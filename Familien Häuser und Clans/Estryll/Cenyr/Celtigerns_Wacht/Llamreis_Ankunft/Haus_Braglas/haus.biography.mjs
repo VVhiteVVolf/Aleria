@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Braglas",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Braglas ist eine bürgerliche Familie aus Gwynthor.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Braglas/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Braglas sind eine kleine Bürgerfamilie in Gwynthor. Ihre bekannte Überlieferung beginnt mit Ifor und Morfydd und verzweigt sich in Cadfans Hauptlinie und Bryns Familie. Das Zeichen zeigt ein Fass zwischen Ähren; ein bestimmter Familienbetrieb ist bisher nicht festgelegt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Ifor Braglas"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Braglas ist eine bürgerliche Familie aus Gwynthor.",
+    "biographyText": "Die Braglas sind eine kleine Bürgerfamilie in Gwynthor. Ihre bekannte Überlieferung beginnt mit Ifor und Morfydd und verzweigt sich in Cadfans Hauptlinie und Bryns Familie. Das Zeichen zeigt ein Fass zwischen Ähren; ein bestimmter Familienbetrieb ist bisher nicht festgelegt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Cadfan und Tegwen sind die Eltern Geraints, Emyrs und Nerys’. Cadfans Bruder Bryn heiratete Anwen Aelmor; ihre Söhne heißen Madoc und Iestyn. Meurig blieb unverheiratet und kinderlos. Elens wegverheiratete Linie ist ohne bekanntes Zielhaus überliefert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die jüngeren Angehörigen sind unverheiratet; ihre weiteren Lebenswege bleiben offen. Beruf, Hausbesitz und Motto sind noch nicht belegt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die Ehe Bryns mit Anwen begründet die bekannte Verbindung zum Bürgerhaus Aelmor."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Braglas.png",
         "title": "Haus Braglas · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-braglas"
       }
     ],

@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Saethwyr O'Gwynthor",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Saethwyr ist ein Ritterfürstenhaus aus Gwynthor und ein Kadettenzweig der Draigs. Flotte, Seekampf und Küstenschutz bestimmen seine Stellung in Celtigerns Wacht.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Saethwyr ist ein Kadettenhaus der Draigs mit Sitz in Gwynthor. Sein Gründer Kynwrig, der Seefahrer, verband ritterlichen Mut mit einer tiefen Leidenschaft für das Meer. Dieses Erbe prägt die Ritterfürstenfamilie und ihre Aufgabe im Küstenschutz.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Ein Haus im Zeichen der Seefahrt",
-    "biographyText": "Haus Saethwyr ist ein Ritterfürstenhaus aus Gwynthor und ein Kadettenzweig der Draigs. Flotte, Seekampf und Küstenschutz bestimmen seine Stellung in Celtigerns Wacht.",
+    "biographyText": "Haus Saethwyr ist ein Kadettenhaus der Draigs mit Sitz in Gwynthor. Sein Gründer Kynwrig, der Seefahrer, verband ritterlichen Mut mit einer tiefen Leidenschaft für das Meer. Dieses Erbe prägt die Ritterfürstenfamilie und ihre Aufgabe im Küstenschutz.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Ein Schiff gab dem Haus seinen Namen",
-    "historyText": "Kynwrig Draig, der Seefahrer, besiegte mit einer zahlenmäßig unterlegenen Mannschaft die Nordmänner. Dafür erhielt er den Ritterfürstentitel und das Recht auf ein eigenes Haus. Er benannte es nach seinem Schiff Saethwyr und nahm sich den Entdecker Sir Melwas zum Vorbild.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Kynwrig Draig führte ein Schiff namens Saethwyr und wollte den großen Entdeckern und Seekriegern nacheifern. Besonders Sir Melwas war sein Vorbild. Er übernahm dessen Rüstungsstil und Kampfweise und suchte selbst die Bewährung auf See.\n\nIn einer entscheidenden Schlacht gegen die Nordmänner führte Kynwrig seine deutlich unterlegenen Männer durch Geschick und List zum Sieg. Dafür erhielt er den Rang eines Ritterfürsten und die Erlaubnis zur Gründung eines eigenen Hauses. Den Namen wählte er zu Ehren seines Schiffes: Saethwyr.\n\nEin augenzwinkernder Teil der Überlieferung handelt von seinem Vorbild Melwas. Dessen Tapferkeit und Kampfstil konnte Kynwrig nachahmen; der berühmte prächtige Schnurrbart wollte ihm jedoch nicht wachsen. Der ehrgeizige Seefahrer blieb trotz aller Ähnlichkeit im Auftreten glattrasiert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Mut, Entschlossenheit und Seefahrertreue prägen das Haus. Werften, Fischerei und Küstenhandel tragen seinen Wohlstand. Die Dame der See und die Seemaid sind seine besonderen Patrone. Huw führt das Haus seit 1720; Marmaduke steht zuerst in der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Angehörigen werden von klein auf mit Seefahrt und Seekampf vertraut gemacht. Ein eigenes Schiff zu führen gilt als besondere Ehre. Ausrüstung und Auftreten erinnern an Kynwrig; die Verteidigung der Küsten wird als Pflicht gegenüber dem Gründer und als Vermächtnis des Hauses verstanden."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Hafensiedlungen, Fischerei und Werften bilden die wirtschaftliche Grundlage. Salzfisch wird entlang der Küsten gehandelt. Die Schiffbauer fertigen schnelle, robuste Schiffe für Handel, Fischfang und Krieg."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Saethwyr gehören zu den Cenyri und zur Alerischen Kirche. Als besondere Patrone verehren sie die Dame der See und die Seemaid."
       }
     ],
     "triviaTitle": "Besonderheiten",

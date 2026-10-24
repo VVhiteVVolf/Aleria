@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-eneiniog",
   "name": "Haus Eneiniog",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Eneiniog ist ein Ritterhaus aus Gwynthor und Vasall der Saethwyr. Verwaltung, Glaube und Ritterdienst prägen die Familie. Minen und Werkstätten, darunter Goldschmieden für kirchliche Arbeiten, sichern ihre Versorgung.",
+    "overview": "Die Eneiniog sind ein ruhiges, pflichtbewusstes Ritterhaus, das Ordnung, Glauben und Dienst über Ruhm und Macht stellt. Als loyale Vasallen der Saethwyr handeln sie offen, meiden Intrigen und tragen Verantwortung lieber selbst, als sie weiterzugeben. Ihr Ansehen gründet nicht auf Glanz, sondern auf Verlässlichkeit, Maß und einer tief verankerten Menschlichkeit.",
     "history": "Der Kämmerer Tyrnog minderte eigenmächtig überhöhte Forderungen, damit die Schuldner zahlen und auf ihrem Land bleiben konnten. Sein Herr erkannte die Weitsicht dieser Tat und erhob ihn zum Ritterherrn.",
-    "character": "Pflicht, Maß und Menschlichkeit gelten als zentrale Werte. Maredog führt das Haus; Owain ist sein erster Erbe."
+    "character": "Pflicht, Maß und Menschlichkeit gelten als zentrale Werte. Maredog führt das Haus; Owain ist sein erster Erbe.",
+    "customs": "Die Eneiniog bauen ihr Haus nicht auf Blutlinien oder prunkvolle Titel, sondern auf drei feste Säulen: Verwaltung, Glaube und Rittertum. Diese Dreiteilung gilt nicht als Ideal, sondern als Pflicht – jedes Mitglied des Hauses muss in mindestens einem dieser Bereiche dienen, viele in mehr als einem. Talent entscheidet über den Weg, nicht Geburt oder Rang.",
+    "holdings": "Der Besitz der Eneiniog ist überschaubar, zweckmäßig und bewusst unspektakulär. Ihr Sitz ist eine beschauliche Burg innerhalb Gwynthors, mehr Verwaltungs- und Wehrpunkt als repräsentatives Machtzeichen. Die Mauern sind alt, gepflegt und funktional; nichts an ihr soll beeindrucken, alles soll bestehen.",
+    "culture": "Die Eneiniog sind fromme Mitglieder der Alerischen Kirche und fördern den geistlichen Dienst aktiv, ohne ihn zu erzwingen. In nahezu jeder Generation finden sich ein oder zwei Priester oder Paladine, ohne dass dies für alle Familienmitglieder erwartet wird."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -237,5 +240,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Maredog Eneiniog",
   "firstHeir": "Owain Eneiniog",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2526:7329ebef:bd0ac4c9"
+  ]
 };

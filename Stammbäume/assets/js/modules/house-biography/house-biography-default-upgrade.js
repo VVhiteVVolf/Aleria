@@ -1,22 +1,10 @@
-import { normalizeHouseBiographyModule } from './house-biography-model.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261021-arvel-v3';
-
-// Recognize shipped defaults only. These fingerprints are not security hashes.
-export function houseBiographyDefaultFingerprint(value) {
-  const text = JSON.stringify(normalizeHouseBiographyModule(value));
-  let first = 2166136261;
-  let second = 2246822507;
-  for (let index = 0; index < text.length; index += 1) {
-    const code = text.charCodeAt(index);
-    first = Math.imul(first ^ code, 16777619);
-    second = Math.imul(second ^ code, 2246822507);
-  }
-  return `${text.length}:${(first >>> 0).toString(16)}:${(second >>> 0).toString(16)}`;
-}
+import { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
+export { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
+import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261024-housebio-v1';
 
 const REPLACED_DEFAULTS = Object.freeze({
   // Draig revision 8: full biography, replaced by the requested short overview.
-  'haus-draig': ['13197:966c96ad:860ab92b'],
+  'haus-draig': ['13197:966c96ad:860ab92b', '13211:8bc11338:f9fd47ae'],
 });
 
 export function houseBiographyDefaultUpgrade(registered, local) {

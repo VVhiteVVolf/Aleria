@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Trevoryn",
   "housePage": true,
   "image": "../AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Die Trevoryn sind im Hafenviertel Gwynthors verwurzelt. In der Krummen Kanne kennt man Merriks offenen Empfang, Eirians klirrenden Schlüsselbund und Elidyrs trockene Antworten am Tresen.",
   "quote": "",
   "quoteBy": "",
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Gwynthor · Cenyr"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Herkunft & Hausgeschichte",
     "historyText": "Die alten Gründer sind längst vergessen. Was die Familie heute zusammenhält, begann mit Merriks Heimkehr aus dem Großen Krieg. 1722 eröffnete er mit seinen Feldkameraden Hrolf und Aedan die Krumme Kanne; ein Jahr später heiratete Hrolf seine Schwester Eirian.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Celyn hält Vorratskammer und Wäschetruhe gefüllt, während Nestwen am Fenster flickt und Geschichten erzählt. Bei ihr finden Cadri und Enlli stets einen Platz. Im Zweifel stellen die Trevoryn erst einen Teller hin und fragen dann, was geschehen ist."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Celyn hält Vorratskammer und Wäschetruhe gefüllt, während Nestwen am Fenster flickt und Geschichten erzählt. Bei ihr finden Cadri und Enlli stets einen Platz. Im Zweifel stellen die Trevoryn erst einen Teller hin und fragen dann, was geschehen ist."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Anteil am gemeinsamen Schank- und Herbergsbetrieb der Krummen Kanne im Osten des Hafenviertels, an der Gasse Richtung Osttor. Die drei Inhaber gründeten das Haus 1722. Weiterer Grundbesitz ist nicht benannt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Gwynthor · Cenyr. Die Hausgemeinschaft verbindet cenyrische, aldrimarische und albische Gewohnheiten, besonders am gemeinsamen Herd."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -94,7 +109,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Trevoryn.png",
         "title": "Haus Trevoryn · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-trevoryn"
       }
     ],

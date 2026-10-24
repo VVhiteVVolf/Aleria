@@ -2,7 +2,7 @@ import {
   listFamilyRecords,
   loadFamilyById,
   normalizeFamilyId
-} from '../../services/family-library.js?v=20261021-arvel-v3';
+} from '../../services/family-library.js?v=20261024-housebio-v1';
 
 function folderPathFromFamily(family, fallback = []) {
   const folderPath = family?.extensions?.registry?.folderPath;

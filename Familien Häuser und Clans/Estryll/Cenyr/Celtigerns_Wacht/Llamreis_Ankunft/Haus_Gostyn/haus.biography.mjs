@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gostyn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Gostyn ist ein Ritterhaus unter den Gafyr. Es lebt in Gwynthor und versieht Aufgaben in Bronfelen. Mühlen und Bäckereien verbinden seine Einkünfte mit der Versorgung Bedürftiger.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Das Haus Gostyn ist ein kleines, ritterliches Vasallenhaus unter dem Lehn des Hauses Gafyr mit Sitz in Gwynthor. Es genießt den Ruf eines volksnahen, frommen und verlässlichen Geschlechts, das Macht meidet und Pflicht vor Ehrgeiz stellt. Politisch zurückhaltend, wirtschaftlich solide und kirchlich eng verbunden, treten die Gostyn selten hervor, gelten jedoch als stabiler Faktor innerhalb der Grafschaft. Ihre aktuelle Lage ist ruhig: fest eingebunden in bestehende Lehnsstrukturen, ohne offene Fehden, getragen von Tradition, Glauben und lokaler Verantwortung.",
   "quote": "Wer dient, steht höher als er glaubt.",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Gostyn ist ein Ritterhaus unter den Gafyr. Es lebt in Gwynthor und versieht Aufgaben in Bronfelen. Mühlen und Bäckereien verbinden seine Einkünfte mit der Versorgung Bedürftiger.",
+    "biographyText": "Das Haus Gostyn ist ein kleines, ritterliches Vasallenhaus unter dem Lehn des Hauses Gafyr mit Sitz in Gwynthor. Es genießt den Ruf eines volksnahen, frommen und verlässlichen Geschlechts, das Macht meidet und Pflicht vor Ehrgeiz stellt. Politisch zurückhaltend, wirtschaftlich solide und kirchlich eng verbunden, treten die Gostyn selten hervor, gelten jedoch als stabiler Faktor innerhalb der Grafschaft. Ihre aktuelle Lage ist ruhig: fest eingebunden in bestehende Lehnsstrukturen, ohne offene Fehden, getragen von Tradition, Glauben und lokaler Verantwortung.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Roderic der Hochgewachsene trat als Kammerdiener für einen verletzten Gafyr-Prinzen im Turnier an. Er lehnte lange jede Erhebung ab und nahm die Ritterwürde erst im Alter an. Das genaue Gründungsjahr ist offen.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Demut, Mäßigung und tätige Nächstenliebe prägen das Haus. Sein Wappen zeigt einen Teller mit Krümeln und Besteck. Eifion führt das Haus; Gruffydd ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Gostyn sind streng fromme Anhänger der Kirche. Viele Mitglieder wählen keinen priesterlichen, sondern einen paladinischen Weg und binden sich durch Schwüre und Gelübde an den Dienst am Volk. Ein Bruch dieser Schwüre führt weder bei Haus noch Kirche zu Ausgrenzung, sondern zu Buße, Rückkehr und einem erneuten Versuch."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Gostyn gelten als volksnahes Haus. Zwar lehnte ihr Gründervater viele Lobpreisungen und Geschenke der Gafyr ab, doch seine Nachkommen waren weniger streng. Heute bewohnen die Gostyn ein Anwesen innerhalb der alten Stadtmauern von Gwynthor, an jener Stelle, wo einst die alte Mühle stand, in der Roderic heiratete."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Gostyn sind Cenyri durch und durch, mit einem spürbaren Anteil albischen Blutes, der sich häufig in brünettem Haar und blauen Augen zeigt. Kulturell gelten sie als bodenständig, gemeinschaftsorientiert und wenig prunkliebend; Herkunft und Stand werden nicht zur Schau gestellt, sondern als Verpflichtung verstanden."
       }
     ],
     "triviaTitle": "Besonderheiten",

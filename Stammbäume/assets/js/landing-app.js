@@ -4,7 +4,7 @@ import { pickBiographySample } from './services/dashboard-bio-preview.js';
 import { pickFactSample } from './services/dashboard-facts.js';
 import { isAleriaGptAvailable, requestAleriaGptSuggestion } from './services/aleria-gpt-bridge.js';
 import { createFamilyViewLink } from './services/family-links.js';
-import { listFamilyRecords } from './services/family-library.js?v=20261021-arvel-v3';
+import { listFamilyRecords } from './services/family-library.js?v=20261024-housebio-v1';
 import {
   buildLandingTriviaPrompt,
   buildLocalTriviaBlurb,

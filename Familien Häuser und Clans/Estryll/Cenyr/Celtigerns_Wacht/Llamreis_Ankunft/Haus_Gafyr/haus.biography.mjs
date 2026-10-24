@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gafyr O'Gwynthor",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Gafyr ist ein Ritterfürstenhaus aus Gwynthor und Vasall der Draigs. Es herrscht über nördliche Gebiete der Region. Ritterdienst, Ziegenzucht, Holz und Erz bilden die Grundlagen seiner Stellung.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Gafyr ist ein Ritterfürstenhaus mit Sitz in Gwynthor. Als Vasallen der Draigs verwalten die Gafyr Gebiete nördlich der Stadt. Ihr Ruf beruht auf treuem Ritterdienst und bodenständiger Wirtschaft: Ziegenzucht, Holzgewinnung und Erzabbau tragen ihren Wohlstand.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Treue unter dem gehörnten Helm",
-    "biographyText": "Haus Gafyr ist ein Ritterfürstenhaus aus Gwynthor und Vasall der Draigs. Es herrscht über nördliche Gebiete der Region. Ritterdienst, Ziegenzucht, Holz und Erz bilden die Grundlagen seiner Stellung.",
+    "biographyText": "Haus Gafyr ist ein Ritterfürstenhaus mit Sitz in Gwynthor. Als Vasallen der Draigs verwalten die Gafyr Gebiete nördlich der Stadt. Ihr Ruf beruht auf treuem Ritterdienst und bodenständiger Wirtschaft: Ziegenzucht, Holzgewinnung und Erzabbau tragen ihren Wohlstand.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Garyms Erbe und Kynwrigs Haus",
-    "historyText": "Garym, der Gehörnte, floh als einfacher Milwr mit Vortigern und Celtigern aus Avallorn. Celtigern schlug ihn zum Ritter. Nach Garyms tödlicher Verwundung wurde seinem Sohn Kynwrig die Gründung eines eigenen Hauses zugesagt. Garyms erbeuteter Hornhelm blieb das wichtigste Erbstück der Familie.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Garym, später „der Gehörnte“ genannt, kam als einfacher Milwr aus Avallorn. Er floh gemeinsam mit Vortigern und Celtigern nach Estryll. Seine Treue, sein Mut und sein Sinn für Gerechtigkeit brachten ihm Celtigerns Vertrauen und schließlich den Ritterschlag ein. Die albenstämmige Prinzessin Fíodhna Ui Talamh wurde seine Gefährtin; auf beide führt das Haus seinen Ursprung zurück.\n\nIn einem Zweikampf besiegte Garym einen Anführer der Nordmänner und nahm dessen gehörnten Helm als Trophäe. Fortan trug er ihn selbst im Kampf und erhielt so seinen Beinamen. In der letzten großen Schlacht vor der Gründung Cenyrs wurde er tödlich verwundet.\n\nSeinem Sohn Kynwrig wurde zugesagt, nach Erreichen des Erwachsenenalters einen eigenen Adelstitel und das Recht zur Hausgründung zu erhalten. So begründete Kynwrig das Haus Gafyr, dessen geistiger Ahnherr Garym blieb. Der Hornhelm wurde zum geheiligten Erbstück und von Ritterfürst zu Ritterfürst weitergegeben. Nach dem Glauben der Familie bewahrt er Garyms Willenskraft.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Treue, Gerechtigkeit und Frömmigkeit bestimmen das Selbstverständnis der Gafyr. Junge Angehörige dienen häufig in der Teulu der Draigs. Duncan führt das Haus seit 1708; Egon steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Viele junge Gafyr beginnen ihren Dienst in der Teulu des Hauses Draig. Die persönliche Bindung an das Grafenhaus gilt als Bewährungsweg und setzt Garyms ursprüngliche Treue fort."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die nördlich von Gwynthor gelegenen Besitzungen umfassen mehrere Siedlungen, Wälder und Erzvorkommen. Holz und Erze versorgen Handwerk und Handel. Besonders bekannt sind die Ziegenherden und ihr Käse, der weit über die unmittelbare Umgebung hinaus gehandelt wird."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Gafyr gehören zu den Cenyri und zur Alerischen Kirche. Als Patrone sind die Dame der See und der Streiter genannt."
       }
     ],
     "triviaTitle": "Besonderheiten",

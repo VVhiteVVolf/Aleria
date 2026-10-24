@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Svathamar",
   "housePage": true,
   "image": "../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Die Svathamar sind eine bürgerliche Familie aus Rorikshall in Aldrimar. Hrolf fand nach dem Großen Krieg in Gwynthor ein neues Zuhause. Seine Geschwister Ketil und Runa folgten ihm; mit Eirian Trevoryn und den Kindern Styr und Heledd gehört er heute zur Hausgemeinschaft der Krummen Kanne.",
   "quote": "",
   "quoteBy": "",
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Rorikshall · Aldrimar"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Herkunft & Hausgeschichte",
     "historyText": "Von den frühen Svathamar erzählen nur noch wenige Geschichten. Hrolfs Weg führte aus Rorikshall in den Großen Krieg und mit seinen Kameraden weiter nach Gwynthor. Nach der Gründung der Kanne heiratete er Eirian Trevoryn; seine jüngeren Geschwister Ketil und Runa folgten ihm in die Stadt.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Hrolf hält den Hausfrieden, Ketil wacht an der Tür und Runa über saubere Kammern. Eirian hält sie alle auf Trab. Styr übt sich am Tresen in der Gelassenheit seines Vaters; Heledd lauscht lieber dessen Heldengeschichten."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Hrolf hält den Hausfrieden, Ketil wacht an der Tür und Runa über saubere Kammern. Eirian hält sie alle auf Trab. Styr übt sich am Tresen in der Gelassenheit seines Vaters; Heledd lauscht lieber dessen Heldengeschichten."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Anteil am gemeinsamen Schank- und Herbergsbetrieb der Krummen Kanne im Osten des Hafenviertels, an der Gasse Richtung Osttor. Die drei Inhaber gründeten das Haus 1722. Weiterer Grundbesitz ist nicht benannt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Rorikshall · Aldrimar. Die Hausgemeinschaft verbindet cenyrische, aldrimarische und albische Gewohnheiten, besonders am gemeinsamen Herd."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -94,7 +109,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Svathamar.png",
         "title": "Haus Svathamar · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-svathamar"
       }
     ],

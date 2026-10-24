@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Bleiddorn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/assets/krieger-g850v6f.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Das ritterliche Herrenhaus Bleiddorn entstand durch Hrolfs Auswanderung aus Aldrimar nach Cenyr. In Gwynthor unter Celtigerns Wacht blüht der aus Clan Wolfshorn hervorgegangene Familienzweig neu auf.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Bleiddorn ist ein junges Ritterherrenhaus in Gwynthor und geht auf Hrolf Wolfshorns Exil aus Aldrimar zurück. Die neue cenyrische Hauslinie bewahrt ihre Herkunft aus Clan Wolfshorn. Hrolf, seine beiden ältesten Kinder Ylva und Asgeir sowie sein Bruder Halvar bilden den bekannten ausgewanderten Familienkreis.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Hrolf Wolfshorn"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Das ritterliche Herrenhaus Bleiddorn entstand durch Hrolfs Auswanderung aus Aldrimar nach Cenyr. In Gwynthor unter Celtigerns Wacht blüht der aus Clan Wolfshorn hervorgegangene Familienzweig neu auf.",
+    "biographyText": "Haus Bleiddorn ist ein junges Ritterherrenhaus in Gwynthor und geht auf Hrolf Wolfshorns Exil aus Aldrimar zurück. Die neue cenyrische Hauslinie bewahrt ihre Herkunft aus Clan Wolfshorn. Hrolf, seine beiden ältesten Kinder Ylva und Asgeir sowie sein Bruder Halvar bilden den bekannten ausgewanderten Familienkreis.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Hrolf wurde mit Ylva, Asgeir und Halvar aus Aldrimar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern. In Gwynthor begründete Hrolf Haus Bleiddorn. Seine Gemahlin Liv lebt noch; sie verließ ihn und kehrte mit einem Teil ihrer Kinder zu ihrem eigenen Clan im Norden Aldrimars zurück.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Aldrimarische Herkunft und der Aufbau einer neuen Stellung in Cenyr prägen den Familienzweig. Die in Aldrimar verbliebenen Angehörigen werden nicht in die Auswandererakte übernommen. Ein zusätzliches Gründungsdatum und weitere eigene Besitzrechte sind nicht überliefert."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Clan Wolfshorn bleibt der Herkunftsclan. Die neue Hausbezeichnung Bleiddorn bildet die eigenständige Linie in Celtigerns Wacht ab."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-bleiddorn.png",
         "title": "Haus Bleiddorn · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bleiddorn"
       }
     ],

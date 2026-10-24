@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Trydar",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Trydar/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Trydar ist ein militärisch geprägtes Ritterhaus aus Abergwint unter den Gwyvern. Seine Angehörigen führen Wachen, Garnisonen und Küstenposten. Minen, Schmieden und Rüstungswerkstätten stützen seine Aufgaben.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Trydar ist ein niederes ritterliches Haus der Baronie Gwendolyns Ufer und steht als treuer Lehnsvasall im Dienst des Hauses Gwyvern, der Barone von Abergwint. Es ist maritim wie kriegerisch geprägt: Küstensicherung, Hafenaufsicht, Konvoischutz und der harte Dienst an Land gehören gleichermaßen zu seinem Selbstverständnis. Die Trydar sind kein Haus der Reden, sondern der Einsätze.\n\nDie Trydar stellen Ritter, Konstabler und Feldhauptleute. Wo Ordnung durchgesetzt, Männer geführt oder Küsten gehalten werden müssen, taucht ihr Name auf. Staatsmänner bringen sie selten hervor – dafür Marschälle, Hauptmänner und Kommandanten, die Befehle klar geben und ebenso klar ausführen. Disziplin, Verlässlichkeit und ein nüchterner Blick auf Pflicht sind ihr Markenzeichen.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Trydar ist ein militärisch geprägtes Ritterhaus aus Abergwint unter den Gwyvern. Seine Angehörigen führen Wachen, Garnisonen und Küstenposten. Minen, Schmieden und Rüstungswerkstätten stützen seine Aufgaben.",
+    "biographyText": "Haus Trydar ist ein niederes ritterliches Haus der Baronie Gwendolyns Ufer und steht als treuer Lehnsvasall im Dienst des Hauses Gwyvern, der Barone von Abergwint. Es ist maritim wie kriegerisch geprägt: Küstensicherung, Hafenaufsicht, Konvoischutz und der harte Dienst an Land gehören gleichermaßen zu seinem Selbstverständnis. Die Trydar sind kein Haus der Reden, sondern der Einsätze.\n\nDie Trydar stellen Ritter, Konstabler und Feldhauptleute. Wo Ordnung durchgesetzt, Männer geführt oder Küsten gehalten werden müssen, taucht ihr Name auf. Staatsmänner bringen sie selten hervor – dafür Marschälle, Hauptmänner und Kommandanten, die Befehle klar geben und ebenso klar ausführen. Disziplin, Verlässlichkeit und ein nüchterner Blick auf Pflicht sind ihr Markenzeichen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Maelor Trydar wurde von den Draig zur Sicherung der Küste eingesetzt. Seine Nachkommen dienten dort über Generationen und wurden mit der Erhebung der Gwyvern dauerhaft an deren Seite gestellt.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die Herkunft des Hauses ist unspektakulär und genau darin konsequent. Als die Draigs ihre Reichweite an den östlichen Küsten nicht mehr aus eigener Hand sichern konnten, setzten sie Sir Maelor Trydar als ritterlichen Vasallen ein. Maelor diente dort wiederholt als Hauptmann und Küstenkommandant in der Region, die heute als Gwendolyns Ufer bekannt ist.\n\nSeine Nachkommen wurden über Generationen hinweg immer wieder an diese Küsten entsandt – nicht zur Zierde, sondern zur Sicherung. Erst mit der Erhebung des eigenen Kadettenhauses der Gwyvern änderte sich die Bindung: Die Trydar wurden dauerhaft an deren Seite gestellt, schworen den Lehnseid und zählen seither zu den frühesten und verlässlichsten Vasallen der Gwyvern. Ihr Platz war nie umstritten – er wurde erarbeitet.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Disziplin, Truppenführung und Verlässlichkeit bestimmen die Ausbildung. Morgan führt das Haus und dient als Großkonstabler des Marschalls; Pryce ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Trydar sind ein Ritterhaus. Punkt. Sie definieren sich weder über Verwaltung noch über Rechtsprechung, Intrige oder höfische Etikette."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Das Haus Trydar kontrolliert weite Teile des Militärviertels von Abergwint. Dort befinden sich sowohl ihre eigene Burg als auch die Garnison der Stadt und die Burg des Marschalls, bewusst so gesetzt, dass Befehl, Truppe und Nachschub in einem geschlossenen militärischen Kern liegen. Diese Nähe ist kein Zufall, sondern Ausdruck ihrer Funktion: Die Trydar sind Träger der militärischen Infrastruktur, nicht bloß deren Nutzer."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Trydar sind fromm im erwartbaren Maß – nicht mehr, nicht weniger. Sie erfüllen die religiösen Pflichten eines cenyrischen Ritterhauses, ohne daraus Identität oder Sendungsbewusstsein zu ziehen."
       }
     ],
     "triviaTitle": "Besonderheiten",

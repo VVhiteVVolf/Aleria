@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gofrann",
   "housePage": true,
   "image": "../AleriaAlmanach/assets/gofrann-schmiede/scenes/aussenansicht.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Die Gofrann führen die Waffen- und Harnischschmiede Zum Dritten Funken in Gwynthors Innenstadt. Gethin und sein Vetter Bleddyn stehen selbst am Werkstück; ihre Familie hält Verkauf, Bücher und Lieferwege zusammen.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Unter dem Amboss und den drei Funken entstehen Waffen und Harnische für Ritter, Söldner und Gilden. Die Gofrann gehören zu den angesehenen Handwerkerfamilien Gwynthors.",
   "quote": "Stahl und Wort.",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über die Familie",
-    "biographyText": "Die Gofrann führen die Waffen- und Harnischschmiede Zum Dritten Funken in Gwynthors Innenstadt. Gethin und sein Vetter Bleddyn stehen selbst am Werkstück; ihre Familie hält Verkauf, Bücher und Lieferwege zusammen.",
+    "biographyText": "Unter dem Amboss und den drei Funken entstehen Waffen und Harnische für Ritter, Söldner und Gilden. Die Gofrann gehören zu den angesehenen Handwerkerfamilien Gwynthors.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Zwei Werkbänke, ein Haus",
-    "historyText": "Nach den unbekannten Gründern setzt die Überlieferung bei den Brüdern Edern und Caradfan ein. Ihre Söhne Gethin und Bleddyn lernten nebeneinander und führten die Werkstatt gemeinsam weiter.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Edern führte die Harnischbank, sein Bruder Caradfan die Klingenarbeit. Gethin und Bleddyn behielten diese Teilung bei und machten aus den vertrauten Werkbänken einen Betrieb, in dem heute mehrere Generationen zusammenarbeiten.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Ein Harnisch soll Bewegung zulassen, eine Klinge zur Hand ihres Trägers passen. Die Meister versprechen keinen unmöglichen Termin und geben ein Stück erst nach ihrer Prüfung heraus."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Vor der Übergabe prüfen die Meister das fertige Stück. Am Familiennamen soll auch nach Jahren noch eine gute Nietung, ein sicherer Griff und eine eingehaltene Zusage hängen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Familie besitzt und führt die Schmiede Zum Dritten Funken mit Verkaufsraum, Werkstatt und Kontor in Gwynthors Innenstadt. Haus Tlawd hält einen bedeutenden Anteil und liefert den größten Teil des Erzes."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Familie lebt nach cenyrischen Bräuchen. Der Knecht wird für redliche Arbeit und den Zusammenhalt der vielen Hände verehrt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +107,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gofrann.png",
         "title": "Haus Gofrann · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gofrann"
       }
     ],

@@ -61,7 +61,7 @@ window.HAEUSER_DATA = {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
     "houseType": "Bürgerliches Haus",
-    "motto": "",
+    "motto": "Was gehört wird, geht nicht verloren.",
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Haus Draig",
@@ -84,11 +84,14 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
-  "showMotto": false,
+  "showMotto": true,
   "sections": {
     "overview": "Volksnahe Schreiber- und Journalistenfamilie aus Gwynthor, die Celtigerns Echo herausgibt, Schreibende ausbildet und mit kleinen Redaktionsstuben in den größeren Orten Celtigerns Wacht vertreten ist. Weitere Inhalte folgen.",
     "history": "Folgt …",
@@ -104,7 +107,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Folgt …"
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

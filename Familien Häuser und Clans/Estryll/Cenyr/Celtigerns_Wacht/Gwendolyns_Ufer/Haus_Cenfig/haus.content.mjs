@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-cenfig",
   "name": "Haus Cenfig",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Cenfig ist ein Ritterhaus aus Abergwint im Dienst der Gwyvern. Rechtsgelehrsamkeit und Waffendienst bestehen gleichberechtigt nebeneinander. Die Familie führt eine Universität für Rechtswesen und eine Kanzlei, die auch Bedürftigen offensteht.",
+    "overview": "Haus Cenfig entstammt keiner siegreichen Schlacht, keinem glorreichen Feldzug und keinem ererbten Anspruch. Es entstand aus Recht, aus Widerspruch – und aus dem Mut, selbst einem Draig zu sagen: Nein.\n\nDie Cenfig sind ein Haus ohne alten Titel, ohne reines Blut, ohne Anspruch auf Größe. Und genau deshalb wurden sie gebraucht.\n\nHaus Cenfig ist ein Haus der Schrift und des Schwertes, das Recht über Macht stellt und dort Ordnung wahrt, wo andere aus Bequemlichkeit wegsehen.",
     "history": "Steffan Cenfig widersprach einem ungerechten Baron und wurde durch eine Intrige eingekerkert. Nach seiner Entlastung führte er die Baronie als Regent für den minderjährigen Erben. Seine spätere Erhebung begründete das Haus.",
-    "character": "Recht, Wahrheit und Verantwortung gelten mehr als persönlicher Vorteil. Mathon führt das Haus; Folant folgt ihm in der Erbfolge."
+    "character": "Recht, Wahrheit und Verantwortung gelten mehr als persönlicher Vorteil. Mathon führt das Haus; Folant folgt ihm in der Erbfolge.",
+    "customs": "Haus Cenfig begreift Tradition als Pflicht zur Ordnung. Seit seiner Gründung gilt im Haus der Grundsatz, dass Recht und Macht untrennbar verbunden sind. Daher stellen die Cenfig nicht nur Ritter, sondern ebenso bewusst Rechtsgelehrte.",
+    "holdings": "Haus Cenfig besitzt kein ausgedehntes Land und keine wehrhafte Burg, sondern ein ritterliches Anwesen innerhalb der Stadt Abergwint, dessen Bedeutung weniger aus Mauern als aus Funktion erwächst. Das Anwesen dient zugleich als Wohnsitz, Kanzlei und Ort der Unterweisung und ist fest in das städtische Gefüge eingebunden. Hier werden Verträge verwahrt, Urteile vorbereitet und Gesandte empfangen; ein Ort ruhiger, beständiger Arbeit, nicht der Repräsentation.",
+    "culture": "Haus Cenfig bekennt sich ohne Abweichung zur Alerischen Kirche und zum Glauben an die Neun Göttlichen sowie die Fünf Souveräne, die als fleischgewordene Götter unter den Menschen wandelten. In Fragen des Glaubens gelten die Cenfig als orthodox und pflichtbewusst; sie stellen den kirchlichen Lehren nicht ihre eigene Auslegung entgegen und betrachten religiöse Ordnung als notwendiges Gegenstück weltlichen Rechts."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -274,7 +277,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Folant Cenfig",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1849:e58372b3:b8a40ee5"
+    "1849:e58372b3:b8a40ee5",
+    "3145:d526d843:da71a649"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

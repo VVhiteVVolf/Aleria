@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Ritterhaus",
-    "scale": "Ritterhaus",
+    "scale": "Ritterhaus · im Banner Arwydds",
     "parentHouseId": "",
     "rootHouseId": "haus-gwared",
     "territoryId": "herrschaft-rhonwens-traenen"
@@ -60,8 +60,8 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
-    "houseType": "Ritterhaus",
-    "motto": "",
+    "houseType": "Ritterhaus · im Banner Arwydds",
+    "motto": "Ehre wägt schwerer als Blut.",
     "quoteAuthor": "",
     "seat": "Castellbryn",
     "affiliation": "Haus Arwydd",
@@ -84,24 +84,27 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
-  "showMotto": false,
+  "showMotto": true,
   "sections": {
-    "overview": "Ein ritterliches Haus aus Rhonwens Tränen: einst Illysywen verpflichtet, seit dem Fall Illysywens im Krieg von 1718-1720 im Banner Haus Arwydds. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
+    "overview": "Haus Gwared ist ein Ritterhaus aus Rhonwens Tränen. Einst den Illysywen verpflichtet, steht es seit dem Ende des Krieges von 1718 bis 1720 im Banner Haus Arwydds. Die Hausgeschichte ist von der Trennung einer Illysywen-treuen Hauptlinie und einer früh Draig-treuen Nebenlinie geprägt.",
+    "history": "Als sagenhafter Begründer gilt Uwchor Gwared. Cyrwyn hielt den Illysywen die Treue und starb 1682 friedlich. Sein jüngerer Bruder Rhydor wandte sich hingegen früh den Draigs zu. Im späteren Krieg fielen Dyrian 1718 und Firban 1719; mit Gwaedans Tod 1720 endete die Folge der Illysywen-treuen Ritterherren.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
     "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die heutige Bannerbindung gilt Haus Arwydd. Die frühere Verpflichtung gegenüber Illysywen gehört zur Geschichte; die Vormundschaften bei Balchder und Chwedonol werden in den bestehenden Gegenakten fortgeführt.",
+    "values": "Gwaedans Kinder Sheev und Soffi waren am Unrecht der Erwachsenen unbeteiligt. Sie kamen als Mündel zu Balchder und Chwedonol. Heute führt Ellric Gwared das Haus unter Arwydd; Brenar ist als vorgesehener Erbe verzeichnet.",
+    "court": "Gründer und bekannte Angehörige sind unten mit der bestehenden Familienakte verknüpft.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Die folgenden Persönlichkeiten gehören zur belegten Geschichte der Familie."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -123,22 +126,131 @@ window.HAEUSER_DATA = {
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html",
       "alt": "Herrschaftsbanner von Herrschaft Rhonwens Tränen",
       "format": "square"
+    },
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-balchder/sheev-gwared.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=sheev-gwared",
+      "alt": "Sheev Gwared",
+      "format": "portrait"
+    },
+    "hof-offices-2": {
+      "src": "../Stammbäume/assets/images/portraits/haus-chwedlonol/soffi-gwared.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=soffi-gwared",
+      "alt": "Soffi Gwared",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "founder",
+        "title": "Gründer",
+        "entries": [
+          {
+            "name": "Uwchor Gwared",
+            "role": "Sagenhafter Begründer des Hauses Gwared",
+            "detail": "Sagenhafter Begründer des Hauses Gwared",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=uwchor-gwared",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Gwared",
+        "note": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+        "entries": [
+          {
+            "name": "Ellric Gwared",
+            "role": "Ritterherr des Hauses Gwared",
+            "detail": "Ritterherr des Hauses Gwared",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=ellric-gwared",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "heirs",
+        "title": "Erbfolge",
+        "entries": [
+          {
+            "name": "Brenar Gwared",
+            "role": "Vorgesehener Erbe des Hauses Gwared",
+            "detail": "Vorgesehener Erbe des Hauses Gwared",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=brenar-gwared",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Hofämter",
+        "entries": [
+          {
+            "name": "Sheev Gwared",
+            "role": "Mündel bei Haus Balchder",
+            "detail": "Mündel bei Haus Balchder",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=sheev-gwared",
+            "imageKey": "hof-offices-1"
+          },
+          {
+            "name": "Soffi Gwared",
+            "role": "Mündel bei Haus Chwedonol",
+            "detail": "Mündel bei Haus Chwedonol",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=soffi-gwared",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Brenar Gwared",
+            "role": "Vorgesehener Erbe des Hauses Gwared",
+            "detail": "Vorgesehener Erbe des Hauses Gwared",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view&person=brenar-gwared",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
-    "entries": []
+    "tableTitle": "Prägende historische Persönlichkeiten",
+    "entries": [
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Sagenhafter Begründer des Hauses Gwared",
+        "name": "Uwchor Gwared",
+        "description": "Sagenhafter Begründer des Hauses Gwared",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Ritterherr des Hauses Gwared",
+        "name": "Cyrwyn Gwared",
+        "description": "Hielt Haus Illysywen die Treue; starb 1682 friedlich, Jahrzehnte vor dem Krieg.",
+        "imageKey": "haus-figur-2"
+      },
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Jüngerer Bruder Cyrwyns",
+        "name": "Rhydor Gwared",
+        "description": "Wandte sich von Illysywen ab und stellte sich früh an die Seite Haus Draigs; zu Lebzeiten nur Nebenlinie, da Cyrwyns Nachkommen die Kopfschaft hielten.",
+        "imageKey": "haus-figur-3"
+      },
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Ritterherr des Hauses Gwared",
+        "name": "Dyrian Gwared",
+        "description": "Führte die Illysywen-treue Linie fort; fiel 1718 zu Beginn des Krieges gegen die Draig-treuen Kräfte.",
+        "imageKey": "haus-figur-4"
+      }
+    ]
   },
   "familyTreeEmbed": {
     "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwared&mode=view",
     "title": "Stammbaum von Haus Gwared"
   },
   "trivia": [
-    "Folgt …"
+    "Ritterhaus · im Banner Arwydds"
   ]
 };

@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Dubhdarach",
   "housePage": true,
   "image": "../AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Mit Aedan Dubhdarach kam ein Stück Leitheach in die Krumme Kanne. Der höfliche Albe kümmert sich um Lieferanten und vertrauliche Gäste, während Mair über Kasse und Gästebuch wacht.",
   "quote": "",
   "quoteBy": "",
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Leitheach · Albische Herkunft"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Herkunft & Hausgeschichte",
     "historyText": "Die Wurzeln der Dubhdarach liegen in Leitheach; die Namen ihrer frühen Gründer gingen verloren. Aedan lernte Merrik und Hrolf im Großen Krieg kennen und blieb nach dem Frieden bei ihnen. In Gwynthor fand er mit Mair auch eine Familie. Die beiden heirateten 1724.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Neifion lernt bei Mair das Schreiben und Rechnen; Eirlys fragt den Gästen lieber Löcher in den Bauch. Liegt die Tiefenwyrm im Hafen, schaut auch Mairs ältester Sohn Caradog vorbei. Der Schreiber bringt Nachrichten mit, für die Aedan gern einen Becher bereitstellt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Neifion lernt bei Mair das Schreiben und Rechnen; Eirlys fragt den Gästen lieber Löcher in den Bauch. Liegt die Tiefenwyrm im Hafen, schaut auch Mairs ältester Sohn Caradog vorbei. Der Schreiber bringt Nachrichten mit, für die Aedan gern einen Becher bereitstellt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Anteil am gemeinsamen Schank- und Herbergsbetrieb der Krummen Kanne im Osten des Hafenviertels, an der Gasse Richtung Osttor. Die drei Inhaber gründeten das Haus 1722. Weiterer Grundbesitz ist nicht benannt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Leitheach · Albische Herkunft. Die Hausgemeinschaft verbindet cenyrische, aldrimarische und albische Gewohnheiten, besonders am gemeinsamen Herd."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -94,7 +109,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
         "title": "Haus Dubhdarach · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dubhdarach"
       }
     ],

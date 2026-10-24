@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Morveth",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Morveth/assets/krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Morveth ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Morveth ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -21,32 +22,12 @@ export const HOUSE_BIOGRAPHY = {
       "Ritterherr"
     ],
     [
-      "Stammsitz",
-      ""
-    ],
-    [
       "Grafschaft",
       "Celtigerns Wacht"
     ],
     [
-      "Letztes Oberhaupt",
-      ""
-    ],
-    [
       "Status",
       "Als eigenständiges Haus erloschen · Zeitpunkt offen"
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +36,19 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Morveth ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben.",
+    "biographyText": "Haus Morveth ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Das Haus ist als erloschen verzeichnet. Ein genaues Endjahr und eine ausgearbeitete Chronik sind bisher nicht überliefert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die Hausdarstellung und das vorhandene Wappen sind zugeordnet. Besondere Hausbräuche, Taten und persönliche Überlieferungen werden ergänzt, sobald dazu Quellen vorliegen."
       }
     ],
     "triviaTitle": "Besonderheiten",

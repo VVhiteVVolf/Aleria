@@ -79,13 +79,16 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Madryn ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Weitere Inhalte folgen.",
+    "overview": "Haus Madryn ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",

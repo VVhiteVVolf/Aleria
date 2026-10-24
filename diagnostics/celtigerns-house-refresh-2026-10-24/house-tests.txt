@@ -1,0 +1,346 @@
+TAP version 13
+# Subtest: Jede der 93 Familien besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio
+ok 1 - Jede der 93 Familien besitzt eine erreichbare Hausseite und eine korrekt verlinkte Bio
+  ---
+  duration_ms: 15.4595
+  type: 'test'
+  ...
+# Subtest: Grafschaft führt ihre 53 ausgewählten Häuser mit direkten Hausseitenlinks und lokalen Wappen
+ok 2 - Grafschaft führt ihre 53 ausgewählten Häuser mit direkten Hausseitenlinks und lokalen Wappen
+  ---
+  duration_ms: 9.3957
+  type: 'test'
+  ...
+# Subtest: Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfundenen Chroniken
+ok 3 - Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfundenen Chroniken
+  ---
+  duration_ms: 15.3572
+  type: 'test'
+  ...
+# Subtest: Neue Bilder, Banner und Personenlinks zeigen auf vorhandene Projektdateien und Personen
+ok 4 - Neue Bilder, Banner und Personenlinks zeigen auf vorhandene Projektdateien und Personen
+  ---
+  duration_ms: 23.5412
+  type: 'test'
+  ...
+# Subtest: Ungeklärte Angaben bleiben leer; ausgestorbene Ritterhäuser bekommen kein fremdes Todesjahr
+ok 5 - Ungeklärte Angaben bleiben leer; ausgestorbene Ritterhäuser bekommen kein fremdes Todesjahr
+  ---
+  duration_ms: 0.4373
+  type: 'test'
+  ...
+# Subtest: Neue Registry-Bios ergänzen alte Akten, erhalten aber eigene Texte, Löschung und Familiengraphen
+ok 6 - Neue Registry-Bios ergänzen alte Akten, erhalten aber eigene Texte, Löschung und Familiengraphen
+  ---
+  duration_ms: 189.3891
+  type: 'test'
+  ...
+# Subtest: Default-Anbindung verändert keine Rohakte und respektiert schon zugewiesene Bios
+ok 7 - Default-Anbindung verändert keine Rohakte und respektiert schon zugewiesene Bios
+  ---
+  duration_ms: 0.2539
+  type: 'test'
+  ...
+# Subtest: illysywen: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 8 - illysywen: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 2.5899
+  type: 'test'
+  ...
+# Subtest: illysywen: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 9 - illysywen: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 2.1585
+  type: 'test'
+  ...
+# Subtest: illysywen: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 10 - illysywen: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 3.9539
+  type: 'test'
+  ...
+# Subtest: gafyr: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 11 - gafyr: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 1.5396
+  type: 'test'
+  ...
+# Subtest: gafyr: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 12 - gafyr: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 1.645
+  type: 'test'
+  ...
+# Subtest: gafyr: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 13 - gafyr: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 4.1364
+  type: 'test'
+  ...
+# Subtest: wyrm: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 14 - wyrm: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 1.9923
+  type: 'test'
+  ...
+# Subtest: wyrm: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 15 - wyrm: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 1.3739
+  type: 'test'
+  ...
+# Subtest: wyrm: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 16 - wyrm: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 3.984
+  type: 'test'
+  ...
+# Subtest: saethwyr: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 17 - saethwyr: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 1.4912
+  type: 'test'
+  ...
+# Subtest: saethwyr: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 18 - saethwyr: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 1.3944
+  type: 'test'
+  ...
+# Subtest: saethwyr: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 19 - saethwyr: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 4.7012
+  type: 'test'
+  ...
+# Subtest: gwefrydd: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 20 - gwefrydd: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 1.5484
+  type: 'test'
+  ...
+# Subtest: gwefrydd: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 21 - gwefrydd: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 1.7816
+  type: 'test'
+  ...
+# Subtest: gwefrydd: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 22 - gwefrydd: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 3.9547
+  type: 'test'
+  ...
+# Subtest: gwyvern: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 23 - gwyvern: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 1.3709
+  type: 'test'
+  ...
+# Subtest: gwyvern: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 24 - gwyvern: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 1.5363
+  type: 'test'
+  ...
+# Subtest: gwyvern: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 25 - gwyvern: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 3.0204
+  type: 'test'
+  ...
+# Subtest: arwydd: veröffentlichte Hausseite und kurze Bio sind verbunden
+ok 26 - arwydd: veröffentlichte Hausseite und kurze Bio sind verbunden
+  ---
+  duration_ms: 1.4261
+  type: 'test'
+  ...
+# Subtest: arwydd: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+ok 27 - arwydd: vollständige Hofdaten, Silhouetten und gültige Personenlinks
+  ---
+  duration_ms: 2.0702
+  type: 'test'
+  ...
+# Subtest: arwydd: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+ok 28 - arwydd: Bio-Ergänzung erhält den Familiengraphen und eigene Texte
+  ---
+  duration_ms: 2.0878
+  type: 'test'
+  ...
+# Subtest: Alle 92 aktuellen Familien besitzen Hausseite, passende Hauptabbildung und das kanonische Stammbaum-Iframe
+ok 29 - Alle 92 aktuellen Familien besitzen Hausseite, passende Hauptabbildung und das kanonische Stammbaum-Iframe
+  ---
+  duration_ms: 12.5426
+  type: 'test'
+  ...
+# Subtest: Ein Standardbio-Upgrade lässt alle Graphsammlungen der geladenen Familie unverändert
+ok 30 - Ein Standardbio-Upgrade lässt alle Graphsammlungen der geladenen Familie unverändert
+  ---
+  duration_ms: 88.0398
+  type: 'test'
+  ...
+# Subtest: Ausgelieferte alte Standardbios werden erneuert; eigene Texte, Löschung, Notizen und Personenänderungen bleiben erhalten
+ok 31 - Ausgelieferte alte Standardbios werden erneuert; eigene Texte, Löschung, Notizen und Personenänderungen bleiben erhalten
+  ---
+  duration_ms: 169.5234
+  type: 'test'
+  ...
+# Subtest: Neue Berufs- und Familienseiten verwenden vorhandene Personen statt neuer erfundener Hofinhaber
+ok 32 - Neue Berufs- und Familienseiten verwenden vorhandene Personen statt neuer erfundener Hofinhaber
+  ---
+  duration_ms: 8.0227
+  type: 'test'
+  ...
+# Subtest: Die Galerie ordnet sämtliche 92 Haus-Hauptbilder demselben kanonischen Haus zu
+ok 33 - Die Galerie ordnet sämtliche 92 Haus-Hauptbilder demselben kanonischen Haus zu
+  ---
+  duration_ms: 113.1465
+  type: 'test'
+  ...
+# Subtest: Die 18 neuen Originale besitzen redigierte Artikel, eigenständige kurze Bios und archivierte Bildquellen
+ok 34 - Die 18 neuen Originale besitzen redigierte Artikel, eigenständige kurze Bios und archivierte Bildquellen
+  ---
+  duration_ms: 31.1493
+  type: 'test'
+  ...
+# Subtest: Die 19 ausdrücklich gelieferten Kriegerbilder ergänzen ihre bestehenden Häuser
+ok 35 - Die 19 ausdrücklich gelieferten Kriegerbilder ergänzen ihre bestehenden Häuser
+  ---
+  duration_ms: 14.6278
+  type: 'test'
+  ...
+# Subtest: Widersprüche bleiben offen, vorhandene Herkunft und Personenidentitäten werden nicht überschrieben
+ok 36 - Widersprüche bleiben offen, vorhandene Herkunft und Personenidentitäten werden nicht überschrieben
+  ---
+  duration_ms: 1.2322
+  type: 'test'
+  ...
+# Subtest: Unveränderte alte Vorbereitungsbio annwyl wird aktualisiert; eigene Texte und Löschung bleiben erhalten
+ok 37 - Unveränderte alte Vorbereitungsbio annwyl wird aktualisiert; eigene Texte und Löschung bleiben erhalten
+  ---
+  duration_ms: 2.9706
+  type: 'test'
+  ...
+# Subtest: Unveränderte alte Vorbereitungsbio gwared wird aktualisiert; eigene Texte und Löschung bleiben erhalten
+ok 38 - Unveränderte alte Vorbereitungsbio gwared wird aktualisiert; eigene Texte und Löschung bleiben erhalten
+  ---
+  duration_ms: 3.9199
+  type: 'test'
+  ...
+# Subtest: Die Hausgalerie umfasst alle gelieferten Hauskrieger und die beiden Ergänzungen
+ok 39 - Die Hausgalerie umfasst alle gelieferten Hauskrieger und die beiden Ergänzungen
+  ---
+  duration_ms: 0.9203
+  type: 'test'
+  ...
+# Subtest: Das Herrschaftsbanner führt zur vorhandenen Seite von Celtigerns Wacht
+ok 40 - Das Herrschaftsbanner führt zur vorhandenen Seite von Celtigerns Wacht
+  ---
+  duration_ms: 0.2999
+  type: 'test'
+  ...
+# Subtest: Hausseite und Stammbaum-Bio stammen vollständig aus derselben Quelle
+ok 41 - Hausseite und Stammbaum-Bio stammen vollständig aus derselben Quelle
+  ---
+  duration_ms: 1.9438
+  type: 'test'
+  ...
+# Subtest: Alle elf unbenannten Hofämter verwenden die Silhouetten der Quelle
+ok 42 - Alle elf unbenannten Hofämter verwenden die Silhouetten der Quelle
+  ---
+  duration_ms: 0.1448
+  type: 'test'
+  ...
+# Subtest: Alle Personenlinks verweisen auf vorhandene Stammbaumeinträge
+ok 43 - Alle Personenlinks verweisen auf vorhandene Stammbaumeinträge
+  ---
+  duration_ms: 0.4155
+  type: 'test'
+  ...
+# Subtest: Alle Bilder sind lokale, vorhandene Dateien
+ok 44 - Alle Bilder sind lokale, vorhandene Dateien
+  ---
+  duration_ms: 3.0053
+  type: 'test'
+  ...
+# Subtest: Unbekanntes Hausmotto bleibt nach Normalisierung und Speicherung leer
+ok 45 - Unbekanntes Hausmotto bleibt nach Normalisierung und Speicherung leer
+  ---
+  duration_ms: 0.2801
+  type: 'test'
+  ...
+# Subtest: Bestehende Draig-Snapshots erhalten die Bio ohne Änderungen am Familiengraphen
+ok 46 - Bestehende Draig-Snapshots erhalten die Bio ohne Änderungen am Familiengraphen
+  ---
+  duration_ms: 19.0086
+  type: 'test'
+  ...
+# Subtest: Die unveränderte lange Standardbio wird gekürzt, eigene Änderungen bleiben erhalten
+ok 47 - Die unveränderte lange Standardbio wird gekürzt, eigene Änderungen bleiben erhalten
+  ---
+  duration_ms: 27.2125
+  type: 'test'
+  ...
+# Subtest: every canonical register house is present exactly once, including houses without artwork
+ok 48 - every canonical register house is present exactly once, including houses without artwork
+  ---
+  duration_ms: 1.7695
+  type: 'test'
+  ...
+# Subtest: artwork exists, copies are deduplicated, class icons are excluded and civilian houses are categorized
+ok 49 - artwork exists, copies are deduplicated, class icons are excluded and civilian houses are categorized
+  ---
+  duration_ms: 31.4809
+  type: 'test'
+  ...
+# Subtest: city guards and clergy do not create unsupported house assignments
+ok 50 - city guards and clergy do not create unsupported house assignments
+  ---
+  duration_ms: 0.3505
+  type: 'test'
+  ...
+# Subtest: assignments persist, change missing coverage, and keep provenance unchanged
+ok 51 - assignments persist, change missing coverage, and keep provenance unchanged
+  ---
+  duration_ms: 11.4174
+  type: 'test'
+  ...
+# Subtest: removing all source assignments survives reload and restore recovers source membership
+ok 52 - removing all source assignments survives reload and restore recovers source membership
+  ---
+  duration_ms: 0.444
+  type: 'test'
+  ...
+# Subtest: invalid imports are atomic and do not overwrite existing work
+ok 53 - invalid imports are atomic and do not overwrite existing work
+  ---
+  duration_ms: 0.5123
+  type: 'test'
+  ...
+# Subtest: accent-insensitive search and register scope retain empty houses
+ok 54 - accent-insensitive search and register scope retain empty houses
+  ---
+  duration_ms: 27.589
+  type: 'test'
+  ...
+# Subtest: unavailable browser storage still permits work and reports the need to export
+ok 55 - unavailable browser storage still permits work and reports the need to export
+  ---
+  duration_ms: 0.2339
+  type: 'test'
+  ...
+# Subtest: the local review accounts for every source and exposes all included variants
+ok 56 - the local review accounts for every source and exposes all included variants
+  ---
+  duration_ms: 38.1548
+  type: 'test'
+  ...
+1..56
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2587.7615

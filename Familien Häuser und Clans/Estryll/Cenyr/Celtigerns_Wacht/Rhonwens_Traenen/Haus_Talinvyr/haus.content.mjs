@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-talinvyr",
   "name": "Haus Talinvyr",
@@ -15,13 +15,13 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": true,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Talinvyr ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
-    "history": "Folgt …",
-    "character": "Folgt …"
+    "overview": "Haus Talinvyr ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+    "history": "Gründung, namentliche frühe Oberhäupter und eine ausführliche Chronik sind bisher nicht überliefert.",
+    "character": "Die Hausdarstellung und das vorhandene Wappen sind zugeordnet. Besondere Hausbräuche, Taten und persönliche Überlieferungen werden ergänzt, sobald dazu Quellen vorliegen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -88,7 +88,7 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Haus Talinvyr ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Weitere Inhalte folgen.",
+    "overview": "Haus Talinvyr ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
@@ -121,6 +121,10 @@ export const HOUSE_CONTENT = {
   "firstHeir": "",
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
   "biographyPreviousDefaultFingerprints": [
-    "1553:b9f0423:f80e9971"
-  ]
+    "1553:b9f0423:f80e9971",
+    "1676:7fcaf9c0:31a40552"
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

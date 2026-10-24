@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Ritterhaus",
-    "scale": "Ritterhaus",
+    "scale": "Ritterhaus · Herkunft aus Faelaorn",
     "parentHouseId": "",
     "rootHouseId": "haus-dubhan-gwynthor",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
-    "houseType": "Ritterhaus",
+    "houseType": "Ritterhaus · Herkunft aus Faelaorn",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,24 +84,27 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Das niedere Ritterhaus Dubhan entstand in Gwynthor aus Breccans Auswanderung von Faelaorn nach Celtigerns Wacht. Die neue Linie bewahrt ihre Herkunft aus der Sept Dubhan und dient fortan Haus Draig. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
+    "overview": "Das niedere Ritterhaus Dubhan in Gwynthor entstand aus Breccan Dubhans Auswanderung von Faelaorn nach Celtigerns Wacht. Es dient Haus Draig und bewahrt zugleich seine Herkunft aus der Sept Dubhan. Die neue Hauslinie und die fortbestehende Herkunftssept sind getrennte Familienakten mit gemeinsamen Personenidentitäten.",
+    "history": "Breccan begründete mit seiner Familie die Gwynthorer Linie. Seine Tochter Rogaire und sein Sohn Alpin begleiteten ihn aus Faelaorn nach Cenyr. Seine Gemahlin Eithne starb 1735; ihre Todesumstände sind nicht überliefert.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
     "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die Sept Dubhan bleibt in Faelaorn bestehen. Breccans Dienst für Haus Draig ist eine neue Lehensbindung und verändert seine Herkunft nicht.",
+    "values": "Die Bindung an die alte Sept und der Neubeginn unter den Draig bestimmen die bisher bekannte Hausgeschichte. Ein genaues Gründungsjahr, ein eigener Wahlspruch und besondere Besitzungen sind noch nicht ausgearbeitet.",
+    "court": "Gründer und bekannte Angehörige sind unten mit der bestehenden Familienakte verknüpft.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -123,15 +126,55 @@ window.HAEUSER_DATA = {
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-founder-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-dubhan/breccan-dubhan.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan",
+      "alt": "Breccan Dubhan",
+      "format": "portrait"
+    },
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-dubhan/breccan-dubhan.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan",
+      "alt": "Breccan Dubhan",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "founder",
+        "title": "Gründer",
+        "entries": [
+          {
+            "name": "Breccan Dubhan",
+            "role": "Oberherr und Gründer",
+            "detail": "Oberherr und Gründer",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan",
+            "imageKey": "hof-founder-1"
+          }
+        ]
+      },
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Dubhan",
+        "note": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+        "entries": [
+          {
+            "name": "Breccan Dubhan",
+            "role": "Oberherr und Gründer",
+            "detail": "Oberherr und Gründer",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-dubhan-gwynthor&mode=view&person=breccan-dubhan",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -139,6 +182,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Dubhan"
   },
   "trivia": [
-    "Folgt …"
+    "Ritterhaus · Herkunft aus Faelaorn"
   ]
 };

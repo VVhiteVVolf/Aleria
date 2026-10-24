@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Ysgrif",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Ysgrif ist eine bürgerliche Familie aus Gwynthor.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Ysgrif/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Ysgrif gehört zum bürgerlichen Familienkreis Gwynthors. Seine jüngere Überlieferung führt bis zu Floyd, seinen Schwestern und den drei Söhnen seines Onkels Bryn. Bücher und Schriftrolle prägen das Familienzeichen.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Idris Ysgrif"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Ysgrif ist eine bürgerliche Familie aus Gwynthor.",
+    "biographyText": "Haus Ysgrif gehört zum bürgerlichen Familienkreis Gwynthors. Seine jüngere Überlieferung führt bis zu Floyd, seinen Schwestern und den drei Söhnen seines Onkels Bryn. Bücher und Schriftrolle prägen das Familienzeichen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Idris und Efa sind die älteste namentlich bekannte Generation. Idris’ Schwester Gwenllian heiratete Owain Maerllys. Aneirin und Catrin führen die Hauptlinie mit Floyd, Mair und Eleri fort; Bryn und Elen begründen die Vetternlinie mit Cadell, Huw und Emrys. Madoc ging als Söldner eigene Wege und blieb ohne Ehe und Kinder.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Floyds und der anderen jungen Angehörigen Lebenswege bleiben offen. Das Schriftmotiv ist als Hauszeichen belegt; daraus werden weder ein Familienbetrieb noch allgemeine Ämter abgeleitet."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die gesicherte Eheverbindung zu Maerllys geht auf Gwenllian und Owain zurück."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Ysgrif.png",
         "title": "Haus Ysgrif · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ysgrif"
       }
     ],

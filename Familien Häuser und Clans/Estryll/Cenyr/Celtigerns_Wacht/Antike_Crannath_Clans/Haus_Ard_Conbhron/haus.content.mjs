@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-ard-conbhron",
   "name": "Haus Ard Conbhrón",
@@ -15,12 +15,12 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 1,
+  "biographySourceRevision": 2,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Ard Conbhrón ist ein alter Clan der Crannath-Alben aus Lycath in Celtigerns Wacht.",
-    "history": "Die ausführliche Geschichte folgt. Der vorhandene Stammbaum nennt noch Scáthach, Tlachtga und Uathach als lebende Angehörige; der abweichende Status der alten Hausvorlage ist ungeklärt.",
+    "overview": "Ard Conbhrón ist ein alter Clan der Crannath-Alben aus Lycath in Celtigerns Wacht. Der Stammbaum nennt noch Scáthach, Tlachtga und Uathach als lebende Angehörige. Weitere Inhalte folgen.",
+    "history": "Folgt …",
     "character": "Weitere Angaben folgen."
   },
   "placeholders": {
@@ -244,5 +244,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "",
   "firstHeir": "",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "1947:11ab1423:793d2af9"
+  ]
 };

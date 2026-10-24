@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-balchder",
   "name": "Haus Balchder",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Balchder ist ein Ritterhaus aus Gwynthor im Dienst der Draigs. Verwaltung, Rechtsprechung, Archive und Lehre bestimmen seine Stellung. Buchbinderei, Papier- und Tintenherstellung ergänzen seine Einkünfte.",
     "history": "Der Buchbinder Caedmon bewährte sich als Schreiber und Vogt der Draigs. Seine Erhebung zum Ritterherrn begründete ein Haus, das bis heute die Ausbildung von Staatsleuten und die Bewahrung von Wissen prägt.",
-    "character": "„Feder und Pflicht.“ steht für Wahrheitstreue, Verantwortung und Besonnenheit. Dalvin führt das Haus; Avan ist sein erster Erbe."
+    "character": "„Feder und Pflicht.“ steht für Wahrheitstreue, Verantwortung und Besonnenheit. Dalvin führt das Haus; Avan ist sein erster Erbe.",
+    "customs": "Das Haus Balchder ist ein ritterliches Haus, das sich dem Wissen und der Staatskunst verschrieben hat, ohne dabei den traditionellen Weg des Ritters zu leugnen oder zu umgehen. Vielmehr vollziehen die Balchder seit jeher den bewussten Spagat zwischen beidem. Für sie schließen sich Schwert und Feder nicht aus, sondern ergänzen einander.",
+    "holdings": "In Gwynthor selbst besitzen die Balchder ein stattliches Herrenhaus sowie mehrere Grundstücke, auf denen sie ihre weiteren Geschäfte errichtet haben. Diese dienen vor allem der Herstellung von Tinte für den Schreibergebrauch sowie der Produktion von Papier. Darüber hinaus betreiben sie eine Buchbinderei, die für ihre saubere Arbeit und Haltbarkeit geschätzt wird.",
+    "culture": "Wie die meisten Cenyri bekennen sich auch die Balchder zur Alerischen Kirche. Ihr Glaube ist fest in den Alltag eingebunden und zeigt sich weniger in großen Worten oder öffentlichen Gesten als im beständigen, verantwortungsvollen Handeln."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -228,5 +231,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Dalvin Balchder",
   "firstHeir": "Avan Balchder",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2515:d5687406:5b9a9034"
+  ]
 };

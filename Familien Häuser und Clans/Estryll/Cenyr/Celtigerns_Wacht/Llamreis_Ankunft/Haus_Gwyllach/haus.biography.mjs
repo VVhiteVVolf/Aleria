@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gwyllach",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Die Gwyllach sind eine bürgerliche Familie aus Gwynthor im Dienst der Draigs. Hofarbeit, Schreibwesen und eine Kutscher- und Fuhrmannszunft bilden die Grundlage ihres Einflusses.",
   "quote": "",
   "quoteBy": "",
@@ -39,14 +40,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -59,8 +52,8 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Aus dem Dienst als Schreiber und Verwaltungsgehilfen entwickelte sich über Generationen ein Netz von Kontakten und Nachrichten. Über dessen tatsächliche Reichweite schweigt die Familie.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die Ursprünge der Familie reichen mehrere Jahrhunderte zurück, als erste Mitglieder der Gwyllach als einfache Schreiber und Verwaltungsdiener in die Dienste von Haus Draig traten. Während andere bürgerliche Familien ihren Aufstieg durch Handel oder Militärdienst suchten, erkannten die Gwyllach früh den Wert von Informationen.\n\nSie führten Archive, überbrachten Botschaften und verwalteten Berichte aus den Städten und Grenzlanden Cenyrs. Mit der Zeit begannen sie jedoch, weit mehr zu sammeln als bloße Schriftstücke. Namen, Gewohnheiten, Gerüchte, Rivalitäten und heimliche Absprachen wurden ebenso aufmerksam festgehalten wie Steuern oder Urkunden.\n\nÜber Generationen entstand daraus ein stilles Netz aus Beobachtern und Kontakten, das sich weit über Gwynthor hinaus erstrecken soll.\n\nWie groß der tatsächliche Einfluss der Gwyllach wirklich ist, weiß niemand mit Sicherheit.\n\nManche halten die Geschichten über ihre Agenten und Informanten für übertriebene Hofgerüchte. Andere wiederum behaupten, es gebe kaum eine wichtige Halle in Cenyr, in der nicht wenigstens ein Paar Ohren den Gwyllach gehört.\n\nDie Gwyllach selbst äußern sich dazu niemals.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +61,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Verschwiegenheit, Geduld und Loyalität prägen das Haus. Seine Krähe trägt eine Schriftrolle. Rhovan ist das Oberhaupt, Drystan sein vorgesehener Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Gwyllach sind keine Kriegerfamilie und kein prunkliebendes Hofgeschlecht. Ihre Traditionen entstanden nicht auf Schlachtfeldern oder Turnieren, sondern in Schreibstuben, Audienzsälen, Archiven und hinter verschlossenen Türen. Viele ihrer Bräuche wirken für Außenstehende unscheinbar oder seltsam gewöhnlich — doch innerhalb der Familie besitzen sie große Bedeutung."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Gwyllach leben bewusst außerhalb der Mauern Gwynthors, in den ärmeren Vorstädten der Stadt. Während viele wohlhabende Familien ihren Reichtum offen zur Schau stellen, bevorzugen die Gwyllach die Nähe zu gewöhnlichen Reisenden, Händlern, Arbeitern und Fuhrleuten. Dort, zwischen Schankhäusern, Werkstätten und schlammigen Straßen, hören sie mehr über die Welt als manch Adliger in seinem steinernen Saal."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Gwyllach sind nicht besonders fromm. Sie erfüllen die üblichen religiösen Pflichten, ohne ihren Glauben stärker in den Vordergrund zu stellen."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +99,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gwyllach.png",
         "title": "Haus Gwyllach · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwyllach"
       }
     ],

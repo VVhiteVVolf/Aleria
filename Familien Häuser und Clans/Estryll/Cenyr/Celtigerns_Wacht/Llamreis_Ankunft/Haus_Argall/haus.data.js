@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bürgerfamilie in Llysfaen",
     "parentHouseId": "",
     "rootHouseId": "haus-argall",
     "territoryId": "herrschaft-wyrm"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie in Llysfaen",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Llysfaen",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Argall ist eine bürgerliche Familie aus Llysfaen. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
+    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen.",
+    "values": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Die folgenden Persönlichkeiten gehören zur belegten Geschichte der Familie."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,33 +116,113 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Argall",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Argall",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/herrschaftsbanner.png",
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html",
       "alt": "Herrschaftsbanner von Herrschaft der Wyrm",
       "format": "square"
+    },
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-argall/brinthan-argall.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=brinthan-argall",
+      "alt": "Brinthan Argall",
+      "format": "portrait"
+    },
+    "hof-offices-2": {
+      "src": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig",
+      "alt": "Owain Draig",
+      "format": "portrait"
+    },
+    "hof-offices-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-argall/iolo-argall.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
+      "alt": "Iolo Argall",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "founder",
+        "title": "Gründer",
+        "entries": [
+          {
+            "name": "Iwrian Argall",
+            "role": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+            "detail": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=iwrian-argall",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Brinthan Argall",
+            "role": "Oberhaupt des Hauses Argall",
+            "detail": "Oberhaupt des Hauses Argall",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=brinthan-argall",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Iwrian Argall",
+            "role": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+            "detail": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=iwrian-argall",
+            "imageKey": ""
+          },
+          {
+            "name": "Owain Draig",
+            "role": "Geheime Affäre Shylene Argalls",
+            "detail": "Geheime Affäre Shylene Argalls",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Iolo Argall",
+            "role": "Unehelicher Sohn Shylene Argalls und Owain Draigs",
+            "detail": "Unehelicher Sohn Shylene Argalls und Owain Draigs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
+            "imageKey": "hof-offices-3"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
-    "entries": []
+    "tableTitle": "Prägende historische Persönlichkeiten",
+    "entries": [
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Ältestes überliefertes Oberhaupt des Hauses Argall",
+        "name": "Cyran Argall",
+        "description": "Ältestes überliefertes Oberhaupt des Hauses Argall",
+        "imageKey": "haus-figur-1"
+      }
+    ]
   },
   "familyTreeEmbed": {
     "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view",
     "title": "Stammbaum von Haus Argall"
   },
   "trivia": [
-    "Folgt …"
+    "Bürgerfamilie in Llysfaen"
   ]
 };

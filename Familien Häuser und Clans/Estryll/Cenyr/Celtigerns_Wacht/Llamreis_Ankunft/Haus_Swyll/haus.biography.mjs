@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Swyll",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Swyll ist eine weit verzweigte bürgerliche Familie aus Gwynthor.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Swyll/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Swyll sind eine weit verzweigte Bürgerfamilie aus Gwynthor. Ihre jüngste Generation umfasst Meredith, ihren älteren Bruder Gareth und die jüngere Schwester Rhydwen. Das Haus steht durch mehrere Ehen in enger Verbindung mit anderen Bürgerfamilien der Stadt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Emyr Swyll"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Swyll ist eine weit verzweigte bürgerliche Familie aus Gwynthor.",
+    "biographyText": "Die Swyll sind eine weit verzweigte Bürgerfamilie aus Gwynthor. Ihre jüngste Generation umfasst Meredith, ihren älteren Bruder Gareth und die jüngere Schwester Rhydwen. Das Haus steht durch mehrere Ehen in enger Verbindung mit anderen Bürgerfamilien der Stadt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Emyr Swyll und Tegwen gehören zur ältesten namentlich überlieferten Generation. Unter ihren Nachkommen verbinden Eirwen und Bronwen das Haus mit Pendrwn und Maerllys. Iestyns Ehe mit Rhiannon Draenmelyn führt zu Gareth, Meredith und Rhydwen. Der Krieg hinterließ Verluste: Cadfan fiel 1719, Madryn 1720; beide hinterließen weder Ehefrau noch Kinder.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die Familiengeschichte umfasst Haupt- und Seitenlinien sowie Rhodris nicht eheliche Kinder Carwyn und Lowri. Ein gemeinsamer Beruf, ein bestimmter Betrieb und ein verbindliches Hausmotto sind bisher nicht belegt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die Ehen mit Draenmelyn, Pendrwn und Maerllys gehören zum belegten Familiennetz. Für mehrere wegverheiratete Frauen sind die Zielhäuser noch unbekannt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
         "title": "Haus Swyll · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-swyll"
       }
     ],

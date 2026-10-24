@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Cenfig",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cenfig/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Cenfig ist ein Ritterhaus aus Abergwint im Dienst der Gwyvern. Rechtsgelehrsamkeit und Waffendienst bestehen gleichberechtigt nebeneinander. Die Familie führt eine Universität für Rechtswesen und eine Kanzlei, die auch Bedürftigen offensteht.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Cenfig entstammt keiner siegreichen Schlacht, keinem glorreichen Feldzug und keinem ererbten Anspruch. Es entstand aus Recht, aus Widerspruch – und aus dem Mut, selbst einem Draig zu sagen: Nein.\n\nDie Cenfig sind ein Haus ohne alten Titel, ohne reines Blut, ohne Anspruch auf Größe. Und genau deshalb wurden sie gebraucht.\n\nHaus Cenfig ist ein Haus der Schrift und des Schwertes, das Recht über Macht stellt und dort Ordnung wahrt, wo andere aus Bequemlichkeit wegsehen.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Cenfig ist ein Ritterhaus aus Abergwint im Dienst der Gwyvern. Rechtsgelehrsamkeit und Waffendienst bestehen gleichberechtigt nebeneinander. Die Familie führt eine Universität für Rechtswesen und eine Kanzlei, die auch Bedürftigen offensteht.",
+    "biographyText": "Haus Cenfig entstammt keiner siegreichen Schlacht, keinem glorreichen Feldzug und keinem ererbten Anspruch. Es entstand aus Recht, aus Widerspruch – und aus dem Mut, selbst einem Draig zu sagen: Nein.\n\nDie Cenfig sind ein Haus ohne alten Titel, ohne reines Blut, ohne Anspruch auf Größe. Und genau deshalb wurden sie gebraucht.\n\nHaus Cenfig ist ein Haus der Schrift und des Schwertes, das Recht über Macht stellt und dort Ordnung wahrt, wo andere aus Bequemlichkeit wegsehen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Steffan Cenfig widersprach einem ungerechten Baron und wurde durch eine Intrige eingekerkert. Nach seiner Entlastung führte er die Baronie als Regent für den minderjährigen Erben. Seine spätere Erhebung begründete das Haus.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Recht, Wahrheit und Verantwortung gelten mehr als persönlicher Vorteil. Mathon führt das Haus; Folant folgt ihm in der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Haus Cenfig begreift Tradition als Pflicht zur Ordnung. Seit seiner Gründung gilt im Haus der Grundsatz, dass Recht und Macht untrennbar verbunden sind. Daher stellen die Cenfig nicht nur Ritter, sondern ebenso bewusst Rechtsgelehrte."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Haus Cenfig besitzt kein ausgedehntes Land und keine wehrhafte Burg, sondern ein ritterliches Anwesen innerhalb der Stadt Abergwint, dessen Bedeutung weniger aus Mauern als aus Funktion erwächst. Das Anwesen dient zugleich als Wohnsitz, Kanzlei und Ort der Unterweisung und ist fest in das städtische Gefüge eingebunden. Hier werden Verträge verwahrt, Urteile vorbereitet und Gesandte empfangen; ein Ort ruhiger, beständiger Arbeit, nicht der Repräsentation."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Haus Cenfig bekennt sich ohne Abweichung zur Alerischen Kirche und zum Glauben an die Neun Göttlichen sowie die Fünf Souveräne, die als fleischgewordene Götter unter den Menschen wandelten. In Fragen des Glaubens gelten die Cenfig als orthodox und pflichtbewusst; sie stellen den kirchlichen Lehren nicht ihre eigene Auslegung entgegen und betrachten religiöse Ordnung als notwendiges Gegenstück weltlichen Rechts."
       }
     ],
     "triviaTitle": "Besonderheiten",

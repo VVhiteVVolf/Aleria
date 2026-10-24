@@ -64,10 +64,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Mittelmäßig",
-    "tiarna": "Überwiegend Cantref, Uchelwyr",
-    "kerns": "Mittelmäßig, überwiegend Kavallerie",
-    "fleet": "Wenig",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "12. Jahrhundert · erste überlieferte Amtszeit ab 1128",
     "milestoneOne": "Tryffin Draig, der „Fahrende Draig“, begründete den Zweig gemeinsam mit Rhianwyn Saethwyr. Seine Reisen und Heldentaten brachten ihm das Recht auf ein eigenes Haus ein. Die Wyrm führen auch Myrddins Abenteuerlust auf das Vorbild seines Onkels Tryffin zurück.",
     "milestoneTwo": "Mailgwin Wyrm · Seit 1717",
@@ -80,6 +80,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Draig",
     "enemies": "Keine gegenwärtige Hausfehde benannt"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

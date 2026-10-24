@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gwyvern O'Abergwint",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyvern/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Gwyvern ist ein junges Baronenhaus und ein Kadettenzweig der Draigs. Von Abergwint aus regiert es Gwendolyns Ufer. Seefahrt, eine starke Flotte und der Schutz der Küsten bestimmen seine Aufgaben.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Gwyvern ist ein junges Baronenhaus und ein Zweig der Draig-Familie. Es herrscht über Abergwint und Gwendolyns Ufer, nordwestlich der Hauptstadt. Sein Ursprung liegt in der Seefahrt und in der Rückgewinnung einer lange von Piraten bedrohten Küste.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Die Küstenwächter von Abergwint",
-    "biographyText": "Haus Gwyvern ist ein junges Baronenhaus und ein Kadettenzweig der Draigs. Von Abergwint aus regiert es Gwendolyns Ufer. Seefahrt, eine starke Flotte und der Schutz der Küsten bestimmen seine Aufgaben.",
+    "biographyText": "Haus Gwyvern ist ein junges Baronenhaus und ein Zweig der Draig-Familie. Es herrscht über Abergwint und Gwendolyns Ufer, nordwestlich der Hauptstadt. Sein Ursprung liegt in der Seefahrt und in der Rückgewinnung einer lange von Piraten bedrohten Küste.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Der Sieg des Einäugigen Wyvern",
-    "historyText": "Bleddyn Draig besiegte als Seemarschall die Piraten der Blutigen Schlachter. Er schuf ein Küstenwarnnetz und entwickelte schnelle Wyvern-Schiffe. In der entscheidenden Schlacht verlor er ein Auge. Als Lohn erhielt er Gwendolyns Ufer und Caer Abergwint.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Vor über hundert Jahren machten die Blutigen Schlachter Gwendolyns Ufer unsicher. Selbst die Befestigungen von Abergwint boten nur begrenzten Schutz. Als neuer Seemarschall nahm sich Prinz Bleddyn Draig der Verteidigung an: Er ließ Abergwint ausbauen, verstärkte die Flotte und errichtete ein Alarmnetz aus Küstenvorposten.\n\nBleddyn entwickelte außerdem eine kleinere, schnelle Schiffsklasse. Die später so genannten Wyvern-Schiffe konnten die wendigen Langschiffe der Piraten dort stellen, wo schwere Kriegsschiffe versagten. Innerhalb weniger Jahre brachte er weite Teile der Küste wieder unter Kontrolle.\n\nDie Blutigen Schlachter griffen schließlich mit einer großen Flotte das befestigte Abergwint an. Bleddyn verlor in der Schlacht ein Auge, führte seine Truppen aber zum vollständigen Sieg. Die angreifenden Piraten wurden getötet. Aus den zerlegten Beuteschiffen ließ er ein gewaltiges Feuer errichten, das den endgültigen Sieg sichtbar machte.\n\nFortan hieß er der Einäugige Wyvern. Der Graf belohnte ihn mit Gwendolyns Ufer und der Burg Caer Abergwint, deren Umgebung er zu einer aufstrebenden Stadt ausbaute. Damit begann die Geschichte des Hauses Gwyvern als maritimes Kadettenhaus der Draigs.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Mut, Pflichtbewusstsein und Treue zum Gründer prägen das Haus. Das jährliche Feuerfest erinnert an seinen Sieg. Fischerei, Handel und Schiffbau tragen den Wohlstand. Mervyn führt das Haus seit 1720; Trevor ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Seefahrt und Seekampf gelten als unmittelbares Erbe Bleddyns. Seine schnellen Wyvern-Schiffe genießen besondere Verehrung. Beim jährlichen Feuerfest entzündet das Haus ein großes Küstenfeuer: Es erinnert an die verbrannten Beuteschiffe der Blutigen Schlachter und bekräftigt das Versprechen, die Küste weiterhin zu verteidigen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Abergwint ist das wirtschaftliche Zentrum von Gwendolyns Ufer. Sein Hafen verbindet Küstenhandel und Binnenland. Fischerei, Salzfisch-Exporte, Schiffbau und Schiffsbedarf tragen den Wohlstand."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Gwyvern gehören zu den Cenyri und folgen der Alerischen Kirche. Ihre besondere Schutzpatronin ist die Dame der See."
       }
     ],
     "triviaTitle": "Besonderheiten",

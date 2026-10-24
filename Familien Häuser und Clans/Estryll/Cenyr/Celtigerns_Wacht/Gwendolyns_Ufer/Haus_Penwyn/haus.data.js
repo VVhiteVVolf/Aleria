@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Myrddin",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

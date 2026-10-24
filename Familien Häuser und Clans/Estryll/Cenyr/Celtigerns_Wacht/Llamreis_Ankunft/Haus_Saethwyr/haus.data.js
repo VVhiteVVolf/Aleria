@@ -64,10 +64,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Mittelmäßig",
-    "tiarna": "Überwiegend Helwyr, Cantref",
-    "kerns": "Mittelmäßig, überwiegend Infanterie",
-    "fleet": "Mehr Flotte als Heer",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Nach Kynwrigs Seesieg · Jahr unbekannt",
     "milestoneOne": "Kynwrig Draig, der Seefahrer, besiegte mit einer zahlenmäßig unterlegenen Mannschaft die Nordmänner. Dafür erhielt er den Ritterfürstentitel und das Recht auf ein eigenes Haus. Er benannte es nach seinem Schiff Saethwyr und nahm sich den Entdecker Sir Melwas zum Vorbild.",
     "milestoneTwo": "Huw Saethwyr · Seit 1720",
@@ -80,6 +80,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Draig",
     "enemies": "Keine gegenwärtige Hausfehde benannt"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -201,7 +204,7 @@ window.HAEUSER_DATA = {
     "hof-offices-3": {
       "src": "../Stammbäume/assets/images/placeholders/male.png",
       "href": "",
-      "alt": "Silhouette · Kommandant der Garde nicht benannt",
+      "alt": "Melyn Saethwyr",
       "format": "portrait"
     },
     "hof-offices-4": {
@@ -430,9 +433,9 @@ window.HAEUSER_DATA = {
             "imageKey": "hof-offices-2"
           },
           {
-            "name": "Nicht benannt",
+            "name": "Melyn Saethwyr",
             "role": "Kommandant der Garde",
-            "detail": "",
+            "detail": "In der Hofliste benannt; keine sichere Zuordnung zu einer vorhandenen Person.",
             "href": "",
             "imageKey": "hof-offices-3"
           },

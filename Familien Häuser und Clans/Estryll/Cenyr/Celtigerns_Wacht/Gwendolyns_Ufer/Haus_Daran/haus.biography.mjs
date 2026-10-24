@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Daran",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Daran/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Daran ist ein junges Ritterhaus aus Garwfaen unter den Gwyvern. Seine Angehörigen dienen vor allem in der Stadtwache. Ein kleines Castell und wenige Höfe im nördlichen Umland sichern den Unterhalt.",
   "quote": "",
   "quoteBy": "",
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Maelgwyn wurde 1686 zum Ritter geschlagen, zog durch Cenyr und bewährte sich im Krieg. 1720 begründete er sein Haus. Den angebotenen Posten des Lehenswarts lehnte er ab und blieb Hauptmann der Stadtwache.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Ehrlichkeit, Disziplin und Schutzpflicht prägen die Familie. Junge Ritter sammeln auf Wanderschaft Erfahrung. Maelgwyn führt das Haus; Seithved ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Aus dem Vorbild Sir Maelgwyns – und später auch seines Sohnes – entstand eine junge, aber feste Übung: Frisch geschlagene Ritter des Hauses Daran sollen ein bis zwei Jahre als fahrende Ritter durch Cenyr ziehen, um Land und Leute kennenzulernen, Schutz zu gewähren und Dienst zu leisten; erst nach ihrer Rückkehr binden sie sich bewusst an Garwfaen, das Land und das Haus."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Haus Daran verfügt über ein bewusst schlichtes und zweckgebundenes Besitztum. Mit der Gründung des Hauses im Jahr 1720 erhielt Sir Maelgwyn Daran ein altes Castell nördlich von Garwfaen, das ursprünglich als Wachposten diente und zu einem ritterlichen Gut umfunktioniert wurde. Dieses Anwesen gilt als formeller Sitz des Hauses, wird jedoch von wenigen Mitgliedern bewohnt, da sich die meisten anderen Mitglieder des Hauses im täglichen Dienst in Garwfaen aufhalten."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Haus Daran ist in seinem Kern durch und durch garwfaenisch. Die Linie geht direkt auf Sir Maelgwyn Daran zurück – einen frommen, pflichtbewussten Mann von über siebzig Wintern, der nie vergessen hat, woher er stammt."
       }
     ],
     "triviaTitle": "Besonderheiten",

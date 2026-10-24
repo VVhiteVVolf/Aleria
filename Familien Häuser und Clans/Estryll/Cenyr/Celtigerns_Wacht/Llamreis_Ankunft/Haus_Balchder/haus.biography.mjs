@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Balchder",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Balchder ist ein Ritterhaus aus Gwynthor im Dienst der Draigs. Verwaltung, Rechtsprechung, Archive und Lehre bestimmen seine Stellung. Buchbinderei, Papier- und Tintenherstellung ergänzen seine Einkünfte.",
   "quote": "Feder und Pflicht.",
   "quoteBy": "",
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Der Buchbinder Caedmon bewährte sich als Schreiber und Vogt der Draigs. Seine Erhebung zum Ritterherrn begründete ein Haus, das bis heute die Ausbildung von Staatsleuten und die Bewahrung von Wissen prägt.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Feder und Pflicht.“ steht für Wahrheitstreue, Verantwortung und Besonnenheit. Dalvin führt das Haus; Avan ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Das Haus Balchder ist ein ritterliches Haus, das sich dem Wissen und der Staatskunst verschrieben hat, ohne dabei den traditionellen Weg des Ritters zu leugnen oder zu umgehen. Vielmehr vollziehen die Balchder seit jeher den bewussten Spagat zwischen beidem. Für sie schließen sich Schwert und Feder nicht aus, sondern ergänzen einander."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "In Gwynthor selbst besitzen die Balchder ein stattliches Herrenhaus sowie mehrere Grundstücke, auf denen sie ihre weiteren Geschäfte errichtet haben. Diese dienen vor allem der Herstellung von Tinte für den Schreibergebrauch sowie der Produktion von Papier. Darüber hinaus betreiben sie eine Buchbinderei, die für ihre saubere Arbeit und Haltbarkeit geschätzt wird."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Balchder zur Alerischen Kirche. Ihr Glaube ist fest in den Alltag eingebunden und zeigt sich weniger in großen Worten oder öffentlichen Gesten als im beständigen, verantwortungsvollen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",

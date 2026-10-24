@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Maethan",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Maethan ist in Artus Streben in Celtigerns Wacht verzeichnet.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Maethan/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Maethan ist als Bürgerfamilie in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -27,26 +28,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Grafschaft",
       "Celtigerns Wacht"
-    ],
-    [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +36,19 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Maethan ist in Artus Streben in Celtigerns Wacht verzeichnet.",
+    "biographyText": "Haus Maethan ist als Bürgerfamilie in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Gründung, namentliche frühe Oberhäupter und eine ausführliche Chronik sind bisher nicht überliefert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Beruf, eigener Betrieb, Hausbräuche und ein verbindlicher Leitspruch sind noch nicht festgelegt. Die vorbereitete Hausdarstellung greift ausschließlich das vorhandene Familienzeichen auf."
       }
     ],
     "triviaTitle": "Besonderheiten",

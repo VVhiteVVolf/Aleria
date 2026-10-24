@@ -76,8 +76,15 @@ window.HAEUSER_DATA = {
     "religion": "Bräuche der Heimat",
     "patronDeities": "",
     "allies": "Trevoryn · Svathamar · Dubhdarach",
-    "enemies": ""
+    "enemies": "",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -98,7 +105,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Diese Gesichter begegnen Gästen am Tresen, im Hof und am gemeinsamen Tisch."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

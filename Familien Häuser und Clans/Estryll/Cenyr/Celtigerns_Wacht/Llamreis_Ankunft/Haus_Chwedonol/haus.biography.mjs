@@ -5,10 +5,11 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Chwedonol",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Chwedonol ist ein von Frauen geführtes Ritterhaus im Dienst der Saethwyr. Seine Kapitäne und Ritter zur See schützen die Küste; Burgen in Gwynthor und Glastraeth sowie eine Werft tragen seine Stellung.",
-  "quote": "Pflicht kennt keine Flaute",
+  "quote": "Pflicht kennt keine Flaute.",
   "quoteBy": "",
   "commentSequence": [],
   "stats": [
@@ -41,10 +42,6 @@ export const HOUSE_BIOGRAPHY = {
       "Haus Saethwyr"
     ],
     [
-      "Ursprung",
-      ""
-    ],
-    [
       "Schutzpatronin",
       "Nimue, Seemaid"
     ]
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Die Gründerin Meredithe diente Kynwrig Draig auf See und wurde von ihm zum Ritter geschlagen. Sie begründete die maritime Tradition und die weibliche Führung des Hauses.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Pflicht kennt keine Flaute.“ verbindet seemännisches Können mit Disziplin und Verantwortung. Gwenhwyfar führt das Haus; Niniane ist ihre Erbin."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Chwedonol sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Bereits in jungen Jahren beginnt ihre Ausbildung, wobei der Schwerpunkt auf all jenen Kampf- und Waffenarten liegt, die im Kampf zur See von Nutzen sind."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Chwedonol verfügen über zwei Burgen, die ihre Stellung innerhalb der Grafschaft unterstreichen. Die erste erhebt sich im Hafenbereich von Gwynthor. Dort residiert das Familienoberhaupt, ebenso wie viele weitere Mitglieder des Hauses."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch dDie Chwedonol zur Alerischen Kirche. Ihr Glaube ist fest verwurzelt und Teil ihres Alltags, ohne dabei je aufdringlich oder demonstrativ zu sein."
       }
     ],
     "triviaTitle": "Besonderheiten",

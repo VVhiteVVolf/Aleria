@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Waffenschmiede und Dienst für Draig",
     "parentHouseId": "",
     "rootHouseId": "haus-coeddu",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Waffenschmiede und Dienst für Draig",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
-    "history": "Die Namen des ursprünglichen Gründerpaares und die frühen Generationen sind nicht überliefert. Der Dienst für Haus Draig gehört seit Generationen zur Geschichte der Familie. Mit Brenric wird die jüngere Linie greifbar: Er kämpfte im Großen Krieg unter Sir Maredudd und trat wegen wiederkehrender Gelenkbeschwerden, besonders am Fuß, in den Ruhestand. Sein Sohn Llywelyn dient als Waffenknecht. Durch dessen Ehe mit Catrin Craigddu sind die Coeddu mit einer weiteren kriegerischen Bürgerfamilie Gwynthors verbunden.",
-    "traditions": "Seit Generationen gehören der Dienst für Haus Draig und das Waffenhandwerk zum Familienleben. Die Waffenschmiede in Gwynthor wird innerhalb des Hauses weitergeführt.",
-    "knighthood": "Die Coeddu stellen vor allem Wachen und Waffenknechte für Haus Draig. Einzelne Angehörige steigen zu Rittern auf. Der Ritterstand ist eine persönliche Stellung innerhalb einer weiterhin bürgerlichen Familie.",
-    "succession": "Folgt …",
-    "holdings": "Die Familie besitzt eine Waffenschmiede in Gwynthor, die in der Stadt sehr beliebt ist. Die Werkstatt bildet neben dem Waffendienst einen festen wirtschaftlichen Mittelpunkt des Hauses.",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Haus Draig ist seit Generationen der Lehnsherr und Dienstherr der Coeddu. Llywelyns Ehe mit Catrin Craigddu verbindet beide Bürgerhäuser auch verwandtschaftlich. Catrins Bruder Hywel ist Llywelyns bester Freund.",
-    "values": "Waffendienst und Waffenschmiede prägen das Haus gleichermaßen. Die beliebte Schmiede verankert die Coeddu im städtischen Handwerk, während ihre Wachen, Waffenknechte und gelegentlichen Ritter für Haus Draig einstehen. Das Haus bleibt bürgerlich; der Ritterschlag einzelner Angehöriger macht nicht die ganze Familie zu einem Adelshaus.",
-    "court": "Folgt …",
-    "familyTree": "Auf das unbekannte Gründerpaar folgen das Hauswappen und ein Zeitsprung zu Brenric und Gweneth. Die jüngere Familie umfasst ihre vier Kinder Rhydian, Llywelyn, Maelwen und Thalor sowie Llywelyns Frau Catrin und den gemeinsamen Sohn Ellian.",
-    "historicalFigures": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Sein Sohn Llywelyn steht heute als Waffenknecht im Dienst von Haus Draig."
+    "overview": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
+    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Weitere Hausallianzen und Fehden sind bisher nicht belegt.",
+    "values": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -124,36 +127,74 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
-    "haus-figur-1": {
+    "hof-offices-2": {
       "src": "../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
       "alt": "Llywelyn Coeddu",
       "format": "portrait"
+    },
+    "hof-offices-3": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/goettliche-eleganz/portraits/maelwen-v2.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=maelwen-coeddu",
+      "alt": "Maelwen Coeddu",
+      "format": "portrait"
+    },
+    "hof-offices-4": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/goettliche-eleganz/portraits/tiberian.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=tiberian-raves",
+      "alt": "Tiberian Raves",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Brenric Coeddu",
+            "role": "Waffenknecht im Ruhestand · Veteran des Großen Krieges",
+            "detail": "Waffenknecht im Ruhestand · Veteran des Großen Krieges",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=brenric-coeddu",
+            "imageKey": ""
+          },
+          {
+            "name": "Llywelyn Coeddu",
+            "role": "Waffenknecht in Gwynthor",
+            "detail": "Waffenknecht in Gwynthor",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=llywelyn-coeddu",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Maelwen Coeddu",
+            "role": "Empfangsmeisterin · Kundschaft & Termine",
+            "detail": "Empfangsmeisterin · Kundschaft & Termine",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=maelwen-coeddu",
+            "imageKey": "hof-offices-3"
+          },
+          {
+            "name": "Tiberian Raves",
+            "role": "Handelsmeister · Seeroute & Fortuna",
+            "detail": "Handelsmeister · Seeroute & Fortuna",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=tiberian-raves",
+            "imageKey": "hof-offices-4"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
-    "entries": [
-      {
-        "group": "Persönlichkeiten des Hauses",
-        "role": "Waffenknecht in Gwynthor",
-        "name": "Llywelyn Coeddu",
-        "description": "Pflichtbewusst und gemütlich; Catrins Ehemann, Ellians Vater und Hywels bester Freund.",
-        "imageKey": "haus-figur-1"
-      }
-    ]
+    "tableTitle": "Prägende historische Persönlichkeiten",
+    "entries": []
   },
   "familyTreeEmbed": {
     "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view",
     "title": "Stammbaum von Haus Coeddu"
   },
   "trivia": [
-    "Die Waffenschmiede der Coeddu ist in Gwynthor sehr beliebt.",
-    "Das Wappen zeigt eine gepanzerte Hand mit Speer und Zinnen in Rostrot, Knochenweiß und Kohlegrau."
+    "Waffenschmiede und Dienst für Draig"
   ]
 };

@@ -1,0 +1,3382 @@
+[
+  {
+    "id": "haus-arwydd",
+    "name": "Haus Arwydd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen",
+      "Castellbryn"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Castellbryn",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/castellbryn.png",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Arwydd\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-c0affc9df7efcc44",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/assets/ritter.png",
+        "name": "Haus Arwydd O'Castellbryn · Hausdarstellung"
+      }
+    ],
+    "notes": "Familienlinie von Haus Arwydd nach der überlieferten Stammbaumvorlage."
+  },
+  {
+    "id": "haus-draig",
+    "name": "Haus Draig",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "county",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Haus_Draig\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/draig-ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-df9020fc47d77b6c",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-barddwyr.png",
+        "name": "Barddwyr"
+      },
+      {
+        "id": "bild-09ebd2493aa4d7f0",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-berittener-waffenknecht.png",
+        "name": "Berittener Waffenknecht"
+      },
+      {
+        "id": "bild-8e4d00c36c482a34",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-bogenschuetze.png",
+        "name": "Bogenschützen-Waffenknecht"
+      },
+      {
+        "id": "bild-2638dcd56cd7bc5a",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-cantref.png",
+        "name": "Cantref"
+      },
+      {
+        "id": "bild-7082598f13816502",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-derwyn-v1.png",
+        "name": "Derwyn"
+      },
+      {
+        "id": "bild-87d2c867c1db8356",
+        "image": "AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-krieger.png",
+        "name": "Drachengarde · frühere Rüstungsreferenz"
+      },
+      {
+        "id": "bild-379bc6c52767f134",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-helwyr.png",
+        "name": "Helwyr"
+      },
+      {
+        "id": "bild-62caaac146c62f7a",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-knappe.png",
+        "name": "Knappe"
+      },
+      {
+        "id": "bild-24d20074463b50a6",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-leibgardist-v1.png",
+        "name": "Leibgardist"
+      },
+      {
+        "id": "bild-49b680d2d2224e5e",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-mariner-waffenknecht.png",
+        "name": "Mariner Waffenknecht"
+      },
+      {
+        "id": "bild-4262415355aab363",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-page.png",
+        "name": "Page"
+      },
+      {
+        "id": "bild-d0df3cc9df1684d2",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-ritter-zur-see.png",
+        "name": "Ritter zur See"
+      },
+      {
+        "id": "bild-b81ceeeb69d9fa4b",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/draig-ritter.png",
+        "name": "Teulu"
+      },
+      {
+        "id": "bild-7dcd42b54910923d",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-uchelwyr.png",
+        "name": "Uchelwyr"
+      }
+    ],
+    "notes": "Die überlieferte Grafenlinie des Hauses Draig von Celtigern, dem Überlebenden Avalons, bis zur Erbfolge der Gegenwart im Jahr 1740."
+  },
+  {
+    "id": "haus-wyrm",
+    "name": "Haus Wyrm",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Wyrm\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-d142e66555ed8d00",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/ritter.png",
+        "name": "Haus Wyrm O'Gwynthor · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Hauptlinie des Hauses Wyrm von Tryffin Draig und Rhianwyn Saethwyr bis zur Generation von 1729."
+  },
+  {
+    "id": "haus-saethwyr",
+    "name": "Haus Saethwyr",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Saethwyr\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-2b07b8626e20fdb5",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Saethwyr/assets/ritter.png",
+        "name": "Haus Saethwyr O'Gwynthor · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Hauptlinie des Hauses Saethwyr von der Gründerüberlieferung Kynwrig Draigs und Sianwyn Gafyrs bis zur Generation von 1725."
+  },
+  {
+    "id": "haus-gafyr",
+    "name": "Haus Gafyr",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Gafyr\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-9a2b72a0e9596ddb",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gafyr/assets/ritter.png",
+        "name": "Haus Gafyr O'Gwynthor · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Linie der Familie Gafyr O'Gwynthor von Garym dem Gehörnten bis zur Generation von 1724."
+  },
+  {
+    "id": "haus-gwefrydd",
+    "name": "Haus Gwefrydd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Gwefrydd\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-b6721bb29b7a27bf",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/ritter.png",
+        "name": "Haus Gwefrydd O'Rhosmere · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Linie des Baronenhauses Gwefrydd von Rhosmere: von Tallwch und Clodagh Ard Conbhrón über drei Überlieferungslücken bis zur Generation von 1723."
+  },
+  {
+    "id": "haus-gwyvern",
+    "name": "Haus Gwyvern",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "barony",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Gwyvern\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyvern/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-72eeb2a955be2f88",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyvern/assets/ritter.png",
+        "name": "Haus Gwyvern O'Abergwint · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des Baronenhauses Gwyvern von Bleddyn Draig und Owena Saethwyr bis zur Generation von 1725."
+  },
+  {
+    "id": "haus-illysywen",
+    "name": "Haus Illysywen",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen",
+      "Castellbryn"
+    ],
+    "profile": {
+      "rankId": "knight-prince",
+      "seat": "Castellbryn",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/castellbryn.png",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Illysywen\\haus.content.mjs",
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Illysywen/assets/ritter.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-37d3839095905319",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Illysywen/assets/ritter.png",
+        "name": "Haus Illysywen O'Castellbryn · Hausdarstellung"
+      }
+    ],
+    "notes": "Die erloschene Linie des Ritterfürstenhauses Illysywen von Castellbryn: von Arwel dem Schwarzen Aal bis zum Aussterben der männlichen Linie im Jahr 1720."
+  },
+  {
+    "id": "haus-ard-conbhron",
+    "name": "Haus Ard Conbhrón",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Antike Crannath Clans",
+      "Lycath"
+    ],
+    "profile": {
+      "rankId": "dun-tiarna",
+      "seat": "Lycath",
+      "barony": "Antike Crannath Clans",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/AntikeIcon.png",
+        "barony": "assets/images/regions/AntikeIcon.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Antike_Crannath_Clans\\Haus_Ard_Conbhron\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ard_Conbhron/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-8b325637b3c94f05",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ard_Conbhron/assets/hausmotiv.png",
+        "name": "Haus Ard Conbhrón · Hausdarstellung"
+      }
+    ],
+    "notes": "Ein antiker albischer Dún-Tiarna-Clan aus Celtigerns Wacht, Sitz Lycath, dessen Gründerpaar nicht überliefert ist. Heute ist der Clan so gut wie erloschen; nur Scáthach, Tlachtga und Uathach leben noch."
+  },
+  {
+    "id": "haus-ui-talamh",
+    "name": "Haus Ui Talamh",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Antike Crannath Clans",
+      "Antikes Gwynthor"
+    ],
+    "profile": {
+      "rankId": "ard-tiarna",
+      "seat": "Antikes Gwynthor",
+      "barony": "Antike Crannath Clans",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/AntikeIcon.png",
+        "barony": "assets/images/regions/AntikeIcon.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Antike_Crannath_Clans\\Haus_Ui_Talamh\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ui_Talamh/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-7023ff76310f03eb",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ui_Talamh/assets/hausmotiv.png",
+        "name": "Haus Ui Talamh · Hausdarstellung"
+      }
+    ],
+    "notes": "Das antike Fürstengeschlecht der Crannath-Alben, das einst über das Fürstentum von Oseneach herrschte, bevor die Avallornier unter Celtigern ankamen, sich mit den Ui Talamh gegen gemeinsame Feinde verbündeten und daraus das Königreich Cenyr hervorging. Celtigerns eigenes Geschlecht Draig ließ sich nieder, wo es landete, und Celtigerns Wacht wurde zur Grafschaft der Draigs. Die Ui Talamh selbst bestehen heute nicht mehr eigenständig; ihre letzten Töchter und Söhne sind in andere Häuser eingeheiratet."
+  },
+  {
+    "id": "haus-garrael",
+    "name": "Haus Garrael",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Camruisge",
+      "Aberllan"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Aberllan",
+      "barony": "Camruisge",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Celtigerns Wacht/Camruisge/Aberllan.png",
+        "barony": "assets/images/regions/camruisge.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Camruisge\\Haus_Garrael\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Camruisge/Haus_Garrael/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-39adf7d48a7b5b6a",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Camruisge/Haus_Garrael/assets/hausmotiv.png",
+        "name": "Haus Garrael · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des Ritterherrenhauses Garrael, dauerhafte Lehenswarte über Aberllan im Herrschaftsgebiet Camruisge: vom Begründer Aledd bis zur Generation von 1727."
+  },
+  {
+    "id": "haus-dubhan-gwynthor",
+    "name": "Haus Dubhan",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Dubhan\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/assets/krieger-M3xsR4U.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-3046ebfb3dc1a1b5",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/assets/krieger-M3xsR4U.png",
+        "name": "Haus Dubhan · Hausdarstellung"
+      }
+    ],
+    "notes": "Das niedere Ritterhaus Dubhan entstand in Gwynthor aus Breccans Auswanderung von Faelaorn nach Celtigerns Wacht. Die neue Linie bewahrt ihre Herkunft aus der Sept Dubhan und dient fortan Haus Draig."
+  },
+  {
+    "id": "haus-bleiddorn",
+    "name": "Haus Bleiddorn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Bleiddorn\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/assets/krieger-g850v6f.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-b857138c9d7fda90",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/assets/krieger-g850v6f.png",
+        "name": "Haus Bleiddorn · Hausdarstellung"
+      }
+    ],
+    "notes": "Das ritterliche Herrenhaus Bleiddorn entstand durch Hrolfs Auswanderung aus Aldrimar nach Cenyr. In Gwynthor unter Celtigerns Wacht blüht der aus Clan Wolfshorn hervorgegangene Familienzweig neu auf."
+  },
+  {
+    "id": "haus-cymrath-o-traethlan",
+    "name": "Haus Cymrath O'Traethlan",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Tŵr Traethlan"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Tŵr Traethlan",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Cymrath_OTraethlan\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Das junge Haus Cymrath O'Traethlan wurde in Tŵr Traethlan von Aldo Falveri begründet. Seine Herkunft aus dem venalischen Magnarierhaus Falveri bleibt als eigene Herkunftsverknüpfung sichtbar; Nachkommen sind bislang nicht verzeichnet."
+  },
+  {
+    "id": "haus-gwyllach",
+    "name": "Haus Gwyllach",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Gwyllach\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-878be5ef00e3b182",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwyllach/assets/hausmotiv.png",
+        "name": "Haus Gwyllach · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des bürgerlichen Hauses Gwyllach in Gwynthor, öffentlich die Kutscher- und Fuhrmannszunft, insgeheim Augen und Ohren des Drachen im Dienst Haus Draigs: vom Begründer Maelgoran bis zur Generation um 1723."
+  },
+  {
+    "id": "haus-sgrechiwr",
+    "name": "Haus Sgrechiwr",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Lynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Lynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Lynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Sgrechiwr\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Sgrechiwr/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-1a39a1dc2e80d990",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Sgrechiwr/assets/hausmotiv.png",
+        "name": "Haus Sgrechiwr · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des bürgerlichen Hauses Sgrechiwr aus Lynthor, bekannt für Herolde, Hofschreier und Musiker sowie die bedeutendste Instrumentmacherei der Stadt: vom Begründer Emrys bis zur Generation um 1727."
+  },
+  {
+    "id": "haus-tlawd",
+    "name": "Haus Tlawd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gafyr",
+      "liegeHouseName": "Haus Gafyr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Tlawd\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tlawd/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-6ecaf13493a63b64",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tlawd/assets/hausmotiv.png",
+        "name": "Haus Tlawd · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des Ritterherrenhauses Tlawd unter Haus Gafyr: von Edric Tlawd bis zur Generation von 1722."
+  },
+  {
+    "id": "haus-rhyddid",
+    "name": "Haus Rhyddid",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Mwyncraig"
+      ],
+      "liegeHouseId": "haus-wyrm",
+      "liegeHouseName": "Haus Wyrm",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Rhyddid\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-aeeaaf125b31e2ba",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/assets/hausmotiv.png",
+        "name": "Haus Rhyddid · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des Ritterherrenhauses Rhyddid unter Haus Wyrm: vom Ritterschlag Gwilyms im Jahr 1272 bis zur Generation von 1730."
+  },
+  {
+    "id": "haus-gelyn",
+    "name": "Haus Gelyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Gwynthstorm"
+      ],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Gelyn\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-6e43da1810776e2a",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/assets/hausmotiv.png",
+        "name": "Haus Gelyn · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des jungen Ritterherrenhauses Gelyn unter Haus Draig: von der Erhebung Cadocs im Jahr 1720 bis zur Generation von 1733."
+  },
+  {
+    "id": "haus-cludwyr",
+    "name": "Haus Cludwyr",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Bronhir"
+      ],
+      "liegeHouseId": "haus-wyrm",
+      "liegeHouseName": "Haus Wyrm",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Cludwyr\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-62ef43583d055366",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/assets/hausmotiv.png",
+        "name": "Haus Cludwyr · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des Ritterherrenhauses Cludwyr unter Haus Wyrm: von Saith Cludwyr, dem ersten Lehenswart von Bronhir, bis zur Generation von 1732."
+  },
+  {
+    "id": "haus-chwedlonol",
+    "name": "Haus Chwedonol",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Glastraeth"
+      ],
+      "liegeHouseId": "haus-saethwyr",
+      "liegeHouseName": "Haus Saethwyr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Chwedonol\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-63884fdc419dec51",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/assets/hausmotiv.png",
+        "name": "Haus Chwedonol · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des matriarchal geführten Ritterherrenhauses Chwedonol unter Haus Saethwyr: von der Gründerin Meredithe bis zur Generation von 1730."
+  },
+  {
+    "id": "haus-balchder",
+    "name": "Haus Balchder",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Balchder\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-5eccc10b14ffdefd",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/assets/hausmotiv.png",
+        "name": "Haus Balchder · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des Ritterherrenhauses Balchder unter Haus Draig: von Gründer Caedmon bis zur jüngsten Generation des Jahres 1730."
+  },
+  {
+    "id": "haus-eneiniog",
+    "name": "Haus Eneiniog",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-saethwyr",
+      "liegeHouseName": "Haus Saethwyr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Eneiniog\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-39220b2fb688e14e",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/assets/hausmotiv.png",
+        "name": "Haus Eneiniog · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Linie des Ritterherrenhauses Eneiniog unter Haus Saethwyr: von Gründer Tyrnog bis zur jüngsten Generation im Jahr 1740."
+  },
+  {
+    "id": "haus-gostyn",
+    "name": "Haus Gostyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Bronfelen"
+      ],
+      "liegeHouseId": "haus-gafyr",
+      "liegeHouseName": "Haus Gafyr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Gostyn\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-f70e757fae5ab215",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/assets/hausmotiv.png",
+        "name": "Haus Gostyn · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Linie des bescheidenen Ritterherrenhauses Gostyn unter Haus Gafyr: vom Gründer Roderic dem Hochgewachsenen bis zur jüngsten Generation des Jahres 1740."
+  },
+  {
+    "id": "haus-awenydd",
+    "name": "Haus Awenydd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Awenydd\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-770bcc6e6cddc21a",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/assets/hausmotiv.png",
+        "name": "Haus Awenydd · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des unauffälligen, aber verlässlichen Ritterherrenhauses Awenydd unter Haus Draig: vom Gründer Aeddan bis zur Generation von 1733."
+  },
+  {
+    "id": "haus-awenor",
+    "name": "Haus Awenor",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Awenor\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-b2eb32d1040c9f82",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/assets/hausmotiv.png",
+        "name": "Haus Awenor · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des älteren, kriegerisch geprägten Ritterherrenhauses Awenor unter Haus Draig: vom Gründer Aergol bis zur Generation von 1731."
+  },
+  {
+    "id": "haus-loer",
+    "name": "Haus Loer",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Craithglyn"
+      ],
+      "liegeHouseId": "haus-wyrm",
+      "liegeHouseName": "Haus Wyrm",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Loer\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-d05a008af6a67422",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/assets/hausmotiv.png",
+        "name": "Haus Loer · Hausdarstellung"
+      }
+    ],
+    "notes": "Die belegte Linie des wohlhabenden, im Edelsteinhandel führenden Ritterherrenhauses Loer unter Haus Wyrm: vom Begründer Cadfarch bis zur Generation von 1722."
+  },
+  {
+    "id": "haus-trevoryn",
+    "name": "Haus Trevoryn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Trevoryn\\haus.content.mjs",
+    "prepared": false,
+    "image": "../AleriaAlmanach/assets/krumme-kanne/references/merrik.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Einheimisches Bürgerhaus aus Gwynthor. Merrik, seine Schwester Eirian und sein Bruder Elidyr sind Kinder Nestwens. Merrik gründete 1722 mit seinen Feldkameraden die Krumme Kanne im östlichen Hafenviertel. Die frühere Hausgeschichte ist nicht einzeln überliefert."
+  },
+  {
+    "id": "haus-svathamar",
+    "name": "Haus Svathamar",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Svathamar\\haus.content.mjs",
+    "prepared": false,
+    "image": "../AleriaAlmanach/assets/krumme-kanne/references/hrolf.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Bürgerliche Familie aus Rorikshall in Aldrimar, heute in Gwynthor ansässig. Hrolf blieb nach dem Großen Krieg bei seinen Kameraden; Ketil und Runa folgten ihm. Hrolf heiratete Eirian Trevoryn. Die unbekannte ältere Abstammung wird durch einen Zeitsprung von der belegten Familie getrennt."
+  },
+  {
+    "id": "haus-dubhdarach",
+    "name": "Haus Dubhdarach",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Dubhdarach\\haus.content.mjs",
+    "prepared": false,
+    "image": "../AleriaAlmanach/assets/krumme-kanne/references/aedan.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Albische Bürgerfamilie aus Leitheach, seit der Gründung der Krummen Kanne in Gwynthor ansässig. Aedan heiratete 1724 die einheimische Cenyri Mair. Ihre gemeinsamen Kinder heißen Neifion und Eirlys; Caradog Tonnarth ist Mairs älterer Sohn und Aedans Stiefsohn."
+  },
+  {
+    "id": "haus-raves",
+    "name": "Haus Raves",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Raves\\haus.content.mjs",
+    "prepared": false,
+    "image": "../AleriaAlmanach/assets/goettliche-eleganz/aussenansicht.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Gwynthorer Zweig der Veltrane aus Tirnara. Aus Matteo Veltranes und Gwenora Maerllys’ Krämerladen entstand die Göttliche Eleganz, heute unter Eleonora Cassia Raves die angesehenste Schneiderei der Innenstadt."
+  },
+  {
+    "id": "haus-gofrann",
+    "name": "Haus Gofrann",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-tlawd",
+      "liegeHouseName": "Haus Tlawd",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Gofrann\\haus.content.mjs",
+    "prepared": false,
+    "image": "../AleriaAlmanach/assets/gofrann-schmiede/scenes/aussenansicht.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Bürgerliche Waffen- und Harnischmeister aus Gwynthors Innenstadt. Die Vettern Gethin und Bleddyn führen die Familienschmiede Zum Dritten Funken. Haus Tlawd hält einen bedeutenden Anteil, liefert Erz und erhält den Lehnsanteil; über Tlawd stehen die Gofrann im Gefolge der Gafyr."
+  },
+  {
+    "id": "haus-vann",
+    "name": "Haus Vann",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Vann\\haus.content.mjs",
+    "prepared": false,
+    "image": "../AleriaAlmanach/assets/letzte-rast/scenes/aussenansicht.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Wohlhabendes Gwynthorer Bürgerhaus und seit 1334 Eigentümer von Celtigerns Letzter Rast. Brenn und Madoc führen das traditionsreiche Gasthaus mit gehobener Küche, Salons und Herberge."
+  },
+  {
+    "id": "haus-draenmelyn",
+    "name": "Haus Draenmelyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Draenmelyn\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Geschlecht aus Gwynthor, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt des Hauses Draig stehen."
+  },
+  {
+    "id": "haus-pendrwn",
+    "name": "Haus Pendrwn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Pendrwn\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Haus aus Gwynthor, dessen konkrete Linie nur bis zu Emyr Pendrwns Großvater zurückreicht."
+  },
+  {
+    "id": "haus-swyll",
+    "name": "Haus Swyll",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Swyll\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein weit verzweigtes bürgerliches Geschlecht aus Gwynthor. Die jüngste Generation gruppiert sich um Meredith Swyll, ohne sie zum technischen Stammbaumknoten zu machen."
+  },
+  {
+    "id": "haus-aelmor",
+    "name": "Haus Aelmor",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-saethwyr",
+      "liegeHouseName": "Haus Saethwyr",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Aelmor\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Haus aus Gwynthor mit höchstens drei Linien unter der Großelterngeneration."
+  },
+  {
+    "id": "haus-maerllys",
+    "name": "Haus Maerllys",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Maerllys\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Gwynthorer Schneiderfamilie, deren Schere und Garnrolle seit Generationen für gute Arbeit stehen. Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie; die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern."
+  },
+  {
+    "id": "haus-braglas",
+    "name": "Haus Braglas",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Braglas\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Haus aus Gwynthor mit höchstens drei Linien unter der Großelterngeneration."
+  },
+  {
+    "id": "haus-tonnarth",
+    "name": "Haus Tonnarth",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Tonnarth\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Haus aus Gwynthor, dessen jüngste Generation sich um Llewarch Tonnarth gruppiert."
+  },
+  {
+    "id": "haus-ysgrif",
+    "name": "Haus Ysgrif",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Ysgrif\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Haus aus Gwynthor, dessen jüngste Generation um Floyd Ysgrif bewusst offen bleibt."
+  },
+  {
+    "id": "haus-falchdyn",
+    "name": "Haus Falchdyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Falchdyn\\haus.content.mjs",
+    "prepared": true,
+    "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
+    "bio": true,
+    "biographyExternal": true,
+    "illustrations": [
+      {
+        "id": "bild-b06dccc8354e2d34",
+        "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
+        "name": "Haus Falchdyn · Hausdarstellung"
+      }
+    ],
+    "notes": "Volksnahe Schreiber- und Journalistenfamilie aus Gwynthor, die Celtigerns Echo herausgibt, Schreibende ausbildet und mit kleinen Redaktionsstuben in den größeren Orten Celtigerns Wacht vertreten ist."
+  },
+  {
+    "id": "haus-coeddu",
+    "name": "Haus Coeddu",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Coeddu\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/assets/coeddu-krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-3781320b04414a6c",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/assets/coeddu-krieger.png",
+        "name": "Haus Coeddu · Hausdarstellung"
+      }
+    ],
+    "notes": "Kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Die Coeddu dienen Haus Draig seit Generationen als Wachen, Waffenknechte und vereinzelt als Ritter. Brenric ist Veteran des Großen Krieges; sein Sohn Llywelyn dient als Waffenknecht."
+  },
+  {
+    "id": "craigddu",
+    "name": "Haus Craigddu",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Craigddu\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-3b3adf1f46d9b259",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
+        "name": "Haus Craigddu · Hausdarstellung"
+      }
+    ],
+    "notes": "Kriegerisches Bürgerhaus aus Gwynthor im generationslangen Dienst von Haus Draig. Aus der Baumeisterfamilie gingen Wachen, Waffenknechte und einzelne Ritter hervor; mehrere Angehörige arbeiten weiterhin in Gwynthors Baumeistergilde."
+  },
+  {
+    "id": "haus-fontani",
+    "name": "Haus Fontani",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Kleine argentische Bürgerfamilie in Gwynthor. Seit mehreren Generationen betreibt sie das von ihren Vorfahren nach argentischer Baukunst errichtete Badehaus. Der Stammbaum zeigt vorerst nur Cassiano, Livia und Terenzio; ältere Angehörige sind noch nicht einzeln ausgearbeitet."
+  },
+  {
+    "id": "haus-rhwyd",
+    "name": "Haus Rhwyd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Arme, überschuldete Gwynthorer Wirtsfamilie des Kleinen Dursts direkt an den Docks. Vier der fünf Söhne Gethins und Efas fielen 1720; der jüngste, Iorwerth, führt die Kneipe heute mit seiner Mutter. Meleri, Nia und Dewi gehören zum kleinen lebenden Familienkreis."
+  },
+  {
+    "id": "haus-penrudd",
+    "name": "Haus Penrudd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Bannkreis Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Zum Roten Tor",
+        "Penrudd-Hof"
+      ],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Eigenständige cenyrische Wirts- und Bauernfamilie im Bannkreis Gwynthors. Gwilyms Familie führt die Herberge Zum Roten Tor; sein jüngerer Bruder Tudur bewirtschaftet mit Kindern und Enkeln den nahen Penrudd-Hof. Beide Haushalte rechnen ihre Lieferungen miteinander ab. Keine genealogische Verbindung zu Haus Penry aus Talgarth."
+  },
+  {
+    "id": "haus-gwregysdu",
+    "name": "Haus Gwregysdu",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": true,
+    "illustrations": [],
+    "notes": "Bürgerliches Lager- und Handelshaus im Hafen Gwynthors. Madog Schwarzgurt begründete den Betrieb mit Godwyn Doeths Tochter Gwen. Heute führt Gruffudds Onkel Bleddyn vier Lagerhäuser der Familie im großen Handelsposten der Klingenden Münze."
+  },
+  {
+    "id": "haus-valerus",
+    "name": "Haus Valerus",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bürgerliche",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Die rote Klaue · Marktviertel Gwynthors"
+      ],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bürgerliche",
+        "Gwynthor"
+      ],
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Venalysisch geprägte Bürgerfamilie in Gwynthor. Decians Pension und Ersparnisse gründeten die Rote Klaue; seine Zwillinge Lucan und Camilla führen sie gemeinsam als Kooperationsbetrieb der Klingenden Münze."
+  },
+  {
+    "id": "haus-fearnan",
+    "name": "Familie Fearnan",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Eine albische Fischerfamilie und ihr bescheidenes Zuhause nahe den Docks."
+  },
+  {
+    "id": "haus-torvik",
+    "name": "Familie Torvik",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Ein aldrimarischer Schmiedegehilfe, seine albische Frau und ihr elfjähriger Sohn."
+  },
+  {
+    "id": "haus-celynfor",
+    "name": "Familie Celynfor",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "house-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    },
+    "bio": false,
+    "illustrations": [],
+    "notes": "Ein jung verheiratetes cenyrisches Paar, zwei Arbeitswege und ein Hund vor dem Herd."
+  },
+  {
+    "id": "haus-bradrhith",
+    "name": "Haus Bradrhith",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor",
+      "Bradrhith Hof"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Bradrhith Hof",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-awenydd",
+      "liegeHouseName": "Haus Awenydd",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor",
+        "Bradrhith Hof"
+      ],
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Bradrhith\\haus.content.mjs",
+    "prepared": true,
+    "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bradrhith/assets/bradrhith-hausbild.png",
+    "bio": true,
+    "biographyExternal": true,
+    "illustrations": [
+      {
+        "id": "bild-e11f8f055e6309c0",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bradrhith/assets/bradrhith-hausbild.png",
+        "name": "Haus Bradrhith · Hausdarstellung"
+      }
+    ],
+    "notes": "Die Bradrhith sind eine bürgerliche Pferdezüchterfamilie am nördlichen Rand des Gwynthorer Bannkreises, nahe der Grenze zu Mwyncreig. Ihr Hof versorgte Gwynthor mit guten Rössern und Pferden. Nach dem Überfall der Schwarzen Zitteraale ist das Gestüt schwer verwüstet; seine Nachfolge und Weiterführung sind ungeklärt."
+  },
+  {
+    "id": "haus-argall",
+    "name": "Haus Argall",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Llysfaen"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Llysfaen",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-wyrm",
+      "liegeHouseName": "Haus Wyrm",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Llysfaen.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Llamreis_Ankunft\\Haus_Argall\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Ein kleines bürgerliches Haus aus Llysfaen mit zwei Brüderlinien, einer schmalen Vetterlinie und Shylene Argalls Verbindung zu Owain Draig."
+  },
+  {
+    "id": "haus-almarch",
+    "name": "Haus Almarch",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Almarch\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Almarch/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-4e4491c74e9dfd16",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Almarch/assets/krieger.png",
+        "name": "Haus Almarch · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Almarch aus Artus Streben."
+  },
+  {
+    "id": "haus-althin",
+    "name": "Haus Althin",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Althin\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Althin/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-afd793b97612ecb6",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Althin/assets/krieger.png",
+        "name": "Haus Althin · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Althin aus Artus Streben."
+  },
+  {
+    "id": "haus-brinmarch",
+    "name": "Haus Brinmarch",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Brinmarch\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Brinmarch/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-99ff021a0bdfb4c2",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Brinmarch/assets/krieger.png",
+        "name": "Haus Brinmarch · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Brinmarch aus Artus Streben."
+  },
+  {
+    "id": "haus-coedvarn",
+    "name": "Haus Coedvarn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Coedvarn\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Coedvarn/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-0557ab9b39f38150",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Coedvarn/assets/krieger.png",
+        "name": "Haus Coedvarn · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Coedvarn aus Artus Streben."
+  },
+  {
+    "id": "haus-eirfael",
+    "name": "Haus Eirfael",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Eirfael\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Eirfael/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-6055c2f5d2bd44dc",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Eirfael/assets/krieger.png",
+        "name": "Haus Eirfael · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Eirfael aus Artus Streben."
+  },
+  {
+    "id": "haus-ghorswyn",
+    "name": "Haus Ghorswyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Ghorswyn\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Ghorswyn/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-b78ef990b70b9bc8",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Ghorswyn/assets/krieger.png",
+        "name": "Haus Ghorswyn · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Ghorswyn aus Artus Streben."
+  },
+  {
+    "id": "haus-gwardin",
+    "name": "Haus Gwardin",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Gwardin\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwardin/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-bd89940752df3932",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwardin/assets/krieger.png",
+        "name": "Haus Gwardin · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Gwardin aus Artus Streben."
+  },
+  {
+    "id": "haus-gwynrhos",
+    "name": "Haus Gwynrhos",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Gwynrhos\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwynrhos/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-e76019a0e3c46544",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwynrhos/assets/krieger.png",
+        "name": "Haus Gwynrhos · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Gwynrhos aus Artus Streben."
+  },
+  {
+    "id": "haus-talmeirch",
+    "name": "Haus Talmeirch",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Talmeirch\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Talmeirch/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-2e1e8d7b300471d9",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Talmeirch/assets/krieger.png",
+        "name": "Haus Talmeirch · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Talmeirch aus Artus Streben."
+  },
+  {
+    "id": "haus-tirwyn",
+    "name": "Haus Tirwyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Tirwyn\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Tirwyn/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-46bf2bcb958c64f8",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Tirwyn/assets/krieger.png",
+        "name": "Haus Tirwyn · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Tirwyn aus Artus Streben."
+  },
+  {
+    "id": "haus-bekab",
+    "name": "Haus Bekab",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Bekab\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Vorbereitete Familienakte des Hauses Bekab aus Artus Streben."
+  },
+  {
+    "id": "haus-iorwen",
+    "name": "Haus Iorwen",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Iorwen\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Vorbereitete Familienakte des Hauses Iorwen aus Artus Streben."
+  },
+  {
+    "id": "haus-maethan",
+    "name": "Haus Maethan",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Maethan\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Vorbereitete Familienakte des Hauses Maethan aus Artus Streben."
+  },
+  {
+    "id": "haus-rhen",
+    "name": "Haus Rhen",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Artus Streben",
+      "Rhosmere"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Rhosmere",
+      "barony": "Artus Streben",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "assets/images/regions/rhosmere.png",
+        "barony": "assets/images/regions/artus-streben.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Artus_Streben\\Haus_Rhen\\haus.content.mjs",
+    "prepared": true,
+    "image": "",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Vorbereitete Familienakte des Hauses Rhen aus Artus Streben."
+  },
+  {
+    "id": "haus-annwyl",
+    "name": "Haus Annwyl",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Côr Mynyddfaen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Côr Mynyddfaen",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Celtigerns Wacht/Gwendolyns Ufer/Côr Mynyddfaen.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Annwyl\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Annwyl/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-b208b66c24c1baa0",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Annwyl/assets/hausmotiv.png",
+        "name": "Haus Annwyl · Hausdarstellung"
+      }
+    ],
+    "notes": "Die überlieferte Linie des kirchlich begründeten Ritterhauses Annwyl aus Côr Mynyddfaen: von Sir Willard Annwyl bis zur Erbengeneration des Jahres 1740."
+  },
+  {
+    "id": "haus-barus",
+    "name": "Haus Barus",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Barus\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Barus/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-29b9688e98385087",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Barus/assets/hausmotiv.png",
+        "name": "Haus Barus · Hausdarstellung"
+      }
+    ],
+    "notes": "Das maritime Ritterhaus Barus aus Abergwint gründet seinen Einfluss auf Handel, Flotte, Kapital und verlässlich erfüllte Verträge."
+  },
+  {
+    "id": "haus-cenfig",
+    "name": "Haus Cenfig",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Cenfig\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cenfig/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-fd65c3783f8e6548",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cenfig/assets/hausmotiv.png",
+        "name": "Haus Cenfig · Hausdarstellung"
+      }
+    ],
+    "notes": "Das Ritterhaus Cenfig aus Abergwint dient Haus Gwyvern und verbindet ritterliche Pflicht mit Rechtspflege, Bildung und Verwaltung."
+  },
+  {
+    "id": "haus-cysgodion",
+    "name": "Haus Cysgodion",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Cysgodion\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cysgodion/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-446b418d450869bb",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cysgodion/assets/hausmotiv.png",
+        "name": "Haus Cysgodion · Hausdarstellung"
+      }
+    ],
+    "notes": "Das zurückhaltende Ritterhaus Cysgodion aus Abergwint dient Haus Gwyvern durch Verwaltung, Recht, Aufklärung und ein verborgenes Informationsnetz."
+  },
+  {
+    "id": "haus-daran",
+    "name": "Haus Daran",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Garwfaen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Garwfaen",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Celtigerns Wacht/Gwendolyns Ufer/Garwfaen.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Daran\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Daran/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-e26e6dd52ececb47",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Daran/assets/hausmotiv.png",
+        "name": "Haus Daran · Hausdarstellung"
+      }
+    ],
+    "notes": "Das junge Ritterhaus Daran aus Garwfaen entstand aus Sir Maelgwyns jahrzehntelangem Wach- und Kriegsdienst und stellt Pflicht, Schutz und Verlässlichkeit über Rang und Prunk."
+  },
+  {
+    "id": "haus-edmy",
+    "name": "Haus Edmy",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Edmy\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Edmy/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-5b72f001d8b6a502",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Edmy/assets/hausmotiv.png",
+        "name": "Haus Edmy · Hausdarstellung"
+      }
+    ],
+    "notes": "Das kleine Ritterhaus Edmy aus Abergwint bewahrt den nie erfüllten Eid seines Gründers, Königin Isobels verlorenen avallornischen Ring zu finden."
+  },
+  {
+    "id": "haus-gwyntog",
+    "name": "Haus Gwyntog",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Gwyntog\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyntog/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-5cc3a6400fc5810c",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyntog/assets/hausmotiv.png",
+        "name": "Haus Gwyntog · Hausdarstellung"
+      }
+    ],
+    "notes": "Das seefahrende Ritterhaus Gwyntog aus Abergwint: Kapitäne, Admiräle und Schiffsherren im Dienst von Haus Gwyvern."
+  },
+  {
+    "id": "haus-penwyn",
+    "name": "Haus Penwyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Morddyn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Morddyn",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-draig",
+      "liegeHouseName": "Haus Draig",
+      "regionEmblems": {
+        "seat": "assets/images/regions/Cenyr/Celtigerns Wacht/Gwendolyns Ufer/Morddyn.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Penwyn\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Penwyn/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-39f32951c5e6571e",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Penwyn/assets/hausmotiv.png",
+        "name": "Haus Penwyn · Hausdarstellung"
+      }
+    ],
+    "notes": "Das älteste bestehende Geschlecht Morddyns verwaltet und schützt den Küstenort als ritterliches Vasallenhaus Sir Myrddin Draigs."
+  },
+  {
+    "id": "haus-rhuddgar",
+    "name": "Haus Rhuddgar",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Rhuddgar\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Rhuddgar/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-9bce9b3757f1a676",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Rhuddgar/assets/hausmotiv.png",
+        "name": "Haus Rhuddgar · Hausdarstellung"
+      }
+    ],
+    "notes": "Das alte Jäger- und Ritterhaus Rhuddgar aus Abergwint, im Banner Haus Gwyverns und bekannt für Waffenkunst, Fährtenlesen und besonnenes Handelsgeschick."
+  },
+  {
+    "id": "haus-seldryn",
+    "name": "Haus Seldryn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Seldryn\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Seldryn/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-3fcfee27297f21fc",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Seldryn/assets/hausmotiv.png",
+        "name": "Haus Seldryn · Hausdarstellung"
+      }
+    ],
+    "notes": "Das junge Ritterhaus Seldryn aus Abergwint verbindet den Dienst am Schwert mit der Gelehrten- und Forschertradition des Lebenszirkels."
+  },
+  {
+    "id": "haus-selog",
+    "name": "Haus Selog",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Burg am Feuerstollen"
+      ],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Selog\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Selog/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-1a47d38091708679",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Selog/assets/hausmotiv.png",
+        "name": "Haus Selog · Hausdarstellung"
+      }
+    ],
+    "notes": "Das Ritterhaus Selog aus Abergwint bewacht vom Sitz am Feuerstollen aus die alten Wälder und stellt sich besonders unnatürlichen Gefahren entgegen."
+  },
+  {
+    "id": "haus-taranvyr",
+    "name": "Haus Taranvyr",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Taranvyr\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Taranvyr/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-b73f23212c369e50",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Taranvyr/assets/hausmotiv.png",
+        "name": "Haus Taranvyr · Hausdarstellung"
+      }
+    ],
+    "notes": "Das alte Ritterhaus Taranvyr aus Abergwint dient den Baronen von Haus Gwyvern als verlässliche Stütze, Garnisonsführer und Ausbilder der Teulu-Schwertkämpfer."
+  },
+  {
+    "id": "haus-tawelgar",
+    "name": "Haus Tawelgar",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Tawelgar\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Tawelgar/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-294e5b0e481e2794",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Tawelgar/assets/hausmotiv.png",
+        "name": "Haus Tawelgar · Hausdarstellung"
+      }
+    ],
+    "notes": "Das bescheidene Ritterhaus Tawelgar aus Abergwint bewacht die Handelsstraße nach Llysbrynn und dient Haus Gwyvern mit stiller Verlässlichkeit."
+  },
+  {
+    "id": "haus-trydar",
+    "name": "Haus Trydar",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Trydar\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Trydar/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-074e9453c064941d",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Trydar/assets/hausmotiv.png",
+        "name": "Haus Trydar · Hausdarstellung"
+      }
+    ],
+    "notes": "Das maritime und kriegerische Ritterhaus Trydar aus Abergwint, zuständig für Küstensicherung, Hafenaufsicht, Konvoischutz und militärische Ordnung."
+  },
+  {
+    "id": "haus-ymladd",
+    "name": "Haus Ymladd",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Ymladd\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-842a3b64c5fb46ea",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/assets/hausmotiv.png",
+        "name": "Haus Ymladd · Hausdarstellung"
+      }
+    ],
+    "notes": "Das alte Ritterhaus Ymladd bewacht die östlichen Gebirgsränder Gwendolyns Ufers und schützt Land, Vieh und Reisende vor den Gefahren der Wildnis."
+  },
+  {
+    "id": "haus-caerlaen",
+    "name": "Haus Caerlaen",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Caerlaen\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Caerlaen/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Das gelehrte Bürgerhaus Caerlaen aus Abergwint verwaltet das Archiv des Barons, die Stadtbibliothek und eine eigene Schreiberschule im Dienst Haus Gwyverns."
+  },
+  {
+    "id": "haus-caerthwyn",
+    "name": "Haus Caerthwyn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Gwendolyns Ufer",
+      "Abergwint"
+    ],
+    "profile": {
+      "rankId": "commoner",
+      "seat": "Abergwint",
+      "barony": "Gwendolyns Ufer",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-gwyvern",
+      "liegeHouseName": "Haus Gwyvern",
+      "regionEmblems": {
+        "seat": "assets/images/regions/abergwint.png",
+        "barony": "assets/images/regions/gwendolyns-ufer.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Gwendolyns_Ufer\\Haus_Caerthwyn\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Caerthwyn/assets/hausmotiv.png",
+    "bio": true,
+    "illustrations": [],
+    "notes": "Das einflussreiche Bürgerhaus Caerthwyn aus Abergwint verbindet den Dienst als Vogt des Barons mit seinem traditionsreichen Gestüt zwischen Castell Rhewglyn und Llysbrynn."
+  },
+  {
+    "id": "haus-gwared",
+    "name": "Haus Gwared",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen",
+      "Castellbryn"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "Castellbryn",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "haus-arwydd",
+      "liegeHouseName": "Haus Arwydd",
+      "regionEmblems": {
+        "seat": "assets/images/regions/castellbryn.png",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Gwared\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-56c6696a5c64d659",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/assets/krieger.png",
+        "name": "Haus Gwared · Hausdarstellung"
+      }
+    ],
+    "notes": "Ein ritterliches Haus aus Rhonwens Tränen: einst Illysywen verpflichtet, seit dem Fall Illysywens im Krieg von 1718-1720 im Banner Haus Arwydds."
+  },
+  {
+    "id": "haus-madryn",
+    "name": "Haus Madryn",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Madryn\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-e74a6faf44dcb2f9",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/assets/krieger.png",
+        "name": "Haus Madryn · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Madryn aus Rhonwens Tränen."
+  },
+  {
+    "id": "haus-merek",
+    "name": "Haus Merek",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Merek\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-c69fb99bfa22ea13",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/assets/krieger.png",
+        "name": "Haus Merek · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Merek aus Rhonwens Tränen."
+  },
+  {
+    "id": "haus-rhenna",
+    "name": "Haus Rhenna",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Rhenna\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Rhenna/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-8f5d335cc37bfac1",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Rhenna/assets/krieger.png",
+        "name": "Haus Rhenna · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Rhenna aus Rhonwens Tränen."
+  },
+  {
+    "id": "haus-talinvyr",
+    "name": "Haus Talinvyr",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Talinvyr\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Talinvyr/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-4f83a9d3102f3bc2",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Talinvyr/assets/krieger.png",
+        "name": "Haus Talinvyr · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des Hauses Talinvyr aus Rhonwens Tränen."
+  },
+  {
+    "id": "haus-morveth",
+    "name": "Haus Morveth",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Morveth\\haus.content.mjs",
+    "prepared": true,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Morveth/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-da043b1a268c150c",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Morveth/assets/krieger.png",
+        "name": "Haus Morveth · Hausdarstellung"
+      }
+    ],
+    "notes": "Vorbereitete Familienakte des erloschenen Hauses Morveth aus Rhonwens Tränen."
+  },
+  {
+    "id": "haus-skellor",
+    "name": "Haus Skellor",
+    "folder": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Rhonwens Tränen"
+    ],
+    "profile": {
+      "rankId": "knight",
+      "seat": "",
+      "barony": "Rhonwens Tränen",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "assets/images/regions/rhonwens-traenen.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    },
+    "file": "Familien Häuser und Clans\\Estryll\\Cenyr\\Celtigerns_Wacht\\Rhonwens_Traenen\\Haus_Skellor\\haus.content.mjs",
+    "prepared": false,
+    "image": "Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
+    "bio": true,
+    "illustrations": [
+      {
+        "id": "bild-5beddeff606318fe",
+        "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
+        "name": "Haus Skellor · Hausdarstellung"
+      }
+    ],
+    "notes": "1720 entmachtetes Ritterhaus von Caer Creigfryn. Arvel Skellor überlebte als Schwarzer Zitteraal; das Haus ist nicht ausgestorben."
+  }
+]

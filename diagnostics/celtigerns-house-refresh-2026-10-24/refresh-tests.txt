@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: Alle 92 aktuellen Familien besitzen Hausseite, passende Hauptabbildung und das kanonische Stammbaum-Iframe
+ok 1 - Alle 92 aktuellen Familien besitzen Hausseite, passende Hauptabbildung und das kanonische Stammbaum-Iframe
+  ---
+  duration_ms: 19.2145
+  type: 'test'
+  ...
+# Subtest: Ein Standardbio-Upgrade lässt alle Graphsammlungen der geladenen Familie unverändert
+ok 2 - Ein Standardbio-Upgrade lässt alle Graphsammlungen der geladenen Familie unverändert
+  ---
+  duration_ms: 103.5367
+  type: 'test'
+  ...
+# Subtest: Ausgelieferte alte Standardbios werden erneuert; eigene Texte, Löschung, Notizen und Personenänderungen bleiben erhalten
+ok 3 - Ausgelieferte alte Standardbios werden erneuert; eigene Texte, Löschung, Notizen und Personenänderungen bleiben erhalten
+  ---
+  duration_ms: 164.2657
+  type: 'test'
+  ...
+# Subtest: Neue Berufs- und Familienseiten verwenden vorhandene Personen statt neuer erfundener Hofinhaber
+ok 4 - Neue Berufs- und Familienseiten verwenden vorhandene Personen statt neuer erfundener Hofinhaber
+  ---
+  duration_ms: 8.1
+  type: 'test'
+  ...
+# Subtest: Die Galerie ordnet sämtliche 92 Haus-Hauptbilder demselben kanonischen Haus zu
+ok 5 - Die Galerie ordnet sämtliche 92 Haus-Hauptbilder demselben kanonischen Haus zu
+  ---
+  duration_ms: 105.1857
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1865.508

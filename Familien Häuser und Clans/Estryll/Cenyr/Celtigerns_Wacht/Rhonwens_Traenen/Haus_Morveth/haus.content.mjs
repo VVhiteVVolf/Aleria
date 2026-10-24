@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-morveth",
   "name": "Haus Morveth",
@@ -15,13 +15,13 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": true,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Morveth ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben.",
-    "history": "Folgt …",
-    "character": "Folgt …"
+    "overview": "Haus Morveth ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+    "history": "Das Haus ist als erloschen verzeichnet. Ein genaues Endjahr und eine ausgearbeitete Chronik sind bisher nicht überliefert.",
+    "character": "Die Hausdarstellung und das vorhandene Wappen sind zugeordnet. Besondere Hausbräuche, Taten und persönliche Überlieferungen werden ergänzt, sobald dazu Quellen vorliegen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -88,7 +88,7 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Haus Morveth ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben. Weitere Inhalte folgen.",
+    "overview": "Haus Morveth ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
@@ -122,6 +122,10 @@ export const HOUSE_CONTENT = {
   "extinctionText": "Als eigenständiges Haus erloschen · Zeitpunkt offen",
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
   "biographyPreviousDefaultFingerprints": [
-    "1662:93e6574e:1a1ae1b4"
-  ]
+    "1662:93e6574e:1a1ae1b4",
+    "1784:6dcdd539:cf646357"
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

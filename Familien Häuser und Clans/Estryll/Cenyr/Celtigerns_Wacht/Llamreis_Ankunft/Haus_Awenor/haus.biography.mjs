@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Awenor",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Awenor ist ein älteres Ritterhaus im Dienst der Draigs. Seine Angehörigen übernehmen militärische Kommandos, sichern Gebiete und wirken in Bergbauregionen wie Mwynfaen.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Awenor ist ein älteres ritterliches Geschlecht im festen Dienst des Hauses Draig, bekannt für militärische Verlässlichkeit, Disziplin und pflichtbewussten Gehorsam. Ohne großen Namen oder Legenden stellen die Awenor für die Draigs bevorzugt Lehenswarte, Statthalter, Hauptmänner und Kommandanten, sichern Bergbauregionen wie Mwynfaen und dienen regelmäßig unter dem Marschall des Grafen. Ihre Burg in Gwynthor, ihre Minen und Schmieden geben ihnen strategische Unabhängigkeit, ihr Glaube an die Alerische Kirche bleibt nüchtern und ordnend. Die Awenor streben nicht nach Ruhm – sie existieren, um Befehle auszuführen, Gebiete zu halten und Ordnung durchzusetzen, solange der Dienst es verlangt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -39,14 +40,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +48,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Awenor ist ein älteres Ritterhaus im Dienst der Draigs. Seine Angehörigen übernehmen militärische Kommandos, sichern Gebiete und wirken in Bergbauregionen wie Mwynfaen.",
+    "biographyText": "Haus Awenor ist ein älteres ritterliches Geschlecht im festen Dienst des Hauses Draig, bekannt für militärische Verlässlichkeit, Disziplin und pflichtbewussten Gehorsam. Ohne großen Namen oder Legenden stellen die Awenor für die Draigs bevorzugt Lehenswarte, Statthalter, Hauptmänner und Kommandanten, sichern Bergbauregionen wie Mwynfaen und dienen regelmäßig unter dem Marschall des Grafen. Ihre Burg in Gwynthor, ihre Minen und Schmieden geben ihnen strategische Unabhängigkeit, ihr Glaube an die Alerische Kirche bleibt nüchtern und ordnend. Die Awenor streben nicht nach Ruhm – sie existieren, um Befehle auszuführen, Gebiete zu halten und Ordnung durchzusetzen, solange der Dienst es verlangt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Die Familie stellte schon früh bewaffnete Gefolgsleute und übernahm Grenzaufgaben. Minen und Schmieden stützen ihre Versorgung und ihre militärischen Verpflichtungen.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Der Ursprung des Hauses Awenor reicht mehrere Generationen weiter zurück als jener vieler anderer ritterlicher Vasallen der Draigs. Schon früh stellten sie bewaffnete Gefolgsleute, übernahmen Grenzaufgaben und dienten als verlängerter Arm der gräflichen Autorität. Ihr Schwerpunkt lag nie auf Verwaltung oder Kanzlei, sondern auf militärischer Präsenz und lokaler Herrschaftsausübung.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +61,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Pflicht, Disziplin und Standhaftigkeit bestimmen das Haus. Ffraid ist das Oberhaupt; Derwain steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Traditionen des Hauses Awenor sind klar, militärisch und frei von Zierde. Ihre Sprösslinge werden früh an Waffen, Disziplin und Befehlsketten gewöhnt. Ausbildung bedeutet bei ihnen Dienstfähigkeit: kämpfen, führen, halten."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Der Besitz des Hauses Awenor ist zweckmäßig und eng mit Krieg und Versorgung verbunden. Nördlich von Gwynthor liegen mehrere Minen, die dem Haus unterstehen. Sie liefern vor allem Erze für Waffen, Werkzeuge und Bau – ein strategisch wertvoller Besitz, besonders in Zeiten erhöhter militärischer Aktivität."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie andere Häuser bekennen sich auch die Awenor in selbstverständlicher Weise zur Alerischen Kirche. Ihre Frömmigkeit ist geordnet, pflichtbewusst und frei von Überschwang."
       }
     ],
     "triviaTitle": "Besonderheiten",

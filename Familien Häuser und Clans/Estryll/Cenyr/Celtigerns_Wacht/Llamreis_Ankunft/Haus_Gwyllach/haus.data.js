@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -104,7 +107,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Folgt …"
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

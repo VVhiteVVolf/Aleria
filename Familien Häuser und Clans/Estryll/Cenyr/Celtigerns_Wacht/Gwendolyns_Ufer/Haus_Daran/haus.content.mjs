@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-daran",
   "name": "Haus Daran",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 4,
+  "biographySourceRevision": 5,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Daran ist ein junges Ritterhaus aus Garwfaen unter den Gwyvern. Seine Angehörigen dienen vor allem in der Stadtwache. Ein kleines Castell und wenige Höfe im nördlichen Umland sichern den Unterhalt.",
     "history": "Maelgwyn wurde 1686 zum Ritter geschlagen, zog durch Cenyr und bewährte sich im Krieg. 1720 begründete er sein Haus. Den angebotenen Posten des Lehenswarts lehnte er ab und blieb Hauptmann der Stadtwache.",
-    "character": "Ehrlichkeit, Disziplin und Schutzpflicht prägen die Familie. Junge Ritter sammeln auf Wanderschaft Erfahrung. Maelgwyn führt das Haus; Seithved ist sein erster Erbe."
+    "character": "Ehrlichkeit, Disziplin und Schutzpflicht prägen die Familie. Junge Ritter sammeln auf Wanderschaft Erfahrung. Maelgwyn führt das Haus; Seithved ist sein erster Erbe.",
+    "customs": "Aus dem Vorbild Sir Maelgwyns – und später auch seines Sohnes – entstand eine junge, aber feste Übung: Frisch geschlagene Ritter des Hauses Daran sollen ein bis zwei Jahre als fahrende Ritter durch Cenyr ziehen, um Land und Leute kennenzulernen, Schutz zu gewähren und Dienst zu leisten; erst nach ihrer Rückkehr binden sie sich bewusst an Garwfaen, das Land und das Haus.",
+    "holdings": "Haus Daran verfügt über ein bewusst schlichtes und zweckgebundenes Besitztum. Mit der Gründung des Hauses im Jahr 1720 erhielt Sir Maelgwyn Daran ein altes Castell nördlich von Garwfaen, das ursprünglich als Wachposten diente und zu einem ritterlichen Gut umfunktioniert wurde. Dieses Anwesen gilt als formeller Sitz des Hauses, wird jedoch von wenigen Mitgliedern bewohnt, da sich die meisten anderen Mitglieder des Hauses im täglichen Dienst in Garwfaen aufhalten.",
+    "culture": "Haus Daran ist in seinem Kern durch und durch garwfaenisch. Die Linie geht direkt auf Sir Maelgwyn Daran zurück – einen frommen, pflichtbewussten Mann von über siebzig Wintern, der nie vergessen hat, woher er stammt."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -248,7 +251,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Seithved Daran",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1930:dae8da03:79ed5a9"
+    "1930:dae8da03:79ed5a9",
+    "2705:8815b436:b01f7934"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

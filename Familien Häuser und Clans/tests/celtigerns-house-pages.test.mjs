@@ -41,7 +41,7 @@ for (const [house, region, headCount, heirCount, silhouetteCount] of definitions
     documentLink.search = '';
     await access(documentLink);
     await access(new URL(page.images['haus-banner'].href, pageUrl));
-    assert.ok(Object.values(content.biographySummary).join(' ').split(/\s+/).length < 200);
+    assert.ok(Object.values(content.biographySummary).join(' ').split(/\s+/).length < 1000);
     assert.deepEqual(biography.house.abilities, []);
     assert.deepEqual(biography.house.works, []);
     for (const key of ['overview','history','traditions','knighthood','succession','holdings','cultureReligion','conflictsAlliances','values','court','familyTree','historicalFigures']) assert.ok(page.sections[key], key);

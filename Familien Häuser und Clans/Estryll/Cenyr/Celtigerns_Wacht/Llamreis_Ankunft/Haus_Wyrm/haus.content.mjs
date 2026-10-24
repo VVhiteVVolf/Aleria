@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Original und Bildnachweise liegen im selben Hausordner.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-wyrm",
   "name": "Haus Wyrm O'Gwynthor",
@@ -15,9 +15,12 @@ export const HOUSE_CONTENT = {
   "biographyIntroTitle": "Fahrende Ritter und höfische Romantik",
   "biographyHistoryTitle": "Das Vermächtnis des Fahrenden Draig",
   "biographySummary": {
-    "overview": "Haus Wyrm ist ein altes Kadettenhaus der Draigs mit Sitz in Gwynthor. Seine Ritterfürsten stehen für Abenteuerlust, höfische Romantik und eine ausgeprägte Bindung an das ritterliche Ideal.",
-    "history": "Tryffin Draig, der „Fahrende Draig“, begründete den Zweig gemeinsam mit Rhianwyn Saethwyr. Seine Reisen und Heldentaten brachten ihm das Recht auf ein eigenes Haus ein. Die Wyrm führen auch Myrddins Abenteuerlust auf das Vorbild seines Onkels Tryffin zurück.",
-    "character": "Ehre, Tapferkeit und galantes Auftreten prägen das Haus. Bergbau, Pferdezucht und Holzverarbeitung sichern seine Stellung. Die Familienordnung bleibt streng traditionsgebunden. Mailgwin führt das Haus seit 1717; Shan ist sein erster Erbe."
+    "overview": "Haus Wyrm ist ein altes Kadettenhaus der Draigs, begründet von Tryffin Draig und Rhianwyn Saethwyr. Mit Sitz in Gwynthor gehört es zu den Ritterfürstenhäusern von Celtigerns Wacht. Fahrende Ritter, höfische Romantik und ein ausgeprägtes Traditionsbewusstsein bestimmen seinen Ruf.",
+    "history": "Sir Tryffin, ein Prinz des Hauses Draig, wurde als „Fahrender Draig“ bekannt. Er bereiste Cenyr und fremde Länder und erwarb durch Abenteuer und Heldentaten großen Ruhm. Seine Erlebnisse beeindruckten auch seinen jungen Neffen Myrddin, der später zum bedeutendsten Magier des Reiches aufstieg. Die Wyrm behaupten bis heute, Tryffin habe dessen Abenteuerlust geweckt und ihm den Weg zur Magie eröffnet.\n\nFür seine Verdienste erhielt Tryffin das Recht, ein eigenes Haus zu gründen. Aus dieser Auszeichnung entstand Haus Wyrm. Die überlieferte Oberhauptfolge setzt mit seiner Amtszeit von 1128 bis 1171 ein. Seine Nachkommen pflegten das Bild des fahrenden, galanten Ritters: mutig im Kampf, geschickt im Sattel und gewandt im höfischen Umgang.",
+    "character": "Ehre, Tapferkeit und galantes Auftreten prägen das Haus. Bergbau, Pferdezucht und Holzverarbeitung sichern seine Stellung. Die Familienordnung bleibt streng traditionsgebunden. Mailgwin führt das Haus seit 1717; Shan ist sein erster Erbe.",
+    "customs": "Junge Männer werden ermutigt, als fahrende Ritter Tryffins Vorbild zu folgen. Abenteuerreisen, ritterliche Bewährung und die Kunst des Hofmachens gelten als ehrenvolle Wege, den Namen des Hauses bekannt zu machen.",
+    "holdings": "Bergbau, Pferdezucht und Holzverarbeitung tragen die Wirtschaft der Herrschaft. Erze und seltene Metalle versorgen Handel und Waffenherstellung. In Zusammenarbeit mit Rhosmeres Rösser werden robuste, gut ausgebildete Kriegspferde gezüchtet.",
+    "culture": "Das Haus gehört zur cenyrischen Kultur und folgt der Alerischen Kirche. Besonders verehrt wird die Dame der See."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -75,10 +78,10 @@ export const HOUSE_CONTENT = {
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Mittelmäßig",
-    "tiarna": "Überwiegend Cantref, Uchelwyr",
-    "kerns": "Mittelmäßig, überwiegend Kavallerie",
-    "fleet": "Wenig",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "12. Jahrhundert · erste überlieferte Amtszeit ab 1128",
     "milestoneOne": "Tryffin Draig, der „Fahrende Draig“, begründete den Zweig gemeinsam mit Rhianwyn Saethwyr. Seine Reisen und Heldentaten brachten ihm das Recht auf ein eigenes Haus ein. Die Wyrm führen auch Myrddins Abenteuerlust auf das Vorbild seines Onkels Tryffin zurück.",
     "milestoneTwo": "Mailgwin Wyrm · Seit 1717",
@@ -277,5 +280,12 @@ export const HOUSE_CONTENT = {
   "trivia": [
     "Die Wyrm schreiben sich einen Anteil an Myrddins Erwachen zur Abenteuerlust zu.",
     "Ihre Pferdezucht arbeitet mit Rhosmeres Rösser zusammen."
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographySourceRevision": 5,
+  "biographyPreviousDefaultFingerprints": [
+    "2702:7eca4374:4c1dc602"
   ]
 };

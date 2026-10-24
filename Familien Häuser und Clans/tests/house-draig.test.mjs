@@ -47,16 +47,16 @@ test('Hausseite und Stammbaum-Bio stammen vollständig aus derselben Quelle', as
   assert.equal(HOUSE_BIOGRAPHY.house.biographyText, HOUSE_CONTENT.biographySummary.overview);
   assert.equal(HOUSE_BIOGRAPHY.house.historyText, HOUSE_CONTENT.biographySummary.history);
   assert.deepEqual(HOUSE_BIOGRAPHY.house.works, []);
-  assert.equal(HOUSE_BIOGRAPHY.house.extraSections.length, 1);
+  assert.ok(HOUSE_BIOGRAPHY.house.extraSections.length >= 3);
   assert.ok(!JSON.stringify(HOUSE_BIOGRAPHY).includes('Hofämter'));
   const biographyWords = [HOUSE_BIOGRAPHY.house.biographyText, HOUSE_BIOGRAPHY.house.historyText, HOUSE_BIOGRAPHY.house.extraSections[0].text].join(' ').split(/\s+/);
-  assert.ok(biographyWords.length < 200, 'Die Hausbio bleibt ein kurzer Überblick.');
+  assert.ok(biographyWords.length < 1000, 'Die Hausbio bleibt gegenüber der vollständigen Hausseite gekürzt.');
 });
 
 test('Alle elf unbenannten Hofämter verwenden die Silhouetten der Quelle', () => {
   const offices = page.court.groups.find(group => group.id === 'offices').entries;
   const unassigned = offices.filter(entry => entry.name === 'Nicht benannt');
-  assert.equal(unassigned.length, 11);
+  assert.equal(unassigned.length, 10);
   for (const entry of unassigned) {
     const expected = ['Brotmeister', 'Gartenmeister', 'Hoffalkner'].includes(entry.role) ? 'female' : 'male';
     assert.equal(page.images[entry.imageKey].src, `../Stammbäume/assets/images/placeholders/${expected}.png`);

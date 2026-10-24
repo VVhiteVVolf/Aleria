@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-rhyddid",
   "name": "Haus Rhyddid",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 5,
+  "biographySourceRevision": 6,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Rhyddid ist ein Ritterhaus aus Gwynthor und Vasall der Wyrm. Seine Angehörigen dienen als Hauptleute, Garnisonsaufseher und Lehenswarte; mit Mwyncreig verbindet sie ein langjähriger Auftrag.",
     "history": "Myfanwy Saethwyr rettete Gwilym und Gwenifer nach einem Überfall und sorgte für ihre Aufnahme im Kloster Côr Mynyddfaen. Später schlug sie Gwilym zum Ritter. Sein Dankesschwur begründete die Treue des Hauses zu den Wyrm.",
-    "character": "Der Leitspruch „Der Eid endet nicht.“ verbindet Pflicht, Dankbarkeit und Beständigkeit. Taran ist das Oberhaupt; Arian ist sein erster Erbe."
+    "character": "Der Leitspruch „Der Eid endet nicht.“ verbindet Pflicht, Dankbarkeit und Beständigkeit. Taran ist das Oberhaupt; Arian ist sein erster Erbe.",
+    "customs": "Die Rhyddid sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Pflichtbewusstsein und die Erfüllung des Eides sind tief in ihrer Identität verankert und werden von Generation zu Generation weitergegeben – nicht als bloße Lehre, sondern als gelebte Selbstverständlichkeit, die das tägliche Handeln bestimmt.",
+    "holdings": "Die Burg der Rhyddid liegt in unmittelbarer Nähe zur Burg des Hauses Wyrm in der Stadt Gwynthor – man sagt, sie sei kaum mehr als einen Katzensprung entfernt. Diese räumliche Nähe ist kein Zufall, sondern Ausdruck des engen Bandes der Treue, das beide Häuser seit Generationen verbindet. Kurze Wege ermöglichen schnelle Absprachen, unmittelbare Unterstützung und eine Präsenz, die dem gegenseitigen Vertrauen entspricht.",
+    "culture": "Wie die meisten Cenyri bekennen sich auch die Rhyddid zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Gesten oder öffentlichen Bekundungen als im beständigen Handeln."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -314,5 +317,11 @@ export const HOUSE_CONTENT = {
       ]
     }
   ],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2499:881330f1:bba21db3"
+  ]
 };

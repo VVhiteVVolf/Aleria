@@ -1,0 +1,2723 @@
+node : (node:45888) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use
+`register()`:
+In Zeile:2 Zeichen:564
++ ... w($false)); node --experimental-loader ./diagnostics/celtigerns-house ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:45888) Ex...e `register()`::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url";
+register("./diagnostics/celtigerns-house-refresh-2026-10-24/baseline-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ startet auch große Bäume und alte Fokusakten vollständig eingepasst
+✓ normalisiert Rollen, Gründerlinie und Kadettenhäuser
+✓ entfernt nicht unterstützte Geschlechtswerte aus dem Modell
+✓ berechnet Beziehungen ausschließlich aus dem Graphen
+✓ findet Personen über Name, Titel und Haus
+✓ erkennt vorhandene Almanach-Charaktere rückwärts für ein Haus
+✓ übersetzt Gründerwappen, Zeitsprung und Kadettenhaus im Adapter
+✓ setzt einen freien Zeitsprung zwingend unter das vorhandene Stammwappen
+✓ behandelt einen Zeitsprung als alleinige Barriere vor allen Fortsetzungen der Generation
+✓ belässt einen Hausknoten des Gründerpaares direkt an diesem Paar
+✓ baut Personenkarten in der vorgegebenen Ebenenfolge auf
+✓ richtet Personenkartentexte global links aus, verkleinert sie und trennt den Hausnamen ab
+✓ persistiert Hauptlinie und Oberhaupt als eigene Personenstellung
+✓ berücksichtigt die eigene Wappenposition jeder Personenfassung
+✓ setzt beide Jahreszahlen ohne Von/Bis über die Linien des Zeitrahmens
+✓ unterdrückt den rechteckigen Family-Chart-Hintergrund für alle Ebenenkarten
+✓ rendert Wappenknoten ohne eingeblendeten Aktions- oder Standardtext
+✓ setzt bei ungültigen Wappenfassungen zuverlässig den Goldrahmen ein
+✓ formatiert Lebensdaten im verbindlichen Almanach-Stil
+✓ berechnet Alter verbindlich für das Gegenwartsjahr 1740
+✓ bildet Haus Arwydd mit den Beziehungen aus der Vorlage ab
+✓ liefert für Haus Arwydd sämtliche Portraits als lokale Projektdateien aus
+✓ führt überlagerungsarme Verbindungslinien über gemeinsame rechtwinklige Stämme
+✓ markiert nur unvermeidbare Kreuzungen unabhängiger Linien für eine Überführung
+✓ erzeugt weder an gemeinsamen Endpunkten noch innerhalb einer Liniengruppe Tunnel
+✓ plant eine unkonfigurierte Mehrpartnergruppe um eine einmalige Kernperson
+✓ lässt explizite und verschachtelte Mehrpartnerlayouts unangetastet
+✓ ordnet legitime Partner näher an der Kernperson als Affären und Opferbeziehungen
+✓ öffnet für eine entfernte Affäre eine freie Nachbarspur ohne Kartenüberlappung
+✓ verwendet für synthetische Wappenlinien unverfälschte Family-Chart-Anker
+✓ hält für Wappen- und Zeitknoten zusätzlichen Generationsabstand frei
+✓ berechnet native Elternlinien ausschließlich aus den endgültigen Kartenpositionen neu
+✓ ersetzt eine native Mehrpartnerlinie nur dann, wenn sie durch eine fremde Partnerkarte läuft
+✓ verankert eine nachträglich verschobene native Linie erneut an den finalen Karten
+✓ berechnet Kartenkollisionen von der tatsächlichen Kartenmitte aus
+✓ findet für einen kollidierenden Familienblock zentral eine freie Kartenspur
+✓ weitet einen kollidierenden Gesamtbaum proportional aus und bewahrt senkrechte Achsen
+✓ vergrößert notfalls den Generationenabstand, wenn zwei Karten dieselbe Querachse teilen
+✓ löst eine lokale Zweigkollision ohne globale Aufspreizung des Gesamtbaums
+✓ entkoppelt die fachliche Paarbindung eines Hausknotens von seiner einmaligen Renderprojektion
+✗ weist jede registrierte strikte Stammbaumakte mit fehlerhaften Layout-Ankern zurück
+AssertionError [ERR_ASSERTION]: Haus Skellor: strikte Layout-Anker sind widersprüchlich oder unvollständig.
++ actual - expected
+
++ [
++   {
++     childPersonIds: [
++       'iorren-skellor',
++       'catrin-skellor'
++     ],
++     code: 'LEAF_CHILD_GROUP_WITHOUT_PARENT_PAIR_ANCHOR',
++     partnershipId: 'marriage-skellor-cadfan-olwen'
++   }
++ ]
+- []
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:2666:12
+    at Array.forEach (<anonymous>)
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:2665:18
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual'
+}
+✓ setzt Auswanderungshäuser seitlich an die Gründerperson statt in eine Kindgeneration
+✓ schützt den Bearbeitungsmodus mit einer sitzungsgebundenen Freigabe
+✓ erzeugt explizite und familienbezogene Ansichts-URLs
+✓ liefert die Oberfläche standardmäßig schreibgeschützt und ohne Inline-Handler aus
+✓ bündelt seltene Familienwerkzeuge in klar benannten Toolbar-Menüs
+✓ übernimmt den Biographie-Vertrag des Almanachs als Personen-Erweiterung
+✓ wandelt Infotabellenzeilen für Firestore in {label, value}-Objekte, da Firestore keine verschachtelten Arrays erlaubt
+✓ legt neue Biographien mit zwölf sinnvollen Infotabellenzeilen an
+✓ bindet Almanach-Icons und auswahlstabile Rich-Text-Werkzeuge an
+✓ speichert Biographien mit Undo und Redo direkt an der Stammbaum-Person
+✓ rendert die Almanach-Biographie vollständig und erkennt Portraitklicks getrennt
+✓ liefert alle lokalen Toolbar-Motive und vereinheitlichte Linienkonturen aus
+✓ migriert das alte persons/couples-Format ohne Render-Abhängigkeit
+✓ exportiert und importiert das aktuelle Schema verlustfrei
+✓ weist zyklische Abstammung zurück
+✓ weist doppelte feste Personen-IDs zurück
+✓ weist reale Eltern an direkt unter einem Ursprungshaus geführten Personen zurück
+✓ weist parallele Zeitsprünge am selben Anker als ungültig zurück
+✓ weist auch überlappende Paar-/Einzelanker und einen Einzelanker neben dem Haus-Zeitsprung zurück
+✓ weist disjunkte Zeitsprünge derselben Generation unabhängig von der Datenreihenfolge zurück
+✓ erlaubt mehrere Elternpaare nur als gleich tiefe Zuführungen zu einem gemeinsamen Zeitsprung
+✓ erlaubt mehrere Zeitsprünge nur seriell an verschiedenen Generationen
+✓ kapselt Mutationen und unterstützt Undo/Redo
+✓ verwaltet Darstellungsoptionen und Kadettenhäuser im Store
+✓ vermittelt ein Mündel atomar und hängt den Zielhausknoten direkt unter die Person
+✓ legt eine neue Person und ihre Beziehung atomar an
+✓ ordnet neue Nachkommen hinter einem frei gesetzten Zeitsprungknoten ein
+✓ markiert eine bestehende Abstammung beim Zeitsprung und stellt sie beim Löschen wieder her
+✓ setzt einen Zeitsprung direkt nach einer einzelnen Person ohne Partnerschaft
+✓ bearbeitet Bild und Untertitel des Stammwappenknotens gemeinsam
+✓ erstellt einen vollständig leeren neuen Arbeitsstand
+✓ erstellt eine unabhängige Familie mit Gründerpaar und Wappen
+✓ fordert bei neuen Häusern Rang, vollständigen Registerpfad und ein Icon je Ebene
+✓ speichert ein Haus auf ausdrücklichen Wunsch ohne Ortszuordnung unter Nicht einsortiert
+✓ ordnet ein optionales erstes Kind direkt unter dem Gründerwappen ein
+✓ gliedert einen später am Wappen angelegten Sprössling unter dem Wappenknoten ein
+✓ Stammbaum-Generator Phase 1: createFamilyProfileDraft liefert eine gültige, personenlose Akte
+✓ Stammbaum-Generator Phase 2: commitFounderCouple baut auf einer Phase-1-Akte auf
+✓ Stammbaum-Generator: deriveTreeGeneratorPhase folgt 1→2→3→4 dem tatsächlichen Baum
+✓ Stammbaum-Generator: "Direkt beginnen" überspringt Phase 3 für die aktuelle Sitzung
+✓ Stammbaum-Generator hält Wiederverheiratungen als getrennte Fortsetzungslinien
+✓ Stammbaum-Generator kann enden, wenn alle Linien ohne nächste Generation abgeschlossen sind
+✓ Stammbaum-Generator bietet hinter einem vorhandenen Haus-Zeitsprung keinen parallelen zweiten Trenner an
+✓ Stammbaum-Generator: Vorschlags-Engine respektiert Alters-Plausibilität und wiederholt keine Namen
+✓ Stammbaum-Generator: store.setFamilyExtension setzt und entfernt Erweiterungsdaten
+✓ Stammbaum-Generator: eine vollständig simulierte Generation bleibt schemakonform
+✓ bereinigt Gründer- und Kadettenverweise beim Löschen von Personen
+✓ speichert Familien unter verschachtelten Registerpfaden
+✓ bewahrt Pfad-Icons im Register und kann die Einsortierung bewusst entfernen
+✓ zerlegt Cloud-Änderungen nach Entität und setzt sie verlustfrei zusammen
+✓ weist unsichere Firebase-Record-IDs vor dem Speichern zurück
+✓ öffnet Haus Arwydd als eigenständige Registerfamilie
+✓ bildet Haus Draig vom Ursprungshaus Dreigiau bis zur jüngsten Generation vollständig ab
+✓ liefert alle in Draig-Tabelle und Bildabschnitten belegten Portraits lokal aus
+✓ bildet Haus Wyrm mit beiden Überlieferungslücken und allen belegten Zweigen ab
+✓ liefert für Haus Wyrm alle belegten Portraits lokal aus
+✓ bildet Haus Gwyvern von Bleddyn und Owena bis zur jüngsten Generation ab
+✓ liefert für Haus Gwyvern alle belegten Portraits lokal aus
+✓ bildet Haus Gwefrydd mit drei Überlieferungslücken und allen belegten Zweigen ab
+✓ liefert für Haus Gwefrydd alle belegten Portraits lokal aus
+✓ bildet das erloschene Ritterfürstenhaus Illysywen mit Ausgestorben-Knoten ab
+✓ liefert für Haus Illysywen alle belegten Portraits lokal aus
+✗ bildet das Ritterherrenhaus Tlawd mit Überlieferungslücke und silbernem Wappenrahmen ab
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== 0
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:4709:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual'
+}
+✗ liefert für Haus Tlawd alle belegten Portraits lokal aus
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+21 !== 19
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:4773:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 21,
+  expected: 19,
+  operator: 'strictEqual'
+}
+✓ bildet das Ritterherrenhaus Rhyddid mit Gründerfamilie, Überlieferungslücke und Fremdhaus-Wappen ab
+✓ liefert für Haus Rhyddid alle belegten Portraits lokal aus
+✓ bildet das junge Ritterherrenhaus Gelyn ohne Überlieferungslücke ab
+✓ liefert für Haus Gelyn alle belegten Portraits lokal aus
+✓ bildet das Ritterherrenhaus Cludwyr mit geteiltem Rhyddid-Paar und Herkunfts-Wappen ab
+✓ liefert für Haus Cludwyr alle belegten Portraits lokal aus
+✓ modifiziert Beziehungen über den Store: Scheidung, Eheschluss aus Verlobung, Legitimierung, Hauszugang
+✓ verdoppelt beim Registerimport weder Haus- noch Clanname
+✓ verlobt eine Person registerübergreifend samt importierter Registerakte (Idwal-Beispiel)
+✓ bildet das matriarchale Ritterherrenhaus Chwedonol mit weiblicher Erbfolge und geteiltem Rhyddid-Paar ab
+✓ liefert für Haus Chwedonol alle belegten Portraits lokal aus
+✓ bildet Haus Balchder mit Silberrahmen, Hauptlinie und bestehenden Hausverbindungen ab
+✓ liefert für Haus Balchder alle belegten Portraits lokal oder über kanonische Hausdateien aus
+✓ bildet Haus Eneiniog mit unbekannten Ehepartnern, plausiblen Altersstufen und Balchder-Verbindung ab
+✓ liefert für Haus Eneiniog alle 23 belegten Portraits lokal aus
+✓ bildet Haus Gostyn mit Gründerlücke, allen belegten Ehen und der Erbfolge ab
+✓ liefert für Haus Gostyn alle 18 belegten Portraits lokal aus
+✓ bildet das Ritterherrenhaus Awenydd mit Überlieferungslücke und rückwirkend berechneten Altersabständen ab
+✓ liefert für Haus Awenydd alle 23 belegten Portraits lokal aus
+✓ bildet das ältere Ritterherrenhaus Awenor mit rückwirkend berechneten Altersabständen ab
+✓ liefert für Haus Awenor alle 19 belegten Portraits lokal aus
+✓ bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Schwestern ab
+✓ liefert für Haus Loer alle 14 belegten Portraits lokal aus
+✓ bildet das Ritterherrenhaus Garrael mit ausdrücklich benannten Wegverheiratungen ab
+✓ liefert für Haus Garrael alle 15 belegten Portraits lokal aus
+✓ bildet das bürgerliche Haus Gwyllach mit wechselnder Kopfschaft und vier Wegverheiratungen ab
+✓ führt Meirawen und Morwella als junge Zwillinge mit stimmiger Elterngeneration
+✓ aktualisiert Gwyllachs alte Altersangaben ohne Verlust eigener Ergänzungen oder Identitäten
+✓ liefert für Haus Gwyllach alle 19 belegten Portraits lokal aus
+✓ bildet das bürgerliche Haus Sgrechiwr aus Lynthor mit fünfstufiger Erbfolge nach Eignung ab
+✓ liefert für Haus Sgrechiwr alle 16 lokalen und 1 wiederverwendetes Portrait aus
+✓ bildet Haus Gafyr mit Überlieferungslücke, Mündel und allen belegten Zweigen ab
+✓ verwendet für namens- und jahresgleiche Personen hausübergreifend dieselbe Weltpersonen-ID
+✓ liefert für Haus Gafyr echte Portraits lokal und Platzhalter nur für unbelegte Bilder aus
+✓ bildet Haus Saethwyr mit beiden Überlieferungssprüngen und allen belegten Zweigen ab
+✓ liefert für Haus Saethwyr belegte Portraits lokal und wiederverwendet gemeinsame Personenbilder
+✓ ersetzt nur unberührte lokale Leerakten durch ausgearbeitete Registerfassungen
+✓ ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation
+✗ verzeichnet alle Häuser mit unabhängigem Rang und vollständiger Orts-Hierarchie
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+562 !== 522
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:7345:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 562,
+  expected: 522,
+  operator: 'strictEqual'
+}
+✓ baut eine Beziehungsmatrix aus direkten Familien- und Schwiegerbeziehungen
+✓ trennt aufgenommene Mündel von weggegebenen Familienkindern
+✓ übernimmt Oberhäupter und Erbfolgen aus den Haus-Hierarchien
+✓ pickTriviaSample wählt eine wiederholungsfreie, injizierbare Zufallsauswahl ohne Leerakten
+✓ buildShortHouseProfile degradiert graziös bei unvollständigem Hausprofil
+✓ buildLocalTriviaBlurb degradiert graziös bei fehlenden Segmenten
+✓ buildLandingTriviaPrompt enthält Titel und bekannte Kennzahlen, erfindet aber keine neuen
+✓ tree-generator-ai-bridge.js reicht den gemeinsamen AleriaGPT-Wrapper unverändert weiter
+✓ Pending-Tree-Generator-Merker: markieren, prüfen, ein-für-alle-Mal konsumieren
+✓ collectFamilyImageRefs findet alle bild-tragenden Schema-Stellen und überspringt leere Felder
+✓ extensionForContentType und zipFilenameFor liefern stabile, eindeutige Dateinamen
+✓ exportiert und ersetzt tief verschachtelte Registericons positionsstabil
+✓ buildFamilyBundleZip packt erreichbare Bilder, überspringt fehlgeschlagene und schreibt ein vollständiges Manifest
+✓ rewriteFamilyImageRefs lässt nicht aufgelöste Bildfelder unangetastet
+✓ parseFamilyBundleZip: fehlende family.json wirft einen klaren Fehler
+✓ parseFamilyBundleZip: fehlende manifest.json degradiert auf keine Bilder statt zu scheitern
+✓ parseFamilyBundleZip: liest referenzierte Bilder, überspringt fehlerhafte Manifest-Einträge
+✓ Landingpage verlinkt zur Generator-CTA und zum Familienregister, ohne Inline-Handler
+✓ Familienregister verlinkt zurück zur Startseite
+✓ Stammbaum.html bindet JSZip ein und bietet Paket-Export/Import sowie Startseiten-Links
+✓ netlify.toml leitet die Stammbäume-Startseite nicht mehr künstlich um
+✓ collectHouseFacts findet erloschene Linien und ihre Archivnotiz bei Haus Illysywen
+✓ collectHouseFacts erkennt Vormundschaften (Mündel) aus foster-Abstammungen
+✓ collectHouseFacts erkennt matriarchale Erbfolge bei Haus Chwedlonol
+✓ collectHouseFacts erkennt bürgerliche Erbfolge-nach-Eignung bei Haus Gwyllach
+✓ collectHouseFacts findet Ursprungshaus und Legitimierung bei Haus Draig
+✓ collectHouseFacts filtert Notizen heraus, die die Erzählebene durchbrechen (Bezug auf Vorlage/User)
+✓ collectHouseFacts liefert nichts für eine Familie ohne Datensatz und kürzt lange Archivtexte
+✓ collectGlobalFacts und pickFactSample liefern eine wiederholungsfreie, injizierbare Auswahl
+✓ collectBiographyPreviews ignoriert Personen ohne ausgearbeitete Biografie und findet welche mit Freitext
+✓ Landingpage rendert "Wusstest du schon?"-Spotlight und Biografie-Vorschau ohne Inline-Handler
+✓ createFounderPlaceholderHouseFamily legt ein schemakonformes Platzhalter-Gründerpaar an
+✓ createExtinctPlaceholderHouseFamily hängt den Ausgestorben-Knoten als Kind unter die letzte Erbperson
+✓ weist paargebundene oder seitlich platzierte Ausgestorben-Knoten zurück
+✓ createFounderTimeJumpPlaceholderHouseFamily setzt einen leeren Zeitsprung seriell unter das Stammwappen
+✗ bewahrt die ursprünglichen neun Bürgerhäuser aus Gwynthor mit lokalen Wappen und Grafschaftslinks
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+2 !== 1
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:8221:12
+    at async Promise.all (index 4)
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:8211:3
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 1,
+  operator: 'strictEqual'
+}
+✓ bildet Haus Falchdyn mit drei Großvätern, vier wegverheirateten Töchtern und unverheirateten Sprösslingen ab
+✓ spiegelt Llio Falchdyns Ehe mit Geraint Maerllys ohne doppelte Nachkommenslinie
+✓ liefert Haus Falchdyns ausgearbeitete Hausbiografie mit Hauptbild und Zeitungsemblem aus
+✓ gliedert Haus Argall als kleines Bürgerhaus aus Llysfaen mit Draig-Gegenakte ein
+✓ Haus Aelmor bleibt bis zur Großelterngeneration und auf drei Linien begrenzt
+✓ Haus Braglas führt höchstens drei männliche Linien und hält alle jungen Sprösslinge unverheiratet
+✓ Anwen Aelmor und Bryn Braglas sind mit Zielhaus und zwei Söhnen beidseitig registriert
+✓ Haus Draenmelyn bleibt kompakt: Taliesin und Myfanwy sind Cousins mit je zwei Geschwistern
+✓ Caradogs Söldnerlinie und Rhiannons Wegheirat nach Swyll sind beidseitig registriert
+✓ Haus Swyll baut Meredith als mittleres Kind auf, ohne sie zur Diagrammwurzel zu machen
+✓ Swyll führt fünf Tanten, drei Onkel sowie Großtante und Großonkel exakt nach Vorgabe
+✗ Swyll-Registryupgrade entfernt den veralteten direkten Gründerpfad zu Iestyn
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+11 !== 10
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:9015:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 11,
+  expected: 10,
+  operator: 'strictEqual'
+}
+✗ Draenmelyn-Registryupgrade ersetzt den alten Einlinien-Fokus und den leeren Zeitsprung
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+9 !== 8
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:9048:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 9,
+  expected: 8,
+  operator: 'strictEqual'
+}
+✗ Haus Pendrwn bleibt bis zu Emyrs Großvater begrenzt und lässt die gesamte junge Generation unverheiratet
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+16 !== 11
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:9090:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 16,
+  expected: 11,
+  operator: 'strictEqual'
+}
+✓ Pendrwns Verbindungen zu Swyll und Draenmelyn sind in den Gegenstammbäumen sichtbar gespiegelt
+✗ Haus Maerllys bleibt bis zu Nias Großvater begrenzt und lässt die junge Generation unverheiratet
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+19 !== 15
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:9209:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 19,
+  expected: 15,
+  operator: 'strictEqual'
+}
+✗ Haus Tonnarth bildet Llewarchs kleine Familie mit allen Tanten-, Onkel- und Vetternzweigen ab
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+26 !== 25
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:9296:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 26,
+  expected: 25,
+  operator: 'strictEqual'
+}
+✓ Haus Ysgrif bleibt klein und baut Floyd mit zwei Schwestern, drei Vettern und einem kinderlosen Söldneronkel auf
+✓ Maerllys-Verbindungen zu Swyll und Ysgrif sind in beiden Gegenstammbäumen gespiegelt
+✓ Rhoswen Maerllys und Madoc Tonnarth sind mit Ehe, Zielhaus und drei Kindern beidseitig verknüpft
+✓ Floyd, Sioned, Mair und Gareth bleiben ohne Ehe oder Verlobung und alte Fehlverknüpfungen werden migriert
+✓ Neue Vasallenhäuser (Artus Streben/Gwendolyns Ufer/Rhonwens Tränen): schemakonform, eindeutige IDs, Gwefrydd/Illysywen bewusst ausgelassen
+✓ Nur das ausgestorbene Haus Morveth trägt in Rhonwens Tränen einen Ausgestorben-Knoten; Skellor lebt fort
+✓ Neue Vasallenhäuser sind über die Hausregistrierung mit korrektem Rang/Orts-Hierarchie auffindbar
+✓ bildet Haus Annwyl vollständig und mit einem strikt seriellen Gründer-Zeitsprung ab
+✓ liefert alle elf individuellen Annwyl-Porträts als lokale JPEG-Dateien aus
+✓ ersetzt die Annwyl-Leerakte und migriert Eithne sowie Côr Mynyddfaen ohne Doppelakte
+✓ bildet Haus Rhuddgar mit Frewis fortgeführter Hauslinie und Serennas Wegverheiratung ab
+✓ liefert alle 36 individuellen Rhuddgar-Porträts lokal im tatsächlichen Dateiformat aus
+✓ ersetzt die frühere Rhuddgar-Leerakte durch den ausgearbeiteten Register-Stammbaum
+✓ bildet Haus Gwyntog mit Elians Kindern, Owenas und Manons Wegverheiratung sowie Gereints Affäre ab
+✓ liefert 19 neue und drei kanonisch wiederverwendete Gwyntog-Porträts lokal aus
+✓ ersetzt die frühere Gwyntog-Leerakte durch den ausgearbeiteten Register-Stammbaum
+✓ bildet Haus Trydar mit serieller Quellenlücke, Erbfolge und Maeryns Wegverheiratung ab
+✓ liefert 15 neue und zwei kanonisch wiederverwendete Trydar-Porträts lokal aus
+✓ ersetzt die frühere Trydar-Leerakte durch den ausgearbeiteten Register-Stammbaum
+✓ bildet Haus Taranvyr mit serieller Gründerlücke, Erbfolge und beiden Wegverheiratungen ab
+✓ liefert 33 neue und zwei kanonisch wiederverwendete Taranvyr-Porträts lokal aus
+✓ ersetzt die Taranvyr-Leerakte und migriert Kenyons Gwyvern-Gegenakte ohne Duplikate
+✓ bildet Haus Selog mit serieller Gründerlücke, Erbfolge und direkten Wegverheiratungen ab
+✓ liefert 18 neue und vier kanonisch wiederverwendete Selog-Porträts lokal aus
+✓ ersetzt die Selog-Leerakte im Familienregister ohne einen zweiten Stammbaum anzulegen
+✓ bildet Haus Penwyn mit serieller Gründerlücke, beiden Hauptzweigen und allen Wegverheiratungen ab
+✓ liefert 21 neue und zwei kanonisch wiederverwendete Penwyn-Porträts lokal aus
+✓ ersetzt die Penwyn-Leerakte und aktualisiert Rhoswyns Awenydd-Gegenakte ohne Duplikate
+✓ bildet Haus Seldryn lückenlos mit Erbfolge und beiden Wegverheiratungen ab
+✓ liefert 16 neue und Lughs synchronisiertes Seldryn-Portrait lokal aus
+✓ ersetzt die Seldryn-Leerakte und migriert die korrigierte Balchder-Gegenverknüpfung
+✓ bildet Haus Cysgodion mit einem seriellen Gründer-Zeitsprung und allen Wegverheiratungen ab
+✓ liefert alle 24 individuellen Cysgodion-Portraits lokal aus
+✓ ersetzt die Cysgodion-Leerakte im Familienregister ohne eine Doppelakte
+✓ bildet Haus Edmy mit einem seriellen Gründer-Zeitsprung und direkten Zielhausknoten ab
+✓ liefert alle 24 individuellen Edmy-Portraits lokal oder aus der Penwyn-Gegenakte aus
+✓ ersetzt die Edmy-Leerakte im Familienregister ohne eine Doppelakte
+✓ bildet Haus Barus mit einem seriellen Gründer-Zeitsprung und drei direkten Wegverheiratungen ab
+✓ liefert zehn neue und zwei kanonisch wiederverwendete Barus-Portraits lokal aus
+✓ ersetzt die Barus-Leerakte im Familienregister ohne eine Doppelakte
+✓ bildet Haus Cenfig mit einem seriellen Gründer-Zeitsprung und fünf direkten Wegverheiratungen ab
+✓ liefert 17 neue und zwei kanonisch wiederverwendete Cenfig-Portraits lokal aus
+✓ ersetzt die Cenfig-Leerakte im Familienregister ohne eine Doppelakte
+✓ bildet das Bürgerhaus Caerlaen mit einem seriellen Gründer-Zeitsprung und direkten Zielhausknoten ab
+✓ liefert 13 neue und sechs kanonisch wiederverwendete Caerlaen-Portraits lokal aus
+✓ ersetzt die Caerlaen-Leerakte im Familienregister ohne eine Doppelakte
+✓ bildet das Bürgerhaus Caerthwyn mit einem seriellen Gründer-Zeitsprung und direkten Zielhausknoten ab
+✓ liefert 24 neue und vier kanonisch wiederverwendete Caerthwyn-Portraits lokal aus
+✓ ersetzt die Caerthwyn-Leerakte im Familienregister ohne eine Doppelakte
+✓ bildet Haus Tawelgar mit serieller Gründerlücke und drei direkten Fremdhausknoten ab
+✓ liefert 24 neue und fünf kanonisch wiederverwendete Tawelgar-Portraits lokal aus
+✓ ersetzt die Tawelgar-Leerakte und migriert Emlyns Chwedonol-Gegenakte ohne Duplikate
+✓ bildet Haus Ymladd mit absolutem Gründersprung und vier korrekt zugeordneten Enkelzweigen ab
+✓ liefert alle 16 belegten Ymladd-Portraits lokal aus und lässt nur unbekannte Ehefrauen neutral
+✓ ersetzt die Ymladd-Leerakte im Register ohne eine zweite Familieninsel anzulegen
+✓ bildet Haus Daran lückenlos mit Maelgwyns Gwyvern-Vermittlung und Angharads Wegverheiratung ab
+✓ liefert zwölf neue und Morcants kanonisch wiederverwendetes Daran-Portrait lokal aus
+✓ ersetzt die Daran-Leerakte und migriert Morcants Vormundschaft sowie Maelgwyns Gwyvern-Gegenakte
+✓ bildet das Ritterhaus Gwared mit gespaltener Erbfolge nach dem Fall Illysywens 1720 ab
+✓ Sheev und Soffi Gwared sind über Balchder/Chwedonol hinweg dieselben Weltpersonen wie in Haus Gwared
+✓ bildet den antiken Albenclan Ard Conbhrón mit zweiter Überlieferungslücke und drei lebenden Nachfahren ab
+✓ Clodagh, Tallwch, Caireen und Llamrei sind über Gwefrydd/Draig hinweg dieselben Weltpersonen wie in Haus Ard Conbhrón
+✓ bildet das antike Fürstengeschlecht Ui Talamh ab, das vollständig in andere Häuser eingeheiratet ist
+✓ Dónall, Fíodhna/Garym, Líadan, Blathnaid/Grugyn und Ragnailt sind über Ard Conbhrón/Gafyr/Draig hinweg dieselben Weltpersonen wie in Haus Ui Talamh
+✓ bildet die Königsdynastie Haus Pendrag von Vortigern bis zur Regentschaft König Tristans ab
+✓ Vortigerns Draig-eingeheiratete Verwandte (Rhianu, Artus, Isobel, Godwyn, Isolde, Morholt, Marared, Caitrin, Cunedda, Rhodri, Owain) sind über Haus Draig hinweg dieselben Weltpersonen wie in Haus Pendrag
+✓ bildet die Grafenlinie Haus Illewod von Bedwyr bis zur Gegenwart 1740 ab
+✓ liefert alle belegten und korrigierten Illewod-Portraits als lokale Dateien aus
+✓ Kyvwlch/Selwyn (Haus Draig) und Sayres (Haus Saethwyr) sind über beide Häuser hinweg dieselben Weltpersonen wie in Haus Illewod
+✓ bildet die 104 Personen des Grafenhauses Neidr mit fünf seriellen Generationentrennern ab
+✓ hält Neidr-Weltpersonen, Portraits und hausübergreifende Beziehungs-IDs konsistent
+✓ liefert das lokale Neidr-Portraitmanifest mit 65 vollständigen JPEG-Dateien aus
+✓ ergänzt fehlende Cenyr-Wappen aus der kanonischen Familienregistrierung
+✓ ersetzt die Neidr-Leerakte im Familienregister durch den ausgearbeiteten Stammbaum
+✓ migriert einen lokalen Neidr-Stand ohne doppelte Altzweige auf die korrigierten Hausknoten
+✓ bildet die 103 Personen des Grafenhauses Grawn mit einem seriellen Generationentrenner ab
+✓ ordnet Mordreds acht Bastarde sichtbar und fachlich ihren beiden Affären zu
+✓ hält Grawn-Weltpersonen, Portraits und Beziehungs-IDs in den Gegenstammbäumen konsistent
+✓ liefert das lokale Grawn-Portraitmanifest mit 62 vollständigen JPEG-Dateien aus
+✓ ersetzt die Grawn-Leerakte im Familienregister durch den ausgearbeiteten Stammbaum
+✓ bildet Haus Aderyn als eindeutigen verbundenen Stammbaum mit sechs strikt seriellen Zeitsprüngen ab
+✓ hält Aderyn-Weltpersonen, Beziehungen, Portraits und Wappen in allen Gegenstammbäumen synchron
+✓ liefert alle 73 individuellen Aderyn-Portraits ohne generische Silhouetten aus
+✓ ersetzt die Aderyn-Leerakte und aktualisiert einen älteren lokalen Aderyn-Stand ohne Duplikate
+✓ bildet Haus Pysgod vollständig mit drei strikt seriellen Überlieferungslücken und direkt gebundenen Hausknoten ab
+✓ hält Pysgod-Weltpersonen, Ehen, Portraits und das Pysgod-Wappen in den Gegenstammbäumen synchron
+✓ liefert 68 neue Pysgod-Quellportraits lokal und verwendet zehn Gegenakten-Portraits ohne Dublette
+✓ ersetzt die Pysgod-Leerakte und migriert einen älteren lokalen Pysgod-Stand ohne Doppelzweige
+✓ bildet Haus Arth vollständig mit vier strikt seriellen Zeitsprüngen und allen direkt gebundenen Hausknoten ab
+✓ hält Arth-Weltpersonen, Beziehungen und Portraits in allen vorhandenen Gegenstammbäumen synchron
+✓ liefert 64 abrufbare Arth-Quellportraits lokal und dokumentiert Caradocs ausgefallene Einzelquelle separat
+✓ ersetzt die Arth-Leerakte und migriert einen älteren lokalen Arth-Stand ohne Doppelzweige
+✓ bildet Haus Wylan vollständig mit vier strikt seriellen Zeitsprüngen und allen Wegverheiratet-Knoten ab
+✓ hält Wylan-Weltpersonen, Beziehungen, Portraits und Wappen in allen vorhandenen Gegenstammbäumen synchron
+✓ liefert alle 62 individuellen Wylan-Quellportraits lokal und lässt generische Silhouetten bewusst aus
+✓ ersetzt die Wylan-Leerakte und migriert einen älteren lokalen Wylan-Stand ohne Doppelzweige
+✓ bildet das Königshaus Blodyn vollständig mit zwei seriellen Zeitsprüngen und getrennten Zielhauslinien ab
+✓ hält die Aberdail-Linie klein und führt Dalvin und Erec ausschließlich dort weiter
+✓ hält Yhons Talgarther Blodyn-Linie getrennt und ordnet Kinder sowie Mündel ausschließlich dort zu
+✓ synchronisiert Blodyn-Weltpersonen, Ehen, Lebensdaten und Portraits mit allen vorhandenen Gegenakten
+✓ liefert alle 57 individuellen Blodyn-Quellportraits und die Regionswappen lokal aus
+✓ registriert alle drei Blodyn-Akten unter ihren getrennten Ortslinien und ersetzt alte Leerakten
+✓ bereitet die Orts-Hierarchie der acht übrigen Grafschaften Cenyrs vor (Vortigerns Ruh und Weidebucht ausgebaut)
+✓ legt Platzhalter-Gründerpaare für die 8 übrigen Grafenhäuser Cenyrs an, mit goldenem statt silbernem Wappenrahmen
+✓ gliedert sämtliche Häuser der Klaueninseln unter die belegten Herrschaften, Sitze und Ränge ein
+✓ trennt die fünf Vennyr-Herkunftshäuser von ihren Klaueninsel-Nachfolgeakten
+✓ verbindet den vollständigen Cwingod-Baum mit dem bestehenden Arth-Gründerpaar
+✓ bildet Haus Eirth vollständig als Kadetten- und Vasallenhaus der Arth ab
+✓ setzt Eirths Hausknoten direkt unter Rhynnon und Kyndra und niemals parallel zu einer Generation
+✓ ordnet Eirths Nachkommen ausschließlich dem richtigen Elternpaar zu
+✓ führt Gaynor und Eirwyn mit den normalen geraden Wegverheiratet-Knoten nach Unigol
+✓ synchronisiert Eirths geteilte Personen und Ehen mit allen bestehenden Gegenakten
+✓ liefert Eirths elf Individualporträts lokal und lässt die Standardsilhouette Kyndras aus
+✓ ersetzt Eirths frühere Arth-Gründer-Leerakte durch den vollständigen Kadettenstammbaum
+✓ erlaubt mehrere Ehen und kann versehentliche Partner- sowie Kinderverknüpfungen vollständig entfernen
+✓ verhindert doppelte Wappenverknüpfungen an demselben Ursprung
+✓ stellt zwischen Live-Vorschau und Bearbeitung einen zugänglichen Breitenregler bereit
+✓ übernimmt das Häuser-Template des Aleria Almanachs vollständig als Familien-Erweiterung
+✓ speichert Clanbeschreibungen mit Undo und rendert den originalen Häuser-Kopf über der Biographie
+✓ setzt Titel, Motto und Wappen der Clanbeschreibung in die obere Dialogleiste
+✓ führt einen Ursprungshaus-Zeitsprung seriell zwischen Wappen und erster belegter Person
+✓ bildet Haus Sélwyn vollständig als eigenständiges Ritterfürsten- und Vasallenhaus der Arth ab
+✓ setzt Sélwyns Hausknoten und einzigen Zeitsprung strikt seriell vor Garselid und Linette
+✓ ordnet Sélwyns Nachkommen ausschließlich ihrem belegten Elternpaar zu
+✓ führt Linette und Cariad mit normalen geraden Wegverheiratet-Knoten zu ihren Zielhäusern
+✓ synchronisiert Sélwyns geteilte Personen und Ehen mit allen bestehenden Gegenakten
+✓ liefert Sélwyns sieben neue Individualporträts lokal und Gegenaktenbilder kanonisch aus
+✓ ersetzt Sélwyns falsche Arth-Kadetten-Leerakte durch den eigenständigen vollständigen Stammbaum
+✓ bildet Haus Pawen vollständig als ältestes Kadettenhaus der Arth ab
+✓ ersetzt Pawens frühere lokale Gründer-Leerakte durch den vollständigen Stammbaum
+✓ setzt Pawens Hausknoten und einzigen Zeitsprung strikt seriell vor Cadoc und Ceridwen
+✓ ordnet Pawens Wegverheiratungen und Unigol-Gründung den richtigen Ehen zu
+✓ führt fremde Nachkommen nur in den Zielhäusern und lässt Pawens jüngste Generation unverheiratet
+✓ liefert Pawens individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch
+✓ bildet Haus Unigol vollständig als von Trahaern Arth begründetes Kadettenhaus ab
+✓ setzt Unigols Stammwappen direkt unter Trahaern und Ceridwen und verzichtet auf einen Zeitsprung
+✓ führt ausschließlich Trachmyrs Unigol-Linie weiter und ordnet alle Kinder ihren Elternpaaren zu
+✓ hängt Unigols sechs Wegverheiratet-Knoten direkt an die richtige Ehe
+✓ synchronisiert Unigol mit Arth, Crafanc, Dienyddiwr, Chiffyddlon, Crefyddol, Sgwarnog und Canwyll
+✓ liefert Unigols Individualporträts lokal und Gegenaktenbilder kanonisch aus
+✓ ersetzt Unigols frühere Arth-Gründer-Leerakte durch den vollständigen Stammbaum
+✓ bildet Haus Morthwyll vollständig als eigenständiges Vasallenhaus der Arth ab
+✓ setzt Morthwyll-Wappen und einzigen Zeitsprung strikt seriell vor Merlion und Gwenfrewi
+✓ ordnet Morthwyll-Kinder ausschließlich ihrem belegten Elternpaar zu
+✓ hängt Morthwyll-Frauen mit geraden Wegverheiratet-Knoten an die richtigen Zielhäuser
+✓ synchronisiert Morthwyll mit Penderyn, Dyngwn, Arth, Unigol und Crefyddol
+✓ liefert Morthwylls Individualporträts lokal und Gegenaktenbilder kanonisch aus
+✓ ersetzt Morthwylls falsche Arth-Kadetten-Leerakte durch den eigenständigen vollständigen Stammbaum
+✓ bildet Haus Crafanc vollständig als zweites Kadettenhaus der Arth ab
+✓ ersetzt Crafancs frühere lokale Gründer-Leerakte durch den vollständigen Stammbaum
+✓ setzt Crafancs Hausknoten und einzigen Zeitsprung strikt seriell vor Caradoc und Kerenza
+✓ ordnet Crafancs Zielhauslinien, Eirth-Gründung und Gwennas Mündelknoten korrekt zu
+✓ synchronisiert Crafancs Gegenakten und führt fremde Kinder nur im fortführenden Zielhaus
+✓ liefert Crafancs individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch
+✓ bildet Diafols vollständige Herkunftslinie aus Trefgoch ohne Fokusbegrenzung ab
+✓ führt in Talgarth alle acht überlebenden Diafol mit ihren notwendigen Partnern fort
+✓ setzt Diafols Hausknoten und einzigen Zeitsprung strikt seriell vor Ercwlff und Griff
+✓ ordnet Torri Diafols Kinder eindeutig ihren beiden Affären zu
+✓ verteilt kollidierende Partnerkarten bei beiden Diafol-Linien links und rechts der Kernperson
+✓ stellt bei einer Kollision zuerst die sichtbare Diagrammposition des Partners wieder her
+✓ richtet gestaffelte Einzelkind-Elternblöcke von unten nach oben geradlinig aus
+✓ verschiebt einen geradlinigen Einzelkindzweig als Block aus benachbarten Karten heraus
+✓ zentriert einen opt-in Geschwisterblock unter dem zugehörigen Elternpaar
+✓ richtet verschachtelte Kindergruppen von unten nach oben aus
+✓ packt einen terminalen Geschwisterzweig direkt neben den ausgerichteten Hauptzweig
+✓ bewahrt bei einem eingebetteten Elternpaar den Abstand zu dessen Geschwistern
+✓ synchronisiert Diafols Migration, Gwaedlyd-Ehe und Telyns Mündel-Gegenakte
+✓ liefert Diafols individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch
+✓ ersetzt Diafols frühere lokale Platzhalterakten in Vennyr und Talgarth
+✓ bildet Diancs vollständige Herkunftslinie aus Gwynlann ohne Fokusbegrenzung ab
+✓ setzt Diancs Hausknoten und einzigen Zeitsprung strikt seriell vor Kynwrig und Jenifrydd
+✓ führt Diancs Aberdail-Linie mit einem gemeinsamen Knoten über Gingalain und Murvin fort
+✓ synchronisiert Diancs Migration und sämtliche vorhandenen Gegenakten ohne doppelte Kinder
+✓ liefert Diancs individuelle Quellenporträts lokal aus und übernimmt Gegenaktenbilder kanonisch
+✓ ersetzt Diancs frühere lokale Platzhalterakten in Gwynlann und Aberdail
+✓ bildet Arfordirs vollständige Grafenlinie aus Serenlyn ohne Fokusbegrenzung ab
+✓ setzt Arfordirs Hausknoten und einzigen Zeitsprung strikt seriell vor die belegte Linie
+✓ beginnt Arfordirs Aberdail-Linie gemeinsam bei den Brüdern Leodegrance und Luc
+✓ synchronisiert Arfordirs Migration und alle vorhandenen Gegenakten ohne doppelte Kinder
+✓ liefert Arfordirs individuelle Quellenporträts lokal und Gegenaktenbilder kanonisch aus
+✓ ersetzt Arfordirs frühere lokale Platzhalterakten in Serenlyn und Aberdail
+✓ bildet Dyfrgis vollständige alte Grafenlinie aus Mynyddharbwr ohne Fokusbegrenzung ab
+✓ setzt Dyfrgis Hausknoten und Zeitsprung strikt seriell und die Migration allein unter Mervyn
+✓ beginnt Dyfrgis Ritterfürstenlinie in Caer Cryftlawd ausschließlich bei Mervyn und Elin
+✓ synchronisiert Dyfrgis Migration und beide Blodyn-Gegenverknüpfungen ohne doppelte Kinder
+✓ liefert Dyfrgis individuelle Quellenporträts lokal und Blodyn-Gegenaktenbilder kanonisch aus
+✓ ersetzt Dyfrgis frühere lokale Platzhalterakten in Mynyddharbwr und Caer Cryftlawd
+✓ bildet Walwrs vollständige alte Ritterfürstenlinie aus Traeth ohne Personenfokus ab
+✓ setzt Walwrs Stammwappen, Zeitsprung und Rheidwns Migration strikt seriell
+✓ beginnt Walwrs Caer-Deheuol-Linie bei Rheidwn und führt nur seine Nachkommen fort
+✓ synchronisiert Walwrs mit allen acht Gegenakten und verdoppelt keine Fremdhauskinder
+✓ liefert Walwrs Individualporträts lokal und Gegenaktenbilder kanonisch aus
+✓ ersetzt Walwrs frühere Platzhalterakten in Traeth und Caer Deheuol
+✗ liefert die neuen Wappen der Klaueninseln und Tir Gogledd als lokale PNG-Dateien aus
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  [
+    'Sturmklaue',
+    'Talklaue',
+    'Blutklaue',
+    'Frostklaue',
+...
+    'Wellenklaue',
++   'Herrschaft der Pawen',
++   'Herrschaft der Crafanc',
++   'Herrschaft der Diafol',
++   'Krallenspitze',
++   'Herrschaft der Dianc',
++   'Herrschaft der Arfordir',
++   'Blutsturz'
+  ]
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:19961:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [Array],
+  operator: 'deepStrictEqual'
+}
+✓ gliedert die Graue Weite samt Vennyr-Herkunftslinien unter die belegten Orte und Ränge ein
+✓ registriert alte und neue Flüchtlingslinien der Grauen Weite getrennt und jeweils genau einmal
+✓ hält historische Vennyr-Verweise bei den alten Akten und reserviert neue IDs für Tredegar
+✓ führt Blaidd O'Branon von unbekannten Eltern über beide Brüder bis zur Gründung durch Gwynfor
+✓ setzt Blaidds Zeitsprünge seriell nur unter der fortgeführten Gwynfor-Linie
+✓ trennt Blaidds vollständige Branon-Herkunft von Pelleas’ Tredegar-Nachkommen
+✓ spiegelt Blaidds bestehende Ehen mit identischen Weltpersonen in den Gegenakten
+✓ liefert Blaidds individuelle Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ migriert die verworfene Blaidd-Doppelwappenfassung zur Gründung durch Gwynfor und Ceridwen
+✓ bildet Illygoden O'Tirwedd vollständig mit zwei seriellen Quellenlücken ab
+✓ trennt Illygodens Tirwedd-Herkunft von den vollständig fortgeführten Tredegar-Zweigen
+✓ zentriert Bleddyn genau einmal zwischen seinen Ehefrauen und ordnet Kinder ihrer Mutter zu
+✓ spiegelt Illygodens bestehende Ehen mit identischen Weltpersonen in den Gegenakten
+✓ liefert Illygodens 19 neue Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ bildet Gwaedlyd O'Caer Gorwel vollständig bis zum geradlinigen Gronw-Übergang ab
+✓ führt ab Gronw alle fünf Überlebenden genealogisch korrekt in Tredegar fort
+✓ spiegelt Gwaedlyds Gegenbeziehungen und ersetzt Zaras widersprüchliche Créyr-Verlobung
+✓ liefert Gwaedlyds 22 neue Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ bildet Lyfant O Derwyddion vollstaendig bis zu zwei geradlinigen Uebergaengen ab
+✓ trennt Lyfants Caer-Asgwrn-Nachfolge von Meredydds erloschener Derwyddion-Linie
+✓ spiegelt Lyfants ausgearbeitete Gegenbeziehungen in beiden Stammbaeumen
+✓ liefert Lyfants 28 zulassige Quellportraets und laesst veraltete Bilder aus
+✗ liefert alle Wappen und Regionsicons der Grauen Weite lokal als PNG aus
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    'Schimmerküste',
+    'Silberwald',
+    'Achatsee',
+    'Eichenlicht',
+    'Grauküste',
+    'Skelettküste',
++   'Herrschaft der Blaidd',
++   'Herrschaft der Gwaedlyd',
++   'Herrschaft der Illygoden',
++   'Herrschaft der Gwialen',
++   'Herrschaft der Brithyll'
+  ]
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:20921:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [Array],
+  operator: 'deepStrictEqual'
+}
+✓ zeigt die Graue Weite und ihre vier Vennyr-Ursprünge als getrennte Registerzweige
+✓ bildet Haus Brithyll vollständig mit serieller Gründerlücke und eindeutiger Erbfolge ab
+✓ ordnet Brithylls Ehen, Gwyneths zwei Verbindungen und alle Wegverheiratungen eindeutig zu
+✓ synchronisiert Brithylls vorhandene Gegenakten mit Weltpersonen, Beziehungen und Wappen
+✓ liefert Brithylls 36 neue und sechs kanonisch wiederverwendete Porträts lokal aus
+✓ bildet Haus Gwialen vollständig mit einem einzigen seriellen Gründer-Zeitsprung ab
+✓ ordnet Gwialens sieben Wegverheiratungen direkt zu und führt Kinder nur im zuständigen Haus fort
+✓ synchronisiert Gwialens vorhandene Gegenakten mit Weltpersonen, Beziehungen und Wappen
+✓ liefert Gwialens 22 neue und zehn kanonisch wiederverwendete Porträts lokal aus
+✓ gliedert sämtliche Häuser des Tals der Milane unter ihre belegten Herrschaften ein
+✓ registriert 20 abhängige Häuser des Tals der Milane genau einmal neben Aderyn
+✓ bildet Haus Eryr vollständig mit serieller Gründerlücke und eindeutiger Erbfolge ab
+✓ führt Eryr-Kinder nur auf der zuständigen Hausseite fort und setzt direkte Zielhausknoten
+✓ synchronisiert Eryrs vorhandene Gegenakten mit identischen Weltpersonen und Beziehungen
+✓ liefert Eryrs 28 individuelle Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt die Eryr-Leerakte im Register ohne einen zweiten Stammbaum anzulegen
+✓ bildet Haus Ilyuncu als jungen Aderyn-Kadettenzweig ohne erfundenen Parallel-Zeitsprung ab
+✓ setzt Ilyuncus Wegverheiratungen direkt unter das jeweilige Paar und führt Verlobungen nicht vorzeitig fort
+✓ synchronisiert alle acht Ilyuncu-Gegenbeziehungen mit identischen Weltpersonen und Portraits
+✓ liefert Bogus Ilyuncus Quellportrait lokal und verwendet fünfzehn Gegenaktenbilder wieder
+✓ ersetzt die Ilyuncu-Leerakte im Register ohne doppelte Familienakte
+✓ bildet Haus Sliabh als niederes Ilyuncu-Ritterherrenhaus ohne erfundene Personen ab
+✓ hängt Ciaras Wegverlobung direkt unter ihr Ilyuncu-Paar
+✓ spiegelt Sliabhs beide Verlobungen mit identischen Weltpersonen in Ilyuncu und Durdynn
+✓ bewahrt Caryl Durdynns unbekannte Abstammung hinter einem einzigen seriellen Zeitsprung
+✓ liefert zwölf Sliabh- und Caryl Durdynns Individualportrait als lokale Rasterbilder aus
+✓ registriert Sliabh und den belegten Durdynn-Gegenast jeweils genau einmal
+✓ bildet Haus Tylluan vollständig mit seriellem Hausknoten und absolutem Zeitsprung ab
+✓ ordnet Tylluans Affäre, Kinder und Wegverheiratungen jeweils genau einer Linie zu
+✓ synchronisiert Tylluans vorhandene Gegenakten und den Aderyn-Gründungsknoten
+✓ liefert Tylluans 20 individuelle Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt die Tylluan-Leerakte im Register ohne Doppelung und migriert alte Platzhalter
+✓ bildet Haus Mwyalchen vollständig mit seriellem Hausknoten und absolutem Zeitsprung ab
+✓ führt Mwyalchen-Nachkommen nur auf der zuständigen Hausseite fort und setzt alle Zielhausknoten direkt
+✓ synchronisiert Mwyalchens vorhandene Gegenakten mit identischen Weltpersonen, Beziehungen und Porträts
+✓ liefert Mwyalchens 29 individuelle Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt die Mwyalchen-Leerakte im Register ohne einen zweiten Stammbaum anzulegen
+✓ zeigt das Tal der Milane mit vier Herrschaften und dem Antike-Ordner im Register
+✗ liefert alle Tal-der-Milane-Herrschaftsicons und Hauswappen lokal aus
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    'Falkenhöh',
++   'Herrschaft der Eryr',
++   'Herrschaft der Mwyalchen',
++   'Herrschaft der Tylluan',
+    'Schwalbenhort',
+    'Taubenfurt',
+    'Yvains Klamm'
+  ]
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:22721:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [Array],
+  operator: 'deepStrictEqual'
+}
+✓ gliedert sämtliche Häuser der Silberinsel unter ihre belegten Herrschaften ein
+✓ registriert die 17 abhängigen Silberinsel-Häuser genau einmal neben der bestehenden Neidr-Akte
+✓ bildet Haus Saith vollständig, seriell und ohne gedoppelte Gegenakten-Kinder ab
+✓ liefert die neuen Saith-Porträts lokal aus und verwendet vorhandene Gegenaktenbilder wieder
+✓ führt Crefyddol aus Sieffres Linie fort und trennt Canwyll am richtigen Bruder ab
+✓ liefert die neuen Crefyddol-Porträts lokal aus und hält Gegenaktenbilder identisch
+✓ führt Canwyll aus Llwellyns Linie fort und trennt Crefyddol am richtigen Bruder ab
+✓ liefert Canwyll-Porträts lokal aus und hält gemeinsame Gegenaktenbilder identisch
+✓ bildet Tiwna mit zwei seriellen Generationentrennern und vollstaendigen Gegenverknuepfungen ab
+✓ liefert Tiwna-Portraets lokal aus und haelt gemeinsame Gegenaktenbilder identisch
+✓ bildet Pyrth vollständig mit einem seriellen Gründertrenner und eindeutigen Nachkommenlinien ab
+✓ liefert Pyrth-Porträts lokal aus und hält gemeinsame Gegenaktenbilder identisch
+✓ zeigt die Silberinsel mit drei heutigen Herrschaften und dem Antike-Ordner im Register
+✗ liefert alle Silberinsel-Regions- und Hauswappen lokal aus
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
++   'Herrschaft der Canwyll',
++   'Herrschaft der Crefyddol',
++   'Herrschaft der Saith',
+    'Silberbucht',
+    'Silberküste',
+    'Silberpfad'
+  ]
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:23402:10
+    at async file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:5 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [Array],
+  operator: 'deepStrictEqual'
+}
+✓ gliedert sämtliche Häuser des Ährentals ohne doppelte Ciaróg-Akte ein
+✓ registriert elf abhängige Ährental-Häuser genau einmal und ersetzt sieben ausgearbeitete Leerakten
+✓ bildet Haus Ciaróg vollständig mit serieller Gründerlücke und zwei aufgenommenen Mündeln ab
+✓ führt Ciarógs sieben Frauenlinien direkt fort und verdoppelt keine Gegenaktenkinder
+✓ liefert Ciarógs 32 neue und fünf kanonisch wiederverwendete Quellporträts lokal aus
+✓ bildet Haus Sgwarnog vollständig mit serieller Gründerlücke und belegter Erbfolge ab
+✓ setzt Sgwarnogs Hausknoten und einzigen Quellen-Zeitsprung strikt seriell
+✓ führt Sgwarnogs acht endende Frauenlinien direkt zum jeweiligen Zielhaus
+✓ synchronisiert Sgwarnogs fünf vorhandene Gegenakten ohne doppelte Kinderlinien
+✓ liefert Sgwarnogs 25 neue und acht kanonisch wiederverwendete Quellporträts lokal aus
+✓ bildet das erloschene Haus Chiffyddlon vollständig, eindeutig und mit belegter Erbfolge ab
+✓ setzt Chiffyddlons beide Überlieferungslücken als getrennte serielle Zeitsprünge
+✓ führt Chiffyddlons zwölf endende Frauenlinien direkt zum jeweiligen Zielhaus
+✓ synchronisiert Chiffyddlons acht vorhandene Gegenakten ohne doppelte Kinderlinien
+✓ liefert Chiffyddlons 16 neue und elf kanonisch wiederverwendete Quellporträts lokal aus
+✓ bildet das erloschene Haus Gwarchod vollständig, eindeutig und mit belegter Erbfolge ab
+✓ setzt Gwarchods einzige Überlieferungslücke seriell nach Gründerpaar und Hauswappen
+✓ führt Gwarchods neun endende Frauenlinien direkt zum jeweiligen Zielhaus
+✓ synchronisiert Gwarchods zehn vorhandene Gegenakten ohne doppelte Kinderlinien
+✓ liefert Gwarchods zwölf neue und vierzehn kanonisch wiederverwendete Quellporträts lokal aus
+✓ bildet Haus Baedd vollständig vom Warthog-Ursprung bis zur jungen Generation ab
+✓ setzt Baedds Hausknoten und einzigen Quellen-Zeitsprung strikt seriell
+✓ führt Baedds sieben endenden Frauenlinien direkt zum jeweiligen Zielhaus
+✓ synchronisiert Baedds vorhandene Gegenakten und verdoppelt keine Kinderlinien
+✓ liefert Baedds 17 neue und zwölf kanonisch wiederverwendete Quellporträts lokal aus
+✓ bildet Haus Morcanhuc lückenlos von Charlton und Deidrie bis zur jungen Generation ab
+✓ spiegelt Morcanhucs Grawn- und Marchog-Ehen ohne doppelte Kinderlinien
+✓ liefert Morcanhucs neun neue und vier kanonisch wiederverwendete Quellporträts lokal aus
+✓ bildet Haus Marchog vollständig mit Gründer, Erbfolge und getrennten Affären ab
+✓ ordnet Marchogs Hausknoten und sämtliche Fortsetzungen ohne Doppelpersonen an
+✓ zentriert eine gemeinsame Person optional nur zwischen ausdrücklich gewählten Ehepartnern
+✓ packt Ehe, Kernperson und kleinen Affärenzweig ohne fremde Karten dazwischen
+✓ haelt eine ausdruecklich kompakte Mehrpartnergruppe samt Mutter-Kind-Spuren lokal zusammen
+✓ haelt eine verstorbene kinderlose Altverlobte direkt bei der spaeteren Ehe und deren Nachkommen
+✓ reserviert auch bei einer kinderlosen Ehe drei kollisionsfreie Mehrpartner-Spuren
+✓ reserviert bei drei Affären eine eigene Mittelspur für die gemeinsame Kernperson
+✓ verschiebt bei einer fortgeführten Mehrpartnerlinie den gesamten lokalen Nachkommenzweig mit
+✓ verankert einen nachträglich gepackten Nachkommenzweig wieder senkrecht unter seinem Elternpartner
+✓ packt die Kernperson auch dann, wenn erst ihre künftige Mittelpunktposition kollidieren würde
+✓ setzt ein geordnetes Seitenpaar kompakt vor die fortlaufende Generation
+✓ zieht einen Wegverheiratet-Knoten nach einer verschobenen Ehe wieder gerade unter das Paar
+✓ fächert mehrere Bruderhausknoten desselben Elternpaares kollisionsfrei auf
+✓ richtet einen Hausknoten an der tatsächlich dargestellten Partnerkopie aus
+✓ zieht einen personengebundenen Mündelknoten ohne Zickzack direkt unter die Person
+✓ setzt einen Wegverheiratet-Knoten unmittelbar unter die zugehörige Paar-Generation
+✓ verschiebt beim Ausrichten eines Hausknotens niemals einen bereits ausgerichteten Einzelkindzweig
+✓ rendert die Wegverheiratet-Leitung aus der aktuellen Paarmitte statt aus alten Layoutpunkten
+✓ holt eine ausgerichtete Mutter bei Kollision nicht an eine weit entfernte Bibliotheksposition zurück
+✓ verschiebt einen reservierten Affären-Mutter-Kind-Block bei Kollision geschlossen in die Breite
+✓ führt Marchogs Wegverheiratungen direkt und synchronisiert vorhandene Gegenakten ohne doppelte Kinder
+✓ liefert Marchogs 33 neue und vier kanonisch wiederverwendete Quellporträts lokal aus
+✓ migriert eine ältere Marchog-Akte auf Partner- und geradlinige Ursprungsausrichtung
+✓ zeigt Ährental mit Herrschafts-, Ausgestorben- und Antike-Ordnern im Register
+✓ liefert alle Ährental-Regions- und Hauswappen lokal aus
+✓ gliedert sämtliche Häuser der Weidebucht in die vier heutigen Baronien und zwei antiken Orte ein
+✓ registriert alle 19 abhängigen Weidebucht-Häuser genau einmal als vorbereitete Akten
+✓ bildet Dinefwr als eigenständiges Bruderhaus Tir Addawols vollständig ab
+✓ setzt Dinefwr-Wappen, beide Zeitsprünge und Tir Addawol ohne Parallelfehler
+✓ führt Dinefwrs verheiratete Frauen direkt zum Zielhaus und Nachkommen nur im zuständigen Stammbaum
+✓ liefert Dinefwrs individuelle Quellporträts lokal aus und lässt Standardsilhouetten aus
+✓ bildet Tir Addawol als eigenständiges Baronshaus und Gegenakte zu Dinefwr vollständig ab
+✓ setzt Tir-Addawol-Wappen und beide Quellenlücken als absolute serielle Trenner
+✓ führt Tir-Addawols wegverheiratete Frauen direkt zum Zielhaus und synchronisiert Gegenakten
+✓ liefert Tir Addawols 21 neue Quellporträts lokal aus und lässt Standardsilhouetten aus
+✓ bildet Hwyaden als eigenständiges Baronshaus von Trefyddin vollständig ab
+✓ setzt Hwyadens Hauswappen und beide Zeitsprünge als absolute serielle Trenner
+✓ führt Hwyadens wegverheiratete Frauen direkt zum Zielhaus und verdoppelt keine Kinderlinien
+✓ liefert Hwyadens 19 neue Quellporträts lokal aus und verwendet Gegenaktenbilder erneut
+✓ bildet Créyr als eigenständiges Baronshaus von Esgairmor vollständig ab
+✓ setzt Créyrs Hauswappen und beide Quellenlücken als absolute serielle Trenner
+✓ führt Créyrs wegverheiratete Frauen direkt zum Zielhaus und Kinder nur am zuständigen Zweig fort
+✓ liefert Créyrs 19 neue Quellporträts lokal aus und verwendet Gegenaktenbilder erneut
+✓ bildet Asyn als zurückgekehrtes Ritterfürstenhaus und die verborgene Bastardlinie vollständig ab
+✓ setzt Asyns Hauswappen und alle vier Quellenlücken als absolute serielle Trenner
+✓ führt Asyns wegverheiratete Frauen direkt zum Zielhaus und spiegelt bestehende Gegenakten ohne doppelte Kinder
+✓ liefert Asyns 18 neue Quellporträts lokal aus und verwendet Gegenaktenbilder erneut
+✓ trennt Mochdaer in die endende Gwyliau- und die allein fortgeführte Cerrigarth-Akte
+✓ verzeichnet beide Mochdaer-Akten genau einmal unter ihren getrennten Ortslinien
+✓ hält die belegten Mochdaer-Gegenbeziehungen und Wegverheiratet-Knoten vollständig
+✓ liefert Mochdaer-Portraits und beide Vennyr-Regionsicons lokal aus
+✓ führt Ua Fhàire als Lairdtum auf Ritterfürsten-Tier
+✓ bildet Clan Ua Fhàire als antikes Lairdtum vollständig ab
+✓ setzt Ua Fhàires Wappen und einzigen Zeitsprung seriell nur unter Fachtna und Máirín
+✓ führt Ua-Fhàire-Frauen zu ihren Zielhäusern und verdoppelt keine Gegenaktenkinder
+✓ verwirft alte Ua-Fhàire-Porträts und verwendet nur neun vorhandene Gegenaktenbilder
+✓ führt Ui Trisceil als Mor Tiarnatum auf Grafen-Tier
+✓ bildet Clan Ui Trisceil als antikes Mor Tiarnatum vollständig ab
+✓ setzt Ui Trisceils Wappen und einzigen Zeitsprung seriell unter Fergals Linie
+✓ führt Ui-Trisceil-Frauen direkt zu Wylan und Ua Fhàire ohne doppelte Wylan-Kinder
+✓ verwirft alte Ui-Trisceil-Porträts und verwendet nur vier Wylan-Gegenaktenbilder
+✓ zeigt Weidebucht im Register mit Baronie-Icons und bewusst leeren modernen Stadtwappen
+✓ liefert alle Weidebucht-Baronie- und Hauswappen lokal als vollständige PNG-Dateien aus
+✓ gliedert sämtliche Adelshäuser der Sonnenküste in Aberon, Caer Llew, Carngol und Dun Afalla ein
+✓ registriert sechs ausgearbeitete Sonnenküsten-Akten neben 19 Platzhaltern
+✓ bildet Haus Grianlaoch als kleine Gründerfamilie mit zwei weggegebenen Illewod-Mündeln ab
+✓ verknüpft Grianlaoch und Illewod beidseitig ohne doppelte Weltpersonen oder Nachkommen
+✓ registriert die ausgearbeitete Grianlaoch-Akte genau einmal in Gallchofaen bei Aberon
+✓ verwendet für Grianlaoch das lokale Wappen und dieselben vier kanonischen Portraitdateien wie Illewod
+✓ bildet Haus Teyrngarch vollständig und ohne gedoppelte Nachkommen aus der Altdatenquelle ab
+✓ setzt Teyrngarchs Hauswappen und einzigen Zeitsprung strikt seriell vor Ercwiff und Lanette
+✓ führt alle belegten Teyrngarch-Fremdhauslinien direkt zum richtigen Hausknoten
+✓ synchronisiert Teyrngarchs vorhandene Gegenakten und setzt Kinder nur am fortgeführten Zweig
+✓ registriert und migriert die ausgearbeitete Teyrngarch-Akte genau einmal in Aberon
+✓ liefert 27 neue und neun kanonisch wiederverwendete Teyrngarch-Porträts lokal aus
+✓ bildet Haus Blach vollständig mit Kopfschaft, Erbfolge und aufgenommenem Mündel ab
+✓ setzt Blachs vier Überlieferungssprünge als globale serielle Generationentrenner
+✓ führt jede belegte wegverheiratete Blach-Frau direkt zum richtigen Zielhaus
+✓ synchronisiert Blachs Gegenakten und verdoppelt keine fortgeführten Kinder
+✓ registriert und migriert die ausgearbeitete Blach-Akte genau einmal in Aberon
+✓ liefert 32 neue und 17 kanonisch wiederverwendete Blach-Porträts lokal aus
+✓ bildet Haus Llwynog vollständig, erreichbar und mit eindeutigen Abstammungen ab
+✓ setzt Llwynogs zwei Quellenlücken seriell fort, ohne Nerys Wegheirat anzuschließen
+✓ führt Llwynogs verheiratete und verlobte Frauen direkt zu ihren Zielhäusern
+✓ synchronisiert Llwynogs Gegenakten und führt Kinder nur am zuständigen Zweig fort
+✓ registriert und migriert die ausgearbeitete Llwynog-Akte genau einmal in Aberon
+✓ liefert 25 neue und 18 kanonisch wiederverwendete Llwynog-Porträts lokal aus
+✓ bildet Haus Illwath vollständig, eindeutig und ohne Verlobungen der jüngsten Generation ab
+✓ setzt Illwaths Hauswappen direkt und seriell unter das Gründerpaar
+✓ führt Illwaths verheiratete Frauen direkt zu ihren drei belegten Zielhäusern
+✓ synchronisiert Illwaths Gegenakten und führt Nachkommen nur in der Illwath-Akte fort
+✓ registriert und migriert die ausgearbeitete Illwath-Akte genau einmal nach Caer Llew
+✓ liefert 13 neue und fünf kanonisch wiederverwendete Illwath-Porträts ohne Rheanne und Fintan aus
+✓ bildet Morforwyn als getrennte Stammlinie ab
+✓ setzt Mapnimue in den HolyFrame und hält dessen Text unter dem Sonnenornament
+✓ trennt Stammlinie, Elimue-Linie und Marmue-Linie durch jeweils serielle Zeitsprünge
+✓ spiegelt nur die hausinternen Ehen innerhalb der Stammlinie und dupliziert keine Kinder
+✓ führt Morforwyns sieben extern wegverheiratete Frauen in ihrer jeweiligen Linienakte zum Zielhaus
+✓ verknüpft alle sechzehn Ehen zwischen Morforwyn-Linien mit normalen Wegverheiratet-Knoten am Herkunftspaar
+✓ synchronisiert Morforwyns Gegenakten und dupliziert deren Kinder nicht
+✓ registriert und migriert das ausgearbeitete Baronenhaus Morforwyn genau einmal nach Carngol
+✓ liefert Morforwyns neue und kanonisch wiederverwendete Porträts vollständig lokal aus
+✓ migriert eine lokale Illewod-Akte aus dem alten direkten Aberon-Pfad in die Gersteküste
+✓ liefert alle Sonnenküsten-Ortsbilder und Tabellenwappen als lokale PNG-Dateien aus
+✓ gliedert Vortigerns Ruh in Uthers Aufstieg, Tanwens Flamme und das antike Calon
+✓ registriert alle abhängigen Häuser Vortigerns Ruhs genau einmal mit passenden Rahmen
+✓ bereitet Haus Pengair als Mathragoner Ritterhaus mit Gründerpaar und serieller Quellenlücke vor
+✓ bildet Haus Ceirwyn vollständig mit drei fortgeführten Gegenwartszweigen ab
+✓ setzt Ceirwyns Hauswappen und beide Überlieferungslücken strikt seriell
+✓ führt alle verheirateten Ceirwyn-Frauen mit direkter Zielhausverknüpfung
+✓ synchronisiert Ceirwyns vorhandene Gegenakten ohne neue Weltpersonen oder Ehen
+✓ registriert die ausgearbeitete Ceirwyn-Akte genau einmal als Baronenhaus in Calon
+✓ liefert 43 individuelle Ceirwyn-Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ bildet Haus Grael vollständig und ohne gedoppelte Personen oder Nachkommen ab
+✓ setzt Graels vier Überlieferungssprünge als globale serielle Generationentrenner
+✓ führt die Cousinenehe Genofeva und Ysberyr nur an Ysberyrs Zweig mit Nachkommen fort
+✓ führt alle belegten wegverheirateten Grael-Frauen direkt zum richtigen Zielhaus
+✓ synchronisiert Graels gemeinsame Personen, Ehen und Porträts mit den Gegenakten
+✓ registriert die ausgearbeitete Grael-Akte genau einmal als Ritterfürstenhaus in Mathragon
+✓ liefert 21 neue und 17 kanonisch wiederverwendete Grael-Porträts lokal aus
+✓ bildet Haus Cath vollständig und ohne gedoppelte Personen nach der Altdatenquelle ab
+✓ setzt Cath-Wappen und Überlieferungssprung strikt seriell zwischen Arawn und der 1632er Generation
+✓ führt Heledd als legitime Cath mit direkter Wegverheiratet-Verknüpfung zu Haus Pawen
+✓ registriert die ausgearbeitete Cath-Akte genau einmal als Ritterfürstenhaus in Mathragon
+✓ liefert sämtliche belegten Cath-Porträts lokal im korrekten Bildformat aus
+✓ bildet Haus Penderyn vollständig und ohne gedoppelte Nachkommen aus der Altdatenquelle ab
+✓ setzt Penderyns Hauswappen und einzigen Zeitsprung strikt seriell vor Dadweir und Cerith
+✓ führt alle Penderyn-Frauen mit belegter Fremdhauslinie direkt zum richtigen Hausknoten
+✓ synchronisiert Penderyns gemeinsame Personen und Beziehungen mit allen vorhandenen Gegenakten
+✓ registriert die ausgearbeitete Penderyn-Akte genau einmal als Ritterfürstenhaus in Mathragon
+✓ liefert alle 27 neuen und sieben kanonisch wiederverwendeten Penderyn-Porträts lokal aus
+✓ bildet Haus Dienyddiwr vollständig mit der belegten Ritterfürsten- und Erbfolge ab
+✓ setzt Dienyddiwrs Hauswappen und einzigen Zeitsprung strikt seriell vor Trayvon und Arianell
+✓ führt alle dreizehn wegverheirateten Dienyddiwr-Frauen direkt zum belegten Zielhaus
+✓ synchronisiert Dienyddiwrs vorhandene Gegenakten ohne doppelte Weltpersonen oder Ehen
+✓ registriert die ausgearbeitete Dienyddiwr-Akte genau einmal als Ritterfürstenhaus in Mathragon
+✓ liefert 36 neue und dreizehn kanonisch wiederverwendete Dienyddiwr-Porträts lokal aus
+✓ bildet Haus Dyngwn vollständig mit beiden Ehelinien Morgans und der belegten Erbfolge ab
+✓ setzt Dyngwns zwei Quellenlücken ausschließlich als serielle Generationentrenner
+✓ führt alle dreiundzwanzig wegverheirateten Dyngwn-Frauen direkt zum richtigen Zielhaus
+✓ synchronisiert Dyngwns vorhandene Gegenakten ohne zweite Weltpersonen oder Beziehungen
+✓ registriert die ausgearbeitete Dyngwn-Akte genau einmal als Ritterfürstenhaus in Mathragon
+✓ liefert alle fünfzig neuen Dyngwn-Porträts lokal im tatsächlichen Bildformat aus
+✓ bildet Haus Marwolaeth vollständig mit Kopfschaft, Erbkonflikt und erzwungener Verbindung ab
+✓ setzt Marwolaeths einzigen Zeitsprung strikt nach Gründerpaar und Stammwappen
+✓ führt alle dreizehn wegverheirateten Marwolaeth-Frauen direkt zum richtigen Zielhaus
+✓ synchronisiert Marwolaeths vorhandene Gegenakten und korrigiert deren Lebensdaten
+✓ registriert und migriert Haus Marwolaeth genau einmal als Ritterfürstenhaus in Mathragon
+✓ liefert achtundzwanzig neue und alle wiederverwendbaren Marwolaeth-Porträts lokal aus
+✓ liefert alle neuen Wappen Vortigerns Ruhs als lokale PNG-Dateien aus
+✓ migriert eine lokal gespeicherte Pendrag-Akte in die neue Mathragon-Hierarchie
+✓ bietet am Stammwappen und an Zeitsprüngen nur fachlich zulässige Knotenaktionen an
+✓ verwaltet den Zeitsprung unter dem Stammwappen getrennt von den Hausdaten
+✓ ersetzt Idwals markierte Platzhalter-Verlobung statt eine zweite aktive Verbindung anzulegen
+✓ behält beim Platzhaltertausch strukturelle Verweise und die bestehende Partnerschafts-ID
+✓ erlaubt die Hochstufung einer Verlobung neben einer weiteren Ehe
+✓ spiegelt eine neue Register-Verlobung mit gemeinsamer Weltidentität in beide Familienakten
+✓ entfernt eine gespiegelte Registerehe vollständig aus beiden Familienakten
+✓ erlaubt weitere Ehen im Aktionsmenü und lässt Affären ausdrücklich zu
+✓ bewahrt mehrere echte Ehen und blockiert nur eine identische doppelte Auswahl
+✓ bereinigt die Auswahl eines zweiten Elternteils statt Kind oder Hauptelternteil zuzulassen
+✓ legitimiert alle Abstammungsfassungen in genau einem rückgängig machbaren Schritt
+✓ verhindert eine einseitige Personenlöschung solange gespiegelte Registerverbindungen bestehen
+✓ leitet Tot- und Lebendig-Aktionen aus einem einzigen konsistenten Zustand ab
+✓ spiegelt Affären trotz bestehender Ehen in beide Registerfamilien und nutzt Affärenrahmen
+✓ legt bei einer Registerehe den Wegverheiratet-Knoten nur an der gewählten Herkunftslinie an
+✓ vermittelt Mündel beidseitig mit Zielperson, korrekten Rahmen und atomarer Online-Grenze
+✓ nimmt ein lokales Mündel samt Rollenwechsel in genau einem rückgängig machbaren Schritt auf
+✓ ordnet ein gespiegeltes Mündel nur ausdrücklich gewählten aufnehmenden Personen zu
+✓ verknüpft Zielhaus-Wappenknoten nur mit ausdrücklich gewählten Ehe- oder Lebenslinien
+✓ zeigt im Generator nur wirksame Regeln und behandelt den eingegebenen zweiten Menschen selbst als Zwilling
+✓ verwirft lokalen Generatorzustand auch beim nativen Schließen mit Escape
+✓ kann den Generator gezielt an einem vorhandenen Zeitsprung fortsetzen
+✓ führt Nachkommen hinter dem Haus-Zeitsprung als beanspruchte Linie statt als direkte biologische Kinder
+✓ automatische Familienvorlagen bieten exakt kompakt, ausgewogen und groß an
+✓ seedbarer Vorlagengenerator ist rein, reproduzierbar und erzeugt drei verschieden breite Topologien
+✓ automatische Vorlage akzeptiert das Gründerpaar allein als eine Generation
+✓ automatische Chronologie bleibt bis 1740 und hält normale Elternalter plausibel
+✓ automatische Lebensläufe reichen bis Partnerschaftsbeginn und biologische Kindergeburt
+✓ automatische Vorlage weist explizit widersprüchliche Gründer-Todesdaten klar zurück
+✓ automatische Vorlage bildet den optionalen Zeitsprung als einzigen absoluten Trenner ab
+✓ Übernahme einer automatischen Vorschau bleibt genau eine Store- und Undo-Grenze
+✓ Generator-UI delegiert Automatikaktionen zentral und ohne Inline-Handler
+✓ geänderte Automatikoptionen entwerten Signatur und sichtbare Vorschau
+✓ rendert die lokale Familie sofort und spielt die Repository-Fassung erst danach priorisiert ein
+✓ zeigt eine ältere GitHub-Fassung mit neueren Projektkorrekturen zusammengeführt an
+✓ lässt eine veraltete veröffentlichte Leerakte die neuere Neidr-Ursprungsfassung nicht verdecken
+✓ app-start wartet vor dem lokalen Rendern nicht auf das Online-Repository
+✓ speichert lokale Autosave-Entwürfe getrennt nach Familien-ID
+✓ liest Gegenfamilien und Beziehungskandidaten aus dem neuesten lokalen Draft
+✓ projiziert geänderte Weltpersonen-Portraits unabhängig vom Herkunftshaus auf Gegenakten
+✓ verwirft ein komplettes Spiegelpaket bei einer veralteten Gegenfamilien-Basis
+✓ schreibt Änderungen erst nach Online-speichern und niemals durch lokales Autosave
+✓ speichert ein geändertes Portrait derselben Weltperson in Draenmelyn und Swyll atomar
+✓ übernimmt Patricks GitHub-Inhalte und hält neuere Registry-Korrekturen zum Speichern offen
+✓ reicht einen ausdrücklich gewünschten Netlify-Deploy bis zum Online-Repository weiter
+✓ lässt eine neuere Firebase-Revision gewinnen und archiviert den lokalen Entwurf
+✓ bindet eine cloudgespeicherte Akte dauerhaft an ihre Familien-ID
+✓ blockiert eine neue Familie mit derselben bereits cloudgebundenen ID
+✓ stellt die Same-ID-Sperre nach Undo und Redo wieder her
+✓ bewahrt die Same-ID-Provenienz über ID-Ausflug und Undo
+✓ löst eine Same-ID-Neuanlage durch eine wirklich neue Familien-ID
+✓ speichert gespiegelte Beziehungen beider Familien in einer atomaren Cloud-Transaktion
+✓ hält eine Related-Komponente nach Firebase-Vorrang bis zum gemeinsamen Batch zusammen
+✓ blockiert nach Firebase-Vorrang eine nur noch einseitige echte Spiegelbeziehung
+✓ blockiert einen geänderten Cross-Family-Link auch ohne Related-Metadaten im Einzelspeicher
+✓ blockiert dieselbe Cross-Family-Link-ID bei abweichenden Weltpersonen
+✓ fasst verkettete Spiegeländerungen zu einem gemeinsamen atomaren Paket zusammen
+✓ bildet Bleiddorn als exakt abgegrenzte Wolfshorn-Auswanderungslinie ab
+✓ ordnet Wolfshorn-Ursprung, Bleiddorn-Gründerpaar und beide Kinder seriell im Chart an
+✓ liefert Bleiddorn-Wappen, Wolfshorn-Ursprung und geteilte Portraits lokal aus
+✓ aktualisiert eine lokale Wolfshorn-Revision ohne Personen- oder Hausknoten-Dopplung
+✓ bildet Haus Dubhan als exakt vierköpfige Auswanderungslinie der Sept ab
+✓ ordnet Sept-Ursprung, Dubhan-Gründerpaar und beide Kinder seriell im Chart an
+✓ liefert neues Dubhan-Wappen, Sept-Ursprung und geteilte Portraits lokal aus
+✓ aktualisiert eine lokale Sept-Dubhan-Revision ohne Personen- oder Hausknoten-Dopplung
+✓ migriert alte Nachkommenknoten von Bleiddorn und Dubhan zu seitlichen Auswanderungszweigen
+✓ bildet Hochreuth mit Friedrichs vier Kindern und drei Wegverheiratungen neutral ab
+✓ führt die rechtmäßige Erbfolge über Albrecht, Wilhelm und Ruprecht und setzt Otto erst politisch ein
+✓ registriert von Hochreuth als Ritterherrenhaus unter Goldmund und zeigt das Goldmund-Wappen am Verzeichnis
+✓ ordnet Friedrichs vier Kinder direkt unter dem Stammwappen an
+✓ migriert die verworfene Hochreuth-Erbrekonstruktion ohne alte Personen oder Konfliktdaten
+✓ liefert Hochreuth-, Roden- und Goldmund-Wappen sowie alle drei belegten Portraits lokal aus
+✓ bildet Weinlaub von unbekannten Gründern über Josiahs zwei Ehen bis zu den Halbbrüdern ab
+✓ hält Gideons Enterbung und Elias Bevorzugung als eindeutigen Nachfolgekonflikt fest
+✓ registriert Weinlaub unter Weisenfluh und ordnet das Stammwappen vor Josiahs Familienzweigen an
+✓ liefert Weinlaub-Portraits sowie Haus- und Weisenfluh-Wappen lokal aus
+✓ führt die vier venalischen Stände ohne feudale Profilbezeichnungen
+✓ bildet Falveri als große Magnarierfamilie mit Hauptlinie und Aldos unbedeutendem Nebenzweig ab
+✓ ordnet das Falveri-Silberwappen und den einzigen Zeitsprung strikt vor Aldos Großvater an
+✓ ordnet alle drei Falveri-Bastarde sichtbar und eindeutig ihren zwei Affären zu
+✓ verheiratet erwachsene Falveri-Frauen weg und lässt die jüngere Generation ledig
+✓ verwendet für die ausgestalteten Falveri die Namensformen der Lingua Argenti
+✓ registriert Falveri einmalig als Magnarierhaus direkt unter Venalys
+✓ liefert Aldos Portrait sowie Falveri- und Venalys-Wappen lokal aus
+✓ bildet Cymrath O'Traethlan als kinderlose Neugründung Aldo Falveris ab
+✓ verknüpft Cymrath O'Traethlan wechselseitig mit der Falveri-Akte und registriert es genau einmal
+✓ liefert das Wappen von Cymrath O'Traethlan lokal und mit Quellenangabe aus
+✓ bildet Haus Karreg in exakt drei Linien um Keldran und Thoran ab
+✓ ordnet Karregs Silberwappen und Zeitsprung strikt vor Keldrans Großvater an
+✓ hält Karreg frei von Affären und Bastarden und beachtet die Altersregeln
+✓ führt Karregs wegverheiratete Frauen mit direkten Zielhausknoten
+✓ verwendet für Karregs ergänzte Personen die Morgar-Namensformen
+✓ registriert Karreg einmalig als niederes Rittergeschlecht in der Felsbreche
+✓ liefert Keldrans Portrait sowie Karreg- und Morgorn-Wappen lokal aus
+✓ bildet Haus Scandyn in drei Linien mit Cenric im entbehrlichen Zweig ab
+✓ ordnet Scandyns Silberwappen und Zeitsprung strikt vor Cenrics Großvater an
+✓ hält Scandyn frei von Affären und Bastarden und lässt die junge Generation ledig
+✓ führt Scandyns wegverheiratete Frauen mit direkten Zielhausknoten
+✓ verwendet für Scandyns Ergänzungen angelsächsisch-rohirimische Namen
+✓ registriert Scandyn einmalig unter Aeldrunmar und Scandmere
+✓ liefert Cenrics Portrait sowie Scandyn- und Aeldrunmar-Wappen lokal aus
+✓ bildet Haus Thornwick als kleine, nahezu ausgelöschte Widerstandsfamilie ab
+✓ legt Thornwicks Kriegsverluste zwischen den Umsturz 1720 und die Hinrichtung 1739
+✓ ordnet Thornwicks Silberwappen und einzigen Zeitsprung strikt vor Refris Großvater an
+✓ führt Rowena direkt zum unbekannten Zielhaus und Wulstan weiter bei den Blauschwingen
+✓ registriert Thornwick einmalig unter Talyndor und Thornholt
+✓ liefert Refris Familie sowie Thornwick- und Talyndor-Wappen lokal aus
+✓ bildet Sept Daire als kleine Bürgerfamilie mit Lorcán als einzigem Überlebenden ab
+✓ lässt alle übrigen Daire im Krieg ab 1720 oder seinen unmittelbaren Folgejahren sterben
+✓ ordnet Daires Eisenwappen und einzigen Zeitsprung strikt vor Lorcáns Großvater an
+✓ bereitet Ceitheachs sechs Oberherrschaften und ihre herrschenden Clans vollständig vor
+✓ trennt Nic Blar in die Ceitheacher Herkunft und die parallele Leitheacher Fortsetzung
+✓ sichert die freigegebenen Nic-Blar-Porträts lokal und übernimmt Gegenaktenbilder
+✓ registriert Sept Daire einmalig unter Ceitheach und Tulachinis
+✓ liefert Lorcáns Portrait sowie sämtliche Ceitheach-Regions- und Clanwappen lokal aus
+✓ validiert Portraitwechsel für HTTPS und lokale Projektpfade
+✓ liest und speichert revisionsgebundene GitHub-Familienakten über das Publisher-Repository
+✓ hält den GitHub-Token serverseitig, benötigt aber keinen Veröffentlichungsschlüssel
+✓ erzeugt für GitHub denselben Registerpfad und eine fortlaufende Revision
+✓ wandelt lokal vorgemerkte Portraitdateien vor dem GitHub-Commit in Projektassets um
+✓ veröffentlicht lokal ausgewählte Register-Icons gemeinsam mit der Familienakte
+✓ bildet Haus Gaeth vollständig mit drei absoluten seriellen Zeitsprüngen ab
+✓ ordnet Gaeths Kinder nur der fortführenden Hausakte zu und setzt alle Wegverheiratet-Knoten direkt
+✓ synchronisiert Gaeths vorhandene Gegenakten mit identischen Weltpersonen, Ehen und Porträts
+✓ liefert Gaeths 22 individuelle Quellporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt die Gaeth-Leerakte im Register ohne einen zweiten Stammbaum anzulegen
+✓ bildet Haus Hebog vollständig mit drei seriellen und global eindeutigen Zeitsprüngen ab
+✓ führt Hebogs abgehende Frauen und Verlobte direkt zu ihren Zielhäusern
+✓ synchronisiert Hebogs Gegenakten mit identischen Weltpersonen, Beziehungen und Porträts
+✓ liefert Hebogs sieben neue Individualporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt die Hebog-Leerakte im Register ohne einen zweiten Stammbaum anzulegen
+✓ legt bei jeder GitHub-Speicherung eine unveränderliche Familienrevision im selben Commit ab
+✓ bildet Haus Coedwig vollständig mit genau einem seriellen Gründer-Zeitsprung ab
+✓ aktualisiert eine unvollständige lokale Coedwig-Akte und setzt den vollständigen Gründerfokus durch
+✓ führt Coedwigs zwölf Wegverheiratungen direkt zum Zielhaus und verdoppelt keine Fremdhauskinder
+✓ synchronisiert Coedwigs Gegenakten samt Zaras Verlobung und allen Wappen
+✓ liefert Coedwigs 24 neue Porträts lokal und verwendet Gegenaktenbilder kanonisch wieder
+✓ ersetzt Ottilies falsches Männerbild in beiden Gegenakten durch die weibliche Standardsilhouette
+✓ bildet Haus Morfil vollständig vom Gründerpaar aus mit genau einem seriellen Zeitsprung ab
+✓ führt Morfils acht Wegverheiratungen direkt zum Zielhaus und setzt Kinder nur am fortführenden Zweig
+✓ synchronisiert Morfils bestehende Gegenakten samt Beziehungen, Weltpersonen und Wappen
+✓ liefert Morfils 23 neue Porträts lokal und verwendet Gegenaktenbilder kanonisch wieder
+✓ bildet Haus Wivern vollständig vom Gründerpaar aus mit einem seriellen Zeitsprung und Brynmors Mündel ab
+✓ führt Wiverns sechs Wegverheiratungen direkt zum Zielhaus und doppelt keine fremden Kinderlinien
+✓ synchronisiert Wiverns vorhandene Gegenakten samt Beziehungen, Weltpersonen und Wappen
+✓ migriert Wiverns Wappen und beendete Gegenbeziehungen in bereits lokale Familienfassungen
+✓ liefert Wiverns 18 neue Porträts lokal und verwendet Gegenaktenbilder kanonisch wieder
+✓ ersetzt die Wivern-Leerakte im Register ohne doppelte Personen oder Beziehungen
+✓ bildet Haus Draenog vollständig vom Gründerpaar aus mit genau einem seriellen Zeitsprung ab
+✓ führt Draenogs zwölf Wegverheiratungen direkt zum Zielhaus und keine Zielhauskinder doppelt
+✓ synchronisiert Draenogs vorhandene Gegenakten samt Weltpersonen, Beziehungen, Porträts und Wappen
+✓ liefert Draenogs 22 neue Quellporträts lokal und verwendet Gegenaktenbilder kanonisch wieder
+✓ ersetzt die Draenog-Leerakte im Register ohne doppelte Personen oder Beziehungen
+✓ zeigt alle ausgearbeiteten Häuser der Grauen Weite vollständig ab dem frühesten Gründer an
+✓ migriert gespeicherte Brithyll- und Gwialen-Ansichten vom Personenfokus zur vollständigen Gründeransicht
+✓ bildet Haus Beryn bis zu Ifors Urgroßvater in genau drei Linien ab
+✓ ordnet Beryns Bastarde eindeutig Cadells Affäre zu und lässt alle unter 28 unverheiratet
+✓ entfernt Beryns alte kollidierende Eheausrichtung auch aus einer lokal gespeicherten Revision
+✓ registriert Beryn einmalig als niederes Ritterherrenhaus in Talgarth
+✓ übernimmt den verbundenen Kendryck-Export ohne isolierte Dublette und mit allen Wegverheiratungen
+✓ registriert Kendryck als Königshaus im Königlichen Jarltum und zeigt den gesamten Exportgraphen
+✓ registriert Aeldrunmars Earltumshäuser und Seolfor in der neuen Jarltumsstruktur
+✓ ordnet veröffentlichte Aeldrunmar-Häuser kanonisch ein und entfernt ihre statischen Doppelakten
+✓ bewahrt beim GitHub-Ersatz die kanonische Projekt-ID und den Projektpfad
+✓ leitet alte Aeldrunmar-Prototyp-IDs auf die integrierten Registerfamilien um
+✓ zeigt jeden importierten Aeldrunmar-Export vollständig und ohne verwaiste jüngste Generation
+✓ liefert Ifors Portrait und das Kendryck-Wappen als lokale PNG-Dateien aus
+✓ führt Aldrimars fünf große Jarltümer und ihre Jarlsclans als Hauptlinien
+✓ bildet Clan Vaeren vollständig von Odin bis zur Generation von 1740 ab
+✓ setzt Vaerens drei Quellenlücken seriell und vereint parallele Ahnen nur im gemeinsamen Trenner
+✓ trennt Vaerens Mehrfachehen und Affären strikt nach den jeweiligen Müttern
+✓ verwendet bei Vaeren Mündelrahmen ausschließlich für den jungen Sprössling Durathor
+✓ migriert Vaerens alte Mehrpartner-Anker und Astrids fehlendes Gegenaktenporträt
+✓ spiegelt Vaerens bestehende Gegenakten mit denselben Weltpersonen und Beziehungen
+✓ liefert Vaerens belegte Individualporträts lokal und wiederverwendet Gegenaktenbilder
+✓ liefert Aldrimar, alle Jarltümer und alle fünf Clanwappen als lokale PNG-Dateien aus
+✓ bildet Clan Varangr vollständig von Loki bis zur Generation von 1740 ab
+✓ setzt Varangrs Quellenlücken ausschließlich seriell und unter dem richtigen Paar
+✓ trennt Varangrs vier Affären und Bastardgruppen nach der jeweiligen Mutter
+✓ führt Varangrs Frauen und Ingulfs Mündelschaft direkt zu den Zielhäusern
+✓ spiegelt Varangrs vorhandene Gegenakten mit identischen Weltpersonen und Partnerschaften
+✓ liefert Varangrs 69 gültige Quellporträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt eine gespeicherte Varangr-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ entfernt Varangrs alte unbekannte Partner von Ingemar und Inga auch aus gespeicherten Fassungen
+✓ migriert Varangrs alte Partnerausrichtung und Svanhildrs falsches Bild
+✓ gleicht einen lokalen Varangr-Entwurf vor dem Bearbeiten mit der Registry ab
+✓ gliedert Schwarzfenns Jarlsclan, Thane und Hesire in die belegten Herrschaften ein
+✓ gliedert das nicht anerkannte Haus Eisbrand separat unter Todesfenn und Hallsvalr ein
+✓ trennt Schwarzfenns erloschene Clans nach Norrnaigh, Aldrimarern und Crannath
+✓ bildet Clan Arnvild vollständig bis zur Schändung von Flusswall ab
+✓ setzt Arnvilds einzigen Quellenzeitsprung strikt seriell und ordnet alle Kinder richtig zu
+✓ führt Arnvilds Frauen direkt in ihre Zielclans und spiegelt bestehende Gegenakten
+✓ liefert Arnvilds neue Individualporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt Arnvilds historische Leerakte kontrolliert durch den vollständigen Quellenbaum
+✓ liefert Schwarzfenns Gebiets- und Clanwappen vollständig als lokale PNG-Dateien aus
+✓ bildet Clan Ragnulf vollständig vom ersten Jarl bis zur Generation von 1740 ab
+✓ setzt Ragnulfs Hauswappen und beide Quellenlücken strikt seriell
+✓ trennt Oddvars legitime Kinder und Bastarde nach ihren Müttern und spiegelt die interne Ehe kontrolliert
+✓ ordnet Thoralds vier Kinder eindeutig den beiden Ehefrauen zu
+✓ führt Ragnulfs Wegverheiratungen und beide Mündelfälle ohne falsche Kinderlinien
+✓ spiegelt Ragnulfs vorhandene Gegenakten mit nur einer Kinderfortsetzung
+✓ liefert Ragnulfs 38 neue Quellporträts lokal und verwendet Gegenaktenbilder kanonisch wieder
+✓ ersetzt eine lokal gespeicherte Ragnulf-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ entfernt Hjördis falsche Verlobungs-Gegenakte bei der Ragnulf-Migration
+✓ migriert Svanhildrs falsches Ragnulf-Gegenaktenbild auf die Frauensilhouette
+✓ gliedert Ivarsheims Thane, Hesire und Trachwyll-Herkunft ohne Doppelakten ein
+✓ bildet Trachwyll O'Talfronwyn vollständig und mit zwei ausschließlich seriellen Quellenlücken ab
+✓ trennt Kenyons Ivarsfels-Linie eindeutig von allen in Vennyr verbleibenden Trachwyll-Zweigen
+✓ spiegelt Kenyons belegte Ivarsfels-Ehen in Silberzunge, Wargh und Skogg ohne doppelte Kinderlinien
+✓ liefert Trachwylls 33 neue Individualporträts lokal und übernimmt Gegenaktenbilder kanonisch
+✓ liefert Ivarsheims Regionen und Hauswappen vollständig als lokale PNG-Dateien aus
+✓ gliedert Roriksheims aktive Thanen- und Hesire-Clans vollständig und ohne Doppelakte ein
+✓ gliedert Roriksheims vierzehn Huskarlclans an ihren beiden Stammsitzen ein
+✓ bildet Clan Eisenjungfer vollständig und matriarchal um Lagertha aus der Skald-Gegenakte ab
+✓ spiegelt Lagerthas Ehe mit Ragnar in beiden Clans, führt die sieben Kinder aber nur bei den Skald fort
+✓ liefert für Clan Eisenjungfer ein vollständig ausgefülltes Almanach-Häuser-Modul
+✓ ersetzt die unberührte Eisenjungfer-Leerakte durch Stammbaum und Clanmodul
+✓ liefert alle vierzehn Huskarlwappen lokal und mit nachvollziehbarer Quelle aus
+✓ bildet Clan Brathfengr vollständig von Kvasir bis zur Generation von 1740 ab
+✓ setzt Brathfengrs Hauswappen und beide Zeitsprünge ausschließlich seriell
+✓ ordnet Brathfengrs Nachkommen vollständig den belegten Elternpaaren zu
+✓ führt alle vierzehn belegten Brathfengr-Frauen direkt zu ihren Zielhäusern
+✓ spiegelt Brathfengrs Gegenakten mit identischen Weltpersonen und Partnerschaften
+✓ liefert Brathfengrs 22 neue Quellporträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt eine lokal gespeicherte Brathfengr-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Sterkr vollständig von Aegir bis zur Generation von 1740 ab
+✓ setzt Sterkrs Stammwappen und beide Quellenlücken ausschließlich seriell
+✓ ordnet Sterkrs vollständige Nachkommenschaft genau den belegten Paaren zu
+✓ führt alle neun belegten Sterkr-Frauen direkt zu ihren Zielhäusern
+✓ spiegelt Sterkrs Gegenakten mit identischen Weltpersonen und Partnerschaften
+✓ liefert Sterkrs 25 neue Quellportraits lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt eine lokal gespeicherte Sterkr-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Sökeren vollständig von Forseti bis zur Generation von 1740 ab
+✓ setzt Sökerens Stammwappen und einzigen Zeitsprung ausschließlich seriell
+✓ ordnet Sökerens vollständige Nachkommenschaft genau den belegten Paaren zu
+✓ führt alle acht belegten Sökeren-Frauen direkt zu ihren Zielhäusern
+✓ spiegelt Sökerens Gegenakten mit identischen Weltpersonen und Partnerschaften
+✓ setzt Haus Sökering als vorgemerkten Kadettenhausknoten direkt unter Horik und Irmtraut
+✓ liefert Sökerens 20 neue Quellporträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt eine lokal gespeicherte Sökeren-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Skald vollständig von Jurgen Windrufer bis zur Generation von 1740 ab
+✓ setzt Skalds Stammwappen und einzigen Zeitsprung ausschließlich seriell
+✓ ordnet Skalds vollständige Nachkommenschaft den belegten Elternpaaren zu
+✓ führt alle dreizehn belegten Skald-Frauen direkt zu ihren Zielhäusern
+✓ spiegelt Skalds vorhandene Gegenakten mit identischen Weltpersonen und Partnerschaften
+✓ liefert Skalds 43 neue Quellporträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt eine lokal gespeicherte Skald-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ trennt Roriksheims ausgestorbene Norrnaigh- und Glaennath-Clans nach Kultur
+✓ liefert Roriksheims Gebiets- und Clanwappen vollständig als lokale PNG-Dateien aus
+✓ bildet Clan Vangandr vollständig vom Vanir-Ursprung bis zur Generation von 1740 ab
+✓ trennt Vangandrs Affären und erzwungene Verbindungen nach den richtigen Kindern
+✓ behält Vangandr-Frauen in der Clanlinie und richtet nur echte Mehrfachpartner-Gruppen aus
+✓ spiegelt Erna und Estrid kontrolliert an der fortgeführten Ehe ohne doppelte Kinderlinien
+✓ liefert Vangandrs individuelle Quellenporträts als lokale PNG-Dateien aus
+✓ bildet Clan Varulv vollständig vom Stammvater bis zur Generation von 1740 ab
+✓ setzt Varulvs Kadettenhäuser direkt unter ihre Gründerpaare und hält alle Zeitsprünge seriell
+✓ führt Varulvs verheiratete Frauen zu ihren Zielhäusern und spiegelt Skallis Verlobung mit Draig
+✓ liefert Varulvs 62 neue Quellporträts lokal und verwendet Draigs Gegenaktenbilder kanonisch wieder
+✓ ersetzt eine lokal gespeicherte Varulv-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Freiwinter vollständig von Vigulf bis zur Generation von 1740 ab
+✓ setzt Freiwinters Hauswappen und einzigen Zeitsprung strikt seriell
+✓ führt alle belegten Freiwinter-Frauen direkt zu ihren Zielclans und doppelt keine fremden Kinder
+✓ spiegelt Freiwinters gemeinsame Varulv-Personen und Ehen mit nur einer Kinderfortsetzung
+✓ liefert Freiwinters 38 neue Quellporträts lokal und übernimmt fünf Varulv-Bilder kanonisch
+✓ ersetzt eine lokal gespeicherte Freiwinter-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Nachtjäger vollständig von Fannarr bis zur Generation von 1740 ab
+✓ setzt Nachtjägers Hauswappen und einzigen Zeitsprung strikt seriell
+✓ ordnet Joric biologisch Rognars Affäre und adoptiv ausschließlich Ran zu
+✓ richtet Rans und Vornas Kinderzweige getrennt aus, ohne Rognar zu doppeln
+✓ führt Nachtjäger-Frauen direkt zu ihren Zielclans und doppelt dortige Kinder nicht
+✓ spiegelt Nachtjägers gemeinsame Varulv- und Freiwinter-Personen ohne doppelte Kinderfortsetzung
+✓ liefert Nachtjägers 24 neue Quellporträts lokal und übernimmt sieben Gegenaktenbilder kanonisch
+✓ ersetzt eine lokal gespeicherte Nachtjäger-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Schwarzdorn vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ setzt Schwarzdorns Hauswappen und einzigen Zeitsprung strikt seriell
+✓ ordnet Schwarzdorns Kinder allen belegten Elternpaaren vollständig und ohne Zweigvertauschung zu
+✓ stellt Thorir einmalig dar und richtet Dagny sowie Thurid über ihren eigenen Kindern aus
+✓ behält Maven in der Schwarzdorn-Linie und führt stattdessen Jarell aus Hyrmgarthr zu Schwarzdorn
+✓ spiegelt Schwarzdorns gemeinsame Gegenakten-Personen und Ehen ohne doppelte Kinderfortsetzung
+✓ liefert Schwarzdorns 43 neue Quellporträts lokal und übernimmt acht Gegenaktenbilder kanonisch
+✓ ersetzt eine lokal gespeicherte Schwarzdorn-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Helgr vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ führt alle belegten Helgr-Frauen direkt zu ihren Zielhäusern und synchronisiert Gegenakten
+✓ liefert Helgrs 45 Individualporträts lokal und verwendet vierzehn Gegenaktenbilder kanonisch
+✓ ersetzt eine vorbereitete Helgr-Leerakte kontrolliert durch den vollständigen Quellenbaum
+✓ bildet Clan Todbrand vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ trennt Todbrands Ehen und Affären sichtbar nach der jeweils richtigen Mutter
+✓ führt alle belegten Todbrand-Frauen direkt zu ihren Zielhäusern und synchronisiert Gegenakten
+✓ liefert Todbrands 24 Individualporträts lokal und verwendet sieben Gegenaktenbilder kanonisch
+✓ ersetzt eine vorbereitete Todbrand-Leerakte kontrolliert durch den vollständigen Quellenbaum
+✓ bildet Haus Eisbrand vollständig als reine Bastard- und Affärenlinie ab
+✓ verknüpft Audun geradlinig aus Todbrand mit seiner eigenständigen Eisbrand-Akte
+✓ migriert alte Eisbrand-Affärenkarten von Eydis und Skjolda auf den Opferrahmen
+✓ liefert alle dreizehn belegten Eisbrand-Porträts lokal und ohne Standardsilhouetten aus
+✓ bildet Clan Skjegg vollstaendig, ohne Personenfokus und mit genau einem seriellen Zeitsprung ab
+✓ verknuepft alle wegverheirateten Skjegg-Frauen direkt und synchronisiert bestehende Gegenakten
+✓ liefert Skjeggs 27 neue Individualportraets lokal und verwendet acht Gegenaktenbilder kanonisch
+✓ migriert Sweyns und Ragnfrids falsche lokale Ehe zur belegten Affaere
+✓ bildet Clan Skaal vollstaendig vom ueberlieferten Ursprung bis 1740 ab
+✓ fuehrt Skaal-Frauen direkt zu ihren Zielclans und spiegelt Gegenakten ohne doppelte Kinder
+✓ liefert Skaals 31 neue Individualportraets lokal und verwendet neun Gegenaktenbilder kanonisch
+✓ migriert Bjoerns alte Muendel-Ehe vollstaendig zur direkten Verlobung mit Svanhild
+✓ ersetzt die lokal gespeicherte Skaal-Leerakte kontrolliert durch den vollstaendigen Stammbaum
+✓ bildet Kampfgeborene vollstaendig und Frostgeborene separat als Buergerfamilie ab
+✓ setzt Kampfgeborenen-Wappen und Zeitsprung seriell und verknuepft Thorims Bastardhaus direkt unter ihm
+✓ zeigt Lars und Morga als oeffentliche Eltern und bewahrt Jon und Morga als geheime biologische Eltern
+✓ aktiviert die frauenpriorisierte Zusatzkinder-Ausrichtung nur per ausdruecklichem Opt-in
+✓ gruppiert sichtbare Elternlinien nur unter einem tatsaechlich verzeichneten Elternteil
+✓ migriert den alten Hella-Ysmal-Zweig auf den frauenpriorisierten Morga-Block
+✓ liefert alle belegten Kampf- und Frostgeborenen-Portraets lokal aus, einschliesslich Ulfrik und Jokul
+✓ bildet Clan Wargh vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ setzt Warghs drei Quellenlücken ausschließlich seriell und alle Frauenknoten direkt
+✓ spiegelt Warghs bestehende Gegenakten mit denselben Weltpersonen und Partnerschaften
+✓ liefert Warghs 51 neue Individualporträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ bildet Clan Feuerhaar vollständig und ohne abgeschnittenen Personenfokus ab
+✓ ordnet Feuerhaars Kinder, Affäre und einziges Mündel der richtigen Herkunft zu
+✓ spiegelt Feuerhaars belegte Ehen mit denselben Weltpersonen in allen Gegenakten
+✓ migriert die falschen Eldhári-Gegenakten auf Ingrid und Ingeborg Feuerhaar
+✓ ersetzt die alte Feuerhaar-Leerakte automatisch durch den vollständigen Quellenbaum
+✓ liefert Feuerhaars 24 Individualporträts lokal aus
+✓ bildet Clan Skogg vollständig und ohne abgeschnittenen Personenfokus ab
+✓ ordnet Skoggs Affären, Bastarde und aufgenommenen Mündel ausschließlich den richtigen Eltern zu
+✓ führt alle belegten Skogg-Frauen direkt zu ihren Zielhäusern
+✓ spiegelt Skoggs vorhandene Gegenakten mit identischen Weltpersonen und Partnerschaften
+✓ ersetzt die alte Skogg-Leerakte automatisch durch den vollständigen Quellenbaum
+✓ liefert Skoggs 45 neue Individualporträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ bildet Clan Silberzunge vollständig von Surtr bis zur Generation von 1740 ab
+✓ führt Silberzungen-Frauen direkt in ihre Zielhäuser und trennt fremde Nachkommen ab
+✓ spiegelt Silberzunges vorhandene Gegenakten mit gemeinsamen Weltpersonen und Ehen
+✓ liefert Silberzunges 26 neue Individualporträts lokal und übernimmt Gegenaktenbilder kanonisch
+✓ ersetzt die vorbereitete Silberzungen-Leerakte kontrolliert durch den vollständigen Quellenbaum
+✓ ersetzt beide vorbereiteten Trachwyll-Leerakten kontrolliert durch Herkunfts- und Ivarsfels-Linie
+✓ bildet Clan Grendel vollständig von Leif bis zur Generation von 1740 ab
+✓ führt Grendel-Frauen direkt zu ihren Zielclans und bildet beide fortgegebenen Mündel ab
+✓ spiegelt Grendels vorhandene Gegenakten mit identischen Weltpersonen und Ehen
+✓ liefert Grendels 28 neue Individualporträts lokal und übernimmt Gegenaktenbilder kanonisch
+✓ ersetzt die vorbereitete Grendel-Leerakte kontrolliert durch den vollständigen Stammbaum
+✓ bildet Clan Hyrmgarthr vollstaendig von Gunnhildr bis zur Generation von 1740 ab
+✓ verwendet fuer Gunnhildr exklusiv den Infernalen Rahmen und fuer Niflhel den normalen Kernrahmen
+✓ doppelt interne Hyrmgarthr-Ehepartner kontrolliert und fuehrt Kinder nur unter dem Mann fort
+✓ fuehrt extern verheiratete Hyrmgarthr-Mitglieder direkt zum Zielhaus und doppelt fremde Kinder nicht
+✓ spiegelt Hyrmgarthrs vorhandene Gegenakten mit identischen Weltpersonen und Ehen
+✓ liefert Hyrmgarthrs 41 neue Individualportraits lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt die vorbereitete Hyrmgarthr-Leerakte kontrolliert durch den vollstaendigen Stammbaum
+✓ bildet Clan Schmetterschild vollständig vom Gründerpaar bis 1740 ab
+✓ ordnet Schmetterschilds Kinder lückenlos der richtigen Ehe oder Affäre zu
+✓ führt Schmetterschild-Wegverheiratungen direkt zum Zielhaus und spiegelt bestehende Gegenakten
+✓ liefert Schmetterschilds 25 neue und fünfzehn kanonisch wiederverwendete Porträts lokal aus
+✓ ersetzt die vorbereitete Schmetterschild-Leerakte kontrolliert durch den Quellenbaum
+✓ bildet Clan Hrafn vollständig vom Gründerpaar bis 1740 ab
+✓ ordnet Hrafns Kinder ausschließlich ihren belegten Elternpaaren zu
+✓ führt Hrafn-Frauen direkt zu ihren Zielhäusern und spiegelt alle belegten Gegenakten
+✓ bewahrt den Leiknir-Widerspruch sichtbar, ohne eine zweite Mündelschaft zu erfinden
+✓ liefert Hrafns neun Individualporträts lokal und verwendet Gegenaktenbilder wieder
+✓ bildet Clan Graumähne vollständig und ohne Personenfokus ab
+✓ setzt Graumähnes Hauswappen und beide Quellenlücken strikt seriell
+✓ trennt Graumähnes Mehrfachehen und Affären nach den richtigen Müttern
+✓ führt Graumähne-Frauen direkt zu ihren Zielhäusern und spiegelt Gegenakten
+✓ liefert Graumähnes 39 neue und zwölf kanonisch wiederverwendete Porträts
+✓ entfernt Graumähnes alte Ganzzweig-Auslagerung und packt lokale Partnergruppen
+✓ ersetzt eine vorbereitete Graumähne-Leerakte kontrolliert durch den Quellenbaum
+✓ ordnet den ausgestorbenen Clan Hjerte als Norrnaigh-Ursprung in Krähenmoor ein
+✓ bildet Clan Schattenherz vollständig vom Hjerte-Ursprung bis 1740 ab
+✓ ordnet Schattenherzens Nachkommen ausschließlich den belegten Elternpaaren zu
+✓ führt Schattenherzens Wegverheiratungen direkt aus und ordnet Hilda der belegten Affäre zu
+✓ spiegelt Schattenherzens vorhandene Gegenakten mit identischen Weltpersonen und Beziehungen
+✓ liefert Schattenherzens belegte Individualporträts lokal und ohne Standardsilhouetten aus
+✓ ersetzt die vorbereitete Schattenherz-Leerakte kontrolliert durch den Quellenbaum
+✓ entfernt Bergtors falsche Verlobung bei der Schattenherz-Migration vollständig
+✓ bildet Clan Kaltherz vollständig vom Hjerte-Ursprung bis 1740 ab
+✓ ordnet Kaltherzens Nachkommen ausschließlich den belegten Elternpaaren zu
+✓ führt Kaltherzens Wegverheiratungen direkt unter den jeweiligen Paaren aus
+✓ spiegelt Kaltherzens vorhandene Gegenakten mit identischen Weltpersonen und Beziehungen
+✓ liefert Kaltherzens neue Individualporträts lokal und verwendet Gegenaktenbilder wieder
+✓ ersetzt die vorbereitete Kaltherz-Leerakte kontrolliert durch den Quellenbaum
+✓ bildet Clan Feuerherz vollständig vom Hjerte-Ursprung bis 1740 ab
+✓ ordnet Feuerherzens Nachkommen ausschließlich den belegten Elternpaaren zu
+✓ führt Feuerherzens Wegverheiratungen direkt unter den jeweiligen Paaren aus
+✓ spiegelt Feuerherzens vorhandene Gegenakten mit getrennten Ingunn-Weltpersonen
+✓ liefert Feuerherzens Individualporträts lokal und ohne Standardsilhouetten aus
+✓ ersetzt die vorbereitete Feuerherz-Leerakte kontrolliert durch den Quellenbaum
+✓ bildet Clan Vragi vollständig von Knar bis zur Generation von 1740 ab
+✓ ordnet Vragis Nachkommen ausschließlich den belegten Elternpaaren zu
+✓ führt Vragi-Frauen direkt zu ihren Zielclans und doppelt die interne Ehe kontrolliert
+✓ spiegelt Vragis vorhandene Gegenakten mit identischen Weltpersonen und Ehen
+✓ liefert Vragis Individualporträts lokal und ohne Standardsilhouetten aus
+✓ ersetzt die vorbereitete Vragi-Leerakte kontrolliert durch den Quellenbaum
+✓ bildet Clan Goldglanz vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ ordnet Goldglanz-Nachkommen ausschließlich ihren belegten Elternpaaren zu
+✓ setzt Goldglanz-Wegverheiratungen und Kjallaks Mündelziel geradlinig an ihre Anker
+✓ spiegelt Goldglanz-Ehen und korrigierte Lebensdaten in den vorhandenen Gegenakten
+✓ liefert Goldglanz-Individualporträts lokal und ohne Standardsilhouetten aus
+✓ ersetzt die vorbereitete Goldglanz-Leerakte kontrolliert durch den Quellenbaum
+✓ gliedert Krähenmoors Thane, Hesire, Huskarle und Kulturerben ohne doppelte Registerakte ein
+✓ zeigt Rabenforst und Rabenhain als eigene tiefe Registerebenen mit den richtigen Icons
+✓ führt alle Krähenmoor-Wappen und Regionsicons lokal mit dokumentierter Quelle
+✓ bereitet das Königliche Jarltum Kronental vollständig und ohne doppelten Vaeren-Eintrag vor
+✓ trennt Kronentals erloschene Norrnaigh- und Glaennath-Clans und bewahrt Torrenwacht
+✓ zeigt Kronentals tiefe Gebietsstruktur mit den überlieferten Icons
+✓ führt Kronentals überlieferte Wappen und Regionsicons lokal mit Quellenangabe
+✓ migriert Kronentals neue Clanwappen in vorbereitete und verknüpfte Familienakten
+✓ bildet den Bürgerclan Spindelschlag vollständig vom Gründerpaar bis 1740 ab
+✓ ersetzt die frühere Spindelschlag-Platzhalterakte durch den vollständigen Quellenstammbaum
+✓ entfernt Hlif und Bersis frühere Beziehung auch aus gespeicherten Spindelschlag-Akten
+✓ setzt Spindelschlags Wappen und einzigen Zeitsprung strikt seriell
+✓ ordnet Spindelschlags Kinder den belegten Elternpaaren zu und lässt fremde Kinder in ihren Zielakten
+✓ spiegelt Spindelschlags bestehende Gegenakten mit identischen Weltpersonen und Ehen
+✓ liefert Spindelschlags belegte Individualporträts lokal und quellenbelegt aus
+✓ bildet den ausgestorbenen Clan Järnblod vollständig als Ursprung dreier Nachfolgeclans ab
+✓ ordnet Järnblods Schwarzblut-, Blutstahl- und Silberblut-Gründungen den richtigen Paaren zu
+✓ bildet Clan Schwarzblut vollständig vom Järnblod-Ursprung bis 1740 ab
+✓ trennt Schwarzbluts Affären und Opferbeziehung sichtbar nach den richtigen Kindern
+✓ hält bei Sindre jede Mutter über ihrem eigenen Kinderblock und Sindre dazwischen
+✓ führt Schwarzbluts Wegverheiratungen direkt aus und spiegelt vorhandene Varangr-Gegenakten
+✓ liefert Järnblod- und Schwarzblut-Porträts lokal und ohne alte Standardsilhouetten aus
+✓ ersetzt Järnblods und Schwarzbluts vorbereitete Leerakten ohne doppelte Gründer
+✓ bildet Clan Kummerherz vollständig vom Hjerte-Ursprung bis 1740 ab
+✓ ordnet Kummerherzens Nachkommen ausschließlich den belegten Elternpaaren zu
+✓ trennt Kummerherzens Wegverheiratungen und beide Mündelfälle korrekt
+✓ spiegelt Kummerherzens bestehende Gegenakten mit identischen Weltpersonen und Ehen
+✓ liefert Hjerte- und Kummerherz-Porträts lokal ohne Standardsilhouetten aus
+✓ ersetzt die vorbereitete Kummerherz-Leerakte kontrolliert durch den Quellenbaum
+✓ erweitert eine gespeicherte kurze Hjerte-Ursprungsakte auf alle vier Kadettenlinien
+✓ migriert Hjerters alten falschen Schattenherz-Knoten auf Zarnik und Wodruns Vaeren-Wegheirat
+✓ liefert Blutstahl und Silberblut als vollständige, valide Quellenstammbäume aus
+✓ bildet Blutstahls Elternschaften, Opferkontext und Weiterheiraten quellentreu ab
+✓ entfernt beim Blutstahl-Upgrade Birgers alten Mündelknoten und übernimmt gerade Einzelkindlinien
+✓ bildet Silberbluts Linien und Olnas biologische sowie Mündel-Zuordnung getrennt ab
+✓ spiegelt Blutstahl- und Silberblut-Ehen mit denselben Weltpersonen in Gegenakten
+✓ liefert Blutstahl- und Silberblut-Porträts lokal und mit vollständigen Quellenmanifesten aus
+✓ bildet Clan Wellenschild vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ ordnet Wellenschild-Nachkommen ausschließlich ihren belegten Elternpaaren zu
+✓ erzwingt für strikte Quellenbäume gerade Kinder- und Hausanker
+✓ setzt Wellenschild-Wegverheiratungen und Ingas Mündelziel senkrecht an ihre Anker
+✓ spiegelt Wellenschilds vorhandene Gegenakten mit identischen Personen und Ehen
+✓ liefert Wellenschilds Individualporträts lokal und ohne Standardsilhouetten aus
+✓ bildet Clan Gullvig vollständig von Sten bis zur jüngsten Generation ab
+✓ ordnet Gullvig-Nachkommen ausschließlich ihren belegten Elternpaaren zu
+✓ trennt Gullvigs interne Ehen durch je eine wiederholte Frauenkarte von den Herkunftslinien
+✓ migriert Gullvigs symmetrische Vierfachdarstellung auf weibliche Ehefassungen
+✓ wertet bei Gullvig nur die jüngste Generation als Mündel aus
+✓ setzt Gullvigs Wegverheiratungen gerade unter die jeweiligen Paare
+✓ spiegelt Gullvigs vorhandene Gegenakten mit identischen Personen und Ehen
+✓ liefert Gullvigs Individualporträts lokal und ohne Standardsilhouetten aus
+✓ bildet Clan Sturmgeborene vollständig vom Gründerpaar bis zur Generation von 1740 ab
+✓ ordnet Sturmgeborenen-Nachkommen nur den belegten Elternpaaren und dem richtigen Mündel zu
+✓ trennt die interne Ehe Arnthor–Elinborg ohne doppelte Kinderfortsetzung
+✓ haelt Arnthors Fortsetzung und Elinborgs kinderlose Herkunft auch im Layout in getrennten Zweigen
+✓ hält kopierte Binnenheiratspartner in einem direkt benachbarten Kartenplatz
+✓ führt Sturmgeborenen-Frauen senkrecht zu den verknüpften Zielclans
+✓ spiegelt Sturmgeborenen-Gegenakten und berichtigt belegte Quellfehler
+✓ liefert Sturmgeborenes neue Individualporträts lokal und quellenbelegt aus
+✓ ersetzt die vorbereitete Sturmgeborenen-Leerakte kontrolliert durch den vollständigen Baum
+✓ bildet Clan Wellensänger vollständig von Snorri bis zur Generation von 1740 ab
+✓ ordnet Wellensänger-Nachkommen ausschließlich ihren belegten Elternpaaren zu
+✓ führt Wellensänger-Frauen und Isaura direkt zu den richtigen Zielhäusern
+✓ spiegelt Wellensängers vorhandene Gegenakten mit identischen Personen und Ehen
+✓ liefert Wellensängers Individualporträts lokal und ohne Standardsilhouetten aus
+✓ ersetzt die vorbereitete Wellensänger-Leerakte kontrolliert durch den vollständigen Baum
+✓ bildet Clan Riesentod vollständig von Leif bis zur Generation von 1740 ab
+✓ setzt Riesentods zwei Zeitsprünge seriell und ordnet jedes Kind nur dem belegten Elternpaar zu
+✓ führt Riesentod-Frauen senkrecht unter ihren Ehepaaren zu den richtigen Zielclans
+✓ spiegelt Riesentods bereits vorhandene Gegenakten mit stabilen Weltpersonen und Bündnissen
+✓ liefert Riesentods Individualporträts lokal und quellenbelegt aus
+✓ ersetzt die vorbereitete Riesentod-Leerakte kontrolliert durch den vollständigen Baum
+✓ bildet Clan Eibenschild vollstaendig und am korrigierten Pfad unter Vagaborg ab
+✓ ordnet Thorin, Marit und die Eibenschild-Nachkommen nur ihren belegten Linien zu
+✓ spiegelt Thorins und Marits Wellenschild-Ehen ohne doppelte Kinder
+✓ liefert das lokale Eibenschild-Wappen samt Quellenbeleg aus
+✓ bildet Clan Eisenbieger vollstaendig und ohne abgeschnittenen Personenfokus ab
+✓ haelt Eisenbiegers Altverlobung und Mehrpartnerfamilie jeweils als kompakte lokale Gruppe
+✓ liefert Eisenbiegers belegte Individualportraets lokal und quellenbelegt aus
+✓ aktualisiert eine alte Eisenbieger-Akte auf die kompakte Helga- und Nordall-Geometrie
+✓ baut Family Chart bei Aktenwechseln und Portraitänderungen kontrolliert neu auf
+✓ meldet Portraitänderungen aus dem Store an die Chart-Lifecycle-Policy
+✓ optimiert Bildquellen über 1 MB vor dem lokalen Vormerken
+✓ weist nur Bildquellen über 8 MB vor der Optimierung zurück
+✓ verkleinert große Bilder iterativ in das Veröffentlichungsbudget
+✓ bildet Clan Frostauge vollstaendig und ohne Platzhalter-Verlobungen ab
+✓ beginnt Frostzorn bei Vorn und Pidra ohne Zeitsprung und fuehrt direkt bis 1740
+✓ fuehrt alle neuen Frostaugen-Portraets lokal und mit dokumentierter Quelle
+✓ führt die vollständige albische Rangfolge ohne besetzten Ri Tiarna
+✓ ordnet den Fürstenclan, fünf Mor-Tiarna-Clans und alle Unterclans in Leitheach ein
+✗ bildet die Lehnspyramide von Tir na Sinsear mit Ua’Gaelach, Gallchobhair und Na’Mhuir ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'silver',
+...
+      houseProfile: {
++       barony: 'Tir na Coimhthioch',
+-       barony: 'Lehnsherrschaft der Fir An’Gallchobhair',
+        county: 'Tir na Sinsear',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-sinsear.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg',
+-         'assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sinsear',
++         'Tir na Coimhthioch',
++         'Dun Laog'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-ua-gaelach',
+        liegeHouseName: 'Clan Ua’Gaelach',
+        rankId: 'dun-tiarna',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg',
+-         barony: 'assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png',
+          county: 'assets/images/regions/Leitheach/tir-na-sinsear.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
+        seat: 'Dun Laog',
+...
+      albicRank: 'dun-tiarna',
++     albicTerritorialReview: 1,
+      blaithneachSourceCounterInventory: 'assets/data/source-inventories/blaithneach-families-audit-2026-10-08.json',
+      blankFamily: false,
+      documentedLairdHouses: [
+        'Clan Ua’Cleir',
+        'Clan Ua’Ghaiscíoch',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47339:12
+    at Array.forEach (<anonymous>)
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47309:36
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✗ bildet Tir na Gortanna mit erloschenen Vorgängern und Somhairles Herkunft ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Gortanna',
++         'Lochansail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      dunfalSourceCounterInventory: 'assets/data/source-inventories/dunfal-families-audit-2026-10-07.json',
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-ard-cumhaill',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47427:12
+    at Array.forEach (<anonymous>)
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47397:37
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✗ ordnet Tir na Tonn mit Fir An’Tarvo und zwei unmittelbar unterstellten Lairds ein
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Tonn',
++         'Dun Rothar'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-ard-cumhaill',
+      immediateLiegeHouseName: 'Clan Mac Ard Cumhaill',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47545:12
+    at Array.forEach (<anonymous>)
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47505:33
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✗ ordnet Tir na Sruth mit Tir An’Cuinn, Tir An’Airgid und Ua’Amhran ein
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sruth',
++         'Ceanntire'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-ard-cumhaill',
+      immediateLiegeHouseName: 'Clan Mac Ard Cumhaill',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47643:12
+    at Array.forEach (<anonymous>)
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:47609:34
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ übernimmt die vollständige Tir-An’Cuinn-Linie ohne Bilder der Altquelle
+✓ übernimmt die vollständige Ua-Amhran-Linie samt aktuellen Porträts und Gegenakten
+✓ übernimmt die vollständige Tir-An’Airgid-Linie mit Mündel, Bastarden und Zielhausverknotungen
+✓ ordnet Tir an Comhchuibhis mit Mac Airt, Ruin’Laidir, zwei Lairds und Dal T’Saor ein
+✗ bildet Dal T’Saor vollständig von Lorcan bis zur Auslöschung von 1735 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Herrschaft der Dál T’Saor',
+-       barony: '',
+        county: 'Tir an Comhchuibhis',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-comhchuibhis.png',
++         'assets/images/houses/Leitheach/clan-dal-t-saor.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir an Comhchuibhis',
++         'Herrschaft der Dál T’Saor',
++         'Sruthlann'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-airt',
+        liegeHouseName: 'Clan Mac Airt',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/houses/Leitheach/clan-dal-t-saor.png',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-comhchuibhis.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
+        seat: 'Sruthlann',
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      extinctionEvent: {
+        administrativeExtinction: true,
+        cause: 'Finsteres Unheil aus dem Dunkelhain in der T’Saoir-Burg',
+        survivorIds: [
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:48446:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ erhält Dal T’Saoirs Quellenlücke und ordnet alle Kinder ihren belegten Elternpaaren zu
+✓ führt Dal T’Saoirs fünf wegverheiratete Frauen direkt in ihren Zielakten fort
+✓ spiegelt Dal T’Saoirs sieben Gegenverbindungen mit stabilen Weltpersonen und Ehen
+✓ migriert die frühere Haus-T’Saoir-Kennung in allen betroffenen Gegenakten
+✓ ignoriert sämtliche alten Dal-T’Saoir-Bilder und nutzt drei bisherige und ein Gaisgh-Gegenporträt
+✓ ersetzt Dal T’Saoirs vorbereitete Ausgestorben-Akte kontrolliert durch den Quellenbaum
+✓ migriert ältere Ausgestorben-Knoten unter die jeweilige letzte Erbperson
+✗ bildet Ruin’Laidir vollständig vom unbekannten Elternpaar bis zur Generation von 1726 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na Dídine',
+-       barony: 'Lehensherrschaft der Ruin’Laidir',
+        county: 'Tir an Comhchuibhis',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-comhchuibhis.png',
+          'assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir an Comhchuibhis',
++         'Tir na Dídine',
++         'Claisean'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-airt',
+        liegeHouseName: 'Clan Mac Airt',
+        rankId: 'dun-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'dun-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-airt',
+      immediateLiegeHouseName: 'Clan Mac Airt',
+      inheritance: {
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:48795:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ erhält Ruin’Laidirs Quellenlücke und führt sämtliche überlieferten Kinder bei ihren Elternpaaren
+✓ kennzeichnet die fünf außerhalb fortgeführten Laidir-Frauen samt Hausverknotung
+✓ spiegelt Ruin’Laidirs zehn Gegenakten mit stabilen Weltpersonen und Ehe-IDs
+✓ aktualisiert die sieben neuen Laidir-Porträts und Hearnaits Lebensdaten revisionssicher
+✓ liefert Ruin’Laidirs 17 Quellporträts lokal und fünf angeheiratete Gegenaktenbilder kanonisch
+✓ ersetzt Ruin’Laidirs vorbereitete Leerakte kontrolliert durch den Quellenbaum
+✗ bildet Clan Mac Airt vollständig von Colman bis zur Generation von 1740 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir an Comhchuibhis',
++         'Sruthlann'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      dunfalSourceCounterInventory: 'assets/data/source-inventories/dunfal-families-audit-2026-10-07.json',
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-ard-cumhaill',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:49062:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ hält Mac Airts zwei Quellenlücken, Bastardzweig und unbekanntes Elternpaar getrennt
+✓ korrigiert Mac Airts unmögliche Todesjahre und führt Bairres Erbfolge fort
+✓ kennzeichnet Mac Airts zehn außerhalb fortgeführte Frauen direkt als Wegverheiratet
+✓ spiegelt Mac Airts vierzehn vorhandene Gegenakten mit stabilen Weltidentitäten
+✓ ignoriert alte Mac-Airt-Bilder und ergänzt die Gegenaktenporträts aus Dunfal und Aislearneach
+✗ bildet Ua’Choinnich vollständig von Sweeneys Eltern bis zur Generation ab 1720 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na gCrúb',
+-       barony: '',
+        county: 'Tir an Comhchuibhis',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-comhchuibhis.png',
++         'assets/images/regions/Leitheach/herrschaft-ua-choinnich.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir an Comhchuibhis',
++         'Tir na gCrúb',
++         'Sruthlann'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-airt',
+        liegeHouseName: 'Clan Mac Airt',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/herrschaft-ua-choinnich.png',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-comhchuibhis.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
+        seat: 'Sruthlann',
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-airt',
+      immediateLiegeHouseName: 'Clan Mac Airt',
+      inheritance: {
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:49260:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ hält Ua’Choinnichs zwei serielle Quellenlücken und die fortgeführten Kinderlinien getrennt
+✓ kennzeichnet Ua’Choinnichs zehn außerhalb fortgeführte Frauen direkt als Wegverheiratet
+✓ spiegelt Ua’Choinnichs zehn vorhandene Gegenakten mit stabilen Weltidentitäten
+✓ ignoriert alle alten Ua-Choinnich-Bilder und verwendet zehn bisherige Gegenaktenporträts und Haileigh Muileach
+✗ bildet Fir An’Tarvo vom angenommenen Ahnherrn bis zur jüngsten Generation vollständig ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Tonn',
++         'Dun Rothar'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-ard-cumhaill',
+      immediateLiegeHouseName: 'Clan Mac Ard Cumhaill',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:49430:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt sieben Tarvo-Frauen direkt zu ihren fortführenden Zielhäusern
+✓ spiegelt Fir An’Tarvos bestehende Gegenverbindungen und Porträts mit stabilen Weltidentitäten
+✓ liefert Fir An’Tarvos 22 Individualporträts lokal und ignoriert Standardsilhouetten
+✗ bildet Ru’Gortach vom Gründer bis zu den fünf jüngsten Kindern vollständig ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na Breithe',
+-       barony: 'Herrschaft der Ru’Gortach',
+        county: 'Tir na Tonn',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-tonn.png',
+          'assets/images/regions/Leitheach/herrschaft-ru-gortach.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Tonn',
++         'Tir na Breithe',
++         'Broch an Ear'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-fir-an-tarvo',
+        liegeHouseName: 'Clan Fir An’Tarvo',
+        rankId: 'laird',
+        regionEmblems: {
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blaithneachSourceCounterInventory: 'assets/data/source-inventories/blaithneach-families-audit-2026-10-08.json',
+      blankFamily: false,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-fir-an-tarvo',
+      immediateLiegeHouseName: 'Clan Fir An’Tarvo',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:49599:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ ordnet Júana – Séamus – Míde – Híomhar – Trianne und trennt eheliche Kinder von den Bastarden
+✓ führt sechs Gortach-Frauen als wegverheiratete Zielhaus-Verknotungen
+✓ spiegelt Gortachs Gegenakten mit stabilen Weltidentitäten und kanonischen Porträts
+✓ liefert Gortachs 25 Quellporträts lokal und acht vorhandene Gegenporträts
+✓ ersetzt die vorbereitete Gortach-Leerakte kontrolliert durch den Quellenbaum
+✗ bildet Dál’Ruitheach vom Biber-Gründer bis zur Generation von 1726 vollständig ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na nDambaí',
+-       barony: 'Herrschaft der Dál’Ruitheach',
+        county: 'Tir na Tonn',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-tonn.png',
+          'assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Tonn',
++         'Tir na nDambaí',
++         'Broch an Iar'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-fir-an-tarvo',
+        liegeHouseName: 'Clan Fir An’Tarvo',
+        rankId: 'laird',
+        regionEmblems: {
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-fir-an-tarvo',
+      immediateLiegeHouseName: 'Clan Fir An’Tarvo',
+      inheritance: {
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedLineageFields: [
+        'houseId'
+      ],
+      registryManagedRecordFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:50051:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ stellt Júdán direkt unter Feidlim und eheliche Ruitheach-Kinder zwischen ihren Eltern dar
+✓ führt Conairean und Méabh als wegverheiratete Ruitheach-Verknotungen
+✓ spiegelt Dál’Ruitheachs fünf Gegenakten mit stabilen Weltpersonen, Ehen und Porträts
+✓ aktualisiert die vier neuen Ruitheach-Porträts revisionssicher in den Gegenakten
+✓ liefert Dál’Ruitheachs 16 Individualporträts lokal und drei Gegenaktenbilder kanonisch
+✓ ersetzt Dál’Ruitheachs vorbereitete Leerakte kontrolliert durch den Quellenbaum
+✗ bildet Clan Dál’Cruthin vollständig vom Gründer bis zur Generation von 1740 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Gortanna',
++         'Lochansail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      dunfalSourceCounterInventory: 'assets/data/source-inventories/dunfal-families-audit-2026-10-07.json',
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-mac-ard-cumhaill',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:50277:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt sechs Cruthin-Frauen direkt zu ihren fortführenden Zielhäusern
+✓ spiegelt Dál’Cruthins ausgearbeitete Gegenverbindungen mit stabilen Weltidentitäten
+✓ liefert Dál’Cruthins 26 Individualporträts lokal und ignoriert Standardsilhouetten
+✓ ersetzt Dál’Cruthins vorbereitete Leerakte kontrolliert durch den Quellenbaum
+✗ bildet die Ard Frisealach vollständig vom Gründer bis zur Generation von 1728 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na Lúibe',
+-       barony: 'Lehensherrschaft der Ard Frisealach',
+        county: 'Tir na Gortanna',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-gortanna.png',
+          'assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Gortanna',
++         'Tir na Lúibe',
++         'Lasbun'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-dal-cruthin',
+        liegeHouseName: 'Clan Dál’Cruthin',
+        rankId: 'dun-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'dun-tiarna',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-dal-cruthin',
+      immediateLiegeHouseName: 'Clan Dál’Cruthin',
+      inheritance: {
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:50439:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt neun Frisealach-Frauen direkt zu ihren fortführenden Zielhäusern
+✓ spiegelt Ard Frisealachs acht vorhandene Gegenakten mit stabilen Weltpersonen und Ehen
+✓ aktualisiert die neuen Frisealach-Porträts revisionssicher in allen Gegenakten
+✓ liefert Ard Frisealachs 32 Quellporträts lokal und Gegenaktenbilder kanonisch
+✓ ersetzt Ard Frisealachs vorbereitete Leerakte kontrolliert durch den Quellenbaum
+✗ bildet Ard Trodach vollständig vom Gründer bis zur Generation von 1740 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na gComhrac',
+-       barony: '',
+        county: 'Tir na Gortanna',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-gortanna.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Gortanna',
++         'Tir na gComhrac',
++         'Lochansail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-dal-cruthin',
+        liegeHouseName: 'Clan Dál’Cruthin',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-gortanna.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
+        seat: 'Lochansail',
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      dunfalSourceCounterInventory: 'assets/data/source-inventories/dunfal-families-audit-2026-10-07.json',
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-dal-cruthin',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:50648:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt Ard Trodachs drei fortgesetzte Linien direkt zu ihren Zielhäusern
+✓ spiegelt Ard Trodachs Gegenakten mit stabilen Weltpersonen, Ehen und Porträts
+✓ liefert Ard Trodachs 26 Quellporträts lokal und vier Gegenaktenbilder kanonisch
+✓ ersetzt Ard Trodachs vorbereitete Leerakte kontrolliert durch den Quellenbaum
+✓ entfernt die alte Kadhghán–Lannraig-Ehe beim Upgrade beider Gegenakten
+✗ bildet Nic Caoimhe vollständig und matriarchal vom Gründerpaar bis zur Generation von 1740 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na Lasrach',
+-       barony: '',
+        county: 'Tir na Gortanna',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-gortanna.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Gortanna',
++         'Tir na Lasrach',
++         'Lochansail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-dal-cruthin',
+        liegeHouseName: 'Clan Dál’Cruthin',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-gortanna.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
+        seat: 'Lochansail',
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      directMorTiarnaBarony: true,
+      historicalStatus: 'active',
+      immediateLiegeHouseId: 'haus-dal-cruthin',
+      immediateLiegeHouseName: 'Clan Dál’Cruthin',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:50891:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ kennzeichnet alle sechs außerhalb von Nic Caoimhe fortgeführten Ehen als Wegverheiratet
+✓ spiegelt Nic Caoimhes sechs vorhandene Gegenakten ohne Identitäts- oder Porträtbruch
+✓ liefert Nic Caoimhes 20 Individualporträts lokal und sechs Gegenaktenbilder kanonisch
+✓ ersetzt Nic Caoimhes vorbereitete Leerakte kontrolliert durch den Quellenbaum
+✗ bildet Fir An’Gallchobhair vollständig vom Gründerpaar bis zur Generation von 1740 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'silver',
+...
+      houseProfile: {
++       barony: 'Tir na Coimhthioch',
+-       barony: 'Lehnsherrschaft der Fir An’Gallchobhair',
+        county: 'Tir na Sinsear',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-sinsear.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg',
+-         'assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sinsear',
++         'Tir na Coimhthioch',
++         'Dun Laog'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-ua-gaelach',
+        liegeHouseName: 'Clan Ua’Gaelach',
+        rankId: 'dun-tiarna',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg',
+-         barony: 'assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png',
+          county: 'assets/images/regions/Leitheach/tir-na-sinsear.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
+        seat: 'Dun Laog',
+...
+      albicRank: 'dun-tiarna',
++     albicTerritorialReview: 1,
+      blaithneachSourceCounterInventory: 'assets/data/source-inventories/blaithneach-families-audit-2026-10-08.json',
+      blankFamily: false,
+      documentedLairdHouses: [
+        'Clan Ua’Cleir',
+        'Clan Ua’Ghaiscíoch',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:51038:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ hält Ètáin links neben Aonghus und beide außerhalb der Gallchobhair-Hauptlinie
+✓ verknotet Taerlach, Gilleón und Aonghus personengebunden mit ihren drei Laird-Clans
+✓ führt elf Gallchobhair-Frauen direkt zu ihren Zielhäusern
+✓ lagert Tynans Nachkommen ausschließlich in Haus Grianlaoch unter Illewod aus
+✓ spiegelt Gallchobhairs neun ausgearbeitete Gegenverbindungen mit stabilen Weltidentitäten
+✓ liefert Gallchobhairs 30 Quellporträts lokal und verwendet elf Gegenaktenbilder wieder
+✗ bildet Clan Ua’Gaelach vollständig vom Cumhaill-Gründer bis zur Generation von 1740 ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sinsear',
++         'Nossail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'mor-tiarna',
+        regionEmblems: {
+...
+      albicRank: 'mor-tiarna',
++     albicTerritorialReview: 1,
+      blaithneachSourceCounterInventory: 'assets/data/source-inventories/blaithneach-families-audit-2026-10-08.json',
+      blankFamily: false,
+      portraitPolicy: {
+        ownClanMembersUsePlaceholders: true,
+        pastedPortraitsIgnored: true,
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:51311:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt acht Ua’Gaelach-Frauen direkt zu ihren fortführenden Zielhäusern
+✓ spiegelt Ua’Gaelachs sieben ausgearbeitete Gegenverbindungen mit stabilen Weltidentitäten
+✓ ignoriert sämtliche alten Ua’Gaelach-Bilder und nutzt vorhandene Fremdporträts
+✓ modelliert Mac Ard Cumhaill mit sieben Quellenlücken und der vollständigen Gegenwartslinie
+✓ verknotet Sinna, Donnchadh und den frühen Senan mit ihren Kadettenhäusern
+✓ kennzeichnet alle zwölf verheirateten Cumhaill-Frauen am Zielhaus
+✓ führt Mündel und die erzwungene Marwolaeth-Verbindung ohne falsche Abstammung
+✓ liefert die 42 individuellen Cumhaill-Porträts lokal und quellenbelegt aus
+✗ bildet Clan Ua’Eirce vollständig mit Überlieferungslücke, Erbfolge und Mündel ab
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na nIúr',
+-       barony: '',
+        county: 'Tir na Sleagh',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-sleagh.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sleagh',
++         'Tir na nIúr',
++         'Senanbail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-sleagh.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
++       seat: 'Senanbail',
+-       seat: '',
+        secondarySeats: []
+      },
+      id: 'haus-ua-eirce',
+      motto: '',
+      title: 'Clan Ua’Eirce'
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      inheritance: {
+        fallbackRule: 'Töchter erben nur ohne anerkannten männlichen Nachkommen und mit Zustimmung des Fürstenhauses.',
+        primaryRule: 'männliche Primogenitur',
+        publishedOrder: [
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:51728:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'deepStrictEqual'
+}
+✓ führt alle fünf belegten Ua’Eirce-Frauen als wegverheiratete Hauslinien
+✗ bildet Clan Uí Fiachrach vollständig mit Affäre, Erbfolge und korrigierter Elternschaft ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na Seamróige',
+-       barony: '',
+        county: 'Tir na Sleagh',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-sleagh.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sleagh',
++         'Tir na Seamróige',
++         'Mârbail'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-sleagh.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
++       seat: 'Mârbail',
+-       seat: '',
+        secondarySeats: []
+      },
+      id: 'haus-fiachrach',
+      motto: '',
+      title: 'Clan Uí Fiachrach'
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      dunfalSourceCounterInventory: 'assets/data/source-inventories/dunfal-families-audit-2026-10-07.json',
+      inheritance: {
+        fallbackRule: 'Der Titel fällt durch die nächsten männlichen Linien; Töchter erben erst nach Erlöschen
+sämtlicher männlicher Linien.',
+        primaryRule: 'männliche Primogenitur',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:51793:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt alle sechs belegten Fiachrach-Frauen als wegverheiratete Hauslinien
+✗ bildet Ruin Ua Laoch vollständig mit Überlieferungslücke, Erbfolge und Mündel ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na gCoiréal',
+-       barony: '',
+        county: 'Tir na Sleagh',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-sleagh.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sleagh',
++         'Tir na gCoiréal',
++         'Broch an Abhainn'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-mac-ard-cumhaill',
+        liegeHouseName: 'Clan Mac Ard Cumhaill',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg',
+-         barony: '',
+          county: 'assets/images/regions/Leitheach/tir-na-sleagh.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
++       seat: 'Broch an Abhainn',
+-       seat: '',
+        secondarySeats: []
+      },
+      id: 'haus-ruin-ua-laoch',
+      motto: '',
+      title: 'Ruin Ua Laoch'
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blaithneachSourceCounterInventory: 'assets/data/source-inventories/blaithneach-families-audit-2026-10-08.json',
+      blankFamily: false,
+      faelaornSourceCounterInventory: 'assets/data/source-inventories/faelaorn-families-audit-2026-10-08.json',
+      inheritance: {
+        fallbackRule: 'Töchter erben nur ohne anerkannten männlichen Nachkommen und mit Zustimmung des Fürstenhauses.',
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:51864:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt alle acht belegten Laoch-Frauen als wegverheiratete Hauslinien
+✓ spiegelt die ausgearbeiteten Ua’Eirce-, Fiachrach- und Laoch-Gegenakten ohne Identitäts- oder Porträtbruch
+✓ liefert nur individuelle Ua’Eirce-, Fiachrach- und Laoch-Quellenporträts lokal aus
+✗ bildet die drei Gallchobhair-Kadetten vollständig als eigene Laird-Stammbäume ab
+AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
++ actual - expected
+... Skipped lines
+
+  {
+    cadetBranches: [
+      {
+        childIds: [],
+        crestFrame: 'gold',
+...
+      houseProfile: {
++       barony: 'Tir na bhFiach',
+-       barony: 'Lehnsherrschaft der Fir An’Gallchobhair',
+        county: 'Tir na Sinsear',
+        folderIcons: [
+          'assets/images/regions/Leitheach/leitheach.png',
+          'assets/images/regions/Leitheach/tir-na-sinsear.png',
++         'assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg',
++         'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg',
+-         'assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png',
+          ''
+        ],
++       folderPath: [
++         'Leitheach',
++         'Tir na Sinsear',
++         'Tir na Coimhthioch',
++         'Tir na bhFiach',
++         'Cairn Fàire'
++       ],
+        kingdom: 'Leitheach',
+        liegeHouseId: 'haus-gallchobhair',
+        liegeHouseName: 'Fir An’Gallchobhair',
+        rankId: 'laird',
+        regionEmblems: {
++         barony: 'assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg',
+-         barony: 'assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png',
+          county: 'assets/images/regions/Leitheach/tir-na-sinsear.png',
+          kingdom: 'assets/images/regions/Leitheach/leitheach.png',
+          seat: ''
+        },
++       seat: 'Cairn Fàire',
+-       seat: 'Dun Laog',
+        secondarySeats: []
+      },
+      id: 'haus-cleir',
+      motto: '',
+      title: 'Clan Ua’Cleir'
+...
+      albicRank: 'laird',
++     albicTerritorialReview: 1,
+      blankFamily: false,
+      immediateLiegeHouseId: 'haus-gallchobhair',
+      immediateLiegeHouseName: 'Fir An’Gallchobhair',
+      inheritance: {
+        publishedOrder: [],
+...
+        'regionEmblems',
++       'folderPath'
+      ],
+      registryManagedRecordFields: [
+        'folderPath'
+      ],
+      registryManagedViewFields: [
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:52108:12
+    at Array.forEach (<anonymous>)
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:52082:15
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'strictEqual'
+}
+✓ führt die belegten Frauen der drei Kadetten direkt zu ihren fortführenden Zielhäusern
+✓ spiegelt alle ausgearbeiteten Gegenverbindungen der drei Kadetten ohne Identitätsbruch
+✓ ignoriert sämtliche alten Bilder der drei Kadetten und nutzt nur bestehende Personenporträts
+✓ bewahrt Dál’Ceardaíochts Quellenkonflikte, Affäre und Mündel fachlich getrennt
+✓ migriert Blach und Illwath auf die kanonische Dál’Ceardaíocht-Hauskennung
+✓ bildet Clan Na’Mhuir vollständig von Connla bis zur Generation von 1740 ab
+✓ spiegelt Na’Mhuirs zehn ausgearbeitete Gegenverbindungen ohne Identitäts- oder Porträtbruch
+✓ liefert Na’Mhuirs Individualporträts lokal und verwendet vorhandene Gegenaktenbilder kanonisch
+✓ baut die Sept Grünhand aus Leith um Peregráin und alle bereits vorhandenen Grünhand auf
+✓ liefert Grünhands neue Porträts lokal und übernimmt bestehende Personenbilder aus ihren Gegenakten
+✓ migriert alte Mhuir-Hauskennungen und Tuamáns frühere Geschlechtsangabe kontrolliert
+✗ bildet Leitheachs sechs Herrschaftsgebiete als eigene Registerzweige ab
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ undefined
+- [
+-   'haus-cleir',
+-   'haus-dal-ceardaiocht',
+-   'haus-gallchobhair',
+-   'haus-ghaiscioch'
+- ]
+
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:52815:10
+    at file:///E:/Aleria/Stammb%C3%A4ume/tests/run-tests.js:53140:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: [Array],
+  operator: 'deepStrictEqual'
+}
+✓ liefert sämtliche Leitheach-Wappen lokal und quellenbelegt aus
+✓ bildet An’Iomrach bis zum Untergang von Broch an Clais und Cónáns Überleben ab
+✓ bildet Sidhe Somhairle mit Ceitheach-Ursprung, Ordenslinie und Oiseans Mündel ab
+✓ spiegelt Iomrach- und Somhairle-Verbindungen mit stabilen Weltpersonen und Beziehungen
+✓ liefert Iomrach- und Somhairle-Porträts lokal und verwendet Gegenaktenbilder kanonisch
+✓ ersetzt die beiden vorbereiteten Broch-an-Clais-Akten kontrolliert durch die Quellenbäume
+
+36 von 1246 Tests fehlgeschlagen.

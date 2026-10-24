@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Gemischtwarenhandel · Zum Vollen Korb",
     "parentHouseId": "",
     "rootHouseId": "haus-pendrwn",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Gemischtwarenhandel · Zum Vollen Korb",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Pendrwn ist eine bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Haus Pendrwn ist eine bürgerliche Gwynthorer Familie, deren greifbare Geschichte mit Idwals Generation beginnt. Ein wichtiger Teil ihres heutigen Lebens ist der Gemischtwarenhandel Zum Vollen Korb. Neben dem Familiengeschäft bestehen enge persönliche Verbindungen zu Swyll und Draenmelyn.",
+    "history": "Idwal Pendrwn führt den Vollen Korb zusammen mit seinem ältesten Sohn Cadwgan. Cadwgans Gemahlin Mabli betreut die Tageskasse und den Haushaltsbedarf; Rhun nimmt Waren an und liefert aus, während Tesni verkauft und Bestellungen aufnimmt. Meilyrs Ehe mit Eirwen Swyll führt die jüngere Linie um Emyr fort. Die Generationen vor Idwal sind nicht einzeln bekannt.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Der Volle Korb bildet die belegte geschäftliche Grundlage. Das Haus unterhält eine direkte Lieferbeziehung zum Markt der Fortuna. Arbeitsplätze und Lieferverbindungen anderer Angehöriger bedeuten keinen zusätzlichen Familienbesitz.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Meilyr Pendrwn ist mit Eirwen Swyll verheiratet. Seine Schwester Gwenith heiratete Caradog Draenmelyn. Beide Verbindungen bleiben in den bestehenden Familienakten zusammengeführt.",
+    "values": "Sorgfalt bei Mengen, Rechnungen und Waren bestimmt den Alltag des belegten Familienbetriebs. Andere Angehörige bleiben mit eigenen Lebenswegen Teil des Hauses; aus ihrem Namen folgt keine automatische Mitarbeit im Laden.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,26 +116,144 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Pendrwn",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Pendrwn/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Pendrwn",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-pendrwn/idwal-pendrwn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=idwal-pendrwn",
+      "alt": "Idwal Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-1": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/pendrwn-general-store/portraits/cadwgan.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=cadwgan-pendrwn",
+      "alt": "Cadwgan Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-2": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/pendrwn-general-store/portraits/mabli.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=mabli-spouse-pendrwn",
+      "alt": "Mabli",
+      "format": "portrait"
+    },
+    "hof-offices-3": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/pendrwn-general-store/portraits/rhun.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=rhun-pendrwn",
+      "alt": "Rhun Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-4": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/pendrwn-general-store/portraits/tesni.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=tesni-pendrwn",
+      "alt": "Tesni Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-5": {
+      "src": "../Stammbäume/assets/images/portraits/haus-pendrwn/meilyr-pendrwn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=meilyr-pendrwn",
+      "alt": "Meilyr Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-7": {
+      "src": "../Stammbäume/assets/images/portraits/haus-pendrwn/gwenith-pendrwn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=gwenith-pendrwn",
+      "alt": "Gwenith Pendrwn",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Idwal Pendrwn",
+            "role": "Oberhaupt des Hauses Pendrwn · Mitinhaber des Vollen Korbs",
+            "detail": "Oberhaupt des Hauses Pendrwn · Mitinhaber des Vollen Korbs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=idwal-pendrwn",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Cadwgan Pendrwn",
+            "role": "Inhaber · Einkauf und Verkauf",
+            "detail": "Inhaber · Einkauf und Verkauf",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=cadwgan-pendrwn",
+            "imageKey": "hof-offices-1"
+          },
+          {
+            "name": "Mabli",
+            "role": "Kasse · Haushaltsbedarf",
+            "detail": "Kasse · Haushaltsbedarf",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=mabli-spouse-pendrwn",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Rhun Pendrwn",
+            "role": "Wareneingang · Auslieferung",
+            "detail": "Wareneingang · Auslieferung",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=rhun-pendrwn",
+            "imageKey": "hof-offices-3"
+          },
+          {
+            "name": "Tesni Pendrwn",
+            "role": "Verkauf · Bestellungen",
+            "detail": "Verkauf · Bestellungen",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=tesni-pendrwn",
+            "imageKey": "hof-offices-4"
+          },
+          {
+            "name": "Meilyr Pendrwn",
+            "role": "Vater Emyr Pendrwns",
+            "detail": "Vater Emyr Pendrwns",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=meilyr-pendrwn",
+            "imageKey": "hof-offices-5"
+          },
+          {
+            "name": "Eirwen Swyll",
+            "role": "An Haus Pendrwn verheiratete Swyll",
+            "detail": "An Haus Pendrwn verheiratete Swyll",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=eirwen-swyll",
+            "imageKey": ""
+          },
+          {
+            "name": "Gwenith Pendrwn",
+            "role": "Tante Emyr Pendrwns",
+            "detail": "Tante Emyr Pendrwns",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=gwenith-pendrwn",
+            "imageKey": "hof-offices-7"
+          },
+          {
+            "name": "Caradog Draenmelyn",
+            "role": "Söldner",
+            "detail": "Söldner",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-pendrwn&mode=view&person=caradog-draenmelyn",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +261,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Pendrwn"
   },
   "trivia": [
-    "Folgt …"
+    "Gemischtwarenhandel · Zum Vollen Korb"
   ]
 };

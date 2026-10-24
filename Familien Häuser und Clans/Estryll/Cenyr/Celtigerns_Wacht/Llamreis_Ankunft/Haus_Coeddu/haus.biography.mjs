@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Coeddu",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/assets/coeddu-krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -29,24 +30,12 @@ export const HOUSE_BIOGRAPHY = {
       "Celtigerns Wacht"
     ],
     [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
       "Lehnsherr",
       "Haus Draig"
     ],
     [
       "Ursprung",
       "Gwynthor · Waffendienst und Waffenschmiede"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
+    "biographyText": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Die Namen des ursprünglichen Gründerpaares und die frühen Generationen sind nicht überliefert. Der Dienst für Haus Draig gehört seit Generationen zur Geschichte der Familie. Mit Brenric wird die jüngere Linie greifbar: Er kämpfte im Großen Krieg unter Sir Maredudd und trat wegen wiederkehrender Gelenkbeschwerden, besonders am Fuß, in den Ruhestand. Sein Sohn Llywelyn dient als Waffenknecht. Durch dessen Ehe mit Catrin Craigddu sind die Coeddu mit einer weiteren kriegerischen Bürgerfamilie Gwynthors verbunden.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Waffendienst und Waffenschmiede prägen das Haus gleichermaßen. Die beliebte Schmiede verankert die Coeddu im städtischen Handwerk, während ihre Wachen, Waffenknechte und gelegentlichen Ritter für Haus Draig einstehen. Das Haus bleibt bürgerlich; der Ritterschlag einzelner Angehöriger macht nicht die ganze Familie zu einem Adelshaus."
+        "text": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
         "title": "Haus Coeddu · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-coeddu"
       }
     ],

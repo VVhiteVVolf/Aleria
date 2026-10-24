@@ -5,10 +5,11 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Rhuddgar",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Rhuddgar/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Rhuddgar ist ein Ritterhaus aus Abergwint unter den Gwyvern. Aus einer Jägerfamilie hervorgegangen, stellt es erfahrene Kundschafter, Speerkämpfer und Bogenschützen. Jagdbetriebe, Hundezucht und Handwerk tragen seinen Unterhalt.",
-  "quote": "Teile die Beute, nicht das Blut.",
+  "quote": "Teile die Beute – nicht das Blut.",
   "quoteBy": "",
   "commentSequence": [],
   "stats": [
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Die Gründungsüberlieferung erzählt von Arfon, seinem Vater, dem Wolf, und der zerstörerischen Rivalität mit seinem Bruder Arawn. Arfons Erhebung begründete das Haus; die beiden Wölfe im Wappen erinnern an die Folgen von Neid und Misstrauen.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Teile die Beute, nicht das Blut.“ steht für Besonnenheit, Pflicht und Zusammenhalt. Cadwallon führt das Haus; Lewys steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Rhuddgar sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Pflicht, Waffengang und Verantwortung sind keine Phase ihres Lebens, sondern dessen Fundament."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Burg der Rhuddgar lag einst außerhalb der Mauern von Abergwint. Mit dem Wachstum der Stadt wurde sie jedoch nach und nach eingegliedert und ist heute fester Bestandteil der Stadtbefestigung selbst. Ihre Mauern sind älter als viele angrenzende Viertel, und ihre Türme wachen dort, wo Stadt und Wildnis einst unmittelbar aufeinandertrafen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Rhuddgar zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Worten als im beständigen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-annwyl",
   "name": "Haus Annwyl",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 5,
+  "biographySourceRevision": 6,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Annwyl ist ein altes Ritterhaus bei Côr Mynyddfaen. Seine Ritter schützen Siedlung, Pilgerwege und umliegende Höfe. Der geharnischte Hund im Wappen steht für Wachsamkeit und Treue.",
+    "overview": "Haus Annwyl ist ein altes, ländliches Ritterhaus aus Côr Mynyddfaen, geprägt von Frömmigkeit, Pflicht und stiller Standhaftigkeit. Es ist kein Haus der großen Intrigen oder lauten Ambitionen, sondern eines der Wachen, Schwüre und langen Dienste. Ihr Wappen – der geharnischte Hund – steht sinnbildlich für ihre Rolle: wachsam, treu und bereit, notfalls zu beißen, ohne je nach Ruhm zu lechzen.\n\nHaus Annwyl unterscheidet sich von vielen anderen Häusern Cenyrs durch seinen Ursprung: Es verdankt seinen Stand nicht weltlicher Gunst, sondern kirchlicher Anerkennung. Noch heute ist das Haus enger mit Glauben, Moral und Schutzpflicht verbunden als mit Politik oder Machtgewinn. Annwyl-Ritter gelten als diszipliniert, bodenständig und unbeirrbar – keine glänzenden Helden, sondern verlässliche Schildträger.",
     "history": "Die Kirche erhob Willard Annwyl durch das Wirken Petyr Anghofs in den Ritteradel. Später schwor das Haus den Gwyvern die Lehnstreue, ohne seinen geistlichen Ursprung aufzugeben.",
-    "character": "Demut, Frömmigkeit und Dienst prägen die Familie. Zur Ausbildung ihrer Ritter gehört eine Pilgerfahrt durch Cenyr. Cennyn führt das Haus; Elgan ist sein erster Erbe."
+    "character": "Demut, Frömmigkeit und Dienst prägen die Familie. Zur Ausbildung ihrer Ritter gehört eine Pilgerfahrt durch Cenyr. Cennyn führt das Haus; Elgan ist sein erster Erbe.",
+    "customs": "Zu den ältesten und verbindlichsten Bräuchen des Hauses Annwyl zählt die Pilgerfahrt des Ritters. Sie gilt als Pflicht und Prüfung zugleich und wird einmal im Leben eines Hausmitglieds abgelegt – unmittelbar nach der Schwertleite.",
+    "holdings": "Der Besitz des Hauses Annwyl ist überschaubar und bewusst schlicht gehalten. Prunk, übermäßiger Reichtum oder repräsentative Architektur gelten im Selbstverständnis des Hauses als Versuchung und Ablenkung vom eigentlichen Auftrag. Was sie halten, halten sie aus Pflicht – nicht aus Gier.",
+    "culture": "Haus Annwyl lebt seinen Glauben still und konsequent. Frömmigkeit ist für sie kein Zeichen nach außen, sondern tägliche Praxis."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -269,7 +272,12 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Elgan Annwyl",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1898:74e792fc:2995e7a2"
+    "1898:74e792fc:2995e7a2",
+    "2499:a63f6c1d:f9fe895b",
+    "1912:8b67bb0f:b611bec5"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

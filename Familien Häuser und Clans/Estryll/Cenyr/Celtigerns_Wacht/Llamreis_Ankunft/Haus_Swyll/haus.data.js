@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bürgerfamilie · Familienverbindungen",
     "parentHouseId": "",
     "rootHouseId": "haus-swyll",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie · Familienverbindungen",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Swyll ist eine weit verzweigte bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Die Swyll sind eine weit verzweigte Bürgerfamilie aus Gwynthor. Ihre jüngste Generation umfasst Meredith, ihren älteren Bruder Gareth und die jüngere Schwester Rhydwen. Das Haus steht durch mehrere Ehen in enger Verbindung mit anderen Bürgerfamilien der Stadt.",
+    "history": "Emyr Swyll und Tegwen gehören zur ältesten namentlich überlieferten Generation. Unter ihren Nachkommen verbinden Eirwen und Bronwen das Haus mit Pendrwn und Maerllys. Iestyns Ehe mit Rhiannon Draenmelyn führt zu Gareth, Meredith und Rhydwen. Der Krieg hinterließ Verluste: Cadfan fiel 1719, Madryn 1720; beide hinterließen weder Ehefrau noch Kinder.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die Ehen mit Draenmelyn, Pendrwn und Maerllys gehören zum belegten Familiennetz. Für mehrere wegverheiratete Frauen sind die Zielhäuser noch unbekannt.",
+    "values": "Die Familiengeschichte umfasst Haupt- und Seitenlinien sowie Rhodris nicht eheliche Kinder Carwyn und Lowri. Ein gemeinsamer Beruf, ein bestimmter Betrieb und ein verbindliches Hausmotto sind bisher nicht belegt.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Die folgenden Persönlichkeiten gehören zur belegten Geschichte der Familie."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,33 +116,136 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Swyll",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Swyll/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Swyll",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-offices-2": {
+      "src": "../Stammbäume/assets/images/portraits/haus-pendrwn/meilyr-pendrwn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=meilyr-pendrwn",
+      "alt": "Meilyr Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-6": {
+      "src": "../Stammbäume/https://i.imgur.com/cyJqlDG.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+      "alt": "Rhiannon Draenmelyn",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Emyr Swyll",
+            "role": "Ältestes überliefertes Oberhaupt des Hauses Swyll",
+            "detail": "Ältestes überliefertes Oberhaupt des Hauses Swyll",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=emyr-swyll",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Eirwen Swyll",
+            "role": "An Haus Pendrwn verheiratete Swyll",
+            "detail": "An Haus Pendrwn verheiratete Swyll",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=eirwen-swyll",
+            "imageKey": ""
+          },
+          {
+            "name": "Meilyr Pendrwn",
+            "role": "Vater Emyr Pendrwns",
+            "detail": "Vater Emyr Pendrwns",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=meilyr-pendrwn",
+            "imageKey": "hof-offices-2"
+          },
+          {
+            "name": "Bronwen Swyll",
+            "role": "An Haus Maerllys verheiratete Swyll",
+            "detail": "An Haus Maerllys verheiratete Swyll",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=bronwen-swyll",
+            "imageKey": ""
+          },
+          {
+            "name": "Iorwerth Maerllys",
+            "role": "Vater Nia Maerllys’",
+            "detail": "Vater Nia Maerllys’",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=iorwerth-maerllys",
+            "imageKey": ""
+          },
+          {
+            "name": "Owain Swyll",
+            "role": "Onkel Merediths",
+            "detail": "Onkel Merediths",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=owain-swyll",
+            "imageKey": ""
+          },
+          {
+            "name": "Rhiannon Draenmelyn",
+            "role": "Bedienstete des Hauses Draig",
+            "detail": "Bedienstete des Hauses Draig",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+            "imageKey": "hof-offices-6"
+          },
+          {
+            "name": "Rhodri Swyll",
+            "role": "Lebemann des Hauses Swyll",
+            "detail": "Lebemann des Hauses Swyll",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=rhodri-swyll",
+            "imageKey": ""
+          },
+          {
+            "name": "Morwen",
+            "role": "Affäre Rhodri Swylls",
+            "detail": "Affäre Rhodri Swylls",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view&person=morwen-affair-swyll",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
-    "entries": []
+    "tableTitle": "Prägende historische Persönlichkeiten",
+    "entries": [
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Im Krieg gefallener Großonkel",
+        "name": "Madryn Swyll",
+        "description": "Merediths Großonkel; fiel 1720 im Krieg und hinterließ weder Ehefrau noch Kinder.",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Prägende historische Persönlichkeiten",
+        "role": "Im Krieg gefallener Onkel",
+        "name": "Cadfan Swyll",
+        "description": "Merediths Onkel; fiel 1719 im Krieg, unverheiratet und ohne Kinder.",
+        "imageKey": "haus-figur-2"
+      }
+    ]
   },
   "familyTreeEmbed": {
     "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-swyll&mode=view",
     "title": "Stammbaum von Haus Swyll"
   },
   "trivia": [
-    "Folgt …"
+    "Bürgerfamilie · Familienverbindungen"
   ]
 };

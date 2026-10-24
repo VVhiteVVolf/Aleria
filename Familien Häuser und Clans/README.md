@@ -11,6 +11,8 @@ kleinehaeuser.html?haus=kleinehaeuser-vorlage
 
 Wichtige Dateien:
 
+- [CELTIGERNS-WACHT-2026-10-24.md](CELTIGERNS-WACHT-2026-10-24.md) beschreibt den aktuellen Ausbau auf 92 Familien, ausgefüllte Bios und den neu freigegebenen Hausfigurenstil.
+
 - `haus.html` ist die zentrale Vorlagenseite für größere Häuser, Familien und Clans.
 - `kleinehaeuser.html` ist die sekundäre Vorlage für kleinere Häuser, Bürgerfamilien, Nebenlinien und kleinere Clans.
 - `haeuser.registry.js` registriert konkrete Häuser, Familien und Clans.

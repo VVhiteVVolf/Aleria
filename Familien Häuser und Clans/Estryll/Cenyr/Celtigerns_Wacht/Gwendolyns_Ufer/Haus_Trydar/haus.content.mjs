@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-trydar",
   "name": "Haus Trydar",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 5,
+  "biographySourceRevision": 6,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Trydar ist ein militärisch geprägtes Ritterhaus aus Abergwint unter den Gwyvern. Seine Angehörigen führen Wachen, Garnisonen und Küstenposten. Minen, Schmieden und Rüstungswerkstätten stützen seine Aufgaben.",
-    "history": "Maelor Trydar wurde von den Draig zur Sicherung der Küste eingesetzt. Seine Nachkommen dienten dort über Generationen und wurden mit der Erhebung der Gwyvern dauerhaft an deren Seite gestellt.",
-    "character": "Disziplin, Truppenführung und Verlässlichkeit bestimmen die Ausbildung. Morgan führt das Haus und dient als Großkonstabler des Marschalls; Pryce ist sein erster Erbe."
+    "overview": "Haus Trydar ist ein niederes ritterliches Haus der Baronie Gwendolyns Ufer und steht als treuer Lehnsvasall im Dienst des Hauses Gwyvern, der Barone von Abergwint. Es ist maritim wie kriegerisch geprägt: Küstensicherung, Hafenaufsicht, Konvoischutz und der harte Dienst an Land gehören gleichermaßen zu seinem Selbstverständnis. Die Trydar sind kein Haus der Reden, sondern der Einsätze.\n\nDie Trydar stellen Ritter, Konstabler und Feldhauptleute. Wo Ordnung durchgesetzt, Männer geführt oder Küsten gehalten werden müssen, taucht ihr Name auf. Staatsmänner bringen sie selten hervor – dafür Marschälle, Hauptmänner und Kommandanten, die Befehle klar geben und ebenso klar ausführen. Disziplin, Verlässlichkeit und ein nüchterner Blick auf Pflicht sind ihr Markenzeichen.",
+    "history": "Die Herkunft des Hauses ist unspektakulär und genau darin konsequent. Als die Draigs ihre Reichweite an den östlichen Küsten nicht mehr aus eigener Hand sichern konnten, setzten sie Sir Maelor Trydar als ritterlichen Vasallen ein. Maelor diente dort wiederholt als Hauptmann und Küstenkommandant in der Region, die heute als Gwendolyns Ufer bekannt ist.\n\nSeine Nachkommen wurden über Generationen hinweg immer wieder an diese Küsten entsandt – nicht zur Zierde, sondern zur Sicherung. Erst mit der Erhebung des eigenen Kadettenhauses der Gwyvern änderte sich die Bindung: Die Trydar wurden dauerhaft an deren Seite gestellt, schworen den Lehnseid und zählen seither zu den frühesten und verlässlichsten Vasallen der Gwyvern. Ihr Platz war nie umstritten – er wurde erarbeitet.",
+    "character": "Disziplin, Truppenführung und Verlässlichkeit bestimmen die Ausbildung. Morgan führt das Haus und dient als Großkonstabler des Marschalls; Pryce ist sein erster Erbe.",
+    "customs": "Die Trydar sind ein Ritterhaus. Punkt. Sie definieren sich weder über Verwaltung noch über Rechtsprechung, Intrige oder höfische Etikette.",
+    "holdings": "Das Haus Trydar kontrolliert weite Teile des Militärviertels von Abergwint. Dort befinden sich sowohl ihre eigene Burg als auch die Garnison der Stadt und die Burg des Marschalls, bewusst so gesetzt, dass Befehl, Truppe und Nachschub in einem geschlossenen militärischen Kern liegen. Diese Nähe ist kein Zufall, sondern Ausdruck ihrer Funktion: Die Trydar sind Träger der militärischen Infrastruktur, nicht bloß deren Nutzer.",
+    "culture": "Die Trydar sind fromm im erwartbaren Maß – nicht mehr, nicht weniger. Sie erfüllen die religiösen Pflichten eines cenyrischen Ritterhauses, ohne daraus Identität oder Sendungsbewusstsein zu ziehen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -334,7 +337,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Pryce Trydar",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1883:e003e0c9:2935b913"
+    "1883:e003e0c9:2935b913",
+    "2531:83af56ed:b4fbcfcb"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

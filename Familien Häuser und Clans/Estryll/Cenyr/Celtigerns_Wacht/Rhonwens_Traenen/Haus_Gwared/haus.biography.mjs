@@ -5,10 +5,11 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gwared",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/assets/krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Ein ritterliches Haus aus Rhonwens Tränen: einst Illysywen verpflichtet, seit dem Fall Illysywens im Krieg von 1718-1720 im Banner Haus Arwydds.",
-  "quote": "",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Gwared ist ein Ritterhaus aus Rhonwens Tränen. Einst den Illysywen verpflichtet, steht es seit dem Ende des Krieges von 1718 bis 1720 im Banner Haus Arwydds. Die Hausgeschichte ist von der Trennung einer Illysywen-treuen Hauptlinie und einer früh Draig-treuen Nebenlinie geprägt.",
+  "quote": "Ehre wägt schwerer als Blut.",
   "quoteBy": "",
   "commentSequence": [],
   "stats": [
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Ellric Gwared"
     ],
     [
       "Lehnsherr",
       "Haus Arwydd"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Ein ritterliches Haus aus Rhonwens Tränen: einst Illysywen verpflichtet, seit dem Fall Illysywens im Krieg von 1718-1720 im Banner Haus Arwydds.",
+    "biographyText": "Haus Gwared ist ein Ritterhaus aus Rhonwens Tränen. Einst den Illysywen verpflichtet, steht es seit dem Ende des Krieges von 1718 bis 1720 im Banner Haus Arwydds. Die Hausgeschichte ist von der Trennung einer Illysywen-treuen Hauptlinie und einer früh Draig-treuen Nebenlinie geprägt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Als sagenhafter Begründer gilt Uwchor Gwared. Cyrwyn hielt den Illysywen die Treue und starb 1682 friedlich. Sein jüngerer Bruder Rhydor wandte sich hingegen früh den Draigs zu. Im späteren Krieg fielen Dyrian 1718 und Firban 1719; mit Gwaedans Tod 1720 endete die Folge der Illysywen-treuen Ritterherren.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Gwaedans Kinder Sheev und Soffi waren am Unrecht der Erwachsenen unbeteiligt. Sie kamen als Mündel zu Balchder und Chwedonol. Heute führt Ellric Gwared das Haus unter Arwydd; Brenar ist als vorgesehener Erbe verzeichnet."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die heutige Bannerbindung gilt Haus Arwydd. Die frühere Verpflichtung gegenüber Illysywen gehört zur Geschichte; die Vormundschaften bei Balchder und Chwedonol werden in den bestehenden Gegenakten fortgeführt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Rhonwens Tränen/Ritterliche/Gwared.png",
         "title": "Haus Gwared · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwared"
       }
     ],

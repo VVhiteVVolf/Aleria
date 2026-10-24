@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bürgerfamilie",
     "parentHouseId": "",
     "rootHouseId": "haus-tonnarth",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor mit mehreren Seitenlinien. Ihre jüngste Generation gruppiert sich um Llewarch und seine Geschwister. Die Familiengeschichte berührt sowohl die Maerllys als auch das Umfeld der Krummen Kanne und der Tiefenwyrm.",
+    "history": "Idris und Lowri gehören zur ältesten bekannten Generation. Ihr Sohn Cadell ist mit Ceridwen verheiratet und Vater der Geschwister Iorwerth, Llewarch, Gwenllian, Elowen und Rhys. Cadells Bruder Madoc heiratete Rhoswen Maerllys. Aus Gareths früherer Beziehung mit Mair ging Caradog hervor.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Madoc und Rhoswen verbinden Tonnarth mit Maerllys. Mairs späterer Lebenskreis um Aedan Dubhdarach bleibt von Gareths beendeter Beziehung getrennt.",
+    "values": "Mair arbeitet als Rechnungsführerin der Krummen Kanne; Caradog führt Idwals Logbuch und unterstützt die Schriftführung der Tiefenwyrm. Diese persönlichen Aufgaben machen weder Gasthaus noch Schiff zum Besitz der Tonnarth. Ein gemeinsamer Hausbetrieb ist nicht überliefert.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,26 +116,114 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Tonnarth",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tonnarth/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Tonnarth",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-offices-7": {
+      "src": "../Stammbäume/../AleriaAlmanach/assets/krumme-kanne/portraits/mair.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=mair-affair-tonnarth",
+      "alt": "Mair",
+      "format": "portrait"
+    },
+    "hof-offices-8": {
+      "src": "../Stammbäume/https://i.imgur.com/LK3q0UI.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=caradog-bastard-tonnarth",
+      "alt": "Caradog Tonnarth",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Idris Tonnarth",
+            "role": "Ältestes überliefertes Oberhaupt des Hauses Tonnarth",
+            "detail": "Ältestes überliefertes Oberhaupt des Hauses Tonnarth",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=idris-tonnarth",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Lowri",
+            "role": "Großmutter Llewarch Tonnarths",
+            "detail": "Großmutter Llewarch Tonnarths",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=lowri-spouse-tonnarth",
+            "imageKey": ""
+          },
+          {
+            "name": "Cadell Tonnarth",
+            "role": "Vater Llewarch Tonnarths",
+            "detail": "Vater Llewarch Tonnarths",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=cadell-tonnarth",
+            "imageKey": ""
+          },
+          {
+            "name": "Ceridwen",
+            "role": "Mutter Llewarch Tonnarths",
+            "detail": "Mutter Llewarch Tonnarths",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=ceridwen-spouse-tonnarth",
+            "imageKey": ""
+          },
+          {
+            "name": "Madoc Tonnarth",
+            "role": "Onkel Llewarch Tonnarths",
+            "detail": "Onkel Llewarch Tonnarths",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=madoc-tonnarth",
+            "imageKey": ""
+          },
+          {
+            "name": "Rhoswen Maerllys",
+            "role": "An Haus Tonnarth verheiratete Maerllys",
+            "detail": "An Haus Tonnarth verheiratete Maerllys",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=rhoswen-maerllys",
+            "imageKey": ""
+          },
+          {
+            "name": "Gareth Tonnarth",
+            "role": "Lediger Onkel Llewarchs",
+            "detail": "Lediger Onkel Llewarchs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=gareth-tonnarth",
+            "imageKey": ""
+          },
+          {
+            "name": "Mair",
+            "role": "Rechnungsführerin · Kasse & Gästebuch",
+            "detail": "Rechnungsführerin · Kasse & Gästebuch",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=mair-affair-tonnarth",
+            "imageKey": "hof-offices-7"
+          },
+          {
+            "name": "Caradog Tonnarth",
+            "role": "Schreiber & Adjutant der Tiefenwyrm",
+            "detail": "Schreiber & Adjutant der Tiefenwyrm",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tonnarth&mode=view&person=caradog-bastard-tonnarth",
+            "imageKey": "hof-offices-8"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +231,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Tonnarth"
   },
   "trivia": [
-    "Folgt …"
+    "Bürgerfamilie"
   ]
 };

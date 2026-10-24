@@ -84,13 +84,16 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Bekab ist in Artus Streben in Celtigerns Wacht verzeichnet. Weitere Inhalte folgen.",
+    "overview": "Haus Bekab ist als Bürgerfamilie in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
@@ -104,7 +107,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Folgt …"
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,11 +116,10 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Bekab",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Bekab/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Bekab",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/herrschaftsbanner.png",

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-garrael",
   "name": "Haus Garrael",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Garrael ist ein seefahrendes Ritterhaus im Dienst der Draig. Als dauerhafte Lehenswarte sichern seine Angehörigen Aberllan und den Norden Camruisges. Der genaue Hauptsitz bleibt wegen widersprüchlicher Angaben offen.",
-    "history": "Die aus Gwynthor stammende Familie wurde entsandt, um Fehden und Machtkämpfe in Aberllan zu beenden. Über Generationen wurde aus dem äußeren Vermittler ein fest verwurzeltes Inselhaus.",
-    "character": "Seefahrt, Fischerei und Küstenverteidigung prägen die Garrael. Mit Haus Salach im Süden sichern sie den Inselfrieden. Lyonnel führt das Haus; die Erbfolge ist noch nicht benannt."
+    "overview": "Haus Garrael ist ein altes, ritterliches Geschlecht aus Gwynthor, dessen Stellung weniger auf Ruhm oder Reichtum beruht als auf Vertrauen. Sie gelten als nüchtern, pflichtbewusst und wenig geneigt zu lokalen Machtspielen – genau deshalb wurden sie ausgewählt.\n\nAuf Camruisge fungieren die Garrael als dauerhafte Lehenswarte und neutrale Ordnungsmacht über die Stadt Aberllan im Norden der Insel. Ihr Auftrag ist nicht Expansion, sondern Stabilität: Schlichten, überwachen, durchsetzen. Sie herrschen nicht aus Eigeninteresse, sondern im Namen einer übergeordneten Ordnung, und genau das macht ihre Präsenz für viele akzeptabel – und für andere unerträglich.\n\nHaus Garrael ist ein seefahrendes Ritterhaus und dauerhafter Lehenswart der Nordseite Camruisges, dessen Macht auf Pflicht, Ordnung und der ununterbrochenen Verteidigung von Küste und Bevölkerung beruht. Im Norden der Insel sind sie höchste Autorität und Garant des Friedens, nach außen jedoch bewusst zurückhaltend – stark durch Konzentration, nicht durch Ausdehnung.",
+    "history": "Die Entsendung des Hauses Garrael nach Camruisge war die direkte Folge jahrelanger innerstädtischer Fehden in Aberllan. Bürgerliche Familien, Handelsinteressen und lokale Würdenträger rangen wiederholt um Einfluss, Kontrolle über Abgaben und politische Vorherrschaft. Diese Konflikte eskalierten zeitweise offen und bedrohten den fragilen Frieden der Insel.\n\nUrsprünglich griff Haus Draig selbst ein und entsandte einzelne Familienmitglieder zur Schlichtung. Doch mit wachsender Bedeutung des Hauses auf dem Festland wurde diese Praxis zunehmend kostspielig, riskant und ineffizient. Jeder neue Streit auf Camruisge band Ressourcen, erzeugte diplomatische Reibung und lenkte von wichtigeren Verpflichtungen ab.\n\nDie Lösung war ein bewusster Schnitt: Haus Draig setzte ein externes, loyales und lokal unverstricktes Ritterhaus als dauerhafte Lehenswarte ein. Die Wahl fiel auf die Garrael, da sie weder verwandtschaftlich noch wirtschaftlich mit den Parteien Aberllans verbunden waren und sich bereits zuvor als verlässliche Vollstrecker fremder Interessen bewährt hatten.\n\nSeit ihrer Einsetzung halten die Garrael die Kontrolle über Aberllan aufrecht. Offene Fehden wurden unterbunden, rivalisierende Ansprüche eingefroren und die Stadt einer klaren, wenn auch strengen Ordnung unterstellt. Ihre Präsenz hat den offenen Konflikt beendet – aber nicht jede Unzufriedenheit.\n\nHaus Garrael ist damit kein geliebter Herr, sondern ein notwendiger: akzeptiert, weil das Chaos ohne sie schlimmer wäre.",
+    "character": "Seefahrt, Fischerei und Küstenverteidigung prägen die Garrael. Mit Haus Salach im Süden sichern sie den Inselfrieden. Lyonnel führt das Haus; die Erbfolge ist noch nicht benannt.",
+    "customs": "Haus Garrael versteht sich seit Generationen nicht als Fremdherrscher, sondern als Inselhaus. Über viele Jahrhunderte hinweg trugen sie die Verantwortung für die Nordseite Camruisges und wuchsen dabei untrennbar mit Land, Küste und Bevölkerung zusammen. Ihre Stellung gründet weniger auf formaler Macht als auf Gewohnheit, Verlässlichkeit und dem stillen Wissen, dass sie geblieben sind, während andere kamen und gingen.",
+    "holdings": "Haus Garrael hält die volle Obrigkeit und Lehensherrschaft über die gesamte Nordseite Camruisges. Zu ihrem Herrschaftsgebiet zählen die Stadt Aberllan, zahlreiche Bauernhöfe und Einzelgehöfte, mehrere kleinere Siedlungspunkte sowie ein oder zwei ertragreiche Minenstandorte. Diese Besitzungen sichern dem Haus nicht nur wirtschaftliche Eigenständigkeit, sondern auch direkte Kontrolle über Versorgung, Abgaben und Infrastruktur des Nordens.",
+    "culture": "Die Garrael sind fromme Anhänger der Alerischen Kirche."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -186,7 +189,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1897:bd2bdfde:f2980aec"
+    "1897:bd2bdfde:f2980aec",
+    "2488:fb1e27f9:8626fe53"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

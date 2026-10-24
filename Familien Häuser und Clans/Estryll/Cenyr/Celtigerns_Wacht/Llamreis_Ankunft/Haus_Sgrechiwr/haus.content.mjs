@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-sgrechiwr",
   "name": "Haus Sgrechiwr",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Die Sgrechiwr sind eine bürgerliche Familie aus Lynthor, bekannt für Herolde, Hofschreier, Musiker und Zeremonienmeister. Ihre Instrumentmacherei und Holzverarbeitungsbetriebe tragen ihren Wohlstand.",
-    "history": "Nach eigener Überlieferung ist ihre Geschichte seit den frühen Tagen mit Lynthor verbunden. Enge Beziehungen zu den Draigs und Balchder fördern ihren höfischen Dienst.",
-    "character": "Bildung, Redekunst, Musik und ein verbindliches Wort gelten als zentrale Werte. Gareth führt das Haus; Cadogan steht an erster Stelle der Erbfolge."
+    "overview": "Die Sgrechiwr sind vor allem dafür bekannt, Herolde, Hofschreier, Fanfarenträger, Zeremonienmeister und Musiker hervorzubringen. Angehörige des Hauses dienen an zahlreichen Höfen des Landes, wo sie Verkündungen ausrufen, Zeremonien begleiten und als Stimme ihrer Herren auftreten. Besonders in Lynthor gehören die Sgrechiwr zu den führenden Familien der Stadt und genießen sowohl bei Bürgern als auch beim niederen Adel hohes Ansehen. Ihre Tradition der öffentlichen Rede, der Musik und des höfischen Dienstes hat den Namen Sgrechiwr weit über die Grenzen ihrer Heimat hinaus bekannt gemacht.",
+    "history": "Nach den Überlieferungen des Hauses leben die Sgrechiwr bereits seit den frühesten Tagen Lynthors in der Stadt. Familiengeschichten berichten sogar davon, dass ihre Vorfahren beim Aufbau der ersten Siedlung geholfen haben sollen, lange bevor Lynthor zu einer bedeutenden Stadt heranwuchs. Ob diese Erzählungen in allen Einzelheiten der Wahrheit entsprechen, vermag heute niemand mehr mit Sicherheit zu sagen. Unbestritten ist jedoch, dass die Sgrechiwr seit Generationen zu den festen Größen des städtischen Lebens gehören und ihre Geschichte eng mit der Entwicklung Lynthors verbunden ist.",
+    "character": "Bildung, Redekunst, Musik und ein verbindliches Wort gelten als zentrale Werte. Gareth führt das Haus; Cadogan steht an erster Stelle der Erbfolge.",
+    "customs": "Die Sgrechiwr pflegen eine lange Tradition der Redekunst, Musik und öffentlichen Verkündigung. Junge Angehörige des Hauses werden früh im Lesen, Schreiben, Auftreten und höfischen Benehmen unterrichtet. Besonders talentierte Familienmitglieder werden als Herolde, Hofschreier oder Musiker an die Höfe des Landes entsandt.",
+    "holdings": "Die Ursprünge des Hauses Sgrechiwr liegen im Instrumentenbau. Über Generationen hinweg fertigten ihre Vorfahren Lauten, Harfen, Flöten, Fanfaren und andere Musikinstrumente, die in Lynthor und weit darüber hinaus geschätzt wurden. Aus dieser Tradition heraus entstand die bedeutendste Instrumentmacherei der Stadt, die sich bis heute im Besitz der Familie befindet, auch wenn die Sgrechiwr das Handwerk inzwischen nur noch selten selbst ausüben und stattdessen angestellte Meister und Handwerker beschäftigen.",
+    "culture": "Die Sgrechiwr folgen den Lehren der Kirche und gelten als aufrichtige, wenn auch nicht übermäßig strenge Gläubige. Sie legen großen Wert auf Bildung, Etikette und die Bewahrung historischer Überlieferungen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -281,5 +284,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Gareth Sgrechiwr",
   "firstHeir": "Cadogan Sgrechiwr",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Bürgerliche Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2443:cc07ad1b:2a0abf3d"
+  ]
 };

@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bürgerfamilie",
     "parentHouseId": "",
     "rootHouseId": "haus-braglas",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Braglas ist eine bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Die Braglas sind eine kleine Bürgerfamilie in Gwynthor. Ihre bekannte Überlieferung beginnt mit Ifor und Morfydd und verzweigt sich in Cadfans Hauptlinie und Bryns Familie. Das Zeichen zeigt ein Fass zwischen Ähren; ein bestimmter Familienbetrieb ist bisher nicht festgelegt.",
+    "history": "Cadfan und Tegwen sind die Eltern Geraints, Emyrs und Nerys’. Cadfans Bruder Bryn heiratete Anwen Aelmor; ihre Söhne heißen Madoc und Iestyn. Meurig blieb unverheiratet und kinderlos. Elens wegverheiratete Linie ist ohne bekanntes Zielhaus überliefert.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die Ehe Bryns mit Anwen begründet die bekannte Verbindung zum Bürgerhaus Aelmor.",
+    "values": "Die jüngeren Angehörigen sind unverheiratet; ihre weiteren Lebenswege bleiben offen. Beruf, Hausbesitz und Motto sind noch nicht belegt.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,11 +116,10 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Braglas",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Braglas/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Braglas",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
@@ -127,12 +129,61 @@ window.HAEUSER_DATA = {
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Ifor Braglas",
+            "role": "Ältestes überliefertes Oberhaupt des Hauses Braglas",
+            "detail": "Ältestes überliefertes Oberhaupt des Hauses Braglas",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-braglas&mode=view&person=ifor-braglas",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Elen Braglas",
+            "role": "Wegverheiratete Großtante der jüngsten Braglas-Generation",
+            "detail": "Wegverheiratete Großtante der jüngsten Braglas-Generation",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-braglas&mode=view&person=elen-braglas",
+            "imageKey": ""
+          },
+          {
+            "name": "Cadfan Braglas",
+            "role": "Fortführer der Braglas-Hauptlinie",
+            "detail": "Fortführer der Braglas-Hauptlinie",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-braglas&mode=view&person=cadfan-braglas",
+            "imageKey": ""
+          },
+          {
+            "name": "Anwen Aelmor",
+            "role": "An Haus Braglas verheiratete Aelmor",
+            "detail": "An Haus Braglas verheiratete Aelmor",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-braglas&mode=view&person=anwen-aelmor",
+            "imageKey": ""
+          },
+          {
+            "name": "Meurig Braglas",
+            "role": "Lediger Seitenzweig des Hauses Braglas",
+            "detail": "Lediger Seitenzweig des Hauses Braglas",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-braglas&mode=view&person=meurig-braglas",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +191,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Braglas"
   },
   "trivia": [
-    "Folgt …"
+    "Bürgerfamilie"
   ]
 };

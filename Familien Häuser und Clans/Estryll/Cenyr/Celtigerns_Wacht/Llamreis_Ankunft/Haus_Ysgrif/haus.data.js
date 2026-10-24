@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bürgerfamilie",
     "parentHouseId": "",
     "rootHouseId": "haus-ysgrif",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Ysgrif ist eine bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Haus Ysgrif gehört zum bürgerlichen Familienkreis Gwynthors. Seine jüngere Überlieferung führt bis zu Floyd, seinen Schwestern und den drei Söhnen seines Onkels Bryn. Bücher und Schriftrolle prägen das Familienzeichen.",
+    "history": "Idris und Efa sind die älteste namentlich bekannte Generation. Idris’ Schwester Gwenllian heiratete Owain Maerllys. Aneirin und Catrin führen die Hauptlinie mit Floyd, Mair und Eleri fort; Bryn und Elen begründen die Vetternlinie mit Cadell, Huw und Emrys. Madoc ging als Söldner eigene Wege und blieb ohne Ehe und Kinder.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die gesicherte Eheverbindung zu Maerllys geht auf Gwenllian und Owain zurück.",
+    "values": "Floyds und der anderen jungen Angehörigen Lebenswege bleiben offen. Das Schriftmotiv ist als Hauszeichen belegt; daraus werden weder ein Familienbetrieb noch allgemeine Ämter abgeleitet.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,11 +116,10 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Ysgrif",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Ysgrif/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Ysgrif",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
@@ -127,12 +129,75 @@ window.HAEUSER_DATA = {
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Idris Ysgrif",
+            "role": "Ältestes überliefertes Oberhaupt des Hauses Ysgrif",
+            "detail": "Ältestes überliefertes Oberhaupt des Hauses Ysgrif",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=idris-ysgrif",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Gwenllian Ysgrif",
+            "role": "An Haus Maerllys verheiratete Ysgrif",
+            "detail": "An Haus Maerllys verheiratete Ysgrif",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=gwenllian-ysgrif",
+            "imageKey": ""
+          },
+          {
+            "name": "Owain Maerllys",
+            "role": "Großonkel Nia Maerllys’",
+            "detail": "Großonkel Nia Maerllys’",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=owain-maerllys",
+            "imageKey": ""
+          },
+          {
+            "name": "Aneirin Ysgrif",
+            "role": "Vater Floyd Ysgrifs",
+            "detail": "Vater Floyd Ysgrifs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=aneirin-ysgrif",
+            "imageKey": ""
+          },
+          {
+            "name": "Catrin",
+            "role": "Mutter Floyd Ysgrifs",
+            "detail": "Mutter Floyd Ysgrifs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=catrin-spouse-ysgrif",
+            "imageKey": ""
+          },
+          {
+            "name": "Bryn Ysgrif",
+            "role": "Onkel Floyds · Vater dreier Söhne",
+            "detail": "Onkel Floyds · Vater dreier Söhne",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=bryn-ysgrif",
+            "imageKey": ""
+          },
+          {
+            "name": "Madoc Ysgrif",
+            "role": "Söldner",
+            "detail": "Söldner",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-ysgrif&mode=view&person=madoc-ysgrif",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +205,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Ysgrif"
   },
   "trivia": [
-    "Folgt …"
+    "Bürgerfamilie"
   ]
 };

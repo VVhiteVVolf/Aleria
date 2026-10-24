@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Caerthwyn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Caerthwyn/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Die Caerthwyn sind eine bürgerliche Familie aus Abergwint, deren Einfluss auf Verwaltung und Pferdezucht beruht. Ihr Gestüt zwischen Castell Rhewglyn und Llysbrynn ist für Zucht, Pflege und die Erholung verletzter Pferde bekannt.",
   "quote": "Beständig im Wandel.",
   "quoteBy": "",
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Sadwyn wuchs als Mündel des Barons auf und wurde später dessen Vogt. Seither verbindet die Familie ihre ländlichen Wurzeln mit Gelehrsamkeit und Staatsdienst. Eine mögliche Ritterwürde Sions bleibt eine Hoffnung für die Zukunft.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Beständig im Wandel.“ steht für Fleiß, Bildung und Ausgleich zwischen Stadt und Land. Bowen führt das Haus; Adeon steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Caerthwyn sind ein bürgerliches Haus, das zwischen zwei Welten lebt: jener des Pferdezüchters und jener des Staatsmannes. Für die Mitglieder der Familie eröffnen sich in der Regel zwei Wege. Entweder leben sie im Herrenhaus in Abergwint, wo sie eine Ausbildung in Verwaltung, Zahlen und Staatsgeschäften erhalten, oder sie verbleiben auf dem Gestüt, um sich der Zucht und Pflege der Pferde zu widmen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "In Abergwint selbst besitzen die Caerthwyn ein Herrenhaus sowie eine Taverne, die sie verpachtet haben und aus deren Erträgen ein Teil ihres städtischen Einkommens stammt. Den eigentlichen Mittelpunkt ihres Wohlstands jedoch bildet das Gestüt zwischen Llysbrynn und Castell Rhewglyn, eines der größten und angesehensten in ganz Gwendolyns Ufer."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Caerthwyn zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Gesten als im beständigen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +107,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Gwendolyns Ufer/Bürgerliche/Caerthwyn.png",
         "title": "Haus Caerthwyn · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caerthwyn"
       }
     ],

@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Awenydd",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Awenydd ist ein Ritterhaus aus Gwynthor im Dienst der Draigs. Seine Burg sichert eine Nordstraße; Höfe und ein Gestüt bilden die wirtschaftliche Grundlage.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Awenydd ist ein niederes ritterliches Haus aus Gwynthor, alt an Herkunft, aber ohne Legende, bekannt nicht durch Ruhm, sondern durch stete Treue zum Haus Draig. Politisch unauffällig, wirtschaftlich solide und ohne großen Einfluss dient es seit Generationen als verlässlicher Vasall, dessen Mitglieder als Ritter, Verwalter oder Gesandte eingesetzt werden, ohne je den Anspruch zu erheben, mehr zu sein als nötig. Ihre Burg sichert eine wichtige Nordstraße, ihr Gestüt genießt Anerkennung, ihre Ehen sind pragmatisch, ihr Glaube ordentlich und ihre Moral klar auf Pflicht, Maß und Loyalität ausgerichtet. Die Awenydd streben nicht nach Größe – sie bestehen, weil man sich auf sie verlassen kann",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -39,14 +40,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +48,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Awenydd ist ein Ritterhaus aus Gwynthor im Dienst der Draigs. Seine Burg sichert eine Nordstraße; Höfe und ein Gestüt bilden die wirtschaftliche Grundlage.",
+    "biographyText": "Haus Awenydd ist ein niederes ritterliches Haus aus Gwynthor, alt an Herkunft, aber ohne Legende, bekannt nicht durch Ruhm, sondern durch stete Treue zum Haus Draig. Politisch unauffällig, wirtschaftlich solide und ohne großen Einfluss dient es seit Generationen als verlässlicher Vasall, dessen Mitglieder als Ritter, Verwalter oder Gesandte eingesetzt werden, ohne je den Anspruch zu erheben, mehr zu sein als nötig. Ihre Burg sichert eine wichtige Nordstraße, ihr Gestüt genießt Anerkennung, ihre Ehen sind pragmatisch, ihr Glaube ordentlich und ihre Moral klar auf Pflicht, Maß und Loyalität ausgerichtet. Die Awenydd streben nicht nach Größe – sie bestehen, weil man sich auf sie verlassen kann",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Das Haus geht auf einen treuen Ritter der Draigs zurück. Seine früher bedeutendere Rolle in Verwaltung und Hofämtern trat mit dem Aufstieg anderer Häuser in den Hintergrund.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Der Ursprung des Hauses Awenydd ist alt, aber unerquicklich. Keine Legende, kein göttliches Zeichen, kein blutiger Schwur am Ende einer Schlacht. Nur ein Ritter aus Gwynthor, dessen Name heute kaum mehr als eine Randnotiz ist, der dem Hause Draig die Treue schwor – nüchtern, verbindlich, endgültig.\n\nDieser Ritter erhielt Land, ein kleines Lehen, Schutz und Pflicht. Mehr nicht. Und genau daraus wuchs Awenydd. Über Generationen hinweg hielt das Haus, was es versprach: Loyalität ohne Zögern, Dienst ohne Forderung, Waffen nur dort, wo Worte endeten. Sie erhoben sich nie über ihren Stand und fielen nie darunter. Während andere Häuser aufstiegen und stürzten, blieb Awenydd – unauffällig, verlässlich, austauschbar wirkend und doch unersetzlich.\n\nIhre Nähe zum Grafenhaus Draig machte sie nie mächtig, aber immer notwendig. Awenydd wurde das Haus, das man schickt, wenn Loyalität gefragt ist. Das man einsetzt, wenn Ordnung hergestellt werden muss. Das man hört, wenn Entscheidungen ohne Schmuck, ohne Pathos und ohne falsche Versprechen gefällt werden sollen.\n\nSo ist Haus Awenydd bis heute kein Haus der Geschichten, sondern eines der Akten, Siegel und stillen Eide. Und in Gwynthor weiß man: Häuser wie dieses überleben länger als jene, über die gesungen wird.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +61,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Beständigkeit, Maß und verlässlicher Dienst bleiben sein Selbstverständnis. Derfel führt das Haus; Gildas steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Haus Awenydd galt lange als Quelle verlässlicher Verwalter und pflichtbewusster Kastellane. Inzwischen wurden sie in diesen Rollen jedoch von Häusern wie den Balchder deutlich überholt. Wo früher Awenydd als Vögte, Kämmerer oder Justiziare dienten, greifen die Draigs heute meist auf andere zurück."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Haus Awenydd ist weder wohlhabend noch verarmt. Ihre Mittel reichen für Unterhalt, Waffen und Verpflichtungen, aber nicht für Prunk. Ihre Burg liegt im Umland von Gwynthor und sichert die Straße in den Norden – eine strategische Aufgabe, die mehr Pflicht als Prestige bringt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri sind auch die Awenydd treue Anhänger der Alerischen Kirche. Ihre Frömmigkeit ist sittsam, geordnet und frei von Ausschweifungen."
       }
     ],
     "triviaTitle": "Besonderheiten",

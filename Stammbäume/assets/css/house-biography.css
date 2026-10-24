@@ -1,0 +1,6 @@
+/* House artwork is a complete figure, including its clothes, tools and heraldry. */
+.house-biography-dialog .biography-portrait {
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  flex-shrink: 0;
+}

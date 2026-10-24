@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Sgrechiwr",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Sgrechiwr/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Die Sgrechiwr sind eine bürgerliche Familie aus Lynthor, bekannt für Herolde, Hofschreier, Musiker und Zeremonienmeister. Ihre Instrumentmacherei und Holzverarbeitungsbetriebe tragen ihren Wohlstand.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Sgrechiwr sind vor allem dafür bekannt, Herolde, Hofschreier, Fanfarenträger, Zeremonienmeister und Musiker hervorzubringen. Angehörige des Hauses dienen an zahlreichen Höfen des Landes, wo sie Verkündungen ausrufen, Zeremonien begleiten und als Stimme ihrer Herren auftreten. Besonders in Lynthor gehören die Sgrechiwr zu den führenden Familien der Stadt und genießen sowohl bei Bürgern als auch beim niederen Adel hohes Ansehen. Ihre Tradition der öffentlichen Rede, der Musik und des höfischen Dienstes hat den Namen Sgrechiwr weit über die Grenzen ihrer Heimat hinaus bekannt gemacht.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -39,14 +40,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +48,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Die Sgrechiwr sind eine bürgerliche Familie aus Lynthor, bekannt für Herolde, Hofschreier, Musiker und Zeremonienmeister. Ihre Instrumentmacherei und Holzverarbeitungsbetriebe tragen ihren Wohlstand.",
+    "biographyText": "Die Sgrechiwr sind vor allem dafür bekannt, Herolde, Hofschreier, Fanfarenträger, Zeremonienmeister und Musiker hervorzubringen. Angehörige des Hauses dienen an zahlreichen Höfen des Landes, wo sie Verkündungen ausrufen, Zeremonien begleiten und als Stimme ihrer Herren auftreten. Besonders in Lynthor gehören die Sgrechiwr zu den führenden Familien der Stadt und genießen sowohl bei Bürgern als auch beim niederen Adel hohes Ansehen. Ihre Tradition der öffentlichen Rede, der Musik und des höfischen Dienstes hat den Namen Sgrechiwr weit über die Grenzen ihrer Heimat hinaus bekannt gemacht.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Nach eigener Überlieferung ist ihre Geschichte seit den frühen Tagen mit Lynthor verbunden. Enge Beziehungen zu den Draigs und Balchder fördern ihren höfischen Dienst.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Nach den Überlieferungen des Hauses leben die Sgrechiwr bereits seit den frühesten Tagen Lynthors in der Stadt. Familiengeschichten berichten sogar davon, dass ihre Vorfahren beim Aufbau der ersten Siedlung geholfen haben sollen, lange bevor Lynthor zu einer bedeutenden Stadt heranwuchs. Ob diese Erzählungen in allen Einzelheiten der Wahrheit entsprechen, vermag heute niemand mehr mit Sicherheit zu sagen. Unbestritten ist jedoch, dass die Sgrechiwr seit Generationen zu den festen Größen des städtischen Lebens gehören und ihre Geschichte eng mit der Entwicklung Lynthors verbunden ist.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +61,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Bildung, Redekunst, Musik und ein verbindliches Wort gelten als zentrale Werte. Gareth führt das Haus; Cadogan steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Sgrechiwr pflegen eine lange Tradition der Redekunst, Musik und öffentlichen Verkündigung. Junge Angehörige des Hauses werden früh im Lesen, Schreiben, Auftreten und höfischen Benehmen unterrichtet. Besonders talentierte Familienmitglieder werden als Herolde, Hofschreier oder Musiker an die Höfe des Landes entsandt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Ursprünge des Hauses Sgrechiwr liegen im Instrumentenbau. Über Generationen hinweg fertigten ihre Vorfahren Lauten, Harfen, Flöten, Fanfaren und andere Musikinstrumente, die in Lynthor und weit darüber hinaus geschätzt wurden. Aus dieser Tradition heraus entstand die bedeutendste Instrumentmacherei der Stadt, die sich bis heute im Besitz der Familie befindet, auch wenn die Sgrechiwr das Handwerk inzwischen nur noch selten selbst ausüben und stattdessen angestellte Meister und Handwerker beschäftigen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Sgrechiwr folgen den Lehren der Kirche und gelten als aufrichtige, wenn auch nicht übermäßig strenge Gläubige. Sie legen großen Wert auf Bildung, Etikette und die Bewahrung historischer Überlieferungen."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +99,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-sgrechiwr.png",
         "title": "Haus Sgrechiwr · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sgrechiwr"
       }
     ],

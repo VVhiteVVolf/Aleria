@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Original und Bildnachweise liegen im selben Hausordner.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-saethwyr",
   "name": "Haus Saethwyr O'Gwynthor",
@@ -15,9 +15,12 @@ export const HOUSE_CONTENT = {
   "biographyIntroTitle": "Ein Haus im Zeichen der Seefahrt",
   "biographyHistoryTitle": "Ein Schiff gab dem Haus seinen Namen",
   "biographySummary": {
-    "overview": "Haus Saethwyr ist ein Ritterfürstenhaus aus Gwynthor und ein Kadettenzweig der Draigs. Flotte, Seekampf und Küstenschutz bestimmen seine Stellung in Celtigerns Wacht.",
-    "history": "Kynwrig Draig, der Seefahrer, besiegte mit einer zahlenmäßig unterlegenen Mannschaft die Nordmänner. Dafür erhielt er den Ritterfürstentitel und das Recht auf ein eigenes Haus. Er benannte es nach seinem Schiff Saethwyr und nahm sich den Entdecker Sir Melwas zum Vorbild.",
-    "character": "Mut, Entschlossenheit und Seefahrertreue prägen das Haus. Werften, Fischerei und Küstenhandel tragen seinen Wohlstand. Die Dame der See und die Seemaid sind seine besonderen Patrone. Huw führt das Haus seit 1720; Marmaduke steht zuerst in der Erbfolge."
+    "overview": "Haus Saethwyr ist ein Kadettenhaus der Draigs mit Sitz in Gwynthor. Sein Gründer Kynwrig, der Seefahrer, verband ritterlichen Mut mit einer tiefen Leidenschaft für das Meer. Dieses Erbe prägt die Ritterfürstenfamilie und ihre Aufgabe im Küstenschutz.",
+    "history": "Kynwrig Draig führte ein Schiff namens Saethwyr und wollte den großen Entdeckern und Seekriegern nacheifern. Besonders Sir Melwas war sein Vorbild. Er übernahm dessen Rüstungsstil und Kampfweise und suchte selbst die Bewährung auf See.\n\nIn einer entscheidenden Schlacht gegen die Nordmänner führte Kynwrig seine deutlich unterlegenen Männer durch Geschick und List zum Sieg. Dafür erhielt er den Rang eines Ritterfürsten und die Erlaubnis zur Gründung eines eigenen Hauses. Den Namen wählte er zu Ehren seines Schiffes: Saethwyr.\n\nEin augenzwinkernder Teil der Überlieferung handelt von seinem Vorbild Melwas. Dessen Tapferkeit und Kampfstil konnte Kynwrig nachahmen; der berühmte prächtige Schnurrbart wollte ihm jedoch nicht wachsen. Der ehrgeizige Seefahrer blieb trotz aller Ähnlichkeit im Auftreten glattrasiert.",
+    "character": "Mut, Entschlossenheit und Seefahrertreue prägen das Haus. Werften, Fischerei und Küstenhandel tragen seinen Wohlstand. Die Dame der See und die Seemaid sind seine besonderen Patrone. Huw führt das Haus seit 1720; Marmaduke steht zuerst in der Erbfolge.",
+    "customs": "Die Angehörigen werden von klein auf mit Seefahrt und Seekampf vertraut gemacht. Ein eigenes Schiff zu führen gilt als besondere Ehre. Ausrüstung und Auftreten erinnern an Kynwrig; die Verteidigung der Küsten wird als Pflicht gegenüber dem Gründer und als Vermächtnis des Hauses verstanden.",
+    "holdings": "Hafensiedlungen, Fischerei und Werften bilden die wirtschaftliche Grundlage. Salzfisch wird entlang der Küsten gehandelt. Die Schiffbauer fertigen schnelle, robuste Schiffe für Handel, Fischfang und Krieg.",
+    "culture": "Die Saethwyr gehören zu den Cenyri und zur Alerischen Kirche. Als besondere Patrone verehren sie die Dame der See und die Seemaid."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -75,10 +78,10 @@ export const HOUSE_CONTENT = {
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Mittelmäßig",
-    "tiarna": "Überwiegend Helwyr, Cantref",
-    "kerns": "Mittelmäßig, überwiegend Infanterie",
-    "fleet": "Mehr Flotte als Heer",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Nach Kynwrigs Seesieg · Jahr unbekannt",
     "milestoneOne": "Kynwrig Draig, der Seefahrer, besiegte mit einer zahlenmäßig unterlegenen Mannschaft die Nordmänner. Dafür erhielt er den Ritterfürstentitel und das Recht auf ein eigenes Haus. Er benannte es nach seinem Schiff Saethwyr und nahm sich den Entdecker Sir Melwas zum Vorbild.",
     "milestoneTwo": "Huw Saethwyr · Seit 1720",
@@ -203,7 +206,9 @@ export const HOUSE_CONTENT = {
     },
     {
       "role": "Kommandant der Garde",
-      "silhouette": "male"
+      "silhouette": "male",
+      "name": "Melyn Saethwyr",
+      "detail": "In der Hofliste benannt; keine sichere Zuordnung zu einer vorhandenen Person."
     },
     {
       "role": "Zeremonienmeister",
@@ -289,5 +294,12 @@ export const HOUSE_CONTENT = {
   "trivia": [
     "Saethwyr war zuerst der Name von Kynwrigs Schiff.",
     "Kynwrigs Versuch, Melwas nachzueifern, scheiterte der Überlieferung nach ausgerechnet an dessen Schnurrbart."
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographySourceRevision": 6,
+  "biographyPreviousDefaultFingerprints": [
+    "2723:2fdd1562:a6ba8e78"
   ]
 };

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-rhuddgar",
   "name": "Haus Rhuddgar",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 4,
+  "biographySourceRevision": 5,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Rhuddgar ist ein Ritterhaus aus Abergwint unter den Gwyvern. Aus einer Jägerfamilie hervorgegangen, stellt es erfahrene Kundschafter, Speerkämpfer und Bogenschützen. Jagdbetriebe, Hundezucht und Handwerk tragen seinen Unterhalt.",
     "history": "Die Gründungsüberlieferung erzählt von Arfon, seinem Vater, dem Wolf, und der zerstörerischen Rivalität mit seinem Bruder Arawn. Arfons Erhebung begründete das Haus; die beiden Wölfe im Wappen erinnern an die Folgen von Neid und Misstrauen.",
-    "character": "„Teile die Beute, nicht das Blut.“ steht für Besonnenheit, Pflicht und Zusammenhalt. Cadwallon führt das Haus; Lewys steht an erster Stelle der Erbfolge."
+    "character": "„Teile die Beute, nicht das Blut.“ steht für Besonnenheit, Pflicht und Zusammenhalt. Cadwallon führt das Haus; Lewys steht an erster Stelle der Erbfolge.",
+    "customs": "Die Rhuddgar sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Pflicht, Waffengang und Verantwortung sind keine Phase ihres Lebens, sondern dessen Fundament.",
+    "holdings": "Die Burg der Rhuddgar lag einst außerhalb der Mauern von Abergwint. Mit dem Wachstum der Stadt wurde sie jedoch nach und nach eingegliedert und ist heute fester Bestandteil der Stadtbefestigung selbst. Ihre Mauern sind älter als viele angrenzende Viertel, und ihre Türme wachen dort, wo Stadt und Wildnis einst unmittelbar aufeinandertrafen.",
+    "culture": "Wie die meisten Cenyri bekennen sich auch die Rhuddgar zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Worten als im beständigen Handeln."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -88,7 +91,7 @@ export const HOUSE_CONTENT = {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
     "houseType": "Ritterhaus",
-    "motto": "Teile die Beute, nicht das Blut.",
+    "motto": "Teile die Beute – nicht das Blut.",
     "quoteAuthor": "",
     "seat": "Abergwint",
     "affiliation": "Haus Gwyvern",
@@ -279,7 +282,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Lewys Rhuddgar",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1905:db612127:1e0d0511"
+    "1905:db612127:1e0d0511",
+    "3022:6218c5ee:50d05a30"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-gwyllach",
   "name": "Haus Gwyllach",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Die Gwyllach sind eine bürgerliche Familie aus Gwynthor im Dienst der Draigs. Hofarbeit, Schreibwesen und eine Kutscher- und Fuhrmannszunft bilden die Grundlage ihres Einflusses.",
-    "history": "Aus dem Dienst als Schreiber und Verwaltungsgehilfen entwickelte sich über Generationen ein Netz von Kontakten und Nachrichten. Über dessen tatsächliche Reichweite schweigt die Familie.",
-    "character": "Verschwiegenheit, Geduld und Loyalität prägen das Haus. Seine Krähe trägt eine Schriftrolle. Rhovan ist das Oberhaupt, Drystan sein vorgesehener Erbe."
+    "history": "Die Ursprünge der Familie reichen mehrere Jahrhunderte zurück, als erste Mitglieder der Gwyllach als einfache Schreiber und Verwaltungsdiener in die Dienste von Haus Draig traten. Während andere bürgerliche Familien ihren Aufstieg durch Handel oder Militärdienst suchten, erkannten die Gwyllach früh den Wert von Informationen.\n\nSie führten Archive, überbrachten Botschaften und verwalteten Berichte aus den Städten und Grenzlanden Cenyrs. Mit der Zeit begannen sie jedoch, weit mehr zu sammeln als bloße Schriftstücke. Namen, Gewohnheiten, Gerüchte, Rivalitäten und heimliche Absprachen wurden ebenso aufmerksam festgehalten wie Steuern oder Urkunden.\n\nÜber Generationen entstand daraus ein stilles Netz aus Beobachtern und Kontakten, das sich weit über Gwynthor hinaus erstrecken soll.\n\nWie groß der tatsächliche Einfluss der Gwyllach wirklich ist, weiß niemand mit Sicherheit.\n\nManche halten die Geschichten über ihre Agenten und Informanten für übertriebene Hofgerüchte. Andere wiederum behaupten, es gebe kaum eine wichtige Halle in Cenyr, in der nicht wenigstens ein Paar Ohren den Gwyllach gehört.\n\nDie Gwyllach selbst äußern sich dazu niemals.",
+    "character": "Verschwiegenheit, Geduld und Loyalität prägen das Haus. Seine Krähe trägt eine Schriftrolle. Rhovan ist das Oberhaupt, Drystan sein vorgesehener Erbe.",
+    "customs": "Die Gwyllach sind keine Kriegerfamilie und kein prunkliebendes Hofgeschlecht. Ihre Traditionen entstanden nicht auf Schlachtfeldern oder Turnieren, sondern in Schreibstuben, Audienzsälen, Archiven und hinter verschlossenen Türen. Viele ihrer Bräuche wirken für Außenstehende unscheinbar oder seltsam gewöhnlich — doch innerhalb der Familie besitzen sie große Bedeutung.",
+    "holdings": "Die Gwyllach leben bewusst außerhalb der Mauern Gwynthors, in den ärmeren Vorstädten der Stadt. Während viele wohlhabende Familien ihren Reichtum offen zur Schau stellen, bevorzugen die Gwyllach die Nähe zu gewöhnlichen Reisenden, Händlern, Arbeitern und Fuhrleuten. Dort, zwischen Schankhäusern, Werkstätten und schlammigen Straßen, hören sie mehr über die Welt als manch Adliger in seinem steinernen Saal.",
+    "culture": "Die Gwyllach sind nicht besonders fromm. Sie erfüllen die üblichen religiösen Pflichten, ohne ihren Glauben stärker in den Vordergrund zu stellen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -235,5 +238,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Rhovan Gwyllach",
   "firstHeir": "Drystan Gwyllach",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Bürgerliche Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2414:4d70fc3d:878f373f"
+  ]
 };

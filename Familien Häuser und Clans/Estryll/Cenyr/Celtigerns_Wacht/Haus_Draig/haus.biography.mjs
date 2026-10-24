@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Draig O'Gwynthor",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/draig-ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Draig ist das Grafenhaus von Celtigerns Wacht mit Sitz in Gwynthor. Als Bruderhaus der königlichen Pendrag gilt es als Schild und Schwert Cenyrs. Ritterlichkeit, Treue zur Krone und der Zusammenhalt der Familie prägen sein Selbstverständnis.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Draig zählt zu den einflussreichsten Adelsfamilien Cenyrs. Als Bruderhaus der königlichen Pendrag entstammt es derselben avallornischen Dynastie. Die Draigs gelten als Verfechter der Ritterlichkeit und als Schild und Schwert Cenyrs.\n\nVon Gwynthor aus regiert das Grafenhaus die Grafschaft Celtigerns Wacht. Seine Macht beruht auf reichen Bergwerken, regem Seehandel und einem starken Ritteraufgebot. Die Verbundenheit mit dem Königshaus prägt seinen politischen Rang ebenso wie das Erbe der Alben.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Schild und Schwert Cenyrs",
-    "biographyText": "Haus Draig ist das Grafenhaus von Celtigerns Wacht mit Sitz in Gwynthor. Als Bruderhaus der königlichen Pendrag gilt es als Schild und Schwert Cenyrs. Ritterlichkeit, Treue zur Krone und der Zusammenhalt der Familie prägen sein Selbstverständnis.",
+    "biographyText": "Haus Draig zählt zu den einflussreichsten Adelsfamilien Cenyrs. Als Bruderhaus der königlichen Pendrag entstammt es derselben avallornischen Dynastie. Die Draigs gelten als Verfechter der Ritterlichkeit und als Schild und Schwert Cenyrs.\n\nVon Gwynthor aus regiert das Grafenhaus die Grafschaft Celtigerns Wacht. Seine Macht beruht auf reichen Bergwerken, regem Seehandel und einem starken Ritteraufgebot. Die Verbundenheit mit dem Königshaus prägt seinen politischen Rang ebenso wie das Erbe der Alben.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Von Avallorn nach Gwynthor",
-    "historyText": "Celtigern aus der Dynastie Dreigiau gründete das Haus nach der Flucht aus Avallorn an Cenyrs Südküste. Während sein Bruder Vortigern Haus Pendrag und die Königslinie begründete, verband Celtigerns Ehe mit einer Albin die Draigs mit der einheimischen Kultur.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die Wurzeln der Draigs liegen in Avallorn. Nach dessen Untergang erreichte Celtigern, ein Prinz des letzten Königs und Angehöriger der Dynastie Dreigiau, gemeinsam mit seinen Geschwistern, ihrer Garde und Tausenden Überlebenden Estryll. Dort unterstützten die Ankömmlinge die Alben im Kampf gegen die Nordmänner.\n\nDie Dreigiau gründeten Mathragon. Aus ihrer Familie gingen zwei Häuser hervor: Vortigern begründete Haus Pendrag und wurde König von Cenyr; sein Bruder Celtigern gründete Haus Draig und ließ sich an der südlichen Küste nieder. Gwynthor entwickelte sich zum Stammsitz seines Hauses.\n\nCeltigerns Ehe mit einer Albin verband die avallornischen Flüchtlinge mit den Alben Cenyrs. Diese Verbindung prägt bis heute die Geschichte und Kultur der Draigs. Durch ihre Abstammung gehören sie zur königlichen Blutlinie, auch wenn die Krone Cenyrs dem Bruderhaus Pendrag zufiel.\n\nDie Grafschaft der Draigs gehört nicht zu den größten des Reiches. Mit Gwynthor besitzt sie jedoch eine bedeutende Handelsstadt, deren Bergbau, Häfen und kultureller Austausch großen Wohlstand schaffen. Cantref, Teulu und berittene Uchelwyr bilden den Kern der ritterlichen Streitmacht; Seekrieger und Flotte sichern den Einfluss des Hauses auf dem Meer.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Ritterdienst, Ehre und familiäre Pflichten stehen im Mittelpunkt. Die Draigs folgen der Alerischen Kirche und verehren besonders die Dame der See. Bergwerke, Seehandel und eine starke Flotte sichern ihren Wohlstand und Einfluss."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die ritterlichen Tugenden werden von Generation zu Generation weitergegeben. Die Draigs wollen anderen Häusern und Rittern ein Vorbild sein. Dass nicht jedes Familienmitglied diesem Anspruch gerecht wird, ändert wenig an der Bedeutung des Ideals."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Gwynthor und die zugehörige Baronie bilden das Herz des Besitzes der Draigs. Von ihrem Stammsitz aus üben sie ihre gräfliche Herrschaft über Celtigerns Wacht aus."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Draigs bekennen sich zur Alerischen Kirche, zu den Neun Göttlichen und zur Dame der See. Ihre Rittereide gelten als ernsthafte religiöse Verpflichtung."
       }
     ],
     "triviaTitle": "Besonderheiten",

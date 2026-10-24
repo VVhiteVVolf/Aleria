@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: Ausgelieferte alte Standardbios werden erneuert; eigene Texte, Löschung, Notizen und Personenänderungen bleiben erhalten
+ok 1 - Ausgelieferte alte Standardbios werden erneuert; eigene Texte, Löschung, Notizen und Personenänderungen bleiben erhalten
+  ---
+  duration_ms: 233.1167
+  type: 'test'
+  ...
+# Subtest: Neue Berufs- und Familienseiten verwenden vorhandene Personen statt neuer erfundener Hofinhaber
+ok 2 - Neue Berufs- und Familienseiten verwenden vorhandene Personen statt neuer erfundener Hofinhaber
+  ---
+  duration_ms: 8.2841
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1847.7654

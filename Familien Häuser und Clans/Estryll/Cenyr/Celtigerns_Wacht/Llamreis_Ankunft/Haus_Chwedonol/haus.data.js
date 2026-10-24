@@ -61,7 +61,7 @@ window.HAEUSER_DATA = {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
     "houseType": "Ritterhaus",
-    "motto": "Pflicht kennt keine Flaute",
+    "motto": "Pflicht kennt keine Flaute.",
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Haus Saethwyr",
@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

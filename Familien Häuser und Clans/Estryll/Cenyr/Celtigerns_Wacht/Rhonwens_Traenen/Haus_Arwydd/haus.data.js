@@ -64,10 +64,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Castellbryn",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Hoch",
-    "tiarna": "Überwiegend Cantref, Helwyr",
-    "kerns": "Hoch, überwiegend Seekrieger",
-    "fleet": "Hoch",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "1720 · nach der Schlacht um Castellbryn",
     "milestoneOne": "Idwalladr begann als Stadtwächter in Gwynthor und diente später Cahir und Rhodri Draig. Auf seine Bitte wurde sein Sohn Idris als Knappe aufgenommen. Nach Idwalladrs Tod in der Schlacht um Castellbryn erhielt Idris 1720 den Ritterfürstentitel und begründete das Haus.",
     "milestoneTwo": "Idris Arwydd · Seit 1720 · Gründer und gegenwärtiger Ritterfürst",
@@ -80,6 +80,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Draig",
     "enemies": "Keine gegenwärtige Hausfehde benannt"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Illysywen O'Castellbryn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Illysywen/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Illysywen war ein Ritterfürstenhaus mit Sitz in Castellbryn auf Rhonwens Tränen. Seine Macht beruhte auf Seefahrt, Seekriegern und einer starken Flotte. Das Geschlecht erlosch 1720; seine früheren Besitzungen werden heute von Haus Arwydd regiert.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Illysywen war ein altes Ritterfürstenhaus von Rhonwens Tränen mit Sitz in Castellbryn. Über große Teile seiner Geschichte ist wenig überliefert. Seefahrt, eine starke Flotte und zahlreiche Seekrieger bestimmten seine Stellung unter den Vasallen der Draigs.\n\n1720 endete die Herrschaft der Illysywen. Das Haus gilt als ausgestorben; seine ehemaligen Besitzungen befinden sich heute unter der Herrschaft der Arwydd. Die Chronik des Schwarzen Aals erzählt von einem Aufstieg, dessen verborgener Preis erst Generationen später sichtbar wurde.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Das erloschene Haus des Schwarzen Aals",
-    "biographyText": "Haus Illysywen war ein Ritterfürstenhaus mit Sitz in Castellbryn auf Rhonwens Tränen. Seine Macht beruhte auf Seefahrt, Seekriegern und einer starken Flotte. Das Geschlecht erlosch 1720; seine früheren Besitzungen werden heute von Haus Arwydd regiert.",
+    "biographyText": "Haus Illysywen war ein altes Ritterfürstenhaus von Rhonwens Tränen mit Sitz in Castellbryn. Über große Teile seiner Geschichte ist wenig überliefert. Seefahrt, eine starke Flotte und zahlreiche Seekrieger bestimmten seine Stellung unter den Vasallen der Draigs.\n\n1720 endete die Herrschaft der Illysywen. Das Haus gilt als ausgestorben; seine ehemaligen Besitzungen befinden sich heute unter der Herrschaft der Arwydd. Die Chronik des Schwarzen Aals erzählt von einem Aufstieg, dessen verborgener Preis erst Generationen später sichtbar wurde.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Arwels Pakt und das Ende der Illysywen",
     "historyText": "Der Gründer Arwel, genannt der Schwarze Aal, stieg vom ausgestoßenen Fischer zum Ritter und königlichen Herold auf. Eine düstere Überlieferung führt seinen Erfolg auf einen Pakt zurück, der auch seine Nachkommen band. Der Konflikt mit den Draigs besiegelte den Untergang des Hauses.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Die Illysywen gehörten zur cenyrischen Adelswelt und verehrten die Dame der See. Grüne Schuppenrüstungen und Dreizacke prägten ihre Ritter. Ercwlff war das letzte Oberhaupt; eine fortbestehende Erbfolge gibt es nicht."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Illysywen waren erfahrene Seefahrer. Ihre Bindung an die Inseln und an den Ritterdienst der Grafschaft prägte das Haus; zu seinem Aufgebot gehörten vor allem Cantref und Helwyr. Eigene Feste oder besondere Hausrituale sind nicht überliefert."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Herrschaft um Castellbryn lag auf den Inseln von Rhonwens Tränen. Das Haus verfügte über zahlreiche Seekrieger und eine starke Flotte bei mittlerem Wohlstand. Nach seinem Untergang übernahmen die Arwydd die ehemaligen Besitzungen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Illysywen gehörten zu den Cenyri, folgten der Alerischen Kirche und verehrten besonders die Dame der See. Arwels geheimer Pakt war der verborgene Ursprung seiner persönlichen Macht; ein entsprechender öffentlicher Hauskult ist nicht überliefert."
       }
     ],
     "triviaTitle": "Besonderheiten",

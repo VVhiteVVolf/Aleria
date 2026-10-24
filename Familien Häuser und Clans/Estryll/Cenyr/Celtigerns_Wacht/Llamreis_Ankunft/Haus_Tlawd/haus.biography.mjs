@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Tlawd",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tlawd/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Tlawd ist ein Ritterhaus aus Gwynthor im Dienst der Gafyr. Es ist für zähe Teulu-Schwertkämpfer und verlässliche militärische Führung bekannt. Eine Burg vor den Stadttoren, Erzabbau und Schmieden sichern seinen Wohlstand.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Tlawd geht auf Edric Tlawd zurück, der als Knappe Maldwyn Gafyr diente und 1285 zum Ritter geschlagen wurde. Es zählt zu den älteren und treuesten Ritterhäusern im Dienst der Gafyr.\n\nDie Tlawd sind ein schlichtes Ritterhaus. Viele ihrer Söhne und Töchter ziehen als fahrende Ritter durchs Land, doch die meisten versehen ihren Dienst unmittelbar bei den Gafyr – sei es am Hofe oder als Lehenswarte: Landherren, die im Auftrag der Gafyr über deren Siedlungen herrschen und deren Interessen vor Ort vertreten.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Tlawd ist ein Ritterhaus aus Gwynthor im Dienst der Gafyr. Es ist für zähe Teulu-Schwertkämpfer und verlässliche militärische Führung bekannt. Eine Burg vor den Stadttoren, Erzabbau und Schmieden sichern seinen Wohlstand.",
+    "biographyText": "Haus Tlawd geht auf Edric Tlawd zurück, der als Knappe Maldwyn Gafyr diente und 1285 zum Ritter geschlagen wurde. Es zählt zu den älteren und treuesten Ritterhäusern im Dienst der Gafyr.\n\nDie Tlawd sind ein schlichtes Ritterhaus. Viele ihrer Söhne und Töchter ziehen als fahrende Ritter durchs Land, doch die meisten versehen ihren Dienst unmittelbar bei den Gafyr – sei es am Hofe oder als Lehenswarte: Landherren, die im Auftrag der Gafyr über deren Siedlungen herrschen und deren Interessen vor Ort vertreten.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Edric Tlawd diente Maldwyn Gafyr als Page und Knappe und wurde 1285 zum Ritter geschlagen. Das genaue Jahr der anschließenden Hausgründung bleibt offen.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Sir Edric Tlawd begann als eifriger Knappe im Dienste seines Herren, Sir Maldwyn Gafyr, der später als Ritterfürst das Haus Gafyr anführte. Als Edric zum Ritter geschlagen wurde, schwor er den Gafyr feierlich ewigen Lehnseid. Ritterfürst Maldwyn erkannte seine Treue an und gestattete ihm, ein eigenes Haus zu gründen. So wurde Edric Tlawd als Vasall in die Gefolgschaft der Gafyr aufgenommen.\n\nMit der Erhebung fanden die Tlawd Eingang in den niederen Adel. Das genaue Gründungsjahr ist noch ungeklärt.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Treue, Aufrichtigkeit und Fleiß prägen die Familie. Cadfael führt das Haus; Siarl steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Tlawd sind berühmt für ihre Ritter der Teulu-Kaste, den Schwertkämpfern der Cenyri. Staatsmännische Ämter liegen ihnen weniger; als Kämmerer oder Justiziare sucht man sie vergeblich. Doch wenn es um das Kriegshandwerk geht, sind die Tlawd unersetzlich."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "In Gwynthors Innenstadt führen die Gofrann die Schmiede Zum Dritten Funken. Die Tlawd halten einen bedeutenden Anteil und beliefern die Werkstatt vor allem mit Erz. Die Gofrann besitzen und leiten den Betrieb und leisten ihren Lehnsanteil an das Haus Tlawd."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich die Tlawd zur Alerischen Kirche. Besonders verehren sie den Knecht, Gott der Arbeit, Aufrichtigkeit und des Fleißes, sowie den Streiter, Gott des Krieges, der Ehre und der Pflicht."
       }
     ],
     "triviaTitle": "Besonderheiten",

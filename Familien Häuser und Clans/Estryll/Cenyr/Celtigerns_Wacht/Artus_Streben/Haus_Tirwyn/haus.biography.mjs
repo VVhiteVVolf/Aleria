@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Tirwyn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Tirwyn/assets/krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Tirwyn ist in Artus Streben in Celtigerns Wacht verzeichnet.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Tirwyn ist als Ritterhaus in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -27,26 +28,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Grafschaft",
       "Celtigerns Wacht"
-    ],
-    [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +36,19 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Tirwyn ist in Artus Streben in Celtigerns Wacht verzeichnet.",
+    "biographyText": "Haus Tirwyn ist als Ritterhaus in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Gründung, namentliche frühe Oberhäupter und eine ausführliche Chronik sind bisher nicht überliefert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die Hausdarstellung und das vorhandene Wappen sind zugeordnet. Besondere Hausbräuche, Taten und persönliche Überlieferungen werden ergänzt, sobald dazu Quellen vorliegen."
       }
     ],
     "triviaTitle": "Besonderheiten",

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-ymladd",
   "name": "Haus Ymladd",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Ymladd schützt das östliche Hochland von Gwendolyns Ufer. Seine Ritter bewachen Straßen, Weiden und Höfe gegen Kreaturen aus dem Gebirge. Die Burg liegt östlich von Abergwint an der Straße nach Carregmawr.",
     "history": "Dafydd Ymladd hielt im Auftrag der Draig eine abgelegene Grenzburg. Seine Bewährung und die überlieferte Tötung eines Trolls führten zur Anerkennung eines erblichen Ritterhauses.",
-    "character": "Schutz, Erfahrung und Standhaftigkeit bestimmen das Haus. Sein Wappen zeigt eine Spinne über einem Lamm. Hedd führt die Familie; Idris ist sein erster Erbe."
+    "character": "Schutz, Erfahrung und Standhaftigkeit bestimmen das Haus. Sein Wappen zeigt eine Spinne über einem Lamm. Hedd führt die Familie; Idris ist sein erster Erbe.",
+    "customs": "Die Traditionen des Hauses Ymladd sind schlicht, hart und zweckgebunden. Nichts davon dient Repräsentation. Alles davon dient Überleben, Disziplin und Erinnerung.",
+    "holdings": "Haus Ymladd ist kein reiches Haus. Es besitzt seine Burg östlich von Abergwint, nahe der Straße in Richtung Carregmawr, die seit jeher als Sitz und Wachposten des Hauses dient. Darüber hinaus unterstehen den Ymladd einige Höfe und Bauernstellen der umliegenden Weidegebiete, die dem Haus Pacht und Abgaben entrichten.",
+    "culture": "Haus Ymladd bekennt sich wie alle Cenyri zu den Neun Göttlichen. Die Mitglieder des Hauses sehen sich jedoch nicht als besonders fromm und legen wenig Wert auf offene Frömmigkeit oder religiöse Zurschaustellung."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -234,7 +237,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Idris Ymladd",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1879:68e724e9:30af71b"
+    "1879:68e724e9:30af71b",
+    "2533:f0b1c434:f0e3ee66"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

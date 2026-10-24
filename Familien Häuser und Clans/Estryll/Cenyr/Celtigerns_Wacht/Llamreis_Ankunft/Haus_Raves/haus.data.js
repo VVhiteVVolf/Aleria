@@ -76,8 +76,15 @@ window.HAEUSER_DATA = {
     "religion": "Bräuche beider Heimaten",
     "patronDeities": "",
     "allies": "Haus Veltrane · Haus Maerllys · Markt der Fortuna",
-    "enemies": ""
+    "enemies": "",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -98,7 +105,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Die Familie begegnet ihren Gästen im Laden, am Anprobetisch und in den Werkstätten."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

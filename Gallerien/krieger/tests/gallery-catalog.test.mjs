@@ -19,14 +19,14 @@ test('every canonical register house is present exactly once, including houses w
   for (const house of catalog.houses) for (const id of house.illustrationIds) assert.ok(catalog.illustrations.some(i => i.id === id && i.houseIds.includes(house.id)));
 });
 
-test('artwork exists, copies are deduplicated, class icons and civilian motifs are excluded', () => {
+test('artwork exists, copies are deduplicated, class icons are excluded and civilian houses are categorized', () => {
   assert.equal(new Set(catalog.illustrations.map(i => i.sha256)).size, catalog.illustrations.length);
   for (const image of catalog.illustrations) {
     assert.ok(existsSync(new URL(image.image, root)), image.image);
-    assert.doesNotMatch(image.image, /IconOrdner|Klassenordner|drachentanz-kampfstil-klassen|haus-caerlaen|haus-caerthwyn/i);
+    assert.doesNotMatch(image.image, /IconOrdner|Klassenordner|drachentanz-kampfstil-klassen/i);
     for (const id of image.houseIds) assert.ok(catalog.houses.some(h => h.id === id), id);
   }
-  for (const id of ['haus-caerlaen', 'haus-caerthwyn']) assert.equal(catalog.houses.find(h => h.id === id).illustrationIds.length, 0);
+  for (const id of ['haus-caerlaen', 'haus-caerthwyn']) assert.ok(catalog.illustrations.some(image => image.houseIds.includes(id) && image.category === 'Bürgerliche Hausdarstellung'));
 });
 
 test('city guards and clergy do not create unsupported house assignments', () => {
@@ -77,7 +77,8 @@ test('accent-insensitive search and register scope retain empty houses', () => {
   const state = createGalleryState(catalog, memoryStorage());
   assert.ok(state.selectHouses({ query: 'sudstahl' }).some(h => h.id === 'haus-suedstahl'));
   assert.equal(state.selectHouses({ view: 'houses', scope: 'registered' }).length, FAMILY_REGISTRY.length);
-  assert.ok(state.selectHouses({ view: 'missing', query: 'Caerlaen' }).length);
+  const missing = catalog.houses.find(h => !h.illustrationIds.length);
+  assert.ok(state.selectHouses({ view: 'missing' }).some(h => h.id === missing.id));
 });
 
 test('unavailable browser storage still permits work and reports the need to export', () => {

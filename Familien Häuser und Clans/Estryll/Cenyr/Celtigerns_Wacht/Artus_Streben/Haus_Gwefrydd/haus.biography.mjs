@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gwefrydd O'Rhosmere",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Gwefrydd ist das Baronenhaus von Artus Streben mit Sitz in Rhosmere. Pferdezucht und meisterhafte Reitkunst prägen seinen Ruf; seine Ritter gelten als hervorragende Kavalleristen.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Gwefrydd ist ein Baronenhaus mit Sitz in Rhosmere in der Region Artus Streben. Es führt seinen Ursprung auf Sir Tallwch, den Pferdebrecher, zurück. Pferdezucht, Reitkunst und die traditionsreiche Verbindung zur Gilde Rhosmeres Rösser bestimmen seine Stellung.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Pferdemeister von Rhosmere",
-    "biographyText": "Haus Gwefrydd ist das Baronenhaus von Artus Streben mit Sitz in Rhosmere. Pferdezucht und meisterhafte Reitkunst prägen seinen Ruf; seine Ritter gelten als hervorragende Kavalleristen.",
+    "biographyText": "Haus Gwefrydd ist ein Baronenhaus mit Sitz in Rhosmere in der Region Artus Streben. Es führt seinen Ursprung auf Sir Tallwch, den Pferdebrecher, zurück. Pferdezucht, Reitkunst und die traditionsreiche Verbindung zur Gilde Rhosmeres Rösser bestimmen seine Stellung.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Tallwchs Erbe",
-    "historyText": "Tallwch, der Pferdebrecher, kam aus Avallorn und wurde wegen seiner außergewöhnlichen Begabung im Umgang mit Pferden zum Baron erhoben. Auf königliche Weisung erhielt er Land von den Draigs. Aus der Tradition seines Hauses gingen Rhosmeres Rösser und die Gilde Federkiel hervor.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Tallwch stammte aus Avallorn und besaß eine außergewöhnliche Begabung im Umgang mit Pferden. Er verstand und zähmte die Tiere mit einer Sicherheit, die seinen Zeitgenossen beinahe übernatürlich erschien. In der Frühzeit Cenyrs wurde er daher mit dem Aufbau einer eigenen Pferdezucht betraut.\n\nDer König erhob ihn zum Baron. Auf königliche Weisung wiesen die Draigs ihm eine fruchtbare Region zu, die gute Bedingungen für Zucht und Ausbildung bot. Dort gründete Tallwch Haus Gwefrydd. Sein Wissen wurde über Generationen weitergegeben und machte Rhosmere zu einem angesehenen Zentrum der Pferdezucht.\n\nAus dieser Tradition erwuchs Rhosmeres Rösser, eine Züchtergilde von weitreichendem Ruf. Auch die Gründung der Gilde Federkiel geht auf die Gwefrydd zurück. Beide Organisationen wurden später eigenständig und gewannen interkontinentale Bedeutung.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Disziplin, Ehre und die Weitergabe des Zuchtwissens bestimmen das Haus. Beide Gilden sind heute eigenständig, während vertragliche Einnahmeanteile fortbestehen. Stennis führt das Haus seit 1720; Thomos ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Beim Ritual des Erstlingsrosses zieht jeder junge Angehörige ein eigenes Pferd auf und bildet es aus. Die enge Bindung an das Tier gilt als wesentlicher Schritt zum Erwachsenwerden und als Ehrung von Tallwchs Vermächtnis."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Baronie bietet fruchtbares Land für Pferdezucht und Ausbildung. Das Haus gründete die Gilden Federkiel und Rhosmeres Rösser, kontrolliert sie aber seit Langem nicht mehr unmittelbar. Vertragliche Klauseln aus ihrer Veräußerung sichern weiterhin einen Anteil an den Einnahmen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Gwefrydd gehören zu den Cenyri und folgen der Alerischen Kirche. Ihre besondere Schutzpatronin ist die Dame der See."
       }
     ],
     "triviaTitle": "Besonderheiten",

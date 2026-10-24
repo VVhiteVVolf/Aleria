@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Arwydd O'Castellbryn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Arwydd ist ein junges Ritterfürstenhaus mit Sitz in Castellbryn auf Rhonwens Tränen. Es versteht sich als Schild der Draigs und trägt das Motto „Wir sind das Schild des Drachen“.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Arwydd ist ein junges Ritterfürstenhaus, dessen Aufstieg mit der Schlacht um Castellbryn verbunden ist. Von Castellbryn aus regiert es Rhonwens Tränen. Als selbst erklärtes Schild der Draigs sieht das Haus seine vornehmste Aufgabe darin, Land, Verbündete und Bewohner zu schützen.",
   "quote": "Wir sind das Schild des Drachen",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Das Schild des Drachen",
-    "biographyText": "Haus Arwydd ist ein junges Ritterfürstenhaus mit Sitz in Castellbryn auf Rhonwens Tränen. Es versteht sich als Schild der Draigs und trägt das Motto „Wir sind das Schild des Drachen“.",
+    "biographyText": "Haus Arwydd ist ein junges Ritterfürstenhaus, dessen Aufstieg mit der Schlacht um Castellbryn verbunden ist. Von Castellbryn aus regiert es Rhonwens Tränen. Als selbst erklärtes Schild der Draigs sieht das Haus seine vornehmste Aufgabe darin, Land, Verbündete und Bewohner zu schützen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Vom Stadtwächter zum Ritterfürstenhaus",
-    "historyText": "Idwalladr begann als Stadtwächter in Gwynthor und diente später Cahir und Rhodri Draig. Auf seine Bitte wurde sein Sohn Idris als Knappe aufgenommen. Nach Idwalladrs Tod in der Schlacht um Castellbryn erhielt Idris 1720 den Ritterfürstentitel und begründete das Haus.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Idwalladr begann als einfacher Milwr und Stadtwächter in Gwynthor. Später diente er am Hof der Draigs, zunächst unter Graf Cahir dem Schwarzen, dann unter Rhodri dem Großen. Um seinem Sohn Idris eine bessere Zukunft zu ermöglichen, bat er Rhodri, den Jungen als Knappen aufzunehmen.\n\nIdris bewährte sich durch Mut und Treue und wurde schließlich zum Ritter geschlagen. Nach der Schlacht um Castellbryn, in der Idwalladr fiel, erhielt er 1720 den Rang eines Ritterfürsten. Ihm fiel die Herrschaft über die früheren Illysywen-Besitzungen auf Rhonwens Tränen zu.\n\nIdris gilt als eigentlicher Gründer des Hauses Arwydd. Idwalladr wurde für seine Verdienste postum zum Ritter geschlagen. Die Erinnerung an den Vater, dessen Dienst den Aufstieg erst ermöglicht hatte, blieb ein wesentlicher Teil der Hausgeschichte.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Pflichtbewusstsein, Standhaftigkeit und der Schutz des Landes prägen die Arwydd. Fischerei, Schiffbau und Handel sichern die Inselherrschaft. Idris führt das Haus; Ianto steht vor Ifor und Ivor in der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Traditionen der Arwydd richten sich auf ihre Rolle als Beschützer und Verteidiger. Das Andenken an Idwalladrs Dienst und Idris’ Bewährung verbindet die junge Familie mit den Draigs. Ihr Motto lautet: „Wir sind das Schild des Drachen“."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Castellbryn und die Inseln von Rhonwens Tränen bilden die Herrschaft der Arwydd. Fischerei, Schiffbau und Handel tragen ihre Wirtschaft. Die Werften bauen robuste, wendige Schiffe für die anspruchsvollen Inselgewässer."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Arwydd gehören zu den Cenyri und folgen der Alerischen Kirche. Die Dame der See ist ihre besondere Schutzpatronin."
       }
     ],
     "triviaTitle": "Besonderheiten",

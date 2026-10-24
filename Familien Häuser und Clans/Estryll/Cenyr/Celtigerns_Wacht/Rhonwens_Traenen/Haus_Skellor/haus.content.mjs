@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-skellor",
   "name": "Haus Skellor",
@@ -14,15 +14,16 @@ export const HOUSE_CONTENT = {
   "extinct": false,
   "showMotto": false,
   "prepared": false,
-  "contentVersion": "20261021-arvel-v1",
+  "contentVersion": "20261024-housebio-v1",
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 6,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
-    "history": "Als Vasallen der Illysywen folgten die Skellor 1720 deren Aufstand. Rhydan hielt Creigfryn trotz angebotener Kapitulationsbedingungen; die Burg wurde von den Saethwyr erstürmt. Das Fluchtschiff seiner Angehörigen zerschellte währenddessen im Sturm. Nur Arvel überlebte.",
-    "character": "Die frühere Lehnsherrschaft ist verloren. Arvels Anspruch auf den Hausnamen bedeutet keine Anerkennung seiner Banditenherrschaft. Seine beiden unehelichen Söhne leben nicht bei ihm."
+    "overview": "Die Skellor waren niedere Ritterherren und Vasallen der Illysywen in Rhonwens Tränen. Ihre kleine Inselburg Caer Creigfryn sicherte ihnen einen bescheidenen, aber festen Platz im örtlichen Lehnsverband. Seit 1720 sind sie entmachtet. Arvel Skellor überlebte den Untergang und führt heute die Schwarzen Zitteraale; das Haus ist deshalb ausdrücklich nicht ausgestorben.",
+    "history": "1720 folgten die Skellor dem Banner der Illysywen, nachdem diese sich von den Machtversprechen der aufständischen Rochraide gewinnen ließen. Ihr Beweggrund ist nicht sicher bekannt. Nach dem frühen Sieg der Draig gegen Illysywen sollten die Saethwyr die verbliebenen aufständischen Ritterherren unterwerfen. Rhydan Skellor plante zunächst eine Übergabe Creigfryns und ließ die jüngeren Angehörigen fliehen. Ihr Schiff zerschellte im Sturm an einem Riff; nur sein Sohn Arvel erreichte lebend das Festland. Im Glauben, seine Familie sei gerettet, setzte Rhydan den Widerstand fort. Er schlug die wiederholt angebotenen Kapitulationsbedingungen aus. Schließlich erstürmten die Saethwyr die Burg. Arvel glaubt bis heute an die Tötung bereits kapitulationsbereiter Verteidiger und benutzt diese Legende zur Rechtfertigung seiner Verbrechen.",
+    "character": "Die frühere Lehnsherrschaft ist verloren. Arvels Anspruch auf den Hausnamen bedeutet keine Anerkennung seiner Banditenherrschaft. Seine beiden unehelichen Söhne leben nicht bei ihm.",
+    "holdings": "Caer Creigfryn ist eine kleine Burg auf einer felsigen Insel Rhonwens Tränen. Die Skellor wurden dort 1720 vertrieben. Die Anlage lag anschließend rund zwanzig Jahre verlassen und wurde inzwischen Haus Merek als Lehen zugesprochen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -125,6 +126,9 @@ export const HOUSE_CONTENT = {
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
   "biographyPreviousDefaultFingerprints": [
     "1662:fd381510:e58745e6",
-    "1784:bc23d56:4445cbf0"
-  ]
+    "1784:bc23d56:4445cbf0",
+    "2497:d79bf52e:1d277c60"
+  ],
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

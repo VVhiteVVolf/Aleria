@@ -17,6 +17,9 @@ function filesIn(root, relative) {
 export async function collectIllustrations(root, houseCatalog, selection) {
   const entries = new Map();
   function add({ file, houseId = '', name, category = 'Hausdarstellung', affiliation = '', source, original = '', note = '' }) {
+    // Reviewed archives can retain older house-/haus- aliases after a register admission.
+    // Resolve at the shared boundary so provenance remains unchanged in every caller.
+    if (houseId) houseId = houseCatalog.resolveHouse(houseId) || houseId;
     file = cleanPath(file);
     const absolute = new URL(file, root);
     if (!existsSync(absolute)) throw new Error(`Bild fehlt: ${file}`);
@@ -39,7 +42,7 @@ export async function collectIllustrations(root, houseCatalog, selection) {
     const houseId = houseCatalog.resolveHouse(content.id, content.name);
     if (!houseId || excluded.has(houseId)) continue;
     if (content.images?.scene) {
-      add({ file: path.posix.normalize(`${FAMILY_ROOT}/${content.images.scene}`), houseId, name: `${content.name} · Hausdarstellung`, source: file });
+      add({ file: path.posix.normalize(`${FAMILY_ROOT}/${content.images.scene}`), houseId, name: `${content.name} · Hausdarstellung`, category: content.illustrationCategory || 'Hausdarstellung', source: file });
     }
     for (const entry of content.warriorGallery?.entries || []) {
       const item = add({ file: `${FAMILY_ROOT}/${entry.image}`, houseId, name: entry.name, category: /Knappe|Page/.test(entry.name) ? 'Ausbildung & Gefolge' : 'Hausdarstellung', source: file, note: entry.description });

@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Seldryn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Seldryn/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Seldryn ist ein junges Ritterhaus aus Abergwint, hervorgegangen aus einer bürgerlichen Forscherfamilie. Es leitet den örtlichen Lebenszirkel und verbindet Naturforschung, Kartographie und Lehre mit ritterlichem Dienst.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Seldryn ist ein junges Ritterhaus aus Abergwint, hervorgegangen aus einer alten bürgerlichen Gelehrten- und Forscherfamilie. Seine Wurzeln liegen bei der Gilde Lebenszirkel und der Naturforschung, sein Stand jedoch wurde durch Tat und Opfer errungen. Die Seldryn vereinen Wissen und Pflicht – überzeugt davon, dass Erkenntnis ebenso scharf sein kann wie Stahl.\n\nHaus Seldryn ist ein junges Ritterhaus aus Abergwint, hervorgegangen aus einer Gelehrten- und Forscherfamilie, deren Einfluss auf Wissen und Ordnung beruht statt auf Krieg.\n\nEs vereint Schwert und Schrift ohne Zwang zur Entscheidung und fördert Eignung vor Herkunft, wobei Forschung und Pragmatismus stets über Ruhm stehen.\n\nPolitisch solide, wirtschaftlich unabhängig und geistig unbequem gilt das Haus als verlässlich – und als gefährlich unterschätzt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Seldryn ist ein junges Ritterhaus aus Abergwint, hervorgegangen aus einer bürgerlichen Forscherfamilie. Es leitet den örtlichen Lebenszirkel und verbindet Naturforschung, Kartographie und Lehre mit ritterlichem Dienst.",
+    "biographyText": "Haus Seldryn ist ein junges Ritterhaus aus Abergwint, hervorgegangen aus einer alten bürgerlichen Gelehrten- und Forscherfamilie. Seine Wurzeln liegen bei der Gilde Lebenszirkel und der Naturforschung, sein Stand jedoch wurde durch Tat und Opfer errungen. Die Seldryn vereinen Wissen und Pflicht – überzeugt davon, dass Erkenntnis ebenso scharf sein kann wie Stahl.\n\nHaus Seldryn ist ein junges Ritterhaus aus Abergwint, hervorgegangen aus einer Gelehrten- und Forscherfamilie, deren Einfluss auf Wissen und Ordnung beruht statt auf Krieg.\n\nEs vereint Schwert und Schrift ohne Zwang zur Entscheidung und fördert Eignung vor Herkunft, wobei Forschung und Pragmatismus stets über Ruhm stehen.\n\nPolitisch solide, wirtschaftlich unabhängig und geistig unbequem gilt das Haus als verlässlich – und als gefährlich unterschätzt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Lugh Seldryn widerstand auf See dem Bann einer Sirene und rettete Schiff und Besatzung. Seine Tat begründete den Aufstieg des Hauses in den Ritterstand. Er fiel 1720 im Krieg gegen Ceitheach.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Haus Seldryn entstammt einer bürgerlichen Gelehrtenfamilie aus Abergwint, deren Ruf auf Naturforschung, Kartographie und nüchterner Wissenschaft beruhte. Über Generationen hinweg arbeiteten die Seldryn im Umfeld des Lebenszirkels und widmeten sich besonders der Erforschung von Küsten, Meeresströmungen und gefährlichen Kreaturen. Wissen galt ihnen stets als Werkzeug, nicht als Zierde.\n\nDer Aufstieg in den Ritterstand erfolgte durch Sir Lugh Seldryn, der im Dienst des Hauses Gwyvern stand. Während einer Küstenfahrt widerstand er als Einziger dem Bann einer Sirene, überwältigte sie im offenen Meer und rettete so Schiff und Besatzung. Diese Tat begründete Haus Seldryn als ritterliches Geschlecht und verschaffte ihm die dauerhafte Gunst des Barons.\n\nEr starb im großen Krieg in Ceitheach.\n\nBis heute gilt Haus Seldryn als nüchternes, pflichtbewusstes Ritterhaus zwischen Schwert und Schrift – geprägt von der Überzeugung, dass Erkenntnis schützt, aber immer ihren Preis fordert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Eignung, Erkenntnis und Disziplin bestimmen die Laufbahnen der Familie. Braint führt das Haus, Cynon ist sein erster Erbe. Ywain leitet den Lebenszirkel in Abergwint."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Seldryn waren Forscher, lange bevor sie Ritter wurden, und dieser Ursprung bestimmt das Haus bis heute. Mit dem Ritterschlag Sir Lugh Seldryns änderte sich der Stand, nicht jedoch die innere Ausrichtung. Statt eines einheitlichen Weges entwickelten sich im Haus zwei gleichwertige Stränge, die bewusst nebeneinander bestehen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Der Hauptsitz des Hauses Seldryn ist ein weitläufiges Anwesen im Adelsdistrikt von Abergwint. Es dient weniger der Repräsentation als der Verwaltung: Archive, Studierstuben, Kartenräume und Sammlungen nehmen mehr Raum ein als Prunksäle oder Waffenhallen. Das Anwesen fungiert zugleich als Treffpunkt für Gelehrte, Auftraggeber und Gesandte des Lebenszirkels."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Haus Seldryn bekennt sich geschlossen zur Alerischen Kirche und dem Glauben an die Neun Göttlichen, wie er in ganz Cenyr üblich ist. Ihr Glaube ist dabei weder ekstatisch noch demonstrativ, sondern geprägt von Ordnung, Studium und innerer Disziplin."
       }
     ],
     "triviaTitle": "Besonderheiten",

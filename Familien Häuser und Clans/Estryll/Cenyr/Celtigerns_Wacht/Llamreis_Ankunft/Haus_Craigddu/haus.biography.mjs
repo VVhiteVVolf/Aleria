@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Craigddu",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -29,24 +30,12 @@ export const HOUSE_BIOGRAPHY = {
       "Celtigerns Wacht"
     ],
     [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
       "Lehnsherr",
       "Haus Draig"
     ],
     [
       "Ursprung",
       "Gwynthor · Baumeisterfamilie"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+    "biographyText": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Die Craigddu stammen aus dem Bauhandwerk. Über Generationen gewann der Waffendienst für Haus Draig innerhalb der Familie an Bedeutung, bis das Haus ebenso mit seinen Kriegern wie mit seinen Baumeistern verbunden wurde. Namen und Lebensdaten des ursprünglichen Gründerpaares sind unbekannt. Nach der Überlieferungslücke setzt der Stammbaum bei den Brüdern Brenwyn, Iestyn und Cyran ein. Iestyn und Mared sind die Eltern von Hywel und Catrin. Hywel dient als Waffenknecht; Catrins Ehe mit Llywelyn Coeddu verbindet die Craigddu mit dem Haus der Gwynthorer Waffenschmiede.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die jüngere Überlieferung verzweigt sich unter den Brüdern Brenwyn, Iestyn und Cyran. Brenwyn und sein Sohn Rhydric arbeiten als Baumeister, während Cyran, Maelor und Thalwyn im Wachdienst stehen. Iestyns Kinder sind Hywel und Catrin.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Der Dienst für Haus Draig und die Arbeit im Bauwesen bestehen in dieser Familie nebeneinander fort. Brenwyn Craigddu und sein Sohn Rhydric sind in der örtlichen Baumeistergilde tätig; Cyran sowie die jüngeren Angehörigen Hywel, Maelor und Thalwyn vertreten die kriegerische Seite des Hauses. Einzelne Ritter stammen aus der Familie, doch die Craigddu bleiben ein Bürgerhaus."
+        "text": "Hywel ist Waffenknecht, Llywelyn Coeddus bester Freund und mit Eleri Vater von sieben Töchtern. Catrins Ehe mit Llywelyn verbindet Craigddu und Coeddu. Die Familie bewahrt ihre bürgerliche Stellung neben dem generationslangen Dienst für Draig."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Tätigkeit in Gwynthors Baumeistergilde ist belegt; sie macht die Gilde nicht zum Besitz der Familie. Weitere eigene Betriebe sind nicht benannt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
         "title": "Haus Craigddu · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=craigddu"
       }
     ],

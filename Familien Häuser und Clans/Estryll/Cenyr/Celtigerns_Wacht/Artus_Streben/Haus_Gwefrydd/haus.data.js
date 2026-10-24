@@ -64,10 +64,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Rhosmere",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Hoch",
-    "tiarna": "Überwiegend Cantref, Uchelwyr",
-    "kerns": "Hoch, überwiegend Kavallerie",
-    "fleet": "Keine",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Frühzeit des Königreichs Cenyr · Jahr unbekannt",
     "milestoneOne": "Tallwch, der Pferdebrecher, kam aus Avallorn und wurde wegen seiner außergewöhnlichen Begabung im Umgang mit Pferden zum Baron erhoben. Auf königliche Weisung erhielt er Land von den Draigs. Aus der Tradition seines Hauses gingen Rhosmeres Rösser und die Gilde Federkiel hervor.",
     "milestoneTwo": "Stennis Gwefrydd · Seit 1720",
@@ -80,6 +80,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Draig",
     "enemies": "Keine gegenwärtige Hausfehde benannt"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -93,7 +96,7 @@ window.HAEUSER_DATA = {
     "cultureReligion": "Die Gwefrydd gehören zu den Cenyri und folgen der Alerischen Kirche. Ihre besondere Schutzpatronin ist die Dame der See. Zuchtfeste, Reitausbildung und die sorgsame Weitergabe praktischen Wissens sind zentrale Bestandteile ihrer Familienkultur.",
     "conflictsAlliances": "Haus Gwefrydd ist dem Grafen von Celtigerns Wacht lehnspflichtig. Seine Verbindung zu Rhosmeres Rösser und Federkiel besteht durch gemeinsame Geschichte, tätige Familienmitglieder und vertragliche Einnahmeanteile fort. Eine gegenwärtige Hausfehde ist nicht benannt.",
     "values": "Disziplin, Ehre und Tradition prägen das Selbstverständnis. Die Gwefrydd verstehen sich als Bewahrer von Zuchtlinien, Handwerkskunst und Wissen. Loyalität zur Familie verbindet sich mit dem Anspruch, Tallwchs Fähigkeiten und verantwortungsvollen Umgang mit den Pferden weiterzugeben.",
-    "holdings": "Die Baronie bietet fruchtbares Land für Pferdezucht und Ausbildung. Das Haus gründete die Gilden Federkiel und Rhosmeres Rösser, kontrolliert sie aber seit Langem nicht mehr unmittelbar. Vertragliche Klauseln aus ihrer Veräußerung sichern weiterhin einen Anteil an den Einnahmen. Einzelne Gwefrydd bleiben in den eigenständigen Gilden tätig. Das starke Aufgebot umfasst zahlreiche Kavalleristen; eine Flotte besitzt das Haus nicht.",
+    "holdings": "Die Baronie bietet fruchtbares Land für Pferdezucht und Ausbildung. Das Haus gründete die Gilden Federkiel und Rhosmeres Rösser, kontrolliert sie aber seit Langem nicht mehr unmittelbar. Vertragliche Klauseln aus ihrer Veräußerung sichern weiterhin einen Anteil an den Einnahmen. Einzelne Gwefrydd bleiben in den eigenständigen Gilden tätig.",
     "succession": "Die überlieferte Erbfolge nennt Thomos Gwefrydd, Iorwerth Gwefrydd, Bethan Gwefrydd. Die Reihenfolge und bekannten Amtszeiten sind unten aufgeführt; nicht überlieferte Zeiträume bleiben offen.",
     "court": "Stennis Gwefrydd führt das Haus. Die Übersicht versammelt Gründer, Oberhauptfolge, Erben und Hofämter. Nicht benannte Amtsinhaber sind mit den Silhouetten der Vorlage dargestellt.",
     "familyTree": "Der Stammbaum zeigt die überlieferten Generationen und ihre Heiratsverbindungen. Die verlinkten Portraits führen zu den jeweiligen Personen; das Hauswappen im Stammbaum öffnet die kurze Hausbiografie.",

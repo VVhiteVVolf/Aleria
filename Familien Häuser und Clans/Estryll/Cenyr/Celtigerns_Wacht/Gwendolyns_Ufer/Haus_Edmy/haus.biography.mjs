@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Edmy",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Edmy/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Edmy ist ein kleines Ritterhaus unter den Gwyvern, dessen Erbe auf einem unerfüllten königlichen Eid beruht. Die Familie lebt auf einer Landburg zwischen Traethfael und Abergwint und verfügt über wenige Höfe.",
   "quote": "",
   "quoteBy": "",
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Edmwnd Edmy"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Sir Edmwnd schwor, Königin Isobels verlorenen avallornischen Ring zurückzubringen. Die Königin erkannte seine Treue an und stiftete das Haus. Nach Jahrhunderten als fahrende Ritter wurden die Edmy sesshaft.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Einzelne Angehörige nehmen freiwillig die Suche als Isobeliten auf; ihre Reiseberichte bilden eine eigene Chronik. Der Eid ist weltlich. Caledfwlch führt das Haus, Digain ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Haus Edmy pflegt eine eigene, ungewöhnliche Tradition, die direkt aus seiner Gründungslegende hervorgeht und bis heute fortbesteht. In jeder Generation können – sofern es die familiäre Situation erlaubt – einzelne Mitglieder die Bürde des Eides aufnehmen und sich offiziell der Suche nach dem Artefakt Königin Isobels verschreiben."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Haus Edmy gilt als ein vergleichsweise armes ritterliches Haus. Sein Besitz ist überschaubar und funktional, ohne Anspruch auf Größe oder Repräsentation. Der Sitz des Hauses ist eine kleine Landburg zwischen Traethfael und Abergwint, abgelegen genug, um unauffällig zu bleiben, aber strategisch so gelegen, dass Handels- und Küstenwege erreicht werden können."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Haus Edmy wird von Außenstehenden mitunter vorschnell als paladinisches Haus bezeichnet. Diese Einschätzung ist unzutreffend."
       }
     ],
     "triviaTitle": "Besonderheiten",

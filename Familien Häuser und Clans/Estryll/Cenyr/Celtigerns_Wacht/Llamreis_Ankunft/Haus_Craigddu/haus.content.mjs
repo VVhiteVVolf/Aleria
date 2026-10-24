@@ -1,8 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Familien- und Hausangaben nach Benutzervorgaben vom 27./28.09.2026.
-const OVERVIEW = 'Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.';
-const HISTORY = 'Die Craigddu stammen aus dem Bauhandwerk. Über Generationen gewann der Waffendienst für Haus Draig innerhalb der Familie an Bedeutung, bis das Haus ebenso mit seinen Kriegern wie mit seinen Baumeistern verbunden wurde. Namen und Lebensdaten des ursprünglichen Gründerpaares sind unbekannt. Nach der Überlieferungslücke setzt der Stammbaum bei den Brüdern Brenwyn, Iestyn und Cyran ein. Iestyn und Mared sind die Eltern von Hywel und Catrin. Hywel dient als Waffenknecht; Catrins Ehe mit Llywelyn Coeddu verbindet die Craigddu mit dem Haus der Gwynthorer Waffenschmiede.';
-const CHARACTER = 'Der Dienst für Haus Draig und die Arbeit im Bauwesen bestehen in dieser Familie nebeneinander fort. Brenwyn Craigddu und sein Sohn Rhydric sind in der örtlichen Baumeistergilde tätig; Cyran sowie die jüngeren Angehörigen Hywel, Maelor und Thalwyn vertreten die kriegerische Seite des Hauses. Einzelne Ritter stammen aus der Familie, doch die Craigddu bleiben ein Bürgerhaus.';
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "craigddu",
   "name": "Haus Craigddu",
@@ -16,16 +13,21 @@ export const HOUSE_CONTENT = {
   "parentHouseId": "",
   "extinct": false,
   "showMotto": false,
-  "prepared": true,
+  "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
-  "biographyPreviousDefaultFingerprints": ["2205:74add61f:9445a595", "2219:4f81d6c8:9e4d9aa6"],
+  "biographySourceRevision": 4,
+  "biographyPreviousDefaultFingerprints": [
+    "2205:74add61f:9445a595",
+    "2219:4f81d6c8:9e4d9aa6",
+    "3363:a0a9eea9:db8a1cdb"
+  ],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": OVERVIEW,
-    "history": HISTORY,
-    "character": CHARACTER
+    "overview": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
+    "history": "Die jüngere Überlieferung verzweigt sich unter den Brüdern Brenwyn, Iestyn und Cyran. Brenwyn und sein Sohn Rhydric arbeiten als Baumeister, während Cyran, Maelor und Thalwyn im Wachdienst stehen. Iestyns Kinder sind Hywel und Catrin.",
+    "character": "Hywel ist Waffenknecht, Llywelyn Coeddus bester Freund und mit Eleri Vater von sieben Töchtern. Catrins Ehe mit Llywelyn verbindet Craigddu und Coeddu. Die Familie bewahrt ihre bürgerliche Stellung neben dem generationslangen Dienst für Draig.",
+    "holdings": "Die Tätigkeit in Gwynthors Baumeistergilde ist belegt; sie macht die Gilde nicht zum Besitz der Familie. Weitere eigene Betriebe sind nicht benannt."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -79,7 +81,7 @@ export const HOUSE_CONTENT = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Baumeister und Dienst für Draig",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -104,18 +106,18 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": OVERVIEW,
-    "history": HISTORY,
-    "traditions": "Die Verbindung zur örtlichen Baumeistergilde besteht trotz des wachsenden Gewichts des Waffendienstes fort. In den verschiedenen Familienzweigen werden sowohl Baumeister als auch Wachen und Waffenknechte ausgebildet.",
-    "knighthood": "Seit Generationen dienen Angehörige der Craigddu Haus Draig als Wachen und Waffenknechte. Einige haben den Ritterschlag erhalten. Diese persönlichen Ritterwürden ändern den bürgerlichen Rang des Hauses nicht.",
-    "succession": "Folgt …",
-    "holdings": "Der familiäre Mittelpunkt liegt in Gwynthor. Die Craigddu sind weiterhin im Bauwesen tätig; mehrere Mitglieder gehören der lokalen Baumeistergilde an, darunter Brenwyn und sein Sohn Rhydric.",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Der generationslange Dienst bindet das Haus an die Draig. Über Catrins Ehe mit Llywelyn Coeddu besteht außerdem eine enge Familienverbindung zu den Coeddu. Hywel Craigddu und Llywelyn sind beste Freunde.",
-    "values": CHARACTER,
-    "court": "Folgt …",
-    "familyTree": "Ein unbekanntes Gründerpaar steht vor Hauswappen und Zeitsprung. Die jüngere Familie beginnt mit Iestyn, Hywels Vater, und dessen Brüdern Brenwyn und Cyran. Brenwyns Söhne Rhydric und Maelor sowie Cyrans Sohn Thalwyn sind Hywels Vettern und haben eigene Kinder. Hywels Familie mit Eleri und ihren sieben Töchtern sowie Catrins Ehe mit Llywelyn Coeddu sind ebenfalls verzeichnet.",
-    "historicalFigures": "Brenwyn und Rhydric Craigddu führen die Baumeistertradition in Gwynthors Gilde fort. Hywel Craigddu dient als Waffenknecht im Umfeld von Haus Draig."
+    "overview": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
+    "history": "Die jüngere Überlieferung verzweigt sich unter den Brüdern Brenwyn, Iestyn und Cyran. Brenwyn und sein Sohn Rhydric arbeiten als Baumeister, während Cyran, Maelor und Thalwyn im Wachdienst stehen. Iestyns Kinder sind Hywel und Catrin.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Die Tätigkeit in Gwynthors Baumeistergilde ist belegt; sie macht die Gilde nicht zum Besitz der Familie. Weitere eigene Betriebe sind nicht benannt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Weitere Hausallianzen und Fehden sind bisher nicht belegt.",
+    "values": "Hywel ist Waffenknecht, Llywelyn Coeddus bester Freund und mit Eleri Vater von sieben Töchtern. Catrins Ehe mit Llywelyn verbindet Craigddu und Coeddu. Die Familie bewahrt ihre bürgerliche Stellung neben dem generationslangen Dienst für Draig.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "images": {
     "crest": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
@@ -127,23 +129,84 @@ export const HOUSE_CONTENT = {
   "founder": null,
   "heads": [],
   "heirs": [],
-  "offices": [],
-  "figuresTitle": "Persönlichkeiten des Hauses",
-  "figures": [
+  "offices": [
+    {
+      "id": "craigddu-gruender",
+      "familyId": "craigddu",
+      "name": "Iestyn Craigddu",
+      "role": "Vater von Hywel und Catrin",
+      "image": "",
+      "detail": "Vater von Hywel und Catrin"
+    },
+    {
+      "id": "craigddu-gruenderin",
+      "familyId": "craigddu",
+      "name": "Mared",
+      "role": "Mutter von Hywel und Catrin",
+      "image": "",
+      "detail": "Mutter von Hywel und Catrin"
+    },
+    {
+      "id": "brenwyn-craigddu",
+      "familyId": "craigddu",
+      "name": "Brenwyn Craigddu",
+      "role": "Baumeister in Gwynthors Baumeistergilde",
+      "image": "",
+      "detail": "Baumeister in Gwynthors Baumeistergilde"
+    },
+    {
+      "id": "cyran-craigddu",
+      "familyId": "craigddu",
+      "name": "Cyran Craigddu",
+      "role": "Waffenknecht im Dienst von Haus Draig",
+      "image": "",
+      "detail": "Waffenknecht im Dienst von Haus Draig"
+    },
+    {
+      "id": "rhydric-craigddu",
+      "familyId": "craigddu",
+      "name": "Rhydric Craigddu",
+      "role": "Baumeister in Gwynthors Baumeistergilde",
+      "image": "",
+      "detail": "Baumeister in Gwynthors Baumeistergilde"
+    },
+    {
+      "id": "maelor-craigddu",
+      "familyId": "craigddu",
+      "name": "Maelor Craigddu",
+      "role": "Wache im Dienst von Haus Draig",
+      "image": "",
+      "detail": "Wache im Dienst von Haus Draig"
+    },
+    {
+      "id": "thalwyn-craigddu",
+      "familyId": "craigddu",
+      "name": "Thalwyn Craigddu",
+      "role": "Waffenknecht im Dienst von Haus Draig",
+      "image": "",
+      "detail": "Waffenknecht im Dienst von Haus Draig"
+    },
     {
       "id": "person-28b0e0a3",
+      "familyId": "craigddu",
       "name": "Hywel Craigddu",
-      "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
       "role": "Waffenknecht in Gwynthor",
-      "description": "Catrins älterer Bruder und Llywelyns bester Freund.",
-      "familyId": "craigddu"
+      "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+      "detail": "Waffenknecht in Gwynthor"
     }
   ],
+  "figuresTitle": "Prägende historische Persönlichkeiten",
+  "figures": [],
   "trivia": [
-    "Die Craigddu waren ursprünglich eine Baumeisterfamilie und sind noch heute in Gwynthors Baumeistergilde vertreten.",
-    "Das Wappen zeigt eine Burg auf dunklem Gebirge in Schieferblau, Kohlegrau und Elfenbein."
+    "Baumeister und Dienst für Draig"
   ],
   "currentHead": "",
   "firstHeir": "",
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "biographyManagedExternally": false,
+  "illustrationCategory": "Bürgerliche Hausdarstellung",
+  "headsTitle": "Familienführung und Haushalt",
+  "officesTitle": "Angehörige und Aufgaben"
 };

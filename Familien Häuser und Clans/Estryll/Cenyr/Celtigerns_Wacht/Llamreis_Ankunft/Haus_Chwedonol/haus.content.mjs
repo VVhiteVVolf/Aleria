@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-chwedlonol",
   "name": "Haus Chwedonol",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 4,
+  "biographySourceRevision": 5,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Chwedonol ist ein von Frauen geführtes Ritterhaus im Dienst der Saethwyr. Seine Kapitäne und Ritter zur See schützen die Küste; Burgen in Gwynthor und Glastraeth sowie eine Werft tragen seine Stellung.",
     "history": "Die Gründerin Meredithe diente Kynwrig Draig auf See und wurde von ihm zum Ritter geschlagen. Sie begründete die maritime Tradition und die weibliche Führung des Hauses.",
-    "character": "„Pflicht kennt keine Flaute.“ verbindet seemännisches Können mit Disziplin und Verantwortung. Gwenhwyfar führt das Haus; Niniane ist ihre Erbin."
+    "character": "„Pflicht kennt keine Flaute.“ verbindet seemännisches Können mit Disziplin und Verantwortung. Gwenhwyfar führt das Haus; Niniane ist ihre Erbin.",
+    "customs": "Die Chwedonol sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Bereits in jungen Jahren beginnt ihre Ausbildung, wobei der Schwerpunkt auf all jenen Kampf- und Waffenarten liegt, die im Kampf zur See von Nutzen sind.",
+    "holdings": "Die Chwedonol verfügen über zwei Burgen, die ihre Stellung innerhalb der Grafschaft unterstreichen. Die erste erhebt sich im Hafenbereich von Gwynthor. Dort residiert das Familienoberhaupt, ebenso wie viele weitere Mitglieder des Hauses.",
+    "culture": "Wie die meisten Cenyri bekennen sich auch dDie Chwedonol zur Alerischen Kirche. Ihr Glaube ist fest verwurzelt und Teil ihres Alltags, ohne dabei je aufdringlich oder demonstrativ zu sein."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -76,7 +79,7 @@ export const HOUSE_CONTENT = {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
     "houseType": "Ritterhaus",
-    "motto": "Pflicht kennt keine Flaute",
+    "motto": "Pflicht kennt keine Flaute.",
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Haus Saethwyr",
@@ -467,5 +470,11 @@ export const HOUSE_CONTENT = {
     }
   ],
   "founderTitle": "Gründerin",
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2513:380f10e0:5c58b5d6"
+  ]
 };

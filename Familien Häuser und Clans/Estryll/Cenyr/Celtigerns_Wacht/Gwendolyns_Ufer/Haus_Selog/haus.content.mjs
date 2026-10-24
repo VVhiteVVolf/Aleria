@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-selog",
   "name": "Haus Selog",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Selog ist ein Ritterhaus unter den Gwyvern mit enger Bindung an die Alerische Kirche. Seine Burg liegt beim Feuerstollen, nahe dem Ahnenbaum des Grünen Recken, dessen Schutz ihm anvertraut wurde.",
+    "overview": "Das Haus Selog ist ein ritterlich-geistlich geprägtes Geschlecht aus Cenyr, dessen Ursprung weniger in Macht oder Besitz liegt als in einer Lehre von Verantwortung und Standhaftigkeit. Gegründet von Gwerthrynion Selog, einem einst zweifelhaften Ritter, trägt das Haus bis heute das Erbe einer Läuterung: Nicht Fehlerlosigkeit macht würdig, sondern das Einstehen für eigenes Handeln. Die Selog meiden politische Ränkespiele, stehen jedoch ohne Zögern dort, wo unnatürliche Bedrohungen oder göttliche Pflicht sie rufen.\n\nDie Selog sind bekannt als treue, verlässliche Ritter und Paladine, eng verbunden mit der Alerischen Kirche, ohne sich dogmatisch einem einzelnen Gott zu verschreiben. Ihr eigentlicher Sitz liegt nahe dem Feuerstollen, beim Ahnenbaum des Grünen Recken, dessen Schutz ihnen nach Jahrhunderten übertragen wurde. Besitz und Einfluss sind begrenzt, doch ihr Ruf ist gefestigt: Wenn andere abwägen, bleiben die Selog – und handeln.",
     "history": "Die Überlieferung erzählt von Gwerthrynions Begegnung mit dem Grünen Ritter. Indem er sich den Folgen seines Handelns stellte, fand er zu Verantwortung und Treue. Diese Lehre prägt das Haus bis heute.",
-    "character": "Klostererziehung, Ritterschlag am Ahnenbaum und der Kampf gegen unnatürliche Bedrohungen bestimmen seine Tradition. Godwyn führt die Familie; Adda ist sein erster Erbe."
+    "character": "Klostererziehung, Ritterschlag am Ahnenbaum und der Kampf gegen unnatürliche Bedrohungen bestimmen seine Tradition. Godwyn führt die Familie; Adda ist sein erster Erbe.",
+    "customs": "Die Selog besitzen eine klare, fest gefügte Familienordnung, auch wenn sich diese erst über Generationen hinweg herausgebildet hat. Ihre Traditionen sind nicht prunkvoll, sondern streng, kontinuierlich und auf Verantwortung ausgerichtet – ein stilles Erbe aus der Zeit Gwerthrynion Selogs.",
+    "holdings": "Die Selog unterhalten ein Anwesen innerhalb Abergwints, das jedoch eher formalen Charakter besitzt. Es dient als Residenz auf Zeit, wenn Angelegenheiten am Hof oder in der Stadt zu regeln sind, und wird überwiegend von Bediensteten verwaltet. Als eigentlicher Sitz des Hauses gilt es nicht.",
+    "culture": "Die Selog sind treue Anhänger der Alerischen Kirche, wie es für jedes cenyrische Geschlecht üblich ist. Anders als viele ritterlich-geistlich geprägte Häuser binden sie sich jedoch nicht bewusst an einen einzelnen Gott der Neun, noch erzwingen sie eine solche Ausrichtung innerhalb der Familie."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -278,7 +281,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Adda Selog",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1877:9ea98135:918a67df"
+    "1877:9ea98135:918a67df",
+    "2582:dbd70c8b:772e5a45"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

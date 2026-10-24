@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-gostyn",
   "name": "Haus Gostyn",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Gostyn ist ein Ritterhaus unter den Gafyr. Es lebt in Gwynthor und versieht Aufgaben in Bronfelen. Mühlen und Bäckereien verbinden seine Einkünfte mit der Versorgung Bedürftiger.",
+    "overview": "Das Haus Gostyn ist ein kleines, ritterliches Vasallenhaus unter dem Lehn des Hauses Gafyr mit Sitz in Gwynthor. Es genießt den Ruf eines volksnahen, frommen und verlässlichen Geschlechts, das Macht meidet und Pflicht vor Ehrgeiz stellt. Politisch zurückhaltend, wirtschaftlich solide und kirchlich eng verbunden, treten die Gostyn selten hervor, gelten jedoch als stabiler Faktor innerhalb der Grafschaft. Ihre aktuelle Lage ist ruhig: fest eingebunden in bestehende Lehnsstrukturen, ohne offene Fehden, getragen von Tradition, Glauben und lokaler Verantwortung.",
     "history": "Roderic der Hochgewachsene trat als Kammerdiener für einen verletzten Gafyr-Prinzen im Turnier an. Er lehnte lange jede Erhebung ab und nahm die Ritterwürde erst im Alter an. Das genaue Gründungsjahr ist offen.",
-    "character": "Demut, Mäßigung und tätige Nächstenliebe prägen das Haus. Sein Wappen zeigt einen Teller mit Krümeln und Besteck. Eifion führt das Haus; Gruffydd ist sein erster Erbe."
+    "character": "Demut, Mäßigung und tätige Nächstenliebe prägen das Haus. Sein Wappen zeigt einen Teller mit Krümeln und Besteck. Eifion führt das Haus; Gruffydd ist sein erster Erbe.",
+    "customs": "Die Gostyn sind streng fromme Anhänger der Kirche. Viele Mitglieder wählen keinen priesterlichen, sondern einen paladinischen Weg und binden sich durch Schwüre und Gelübde an den Dienst am Volk. Ein Bruch dieser Schwüre führt weder bei Haus noch Kirche zu Ausgrenzung, sondern zu Buße, Rückkehr und einem erneuten Versuch.",
+    "holdings": "Die Gostyn gelten als volksnahes Haus. Zwar lehnte ihr Gründervater viele Lobpreisungen und Geschenke der Gafyr ab, doch seine Nachkommen waren weniger streng. Heute bewohnen die Gostyn ein Anwesen innerhalb der alten Stadtmauern von Gwynthor, an jener Stelle, wo einst die alte Mühle stand, in der Roderic heiratete.",
+    "culture": "Die Gostyn sind Cenyri durch und durch, mit einem spürbaren Anteil albischen Blutes, der sich häufig in brünettem Haar und blauen Augen zeigt. Kulturell gelten sie als bodenständig, gemeinschaftsorientiert und wenig prunkliebend; Herkunft und Stand werden nicht zur Schau gestellt, sondern als Verpflichtung verstanden."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -372,5 +375,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Eifion Gostyn",
   "firstHeir": "Gruffydd Gostyn",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2513:cf6fc334:ba633f1a"
+  ]
 };

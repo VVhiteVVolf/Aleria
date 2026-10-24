@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Taranvyr, Gwyvern, Draig",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

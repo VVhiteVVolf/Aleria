@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Original und Bildnachweise liegen im selben Hausordner.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-illysywen",
   "name": "Haus Illysywen O'Castellbryn",
@@ -16,9 +16,12 @@ export const HOUSE_CONTENT = {
   "biographyIntroTitle": "Das erloschene Haus des Schwarzen Aals",
   "biographyHistoryTitle": "Arwels Pakt und das Ende der Illysywen",
   "biographySummary": {
-    "overview": "Haus Illysywen war ein Ritterfürstenhaus mit Sitz in Castellbryn auf Rhonwens Tränen. Seine Macht beruhte auf Seefahrt, Seekriegern und einer starken Flotte. Das Geschlecht erlosch 1720; seine früheren Besitzungen werden heute von Haus Arwydd regiert.",
+    "overview": "Haus Illysywen war ein altes Ritterfürstenhaus von Rhonwens Tränen mit Sitz in Castellbryn. Über große Teile seiner Geschichte ist wenig überliefert. Seefahrt, eine starke Flotte und zahlreiche Seekrieger bestimmten seine Stellung unter den Vasallen der Draigs.\n\n1720 endete die Herrschaft der Illysywen. Das Haus gilt als ausgestorben; seine ehemaligen Besitzungen befinden sich heute unter der Herrschaft der Arwydd. Die Chronik des Schwarzen Aals erzählt von einem Aufstieg, dessen verborgener Preis erst Generationen später sichtbar wurde.",
     "history": "Der Gründer Arwel, genannt der Schwarze Aal, stieg vom ausgestoßenen Fischer zum Ritter und königlichen Herold auf. Eine düstere Überlieferung führt seinen Erfolg auf einen Pakt zurück, der auch seine Nachkommen band. Der Konflikt mit den Draigs besiegelte den Untergang des Hauses.",
-    "character": "Die Illysywen gehörten zur cenyrischen Adelswelt und verehrten die Dame der See. Grüne Schuppenrüstungen und Dreizacke prägten ihre Ritter. Ercwlff war das letzte Oberhaupt; eine fortbestehende Erbfolge gibt es nicht."
+    "character": "Die Illysywen gehörten zur cenyrischen Adelswelt und verehrten die Dame der See. Grüne Schuppenrüstungen und Dreizacke prägten ihre Ritter. Ercwlff war das letzte Oberhaupt; eine fortbestehende Erbfolge gibt es nicht.",
+    "customs": "Die Illysywen waren erfahrene Seefahrer. Ihre Bindung an die Inseln und an den Ritterdienst der Grafschaft prägte das Haus; zu seinem Aufgebot gehörten vor allem Cantref und Helwyr. Eigene Feste oder besondere Hausrituale sind nicht überliefert.",
+    "holdings": "Die Herrschaft um Castellbryn lag auf den Inseln von Rhonwens Tränen. Das Haus verfügte über zahlreiche Seekrieger und eine starke Flotte bei mittlerem Wohlstand. Nach seinem Untergang übernahmen die Arwydd die ehemaligen Besitzungen.",
+    "culture": "Die Illysywen gehörten zu den Cenyri, folgten der Alerischen Kirche und verehrten besonders die Dame der See. Arwels geheimer Pakt war der verborgene Ursprung seiner persönlichen Macht; ein entsprechender öffentlicher Hauskult ist nicht überliefert."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -69,10 +72,10 @@ export const HOUSE_CONTENT = {
     "quoteAuthor": "",
     "seat": "Castellbryn",
     "affiliation": "Grafschaft Celtigerns Wacht · ehemals Haus Draig",
-    "troopStrength": "Hoch",
-    "tiarna": "Überwiegend Cantref, Helwyr",
-    "kerns": "Hoch, überwiegend Seekrieger",
-    "fleet": "Hoch",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Jahr unbekannt · 1720 ausgestorben",
     "milestoneOne": "Der Gründer Arwel, genannt der Schwarze Aal, stieg vom ausgestoßenen Fischer zum Ritter und königlichen Herold auf. Eine düstere Überlieferung führt seinen Erfolg auf einen Pakt zurück, der auch seine Nachkommen band. Der Konflikt mit den Draigs besiegelte den Untergang des Hauses.",
     "milestoneTwo": "1720: Untergang des Hauses; die Arwydd übernehmen die Herrschaft.",
@@ -280,5 +283,12 @@ export const HOUSE_CONTENT = {
   "trivia": [
     "Arwels Beiname „Schwarzer Aal“ verbindet die Hausgeschichte mit dem Bild des Aals im Pakt.",
     "Die Inseln Rhonwens Tränen und Rhonwen Draig erhalten in der Prophezeiung eine doppelte Bedeutung."
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographySourceRevision": 6,
+  "biographyPreviousDefaultFingerprints": [
+    "2721:c42d08e7:476f9e15"
   ]
 };

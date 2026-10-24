@@ -1,8 +1,8 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-maerllys",
-  "contentVersion": "eleganz-20261016",
+  "contentVersion": "20261024-housebio-v1",
   "name": "Haus Maerllys",
   "type": "Bürgerliches Haus",
   "page": "kleinehaeuser.html",
@@ -14,16 +14,21 @@ export const HOUSE_CONTENT = {
   "parentHouseId": "",
   "extinct": false,
   "showMotto": false,
-  "prepared": true,
+  "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 6,
-  "biographyPreviousDefaultFingerprints": ["1741:ce940b97:2291e4d9"],
+  "biographySourceRevision": 9,
+  "biographyPreviousDefaultFingerprints": [
+    "1741:ce940b97:2291e4d9",
+    "2459:f04827ea:91600d9c"
+  ],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
-    "history": "Gwenora Maerllys verband die Kunst ihrer Familie mit den Stofflieferungen des Kapitäns Matteo Veltrane. Aus ihrem gemeinsamen Krämerladen erwuchs der Raves-Zweig und später die Göttliche Eleganz. Die heutige Maerllys-Linie stammt aus dem Zweig ihres Bruders; die Namen der dazwischenliegenden Generationen sind verloren.",
-    "character": "Die Familie hält an cenyrischen Schnitten und sorgfältiger Handarbeit fest. Ihre Verwandtschaft mit den Raves verbindet die heimische Schneiderkunst mit den Stoffen des Südens."
+    "overview": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
+    "history": "Cadfan und Eira stehen am Beginn der namentlich bekannten jüngeren Linie. Cadfans Bruder Owain heiratete Gwenllian Ysgrif. Aus der nächsten Generation führen Verbindungen zu Falchdyn, Tonnarth und Swyll. Die Schneidermeisterin Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie und das spätere Familiengeschäft.",
+    "character": "Handwerk und weitreichende familiäre Verbindungen prägen die Überlieferung. Elowen Maerllys lebt und arbeitet seit ihrer Ehe mit Edern Vann in der Letzten Rast. Nias weiterer Lebensweg ist noch offen.",
+    "holdings": "Belegt sind die handwerkliche Schneidertradition und Gwenoras Mitwirkung am Raves-Geschäft. Dieses eigenständige Nachfolgehaus wird dadurch nicht zu einem unselbstständigen Besitz der Maerllys.",
+    "relations": "Eheverbindungen führen zu Ysgrif, Falchdyn, Tonnarth, Swyll, Vann und zum Ursprung der Raves."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -77,7 +82,7 @@ export const HOUSE_CONTENT = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Schneiderfamilie",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -102,35 +107,122 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Ihr Wappen zeigt Schere, Tuch und Garnrolle: den schlichten Stolz eines Hauses, dessen Ansehen mit jeder sauber gearbeiteten Naht wächst.",
-    "history": "Gwenora Maerllys heiratete den aus Tirnara stammenden Kapitän Matteo Veltrane. Gemeinsam eröffneten sie 1662 einen Krämerladen und begründeten die Familie Raves. Gwenoras Schnittkunst und Matteos Handelsroute legten den Grund für die spätere Göttliche Eleganz. Die jüngere Maerllys-Hauptlinie führt über Gwenoras unbenannten Bruder zu Cadfan und Owain; die genaue Generationenfolge ist nicht mehr überliefert.",
-    "traditions": "Ein gutes Kleid soll sich seinem Träger fügen. Bevor ein Stück die Werkbank verlässt, werden Fall, Nähte und Bewegungsfreiheit geprüft.",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Mit den Raves verbindet die Maerllys eine alte Verwandtschaft und die gemeinsame Schneidertradition. Über Gwenoras Ehe reicht diese Verbindung bis zum Handelshaus Veltrane in Tirnara.",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
+    "history": "Cadfan und Eira stehen am Beginn der namentlich bekannten jüngeren Linie. Cadfans Bruder Owain heiratete Gwenllian Ysgrif. Aus der nächsten Generation führen Verbindungen zu Falchdyn, Tonnarth und Swyll. Die Schneidermeisterin Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie und das spätere Familiengeschäft.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Belegt sind die handwerkliche Schneidertradition und Gwenoras Mitwirkung am Raves-Geschäft. Dieses eigenständige Nachfolgehaus wird dadurch nicht zu einem unselbstständigen Besitz der Maerllys.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Eheverbindungen führen zu Ysgrif, Falchdyn, Tonnarth, Swyll, Vann und zum Ursprung der Raves.",
+    "values": "Handwerk und weitreichende familiäre Verbindungen prägen die Überlieferung. Elowen Maerllys lebt und arbeitet seit ihrer Ehe mit Edern Vann in der Letzten Rast. Nias weiterer Lebensweg ist noch offen.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "images": {
     "crest": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-    "scene": "",
-    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png"
+    "scene": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/assets/hausfigur-2026-10-24.png",
+    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
+    "sceneAlt": "Bürgerliche Hausdarstellung · Haus Maerllys"
   },
   "cadets": [],
-  "founder": null,
-  "heads": [],
+  "founder": {
+    "id": "gwenora-maerllys",
+    "familyId": "haus-maerllys",
+    "name": "Gwenora Maerllys",
+    "role": "Schneidermeisterin · Mitbegründerin des Geschäfts",
+    "image": "../Stammbäume/../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
+    "detail": "Schneidermeisterin · Mitbegründerin des Geschäfts"
+  },
+  "heads": [
+    {
+      "id": "cadfan-maerllys",
+      "familyId": "haus-maerllys",
+      "name": "Cadfan Maerllys",
+      "role": "Ältestes überliefertes Oberhaupt des Hauses Maerllys",
+      "image": "",
+      "detail": "Ältestes überliefertes Oberhaupt des Hauses Maerllys"
+    }
+  ],
   "heirs": [],
-  "offices": [],
-  "figuresTitle": "Persönlichkeiten des Hauses",
+  "offices": [
+    {
+      "id": "eira-spouse-maerllys",
+      "familyId": "haus-maerllys",
+      "name": "Eira",
+      "role": "Großmutter Nia Maerllys’",
+      "image": "",
+      "detail": "Großmutter Nia Maerllys’"
+    },
+    {
+      "id": "owain-maerllys",
+      "familyId": "haus-maerllys",
+      "name": "Owain Maerllys",
+      "role": "Großonkel Nia Maerllys’",
+      "image": "",
+      "detail": "Großonkel Nia Maerllys’"
+    },
+    {
+      "id": "gwenllian-ysgrif",
+      "familyId": "haus-maerllys",
+      "name": "Gwenllian Ysgrif",
+      "role": "An Haus Maerllys verheiratete Ysgrif",
+      "image": "",
+      "detail": "An Haus Maerllys verheiratete Ysgrif"
+    },
+    {
+      "id": "llio-falchdyn",
+      "familyId": "haus-maerllys",
+      "name": "Llio Falchdyn",
+      "role": "An Haus Maerllys verheiratete Falchdyn",
+      "image": "",
+      "detail": "An Haus Maerllys verheiratete Falchdyn"
+    },
+    {
+      "id": "rhoswen-maerllys",
+      "familyId": "haus-maerllys",
+      "name": "Rhoswen Maerllys",
+      "role": "An Haus Tonnarth verheiratete Maerllys",
+      "image": "",
+      "detail": "An Haus Tonnarth verheiratete Maerllys"
+    },
+    {
+      "id": "madoc-tonnarth",
+      "familyId": "haus-maerllys",
+      "name": "Madoc Tonnarth",
+      "role": "Onkel Llewarch Tonnarths",
+      "image": "",
+      "detail": "Onkel Llewarch Tonnarths"
+    },
+    {
+      "id": "iorwerth-maerllys",
+      "familyId": "haus-maerllys",
+      "name": "Iorwerth Maerllys",
+      "role": "Vater Nia Maerllys’",
+      "image": "",
+      "detail": "Vater Nia Maerllys’"
+    },
+    {
+      "id": "bronwen-swyll",
+      "familyId": "haus-maerllys",
+      "name": "Bronwen Swyll",
+      "role": "An Haus Maerllys verheiratete Swyll",
+      "image": "",
+      "detail": "An Haus Maerllys verheiratete Swyll"
+    }
+  ],
+  "figuresTitle": "Prägende historische Persönlichkeiten",
   "figures": [],
   "trivia": [
-    "Folgt …"
+    "Schneiderfamilie"
   ],
-  "currentHead": "",
+  "currentHead": "Cadfan Maerllys",
   "firstHeir": "",
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+  "omitMilitaryProfile": true,
+  "biographyManagedExternally": false,
+  "illustrationCategory": "Bürgerliche Hausdarstellung",
+  "headsTitle": "Familienführung und Haushalt",
+  "officesTitle": "Angehörige und Aufgaben"
 };

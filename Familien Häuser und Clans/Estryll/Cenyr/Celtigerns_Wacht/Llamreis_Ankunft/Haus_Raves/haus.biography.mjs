@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Raves",
   "housePage": true,
   "image": "../AleriaAlmanach/assets/goettliche-eleganz/aussenansicht.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Die Raves führen mit der Göttlichen Eleganz Gwynthors wohl beste Schneiderei. Die Familie vereint die südlichen Handelsverbindungen der Veltrane mit der Schneiderkunst der Maerllys.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Hinter dem dunkelblauen Schild der Göttlichen Eleganz steht ein altes Familiengeschäft. Die Raves sind in Gwynthor zu Hause und halten ihre Verbindung zum fernen Tirnara lebendig.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Veltrane aus Tirnara · Maerllys aus Gwynthor"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +52,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über die Familie",
-    "biographyText": "Die Raves führen mit der Göttlichen Eleganz Gwynthors wohl beste Schneiderei. Die Familie vereint die südlichen Handelsverbindungen der Veltrane mit der Schneiderkunst der Maerllys.",
+    "biographyText": "Hinter dem dunkelblauen Schild der Göttlichen Eleganz steht ein altes Familiengeschäft. Die Raves sind in Gwynthor zu Hause und halten ihre Verbindung zum fernen Tirnara lebendig.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Von zwei Küsten nach Gwynthor",
-    "historyText": "Matteo Septimus Veltrane blieb bei der Schneidermeisterin Gwenora Maerllys in Gwynthor. Ihr 1662 eröffneter Krämerladen entwickelte sich unter ihrem Sohn Lorenzo zum Kleiderhaus. Seit 1734 führt Eleonora Cassia Raves das Geschäft.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Ein Handelskapitän und eine Schneidermeisterin legten den Grundstein. Matteo Veltrane brachte Waren aus dem Süden, Gwenora Maerllys Kundschaft und Können. Ihr Sohn Lorenzo machte Kleidung zum Mittelpunkt des Hauses. Nach seinem Tod übernahm seine älteste Tochter Eleonora die Führung.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Eleonora entwirft, Tiberian hält die Warenwege offen und Orestian führt die Bücher. Rhiain gibt ihre Schnittkunde weiter; Luciano prüft die kostbaren Stoffe. Im Haus zählt eine unscheinbare saubere Naht ebenso viel wie ein glänzender Besatz."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Silber, Weißgold, Purpur und dunkles Blau bestimmen viele Hausentwürfe. Cenyrische Flechtmuster treffen auf argentische Schnitte; die Güte des Stoffes soll auch ohne schweren Schmuck erkennbar bleiben."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Verkaufs- und Anproberäume in Gwynthors Innenstadt, eigene Schneidereien und trockene Stofflager in der Stadt. Die Waren kommen über die Veltrane-Verbindung und örtliche Handwerksbetriebe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Raves bewahren die elegante Formenwelt ihrer südlichen Herkunft und die praktische Sorgfalt ihrer cenyrischen Heimat. Am Familientisch geht es oft um Schiffe, Stoffe und Menschen."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -94,7 +109,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
         "title": "Haus Raves · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-raves"
       }
     ],

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-tawelgar",
   "name": "Haus Tawelgar",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Tawelgar ist ein kleines Ritterhaus unter den Gwyvern. Von seiner Burg zwischen Abergwint und Llysbrynn sichert es die Handelsstraße und die Versorgung der Stadt. Seine Ritter sind für zuverlässigen Dienst und ihre Nähe zum Baron bekannt.",
     "history": "Brinthan Tawelgar diente als Leibwächter und lehnte höhere Ämter wiederholt ab. Erst im Alter erhob sein Herr ihn zum Ritterherrn. Der spätere Wachposten wurde zur Burg und zum dauerhaften Sitz der Familie.",
-    "character": "„Von Pflicht getragen.“ steht für Demut und Genügsamkeit. Harri führt das Haus; Marwin ist sein Erbe. Eine enge Freundschaft verbindet die Tawelgar mit den Taranvyr."
+    "character": "„Von Pflicht getragen.“ steht für Demut und Genügsamkeit. Harri führt das Haus; Marwin ist sein Erbe. Eine enge Freundschaft verbindet die Tawelgar mit den Taranvyr.",
+    "customs": "Die Tawelgar sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Pflichtbewusstsein und Demut sind tief in ihrer Identität verankert und werden von Generation zu Generation weitergegeben, nicht als bloße Lehre, sondern als gelebte Selbstverständlichkeit.",
+    "holdings": "Die Burg der Tawelgar liegt zwischen Llysbrynn und Abergwint, unmittelbar an der Handelsstraße, die beide Orte miteinander verbindet. Ursprünglich handelte es sich lediglich um einen einfachen Wachposten, die dem Schutz des Weges diente. Erst im Laufe der Jahre wurde sie von den Tawelgar ausgebaut und zu dem festen Sitz, den das Haus heute sein Eigen nennt.",
+    "culture": "Wie die meisten Cenyri bekennen sich auch die Tawelgar zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Gesten als im beständigen Handeln."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -261,7 +264,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Marwin Tawelgar",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1885:b42254ad:f0917f0f"
+    "1885:b42254ad:f0917f0f",
+    "2867:a1b12111:aaff5ebf"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

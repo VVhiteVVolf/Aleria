@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gwyntog",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyntog/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Gwyntog ist ein maritimes Ritterhaus aus Abergwint im Dienst der Gwyvern. Seine Kapitäne, Admiräle und Schiffsherren prägen Werften, Hafenbetrieb und Seehandel; die Burg liegt unmittelbar am Hafen.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Gwyntog ist ein seefahrendes Adelsgeschlecht von alter Prägung – Kapitäne, Admiräle, Schiffsherren. Ihr Name steht für Wind, Fahrt und Kontrolle über Wasserwege. Wo andere Häuser Land zählen, zählen die Gwyntog Routen, Gezeiten und Kiele. Ihre Macht wuchs nicht aus Burgen, sondern aus Werften, Hafenketten und der Fähigkeit, Menschen und Waren sicher über See zu führen.\n\nHaus Gwyntog ist ein maritimes Ritterhaus mit Sitz in Abergwint, dessen Macht und Ansehen vollständig aus der Seefahrt erwachsen. Das Haus stellt seit Generationen Kapitäne, Schiffsherren und Admiräle und kontrolliert maßgeblich Werften, Hafenanlagen und die Organisation des Seehandels. Ursprünglich aus Gwynthor stammend, verlagerte das Haus seinen vollständigen Schwerpunkt nach Abergwint, als die Stadt an Bedeutung gewann und neue baroniale Strukturen etabliert wurden.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Gwyntog ist ein maritimes Ritterhaus aus Abergwint im Dienst der Gwyvern. Seine Kapitäne, Admiräle und Schiffsherren prägen Werften, Hafenbetrieb und Seehandel; die Burg liegt unmittelbar am Hafen.",
+    "biographyText": "Haus Gwyntog ist ein seefahrendes Adelsgeschlecht von alter Prägung – Kapitäne, Admiräle, Schiffsherren. Ihr Name steht für Wind, Fahrt und Kontrolle über Wasserwege. Wo andere Häuser Land zählen, zählen die Gwyntog Routen, Gezeiten und Kiele. Ihre Macht wuchs nicht aus Burgen, sondern aus Werften, Hafenketten und der Fähigkeit, Menschen und Waren sicher über See zu führen.\n\nHaus Gwyntog ist ein maritimes Ritterhaus mit Sitz in Abergwint, dessen Macht und Ansehen vollständig aus der Seefahrt erwachsen. Das Haus stellt seit Generationen Kapitäne, Schiffsherren und Admiräle und kontrolliert maßgeblich Werften, Hafenanlagen und die Organisation des Seehandels. Ursprünglich aus Gwynthor stammend, verlagerte das Haus seinen vollständigen Schwerpunkt nach Abergwint, als die Stadt an Bedeutung gewann und neue baroniale Strukturen etabliert wurden.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Llywarch der Graue wurde von den Draig zum Ritterherrn und Lehenswart von Abergwint erhoben. Mit dem Aufstieg der Gwyvern verlegte das Haus seinen Schwerpunkt aus Gwynthor vollständig an die Küste und schwor den neuen Baronen die Treue.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Seemännisches Können, Disziplin und Verlässlichkeit bestimmen den Rang innerhalb der Familie. Alastair führt das Haus, Nudd ist sein Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Es ist Brauch und Erwartung, dass jedes Mitglied des Hauses Gwyntog entweder in die Marine Abergwints eintritt oder auf andere Weise früh in die Geschicke der Familie eingebunden wird. Der klassische Weg führt über Deck, Ruderbank oder Kartenraum: Ausbildung zum Matrosen, Steuermann, Offizier oder später Kapitän. Wer Talent zeigt, wird gefördert; wer versagt, wird aussortiert – nicht aus Grausamkeit, sondern aus Notwendigkeit."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Das wirtschaftliche und politische Herz des Hauses ist der Werftsbezirk von Abergwint, der faktisch unter Kontrolle der Gwyntog steht. Sie tragen dort die Verantwortung für Flottenbildung, die Ausbildung von Kapitänen, Seeleuten und Matrosen sowie für die strategische Einsatzbereitschaft der Schiffe – im Auftrag des Barons."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Das Haus Gwyntog ist nüchtern religiös. Die Neun Göttlichen werden anerkannt und respektiert, aber nicht ausufernd verehrt."
       }
     ],
     "triviaTitle": "Besonderheiten",

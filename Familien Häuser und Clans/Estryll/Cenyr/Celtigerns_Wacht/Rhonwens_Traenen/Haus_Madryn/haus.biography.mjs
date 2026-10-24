@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Madryn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/assets/krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Madryn ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Madryn ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -21,32 +22,8 @@ export const HOUSE_BIOGRAPHY = {
       "Ritterherr"
     ],
     [
-      "Stammsitz",
-      ""
-    ],
-    [
       "Grafschaft",
       "Celtigerns Wacht"
-    ],
-    [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +32,19 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Madryn ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+    "biographyText": "Haus Madryn ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Gründung, namentliche frühe Oberhäupter und eine ausführliche Chronik sind bisher nicht überliefert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die Hausdarstellung und das vorhandene Wappen sind zugeordnet. Besondere Hausbräuche, Taten und persönliche Überlieferungen werden ergänzt, sobald dazu Quellen vorliegen."
       }
     ],
     "triviaTitle": "Besonderheiten",

@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Tawelgar",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Tawelgar/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Tawelgar ist ein kleines Ritterhaus unter den Gwyvern. Von seiner Burg zwischen Abergwint und Llysbrynn sichert es die Handelsstraße und die Versorgung der Stadt. Seine Ritter sind für zuverlässigen Dienst und ihre Nähe zum Baron bekannt.",
   "quote": "Von Pflicht getragen.",
   "quoteBy": "",
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Brinthan Tawelgar diente als Leibwächter und lehnte höhere Ämter wiederholt ab. Erst im Alter erhob sein Herr ihn zum Ritterherrn. Der spätere Wachposten wurde zur Burg und zum dauerhaften Sitz der Familie.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Von Pflicht getragen.“ steht für Demut und Genügsamkeit. Harri führt das Haus; Marwin ist sein Erbe. Eine enge Freundschaft verbindet die Tawelgar mit den Taranvyr."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Tawelgar sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Pflichtbewusstsein und Demut sind tief in ihrer Identität verankert und werden von Generation zu Generation weitergegeben, nicht als bloße Lehre, sondern als gelebte Selbstverständlichkeit."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Burg der Tawelgar liegt zwischen Llysbrynn und Abergwint, unmittelbar an der Handelsstraße, die beide Orte miteinander verbindet. Ursprünglich handelte es sich lediglich um einen einfachen Wachposten, die dem Schutz des Weges diente. Erst im Laufe der Jahre wurde sie von den Tawelgar ausgebaut und zu dem festen Sitz, den das Haus heute sein Eigen nennt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Tawelgar zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Gesten als im beständigen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",

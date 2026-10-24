@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Avallornier",
     "enemies": "Norrnaigh"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

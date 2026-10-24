@@ -64,10 +64,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Abergwint",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Hoch",
-    "tiarna": "Überwiegend Cantref, Helwyr",
-    "kerns": "Hoch, überwiegend Seekrieger",
-    "fleet": "Hoch",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "1610 · Beginn der überlieferten Oberhauptfolge",
     "milestoneOne": "Bleddyn Draig besiegte als Seemarschall die Piraten der Blutigen Schlachter. Er schuf ein Küstenwarnnetz und entwickelte schnelle Wyvern-Schiffe. In der entscheidenden Schlacht verlor er ein Auge. Als Lohn erhielt er Gwendolyns Ufer und Caer Abergwint.",
     "milestoneTwo": "Mervyn Gwyvern · Seit 1720",
@@ -80,6 +80,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Draig",
     "enemies": "Keine gegenwärtige Hausfehde benannt"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

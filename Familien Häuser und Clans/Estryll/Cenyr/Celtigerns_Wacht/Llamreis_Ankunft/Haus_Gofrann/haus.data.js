@@ -76,8 +76,15 @@ window.HAEUSER_DATA = {
     "religion": "Alerische Kirche",
     "patronDeities": "Der Knecht",
     "allies": "Haus Tlawd · mittelbar Haus Gafyr",
-    "enemies": ""
+    "enemies": "",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -98,7 +105,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Ederns Geduld am Harnisch und Caradfans Auge für Klingen wirken in der heutigen Werkstatt fort."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

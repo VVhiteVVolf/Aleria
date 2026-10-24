@@ -4,7 +4,7 @@ import { galleryElement, renderHouseResults, renderOtherResults, renderStatistic
 import { createImageViewer } from './gallery-viewer.mjs?v=20261006';
 
 const VIEW_COPY = {
-  gallery: ['Nach Hauszugehörigkeit', 'Die Bildersammlung', 'Krieger- und Rüstungsdarstellungen aus Hausbios und Referenzarchiven. Ein Bild anklicken, um es zu vergrößern oder einem Haus zuzuordnen.'],
+  gallery: ['Nach Hauszugehörigkeit', 'Die Bildersammlung', 'Krieger und berufliche Hausfiguren aus Hausbios und Referenzarchiven. Ein Bild anklicken, um es zu vergrößern oder einem Haus zuzuordnen.'],
   houses: ['Das vollständige Verzeichnis', 'Alle Häuser & Namen', 'Sämtliche Registerhäuser, einschließlich bürgerlicher und erloschener Häuser. Weitere benannte Häuser und Linien aus den Stammbäumen stehen in einer eigenen Gruppe. Mögliche Schreibvarianten wurden nicht auf Verdacht zusammengeführt.'],
   missing: ['Lücken in der Sammlung', 'Hier fehlt eine Illustration', 'Für diese Häuser wurde im erfassten Bestand noch keine passende Darstellung gefunden. Ein Wappen oder gewöhnliches Personenporträt zählt nicht als Rüstungsreferenz.'],
   other: ['Weitere Zugehörigkeiten', 'Gilden, Wachen & Klerus', 'Stadtwachen sind nach Ort und Paladine nach Klerus erfasst. Bei den zusätzlichen Gildenreferenzen ist der genaue Verband häufig noch offen. Eine Hauszugehörigkeit wird daraus nicht abgeleitet.'],
@@ -106,7 +106,7 @@ function mountGallery(root, catalog) {
 
 const root = document.querySelector('[data-gallery]');
 try {
-  const response = await fetch(new URL('./data/catalog.json?v=20261006-gwyllt', import.meta.url));
+  const response = await fetch(new URL('./data/catalog.json?v=20261024-housebio-v1', import.meta.url));
   if (!response.ok) throw new Error('Der Bildkatalog konnte nicht geladen werden. Bitte die Seite neu laden.');
   mountGallery(root, await response.json());
 } catch (error) {

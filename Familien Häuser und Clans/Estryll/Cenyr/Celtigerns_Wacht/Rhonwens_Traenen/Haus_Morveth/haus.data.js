@@ -79,13 +79,16 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Morveth ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Das Haus ist ausgestorben. Weitere Inhalte folgen.",
+    "overview": "Haus Morveth ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",

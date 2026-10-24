@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Loer",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Loer ist ein Ritterhaus unter den Wyrm mit einer Höhenburg bei Craithglyn und einem Herrenhaus in Gwynthor. Edelsteinminen, Goldschmieden und Juwelierbetriebe prägen seine Stellung.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Das Haus Loer ist ein niederes Rittergeschlecht aus den Gebirgen Craithglyns und Vasall des Ritterfürstenhauses Wyrm. Seine Macht gründet sich weniger auf große Heere als auf wirtschaftlichen Einfluss.\n\nDurch seine Beteiligungen an den Edelsteinminen Craithglyns sowie eigene Bergwerke, Goldschmieden und Juwelierbetriebe kontrolliert das Haus einen bedeutenden Teil des Edelsteinhandels innerhalb Gwynthors.\n\nDie Familie gilt als wohlhabend, zurückhaltend und äußerst geschäftstüchtig. Ihre Ritter treten in außergewöhnlich prachtvollen Rüstungen auf, reich verziert mit Gold, Silber und Edelsteinen, ohne dabei ihre militärische Disziplin einzubüßen.\n\nIn Craithglyn stellte Haus Loer mehrfach den Hauptmann der Stadt und zeitweise sogar den Lehensherrn. In Gwynthor unterhält das Haus lediglich ein repräsentatives Herrenhaus, das den Angehörigen während ihrer Aufenthalte am Grafenhof als Residenz dient.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -39,14 +40,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Lehnsherr",
       "Haus Wyrm"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +48,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Loer ist ein Ritterhaus unter den Wyrm mit einer Höhenburg bei Craithglyn und einem Herrenhaus in Gwynthor. Edelsteinminen, Goldschmieden und Juwelierbetriebe prägen seine Stellung.",
+    "biographyText": "Das Haus Loer ist ein niederes Rittergeschlecht aus den Gebirgen Craithglyns und Vasall des Ritterfürstenhauses Wyrm. Seine Macht gründet sich weniger auf große Heere als auf wirtschaftlichen Einfluss.\n\nDurch seine Beteiligungen an den Edelsteinminen Craithglyns sowie eigene Bergwerke, Goldschmieden und Juwelierbetriebe kontrolliert das Haus einen bedeutenden Teil des Edelsteinhandels innerhalb Gwynthors.\n\nDie Familie gilt als wohlhabend, zurückhaltend und äußerst geschäftstüchtig. Ihre Ritter treten in außergewöhnlich prachtvollen Rüstungen auf, reich verziert mit Gold, Silber und Edelsteinen, ohne dabei ihre militärische Disziplin einzubüßen.\n\nIn Craithglyn stellte Haus Loer mehrfach den Hauptmann der Stadt und zeitweise sogar den Lehensherrn. In Gwynthor unterhält das Haus lediglich ein repräsentatives Herrenhaus, das den Angehörigen während ihrer Aufenthalte am Grafenhof als Residenz dient.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Die Überlieferung verbindet seine Entstehung mit der Erschließung der Edelsteinadern Craithglyns. Angehörige des Hauses übernahmen wiederholt Aufgaben in der Verwaltung des Ortes.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die Ursprünge des Hauses reichen bis in die Erschließung der Gebirge rund um Craithglyn zurück. Der Überlieferung nach entdeckten ihre Vorfahren die ersten ergiebigen Edelsteinadern der Region und errichteten zum Schutz der Bergwerke ihre Burg zwischen den Gipfeln.\n\nWährend andere Ritterhäuser ihre Macht durch Ritterlichkeit vergrößerten, investierten die Loer in Bergbau, Schmiedekunst und Handel. Mit jedem neu erschlossenen Stollen wuchs ihr Vermögen ebenso wie ihr Einfluss.\n\nMehrfach übernahmen Angehörige des Hauses die Verwaltung Craithglyns und sorgten für den Ausbau der Minen, Handelsstraßen und Werkstätten. Dadurch entwickelte sich die Stadt zu einem der bedeutendsten Zentren für Edelsteine und Schmuck innerhalb Gwynthors.\n\nBis heute gilt Haus Loer als eines der wirtschaftlich stabilsten Ritterhäuser der Grafschaft.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +61,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Loer messen handwerklicher Vollkommenheit höchsten Wert bei."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Der Stammsitz des Hauses ist eine befestigte Höhenburg im Gebirge nahe Craithglyn, umgeben von Steinbrüchen, Minenschächten und weit verzweigten Stollensystemen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
       }
     ],
     "triviaTitle": "Besonderheiten",

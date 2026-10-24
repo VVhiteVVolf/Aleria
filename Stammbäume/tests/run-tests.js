@@ -2,7 +2,7 @@ import { withBrannSourceCounterUpgrade } from '../assets/js/data/brann-source-co
 import { FAELAORN_SOURCE_PORTRAITS } from '../assets/js/data/faelaorn-source-portraits.js';
 import { ALBEN_SOURCE_PORTRAITS } from '../assets/js/data/alben-source-portraits.js';
 import { AISLEARNEACH_SOURCE_PORTRAITS } from '../assets/js/data/aislearneach-source-portraits.js';
-import { assertHouseBiographyRegistrySource } from './house-biography-registry-assertions.js';
+import { assertHouseBiographyRegistrySource, assertHouseBiographyRegistryRevision } from './house-biography-registry-assertions.js';
 import assert from 'node:assert/strict';
 import { withMathghamSourceCounterUpgrade } from '../assets/js/data/mathgham-source-counter-upgrade.js';
 import { withFaernaSourceCounterUpgrade } from '../assets/js/data/faerna-source-counter-upgrade.js';
@@ -7284,8 +7284,10 @@ test('ergänzt eine ältere lokale Draig-Fassung bis zur jüngsten Generation', 
   assert.equal(loaded.source, 'registry-upgrade');
   assert.equal(loaded.family.persons.length, 177);
   assert.equal(loaded.family.view.descendantDepth, 20);
-  assert.equal(loaded.family.extensions.sourceRevision, MATHGHAM_SOURCE_COUNTER_PATCHES['haus-draig'].revision);
-  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: MATHGHAM_SOURCE_COUNTER_PATCHES['haus-draig'].revision });
+  const currentDraigRevision = FAMILY_REGISTRY.find(record => record.id === 'haus-draig').family.extensions.sourceRevision;
+  assert.equal(loaded.family.extensions.sourceRevision, currentDraigRevision);
+  assert.equal(loaded.family.extensions.registryManagedEntitySourceRevision, FAMILY_REGISTRY.find(record => record.id === 'haus-draig').family.extensions.registryManagedEntitySourceRevision);
+  assert.deepEqual(loaded.family.extensions.registryUpgrade, { fromRevision: 2, toRevision: currentDraigRevision });
   assert.equal(loaded.family.lineage.originHouse.enabled, true);
   assert.equal(
     loaded.family.parentages.find(parentage => parentage.childId === 'mairwen-draig').legitimacy,
@@ -9865,7 +9867,7 @@ test('ersetzt die Annwyl-Leerakte und migriert Eithne sowie Côr Mynyddfaen ohne
   }, revisionStorage);
   const upgraded = loadFamilyById('haus-annwyl', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 5);
+  assertHouseBiographyRegistryRevision(upgraded.family, 5);
   assert.equal(upgraded.folderPath.join(' > '), 'Cenyr > Celtigerns Wacht > Gwendolyns Ufer > Côr Mynyddfaen');
   assert.equal(upgraded.family.document.houseProfile.seat, 'Côr Mynyddfaen');
   assert.deepEqual(upgraded.family.document.houseProfile.secondarySeats, []);
@@ -10359,7 +10361,7 @@ test('ersetzt die frühere Gwyntog-Leerakte durch den ausgearbeiteten Register-S
     parentage.childId === 'adda-gwyntog'
   ));
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 4);
+  assertHouseBiographyRegistryRevision(upgraded.family, 4);
   assert.deepEqual([...upgradedAddaParentage.parentIds].sort(), [
     'elian-gwyntog',
     'unknown-spouse-elian-gwyntog'
@@ -10635,7 +10637,7 @@ test('ersetzt die frühere Trydar-Leerakte durch den ausgearbeiteten Register-St
 
   const upgraded = loadFamilyById('haus-trydar', revisionStorage);
   assert.equal(upgraded.source, 'registry-upgrade');
-  assert.equal(upgraded.family.extensions.sourceRevision, 5);
+  assertHouseBiographyRegistryRevision(upgraded.family, 5);
   assert.equal(upgraded.family.persons.length, 24);
   assert.equal(upgraded.family.cadetBranches.length, 3);
   assert.equal(
@@ -10887,7 +10889,7 @@ test('ersetzt die Taranvyr-Leerakte und migriert Kenyons Gwyvern-Gegenakte ohne 
   const upgradedGwyvern = loadFamilyById('haus-gwyvern', gwyvernStorage);
   const upgradedKenyons = upgradedGwyvern.family.persons.filter(person => person.id === 'kenyon-taranvyr');
   assert.equal(upgradedGwyvern.source, 'registry-upgrade');
-  assert.equal(upgradedGwyvern.family.extensions.sourceRevision, 5);
+  assertHouseBiographyRegistryRevision(upgradedGwyvern.family, 5);
   assert.equal(upgradedKenyons.length, 1);
   assert.equal(upgradedKenyons[0].status, 'alive');
   assert.equal(upgradedKenyons[0].death, '');
@@ -11382,7 +11384,7 @@ test('ersetzt die Penwyn-Leerakte und aktualisiert Rhoswyns Awenydd-Gegenakte oh
   const upgradedAwenydd = loadFamilyById('haus-awenydd', awenyddStorage);
   const upgradedRhoswyns = upgradedAwenydd.family.persons.filter(person => person.id === 'rhoswyn-penwyn');
   assert.equal(upgradedAwenydd.source, 'registry-upgrade');
-  assert.equal(upgradedAwenydd.family.extensions.sourceRevision, 3);
+  assertHouseBiographyRegistryRevision(upgradedAwenydd.family, 3);
   assert.equal(upgradedRhoswyns.length, 1);
   assert.equal(upgradedRhoswyns[0].birth, '1700');
   assert.equal(upgradedRhoswyns[0].status, 'alive');
@@ -11618,7 +11620,7 @@ test('ersetzt die Seldryn-Leerakte und migriert die korrigierte Balchder-Gegenve
     branch.id === 'married-away-seldryn-bronwen'
   ));
   assert.equal(upgradedBalchder.source, 'registry-upgrade');
-  assert.equal(upgradedBalchder.family.extensions.sourceRevision, 3);
+  assertHouseBiographyRegistryRevision(upgradedBalchder.family, 3);
   assert.equal(upgradedLugh.portrait, HOUSE_SELDRYN_PORTRAITS['lugh-seldryn']);
   assert.match(upgradedLugh.title, /Gründer.*Seldryn/);
   assert.equal(upgradedMarriage.status, 'ended');
@@ -13106,7 +13108,7 @@ test('ersetzt die Tawelgar-Leerakte und migriert Emlyns Chwedonol-Gegenakte ohne
   const upgradedChwedlonol = loadFamilyById('haus-chwedlonol', chwedlonolStorage);
   const upgradedEmlyn = upgradedChwedlonol.family.persons.find(person => person.id === 'emlyn-tawelgar');
   assert.equal(upgradedChwedlonol.source, 'registry-upgrade');
-  assert.equal(upgradedChwedlonol.family.extensions.sourceRevision, 4);
+  assertHouseBiographyRegistryRevision(upgradedChwedlonol.family, 4);
   assert.equal(upgradedEmlyn.worldPersonId, 'person--haus-tawelgar--emlyn-tawelgar');
   assert.equal(upgradedEmlyn.birth, '1707');
   assert.equal(upgradedEmlyn.portrait, HOUSE_CHWEDLONOL_PORTRAITS['emlyn-tawelgar']);
@@ -13496,7 +13498,7 @@ test('ersetzt die Daran-Leerakte und migriert Morcants Vormundschaft sowie Maelg
     parentage.childId === 'morcant-trydar'
   ));
   assert.equal(upgradedDaran.source, 'registry-upgrade');
-  assert.equal(upgradedDaran.family.extensions.sourceRevision, 4);
+  assertHouseBiographyRegistryRevision(upgradedDaran.family, 4);
   assert.equal(upgradedMorcant.title, 'Knappe von Sir Seithved Daran · Mündel bei Haus Daran');
   assert.deepEqual(upgradedMorcantParentage.parentIds, ['seithved-daran']);
 
@@ -13520,7 +13522,7 @@ test('ersetzt die Daran-Leerakte und migriert Morcants Vormundschaft sowie Maelg
 
   const upgradedGwyvern = loadFamilyById('haus-gwyvern', gwyvernStorage);
   assert.equal(upgradedGwyvern.source, 'registry-upgrade');
-  assert.equal(upgradedGwyvern.family.extensions.sourceRevision, 5);
+  assertHouseBiographyRegistryRevision(upgradedGwyvern.family, 5);
   assert.equal(upgradedGwyvern.family.persons.filter(person => person.id === 'maelgwyn-daran').length, 1);
   assert.equal(upgradedGwyvern.family.parentages.filter(parentage => parentage.childId === 'maelgwyn-daran').length, 1);
   assert.ok(upgradedGwyvern.family.houses.some(house => house.id === 'house-daran'));

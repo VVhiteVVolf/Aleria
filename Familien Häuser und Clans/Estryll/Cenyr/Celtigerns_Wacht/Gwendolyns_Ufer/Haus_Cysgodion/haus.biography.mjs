@@ -5,10 +5,11 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Cysgodion",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cysgodion/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Cysgodion ist ein kleines Ritterhaus aus Abergwint im Dienst der Gwyvern. Staatskunde, Verwaltung und diskrete Informationsbeschaffung prägen seine Stellung. Ein unscheinbares Anwesen sowie verpachtete Herbergen und Tavernen tragen seine Arbeit.",
-  "quote": "Im Schatten des Wyvern.",
+  "quote": "Im Schatten des Wyvern",
   "quoteBy": "",
   "commentSequence": [],
   "stats": [
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Cadwalader Cysgodion"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -59,8 +56,8 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Cadwalader Cysgodion wurde für seine Dienste als Ritter, Staatsmann und Vertrauensmann der Draig zum Ritterherrn erhoben. Später wechselte die Lehnstreue zum Kadettenhaus Gwyvern.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Das Haus Cysgodion geht auf Cadwalader Cysgodion zurück, einen Ritter und Staatsmann im Dienst des Hauses Draig, der in früher Zeit als vertrauenswürdiger Diener der Grafschaft Celtigerns Wacht wirkte. Für seine Loyalität und Dienste wurde er zum Ritterherren erhoben und begründete ein eigenes Haus.\n\nÜber Generationen hinweg dienten die Cysgodion den Draig, bis mit der Abspaltung des Kadettenhauses Gwyvern ein Wechsel des Lehnsherrn erfolgte. Seitdem stehen sie in Abergwint im Dienst der Gwyvern und blieben ihrer ursprünglichen Aufgabe treu, ohne ihre Rolle je offen zu verändern.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Im Schatten des Wyvern“ steht für Verschwiegenheit, Kontrolle und unbedingte Loyalität. Yorath führt das Haus; Cefin ist sein Erbe. Gronw dient als Schatten der Baronie."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Das Haus Cysgodion ist ein ritterliches Geschlecht, das sich seit seiner Gründung der Staatsbildung und Verwaltung der Baronie verschrieben hat. Ihr Kodex lautet: „Wir wandeln im Schatten des Wyvern.“ Dieses Selbstverständnis prägt ihr Handeln ebenso wie ihr Auftreten – stets im Dienst des Hauses Gwyvern, niemals im Vordergrund."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Cysgodion bewohnen kein wehrhaftes Kastell, sondern ein schlichtes Anwesen innerhalb der Stadtmauern Abergwints, gelegen in einem der unscheinbarsten Viertel der Stadt. Lage und Bauweise sind bewusst unauffällig gewählt und dienen mehr der Nähe zu Verwaltung und Hof als der Repräsentation."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Nach außen hin gibt das Haus Cysgodion keinerlei Auskunft über seine kulturellen oder religiösen Prägungen. Diese bewusste Verschlossenheit hat über die Jahre Raum für Gerüchte geschaffen, ohne je etwas zu bestätigen oder zu widerlegen."
       }
     ],
     "triviaTitle": "Besonderheiten",

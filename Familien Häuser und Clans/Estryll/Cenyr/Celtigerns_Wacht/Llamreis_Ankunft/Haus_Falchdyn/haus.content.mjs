@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-falchdyn",
   "name": "Haus Falchdyn",
@@ -12,7 +12,7 @@ export const HOUSE_CONTENT = {
   "territoryHref": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
   "parentHouseId": "",
   "extinct": false,
-  "showMotto": false,
+  "showMotto": true,
   "prepared": true,
   "registerPage": true,
   "biographyIntroTitle": "Über das Haus",
@@ -75,7 +75,7 @@ export const HOUSE_CONTENT = {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
     "houseType": "Bürgerliches Haus",
-    "motto": "",
+    "motto": "Was gehört wird, geht nicht verloren.",
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Haus Draig",
@@ -131,5 +131,8 @@ export const HOUSE_CONTENT = {
   "currentHead": "",
   "firstHeir": "",
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
-  "biographyManagedExternally": true
+  "biographyManagedExternally": true,
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Bürgerliche Hausdarstellung"
 };

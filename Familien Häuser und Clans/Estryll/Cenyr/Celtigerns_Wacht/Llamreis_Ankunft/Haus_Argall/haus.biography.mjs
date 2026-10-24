@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Argall",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Argall ist eine bürgerliche Familie aus Llysfaen.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Brinthan Argall"
     ],
     [
       "Lehnsherr",
       "Haus Wyrm"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Argall ist eine bürgerliche Familie aus Llysfaen.",
+    "biographyText": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png",
         "title": "Haus Argall · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-argall"
       }
     ],

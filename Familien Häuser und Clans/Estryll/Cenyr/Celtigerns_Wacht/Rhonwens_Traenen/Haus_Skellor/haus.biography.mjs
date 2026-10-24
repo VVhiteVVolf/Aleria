@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Skellor",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Skellor waren niedere Ritterherren und Vasallen der Illysywen in Rhonwens Tränen. Ihre kleine Inselburg Caer Creigfryn sicherte ihnen einen bescheidenen, aber festen Platz im örtlichen Lehnsverband. Seit 1720 sind sie entmachtet. Arvel Skellor überlebte den Untergang und führt heute die Schwarzen Zitteraale; das Haus ist deshalb ausdrücklich nicht ausgestorben.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -31,22 +32,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Oberhaupt",
       "Arvel Skellor · entmachtet; kein anerkannter Lehnsherr"
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +40,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Skellor ist ein 1720 entmachtetes Ritterhaus aus Rhonwens Tränen. Sein früherer Sitz Caer Creigfryn liegt auf einer kleinen Insel. Arvel Skellor lebt als Schwarzer Zitteraal; das Haus ist nicht ausgestorben.",
+    "biographyText": "Die Skellor waren niedere Ritterherren und Vasallen der Illysywen in Rhonwens Tränen. Ihre kleine Inselburg Caer Creigfryn sicherte ihnen einen bescheidenen, aber festen Platz im örtlichen Lehnsverband. Seit 1720 sind sie entmachtet. Arvel Skellor überlebte den Untergang und führt heute die Schwarzen Zitteraale; das Haus ist deshalb ausdrücklich nicht ausgestorben.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Als Vasallen der Illysywen folgten die Skellor 1720 deren Aufstand. Rhydan hielt Creigfryn trotz angebotener Kapitulationsbedingungen; die Burg wurde von den Saethwyr erstürmt. Das Fluchtschiff seiner Angehörigen zerschellte währenddessen im Sturm. Nur Arvel überlebte.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "1720 folgten die Skellor dem Banner der Illysywen, nachdem diese sich von den Machtversprechen der aufständischen Rochraide gewinnen ließen. Ihr Beweggrund ist nicht sicher bekannt. Nach dem frühen Sieg der Draig gegen Illysywen sollten die Saethwyr die verbliebenen aufständischen Ritterherren unterwerfen. Rhydan Skellor plante zunächst eine Übergabe Creigfryns und ließ die jüngeren Angehörigen fliehen. Ihr Schiff zerschellte im Sturm an einem Riff; nur sein Sohn Arvel erreichte lebend das Festland. Im Glauben, seine Familie sei gerettet, setzte Rhydan den Widerstand fort. Er schlug die wiederholt angebotenen Kapitulationsbedingungen aus. Schließlich erstürmten die Saethwyr die Burg. Arvel glaubt bis heute an die Tötung bereits kapitulationsbereiter Verteidiger und benutzt diese Legende zur Rechtfertigung seiner Verbrechen.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +53,12 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Die frühere Lehnsherrschaft ist verloren. Arvels Anspruch auf den Hausnamen bedeutet keine Anerkennung seiner Banditenherrschaft. Seine beiden unehelichen Söhne leben nicht bei ihm."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Caer Creigfryn ist eine kleine Burg auf einer felsigen Insel Rhonwens Tränen. Die Skellor wurden dort 1720 vertrieben. Die Anlage lag anschließend rund zwanzig Jahre verlassen und wurde inzwischen Haus Merek als Lehen zugesprochen."
       }
     ],
     "triviaTitle": "Besonderheiten",

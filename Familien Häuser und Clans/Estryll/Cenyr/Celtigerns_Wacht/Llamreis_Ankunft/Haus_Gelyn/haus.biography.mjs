@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Gelyn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Gelyn ist ein junges Ritterhaus im Dienst der Draigs. Von Twr Gwynthstorm aus schützt es die nördlichen Gebirgsregionen; in Gwynthor besitzt es ein weiteres Herrenhaus.",
   "quote": "Im Feuer geprüft.",
   "quoteBy": "",
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Cadoc Gelyn wurde gemeinsam mit Meurig Draig unter Gethin Draig ausgebildet. Seine Bewährung im Krieg gegen Ceitheach führte 1720 zur Erhebung und Hausgründung.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Im Feuer geprüft.“ steht für Tapferkeit, Loyalität und die Feuerprobe vor dem Ritterschlag. Cadoc führt das Haus, Brannoc steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Gelyn sind ein junges Ritterhaus, dem man seinen Stand oft nicht ansieht. Sie zeichnen sich durch ausgeprägte Tapferkeit, bedingungslose Loyalität und ein nahezu vollständiges Desinteresse an Prunk, Etikette und höfischen Feinheiten aus. Ihre Wurzeln liegen im Kampf, und dieser Ursprung wird nicht beschönigt oder verdrängt, sondern bewusst bewahrt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Gelyn verfügen über ein Herrenhaus in Gwynthor, das ihnen vom Hause Draig zur Verfügung gestellt wurde. Gerüchten zufolge soll in den vergangenen zwanzig Jahren kein einziger Gelyn dort gewesen sein – was natürlich nicht ganz der Wahrheit entspricht. Wenn Mitglieder des Hauses sich in Gwynthor aufhalten, nutzen sie das Herrenhaus durchaus."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Gelyn zur Alerischen Kirche. Ihr Glaube ist fest in ihrem Alltag verankert und zeigt sich weniger in großen Gesten oder öffentlichen Bekundungen als im beständigen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",

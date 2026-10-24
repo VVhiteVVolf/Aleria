@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Cymrath O'Traethlan",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Das junge Haus Cymrath O'Traethlan wurde in Tŵr Traethlan von Aldo Falveri begründet. Es hat seinen Ursprung im venalischen Magnarierhaus Falveri.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cymrath_OTraethlan/assets/hausritter-venalys-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Cymrath O’Traethlan ist ein junges Ritterherrenhaus in Tŵr Traethlan. Sein Gründer Aldo Falveri stammt aus einem politisch unbedeutenden Nebenzweig des venalischen Magnarierhauses Falveri. Mit der Hausgründung beginnt eine eigenständige cenyrische Linie, deren Herkunft sichtbar mit Venalys verbunden bleibt.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Aldo Falveri"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,31 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Das junge Haus Cymrath O'Traethlan wurde in Tŵr Traethlan von Aldo Falveri begründet. Es hat seinen Ursprung im venalischen Magnarierhaus Falveri.",
+    "biographyText": "Haus Cymrath O’Traethlan ist ein junges Ritterherrenhaus in Tŵr Traethlan. Sein Gründer Aldo Falveri stammt aus einem politisch unbedeutenden Nebenzweig des venalischen Magnarierhauses Falveri. Mit der Hausgründung beginnt eine eigenständige cenyrische Linie, deren Herkunft sichtbar mit Venalys verbunden bleibt.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Aldo begründete das neue Haus gemeinsam mit seiner bislang namenlosen Braut. Name und Herkunft der Mitgründerin sind noch nicht festgelegt; Nachkommen sind bisher nicht verzeichnet. Die Falveri-Herkunft wird als Verbindung zur eigenständigen Herkunftsakte erhalten.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Der neue Sitz in Cenyr und die venalische Herkunft bestimmen die bisher bekannte Stellung. Eine ältere eigene Dynastie, ein Gründungsjahr, ein verbindliches Motto und zusätzliche Besitzrechte sind noch nicht belegt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die venalische Herkunft zeigt sich auch in der Ausrüstung: ritterliche, legionärsartige und byzantinisch geprägte Lamellenelemente verbinden sich mit geschlossenen Helmen. Blaugoldene Farben und das geflügelte Löwenmotiv kennzeichnen das Haus."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Haus Falveri bleibt Aldos Herkunftshaus in Venalys. Die eigenständige Herkunftsverknüpfung ersetzt keine Lehnsherrenangabe für den neuen Sitz."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +89,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-cymrath-o-traethlan.png",
         "title": "Haus Cymrath O'Traethlan · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cymrath-o-traethlan"
       }
     ],

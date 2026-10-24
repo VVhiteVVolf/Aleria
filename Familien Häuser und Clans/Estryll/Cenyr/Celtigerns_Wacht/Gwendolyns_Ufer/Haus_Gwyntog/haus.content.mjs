@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-gwyntog",
   "name": "Haus Gwyntog",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 4,
+  "biographySourceRevision": 5,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Gwyntog ist ein maritimes Ritterhaus aus Abergwint im Dienst der Gwyvern. Seine Kapitäne, Admiräle und Schiffsherren prägen Werften, Hafenbetrieb und Seehandel; die Burg liegt unmittelbar am Hafen.",
+    "overview": "Haus Gwyntog ist ein seefahrendes Adelsgeschlecht von alter Prägung – Kapitäne, Admiräle, Schiffsherren. Ihr Name steht für Wind, Fahrt und Kontrolle über Wasserwege. Wo andere Häuser Land zählen, zählen die Gwyntog Routen, Gezeiten und Kiele. Ihre Macht wuchs nicht aus Burgen, sondern aus Werften, Hafenketten und der Fähigkeit, Menschen und Waren sicher über See zu führen.\n\nHaus Gwyntog ist ein maritimes Ritterhaus mit Sitz in Abergwint, dessen Macht und Ansehen vollständig aus der Seefahrt erwachsen. Das Haus stellt seit Generationen Kapitäne, Schiffsherren und Admiräle und kontrolliert maßgeblich Werften, Hafenanlagen und die Organisation des Seehandels. Ursprünglich aus Gwynthor stammend, verlagerte das Haus seinen vollständigen Schwerpunkt nach Abergwint, als die Stadt an Bedeutung gewann und neue baroniale Strukturen etabliert wurden.",
     "history": "Llywarch der Graue wurde von den Draig zum Ritterherrn und Lehenswart von Abergwint erhoben. Mit dem Aufstieg der Gwyvern verlegte das Haus seinen Schwerpunkt aus Gwynthor vollständig an die Küste und schwor den neuen Baronen die Treue.",
-    "character": "Seemännisches Können, Disziplin und Verlässlichkeit bestimmen den Rang innerhalb der Familie. Alastair führt das Haus, Nudd ist sein Erbe."
+    "character": "Seemännisches Können, Disziplin und Verlässlichkeit bestimmen den Rang innerhalb der Familie. Alastair führt das Haus, Nudd ist sein Erbe.",
+    "customs": "Es ist Brauch und Erwartung, dass jedes Mitglied des Hauses Gwyntog entweder in die Marine Abergwints eintritt oder auf andere Weise früh in die Geschicke der Familie eingebunden wird. Der klassische Weg führt über Deck, Ruderbank oder Kartenraum: Ausbildung zum Matrosen, Steuermann, Offizier oder später Kapitän. Wer Talent zeigt, wird gefördert; wer versagt, wird aussortiert – nicht aus Grausamkeit, sondern aus Notwendigkeit.",
+    "holdings": "Das wirtschaftliche und politische Herz des Hauses ist der Werftsbezirk von Abergwint, der faktisch unter Kontrolle der Gwyntog steht. Sie tragen dort die Verantwortung für Flottenbildung, die Ausbildung von Kapitänen, Seeleuten und Matrosen sowie für die strategische Einsatzbereitschaft der Schiffe – im Auftrag des Barons.",
+    "culture": "Das Haus Gwyntog ist nüchtern religiös. Die Neun Göttlichen werden anerkannt und respektiert, aber nicht ausufernd verehrt."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -263,7 +266,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Nudd Gwyntog",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1823:32c2ba49:dc742b0b"
+    "1823:32c2ba49:dc742b0b",
+    "2567:10eef31d:197cefc3"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

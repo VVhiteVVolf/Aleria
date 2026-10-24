@@ -1,20 +1,31 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-24",
   "description": "Dauerhafte Bildstil-Vorgaben des Nutzers für Aleria. Den passenden Stil ohne erneute Erinnerung verwenden; ausdrückliche Vorgaben des aktuellen Auftrags haben Vorrang.",
   "defaultPreset": "anime-scene-portrait",
   "presets": {
     "fantasy-rpg-character": {
-      "name": "Klassische Fantasy-RPG-Charakterillustration",
+      "name": "Freigestellte matte Fantasy-Hausfiguren",
       "useFor": [
-        "Kriegergalerie",
-        "Klassenillustrationen",
-        "Vollständige Ganzkörperfiguren im Rollenspielhandbuch-Stil"
+        "Kriegergalerie und Hausabbildungen",
+        "Ritter- und Klassenillustrationen",
+        "Beruflich passende bürgerliche Hausfiguren",
+        "Vollständige freigestellte Fantasy-Ganzkörperfiguren"
       ],
       "aspectRatio": "2:3",
-      "referenceDirectory": "D:\\0-KI Generierte\\01 Bilder\\Oblivion Classes",
-      "referenceUsage": "Vor der Generierung passende Bilder aus diesem Ordner ansehen und als Stilreferenzen verwenden. Der Ordner wurde am 7. Oktober 2026 geprüft; er enthält unter anderem OBR-class-Archer.png, OBR-class-Assassin.png und OBR-class-Knight.png.",
-      "prompt": "Stilrichtung: Klassische Fantasy-RPG-Charakterillustration im 2:3-Hochformat, als vollständige Ganzkörperfigur. Illustrativ, lebendig und leicht comichaft, mit natürlichen, aber stilisierten Proportionen, ausdrucksstarken Gesichtern, dynamischen Posen und fantasievoll gestalteter Kleidung, Rüstung und Waffen. Traditionell gemalte Aquarell-, Gouache- und Tuscheoptik mit lockeren Pinselstrichen, sichtbarem Color Bleeding, transparenten Lasuren, ausgewaschenen Farbflächen, trockenen Pinselspuren und bewusst unfertig auslaufenden, aufbrechenden Bildrändern. Formen sind klar und anatomisch verständlich, Texturen und Details dagegen malerisch angedeutet statt realistisch ausgerendert. Metall, Stoff, Leder, Fell und Haut entstehen durch lockere Farbflächen und wenige gezielte Details. Feine, teilweise unterbrochene Zeichenkonturen statt harter Comic-Outlines. Heller, nahezu leerer Papierhintergrund mit einzelnen lockeren Farb- und Pinselwolken um die Figur. Gesamtwirkung wie eine handgemalte Charakterillustration aus einem klassischen Fantasy-Rollenspielhandbuch – elegant, abenteuerlich, leicht verspielt und malerisch; kein Fotorealismus, kein CGI, keine Hochglanz-Concept-Art und keine vollständig ausgerenderten Oberflächen."
+      "referenceDirectory": "AleriaAlmanach/docs/art/character-style",
+      "referenceUsage": "Vor jeder Generierung die freigegebene Hausritter-Referenz tatsächlich ansehen und als tatsächliche Bildreferenz mitgeben. Sie ersetzt die bisherigen Oblivion-Classes- und Comic-/Aquarell-/Ölvarianten. Motiv, Hausfarben, Wappen und Beruf wechseln; matte Malweise, ruhige Pose, vereinfachte Formen, feine Körnung und echte Freistellung bleiben erhalten.",
+      "prompt": "Stilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.",
+      "styleRevision": "2026-10-24-matte-painted-reference-figures",
+      "userCorrection": "24. Oktober 2026: Der Nutzer verwirft sowohl die realistische Erstfassung als auch die spätere Comic-/Color-Bleed-/Ölfassung. Maßgeblich sind seine drei anschließend gelieferten freigestellten Ritterreferenzen: ruhige Ganzkörperposen, einfache Formen, matte gedeckte Farben, feine gleichmäßige Maltextur. Keine dramatischen Posen, kräftigen Comic-Outlines oder Farbspritzer.",
+      "transparentBackground": true,
+      "status": "approved",
+      "approvedAt": "2026-10-24",
+      "approvalQuote": "Genau so! Bitte überschreibe den stil, den wir vorher hatten auf diesen!",
+      "previousReferenceDirectory": "D:\\0-KI Generierte\\01 Bilder\\Oblivion Classes",
+      "approvedReferenceImage": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "approvedTestPromptManifest": "AleriaAlmanach/docs/art/character-style/approved-style.json",
+      "designUsage": "Nutzerklarstellung vom 24. Oktober 2026: Die Freigabe betrifft den künstlerischen Stil. Rüstungsdesign, Helm, Waffen, Kleidung und kulturelle Formensprache werden eigenständig passend zu Hausgeschichte, Herkunft und Beruf gewählt. Die westliche Plattenrüstung des Stilreferenzritters ist keine allgemeine Designvorlage. Venalysisch geprägte Häuser wie Cymrath kombinieren Ritter-, Legionärs- und byzantinische Lamellenrüstung mit geschlossenen legionärsartigen Helmen."
     },
     "fantasy-inventory-item": {
       "name": "Fantasy-Items im Stil der Häuser aus Celtigerns Wacht",
@@ -129,7 +140,7 @@
   },
   "applicationRules": [
     "Den passenden Stilblock vollständig in den konkreten Bildprompt übernehmen und Motiv, Person, Kleidung, Wappen, Region und Handlung passend zum Auftrag ergänzen.",
-    "Die fünf Stilrichtungen nach Verwendungszweck getrennt verwenden: Fantasy-RPG-Ganzkörperillustrationen in Aquarell/Gouache/Tusche (2:3), Anime-Szenen und -Porträts mit Lineart und Cel-Shading (2:3), freigestellte Fantasy-Inventaritems im belegten Item-Stil (1:1 mit echtem Alphakanal), verspielte Tusche-/Aquarell-Worldmap-Stamps in Dreiviertel-Vogelperspektive (motivgerechtes Format mit echtem Alphakanal und ohne äußere Schatten), nordisch-keltische Wappen auf bemaltem Holz mit geschlossenem Rahmen (1:1, innen vollständig deckend und ausschließlich außen transparent).",
+    "Die fünf Stilrichtungen nach Verwendungszweck getrennt verwenden: freigestellte matte Fantasy-Hausfiguren nach der am 24. Oktober 2026 freigegebenen Referenz (2:3, ruhige Pose, einfache Formen, feine Pigmentkörnung, echte Transparenz), Anime-Szenen und -Porträts mit Lineart und Cel-Shading (2:3), freigestellte Fantasy-Inventaritems im belegten Item-Stil (1:1 mit echtem Alphakanal), verspielte Tusche-/Aquarell-Worldmap-Stamps (echter Alphakanal, keine äußeren Schatten), kreisrunde nordisch-keltische Wappen (innen deckend, nur außen transparent).",
     "Bei Itembildern fantasy-inventory-item wählen. Ein Gegenstand als Teil einer Szene macht die gesamte Szene nicht zum Inventarbild; Szenen und Stillleben mit Umgebung bleiben im passenden Szenenstil.",
     "Bei Map Stamps, Worldmap-Markern und freigestellter Kartenarchitektur fantasy-worldmap-stamp Stilversion 2 verwenden: freigegebenes Bauernhaus ansehen und als Haupt-Bildreferenz mitgeben, neuen kurzen prompt anwenden, sehr geringen Detailgrad beibehalten. Der abgelehnte alte Prompt und die ersten vier Serienbilder sind keine Stilgrundlage.",
     "Bei eigenständigen Clan-, Haus- und Familienwappen fantasy-heraldic-emblem wählen. Vor Vorschlägen die vorhandenen Wappen der passenden Kultur oder Region aus der Stammbaum-Liste ansehen, dann konkrete Entwürfe vorschlagen und nach der Auswahl gemeinsam erstellen. Für einen Aldrimar-Clan die Wappen der Aldrimar-Clans als Referenzen verwenden. Außen Alpha = 0, die gesamte Wappeninnenfläche Alpha = 255; keine transparenten Zwischenräume innerhalb des Rahmens.",

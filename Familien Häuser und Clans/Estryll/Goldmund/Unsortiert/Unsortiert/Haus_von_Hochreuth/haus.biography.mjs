@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus von Hochreuth",
   "housePage": true,
   "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus von Hochreuth ist ein Ritterhaus aus Goldmund. Die Zuordnung seines Zweigs in Celtigerns Wacht ist noch zu klären. Weitere Inhalte folgen.",
   "quote": "",
   "quoteBy": "",
@@ -19,34 +20,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Rang",
       "Ritterherr"
-    ],
-    [
-      "Stammsitz",
-      ""
-    ],
-    [
-      "Grafschaft",
-      ""
-    ],
-    [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -60,7 +33,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {

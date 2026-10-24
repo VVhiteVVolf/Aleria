@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-barus",
   "name": "Haus Barus",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Barus ist ein kaufmännisch geprägtes Ritterhaus aus Abergwint im Dienst der Gwyvern. Handelsflotte, Kontore und seine enge Verbindung zur Klingenden Münze bestimmen seinen Einfluss. Die Rote Kompanie schützt seine Schiffe.",
     "history": "Die wohlhabende Kaufmannsfamilie erlangte ihren Stand durch Besitz, Bürgschaften und Verpflichtungen. Den Spott über ihren Aufstieg griff sie im Wappen auf: Ein Geier auf blutigem Gold ersetzte den ursprünglichen Adler.",
-    "character": "Verträge, wirtschaftliche Vernunft und Verlässlichkeit stehen über höfischem Ansehen. Macsen führt das Haus; Wyett ist der erste Erbe."
+    "character": "Verträge, wirtschaftliche Vernunft und Verlässlichkeit stehen über höfischem Ansehen. Macsen führt das Haus; Wyett ist der erste Erbe.",
+    "customs": "Haus Barus hält an seinem wirtschaftlichen Selbstverständnis fest. Zwar werden alle Sprösslinge in den ritterlichen Künsten ausgebildet und empfangen den Ritterschlag, doch dienen sie dem Haus danach meist in verwaltenden, kaufmännischen oder maritimen Ämtern, die dem Fortbestand des Hauses nützlicher sind. Nur wenige Mitglieder verbleiben dauerhaft im aktiven Waffendienst und führen ein Leben als Banner- oder Kampfritter.",
+    "holdings": "Der Besitz des Hauses Barus gründet sich weniger auf Land als auf Handel und See. Bereits vor dem Eintritt in den Ritterstand war die Familie wohlhabend und baute ihre Macht konsequent über maritime Infrastruktur aus. Die Barus unterhalten eine umfangreiche Handelsflotte und sichern ihre Schiffe durch die Rote Kompanie, eine fest angestellte Söldnertruppe, die als Bord- und Geleitschutz dient.",
+    "culture": "Religion nimmt im Selbstverständnis des Hauses Barus keinen zentralen Stellenwert ein. Wie alle ritterlichen Häuser bekennen sie sich formal zu den Neun Göttlichen, lassen ihre Kinder taufen und leisten bei der Schwertleite den üblichen Eid auf die Neun."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -238,7 +241,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Wyett Barus",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1843:8067e2d9:a637c8cb"
+    "1843:8067e2d9:a637c8cb",
+    "2530:fa7c1af8:af1e5d8a"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-merek",
   "name": "Haus Merek",
@@ -14,15 +14,15 @@ export const HOUSE_CONTENT = {
   "extinct": false,
   "showMotto": false,
   "prepared": true,
-  "contentVersion": "20261021-creigfryn-v1",
+  "contentVersion": "20261024-housebio-v1",
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Merek ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
-    "history": "Haus Merek wurde inzwischen mit Caer Creigfryn belehnt. Die kleine Inselburg gehörte bis 1720 den Skellor und lag nach deren Vertreibung rund zwanzig Jahre verlassen.",
-    "character": "Folgt …"
+    "overview": "Haus Merek ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
+    "history": "Gründung, namentliche frühe Oberhäupter und eine ausführliche Chronik sind bisher nicht überliefert.",
+    "character": "Die Hausdarstellung und das vorhandene Wappen sind zugeordnet. Besondere Hausbräuche, Taten und persönliche Überlieferungen werden ergänzt, sobald dazu Quellen vorliegen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -89,7 +89,7 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Haus Merek ist in Rhonwens Tränen in Celtigerns Wacht verzeichnet. Weitere Inhalte folgen.",
+    "overview": "Haus Merek ist als Ritterhaus in Rhonwens Tränen in Celtigerns Wacht verzeichnet.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
@@ -123,6 +123,9 @@ export const HOUSE_CONTENT = {
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
   "biographyPreviousDefaultFingerprints": [
     "1529:fdce13f3:deef36f9",
-    "1649:80390c7d:fe2b29bf"
-  ]
+    "1649:80390c7d:fe2b29bf",
+    "1849:18f5f008:9043fdfe"
+  ],
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

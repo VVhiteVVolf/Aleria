@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Cludwyr",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Cludwyr dient den Wyrm und verwaltet Bronhir. Seine Ritter sind volksnah und eng mit Landwirtschaft und Versorgung verbunden. Ein weiteres Herrenhaus steht in Gwynthor.",
   "quote": "Der Boden lügt nicht.",
   "quoteBy": "",
@@ -19,10 +20,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Rang",
       "Ritterherr"
-    ],
-    [
-      "Stammsitz",
-      ""
     ],
     [
       "Grafschaft",
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Der Bauernsohn Saith wurde von einem Ritter der Rhyddid aufgenommen. Seine Kenntnisse über Feldarbeit und Ernten überzeugten die Wyrm, ihn zum Ritterherrn und Lehenswart von Bronhir zu erheben.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Der Boden lügt nicht.“ erinnert an Arbeit, Verlässlichkeit und praktische Erfahrung. Rhain führt das Haus; Slevin ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Cludwyr sind ein Ritterhaus, dem man seinen Stand oft nicht ansieht. Sie zeichnen sich durch ausgeprägte Volksnähe und ein nahezu vollständiges Desinteresse an Prunk, Etikette und höfischen Feinheiten aus. Ihre Wurzeln liegen in einer Bauernfamilie – und dieser Ursprung wird nicht verleugnet, sondern bewusst bewahrt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Cludwyr verfügen über ein Herrenhaus in Gwynthor, das ihnen vom Hause Wyrm zur Verfügung gestellt wurde. Dieses Anwesen wird jedoch nur selten von Mitgliedern der Familie selbst bewohnt. Für gewöhnlich dient es den Cludwyr eher als Unterkunft auf Zeit, wenn sie an den Hof ihres Lehensherrn gerufen werden oder dienstliche Angelegenheiten in der Stadt zu erledigen haben."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Cludwyr zur Alerischen Kirche. Ihr Glaube ist fest in den Alltag der Familie eingebunden und zeigt sich weniger in großen Gesten oder öffentlichen Bekundungen als im beständigen, verlässlichen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",

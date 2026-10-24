@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Vann",
   "housePage": true,
   "image": "../AleriaAlmanach/assets/letzte-rast/scenes/aussenansicht.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Die Vanns gehören zu Gwynthors wohlhabenden Bürgerhäusern. Brenn und Madoc führen Celtigerns Letzte Rast mit feiner cenyrischer Küche, Weisenfluher Weinen, Gesellschaftssalons und gehobener Herberge.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Unter dem alten Schild der Letzten Rast empfängt Haus Vann Bürger, Kaufleute, Gelehrte und Adel. Wohlstand und Ansehen beruhen auf Gastfreundschaft und einem seit Jahrhunderten geführten Betrieb.",
   "quote": "Dem Gast das Beste.",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über die Familie",
-    "biographyText": "Die Vanns gehören zu Gwynthors wohlhabenden Bürgerhäusern. Brenn und Madoc führen Celtigerns Letzte Rast mit feiner cenyrischer Küche, Weisenfluher Weinen, Gesellschaftssalons und gehobener Herberge.",
+    "biographyText": "Unter dem alten Schild der Letzten Rast empfängt Haus Vann Bürger, Kaufleute, Gelehrte und Adel. Wohlstand und Ansehen beruhen auf Gastfreundschaft und einem seit Jahrhunderten geführten Betrieb.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Seit 1334 unter dem Dach der Letzten Rast",
-    "historyText": "Iestyn und Efa erwarben 1334 das bereits ältere Gasthaus. Nach nicht einzeln überlieferten Generationen führt die bekannte Linie über Tudwal und Gwenith zu Brenn, Madoc und ihren Nachkommen.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die Taverne bestand lange vor den Vanns. Iestyn und Efa übernahmen sie 1334. Zwischen ihnen und Tudwal sind die einzelnen Generationen nicht überliefert; der ununterbrochene Familienbesitz blieb im Hausgedächtnis bewahrt.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Ein gut bereitetes Gericht, eine ruhige Kammer und ein aufmerksamer Empfang tragen den Namen des Hauses."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Vor einer großen Gesellschaft werden Tafel, Kammern und Keller gemeinsam geprüft. Die Herkunft eines besonderen Weins wird beim Einschenken genannt."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Celtigerns Letzte Rast im Adelsdistrikt umfasst Speiseräume, acht Privatsalons, mehr als sechzig Gästezimmer, Küche, Vorratskeller, Stallungen und Lieferhof."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Vanns leben nach cenyrischen Bräuchen und gehören zur Alerischen Kirche. Gastfreundschaft und das Glück einer guten Reise werden im Haus geschätzt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -81,7 +100,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Vann.png",
         "title": "Haus Vann · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-vann"
       }
     ],

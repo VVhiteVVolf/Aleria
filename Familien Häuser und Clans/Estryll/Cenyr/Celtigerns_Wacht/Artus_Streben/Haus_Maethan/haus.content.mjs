@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-maethan",
   "name": "Haus Maethan",
@@ -15,13 +15,13 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": true,
   "registerPage": true,
-  "biographySourceRevision": 1,
+  "biographySourceRevision": 2,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Maethan ist in Artus Streben in Celtigerns Wacht verzeichnet.",
-    "history": "Folgt …",
-    "character": "Folgt …"
+    "overview": "Haus Maethan ist als Bürgerfamilie in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
+    "history": "Gründung, namentliche frühe Oberhäupter und eine ausführliche Chronik sind bisher nicht überliefert.",
+    "character": "Beruf, eigener Betrieb, Hausbräuche und ein verbindlicher Leitspruch sind noch nicht festgelegt. Die vorbereitete Hausdarstellung greift ausschließlich das vorhandene Familienzeichen auf."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -93,7 +93,7 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Haus Maethan ist in Artus Streben in Celtigerns Wacht verzeichnet. Weitere Inhalte folgen.",
+    "overview": "Haus Maethan ist als Bürgerfamilie in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
@@ -108,8 +108,9 @@ export const HOUSE_CONTENT = {
   },
   "images": {
     "crest": "../Stammbäume/assets/images/houses/Artus Streben/Bürgerliche/Maethan.png",
-    "scene": "",
-    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/herrschaftsbanner.png"
+    "scene": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Maethan/assets/hausfigur-2026-10-24.png",
+    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwefrydd/assets/herrschaftsbanner.png",
+    "sceneAlt": "Bürgerliche Hausdarstellung · Haus Maethan"
   },
   "cadets": [],
   "founder": null,
@@ -123,5 +124,11 @@ export const HOUSE_CONTENT = {
   ],
   "currentHead": "",
   "firstHeir": "",
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Bürgerliche Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "1559:5e50d9e8:36a812ea"
+  ]
 };

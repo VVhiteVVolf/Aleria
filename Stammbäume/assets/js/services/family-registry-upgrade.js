@@ -1,6 +1,6 @@
 import { normalizeFamily } from '../domain/family-schema.js';
 import { withCwingodHouseNameUpgrade } from '../data/cwingod-house-name-upgrade.js';
-import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261021-arvel-v3';
+import { houseBiographyDefaultUpgrade } from '../modules/house-biography/house-biography-default-upgrade.js?v=20261024-housebio-v1';
 
 const ENTITY_COLLECTIONS = Object.freeze([
   'persons',

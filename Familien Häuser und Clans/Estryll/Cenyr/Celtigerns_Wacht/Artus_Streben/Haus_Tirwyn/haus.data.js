@@ -84,13 +84,16 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Tirwyn ist in Artus Streben in Celtigerns Wacht verzeichnet. Weitere Inhalte folgen.",
+    "overview": "Haus Tirwyn ist als Ritterhaus in Artus Streben in Celtigerns Wacht verzeichnet. Als Sitz ist Rhosmere belegt.",
     "history": "Folgt …",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",

@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Ritterhaus",
-    "scale": "Ritterhaus",
+    "scale": "Ritterherrenhaus · Herkunft aus Aldrimar",
     "parentHouseId": "",
     "rootHouseId": "haus-bleiddorn",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
-    "houseType": "Ritterhaus",
+    "houseType": "Ritterherrenhaus · Herkunft aus Aldrimar",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,24 +84,27 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Das ritterliche Herrenhaus Bleiddorn entstand durch Hrolfs Auswanderung aus Aldrimar nach Cenyr. In Gwynthor unter Celtigerns Wacht blüht der aus Clan Wolfshorn hervorgegangene Familienzweig neu auf. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
+    "overview": "Haus Bleiddorn ist ein junges Ritterherrenhaus in Gwynthor und geht auf Hrolf Wolfshorns Exil aus Aldrimar zurück. Die neue cenyrische Hauslinie bewahrt ihre Herkunft aus Clan Wolfshorn. Hrolf, seine beiden ältesten Kinder Ylva und Asgeir sowie sein Bruder Halvar bilden den bekannten ausgewanderten Familienkreis.",
+    "history": "Hrolf wurde mit Ylva, Asgeir und Halvar aus Aldrimar ins Exil geschickt. Hornhall ging an seinen Bruder Bjoern. In Gwynthor begründete Hrolf Haus Bleiddorn. Seine Gemahlin Liv lebt noch; sie verließ ihn und kehrte mit einem Teil ihrer Kinder zu ihrem eigenen Clan im Norden Aldrimars zurück.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
     "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Clan Wolfshorn bleibt der Herkunftsclan. Die neue Hausbezeichnung Bleiddorn bildet die eigenständige Linie in Celtigerns Wacht ab.",
+    "values": "Aldrimarische Herkunft und der Aufbau einer neuen Stellung in Cenyr prägen den Familienzweig. Die in Aldrimar verbliebenen Angehörigen werden nicht in die Auswandererakte übernommen. Ein zusätzliches Gründungsdatum und weitere eigene Besitzrechte sind nicht überliefert.",
+    "court": "Gründer und bekannte Angehörige sind unten mit der bestehenden Familienakte verknüpft.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -123,15 +126,74 @@ window.HAEUSER_DATA = {
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-founder-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-wolfshorn/hrolf-wolfshorn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=hrolf-wolfshorn",
+      "alt": "Hrolf Wolfshorn",
+      "format": "portrait"
+    },
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-wolfshorn/hrolf-wolfshorn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=hrolf-wolfshorn",
+      "alt": "Hrolf Wolfshorn",
+      "format": "portrait"
+    },
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-wolfshorn/ylva-wolfshorn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=ylva-wolfshorn",
+      "alt": "Ylva Wolfshorn",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "founder",
+        "title": "Gründer",
+        "entries": [
+          {
+            "name": "Hrolf Wolfshorn",
+            "role": "Oberherr und Gründer",
+            "detail": "Oberherr und Gründer",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=hrolf-wolfshorn",
+            "imageKey": "hof-founder-1"
+          }
+        ]
+      },
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Bleiddorn",
+        "note": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+        "entries": [
+          {
+            "name": "Hrolf Wolfshorn",
+            "role": "Oberherr und Gründer",
+            "detail": "Oberherr und Gründer",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=hrolf-wolfshorn",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Hofämter",
+        "entries": [
+          {
+            "name": "Ylva Wolfshorn",
+            "role": "Erstgeborene Tochter Hrolfs",
+            "detail": "Erstgeborene Tochter Hrolfs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bleiddorn&mode=view&person=ylva-wolfshorn",
+            "imageKey": "hof-offices-1"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -139,6 +201,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Bleiddorn"
   },
   "trivia": [
-    "Folgt …"
+    "Ritterherrenhaus · Herkunft aus Aldrimar"
   ]
 };

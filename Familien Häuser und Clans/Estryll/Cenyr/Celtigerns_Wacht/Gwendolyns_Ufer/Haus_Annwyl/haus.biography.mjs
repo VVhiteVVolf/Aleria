@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Annwyl",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Annwyl/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Annwyl ist ein altes Ritterhaus bei Côr Mynyddfaen. Seine Ritter schützen Siedlung, Pilgerwege und umliegende Höfe. Der geharnischte Hund im Wappen steht für Wachsamkeit und Treue.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Annwyl ist ein altes, ländliches Ritterhaus aus Côr Mynyddfaen, geprägt von Frömmigkeit, Pflicht und stiller Standhaftigkeit. Es ist kein Haus der großen Intrigen oder lauten Ambitionen, sondern eines der Wachen, Schwüre und langen Dienste. Ihr Wappen – der geharnischte Hund – steht sinnbildlich für ihre Rolle: wachsam, treu und bereit, notfalls zu beißen, ohne je nach Ruhm zu lechzen.\n\nHaus Annwyl unterscheidet sich von vielen anderen Häusern Cenyrs durch seinen Ursprung: Es verdankt seinen Stand nicht weltlicher Gunst, sondern kirchlicher Anerkennung. Noch heute ist das Haus enger mit Glauben, Moral und Schutzpflicht verbunden als mit Politik oder Machtgewinn. Annwyl-Ritter gelten als diszipliniert, bodenständig und unbeirrbar – keine glänzenden Helden, sondern verlässliche Schildträger.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Annwyl ist ein altes Ritterhaus bei Côr Mynyddfaen. Seine Ritter schützen Siedlung, Pilgerwege und umliegende Höfe. Der geharnischte Hund im Wappen steht für Wachsamkeit und Treue.",
+    "biographyText": "Haus Annwyl ist ein altes, ländliches Ritterhaus aus Côr Mynyddfaen, geprägt von Frömmigkeit, Pflicht und stiller Standhaftigkeit. Es ist kein Haus der großen Intrigen oder lauten Ambitionen, sondern eines der Wachen, Schwüre und langen Dienste. Ihr Wappen – der geharnischte Hund – steht sinnbildlich für ihre Rolle: wachsam, treu und bereit, notfalls zu beißen, ohne je nach Ruhm zu lechzen.\n\nHaus Annwyl unterscheidet sich von vielen anderen Häusern Cenyrs durch seinen Ursprung: Es verdankt seinen Stand nicht weltlicher Gunst, sondern kirchlicher Anerkennung. Noch heute ist das Haus enger mit Glauben, Moral und Schutzpflicht verbunden als mit Politik oder Machtgewinn. Annwyl-Ritter gelten als diszipliniert, bodenständig und unbeirrbar – keine glänzenden Helden, sondern verlässliche Schildträger.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Die Kirche erhob Willard Annwyl durch das Wirken Petyr Anghofs in den Ritteradel. Später schwor das Haus den Gwyvern die Lehnstreue, ohne seinen geistlichen Ursprung aufzugeben.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Demut, Frömmigkeit und Dienst prägen die Familie. Zur Ausbildung ihrer Ritter gehört eine Pilgerfahrt durch Cenyr. Cennyn führt das Haus; Elgan ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Zu den ältesten und verbindlichsten Bräuchen des Hauses Annwyl zählt die Pilgerfahrt des Ritters. Sie gilt als Pflicht und Prüfung zugleich und wird einmal im Leben eines Hausmitglieds abgelegt – unmittelbar nach der Schwertleite."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Der Besitz des Hauses Annwyl ist überschaubar und bewusst schlicht gehalten. Prunk, übermäßiger Reichtum oder repräsentative Architektur gelten im Selbstverständnis des Hauses als Versuchung und Ablenkung vom eigentlichen Auftrag. Was sie halten, halten sie aus Pflicht – nicht aus Gier."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Haus Annwyl lebt seinen Glauben still und konsequent. Frömmigkeit ist für sie kein Zeichen nach außen, sondern tägliche Praxis."
       }
     ],
     "triviaTitle": "Besonderheiten",

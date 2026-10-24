@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Tonnarth",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tonnarth/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor mit mehreren Seitenlinien. Ihre jüngste Generation gruppiert sich um Llewarch und seine Geschwister. Die Familiengeschichte berührt sowohl die Maerllys als auch das Umfeld der Krummen Kanne und der Tiefenwyrm.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Idris Tonnarth"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor.",
+    "biographyText": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor mit mehreren Seitenlinien. Ihre jüngste Generation gruppiert sich um Llewarch und seine Geschwister. Die Familiengeschichte berührt sowohl die Maerllys als auch das Umfeld der Krummen Kanne und der Tiefenwyrm.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Idris und Lowri gehören zur ältesten bekannten Generation. Ihr Sohn Cadell ist mit Ceridwen verheiratet und Vater der Geschwister Iorwerth, Llewarch, Gwenllian, Elowen und Rhys. Cadells Bruder Madoc heiratete Rhoswen Maerllys. Aus Gareths früherer Beziehung mit Mair ging Caradog hervor.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Mair arbeitet als Rechnungsführerin der Krummen Kanne; Caradog führt Idwals Logbuch und unterstützt die Schriftführung der Tiefenwyrm. Diese persönlichen Aufgaben machen weder Gasthaus noch Schiff zum Besitz der Tonnarth. Ein gemeinsamer Hausbetrieb ist nicht überliefert."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Madoc und Rhoswen verbinden Tonnarth mit Maerllys. Mairs späterer Lebenskreis um Aedan Dubhdarach bleibt von Gareths beendeter Beziehung getrennt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
         "title": "Haus Tonnarth · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tonnarth"
       }
     ],

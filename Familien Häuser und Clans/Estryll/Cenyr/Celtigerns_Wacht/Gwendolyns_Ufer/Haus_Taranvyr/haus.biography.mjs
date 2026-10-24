@@ -5,10 +5,11 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Taranvyr",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Taranvyr/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Taranvyr ist ein angesehenes Ritterhaus aus Abergwint unter den Gwyvern. Es stellt erfahrene Teulu-Schwertkämpfer, Hauptleute und Lehenswarte und trägt Verantwortung für die große Garnison der Stadt.",
-  "quote": "In Treue wachen wir.",
+  "quote": "In Treue wachen wir",
   "quoteBy": "",
   "commentSequence": [],
   "stats": [
@@ -59,8 +60,8 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Rhydian Taranvyr kam als Ritter und Vertrauter eines Draig-Statthalters aus Gwynthor an die Küste. Nach dem Aufstieg der Gwyvern blieb das Haus an der Seite der neuen Barone. Kenyon prägte seinen Ruf durch jahrzehntelangen Dienst und zwei Kriege.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Die Taranvyr führen ihren Namen auf Rhydian Taranvyr zurück, einen einfachen, aber außergewöhnlich tapferen Ritter des Hauses Draig. Er war ein enger Freund jenes Mannes, der lange vor der Gründung des Hauses Gwyvern als Statthalter nach Abergwint entsandt wurde. In dieser frühen Zeit war Rhydian nicht nur Hauptmann, sondern auch Kamerad, Berater und Vertrauter des damaligen Barons. Durch seinen unermüdlichen Dienst und seine Loyalität verankerte er den Namen Taranvyr fest in der Baronie Gwendolyns Ufer, bis dieser nicht mehr aus ihr wegzudenken war.\n\nAls später das Haus Gwyvern als Kadettenhaus der Draig gegründet und zu den Baronen von Gwendolyns Ufer erhoben wurde, blieb die Treue der Taranvyr ungebrochen. Mit derselben Hingabe, mit der sie zuvor den Draig gedient hatten, stellten sie sich nun in den Dienst der neuen Barone und bewahrten so ihre Rolle als verlässliche Stütze der Herrschaft.\n\nIm Laufe der Geschichte brachte das Haus viele bedeutende Ritter und angesehene Namen hervor. Besonders hervorzuheben ist Kenyon Taranvyr, der über Jahrzehnte hinweg mehreren Baronen als Marschall diente. Er kämpfte in zwei großen Kriegen und gilt bis heute als Sinnbild für Tapferkeit, Pflichtbewusstsein und unerschütterliche Loyalität – Eigenschaften, die das Haus Taranvyr bis in die Gegenwart prägen.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„In Treue wachen wir.“ verbindet Mut, Pflicht und Schutz der Bevölkerung. Kenyon führt das Haus; Hywel ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Taranvyr sind ein Ritterhaus durch und durch. Nur selten schlagen Mitglieder der Familie einen anderen Lebensweg ein oder sehen ihre Berufung außerhalb des ritterlichen Dienstes. Kampf, Pflicht und Schutz sind tief in ihrer Identität verankert und werden von Generation zu Generation weitergegeben."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Burg der Taranvyr steht innerhalb der Mauern von Abergwint selbst und zählt dort zu den größeren Sitzen der einfachen Ritterhäuser. Trotz ihrer Größe verfügt das Haus jedoch weder über weitläufige Ländereien noch über ein eigenes, klar umrissenes Wirtschaftsfeld, wie es bei manch anderem Adelshaus der Fall ist."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Taranvyr zur Alerischen Kirche. Ihr Glaube ist fest verwurzelt und Teil ihres Alltags, ohne dabei je aufdringlich oder demonstrativ zu sein."
       }
     ],
     "triviaTitle": "Besonderheiten",

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Original und Bildnachweise liegen im selben Hausordner.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-gafyr",
   "name": "Haus Gafyr O'Gwynthor",
@@ -15,9 +15,12 @@ export const HOUSE_CONTENT = {
   "biographyIntroTitle": "Treue unter dem gehörnten Helm",
   "biographyHistoryTitle": "Garyms Erbe und Kynwrigs Haus",
   "biographySummary": {
-    "overview": "Haus Gafyr ist ein Ritterfürstenhaus aus Gwynthor und Vasall der Draigs. Es herrscht über nördliche Gebiete der Region. Ritterdienst, Ziegenzucht, Holz und Erz bilden die Grundlagen seiner Stellung.",
-    "history": "Garym, der Gehörnte, floh als einfacher Milwr mit Vortigern und Celtigern aus Avallorn. Celtigern schlug ihn zum Ritter. Nach Garyms tödlicher Verwundung wurde seinem Sohn Kynwrig die Gründung eines eigenen Hauses zugesagt. Garyms erbeuteter Hornhelm blieb das wichtigste Erbstück der Familie.",
-    "character": "Treue, Gerechtigkeit und Frömmigkeit bestimmen das Selbstverständnis der Gafyr. Junge Angehörige dienen häufig in der Teulu der Draigs. Duncan führt das Haus seit 1708; Egon steht an erster Stelle der Erbfolge."
+    "overview": "Haus Gafyr ist ein Ritterfürstenhaus mit Sitz in Gwynthor. Als Vasallen der Draigs verwalten die Gafyr Gebiete nördlich der Stadt. Ihr Ruf beruht auf treuem Ritterdienst und bodenständiger Wirtschaft: Ziegenzucht, Holzgewinnung und Erzabbau tragen ihren Wohlstand.",
+    "history": "Garym, später „der Gehörnte“ genannt, kam als einfacher Milwr aus Avallorn. Er floh gemeinsam mit Vortigern und Celtigern nach Estryll. Seine Treue, sein Mut und sein Sinn für Gerechtigkeit brachten ihm Celtigerns Vertrauen und schließlich den Ritterschlag ein. Die albenstämmige Prinzessin Fíodhna Ui Talamh wurde seine Gefährtin; auf beide führt das Haus seinen Ursprung zurück.\n\nIn einem Zweikampf besiegte Garym einen Anführer der Nordmänner und nahm dessen gehörnten Helm als Trophäe. Fortan trug er ihn selbst im Kampf und erhielt so seinen Beinamen. In der letzten großen Schlacht vor der Gründung Cenyrs wurde er tödlich verwundet.\n\nSeinem Sohn Kynwrig wurde zugesagt, nach Erreichen des Erwachsenenalters einen eigenen Adelstitel und das Recht zur Hausgründung zu erhalten. So begründete Kynwrig das Haus Gafyr, dessen geistiger Ahnherr Garym blieb. Der Hornhelm wurde zum geheiligten Erbstück und von Ritterfürst zu Ritterfürst weitergegeben. Nach dem Glauben der Familie bewahrt er Garyms Willenskraft.",
+    "character": "Treue, Gerechtigkeit und Frömmigkeit bestimmen das Selbstverständnis der Gafyr. Junge Angehörige dienen häufig in der Teulu der Draigs. Duncan führt das Haus seit 1708; Egon steht an erster Stelle der Erbfolge.",
+    "customs": "Viele junge Gafyr beginnen ihren Dienst in der Teulu des Hauses Draig. Die persönliche Bindung an das Grafenhaus gilt als Bewährungsweg und setzt Garyms ursprüngliche Treue fort.",
+    "holdings": "Die nördlich von Gwynthor gelegenen Besitzungen umfassen mehrere Siedlungen, Wälder und Erzvorkommen. Holz und Erze versorgen Handwerk und Handel. Besonders bekannt sind die Ziegenherden und ihr Käse, der weit über die unmittelbare Umgebung hinaus gehandelt wird.",
+    "culture": "Die Gafyr gehören zu den Cenyri und zur Alerischen Kirche. Als Patrone sind die Dame der See und der Streiter genannt."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -75,10 +78,10 @@ export const HOUSE_CONTENT = {
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Mittelmäßig",
-    "tiarna": "Überwiegend Uchelwyr, Teulu",
-    "kerns": "Mittelmäßig, überwiegend Infanterie",
-    "fleet": "Kaum",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Nach der Flucht aus Avallorn · Jahr unbekannt",
     "milestoneOne": "Garym, der Gehörnte, floh als einfacher Milwr mit Vortigern und Celtigern aus Avallorn. Celtigern schlug ihn zum Ritter. Nach Garyms tödlicher Verwundung wurde seinem Sohn Kynwrig die Gründung eines eigenen Hauses zugesagt. Garyms erbeuteter Hornhelm blieb das wichtigste Erbstück der Familie.",
     "milestoneTwo": "Duncan Gafyr · Seit 1708",
@@ -104,7 +107,7 @@ export const HOUSE_CONTENT = {
     ],
     "knighthood": [
       "Das cenyrische Rittertum hat seine Wurzeln in Avallorn. Bei der Aufnahme wird der Knappe an einem See oder einem anderen Gewässer zum Ritter geschlagen und gesalbt. Er schwört auf jeden der Neun Göttlichen und dessen Tugenden; ein zehnter Eid gilt der Dame der See, der Schutzgöttin Cenyrs.",
-      "Dunkle Rüstungen mit goldenen Akzenten und kantigen Formen bestimmen das Erscheinungsbild der Gafyr. Ihre auffälligen, geschwungenen Helmhörner erinnern an Garyms Sieg über den Nordmannführer. Das Aufgebot umfasst vor allem Uchelwyr und Teulu; die Stärke der Infanterie ist mittelmäßig, die Flotte gering."
+      "Dunkle Rüstungen mit goldenen Akzenten und kantigen Formen bestimmen das Erscheinungsbild der Gafyr. Ihre auffälligen, geschwungenen Helmhörner erinnern an Garyms Sieg über den Nordmannführer."
     ],
     "cultureReligion": "Die Gafyr gehören zu den Cenyri und zur Alerischen Kirche. Als Patrone sind die Dame der See und der Streiter genannt. Die Hausüberlieferung betont außerdem die Verehrung des Templers als göttlichen Vertreter von Gerechtigkeit und Menschlichkeit. Geistliche und Paladine gehen zwar nur selten aus der Familie hervor, religiöse Zeremonien und Frömmigkeit haben dennoch einen festen Platz im Hausleben.",
     "conflictsAlliances": "Die Treue zu Haus Draig ist das wichtigste politische Band der Gafyr. Sie reicht bis zu Garyms Dienst unter Celtigern zurück und wird bei jedem Wechsel des Oberhaupts bekräftigt. Eine gegenwärtige Hausfehde oder ein eigenes Kadettenhaus ist nicht benannt.",
@@ -301,5 +304,12 @@ export const HOUSE_CONTENT = {
   "trivia": [
     "Garyms Hornhelm war ursprünglich die Trophäe eines Zweikampfs.",
     "Neben seinen Rittern ist das Haus für Ziegenkäse aus seinen nördlichen Besitzungen bekannt."
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographySourceRevision": 7,
+  "biographyPreviousDefaultFingerprints": [
+    "2728:4df3daab:e03868ed"
   ]
 };

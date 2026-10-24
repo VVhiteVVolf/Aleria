@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bürgerfamilie",
     "parentHouseId": "",
     "rootHouseId": "haus-aelmor",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus Aelmor ist eine bürgerliche Familie aus Gwynthor. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Haus Aelmor gehört zu den kleinen Bürgerfamilien Gwynthors. Die überlieferten Generationen führen von Bledri und Nest über Goronwy und Catrin bis zu Owain, Rhodri und Tegan. Das Familienzeichen trägt ein Schiffsmotiv; eine bestimmte berufliche Tradition ist daraus bislang nicht gesichert.",
+    "history": "Bledri ist das älteste namentlich überlieferte Oberhaupt. Goronwy führt die Hauptlinie fort. Seine Schwester Anwen heiratete Bryn Braglas und verbindet so beide Familien; Madoc blieb unverheiratet und kinderlos. Die jüngeren Aelmor haben noch keine festgelegten Ehen oder Verlobungen.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die Verbindung zu Braglas besteht durch Anwen Aelmor und Bryn Braglas.",
+    "values": "Das Haus ist als bürgerlicher Familienverband fassbar. Ein eigener Betrieb, Vermögensstand und religiöse Sonderbräuche sind bisher nicht ausgearbeitet. Das Bild greift die Farben des vorhandenen Zeichens auf.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,11 +116,10 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Aelmor",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aelmor/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Aelmor",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
@@ -127,12 +129,61 @@ window.HAEUSER_DATA = {
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Bledri Aelmor",
+            "role": "Ältestes überliefertes Oberhaupt des Hauses Aelmor",
+            "detail": "Ältestes überliefertes Oberhaupt des Hauses Aelmor",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelmor&mode=view&person=bledri-aelmor",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Eirlys Aelmor",
+            "role": "Wegverheiratete Großtante der jüngsten Aelmor-Generation",
+            "detail": "Wegverheiratete Großtante der jüngsten Aelmor-Generation",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelmor&mode=view&person=eirlys-aelmor",
+            "imageKey": ""
+          },
+          {
+            "name": "Goronwy Aelmor",
+            "role": "Fortführer der Aelmor-Hauptlinie",
+            "detail": "Fortführer der Aelmor-Hauptlinie",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelmor&mode=view&person=goronwy-aelmor",
+            "imageKey": ""
+          },
+          {
+            "name": "Madoc Aelmor",
+            "role": "Lediger Seitenzweig des Hauses Aelmor",
+            "detail": "Lediger Seitenzweig des Hauses Aelmor",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelmor&mode=view&person=madoc-aelmor",
+            "imageKey": ""
+          },
+          {
+            "name": "Anwen Aelmor",
+            "role": "An Haus Braglas verheiratete Aelmor",
+            "detail": "An Haus Braglas verheiratete Aelmor",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aelmor&mode=view&person=anwen-aelmor",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +191,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Aelmor"
   },
   "trivia": [
-    "Folgt …"
+    "Bürgerfamilie"
   ]
 };

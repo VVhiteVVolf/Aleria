@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-penwyn",
   "name": "Haus Penwyn",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Penwyn ist das älteste bestehende Geschlecht Morddyns und dient Myrddin. Es verwaltet und schützt den Küstenort. Die alte Burg, ein Anteil an den örtlichen Abgaben und die eigene Schmiede tragen seinen Unterhalt.",
     "history": "Die Familie lebte bereits im Dorf, als Myrddin als junger Lehrling dorthin kam. Auf seinen späteren Wunsch wurde der damalige Hauptmann zum Ritter geschlagen und das Haus als sein Vasall anerkannt. Der Name dieses Gründers ist nicht überliefert.",
-    "character": "Beständigkeit, Handwerk und verlässlicher Dienst prägen die Penwyn. Rhys führt das Haus; Cadfael steht an erster Stelle der Erbfolge."
+    "character": "Beständigkeit, Handwerk und verlässlicher Dienst prägen die Penwyn. Rhys führt das Haus; Cadfael steht an erster Stelle der Erbfolge.",
+    "customs": "Die Penwyns gelten in erster Linie als Ritterhaus, nicht aus Laune oder Ehre, sondern aus Gewohnheit und Notwendigkeit. In fast jeder Generation gehen rund achtzig Prozent des Geschlechts den ritterlichen Weg – als Knappe, Waffenknecht, Hauptmann oder Burgwache. Die übrigen schlagen andere Pfade ein: meist Schmiedekunst, manchmal Verwaltung, und in seltenen Fällen auch sonderbarere Dinge – Kräuterkunde, Kartographie, Musik, oder gar die Gärung merkwürdiger Alkoholika.",
+    "holdings": "Auch wenn Morddyn unter der Obhut des großen Myrddin steht, liegt die Verwaltung des Ortes seit Jahrhunderten fest in den Händen von Haus Penwyn. Offiziell fließt der Großteil der Steuern, Abgaben und Handelszölle direkt an den Zauberer – wer hier lebt, lebt auf seinem Grund. Doch da der Alltag, die Ordnung, die Sicherheit und die Abläufe allesamt von den Penwyns getragen werden, bleibt ihnen ein fester Anteil als Verwalterhaus.",
+    "culture": "Die Penwyns sind im Großen und Ganzen gottesfürchtige Leute, wie man sie in jeder ehrbaren Gemeinde findet. Sie beten, wenn gebetet wird, zünden Kerzen an den richtigen Tagen, und lassen den Kleriker reden, ohne zu unterbrechen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -191,7 +194,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Cadfael Penwyn",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1838:ed9404be:c77b0530"
+    "1838:ed9404be:c77b0530",
+    "2538:347036b:176d8725"
   ],
-  "sourceBatch": "gwendolyn-20260911"
+  "sourceBatch": "gwendolyn-20260911",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

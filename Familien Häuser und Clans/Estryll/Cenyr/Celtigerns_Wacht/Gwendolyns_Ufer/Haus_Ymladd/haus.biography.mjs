@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Ymladd",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Ymladd schützt das östliche Hochland von Gwendolyns Ufer. Seine Ritter bewachen Straßen, Weiden und Höfe gegen Kreaturen aus dem Gebirge. Die Burg liegt östlich von Abergwint an der Straße nach Carregmawr.",
   "quote": "",
   "quoteBy": "",
@@ -43,10 +44,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Ursprung",
       "Dafydd Ymladd"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Dafydd Ymladd hielt im Auftrag der Draig eine abgelegene Grenzburg. Seine Bewährung und die überlieferte Tötung eines Trolls führten zur Anerkennung eines erblichen Ritterhauses.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Schutz, Erfahrung und Standhaftigkeit bestimmen das Haus. Sein Wappen zeigt eine Spinne über einem Lamm. Hedd führt die Familie; Idris ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Traditionen des Hauses Ymladd sind schlicht, hart und zweckgebunden. Nichts davon dient Repräsentation. Alles davon dient Überleben, Disziplin und Erinnerung."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Haus Ymladd ist kein reiches Haus. Es besitzt seine Burg östlich von Abergwint, nahe der Straße in Richtung Carregmawr, die seit jeher als Sitz und Wachposten des Hauses dient. Darüber hinaus unterstehen den Ymladd einige Höfe und Bauernstellen der umliegenden Weidegebiete, die dem Haus Pacht und Abgaben entrichten."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Haus Ymladd bekennt sich wie alle Cenyri zu den Neun Göttlichen. Die Mitglieder des Hauses sehen sich jedoch nicht als besonders fromm und legen wenig Wert auf offene Frömmigkeit oder religiöse Zurschaustellung."
       }
     ],
     "triviaTitle": "Besonderheiten",

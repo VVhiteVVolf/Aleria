@@ -19,9 +19,9 @@ export function createHousePageData(content) {
   };
   const groups = [
     { id: 'founder', title: content.founderTitle || 'Gründer', entries: [Object.hasOwn(content, 'founder') ? content.founder : content.heads[0]].filter(Boolean) },
-    { id: 'heads', title: `Oberhauptfolge · ${content.name}`, note: content.headsNote || 'Überlieferte Amtszeiten; unbekannte Zeiträume bleiben offen.', entries: content.heads },
+    { id: 'heads', title: content.headsTitle || `Oberhauptfolge · ${content.name}`, note: content.headsNote || 'Überlieferte Amtszeiten; unbekannte Zeiträume bleiben offen.', entries: content.heads },
     { id: 'heirs', title: content.extinct ? 'Ehemalige Erbfolge · Haus ausgestorben' : 'Erbfolge', entries: content.heirs },
-    { id: 'offices', title: content.extinct ? 'Historische Hofämter' : 'Hofämter', entries: content.offices },
+    { id: 'offices', title: content.officesTitle || (content.extinct ? 'Historische Hofämter' : 'Hofämter'), entries: content.offices },
   ].filter(group => group.entries.length).map(group => ({ ...group, entries: group.entries.map((entry, i) => card(entry, `hof-${group.id}-${i + 1}`)) }));
   const cadets = content.cadets.map(entry => {
     const imageKey = `kadetten-${entry.id}`;
@@ -38,10 +38,11 @@ export function createHousePageData(content) {
     name: content.name, hierarchy: content.hierarchy, layout: 'responsive',
     classification: { category: 'Familien Häuser und Clans', houseType: content.type, scale: content.profile.houseType, parentHouseId: content.parentHouseId || '', rootHouseId: content.parentHouseId || content.id, territoryId: content.territoryId },
     profile: content.profile,
+    ...(content.omitMilitaryProfile ? { hiddenProfileGroups: ['military'] } : {}),
     profileLabels: { tiarna: 'Ritter', kerns: 'Knechte' },
     showMotto: content.showMotto,
     sections: Object.fromEntries(Object.entries(content.sections).map(([key, value]) => [key, paragraphs(value)])),
-    sectionTitles: { knighthood: content.type === 'Clan' ? '4. Tiarnatum' : '4. Rittertum' },
+    sectionTitles: { knighthood: content.type === 'Clan' ? '4. Tiarnatum' : content.type === 'Bürgerliches Haus' ? '4. Beruf und Hausleben' : '4. Rittertum' },
     ...(content.scenes?.length ? { scenes: content.scenes } : {}),
     ...(content.warriorGallery?.entries?.length ? { warriorGallery: content.warriorGallery } : {}),
     images, court: { groups, cadets },
@@ -57,26 +58,30 @@ export function createHouseBiography(content) {
   return {
     schema: 'aleria.house-module', schemaVersion: 1,
     pageTitle: content.name, housePage: true,
-    image: biographyImage(content.images.scene), imageWidth: 30, imageSquare: true,
+    image: biographyImage(content.images.scene), imageWidth: 38, imageSquare: false, imageTall: true,
     description: summary.overview, quote: content.showMotto ? profile.motto : '', quoteBy: '', commentSequence: [],
     stats: [
       ['Voller Name', content.name], ['Rang', profile.highestTitle], ['Stammsitz', profile.seat],
       ['Grafschaft', content.county], [content.extinct ? 'Letztes Oberhaupt' : 'Oberhaupt', content.currentHead ?? content.heads.at(-1)?.name ?? ''],
       ...(content.extinct ? [['Status', content.extinctionText || 'Ausgestorben · Zeitpunkt offen']] : [['Erbe', content.firstHeir ?? content.heirs[0]?.name ?? '']]), ['Lehnsherr', content.liege],
       ['Ursprung', profile.origin], ['Schutzpatronin', profile.patronDeities],
-    ],
+    ].filter(([, value]) => String(value || '').trim()),
     house: {
       crestImage: biographyImage(content.images.crest), sideWidth: 100,
       connectionPortraitHeight: 80, connectionTextOffset: 0,
       biographyTitle: content.biographyIntroTitle, biographyText: summary.overview,
       abilitiesTitle: 'Einfluss und Aufgaben',
-      abilities: [],
+      abilities: summary.influence || [],
       historyTitle: content.biographyHistoryTitle, historyText: summary.history,
-      worksTitle: 'Hausgeschichte', works: [],
+      worksTitle: 'Prägende Ereignisse', works: summary.achievements || [],
       extraSections: [
         { position: 'afterWorks', mode: 'text', title: 'Werte und Stellung', text: summary.character },
+        ...(summary.customs ? [{ position: 'afterWorks', mode: 'text', title: 'Traditionen und Hausleben', text: summary.customs }] : []),
+        ...(summary.holdings ? [{ position: 'afterWorks', mode: 'text', title: 'Besitz und Lebensgrundlage', text: summary.holdings }] : []),
+        ...(summary.culture ? [{ position: 'afterWorks', mode: 'text', title: 'Kultur und Glaube', text: summary.culture }] : []),
+        ...(summary.relations ? [{ position: 'afterWorks', mode: 'text', title: 'Verbindungen', text: summary.relations }] : []),
       ],
-      triviaTitle: 'Besonderheiten', trivia: [],
+      triviaTitle: 'Besonderheiten', trivia: summary.trivia || [],
       quotesTitle: 'Hausmotto', quotes: [],
       connectionsTitle: 'Verbündete und Kadettenhäuser',
       connections: [
@@ -85,7 +90,7 @@ export function createHouseBiography(content) {
       ],
       documentsTitle: 'Mehr über das Haus',
       documents: [
-        { icon: biographyImage(content.images.crest), title: `${content.name} · vollständige Hausseite`, text: content.prepared ? 'Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.' : 'Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.', link: pageLink(content) },
+        { icon: biographyImage(content.images.crest), title: `${content.name} · vollständige Hausseite`, text: content.prepared ? 'Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.' : content.type === 'Bürgerliches Haus' ? 'Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.' : 'Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.', link: pageLink(content) },
       ],
       footer: '',
     },

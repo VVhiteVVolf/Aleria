@@ -61,7 +61,7 @@ window.HAEUSER_DATA = {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
     "houseType": "Bürgerliches Haus",
-    "motto": "Schrift bewahrt, Wissen lenkt.",
+    "motto": "Schrift bewahrt, wissen lenkt.",
     "quoteAuthor": "",
     "seat": "Abergwint",
     "affiliation": "Haus Gwyvern",
@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Balchder",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -104,7 +107,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Folgt …"
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

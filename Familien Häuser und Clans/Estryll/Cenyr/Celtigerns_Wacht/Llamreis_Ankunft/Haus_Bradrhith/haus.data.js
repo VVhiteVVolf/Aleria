@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Draig, Haus Awenydd",
     "enemies": "Schwarze Zitteraale"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -104,7 +107,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Arianwen ist vierzig Jahre alt. Ihre Kinder Eiludd, Gwrfyw und Creirwy Gwregysdu sind neunzehn, sechzehn und vierzehn; sie kommen für eine Weiterführung des Hofes infrage. Mairwens und Llyrs Kinder Gwyddien, Clydog und Goleuddydd Dewrdd starben beim Überfall im Alter von dreizehn, zehn und sieben Jahren. Zwischen dem unbekannten Gründerpaar der Familie und Ceredig liegen mehrere nicht überlieferte Generationen."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Penwyn",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Penwyn/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Haus Penwyn ist das älteste bestehende Geschlecht Morddyns und dient Myrddin. Es verwaltet und schützt den Küstenort. Die alte Burg, ein Anteil an den örtlichen Abgaben und die eigene Schmiede tragen seinen Unterhalt.",
   "quote": "",
   "quoteBy": "",
@@ -41,10 +42,6 @@ export const HOUSE_BIOGRAPHY = {
       "Myrddin Draig"
     ],
     [
-      "Ursprung",
-      ""
-    ],
-    [
       "Schutzpatronin",
       "Der Knecht"
     ]
@@ -60,7 +57,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Die Familie lebte bereits im Dorf, als Myrddin als junger Lehrling dorthin kam. Auf seinen späteren Wunsch wurde der damalige Hauptmann zum Ritter geschlagen und das Haus als sein Vasall anerkannt. Der Name dieses Gründers ist nicht überliefert.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +65,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Beständigkeit, Handwerk und verlässlicher Dienst prägen die Penwyn. Rhys führt das Haus; Cadfael steht an erster Stelle der Erbfolge."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Penwyns gelten in erster Linie als Ritterhaus, nicht aus Laune oder Ehre, sondern aus Gewohnheit und Notwendigkeit. In fast jeder Generation gehen rund achtzig Prozent des Geschlechts den ritterlichen Weg – als Knappe, Waffenknecht, Hauptmann oder Burgwache. Die übrigen schlagen andere Pfade ein: meist Schmiedekunst, manchmal Verwaltung, und in seltenen Fällen auch sonderbarere Dinge – Kräuterkunde, Kartographie, Musik, oder gar die Gärung merkwürdiger Alkoholika."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Auch wenn Morddyn unter der Obhut des großen Myrddin steht, liegt die Verwaltung des Ortes seit Jahrhunderten fest in den Händen von Haus Penwyn. Offiziell fließt der Großteil der Steuern, Abgaben und Handelszölle direkt an den Zauberer – wer hier lebt, lebt auf seinem Grund. Doch da der Alltag, die Ordnung, die Sicherheit und die Abläufe allesamt von den Penwyns getragen werden, bleibt ihnen ein fester Anteil als Verwalterhaus."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Penwyns sind im Großen und Ganzen gottesfürchtige Leute, wie man sie in jeder ehrbaren Gemeinde findet. Sie beten, wenn gebetet wird, zünden Kerzen an den richtigen Tagen, und lassen den Kleriker reden, ohne zu unterbrechen."
       }
     ],
     "triviaTitle": "Besonderheiten",

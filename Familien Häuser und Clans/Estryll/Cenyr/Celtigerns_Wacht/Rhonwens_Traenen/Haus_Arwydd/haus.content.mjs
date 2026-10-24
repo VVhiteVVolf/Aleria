@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Original und Bildnachweise liegen im selben Hausordner.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-arwydd",
   "name": "Haus Arwydd O'Castellbryn",
@@ -15,9 +15,12 @@ export const HOUSE_CONTENT = {
   "biographyIntroTitle": "Das Schild des Drachen",
   "biographyHistoryTitle": "Vom Stadtwächter zum Ritterfürstenhaus",
   "biographySummary": {
-    "overview": "Haus Arwydd ist ein junges Ritterfürstenhaus mit Sitz in Castellbryn auf Rhonwens Tränen. Es versteht sich als Schild der Draigs und trägt das Motto „Wir sind das Schild des Drachen“.",
-    "history": "Idwalladr begann als Stadtwächter in Gwynthor und diente später Cahir und Rhodri Draig. Auf seine Bitte wurde sein Sohn Idris als Knappe aufgenommen. Nach Idwalladrs Tod in der Schlacht um Castellbryn erhielt Idris 1720 den Ritterfürstentitel und begründete das Haus.",
-    "character": "Pflichtbewusstsein, Standhaftigkeit und der Schutz des Landes prägen die Arwydd. Fischerei, Schiffbau und Handel sichern die Inselherrschaft. Idris führt das Haus; Ianto steht vor Ifor und Ivor in der Erbfolge."
+    "overview": "Haus Arwydd ist ein junges Ritterfürstenhaus, dessen Aufstieg mit der Schlacht um Castellbryn verbunden ist. Von Castellbryn aus regiert es Rhonwens Tränen. Als selbst erklärtes Schild der Draigs sieht das Haus seine vornehmste Aufgabe darin, Land, Verbündete und Bewohner zu schützen.",
+    "history": "Idwalladr begann als einfacher Milwr und Stadtwächter in Gwynthor. Später diente er am Hof der Draigs, zunächst unter Graf Cahir dem Schwarzen, dann unter Rhodri dem Großen. Um seinem Sohn Idris eine bessere Zukunft zu ermöglichen, bat er Rhodri, den Jungen als Knappen aufzunehmen.\n\nIdris bewährte sich durch Mut und Treue und wurde schließlich zum Ritter geschlagen. Nach der Schlacht um Castellbryn, in der Idwalladr fiel, erhielt er 1720 den Rang eines Ritterfürsten. Ihm fiel die Herrschaft über die früheren Illysywen-Besitzungen auf Rhonwens Tränen zu.\n\nIdris gilt als eigentlicher Gründer des Hauses Arwydd. Idwalladr wurde für seine Verdienste postum zum Ritter geschlagen. Die Erinnerung an den Vater, dessen Dienst den Aufstieg erst ermöglicht hatte, blieb ein wesentlicher Teil der Hausgeschichte.",
+    "character": "Pflichtbewusstsein, Standhaftigkeit und der Schutz des Landes prägen die Arwydd. Fischerei, Schiffbau und Handel sichern die Inselherrschaft. Idris führt das Haus; Ianto steht vor Ifor und Ivor in der Erbfolge.",
+    "customs": "Die Traditionen der Arwydd richten sich auf ihre Rolle als Beschützer und Verteidiger. Das Andenken an Idwalladrs Dienst und Idris’ Bewährung verbindet die junge Familie mit den Draigs. Ihr Motto lautet: „Wir sind das Schild des Drachen“.",
+    "holdings": "Castellbryn und die Inseln von Rhonwens Tränen bilden die Herrschaft der Arwydd. Fischerei, Schiffbau und Handel tragen ihre Wirtschaft. Die Werften bauen robuste, wendige Schiffe für die anspruchsvollen Inselgewässer.",
+    "culture": "Die Arwydd gehören zu den Cenyri und folgen der Alerischen Kirche. Die Dame der See ist ihre besondere Schutzpatronin."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -75,10 +78,10 @@ export const HOUSE_CONTENT = {
     "quoteAuthor": "",
     "seat": "Castellbryn",
     "affiliation": "Grafschaft Celtigerns Wacht · Graf Galahad Draig",
-    "troopStrength": "Hoch",
-    "tiarna": "Überwiegend Cantref, Helwyr",
-    "kerns": "Hoch, überwiegend Seekrieger",
-    "fleet": "Hoch",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "1720 · nach der Schlacht um Castellbryn",
     "milestoneOne": "Idwalladr begann als Stadtwächter in Gwynthor und diente später Cahir und Rhodri Draig. Auf seine Bitte wurde sein Sohn Idris als Knappe aufgenommen. Nach Idwalladrs Tod in der Schlacht um Castellbryn erhielt Idris 1720 den Ritterfürstentitel und begründete das Haus.",
     "milestoneTwo": "Idris Arwydd · Seit 1720 · Gründer und gegenwärtiger Ritterfürst",
@@ -256,5 +259,12 @@ export const HOUSE_CONTENT = {
   "trivia": [
     "Idwalladr wurde erst nach seinem Tod zum Ritter geschlagen.",
     "Als Gründer gilt Idris, während Idwalladrs Dienst als Grundlage des Aufstiegs gewürdigt wird."
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographySourceRevision": 4,
+  "biographyPreviousDefaultFingerprints": [
+    "2698:a681842f:ff26bce5"
   ]
 };

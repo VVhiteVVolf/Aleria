@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Draenmelyn",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Ein kleines bürgerliches Geschlecht aus Gwynthor, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt des Hauses Draig stehen.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Draenmelyn/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Draenmelyn gehören zu den kleinen Bürgerfamilien Gwynthors. Seit Generationen stehen ihre Angehörigen als Diener und Bedienstete im Haushalt der Draigs. Ihre Stellung beruht auf diesem persönlichen Dienst, nicht auf einem eigenen Adelstitel.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Ifor Draenmelyn"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Ein kleines bürgerliches Geschlecht aus Gwynthor, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt des Hauses Draig stehen.",
+    "biographyText": "Die Draenmelyn gehören zu den kleinen Bürgerfamilien Gwynthors. Seit Generationen stehen ihre Angehörigen als Diener und Bedienstete im Haushalt der Draigs. Ihre Stellung beruht auf diesem persönlichen Dienst, nicht auf einem eigenen Adelstitel.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Ifor und Nest, später Afan und Elen sowie Meurig und Catrin gehören zu den überlieferten Generationen. Der Dienst im Grafenhaushalt setzt sich bis zu Taliesin, Myfanwy und deren Geschwistern fort. Caradog schlug als Söldner einen anderen Weg ein; seine Ehe mit Gwenith Pendrwn verband die Familie mit den Pendrwn.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Das Haus ist Teil des eng verflochtenen bürgerlichen Familienkreises Gwynthors. Rhiannons Ehe mit Iestyn Swyll und Caradogs Verbindung zu Gwenith Pendrwn führen in benachbarte Bürgerhäuser. Ein eigener Leitspruch und ein genauer Gründungszeitpunkt sind nicht überliefert."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Draig: Dienst im gräflichen Haushalt. Swyll: Rhiannon Draenmelyn und Iestyn Swyll. Pendrwn: Caradog Draenmelyn und Gwenith Pendrwn."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png",
         "title": "Haus Draenmelyn · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-draenmelyn"
       }
     ],

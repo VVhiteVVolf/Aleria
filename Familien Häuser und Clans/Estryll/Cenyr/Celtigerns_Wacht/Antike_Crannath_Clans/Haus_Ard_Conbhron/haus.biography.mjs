@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Ard Conbhrón",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ard_Conbhron/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Ard Conbhrón ist ein alter Clan der Crannath-Alben aus Lycath in Celtigerns Wacht.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Ard Conbhrón ist ein alter Clan der Crannath-Alben aus Lycath in Celtigerns Wacht. Der Stammbaum nennt noch Scáthach, Tlachtga und Uathach als lebende Angehörige. Weitere Inhalte folgen.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -15,10 +16,6 @@ export const HOUSE_BIOGRAPHY = {
     [
       "Voller Name",
       "Haus Ard Conbhrón"
-    ],
-    [
-      "Rang",
-      ""
     ],
     [
       "Stammsitz",
@@ -29,24 +26,8 @@ export const HOUSE_BIOGRAPHY = {
       "Celtigerns Wacht"
     ],
     [
-      "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
-    ],
-    [
-      "Lehnsherr",
-      ""
-    ],
-    [
       "Ursprung",
       "Einheimische aus Celtigerns Wacht"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,12 +36,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Ard Conbhrón ist ein alter Clan der Crannath-Alben aus Lycath in Celtigerns Wacht.",
+    "biographyText": "Ard Conbhrón ist ein alter Clan der Crannath-Alben aus Lycath in Celtigerns Wacht. Der Stammbaum nennt noch Scáthach, Tlachtga und Uathach als lebende Angehörige. Weitere Inhalte folgen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Die ausführliche Geschichte folgt. Der vorhandene Stammbaum nennt noch Scáthach, Tlachtga und Uathach als lebende Angehörige; der abweichende Status der alten Hausvorlage ist ungeklärt.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Folgt …",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {

@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Maerllys",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Cadfan Maerllys"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,31 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Die Maerllys gehören zu Gwynthors alten Schneiderfamilien. Schere, Tuch und Garnrolle stehen auf ihrem Wappen für ein Handwerk, das am guten Sitz seiner Arbeit gemessen wird.",
+    "biographyText": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Gwenora Maerllys verband die Kunst ihrer Familie mit den Stofflieferungen des Kapitäns Matteo Veltrane. Aus ihrem gemeinsamen Krämerladen erwuchs der Raves-Zweig und später die Göttliche Eleganz. Die heutige Maerllys-Linie stammt aus dem Zweig ihres Bruders; die Namen der dazwischenliegenden Generationen sind verloren.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Cadfan und Eira stehen am Beginn der namentlich bekannten jüngeren Linie. Cadfans Bruder Owain heiratete Gwenllian Ysgrif. Aus der nächsten Generation führen Verbindungen zu Falchdyn, Tonnarth und Swyll. Die Schneidermeisterin Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie und das spätere Familiengeschäft.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Die Familie hält an cenyrischen Schnitten und sorgfältiger Handarbeit fest. Ihre Verwandtschaft mit den Raves verbindet die heimische Schneiderkunst mit den Stoffen des Südens."
+        "text": "Handwerk und weitreichende familiäre Verbindungen prägen die Überlieferung. Elowen Maerllys lebt und arbeitet seit ihrer Ehe mit Edern Vann in der Letzten Rast. Nias weiterer Lebensweg ist noch offen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Belegt sind die handwerkliche Schneidertradition und Gwenoras Mitwirkung am Raves-Geschäft. Dieses eigenständige Nachfolgehaus wird dadurch nicht zu einem unselbstständigen Besitz der Maerllys."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Eheverbindungen führen zu Ysgrif, Falchdyn, Tonnarth, Swyll, Vann und zum Ursprung der Raves."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +89,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
         "title": "Haus Maerllys · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-maerllys"
       }
     ],

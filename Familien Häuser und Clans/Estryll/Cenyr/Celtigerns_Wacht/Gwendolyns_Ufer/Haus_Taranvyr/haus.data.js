@@ -61,7 +61,7 @@ window.HAEUSER_DATA = {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
     "houseType": "Ritterhaus",
-    "motto": "In Treue wachen wir.",
+    "motto": "In Treue wachen wir",
     "quoteAuthor": "Kenyon Taranvyr",
     "seat": "Abergwint",
     "affiliation": "Haus Gwyvern",
@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Gwyvern, Draig, Tawelgar",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

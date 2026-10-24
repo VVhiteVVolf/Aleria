@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-argall",
   "name": "Haus Argall",
@@ -13,15 +13,16 @@ export const HOUSE_CONTENT = {
   "parentHouseId": "",
   "extinct": false,
   "showMotto": false,
-  "prepared": true,
+  "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Argall ist eine bürgerliche Familie aus Llysfaen.",
-    "history": "Folgt …",
-    "character": "Folgt …"
+    "overview": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
+    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "character": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel.",
+    "relations": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -75,7 +76,7 @@ export const HOUSE_CONTENT = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bürgerfamilie in Llysfaen",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Llysfaen",
@@ -100,35 +101,96 @@ export const HOUSE_CONTENT = {
     "enemies": ""
   },
   "sections": {
-    "overview": "Haus Argall ist eine bürgerliche Familie aus Llysfaen. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
+    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen.",
+    "values": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Die folgenden Persönlichkeiten gehören zur belegten Geschichte der Familie."
   },
   "images": {
     "crest": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Llysfaen/Argall.png",
-    "scene": "",
-    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/herrschaftsbanner.png"
+    "scene": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/assets/hausfigur-2026-10-24.png",
+    "banner": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/herrschaftsbanner.png",
+    "sceneAlt": "Bürgerliche Hausdarstellung · Haus Argall"
   },
   "cadets": [],
-  "founder": null,
-  "heads": [],
-  "heirs": [],
-  "offices": [],
-  "figuresTitle": "Persönlichkeiten des Hauses",
-  "figures": [],
-  "trivia": [
-    "Folgt …"
+  "founder": {
+    "id": "iwrian-argall",
+    "familyId": "haus-argall",
+    "name": "Iwrian Argall",
+    "role": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+    "image": "",
+    "detail": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation"
+  },
+  "heads": [
+    {
+      "id": "brinthan-argall",
+      "familyId": "haus-argall",
+      "name": "Brinthan Argall",
+      "role": "Oberhaupt des Hauses Argall",
+      "image": "../Stammbäume/assets/images/portraits/haus-argall/brinthan-argall.jpg",
+      "detail": "Oberhaupt des Hauses Argall"
+    }
   ],
-  "currentHead": "",
+  "heirs": [],
+  "offices": [
+    {
+      "id": "iwrian-argall",
+      "familyId": "haus-argall",
+      "name": "Iwrian Argall",
+      "role": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
+      "image": "",
+      "detail": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation"
+    },
+    {
+      "id": "owain-draig",
+      "familyId": "haus-argall",
+      "name": "Owain Draig",
+      "role": "Geheime Affäre Shylene Argalls",
+      "image": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg",
+      "detail": "Geheime Affäre Shylene Argalls"
+    },
+    {
+      "id": "iolo-draig",
+      "familyId": "haus-argall",
+      "name": "Iolo Argall",
+      "role": "Unehelicher Sohn Shylene Argalls und Owain Draigs",
+      "image": "../Stammbäume/assets/images/portraits/haus-argall/iolo-argall.jpg",
+      "detail": "Unehelicher Sohn Shylene Argalls und Owain Draigs"
+    }
+  ],
+  "figuresTitle": "Prägende historische Persönlichkeiten",
+  "figures": [
+    {
+      "id": "cyran-argall",
+      "familyId": "haus-argall",
+      "name": "Cyran Argall",
+      "role": "Ältestes überliefertes Oberhaupt des Hauses Argall",
+      "image": "",
+      "detail": "Ältestes überliefertes Oberhaupt des Hauses Argall",
+      "description": "Ältestes überliefertes Oberhaupt des Hauses Argall"
+    }
+  ],
+  "trivia": [
+    "Bürgerfamilie in Llysfaen"
+  ],
+  "currentHead": "Brinthan Argall",
   "firstHeir": "",
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "biographyManagedExternally": false,
+  "illustrationCategory": "Bürgerliche Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "1722:f24a8265:697155f3"
+  ],
+  "headsTitle": "Familienführung und Haushalt",
+  "officesTitle": "Angehörige und Aufgaben"
 };

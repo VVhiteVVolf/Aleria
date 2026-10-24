@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Bürgerliches Haus",
-    "scale": "Bürgerliches Haus",
+    "scale": "Bedienstete im Draig-Haushalt",
     "parentHouseId": "",
     "rootHouseId": "haus-draenmelyn",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Bürgerlich",
     "rank": "Bürgerlich",
-    "houseType": "Bürgerliches Haus",
+    "houseType": "Bedienstete im Draig-Haushalt",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Gwynthor",
@@ -84,27 +84,30 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Ein kleines bürgerliches Geschlecht aus Gwynthor, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt des Hauses Draig stehen. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Die Draenmelyn gehören zu den kleinen Bürgerfamilien Gwynthors. Seit Generationen stehen ihre Angehörigen als Diener und Bedienstete im Haushalt der Draigs. Ihre Stellung beruht auf diesem persönlichen Dienst, nicht auf einem eigenen Adelstitel.",
+    "history": "Ifor und Nest, später Afan und Elen sowie Meurig und Catrin gehören zu den überlieferten Generationen. Der Dienst im Grafenhaushalt setzt sich bis zu Taliesin, Myfanwy und deren Geschwistern fort. Caradog schlug als Söldner einen anderen Weg ein; seine Ehe mit Gwenith Pendrwn verband die Familie mit den Pendrwn.",
+    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Draig: Dienst im gräflichen Haushalt. Swyll: Rhiannon Draenmelyn und Iestyn Swyll. Pendrwn: Caradog Draenmelyn und Gwenith Pendrwn.",
+    "values": "Das Haus ist Teil des eng verflochtenen bürgerlichen Familienkreises Gwynthors. Rhiannons Ehe mit Iestyn Swyll und Caradogs Verbindung zu Gwenith Pendrwn führen in benachbarte Bürgerhäuser. Ein eigener Leitspruch und ein genauer Gründungszeitpunkt sind nicht überliefert.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {
@@ -113,26 +116,114 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Draenmelyn",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Draenmelyn/assets/hausfigur-2026-10-24.png",
+      "alt": "Bürgerliche Hausdarstellung · Haus Draenmelyn",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-offices-7": {
+      "src": "../Stammbäume/assets/images/portraits/haus-pendrwn/gwenith-pendrwn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=gwenith-pendrwn",
+      "alt": "Gwenith Pendrwn",
+      "format": "portrait"
+    },
+    "hof-offices-8": {
+      "src": "../Stammbäume/https://i.imgur.com/cyJqlDG.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+      "alt": "Rhiannon Draenmelyn",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Familienführung und Haushalt",
+        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "entries": [
+          {
+            "name": "Ifor Draenmelyn",
+            "role": "Altgedienter Hausdiener der Draigs",
+            "detail": "Altgedienter Hausdiener der Draigs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=ifor-draenmelyn",
+            "imageKey": ""
+          }
+        ]
+      },
+      {
+        "id": "offices",
+        "title": "Angehörige und Aufgaben",
+        "entries": [
+          {
+            "name": "Nest",
+            "role": "Altgediente Bedienstete im Draig-Haushalt",
+            "detail": "Altgediente Bedienstete im Draig-Haushalt",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=nest-spouse-draenmelyn",
+            "imageKey": ""
+          },
+          {
+            "name": "Afan Draenmelyn",
+            "role": "Hausdiener der Draigs",
+            "detail": "Hausdiener der Draigs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=afan-draenmelyn",
+            "imageKey": ""
+          },
+          {
+            "name": "Elen",
+            "role": "Bedienstete im Draig-Haushalt",
+            "detail": "Bedienstete im Draig-Haushalt",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=elen-spouse-draenmelyn",
+            "imageKey": ""
+          },
+          {
+            "name": "Meurig Draenmelyn",
+            "role": "Hausdiener der Draigs",
+            "detail": "Hausdiener der Draigs",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=meurig-draenmelyn",
+            "imageKey": ""
+          },
+          {
+            "name": "Catrin",
+            "role": "Bedienstete im Draig-Haushalt",
+            "detail": "Bedienstete im Draig-Haushalt",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=catrin-spouse-draenmelyn",
+            "imageKey": ""
+          },
+          {
+            "name": "Caradog Draenmelyn",
+            "role": "Söldner",
+            "detail": "Söldner",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=caradog-draenmelyn",
+            "imageKey": ""
+          },
+          {
+            "name": "Gwenith Pendrwn",
+            "role": "Tante Emyr Pendrwns",
+            "detail": "Tante Emyr Pendrwns",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=gwenith-pendrwn",
+            "imageKey": "hof-offices-7"
+          },
+          {
+            "name": "Rhiannon Draenmelyn",
+            "role": "Bedienstete des Hauses Draig",
+            "detail": "Bedienstete des Hauses Draig",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+            "imageKey": "hof-offices-8"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +231,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Draenmelyn"
   },
   "trivia": [
-    "Folgt …"
+    "Bedienstete im Draig-Haushalt"
   ]
 };

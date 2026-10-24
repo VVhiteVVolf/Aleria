@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Gafyr",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

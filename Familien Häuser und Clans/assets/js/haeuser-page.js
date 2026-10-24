@@ -38,6 +38,7 @@ import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-w
     setText("[data-haeuser-type]", data.classification?.houseType || data.meta?.type);
 
     renderProfile(data.profile || {});
+    renderProfileVisibility(data.hiddenProfileGroups || []);
     renderProfileLabels(data.profileLabels || {});
     if (typeof data.showMotto === 'boolean') {
       root.querySelectorAll('.haeuser-quote, .haeuser-quote-source').forEach(node => { node.hidden = !data.showMotto; });
@@ -64,6 +65,14 @@ import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-w
     Object.entries(profile).forEach(([key, value]) => {
       setText(`[data-profile-field="${escapeSelector(key)}"]`, value);
     });
+  }
+
+  function renderProfileVisibility(hiddenGroups) {
+    const military = new Set(['troopStrength', 'tiarna', 'kerns', 'fleet']);
+    const fields = [...root.querySelectorAll('[data-profile-field]')].filter(field => military.has(field.dataset.profileField));
+    fields.forEach(field => { field.closest('tr').hidden = hiddenGroups.includes('military'); });
+    const heading = fields[0]?.closest('tr')?.previousElementSibling;
+    if (heading?.querySelector('[colspan="2"]')) heading.hidden = hiddenGroups.includes('military');
   }
 
   function renderSections(sections) {

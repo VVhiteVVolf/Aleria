@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Selog",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Selog/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Selog ist ein Ritterhaus unter den Gwyvern mit enger Bindung an die Alerische Kirche. Seine Burg liegt beim Feuerstollen, nahe dem Ahnenbaum des Grünen Recken, dessen Schutz ihm anvertraut wurde.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Das Haus Selog ist ein ritterlich-geistlich geprägtes Geschlecht aus Cenyr, dessen Ursprung weniger in Macht oder Besitz liegt als in einer Lehre von Verantwortung und Standhaftigkeit. Gegründet von Gwerthrynion Selog, einem einst zweifelhaften Ritter, trägt das Haus bis heute das Erbe einer Läuterung: Nicht Fehlerlosigkeit macht würdig, sondern das Einstehen für eigenes Handeln. Die Selog meiden politische Ränkespiele, stehen jedoch ohne Zögern dort, wo unnatürliche Bedrohungen oder göttliche Pflicht sie rufen.\n\nDie Selog sind bekannt als treue, verlässliche Ritter und Paladine, eng verbunden mit der Alerischen Kirche, ohne sich dogmatisch einem einzelnen Gott zu verschreiben. Ihr eigentlicher Sitz liegt nahe dem Feuerstollen, beim Ahnenbaum des Grünen Recken, dessen Schutz ihnen nach Jahrhunderten übertragen wurde. Besitz und Einfluss sind begrenzt, doch ihr Ruf ist gefestigt: Wenn andere abwägen, bleiben die Selog – und handeln.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Selog ist ein Ritterhaus unter den Gwyvern mit enger Bindung an die Alerische Kirche. Seine Burg liegt beim Feuerstollen, nahe dem Ahnenbaum des Grünen Recken, dessen Schutz ihm anvertraut wurde.",
+    "biographyText": "Das Haus Selog ist ein ritterlich-geistlich geprägtes Geschlecht aus Cenyr, dessen Ursprung weniger in Macht oder Besitz liegt als in einer Lehre von Verantwortung und Standhaftigkeit. Gegründet von Gwerthrynion Selog, einem einst zweifelhaften Ritter, trägt das Haus bis heute das Erbe einer Läuterung: Nicht Fehlerlosigkeit macht würdig, sondern das Einstehen für eigenes Handeln. Die Selog meiden politische Ränkespiele, stehen jedoch ohne Zögern dort, wo unnatürliche Bedrohungen oder göttliche Pflicht sie rufen.\n\nDie Selog sind bekannt als treue, verlässliche Ritter und Paladine, eng verbunden mit der Alerischen Kirche, ohne sich dogmatisch einem einzelnen Gott zu verschreiben. Ihr eigentlicher Sitz liegt nahe dem Feuerstollen, beim Ahnenbaum des Grünen Recken, dessen Schutz ihnen nach Jahrhunderten übertragen wurde. Besitz und Einfluss sind begrenzt, doch ihr Ruf ist gefestigt: Wenn andere abwägen, bleiben die Selog – und handeln.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Die Überlieferung erzählt von Gwerthrynions Begegnung mit dem Grünen Ritter. Indem er sich den Folgen seines Handelns stellte, fand er zu Verantwortung und Treue. Diese Lehre prägt das Haus bis heute.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Klostererziehung, Ritterschlag am Ahnenbaum und der Kampf gegen unnatürliche Bedrohungen bestimmen seine Tradition. Godwyn führt die Familie; Adda ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die Selog besitzen eine klare, fest gefügte Familienordnung, auch wenn sich diese erst über Generationen hinweg herausgebildet hat. Ihre Traditionen sind nicht prunkvoll, sondern streng, kontinuierlich und auf Verantwortung ausgerichtet – ein stilles Erbe aus der Zeit Gwerthrynion Selogs."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Die Selog unterhalten ein Anwesen innerhalb Abergwints, das jedoch eher formalen Charakter besitzt. Es dient als Residenz auf Zeit, wenn Angelegenheiten am Hof oder in der Stadt zu regeln sind, und wird überwiegend von Bediensteten verwaltet. Als eigentlicher Sitz des Hauses gilt es nicht."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Die Selog sind treue Anhänger der Alerischen Kirche, wie es für jedes cenyrische Geschlecht üblich ist. Anders als viele ritterlich-geistlich geprägte Häuser binden sie sich jedoch nicht bewusst an einen einzelnen Gott der Neun, noch erzwingen sie eine solche Ausrichtung innerhalb der Familie."
       }
     ],
     "triviaTitle": "Besonderheiten",

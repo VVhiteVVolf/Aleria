@@ -5,10 +5,11 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Caerlaen",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Caerlaen/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Die Caerlaen sind ein bürgerliches Gelehrtenhaus aus Abergwint. Sie betreuen die Stadtbibliothek und das baroniale Archiv, führen eine Schreiberschule und bilden Schreiber, Staatsleute und Angehörige des Adels aus.",
-  "quote": "Schrift bewahrt, Wissen lenkt.",
+  "quote": "Schrift bewahrt, wissen lenkt.",
   "quoteBy": "",
   "commentSequence": [],
   "stats": [
@@ -60,7 +61,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilities": [],
     "historyTitle": "Geschichte",
     "historyText": "Morien Caerlaen wurde von einem Gelehrten der Balchder entdeckt und ausgebildet. Seine Rückkehr in den Dienst des Barons begründete die Familientradition. Eine königliche Förderung öffnete die Schule später auch weniger wohlhabenden Schülern.",
-    "worksTitle": "Hausgeschichte",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "„Schrift bewahrt, Wissen lenkt.“ verbindet Bildung mit Genauigkeit und Verantwortung. Tudor führt das Haus, Merlyn ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Das Haus Caerlaen ist ein bürgerliches Geschlecht, das sich dem Wissen verschrieben hat. Für die Mitglieder der Familie eröffnet sich in der Regel nur ein Weg: lernen – und weiter lernen. Bildung ist kein Abschnitt ihres Lebens, sondern dessen Fundament."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "In Abergwint selbst besitzen die Caerlaen ein stattliches Herrenhaus sowie mehrere Grundstücke und Wohnhäuser, die an Kaufleute und Handwerker verpachtet werden. Diese Einnahmen bilden eine solide Grundlage, doch das eigentliche wirtschaftliche Rückgrat des Hauses ist ihre Schreiberschule."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Wie die meisten Cenyri bekennen sich auch die Caerlaen zur Alerischen Kirche. Ihr Glaube ist fest in den Alltag eingebunden und zeigt sich weniger in großen Worten oder öffentlichen Gesten als im beständigen Handeln."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -94,7 +113,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Gwendolyns Ufer/Bürgerliche/Caerlaen.png",
         "title": "Haus Caerlaen · vollständige Hausseite",
-        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caerlaen"
       }
     ],

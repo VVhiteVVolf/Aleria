@@ -5,8 +5,9 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Ui Talamh",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Antike_Crannath_Clans/Haus_Ui_Talamh/assets/hausmotiv.png",
-  "imageWidth": 30,
-  "imageSquare": true,
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
   "description": "Die Ui Talamh waren ein antikes Fürstengeschlecht der Crannath-Alben im Gebiet des späteren Celtigerns Wacht. Das Haus besteht heute nicht mehr eigenständig.",
   "quote": "",
   "quoteBy": "",
@@ -21,10 +22,6 @@ export const HOUSE_BIOGRAPHY = {
       "Ard Tiarna (Fürst)"
     ],
     [
-      "Stammsitz",
-      ""
-    ],
-    [
       "Grafschaft",
       "Celtigerns Wacht"
     ],
@@ -37,16 +34,8 @@ export const HOUSE_BIOGRAPHY = {
       "Als eigenständiges Haus erloschen · Zeitpunkt offen"
     ],
     [
-      "Lehnsherr",
-      ""
-    ],
-    [
       "Ursprung",
       "Einheimische aus Celtigerns Wacht"
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -59,8 +48,8 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Ihre letzten Söhne und Töchter heirateten in andere Häuser ein. Eine ausführliche Hauschronik folgt.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Folgt …",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {

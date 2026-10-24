@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-tlawd",
   "name": "Haus Tlawd",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Tlawd ist ein Ritterhaus aus Gwynthor im Dienst der Gafyr. Es ist für zähe Teulu-Schwertkämpfer und verlässliche militärische Führung bekannt. Eine Burg vor den Stadttoren, Erzabbau und Schmieden sichern seinen Wohlstand.",
-    "history": "Edric Tlawd diente Maldwyn Gafyr als Page und Knappe und wurde 1285 zum Ritter geschlagen. Das genaue Jahr der anschließenden Hausgründung bleibt offen.",
-    "character": "Treue, Aufrichtigkeit und Fleiß prägen die Familie. Cadfael führt das Haus; Siarl steht an erster Stelle der Erbfolge."
+    "overview": "Haus Tlawd geht auf Edric Tlawd zurück, der als Knappe Maldwyn Gafyr diente und 1285 zum Ritter geschlagen wurde. Es zählt zu den älteren und treuesten Ritterhäusern im Dienst der Gafyr.\n\nDie Tlawd sind ein schlichtes Ritterhaus. Viele ihrer Söhne und Töchter ziehen als fahrende Ritter durchs Land, doch die meisten versehen ihren Dienst unmittelbar bei den Gafyr – sei es am Hofe oder als Lehenswarte: Landherren, die im Auftrag der Gafyr über deren Siedlungen herrschen und deren Interessen vor Ort vertreten.",
+    "history": "Sir Edric Tlawd begann als eifriger Knappe im Dienste seines Herren, Sir Maldwyn Gafyr, der später als Ritterfürst das Haus Gafyr anführte. Als Edric zum Ritter geschlagen wurde, schwor er den Gafyr feierlich ewigen Lehnseid. Ritterfürst Maldwyn erkannte seine Treue an und gestattete ihm, ein eigenes Haus zu gründen. So wurde Edric Tlawd als Vasall in die Gefolgschaft der Gafyr aufgenommen.\n\nMit der Erhebung fanden die Tlawd Eingang in den niederen Adel. Das genaue Gründungsjahr ist noch ungeklärt.",
+    "character": "Treue, Aufrichtigkeit und Fleiß prägen die Familie. Cadfael führt das Haus; Siarl steht an erster Stelle der Erbfolge.",
+    "customs": "Die Tlawd sind berühmt für ihre Ritter der Teulu-Kaste, den Schwertkämpfern der Cenyri. Staatsmännische Ämter liegen ihnen weniger; als Kämmerer oder Justiziare sucht man sie vergeblich. Doch wenn es um das Kriegshandwerk geht, sind die Tlawd unersetzlich.",
+    "holdings": "In Gwynthors Innenstadt führen die Gofrann die Schmiede Zum Dritten Funken. Die Tlawd halten einen bedeutenden Anteil und beliefern die Werkstatt vor allem mit Erz. Die Gofrann besitzen und leiten den Betrieb und leisten ihren Lehnsanteil an das Haus Tlawd.",
+    "culture": "Wie die meisten Cenyri bekennen sich die Tlawd zur Alerischen Kirche. Besonders verehren sie den Knecht, Gott der Arbeit, Aufrichtigkeit und des Fleißes, sowie den Streiter, Gott des Krieges, der Ehre und der Pflicht."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -259,5 +262,11 @@ export const HOUSE_CONTENT = {
       ]
     }
   ],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2530:b8df5838:3d8100ae"
+  ]
 };

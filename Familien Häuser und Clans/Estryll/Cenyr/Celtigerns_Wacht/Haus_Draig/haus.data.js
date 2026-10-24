@@ -59,10 +59,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Gwynthor",
     "affiliation": "Königreich Cenyr · König Tristan Pendrag",
-    "troopStrength": "Sehr stark",
-    "tiarna": "Uchelwyr, Helwyr, Teulu, Cantref, Barddwyr und Derwyn",
-    "kerns": "Professionelle Milwr-Waffenknechte; daneben niedere Soldaten",
-    "fleet": "30–50 Kriegsschiffe",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Nach dem Untergang Avallorns; Jahr unbekannt",
     "milestoneOne": "Celtigern gründet Haus Draig und lässt sich an der Südküste Cenyrs nieder.",
     "milestoneTwo": "Galahad übernimmt 1720 die Führung des Hauses.",
@@ -75,6 +75,9 @@ window.HAEUSER_DATA = {
     "allies": "Haus Pendrag",
     "enemies": "Keine gegenwärtige Hausfehde benannt"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -373,9 +376,9 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "hof-offices-9": {
-      "src": "../Stammbäume/assets/images/placeholders/male.png",
-      "href": "",
-      "alt": "Silhouette · Jagdmeister nicht benannt",
+      "src": "../Stammbäume/assets/images/portraits/haus-gwefrydd/stennis-gwefrydd.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd",
+      "alt": "Stennis Gwefrydd",
       "format": "portrait"
     },
     "hof-offices-10": {
@@ -718,10 +721,10 @@ window.HAEUSER_DATA = {
             "imageKey": "hof-offices-8"
           },
           {
-            "name": "Nicht benannt",
+            "name": "Stennis Gwefrydd",
             "role": "Jagdmeister",
             "detail": "",
-            "href": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gwefrydd&mode=view&person=stennis-gwefrydd",
             "imageKey": "hof-offices-9"
           },
           {

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Quellenabgleich und offene Angaben: GWENDOLYNS-UFER-HAUSSEITEN.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-edmy",
   "name": "Haus Edmy",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Edmy ist ein kleines Ritterhaus unter den Gwyvern, dessen Erbe auf einem unerfüllten königlichen Eid beruht. Die Familie lebt auf einer Landburg zwischen Traethfael und Abergwint und verfügt über wenige Höfe.",
     "history": "Sir Edmwnd schwor, Königin Isobels verlorenen avallornischen Ring zurückzubringen. Die Königin erkannte seine Treue an und stiftete das Haus. Nach Jahrhunderten als fahrende Ritter wurden die Edmy sesshaft.",
-    "character": "Einzelne Angehörige nehmen freiwillig die Suche als Isobeliten auf; ihre Reiseberichte bilden eine eigene Chronik. Der Eid ist weltlich. Caledfwlch führt das Haus, Digain ist sein erster Erbe."
+    "character": "Einzelne Angehörige nehmen freiwillig die Suche als Isobeliten auf; ihre Reiseberichte bilden eine eigene Chronik. Der Eid ist weltlich. Caledfwlch führt das Haus, Digain ist sein erster Erbe.",
+    "customs": "Haus Edmy pflegt eine eigene, ungewöhnliche Tradition, die direkt aus seiner Gründungslegende hervorgeht und bis heute fortbesteht. In jeder Generation können – sofern es die familiäre Situation erlaubt – einzelne Mitglieder die Bürde des Eides aufnehmen und sich offiziell der Suche nach dem Artefakt Königin Isobels verschreiben.",
+    "holdings": "Haus Edmy gilt als ein vergleichsweise armes ritterliches Haus. Sein Besitz ist überschaubar und funktional, ohne Anspruch auf Größe oder Repräsentation. Der Sitz des Hauses ist eine kleine Landburg zwischen Traethfael und Abergwint, abgelegen genug, um unauffällig zu bleiben, aber strategisch so gelegen, dass Handels- und Küstenwege erreicht werden können.",
+    "culture": "Haus Edmy wird von Außenstehenden mitunter vorschnell als paladinisches Haus bezeichnet. Diese Einschätzung ist unzutreffend."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -347,7 +350,8 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Digain Edmy",
   "headsNote": "Überlieferte Oberhäupter; Lücken und nicht belegte Amtszeiten bleiben offen.",
   "biographyPreviousDefaultFingerprints": [
-    "1867:7d415129:84f0655b"
+    "1867:7d415129:84f0655b",
+    "2753:b5075cdc:2267b2ce"
   ],
   "sourceBatch": "gwendolyn-20260911",
   "scenes": [
@@ -373,5 +377,8 @@ export const HOUSE_CONTENT = {
         "So entstand Haus Edmy."
       ]
     }
-  ]
+  ],
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung"
 };

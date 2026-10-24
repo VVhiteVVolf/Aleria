@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-cludwyr",
   "name": "Haus Cludwyr",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": true,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 4,
+  "biographySourceRevision": 5,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Haus Cludwyr dient den Wyrm und verwaltet Bronhir. Seine Ritter sind volksnah und eng mit Landwirtschaft und Versorgung verbunden. Ein weiteres Herrenhaus steht in Gwynthor.",
     "history": "Der Bauernsohn Saith wurde von einem Ritter der Rhyddid aufgenommen. Seine Kenntnisse über Feldarbeit und Ernten überzeugten die Wyrm, ihn zum Ritterherrn und Lehenswart von Bronhir zu erheben.",
-    "character": "„Der Boden lügt nicht.“ erinnert an Arbeit, Verlässlichkeit und praktische Erfahrung. Rhain führt das Haus; Slevin ist sein erster Erbe."
+    "character": "„Der Boden lügt nicht.“ erinnert an Arbeit, Verlässlichkeit und praktische Erfahrung. Rhain führt das Haus; Slevin ist sein erster Erbe.",
+    "customs": "Die Cludwyr sind ein Ritterhaus, dem man seinen Stand oft nicht ansieht. Sie zeichnen sich durch ausgeprägte Volksnähe und ein nahezu vollständiges Desinteresse an Prunk, Etikette und höfischen Feinheiten aus. Ihre Wurzeln liegen in einer Bauernfamilie – und dieser Ursprung wird nicht verleugnet, sondern bewusst bewahrt.",
+    "holdings": "Die Cludwyr verfügen über ein Herrenhaus in Gwynthor, das ihnen vom Hause Wyrm zur Verfügung gestellt wurde. Dieses Anwesen wird jedoch nur selten von Mitgliedern der Familie selbst bewohnt. Für gewöhnlich dient es den Cludwyr eher als Unterkunft auf Zeit, wenn sie an den Hof ihres Lehensherrn gerufen werden oder dienstliche Angelegenheiten in der Stadt zu erledigen haben.",
+    "culture": "Wie die meisten Cenyri bekennen sich auch die Cludwyr zur Alerischen Kirche. Ihr Glaube ist fest in den Alltag der Familie eingebunden und zeigt sich weniger in großen Gesten oder öffentlichen Bekundungen als im beständigen, verlässlichen Handeln."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -232,5 +235,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Rhain",
   "firstHeir": "Slevin",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2404:c8d5ef31:fcf1959f"
+  ]
 };

@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Wyrm O'Gwynthor",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Wyrm/assets/ritter.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Wyrm ist ein altes Kadettenhaus der Draigs mit Sitz in Gwynthor. Seine Ritterfürsten stehen für Abenteuerlust, höfische Romantik und eine ausgeprägte Bindung an das ritterliche Ideal.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Wyrm ist ein altes Kadettenhaus der Draigs, begründet von Tryffin Draig und Rhianwyn Saethwyr. Mit Sitz in Gwynthor gehört es zu den Ritterfürstenhäusern von Celtigerns Wacht. Fahrende Ritter, höfische Romantik und ein ausgeprägtes Traditionsbewusstsein bestimmen seinen Ruf.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -55,12 +56,12 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Fahrende Ritter und höfische Romantik",
-    "biographyText": "Haus Wyrm ist ein altes Kadettenhaus der Draigs mit Sitz in Gwynthor. Seine Ritterfürsten stehen für Abenteuerlust, höfische Romantik und eine ausgeprägte Bindung an das ritterliche Ideal.",
+    "biographyText": "Haus Wyrm ist ein altes Kadettenhaus der Draigs, begründet von Tryffin Draig und Rhianwyn Saethwyr. Mit Sitz in Gwynthor gehört es zu den Ritterfürstenhäusern von Celtigerns Wacht. Fahrende Ritter, höfische Romantik und ein ausgeprägtes Traditionsbewusstsein bestimmen seinen Ruf.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Das Vermächtnis des Fahrenden Draig",
-    "historyText": "Tryffin Draig, der „Fahrende Draig“, begründete den Zweig gemeinsam mit Rhianwyn Saethwyr. Seine Reisen und Heldentaten brachten ihm das Recht auf ein eigenes Haus ein. Die Wyrm führen auch Myrddins Abenteuerlust auf das Vorbild seines Onkels Tryffin zurück.",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Sir Tryffin, ein Prinz des Hauses Draig, wurde als „Fahrender Draig“ bekannt. Er bereiste Cenyr und fremde Länder und erwarb durch Abenteuer und Heldentaten großen Ruhm. Seine Erlebnisse beeindruckten auch seinen jungen Neffen Myrddin, der später zum bedeutendsten Magier des Reiches aufstieg. Die Wyrm behaupten bis heute, Tryffin habe dessen Abenteuerlust geweckt und ihm den Weg zur Magie eröffnet.\n\nFür seine Verdienste erhielt Tryffin das Recht, ein eigenes Haus zu gründen. Aus dieser Auszeichnung entstand Haus Wyrm. Die überlieferte Oberhauptfolge setzt mit seiner Amtszeit von 1128 bis 1171 ein. Seine Nachkommen pflegten das Bild des fahrenden, galanten Ritters: mutig im Kampf, geschickt im Sattel und gewandt im höfischen Umgang.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
@@ -68,6 +69,24 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Werte und Stellung",
         "text": "Ehre, Tapferkeit und galantes Auftreten prägen das Haus. Bergbau, Pferdezucht und Holzverarbeitung sichern seine Stellung. Die Familienordnung bleibt streng traditionsgebunden. Mailgwin führt das Haus seit 1717; Shan ist sein erster Erbe."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Junge Männer werden ermutigt, als fahrende Ritter Tryffins Vorbild zu folgen. Abenteuerreisen, ritterliche Bewährung und die Kunst des Hofmachens gelten als ehrenvolle Wege, den Namen des Hauses bekannt zu machen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Bergbau, Pferdezucht und Holzverarbeitung tragen die Wirtschaft der Herrschaft. Erze und seltene Metalle versorgen Handel und Waffenherstellung. In Zusammenarbeit mit Rhosmeres Rösser werden robuste, gut ausgebildete Kriegspferde gezüchtet."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Kultur und Glaube",
+        "text": "Das Haus gehört zur cenyrischen Kultur und folgt der Alerischen Kirche. Besonders verehrt wird die Dame der See."
       }
     ],
     "triviaTitle": "Besonderheiten",

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-ui-talamh",
   "name": "Haus Ui Talamh",
@@ -15,12 +15,12 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 1,
+  "biographySourceRevision": 2,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Die Ui Talamh waren ein antikes Fürstengeschlecht der Crannath-Alben im Gebiet des späteren Celtigerns Wacht. Das Haus besteht heute nicht mehr eigenständig.",
-    "history": "Ihre letzten Söhne und Töchter heirateten in andere Häuser ein. Eine ausführliche Hauschronik folgt.",
+    "history": "Folgt …",
     "character": "Weitere Angaben folgen."
   },
   "placeholders": {
@@ -245,5 +245,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "",
   "extinctionText": "Als eigenständiges Haus erloschen · Zeitpunkt offen",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2072:2cc456d5:66088eff"
+  ]
 };

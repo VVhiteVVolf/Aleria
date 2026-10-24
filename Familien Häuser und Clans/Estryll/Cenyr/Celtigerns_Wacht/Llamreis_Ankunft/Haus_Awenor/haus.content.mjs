@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-awenor",
   "name": "Haus Awenor",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Awenor ist ein älteres Ritterhaus im Dienst der Draigs. Seine Angehörigen übernehmen militärische Kommandos, sichern Gebiete und wirken in Bergbauregionen wie Mwynfaen.",
-    "history": "Die Familie stellte schon früh bewaffnete Gefolgsleute und übernahm Grenzaufgaben. Minen und Schmieden stützen ihre Versorgung und ihre militärischen Verpflichtungen.",
-    "character": "Pflicht, Disziplin und Standhaftigkeit bestimmen das Haus. Ffraid ist das Oberhaupt; Derwain steht an erster Stelle der Erbfolge."
+    "overview": "Haus Awenor ist ein älteres ritterliches Geschlecht im festen Dienst des Hauses Draig, bekannt für militärische Verlässlichkeit, Disziplin und pflichtbewussten Gehorsam. Ohne großen Namen oder Legenden stellen die Awenor für die Draigs bevorzugt Lehenswarte, Statthalter, Hauptmänner und Kommandanten, sichern Bergbauregionen wie Mwynfaen und dienen regelmäßig unter dem Marschall des Grafen. Ihre Burg in Gwynthor, ihre Minen und Schmieden geben ihnen strategische Unabhängigkeit, ihr Glaube an die Alerische Kirche bleibt nüchtern und ordnend. Die Awenor streben nicht nach Ruhm – sie existieren, um Befehle auszuführen, Gebiete zu halten und Ordnung durchzusetzen, solange der Dienst es verlangt.",
+    "history": "Der Ursprung des Hauses Awenor reicht mehrere Generationen weiter zurück als jener vieler anderer ritterlicher Vasallen der Draigs. Schon früh stellten sie bewaffnete Gefolgsleute, übernahmen Grenzaufgaben und dienten als verlängerter Arm der gräflichen Autorität. Ihr Schwerpunkt lag nie auf Verwaltung oder Kanzlei, sondern auf militärischer Präsenz und lokaler Herrschaftsausübung.",
+    "character": "Pflicht, Disziplin und Standhaftigkeit bestimmen das Haus. Ffraid ist das Oberhaupt; Derwain steht an erster Stelle der Erbfolge.",
+    "customs": "Die Traditionen des Hauses Awenor sind klar, militärisch und frei von Zierde. Ihre Sprösslinge werden früh an Waffen, Disziplin und Befehlsketten gewöhnt. Ausbildung bedeutet bei ihnen Dienstfähigkeit: kämpfen, führen, halten.",
+    "holdings": "Der Besitz des Hauses Awenor ist zweckmäßig und eng mit Krieg und Versorgung verbunden. Nördlich von Gwynthor liegen mehrere Minen, die dem Haus unterstehen. Sie liefern vor allem Erze für Waffen, Werkzeuge und Bau – ein strategisch wertvoller Besitz, besonders in Zeiten erhöhter militärischer Aktivität.",
+    "culture": "Wie andere Häuser bekennen sich auch die Awenor in selbstverständlicher Weise zur Alerischen Kirche. Ihre Frömmigkeit ist geordnet, pflichtbewusst und frei von Überschwang."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -231,5 +234,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Ffraid Awenor",
   "firstHeir": "Derwain Awenor",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2346:33871a93:116c6e2d"
+  ]
 };

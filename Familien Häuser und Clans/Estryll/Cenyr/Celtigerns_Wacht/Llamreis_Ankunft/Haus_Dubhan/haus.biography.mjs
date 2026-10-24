@@ -5,9 +5,10 @@ export const HOUSE_BIOGRAPHY = {
   "pageTitle": "Haus Dubhan",
   "housePage": true,
   "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/assets/krieger-M3xsR4U.png",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Das niedere Ritterhaus Dubhan entstand in Gwynthor aus Breccans Auswanderung von Faelaorn nach Celtigerns Wacht. Die neue Linie bewahrt ihre Herkunft aus der Sept Dubhan und dient fortan Haus Draig.",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Das niedere Ritterhaus Dubhan in Gwynthor entstand aus Breccan Dubhans Auswanderung von Faelaorn nach Celtigerns Wacht. Es dient Haus Draig und bewahrt zugleich seine Herkunft aus der Sept Dubhan. Die neue Hauslinie und die fortbestehende Herkunftssept sind getrennte Familienakten mit gemeinsamen Personenidentitäten.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Breccan Dubhan"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,25 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Das niedere Ritterhaus Dubhan entstand in Gwynthor aus Breccans Auswanderung von Faelaorn nach Celtigerns Wacht. Die neue Linie bewahrt ihre Herkunft aus der Sept Dubhan und dient fortan Haus Draig.",
+    "biographyText": "Das niedere Ritterhaus Dubhan in Gwynthor entstand aus Breccan Dubhans Auswanderung von Faelaorn nach Celtigerns Wacht. Es dient Haus Draig und bewahrt zugleich seine Herkunft aus der Sept Dubhan. Die neue Hauslinie und die fortbestehende Herkunftssept sind getrennte Familienakten mit gemeinsamen Personenidentitäten.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Breccan begründete mit seiner Familie die Gwynthorer Linie. Seine Tochter Rogaire und sein Sohn Alpin begleiteten ihn aus Faelaorn nach Cenyr. Seine Gemahlin Eithne starb 1735; ihre Todesumstände sind nicht überliefert.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Die Bindung an die alte Sept und der Neubeginn unter den Draig bestimmen die bisher bekannte Hausgeschichte. Ein genaues Gründungsjahr, ein eigener Wahlspruch und besondere Besitzungen sind noch nicht ausgearbeitet."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die Sept Dubhan bleibt in Faelaorn bestehen. Breccans Dienst für Haus Draig ist eine neue Lehensbindung und verändert seine Herkunft nicht."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +83,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-dubhan-gwynthor.png",
         "title": "Haus Dubhan · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dubhan-gwynthor"
       }
     ],

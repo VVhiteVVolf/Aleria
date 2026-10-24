@@ -52,7 +52,7 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Ritterhaus",
-    "scale": "Ritterhaus",
+    "scale": "Junges Ritterherrenhaus · venalische Herkunft",
     "parentHouseId": "",
     "rootHouseId": "haus-cymrath-o-traethlan",
     "territoryId": "celtigerns-wacht"
@@ -60,7 +60,7 @@ window.HAEUSER_DATA = {
   "profile": {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
-    "houseType": "Ritterhaus",
+    "houseType": "Junges Ritterherrenhaus · venalische Herkunft",
     "motto": "",
     "quoteAuthor": "",
     "seat": "Tŵr Traethlan",
@@ -84,24 +84,27 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Das junge Haus Cymrath O'Traethlan wurde in Tŵr Traethlan von Aldo Falveri begründet. Es hat seinen Ursprung im venalischen Magnarierhaus Falveri. Weitere Inhalte folgen.",
-    "history": "Folgt …",
-    "traditions": "Folgt …",
-    "knighthood": "Folgt …",
-    "succession": "Folgt …",
-    "holdings": "Folgt …",
-    "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
-    "values": "Folgt …",
-    "court": "Folgt …",
-    "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
-    "historicalFigures": "Folgt …"
+    "overview": "Haus Cymrath O’Traethlan ist ein junges Ritterherrenhaus in Tŵr Traethlan. Sein Gründer Aldo Falveri stammt aus einem politisch unbedeutenden Nebenzweig des venalischen Magnarierhauses Falveri. Mit der Hausgründung beginnt eine eigenständige cenyrische Linie, deren Herkunft sichtbar mit Venalys verbunden bleibt.",
+    "history": "Aldo begründete das neue Haus gemeinsam mit seiner bislang namenlosen Braut. Name und Herkunft der Mitgründerin sind noch nicht festgelegt; Nachkommen sind bisher nicht verzeichnet. Die Falveri-Herkunft wird als Verbindung zur eigenständigen Herkunftsakte erhalten.",
+    "traditions": "Die venalische Herkunft zeigt sich auch in der Ausrüstung: ritterliche, legionärsartige und byzantinisch geprägte Lamellenelemente verbinden sich mit geschlossenen Helmen. Blaugoldene Farben und das geflügelte Löwenmotiv kennzeichnen das Haus.",
+    "knighthood": "Die venalische Herkunft zeigt sich auch in der Ausrüstung: ritterliche, legionärsartige und byzantinisch geprägte Lamellenelemente verbinden sich mit geschlossenen Helmen. Blaugoldene Farben und das geflügelte Löwenmotiv kennzeichnen das Haus.",
+    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
+    "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
+    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
+    "conflictsAlliances": "Haus Falveri bleibt Aldos Herkunftshaus in Venalys. Die eigenständige Herkunftsverknüpfung ersetzt keine Lehnsherrenangabe für den neuen Sitz.",
+    "values": "Der neue Sitz in Cenyr und die venalische Herkunft bestimmen die bisher bekannte Stellung. Eine ältere eigene Dynastie, ein Gründungsjahr, ein verbindliches Motto und zusätzliche Besitzrechte sind noch nicht belegt.",
+    "court": "Gründer und bekannte Angehörige sind unten mit der bestehenden Familienakte verknüpft.",
+    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
+    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -113,26 +116,65 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "",
-      "alt": "Ritter von Haus Cymrath O'Traethlan",
+      "src": "Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cymrath_OTraethlan/assets/hausritter-venalys-2026-10-24.png",
+      "alt": "Venalysisch geprägter Ritter des Hauses Cymrath mit Lamellenrüstung und geschlossenem Legionärshelm",
       "format": "portrait",
-      "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "maxHeight": 580
     },
     "haus-banner": {
       "src": "Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/gwynthor.png",
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-founder-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-falveri/aldo-falveri.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-cymrath-o-traethlan&mode=view&person=aldo-falveri",
+      "alt": "Aldo Falveri",
+      "format": "portrait"
+    },
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-falveri/aldo-falveri.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-cymrath-o-traethlan&mode=view&person=aldo-falveri",
+      "alt": "Aldo Falveri",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "founder",
+        "title": "Gründer",
+        "entries": [
+          {
+            "name": "Aldo Falveri",
+            "role": "Don · Cavaliere und Gründer des Hauses Cymrath O'Traethlan",
+            "detail": "Don · Cavaliere und Gründer des Hauses Cymrath O'Traethlan",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-cymrath-o-traethlan&mode=view&person=aldo-falveri",
+            "imageKey": "hof-founder-1"
+          }
+        ]
+      },
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus Cymrath O'Traethlan",
+        "note": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+        "entries": [
+          {
+            "name": "Aldo Falveri",
+            "role": "Don · Cavaliere und Gründer des Hauses Cymrath O'Traethlan",
+            "detail": "Don · Cavaliere und Gründer des Hauses Cymrath O'Traethlan",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-cymrath-o-traethlan&mode=view&person=aldo-falveri",
+            "imageKey": "hof-heads-1"
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Persönlichkeiten des Hauses",
+    "tableTitle": "Prägende historische Persönlichkeiten",
     "entries": []
   },
   "familyTreeEmbed": {
@@ -140,6 +182,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus Cymrath O'Traethlan"
   },
   "trivia": [
-    "Folgt …"
+    "Junges Ritterherrenhaus · venalische Herkunft"
   ]
 };

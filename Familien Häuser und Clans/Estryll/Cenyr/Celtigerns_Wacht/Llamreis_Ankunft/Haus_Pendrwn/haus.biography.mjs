@@ -4,10 +4,11 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Pendrwn",
   "housePage": true,
-  "image": "",
-  "imageWidth": 30,
-  "imageSquare": true,
-  "description": "Haus Pendrwn ist eine bürgerliche Familie aus Gwynthor.",
+  "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Pendrwn/assets/hausfigur-2026-10-24.png",
+  "imageWidth": 38,
+  "imageSquare": false,
+  "imageTall": true,
+  "description": "Haus Pendrwn ist eine bürgerliche Gwynthorer Familie, deren greifbare Geschichte mit Idwals Generation beginnt. Ein wichtiger Teil ihres heutigen Lebens ist der Gemischtwarenhandel Zum Vollen Korb. Neben dem Familiengeschäft bestehen enge persönliche Verbindungen zu Swyll und Draenmelyn.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -30,23 +31,11 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      ""
-    ],
-    [
-      "Erbe",
-      ""
+      "Idwal Pendrwn"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
-    ],
-    [
-      "Ursprung",
-      ""
-    ],
-    [
-      "Schutzpatronin",
-      ""
     ]
   ],
   "house": {
@@ -55,19 +44,31 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus Pendrwn ist eine bürgerliche Familie aus Gwynthor.",
+    "biographyText": "Haus Pendrwn ist eine bürgerliche Gwynthorer Familie, deren greifbare Geschichte mit Idwals Generation beginnt. Ein wichtiger Teil ihres heutigen Lebens ist der Gemischtwarenhandel Zum Vollen Korb. Neben dem Familiengeschäft bestehen enge persönliche Verbindungen zu Swyll und Draenmelyn.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
-    "worksTitle": "Hausgeschichte",
+    "historyText": "Idwal Pendrwn führt den Vollen Korb zusammen mit seinem ältesten Sohn Cadwgan. Cadwgans Gemahlin Mabli betreut die Tageskasse und den Haushaltsbedarf; Rhun nimmt Waren an und liefert aus, während Tesni verkauft und Bestellungen aufnimmt. Meilyrs Ehe mit Eirwen Swyll führt die jüngere Linie um Emyr fort. Die Generationen vor Idwal sind nicht einzeln bekannt.",
+    "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Sorgfalt bei Mengen, Rechnungen und Waren bestimmt den Alltag des belegten Familienbetriebs. Andere Angehörige bleiben mit eigenen Lebenswegen Teil des Hauses; aus ihrem Namen folgt keine automatische Mitarbeit im Laden."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Besitz und Lebensgrundlage",
+        "text": "Der Volle Korb bildet die belegte geschäftliche Grundlage. Das Haus unterhält eine direkte Lieferbeziehung zum Markt der Fortuna. Arbeitsplätze und Lieferverbindungen anderer Angehöriger bedeuten keinen zusätzlichen Familienbesitz."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Meilyr Pendrwn ist mit Eirwen Swyll verheiratet. Seine Schwester Gwenith heiratete Caradog Draenmelyn. Beide Verbindungen bleiben in den bestehenden Familienakten zusammengeführt."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -88,7 +89,7 @@ export const HOUSE_BIOGRAPHY = {
       {
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
         "title": "Haus Pendrwn · vollständige Hausseite",
-        "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+        "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-pendrwn"
       }
     ],

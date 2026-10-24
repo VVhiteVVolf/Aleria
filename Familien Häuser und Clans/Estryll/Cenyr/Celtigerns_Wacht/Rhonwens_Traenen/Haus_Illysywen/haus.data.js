@@ -64,10 +64,10 @@ window.HAEUSER_DATA = {
     "quoteAuthor": "",
     "seat": "Castellbryn",
     "affiliation": "Grafschaft Celtigerns Wacht · ehemals Haus Draig",
-    "troopStrength": "Hoch",
-    "tiarna": "Überwiegend Cantref, Helwyr",
-    "kerns": "Hoch, überwiegend Seekrieger",
-    "fleet": "Hoch",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": "",
     "founding": "Jahr unbekannt · 1720 ausgestorben",
     "milestoneOne": "Der Gründer Arwel, genannt der Schwarze Aal, stieg vom ausgestoßenen Fischer zum Ritter und königlichen Herold auf. Eine düstere Überlieferung führt seinen Erfolg auf einen Pakt zurück, der auch seine Nachkommen band. Der Konflikt mit den Draigs besiegelte den Untergang des Hauses.",
     "milestoneTwo": "1720: Untergang des Hauses; die Arwydd übernehmen die Herrschaft.",
@@ -80,6 +80,9 @@ window.HAEUSER_DATA = {
     "allies": "Ehemals Haus Draig",
     "enemies": "Haus Draig im Konflikt von 1720"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

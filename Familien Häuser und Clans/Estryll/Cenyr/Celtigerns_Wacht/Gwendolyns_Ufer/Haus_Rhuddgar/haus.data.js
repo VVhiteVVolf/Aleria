@@ -61,7 +61,7 @@ window.HAEUSER_DATA = {
     "highestTitle": "Ritterherr",
     "rank": "Ritterherr",
     "houseType": "Ritterhaus",
-    "motto": "Teile die Beute, nicht das Blut.",
+    "motto": "Teile die Beute – nicht das Blut.",
     "quoteAuthor": "",
     "seat": "Abergwint",
     "affiliation": "Haus Gwyvern",
@@ -84,6 +84,9 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

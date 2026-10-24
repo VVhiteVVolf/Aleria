@@ -79,6 +79,9 @@ window.HAEUSER_DATA = {
     "allies": "",
     "enemies": "Draig und Saethwyr · Arvels persönliche Fehde"
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"

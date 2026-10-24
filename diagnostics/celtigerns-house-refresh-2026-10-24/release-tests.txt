@@ -1,0 +1,220 @@
+TAP version 13
+# Subtest: Ein zusammenhängendes Paar mit Beziehungsknoten und Kind besteht die Geometrieprüfung
+ok 1 - Ein zusammenhängendes Paar mit Beziehungsknoten und Kind besteht die Geometrieprüfung
+  ---
+  duration_ms: 1.806
+  type: 'test'
+  ...
+# Subtest: Freie Enden werden auch dann erkannt, wenn keine fremde Karte geschnitten wird
+ok 2 - Freie Enden werden auch dann erkannt, wenn keine fremde Karte geschnitten wird
+  ---
+  duration_ms: 0.3641
+  type: 'test'
+  ...
+# Subtest: Eine fremde kreuzende Linie gilt nicht als Abstammungsanschluss
+ok 3 - Eine fremde kreuzende Linie gilt nicht als Abstammungsanschluss
+  ---
+  duration_ms: 0.2853
+  type: 'test'
+  ...
+# Subtest: Kollidierende Beschriftungen, verdeckte Karten und abgetrennte Beschriftungen werden gemeldet
+ok 4 - Kollidierende Beschriftungen, verdeckte Karten und abgetrennte Beschriftungen werden gemeldet
+  ---
+  duration_ms: 0.321
+  type: 'test'
+  ...
+# Subtest: Verweispaare brauchen genau zwei gegenseitig passende Gegenstellen
+ok 5 - Verweispaare brauchen genau zwei gegenseitig passende Gegenstellen
+  ---
+  duration_ms: 0.4233
+  type: 'test'
+  ...
+# Subtest: Eine eigens angelegte Partnerdarstellung darf nicht wieder zur Fernbeziehung werden
+ok 6 - Eine eigens angelegte Partnerdarstellung darf nicht wieder zur Fernbeziehung werden
+  ---
+  duration_ms: 0.216
+  type: 'test'
+  ...
+# Subtest: Gespeicherter Personenfokus und Generationsgrenzen beschneiden keine Gesamtansicht
+ok 7 - Gespeicherter Personenfokus und Generationsgrenzen beschneiden keine Gesamtansicht
+  ---
+  duration_ms: 0.717
+  type: 'test'
+  ...
+# Subtest: Getrennte Zweige sind zusammen sichtbar, ohne genealogische Eltern oder Ursprungsdaten zu verändern
+ok 8 - Getrennte Zweige sind zusammen sichtbar, ohne genealogische Eltern oder Ursprungsdaten zu verändern
+  ---
+  duration_ms: 0.6229
+  type: 'test'
+  ...
+# Subtest: Sämtliche Registerakten liefern eine vom alten Fokus unabhängige erreichbare Gesamtwurzel
+ok 9 - Sämtliche Registerakten liefern eine vom alten Fokus unabhängige erreichbare Gesamtwurzel
+  ---
+  duration_ms: 644.0062
+  type: 'test'
+  ...
+# Subtest: Ein externer Mehrfachpartner erhält eigene Karten je weiterem Herkunftszweig, ohne Personenakten zu ändern
+ok 10 - Ein externer Mehrfachpartner erhält eigene Karten je weiterem Herkunftszweig, ohne Personenakten zu ändern
+  ---
+  duration_ms: 0.8284
+  type: 'test'
+  ...
+# Subtest: Explizit verwaltete Mehrpartner- und alternative Elternansichten bleiben maßgeblich
+ok 11 - Explizit verwaltete Mehrpartner- und alternative Elternansichten bleiben maßgeblich
+  ---
+  duration_ms: 0.2604
+  type: 'test'
+  ...
+# Subtest: Jede lokale Partnerschaft hat einen getrennten Knoten und die Kinder hängen am richtigen Knoten
+ok 12 - Jede lokale Partnerschaft hat einen getrennten Knoten und die Kinder hängen am richtigen Knoten
+  ---
+  duration_ms: 9.9393
+  type: 'test'
+  ...
+# Subtest: Zeitangaben und Status stammen aus der Partnerschaft; eine Ehereihenfolge wird nicht erfunden
+ok 13 - Zeitangaben und Status stammen aus der Partnerschaft; eine Ehereihenfolge wird nicht erfunden
+  ---
+  duration_ms: 0.21
+  type: 'test'
+  ...
+# Subtest: Fernbeziehungen erhalten genau zwei benannte Verweise und behalten die Personen-IDs
+ok 14 - Fernbeziehungen erhalten genau zwei benannte Verweise und behalten die Personen-IDs
+  ---
+  duration_ms: 0.5461
+  type: 'test'
+  ...
+# Subtest: Verweise gehören zur konkreten Kartenerscheinung und veröffentlichen keine verborgene Beziehung
+ok 15 - Verweise gehören zur konkreten Kartenerscheinung und veröffentlichen keine verborgene Beziehung
+  ---
+  duration_ms: 0.1632
+  type: 'test'
+  ...
+# Subtest: Normale Paare und örtliche Dreiergruppen behalten ihre Linien
+ok 16 - Normale Paare und örtliche Dreiergruppen behalten ihre Linien
+  ---
+  duration_ms: 0.261
+  type: 'test'
+  ...
+# Subtest: Mehrere Fernpartner bekommen getrennte Anschlussstellen an derselben Karte
+ok 17 - Mehrere Fernpartner bekommen getrennte Anschlussstellen an derselben Karte
+  ---
+  duration_ms: 0.2961
+  type: 'test'
+  ...
+# Subtest: Kinder einer örtlichen Mehrpartnerbeziehung beginnen an der tatsächlichen Paarspur
+ok 18 - Kinder einer örtlichen Mehrpartnerbeziehung beginnen an der tatsächlichen Paarspur
+  ---
+  duration_ms: 0.6744
+  type: 'test'
+  ...
+# Subtest: Kinder einer Fernbeziehung schließen zusammenhängend an den passenden Elternverweis an
+ok 19 - Kinder einer Fernbeziehung schließen zusammenhängend an den passenden Elternverweis an
+  ---
+  duration_ms: 0.4667
+  type: 'test'
+  ...
+# Subtest: Eine verschobene Karte darf auch bei einer neuen Kollision keinen alten freien Linienanker behalten
+ok 20 - Eine verschobene Karte darf auch bei einer neuen Kollision keinen alten freien Linienanker behalten
+  ---
+  duration_ms: 0.686
+  type: 'test'
+  ...
+# Subtest: Einpassen umfasst die endgültigen Kartenpositionen einschließlich Rand und Kartenmaßen
+ok 21 - Einpassen umfasst die endgültigen Kartenpositionen einschließlich Rand und Kartenmaßen
+  ---
+  duration_ms: 0.2364
+  type: 'test'
+  ...
+# Subtest: Kollidierende Kinder verschiedener Partnerschaften werden innerhalb ihres gemeinsamen Vorfahren getrennt
+ok 22 - Kollidierende Kinder verschiedener Partnerschaften werden innerhalb ihres gemeinsamen Vorfahren getrennt
+  ---
+  duration_ms: 1.5238
+  type: 'test'
+  ...
+# Subtest: Nur wirkliche Abzweige innerhalb derselben Abstammungsgruppe erhalten einen Knotenpunkt
+ok 23 - Nur wirkliche Abzweige innerhalb derselben Abstammungsgruppe erhalten einen Knotenpunkt
+  ---
+  duration_ms: 0.4234
+  type: 'test'
+  ...
+# Subtest: Uneheliche und legitimierte Herkunft sind lesbar und die Karte ist per Tastatur erreichbar
+ok 24 - Uneheliche und legitimierte Herkunft sind lesbar und die Karte ist per Tastatur erreichbar
+  ---
+  duration_ms: 0.39
+  type: 'test'
+  ...
+# Subtest: Zoom verwendet die bestehende Chart-Kamera und verändert keine Person oder Wurzel
+ok 25 - Zoom verwendet die bestehende Chart-Kamera und verändert keine Person oder Wurzel
+  ---
+  duration_ms: 0.2237
+  type: 'test'
+  ...
+# Subtest: Vor einem Bibliotheksupdate verlassen nur die eigenen Zusatzlinien den nativen Daten-Join
+ok 26 - Vor einem Bibliotheksupdate verlassen nur die eigenen Zusatzlinien den nativen Daten-Join
+  ---
+  duration_ms: 0.3016
+  type: 'test'
+  ...
+# Subtest: Viele benannte Fernpartner bekommen Platz über der nächsten Generation, ohne die Zweige auseinanderzuziehen
+ok 27 - Viele benannte Fernpartner bekommen Platz über der nächsten Generation, ohne die Zweige auseinanderzuziehen
+  ---
+  duration_ms: 1.0167
+  type: 'test'
+  ...
+# Subtest: Auslaufende Linien werden anhand ihrer konkreten Hierarchieknoten erkannt, auch bei gleichen Personen-IDs
+ok 28 - Auslaufende Linien werden anhand ihrer konkreten Hierarchieknoten erkannt, auch bei gleichen Personen-IDs
+  ---
+  duration_ms: 0.1466
+  type: 'test'
+  ...
+# Subtest: Personenlinks wechseln auch bei getrennten Zweigen nicht zu einer Einzelansicht
+ok 29 - Personenlinks wechseln auch bei getrennten Zweigen nicht zu einer Einzelansicht
+  ---
+  duration_ms: 0.1469
+  type: 'test'
+  ...
+# Subtest: Ein gültiger Personenlink verändert die eingepasste Gesamtansicht nicht
+ok 30 - Ein gültiger Personenlink verändert die eingepasste Gesamtansicht nicht
+  ---
+  duration_ms: 0.188
+  type: 'test'
+  ...
+# Subtest: Ungültige Personen und andere Familien übernehmen den Linkfokus nicht
+ok 31 - Ungültige Personen und andere Familien übernehmen den Linkfokus nicht
+  ---
+  duration_ms: 0.0944
+  type: 'test'
+  ...
+# Subtest: Auch große Bäume und alte Fokuseinstellungen starten vollständig eingepasst
+ok 32 - Auch große Bäume und alte Fokuseinstellungen starten vollständig eingepasst
+  ---
+  duration_ms: 0.0789
+  type: 'test'
+  ...
+# Subtest: Owains Affären bleiben getrennte Familien mit ihren jeweiligen Kindern
+ok 33 - Owains Affären bleiben getrennte Familien mit ihren jeweiligen Kindern
+  ---
+  duration_ms: 3.3788
+  type: 'test'
+  ...
+# Subtest: Eine Affäre erzeugt keine automatisch behauptete Stief- oder Schwiegerfamilie
+ok 34 - Eine Affäre erzeugt keine automatisch behauptete Stief- oder Schwiegerfamilie
+  ---
+  duration_ms: 2.5936
+  type: 'test'
+  ...
+# Subtest: Mehrdeutige Kinderzuordnung bleibt ausdrücklich offen
+ok 35 - Mehrdeutige Kinderzuordnung bleibt ausdrücklich offen
+  ---
+  duration_ms: 0.4508
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2324.586

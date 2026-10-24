@@ -76,8 +76,15 @@ window.HAEUSER_DATA = {
     "religion": "Alerische Kirche",
     "patronDeities": "Die Glücksmaid",
     "allies": "Markt der Fortuna · Häuser Maerllys, Pendrwn und Raves",
-    "enemies": "Geschäftliche Rivalität mit Rebstock, Gaumenfreude und Klingender Münze"
+    "enemies": "Geschäftliche Rivalität mit Rebstock, Gaumenfreude und Klingender Münze",
+    "troopStrength": "",
+    "tiarna": "",
+    "kerns": "",
+    "fleet": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
@@ -98,7 +105,7 @@ window.HAEUSER_DATA = {
     "historicalFigures": "Iestyn und Efa begründeten den Familienbesitz. Tudwal und Gwenith sind die Eltern der heutigen Inhaber."
   },
   "sectionTitles": {
-    "knighthood": "4. Rittertum"
+    "knighthood": "4. Beruf und Hausleben"
   },
   "images": {
     "haus-wappen": {

@@ -1,5 +1,5 @@
-// Redaktionelle Quelle für Hausseite und kurze Stammbaum-Bio.
-// Fehlende Angaben bleiben leer oder folgen später; offene Punkte siehe RITTERHAEUSER-UND-VORBEREITUNG.md.
+// Redaktionelle Quelle für Hausseite und Stammbaum-Bio.
+// Quellenabgleich: diagnostics/celtigerns-house-refresh-2026-10-24/README.md.
 export const HOUSE_CONTENT = {
   "id": "haus-loer",
   "name": "Haus Loer",
@@ -15,13 +15,16 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 2,
+  "biographySourceRevision": 3,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
-    "overview": "Haus Loer ist ein Ritterhaus unter den Wyrm mit einer Höhenburg bei Craithglyn und einem Herrenhaus in Gwynthor. Edelsteinminen, Goldschmieden und Juwelierbetriebe prägen seine Stellung.",
-    "history": "Die Überlieferung verbindet seine Entstehung mit der Erschließung der Edelsteinadern Craithglyns. Angehörige des Hauses übernahmen wiederholt Aufgaben in der Verwaltung des Ortes.",
-    "character": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen."
+    "overview": "Das Haus Loer ist ein niederes Rittergeschlecht aus den Gebirgen Craithglyns und Vasall des Ritterfürstenhauses Wyrm. Seine Macht gründet sich weniger auf große Heere als auf wirtschaftlichen Einfluss.\n\nDurch seine Beteiligungen an den Edelsteinminen Craithglyns sowie eigene Bergwerke, Goldschmieden und Juwelierbetriebe kontrolliert das Haus einen bedeutenden Teil des Edelsteinhandels innerhalb Gwynthors.\n\nDie Familie gilt als wohlhabend, zurückhaltend und äußerst geschäftstüchtig. Ihre Ritter treten in außergewöhnlich prachtvollen Rüstungen auf, reich verziert mit Gold, Silber und Edelsteinen, ohne dabei ihre militärische Disziplin einzubüßen.\n\nIn Craithglyn stellte Haus Loer mehrfach den Hauptmann der Stadt und zeitweise sogar den Lehensherrn. In Gwynthor unterhält das Haus lediglich ein repräsentatives Herrenhaus, das den Angehörigen während ihrer Aufenthalte am Grafenhof als Residenz dient.",
+    "history": "Die Ursprünge des Hauses reichen bis in die Erschließung der Gebirge rund um Craithglyn zurück. Der Überlieferung nach entdeckten ihre Vorfahren die ersten ergiebigen Edelsteinadern der Region und errichteten zum Schutz der Bergwerke ihre Burg zwischen den Gipfeln.\n\nWährend andere Ritterhäuser ihre Macht durch Ritterlichkeit vergrößerten, investierten die Loer in Bergbau, Schmiedekunst und Handel. Mit jedem neu erschlossenen Stollen wuchs ihr Vermögen ebenso wie ihr Einfluss.\n\nMehrfach übernahmen Angehörige des Hauses die Verwaltung Craithglyns und sorgten für den Ausbau der Minen, Handelsstraßen und Werkstätten. Dadurch entwickelte sich die Stadt zu einem der bedeutendsten Zentren für Edelsteine und Schmuck innerhalb Gwynthors.\n\nBis heute gilt Haus Loer als eines der wirtschaftlich stabilsten Ritterhäuser der Grafschaft.",
+    "character": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen.",
+    "customs": "Die Loer messen handwerklicher Vollkommenheit höchsten Wert bei.",
+    "holdings": "Der Stammsitz des Hauses ist eine befestigte Höhenburg im Gebirge nahe Craithglyn, umgeben von Steinbrüchen, Minenschächten und weit verzweigten Stollensystemen.",
+    "culture": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -210,5 +213,11 @@ export const HOUSE_CONTENT = {
   "currentHead": "Eurgain Loer",
   "firstHeir": "Ynyrion Loer",
   "scenes": [],
-  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind."
+  "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+  "contentVersion": "20261024-housebio-v1",
+  "omitMilitaryProfile": true,
+  "illustrationCategory": "Hausdarstellung",
+  "biographyPreviousDefaultFingerprints": [
+    "2412:7d5646a3:56e86079"
+  ]
 };

@@ -1,4 +1,4 @@
-import { loadFamilyById, saveFamilyToLibrary } from '../../services/family-library.js?v=20261021-arvel-v3';
+import { loadFamilyById, saveFamilyToLibrary } from '../../services/family-library.js?v=20261024-housebio-v1';
 import { loadPersistedFamily, persistFamily } from '../../services/family-persistence.js';
 import { assertValidFamily } from '../../domain/family-schema.js';
 
