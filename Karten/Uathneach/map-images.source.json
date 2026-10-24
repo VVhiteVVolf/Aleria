@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "imageSize": [
+    4096,
+    3365
+  ],
+  "sources": [
+    {
+      "layer": "normal",
+      "source": "Uathneach Normale Karte.png",
+      "sourceSha256": "5b5d53923a3371e939a999d64dfaca5ae3e41b4084dee14afdef122d1b15febd",
+      "asset": "Kartenbilder/normal.webp",
+      "sha256": "01956629aedeea7d150cb87e80c461577a16bf901779c50aa75f23cd0207953a",
+      "lossless": true
+    },
+    {
+      "layer": "regions",
+      "source": "Uathneach Regionen.png",
+      "sourceSha256": "f038cc389412ab68f144f29167452e88d1d6da526641b5722e4b0a710bc185d1",
+      "asset": "Kartenbilder/regionen.webp",
+      "sha256": "89789d10041c2cad64538d45c061890fa5992e3bce5fdd2e9cbeec5428f55ea2",
+      "lossless": true
+    }
+  ]
+}

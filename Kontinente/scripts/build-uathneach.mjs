@@ -9,4 +9,4 @@ if (check) {
   if (await readFile(destination, 'utf8') !== content) throw new Error('Uathneach-Seitendaten sind veraltet.');
 } else await writeFile(destination, content);
 await buildTerritoryRegion({ slug: 'uathneach', region: 'Uathneach', kingdom: 'Uathneach',
-  mapFolder: 'Uathneach', version: 'uathneach-20261024b', check });
+  mapFolder: 'Uathneach', version: 'uathneach-20261024c', check });

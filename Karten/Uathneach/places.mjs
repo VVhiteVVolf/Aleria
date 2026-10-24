@@ -1,13 +1,16 @@
 import { structure, territoriesById, clansById, familyHref } from '../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
 import { classifyCity, cityDefinition } from './city-classification.mjs';
+import mapImages from './map-images.source.json' with { type: 'json' };
+
+const [imageWidth, imageHeight] = mapImages.imageSize;
 
 export const cityClassifications = new Map(structure.settlements.map(place => [place.id, classifyCity(place, structure.clans)]));
 export const markers = structure.settlements.map(place => ({
   id: 'uathneach-' + place.id, title: place.name, category: cityClassifications.get(place.id).type, templateId: 'siedlung',
   icon: cityDefinition(cityClassifications.get(place.id).type).marker, territoryId: place.territoryId,
-  x: place.point[0] / 100 * 4096, y: (1 - place.point[1] / 100) * 3365,
+  x: place.point[0] / 100 * imageWidth, y: (1 - place.point[1] / 100) * imageHeight,
   residentFamilyIds: place.residentFamilyIds,
-  sourceRef: { provider: 'aleria-reviewed-map', source: 'Uathneach Städte Namen.png',
+  sourceRef: { provider: 'aleria-reviewed-map', source: mapImages.sources.find(source => source.layer === 'normal').source,
     selection: 'original', settlementId: place.id, coordinateOrigin: 'top-left',
     coordinateUnit: 'percent', coordinates: [...place.point] },
 }));
@@ -24,6 +27,9 @@ export function describePlace(marker) {
     text: place.id === 'reithe' ? structure.decisions.find(decision => decision.id === 'reithe-special-fief').text : '',
     trade: '', faction: '', fields: { 'Bekannte Familien': residents.map(clan => clan.name).join(', '),
       Funktion: city.role, Größenklasse: city.size,
-      ...(place.mapRegionId !== place.territoryId && place.id === 'reithe' ? { Kartenregion: 'Tir na Taoide', Lehenszugehörigkeit: 'Tir na Láimhe · fürstliches Sonderlehen' } : {}) },
+      ...(place.mapRegionId !== place.territoryId && place.id === 'reithe' ? {
+        Kartenregion: territoriesById.get(place.mapRegionId).name,
+        Lehenszugehörigkeit: `${territory.name} · fürstliches Sonderlehen`,
+      } : {}) },
   };
 }

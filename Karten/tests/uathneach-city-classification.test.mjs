@@ -35,7 +35,7 @@ test('local Lairds cannot downgrade a greater clan seat, and unknown ranks stay 
 });
 
 test('map filters, marker tables and territory registers retain the same urban classification', () => {
-  assert.equal(stored.revision, 3);
+  assert.equal(stored.revision, 4);
   assert.equal(stored.state.cats.length, 5);
   const categories = new Map(stored.state.cats.map(category => [category.id, category.label]));
   const markersById = new Map(markers.map(marker => [marker.id, marker]));

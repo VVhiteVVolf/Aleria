@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Uathneach/data.json",
-  "revision": 3,
-  "updatedAt": "2026-10-24T16:43:00.000Z",
-  "generatedStateHash": "e7a4cddec6616b55541135985f39f67a05f69f70fb9757c144ff249a206c53f7",
+  "revision": 4,
+  "updatedAt": "2026-10-24T17:30:00.000Z",
+  "generatedStateHash": "f4864eb71f87af482bee53cd9009885e765c288697d53953ac5c9c7438ed0b01",
   "state": {
     "pins": [
       {
@@ -83,7 +83,7 @@
         "dominionId": "uathneach-tir-na-laimhe",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "dunnean",
           "coordinateOrigin": "top-left",
@@ -177,7 +177,7 @@
         "dominionId": "uathneach-tir-na-laimhe",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "fethlinn",
           "coordinateOrigin": "top-left",
@@ -268,7 +268,7 @@
         "dominionId": "uathneach-herrschaft-fastaigh",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "bronnan",
           "coordinateOrigin": "top-left",
@@ -355,19 +355,19 @@
           },
           {
             "k": "Kartenregion",
-            "v": "Tir na Taoide"
+            "v": "Tir na Seolta"
           },
           {
             "k": "Lehenszugehörigkeit",
-            "v": "Tir na Láimhe · fürstliches Sonderlehen"
+            "v": "Tir na Dála · fürstliches Sonderlehen"
           }
         ],
-        "text": "Broch an Reithe liegt geografisch in Tir na Taoide, dient als Lehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága und wird bei Tir na Láimhe geführt.",
+        "text": "Broch an Reithe liegt geografisch in Tir na Seolta, dient als Lehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága und wird bei Tir na Dála geführt.",
         "secret": false,
         "dominionId": "uathneach-tir-na-laimhe",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "reithe",
           "coordinateOrigin": "top-left",
@@ -458,7 +458,7 @@
         "dominionId": "uathneach-tir-na-sruthan",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "moineal",
           "coordinateOrigin": "top-left",
@@ -549,7 +549,7 @@
         "dominionId": "uathneach-herrschaft-luachra",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "treabhair",
           "coordinateOrigin": "top-left",
@@ -640,7 +640,7 @@
         "dominionId": "uathneach-tir-na-gcoillte",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "cathair",
           "coordinateOrigin": "top-left",
@@ -731,7 +731,7 @@
         "dominionId": "uathneach-tir-na-gcoillte",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "dathuil",
           "coordinateOrigin": "top-left",
@@ -822,7 +822,7 @@
         "dominionId": "uathneach-tir-na-taoide",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "orglen",
           "coordinateOrigin": "top-left",
@@ -915,7 +915,7 @@
         "dominionId": "uathneach-tir-na-taoide",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "mhor",
           "coordinateOrigin": "top-left",
@@ -1006,7 +1006,7 @@
         "dominionId": "uathneach-tir-na-dtorc",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "rinnmara",
           "coordinateOrigin": "top-left",
@@ -1098,7 +1098,7 @@
         "dominionId": "uathneach-tir-na-dtorc",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "cuan",
           "coordinateOrigin": "top-left",
@@ -1189,7 +1189,7 @@
         "dominionId": "uathneach-tir-na-conaire",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "temair",
           "coordinateOrigin": "top-left",
@@ -1280,7 +1280,7 @@
         "dominionId": "uathneach-herrschaft-suilgeach",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "caorthann",
           "coordinateOrigin": "top-left",
@@ -1371,7 +1371,7 @@
         "dominionId": "uathneach-tir-na-conaire",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "ceithirn",
           "coordinateOrigin": "top-left",
@@ -1462,7 +1462,7 @@
         "dominionId": "uathneach-tir-na-cloiche",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "kharanor",
           "coordinateOrigin": "top-left",
@@ -1555,7 +1555,7 @@
         "dominionId": "uathneach-herrschaft-lasgair",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "mhorcha",
           "coordinateOrigin": "top-left",
@@ -1646,7 +1646,7 @@
         "dominionId": "uathneach-herrschaft-clannmhar",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
-          "source": "Uathneach Städte Namen.png",
+          "source": "Uathneach Normale Karte.png",
           "selection": "original",
           "settlementId": "rioghain",
           "coordinateOrigin": "top-left",
@@ -1709,7 +1709,7 @@
       },
       {
         "id": "uathneach-tir-na-laimhe",
-        "name": "Tir na Láimhe",
+        "name": "Tir na Dála",
         "type": "Fürstliche Domäne",
         "ruler": "Mac Ard’Lága",
         "seat": "Dunnean",
@@ -1717,7 +1717,7 @@
       },
       {
         "id": "uathneach-tir-na-sruthan",
-        "name": "Tir na Sruthán",
+        "name": "Tir na nGleannta",
         "type": "Oberherrschaft",
         "ruler": "An Gealân",
         "seat": "Moineal",
@@ -1725,7 +1725,7 @@
       },
       {
         "id": "uathneach-tir-na-gcoillte",
-        "name": "Tir na gCoillte",
+        "name": "Tir na Gairme",
         "type": "Oberherrschaft",
         "ruler": "Ard Conchobhair",
         "seat": "Cathair",
@@ -1733,7 +1733,7 @@
       },
       {
         "id": "uathneach-tir-na-taoide",
-        "name": "Tir na Taoide",
+        "name": "Tir na Seolta",
         "type": "Oberherrschaft",
         "ruler": "Mac Roich",
         "seat": "Orglen",
@@ -1741,7 +1741,7 @@
       },
       {
         "id": "uathneach-tir-na-dtorc",
-        "name": "Tir na dTorc",
+        "name": "Tir na Machairí",
         "type": "Oberherrschaft",
         "ruler": "Mac Midgna",
         "seat": "Rinnmara",
@@ -1749,7 +1749,7 @@
       },
       {
         "id": "uathneach-tir-na-conaire",
-        "name": "Tir na Conaire",
+        "name": "Tir na Faire",
         "type": "Oberherrschaft",
         "ruler": "Tir an Máta",
         "seat": "Temair",
@@ -1757,7 +1757,7 @@
       },
       {
         "id": "uathneach-tir-na-cloiche",
-        "name": "Tir na Cloiche",
+        "name": "Tir na gClog",
         "type": "Oberherrschaft",
         "ruler": "Ua’Luga",
         "seat": "Kharanor",
@@ -1807,20 +1807,22 @@
     "regionTitle": "Fürstentum Uathneach",
     "regionIcon": "/Stammbäume/assets/images/regions/Uathneach/uathneach.webp",
     "mapImages": {
-      "normal": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-      "regions": "",
+      "normal": "/Karten/Uathneach/Kartenbilder/normal.webp",
+      "regions": "/Karten/Uathneach/Kartenbilder/regionen.webp",
       "pins": ""
     },
     "layerNames": {
-      "normal": "Karte",
-      "regions": "Regionen",
-      "pins": "Markierungen"
+      "normal": "Normal",
+      "pins": "Mit Markierungen",
+      "regions": "Regionen"
     },
     "dotSize": 80,
     "lblSize": 50,
     "displaySettingsVersion": 1,
-    "showMarkers": false,
-    "showPinLabels": false,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": true,
     "alwaysShowLettering": false,
     "extraLayers": [],
     "dm": {

@@ -2,8 +2,10 @@ import { structure, territories, territoriesById, clansById, settlementsById, re
   territoryAncestors, familyHref } from '../../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
 import { markers } from '../../../Karten/Uathneach/places.mjs';
 
-const map = { title: 'Karte des Fürstentums Uathneach', imageSrc: '/Karten/Uathneach/Kartenbilder/regionen.webp',
-  imageAlt: 'Uathneach mit den sieben Gebieten der freigegebenen Gliederung', href: '/Karten/karte.html?map=uathneach' };
+const map = { title: 'Karte des Fürstentums Uathneach', imageSrc: '/Karten/Uathneach/Kartenbilder/normal.webp',
+  imageAlt: 'Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar', href: '/Karten/karte.html?map=uathneach' };
+const coreDomain = regionsById.get('uathneach-tir-na-laimhe');
+const westCoast = regionsById.get('uathneach-tir-na-taoide');
 const rank = { 'ard-tiarna': 'Ard Tiarna · Fürstenclan', 'mor-tiarna': 'Mor-Tiarna-Clan',
   'dun-tiarna': 'Dún-Tiarna-Clan', laird: 'Laird-Clan', unknown: 'Offen' };
 const family = (clan, featured = false) => ({ familyId: clan.familyId, name: clan.name, imageSrc: clan.crest, imageAlt: `Wappen ${clan.name}`,
@@ -12,12 +14,12 @@ const family = (clan, featured = false) => ({ familyId: clan.familyId, name: cla
 const paragraphs = (territory, clan) => {
   if (territory.type === 'Fürstentum') return [
     'Uathneach ist ein albisches Fürstentum unter den Mac Ard’Lága. Die Fürsten führen den Titel Ard Tiarna und residieren in Dunnean an der nördlichen Küste.',
-    'Die fürstliche Domäne Tir na Láimhe und sechs Oberherrschaften gliedern das Land. Unter den Mor Tiarna stehen die Dún Tiarna mit ihren eigenen Lehen sowie die örtlichen Lairds.',
+    `Die fürstliche Domäne ${coreDomain.name} und sechs Oberherrschaften gliedern das Land. Unter den Mor Tiarna stehen die Dún Tiarna mit ihren eigenen Lehen sowie die örtlichen Lairds.`,
   ];
   const overview = [`${territory.name} wird von den ${clan.name} mit Sitz in ${territory.seat} geführt.`];
   const liege = clansById.get(clan.liege);
   if (liege) overview.push(`Die ${clan.name} dienen unmittelbar den ${liege.name}.`);
-  if (territory.id === 'uathneach-tir-na-laimhe') overview.push('Broch an Reithe ist das Sonderlehen der Ua Muirin. Obwohl der Broch innerhalb der westlichen Kartenfläche von Tir na Taoide liegt, dient sein Clan unmittelbar den Mac Ard’Lága.');
+  if (territory.id === coreDomain.id) overview.push(`Broch an Reithe ist das Sonderlehen der Ua Muirin. Obwohl der Broch innerhalb der westlichen Kartenfläche von ${westCoast.name} liegt, dient sein Clan unmittelbar den Mac Ard’Lága.`);
   if (territory.id === 'uathneach-tir-na-taoide') overview.push('Broch an Reithe liegt in dieser Küstenlandschaft, ist als fürstliches Sonderlehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága unterstellt.');
   return overview;
 };

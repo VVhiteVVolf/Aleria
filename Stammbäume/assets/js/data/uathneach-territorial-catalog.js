@@ -13,12 +13,13 @@ const root = { id: structure.realm.id, name: 'Fürstentum Uathneach', type: 'Fü
   rulerId: structure.realm.rulerId, banner: structure.realm.banner, href: realmPath + 'Fürstentum Uathneach.html' };
 const regions = structure.regions.map(region => ({ ...region,
   type: region.key === 'laimhe' ? 'Fürstliche Domäne' : 'Oberherrschaft', parentId: root.id,
-  href: realmPath + region.name + '/' + region.name + '.html' }));
+  // Public routes and identifiers survive a change to the displayed name.
+  href: realmPath + (region.routeName || region.name) + '/' + (region.routeName || region.name) + '.html' }));
 const fiefs = structure.clans.filter(clan => clan.rankId === 'dun-tiarna').map(clan => {
   const seat = settlementsById.get(clan.seat), parent = regions.find(region => region.id === clan.regionId);
   const name = `Herrschaft von ${seat.name}`;
   return { id: clan.territoryId, name, type: 'Herrschaft', parentId: parent.id, rulerId: clan.id, banner: '',
-    href: realmPath + parent.name + '/' + name + '/' + name + '.html' };
+    href: realmPath + (parent.routeName || parent.name) + '/' + name + '/' + name + '.html' };
 });
 export const territories = [root, ...regions, ...fiefs].map(territory => {
   const clan = clansById.get(territory.rulerId);

@@ -206,6 +206,12 @@
       "title": "Fürstentum Uathneach",
       "status": "active",
       "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Normal",
+        "pins": "Mit Markierungen",
+        "regions": "Regionen"
+      },
       "hierarchy": [
         {
           "level": "kingdom",
@@ -215,7 +221,8 @@
       ],
       "folder": "Uathneach",
       "images": {
-        "normal": "Uathneach/Kartenbilder/regionen.webp"
+        "normal": "Uathneach/Kartenbilder/normal.webp",
+        "regions": "Uathneach/Kartenbilder/regionen.webp"
       },
       "dataPath": "Uathneach/data.json",
       "territoryHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",

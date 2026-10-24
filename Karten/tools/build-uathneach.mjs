@@ -1,8 +1,10 @@
 import fs from 'node:fs/promises';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 import { structure, territories } from '../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
 import { markers, describePlace } from '../Uathneach/places.mjs';
 import { cityCategoryCatalog, cityCategories } from '../Uathneach/city-classification.mjs';
+import mapImageSources from '../Uathneach/map-images.source.json' with { type: 'json' };
 import { createReviewedPins } from '../modules/territory-places/reviewed-pin-import.mjs';
 import { stateHash, writeGeneratedMap, updateGeneratedMapRegistry } from './generated-map-output.mjs';
 
@@ -13,7 +15,7 @@ const output = async (file, data) => {
   else await fs.writeFile(url, content);
 };
 await output('Uathneach/territories.import.json', { territories });
-const source = { imageSize: [4096, 3365], coordinateOrigin: 'bottom-left', markers };
+const source = { imageSize: mapImageSources.imageSize, coordinateOrigin: 'bottom-left', markers };
 await output('Uathneach/markers.source.json', source);
 const context = vm.createContext({});
 for (const file of ['category-catalog.js', 'pin-template-catalog.js', 'pin-table-presets.js']) {
@@ -25,19 +27,29 @@ for (const pin of pins) for (const asset of [pin.pinMarker, pin.crest, pin.banne
   await fs.access(new URL('../' + asset.replace(/^\//, ''), root));
 }
 const dominions = territories.map(t => ({ id: t.id, name: t.name, type: t.type, ruler: t.house, seat: t.seat, parentId: t.parentId }));
+const images = {};
+for (const image of mapImageSources.sources) {
+  const relative = 'Uathneach/' + image.asset;
+  const hash = createHash('sha256').update(await fs.readFile(new URL(relative, root))).digest('hex');
+  if (hash !== image.sha256) throw new Error(`Uathneach: Kartenbild ${image.layer} entspricht nicht der geprüften Quelle.`);
+  images[image.layer] = relative;
+}
+const layerNames = { normal: 'Normal', pins: 'Mit Markierungen', regions: 'Regionen' };
 const state = { pins, cats: cityCategories(markers), categoryCatalogVersion: context.KartoCategoryCatalog.version, regions: [], dominions,
   regionTitle: 'Fürstentum Uathneach', regionIcon: structure.realm.banner,
-  mapImages: { normal: '/Karten/Uathneach/Kartenbilder/regionen.webp', regions: '', pins: '' },
-  layerNames: { normal: 'Karte', regions: 'Regionen', pins: 'Markierungen' },
+  mapImages: { normal: '/Karten/' + images.normal, regions: '/Karten/' + images.regions, pins: '' },
+  layerNames,
   dotSize: 80, lblSize: 50, displaySettingsVersion: 1,
-  // This supplied map already depicts settlements; click targets and the crest
-  // overlay remain available without stamping a second icon over each drawing.
-  showMarkers: false, showPinLabels: false, alwaysShowLettering: false,
+  // The supplied city drawings have no pins or names on the normal map.
+  // The standard symbol overlay supplies both without a duplicate raster map.
+  markerPresentation: 'symbols', pinVisibilityVersion: 1,
+  showMarkers: true, showPinLabels: true, alwaysShowLettering: false,
   extraLayers: [], dm: { sessions: [], notes: '', groupStatus: {} } };
 await writeGeneratedMap(root, 'Uathneach/data.json', { schemaVersion: 1, dataPath: 'Uathneach/data.json',
-  revision: 3, updatedAt: '2026-10-24T16:43:00.000Z', generatedStateHash: stateHash(state), state }, { check });
+  revision: 4, updatedAt: '2026-10-24T17:30:00.000Z', generatedStateHash: stateHash(state), state }, { check });
 await updateGeneratedMapRegistry(root, 'UATHNEACH', [{ id: 'uathneach', title: 'Fürstentum Uathneach', status: 'active', type: 'region',
+  markerPresentation: 'symbols', layerNames,
   hierarchy: [{ level: 'kingdom', slug: 'uathneach', title: 'Uathneach' }], folder: 'Uathneach',
-  images: { normal: 'Uathneach/Kartenbilder/regionen.webp' }, dataPath: 'Uathneach/data.json',
+  images, dataPath: 'Uathneach/data.json',
   territoryHref: territories[0].href, link: 'karte.html?map=uathneach' }], { check });
 console.log(`Uathneach: ${pins.length} Siedlungen und ${dominions.length} Herrschaften ${check ? 'geprüft' : 'erzeugt'}.`);

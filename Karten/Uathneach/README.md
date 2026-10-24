@@ -19,9 +19,9 @@ Clans. `Stammbäume/assets/js/data/uathneach-territories.source.json` enthält d
 der experimentellen Vorschau. Alternativen bleiben dort archiviert.
 
 Die Quelle unterscheidet die geografische Kartenfläche (`mapRegionId`) von der
-Lehenszugehörigkeit (`territoryId`). Broch an Reithe liegt in Tir na Taoide,
+Lehenszugehörigkeit (`territoryId`). Broch an Reithe liegt in Tir na Seolta,
 gehört aber als Sonderlehen der Ua Muirin unmittelbar unter die Lága und wird
-auf Tir na Láimhe geführt. Rioghain gehört zu den Clannmhar, Treabhair zu den
+auf Tir na Dála geführt. Rioghain gehört zu den Clannmhar, Treabhair zu den
 Nic Luachra. Die drei zuletzt hinzugefügten Clans behalten einen offenen Rang.
 
 Die 18 Ortsanker wurden an den Siedlungszeichnungen der freigegebenen Karte
@@ -32,15 +32,23 @@ World-Anvil-Koordinaten. `sourceRef` erhält die lokale Quellenkennung.
 `residentFamilyIds` legt alle 26 Clanresidenzen ausdrücklich fest; Herrschaft
 über ein Gebiet allein erzeugt keine zusätzlichen Residenzen.
 
-Das gelieferte Bild enthält schon Siedlungszeichnungen und Beschriftungen.
-Deshalb werden keine zweiten Ortssymbole darübergestempelt; anklickbare
-Ortsanker und der allgemeine Wappen-Schalter bleiben verfügbar. Die farbigen
-Grenzen stammen unmittelbar aus dem gelieferten Bild. Es werden keine neuen
-Untergebietsgrenzen für die Dún Tiarna oder Lairds erfunden. Die alte
-Rasterbeschriftung „Tir na …“ bleibt bis zum Vorliegen einer unbeschrifteten
-Grundkarte Teil des Originalbildes (vom Nutzer ausdrücklich als Zwischenstand
-bestätigt); die gültigen Namen stehen im Gebietsregister
-und auf den verknüpften Herrschaftsseiten.
+Am 24. Oktober 2026 hat der Nutzer die fertigen Dateien
+`Uathneach Normale Karte.png` und `Uathneach Regionen.png` geliefert.
+`map-images.source.json` dokumentiert Bildgröße und SHA-256 der Originale sowie
+der pixelgleichen, verlustfreien WebP-Kopien. Die Normalkarte ist unbeschriftet;
+die Regionskarte enthält die Farben und die gewählten Namen: Tir na Dála,
+Tir na nGleannta, Tir na Gairme, Tir na Seolta, Tir na Machairí, Tir na Faire
+und Tir na gClog. Stabile Gebiets-IDs, Wappenpfade und bisher veröffentlichte
+Seiten-URLs bleiben erhalten. `routeName` dient ausschließlich diesem stabilen
+URL-Pfad; alle sichtbaren Namen stammen aus `name`.
+
+Die Kartenansicht nutzt die vorhandenen Ebenen **Normal**, **Mit Markierungen**
+und **Regionen**. Für Markierungen gibt es kein zusätzliches Rasterbild:
+`markerPresentation: "symbols"`, `showMarkers: true` und `showPinLabels: true`
+zeigen die 18 vorhandenen Ortsanker als sichtbare Symbole mit Namen. Die
+gemeinsame Sichtbarkeitsmigration berücksichtigt zuvor ausgeblendete Defaults.
+Der Wappen-Schalter bleibt unabhängig nutzbar. Die farbigen Grenzen stammen
+aus dem gelieferten Regionsbild; Untergebietsgrenzen werden nicht erfunden.
 
 Die Familienakten enthalten Namen, Wappen, Ränge und Lehensbindungen; mangels
 genealogischer Quelle bleiben Personen und Verwandtschaften leer. Bereits

@@ -32,14 +32,14 @@
       "crestAlt": "Banner Fürstentum Uathneach",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
           "Uathneach ist ein albisches Fürstentum unter den Mac Ard’Lága. Die Fürsten führen den Titel Ard Tiarna und residieren in Dunnean an der nördlichen Küste.",
-          "Die fürstliche Domäne Tir na Láimhe und sechs Oberherrschaften gliedern das Land. Unter den Mor Tiarna stehen die Dún Tiarna mit ihren eigenen Lehen sowie die örtlichen Lairds."
+          "Die fürstliche Domäne Tir na Dála und sechs Oberherrschaften gliedern das Land. Unter den Mor Tiarna stehen die Dún Tiarna mit ihren eigenen Lehen sowie die örtlichen Lairds."
         ],
         "history": [],
         "culture": [],
@@ -176,8 +176,8 @@
     },
     {
       "id": "uathneach-tir-na-laimhe",
-      "title": "Tir na Láimhe",
-      "shortTitle": "Tir na Láimhe",
+      "title": "Tir na Dála",
+      "shortTitle": "Tir na Dála",
       "type": "Fürstliche Domäne",
       "kicker": "Fürstliche Domäne · Mac Ard’Lága",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -200,23 +200,23 @@
         },
         {
           "type": "Fürstliche Domäne",
-          "name": "Tir na Láimhe",
+          "name": "Tir na Dála",
           "slug": "uathneach-tir-na-laimhe"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
-      "crestAlt": "Banner Tir na Láimhe",
+      "crestAlt": "Banner Tir na Dála",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na Láimhe wird von den Mac Ard’Lága mit Sitz in Dunnean geführt.",
-          "Broch an Reithe ist das Sonderlehen der Ua Muirin. Obwohl der Broch innerhalb der westlichen Kartenfläche von Tir na Taoide liegt, dient sein Clan unmittelbar den Mac Ard’Lága."
+          "Tir na Dála wird von den Mac Ard’Lága mit Sitz in Dunnean geführt.",
+          "Broch an Reithe ist das Sonderlehen der Ua Muirin. Obwohl der Broch innerhalb der westlichen Kartenfläche von Tir na Seolta liegt, dient sein Clan unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
         "culture": [],
@@ -224,7 +224,7 @@
         "defense": [],
         "geography": [
           "Die nördliche Halbinsel verbindet die Küstenstadt Dunnean mit bewaldetem Hügelland. Ein Gebirgszug grenzt sie nach Südosten gegen das Tal von Moineal ab.",
-          "Tir na Láimhe bedeutet „Land der Hand“."
+          "Tir na Dála bedeutet „Land der Versammlung“."
         ]
       },
       "infobox": [
@@ -361,7 +361,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-laimhe",
-          "title": "Tir na Láimhe",
+          "title": "Tir na Dála",
           "sections": [
             {
               "title": "Hauptstadt",
@@ -390,8 +390,8 @@
     },
     {
       "id": "uathneach-tir-na-sruthan",
-      "title": "Tir na Sruthán",
-      "shortTitle": "Tir na Sruthán",
+      "title": "Tir na nGleannta",
+      "shortTitle": "Tir na nGleannta",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · An Gealân",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -414,22 +414,22 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Sruthán",
+          "name": "Tir na nGleannta",
           "slug": "uathneach-tir-na-sruthan"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/sruthan.webp",
-      "crestAlt": "Banner Tir na Sruthán",
+      "crestAlt": "Banner Tir na nGleannta",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na Sruthán wird von den An Gealân mit Sitz in Moineal geführt.",
+          "Tir na nGleannta wird von den An Gealân mit Sitz in Moineal geführt.",
           "Die An Gealân dienen unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
@@ -438,7 +438,7 @@
         "defense": [],
         "geography": [
           "Moineal liegt im zentralen Tal am Fluss, unmittelbar unter den Bergen. Das Gebiet zieht sich zwischen Waldhängen und felsigen Höhen weit nach Süden.",
-          "Tir na Sruthán bedeutet „Land der Bäche“."
+          "Tir na nGleannta bedeutet „Land der Täler“."
         ]
       },
       "infobox": [
@@ -510,7 +510,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-sruthan",
-          "title": "Tir na Sruthán",
+          "title": "Tir na nGleannta",
           "sections": [
             {
               "title": "Große Stadt",
@@ -527,8 +527,8 @@
     },
     {
       "id": "uathneach-tir-na-gcoillte",
-      "title": "Tir na gCoillte",
-      "shortTitle": "Tir na gCoillte",
+      "title": "Tir na Gairme",
+      "shortTitle": "Tir na Gairme",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Ard Conchobhair",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -551,22 +551,22 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na gCoillte",
+          "name": "Tir na Gairme",
           "slug": "uathneach-tir-na-gcoillte"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/gcoillte.webp",
-      "crestAlt": "Banner Tir na gCoillte",
+      "crestAlt": "Banner Tir na Gairme",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na gCoillte wird von den Ard Conchobhair mit Sitz in Cathair geführt.",
+          "Tir na Gairme wird von den Ard Conchobhair mit Sitz in Cathair geführt.",
           "Die Ard Conchobhair dienen unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
@@ -575,7 +575,7 @@
         "defense": [],
         "geography": [
           "Das östliche Gebiet um Cathair und Dathuil besitzt ausgedehnte Waldflächen. Wege führen zwischen Küstenorten, bewaldeten Höhen und dem Binnenland entlang.",
-          "Tir na gCoillte bedeutet „Land der Wälder“."
+          "Tir na Gairme bedeutet „Land des Rufes“."
         ]
       },
       "infobox": [
@@ -647,7 +647,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-gcoillte",
-          "title": "Tir na gCoillte",
+          "title": "Tir na Gairme",
           "sections": [
             {
               "title": "Große Stadt",
@@ -668,8 +668,8 @@
     },
     {
       "id": "uathneach-tir-na-taoide",
-      "title": "Tir na Taoide",
-      "shortTitle": "Tir na Taoide",
+      "title": "Tir na Seolta",
+      "shortTitle": "Tir na Seolta",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Mac Roich",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -692,22 +692,22 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Taoide",
+          "name": "Tir na Seolta",
           "slug": "uathneach-tir-na-taoide"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/taoide.webp",
-      "crestAlt": "Banner Tir na Taoide",
+      "crestAlt": "Banner Tir na Seolta",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na Taoide wird von den Mac Roich mit Sitz in Orglen geführt.",
+          "Tir na Seolta wird von den Mac Roich mit Sitz in Orglen geführt.",
           "Die Mac Roich dienen unmittelbar den Mac Ard’Lága.",
           "Broch an Reithe liegt in dieser Küstenlandschaft, ist als fürstliches Sonderlehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága unterstellt."
         ],
@@ -717,7 +717,7 @@
         "defense": [],
         "geography": [
           "Die westliche Küste um Orglen ist von Buchten und vorspringenden, bewaldeten Landzungen geprägt. Küstenwege verbinden die Stadt mit den beiden Brochs.",
-          "Tir na Taoide bedeutet „Land der Gezeiten“."
+          "Tir na Seolta bedeutet „Land der Segel“."
         ]
       },
       "infobox": [
@@ -811,7 +811,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-taoide",
-          "title": "Tir na Taoide",
+          "title": "Tir na Seolta",
           "sections": [
             {
               "title": "Große Stadt",
@@ -832,8 +832,8 @@
     },
     {
       "id": "uathneach-tir-na-dtorc",
-      "title": "Tir na dTorc",
-      "shortTitle": "Tir na dTorc",
+      "title": "Tir na Machairí",
+      "shortTitle": "Tir na Machairí",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Mac Midgna",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -856,22 +856,22 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na dTorc",
+          "name": "Tir na Machairí",
           "slug": "uathneach-tir-na-dtorc"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/dtorc.webp",
-      "crestAlt": "Banner Tir na dTorc",
+      "crestAlt": "Banner Tir na Machairí",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na dTorc wird von den Mac Midgna mit Sitz in Rinnmara geführt.",
+          "Tir na Machairí wird von den Mac Midgna mit Sitz in Rinnmara geführt.",
           "Die Mac Midgna dienen unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
@@ -880,7 +880,7 @@
         "defense": [],
         "geography": [
           "Die südwestliche Region verbindet Rinnmaras Küstenlage mit niedrigen Hügeln, Waldstücken und offenen Flächen. Nach Süden verengt sich das Land zum Broch an Cuan.",
-          "Tir na dTorc bedeutet „Land der Keiler“."
+          "Tir na Machairí bedeutet „Land der Ebenen“."
         ]
       },
       "infobox": [
@@ -963,7 +963,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-dtorc",
-          "title": "Tir na dTorc",
+          "title": "Tir na Machairí",
           "sections": [
             {
               "title": "Große Stadt",
@@ -984,8 +984,8 @@
     },
     {
       "id": "uathneach-tir-na-conaire",
-      "title": "Tir na Conaire",
-      "shortTitle": "Tir na Conaire",
+      "title": "Tir na Faire",
+      "shortTitle": "Tir na Faire",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Tir an Máta",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -1008,22 +1008,22 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Conaire",
+          "name": "Tir na Faire",
           "slug": "uathneach-tir-na-conaire"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
-      "crestAlt": "Banner Tir na Conaire",
+      "crestAlt": "Banner Tir na Faire",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na Conaire wird von den Tir an Máta mit Sitz in Temair geführt.",
+          "Tir na Faire wird von den Tir an Máta mit Sitz in Temair geführt.",
           "Die Tir an Máta dienen unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
@@ -1032,7 +1032,7 @@
         "defense": [],
         "geography": [
           "Das nordöstliche Küstenland zieht sich von Caorthann nach Temair. Waldwege und Hügel verbinden die Küste mit den bergigen Höhen um Ceithirn.",
-          "Tir na Conaire bedeutet „Land des Pfades“."
+          "Tir na Faire bedeutet „Land der Wacht“."
         ]
       },
       "infobox": [
@@ -1120,7 +1120,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-conaire",
-          "title": "Tir na Conaire",
+          "title": "Tir na Faire",
           "sections": [
             {
               "title": "Große Stadt",
@@ -1143,8 +1143,8 @@
     },
     {
       "id": "uathneach-tir-na-cloiche",
-      "title": "Tir na Cloiche",
-      "shortTitle": "Tir na Cloiche",
+      "title": "Tir na gClog",
+      "shortTitle": "Tir na gClog",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Ua’Luga",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
@@ -1167,22 +1167,22 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Cloiche",
+          "name": "Tir na gClog",
           "slug": "uathneach-tir-na-cloiche"
         }
       ],
       "aliases": [],
       "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
-      "crestAlt": "Banner Tir na Cloiche",
+      "crestAlt": "Banner Tir na gClog",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
         "overview": [
-          "Tir na Cloiche wird von den Ua’Luga mit Sitz in Kharanor geführt.",
+          "Tir na gClog wird von den Ua’Luga mit Sitz in Kharanor geführt.",
           "Die Ua’Luga dienen unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
@@ -1191,7 +1191,7 @@
         "defense": [],
         "geography": [
           "Der schmale südöstliche Landstreifen läuft über mehrere felsige Höhen bis Kharanor. Seine Siedlungen und Wege liegen zwischen Waldstücken, Bergen und Küste.",
-          "Tir na Cloiche bedeutet „Land des Steins“."
+          "Tir na gClog bedeutet „Land der Glocken“."
         ]
       },
       "infobox": [
@@ -1301,7 +1301,7 @@
       "domains": [
         {
           "territoryId": "uathneach-tir-na-cloiche",
-          "title": "Tir na Cloiche",
+          "title": "Tir na gClog",
           "sections": [
             {
               "title": "Große Stadt",
@@ -1324,7 +1324,7 @@
       "type": "Herrschaft",
       "kicker": "Herrschaft · Dál Fastaigh",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
-      "parentLabel": "Tir na Láimhe",
+      "parentLabel": "Tir na Dála",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -1343,7 +1343,7 @@
         },
         {
           "type": "Fürstliche Domäne",
-          "name": "Tir na Láimhe",
+          "name": "Tir na Dála",
           "slug": "uathneach-tir-na-laimhe"
         },
         {
@@ -1357,8 +1357,8 @@
       "crestAlt": "Wappen Dál Fastaigh",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
@@ -1395,7 +1395,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Tir na Láimhe",
+              "value": "Tir na Dála",
               "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html"
             }
           ]
@@ -1445,7 +1445,7 @@
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ua Lasgair",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
-      "parentLabel": "Tir na Cloiche",
+      "parentLabel": "Tir na gClog",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -1464,7 +1464,7 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Cloiche",
+          "name": "Tir na gClog",
           "slug": "uathneach-tir-na-cloiche"
         },
         {
@@ -1478,8 +1478,8 @@
       "crestAlt": "Wappen Ua Lasgair",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
@@ -1516,7 +1516,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Tir na Cloiche",
+              "value": "Tir na gClog",
               "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html"
             }
           ]
@@ -1566,7 +1566,7 @@
       "type": "Herrschaft",
       "kicker": "Herrschaft · Na Suilgeach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
-      "parentLabel": "Tir na Conaire",
+      "parentLabel": "Tir na Faire",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -1585,7 +1585,7 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Conaire",
+          "name": "Tir na Faire",
           "slug": "uathneach-tir-na-conaire"
         },
         {
@@ -1599,8 +1599,8 @@
       "crestAlt": "Wappen Na Suilgeach",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
@@ -1637,7 +1637,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Tir na Conaire",
+              "value": "Tir na Faire",
               "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html"
             }
           ]
@@ -1687,7 +1687,7 @@
       "type": "Herrschaft",
       "kicker": "Herrschaft · Nic Luachra",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html",
-      "parentLabel": "Tir na Sruthán",
+      "parentLabel": "Tir na nGleannta",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -1706,7 +1706,7 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Sruthán",
+          "name": "Tir na nGleannta",
           "slug": "uathneach-tir-na-sruthan"
         },
         {
@@ -1720,8 +1720,8 @@
       "crestAlt": "Wappen Nic Luachra",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
@@ -1758,7 +1758,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Tir na Sruthán",
+              "value": "Tir na nGleannta",
               "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html"
             }
           ]
@@ -1808,7 +1808,7 @@
       "type": "Herrschaft",
       "kicker": "Herrschaft · Tir an Clannmhar",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
-      "parentLabel": "Tir na Cloiche",
+      "parentLabel": "Tir na gClog",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -1827,7 +1827,7 @@
         },
         {
           "type": "Oberherrschaft",
-          "name": "Tir na Cloiche",
+          "name": "Tir na gClog",
           "slug": "uathneach-tir-na-cloiche"
         },
         {
@@ -1841,8 +1841,8 @@
       "crestAlt": "Wappen Tir an Clannmhar",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
-        "imageSrc": "/Karten/Uathneach/Kartenbilder/regionen.webp",
-        "imageAlt": "Uathneach mit den sieben Gebieten der freigegebenen Gliederung",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
         "href": "/Karten/karte.html?map=uathneach"
       },
       "copy": {
@@ -1879,7 +1879,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Tir na Cloiche",
+              "value": "Tir na gClog",
               "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html"
             }
           ]
