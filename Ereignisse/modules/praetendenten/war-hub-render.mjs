@@ -24,5 +24,5 @@ export function renderWarHub(){
   ${renderWarTimeline()}
   <section class="war-source-notes" id="quellen"><header class="war-section-head"><span>III · Überlieferung & offene Stellen</span><h2>Was die Quellen sagen.<br>Und was sie offenlassen.</h2></header><ol>${SOURCE_NOTES.map(note=>`<li>${e(note)}</li>`).join('')}</ol><p>Die Zeittafel erschließt ${dossiers.length} von ${WAR_EVENTS.length} Ereignissen über eigene Dossiers. Überlieferungsstand: ${dossiers.length-outlines} mit ausführlichem Bericht, ${outlines} mit Eckdaten. Die Fraktionsseiten und unveränderten Originalquellen bleiben direkt zugänglich; fehlende Verläufe, unbekannte Tage und die offene Täterschaft bleiben kenntlich.</p><a href="redaktion/abgleich-2026-10-24.md">Alle redaktionellen Entscheidungen lesen ↗</a> · <a href="sources/manifest.json">Das vollständige Quellenverzeichnis öffnen ↗</a></section>
   ${renderReadingBook(source,'sources')}`;
-  return renderWarShell({title:WAR.title,description:WAR.summary,content});
+  return renderWarShell({title:WAR.title,description:WAR.summary,content:content.replace(/^[ \t]+$/gm,'')});
 }
