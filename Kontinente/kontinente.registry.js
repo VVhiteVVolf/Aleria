@@ -9,7 +9,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Uathneach",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
-    "data": "Estryll/Fürstentum Uathneach/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -36,7 +36,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Láimhe",
     "type": "Fürstliche Domäne",
     "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -68,7 +68,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Sruthán",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -100,7 +100,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na gCoillte",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na gCoillte/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na gCoillte/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -132,7 +132,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Taoide",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -164,7 +164,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na dTorc",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -196,7 +196,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Conaire",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -228,7 +228,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Cloiche",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -260,7 +260,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft von Bronnan",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/Herrschaft von Bronnan.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -297,7 +297,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft von Mhorcha",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/Herrschaft von Mhorcha.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -334,7 +334,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft von Caorthann",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/Herrschaft von Caorthann.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -371,7 +371,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft von Treabhair",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/Herrschaft von Treabhair.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {
@@ -408,7 +408,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft von Rioghain",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/Herrschaft von Rioghain.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/herrschaft.data.mjs?v=uathneach-20261024a",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/herrschaft.data.mjs?v=uathneach-20261024b",
     "dataType": "module",
     "hierarchy": [
       {

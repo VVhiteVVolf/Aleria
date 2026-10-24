@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Uathneach/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-24T10:00:00.000Z",
-  "generatedStateHash": "2a8c6fef6b82809d9693fdd93be399d89051250ce4363a31489c661e2c77ff9f",
+  "revision": 2,
+  "updatedAt": "2026-10-24T16:23:00.000Z",
+  "generatedStateHash": "c28c41b6f7d41715f62d268a0fc6ecb479a2b92421c94b5a3fd65b8aa184aad9",
   "state": {
     "pins": [
       {
@@ -68,6 +68,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Fürstenhauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Hauptstadt"
           }
         ],
         "text": "",
@@ -97,10 +105,10 @@
         "title": "Féthlinn",
         "x": 0.32299999999999995,
         "y": 0.17999999999999994,
-        "cat": "mmfltia1m3s7",
+        "cat": "uathneach-stadt-offen",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/leuchtturm.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
@@ -117,7 +125,7 @@
           },
           {
             "k": "Typ",
-            "v": "Leuchtturmsiedlung"
+            "v": "Stadt · Größe offen"
           },
           {
             "k": "Gewerbe",
@@ -154,6 +162,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Clansitz"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Offen – Clanrang noch nicht festgelegt"
           }
         ],
         "text": "",
@@ -180,10 +196,10 @@
         "title": "Bronnan",
         "x": 0.375,
         "y": 0.353,
-        "cat": "mmfls5afqqpr",
+        "cat": "mmflwdjfl6ah",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
@@ -200,7 +216,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Normal große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -237,6 +253,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Hauptort des Dún-Tiarna-Lehens"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Normal groß"
           }
         ],
         "text": "",
@@ -263,7 +287,7 @@
         "title": "Broch an Reithe",
         "x": 0.196,
         "y": 0.33000000000000007,
-        "cat": "mmfls5afqqpr",
+        "cat": "uathneach-burgstadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
@@ -283,7 +307,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Burgstadt"
           },
           {
             "k": "Gewerbe",
@@ -320,6 +344,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Laird-Sitz"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Klein"
           },
           {
             "k": "Kartenregion",
@@ -354,7 +386,7 @@
         "title": "Moineal",
         "x": 0.465,
         "y": 0.47,
-        "cat": "mmflwdjfl6ah",
+        "cat": "uathneach-grosse-stadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
@@ -374,7 +406,7 @@
           },
           {
             "k": "Typ",
-            "v": "Stadt"
+            "v": "Große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -411,6 +443,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Regionshauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Groß"
           }
         ],
         "text": "",
@@ -437,10 +477,10 @@
         "title": "Treabhair",
         "x": 0.5579999999999999,
         "y": 0.29400000000000004,
-        "cat": "mmfls5afqqpr",
+        "cat": "mmflwdjfl6ah",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
@@ -457,7 +497,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Normal große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -494,6 +534,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Hauptort des Dún-Tiarna-Lehens"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Normal groß"
           }
         ],
         "text": "",
@@ -520,7 +568,7 @@
         "title": "Cathair",
         "x": 0.716,
         "y": 0.43900000000000006,
-        "cat": "mmflwdjfl6ah",
+        "cat": "uathneach-grosse-stadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
@@ -540,7 +588,7 @@
           },
           {
             "k": "Typ",
-            "v": "Stadt"
+            "v": "Große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -577,6 +625,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Regionshauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Groß"
           }
         ],
         "text": "",
@@ -603,10 +659,10 @@
         "title": "Dathuil",
         "x": 0.82,
         "y": 0.31800000000000006,
-        "cat": "mmfls5afqqpr",
+        "cat": "uathneach-stadt-offen",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
@@ -623,7 +679,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Stadt · Größe offen"
           },
           {
             "k": "Gewerbe",
@@ -660,6 +716,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Clansitz"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Offen – Clanrang noch nicht festgelegt"
           }
         ],
         "text": "",
@@ -686,7 +750,7 @@
         "title": "Orglen",
         "x": 0.048,
         "y": 0.58,
-        "cat": "mmflwdjfl6ah",
+        "cat": "uathneach-grosse-stadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
@@ -706,7 +770,7 @@
           },
           {
             "k": "Typ",
-            "v": "Stadt"
+            "v": "Große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -743,6 +807,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Regionshauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Groß"
           }
         ],
         "text": "",
@@ -771,7 +843,7 @@
         "title": "Broch an Mhor",
         "x": 0.23800000000000002,
         "y": 0.64,
-        "cat": "mmfls5afqqpr",
+        "cat": "uathneach-burgstadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
@@ -791,7 +863,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Burgstadt"
           },
           {
             "k": "Gewerbe",
@@ -828,6 +900,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Laird-Sitz"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Klein"
           }
         ],
         "text": "",
@@ -854,7 +934,7 @@
         "title": "Rinnmara",
         "x": 0.33899999999999997,
         "y": 0.752,
-        "cat": "mmflwdjfl6ah",
+        "cat": "uathneach-grosse-stadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
@@ -874,7 +954,7 @@
           },
           {
             "k": "Typ",
-            "v": "Stadt"
+            "v": "Große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -911,6 +991,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Regionshauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Groß"
           }
         ],
         "text": "",
@@ -938,7 +1026,7 @@
         "title": "Broch an Cuan",
         "x": 0.4,
         "y": 0.8740000000000001,
-        "cat": "mmfls5afqqpr",
+        "cat": "uathneach-burgstadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
@@ -958,7 +1046,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Burgstadt"
           },
           {
             "k": "Gewerbe",
@@ -995,6 +1083,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Laird-Sitz"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Klein"
           }
         ],
         "text": "",
@@ -1021,10 +1117,10 @@
         "title": "Temair",
         "x": 0.935,
         "y": 0.11699999999999999,
-        "cat": "mmfls5afqqpr",
+        "cat": "uathneach-grosse-stadt",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/mata.webp",
@@ -1041,7 +1137,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -1078,6 +1174,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Regionshauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Groß"
           }
         ],
         "text": "",
@@ -1104,10 +1208,10 @@
         "title": "Caorthann",
         "x": 0.6940000000000001,
         "y": 0.14,
-        "cat": "mmfls5afqqpr",
+        "cat": "mmflwdjfl6ah",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
@@ -1124,7 +1228,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Normal große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -1161,6 +1265,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Hauptort des Dún-Tiarna-Lehens"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Normal groß"
           }
         ],
         "text": "",
@@ -1187,10 +1299,10 @@
         "title": "Ceithirn",
         "x": 0.914,
         "y": 0.22999999999999998,
-        "cat": "mmfls5afqqpr",
+        "cat": "uathneach-stadt-offen",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
@@ -1207,7 +1319,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Stadt · Größe offen"
           },
           {
             "k": "Gewerbe",
@@ -1244,6 +1356,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Clansitz"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Offen – Clanrang noch nicht festgelegt"
           }
         ],
         "text": "",
@@ -1270,7 +1390,7 @@
         "title": "Kharanor",
         "x": 0.5429999999999999,
         "y": 0.9179999999999999,
-        "cat": "mmflwdjfl6ah",
+        "cat": "uathneach-grosse-stadt",
         "templateId": "siedlung",
         "kind": "place",
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
@@ -1290,7 +1410,7 @@
           },
           {
             "k": "Typ",
-            "v": "Stadt"
+            "v": "Große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -1327,6 +1447,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Regionshauptstadt"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Groß"
           }
         ],
         "text": "",
@@ -1355,10 +1483,10 @@
         "title": "Mhorcha",
         "x": 0.635,
         "y": 0.584,
-        "cat": "mmfls5afqqpr",
+        "cat": "mmflwdjfl6ah",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
@@ -1375,7 +1503,7 @@
           },
           {
             "k": "Typ",
-            "v": "Burgsiedlung"
+            "v": "Normal große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -1412,6 +1540,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Hauptort des Dún-Tiarna-Lehens"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Normal groß"
           }
         ],
         "text": "",
@@ -1438,10 +1574,10 @@
         "title": "Rioghain",
         "x": 0.517,
         "y": 0.6779999999999999,
-        "cat": "location-dorf",
+        "cat": "mmflwdjfl6ah",
         "templateId": "siedlung",
         "kind": "place",
-        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
@@ -1458,7 +1594,7 @@
           },
           {
             "k": "Typ",
-            "v": "Dorf"
+            "v": "Normal große Stadt"
           },
           {
             "k": "Gewerbe",
@@ -1495,6 +1631,14 @@
           {
             "k": "Ressourcen",
             "v": ""
+          },
+          {
+            "k": "Funktion",
+            "v": "Hauptort des Dún-Tiarna-Lehens"
+          },
+          {
+            "k": "Größenklasse",
+            "v": "Normal groß"
           }
         ],
         "text": "",
@@ -1521,587 +1665,32 @@
       {
         "id": "mmflrbzxydg7",
         "label": "Hauptstadt",
-        "color": "#ff0000"
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
       },
       {
-        "id": "mmflrqajby8b",
-        "label": "Bauernsiedlung",
-        "color": "#6060b0"
-      },
-      {
-        "id": "mmflry5furso",
-        "label": "Hafensiedlung",
-        "color": "#b03030"
-      },
-      {
-        "id": "mmfls5afqqpr",
-        "label": "Burgsiedlung",
-        "color": "#9050b0"
-      },
-      {
-        "id": "mmflsfqh3sft",
-        "label": "Handelssiedlung",
-        "color": "#3a8a3a"
-      },
-      {
-        "id": "mmflsrndeiee",
-        "label": "Brückensiedlung",
-        "color": "#2a7aaa"
-      },
-      {
-        "id": "mmflt1x3v22o",
-        "label": "Bergbausiedlung",
-        "color": "#7a6040"
-      },
-      {
-        "id": "mmflt7uj831y",
-        "label": "Waldsiedlung",
-        "color": "#c07030"
-      },
-      {
-        "id": "mmflteurd4n5",
-        "label": "Kirchensiedlung",
-        "color": "#508080"
-      },
-      {
-        "id": "mmfltia1m3s7",
-        "label": "Leuchtturmsiedlung",
-        "color": "#c49a20"
-      },
-      {
-        "id": "mmfltullsctk",
-        "label": "Festungssiedlung",
-        "color": "#6060b0"
-      },
-      {
-        "id": "mmflvj37jbh2",
-        "label": "Taverne",
-        "color": "#b03030"
-      },
-      {
-        "id": "mmflvquv2rr3",
-        "label": "Siedlungsruine",
-        "color": "#9050b0"
-      },
-      {
-        "id": "mmflw1z5ko6e",
-        "label": "Stadtruine",
-        "color": "#3a8a3a"
-      },
-      {
-        "id": "mmflw73t2e8v",
-        "label": "Bardensiedlung",
-        "color": "#2a7aaa"
+        "id": "uathneach-grosse-stadt",
+        "label": "Große Stadt",
+        "color": "#8a6334",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
       },
       {
         "id": "mmflwdjfl6ah",
-        "label": "Stadt",
-        "color": "#7a6040"
+        "label": "Normal große Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
       },
       {
-        "id": "mmflwmdfcyua",
-        "label": "Turmruine",
-        "color": "#c07030"
+        "id": "uathneach-burgstadt",
+        "label": "Burgstadt",
+        "color": "#79617e",
+        "marker": "/Karten/assets/icons/welt/burgsiedlung.png"
       },
       {
-        "id": "mmflwxad8w1j",
-        "label": "Schiffswrack",
-        "color": "#508080"
-      },
-      {
-        "id": "mmflx4731uj6",
-        "label": "Turnierplatz",
-        "color": "#c49a20"
-      },
-      {
-        "id": "mmflxnnhbh4g",
-        "label": "Besondere Orte",
-        "color": "#6060b0"
-      },
-      {
-        "id": "location-dorf",
-        "label": "Dorf",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/bardensiedlung.png"
-      },
-      {
-        "id": "location-flusssiedlung",
-        "label": "Flusssiedlung",
-        "color": "#2a7aaa",
-        "marker": "/Karten/assets/icons/welt/flusssiedlung.png"
-      },
-      {
-        "id": "location-bauernhof",
-        "label": "Bauernhof",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/bauernsiedlung.png"
-      },
-      {
-        "id": "location-landgut",
-        "label": "Landgut",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/landgut.png"
-      },
-      {
-        "id": "location-anwesen",
-        "label": "Anwesen",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/anwesen.png"
-      },
-      {
-        "id": "location-rittergut",
-        "label": "Rittergut",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/kleine-burg.png"
-      },
-      {
-        "id": "location-weingut",
-        "label": "Weingut",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/weingut.png"
-      },
-      {
-        "id": "location-obstplantage",
-        "label": "Obstplantage",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/obstplantage.png"
-      },
-      {
-        "id": "location-viehweide",
-        "label": "Viehweide",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/weide.png"
-      },
-      {
-        "id": "location-gestuet",
-        "label": "Gestüt",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/gest-t.png"
-      },
-      {
-        "id": "location-muehle",
-        "label": "Mühle",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/m-hle.png"
-      },
-      {
-        "id": "location-mine",
-        "label": "Mine",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/einzelnemine.png"
-      },
-      {
-        "id": "location-steinbruch",
-        "label": "Steinbruch",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/steinbruch-1.png"
-      },
-      {
-        "id": "location-schmiede",
-        "label": "Schmiede",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/schmiede.png"
-      },
-      {
-        "id": "location-brauerei",
-        "label": "Brauerei",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
-      },
-      {
-        "id": "location-fischerei",
-        "label": "Fischerei",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/fischerh-tte.png"
-      },
-      {
-        "id": "location-holzfaellerlager",
-        "label": "Holzfällerlager",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/holzf-llerlager.png"
-      },
-      {
-        "id": "location-koehlerei",
-        "label": "Köhlerei",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/k-hler3.png"
-      },
-      {
-        "id": "location-imkerei",
-        "label": "Imkerei",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/imkerhof.png"
-      },
-      {
-        "id": "location-handelskontor",
-        "label": "Handelskontor",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/kontor.png"
-      },
-      {
-        "id": "location-markt",
-        "label": "Markt",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/marktstand.png"
-      },
-      {
-        "id": "location-gildenhaus",
-        "label": "Gildenhaus",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/gildenzentrale.png"
-      },
-      {
-        "id": "location-burg",
-        "label": "Burg",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/gro-e-burg.png"
-      },
-      {
-        "id": "location-turm",
-        "label": "Turm",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/turm.png"
-      },
-      {
-        "id": "location-leuchtturm",
-        "label": "Leuchtturm",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/leuchtturm.png"
-      },
-      {
-        "id": "location-aussenposten",
-        "label": "Außenposten",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/au-enposten.png"
-      },
-      {
-        "id": "location-grenzposten",
-        "label": "Grenzposten",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/zoll-grenzposten.png"
-      },
-      {
-        "id": "location-heerlager",
-        "label": "Heerlager",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/heereslager.png"
-      },
-      {
-        "id": "location-lagerplatz",
-        "label": "Lagerplatz",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/lager.png"
-      },
-      {
-        "id": "location-jaegerlager",
-        "label": "Jägerlager",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/j-gerlager.png"
-      },
-      {
-        "id": "location-jagdhaus",
-        "label": "Jagdhaus",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/j-gerhaus.png"
-      },
-      {
-        "id": "location-druidenhuette",
-        "label": "Druidenhütte",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/druidenh-tte.png"
-      },
-      {
-        "id": "location-hexenhuette",
-        "label": "Hexenhütte",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/hexenhaus.png"
-      },
-      {
-        "id": "location-schrein",
-        "label": "Schrein",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/wegschrein.png"
-      },
-      {
-        "id": "location-heiligtum",
-        "label": "Heiligtum",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/heiligtum.png"
-      },
-      {
-        "id": "location-friedhof",
-        "label": "Friedhof",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/l-ndlicher-friedhof.png"
-      },
-      {
-        "id": "location-grabstaette",
-        "label": "Grabstätte",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/grabmal.png"
-      },
-      {
-        "id": "location-ruine",
-        "label": "Ruine",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/ruine2.png"
-      },
-      {
-        "id": "location-ausgrabung",
-        "label": "Ausgrabung",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/ausgrabung.png"
-      },
-      {
-        "id": "location-hoehle",
-        "label": "Höhle",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/h-hle.png"
-      },
-      {
-        "id": "location-hain",
-        "label": "Hain",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/hain.png"
-      },
-      {
-        "id": "location-ahnenbaum",
-        "label": "Ahnenbaum",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/ahnenbaum.png"
-      },
-      {
-        "id": "location-quelle",
-        "label": "Quelle",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/quelle.png"
-      },
-      {
-        "id": "location-berggipfel",
-        "label": "Berggipfel",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/gipfel.png"
-      },
-      {
-        "id": "location-monsterhort",
-        "label": "Monsterhort",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/kreaturenhort.png"
-      },
-      {
-        "id": "location-banditenlager",
-        "label": "Banditenlager",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/banditenlager.png"
-      },
-      {
-        "id": "location-hafen",
-        "label": "Hafen / Steg",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/gro-er-hafen.png"
-      },
-      {
-        "id": "location-werft",
-        "label": "Werft",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/schiffswerft.png"
-      },
-      {
-        "id": "location-poststation",
-        "label": "Poststation",
-        "color": "#a45630",
-        "marker": "/Karten/assets/icons/welt/poststation.png"
-      },
-      {
-        "id": "location-schule",
-        "label": "Schule",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/l-ndliche-universit-t.png"
-      },
-      {
-        "id": "location-zirkus",
-        "label": "Zirkus",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/zirkus3.png"
-      },
-      {
-        "id": "location-wohnhaus",
-        "label": "Wohnhaus",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/b-uerliches-heim.png"
-      },
-      {
-        "id": "location-brauersiedlung",
-        "label": "Brauersiedlung",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/brauersiedlung.png"
-      },
-      {
-        "id": "location-klostersiedlung",
-        "label": "Klostersiedlung",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/klostersiedlung.png"
-      },
-      {
-        "id": "location-rosszuchtsiedlung",
-        "label": "Rosszuchtsiedlung",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/pferdezuchtsiedlung.png"
-      },
-      {
-        "id": "location-sumpfsiedlung",
-        "label": "Sumpfsiedlung",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/sumpfsiedlung.png"
-      },
-      {
-        "id": "location-unterwasserstadt",
-        "label": "Unterwasserstadt",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/unterwasserstadt.png"
-      },
-      {
-        "id": "location-festung",
-        "label": "Festung",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/festung.png"
-      },
-      {
-        "id": "location-magierturm",
-        "label": "Magierturm",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/magierturm.png"
-      },
-      {
-        "id": "location-diebesgilde",
-        "label": "Diebesgilde",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/diebesgilde.png"
-      },
-      {
-        "id": "location-piratenversteck",
-        "label": "Piratenversteck",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/piratenlager.png"
-      },
-      {
-        "id": "location-schmugglerversteck",
-        "label": "Schmugglerversteck",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/schmuggler3.png"
-      },
-      {
-        "id": "location-verwunschener-wald",
-        "label": "Verwunschener Wald",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/waldschrat.png"
-      },
-      {
-        "id": "location-wahrzeichen",
-        "label": "Wahrzeichen",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/wahrzeichen.png"
-      },
-      {
-        "id": "location-dimensionaler-riss",
-        "label": "Dimensionaler Riss",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/dimensionaler-riss.png"
-      },
-      {
-        "id": "location-galgen",
-        "label": "Galgen",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/exekutionsplatz.png"
-      },
-      {
-        "id": "location-muenzpraegestaette",
-        "label": "Münzprägestätte",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/m-nzpr-ger.png"
-      },
-      {
-        "id": "location-bogenschiessstand",
-        "label": "Bogenschießstand",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/schie-stand2.png"
-      },
-      {
-        "id": "location-ziegelei",
-        "label": "Ziegelei",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/ziegelbrenner.png"
-      },
-      {
-        "id": "location-schiff",
-        "label": "Schiff",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/orte/schiff-gut.png"
-      },
-      {
-        "id": "location-kreaturenlager",
-        "label": "Kreaturenlager",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/goblinlager.png"
-      },
-      {
-        "id": "location-heisse-quellen",
-        "label": "Heiße Quellen",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/hei-e-quellen.png"
-      },
-      {
-        "id": "location-brueckenruine",
-        "label": "Brückenruine",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/zerst-rte-br-cke.png"
-      },
-      {
-        "id": "location-kirchenruine",
-        "label": "Kirchenruine",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/welt/zerst-rte-kirche.png"
-      },
-      {
-        "id": "location-hausruine",
-        "label": "Hausruine",
-        "color": "#6060b0",
-        "marker": "/Karten/assets/icons/welt/zerst-rtes-heim.png"
-      },
-      {
-        "id": "location-huegelgrab",
-        "label": "Hügelgrab",
-        "color": "#b08030",
-        "marker": "/Karten/assets/icons/welt/h-gelgrab.png"
-      },
-      {
-        "id": "location-plantage",
-        "label": "Plantage",
-        "color": "#7a6040",
-        "marker": "/Karten/assets/icons/welt/landgut.png"
-      },
-      {
-        "id": "location-kultstaette",
-        "label": "Kultstätte",
-        "color": "#3a8a3a",
-        "marker": "/Karten/assets/icons/welt/okkulter-schrein.png"
-      },
-      {
-        "id": "location-zelt",
-        "label": "Zelt",
-        "color": "#508080",
-        "marker": "/Karten/assets/icons/welt/ritterlicheszelt.png"
-      },
-      {
-        "id": "location-faehrstelle",
-        "label": "Fährstelle",
-        "color": "#906438",
-        "marker": "/Karten/assets/icons/orte/f-hre-steg.png"
-      },
-      {
-        "id": "location-schlachtfeld",
-        "label": "Schlachtfeld",
-        "color": "#6060b0"
+        "id": "uathneach-stadt-offen",
+        "label": "Stadt · Größe offen",
+        "color": "#777267",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
       }
     ],
     "categoryCatalogVersion": 3,

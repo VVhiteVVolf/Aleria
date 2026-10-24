@@ -13,7 +13,7 @@ const territoryBuilders = ['aislearneach', 'alben', 'blaithneach', 'ceitheach', 
 export const WORLD_CONTENT_TASKS = [
   {
     id: 'territory-pages', label: 'Realm hierarchies, territory pages and heraldry',
-    inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/',
+    inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
       'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/'],
     commands: [...territoryBuilders.map(name => ['Kontinente/scripts/build-' + name + '.mjs', '--check']),
       tests('Kontinente/tests')]

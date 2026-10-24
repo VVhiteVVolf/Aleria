@@ -1,5 +1,15 @@
 # Uathneach
 
+Die Übersicht zeigt ausschließlich Städte. Die Einordnung folgt der
+Nutzerkorrektur vom 24. Oktober 2026: Ard Tiarna → Hauptstadt, Mor Tiarna → große
+Regionshauptstadt, Dún Tiarna → normal große Stadt, Laird → kleine Stadt oder
+Burgstadt. Ansässige Lairds stufen den Sitz eines höherrangigen Clans nicht
+herab. Die drei eigenständigen Broch-Sitze sind Burgstädte. Féthlinn ist keine
+Leuchtturmsiedlung, Rioghain kein Dorf. Die genaue Größenklasse der drei
+neuen Clans ohne belegten Rang bleibt offen; ihre Orte sind ausdrücklich Städte.
+Diese Regel liegt in `city-classification.mjs`; Architekturdetails einzelner
+Kartenzeichnungen begründen keine Wirtschafts- oder Siedlungskategorie.
+
 Patrick hat Variante 1 am 24. Oktober 2026 bestätigt: sieben Gebiete, sechs
 Mor-Tiarna-Clans unter den Mac Ard’Lága, fünf Dún-Tiarna-Lehen und die örtlichen
 Clans. `Stammbäume/assets/js/data/uathneach-territories.source.json` enthält den freigegebenen Bestand unabhängig von

@@ -1,5 +1,6 @@
 import { structure, territories, territoriesById, clansById, settlementsById, regionsById,
   territoryAncestors, familyHref } from '../../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
+import { markers } from '../../../Karten/Uathneach/places.mjs';
 
 const map = { title: 'Karte des Fürstentums Uathneach', imageSrc: '/Karten/Uathneach/Kartenbilder/regionen.webp',
   imageAlt: 'Uathneach mit den sieben Gebieten der freigegebenen Gliederung', href: '/Karten/karte.html?map=uathneach' };
@@ -36,7 +37,7 @@ export const pages = territories.map(territory => {
     const houses = children.filter(predicate).map(c => family(c));
     if (houses.length) groups.push({ title: label, houses });
   }
-  const own = structure.settlements.filter(place => place.territoryId === territory.id);
+  const own = markers.filter(place => place.territoryId === territory.id);
   const region = regionsById.get(territory.id);
   return {
     id: territory.id, title: territory.name, shortTitle: isRoot ? 'Uathneach' : territory.name,
@@ -55,7 +56,7 @@ export const pages = territories.map(territory => {
       ...(parent ? [{ label: 'Oberherrschaft', value: parent.name, href: parent.href }] : []),
     ] }], families: groups, councilGroups: [], vassalGroups: [],
     domains: own.length ? [{ territoryId: territory.id, title: territory.name,
-      sections: [...new Set(own.map(p => p.category))].map(category => ({ title: category, placeIds: own.filter(p => p.category === category).map(p => 'uathneach-' + p.id) })) }] : [],
+      sections: [...new Set(own.map(p => p.category))].map(category => ({ title: category, placeIds: own.filter(p => p.category === category).map(p => p.id) })) }] : [],
     territoryLinks: territories.filter(t => t.parentId === territory.id).map(t => t.id),
   };
 });

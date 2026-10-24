@@ -486,7 +486,6 @@
         45.4,
         6.4
       ],
-      "category": "Hauptstadt",
       "mapRegionId": "uathneach-tir-na-laimhe",
       "territoryId": "uathneach-tir-na-laimhe",
       "residentFamilyIds": [
@@ -503,7 +502,6 @@
         32.3,
         18
       ],
-      "category": "Leuchtturmsiedlung",
       "mapRegionId": "uathneach-tir-na-laimhe",
       "territoryId": "uathneach-tir-na-laimhe",
       "residentFamilyIds": [
@@ -517,7 +515,6 @@
         37.5,
         35.3
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-laimhe",
       "territoryId": "uathneach-herrschaft-fastaigh",
       "residentFamilyIds": [
@@ -531,12 +528,12 @@
         19.6,
         33
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-taoide",
       "territoryId": "uathneach-tir-na-laimhe",
       "residentFamilyIds": [
         "haus-muirin"
-      ]
+      ],
+      "cityForm": "burgstadt"
     },
     {
       "id": "moineal",
@@ -545,7 +542,6 @@
         46.5,
         47
       ],
-      "category": "Stadt",
       "mapRegionId": "uathneach-tir-na-sruthan",
       "territoryId": "uathneach-tir-na-sruthan",
       "residentFamilyIds": [
@@ -559,7 +555,6 @@
         55.8,
         29.4
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-sruthan",
       "territoryId": "uathneach-herrschaft-luachra",
       "residentFamilyIds": [
@@ -573,7 +568,6 @@
         71.6,
         43.9
       ],
-      "category": "Stadt",
       "mapRegionId": "uathneach-tir-na-gcoillte",
       "territoryId": "uathneach-tir-na-gcoillte",
       "residentFamilyIds": [
@@ -587,7 +581,6 @@
         82,
         31.8
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-gcoillte",
       "territoryId": "uathneach-tir-na-gcoillte",
       "residentFamilyIds": [
@@ -601,7 +594,6 @@
         4.8,
         58
       ],
-      "category": "Stadt",
       "mapRegionId": "uathneach-tir-na-taoide",
       "territoryId": "uathneach-tir-na-taoide",
       "residentFamilyIds": [
@@ -617,12 +609,12 @@
         23.8,
         64
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-taoide",
       "territoryId": "uathneach-tir-na-taoide",
       "residentFamilyIds": [
         "haus-cairge"
-      ]
+      ],
+      "cityForm": "burgstadt"
     },
     {
       "id": "rinnmara",
@@ -631,7 +623,6 @@
         33.9,
         75.2
       ],
-      "category": "Stadt",
       "mapRegionId": "uathneach-tir-na-dtorc",
       "territoryId": "uathneach-tir-na-dtorc",
       "residentFamilyIds": [
@@ -646,12 +637,12 @@
         40,
         87.4
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-dtorc",
       "territoryId": "uathneach-tir-na-dtorc",
       "residentFamilyIds": [
         "haus-cadhla"
-      ]
+      ],
+      "cityForm": "burgstadt"
     },
     {
       "id": "temair",
@@ -660,7 +651,6 @@
         93.5,
         11.7
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-conaire",
       "territoryId": "uathneach-tir-na-conaire",
       "residentFamilyIds": [
@@ -674,7 +664,6 @@
         69.4,
         14
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-conaire",
       "territoryId": "uathneach-herrschaft-suilgeach",
       "residentFamilyIds": [
@@ -688,7 +677,6 @@
         91.4,
         23
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-conaire",
       "territoryId": "uathneach-tir-na-conaire",
       "residentFamilyIds": [
@@ -702,7 +690,6 @@
         54.3,
         91.8
       ],
-      "category": "Stadt",
       "mapRegionId": "uathneach-tir-na-cloiche",
       "territoryId": "uathneach-tir-na-cloiche",
       "residentFamilyIds": [
@@ -718,7 +705,6 @@
         63.5,
         58.4
       ],
-      "category": "Burgsiedlung",
       "mapRegionId": "uathneach-tir-na-cloiche",
       "territoryId": "uathneach-herrschaft-lasgair",
       "residentFamilyIds": [
@@ -732,7 +718,6 @@
         51.7,
         67.8
       ],
-      "category": "Dorf",
       "mapRegionId": "uathneach-tir-na-cloiche",
       "territoryId": "uathneach-herrschaft-clannmhar",
       "residentFamilyIds": [
@@ -748,6 +733,10 @@
     {
       "id": "unconfirmed-ranks",
       "text": "Na Fiodhrán, Tir An Creagán und Dál Siubhrán sind ihren Siedlungen und Lehnsherren zugeordnet; ihre Ränge bleiben offen."
+    },
+    {
+      "id": "urban-overview-rank-based",
+      "text": "Die Uathneach-Übersicht zeigt ausschließlich Städte. Hauptstadt, große Regionshauptstadt, normal große Stadt und kleine Stadt/Burgstadt richten sich nach dem höchsten ansässigen Clanrang. Einzelne Turm-, Hafen- oder Waldzeichnungen bestimmen keine spezialisierte Siedlungsart."
     }
   ]
 }
