@@ -9,7 +9,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Uathneach",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
-    "data": "Estryll/Fürstentum Uathneach/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -36,7 +36,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Dála",
     "type": "Fürstliche Domäne",
     "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -68,7 +68,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na nGleannta",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -100,7 +100,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Gairme",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na gCoillte/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na gCoillte/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -132,7 +132,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Seolta",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -164,7 +164,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Machairí",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -196,7 +196,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Faire",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -228,7 +228,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na gClog",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -257,10 +257,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "uathneach-herrschaft-fastaigh",
     "slug": "uathneach-herrschaft-fastaigh",
     "aliases": [],
-    "name": "Herrschaft von Bronnan",
+    "name": "Tir na hAille",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/Herrschaft von Bronnan.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -285,7 +285,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft von Bronnan",
+        "name": "Tir na hAille",
         "slug": "uathneach-herrschaft-fastaigh"
       }
     ]
@@ -294,10 +294,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "uathneach-herrschaft-lasgair",
     "slug": "uathneach-herrschaft-lasgair",
     "aliases": [],
-    "name": "Herrschaft von Mhorcha",
+    "name": "Tir na nEití",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/Herrschaft von Mhorcha.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -322,7 +322,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft von Mhorcha",
+        "name": "Tir na nEití",
         "slug": "uathneach-herrschaft-lasgair"
       }
     ]
@@ -331,10 +331,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "uathneach-herrschaft-suilgeach",
     "slug": "uathneach-herrschaft-suilgeach",
     "aliases": [],
-    "name": "Herrschaft von Caorthann",
+    "name": "Tir na Réalta",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/Herrschaft von Caorthann.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -359,7 +359,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft von Caorthann",
+        "name": "Tir na Réalta",
         "slug": "uathneach-herrschaft-suilgeach"
       }
     ]
@@ -368,10 +368,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "uathneach-herrschaft-luachra",
     "slug": "uathneach-herrschaft-luachra",
     "aliases": [],
-    "name": "Herrschaft von Treabhair",
+    "name": "Tir na Raithní",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/Herrschaft von Treabhair.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -396,7 +396,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft von Treabhair",
+        "name": "Tir na Raithní",
         "slug": "uathneach-herrschaft-luachra"
       }
     ]
@@ -405,10 +405,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "uathneach-herrschaft-clannmhar",
     "slug": "uathneach-herrschaft-clannmhar",
     "aliases": [],
-    "name": "Herrschaft von Rioghain",
+    "name": "Tir na Snaidhme",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/Herrschaft von Rioghain.html",
-    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/herrschaft.data.mjs?v=uathneach-20261024c",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -433,8 +433,526 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft von Rioghain",
+        "name": "Tir na Snaidhme",
         "slug": "uathneach-herrschaft-clannmhar"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-briccne",
+    "slug": "uathneach-herrschaft-briccne",
+    "aliases": [],
+    "name": "Herrschaft der Na Briccne",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft der Na Briccne/Herrschaft der Na Briccne.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft der Na Briccne/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Dála",
+        "slug": "uathneach-tir-na-laimhe"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Na Briccne",
+        "slug": "uathneach-herrschaft-briccne"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-arbhair",
+    "slug": "uathneach-herrschaft-arbhair",
+    "aliases": [],
+    "name": "Herrschaft der Dâl Arbhair",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft der Dâl Arbhair/Herrschaft der Dâl Arbhair.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft der Dâl Arbhair/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Dála",
+        "slug": "uathneach-tir-na-laimhe"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dâl Arbhair",
+        "slug": "uathneach-herrschaft-arbhair"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-scathain",
+    "slug": "uathneach-herrschaft-scathain",
+    "aliases": [],
+    "name": "Herrschaft der An Scatháin",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft der An Scatháin/Herrschaft der An Scatháin.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft der An Scatháin/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Dála",
+        "slug": "uathneach-tir-na-laimhe"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der An Scatháin",
+        "slug": "uathneach-herrschaft-scathain"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-muirin",
+    "slug": "uathneach-herrschaft-muirin",
+    "aliases": [],
+    "name": "Tir na nGliomach",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na nGliomach/Tir na nGliomach.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na nGliomach/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Dála",
+        "slug": "uathneach-tir-na-laimhe"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na nGliomach",
+        "slug": "uathneach-herrschaft-muirin"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-cairbre",
+    "slug": "uathneach-herrschaft-cairbre",
+    "aliases": [],
+    "name": "Herrschaft der Ua Cairbre",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Taoide/Herrschaft der Ua Cairbre/Herrschaft der Ua Cairbre.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/Herrschaft der Ua Cairbre/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Seolta",
+        "slug": "uathneach-tir-na-taoide"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua Cairbre",
+        "slug": "uathneach-herrschaft-cairbre"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-reannachain",
+    "slug": "uathneach-herrschaft-reannachain",
+    "aliases": [],
+    "name": "Herrschaft der Ua Reannachain",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Taoide/Herrschaft der Ua Reannachain/Herrschaft der Ua Reannachain.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/Herrschaft der Ua Reannachain/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Seolta",
+        "slug": "uathneach-tir-na-taoide"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua Reannachain",
+        "slug": "uathneach-herrschaft-reannachain"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-cairge",
+    "slug": "uathneach-herrschaft-cairge",
+    "aliases": [],
+    "name": "Tir na bPortán",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na bPortán/Tir na bPortán.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na bPortán/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Seolta",
+        "slug": "uathneach-tir-na-taoide"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na bPortán",
+        "slug": "uathneach-herrschaft-cairge"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-cuilen",
+    "slug": "uathneach-herrschaft-cuilen",
+    "aliases": [],
+    "name": "Herrschaft der Ua Cuilen",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na dTorc/Herrschaft der Ua Cuilen/Herrschaft der Ua Cuilen.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/Herrschaft der Ua Cuilen/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Machairí",
+        "slug": "uathneach-tir-na-dtorc"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua Cuilen",
+        "slug": "uathneach-herrschaft-cuilen"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-cadhla",
+    "slug": "uathneach-herrschaft-cadhla",
+    "aliases": [],
+    "name": "Tir na Líonta",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na Líonta/Tir na Líonta.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na Líonta/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Machairí",
+        "slug": "uathneach-tir-na-dtorc"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Líonta",
+        "slug": "uathneach-herrschaft-cadhla"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-marcaigh",
+    "slug": "uathneach-herrschaft-marcaigh",
+    "aliases": [],
+    "name": "Herrschaft der Ruin Marcaigh",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft der Ruin Marcaigh/Herrschaft der Ruin Marcaigh.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft der Ruin Marcaigh/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na gClog",
+        "slug": "uathneach-tir-na-cloiche"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ruin Marcaigh",
+        "slug": "uathneach-herrschaft-marcaigh"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-giolla",
+    "slug": "uathneach-herrschaft-giolla",
+    "aliases": [],
+    "name": "Herrschaft der Ruin Giolla",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft der Ruin Giolla/Herrschaft der Ruin Giolla.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft der Ruin Giolla/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na gClog",
+        "slug": "uathneach-tir-na-cloiche"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ruin Giolla",
+        "slug": "uathneach-herrschaft-giolla"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-fiodhran",
+    "slug": "uathneach-herrschaft-fiodhran",
+    "aliases": [],
+    "name": "Tir na gCurach",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCurach/Tir na gCurach.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCurach/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gairme",
+        "slug": "uathneach-tir-na-gcoillte"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na gCurach",
+        "slug": "uathneach-herrschaft-fiodhran"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-creagan",
+    "slug": "uathneach-herrschaft-creagan",
+    "aliases": [],
+    "name": "Tir na bhFeochadán",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na bhFeochadán/Tir na bhFeochadán.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na bhFeochadán/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Faire",
+        "slug": "uathneach-tir-na-conaire"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na bhFeochadán",
+        "slug": "uathneach-herrschaft-creagan"
+      }
+    ]
+  },
+  {
+    "id": "uathneach-herrschaft-einsiedlerkrebs",
+    "slug": "uathneach-herrschaft-einsiedlerkrebs",
+    "aliases": [],
+    "name": "Tir na Fánaíochta",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Fánaíochta/Tir na Fánaíochta.html",
+    "data": "Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Fánaíochta/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Uathneach",
+        "slug": "fuerstentum-uathneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Tir na Dála",
+        "slug": "uathneach-tir-na-laimhe"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Fánaíochta",
+        "slug": "uathneach-herrschaft-einsiedlerkrebs"
       }
     ]
   },
@@ -449,7 +967,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Leitheach",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
-    "data": "Estryll/Fürstentum Leitheach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -464,7 +982,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       }
     ]
@@ -473,10 +991,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-tir-na-sleagh",
     "slug": "leitheach-tir-na-sleagh",
     "aliases": [],
-    "name": "Oberherrschaft Tir na Sleagh",
+    "name": "Tir na Sleagh",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -491,7 +1009,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -505,10 +1023,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-tir-na-sinsear",
     "slug": "leitheach-tir-na-sinsear",
     "aliases": [],
-    "name": "Oberherrschaft Tir na Sinsear",
+    "name": "Tir na Sinsear",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -523,7 +1041,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -540,7 +1058,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Fancha",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -555,7 +1073,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -577,7 +1095,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Tir na Coimhthioch",
     "type": "Lehensherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -592,7 +1110,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -611,10 +1129,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-cleir",
     "slug": "leitheach-herrschaft-cleir",
     "aliases": [],
-    "name": "Herrschaft der Ua’Cleir",
+    "name": "Tir na bhFiach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/Herrschaft der Ua’Cleir.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -629,7 +1147,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -644,7 +1162,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Cleir",
+        "name": "Tir na bhFiach",
         "slug": "leitheach-herrschaft-cleir"
       }
     ]
@@ -653,10 +1171,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-ghaiscioch",
     "slug": "leitheach-herrschaft-ghaiscioch",
     "aliases": [],
-    "name": "Herrschaft der Ua’Ghaiscíoch",
+    "name": "Tir na nArmúr",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/Herrschaft der Ua’Ghaiscíoch.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -671,7 +1189,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -686,7 +1204,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Ghaiscíoch",
+        "name": "Tir na nArmúr",
         "slug": "leitheach-herrschaft-ghaiscioch"
       }
     ]
@@ -695,10 +1213,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-ceardaiocht",
     "slug": "leitheach-herrschaft-ceardaiocht",
     "aliases": [],
-    "name": "Herrschaft der Dál’Ceardaíocht",
+    "name": "Tir na hInneonach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/Herrschaft der Dál’Ceardaíocht.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -713,7 +1231,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -728,7 +1246,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dál’Ceardaíocht",
+        "name": "Tir na hInneonach",
         "slug": "leitheach-herrschaft-ceardaiocht"
       }
     ]
@@ -737,10 +1255,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-tir-na-gortanna",
     "slug": "leitheach-tir-na-gortanna",
     "aliases": [],
-    "name": "Oberherrschaft Tir na Gortanna",
+    "name": "Tir na Gortanna",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -755,7 +1273,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -769,10 +1287,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-ard-trodach",
     "slug": "leitheach-herrschaft-ard-trodach",
     "aliases": [],
-    "name": "Herrschaft der Ard Trodach",
+    "name": "Tir na gComhrac",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/Herrschaft der Ard Trodach.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -787,7 +1305,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -797,7 +1315,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ard Trodach",
+        "name": "Tir na gComhrac",
         "slug": "leitheach-herrschaft-ard-trodach"
       }
     ]
@@ -806,10 +1324,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-nic-caoimhe",
     "slug": "leitheach-herrschaft-nic-caoimhe",
     "aliases": [],
-    "name": "Herrschaft der Nic Caoimhe",
+    "name": "Tir na Lasrach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/Herrschaft der Nic Caoimhe.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -824,7 +1342,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -834,7 +1352,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Nic Caoimhe",
+        "name": "Tir na Lasrach",
         "slug": "leitheach-herrschaft-nic-caoimhe"
       }
     ]
@@ -843,10 +1361,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-frisealach",
     "slug": "leitheach-herrschaft-frisealach",
     "aliases": [],
-    "name": "Lehensherrschaft der Ard Frisealach",
+    "name": "Tir na Lúibe",
     "type": "Lehensherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -861,7 +1379,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -871,7 +1389,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Lehensherrschaft",
-        "name": "Lehensherrschaft der Ard Frisealach",
+        "name": "Tir na Lúibe",
         "slug": "leitheach-herrschaft-frisealach"
       }
     ]
@@ -880,10 +1398,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-somhairle",
     "slug": "leitheach-herrschaft-somhairle",
     "aliases": [],
-    "name": "Herrschaft der Sidhe Somhairle",
+    "name": "Tir na Soilse",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -898,7 +1416,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -908,7 +1426,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Sidhe Somhairle",
+        "name": "Tir na Soilse",
         "slug": "leitheach-herrschaft-somhairle"
       }
     ]
@@ -917,10 +1435,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-tir-na-tonn",
     "slug": "leitheach-tir-na-tonn",
     "aliases": [],
-    "name": "Oberherrschaft Tir na Tonn",
+    "name": "Tir na Tonn",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -935,7 +1453,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -949,10 +1467,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-gortach",
     "slug": "leitheach-herrschaft-gortach",
     "aliases": [],
-    "name": "Herrschaft der Ru’Gortach",
+    "name": "Tir na Breithe",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -967,7 +1485,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -977,7 +1495,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ru’Gortach",
+        "name": "Tir na Breithe",
         "slug": "leitheach-herrschaft-gortach"
       }
     ]
@@ -986,10 +1504,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-ruitheach",
     "slug": "leitheach-herrschaft-ruitheach",
     "aliases": [],
-    "name": "Herrschaft der Dál’Ruitheach",
+    "name": "Tir na nDambaí",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1004,7 +1522,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1014,7 +1532,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dál’Ruitheach",
+        "name": "Tir na nDambaí",
         "slug": "leitheach-herrschaft-ruitheach"
       }
     ]
@@ -1023,10 +1541,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-tir-na-comhchuibhis",
     "slug": "leitheach-tir-na-comhchuibhis",
     "aliases": [],
-    "name": "Oberherrschaft Tir an Comhchuibhis",
+    "name": "Tir an Comhchuibhis",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1041,7 +1559,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1055,10 +1573,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-laidir",
     "slug": "leitheach-herrschaft-laidir",
     "aliases": [],
-    "name": "Lehensherrschaft der Ruin’Laidir",
+    "name": "Tir na Dídine",
     "type": "Lehensherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1073,7 +1591,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1083,7 +1601,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Lehensherrschaft",
-        "name": "Lehensherrschaft der Ruin’Laidir",
+        "name": "Tir na Dídine",
         "slug": "leitheach-herrschaft-laidir"
       }
     ]
@@ -1092,10 +1610,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-choinnich",
     "slug": "leitheach-herrschaft-choinnich",
     "aliases": [],
-    "name": "Herrschaft der Ua’Choinnich",
+    "name": "Tir na gCrúb",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/Herrschaft der Ua’Choinnich.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1110,7 +1628,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1120,7 +1638,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Choinnich",
+        "name": "Tir na gCrúb",
         "slug": "leitheach-herrschaft-choinnich"
       }
     ]
@@ -1129,10 +1647,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-nic-blar",
     "slug": "leitheach-herrschaft-nic-blar",
     "aliases": [],
-    "name": "Herrschaft der Nic’Blar",
+    "name": "Tir na Rún",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/Herrschaft der Nic’Blar.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1147,7 +1665,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1157,7 +1675,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Nic’Blar",
+        "name": "Tir na Rún",
         "slug": "leitheach-herrschaft-nic-blar"
       }
     ]
@@ -1166,10 +1684,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-tir-na-sruth",
     "slug": "leitheach-tir-na-sruth",
     "aliases": [],
-    "name": "Oberherrschaft Tir na Sruth",
+    "name": "Tir na Sruth",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1184,7 +1702,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1198,10 +1716,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-airgid",
     "slug": "leitheach-herrschaft-airgid",
     "aliases": [],
-    "name": "Lehensherrschaft der Tir An’Airgid",
+    "name": "Tir na gCorr",
     "type": "Lehensherrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1216,7 +1734,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1226,7 +1744,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Lehensherrschaft",
-        "name": "Lehensherrschaft der Tir An’Airgid",
+        "name": "Tir na gCorr",
         "slug": "leitheach-herrschaft-airgid"
       }
     ]
@@ -1235,10 +1753,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-amhran",
     "slug": "leitheach-herrschaft-amhran",
     "aliases": [],
-    "name": "Herrschaft der Ua’Amhran",
+    "name": "Tir na hÉisteachta",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/Herrschaft der Ua’Amhran.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1253,7 +1771,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1263,7 +1781,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Amhran",
+        "name": "Tir na hÉisteachta",
         "slug": "leitheach-herrschaft-amhran"
       }
     ]
@@ -1272,10 +1790,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-eirce",
     "slug": "leitheach-herrschaft-eirce",
     "aliases": [],
-    "name": "Herrschaft der Ua’Eirce",
+    "name": "Tir na nIúr",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/Herrschaft der Ua’Eirce.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1290,7 +1808,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1300,7 +1818,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Eirce",
+        "name": "Tir na nIúr",
         "slug": "leitheach-herrschaft-eirce"
       }
     ]
@@ -1309,10 +1827,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-fiachrach",
     "slug": "leitheach-herrschaft-fiachrach",
     "aliases": [],
-    "name": "Herrschaft der Uí Fiachrach",
+    "name": "Tir na Seamróige",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/Herrschaft der Uí Fiachrach.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1327,7 +1845,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1337,7 +1855,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Uí Fiachrach",
+        "name": "Tir na Seamróige",
         "slug": "leitheach-herrschaft-fiachrach"
       }
     ]
@@ -1346,10 +1864,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "leitheach-herrschaft-laoch",
     "slug": "leitheach-herrschaft-laoch",
     "aliases": [],
-    "name": "Herrschaft von Broch an Abhainn",
+    "name": "Tir na gCoiréal",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
-    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/herrschaft.data.mjs?v=leitheach-20261024c",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -1364,7 +1882,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Leitheach",
+        "name": "Fürstentum Leitheach",
         "slug": "fuerstentum-leitheach"
       },
       {
@@ -1374,8 +1892,45 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft von Broch an Abhainn",
+        "name": "Tir na gCoiréal",
         "slug": "leitheach-herrschaft-laoch"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-dal-t-saor",
+    "slug": "leitheach-herrschaft-dal-t-saor",
+    "aliases": [],
+    "name": "Herrschaft der Dál T’Saor",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Dál T’Saor/Herrschaft der Dál T’Saor.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Dál T’Saor/herrschaft.data.mjs?v=albic-fiefs-20261024",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dál T’Saor",
+        "slug": "leitheach-herrschaft-dal-t-saor"
       }
     ]
   },
@@ -2109,7 +2664,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Faelaorn",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Faelaorn/Fürstentum Faelaorn.html",
-    "data": "Estryll/Fürstentum Faelaorn/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2124,7 +2679,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       }
     ]
@@ -2136,7 +2691,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Rann",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Oberherrschaft Tir na Rann.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2151,7 +2706,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2168,7 +2723,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Mathgham",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Oberherrschaft Tir na Mathgham.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2183,7 +2738,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2200,7 +2755,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Braigh",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Oberherrschaft Tir na Braigh.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2215,7 +2770,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2232,7 +2787,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Faerna",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Oberherrschaft Tir na Faerna.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2247,7 +2802,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2264,7 +2819,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Damh",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Oberherrschaft Tir na Damh.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2279,7 +2834,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2296,7 +2851,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Brann",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Oberherrschaft Tir na Brann.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2311,7 +2866,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2325,10 +2880,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-stwatchn",
     "slug": "faelaorn-herrschaft-stwatchn",
     "aliases": [],
-    "name": "Herrschaft der Stwatchn",
+    "name": "Tir na Sionnach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Stwatchn/Herrschaft der Stwatchn.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Stwatchn/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Stwatchn/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2343,7 +2898,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2353,7 +2908,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Stwatchn",
+        "name": "Tir na Sionnach",
         "slug": "faelaorn-herrschaft-stwatchn"
       }
     ]
@@ -2365,7 +2920,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Bhaird",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Bhaird/Herrschaft der Bhaird.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Bhaird/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Bhaird/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2380,7 +2935,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2402,7 +2957,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Luthsach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Luthsach/Herrschaft der Luthsach.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Luthsach/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Luthsach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2417,7 +2972,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2436,10 +2991,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-lachlann",
     "slug": "faelaorn-herrschaft-lachlann",
     "aliases": [],
-    "name": "Herrschaft der Lachlann",
+    "name": "Tir na Sciath",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Lachlann/Herrschaft der Lachlann.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Lachlann/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Lachlann/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2454,7 +3009,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2464,7 +3019,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Lachlann",
+        "name": "Tir na Sciath",
         "slug": "faelaorn-herrschaft-lachlann"
       }
     ]
@@ -2473,10 +3028,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-drummond",
     "slug": "faelaorn-herrschaft-drummond",
     "aliases": [],
-    "name": "Herrschaft der Drummond",
+    "name": "Tir na Sceiche",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Drummond/Herrschaft der Drummond.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Drummond/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Drummond/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2491,7 +3046,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2501,7 +3056,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Drummond",
+        "name": "Tir na Sceiche",
         "slug": "faelaorn-herrschaft-drummond"
       }
     ]
@@ -2510,10 +3065,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-dundas",
     "slug": "faelaorn-herrschaft-dundas",
     "aliases": [],
-    "name": "Herrschaft der Dundas",
+    "name": "Tir na gCat",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Dundas/Herrschaft der Dundas.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Dundas/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Dundas/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2528,7 +3083,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2538,7 +3093,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dundas",
+        "name": "Tir na gCat",
         "slug": "faelaorn-herrschaft-dundas"
       }
     ]
@@ -2547,10 +3102,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-ffearnach",
     "slug": "faelaorn-herrschaft-ffearnach",
     "aliases": [],
-    "name": "Ehemalige Herrschaft der Ffearnach",
+    "name": "Tir na nIarsmaí",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ehemalige Herrschaft der Ffearnach/Ehemalige Herrschaft der Ffearnach.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ehemalige Herrschaft der Ffearnach/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ehemalige Herrschaft der Ffearnach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2565,7 +3120,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2575,7 +3130,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Ehemalige Herrschaft der Ffearnach",
+        "name": "Tir na nIarsmaí",
         "slug": "faelaorn-herrschaft-ffearnach"
       }
     ]
@@ -2584,10 +3139,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-lockart",
     "slug": "faelaorn-herrschaft-lockart",
     "aliases": [],
-    "name": "Herrschaft der Lockart",
+    "name": "Tir na mBroc",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Lockart/Herrschaft der Lockart.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Lockart/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Lockart/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2602,7 +3157,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2612,7 +3167,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Lockart",
+        "name": "Tir na mBroc",
         "slug": "faelaorn-herrschaft-lockart"
       }
     ]
@@ -2621,10 +3176,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-fiorghra",
     "slug": "faelaorn-herrschaft-fiorghra",
     "aliases": [],
-    "name": "Herrschaft der Fiorghra",
+    "name": "Tir na Reithí",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Fiorghra/Herrschaft der Fiorghra.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Fiorghra/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Fiorghra/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2639,7 +3194,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2649,7 +3204,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Fiorghra",
+        "name": "Tir na Reithí",
         "slug": "faelaorn-herrschaft-fiorghra"
       }
     ]
@@ -2658,10 +3213,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-ness",
     "slug": "faelaorn-herrschaft-ness",
     "aliases": [],
-    "name": "Herrschaft der Ness",
+    "name": "Tir na gClaímhte",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Ness/Herrschaft der Ness.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Ness/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Ness/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2676,7 +3231,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2686,7 +3241,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ness",
+        "name": "Tir na gClaímhte",
         "slug": "faelaorn-herrschaft-ness"
       }
     ]
@@ -2695,10 +3250,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-haig",
     "slug": "faelaorn-herrschaft-haig",
     "aliases": [],
-    "name": "Herrschaft der Haig",
+    "name": "Tir na Mac Tíre",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Haig/Herrschaft der Haig.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Haig/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Haig/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2713,7 +3268,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2723,7 +3278,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Haig",
+        "name": "Tir na Mac Tíre",
         "slug": "faelaorn-herrschaft-haig"
       }
     ]
@@ -2732,10 +3287,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-banlaoch",
     "slug": "faelaorn-herrschaft-banlaoch",
     "aliases": [],
-    "name": "Herrschaft der Banlaoch",
+    "name": "Tir na Giúise",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Banlaoch/Herrschaft der Banlaoch.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Banlaoch/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Banlaoch/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2750,7 +3305,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2760,7 +3315,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Banlaoch",
+        "name": "Tir na Giúise",
         "slug": "faelaorn-herrschaft-banlaoch"
       }
     ]
@@ -2769,10 +3324,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-borthwick",
     "slug": "faelaorn-herrschaft-borthwick",
     "aliases": [],
-    "name": "Herrschaft der Borthwick",
+    "name": "Tir na Deilfe",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Borthwick/Herrschaft der Borthwick.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Borthwick/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Borthwick/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2787,7 +3342,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2797,7 +3352,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Borthwick",
+        "name": "Tir na Deilfe",
         "slug": "faelaorn-herrschaft-borthwick"
       }
     ]
@@ -2806,10 +3361,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-erskine",
     "slug": "faelaorn-herrschaft-erskine",
     "aliases": [],
-    "name": "Herrschaft der Erskine",
+    "name": "Tir na Liús",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Erskine.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2824,7 +3379,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2834,7 +3389,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Erskine",
+        "name": "Tir na Liús",
         "slug": "faelaorn-herrschaft-erskine"
       }
     ]
@@ -2843,10 +3398,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-grannd",
     "slug": "faelaorn-herrschaft-grannd",
     "aliases": [],
-    "name": "Herrschaft der Grannd",
+    "name": "Tir na Sliogán",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Grannd/Herrschaft der Grannd.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Grannd/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Grannd/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2861,7 +3416,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2871,12 +3426,12 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Erskine",
+        "name": "Tir na Liús",
         "slug": "faelaorn-herrschaft-erskine"
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Grannd",
+        "name": "Tir na Sliogán",
         "slug": "faelaorn-herrschaft-grannd"
       }
     ]
@@ -2885,10 +3440,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-durachd",
     "slug": "faelaorn-herrschaft-durachd",
     "aliases": [],
-    "name": "Herrschaft der Durachd",
+    "name": "Tir na mBuailteán",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Durachd/Herrschaft der Durachd.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Durachd/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Durachd/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2903,7 +3458,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2913,7 +3468,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Durachd",
+        "name": "Tir na mBuailteán",
         "slug": "faelaorn-herrschaft-durachd"
       }
     ]
@@ -2922,10 +3477,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-muirgheal",
     "slug": "faelaorn-herrschaft-muirgheal",
     "aliases": [],
-    "name": "Herrschaft der Muirgheal",
+    "name": "Tir na nEasanna",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Muirgheal.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2940,7 +3495,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2950,7 +3505,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Muirgheal",
+        "name": "Tir na nEasanna",
         "slug": "faelaorn-herrschaft-muirgheal"
       }
     ]
@@ -2959,10 +3514,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-boyd",
     "slug": "faelaorn-herrschaft-boyd",
     "aliases": [],
-    "name": "Herrschaft der Boyd",
+    "name": "Tir na nEascann",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Boyd/Herrschaft der Boyd.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Boyd/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Boyd/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -2977,7 +3532,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -2987,12 +3542,12 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Muirgheal",
+        "name": "Tir na nEasanna",
         "slug": "faelaorn-herrschaft-muirgheal"
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Boyd",
+        "name": "Tir na nEascann",
         "slug": "faelaorn-herrschaft-boyd"
       }
     ]
@@ -3001,10 +3556,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-agnew",
     "slug": "faelaorn-herrschaft-agnew",
     "aliases": [],
-    "name": "Herrschaft der Agnew",
+    "name": "Tir na hAitinne",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Agnew/Herrschaft der Agnew.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Agnew/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Agnew/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3019,7 +3574,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3029,7 +3584,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Agnew",
+        "name": "Tir na hAitinne",
         "slug": "faelaorn-herrschaft-agnew"
       }
     ]
@@ -3038,10 +3593,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-duff",
     "slug": "faelaorn-herrschaft-duff",
     "aliases": [],
-    "name": "Herrschaft der Duff",
+    "name": "Tir na gCuileann",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Duff/Herrschaft der Duff.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Duff/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Duff/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3056,7 +3611,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3066,7 +3621,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Duff",
+        "name": "Tir na gCuileann",
         "slug": "faelaorn-herrschaft-duff"
       }
     ]
@@ -3075,10 +3630,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-dianaomh",
     "slug": "faelaorn-herrschaft-dianaomh",
     "aliases": [],
-    "name": "Herrschaft der Dianaomh",
+    "name": "Tir na hUaighe",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dianaomh/Herrschaft der Dianaomh.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dianaomh/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dianaomh/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3093,7 +3648,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3103,7 +3658,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dianaomh",
+        "name": "Tir na hUaighe",
         "slug": "faelaorn-herrschaft-dianaomh"
       }
     ]
@@ -3112,10 +3667,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-dobhar",
     "slug": "faelaorn-herrschaft-dobhar",
     "aliases": [],
-    "name": "Herrschaft der Dobhar",
+    "name": "Tir na Madraí Uisce",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dobhar/Herrschaft der Dobhar.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dobhar/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dobhar/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3130,7 +3685,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3140,7 +3695,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dobhar",
+        "name": "Tir na Madraí Uisce",
         "slug": "faelaorn-herrschaft-dobhar"
       }
     ]
@@ -3149,10 +3704,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-forsyth",
     "slug": "faelaorn-herrschaft-forsyth",
     "aliases": [],
-    "name": "Herrschaft der Forsyth",
+    "name": "Tir na gCaorthann",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Forsyth/Herrschaft der Forsyth.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Forsyth/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Forsyth/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3167,7 +3722,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3177,7 +3732,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Forsyth",
+        "name": "Tir na gCaorthann",
         "slug": "faelaorn-herrschaft-forsyth"
       }
     ]
@@ -3189,7 +3744,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Elid",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Elid/Herrschaft der Elid.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Elid/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Elid/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3204,7 +3759,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3223,10 +3778,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-oglivy",
     "slug": "faelaorn-herrschaft-oglivy",
     "aliases": [],
-    "name": "Herrschaft der Oglivy",
+    "name": "Tir na Seabhac",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Oglivy/Herrschaft der Oglivy.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Oglivy/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Oglivy/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3241,7 +3796,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3251,7 +3806,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Oglivy",
+        "name": "Tir na Seabhac",
         "slug": "faelaorn-herrschaft-oglivy"
       }
     ]
@@ -3260,10 +3815,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-cerneige",
     "slug": "faelaorn-herrschaft-cerneige",
     "aliases": [],
-    "name": "Herrschaft der Cerneige",
+    "name": "Tir na nInbhear",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Cerneige/Herrschaft der Cerneige.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Cerneige/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Cerneige/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3278,7 +3833,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3288,7 +3843,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Cerneige",
+        "name": "Tir na nInbhear",
         "slug": "faelaorn-herrschaft-cerneige"
       }
     ]
@@ -3297,10 +3852,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-airdmhor",
     "slug": "faelaorn-herrschaft-airdmhor",
     "aliases": [],
-    "name": "Herrschaft der Airdmhor",
+    "name": "Tir na Sceire",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Airdmhor/Herrschaft der Airdmhor.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Airdmhor/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Airdmhor/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3315,7 +3870,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3325,7 +3880,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Airdmhor",
+        "name": "Tir na Sceire",
         "slug": "faelaorn-herrschaft-airdmhor"
       }
     ]
@@ -3334,10 +3889,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-wemyss",
     "slug": "faelaorn-herrschaft-wemyss",
     "aliases": [],
-    "name": "Herrschaft der Wemyss",
+    "name": "Tir na gCreag",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Wemyss/Herrschaft der Wemyss.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Wemyss/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Wemyss/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3352,7 +3907,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3362,7 +3917,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Wemyss",
+        "name": "Tir na gCreag",
         "slug": "faelaorn-herrschaft-wemyss"
       }
     ]
@@ -3371,10 +3926,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "faelaorn-herrschaft-dubhan",
     "slug": "faelaorn-herrschaft-dubhan",
     "aliases": [],
-    "name": "Ehemalige Herrschaft der Dubhan",
+    "name": "Tir na Fuil",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Ehemalige Herrschaft der Dubhan/Ehemalige Herrschaft der Dubhan.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Ehemalige Herrschaft der Dubhan/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Ehemalige Herrschaft der Dubhan/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3389,7 +3944,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -3399,7 +3954,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Ehemalige Herrschaft der Dubhan",
+        "name": "Tir na Fuil",
         "slug": "faelaorn-herrschaft-dubhan"
       }
     ]
@@ -3411,7 +3966,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Ungeklärter Verwaltungsbereich in Tir na Rann",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ungeklärter Verwaltungsbereich in Tir na Rann/Ungeklärter Verwaltungsbereich in Tir na Rann.html",
-    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ungeklärter Verwaltungsbereich in Tir na Rann/herrschaft.data.mjs?v=faelaorn-skjaerheim-20261022b",
+    "data": "Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ungeklärter Verwaltungsbereich in Tir na Rann/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -3426,7 +3981,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Faelaorn",
+        "name": "Fürstentum Faelaorn",
         "slug": "fuerstentum-faelaorn"
       },
       {
@@ -4522,7 +5077,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Ceitheach",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Ceitheach/Fürstentum Ceitheach.html",
-    "data": "Estryll/Fürstentum Ceitheach/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4537,7 +5092,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       }
     ]
@@ -4549,7 +5104,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Cruach",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Cruach/Oberherrschaft Tir na Cruach.html",
-    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Cruach/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Cruach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4564,7 +5119,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4581,7 +5136,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Scian",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Scian/Oberherrschaft Tir na Scian.html",
-    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Scian/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Scian/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4596,7 +5151,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4613,7 +5168,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Dorcha",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dorcha/Oberherrschaft Tir na Dorcha.html",
-    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dorcha/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dorcha/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4628,7 +5183,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4645,7 +5200,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Dun",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dun/Oberherrschaft Tir na Dun.html",
-    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dun/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Dun/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4660,7 +5215,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4677,7 +5232,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Ceo",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Ceo/Oberherrschaft Tir na Ceo.html",
-    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Ceo/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Ceo/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4692,7 +5247,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4709,7 +5264,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Toraidh",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Toraidh/Oberherrschaft Tir na Toraidh.html",
-    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Toraidh/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Oberherrschaft Tir na Toraidh/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4724,7 +5279,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4741,7 +5296,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Tir an Craobhan",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der Tir an Craobhan/Herrschaft der Tir an Craobhan.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Tir an Craobhan/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Tir an Craobhan/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4756,7 +5311,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4778,7 +5333,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Fáill Ua’Eldath",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Ua’Eldath/Herrschaft der Fáill Ua’Eldath.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Ua’Eldath/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Ua’Eldath/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4793,7 +5348,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4812,10 +5367,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ceitheach-eamhra",
     "slug": "herrschaft-ceitheach-eamhra",
     "aliases": [],
-    "name": "Herrschaft der Fáill Mallacht Eamhra",
+    "name": "Tir na Tairsí",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Mallacht Eamhra/Herrschaft der Fáill Mallacht Eamhra.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Mallacht Eamhra/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Mallacht Eamhra/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4830,7 +5385,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4840,7 +5395,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Fáill Mallacht Eamhra",
+        "name": "Tir na Tairsí",
         "slug": "herrschaft-ceitheach-eamhra"
       }
     ]
@@ -4849,10 +5404,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ceitheach-seaghda",
     "slug": "herrschaft-ceitheach-seaghda",
     "aliases": [],
-    "name": "Herrschaft der Mallacht Seaghda",
+    "name": "Tir na Leon",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der Mallacht Seaghda/Herrschaft der Mallacht Seaghda.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Mallacht Seaghda/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Mallacht Seaghda/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4867,7 +5422,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4877,7 +5432,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Mallacht Seaghda",
+        "name": "Tir na Leon",
         "slug": "herrschaft-ceitheach-seaghda"
       }
     ]
@@ -4886,10 +5441,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ceitheach-somhairle",
     "slug": "herrschaft-ceitheach-somhairle",
     "aliases": [],
-    "name": "Herrschaft der Sidhe Somhairle",
+    "name": "Tir na bhFásach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Sidhe Somhairle/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Sidhe Somhairle/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4904,7 +5459,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4914,7 +5469,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Sidhe Somhairle",
+        "name": "Tir na bhFásach",
         "slug": "herrschaft-ceitheach-somhairle"
       }
     ]
@@ -4923,10 +5478,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ceitheach-an-morchoe",
     "slug": "herrschaft-ceitheach-an-morchoe",
     "aliases": [],
-    "name": "Herrschaft der An’Morchoe",
+    "name": "Tir na gCéanna",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der An’Morchoe/Herrschaft der An’Morchoe.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der An’Morchoe/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der An’Morchoe/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4941,7 +5496,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4951,7 +5506,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der An’Morchoe",
+        "name": "Tir na gCéanna",
         "slug": "herrschaft-ceitheach-an-morchoe"
       }
     ]
@@ -4960,10 +5515,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ceitheach-tir-an-tordarroch",
     "slug": "herrschaft-ceitheach-tir-an-tordarroch",
     "aliases": [],
-    "name": "Herrschaft der Tir An’Tordarroch",
+    "name": "Tir na mBachlóg",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der Tir An’Tordarroch/Herrschaft der Tir An’Tordarroch.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Tir An’Tordarroch/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der Tir An’Tordarroch/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -4978,7 +5533,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -4988,7 +5543,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Tir An’Tordarroch",
+        "name": "Tir na mBachlóg",
         "slug": "herrschaft-ceitheach-tir-an-tordarroch"
       }
     ]
@@ -4997,10 +5552,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ceitheach-an-bhaird",
     "slug": "herrschaft-ceitheach-an-bhaird",
     "aliases": [],
-    "name": "Herrschaft der An’Bhaird",
+    "name": "Tir na Doimhne",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Ceitheach/Herrschaft der An’Bhaird/Herrschaft der An’Bhaird.html",
-    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der An’Bhaird/herrschaft.data.mjs?v=ceitheach-20261022a",
+    "data": "Estryll/Fürstentum Ceitheach/Herrschaft der An’Bhaird/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5015,7 +5570,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Ceitheach",
+        "name": "Fürstentum Ceitheach",
         "slug": "fuerstentum-ceitheach"
       },
       {
@@ -5025,7 +5580,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der An’Bhaird",
+        "name": "Tir na Doimhne",
         "slug": "herrschaft-ceitheach-an-bhaird"
       }
     ]
@@ -5039,7 +5594,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Blaithneach",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Blaithneach/Fürstentum Blaithneach.html",
-    "data": "Estryll/Fürstentum Blaithneach/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5054,7 +5609,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       }
     ]
@@ -5066,7 +5621,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Beatha",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Beatha/Oberherrschaft Tir na Beatha.html",
-    "data": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Beatha/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Beatha/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5081,7 +5636,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5098,7 +5653,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Dílse",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Dílse/Oberherrschaft Tir na Dílse.html",
-    "data": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Dílse/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Dílse/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5113,7 +5668,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5130,7 +5685,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Méinnear",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Méinnear/Oberherrschaft Tir na Méinnear.html",
-    "data": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Méinnear/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Méinnear/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5145,7 +5700,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5159,10 +5714,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-blaithneach-goidin",
     "slug": "herrschaft-blaithneach-goidin",
     "aliases": [],
-    "name": "Herrschaft der Ua’Goidin",
+    "name": "Tir na nÚll",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Goidin/Herrschaft der Ua’Goidin.html",
-    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Goidin/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Goidin/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5177,7 +5732,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5187,7 +5742,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Goidin",
+        "name": "Tir na nÚll",
         "slug": "herrschaft-blaithneach-goidin"
       }
     ]
@@ -5196,10 +5751,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-blaithneach-haeghra",
     "slug": "herrschaft-blaithneach-haeghra",
     "aliases": [],
-    "name": "Lehnsherrschaft der An’Haeghra",
+    "name": "Tir na Braiche",
     "type": "Lehnsherrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Lehnsherrschaft der An’Haeghra/Lehnsherrschaft der An’Haeghra.html",
-    "data": "Estryll/Fürstentum Blaithneach/Lehnsherrschaft der An’Haeghra/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Lehnsherrschaft der An’Haeghra/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5214,7 +5769,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5224,7 +5779,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Lehnsherrschaft",
-        "name": "Lehnsherrschaft der An’Haeghra",
+        "name": "Tir na Braiche",
         "slug": "herrschaft-blaithneach-haeghra"
       }
     ]
@@ -5233,10 +5788,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-blaithneach-suiste",
     "slug": "herrschaft-blaithneach-suiste",
     "aliases": [],
-    "name": "Herrschaft der Ua’Suiste",
+    "name": "Tir na nGéanna",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Suiste/Herrschaft der Ua’Suiste.html",
-    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Suiste/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Suiste/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5251,7 +5806,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5261,7 +5816,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Suiste",
+        "name": "Tir na nGéanna",
         "slug": "herrschaft-blaithneach-suiste"
       }
     ]
@@ -5270,10 +5825,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-blaithneach-gairner",
     "slug": "herrschaft-blaithneach-gairner",
     "aliases": [],
-    "name": "Herrschaft der Dal’Gáirnér",
+    "name": "Tir na Linnte",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Gáirnér/Herrschaft der Dal’Gáirnér.html",
-    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Gáirnér/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Gáirnér/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5288,7 +5843,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5298,7 +5853,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dal’Gáirnér",
+        "name": "Tir na Linnte",
         "slug": "herrschaft-blaithneach-gairner"
       }
     ]
@@ -5307,10 +5862,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-blaithneach-leite",
     "slug": "herrschaft-blaithneach-leite",
     "aliases": [],
-    "name": "Herrschaft der Dal’Leite",
+    "name": "Tir na Deoraíochta",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Leite/Herrschaft der Dal’Leite.html",
-    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Leite/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Leite/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5325,7 +5880,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5335,7 +5890,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dal’Leite",
+        "name": "Tir na Deoraíochta",
         "slug": "herrschaft-blaithneach-leite"
       }
     ]
@@ -5344,10 +5899,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-blaithneach-eala",
     "slug": "herrschaft-blaithneach-eala",
     "aliases": [],
-    "name": "Herrschaft der Ua’Eala",
+    "name": "Tir na hEala",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Eala/Herrschaft der Ua’Eala.html",
-    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Eala/herrschaft.data.mjs?v=blaithneach-20261022a",
+    "data": "Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Eala/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5362,7 +5917,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Blaithneach",
+        "name": "Fürstentum Blaithneach",
         "slug": "fuerstentum-blaithneach"
       },
       {
@@ -5372,7 +5927,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Eala",
+        "name": "Tir na hEala",
         "slug": "herrschaft-blaithneach-eala"
       }
     ]
@@ -5386,7 +5941,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Aislearneach",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
-    "data": "Estryll/Fürstentum Aislearneach/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5401,7 +5956,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       }
     ]
@@ -5413,7 +5968,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Geach",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
-    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5428,7 +5983,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5445,7 +6000,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Tirth",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
-    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5460,7 +6015,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5477,7 +6032,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Faela",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Faela/Oberherrschaft Tir na Faela.html",
-    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Faela/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Faela/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5492,7 +6047,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5509,7 +6064,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Adharcach",
     "type": "Kirchliche Oberherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
-    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5524,7 +6079,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5541,7 +6096,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Iomaire",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
-    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5556,7 +6111,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5570,10 +6125,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-coronach",
     "slug": "herrschaft-aislearneach-coronach",
     "aliases": [],
-    "name": "Herrschaft der Ua’Coronach",
+    "name": "Tir na Nathrach",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Coronach/Herrschaft der Ua’Coronach.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Coronach/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Coronach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5588,7 +6143,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5598,7 +6153,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Coronach",
+        "name": "Tir na Nathrach",
         "slug": "herrschaft-aislearneach-coronach"
       }
     ]
@@ -5607,10 +6162,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-morgacht",
     "slug": "herrschaft-aislearneach-morgacht",
     "aliases": [],
-    "name": "Herrschaft der Na’Morgacht",
+    "name": "Tir na nGeataí",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Morgacht/Herrschaft der Na’Morgacht.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Morgacht/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Morgacht/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5625,7 +6180,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5635,7 +6190,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Na’Morgacht",
+        "name": "Tir na nGeataí",
         "slug": "herrschaft-aislearneach-morgacht"
       }
     ]
@@ -5644,10 +6199,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-rioga",
     "slug": "herrschaft-aislearneach-rioga",
     "aliases": [],
-    "name": "Herrschaft der An’Rioga",
+    "name": "Tir na nAncairí",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Rioga/Herrschaft der An’Rioga.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Rioga/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Rioga/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5662,7 +6217,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5672,7 +6227,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der An’Rioga",
+        "name": "Tir na nAncairí",
         "slug": "herrschaft-aislearneach-rioga"
       }
     ]
@@ -5681,10 +6236,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-fiantorc",
     "slug": "herrschaft-aislearneach-fiantorc",
     "aliases": [],
-    "name": "Herrschaft der Ua’Fiáintorc",
+    "name": "Tir na gCnoc",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Fiáintorc/Herrschaft der Ua’Fiáintorc.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Fiáintorc/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Fiáintorc/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5699,7 +6254,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5709,7 +6264,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Fiáintorc",
+        "name": "Tir na gCnoc",
         "slug": "herrschaft-aislearneach-fiantorc"
       }
     ]
@@ -5718,10 +6273,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-treada",
     "slug": "herrschaft-aislearneach-treada",
     "aliases": [],
-    "name": "Herrschaft der Ua’Tréada",
+    "name": "Tir na Sméar",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Tréada/Herrschaft der Ua’Tréada.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Tréada/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Tréada/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5736,7 +6291,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5746,7 +6301,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ua’Tréada",
+        "name": "Tir na Sméar",
         "slug": "herrschaft-aislearneach-treada"
       }
     ]
@@ -5755,10 +6310,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-muileach",
     "slug": "herrschaft-aislearneach-muileach",
     "aliases": [],
-    "name": "Lehnsherrschaft der Ua’Muileach",
+    "name": "Tir na Srianta",
     "type": "Lehnsherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Lehnsherrschaft der Ua’Muileach/Lehnsherrschaft der Ua’Muileach.html",
-    "data": "Estryll/Fürstentum Aislearneach/Lehnsherrschaft der Ua’Muileach/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Lehnsherrschaft der Ua’Muileach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5773,7 +6328,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5783,7 +6338,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Lehnsherrschaft",
-        "name": "Lehnsherrschaft der Ua’Muileach",
+        "name": "Tir na Srianta",
         "slug": "herrschaft-aislearneach-muileach"
       }
     ]
@@ -5792,10 +6347,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-feannag",
     "slug": "herrschaft-aislearneach-feannag",
     "aliases": [],
-    "name": "Lehnsherrschaft der An’Feannag",
+    "name": "Tir na Meala",
     "type": "Lehnsherrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Lehnsherrschaft der An’Feannag/Lehnsherrschaft der An’Feannag.html",
-    "data": "Estryll/Fürstentum Aislearneach/Lehnsherrschaft der An’Feannag/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Lehnsherrschaft der An’Feannag/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5810,7 +6365,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5820,7 +6375,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Lehnsherrschaft",
-        "name": "Lehnsherrschaft der An’Feannag",
+        "name": "Tir na Meala",
         "slug": "herrschaft-aislearneach-feannag"
       }
     ]
@@ -5829,10 +6384,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-uilebheist",
     "slug": "herrschaft-aislearneach-uilebheist",
     "aliases": [],
-    "name": "Herrschaft der An’Uilebheist",
+    "name": "Tir na gClochán",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5847,7 +6402,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5857,7 +6412,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der An’Uilebheist",
+        "name": "Tir na gClochán",
         "slug": "herrschaft-aislearneach-uilebheist"
       }
     ]
@@ -5866,10 +6421,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-cnogan",
     "slug": "herrschaft-aislearneach-cnogan",
     "aliases": [],
-    "name": "Herrschaft der Nic’Cnogan",
+    "name": "Tir na gCoirceog",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5884,7 +6439,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5894,7 +6449,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Nic’Cnogan",
+        "name": "Tir na gCoirceog",
         "slug": "herrschaft-aislearneach-cnogan"
       }
     ]
@@ -5903,10 +6458,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-fiachiontach",
     "slug": "herrschaft-aislearneach-fiachiontach",
     "aliases": [],
-    "name": "Herrschaft der Na’Fiachiontach",
+    "name": "Tir na Leabhar",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5921,7 +6476,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5931,7 +6486,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Na’Fiachiontach",
+        "name": "Tir na Leabhar",
         "slug": "herrschaft-aislearneach-fiachiontach"
       }
     ]
@@ -5940,10 +6495,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-tartarfhuil",
     "slug": "herrschaft-aislearneach-tartarfhuil",
     "aliases": [],
-    "name": "Herrschaft der Dal’Tartarfhuil",
+    "name": "Tir na Loingseoireachta",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5958,7 +6513,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -5968,7 +6523,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dal’Tartarfhuil",
+        "name": "Tir na Loingseoireachta",
         "slug": "herrschaft-aislearneach-tartarfhuil"
       }
     ]
@@ -5977,10 +6532,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-gaisgh",
     "slug": "herrschaft-aislearneach-gaisgh",
     "aliases": [],
-    "name": "Herrschaft der An’Gaisgh",
+    "name": "Tir na dTuanna",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -5995,7 +6550,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -6005,7 +6560,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der An’Gaisgh",
+        "name": "Tir na dTuanna",
         "slug": "herrschaft-aislearneach-gaisgh"
       }
     ]
@@ -6014,10 +6569,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-aislearneach-luchdon",
     "slug": "herrschaft-aislearneach-luchdon",
     "aliases": [],
-    "name": "Herrschaft der Na’Luchdon",
+    "name": "Tir na hEasóige",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
-    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/herrschaft.data.mjs?v=aislearneach-20261022a",
+    "data": "Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6032,7 +6587,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Aislearneach",
+        "name": "Fürstentum Aislearneach",
         "slug": "fuerstentum-aislearneach"
       },
       {
@@ -6042,7 +6597,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Na’Luchdon",
+        "name": "Tir na hEasóige",
         "slug": "herrschaft-aislearneach-luchdon"
       }
     ]
@@ -6056,7 +6611,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Fürstentum Dunfal",
     "type": "Fürstentum",
     "page": "Estryll/Fürstentum Dunfal/Fürstentum Dunfal.html",
-    "data": "Estryll/Fürstentum Dunfal/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6071,7 +6626,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       }
     ]
@@ -6083,7 +6638,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Rithe",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
-    "data": "Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6098,7 +6653,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6115,7 +6670,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Oberherrschaft Tir na Fathach",
     "type": "Oberherrschaft",
     "page": "Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
-    "data": "Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6130,7 +6685,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6144,10 +6699,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-ailella",
     "slug": "herrschaft-ailella",
     "aliases": [],
-    "name": "Herrschaft der Mac Sidhe’Ailella",
+    "name": "Tir na bPeiteal",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Mac Sidhe’Ailella/Herrschaft der Mac Sidhe’Ailella.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Mac Sidhe’Ailella/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Mac Sidhe’Ailella/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6162,7 +6717,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6172,7 +6727,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Mac Sidhe’Ailella",
+        "name": "Tir na bPeiteal",
         "slug": "herrschaft-ailella"
       }
     ]
@@ -6181,10 +6736,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-cein",
     "slug": "herrschaft-cein",
     "aliases": [],
-    "name": "Herrschaft der Mac’Céin",
+    "name": "Tir na dTeorainneacha",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Mac’Céin/Herrschaft der Mac’Céin.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Mac’Céin/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Mac’Céin/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6199,7 +6754,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6209,7 +6764,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Mac’Céin",
+        "name": "Tir na dTeorainneacha",
         "slug": "herrschaft-cein"
       }
     ]
@@ -6218,10 +6773,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-birn",
     "slug": "herrschaft-birn",
     "aliases": [],
-    "name": "Herrschaft der Dál’Birn",
+    "name": "Tir na Mionn",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Dál’Birn/Herrschaft der Dál’Birn.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Dál’Birn/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Dál’Birn/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6236,7 +6791,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6246,7 +6801,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Dál’Birn",
+        "name": "Tir na Mionn",
         "slug": "herrschaft-birn"
       }
     ]
@@ -6255,10 +6810,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-morath",
     "slug": "herrschaft-morath",
     "aliases": [],
-    "name": "Herrschaft der Ruin’Morath",
+    "name": "Tir na nEalaíon",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Ruin’Morath/Herrschaft der Ruin’Morath.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Ruin’Morath/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Ruin’Morath/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6273,7 +6828,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6283,7 +6838,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Ruin’Morath",
+        "name": "Tir na nEalaíon",
         "slug": "herrschaft-morath"
       }
     ]
@@ -6295,7 +6850,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Ua’Anbhair",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Ua’Anbhair/Herrschaft der Ua’Anbhair.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Ua’Anbhair/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Ua’Anbhair/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6310,7 +6865,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6332,7 +6887,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Ua’Casur",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Ua’Casur/Herrschaft der Ua’Casur.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Ua’Casur/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Ua’Casur/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6347,7 +6902,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6369,7 +6924,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Dál’Aonghusa",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Dál’Aonghusa/Herrschaft der Dál’Aonghusa.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Dál’Aonghusa/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Dál’Aonghusa/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6384,7 +6939,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6403,10 +6958,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-riangabra",
     "slug": "herrschaft-riangabra",
     "aliases": [],
-    "name": "Herrschaft der Na’Riangabra",
+    "name": "Tir na Fuaime",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Na’Riangabra/Herrschaft der Na’Riangabra.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Na’Riangabra/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Na’Riangabra/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6421,7 +6976,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6431,7 +6986,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Na’Riangabra",
+        "name": "Tir na Fuaime",
         "slug": "herrschaft-riangabra"
       }
     ]
@@ -6440,10 +6995,10 @@ window.KONTINENTE_REGISTRY = [
     "id": "herrschaft-eachtrai",
     "slug": "herrschaft-eachtrai",
     "aliases": [],
-    "name": "Herrschaft der Mac’Eachtrai",
+    "name": "Tir na Lámhainne",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Mac’Eachtrai/Herrschaft der Mac’Eachtrai.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Mac’Eachtrai/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Mac’Eachtrai/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6458,7 +7013,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {
@@ -6468,7 +7023,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Herrschaft",
-        "name": "Herrschaft der Mac’Eachtrai",
+        "name": "Tir na Lámhainne",
         "slug": "herrschaft-eachtrai"
       }
     ]
@@ -6480,7 +7035,7 @@ window.KONTINENTE_REGISTRY = [
     "name": "Herrschaft der Fianna",
     "type": "Herrschaft",
     "page": "Estryll/Fürstentum Dunfal/Herrschaft der Fianna/Herrschaft der Fianna.html",
-    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Fianna/herrschaft.data.mjs?v=dunfal-20261022b",
+    "data": "Estryll/Fürstentum Dunfal/Herrschaft der Fianna/herrschaft.data.mjs?v=albic-fiefs-20261024",
     "dataType": "module",
     "hierarchy": [
       {
@@ -6495,7 +7050,7 @@ window.KONTINENTE_REGISTRY = [
       },
       {
         "type": "Fürstentum",
-        "name": "Dunfal",
+        "name": "Fürstentum Dunfal",
         "slug": "fuerstentum-dunfal"
       },
       {

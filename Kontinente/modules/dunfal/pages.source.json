@@ -21,7 +21,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         }
       ],
@@ -110,7 +110,7 @@
               "name": "Clan Nic’Nuadat",
               "familyId": "haus-nuadat",
               "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-nic-nuadat.png",
-              "seat": "Cradh na Frinne",
+              "seat": "Cradh na Fírinne",
               "liege": "Clan Ard’Chulainn",
               "rank": "Mor-Tiarna-Clan",
               "featured": true,
@@ -303,12 +303,13 @@
       "territoryLinks": [
         "oberherrschaft-tir-na-rithe",
         "oberherrschaft-tir-na-fathach"
-      ]
+      ],
+      "crestAlt": "Banner Fürstentum Dunfal"
     },
     {
       "id": "oberherrschaft-tir-na-rithe",
       "title": "Oberherrschaft Tir na Rithe",
-      "shortTitle": "Tir na Rithe",
+      "shortTitle": "Oberherrschaft Tir na Rithe",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Ard’Chulainn",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Fürstentum Dunfal.html",
@@ -326,7 +327,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -565,12 +566,13 @@
         "herrschaft-cein",
         "herrschaft-birn",
         "herrschaft-morath"
-      ]
+      ],
+      "crestAlt": "Banner Oberherrschaft Tir na Rithe"
     },
     {
       "id": "oberherrschaft-tir-na-fathach",
       "title": "Oberherrschaft Tir na Fathach",
-      "shortTitle": "Tir na Fathach",
+      "shortTitle": "Oberherrschaft Tir na Fathach",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Nic’Nuadat",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Fürstentum Dunfal.html",
@@ -588,7 +590,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -626,7 +628,7 @@
               "name": "Clan Nic’Nuadat",
               "familyId": "haus-nuadat",
               "imageSrc": "/Stammbäume/assets/images/houses/Dunfal/clan-nic-nuadat.png",
-              "seat": "Cradh na Frinne",
+              "seat": "Cradh na Fírinne",
               "liege": "Clan Ard’Chulainn",
               "rank": "Mor-Tiarna-Clan",
               "featured": true,
@@ -920,12 +922,13 @@
         "herrschaft-riangabra",
         "herrschaft-eachtrai",
         "herrschaft-fianna"
-      ]
+      ],
+      "crestAlt": "Banner Oberherrschaft Tir na Fathach"
     },
     {
       "id": "herrschaft-ailella",
-      "title": "Herrschaft der Mac Sidhe’Ailella",
-      "shortTitle": "Herrschaft der Mac Sidhe’Ailella",
+      "title": "Tir na bPeiteal",
+      "shortTitle": "Tir na bPeiteal",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Mac Sidhe’Ailella",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
@@ -943,7 +946,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -953,12 +956,16 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Mac Sidhe’Ailella",
+          "name": "Tir na bPeiteal",
           "slug": "herrschaft-ailella"
         }
       ],
       "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-sidhe-ailella.png",
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na bPeiteal bedeutet „Land der Blütenblätter“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -1014,7 +1021,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-ailella",
-          "title": "Herrschaft der Mac Sidhe’Ailella",
+          "title": "Tir na bPeiteal",
           "center": "Braighmòr",
           "sections": [
             {
@@ -1087,12 +1094,13 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Tir na bPeiteal"
     },
     {
       "id": "herrschaft-cein",
-      "title": "Herrschaft der Mac’Céin",
-      "shortTitle": "Herrschaft der Mac’Céin",
+      "title": "Tir na dTeorainneacha",
+      "shortTitle": "Tir na dTeorainneacha",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Mac’Céin",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
@@ -1110,7 +1118,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1120,12 +1128,16 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Mac’Céin",
+          "name": "Tir na dTeorainneacha",
           "slug": "herrschaft-cein"
         }
       ],
       "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-cein.png",
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na dTeorainneacha bedeutet „Land der Grenzsäume“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -1181,7 +1193,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-cein",
-          "title": "Herrschaft der Mac’Céin",
+          "title": "Tir na dTeorainneacha",
           "center": "Caerthalas",
           "sections": [
             {
@@ -1239,12 +1251,13 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Tir na dTeorainneacha"
     },
     {
       "id": "herrschaft-birn",
-      "title": "Herrschaft der Dál’Birn",
-      "shortTitle": "Herrschaft der Dál’Birn",
+      "title": "Tir na Mionn",
+      "shortTitle": "Tir na Mionn",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Dál’Birn",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
@@ -1262,7 +1275,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1272,12 +1285,16 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dál’Birn",
+          "name": "Tir na Mionn",
           "slug": "herrschaft-birn"
         }
       ],
       "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-dal-birn.png",
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na Mionn bedeutet „Land der Eide“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -1333,7 +1350,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-birn",
-          "title": "Herrschaft der Dál’Birn",
+          "title": "Tir na Mionn",
           "center": "Dùnthàirne",
           "sections": [
             {
@@ -1375,12 +1392,13 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Tir na Mionn"
     },
     {
       "id": "herrschaft-morath",
-      "title": "Herrschaft der Ruin’Morath",
-      "shortTitle": "Herrschaft der Ruin’Morath",
+      "title": "Tir na nEalaíon",
+      "shortTitle": "Tir na nEalaíon",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ruin’Morath",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Rithe/Oberherrschaft Tir na Rithe.html",
@@ -1398,7 +1416,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1408,12 +1426,16 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ruin’Morath",
+          "name": "Tir na nEalaíon",
           "slug": "herrschaft-morath"
         }
       ],
       "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ruin-morath.png",
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na nEalaíon bedeutet „Land der Künste“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -1469,7 +1491,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-morath",
-          "title": "Herrschaft der Ruin’Morath",
+          "title": "Tir na nEalaíon",
           "center": "Iarthar",
           "sections": [
             {
@@ -1530,7 +1552,8 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Tir na nEalaíon"
     },
     {
       "id": "herrschaft-anbhair",
@@ -1553,7 +1576,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1622,7 +1645,8 @@
       ],
       "vassalGroups": [],
       "domains": [],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Herrschaft der Ua’Anbhair"
     },
     {
       "id": "herrschaft-casur",
@@ -1645,7 +1669,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1714,7 +1738,8 @@
       ],
       "vassalGroups": [],
       "domains": [],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Herrschaft der Ua’Casur"
     },
     {
       "id": "herrschaft-aonghusa",
@@ -1737,7 +1762,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1806,12 +1831,13 @@
       ],
       "vassalGroups": [],
       "domains": [],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Herrschaft der Dál’Aonghusa"
     },
     {
       "id": "herrschaft-riangabra",
-      "title": "Herrschaft der Na’Riangabra",
-      "shortTitle": "Herrschaft der Na’Riangabra",
+      "title": "Tir na Fuaime",
+      "shortTitle": "Tir na Fuaime",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Na’Riangabra",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
@@ -1829,7 +1855,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1839,12 +1865,16 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Na’Riangabra",
+          "name": "Tir na Fuaime",
           "slug": "herrschaft-riangabra"
         }
       ],
       "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-na-riangabra.png",
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na Fuaime bedeutet „Land des Klanges“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -1900,7 +1930,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-riangabra",
-          "title": "Herrschaft der Na’Riangabra",
+          "title": "Tir na Fuaime",
           "center": "Baile Begg",
           "sections": [
             {
@@ -1940,12 +1970,13 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Tir na Fuaime"
     },
     {
       "id": "herrschaft-eachtrai",
-      "title": "Herrschaft der Mac’Eachtrai",
-      "shortTitle": "Herrschaft der Mac’Eachtrai",
+      "title": "Tir na Lámhainne",
+      "shortTitle": "Tir na Lámhainne",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Mac’Eachtrai",
       "parentHref": "/Kontinente/Estryll/Fürstentum Dunfal/Oberherrschaft Tir na Fathach/Oberherrschaft Tir na Fathach.html",
@@ -1963,7 +1994,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -1973,12 +2004,16 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Mac’Eachtrai",
+          "name": "Tir na Lámhainne",
           "slug": "herrschaft-eachtrai"
         }
       ],
       "crestSrc": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-eachtrai.png",
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na Lámhainne bedeutet „Land des Handschuhs“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -2034,7 +2069,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-eachtrai",
-          "title": "Herrschaft der Mac’Eachtrai",
+          "title": "Tir na Lámhainne",
           "center": "Athenry",
           "sections": [
             {
@@ -2089,7 +2124,8 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Tir na Lámhainne"
     },
     {
       "id": "herrschaft-fianna",
@@ -2112,7 +2148,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Dunfal",
+          "name": "Fürstentum Dunfal",
           "slug": "fuerstentum-dunfal"
         },
         {
@@ -2208,7 +2244,8 @@
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [],
+      "crestAlt": "Banner Herrschaft der Fianna"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Leitheach/data.json",
-  "revision": 2,
-  "updatedAt": "2026-10-24T18:00:00.000Z",
-  "generatedStateHash": "ba7730ca543923555c6c20141f71b147d1aed511883f4413c41513b83aa03af4",
+  "revision": 3,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "ec28133be342e50c7f5628b61f814b3b83810d9ce7121868a24b606b395884ec",
   "state": {
     "pins": [
       {
@@ -19,7 +19,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
-        "banner": "",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
         "region": "Fürstentum Leitheach",
         "house": "Dál’Ruitheach",
@@ -113,12 +113,12 @@
         "pinMarker": "/Karten/assets/icons/welt/stadt.png",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-mac-ard-cumhaill.png",
-        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-mac-ard-cumhaill&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sleagh.png",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruin-ua-laoch&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
         "region": "Fürstentum Leitheach",
-        "house": "Clan Mac Ard Cumhaill",
+        "house": "Ruin Ua Laoch",
         "faction": "",
         "table": [
           {
@@ -143,7 +143,7 @@
           },
           {
             "k": "Lehensherr",
-            "v": "Clan Mac Ard Cumhaill"
+            "v": "Ruin Ua Laoch"
           },
           {
             "k": "Bevölkerung",
@@ -176,7 +176,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": "leitheach-tir-na-sleagh",
+        "dominionId": "leitheach-herrschaft-laoch",
         "sourceRef": {
           "type": "world-anvil",
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
@@ -191,7 +191,7 @@
               3573
             ]
           },
-          "assignment": "region-outline",
+          "assignment": "documented-seat",
           "sourceIcon": "marker-icon-transparent.png",
           "missing": [
             "Beschreibung fehlt"
@@ -499,7 +499,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-tir-an-airgid.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-airgid&mode=view",
-        "banner": "",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-tir-an-airgid.png",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
         "region": "Fürstentum Leitheach",
         "house": "Tir An’Airgid",
@@ -883,7 +883,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
-        "banner": "",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
         "region": "Fürstentum Leitheach",
         "house": "Ru’Gortach",
@@ -1075,7 +1075,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-na-mhuir.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-na-mhuir&mode=view",
-        "banner": "",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-fancha.png",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
         "region": "Fürstentum Leitheach",
         "house": "Clan Na’Mhuir",
@@ -1171,7 +1171,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-frisealach.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-frisealach&mode=view",
-        "banner": "",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
         "region": "Fürstentum Leitheach",
         "house": "Ard Frisealach",
@@ -1267,7 +1267,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-laidir.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-laidir&mode=view",
-        "banner": "",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
         "region": "Fürstentum Leitheach",
         "house": "Ruin’Laidir",
@@ -3941,7 +3941,7 @@
       },
       {
         "id": "leitheach-herrschaft-cleir",
-        "name": "Herrschaft der Ua’Cleir",
+        "name": "Tir na bhFiach",
         "type": "Herrschaft",
         "ruler": "Clan Ua’Cleir",
         "seat": "Cairn Fàire",
@@ -3950,7 +3950,7 @@
       },
       {
         "id": "leitheach-herrschaft-ghaiscioch",
-        "name": "Herrschaft der Ua’Ghaiscíoch",
+        "name": "Tir na nArmúr",
         "type": "Herrschaft",
         "ruler": "Clan Ua’Ghaiscíoch",
         "seat": "Dun Laog",
@@ -3959,7 +3959,7 @@
       },
       {
         "id": "leitheach-herrschaft-ceardaiocht",
-        "name": "Herrschaft der Dál’Ceardaíocht",
+        "name": "Tir na hInneonach",
         "type": "Herrschaft",
         "ruler": "Clan Dál’Ceardaíocht",
         "seat": "Dun Laog",
@@ -3977,7 +3977,7 @@
       },
       {
         "id": "leitheach-herrschaft-ard-trodach",
-        "name": "Herrschaft der Ard Trodach",
+        "name": "Tir na gComhrac",
         "type": "Herrschaft",
         "ruler": "Ard Trodach",
         "seat": "Lochansail",
@@ -3986,7 +3986,7 @@
       },
       {
         "id": "leitheach-herrschaft-nic-caoimhe",
-        "name": "Herrschaft der Nic Caoimhe",
+        "name": "Tir na Lasrach",
         "type": "Herrschaft",
         "ruler": "Nic Caoimhe",
         "seat": "Lochansail",
@@ -3995,7 +3995,7 @@
       },
       {
         "id": "leitheach-herrschaft-frisealach",
-        "name": "Lehensherrschaft der Ard Frisealach",
+        "name": "Tir na Lúibe",
         "type": "Lehensherrschaft",
         "ruler": "Ard Frisealach",
         "seat": "Lasbun",
@@ -4004,7 +4004,7 @@
       },
       {
         "id": "leitheach-herrschaft-somhairle",
-        "name": "Herrschaft der Sidhe Somhairle",
+        "name": "Tir na Soilse",
         "type": "Herrschaft",
         "ruler": "Sidhe Somhairle",
         "seat": "Broch an Clais",
@@ -4022,7 +4022,7 @@
       },
       {
         "id": "leitheach-herrschaft-gortach",
-        "name": "Herrschaft der Ru’Gortach",
+        "name": "Tir na Breithe",
         "type": "Herrschaft",
         "ruler": "Ru’Gortach",
         "seat": "Broch an Ear",
@@ -4031,7 +4031,7 @@
       },
       {
         "id": "leitheach-herrschaft-ruitheach",
-        "name": "Herrschaft der Dál’Ruitheach",
+        "name": "Tir na nDambaí",
         "type": "Herrschaft",
         "ruler": "Dál’Ruitheach",
         "seat": "Broch an Iar",
@@ -4049,7 +4049,7 @@
       },
       {
         "id": "leitheach-herrschaft-laidir",
-        "name": "Lehensherrschaft der Ruin’Laidir",
+        "name": "Tir na Dídine",
         "type": "Lehensherrschaft",
         "ruler": "Ruin’Laidir",
         "seat": "Claisean",
@@ -4058,7 +4058,7 @@
       },
       {
         "id": "leitheach-herrschaft-choinnich",
-        "name": "Herrschaft der Ua’Choinnich",
+        "name": "Tir na gCrúb",
         "type": "Herrschaft",
         "ruler": "Ua’Choinnich",
         "seat": "Sruthlann",
@@ -4067,7 +4067,7 @@
       },
       {
         "id": "leitheach-herrschaft-nic-blar",
-        "name": "Herrschaft der Nic’Blar",
+        "name": "Tir na Rún",
         "type": "Herrschaft",
         "ruler": "Nic’Blar · Leitheach",
         "seat": "Sruthlann",
@@ -4085,7 +4085,7 @@
       },
       {
         "id": "leitheach-herrschaft-airgid",
-        "name": "Lehensherrschaft der Tir An’Airgid",
+        "name": "Tir na gCorr",
         "type": "Lehensherrschaft",
         "ruler": "Tir An’Airgid",
         "seat": "Cel Leagan",
@@ -4094,7 +4094,7 @@
       },
       {
         "id": "leitheach-herrschaft-amhran",
-        "name": "Herrschaft der Ua’Amhran",
+        "name": "Tir na hÉisteachta",
         "type": "Herrschaft",
         "ruler": "Ua’Amhran",
         "seat": "Ceanntire",
@@ -4103,7 +4103,7 @@
       },
       {
         "id": "leitheach-herrschaft-eirce",
-        "name": "Herrschaft der Ua’Eirce",
+        "name": "Tir na nIúr",
         "type": "Herrschaft",
         "ruler": "Clan Ua’Eirce",
         "seat": "Senanbail",
@@ -4112,7 +4112,7 @@
       },
       {
         "id": "leitheach-herrschaft-fiachrach",
-        "name": "Herrschaft der Uí Fiachrach",
+        "name": "Tir na Seamróige",
         "type": "Herrschaft",
         "ruler": "Clan Uí Fiachrach",
         "seat": "Mârbail",
@@ -4121,11 +4121,20 @@
       },
       {
         "id": "leitheach-herrschaft-laoch",
-        "name": "Herrschaft von Broch an Abhainn",
+        "name": "Tir na gCoiréal",
         "type": "Herrschaft",
         "ruler": "Ruin Ua Laoch",
-        "seat": "",
+        "seat": "Broch an Abhainn",
         "parentId": "leitheach-tir-na-sleagh",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-dal-t-saor",
+        "name": "Herrschaft der Dál T’Saor",
+        "type": "Herrschaft",
+        "ruler": "Dal T’Saor",
+        "seat": "Sruthlann",
+        "parentId": "leitheach-tir-na-comhchuibhis",
         "note": ""
       }
     ],

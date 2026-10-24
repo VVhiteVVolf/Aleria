@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Faelaorn/tir-na-brann/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T21:00:00.000Z",
-  "generatedStateHash": "549c96216e1cbc437be6f38ead653abd33d63932c9680757bbbe3957541d9405",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "e773988742d8a739d6b3bd9b9df6c14b450248cee01e5af77f1d88234833ea13",
   "state": {
     "pins": [],
     "cats": [
@@ -616,7 +616,7 @@
       },
       {
         "id": "faelaorn-herrschaft-cerneige",
-        "name": "Herrschaft der Cerneige",
+        "name": "Tir na nInbhear",
         "type": "Herrschaft",
         "ruler": "Clan Tair Carnegie",
         "seat": "Glenmohr",
@@ -625,7 +625,7 @@
       },
       {
         "id": "faelaorn-herrschaft-airdmhor",
-        "name": "Herrschaft der Airdmhor",
+        "name": "Tir na Sceire",
         "type": "Herrschaft",
         "ruler": "Clan Dál Airdmhor",
         "seat": "Carnascal",
@@ -634,7 +634,7 @@
       },
       {
         "id": "faelaorn-herrschaft-wemyss",
-        "name": "Herrschaft der Wemyss",
+        "name": "Tir na gCreag",
         "type": "Herrschaft",
         "ruler": "Clan Tir An Wemyss",
         "seat": "Drumrath",
@@ -643,7 +643,7 @@
       },
       {
         "id": "faelaorn-herrschaft-dubhan",
-        "name": "Ehemalige Herrschaft der Dubhan",
+        "name": "Tir na Fuil",
         "type": "Herrschaft",
         "ruler": "Sept Dubhan",
         "seat": "Caer Dubhan",

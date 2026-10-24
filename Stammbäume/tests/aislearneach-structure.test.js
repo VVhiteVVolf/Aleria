@@ -14,6 +14,7 @@ import { assertValidFamily, normalizeFamily } from '../assets/js/domain/family-s
 import { createRegistryBrowserIndex, resolveRegistryLocation, searchRegistry } from '../assets/js/modules/family-registry/registry-browser-model.js';
 import { loadFamilyById } from '../assets/js/services/family-library.js';
 import { validateWorkspaceForPublishing } from '../../firebase/functions/src/families/family-validation.js';
+import territoryCatalog from '../../Karten/Aislearneach/territories.import.json' with { type: 'json' };
 
 const inventory = JSON.parse(fs.readFileSync(new URL('../assets/data/source-inventories/aislearneach-2026-10-07.json', import.meta.url), 'utf8'));
 const sourceCell = (id, row, column = 0) => inventory.sources.find(source => source.id === id).rows.find(entry => entry.row === row).cells[column];
@@ -66,7 +67,7 @@ test('source columns determine names and crests; documented corrections have ind
   assert.equal(sourceCell('aislearneach', 59, 1).text, 'Eachan Fintain');
   assert.equal(family('haus-fintain').document.houseProfile.seat, 'Croga');
   assert.equal(sourceCell('tir-na-faela', 50).text, 'Cethearlach');
-  assert.equal(family('haus-feannag').document.houseProfile.seat, 'Caetharlach');
+  assert.equal(family('haus-feannag').document.houseProfile.seat, 'Ceatharlach');
 });
 
 test('user corrections override the swapped Broch seats and distinguish expulsion from extinction', () => {
@@ -89,17 +90,18 @@ test('user corrections override the swapped Broch seats and distinguish expulsio
   assert.equal(inventory.decisions.filter(entry => entry.status === 'user-corrected').length, 2);
 });
 
-test('five territories and ten seats remain separate from empty template realms and organizations', () => {
+test('five upper territories contain thirteen own fiefs, five main seats and the historical seat Cliath', () => {
   const index = createRegistryBrowserIndex(FAMILY_REGISTRY, FAMILY_REGISTRY_FOLDERS);
   const root = resolveRegistryLocation(index, ['Aislearneach']);
   assert.equal(root.totalCount, 19);
   assert.equal(root.children.length, 5);
-  assert.equal(root.children.reduce((sum, territory) => sum + territory.children.length, 0), 10);
+  assert.equal(root.children.reduce((sum, territory) => sum + territory.children.length, 0), 19);
   for (const [name, count] of [['Geach', 4], ['Tirth', 5], ['Faela', 2], ['Adharcach', 3], ['Iomaire', 5]]) {
     assert.equal(resolveRegistryLocation(index, ['Aislearneach', `Tir na ${name}`]).totalCount, count);
   }
   for (const definition of AISLEARNEACH_HOUSE_DEFINITIONS) {
-    assert.equal(family(definition.familyId).document.houseProfile.barony, '');
+    const fief = territoryCatalog.territories.find(t => t.familyId === definition.familyId && t.extent);
+    assert.equal(family(definition.familyId).document.houseProfile.barony, fief?.name || '');
   }
   for (const query of ['Aislaerneach', 'Tir na Gaech', 'Cethearlach']) {
     assert.ok(searchRegistry(index, query).folders.length > 0, query);

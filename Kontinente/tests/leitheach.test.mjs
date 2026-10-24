@@ -17,7 +17,7 @@ const pages = new Map(source.pages.map(page => [page.id, page]));
 const exists = href => fs.existsSync(new URL('.' + new URL(href, 'https://aleria.local').pathname, root));
 
 test('Leitheach articles, heraldry and portrait links load through the shared territory catalog', () => {
-  assert.equal(pages.size, 26);
+  assert.equal(pages.size, 27);
   for (const page of source.pages) {
     const rendered = createTerritory(page.id, context.window.ALERIA_HERRSCHAFT_DATA);
     assert.equal(rendered.meta.id, page.id);

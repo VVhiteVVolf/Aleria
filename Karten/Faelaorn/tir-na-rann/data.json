@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Faelaorn/tir-na-rann/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T21:00:00.000Z",
-  "generatedStateHash": "bfee99c63e8f2be3492ccfc951a35d3cc14f9c3206d5e148c5b438832e806f0f",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "e55cc08f656caf7245a195bb828dbf67661ac667966a1d7efdbb06964cf0593c",
   "state": {
     "pins": [],
     "cats": [
@@ -616,7 +616,7 @@
       },
       {
         "id": "faelaorn-herrschaft-stwatchn",
-        "name": "Herrschaft der Stwatchn",
+        "name": "Tir na Sionnach",
         "type": "Herrschaft",
         "ruler": "Clan Ru Stwatchn",
         "seat": "Invercalda",
@@ -643,7 +643,7 @@
       },
       {
         "id": "faelaorn-herrschaft-lachlann",
-        "name": "Herrschaft der Lachlann",
+        "name": "Tir na Sciath",
         "type": "Herrschaft",
         "ruler": "Clan Breac Lachlann",
         "seat": "Dun Liath",
@@ -652,7 +652,7 @@
       },
       {
         "id": "faelaorn-herrschaft-drummond",
-        "name": "Herrschaft der Drummond",
+        "name": "Tir na Sceiche",
         "type": "Herrschaft",
         "ruler": "Clan Breac Drummond",
         "seat": "Dun Grealach",
@@ -661,7 +661,7 @@
       },
       {
         "id": "faelaorn-herrschaft-dundas",
-        "name": "Herrschaft der Dundas",
+        "name": "Tir na gCat",
         "type": "Herrschaft",
         "ruler": "Clan Ó Dundas",
         "seat": "Dun Foirgneamh",
@@ -670,7 +670,7 @@
       },
       {
         "id": "faelaorn-herrschaft-ffearnach",
-        "name": "Ehemalige Herrschaft der Ffearnach",
+        "name": "Tir na nIarsmaí",
         "type": "Herrschaft",
         "ruler": "Clan Mac Ffearnach",
         "seat": "Caer Fionnach",

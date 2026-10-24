@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Dunfal/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T17:30:00.000Z",
-  "generatedStateHash": "39375badc297e95a12cfa82bc3c55beb7ae7da8a1ea592a2ee09dd1f705c38a7",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "7a206aef09c458a8de0f945575b545d74b751f510058af18b3908ddfd92bc0fa",
   "state": {
     "pins": [
       {
@@ -12866,7 +12866,7 @@
       },
       {
         "id": "wa-0f5ed9b4-d3ff-40e4-a5bc-4037d850a942",
-        "name": "Herrschaft der Dál’Birn",
+        "name": "Tir na Mionn",
         "kind": "boundary",
         "paths": [
           [
@@ -12944,7 +12944,7 @@
       },
       {
         "id": "wa-568d9c7a-c71c-4e7a-aaa9-061285465beb",
-        "name": "Herrschaft der Mac Sidhe’Ailella",
+        "name": "Tir na bPeiteal",
         "kind": "boundary",
         "paths": [
           [
@@ -13128,7 +13128,7 @@
       },
       {
         "id": "wa-8312d4c9-dded-48ed-ae9a-9b99bbef6f3d",
-        "name": "Herrschaft der Mac’Céin",
+        "name": "Tir na dTeorainneacha",
         "kind": "boundary",
         "paths": [
           [
@@ -13550,7 +13550,7 @@
       },
       {
         "id": "wa-0cf1a95b-c73e-4074-b64a-0bff9b252397",
-        "name": "Herrschaft der Mac’Eachtrai",
+        "name": "Tir na Lámhainne",
         "kind": "area",
         "paths": [
           [
@@ -14736,7 +14736,7 @@
       },
       {
         "id": "wa-76e0ebed-78e8-4542-b94c-eb918cfbae26",
-        "name": "Herrschaft der Ruin’Morath",
+        "name": "Tir na nEalaíon",
         "kind": "area",
         "paths": [
           [
@@ -15746,7 +15746,7 @@
       },
       {
         "id": "wa-dd125333-f6db-4a30-a146-c8630c93c622",
-        "name": "Herrschaft der Na’Riangabra",
+        "name": "Tir na Fuaime",
         "kind": "area",
         "paths": [
           [
@@ -16231,7 +16231,7 @@
       },
       {
         "id": "herrschaft-ailella",
-        "name": "Herrschaft der Mac Sidhe’Ailella",
+        "name": "Tir na bPeiteal",
         "type": "Herrschaft",
         "ruler": "Clan Mac Sidhe’Ailella",
         "seat": "Braighmòr",
@@ -16240,7 +16240,7 @@
       },
       {
         "id": "herrschaft-cein",
-        "name": "Herrschaft der Mac’Céin",
+        "name": "Tir na dTeorainneacha",
         "type": "Herrschaft",
         "ruler": "Clan Mac’Céin",
         "seat": "Caerthalas",
@@ -16249,7 +16249,7 @@
       },
       {
         "id": "herrschaft-birn",
-        "name": "Herrschaft der Dál’Birn",
+        "name": "Tir na Mionn",
         "type": "Herrschaft",
         "ruler": "Clan Dál’Birn",
         "seat": "Dùnthàirne",
@@ -16258,7 +16258,7 @@
       },
       {
         "id": "herrschaft-morath",
-        "name": "Herrschaft der Ruin’Morath",
+        "name": "Tir na nEalaíon",
         "type": "Herrschaft",
         "ruler": "Clan Ruin’Morath",
         "seat": "Iarthar",
@@ -16294,7 +16294,7 @@
       },
       {
         "id": "herrschaft-riangabra",
-        "name": "Herrschaft der Na’Riangabra",
+        "name": "Tir na Fuaime",
         "type": "Herrschaft",
         "ruler": "Clan Na’Riangabra",
         "seat": "Baile Begg",
@@ -16303,7 +16303,7 @@
       },
       {
         "id": "herrschaft-eachtrai",
-        "name": "Herrschaft der Mac’Eachtrai",
+        "name": "Tir na Lámhainne",
         "type": "Herrschaft",
         "ruler": "Clan Mac’Eachtrai",
         "seat": "Athenry",

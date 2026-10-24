@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {protectedAlbicMap,reviewHash} from '../../Kontinente/tests/support/albic-review-baseline.mjs';
 import {createHash} from 'node:crypto';
 const root=new URL('../../',import.meta.url),context=vm.createContext({});
 vm.runInContext(fs.readFileSync(new URL('Karten/assets/js/pins/pin-presentation.js',root),'utf8'),context);
@@ -21,18 +22,22 @@ test('maps with drawn markers retain their existing visibility settings',()=>{
  for(const showMarkers of [true,false])assert.deepEqual(resolve({showMarkers},{images:{pins:'drawn-map.webp'}}),{showMarkers});
  assert.deepEqual(resolve(),{showMarkers:false});
 });
-test('unchanged maps retain their baseline; reviewed Leitheach revision 2 retains the symbol-map policy',()=>{
+test('reviewed albic maps preserve their protected positions, texts and geometry while retaining visible symbols',()=>{
  const baseline=JSON.parse(fs.readFileSync(new URL('Kontinente/modules/faelaorn-skjaerheim/sources/alben-pin-baseline.json',root),'utf8'));
  const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+ const reviewed=JSON.parse(fs.readFileSync(new URL('Kontinente/tests/support/albic-map-review-20261024.json',root),'utf8'));
  const ctx={window:{}};vm.runInNewContext(fs.readFileSync(new URL('Karten/karten.registry.js',root),'utf8'),ctx);
  assert.equal(baseline.length,17);
  for(const map of baseline){
   const stored=JSON.parse(fs.readFileSync(new URL('Karten/'+map.path,root),'utf8'));
   const {state}=stored;
-  if(map.id==='leitheach'||map.id.startsWith('leitheach-')){
+  const receipt=reviewed.maps.find(entry=>entry.path===map.path);
+  if(receipt){
+   assert.equal(reviewHash(protectedAlbicMap(state)),receipt.protectedSha256,map.id);
+  }else if(map.id==='leitheach'||map.id.startsWith('leitheach-')){
    // The October 22 baseline had no Leitheach places and displaced borders.
    // Exact corrected geometry and all source markers are covered separately.
-   assert.equal(stored.revision,2);
+   assert.equal(stored.revision,3);
    assert.ok(state.pins.length>0);
    assert.ok(state.pins.every(pin=>pin.sourceRef?.markerId===pin.id));
   }else{

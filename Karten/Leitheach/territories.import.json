@@ -55,11 +55,16 @@
       "house": "Clan Na’Mhuir",
       "seat": "Broch an Coill",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-na-mhuir.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-fancha.png",
+      "bannerAlt": "Banner Tir na Fancha",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
       "mapId": "leitheach-tir-na-sinsear",
-      "sourceArticle": "sources/article-03.html"
+      "sourceArticle": "sources/article-03.html",
+      "extent": "territorial",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Bereits belegter Gebietsname bleibt erhalten."
+      }
     },
     {
       "id": "leitheach-tir-na-coimhthioch",
@@ -70,60 +75,86 @@
       "house": "Fir An’Gallchobhair",
       "seat": "Dun Laog",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+      "bannerAlt": "Banner Tir na Coimhthioch",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
       "mapId": "leitheach-tir-na-sinsear",
-      "sourceArticle": "sources/article-04.html"
+      "sourceArticle": "sources/article-04.html",
+      "extent": "territorial",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Bereits belegter Gebietsname bleibt erhalten."
+      }
     },
     {
       "id": "leitheach-herrschaft-cleir",
-      "name": "Herrschaft der Ua’Cleir",
+      "name": "Tir na bhFiach",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-coimhthioch",
       "familyId": "haus-cleir",
       "house": "Clan Ua’Cleir",
       "seat": "Cairn Fàire",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-cleir.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+      "bannerAlt": "Banner Tir na bhFiach",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/Herrschaft der Ua’Cleir.html",
       "mapId": "leitheach-tir-na-sinsear",
       "sourceArticle": "sources/article-05.html",
       "seatSource": {
         "markerId": "b7e05010-d8ae-4ca9-9319-53c4c8509a3d",
         "source": "World-Anvil-Ortsbeschreibung"
+      },
+      "extent": "territorial",
+      "gloss": "Land der Raben",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der schwarze Rabenvogel im Wappen der Ua’Cleir.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/fiach"
       }
     },
     {
       "id": "leitheach-herrschaft-ghaiscioch",
-      "name": "Herrschaft der Ua’Ghaiscíoch",
+      "name": "Tir na nArmúr",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-coimhthioch",
       "familyId": "haus-ghaiscioch",
       "house": "Clan Ua’Ghaiscíoch",
       "seat": "Dun Laog",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-ghaiscioch.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ghaiscioch.svg",
+      "bannerAlt": "Banner Tir na nArmúr",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/Herrschaft der Ua’Ghaiscíoch.html",
       "mapId": "leitheach-tir-na-sinsear",
-      "sourceArticle": "sources/article-06.html"
+      "sourceArticle": "sources/article-06.html",
+      "extent": "territorial",
+      "gloss": "Land der Rüstungen",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der gepanzerte Krieger der Ua’Ghaiscíoch; ihre belegten Außensiedlungen bilden ein eigenes Gebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/arm%C3%BAr"
+      }
     },
     {
       "id": "leitheach-herrschaft-ceardaiocht",
-      "name": "Herrschaft der Dál’Ceardaíocht",
+      "name": "Tir na hInneonach",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-coimhthioch",
       "familyId": "haus-dal-ceardaiocht",
       "house": "Clan Dál’Ceardaíocht",
       "seat": "Dun Laog",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ceardaiocht.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+      "bannerAlt": "Banner Tir na hInneonach",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/Herrschaft der Dál’Ceardaíocht.html",
       "mapId": "leitheach-tir-na-sinsear",
-      "sourceArticle": "sources/article-07.html"
+      "sourceArticle": "sources/article-07.html",
+      "extent": "territorial",
+      "gloss": "Land des Ambosses",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Schmiedehandwerk der Dál’Ceardaíocht und ihre eigenen Außensiedlungen.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/inneoin"
+      }
     },
     {
       "id": "leitheach-tir-na-gortanna",
@@ -142,63 +173,91 @@
     },
     {
       "id": "leitheach-herrschaft-ard-trodach",
-      "name": "Herrschaft der Ard Trodach",
+      "name": "Tir na gComhrac",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-gortanna",
       "familyId": "haus-ard-trodach",
       "house": "Ard Trodach",
       "seat": "Lochansail",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-trodach.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+      "bannerAlt": "Banner Tir na gComhrac",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/Herrschaft der Ard Trodach.html",
       "mapId": "leitheach-tir-na-gortanna",
-      "sourceArticle": "sources/article-09.html"
+      "sourceArticle": "sources/article-09.html",
+      "extent": "territorial",
+      "gloss": "Land der Kämpfe",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der gerüstete Kämpfer im Wappen der Ard Trodach und ihr belegter ländlicher Herrschaftszweig.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/comhrac"
+      }
     },
     {
       "id": "leitheach-herrschaft-nic-caoimhe",
-      "name": "Herrschaft der Nic Caoimhe",
+      "name": "Tir na Lasrach",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-gortanna",
       "familyId": "haus-nic-caoimhe",
       "house": "Nic Caoimhe",
       "seat": "Lochansail",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-nic-caoimhe.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+      "bannerAlt": "Banner Tir na Lasrach",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/Herrschaft der Nic Caoimhe.html",
       "mapId": "leitheach-tir-na-gortanna",
-      "sourceArticle": "sources/article-10.html"
+      "sourceArticle": "sources/article-10.html",
+      "extent": "territorial",
+      "gloss": "Land der Flamme",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Drache im Wappen der Nic Caoimhe; die zugehörigen Orte liegen außerhalb Lochansails.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/lasair"
+      }
     },
     {
       "id": "leitheach-herrschaft-frisealach",
-      "name": "Lehensherrschaft der Ard Frisealach",
+      "name": "Tir na Lúibe",
       "type": "Lehensherrschaft",
       "parentId": "leitheach-tir-na-gortanna",
       "familyId": "haus-frisealach",
       "house": "Ard Frisealach",
       "seat": "Lasbun",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-frisealach.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png",
+      "bannerAlt": "Banner Tir na Lúibe",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
       "mapId": "leitheach-tir-na-gortanna",
-      "sourceArticle": "sources/article-11.html"
+      "sourceArticle": "sources/article-11.html",
+      "extent": "territorial",
+      "gloss": "Land der Windung",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der gewundene Drachenkörper im Banner der Ard Frisealach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/l%C3%BAb"
+      }
     },
     {
       "id": "leitheach-herrschaft-somhairle",
-      "name": "Herrschaft der Sidhe Somhairle",
+      "name": "Tir na Soilse",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-gortanna",
       "familyId": "haus-somhairle",
       "house": "Sidhe Somhairle",
       "seat": "Broch an Clais",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+      "bannerAlt": "Banner Tir na Soilse",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
       "mapId": "leitheach-tir-na-gortanna",
-      "sourceArticle": "sources/article-12.html"
+      "sourceArticle": "sources/article-12.html",
+      "extent": "territorial",
+      "gloss": "Land der Lichter",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das lichte Frauengestalt-Zeichen der Sidhe Somhairle in Broch an Clais.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/solas"
+      }
     },
     {
       "id": "leitheach-tir-na-tonn",
@@ -217,33 +276,47 @@
     },
     {
       "id": "leitheach-herrschaft-gortach",
-      "name": "Herrschaft der Ru’Gortach",
+      "name": "Tir na Breithe",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-tonn",
       "familyId": "haus-gortach",
       "house": "Ru’Gortach",
       "seat": "Broch an Ear",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
+      "bannerAlt": "Banner Tir na Breithe",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
       "mapId": "leitheach-tir-na-tonn",
-      "sourceArticle": "sources/article-14.html"
+      "sourceArticle": "sources/article-14.html",
+      "extent": "territorial",
+      "gloss": "Land des Urteils",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die richtende Gestalt im Wappen der Ru’Gortach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/breith"
+      }
     },
     {
       "id": "leitheach-herrschaft-ruitheach",
-      "name": "Herrschaft der Dál’Ruitheach",
+      "name": "Tir na nDambaí",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-tonn",
       "familyId": "haus-ruitheach",
       "house": "Dál’Ruitheach",
       "seat": "Broch an Iar",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
+      "bannerAlt": "Banner Tir na nDambaí",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
       "mapId": "leitheach-tir-na-tonn",
-      "sourceArticle": "sources/article-15.html"
+      "sourceArticle": "sources/article-15.html",
+      "extent": "territorial",
+      "gloss": "Land der Dämme",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Biberzeichen der Dál’Ruitheach an ihrem eigenen Broch.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/damba"
+      }
     },
     {
       "id": "leitheach-tir-na-comhchuibhis",
@@ -262,48 +335,69 @@
     },
     {
       "id": "leitheach-herrschaft-laidir",
-      "name": "Lehensherrschaft der Ruin’Laidir",
+      "name": "Tir na Dídine",
       "type": "Lehensherrschaft",
       "parentId": "leitheach-tir-na-comhchuibhis",
       "familyId": "haus-laidir",
       "house": "Ruin’Laidir",
       "seat": "Claisean",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-laidir.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
+      "bannerAlt": "Banner Tir na Dídine",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
       "mapId": "leitheach-tir-na-comhchuibhis",
-      "sourceArticle": "sources/article-17.html"
+      "sourceArticle": "sources/article-17.html",
+      "extent": "territorial",
+      "gloss": "Land der Zuflucht",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Baum- und Mauermotiv der Ruin’Laidir um Claisean.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/d%C3%ADdean"
+      }
     },
     {
       "id": "leitheach-herrschaft-choinnich",
-      "name": "Herrschaft der Ua’Choinnich",
+      "name": "Tir na gCrúb",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-comhchuibhis",
       "familyId": "haus-choinnich",
       "house": "Ua’Choinnich",
       "seat": "Sruthlann",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-choinnich.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+      "bannerAlt": "Banner Tir na gCrúb",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/Herrschaft der Ua’Choinnich.html",
       "mapId": "leitheach-tir-na-comhchuibhis",
-      "sourceArticle": "sources/article-18.html"
+      "sourceArticle": "sources/article-18.html",
+      "extent": "territorial",
+      "gloss": "Land der Hufe",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Pferdezeichen der Ua’Choinnich und ihr belegtes Außengebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/cr%C3%BAb"
+      }
     },
     {
       "id": "leitheach-herrschaft-nic-blar",
-      "name": "Herrschaft der Nic’Blar",
+      "name": "Tir na Rún",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-comhchuibhis",
       "familyId": "haus-nic-blar-leitheach",
       "house": "Nic’Blar · Leitheach",
       "seat": "Sruthlann",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-blar.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+      "bannerAlt": "Banner Tir na Rún",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/Herrschaft der Nic’Blar.html",
       "mapId": "leitheach-tir-na-comhchuibhis",
-      "sourceArticle": "sources/article-19.html"
+      "sourceArticle": "sources/article-19.html",
+      "extent": "territorial",
+      "gloss": "Land der Geheimnisse",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die zauberkundige Gestalt der Nic’Blar und ihr eigener ländlicher Herrschaftszweig.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/r%C3%BAn"
+      }
     },
     {
       "id": "leitheach-tir-na-sruth",
@@ -322,83 +416,137 @@
     },
     {
       "id": "leitheach-herrschaft-airgid",
-      "name": "Lehensherrschaft der Tir An’Airgid",
+      "name": "Tir na gCorr",
       "type": "Lehensherrschaft",
       "parentId": "leitheach-tir-na-sruth",
       "familyId": "haus-airgid",
       "house": "Tir An’Airgid",
       "seat": "Cel Leagan",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-tir-an-airgid.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-tir-an-airgid.png",
+      "bannerAlt": "Banner Tir na gCorr",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
       "mapId": "leitheach-tir-na-sruth",
-      "sourceArticle": "sources/article-21.html"
+      "sourceArticle": "sources/article-21.html",
+      "extent": "territorial",
+      "gloss": "Land der Reiher",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Reiher im Wappen der Tir An’Airgid.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/corr"
+      }
     },
     {
       "id": "leitheach-herrschaft-amhran",
-      "name": "Herrschaft der Ua’Amhran",
+      "name": "Tir na hÉisteachta",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-sruth",
       "familyId": "haus-amrhan",
       "house": "Ua’Amhran",
       "seat": "Ceanntire",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-amrhan.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+      "bannerAlt": "Banner Tir na hÉisteachta",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/Herrschaft der Ua’Amhran.html",
       "mapId": "leitheach-tir-na-sruth",
-      "sourceArticle": "sources/article-22.html"
+      "sourceArticle": "sources/article-22.html",
+      "extent": "territorial",
+      "gloss": "Land des Lauschens",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die einander zugewandten Gestalten der Ua’Amhran; ihre eigenen Außensiedlungen bilden das Gebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/%C3%A9isteacht"
+      }
     },
     {
       "id": "leitheach-herrschaft-eirce",
-      "name": "Herrschaft der Ua’Eirce",
+      "name": "Tir na nIúr",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-sleagh",
       "familyId": "haus-ua-eirce",
       "house": "Clan Ua’Eirce",
       "seat": "Senanbail",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-eirce.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+      "bannerAlt": "Banner Tir na nIúr",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/Herrschaft der Ua’Eirce.html",
       "mapId": "leitheach-tir-na-sleagh",
       "seatSource": {
         "markerId": "70c25771-331d-47fd-b8f7-bf19cef36ac3",
         "source": "World-Anvil-Ortsbeschreibung"
+      },
+      "extent": "territorial",
+      "gloss": "Land der Eiben",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das grüne Baumzeichen der Ua’Eirce und ihr bewaldetes Umland.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/i%C3%BAr"
       }
     },
     {
       "id": "leitheach-herrschaft-fiachrach",
-      "name": "Herrschaft der Uí Fiachrach",
+      "name": "Tir na Seamróige",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-sleagh",
       "familyId": "haus-fiachrach",
       "house": "Clan Uí Fiachrach",
       "seat": "Mârbail",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ui-fiachrach.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+      "bannerAlt": "Banner Tir na Seamróige",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/Herrschaft der Uí Fiachrach.html",
       "mapId": "leitheach-tir-na-sleagh",
       "seatSource": {
         "markerId": "987c24d0-88e9-415e-97cb-b393a8ce7c4e",
         "source": "World-Anvil-Ortsbeschreibung"
+      },
+      "extent": "territorial",
+      "gloss": "Land des Kleeblatts",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Kleeblatt im Wappen der Uí Fiachrach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/seamr%C3%B3g"
       }
     },
     {
       "id": "leitheach-herrschaft-laoch",
-      "name": "Herrschaft von Broch an Abhainn",
+      "name": "Tir na gCoiréal",
       "type": "Herrschaft",
       "parentId": "leitheach-tir-na-sleagh",
       "familyId": "haus-ruin-ua-laoch",
       "house": "Ruin Ua Laoch",
-      "seat": "",
+      "seat": "Broch an Abhainn",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
-      "banner": "",
-      "bannerAlt": "",
+      "banner": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+      "bannerAlt": "Banner Tir na gCoiréal",
       "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
-      "mapId": "leitheach-tir-na-sleagh"
+      "mapId": "leitheach-tir-na-sleagh",
+      "extent": "territorial",
+      "gloss": "Land der Korallen",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Wasserwesen im Wappen der Ruin Ua Laoch; der Name gibt dem eigenen Brochgebiet ein Seezeichen.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/coir%C3%A9al"
+      }
+    },
+    {
+      "id": "leitheach-herrschaft-dal-t-saor",
+      "name": "Herrschaft der Dál T’Saor",
+      "type": "Herrschaft",
+      "familyId": "haus-dal-t-saor",
+      "house": "Dal T’Saor",
+      "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+      "banner": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+      "seat": "Sruthlann",
+      "parentId": "leitheach-tir-na-comhchuibhis",
+      "mapId": "leitheach-tir-na-comhchuibhis",
+      "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Dál T’Saor/Herrschaft der Dál T’Saor.html",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Dál T’Saor",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Laird in Sruthlann am Sitz der Mac Airt; kein eigenes belegtes Außengebiet."
+      }
     }
   ]
 }

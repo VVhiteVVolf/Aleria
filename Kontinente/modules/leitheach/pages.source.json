@@ -21,7 +21,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         }
       ],
@@ -452,7 +452,7 @@
     },
     {
       "id": "leitheach-tir-na-sleagh",
-      "title": "Oberherrschaft Tir na Sleagh",
+      "title": "Tir na Sleagh",
       "shortTitle": "Tir na Sleagh",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Mac Ard Cumhaill",
@@ -471,7 +471,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -583,7 +583,7 @@
               "name": "Ruin Ua Laoch",
               "familyId": "haus-ruin-ua-laoch",
               "imageSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
-              "seat": "",
+              "seat": "Broch an Abhainn",
               "liege": "Clan Mac Ard Cumhaill",
               "rank": "Laird-Clan",
               "featured": false
@@ -689,7 +689,7 @@
     },
     {
       "id": "leitheach-tir-na-sinsear",
-      "title": "Oberherrschaft Tir na Sinsear",
+      "title": "Tir na Sinsear",
       "shortTitle": "Tir na Sinsear",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Ua’Gaelach",
@@ -708,7 +708,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -931,7 +931,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -946,8 +946,8 @@
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-na-mhuir.png",
-      "crestAlt": "Wappen Clan Na’Mhuir",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/tir-na-fancha.png",
+      "crestAlt": "Banner Tir na Fancha",
       "map": {
         "title": "Karte von Tir na Sinsear",
         "imageSrc": "/Karten/Leitheach/tir-na-sinsear/Kartenbilder/normal.webp",
@@ -1121,7 +1121,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -1136,8 +1136,8 @@
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png",
-      "crestAlt": "Wappen Fir An’Gallchobhair",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+      "crestAlt": "Banner Tir na Coimhthioch",
       "map": {
         "title": "Karte von Tir na Sinsear",
         "imageSrc": "/Karten/Leitheach/tir-na-sinsear/Kartenbilder/normal.webp",
@@ -1326,8 +1326,8 @@
     },
     {
       "id": "leitheach-herrschaft-cleir",
-      "title": "Herrschaft der Ua’Cleir",
-      "shortTitle": "Herrschaft der Ua’Cleir",
+      "title": "Tir na bhFiach",
+      "shortTitle": "Tir na bhFiach",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Cleir",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
@@ -1345,7 +1345,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -1360,13 +1360,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Cleir",
+          "name": "Tir na bhFiach",
           "slug": "leitheach-herrschaft-cleir"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-cleir.png",
-      "crestAlt": "Wappen Clan Ua’Cleir",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+      "crestAlt": "Banner Tir na bhFiach",
       "map": {
         "title": "Karte von Tir na Sinsear",
         "imageSrc": "/Karten/Leitheach/tir-na-sinsear/Kartenbilder/normal.webp",
@@ -1379,7 +1379,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na bhFiach bedeutet „Land der Raben“."
+        ]
       },
       "infobox": [
         {
@@ -1428,7 +1430,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Ua’Cleir",
+              "office": "Laird · Tir na bhFiach",
               "name": "Colm Cleir",
               "familyId": "haus-cleir",
               "href": "/Stammbäume/Stammbaum.html?family=haus-cleir&mode=view&person=colm-cleir",
@@ -1507,8 +1509,8 @@
     },
     {
       "id": "leitheach-herrschaft-ghaiscioch",
-      "title": "Herrschaft der Ua’Ghaiscíoch",
-      "shortTitle": "Herrschaft der Ua’Ghaiscíoch",
+      "title": "Tir na nArmúr",
+      "shortTitle": "Tir na nArmúr",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Ghaiscíoch",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
@@ -1526,7 +1528,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -1541,13 +1543,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Ghaiscíoch",
+          "name": "Tir na nArmúr",
           "slug": "leitheach-herrschaft-ghaiscioch"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-ghaiscioch.png",
-      "crestAlt": "Wappen Clan Ua’Ghaiscíoch",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ghaiscioch.svg",
+      "crestAlt": "Banner Tir na nArmúr",
       "map": {
         "title": "Karte von Tir na Sinsear",
         "imageSrc": "/Karten/Leitheach/tir-na-sinsear/Kartenbilder/normal.webp",
@@ -1560,7 +1562,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na nArmúr bedeutet „Land der Rüstungen“."
+        ]
       },
       "infobox": [
         {
@@ -1609,7 +1613,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Ua’Ghaiscíoch",
+              "office": "Laird · Tir na nArmúr",
               "name": "Darragh Ghaiscíoch",
               "familyId": "haus-ghaiscioch",
               "href": "/Stammbäume/Stammbaum.html?family=haus-ghaiscioch&mode=view&person=darragh-ua-ghaiscioch",
@@ -1688,8 +1692,8 @@
     },
     {
       "id": "leitheach-herrschaft-ceardaiocht",
-      "title": "Herrschaft der Dál’Ceardaíocht",
-      "shortTitle": "Herrschaft der Dál’Ceardaíocht",
+      "title": "Tir na hInneonach",
+      "shortTitle": "Tir na hInneonach",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Dál’Ceardaíocht",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
@@ -1707,7 +1711,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -1722,13 +1726,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dál’Ceardaíocht",
+          "name": "Tir na hInneonach",
           "slug": "leitheach-herrschaft-ceardaiocht"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ceardaiocht.png",
-      "crestAlt": "Wappen Clan Dál’Ceardaíocht",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+      "crestAlt": "Banner Tir na hInneonach",
       "map": {
         "title": "Karte von Tir na Sinsear",
         "imageSrc": "/Karten/Leitheach/tir-na-sinsear/Kartenbilder/normal.webp",
@@ -1741,7 +1745,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na hInneonach bedeutet „Land des Ambosses“."
+        ]
       },
       "infobox": [
         {
@@ -1790,7 +1796,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Dál’Ceardaíocht",
+              "office": "Laird · Tir na hInneonach",
               "name": "Caibrel Ceardaíocht",
               "familyId": "haus-dal-ceardaiocht",
               "href": "/Stammbäume/Stammbaum.html?family=haus-dal-ceardaiocht&mode=view&person=caibrel-ceardaiocht",
@@ -1869,7 +1875,7 @@
     },
     {
       "id": "leitheach-tir-na-gortanna",
-      "title": "Oberherrschaft Tir na Gortanna",
+      "title": "Tir na Gortanna",
       "shortTitle": "Tir na Gortanna",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Dál’Cruthin",
@@ -1888,7 +1894,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -2135,8 +2141,8 @@
     },
     {
       "id": "leitheach-herrschaft-ard-trodach",
-      "title": "Herrschaft der Ard Trodach",
-      "shortTitle": "Herrschaft der Ard Trodach",
+      "title": "Tir na gComhrac",
+      "shortTitle": "Tir na gComhrac",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ard Trodach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
@@ -2154,7 +2160,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -2164,13 +2170,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ard Trodach",
+          "name": "Tir na gComhrac",
           "slug": "leitheach-herrschaft-ard-trodach"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-trodach.png",
-      "crestAlt": "Wappen Ard Trodach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+      "crestAlt": "Banner Tir na gComhrac",
       "map": {
         "title": "Karte von Tir na Gortanna",
         "imageSrc": "/Karten/Leitheach/tir-na-gortanna/Kartenbilder/normal.webp",
@@ -2183,7 +2189,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na gComhrac bedeutet „Land der Kämpfe“."
+        ]
       },
       "infobox": [
         {
@@ -2232,7 +2240,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Ard Trodach",
+              "office": "Laird · Tir na gComhrac",
               "name": "Caireall Trodach",
               "familyId": "haus-ard-trodach",
               "href": "/Stammbäume/Stammbaum.html?family=haus-ard-trodach&mode=view&person=caireall-trodach",
@@ -2311,8 +2319,8 @@
     },
     {
       "id": "leitheach-herrschaft-nic-caoimhe",
-      "title": "Herrschaft der Nic Caoimhe",
-      "shortTitle": "Herrschaft der Nic Caoimhe",
+      "title": "Tir na Lasrach",
+      "shortTitle": "Tir na Lasrach",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Nic Caoimhe",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
@@ -2330,7 +2338,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -2340,13 +2348,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Nic Caoimhe",
+          "name": "Tir na Lasrach",
           "slug": "leitheach-herrschaft-nic-caoimhe"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-nic-caoimhe.png",
-      "crestAlt": "Wappen Nic Caoimhe",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+      "crestAlt": "Banner Tir na Lasrach",
       "map": {
         "title": "Karte von Tir na Gortanna",
         "imageSrc": "/Karten/Leitheach/tir-na-gortanna/Kartenbilder/normal.webp",
@@ -2359,7 +2367,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Lasrach bedeutet „Land der Flamme“."
+        ]
       },
       "infobox": [
         {
@@ -2408,7 +2418,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Nic Caoimhe",
+              "office": "Laird · Tir na Lasrach",
               "name": "Ciannait Caoimhe",
               "familyId": "haus-nic-caoimhe",
               "href": "/Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view&person=ciannait-caoimhe",
@@ -2487,8 +2497,8 @@
     },
     {
       "id": "leitheach-herrschaft-frisealach",
-      "title": "Lehensherrschaft der Ard Frisealach",
-      "shortTitle": "Lehensherrschaft der Ard Frisealach",
+      "title": "Tir na Lúibe",
+      "shortTitle": "Tir na Lúibe",
       "type": "Lehensherrschaft",
       "kicker": "Lehensherrschaft · Ard Frisealach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
@@ -2506,7 +2516,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -2516,13 +2526,13 @@
         },
         {
           "type": "Lehensherrschaft",
-          "name": "Lehensherrschaft der Ard Frisealach",
+          "name": "Tir na Lúibe",
           "slug": "leitheach-herrschaft-frisealach"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-frisealach.png",
-      "crestAlt": "Wappen Ard Frisealach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png",
+      "crestAlt": "Banner Tir na Lúibe",
       "map": {
         "title": "Karte von Tir na Gortanna",
         "imageSrc": "/Karten/Leitheach/tir-na-gortanna/Kartenbilder/normal.webp",
@@ -2535,7 +2545,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Lúibe bedeutet „Land der Windung“."
+        ]
       },
       "infobox": [
         {
@@ -2584,7 +2596,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Dún Tiarna · Lehensherrschaft der Ard Frisealach",
+              "office": "Dún Tiarna · Tir na Lúibe",
               "name": "Giollanáimhe Frisealach",
               "familyId": "haus-frisealach",
               "href": "/Stammbäume/Stammbaum.html?family=haus-frisealach&mode=view&person=giollanaimhe-frisealach",
@@ -2663,8 +2675,8 @@
     },
     {
       "id": "leitheach-herrschaft-somhairle",
-      "title": "Herrschaft der Sidhe Somhairle",
-      "shortTitle": "Herrschaft der Sidhe Somhairle",
+      "title": "Tir na Soilse",
+      "shortTitle": "Tir na Soilse",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Sidhe Somhairle",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
@@ -2682,7 +2694,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -2692,13 +2704,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Sidhe Somhairle",
+          "name": "Tir na Soilse",
           "slug": "leitheach-herrschaft-somhairle"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
-      "crestAlt": "Wappen Sidhe Somhairle",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
+      "crestAlt": "Banner Tir na Soilse",
       "map": {
         "title": "Karte von Tir na Gortanna",
         "imageSrc": "/Karten/Leitheach/tir-na-gortanna/Kartenbilder/normal.webp",
@@ -2711,7 +2723,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Soilse bedeutet „Land der Lichter“."
+        ]
       },
       "infobox": [
         {
@@ -2760,7 +2774,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Sidhe Somhairle",
+              "office": "Laird · Tir na Soilse",
               "name": "Klaihn Somhairle",
               "familyId": "haus-somhairle",
               "href": "/Stammbäume/Stammbaum.html?family=haus-somhairle&mode=view&person=klaihn-somhairle",
@@ -2839,7 +2853,7 @@
     },
     {
       "id": "leitheach-tir-na-tonn",
-      "title": "Oberherrschaft Tir na Tonn",
+      "title": "Tir na Tonn",
       "shortTitle": "Tir na Tonn",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Fir An’Tarvo",
@@ -2858,7 +2872,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -3058,8 +3072,8 @@
     },
     {
       "id": "leitheach-herrschaft-gortach",
-      "title": "Herrschaft der Ru’Gortach",
-      "shortTitle": "Herrschaft der Ru’Gortach",
+      "title": "Tir na Breithe",
+      "shortTitle": "Tir na Breithe",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ru’Gortach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
@@ -3077,7 +3091,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -3087,13 +3101,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ru’Gortach",
+          "name": "Tir na Breithe",
           "slug": "leitheach-herrschaft-gortach"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
-      "crestAlt": "Wappen Ru’Gortach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
+      "crestAlt": "Banner Tir na Breithe",
       "map": {
         "title": "Karte von Tir na Tonn",
         "imageSrc": "/Karten/Leitheach/tir-na-tonn/Kartenbilder/normal.webp",
@@ -3106,7 +3120,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Breithe bedeutet „Land des Urteils“."
+        ]
       },
       "infobox": [
         {
@@ -3155,7 +3171,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Ru’Gortach",
+              "office": "Laird · Tir na Breithe",
               "name": "Kinneth Gortach",
               "familyId": "haus-gortach",
               "href": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view&person=kinneth-gortach",
@@ -3234,8 +3250,8 @@
     },
     {
       "id": "leitheach-herrschaft-ruitheach",
-      "title": "Herrschaft der Dál’Ruitheach",
-      "shortTitle": "Herrschaft der Dál’Ruitheach",
+      "title": "Tir na nDambaí",
+      "shortTitle": "Tir na nDambaí",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Dál’Ruitheach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
@@ -3253,7 +3269,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -3263,13 +3279,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dál’Ruitheach",
+          "name": "Tir na nDambaí",
           "slug": "leitheach-herrschaft-ruitheach"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
-      "crestAlt": "Wappen Dál’Ruitheach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
+      "crestAlt": "Banner Tir na nDambaí",
       "map": {
         "title": "Karte von Tir na Tonn",
         "imageSrc": "/Karten/Leitheach/tir-na-tonn/Kartenbilder/normal.webp",
@@ -3282,7 +3298,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na nDambaí bedeutet „Land der Dämme“."
+        ]
       },
       "infobox": [
         {
@@ -3331,7 +3349,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Dál’Ruitheach",
+              "office": "Laird · Tir na nDambaí",
               "name": "Muirinn Ruitheach",
               "familyId": "haus-ruitheach",
               "href": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view&person=muirinn-ruitheach",
@@ -3410,7 +3428,7 @@
     },
     {
       "id": "leitheach-tir-na-comhchuibhis",
-      "title": "Oberherrschaft Tir an Comhchuibhis",
+      "title": "Tir an Comhchuibhis",
       "shortTitle": "Tir an Comhchuibhis",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Mac Airt",
@@ -3429,7 +3447,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -3645,7 +3663,8 @@
       "territoryLinks": [
         "leitheach-herrschaft-laidir",
         "leitheach-herrschaft-choinnich",
-        "leitheach-herrschaft-nic-blar"
+        "leitheach-herrschaft-nic-blar",
+        "leitheach-herrschaft-dal-t-saor"
       ],
       "domains": [],
       "source": {
@@ -3655,8 +3674,8 @@
     },
     {
       "id": "leitheach-herrschaft-laidir",
-      "title": "Lehensherrschaft der Ruin’Laidir",
-      "shortTitle": "Lehensherrschaft der Ruin’Laidir",
+      "title": "Tir na Dídine",
+      "shortTitle": "Tir na Dídine",
       "type": "Lehensherrschaft",
       "kicker": "Lehensherrschaft · Ruin’Laidir",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
@@ -3674,7 +3693,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -3684,13 +3703,13 @@
         },
         {
           "type": "Lehensherrschaft",
-          "name": "Lehensherrschaft der Ruin’Laidir",
+          "name": "Tir na Dídine",
           "slug": "leitheach-herrschaft-laidir"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-laidir.png",
-      "crestAlt": "Wappen Ruin’Laidir",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
+      "crestAlt": "Banner Tir na Dídine",
       "map": {
         "title": "Karte von Tir an Comhchuibhis",
         "imageSrc": "/Karten/Leitheach/tir-na-comhchuibhis/Kartenbilder/normal.webp",
@@ -3703,7 +3722,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Dídine bedeutet „Land der Zuflucht“."
+        ]
       },
       "infobox": [
         {
@@ -3752,7 +3773,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Dún Tiarna · Lehensherrschaft der Ruin’Laidir",
+              "office": "Dún Tiarna · Tir na Dídine",
               "name": "Ríoghnán Laidir",
               "familyId": "haus-laidir",
               "href": "/Stammbäume/Stammbaum.html?family=haus-laidir&mode=view&person=rioghnan-laidir",
@@ -3831,8 +3852,8 @@
     },
     {
       "id": "leitheach-herrschaft-choinnich",
-      "title": "Herrschaft der Ua’Choinnich",
-      "shortTitle": "Herrschaft der Ua’Choinnich",
+      "title": "Tir na gCrúb",
+      "shortTitle": "Tir na gCrúb",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ua’Choinnich",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
@@ -3850,7 +3871,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -3860,13 +3881,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Choinnich",
+          "name": "Tir na gCrúb",
           "slug": "leitheach-herrschaft-choinnich"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-choinnich.png",
-      "crestAlt": "Wappen Ua’Choinnich",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+      "crestAlt": "Banner Tir na gCrúb",
       "map": {
         "title": "Karte von Tir an Comhchuibhis",
         "imageSrc": "/Karten/Leitheach/tir-na-comhchuibhis/Kartenbilder/normal.webp",
@@ -3879,7 +3900,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na gCrúb bedeutet „Land der Hufe“."
+        ]
       },
       "infobox": [
         {
@@ -3928,7 +3951,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Ua’Choinnich",
+              "office": "Laird · Tir na gCrúb",
               "name": "Tiarnóg Choinnich",
               "familyId": "haus-choinnich",
               "href": "/Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view&person=tiarnog-choinnich",
@@ -4007,8 +4030,8 @@
     },
     {
       "id": "leitheach-herrschaft-nic-blar",
-      "title": "Herrschaft der Nic’Blar",
-      "shortTitle": "Herrschaft der Nic’Blar",
+      "title": "Tir na Rún",
+      "shortTitle": "Tir na Rún",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Nic’Blar · Leitheach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
@@ -4026,7 +4049,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -4036,13 +4059,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Nic’Blar",
+          "name": "Tir na Rún",
           "slug": "leitheach-herrschaft-nic-blar"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Ceitheach/clan-nic-blar.png",
-      "crestAlt": "Wappen Nic’Blar · Leitheach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+      "crestAlt": "Banner Tir na Rún",
       "map": {
         "title": "Karte von Tir an Comhchuibhis",
         "imageSrc": "/Karten/Leitheach/tir-na-comhchuibhis/Kartenbilder/normal.webp",
@@ -4055,7 +4078,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Rún bedeutet „Land der Geheimnisse“."
+        ]
       },
       "infobox": [
         {
@@ -4104,7 +4129,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Nic’Blar",
+              "office": "Laird · Tir na Rún",
               "name": "Sceolaith Blár",
               "familyId": "haus-nic-blar-leitheach",
               "href": "/Stammbäume/Stammbaum.html?family=haus-nic-blar-leitheach&mode=view&person=sceolaith-blar",
@@ -4183,7 +4208,7 @@
     },
     {
       "id": "leitheach-tir-na-sruth",
-      "title": "Oberherrschaft Tir na Sruth",
+      "title": "Tir na Sruth",
       "shortTitle": "Tir na Sruth",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Tir An’Cuinn",
@@ -4202,7 +4227,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -4403,8 +4428,8 @@
     },
     {
       "id": "leitheach-herrschaft-airgid",
-      "title": "Lehensherrschaft der Tir An’Airgid",
-      "shortTitle": "Lehensherrschaft der Tir An’Airgid",
+      "title": "Tir na gCorr",
+      "shortTitle": "Tir na gCorr",
       "type": "Lehensherrschaft",
       "kicker": "Lehensherrschaft · Tir An’Airgid",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
@@ -4422,7 +4447,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -4432,13 +4457,13 @@
         },
         {
           "type": "Lehensherrschaft",
-          "name": "Lehensherrschaft der Tir An’Airgid",
+          "name": "Tir na gCorr",
           "slug": "leitheach-herrschaft-airgid"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-tir-an-airgid.png",
-      "crestAlt": "Wappen Tir An’Airgid",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/lehensherrschaft-tir-an-airgid.png",
+      "crestAlt": "Banner Tir na gCorr",
       "map": {
         "title": "Karte von Tir na Sruth",
         "imageSrc": "/Karten/Leitheach/tir-na-sruth/Kartenbilder/normal.webp",
@@ -4451,7 +4476,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na gCorr bedeutet „Land der Reiher“."
+        ]
       },
       "infobox": [
         {
@@ -4500,7 +4527,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Dún Tiarna · Lehensherrschaft der Tir An’Airgid",
+              "office": "Dún Tiarna · Tir na gCorr",
               "name": "Tomaltach Airgid",
               "familyId": "haus-airgid",
               "href": "/Stammbäume/Stammbaum.html?family=haus-airgid&mode=view&person=tomaltach-airgid",
@@ -4579,8 +4606,8 @@
     },
     {
       "id": "leitheach-herrschaft-amhran",
-      "title": "Herrschaft der Ua’Amhran",
-      "shortTitle": "Herrschaft der Ua’Amhran",
+      "title": "Tir na hÉisteachta",
+      "shortTitle": "Tir na hÉisteachta",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ua’Amhran",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
@@ -4598,7 +4625,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -4608,13 +4635,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Amhran",
+          "name": "Tir na hÉisteachta",
           "slug": "leitheach-herrschaft-amhran"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-amrhan.png",
-      "crestAlt": "Wappen Ua’Amhran",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+      "crestAlt": "Banner Tir na hÉisteachta",
       "map": {
         "title": "Karte von Tir na Sruth",
         "imageSrc": "/Karten/Leitheach/tir-na-sruth/Kartenbilder/normal.webp",
@@ -4627,7 +4654,9 @@
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na hÉisteachta bedeutet „Land des Lauschens“."
+        ]
       },
       "infobox": [
         {
@@ -4676,7 +4705,7 @@
           "title": "Herrschaft",
           "members": [
             {
-              "office": "Laird · Herrschaft der Ua’Amhran",
+              "office": "Laird · Tir na hÉisteachta",
               "name": "Fionntan Amrhan",
               "familyId": "haus-amrhan",
               "href": "/Stammbäume/Stammbaum.html?family=haus-amrhan&mode=view&person=fionntan-amrhan",
@@ -4755,12 +4784,12 @@
     },
     {
       "id": "leitheach-herrschaft-eirce",
-      "title": "Herrschaft der Ua’Eirce",
-      "shortTitle": "Herrschaft der Ua’Eirce",
+      "title": "Tir na nIúr",
+      "shortTitle": "Tir na nIúr",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Eirce",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
-      "parentLabel": "Oberherrschaft Tir na Sleagh",
+      "parentLabel": "Tir na Sleagh",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -4774,7 +4803,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -4784,19 +4813,23 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Eirce",
+          "name": "Tir na nIúr",
           "slug": "leitheach-herrschaft-eirce"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-eirce.png",
-      "crestAlt": "Wappen Clan Ua’Eirce",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+      "crestAlt": "Banner Tir na nIúr",
       "map": {
         "title": "Karte von Tir na Sleagh",
         "imageSrc": "/Karten/Leitheach/tir-na-sleagh/Kartenbilder/normal.webp",
         "imageAlt": "Karte von Tir na Sleagh",
         "href": "/Karten/karte.html?map=leitheach-tir-na-sleagh"
       },
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na nIúr bedeutet „Land der Eiben“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -4863,12 +4896,12 @@
     },
     {
       "id": "leitheach-herrschaft-fiachrach",
-      "title": "Herrschaft der Uí Fiachrach",
-      "shortTitle": "Herrschaft der Uí Fiachrach",
+      "title": "Tir na Seamróige",
+      "shortTitle": "Tir na Seamróige",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Uí Fiachrach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
-      "parentLabel": "Oberherrschaft Tir na Sleagh",
+      "parentLabel": "Tir na Sleagh",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -4882,7 +4915,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -4892,19 +4925,23 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Uí Fiachrach",
+          "name": "Tir na Seamróige",
           "slug": "leitheach-herrschaft-fiachrach"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ui-fiachrach.png",
-      "crestAlt": "Wappen Clan Uí Fiachrach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+      "crestAlt": "Banner Tir na Seamróige",
       "map": {
         "title": "Karte von Tir na Sleagh",
         "imageSrc": "/Karten/Leitheach/tir-na-sleagh/Kartenbilder/normal.webp",
         "imageAlt": "Karte von Tir na Sleagh",
         "href": "/Karten/karte.html?map=leitheach-tir-na-sleagh"
       },
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na Seamróige bedeutet „Land des Kleeblatts“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -4971,12 +5008,12 @@
     },
     {
       "id": "leitheach-herrschaft-laoch",
-      "title": "Herrschaft von Broch an Abhainn",
-      "shortTitle": "Herrschaft von Broch an Abhainn",
+      "title": "Tir na gCoiréal",
+      "shortTitle": "Tir na gCoiréal",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ruin Ua Laoch",
       "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
-      "parentLabel": "Oberherrschaft Tir na Sleagh",
+      "parentLabel": "Tir na Sleagh",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -4990,7 +5027,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Leitheach",
+          "name": "Fürstentum Leitheach",
           "slug": "fuerstentum-leitheach"
         },
         {
@@ -5000,19 +5037,23 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft von Broch an Abhainn",
+          "name": "Tir na gCoiréal",
           "slug": "leitheach-herrschaft-laoch"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
-      "crestAlt": "Wappen Ruin Ua Laoch",
+      "crestSrc": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+      "crestAlt": "Banner Tir na gCoiréal",
       "map": {
         "title": "Karte von Tir na Sleagh",
         "imageSrc": "/Karten/Leitheach/tir-na-sleagh/Kartenbilder/normal.webp",
         "imageAlt": "Karte von Tir na Sleagh",
         "href": "/Karten/karte.html?map=leitheach-tir-na-sleagh"
       },
-      "copy": {},
+      "copy": {
+        "geography": [
+          "Tir na gCoiréal bedeutet „Land der Korallen“."
+        ]
+      },
       "infobox": [
         {
           "title": "Allgemein",
@@ -5028,7 +5069,7 @@
             },
             {
               "label": "Sitz",
-              "value": "Offen"
+              "value": "Broch an Abhainn"
             },
             {
               "label": "Oberherrschaft",
@@ -5046,7 +5087,7 @@
               "name": "Ruin Ua Laoch",
               "familyId": "haus-ruin-ua-laoch",
               "imageSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
-              "seat": "",
+              "seat": "Broch an Abhainn",
               "liege": "Clan Mac Ard Cumhaill",
               "rank": "Laird-Clan",
               "featured": true,
@@ -5075,6 +5116,112 @@
       "source": {
         "familyId": "haus-ruin-ua-laoch",
         "note": "Herrschaft auf der Teilkarte Tir na Sleagh; Rang und Ratsoberhaupt aus der vorhandenen Familienakte."
+      }
+    },
+    {
+      "id": "leitheach-herrschaft-dal-t-saor",
+      "title": "Herrschaft der Dál T’Saor",
+      "shortTitle": "Herrschaft der Dál T’Saor",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Dal T’Saor",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+      "parentLabel": "Tir an Comhchuibhis",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Leitheach",
+          "slug": "fuerstentum-leitheach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir an Comhchuibhis",
+          "slug": "leitheach-tir-na-comhchuibhis"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Dál T’Saor",
+          "slug": "leitheach-herrschaft-dal-t-saor"
+        }
+      ],
+      "crestSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+      "crestAlt": "Banner Herrschaft der Dál T’Saor",
+      "copy": {
+        "overview": [
+          "Herrschaft der Dál T’Saor ist die städtische Herrschaft des Clans in Sruthlann. Die Stadt ist zugleich der Sitz seines unmittelbaren Lehnsherrn; ein eigenes Landschaftsgebiet wird hierfür nicht abgegrenzt."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Städtische Laird-Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Dal T’Saor",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird (Ritterfürst)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Sruthlann"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir an Comhchuibhis",
+              "href": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-dal-t-saor",
+              "name": "Dal T’Saor",
+              "imageSrc": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+              "imageAlt": "Wappen Dal T’Saor",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view",
+              "seat": "Sruthlann",
+              "rank": "Laird (Ritterfürst)",
+              "liege": "Clan Mac Airt",
+              "featured": true,
+              "featuredLabel": "Herrschender Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [],
+      "map": {
+        "title": "Karte von Tir an Comhchuibhis",
+        "imageSrc": "/Karten/Leitheach/tir-na-comhchuibhis/Kartenbilder/normal.webp",
+        "imageAlt": "Karte von Tir an Comhchuibhis",
+        "href": "/Karten/karte.html?map=leitheach-tir-na-comhchuibhis"
       }
     }
   ]

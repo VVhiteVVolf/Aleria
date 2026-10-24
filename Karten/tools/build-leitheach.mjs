@@ -37,8 +37,8 @@ for (const definition of definitions) {
     layerNames: { normal: 'Karte', regions: 'Regionen', pins: 'Markierungen' }, dotSize: 80, lblSize: 50,
     displaySettingsVersion: 1, markerPresentation: 'symbols', pinVisibilityVersion: 1, showMarkers: true,
     showPinLabels: false, alwaysShowLettering: false, extraLayers: [], dm: { sessions: [], notes: '', groupStatus: {} } };
-  prepared.push([folder + '/data.json', { schemaVersion: 1, dataPath: folder + '/data.json', revision: 2,
-    updatedAt: '2026-10-24T18:00:00.000Z', generatedStateHash: stateHash(state), state }]);
+  prepared.push([folder + '/data.json', { schemaVersion: 1, dataPath: folder + '/data.json', revision: 3,
+    updatedAt: '2026-10-24T18:20:00.000Z', generatedStateHash: stateHash(state), state }]);
   const territory = territoriesById.get(territoryId);
   registryEntries.push({ id: mapId, title, status: 'active', type: 'region', markerPresentation: 'symbols',
     hierarchy: [{ level: 'region', slug: 'leitheach', title: 'Fürstentum Leitheach' }, ...main ? [] : [{ level: 'region', slug, title }]],

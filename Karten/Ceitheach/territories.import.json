@@ -104,12 +104,17 @@
       "familyId": "haus-craobhan",
       "house": "Clan Tir an Craobhan",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Cruach",
+      "banner": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
+      "bannerAlt": "Banner Herrschaft der Tir an Craobhan",
       "seat": "Carraigreach",
       "parentId": "oberherrschaft-ceitheach-tir-na-cruach",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der Tir an Craobhan/Herrschaft der Tir an Craobhan.html",
-      "realmId": "tir-na-cruach"
+      "realmId": "tir-na-cruach",
+      "extent": "urban",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "herrschaft-ceitheach-eldath",
@@ -118,96 +123,143 @@
       "familyId": "haus-eldath",
       "house": "Clan Fáill Ua’Eldath",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Cruach",
+      "banner": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
+      "bannerAlt": "Banner Herrschaft der Fáill Ua’Eldath",
       "seat": "Carraigreach",
       "parentId": "oberherrschaft-ceitheach-tir-na-cruach",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Ua’Eldath/Herrschaft der Fáill Ua’Eldath.html",
-      "realmId": "tir-na-cruach"
+      "realmId": "tir-na-cruach",
+      "extent": "urban",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "herrschaft-ceitheach-eamhra",
-      "name": "Herrschaft der Fáill Mallacht Eamhra",
+      "name": "Tir na Tairsí",
       "type": "Herrschaft",
       "familyId": "haus-eamhra",
       "house": "Clan Fáill Mallacht Eamhra",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-mallacht-eamhra.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-cruach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Cruach",
+      "banner": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-eamhra.svg",
+      "bannerAlt": "Banner Tir na Tairsí",
       "seat": "Tineach",
       "parentId": "oberherrschaft-ceitheach-tir-na-cruach",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der Fáill Mallacht Eamhra/Herrschaft der Fáill Mallacht Eamhra.html",
-      "realmId": "tir-na-cruach"
+      "realmId": "tir-na-cruach",
+      "extent": "territorial",
+      "gloss": "Land der Schwelle",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die dunkle Toröffnung im Wappen der Fáill Mallacht Eamhra.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/tairseach"
+      }
     },
     {
       "id": "herrschaft-ceitheach-seaghda",
-      "name": "Herrschaft der Mallacht Seaghda",
+      "name": "Tir na Leon",
       "type": "Herrschaft",
       "familyId": "haus-seaghda",
       "house": "Clan Mallacht Seaghda",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-dorcha.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Dorcha",
+      "banner": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-seaghda.svg",
+      "bannerAlt": "Banner Tir na Leon",
       "seat": "Glaennmor",
       "parentId": "oberherrschaft-ceitheach-tir-na-dorcha",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der Mallacht Seaghda/Herrschaft der Mallacht Seaghda.html",
-      "realmId": "tir-na-dorcha"
+      "realmId": "tir-na-dorcha",
+      "extent": "territorial",
+      "gloss": "Land der Löwen",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Löwe der Mallacht Seaghda.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/leon"
+      }
     },
     {
       "id": "herrschaft-ceitheach-somhairle",
-      "name": "Herrschaft der Sidhe Somhairle",
+      "name": "Tir na bhFásach",
       "type": "Herrschaft",
       "familyId": "haus-somhairle",
       "house": "Clan Sidhe Somhairle",
       "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-dun.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Dun",
+      "banner": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-somhairle.svg",
+      "bannerAlt": "Banner Tir na bhFásach",
       "seat": "Glaennmor",
       "parentId": "oberherrschaft-ceitheach-tir-na-dun",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
-      "realmId": "tir-na-dun"
+      "realmId": "tir-na-dun",
+      "extent": "territorial",
+      "gloss": "Land der Wildnisse",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der frühere eigene Herrschaftsbereich der Sidhe Somhairle in Ceitheach; ihr heutiger Sitz bleibt in Leitheach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/f%C3%A1sach"
+      }
     },
     {
       "id": "herrschaft-ceitheach-an-morchoe",
-      "name": "Herrschaft der An’Morchoe",
+      "name": "Tir na gCéanna",
       "type": "Herrschaft",
       "familyId": "haus-an-morchoe",
       "house": "Clan An’Morchoe",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-morchoe.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-ceo.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Ceo",
+      "banner": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-an-morchoe.svg",
+      "bannerAlt": "Banner Tir na gCéanna",
       "seat": "Sruthbruach",
       "parentId": "oberherrschaft-ceitheach-tir-na-ceo",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der An’Morchoe/Herrschaft der An’Morchoe.html",
-      "realmId": "tir-na-ceo"
+      "realmId": "tir-na-ceo",
+      "extent": "territorial",
+      "gloss": "Land der Kais",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Schiff der An’Morchoe am eigenen früheren Küsten- und Flussgebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/c%C3%A9"
+      }
     },
     {
       "id": "herrschaft-ceitheach-tir-an-tordarroch",
-      "name": "Herrschaft der Tir An’Tordarroch",
+      "name": "Tir na mBachlóg",
       "type": "Herrschaft",
       "familyId": "haus-tir-an-tordarroch",
       "house": "Clan Tir An’Tordarroch",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-tordarroch.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-toraidh.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Toraidh",
+      "banner": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-tir-an-tordarroch.svg",
+      "bannerAlt": "Banner Tir na mBachlóg",
       "seat": "Teorannach",
       "parentId": "oberherrschaft-ceitheach-tir-na-toraidh",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der Tir An’Tordarroch/Herrschaft der Tir An’Tordarroch.html",
-      "realmId": "tir-na-toraidh"
+      "realmId": "tir-na-toraidh",
+      "extent": "territorial",
+      "gloss": "Land der Knospen",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Pflanzenzeichen der Tir An’Tordarroch.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/bachl%C3%B3g"
+      }
     },
     {
       "id": "herrschaft-ceitheach-an-bhaird",
-      "name": "Herrschaft der An’Bhaird",
+      "name": "Tir na Doimhne",
       "type": "Herrschaft",
       "familyId": "haus-an-bhaird",
       "house": "Clan An’Bhaird",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-bhaird.png",
-      "banner": "/Stammbäume/assets/images/regions/Ceitheach/tir-na-toraidh.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Toraidh",
+      "banner": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-an-bhaird.svg",
+      "bannerAlt": "Banner Tir na Doimhne",
       "seat": "Lochmorach",
       "parentId": "oberherrschaft-ceitheach-tir-na-toraidh",
       "href": "/Kontinente/Estryll/Fürstentum Ceitheach/Herrschaft der An’Bhaird/Herrschaft der An’Bhaird.html",
-      "realmId": "tir-na-toraidh"
+      "realmId": "tir-na-toraidh",
+      "extent": "territorial",
+      "gloss": "Land der Tiefe",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Fisch der An’Bhaird in ihrem früheren Seengebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/doimhne"
+      }
     },
     {
       "id": "ceitheach-offen-1a773697-4d2c-4110-bdfb-cf844e0d95c9",

@@ -368,24 +368,17 @@
               "placeIds": [
                 "uathneach-dunnean"
               ]
-            },
-            {
-              "title": "Stadt · Größe offen",
-              "placeIds": [
-                "uathneach-fethlinn"
-              ]
-            },
-            {
-              "title": "Burgstadt",
-              "placeIds": [
-                "uathneach-reithe"
-              ]
             }
           ]
         }
       ],
       "territoryLinks": [
-        "uathneach-herrschaft-fastaigh"
+        "uathneach-herrschaft-fastaigh",
+        "uathneach-herrschaft-briccne",
+        "uathneach-herrschaft-arbhair",
+        "uathneach-herrschaft-scathain",
+        "uathneach-herrschaft-muirin",
+        "uathneach-herrschaft-einsiedlerkrebs"
       ]
     },
     {
@@ -654,17 +647,13 @@
               "placeIds": [
                 "uathneach-cathair"
               ]
-            },
-            {
-              "title": "Stadt · Größe offen",
-              "placeIds": [
-                "uathneach-dathuil"
-              ]
             }
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [
+        "uathneach-herrschaft-fiodhran"
+      ]
     },
     {
       "id": "uathneach-tir-na-taoide",
@@ -818,17 +807,15 @@
               "placeIds": [
                 "uathneach-orglen"
               ]
-            },
-            {
-              "title": "Burgstadt",
-              "placeIds": [
-                "uathneach-mhor"
-              ]
             }
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [
+        "uathneach-herrschaft-cairbre",
+        "uathneach-herrschaft-reannachain",
+        "uathneach-herrschaft-cairge"
+      ]
     },
     {
       "id": "uathneach-tir-na-dtorc",
@@ -970,17 +957,14 @@
               "placeIds": [
                 "uathneach-rinnmara"
               ]
-            },
-            {
-              "title": "Burgstadt",
-              "placeIds": [
-                "uathneach-cuan"
-              ]
             }
           ]
         }
       ],
-      "territoryLinks": []
+      "territoryLinks": [
+        "uathneach-herrschaft-cuilen",
+        "uathneach-herrschaft-cadhla"
+      ]
     },
     {
       "id": "uathneach-tir-na-conaire",
@@ -1127,18 +1111,13 @@
               "placeIds": [
                 "uathneach-temair"
               ]
-            },
-            {
-              "title": "Stadt · Größe offen",
-              "placeIds": [
-                "uathneach-ceithirn"
-              ]
             }
           ]
         }
       ],
       "territoryLinks": [
-        "uathneach-herrschaft-suilgeach"
+        "uathneach-herrschaft-suilgeach",
+        "uathneach-herrschaft-creagan"
       ]
     },
     {
@@ -1314,13 +1293,15 @@
       ],
       "territoryLinks": [
         "uathneach-herrschaft-lasgair",
-        "uathneach-herrschaft-clannmhar"
+        "uathneach-herrschaft-clannmhar",
+        "uathneach-herrschaft-marcaigh",
+        "uathneach-herrschaft-giolla"
       ]
     },
     {
       "id": "uathneach-herrschaft-fastaigh",
-      "title": "Herrschaft von Bronnan",
-      "shortTitle": "Herrschaft von Bronnan",
+      "title": "Tir na hAille",
+      "shortTitle": "Tir na hAille",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Dál Fastaigh",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
@@ -1348,13 +1329,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft von Bronnan",
+          "name": "Tir na hAille",
           "slug": "uathneach-herrschaft-fastaigh"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
-      "crestAlt": "Wappen Dál Fastaigh",
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fastaigh.svg",
+      "crestAlt": "Banner Tir na hAille",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
         "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
@@ -1363,14 +1344,16 @@
       },
       "copy": {
         "overview": [
-          "Herrschaft von Bronnan wird von den Dál Fastaigh mit Sitz in Bronnan geführt.",
+          "Tir na hAille wird von den Dál Fastaigh mit Sitz in Bronnan geführt.",
           "Die Dál Fastaigh dienen unmittelbar den Mac Ard’Lága."
         ],
         "history": [],
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na hAille bedeutet „Land der Steilklippe“."
+        ]
       },
       "infobox": [
         {
@@ -1425,7 +1408,7 @@
       "domains": [
         {
           "territoryId": "uathneach-herrschaft-fastaigh",
-          "title": "Herrschaft von Bronnan",
+          "title": "Tir na hAille",
           "sections": [
             {
               "title": "Normal große Stadt",
@@ -1440,8 +1423,8 @@
     },
     {
       "id": "uathneach-herrschaft-lasgair",
-      "title": "Herrschaft von Mhorcha",
-      "shortTitle": "Herrschaft von Mhorcha",
+      "title": "Tir na nEití",
+      "shortTitle": "Tir na nEití",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Ua Lasgair",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
@@ -1469,13 +1452,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft von Mhorcha",
+          "name": "Tir na nEití",
           "slug": "uathneach-herrschaft-lasgair"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
-      "crestAlt": "Wappen Ua Lasgair",
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-lasgair.svg",
+      "crestAlt": "Banner Tir na nEití",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
         "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
@@ -1484,14 +1467,16 @@
       },
       "copy": {
         "overview": [
-          "Herrschaft von Mhorcha wird von den Ua Lasgair mit Sitz in Mhorcha geführt.",
+          "Tir na nEití wird von den Ua Lasgair mit Sitz in Mhorcha geführt.",
           "Die Ua Lasgair dienen unmittelbar den Ua’Luga."
         ],
         "history": [],
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na nEití bedeutet „Land der Flossen“."
+        ]
       },
       "infobox": [
         {
@@ -1546,7 +1531,7 @@
       "domains": [
         {
           "territoryId": "uathneach-herrschaft-lasgair",
-          "title": "Herrschaft von Mhorcha",
+          "title": "Tir na nEití",
           "sections": [
             {
               "title": "Normal große Stadt",
@@ -1561,8 +1546,8 @@
     },
     {
       "id": "uathneach-herrschaft-suilgeach",
-      "title": "Herrschaft von Caorthann",
-      "shortTitle": "Herrschaft von Caorthann",
+      "title": "Tir na Réalta",
+      "shortTitle": "Tir na Réalta",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Na Suilgeach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
@@ -1590,13 +1575,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft von Caorthann",
+          "name": "Tir na Réalta",
           "slug": "uathneach-herrschaft-suilgeach"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
-      "crestAlt": "Wappen Na Suilgeach",
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-suilgeach.svg",
+      "crestAlt": "Banner Tir na Réalta",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
         "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
@@ -1605,14 +1590,16 @@
       },
       "copy": {
         "overview": [
-          "Herrschaft von Caorthann wird von den Na Suilgeach mit Sitz in Caorthann geführt.",
+          "Tir na Réalta wird von den Na Suilgeach mit Sitz in Caorthann geführt.",
           "Die Na Suilgeach dienen unmittelbar den Tir an Máta."
         ],
         "history": [],
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Réalta bedeutet „Land des Sterns“."
+        ]
       },
       "infobox": [
         {
@@ -1667,7 +1654,7 @@
       "domains": [
         {
           "territoryId": "uathneach-herrschaft-suilgeach",
-          "title": "Herrschaft von Caorthann",
+          "title": "Tir na Réalta",
           "sections": [
             {
               "title": "Normal große Stadt",
@@ -1682,8 +1669,8 @@
     },
     {
       "id": "uathneach-herrschaft-luachra",
-      "title": "Herrschaft von Treabhair",
-      "shortTitle": "Herrschaft von Treabhair",
+      "title": "Tir na Raithní",
+      "shortTitle": "Tir na Raithní",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Nic Luachra",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Sruthán/Tir na Sruthán.html",
@@ -1711,13 +1698,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft von Treabhair",
+          "name": "Tir na Raithní",
           "slug": "uathneach-herrschaft-luachra"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
-      "crestAlt": "Wappen Nic Luachra",
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-luachra.svg",
+      "crestAlt": "Banner Tir na Raithní",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
         "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
@@ -1726,14 +1713,16 @@
       },
       "copy": {
         "overview": [
-          "Herrschaft von Treabhair wird von den Nic Luachra mit Sitz in Treabhair geführt.",
+          "Tir na Raithní wird von den Nic Luachra mit Sitz in Treabhair geführt.",
           "Die Nic Luachra dienen unmittelbar den An Gealân."
         ],
         "history": [],
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Raithní bedeutet „Land des Farns“."
+        ]
       },
       "infobox": [
         {
@@ -1788,7 +1777,7 @@
       "domains": [
         {
           "territoryId": "uathneach-herrschaft-luachra",
-          "title": "Herrschaft von Treabhair",
+          "title": "Tir na Raithní",
           "sections": [
             {
               "title": "Normal große Stadt",
@@ -1803,8 +1792,8 @@
     },
     {
       "id": "uathneach-herrschaft-clannmhar",
-      "title": "Herrschaft von Rioghain",
-      "shortTitle": "Herrschaft von Rioghain",
+      "title": "Tir na Snaidhme",
+      "shortTitle": "Tir na Snaidhme",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Tir an Clannmhar",
       "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
@@ -1832,13 +1821,13 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft von Rioghain",
+          "name": "Tir na Snaidhme",
           "slug": "uathneach-herrschaft-clannmhar"
         }
       ],
       "aliases": [],
-      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
-      "crestAlt": "Wappen Tir an Clannmhar",
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-clannmhar.svg",
+      "crestAlt": "Banner Tir na Snaidhme",
       "map": {
         "title": "Karte des Fürstentums Uathneach",
         "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
@@ -1847,14 +1836,16 @@
       },
       "copy": {
         "overview": [
-          "Herrschaft von Rioghain wird von den Tir an Clannmhar mit Sitz in Rioghain geführt.",
+          "Tir na Snaidhme wird von den Tir an Clannmhar mit Sitz in Rioghain geführt.",
           "Die Tir an Clannmhar dienen unmittelbar den Ua’Luga."
         ],
         "history": [],
         "culture": [],
         "economy": [],
         "defense": [],
-        "geography": []
+        "geography": [
+          "Tir na Snaidhme bedeutet „Land des Knotens“."
+        ]
       },
       "infobox": [
         {
@@ -1909,12 +1900,1630 @@
       "domains": [
         {
           "territoryId": "uathneach-herrschaft-clannmhar",
-          "title": "Herrschaft von Rioghain",
+          "title": "Tir na Snaidhme",
           "sections": [
             {
               "title": "Normal große Stadt",
               "placeIds": [
                 "uathneach-rioghain"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-briccne",
+      "title": "Herrschaft der Na Briccne",
+      "shortTitle": "Herrschaft der Na Briccne",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Na Briccne",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+      "parentLabel": "Tir na Dála",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Tir na Dála",
+          "slug": "uathneach-tir-na-laimhe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Na Briccne",
+          "slug": "uathneach-herrschaft-briccne"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/briccne.webp",
+      "crestAlt": "Banner Herrschaft der Na Briccne",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Na Briccne wird von den Na Briccne mit Sitz in Dunnean geführt.",
+          "Die Na Briccne dienen unmittelbar den Mac Ard’Lága."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Dunnean, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Na Briccne",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-briccne&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dunnean"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Dála",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-briccne",
+              "name": "Na Briccne",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/briccne.webp",
+              "imageAlt": "Wappen Na Briccne",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-briccne&mode=view",
+              "seat": "Dunnean",
+              "liege": "Mac Ard’Lága",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-arbhair",
+      "title": "Herrschaft der Dâl Arbhair",
+      "shortTitle": "Herrschaft der Dâl Arbhair",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Dâl Arbhair",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+      "parentLabel": "Tir na Dála",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Tir na Dála",
+          "slug": "uathneach-tir-na-laimhe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Dâl Arbhair",
+          "slug": "uathneach-herrschaft-arbhair"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/arbhair.webp",
+      "crestAlt": "Banner Herrschaft der Dâl Arbhair",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Dâl Arbhair wird von den Dâl Arbhair mit Sitz in Dunnean geführt.",
+          "Die Dâl Arbhair dienen unmittelbar den Mac Ard’Lága."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Dunnean, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Dâl Arbhair",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-arbhair&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dunnean"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Dála",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-arbhair",
+              "name": "Dâl Arbhair",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/arbhair.webp",
+              "imageAlt": "Wappen Dâl Arbhair",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-arbhair&mode=view",
+              "seat": "Dunnean",
+              "liege": "Mac Ard’Lága",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-scathain",
+      "title": "Herrschaft der An Scatháin",
+      "shortTitle": "Herrschaft der An Scatháin",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · An Scatháin",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+      "parentLabel": "Tir na Dála",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Tir na Dála",
+          "slug": "uathneach-tir-na-laimhe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der An Scatháin",
+          "slug": "uathneach-herrschaft-scathain"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/scathain.webp",
+      "crestAlt": "Banner Herrschaft der An Scatháin",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der An Scatháin wird von den An Scatháin mit Sitz in Dunnean geführt.",
+          "Die An Scatháin dienen unmittelbar den Mac Ard’Lága."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Dunnean, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "An Scatháin",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-scathain&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dunnean"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Dála",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-scathain",
+              "name": "An Scatháin",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/scathain.webp",
+              "imageAlt": "Wappen An Scatháin",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-scathain&mode=view",
+              "seat": "Dunnean",
+              "liege": "Mac Ard’Lága",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-muirin",
+      "title": "Tir na nGliomach",
+      "shortTitle": "Tir na nGliomach",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ua Muirin",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+      "parentLabel": "Tir na Dála",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Tir na Dála",
+          "slug": "uathneach-tir-na-laimhe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na nGliomach",
+          "slug": "uathneach-herrschaft-muirin"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-muirin.svg",
+      "crestAlt": "Banner Tir na nGliomach",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na nGliomach wird von den Ua Muirin mit Sitz in Broch an Reithe geführt.",
+          "Die Ua Muirin dienen unmittelbar den Mac Ard’Lága."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tir na nGliomach bedeutet „Land der Hummer“."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ua Muirin",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Reithe"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Dála",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-muirin",
+              "name": "Ua Muirin",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
+              "imageAlt": "Wappen Ua Muirin",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view",
+              "seat": "Broch an Reithe",
+              "liege": "Mac Ard’Lága",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "uathneach-herrschaft-muirin",
+          "title": "Tir na nGliomach",
+          "sections": [
+            {
+              "title": "Burgstadt",
+              "placeIds": [
+                "uathneach-reithe"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-cairbre",
+      "title": "Herrschaft der Ua Cairbre",
+      "shortTitle": "Herrschaft der Ua Cairbre",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ua Cairbre",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+      "parentLabel": "Tir na Seolta",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Seolta",
+          "slug": "uathneach-tir-na-taoide"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua Cairbre",
+          "slug": "uathneach-herrschaft-cairbre"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/cairbre.webp",
+      "crestAlt": "Banner Herrschaft der Ua Cairbre",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Ua Cairbre wird von den Ua Cairbre mit Sitz in Orglen geführt.",
+          "Die Ua Cairbre dienen unmittelbar den Mac Roich."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Orglen, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ua Cairbre",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cairbre&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Orglen"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Seolta",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-cairbre",
+              "name": "Ua Cairbre",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/cairbre.webp",
+              "imageAlt": "Wappen Ua Cairbre",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cairbre&mode=view",
+              "seat": "Orglen",
+              "liege": "Mac Roich",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-reannachain",
+      "title": "Herrschaft der Ua Reannachain",
+      "shortTitle": "Herrschaft der Ua Reannachain",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ua Reannachain",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+      "parentLabel": "Tir na Seolta",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Seolta",
+          "slug": "uathneach-tir-na-taoide"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua Reannachain",
+          "slug": "uathneach-herrschaft-reannachain"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/reannachain.webp",
+      "crestAlt": "Banner Herrschaft der Ua Reannachain",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Ua Reannachain wird von den Ua Reannachain mit Sitz in Orglen geführt.",
+          "Die Ua Reannachain dienen unmittelbar den Mac Roich."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Orglen, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ua Reannachain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-reannachain&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Orglen"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Seolta",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-reannachain",
+              "name": "Ua Reannachain",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/reannachain.webp",
+              "imageAlt": "Wappen Ua Reannachain",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-reannachain&mode=view",
+              "seat": "Orglen",
+              "liege": "Mac Roich",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-cairge",
+      "title": "Tir na bPortán",
+      "shortTitle": "Tir na bPortán",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ua Cairge",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+      "parentLabel": "Tir na Seolta",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Seolta",
+          "slug": "uathneach-tir-na-taoide"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na bPortán",
+          "slug": "uathneach-herrschaft-cairge"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cairge.svg",
+      "crestAlt": "Banner Tir na bPortán",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na bPortán wird von den Ua Cairge mit Sitz in Broch an Mhor geführt.",
+          "Die Ua Cairge dienen unmittelbar den Mac Roich."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tir na bPortán bedeutet „Land der Krabben“."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ua Cairge",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Mhor"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Seolta",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-cairge",
+              "name": "Ua Cairge",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
+              "imageAlt": "Wappen Ua Cairge",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view",
+              "seat": "Broch an Mhor",
+              "liege": "Mac Roich",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "uathneach-herrschaft-cairge",
+          "title": "Tir na bPortán",
+          "sections": [
+            {
+              "title": "Burgstadt",
+              "placeIds": [
+                "uathneach-mhor"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-cuilen",
+      "title": "Herrschaft der Ua Cuilen",
+      "shortTitle": "Herrschaft der Ua Cuilen",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ua Cuilen",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
+      "parentLabel": "Tir na Machairí",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Machairí",
+          "slug": "uathneach-tir-na-dtorc"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ua Cuilen",
+          "slug": "uathneach-herrschaft-cuilen"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/cuilen.webp",
+      "crestAlt": "Banner Herrschaft der Ua Cuilen",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Ua Cuilen wird von den Ua Cuilen mit Sitz in Rinnmara geführt.",
+          "Die Ua Cuilen dienen unmittelbar den Mac Midgna."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Rinnmara, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ua Cuilen",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cuilen&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Rinnmara"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Machairí",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-cuilen",
+              "name": "Ua Cuilen",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/cuilen.webp",
+              "imageAlt": "Wappen Ua Cuilen",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cuilen&mode=view",
+              "seat": "Rinnmara",
+              "liege": "Mac Midgna",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-cadhla",
+      "title": "Tir na Líonta",
+      "shortTitle": "Tir na Líonta",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · An Cadhla",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
+      "parentLabel": "Tir na Machairí",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Machairí",
+          "slug": "uathneach-tir-na-dtorc"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Líonta",
+          "slug": "uathneach-herrschaft-cadhla"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cadhla.svg",
+      "crestAlt": "Banner Tir na Líonta",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na Líonta wird von den An Cadhla mit Sitz in Broch an Cuan geführt.",
+          "Die An Cadhla dienen unmittelbar den Mac Midgna."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tir na Líonta bedeutet „Land der Netze“."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "An Cadhla",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Broch an Cuan"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Machairí",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-cadhla",
+              "name": "An Cadhla",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
+              "imageAlt": "Wappen An Cadhla",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view",
+              "seat": "Broch an Cuan",
+              "liege": "Mac Midgna",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "uathneach-herrschaft-cadhla",
+          "title": "Tir na Líonta",
+          "sections": [
+            {
+              "title": "Burgstadt",
+              "placeIds": [
+                "uathneach-cuan"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-marcaigh",
+      "title": "Herrschaft der Ruin Marcaigh",
+      "shortTitle": "Herrschaft der Ruin Marcaigh",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ruin Marcaigh",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
+      "parentLabel": "Tir na gClog",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na gClog",
+          "slug": "uathneach-tir-na-cloiche"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ruin Marcaigh",
+          "slug": "uathneach-herrschaft-marcaigh"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/marcaigh.webp",
+      "crestAlt": "Banner Herrschaft der Ruin Marcaigh",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Ruin Marcaigh wird von den Ruin Marcaigh mit Sitz in Kharanor geführt.",
+          "Die Ruin Marcaigh dienen unmittelbar den Ua’Luga."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Kharanor, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ruin Marcaigh",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-marcaigh&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Kharanor"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na gClog",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-marcaigh",
+              "name": "Ruin Marcaigh",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/marcaigh.webp",
+              "imageAlt": "Wappen Ruin Marcaigh",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-marcaigh&mode=view",
+              "seat": "Kharanor",
+              "liege": "Ua’Luga",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-giolla",
+      "title": "Herrschaft der Ruin Giolla",
+      "shortTitle": "Herrschaft der Ruin Giolla",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Ruin Giolla",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html",
+      "parentLabel": "Tir na gClog",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na gClog",
+          "slug": "uathneach-tir-na-cloiche"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Herrschaft der Ruin Giolla",
+          "slug": "uathneach-herrschaft-giolla"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Uathneach/giolla.webp",
+      "crestAlt": "Banner Herrschaft der Ruin Giolla",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft der Ruin Giolla wird von den Ruin Giolla mit Sitz in Kharanor geführt.",
+          "Die Ruin Giolla dienen unmittelbar den Ua’Luga."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die Herrschaft liegt innerhalb von Kharanor, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Ruin Giolla",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-giolla&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird-Clan"
+            },
+            {
+              "label": "Sitz",
+              "value": "Kharanor"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na gClog",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Tir na Cloiche.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-giolla",
+              "name": "Ruin Giolla",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/giolla.webp",
+              "imageAlt": "Wappen Ruin Giolla",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-giolla&mode=view",
+              "seat": "Kharanor",
+              "liege": "Ua’Luga",
+              "rank": "Laird-Clan",
+              "featured": true,
+              "featuredLabel": "Laird-Clan"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-fiodhran",
+      "title": "Tir na gCurach",
+      "shortTitle": "Tir na gCurach",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Na Fiodhrán",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
+      "parentLabel": "Tir na Gairme",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Gairme",
+          "slug": "uathneach-tir-na-gcoillte"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na gCurach",
+          "slug": "uathneach-herrschaft-fiodhran"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fiodhran.svg",
+      "crestAlt": "Banner Tir na gCurach",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na gCurach wird von den Na Fiodhrán mit Sitz in Dathuil geführt.",
+          "Die Na Fiodhrán dienen unmittelbar den Ard Conchobhair."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tir na gCurach bedeutet „Land der Boote“."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Na Fiodhrán",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dathuil"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Gairme",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-fiodhran",
+              "name": "Na Fiodhrán",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
+              "imageAlt": "Wappen Na Fiodhrán",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view",
+              "seat": "Dathuil",
+              "liege": "Ard Conchobhair",
+              "rank": "Offen",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "uathneach-herrschaft-fiodhran",
+          "title": "Tir na gCurach",
+          "sections": [
+            {
+              "title": "Stadt · Größe offen",
+              "placeIds": [
+                "uathneach-dathuil"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-creagan",
+      "title": "Tir na bhFeochadán",
+      "shortTitle": "Tir na bhFeochadán",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Tir An Creagán",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
+      "parentLabel": "Tir na Faire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Oberherrschaft",
+          "name": "Tir na Faire",
+          "slug": "uathneach-tir-na-conaire"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na bhFeochadán",
+          "slug": "uathneach-herrschaft-creagan"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-creagan.svg",
+      "crestAlt": "Banner Tir na bhFeochadán",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na bhFeochadán wird von den Tir An Creagán mit Sitz in Ceithirn geführt.",
+          "Die Tir An Creagán dienen unmittelbar den Tir an Máta."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tir na bhFeochadán bedeutet „Land der Disteln“."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Tir An Creagán",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ceithirn"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Faire",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-creagan",
+              "name": "Tir An Creagán",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
+              "imageAlt": "Wappen Tir An Creagán",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view",
+              "seat": "Ceithirn",
+              "liege": "Tir an Máta",
+              "rank": "Offen",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "uathneach-herrschaft-creagan",
+          "title": "Tir na bhFeochadán",
+          "sections": [
+            {
+              "title": "Stadt · Größe offen",
+              "placeIds": [
+                "uathneach-ceithirn"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "uathneach-herrschaft-einsiedlerkrebs",
+      "title": "Tir na Fánaíochta",
+      "shortTitle": "Tir na Fánaíochta",
+      "type": "Herrschaft",
+      "kicker": "Herrschaft · Dál Siubhrán",
+      "parentHref": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+      "parentLabel": "Tir na Dála",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Estryll",
+          "slug": "estryll"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Uathneach",
+          "slug": "fuerstentum-uathneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Tir na Dála",
+          "slug": "uathneach-tir-na-laimhe"
+        },
+        {
+          "type": "Herrschaft",
+          "name": "Tir na Fánaíochta",
+          "slug": "uathneach-herrschaft-einsiedlerkrebs"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-einsiedlerkrebs.svg",
+      "crestAlt": "Banner Tir na Fánaíochta",
+      "map": {
+        "title": "Karte des Fürstentums Uathneach",
+        "imageSrc": "/Karten/Uathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Grundkarte Uathneachs; Markierungen und Regionen sind in der Kartenansicht zuschaltbar",
+        "href": "/Karten/karte.html?map=uathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na Fánaíochta wird von den Dál Siubhrán mit Sitz in Féthlinn geführt.",
+          "Die Dál Siubhrán dienen unmittelbar den Mac Ard’Lága."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tir na Fánaíochta bedeutet „Land der Wanderschaft“."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft",
+          "rows": [
+            {
+              "label": "Typ",
+              "value": "Herrschaft"
+            },
+            {
+              "label": "Herrschender Clan",
+              "value": "Dál Siubhrán",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Féthlinn"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Dála",
+              "href": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschender Clan",
+          "houses": [
+            {
+              "familyId": "haus-siubhran",
+              "name": "Dál Siubhrán",
+              "imageSrc": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+              "imageAlt": "Wappen Dál Siubhrán",
+              "href": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view",
+              "seat": "Féthlinn",
+              "liege": "Mac Ard’Lága",
+              "rank": "Offen",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "uathneach-herrschaft-einsiedlerkrebs",
+          "title": "Tir na Fánaíochta",
+          "sections": [
+            {
+              "title": "Stadt · Größe offen",
+              "placeIds": [
+                "uathneach-fethlinn"
               ]
             }
           ]

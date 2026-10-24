@@ -7,6 +7,10 @@ const tests = (directory, extension = 'mjs') => ['--test', '--experimental-test-
 const territoryBuilders = ['aislearneach', 'alben', 'blaithneach', 'ceitheach', 'cenyr-court',
   'dunfal', 'dunkelhain', 'faelaorn', 'fjordheim', 'heldenwacht', 'ivarsheim',
   'kraehenmoor', 'leitheach', 'schwarzfenn', 'skjaerheim', 'uathneach', 'vennyr'];
+const albicTerritoryInputs = ['Stammbäume/assets/js/modules/albic-territories/',
+  'Stammbäume/scripts/albic-territories/',
+  ...['Leitheach', 'Aislearneach', 'Dunfal', 'Blaithneach', 'Uathneach', 'Faelaorn', 'Ceitheach']
+    .flatMap(realm => [`Karten/${realm}/territories.import.json`, `Stammbäume/assets/images/regions/${realm}/`])];
 
 // These tasks own the new world-content systems. Existing focused Roriksheim
 // and family-chart geometry checks remain in site-build-tasks.mjs.
@@ -14,15 +18,17 @@ export const WORLD_CONTENT_TASKS = [
   {
     id: 'territory-pages', label: 'Realm hierarchies, territory pages and heraldry',
     inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
-      'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/'],
-    commands: [...territoryBuilders.map(name => ['Kontinente/scripts/build-' + name + '.mjs', '--check']),
+      'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
+    commands: [['Kontinente/scripts/review-albic-territories.mjs', '--check'],
+      ...territoryBuilders.map(name => ['Kontinente/scripts/build-' + name + '.mjs', '--check']),
       tests('Kontinente/tests')]
   },
   {
     id: 'map-systems', label: 'Map sources, regions, marker editing and household crests',
     inputs: ['Karten/', 'Kontinente/modules/', 'Kontinente/kontinente.registry.js',
-      'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/'],
-    commands: [['Karten/tools/import-leitheach-source.mjs', '--check'],
+      'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
+    commands: [['Karten/tools/sync-albic-territory-labels.mjs', '--check'],
+      ['Karten/tools/import-leitheach-source.mjs', '--check'],
       ['Karten/tools/build-leitheach.mjs', '--check'],
       ['Karten/tools/build-uathneach.mjs', '--check'],
       ['Karten/tools/build-households.mjs', '--check'], tests('Karten/tests')]
@@ -39,6 +45,7 @@ export const WORLD_CONTENT_TASKS = [
       'Stammbäume/tests/crew-family-records.test.js',
       'Stammbäume/tests/fjordheim-structure.test.js',
       'Stammbäume/tests/skjaerheim-structure.test.js',
+      'Stammbäume/tests/albic-fief-placements.test.js',
       'Stammbäume/tests/dunfal-portrait-upgrade.test.js']]
   },
   {

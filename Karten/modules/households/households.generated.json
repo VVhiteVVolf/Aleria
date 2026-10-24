@@ -3274,7 +3274,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-dal-leite&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Deoraíochta",
+          "kingdom": "Blaithneach",
+          "county": "Tir na Dílse"
+        }
+      ],
       "priority": 6,
       "residences": [
         {
@@ -3290,7 +3296,7 @@
           "role": "Hauptsitz",
           "kingdom": "Blaithneach",
           "county": "Tir na Dílse",
-          "territory": "",
+          "territory": "Tir na Deoraíochta",
           "rank": "laird"
         }
       ]
@@ -3368,7 +3374,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-craobhan&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Tir an Craobhan",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Cruach"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3376,7 +3388,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Cruach",
-          "territory": "",
+          "territory": "Herrschaft der Tir an Craobhan",
           "rank": "unknown"
         }
       ]
@@ -3388,7 +3400,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-eldath&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Fáill Ua’Eldath",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Cruach"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3396,7 +3414,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Cruach",
-          "territory": "",
+          "territory": "Herrschaft der Fáill Ua’Eldath",
           "rank": "unknown"
         }
       ]
@@ -3408,7 +3426,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-eamhra&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Tairsí",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Cruach"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3416,7 +3440,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Cruach",
-          "territory": "",
+          "territory": "Tir na Tairsí",
           "rank": "unknown"
         }
       ]
@@ -3428,7 +3452,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-seaghda&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Leon",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Dorcha"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3436,7 +3466,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Dorcha",
-          "territory": "",
+          "territory": "Tir na Leon",
           "rank": "unknown"
         }
       ]
@@ -3448,7 +3478,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-an-morchoe&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCéanna",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Ceo"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3456,7 +3492,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Ceo",
-          "territory": "",
+          "territory": "Tir na gCéanna",
           "rank": "unknown"
         }
       ]
@@ -3468,7 +3504,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-tir-an-tordarroch&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na mBachlóg",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Toraidh"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3476,7 +3518,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Toraidh",
-          "territory": "",
+          "territory": "Tir na mBachlóg",
           "rank": "unknown"
         }
       ]
@@ -3488,7 +3530,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-an-bhaird&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Doimhne",
+          "kingdom": "Ceitheach",
+          "county": "Tir na Toraidh"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -3496,7 +3544,7 @@
           "role": "Hauptsitz",
           "kingdom": "Ceitheach",
           "county": "Tir na Toraidh",
-          "territory": "",
+          "territory": "Tir na Doimhne",
           "rank": "unknown"
         }
       ]
@@ -3528,9 +3576,24 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-ua-eirce&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nIúr",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sleagh"
+        }
+      ],
       "priority": 13,
-      "residences": []
+      "residences": [
+        {
+          "seat": "Senanbail",
+          "role": "Hauptsitz",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sleagh",
+          "territory": "Tir na nIúr",
+          "rank": "laird"
+        }
+      ]
     },
     {
       "id": "haus-fiachrach",
@@ -3539,9 +3602,24 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Seamróige",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sleagh"
+        }
+      ],
       "priority": 13,
-      "residences": []
+      "residences": [
+        {
+          "seat": "Mârbail",
+          "role": "Hauptsitz",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sleagh",
+          "territory": "Tir na Seamróige",
+          "rank": "laird"
+        }
+      ]
     },
     {
       "id": "haus-ruin-ua-laoch",
@@ -3550,9 +3628,24 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-ruin-ua-laoch&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCoiréal",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sleagh"
+        }
+      ],
       "priority": 13,
-      "residences": []
+      "residences": [
+        {
+          "seat": "Broch an Abhainn",
+          "role": "Hauptsitz",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sleagh",
+          "territory": "Tir na gCoiréal",
+          "rank": "laird"
+        }
+      ]
     },
     {
       "id": "haus-ua-gaelach",
@@ -3583,7 +3676,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "name": "Tir na Coimhthioch",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear"
         }
@@ -3595,7 +3688,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear",
-          "territory": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "territory": "Tir na Coimhthioch",
           "rank": "dun-tiarna"
         }
       ]
@@ -3609,7 +3702,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "name": "Tir na bhFiach",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear"
         }
@@ -3617,11 +3710,11 @@
       "priority": 13,
       "residences": [
         {
-          "seat": "Dun Laog",
+          "seat": "Cairn Fàire",
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear",
-          "territory": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "territory": "Tir na bhFiach",
           "rank": "laird"
         }
       ]
@@ -3635,7 +3728,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "name": "Tir na nArmúr",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear"
         }
@@ -3647,7 +3740,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear",
-          "territory": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "territory": "Tir na nArmúr",
           "rank": "laird"
         }
       ]
@@ -3661,7 +3754,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "name": "Tir na hInneonach",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear"
         }
@@ -3673,7 +3766,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Sinsear",
-          "territory": "Lehnsherrschaft der Fir An’Gallchobhair",
+          "territory": "Tir na hInneonach",
           "rank": "laird"
         }
       ]
@@ -3787,7 +3880,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehensherrschaft der Ard Frisealach",
+          "name": "Tir na Lúibe",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna"
         }
@@ -3799,7 +3892,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna",
-          "territory": "Lehensherrschaft der Ard Frisealach",
+          "territory": "Tir na Lúibe",
           "rank": "dun-tiarna"
         }
       ]
@@ -3811,7 +3904,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-ard-trodach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gComhrac",
+          "kingdom": "Leitheach",
+          "county": "Tir na Gortanna"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -3819,7 +3918,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna",
-          "territory": "",
+          "territory": "Tir na gComhrac",
           "rank": "laird"
         }
       ]
@@ -3831,7 +3930,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Lasrach",
+          "kingdom": "Leitheach",
+          "county": "Tir na Gortanna"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -3839,7 +3944,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna",
-          "territory": "",
+          "territory": "Tir na Lasrach",
           "rank": "laird"
         }
       ]
@@ -3853,7 +3958,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Broch an Clais",
+          "name": "Tir na Soilse",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna"
         }
@@ -3865,7 +3970,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna",
-          "territory": "Herrschaft von Broch an Clais",
+          "territory": "Tir na Soilse",
           "rank": "laird"
         }
       ]
@@ -3879,7 +3984,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Broch an Clais",
+          "name": "Tir na Soilse",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna"
         }
@@ -3891,7 +3996,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Gortanna",
-          "territory": "Herrschaft von Broch an Clais",
+          "territory": "Tir na Soilse",
           "rank": "laird"
         }
       ]
@@ -3925,7 +4030,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Dál’Ruitheach",
+          "name": "Tir na nDambaí",
           "kingdom": "Leitheach",
           "county": "Tir na Tonn"
         }
@@ -3937,7 +4042,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Tonn",
-          "territory": "Herrschaft der Dál’Ruitheach",
+          "territory": "Tir na nDambaí",
           "rank": "laird"
         }
       ]
@@ -3951,7 +4056,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Ru’Gortach",
+          "name": "Tir na Breithe",
           "kingdom": "Leitheach",
           "county": "Tir na Tonn"
         }
@@ -3963,7 +4068,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Tonn",
-          "territory": "Herrschaft der Ru’Gortach",
+          "territory": "Tir na Breithe",
           "rank": "laird"
         }
       ]
@@ -3995,7 +4100,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCrúb",
+          "kingdom": "Leitheach",
+          "county": "Tir an Comhchuibhis"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4003,7 +4114,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir an Comhchuibhis",
-          "territory": "",
+          "territory": "Tir na gCrúb",
           "rank": "laird"
         }
       ]
@@ -4015,7 +4126,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-nic-blar-leitheach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Rún",
+          "kingdom": "Leitheach",
+          "county": "Tir an Comhchuibhis"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4023,7 +4140,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir an Comhchuibhis",
-          "territory": "",
+          "territory": "Tir na Rún",
           "rank": "laird"
         }
       ]
@@ -4037,7 +4154,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehensherrschaft der Ruin’Laidir",
+          "name": "Tir na Dídine",
           "kingdom": "Leitheach",
           "county": "Tir an Comhchuibhis"
         }
@@ -4049,7 +4166,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir an Comhchuibhis",
-          "territory": "Lehensherrschaft der Ruin’Laidir",
+          "territory": "Tir na Dídine",
           "rank": "dun-tiarna"
         }
       ]
@@ -4061,7 +4178,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Dál T’Saor",
+          "kingdom": "Leitheach",
+          "county": "Tir an Comhchuibhis"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4069,7 +4192,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir an Comhchuibhis",
-          "territory": "",
+          "territory": "Herrschaft der Dál T’Saor",
           "rank": "laird"
         }
       ]
@@ -4103,7 +4226,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Lehensherrschaft der Tir An’Airgid",
+          "name": "Tir na gCorr",
           "kingdom": "Leitheach",
           "county": "Tir na Sruth"
         }
@@ -4115,7 +4238,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Sruth",
-          "territory": "Lehensherrschaft der Tir An’Airgid",
+          "territory": "Tir na gCorr",
           "rank": "dun-tiarna"
         }
       ]
@@ -4127,7 +4250,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-amrhan&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na hÉisteachta",
+          "kingdom": "Leitheach",
+          "county": "Tir na Sruth"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4135,7 +4264,7 @@
           "role": "Hauptsitz",
           "kingdom": "Leitheach",
           "county": "Tir na Sruth",
-          "territory": "",
+          "territory": "Tir na hÉisteachta",
           "rank": "laird"
         }
       ]
@@ -4169,7 +4298,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Mac Sidhe’Ailella",
+          "name": "Tir na bPeiteal",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe"
         }
@@ -4177,11 +4306,11 @@
       "priority": 13,
       "residences": [
         {
-          "seat": "Dunfal",
+          "seat": "Braighmòr",
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe",
-          "territory": "Herrschaft der Mac Sidhe’Ailella",
+          "territory": "Tir na bPeiteal",
           "rank": "laird"
         }
       ]
@@ -4195,7 +4324,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Mac’Céin",
+          "name": "Tir na dTeorainneacha",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe"
         }
@@ -4203,11 +4332,11 @@
       "priority": 13,
       "residences": [
         {
-          "seat": "Dunfal",
+          "seat": "Caerthalas",
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe",
-          "territory": "Herrschaft der Mac’Céin",
+          "territory": "Tir na dTeorainneacha",
           "rank": "laird"
         }
       ]
@@ -4221,7 +4350,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Dál’Birn",
+          "name": "Tir na Mionn",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe"
         }
@@ -4229,11 +4358,11 @@
       "priority": 13,
       "residences": [
         {
-          "seat": "Dunfal",
+          "seat": "Dùnthàirne",
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe",
-          "territory": "Herrschaft der Dál’Birn",
+          "territory": "Tir na Mionn",
           "rank": "laird"
         }
       ]
@@ -4247,7 +4376,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Ruin’Morath",
+          "name": "Tir na nEalaíon",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe"
         }
@@ -4259,7 +4388,7 @@
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Rithe",
-          "territory": "Herrschaft der Ruin’Morath",
+          "territory": "Tir na nEalaíon",
           "rank": "laird"
         }
       ]
@@ -4286,7 +4415,7 @@
       "priority": 6,
       "residences": [
         {
-          "seat": "Cradh na Frinne",
+          "seat": "Cradh na Fírinne",
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Fathach",
@@ -4382,7 +4511,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Na’Riangabra",
+          "name": "Tir na Fuaime",
           "kingdom": "Dunfal",
           "county": "Tir na Fathach"
         }
@@ -4394,7 +4523,7 @@
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Fathach",
-          "territory": "Herrschaft der Na’Riangabra",
+          "territory": "Tir na Fuaime",
           "rank": "laird"
         }
       ]
@@ -4408,7 +4537,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft der Mac’Eachtrai",
+          "name": "Tir na Lámhainne",
           "kingdom": "Dunfal",
           "county": "Tir na Fathach"
         }
@@ -4420,7 +4549,7 @@
           "role": "Hauptsitz",
           "kingdom": "Dunfal",
           "county": "Tir na Fathach",
-          "territory": "Herrschaft der Mac’Eachtrai",
+          "territory": "Tir na Lámhainne",
           "rank": "laird"
         }
       ]
@@ -4532,7 +4661,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-coronach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Nathrach",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Geach"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4540,7 +4675,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Geach",
-          "territory": "",
+          "territory": "Tir na Nathrach",
           "rank": "laird"
         }
       ]
@@ -4552,15 +4687,21 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-morgacht&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nGeataí",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Geach"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
-          "seat": "Gaelan",
+          "seat": "Broch an Geata",
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Geach",
-          "territory": "",
+          "territory": "Tir na nGeataí",
           "rank": "laird"
         }
       ]
@@ -4572,15 +4713,21 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-rioga&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nAncairí",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Geach"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
-          "seat": "Gaelan",
+          "seat": "Broch an Duhbach",
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Geach",
-          "territory": "",
+          "territory": "Tir na nAncairí",
           "rank": "laird"
         }
       ]
@@ -4592,7 +4739,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-fiantorc&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCnoc",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Tirth"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4600,7 +4753,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Tirth",
-          "territory": "",
+          "territory": "Tir na gCnoc",
           "rank": "laird"
         }
       ]
@@ -4612,7 +4765,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-treada&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Sméar",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Tirth"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4620,7 +4779,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Tirth",
-          "territory": "",
+          "territory": "Tir na Sméar",
           "rank": "laird"
         }
       ]
@@ -4632,7 +4791,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-muileach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Srianta",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Tirth"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -4640,7 +4805,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Tirth",
-          "territory": "",
+          "territory": "Tir na Srianta",
           "rank": "dun-tiarna"
         }
       ]
@@ -4672,15 +4837,21 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-feannag&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Meala",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Faela"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
-          "seat": "Caetharlach",
+          "seat": "Ceatharlach",
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Faela",
-          "territory": "",
+          "territory": "Tir na Meala",
           "rank": "dun-tiarna"
         }
       ]
@@ -4692,7 +4863,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gClochán",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Adharcach"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4700,7 +4877,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Adharcach",
-          "territory": "",
+          "territory": "Tir na gClochán",
           "rank": "laird"
         }
       ]
@@ -4712,7 +4889,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCoirceog",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Adharcach"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4720,7 +4903,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Adharcach",
-          "territory": "",
+          "territory": "Tir na gCoirceog",
           "rank": "laird"
         }
       ]
@@ -4752,7 +4935,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Leabhar",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Iomaire"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4760,7 +4949,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Iomaire",
-          "territory": "",
+          "territory": "Tir na Leabhar",
           "rank": "laird"
         }
       ]
@@ -4772,7 +4961,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Loingseoireachta",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Iomaire"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4780,7 +4975,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Iomaire",
-          "territory": "",
+          "territory": "Tir na Loingseoireachta",
           "rank": "laird"
         }
       ]
@@ -4792,7 +4987,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na dTuanna",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Iomaire"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4800,7 +5001,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Iomaire",
-          "territory": "",
+          "territory": "Tir na dTuanna",
           "rank": "laird"
         }
       ]
@@ -4812,7 +5013,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na hEasóige",
+          "kingdom": "Aislearneach",
+          "county": "Tir na Iomaire"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4820,7 +5027,7 @@
           "role": "Hauptsitz",
           "kingdom": "Aislearneach",
           "county": "Tir na Iomaire",
-          "territory": "",
+          "territory": "Tir na hEasóige",
           "rank": "laird"
         }
       ]
@@ -4852,7 +5059,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-goidin&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nÚll",
+          "kingdom": "Blaithneach",
+          "county": "Tir na Beatha"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4860,7 +5073,7 @@
           "role": "Hauptsitz",
           "kingdom": "Blaithneach",
           "county": "Tir na Beatha",
-          "territory": "",
+          "territory": "Tir na nÚll",
           "rank": "laird"
         }
       ]
@@ -4872,7 +5085,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-haeghra&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Braiche",
+          "kingdom": "Blaithneach",
+          "county": "Tir na Beatha"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -4880,7 +5099,7 @@
           "role": "Hauptsitz",
           "kingdom": "Blaithneach",
           "county": "Tir na Beatha",
-          "territory": "",
+          "territory": "Tir na Braiche",
           "rank": "dun-tiarna"
         }
       ]
@@ -4912,7 +5131,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-suiste&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nGéanna",
+          "kingdom": "Blaithneach",
+          "county": "Tir na Dílse"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4920,7 +5145,7 @@
           "role": "Hauptsitz",
           "kingdom": "Blaithneach",
           "county": "Tir na Dílse",
-          "territory": "",
+          "territory": "Tir na nGéanna",
           "rank": "laird"
         }
       ]
@@ -4932,7 +5157,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-gairner&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Linnte",
+          "kingdom": "Blaithneach",
+          "county": "Tir na Dílse"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -4940,7 +5171,7 @@
           "role": "Hauptsitz",
           "kingdom": "Blaithneach",
           "county": "Tir na Dílse",
-          "territory": "",
+          "territory": "Tir na Linnte",
           "rank": "laird"
         }
       ]
@@ -5012,7 +5243,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-eala&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na hEala",
+          "kingdom": "Blaithneach",
+          "county": "Tir na Méinnear"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5020,7 +5257,7 @@
           "role": "Hauptsitz",
           "kingdom": "Blaithneach",
           "county": "Tir na Méinnear",
-          "territory": "",
+          "territory": "Tir na hEala",
           "rank": "laird"
         }
       ]
@@ -5052,7 +5289,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-stwatchn&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Sionnach",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5060,7 +5303,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Tir na Sionnach",
           "rank": "dun-tiarna"
         }
       ]
@@ -5072,7 +5315,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-bhaird&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Bhaird",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5080,7 +5329,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Herrschaft der Bhaird",
           "rank": "laird"
         }
       ]
@@ -5092,7 +5341,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-luthsach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Luthsach",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5100,7 +5355,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Herrschaft der Luthsach",
           "rank": "laird"
         }
       ]
@@ -5112,7 +5367,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-lachlann&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Sciath",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5120,7 +5381,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Tir na Sciath",
           "rank": "laird"
         }
       ]
@@ -5132,7 +5393,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-drummond&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Sceiche",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5140,7 +5407,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Tir na Sceiche",
           "rank": "laird"
         }
       ]
@@ -5152,7 +5419,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-dundas&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCat",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5160,7 +5433,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Tir na gCat",
           "rank": "laird"
         }
       ]
@@ -5172,7 +5445,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-ffearnach&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nIarsmaí",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Rann"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -5180,7 +5459,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Rann",
-          "territory": "",
+          "territory": "Tir na nIarsmaí",
           "rank": "unknown"
         }
       ]
@@ -5212,7 +5491,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-lockart&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na mBroc",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Mathgham"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5220,7 +5505,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Mathgham",
-          "territory": "",
+          "territory": "Tir na mBroc",
           "rank": "dun-tiarna"
         }
       ]
@@ -5232,7 +5517,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-fiorghra&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Reithí",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Mathgham"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5240,7 +5531,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Mathgham",
-          "territory": "",
+          "territory": "Tir na Reithí",
           "rank": "dun-tiarna"
         }
       ]
@@ -5252,7 +5543,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-ness&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gClaímhte",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Mathgham"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5260,7 +5557,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Mathgham",
-          "territory": "",
+          "territory": "Tir na gClaímhte",
           "rank": "dun-tiarna"
         }
       ]
@@ -5272,7 +5569,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-haig&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Mac Tíre",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Mathgham"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5280,7 +5583,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Mathgham",
-          "territory": "",
+          "territory": "Tir na Mac Tíre",
           "rank": "laird"
         }
       ]
@@ -5292,7 +5595,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Giúise",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Mathgham"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5300,7 +5609,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Mathgham",
-          "territory": "",
+          "territory": "Tir na Giúise",
           "rank": "laird"
         }
       ]
@@ -5332,7 +5641,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-borthwick&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Deilfe",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Braigh"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5340,7 +5655,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Braigh",
-          "territory": "",
+          "territory": "Tir na Deilfe",
           "rank": "dun-tiarna"
         }
       ]
@@ -5352,7 +5667,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-erskine&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Liús",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Braigh"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5360,7 +5681,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Braigh",
-          "territory": "",
+          "territory": "Tir na Liús",
           "rank": "dun-tiarna"
         }
       ]
@@ -5372,7 +5693,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-grannd&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Sliogán",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Braigh"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5380,7 +5707,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Braigh",
-          "territory": "",
+          "territory": "Tir na Sliogán",
           "rank": "laird"
         }
       ]
@@ -5467,7 +5794,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-durachd&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na mBuailteán",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Faerna"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5475,7 +5808,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Faerna",
-          "territory": "",
+          "territory": "Tir na mBuailteán",
           "rank": "dun-tiarna"
         }
       ]
@@ -5487,7 +5820,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-muirgheal&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nEasanna",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Faerna"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5495,7 +5834,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Faerna",
-          "territory": "",
+          "territory": "Tir na nEasanna",
           "rank": "dun-tiarna"
         }
       ]
@@ -5507,7 +5846,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-boyd&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nEascann",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Faerna"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5515,7 +5860,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Faerna",
-          "territory": "",
+          "territory": "Tir na nEascann",
           "rank": "laird"
         }
       ]
@@ -5547,7 +5892,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-agnew&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na hAitinne",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5555,7 +5906,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Tir na hAitinne",
           "rank": "dun-tiarna"
         }
       ]
@@ -5567,7 +5918,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-duff&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCuileann",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5575,7 +5932,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Tir na gCuileann",
           "rank": "dun-tiarna"
         },
         {
@@ -5595,7 +5952,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-dianaomh&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na hUaighe",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5603,7 +5966,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Tir na hUaighe",
           "rank": "dun-tiarna"
         }
       ]
@@ -5615,7 +5978,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-dobhar&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Madraí Uisce",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5623,7 +5992,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Tir na Madraí Uisce",
           "rank": "dun-tiarna"
         }
       ]
@@ -5635,7 +6004,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-forsyth&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCaorthann",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5643,7 +6018,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Tir na gCaorthann",
           "rank": "laird"
         },
         {
@@ -5663,7 +6038,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-elid&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Elid",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5671,7 +6052,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Herrschaft der Elid",
           "rank": "laird"
         }
       ]
@@ -5683,7 +6064,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-oglivy&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Seabhac",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Damh"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -5691,7 +6078,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Damh",
-          "territory": "",
+          "territory": "Tir na Seabhac",
           "rank": "laird"
         }
       ]
@@ -5723,7 +6110,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-cerneige&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nInbhear",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Brann"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5731,7 +6124,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Brann",
-          "territory": "",
+          "territory": "Tir na nInbhear",
           "rank": "dun-tiarna"
         }
       ]
@@ -5743,7 +6136,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-airdmhor&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Sceire",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Brann"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5751,7 +6150,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Brann",
-          "territory": "",
+          "territory": "Tir na Sceire",
           "rank": "dun-tiarna"
         },
         {
@@ -5771,7 +6170,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCreag",
+          "kingdom": "Faelaorn",
+          "county": "Tir na Brann"
+        }
+      ],
       "priority": 9,
       "residences": [
         {
@@ -5779,7 +6184,7 @@
           "role": "Hauptsitz",
           "kingdom": "Faelaorn",
           "county": "Tir na Brann",
-          "territory": "",
+          "territory": "Tir na gCreag",
           "rank": "dun-tiarna"
         }
       ]
@@ -5933,7 +6338,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Bronnan",
+          "name": "Tir na hAille",
           "kingdom": "Uathneach",
           "county": "Tir na Dála"
         }
@@ -5945,7 +6350,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Dála",
-          "territory": "Herrschaft von Bronnan",
+          "territory": "Tir na hAille",
           "rank": "dun-tiarna"
         }
       ]
@@ -5959,7 +6364,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Mhorcha",
+          "name": "Tir na nEití",
           "kingdom": "Uathneach",
           "county": "Tir na gClog"
         }
@@ -5971,7 +6376,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na gClog",
-          "territory": "Herrschaft von Mhorcha",
+          "territory": "Tir na nEití",
           "rank": "dun-tiarna"
         }
       ]
@@ -5985,7 +6390,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Caorthann",
+          "name": "Tir na Réalta",
           "kingdom": "Uathneach",
           "county": "Tir na Faire"
         }
@@ -5997,7 +6402,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Faire",
-          "territory": "Herrschaft von Caorthann",
+          "territory": "Tir na Réalta",
           "rank": "dun-tiarna"
         }
       ]
@@ -6011,7 +6416,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Treabhair",
+          "name": "Tir na Raithní",
           "kingdom": "Uathneach",
           "county": "Tir na nGleannta"
         }
@@ -6023,7 +6428,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na nGleannta",
-          "territory": "Herrschaft von Treabhair",
+          "territory": "Tir na Raithní",
           "rank": "dun-tiarna"
         }
       ]
@@ -6037,7 +6442,7 @@
       "formerSeat": "",
       "territories": [
         {
-          "name": "Herrschaft von Rioghain",
+          "name": "Tir na Snaidhme",
           "kingdom": "Uathneach",
           "county": "Tir na gClog"
         }
@@ -6049,7 +6454,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na gClog",
-          "territory": "Herrschaft von Rioghain",
+          "territory": "Tir na Snaidhme",
           "rank": "dun-tiarna"
         }
       ]
@@ -6061,7 +6466,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-briccne&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Na Briccne",
+          "kingdom": "Uathneach",
+          "county": "Tir na Dála"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6069,7 +6480,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Dála",
-          "territory": "",
+          "territory": "Herrschaft der Na Briccne",
           "rank": "laird"
         }
       ]
@@ -6081,7 +6492,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-arbhair&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Dâl Arbhair",
+          "kingdom": "Uathneach",
+          "county": "Tir na Dála"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6089,7 +6506,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Dála",
-          "territory": "",
+          "territory": "Herrschaft der Dâl Arbhair",
           "rank": "laird"
         }
       ]
@@ -6101,7 +6518,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-scathain&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der An Scatháin",
+          "kingdom": "Uathneach",
+          "county": "Tir na Dála"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6109,7 +6532,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Dála",
-          "territory": "",
+          "territory": "Herrschaft der An Scatháin",
           "rank": "laird"
         }
       ]
@@ -6121,7 +6544,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na nGliomach",
+          "kingdom": "Uathneach",
+          "county": "Tir na Dála"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6129,7 +6558,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Dála",
-          "territory": "",
+          "territory": "Tir na nGliomach",
           "rank": "laird"
         }
       ]
@@ -6141,7 +6570,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-cairbre&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Ua Cairbre",
+          "kingdom": "Uathneach",
+          "county": "Tir na Seolta"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6149,7 +6584,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Seolta",
-          "territory": "",
+          "territory": "Herrschaft der Ua Cairbre",
           "rank": "laird"
         }
       ]
@@ -6161,7 +6596,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-reannachain&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Ua Reannachain",
+          "kingdom": "Uathneach",
+          "county": "Tir na Seolta"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6169,7 +6610,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Seolta",
-          "territory": "",
+          "territory": "Herrschaft der Ua Reannachain",
           "rank": "laird"
         }
       ]
@@ -6181,7 +6622,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na bPortán",
+          "kingdom": "Uathneach",
+          "county": "Tir na Seolta"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6189,7 +6636,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Seolta",
-          "territory": "",
+          "territory": "Tir na bPortán",
           "rank": "laird"
         }
       ]
@@ -6201,7 +6648,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-cuilen&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Ua Cuilen",
+          "kingdom": "Uathneach",
+          "county": "Tir na Machairí"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6209,7 +6662,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Machairí",
-          "territory": "",
+          "territory": "Herrschaft der Ua Cuilen",
           "rank": "laird"
         }
       ]
@@ -6221,7 +6674,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Líonta",
+          "kingdom": "Uathneach",
+          "county": "Tir na Machairí"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6229,7 +6688,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Machairí",
-          "territory": "",
+          "territory": "Tir na Líonta",
           "rank": "laird"
         }
       ]
@@ -6241,7 +6700,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-marcaigh&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Ruin Marcaigh",
+          "kingdom": "Uathneach",
+          "county": "Tir na gClog"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6249,7 +6714,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na gClog",
-          "territory": "",
+          "territory": "Herrschaft der Ruin Marcaigh",
           "rank": "laird"
         }
       ]
@@ -6261,7 +6726,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-giolla&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Herrschaft der Ruin Giolla",
+          "kingdom": "Uathneach",
+          "county": "Tir na gClog"
+        }
+      ],
       "priority": 13,
       "residences": [
         {
@@ -6269,7 +6740,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na gClog",
-          "territory": "",
+          "territory": "Herrschaft der Ruin Giolla",
           "rank": "laird"
         }
       ]
@@ -6281,7 +6752,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na gCurach",
+          "kingdom": "Uathneach",
+          "county": "Tir na Gairme"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -6289,7 +6766,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Gairme",
-          "territory": "",
+          "territory": "Tir na gCurach",
           "rank": "unknown"
         }
       ]
@@ -6301,7 +6778,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na bhFeochadán",
+          "kingdom": "Uathneach",
+          "county": "Tir na Faire"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -6309,7 +6792,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Faire",
-          "territory": "",
+          "territory": "Tir na bhFeochadán",
           "rank": "unknown"
         }
       ]
@@ -6321,7 +6804,13 @@
       "href": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view",
       "status": "active",
       "formerSeat": "",
-      "territories": [],
+      "territories": [
+        {
+          "name": "Tir na Fánaíochta",
+          "kingdom": "Uathneach",
+          "county": "Tir na Dála"
+        }
+      ],
       "priority": 15,
       "residences": [
         {
@@ -6329,7 +6818,7 @@
           "role": "Hauptsitz",
           "kingdom": "Uathneach",
           "county": "Tir na Dála",
-          "territory": "",
+          "territory": "Tir na Fánaíochta",
           "rank": "unknown"
         }
       ]

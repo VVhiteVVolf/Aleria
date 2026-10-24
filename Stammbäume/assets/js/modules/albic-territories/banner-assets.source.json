@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 1,
+  "method": "svg-cloth-with-existing-clan-emblem",
+  "assets": [
+    {
+      "territoryId": "leitheach-herrschaft-eirce",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-eirce.png",
+      "emblemSha256": "d150783a10f7f1dac8e791a932c9f4a79160fedbcc666f0c62cd35bfeed1a587",
+      "sha256": "540706d4f9b20df21de0d0c4ef1f0958c9aa9c674c0e330df224406e67470e7d"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-fiachrach",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ui-fiachrach.png",
+      "emblemSha256": "47c1fee09c24827d12f14185a403b2f1ff9746609956a1fa3e1cdfbf00fedd03",
+      "sha256": "dab1de62ef4d6342f312303869edc09a53ac8ae6d14b790c4d97a6193513326f"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-laoch",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
+      "emblemSha256": "90e450cd3d5a0b3e3cf66247730d1cd29c07551eb77ce87774fd891d6be0ca80",
+      "sha256": "c312d0896e83ebebf0b6877165c72ea398ed672376e8bee64ff12712ff55f456"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-cleir",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-cleir.png",
+      "emblemSha256": "d11953c21833d2ae48e0ed331b3745db8c3c1b7450d8e53622c5a08172cb4918",
+      "sha256": "da5c1171abfd52ed144d85301b501c7397ae8b98462096af0c61753c7a09bf66"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-ghaiscioch",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ghaiscioch.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-ghaiscioch.png",
+      "emblemSha256": "8f6544ca975b41e700cd10ace73c67c8da62d1dd9569b13fbf2d743d5e781c1b",
+      "sha256": "d6b97ac3f58195064dfd6b7ffe8d4d3281ee26016722211ec89819ea2748e8ea"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-ceardaiocht",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ceardaiocht.png",
+      "emblemSha256": "5f77ec23399223499887acb512f6e86de8e0c410f4f78aaeeed949a8d0072e63",
+      "sha256": "5c77104279f043f35a40fd10e7b9e208cad14c0141aba4d95e22d2a5b15db2fc"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-ard-trodach",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-trodach.png",
+      "emblemSha256": "727c7f2cf90e25a56eb61afeafcdd5835e85c08ee5a44168bed730755a0ac241",
+      "sha256": "8f61526805fddfe6ae57fead7bdca40baee0a00467f504c8a3c231827757ba32"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-nic-caoimhe",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-nic-caoimhe.png",
+      "emblemSha256": "f98039ce0ff8aa1ffd96b902a9cfa33dc72e1d7770d33e4e22536ed327688a0a",
+      "sha256": "a0df4ffe6c0d114f8d06db9e9554292bd388baa77c6ab6ebb6e837e6bdbff970"
+    },
+    {
+      "territoryId": "leitheach-herrschaft-amhran",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-amrhan.png",
+      "emblemSha256": "2bd78502ec7525f86fe0b10a47a6e9a9511e34e56a9e5edc703fa69a20318c54",
+      "sha256": "6d8661795b0feecaf5bd9344424cbfc005af0794a86fe77bb5be755a57142c48"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-coronach",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-coronach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
+      "emblemSha256": "0a273cd8faa4f4d8ecd7a70a1a0234bf5a40b01c6fb93c20e64f0d9962170481",
+      "sha256": "c1a4d4c688828085579dfc75cf3ed3616192935b33c3418061fd66456d2c9b1c"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-morgacht",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-morgacht.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
+      "emblemSha256": "673261032144d251b03a08b1fc9e31e10eb3434820dc816b9e4e1459f2a4ac97",
+      "sha256": "9cf3890fb7e24972cbea03d4695a61e062428de7843f52d991cbe80469e3d141"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-rioga",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-rioga.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-rioga.png",
+      "emblemSha256": "ebca525e87ae3fe549f736ffa7229cf444eac025387cc911b4ef340665cbdb47",
+      "sha256": "500a8fa9a6aa2920fec8ef55954f2c122e6443f675c3b64bd1f1c9b71cdf73ee"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-fiantorc",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiantorc.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
+      "emblemSha256": "d568d91783eb785958fd486ae0061f7cbdcc94bab1ee4d2e3dce4d65d3db63a3",
+      "sha256": "d479b33b158aed8c79937d4b8bae34e8ce74ccf888a383c938714c01ceee8fca"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-treada",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-treada.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-treada.png",
+      "emblemSha256": "742fc19555f17c06b4ed729501739dce7de7bb1a6aeb0c4ed65f83b015014031",
+      "sha256": "c2b0b0afce8fce98fd49afcfd0ebdfcda0b8855563fddcd4e88d34c9915b902c"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-muileach",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-muileach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
+      "emblemSha256": "678cc76e7a9d65e33d2129c8b813f98a914301dd666cfa5abf21c619768d9b1a",
+      "sha256": "d66776b1136cb3275af91194caff1daf7f00c9172f5b4bcfd041587ecb6583c5"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-feannag",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-feannag.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
+      "emblemSha256": "40bea72197862e31a321feddf04984004b1853ae1f1e71bcbf2fa6685f1b94fd",
+      "sha256": "53e9518bb2ccabb936575d903e8965d1ac306adf7bde373f8e8df058db65d84b"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-uilebheist",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-uilebheist.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
+      "emblemSha256": "84b1b550ffff7257db29b62531659705a522dcef3d06bf8caf536e701adf98da",
+      "sha256": "059cbfcef09ba19963e9dd2048903cc672bc6e8435db7fe1f1a59d7a8b76f3c2"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-cnogan",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-cnogan.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
+      "emblemSha256": "43aabfa8daa95d4bac1f2691044196441919f4543c6212562191488a236e83f2",
+      "sha256": "2b977b8f490e5823addece5d2d07cca86c162b35ebdbaf11b67ad2e54c2a99f7"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-fiachiontach",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiachiontach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
+      "emblemSha256": "202d8b50b5dc91f734ac3d2e79dd7c31d002bbaddfb5594ea2d7623aa9e9bca3",
+      "sha256": "9ff68139e47720ae88fb769094dbdedb1b9a541e541cbd56356e3ba7b9144f5e"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-tartarfhuil",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-tartarfhuil.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
+      "emblemSha256": "78d965cf9508978dd1d17513b5eacd202471d084dfd39b7c15cf94b8c67fef5d",
+      "sha256": "e42f7677b9b602fc5be7e3de2db40fc54e136e21b9faa5cb914f10bfd10f500d"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-gaisgh",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-gaisgh.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
+      "emblemSha256": "7e44452ac06b49c639ac703ff11f3758ffa2560497f124e384d4c61f804282fd",
+      "sha256": "8ca0bcc548128982031f11f5424ad63e24de851305a84134a967a6a161b6ebff"
+    },
+    {
+      "territoryId": "herrschaft-aislearneach-luchdon",
+      "asset": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-luchdon.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
+      "emblemSha256": "bc10ac9635e083b7efabd3028f4d893b5707947584611971b1812ef5d71a268f",
+      "sha256": "a2c8554b69697b9adbb74d9068dc9fd2de8cf8a4bc1a271d65c0c55c0c422dcc"
+    },
+    {
+      "territoryId": "herrschaft-blaithneach-goidin",
+      "asset": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-goidin.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-goidin.png",
+      "emblemSha256": "dc0e22e067f734aba322e273db71617c8c90b0607a7ee0b22e010f3754315ccd",
+      "sha256": "73414c87b5f5d616c0c0b47963cf4a40ff263edc59629f4b5e78301b10c2aa68"
+    },
+    {
+      "territoryId": "herrschaft-blaithneach-haeghra",
+      "asset": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-haeghra.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Blaithneach/clan-an-haeghra.png",
+      "emblemSha256": "8c97ea2ebac163c54abb41882fdc7c117b2c4609a224fb52365c597fcac1f625",
+      "sha256": "334dba0b1c3798f516bfbad01b88971d2df8a829208019cbae74c2ca7e072946"
+    },
+    {
+      "territoryId": "herrschaft-blaithneach-suiste",
+      "asset": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-suiste.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-suiste.png",
+      "emblemSha256": "b45d228fb46cddc70ab93315ebb819e630f5049d0e719e4119e3f21d4b1658c7",
+      "sha256": "a4101cff22cf73ab79efa3d512111b3773ce15e9225220843ec36de6151c8ee3"
+    },
+    {
+      "territoryId": "herrschaft-blaithneach-gairner",
+      "asset": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-gairner.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Blaithneach/clan-dal-gairner.png",
+      "emblemSha256": "df6021bdd518b9ba54a953a38f46b494ff3c32deee7e9b73c0a7993ed3f5a9e1",
+      "sha256": "b6b26726843bd8ff4d251083a590b2d24a061f40c5b7d9a0d18c1c2206fab206"
+    },
+    {
+      "territoryId": "herrschaft-blaithneach-leite",
+      "asset": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-leite.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Ceitheach/clan-dal-leite.png",
+      "emblemSha256": "87c2db992313ada2e69a402ed3029d6f9d89adde82b60d1f106d681188fd6c82",
+      "sha256": "f5af52c40a479cf6cfa152b79bfb1f304d3b11be47da4960e4a63725801aad32"
+    },
+    {
+      "territoryId": "herrschaft-blaithneach-eala",
+      "asset": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-eala.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-eala.png",
+      "emblemSha256": "8b981f106858b34e34da07acb5d0173c1647343ba9315c1bf1eadcdda14b655f",
+      "sha256": "c67d864d114d2dbe2048691ae6941abb1758ce35f511a8d6b71024c5d6b2619c"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-fastaigh",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fastaigh.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
+      "emblemSha256": "e7532ba545af34d51a2af216a3f98fac37d4ba5c9375ac97b518e206dff88466",
+      "sha256": "8811b921796df116be6982a1a1d26b3645c4b7c02e25f4d8ac57b6100fbbc13e"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-lasgair",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-lasgair.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
+      "emblemSha256": "ce01e24a39e133f730cea1e88141fd0b8b82c445e48cd4cf8ff5763737f984aa",
+      "sha256": "52e8856a772e1bc7809a52fe230a38a851e58f752b3c17795838375dbf2054b4"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-suilgeach",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-suilgeach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
+      "emblemSha256": "406eddd7b22cba1e4b9e3a364a4cbd60e32ce3a0956ffe86dcbca8bf206d35ed",
+      "sha256": "8c1a01bb4565944d8e3ebb324bc23f67c9da4a093d087fe3745d77a27cc7abca"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-luachra",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-luachra.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
+      "emblemSha256": "9e682e7e0f2a9d52c88ff2cb3d94c3560fdf42aa65bcde99c0ee056bdd1c4159",
+      "sha256": "74ff0075ea55e06f5ddfe8a140a0c66a4964e9fc23619566af5e55ce2dd6e263"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-clannmhar",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-clannmhar.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
+      "emblemSha256": "bfe13fd6880d589417e5f8465e4d81e75133b52972481a82e2443dc48e032813",
+      "sha256": "dd63ec1d866f732f5f41ccc8cf6a6e32133c9f44eb6400dd379d773734cf70a6"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-muirin",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-muirin.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
+      "emblemSha256": "2528a7651cc7b45f0869ad2fe9396b25c9f22dc391bc9e46c81906220f316a96",
+      "sha256": "a82c857b11bba3b8a47a97b33a9e59a8fb6a26a5a6e17a9984f3c70ccd9e6a9c"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-cairge",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cairge.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
+      "emblemSha256": "756eaae3996cdb11f6da0339f7968c1094880b8310892b42df862686122530c9",
+      "sha256": "0bf753f46bdd13d101a95d233d87a4d9678cf6b6bbde77f7911e6b20ef5a027f"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-cadhla",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cadhla.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
+      "emblemSha256": "b86c8151ba906c4ab61e1ff90099abe684db5bc78ee8f3a3b3cf799bad7022d8",
+      "sha256": "1e47e528bf9062e7106e5e0389c21a607d7aeea9876ebd3b9e1cd5d4361ccead"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-fiodhran",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fiodhran.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
+      "emblemSha256": "5131857f62ab31349e4b1530e8bafd45162b7e158571429d274a30af0e8e1479",
+      "sha256": "f9c2b6b956fcd4077ff8176f33c840ae318b7a283bf513a923af311847112ba4"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-creagan",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-creagan.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
+      "emblemSha256": "fde7233bc067e69c09882d57a89530c25b19cabf4280354b6fedbf76b8eaf570",
+      "sha256": "e58ad043bd13d14d63a0b70517e9190184999ccff4e05f5b4d68d06b203be42c"
+    },
+    {
+      "territoryId": "uathneach-herrschaft-einsiedlerkrebs",
+      "asset": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-einsiedlerkrebs.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
+      "emblemSha256": "bd904e328a20ffc25764317b644a4c4a39af5b56e15ea13feba7ad2e54ce4e75",
+      "sha256": "c60195b42d6f42ac340b565dcb1487d4eb7c13a855c9b1e8d50a2e9f70d0d846"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-stwatchn",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-stwatchn.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-stwatchn.png",
+      "emblemSha256": "94640630ad57ab784a9ab16494b18fdce55cd4bc8ba35d4e71d00ba52c27ee94",
+      "sha256": "c39811e02ff5f386d1a60a083aecbc7957464610132298ac4f44fc14231188de"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-lachlann",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lachlann.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-lachlann.png",
+      "emblemSha256": "01284bd0ff3d38b8a1b8c2e1ce7ceade2c700df3d3e57b3043948e08d3507794",
+      "sha256": "dd03563b67bf5ed4e7a3557ce336d4f30ab0b4549db80306e97fb814b742062d"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-drummond",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-drummond.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-drummond.png",
+      "emblemSha256": "41365033f68728897e82f599ed98c74ecadd6b67f9c45ad8e4956922743f00f3",
+      "sha256": "1ccd91e0244c3d3d808b2c5b60f8ba7f8809a9051a2126cd3ff40932479b2e02"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-dundas",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dundas.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-dundas.png",
+      "emblemSha256": "db427c5c8247f4e60d0020e5913d3b6ae6f9c524b70d2eb138ee6e4a1e6af365",
+      "sha256": "ac589bbf48ea4b1d1c7e87086d0364d6170c2f4db4d827136f71da07a4dff447"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-ffearnach",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ffearnach.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-ffearnach.png",
+      "emblemSha256": "791bde228adb700c142c0c349668c508411c8b152eccdd43c7c4c2f6ff578af3",
+      "sha256": "d751c3f1f262c233249183c09aa6599251fab48883ded815253e798b0e20d97e"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-lockart",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lockart.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-lockart.png",
+      "emblemSha256": "d5c3ff9fcbccd993576d16652062905df759b42aca720db265505af8ab3b9e4e",
+      "sha256": "f81ff5c8d3a65470208bbe0b27a9ef56a610fc25c42bcb788398d196fa58877e"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-fiorghra",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-fiorghra.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-fiorghra.png",
+      "emblemSha256": "de7e55af50e1c4f88e237db4cee63f19631d71c12caeb0bc4283de942aebaca3",
+      "sha256": "ffb5df729181d4acea9323969fa6f207a01cf877580866937955aea16188dca0"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-ness",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ness.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-ness.png",
+      "emblemSha256": "f4f4c4d765040c76e2f9eeec2b8d6d98e94fa5f544e4414207e7258f2f935658",
+      "sha256": "2c915343591284c5a5a7764169aa9910a8b2e775cde7e031abb66cc27ab5051b"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-haig",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-haig.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-haig.png",
+      "emblemSha256": "ad712323d1b52fc10d6c97fe35e592f624f87d70e66b476801d06e4cfecfeb7c",
+      "sha256": "9227d86e68c66ce4d9c76f45ff1db33e03ae10e5d8e63e4d49baaa41732a4d5c"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-banlaoch",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-banlaoch.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-banlaoch.png",
+      "emblemSha256": "084767a592e3000115cf053fa8b7d60b895fdd06ad90ac3b5a44bea1fd7eb988",
+      "sha256": "e6f31a56c884d5fb7157abb70fc1746ef4ff604457dd514f788588b6d8020f5a"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-borthwick",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-borthwick.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-borthwick.png",
+      "emblemSha256": "9c02f0782dbbfa79ce22295eaab1e5f06581a923cadcc097c88410f5f63c29da",
+      "sha256": "4ac6b941d37b9e856a38696cefb4af56e545a11a1bf024262589110dcad21218"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-erskine",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-erskine.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-erskine.png",
+      "emblemSha256": "3a202c4f8ca2af148bc40a310885bd5177596a03843d416c41cdebff539f838b",
+      "sha256": "017643117038e271bee4de869466e03d3be92cd1b7897b3fe2bf3084dcc5d991"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-grannd",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-grannd.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-grannd.png",
+      "emblemSha256": "149a9c314e7ddaca7153e0717fd86b41b9c546c08eb7f54993534d8bc109d0bf",
+      "sha256": "e544172df27ff6db284997ee1a3536c40d0aaae0802ca974e1c638abc10bf44b"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-durachd",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-durachd.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-durachd.png",
+      "emblemSha256": "50bcaa115d13bb3cf7a509cb0e615e2b840f3b0deb5ccceb283e5eec0a77b5ba",
+      "sha256": "b6223e737e0f1a326d86c6346794ffed17ef02771a00e3602f272f4880361a2d"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-muirgheal",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-muirgheal.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-muirgheal.png",
+      "emblemSha256": "bfe134047127195461374610388489f12817a8da8ea62198bdab6f293bc66041",
+      "sha256": "96494d3edeb7276f9a829e71ebfddb1ddbf69f8029973e555c7ce5d1c3fb513a"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-boyd",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-boyd.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-boyd.png",
+      "emblemSha256": "5b04896c61844d046c059d8dff3c0045885e87884c1d777cb440f61ce46ba9ec",
+      "sha256": "60303d25b5dac9dbd62acc6b2e50f1d943ef0791fab7c9bf16367816b9df4ab6"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-agnew",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-agnew.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-agnew.png",
+      "emblemSha256": "ae7b25dce9b353398ce723531fb306ca45903ac2b11b3fec262de93761a1686f",
+      "sha256": "f786945c86faad04af826ec705d0053bc3782ec35f9ff27a4189c487ac0ff0b6"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-duff",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-duff.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-duff.png",
+      "emblemSha256": "0d6787badebfe5788cc6d7ccffb7d63547aaaf14e11b574b3ca51fc18d6aa2ce",
+      "sha256": "1c2157c17ccb822ecae2406988aafacf591cb63c6edf1f8695a9402a97adbda0"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-dianaomh",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dianaomh.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-dianaomh.png",
+      "emblemSha256": "183b3370f98328c92ec58419816035dd550171b613c22ee106c31d9a0c167da6",
+      "sha256": "6ca85b8acfe174ac0ebd0a50d0bc0b1adbdb0bd926b56ff6634a81a10b6ee193"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-dobhar",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dobhar.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-dobhar.png",
+      "emblemSha256": "70fda046074aeabf00dbcb7adfd31e2122488213eab44d2c2b2b6b083b8ebe72",
+      "sha256": "d15d686fe84bf1c3d5c9fa9bc33f77cb1c3676fb85575d3482f49db654771bfe"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-forsyth",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-forsyth.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-forsyth.png",
+      "emblemSha256": "96ef0f5fbb7508893068b597c611dced5b366b9c48bc01002c0212ced4f7439e",
+      "sha256": "7d3d3de1c621dcdcd7b2951e6fb0590a5ad046418d846aabc3c8e40b54135904"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-oglivy",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-oglivy.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-oglivy.png",
+      "emblemSha256": "453e5ac9fe6b6abbc6ad17b595955db90b58b44c1c9c54859d92b102823eec34",
+      "sha256": "388618464410d99c8df641f101d05fde654632205c8d5d3248afcdfcdbc84221"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-cerneige",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-cerneige.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-cerneige.png",
+      "emblemSha256": "1a4ada33b310a9efe3d177dee2a5db8bc6f8690a2df39ad00bcef180b25125de",
+      "sha256": "f076e00b37572a91231ba35dafbc11ac1753bbdf4b8dd4918f6c309ffe30a34c"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-airdmhor",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-airdmhor.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-airdmhor.png",
+      "emblemSha256": "ecf90cb65d9776f5c17413610d6c547ea97ba88f6888606a39f7fa126f1be382",
+      "sha256": "bbd5b20c34e41f8d8474291f2a584c13515e83eb75bd1edb8cb37156dc94aae5"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-wemyss",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-wemyss.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/clan-wemyss.png",
+      "emblemSha256": "0ab1a334f753773df96f8cc32be07cb6b610cc78c5c986cc583c6298e0d55b77",
+      "sha256": "8fcbe67ee05aa16e590c10eb2042a48abdb881b391a762bfe9c32521e3d29eaf"
+    },
+    {
+      "territoryId": "faelaorn-herrschaft-dubhan",
+      "asset": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dubhan.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Faelaorn/sept-dubhan.png",
+      "emblemSha256": "e68ce9457dbf0001d733e126279a55f2f2bcfd1ca8e9cbb5021e2f2eb013b470",
+      "sha256": "3acccced62111eb619615cd53653d54a833ab59840059e50abec30c74ca5c51a"
+    },
+    {
+      "territoryId": "herrschaft-ceitheach-eamhra",
+      "asset": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-eamhra.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Ceitheach/clan-faill-mallacht-eamhra.png",
+      "emblemSha256": "084b71551c23982a2d9d97b48856cf8b01e2985b1b9e3c2a3d2d6186edfaec54",
+      "sha256": "532cd8d27b1a55d1c102386e2e6e03c63b6f3e18cb4b7335490d2cde8569a166"
+    },
+    {
+      "territoryId": "herrschaft-ceitheach-seaghda",
+      "asset": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-seaghda.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Ceitheach/clan-mallacht-seaghda.png",
+      "emblemSha256": "7e93164d28154060cca5da054736a5b23baf1ab1a13325d66cafdd71b5de24a3",
+      "sha256": "36d6b99453a677b86b855d1b13348e4c771128566d8c612c646d4430d5f2097e"
+    },
+    {
+      "territoryId": "herrschaft-ceitheach-somhairle",
+      "asset": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-somhairle.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-sidhe-somhairle.png",
+      "emblemSha256": "9e3c8213b2a0bdaae1ac0405138a1d09217b0a39b24534bd82806f8982153449",
+      "sha256": "ab5c1fb60f19ff3657754166f05aa0e771f3e1f45a91432841a337f6df59ae0b"
+    },
+    {
+      "territoryId": "herrschaft-ceitheach-an-morchoe",
+      "asset": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-an-morchoe.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-morchoe.png",
+      "emblemSha256": "3c3ae1d677238623b0ebac2e4bc1aeb35c238cd721990bb48023505eeac357ff",
+      "sha256": "b47c4a037a459a09421982145ebe0ee1a28a811c19603aa759966296e54e70e9"
+    },
+    {
+      "territoryId": "herrschaft-ceitheach-tir-an-tordarroch",
+      "asset": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-tir-an-tordarroch.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Ceitheach/clan-tir-an-tordarroch.png",
+      "emblemSha256": "5bd43aed8eb314c76a33a26b2772ae98ee9643576e13ef8b11fcceab37c3038e",
+      "sha256": "80230980ebb20b98fedf709b8ea91232ae6c8e3347407ada68bdaa10ab3b7506"
+    },
+    {
+      "territoryId": "herrschaft-ceitheach-an-bhaird",
+      "asset": "/Stammbäume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-an-bhaird.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Ceitheach/clan-an-bhaird.png",
+      "emblemSha256": "a27f995d1f77ce5fc11657beb3482522a55083aff6f929b4e45af157b09e3d61",
+      "sha256": "ffffb4eb48f01529032888674dcf169dc2b05cae2a686c4d0bb75f6e98c24dba"
+    },
+    {
+      "territoryId": "leitheach-tir-na-coimhthioch",
+      "asset": "/Stammbäume/assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
+      "emblemSource": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png",
+      "emblemSha256": "e04f642ee2c5696aeab8aa929500bd45edde9ac6b511f7ee17f913179b3af3bd",
+      "sha256": "eb2888de75ec8b42094d781efbff281ab94e0bbbf8530c582b2ac7259cda7e2b"
+    }
+  ]
+}

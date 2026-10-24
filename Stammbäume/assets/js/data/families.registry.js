@@ -55,7 +55,7 @@ import { HOUSE_VALERUS_FAMILY } from './house-valerus-family.js';
 import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from './gwynthor-small-households.js';
 import { SEPT_CNEACAIL_FAMILY } from './sept-cneacail-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
-import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js?v=20261021-arvel-v3';
+import { RHONWENS_TRAENEN_HOUSE_FAMILIES } from './rhonwens-traenen-house-families.js?v=20261024-housebio-v1';
 import { CENYR_COUNTY_HOUSE_FAMILIES } from './cenyr-county-house-families.js';
 import {
   SONNENKUESTE_DEPENDENT_HOUSE_FAMILIES,
@@ -78,7 +78,7 @@ import { MOCHDAER_ORIGIN_HOUSE_FAMILIES } from './mochdaer-house-families.js';
 import { BLODYN_HOUSE_FAMILIES } from './blodyn-house-families.js';
 import { VENNYR_NEW_HOUSE_FAMILIES } from './vennyr-house-families.js';
 import { createFolderPathFromHouseProfile } from '../domain/house-profile.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261021-arvel-v3';
+import { HOUSE_BIOGRAPHY_DEFAULTS } from './house-biographies.registry.js?v=20261024-housebio-v1';
 import { withHouseBiographyDefault } from '../modules/house-biography/house-biography-registry-default.js';
 import { withCwingodSourcePortraitUpgrade } from './cwingod-source-portrait-upgrade.js';
 import { withDunfalPortraitUpgrade } from './dunfal-portrait-upgrade.js';
@@ -87,6 +87,7 @@ import { withBraighSourceCounterUpgrade } from './braigh-source-counter-upgrade.
 import { withFaernaSourceCounterUpgrade } from './faerna-source-counter-upgrade.js';
 import { withDamhSourceCounterUpgrade } from './damh-source-counter-upgrade.js';
 import { withBrannSourceCounterUpgrade } from './brann-source-counter-upgrade.js';
+import { withReviewedAlbicPlacement, reviewedAlbicAdditionalPlacements } from '../modules/albic-territories/family-placements.js';
 
 export const RETIRED_FAMILY_IDS = Object.freeze(['haus-vael', 'haus-sgrechwyr']);
 
@@ -106,7 +107,7 @@ function additionalPlacementsFor(family, territorialPlacements = []) {
   const familyPlacements = Array.isArray(family.extensions?.registryAdditionalPlacements)
     ? family.extensions.registryAdditionalPlacements
     : [];
-  const placements = [...familyPlacements, ...territorialPlacements];
+  const placements = reviewedAlbicAdditionalPlacements(family.document.id, [...familyPlacements, ...territorialPlacements]);
   return Object.freeze(placements.flatMap(placement => {
     const houseProfile = placement?.houseProfile;
     if (!houseProfile) return [];
@@ -131,6 +132,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
   family = withBrannSourceCounterUpgrade(family);
   family = withDunfalPortraitUpgrade(family);
   family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
+  family = withReviewedAlbicPlacement(family);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   const additionalPlacements = additionalPlacementsFor(family, territorialPlacements);
   return Object.freeze({

@@ -1,3 +1,3 @@
-import { createTerritory } from '../../../../modules/uathneach/territory-page.mjs?v=uathneach-20261024c';
+import { createTerritory } from '../../../../modules/uathneach/territory-page.mjs?v=albic-fiefs-20261024';
 
 export default createTerritory('uathneach-herrschaft-fastaigh');

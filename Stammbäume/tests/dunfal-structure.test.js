@@ -106,7 +106,8 @@ test('Dunfal geography remains separate from genealogy, existing regions and the
   assert.equal(index.root.totalCount - before.root.totalCount, 13);
 });
 
-test('ranks, extinct status and explicit territorial hierarchy do not invent barons or a liege for Ferbend', () => {
+test('ranks, extinct status and explicit territorial hierarchy do not invent barons or a liege for Ferbend', async () => {
+  const { reviewedFief } = await import('../assets/js/modules/albic-territories/fief-catalog.js');
   const family = id => getRegisteredFamily(id).family;
   assert.equal(family('haus-chulainn').document.houseProfile.rankId, 'ard-tiarna');
   assert.equal(family('haus-nuadat').document.houseProfile.rankId, 'mor-tiarna');
@@ -118,7 +119,7 @@ test('ranks, extinct status and explicit territorial hierarchy do not invent bar
   for (const definition of DUNFAL_HOUSE_DEFINITIONS.filter(entry => entry.realm)) {
     const profile = family(definition.familyId).document.houseProfile;
     assert.equal(profile.rankId, 'laird');
-    assert.equal(profile.barony, definition.realm);
+    assert.equal(profile.barony, reviewedFief('herrschaft-' + definition.slug)?.name || definition.realm);
     assert.equal(profile.liegeHouseId, definition.territoryId === 'tir-na-rithe' ? 'haus-chulainn' : 'haus-nuadat');
     assert.notEqual(profile.regionEmblems.barony, definition.emblem);
   }

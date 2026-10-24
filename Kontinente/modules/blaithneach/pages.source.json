@@ -21,7 +21,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         }
       ],
@@ -468,7 +468,7 @@
     {
       "id": "oberherrschaft-blaithneach-tir-na-beatha",
       "title": "Oberherrschaft Tir na Beatha",
-      "shortTitle": "Tir na Beatha",
+      "shortTitle": "Oberherrschaft Tir na Beatha",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Ard’Nessa",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Fürstentum Blaithneach.html",
@@ -486,7 +486,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -813,7 +813,7 @@
     {
       "id": "oberherrschaft-blaithneach-tir-na-dilse",
       "title": "Oberherrschaft Tir na Dílse",
-      "shortTitle": "Tir na Dílse",
+      "shortTitle": "Oberherrschaft Tir na Dílse",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Mac Ard’Ronain",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Fürstentum Blaithneach.html",
@@ -831,7 +831,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -1153,7 +1153,7 @@
     {
       "id": "oberherrschaft-blaithneach-tir-na-meinnear",
       "title": "Oberherrschaft Tir na Méinnear",
-      "shortTitle": "Tir na Méinnear",
+      "shortTitle": "Oberherrschaft Tir na Méinnear",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Sidhe’Magach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Fürstentum Blaithneach.html",
@@ -1171,7 +1171,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -1528,8 +1528,8 @@
     },
     {
       "id": "herrschaft-blaithneach-goidin",
-      "title": "Herrschaft der Ua’Goidin",
-      "shortTitle": "Herrschaft der Ua’Goidin",
+      "title": "Tir na nÚll",
+      "shortTitle": "Tir na nÚll",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Goidin",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Beatha/Oberherrschaft Tir na Beatha.html",
@@ -1547,7 +1547,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -1557,13 +1557,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Goidin",
+          "name": "Tir na nÚll",
           "slug": "herrschaft-blaithneach-goidin"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-beatha.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Beatha",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-goidin.svg",
+      "crestAlt": "Banner Tir na nÚll",
+      "copy": {
+        "geography": [
+          "Tir na nÚll bedeutet „Land der Äpfel“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -1571,7 +1575,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Ua’Goidin"
+              "value": "Tir na nÚll"
             },
             {
               "label": "Typ",
@@ -1629,7 +1633,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-blaithneach-goidin",
-          "title": "Herrschaft der Ua’Goidin",
+          "title": "Tir na nÚll",
           "center": "Sioran",
           "sections": [
             {
@@ -1678,8 +1682,8 @@
     },
     {
       "id": "herrschaft-blaithneach-haeghra",
-      "title": "Lehnsherrschaft der An’Haeghra",
-      "shortTitle": "Lehnsherrschaft der An’Haeghra",
+      "title": "Tir na Braiche",
+      "shortTitle": "Tir na Braiche",
       "type": "Lehnsherrschaft",
       "kicker": "Lehnsherrschaft · Clan An’Haeghra",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Beatha/Oberherrschaft Tir na Beatha.html",
@@ -1697,7 +1701,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -1707,13 +1711,17 @@
         },
         {
           "type": "Lehnsherrschaft",
-          "name": "Lehnsherrschaft der An’Haeghra",
+          "name": "Tir na Braiche",
           "slug": "herrschaft-blaithneach-haeghra"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-beatha.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Beatha",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-haeghra.svg",
+      "crestAlt": "Banner Tir na Braiche",
+      "copy": {
+        "geography": [
+          "Tir na Braiche bedeutet „Land des Malzes“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -1721,7 +1729,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Lehnsherrschaft der An’Haeghra"
+              "value": "Tir na Braiche"
             },
             {
               "label": "Typ",
@@ -1779,7 +1787,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-blaithneach-haeghra",
-          "title": "Lehnsherrschaft der An’Haeghra",
+          "title": "Tir na Braiche",
           "center": "Réadlann",
           "sections": [
             {
@@ -1854,8 +1862,8 @@
     },
     {
       "id": "herrschaft-blaithneach-suiste",
-      "title": "Herrschaft der Ua’Suiste",
-      "shortTitle": "Herrschaft der Ua’Suiste",
+      "title": "Tir na nGéanna",
+      "shortTitle": "Tir na nGéanna",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Suiste",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Dílse/Oberherrschaft Tir na Dílse.html",
@@ -1873,7 +1881,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -1883,13 +1891,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Suiste",
+          "name": "Tir na nGéanna",
           "slug": "herrschaft-blaithneach-suiste"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Dílse",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-suiste.svg",
+      "crestAlt": "Banner Tir na nGéanna",
+      "copy": {
+        "geography": [
+          "Tir na nGéanna bedeutet „Land der Gänse“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -1897,7 +1909,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Ua’Suiste"
+              "value": "Tir na nGéanna"
             },
             {
               "label": "Typ",
@@ -1955,7 +1967,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-blaithneach-suiste",
-          "title": "Herrschaft der Ua’Suiste",
+          "title": "Tir na nGéanna",
           "center": "Eorach",
           "sections": [
             {
@@ -2002,8 +2014,8 @@
     },
     {
       "id": "herrschaft-blaithneach-gairner",
-      "title": "Herrschaft der Dal’Gáirnér",
-      "shortTitle": "Herrschaft der Dal’Gáirnér",
+      "title": "Tir na Linnte",
+      "shortTitle": "Tir na Linnte",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Dal’Gáirnér",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Dílse/Oberherrschaft Tir na Dílse.html",
@@ -2021,7 +2033,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -2031,13 +2043,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dal’Gáirnér",
+          "name": "Tir na Linnte",
           "slug": "herrschaft-blaithneach-gairner"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Dílse",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-gairner.svg",
+      "crestAlt": "Banner Tir na Linnte",
+      "copy": {
+        "geography": [
+          "Tir na Linnte bedeutet „Land der Wasserbecken“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2045,7 +2061,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Dal’Gáirnér"
+              "value": "Tir na Linnte"
             },
             {
               "label": "Typ",
@@ -2103,7 +2119,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-blaithneach-gairner",
-          "title": "Herrschaft der Dal’Gáirnér",
+          "title": "Tir na Linnte",
           "center": "Eorach",
           "sections": [
             {
@@ -2161,8 +2177,8 @@
     },
     {
       "id": "herrschaft-blaithneach-leite",
-      "title": "Herrschaft der Dal’Leite",
-      "shortTitle": "Herrschaft der Dal’Leite",
+      "title": "Tir na Deoraíochta",
+      "shortTitle": "Tir na Deoraíochta",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Dal’Leite",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Dílse/Oberherrschaft Tir na Dílse.html",
@@ -2180,7 +2196,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -2190,13 +2206,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dal’Leite",
+          "name": "Tir na Deoraíochta",
           "slug": "herrschaft-blaithneach-leite"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Dílse",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-leite.svg",
+      "crestAlt": "Banner Tir na Deoraíochta",
+      "copy": {
+        "geography": [
+          "Tir na Deoraíochta bedeutet „Land des Exils“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2204,7 +2224,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Dal’Leite"
+              "value": "Tir na Deoraíochta"
             },
             {
               "label": "Typ",
@@ -2244,7 +2264,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-blaithneach-leite",
-          "title": "Herrschaft der Dal’Leite",
+          "title": "Tir na Deoraíochta",
           "center": "Ardán",
           "sections": [
             {
@@ -2301,8 +2321,8 @@
     },
     {
       "id": "herrschaft-blaithneach-eala",
-      "title": "Herrschaft der Ua’Eala",
-      "shortTitle": "Herrschaft der Ua’Eala",
+      "title": "Tir na hEala",
+      "shortTitle": "Tir na hEala",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Eala",
       "parentHref": "/Kontinente/Estryll/Fürstentum Blaithneach/Oberherrschaft Tir na Méinnear/Oberherrschaft Tir na Méinnear.html",
@@ -2320,7 +2340,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Blaithneach",
+          "name": "Fürstentum Blaithneach",
           "slug": "fuerstentum-blaithneach"
         },
         {
@@ -2330,13 +2350,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Eala",
+          "name": "Tir na hEala",
           "slug": "herrschaft-blaithneach-eala"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-meinnear.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Méinnear",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-eala.svg",
+      "crestAlt": "Banner Tir na hEala",
+      "copy": {
+        "geography": [
+          "Tir na hEala bedeutet „Land des Schwans“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2344,7 +2368,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Ua’Eala"
+              "value": "Tir na hEala"
             },
             {
               "label": "Typ",
@@ -2402,7 +2426,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-blaithneach-eala",
-          "title": "Herrschaft der Ua’Eala",
+          "title": "Tir na hEala",
           "center": "Cel Bearradh",
           "sections": [
             {

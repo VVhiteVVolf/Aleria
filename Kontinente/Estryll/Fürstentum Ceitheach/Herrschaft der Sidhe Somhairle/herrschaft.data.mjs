@@ -1,3 +1,3 @@
-import { createTerritory } from '../../../modules/ceitheach/territory-page.mjs?v=ceitheach-20261022a';
+import { createTerritory } from '../../../modules/ceitheach/territory-page.mjs?v=albic-fiefs-20261024';
 
 export default createTerritory('herrschaft-ceitheach-somhairle');

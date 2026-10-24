@@ -86,15 +86,23 @@
     },
     {
       "id": "faelaorn-herrschaft-stwatchn",
-      "name": "Herrschaft der Stwatchn",
+      "name": "Tir na Sionnach",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-rann",
       "familyId": "haus-stwatchn",
       "house": "Clan Ru Stwatchn",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-stwatchn.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-stwatchn.svg",
       "seat": "Invercalda",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Stwatchn/Herrschaft der Stwatchn.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Stwatchn/Herrschaft der Stwatchn.html",
+      "extent": "territorial",
+      "gloss": "Land der Füchse",
+      "bannerAlt": "Banner Tir na Sionnach",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der rote Fuchs im Wappen der Ru Stwatchn.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/sionnach"
+      }
     },
     {
       "id": "faelaorn-herrschaft-bhaird",
@@ -104,9 +112,15 @@
       "familyId": "haus-bhaird",
       "house": "Clan Ó / Dál Bhaird",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-bhaird.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/houses/Faelaorn/clan-bhaird.png",
       "seat": "Piobarach",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Bhaird/Herrschaft der Bhaird.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Bhaird/Herrschaft der Bhaird.html",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Bhaird",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "faelaorn-herrschaft-luthsach",
@@ -116,249 +130,415 @@
       "familyId": "haus-luthsach",
       "house": "Clan Ó / Dál Luthsach",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-luthsach.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/houses/Faelaorn/clan-luthsach.png",
       "seat": "Piobarach",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Luthsach/Herrschaft der Luthsach.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Luthsach/Herrschaft der Luthsach.html",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Luthsach",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "faelaorn-herrschaft-lachlann",
-      "name": "Herrschaft der Lachlann",
+      "name": "Tir na Sciath",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-rann",
       "familyId": "haus-lachlann",
       "house": "Clan Breac Lachlann",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-lachlann.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lachlann.svg",
       "seat": "Dun Liath",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Lachlann/Herrschaft der Lachlann.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Lachlann/Herrschaft der Lachlann.html",
+      "extent": "territorial",
+      "gloss": "Land der Schilde",
+      "bannerAlt": "Banner Tir na Sciath",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Schildträger der Dál Lachlann.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/sciath"
+      }
     },
     {
       "id": "faelaorn-herrschaft-drummond",
-      "name": "Herrschaft der Drummond",
+      "name": "Tir na Sceiche",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-rann",
       "familyId": "haus-drummond",
       "house": "Clan Breac Drummond",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-drummond.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-drummond.svg",
       "seat": "Dun Grealach",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Drummond/Herrschaft der Drummond.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Drummond/Herrschaft der Drummond.html",
+      "extent": "territorial",
+      "gloss": "Land des Weißdorns",
+      "bannerAlt": "Banner Tir na Sceiche",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Ein Gehölzname für das eigene Burggebiet um Dun Grealach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/sceach"
+      }
     },
     {
       "id": "faelaorn-herrschaft-dundas",
-      "name": "Herrschaft der Dundas",
+      "name": "Tir na gCat",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-rann",
       "familyId": "haus-dundas",
       "house": "Clan Ó Dundas",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-dundas.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dundas.svg",
       "seat": "Dun Foirgneamh",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Dundas/Herrschaft der Dundas.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Herrschaft der Dundas/Herrschaft der Dundas.html",
+      "extent": "territorial",
+      "gloss": "Land der Katzen",
+      "bannerAlt": "Banner Tir na gCat",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das silberne Katzentier der Dál Dundas.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/cat"
+      }
     },
     {
       "id": "faelaorn-herrschaft-ffearnach",
-      "name": "Ehemalige Herrschaft der Ffearnach",
+      "name": "Tir na nIarsmaí",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-rann",
       "familyId": "haus-ffearnach",
       "house": "Clan Mac Ffearnach",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-ffearnach.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ffearnach.svg",
       "seat": "Caer Fionnach",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ehemalige Herrschaft der Ffearnach/Ehemalige Herrschaft der Ffearnach.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Rann/Ehemalige Herrschaft der Ffearnach/Ehemalige Herrschaft der Ffearnach.html",
+      "extent": "territorial",
+      "gloss": "Land der Überreste",
+      "bannerAlt": "Banner Tir na nIarsmaí",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das ehemalige Lehen der Ffearnach um Caer Fionnach; der Name begründet keine erneute Belehnung.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/iarsma"
+      }
     },
     {
       "id": "faelaorn-herrschaft-lockart",
-      "name": "Herrschaft der Lockart",
+      "name": "Tir na mBroc",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-mathgham",
       "familyId": "haus-lockart",
       "house": "Clan Ó Lockart",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-lockart.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lockart.svg",
       "seat": "Cnosbubh",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Lockart/Herrschaft der Lockart.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Lockart/Herrschaft der Lockart.html",
+      "extent": "territorial",
+      "gloss": "Land der Dachse",
+      "bannerAlt": "Banner Tir na mBroc",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das schwarzweiße Tier der Ru Lockart.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/broc"
+      }
     },
     {
       "id": "faelaorn-herrschaft-fiorghra",
-      "name": "Herrschaft der Fiorghra",
+      "name": "Tir na Reithí",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-mathgham",
       "familyId": "haus-fiorghra",
       "house": "Clan Tir An Fiorghra",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-fiorghra.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-fiorghra.svg",
       "seat": "Lochcaeron",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Fiorghra/Herrschaft der Fiorghra.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Fiorghra/Herrschaft der Fiorghra.html",
+      "extent": "territorial",
+      "gloss": "Land der Widder",
+      "bannerAlt": "Banner Tir na Reithí",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Widder im Wappen der Tir an Fíorghrá.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/reithe"
+      }
     },
     {
       "id": "faelaorn-herrschaft-ness",
-      "name": "Herrschaft der Ness",
+      "name": "Tir na gClaímhte",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-mathgham",
       "familyId": "haus-ness",
       "house": "Clan An Ness",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-ness.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ness.svg",
       "seat": "Glenshear",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Ness/Herrschaft der Ness.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Ness/Herrschaft der Ness.html",
+      "extent": "territorial",
+      "gloss": "Land der Schwerter",
+      "bannerAlt": "Banner Tir na gClaímhte",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die schwerttragende Gestalt der Mac Ness.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/cla%C3%ADomh"
+      }
     },
     {
       "id": "faelaorn-herrschaft-haig",
-      "name": "Herrschaft der Haig",
+      "name": "Tir na Mac Tíre",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-mathgham",
       "familyId": "haus-haig",
       "house": "Clan Ó / Dál Haig",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-haig.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-haig.svg",
       "seat": "Tur na Fala",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Haig/Herrschaft der Haig.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Haig/Herrschaft der Haig.html",
+      "extent": "territorial",
+      "gloss": "Land der Wölfe",
+      "bannerAlt": "Banner Tir na Mac Tíre",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Wolfskopf der Na Haig.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/mac%20t%C3%ADre"
+      }
     },
     {
       "id": "faelaorn-herrschaft-banlaoch",
-      "name": "Herrschaft der Banlaoch",
+      "name": "Tir na Giúise",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-mathgham",
       "familyId": "haus-banlaoch",
       "house": "Clan Nic Banlaoch",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-banlaoch.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-banlaoch.svg",
       "seat": "Caisteal Gorm",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Banlaoch/Herrschaft der Banlaoch.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Mathgham/Herrschaft der Banlaoch/Herrschaft der Banlaoch.html",
+      "extent": "territorial",
+      "gloss": "Land der Kiefer",
+      "bannerAlt": "Banner Tir na Giúise",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die bewaldete Umgebung der Kriegerin im Wappen der Na Banlaoch.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/gi%C3%BAis"
+      }
     },
     {
       "id": "faelaorn-herrschaft-borthwick",
-      "name": "Herrschaft der Borthwick",
+      "name": "Tir na Deilfe",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-braigh",
       "familyId": "haus-borthwick",
       "house": "Clan Tir An Borthwick",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-borthwick.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-borthwick.svg",
       "seat": "Morvay",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Borthwick/Herrschaft der Borthwick.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Borthwick/Herrschaft der Borthwick.html",
+      "extent": "territorial",
+      "gloss": "Land des Delfins",
+      "bannerAlt": "Banner Tir na Deilfe",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der weiße Delfin der Tir an Borthwick.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/deilf"
+      }
     },
     {
       "id": "faelaorn-herrschaft-erskine",
-      "name": "Herrschaft der Erskine",
+      "name": "Tir na Liús",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-braigh",
       "familyId": "haus-erskine",
       "house": "Clan An Erskine",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-erskine.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-erskine.svg",
       "seat": "Garadhain",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Erskine.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Erskine.html",
+      "extent": "territorial",
+      "gloss": "Land der Hechte",
+      "bannerAlt": "Banner Tir na Liús",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Fisch der Mac Erskine.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/li%C3%BAs"
+      }
     },
     {
       "id": "faelaorn-herrschaft-grannd",
-      "name": "Herrschaft der Grannd",
+      "name": "Tir na Sliogán",
       "type": "Herrschaft",
       "parentId": "faelaorn-herrschaft-erskine",
       "familyId": "haus-grannd",
       "house": "Clan Na Grannd",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-grannd.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-grannd.svg",
       "seat": "Dun Uisge",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Grannd/Herrschaft der Grannd.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Grannd/Herrschaft der Grannd.html",
+      "extent": "territorial",
+      "gloss": "Land der Muscheln",
+      "bannerAlt": "Banner Tir na Sliogán",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Schalentier der Dál Grannd; die Unterordnung unter Mac Erskine bleibt erhalten.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/sliog%C3%A1n"
+      }
     },
     {
       "id": "faelaorn-herrschaft-durachd",
-      "name": "Herrschaft der Durachd",
+      "name": "Tir na mBuailteán",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-faerna",
       "familyId": "haus-durachd",
       "house": "Clan Tir An Durachd",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-durachd.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-durachd.svg",
       "seat": "Culrain",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Durachd/Herrschaft der Durachd.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Durachd/Herrschaft der Durachd.html",
+      "extent": "territorial",
+      "gloss": "Land der Dreschplätze",
+      "bannerAlt": "Banner Tir na mBuailteán",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das bäuerliche Zeichen der Tir an Dúrachd; der Name unterscheidet sich vom übergeordneten Herdenland.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/buailte%C3%A1n"
+      }
     },
     {
       "id": "faelaorn-herrschaft-muirgheal",
-      "name": "Herrschaft der Muirgheal",
+      "name": "Tir na nEasanna",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-faerna",
       "familyId": "haus-muirgheal",
       "house": "Clan Tir An Muirgheal",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-muirgheal.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-muirgheal.svg",
       "seat": "Airdree",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Muirgheal.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Muirgheal.html",
+      "extent": "territorial",
+      "gloss": "Land der Wasserfälle",
+      "bannerAlt": "Banner Tir na nEasanna",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Pferd über bewegtem Wasser im Wappen der Tir an Muirgheal.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/eas"
+      }
     },
     {
       "id": "faelaorn-herrschaft-boyd",
-      "name": "Herrschaft der Boyd",
+      "name": "Tir na nEascann",
       "type": "Herrschaft",
       "parentId": "faelaorn-herrschaft-muirgheal",
       "familyId": "haus-boyd",
       "house": "Clan Na Boyd",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-boyd.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-boyd.svg",
       "seat": "Ealach",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Boyd/Herrschaft der Boyd.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Boyd/Herrschaft der Boyd.html",
+      "extent": "territorial",
+      "gloss": "Land der Aale",
+      "bannerAlt": "Banner Tir na nEascann",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Aal der Na Boyd; die Unterordnung unter Tir an Muirgheal bleibt erhalten.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/eascann"
+      }
     },
     {
       "id": "faelaorn-herrschaft-agnew",
-      "name": "Herrschaft der Agnew",
+      "name": "Tir na hAitinne",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-damh",
       "familyId": "haus-agnew",
       "house": "Clan Ó Nic Agnew",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-agnew.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-agnew.svg",
       "seat": "Tighlean",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Agnew/Herrschaft der Agnew.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Agnew/Herrschaft der Agnew.html",
+      "extent": "territorial",
+      "gloss": "Land des Ginsters",
+      "bannerAlt": "Banner Tir na hAitinne",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das grüne Land um den Hirsch der Dál Agnew; ein zweites Geweihland wird vermieden.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/aiteann"
+      }
     },
     {
       "id": "faelaorn-herrschaft-duff",
-      "name": "Herrschaft der Duff",
+      "name": "Tir na gCuileann",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-damh",
       "familyId": "haus-duff",
       "house": "Clan Ó Ard Duff",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-duff.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-duff.svg",
       "seat": "Dalriadh",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Duff/Herrschaft der Duff.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Duff/Herrschaft der Duff.html",
+      "extent": "territorial",
+      "gloss": "Land der Stechpalmen",
+      "bannerAlt": "Banner Tir na gCuileann",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Ein Gehölzname für das Lehen der Na Duff, ohne das Hirschmotiv anderer Gebiete zu wiederholen.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/cuileann"
+      }
     },
     {
       "id": "faelaorn-herrschaft-dianaomh",
-      "name": "Herrschaft der Dianaomh",
+      "name": "Tir na hUaighe",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-damh",
       "familyId": "haus-dianaomh",
       "house": "Clan Sid Ard Dianaomh",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-dianaomh.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dianaomh.svg",
       "seat": "Torbhreac",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dianaomh/Herrschaft der Dianaomh.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dianaomh/Herrschaft der Dianaomh.html",
+      "extent": "territorial",
+      "gloss": "Land des Grabes",
+      "bannerAlt": "Banner Tir na hUaighe",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die geisterhafte Gestalt der Ru Diànaomh.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/uaigh"
+      }
     },
     {
       "id": "faelaorn-herrschaft-dobhar",
-      "name": "Herrschaft der Dobhar",
+      "name": "Tir na Madraí Uisce",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-damh",
       "familyId": "haus-dobhar",
       "house": "Clan An Dobhar",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-dobhar.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dobhar.svg",
       "seat": "Maolnair",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dobhar/Herrschaft der Dobhar.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Dobhar/Herrschaft der Dobhar.html",
+      "extent": "territorial",
+      "gloss": "Land der Fischotter",
+      "bannerAlt": "Banner Tir na Madraí Uisce",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Otterzeichen der Ru Dobhar.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/madra%20uisce"
+      }
     },
     {
       "id": "faelaorn-herrschaft-forsyth",
-      "name": "Herrschaft der Forsyth",
+      "name": "Tir na gCaorthann",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-damh",
       "familyId": "haus-forsyth",
       "house": "Clan Ó Forsyth",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-forsyth.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-forsyth.svg",
       "seat": "Inverfay",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Forsyth/Herrschaft der Forsyth.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Forsyth/Herrschaft der Forsyth.html",
+      "extent": "territorial",
+      "gloss": "Land der Ebereschen",
+      "bannerAlt": "Banner Tir na gCaorthann",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die rote Vegetation um das Hirschzeichen der Dál Forsyth.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/caorthann"
+      }
     },
     {
       "id": "faelaorn-herrschaft-elid",
@@ -368,69 +548,114 @@
       "familyId": "haus-elid",
       "house": "Clan Ó Mall Elid",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-elid.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/houses/Faelaorn/clan-elid.png",
       "seat": "Càrn Bruach",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Elid/Herrschaft der Elid.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Elid/Herrschaft der Elid.html",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Elid",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "faelaorn-herrschaft-oglivy",
-      "name": "Herrschaft der Oglivy",
+      "name": "Tir na Seabhac",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-damh",
       "familyId": "haus-oglivy",
       "house": "Clan Fir An Oglivy",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-oglivy.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-oglivy.svg",
       "seat": "Inniscaer",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Oglivy/Herrschaft der Oglivy.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Damh/Herrschaft der Oglivy/Herrschaft der Oglivy.html",
+      "extent": "territorial",
+      "gloss": "Land der Falken",
+      "bannerAlt": "Banner Tir na Seabhac",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Jagdvogel der Na Oglivy.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/seabhac"
+      }
     },
     {
       "id": "faelaorn-herrschaft-cerneige",
-      "name": "Herrschaft der Cerneige",
+      "name": "Tir na nInbhear",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-brann",
       "familyId": "haus-cerneige",
       "house": "Clan Tair Carnegie",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-cerneige.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-cerneige.svg",
       "seat": "Glenmohr",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Cerneige/Herrschaft der Cerneige.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Cerneige/Herrschaft der Cerneige.html",
+      "extent": "territorial",
+      "gloss": "Land der Flussmündungen",
+      "bannerAlt": "Banner Tir na nInbhear",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Baum über dem Wasser im Wappen der Mac Cerneige.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/inbhear"
+      }
     },
     {
       "id": "faelaorn-herrschaft-airdmhor",
-      "name": "Herrschaft der Airdmhor",
+      "name": "Tir na Sceire",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-brann",
       "familyId": "haus-airdmhor",
       "house": "Clan Dál Airdmhor",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-airdmhor.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-airdmhor.svg",
       "seat": "Carnascal",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Airdmhor/Herrschaft der Airdmhor.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Airdmhor/Herrschaft der Airdmhor.html",
+      "extent": "territorial",
+      "gloss": "Land des Riffs",
+      "bannerAlt": "Banner Tir na Sceire",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Küstenkrieger der Dál Àirdmhòr.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/sceir"
+      }
     },
     {
       "id": "faelaorn-herrschaft-wemyss",
-      "name": "Herrschaft der Wemyss",
+      "name": "Tir na gCreag",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-brann",
       "familyId": "haus-wemyss",
       "house": "Clan Tir An Wemyss",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/clan-wemyss.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-wemyss.svg",
       "seat": "Drumrath",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Wemyss/Herrschaft der Wemyss.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Herrschaft der Wemyss/Herrschaft der Wemyss.html",
+      "extent": "territorial",
+      "gloss": "Land der Felszacken",
+      "bannerAlt": "Banner Tir na gCreag",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die Felserhebung über dem Meer im Wappen der Tir an Wemyss.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/creag"
+      }
     },
     {
       "id": "faelaorn-herrschaft-dubhan",
-      "name": "Ehemalige Herrschaft der Dubhan",
+      "name": "Tir na Fuil",
       "type": "Herrschaft",
       "parentId": "faelaorn-tir-na-brann",
       "familyId": "haus-dubhan",
       "house": "Sept Dubhan",
       "crest": "/Stammbäume/assets/images/houses/Faelaorn/sept-dubhan.png",
-      "banner": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "banner": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dubhan.svg",
       "seat": "Caer Dubhan",
-      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Ehemalige Herrschaft der Dubhan/Ehemalige Herrschaft der Dubhan.html"
+      "href": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Brann/Ehemalige Herrschaft der Dubhan/Ehemalige Herrschaft der Dubhan.html",
+      "extent": "territorial",
+      "gloss": "Land des Blutes",
+      "bannerAlt": "Banner Tir na Fuil",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Bereits überlieferter Name des ehemaligen Dubhan-Lehens; keine neue Belehnung."
+      }
     },
     {
       "id": "faelaorn-rann-verwaltung-offen",

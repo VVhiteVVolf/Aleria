@@ -21,7 +21,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         }
       ],
@@ -444,7 +444,7 @@
     {
       "id": "oberherrschaft-aislearneach-tir-na-geach",
       "title": "Oberherrschaft Tir na Geach",
-      "shortTitle": "Tir na Geach",
+      "shortTitle": "Oberherrschaft Tir na Geach",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Ui’Morna",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
@@ -462,7 +462,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -773,7 +773,7 @@
     {
       "id": "oberherrschaft-aislearneach-tir-na-tirth",
       "title": "Oberherrschaft Tir na Tirth",
-      "shortTitle": "Tir na Tirth",
+      "shortTitle": "Oberherrschaft Tir na Tirth",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Mac’Durthacht",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
@@ -791,7 +791,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -1058,7 +1058,7 @@
     {
       "id": "oberherrschaft-aislearneach-tir-na-faela",
       "title": "Oberherrschaft Tir na Faela",
-      "shortTitle": "Tir na Faela",
+      "shortTitle": "Oberherrschaft Tir na Faela",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Mac’Fintain",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
@@ -1076,7 +1076,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -1443,7 +1443,7 @@
     {
       "id": "oberherrschaft-aislearneach-tir-na-adharcach",
       "title": "Oberherrschaft Tir na Adharcach",
-      "shortTitle": "Tir na Adharcach",
+      "shortTitle": "Oberherrschaft Tir na Adharcach",
       "type": "Kirchliche Oberherrschaft",
       "kicker": "Kirchliche Oberherrschaft",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
@@ -1461,7 +1461,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -1714,7 +1714,7 @@
     {
       "id": "oberherrschaft-aislearneach-tir-na-iomaire",
       "title": "Oberherrschaft Tir na Iomaire",
-      "shortTitle": "Tir na Iomaire",
+      "shortTitle": "Oberherrschaft Tir na Iomaire",
       "type": "Oberherrschaft",
       "kicker": "Oberherrschaft · Clan Tir An’Ceallaigh",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Fürstentum Aislearneach.html",
@@ -1732,7 +1732,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -1990,8 +1990,8 @@
     },
     {
       "id": "herrschaft-aislearneach-coronach",
-      "title": "Herrschaft der Ua’Coronach",
-      "shortTitle": "Herrschaft der Ua’Coronach",
+      "title": "Tir na Nathrach",
+      "shortTitle": "Tir na Nathrach",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Coronach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
@@ -2009,7 +2009,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2019,13 +2019,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Coronach",
+          "name": "Tir na Nathrach",
           "slug": "herrschaft-aislearneach-coronach"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Geach",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-coronach.svg",
+      "crestAlt": "Banner Tir na Nathrach",
+      "copy": {
+        "geography": [
+          "Tir na Nathrach bedeutet „Land der Schlange“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2033,7 +2037,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Ua’Coronach"
+              "value": "Tir na Nathrach"
             },
             {
               "label": "Typ",
@@ -2091,7 +2095,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-coronach",
-          "title": "Herrschaft der Ua’Coronach",
+          "title": "Tir na Nathrach",
           "center": "Gaelan",
           "sections": [
             {
@@ -2136,8 +2140,8 @@
     },
     {
       "id": "herrschaft-aislearneach-morgacht",
-      "title": "Herrschaft der Na’Morgacht",
-      "shortTitle": "Herrschaft der Na’Morgacht",
+      "title": "Tir na nGeataí",
+      "shortTitle": "Tir na nGeataí",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Na’Morgacht",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
@@ -2155,7 +2159,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2165,13 +2169,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Na’Morgacht",
+          "name": "Tir na nGeataí",
           "slug": "herrschaft-aislearneach-morgacht"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Geach",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-morgacht.svg",
+      "crestAlt": "Banner Tir na nGeataí",
+      "copy": {
+        "geography": [
+          "Tir na nGeataí bedeutet „Land der Tore“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2179,7 +2187,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Na’Morgacht"
+              "value": "Tir na nGeataí"
             },
             {
               "label": "Typ",
@@ -2237,7 +2245,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-morgacht",
-          "title": "Herrschaft der Na’Morgacht",
+          "title": "Tir na nGeataí",
           "center": "Broch an Geata",
           "sections": [
             {
@@ -2299,8 +2307,8 @@
     },
     {
       "id": "herrschaft-aislearneach-rioga",
-      "title": "Herrschaft der An’Rioga",
-      "shortTitle": "Herrschaft der An’Rioga",
+      "title": "Tir na nAncairí",
+      "shortTitle": "Tir na nAncairí",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan An’Rioga",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Geach/Oberherrschaft Tir na Geach.html",
@@ -2318,7 +2326,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2328,13 +2336,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der An’Rioga",
+          "name": "Tir na nAncairí",
           "slug": "herrschaft-aislearneach-rioga"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Geach",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-rioga.svg",
+      "crestAlt": "Banner Tir na nAncairí",
+      "copy": {
+        "geography": [
+          "Tir na nAncairí bedeutet „Land der Anker“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2342,7 +2354,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der An’Rioga"
+              "value": "Tir na nAncairí"
             },
             {
               "label": "Typ",
@@ -2400,7 +2412,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-rioga",
-          "title": "Herrschaft der An’Rioga",
+          "title": "Tir na nAncairí",
           "center": "Broch an Duhbach",
           "sections": [
             {
@@ -2451,8 +2463,8 @@
     },
     {
       "id": "herrschaft-aislearneach-fiantorc",
-      "title": "Herrschaft der Ua’Fiáintorc",
-      "shortTitle": "Herrschaft der Ua’Fiáintorc",
+      "title": "Tir na gCnoc",
+      "shortTitle": "Tir na gCnoc",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Fiáintorc",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
@@ -2470,7 +2482,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2480,13 +2492,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Fiáintorc",
+          "name": "Tir na gCnoc",
           "slug": "herrschaft-aislearneach-fiantorc"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiantorc.svg",
+      "crestAlt": "Banner Tir na gCnoc",
+      "copy": {
+        "geography": [
+          "Tir na gCnoc bedeutet „Land der Kuppen“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2494,7 +2510,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Ua’Fiáintorc"
+              "value": "Tir na gCnoc"
             },
             {
               "label": "Typ",
@@ -2552,7 +2568,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-fiantorc",
-          "title": "Herrschaft der Ua’Fiáintorc",
+          "title": "Tir na gCnoc",
           "center": "Lorai",
           "sections": [
             {
@@ -2589,8 +2605,8 @@
     },
     {
       "id": "herrschaft-aislearneach-treada",
-      "title": "Herrschaft der Ua’Tréada",
-      "shortTitle": "Herrschaft der Ua’Tréada",
+      "title": "Tir na Sméar",
+      "shortTitle": "Tir na Sméar",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ua’Tréada",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
@@ -2608,7 +2624,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2618,13 +2634,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ua’Tréada",
+          "name": "Tir na Sméar",
           "slug": "herrschaft-aislearneach-treada"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-treada.svg",
+      "crestAlt": "Banner Tir na Sméar",
+      "copy": {
+        "geography": [
+          "Tir na Sméar bedeutet „Land der Beeren“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2632,7 +2652,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Ua’Tréada"
+              "value": "Tir na Sméar"
             },
             {
               "label": "Typ",
@@ -2690,7 +2710,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-treada",
-          "title": "Herrschaft der Ua’Tréada",
+          "title": "Tir na Sméar",
           "center": "Lorai",
           "sections": [
             {
@@ -2741,8 +2761,8 @@
     },
     {
       "id": "herrschaft-aislearneach-muileach",
-      "title": "Lehnsherrschaft der Ua’Muileach",
-      "shortTitle": "Lehnsherrschaft der Ua’Muileach",
+      "title": "Tir na Srianta",
+      "shortTitle": "Tir na Srianta",
       "type": "Lehnsherrschaft",
       "kicker": "Lehnsherrschaft · Clan Ua’Muileach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Tirth/Oberherrschaft Tir na Tirth.html",
@@ -2760,7 +2780,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2770,13 +2790,17 @@
         },
         {
           "type": "Lehnsherrschaft",
-          "name": "Lehnsherrschaft der Ua’Muileach",
+          "name": "Tir na Srianta",
           "slug": "herrschaft-aislearneach-muileach"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Tirth",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-muileach.svg",
+      "crestAlt": "Banner Tir na Srianta",
+      "copy": {
+        "geography": [
+          "Tir na Srianta bedeutet „Land der Zügel“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2784,7 +2808,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Lehnsherrschaft der Ua’Muileach"
+              "value": "Tir na Srianta"
             },
             {
               "label": "Typ",
@@ -2842,7 +2866,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-muileach",
-          "title": "Lehnsherrschaft der Ua’Muileach",
+          "title": "Tir na Srianta",
           "center": "Athan",
           "sections": [
             {
@@ -2899,8 +2923,8 @@
     },
     {
       "id": "herrschaft-aislearneach-feannag",
-      "title": "Lehnsherrschaft der An’Feannag",
-      "shortTitle": "Lehnsherrschaft der An’Feannag",
+      "title": "Tir na Meala",
+      "shortTitle": "Tir na Meala",
       "type": "Lehnsherrschaft",
       "kicker": "Lehnsherrschaft · Clan An’Feannag",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Faela/Oberherrschaft Tir na Faela.html",
@@ -2918,7 +2942,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -2928,13 +2952,17 @@
         },
         {
           "type": "Lehnsherrschaft",
-          "name": "Lehnsherrschaft der An’Feannag",
+          "name": "Tir na Meala",
           "slug": "herrschaft-aislearneach-feannag"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-faela.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Faela",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-feannag.svg",
+      "crestAlt": "Banner Tir na Meala",
+      "copy": {
+        "geography": [
+          "Tir na Meala bedeutet „Land des Honigs“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -2942,7 +2970,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Lehnsherrschaft der An’Feannag"
+              "value": "Tir na Meala"
             },
             {
               "label": "Typ",
@@ -3000,7 +3028,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-feannag",
-          "title": "Lehnsherrschaft der An’Feannag",
+          "title": "Tir na Meala",
           "center": "Ceatharlach",
           "sections": [
             {
@@ -3056,8 +3084,8 @@
     },
     {
       "id": "herrschaft-aislearneach-uilebheist",
-      "title": "Herrschaft der An’Uilebheist",
-      "shortTitle": "Herrschaft der An’Uilebheist",
+      "title": "Tir na gClochán",
+      "shortTitle": "Tir na gClochán",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan An’Uilebheist",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
@@ -3075,7 +3103,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -3085,13 +3113,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der An’Uilebheist",
+          "name": "Tir na gClochán",
           "slug": "herrschaft-aislearneach-uilebheist"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Adharcach",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-uilebheist.svg",
+      "crestAlt": "Banner Tir na gClochán",
+      "copy": {
+        "geography": [
+          "Tir na gClochán bedeutet „Land der Trittsteine“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -3099,7 +3131,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der An’Uilebheist"
+              "value": "Tir na gClochán"
             },
             {
               "label": "Typ",
@@ -3157,7 +3189,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-uilebheist",
-          "title": "Herrschaft der An’Uilebheist",
+          "title": "Tir na gClochán",
           "center": "Foraoise",
           "sections": [
             {
@@ -3210,8 +3242,8 @@
     },
     {
       "id": "herrschaft-aislearneach-cnogan",
-      "title": "Herrschaft der Nic’Cnogan",
-      "shortTitle": "Herrschaft der Nic’Cnogan",
+      "title": "Tir na gCoirceog",
+      "shortTitle": "Tir na gCoirceog",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Nic’Cnogan",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Adharcach/Oberherrschaft Tir na Adharcach.html",
@@ -3229,7 +3261,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -3239,13 +3271,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Nic’Cnogan",
+          "name": "Tir na gCoirceog",
           "slug": "herrschaft-aislearneach-cnogan"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Adharcach",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-cnogan.svg",
+      "crestAlt": "Banner Tir na gCoirceog",
+      "copy": {
+        "geography": [
+          "Tir na gCoirceog bedeutet „Land der Bienenkörbe“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -3253,7 +3289,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Nic’Cnogan"
+              "value": "Tir na gCoirceog"
             },
             {
               "label": "Typ",
@@ -3311,7 +3347,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-cnogan",
-          "title": "Herrschaft der Nic’Cnogan",
+          "title": "Tir na gCoirceog",
           "center": "Foraoise",
           "sections": [
             {
@@ -3356,8 +3392,8 @@
     },
     {
       "id": "herrschaft-aislearneach-fiachiontach",
-      "title": "Herrschaft der Na’Fiachiontach",
-      "shortTitle": "Herrschaft der Na’Fiachiontach",
+      "title": "Tir na Leabhar",
+      "shortTitle": "Tir na Leabhar",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Na’Fiachiontach",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
@@ -3375,7 +3411,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -3385,13 +3421,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Na’Fiachiontach",
+          "name": "Tir na Leabhar",
           "slug": "herrschaft-aislearneach-fiachiontach"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiachiontach.svg",
+      "crestAlt": "Banner Tir na Leabhar",
+      "copy": {
+        "geography": [
+          "Tir na Leabhar bedeutet „Land der Bücher“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -3399,7 +3439,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Na’Fiachiontach"
+              "value": "Tir na Leabhar"
             },
             {
               "label": "Typ",
@@ -3457,7 +3497,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-fiachiontach",
-          "title": "Herrschaft der Na’Fiachiontach",
+          "title": "Tir na Leabhar",
           "center": "Koldair",
           "sections": [
             {
@@ -3505,8 +3545,8 @@
     },
     {
       "id": "herrschaft-aislearneach-tartarfhuil",
-      "title": "Herrschaft der Dal’Tartarfhuil",
-      "shortTitle": "Herrschaft der Dal’Tartarfhuil",
+      "title": "Tir na Loingseoireachta",
+      "shortTitle": "Tir na Loingseoireachta",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Dal’Tartarfhuil",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
@@ -3524,7 +3564,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -3534,13 +3574,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dal’Tartarfhuil",
+          "name": "Tir na Loingseoireachta",
           "slug": "herrschaft-aislearneach-tartarfhuil"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-tartarfhuil.svg",
+      "crestAlt": "Banner Tir na Loingseoireachta",
+      "copy": {
+        "geography": [
+          "Tir na Loingseoireachta bedeutet „Land der Schifffahrt“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -3548,7 +3592,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Dal’Tartarfhuil"
+              "value": "Tir na Loingseoireachta"
             },
             {
               "label": "Typ",
@@ -3606,7 +3650,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-tartarfhuil",
-          "title": "Herrschaft der Dal’Tartarfhuil",
+          "title": "Tir na Loingseoireachta",
           "center": "Koldair",
           "sections": [
             {
@@ -3648,8 +3692,8 @@
     },
     {
       "id": "herrschaft-aislearneach-gaisgh",
-      "title": "Herrschaft der An’Gaisgh",
-      "shortTitle": "Herrschaft der An’Gaisgh",
+      "title": "Tir na dTuanna",
+      "shortTitle": "Tir na dTuanna",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan An’Gaisgh",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
@@ -3667,7 +3711,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -3677,13 +3721,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der An’Gaisgh",
+          "name": "Tir na dTuanna",
           "slug": "herrschaft-aislearneach-gaisgh"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-gaisgh.svg",
+      "crestAlt": "Banner Tir na dTuanna",
+      "copy": {
+        "geography": [
+          "Tir na dTuanna bedeutet „Land der Äxte“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -3691,7 +3739,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der An’Gaisgh"
+              "value": "Tir na dTuanna"
             },
             {
               "label": "Typ",
@@ -3749,7 +3797,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-gaisgh",
-          "title": "Herrschaft der An’Gaisgh",
+          "title": "Tir na dTuanna",
           "center": "Broch an Traigh",
           "sections": [
             {
@@ -3796,8 +3844,8 @@
     },
     {
       "id": "herrschaft-aislearneach-luchdon",
-      "title": "Herrschaft der Na’Luchdon",
-      "shortTitle": "Herrschaft der Na’Luchdon",
+      "title": "Tir na hEasóige",
+      "shortTitle": "Tir na hEasóige",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Na’Luchdon",
       "parentHref": "/Kontinente/Estryll/Fürstentum Aislearneach/Oberherrschaft Tir na Iomaire/Oberherrschaft Tir na Iomaire.html",
@@ -3815,7 +3863,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Aislearneach",
+          "name": "Fürstentum Aislearneach",
           "slug": "fuerstentum-aislearneach"
         },
         {
@@ -3825,13 +3873,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Na’Luchdon",
+          "name": "Tir na hEasóige",
           "slug": "herrschaft-aislearneach-luchdon"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "crestAlt": "Banner Oberherrschaft Tir na Iomaire",
-      "copy": {},
+      "crestSrc": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-luchdon.svg",
+      "crestAlt": "Banner Tir na hEasóige",
+      "copy": {
+        "geography": [
+          "Tir na hEasóige bedeutet „Land des Hermelins“."
+        ]
+      },
       "cultureSections": [],
       "infobox": [
         {
@@ -3839,7 +3891,7 @@
           "rows": [
             {
               "label": "Name",
-              "value": "Herrschaft der Na’Luchdon"
+              "value": "Tir na hEasóige"
             },
             {
               "label": "Typ",
@@ -3897,7 +3949,7 @@
       "domains": [
         {
           "territoryId": "herrschaft-aislearneach-luchdon",
-          "title": "Herrschaft der Na’Luchdon",
+          "title": "Tir na hEasóige",
           "center": "Broch an Creig",
           "sections": [
             {

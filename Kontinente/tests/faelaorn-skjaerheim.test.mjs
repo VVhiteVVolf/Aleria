@@ -10,7 +10,7 @@ import {SKJAERHEIM_LOWER_CLANS} from '../../Stammbäume/assets/js/data/skjaerhei
 import {createTerritory as faelaorn} from '../modules/faelaorn/territory-page.mjs';
 import {createTerritory as skjaerheim} from '../modules/skjaerheim/territory-page.mjs';
 import {stateHash} from '../../Karten/tools/generated-map-output.mjs';
-import {assertFamilyBaseline} from './support/family-baseline.mjs';
+import {protectedAlbicFamilies,reviewHash} from './support/albic-review-baseline.mjs';
 import historicalFamilyIds from './support/family-baseline-20261023.json' with {type:'json'};
 const root=new URL('../../',import.meta.url),read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
 const local=p=>new URL(p.replace(/^\//,''),root);
@@ -55,7 +55,10 @@ test('current occupation and the southern war zone do not transfer albic familie
  const war=realms[1].pages.find(p=>p.id==='skjaerheim-suedliche-kriegszone');assert.equal(war.families.length,0);
  assert.match(war.copy.overview.join(' '),/Forsyth/);
  const unassigned=realms[0].pages.find(p=>p.id==='faelaorn-rann-verwaltung-offen');assert.equal(unassigned.pending,true);assert.equal(unassigned.families.length,0);
- assertFamilyBaseline(FAMILY_REGISTRY,read('Kontinente/modules/faelaorn-skjaerheim/sources/family-baseline.json'),historicalFamilyIds);
+ const receipt=read('Kontinente/tests/support/albic-family-review-20261024.json');
+ assert.equal(receipt.sourceBaselineHash,read('Kontinente/modules/faelaorn-skjaerheim/sources/family-baseline.json').sha256);
+ const captured=FAMILY_REGISTRY.filter(record=>historicalFamilyIds.includes(record.id));
+ assert.equal(reviewHash(protectedAlbicFamilies(captured)),receipt.protectedSha256);
 });
 test('Skjaerheim has four jarls, their own thanentums and the ten clans assigned by map and user clarification',()=>{
  const r=realms[1],byId=new Map(r.territories.map(t=>[t.id,t]));

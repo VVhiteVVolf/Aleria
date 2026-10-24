@@ -48,6 +48,7 @@ export function importLeitheachRegions(capture, definition, definitions, territo
     const contextArea = shape.class.includes('marker-circle') || normalizedName === 'grenzgebiet';
     const territory = main ? territories.find(t => t.id === root?.territoryId)
       : territories.find(t => t.familyId === familyId && t.mapId === 'leitheach-' + definition.slug);
+    const displayName = territory?.territorialReview ? territory.name : name;
     const geometry = convertRenderedRegion(shape, capture.image, { independentAxes: true });
     const ruler = familyId ? family(familyId) : null;
     if (familyId && !ruler) throw new Error('Unbekannte Familie: ' + familyId);
@@ -55,7 +56,7 @@ export function importLeitheachRegions(capture, definition, definitions, territo
     const color = String(shape.fill || '').trim();
     const stroke = String(shape.stroke || '#a74732').trim();
     return {
-      id: 'wa-' + markerId, name, shortName: outer ? definition.title : /eigenverwaltung/.test(normalizedName)
+      id: 'wa-' + markerId, name: displayName, shortName: territory?.territorialReview ? displayName : outer ? definition.title : /eigenverwaltung/.test(normalizedName)
         ? 'Eigenverwaltung · ' + (definition.familyId === 'haus-mac-airt' ? 'Mac Airt' : 'Cumhaill') : shortName(name), ...geometry,
       color: /^#[a-f0-9]{6}$/i.test(color) ? color : stroke,
       borderColor: stroke, opacity: geometry.kind === 'boundary' ? 0 : shape.opacity,

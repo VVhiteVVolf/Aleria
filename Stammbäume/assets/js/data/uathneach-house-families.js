@@ -9,8 +9,8 @@ export const UATHNEACH_HOUSE_FAMILIES = Object.freeze(structure.clans.map(clan =
   const houseProfile = createHouseProfileFromFolderPath(['Uathneach', region.name], {
     rankId: clan.rankId, seat: seat.name, barony: fief?.name || '',
     liegeHouseId: liege?.familyId || '', liegeHouseName: liege?.name || '',
-    folderIcons: [structure.realm.banner, region.banner, ...(fief ? [clan.crest] : []), ''],
-    regionEmblems: { kingdom: structure.realm.banner, county: region.banner, barony: fief ? clan.crest : '', seat: '' },
+    folderIcons: [structure.realm.banner, region.banner, ...(fief ? [fief.banner || clan.crest] : []), ''],
+    regionEmblems: { kingdom: structure.realm.banner, county: region.banner, barony: fief ? fief.banner || clan.crest : '', seat: '' },
   });
   const family = createBlankHouseFamily({ id: clan.familyId, title: `Clan ${clan.name}`,
     emblem: clan.crest.replace('/Stammbäume/', ''), houseProfile,

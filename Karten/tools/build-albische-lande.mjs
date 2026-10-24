@@ -25,7 +25,7 @@ for(const folder of ['Aislearneach','Blaithneach','Ceitheach','Dunkelhain']){
   const dominions=territories.map(t=>({id:t.id,name:t.name,type:t.type,ruler:t.house,seat:t.seat,parentId:t.parentId,note:t.pending?'Clan-Zuordnung offen':''}));
   const state={pins,...context.KartoCategoryCatalog.upgrade({}),regions:ownRegions,dominions,regionTitle:map.title,regionIcon:base.banner,mapImages:{normal:map.imageSrc,regions:'',pins:''},layerNames:{normal:'Karte',regions:'Regionen',pins:'Markierungen'},dotSize:80,lblSize:50,displaySettingsVersion:1,markerPresentation:'symbols',pinVisibilityVersion:1,showMarkers:true,showPinLabels:false,alwaysShowLettering:false,extraLayers:[],dm:{sessions:[],notes:'',groupStatus:{}}};
   const dataPath=map.folder+'/data.json';
-  outputs.push([dataPath,{schemaVersion:1,dataPath,revision:1,updatedAt:'2026-10-22T20:30:00.000Z',generatedStateHash:stateHash(state),state}]);
+  outputs.push([dataPath,{schemaVersion:1,dataPath,revision:folder==='Dunkelhain'?1:2,updatedAt:folder==='Dunkelhain'?'2026-10-22T20:30:00.000Z':'2026-10-24T18:20:00.000Z',generatedStateHash:stateHash(state),state}]);
   registry.push({id:map.id,title:map.title,status:'active',type:'region',markerPresentation:'symbols',hierarchy:[{level:'region',slug:maps[0].id,title:maps[0].title},...(map.parentMapId?[{level:'region',slug:map.id,title:map.title}]:[])],folder:map.folder,images:{normal:map.imageSrc.replace('/Karten/','')},dataPath,link:'karte.html?map='+map.id,...(map.parentMapId?{parentMapId:map.parentMapId}:{})});
  }
 }

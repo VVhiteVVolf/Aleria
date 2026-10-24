@@ -109,7 +109,7 @@ test('BBCode headings, paragraphs and links retain the complete source wording',
 test('Fancha uses the user-confirmed name and Sinsear preserves nested local territories', () => {
   const regions = maps.find(({ image }) => image.id === 'tir-na-sinsear').data.state.regions;
   const fancha = regions.find(region => region.source.markerId === '397f74eb-6a69-4e7a-9ef3-0b435b2ede97');
-  assert.equal(fancha.name, 'Herrschaft Tir na Fancha');
+  assert.equal(fancha.name, 'Tir na Fancha');
   assert.equal(fancha.familyId, 'haus-na-mhuir');
   const parent = regions.find(region => region.familyId === 'haus-gallchobhair');
   for (const familyId of ['haus-cleir', 'haus-ghaiscioch', 'haus-dal-ceardaiocht']) {

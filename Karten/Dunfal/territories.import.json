@@ -38,7 +38,7 @@
     },
     {
       "id": "herrschaft-ailella",
-      "name": "Herrschaft der Mac Sidhe’Ailella",
+      "name": "Tir na bPeiteal",
       "familyId": "haus-ailella",
       "parentId": "oberherrschaft-tir-na-rithe",
       "banner": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-sidhe-ailella.png",
@@ -46,11 +46,19 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Mac Sidhe’Ailella/Herrschaft der Mac Sidhe’Ailella.html",
       "house": "Clan Mac Sidhe’Ailella",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-sidhe-ailella.png",
+      "extent": "territorial",
+      "gloss": "Land der Blütenblätter",
+      "bannerAlt": "Banner Tir na bPeiteal",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die weiße Blüte der Mac Sidhe’Ailella und ihr eigener Kartenbereich um Braighmòr.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/peiteal"
+      }
     },
     {
       "id": "herrschaft-cein",
-      "name": "Herrschaft der Mac’Céin",
+      "name": "Tir na dTeorainneacha",
       "familyId": "haus-cein",
       "parentId": "oberherrschaft-tir-na-rithe",
       "banner": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-cein.png",
@@ -58,11 +66,19 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Mac’Céin/Herrschaft der Mac’Céin.html",
       "house": "Clan Mac’Céin",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-cein.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-cein.png",
+      "extent": "territorial",
+      "gloss": "Land der Grenzsäume",
+      "bannerAlt": "Banner Tir na dTeorainneacha",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der bewaffnete Wächter der Mac’Céin in ihrem eigenen Gebiet um Caerthalas.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/teorainn"
+      }
     },
     {
       "id": "herrschaft-birn",
-      "name": "Herrschaft der Dál’Birn",
+      "name": "Tir na Mionn",
       "familyId": "haus-birn",
       "parentId": "oberherrschaft-tir-na-rithe",
       "banner": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-dal-birn.png",
@@ -70,11 +86,19 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Dál’Birn/Herrschaft der Dál’Birn.html",
       "house": "Clan Dál’Birn",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-birn.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-birn.png",
+      "extent": "territorial",
+      "gloss": "Land der Eide",
+      "bannerAlt": "Banner Tir na Mionn",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Blutstropfenzeichen der Dál’Birn wird als Bindung des Eides aufgegriffen; Blutland ist bereits vergeben.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/mionn"
+      }
     },
     {
       "id": "herrschaft-morath",
-      "name": "Herrschaft der Ruin’Morath",
+      "name": "Tir na nEalaíon",
       "familyId": "haus-morath",
       "parentId": "oberherrschaft-tir-na-rithe",
       "banner": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-ruin-morath.png",
@@ -82,7 +106,15 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Ruin’Morath/Herrschaft der Ruin’Morath.html",
       "house": "Clan Ruin’Morath",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-ruin-morath.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-ruin-morath.png",
+      "extent": "territorial",
+      "gloss": "Land der Künste",
+      "bannerAlt": "Banner Tir na nEalaíon",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die geflügelte Harfe der Ruin’Morath.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/eala%C3%ADn"
+      }
     },
     {
       "id": "herrschaft-anbhair",
@@ -94,7 +126,13 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Ua’Anbhair/Herrschaft der Ua’Anbhair.html",
       "house": "Clan Ua’Anbhair",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-anbhair.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-anbhair.png",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Ua’Anbhair",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "herrschaft-casur",
@@ -106,7 +144,13 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Ua’Casur/Herrschaft der Ua’Casur.html",
       "house": "Clan Ua’Casur",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-casur.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-ua-casur.png",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Ua’Casur",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "herrschaft-aonghusa",
@@ -118,11 +162,17 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Dál’Aonghusa/Herrschaft der Dál’Aonghusa.html",
       "house": "Clan Dál’Aonghusa",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-aonghusa.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-dal-aonghusa.png",
+      "extent": "urban",
+      "bannerAlt": "Banner Herrschaft der Dál’Aonghusa",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Städtische beziehungsweise historische Clan-Herrschaft am Sitz des unmittelbaren Lehnsherrn; keine zusätzliche Flächengrenze zugewiesen."
+      }
     },
     {
       "id": "herrschaft-riangabra",
-      "name": "Herrschaft der Na’Riangabra",
+      "name": "Tir na Fuaime",
       "familyId": "haus-riangabra",
       "parentId": "oberherrschaft-tir-na-fathach",
       "banner": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-na-riangabra.png",
@@ -130,11 +180,19 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Na’Riangabra/Herrschaft der Na’Riangabra.html",
       "house": "Clan Na’Riangabra",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-na-riangabra.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-na-riangabra.png",
+      "extent": "territorial",
+      "gloss": "Land des Klanges",
+      "bannerAlt": "Banner Tir na Fuaime",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Saiteninstrument der Na’Riangabra.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/fuaim"
+      }
     },
     {
       "id": "herrschaft-eachtrai",
-      "name": "Herrschaft der Mac’Eachtrai",
+      "name": "Tir na Lámhainne",
       "familyId": "haus-eachtrai",
       "parentId": "oberherrschaft-tir-na-fathach",
       "banner": "/Stammbäume/assets/images/regions/Dunfal/herrschaft-mac-eachtrai.png",
@@ -142,7 +200,15 @@
       "type": "Herrschaft",
       "href": "/Kontinente/Estryll/Fürstentum Dunfal/Herrschaft der Mac’Eachtrai/Herrschaft der Mac’Eachtrai.html",
       "house": "Clan Mac’Eachtrai",
-      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-eachtrai.png"
+      "crest": "/Stammbäume/assets/images/houses/Dunfal/clan-mac-eachtrai.png",
+      "extent": "territorial",
+      "gloss": "Land des Handschuhs",
+      "bannerAlt": "Banner Tir na Lámhainne",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die gerüstete Hand der Mac’Eachtrai.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/l%C3%A1mhainn"
+      }
     },
     {
       "id": "herrschaft-fianna",

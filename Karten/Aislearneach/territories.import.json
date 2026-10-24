@@ -85,187 +85,278 @@
     },
     {
       "id": "herrschaft-aislearneach-coronach",
-      "name": "Herrschaft der Ua’Coronach",
+      "name": "Tir na Nathrach",
       "type": "Herrschaft",
       "familyId": "haus-coronach",
       "house": "Clan Ua’Coronach",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-coronach.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Geach",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-coronach.svg",
+      "bannerAlt": "Banner Tir na Nathrach",
       "seat": "Gaelan",
       "parentId": "oberherrschaft-aislearneach-tir-na-geach",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Coronach/Herrschaft der Ua’Coronach.html",
-      "realmId": "tir-na-geach"
+      "realmId": "tir-na-geach",
+      "extent": "territorial",
+      "gloss": "Land der Schlange",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Schlangenzeichen der Ua’Coronach; die Karte belegt ein eigenes ländliches Gebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/nathair"
+      }
     },
     {
       "id": "herrschaft-aislearneach-morgacht",
-      "name": "Herrschaft der Na’Morgacht",
+      "name": "Tir na nGeataí",
       "type": "Herrschaft",
       "familyId": "haus-morgacht",
       "house": "Clan Na’Morgacht",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-morgacht.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Geach",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-morgacht.svg",
+      "bannerAlt": "Banner Tir na nGeataí",
       "seat": "Broch an Geata",
       "parentId": "oberherrschaft-aislearneach-tir-na-geach",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Morgacht/Herrschaft der Na’Morgacht.html",
       "realmId": "tir-na-geach",
-      "seatEvidence": "Einziger benannter Burgmarker innerhalb der überlieferten Herrschaftsgrenze: 53a3a6c5-90e2-46d3-8565-964da5f78bc6"
+      "seatEvidence": "Einziger benannter Burgmarker innerhalb der überlieferten Herrschaftsgrenze: 53a3a6c5-90e2-46d3-8565-964da5f78bc6",
+      "extent": "territorial",
+      "gloss": "Land der Tore",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Tor- und Wächterzeichen der Na’Morgacht und ihr Sitz Broch an Geata.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/geata"
+      }
     },
     {
       "id": "herrschaft-aislearneach-rioga",
-      "name": "Herrschaft der An’Rioga",
+      "name": "Tir na nAncairí",
       "type": "Herrschaft",
       "familyId": "haus-rioga",
       "house": "Clan An’Rioga",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-rioga.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-geach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Geach",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-rioga.svg",
+      "bannerAlt": "Banner Tir na nAncairí",
       "seat": "Broch an Duhbach",
       "parentId": "oberherrschaft-aislearneach-tir-na-geach",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Rioga/Herrschaft der An’Rioga.html",
       "realmId": "tir-na-geach",
-      "seatEvidence": "Einziger benannter Burgmarker innerhalb der überlieferten Herrschaftsgrenze: 9b6df7a2-a55b-4b37-bd27-a428cb57d74f"
+      "seatEvidence": "Einziger benannter Burgmarker innerhalb der überlieferten Herrschaftsgrenze: 9b6df7a2-a55b-4b37-bd27-a428cb57d74f",
+      "extent": "territorial",
+      "gloss": "Land der Anker",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Anker der An’Rioga und ihr eigener Sitz Broch an Duhbach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/ancaire"
+      }
     },
     {
       "id": "herrschaft-aislearneach-fiantorc",
-      "name": "Herrschaft der Ua’Fiáintorc",
+      "name": "Tir na gCnoc",
       "type": "Herrschaft",
       "familyId": "haus-fiantorc",
       "house": "Clan Ua’Fiáintorc",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Tirth",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiantorc.svg",
+      "bannerAlt": "Banner Tir na gCnoc",
       "seat": "Lorai",
       "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Fiáintorc/Herrschaft der Ua’Fiáintorc.html",
-      "realmId": "tir-na-tirth"
+      "realmId": "tir-na-tirth",
+      "extent": "territorial",
+      "gloss": "Land der Kuppen",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Umland der Ua’Fiáintorc erhält einen Landschaftsnamen statt eines zweiten Keilerlandes.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/cnoc"
+      }
     },
     {
       "id": "herrschaft-aislearneach-treada",
-      "name": "Herrschaft der Ua’Tréada",
+      "name": "Tir na Sméar",
       "type": "Herrschaft",
       "familyId": "haus-treada",
       "house": "Clan Ua’Tréada",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-treada.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Tirth",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-treada.svg",
+      "bannerAlt": "Banner Tir na Sméar",
       "seat": "Lorai",
       "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Ua’Tréada/Herrschaft der Ua’Tréada.html",
-      "realmId": "tir-na-tirth"
+      "realmId": "tir-na-tirth",
+      "extent": "territorial",
+      "gloss": "Land der Beeren",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das bewachsene Umland der Ua’Tréada erhält einen eigenen Landschaftsnamen statt einer Wiederholung des Keilermotivs.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/sm%C3%A9ar"
+      }
     },
     {
       "id": "herrschaft-aislearneach-muileach",
-      "name": "Lehnsherrschaft der Ua’Muileach",
+      "name": "Tir na Srianta",
       "type": "Lehnsherrschaft",
       "familyId": "haus-muileach",
       "house": "Clan Ua’Muileach",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Tirth",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-muileach.svg",
+      "bannerAlt": "Banner Tir na Srianta",
       "seat": "Athan",
       "parentId": "oberherrschaft-aislearneach-tir-na-tirth",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Lehnsherrschaft der Ua’Muileach/Lehnsherrschaft der Ua’Muileach.html",
-      "realmId": "tir-na-tirth"
+      "realmId": "tir-na-tirth",
+      "extent": "territorial",
+      "gloss": "Land der Zügel",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Pferdezeichen der Ua’Muileach und das eigene Lehen um Athan.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/srian"
+      }
     },
     {
       "id": "herrschaft-aislearneach-feannag",
-      "name": "Lehnsherrschaft der An’Feannag",
+      "name": "Tir na Meala",
       "type": "Lehnsherrschaft",
       "familyId": "haus-feannag",
       "house": "Clan An’Feannag",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-faela.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Faela",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-feannag.svg",
+      "bannerAlt": "Banner Tir na Meala",
       "seat": "Ceatharlach",
       "parentId": "oberherrschaft-aislearneach-tir-na-faela",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Lehnsherrschaft der An’Feannag/Lehnsherrschaft der An’Feannag.html",
-      "realmId": "tir-na-faela"
+      "realmId": "tir-na-faela",
+      "extent": "territorial",
+      "gloss": "Land des Honigs",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der weiße Bär der An’Feannag; Honig unterscheidet das Lehen vom bereits bestehenden Bärenland.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/mil"
+      }
     },
     {
       "id": "herrschaft-aislearneach-uilebheist",
-      "name": "Herrschaft der An’Uilebheist",
+      "name": "Tir na gClochán",
       "type": "Herrschaft",
       "familyId": "haus-uilebheist",
       "house": "Clan An’Uilebheist",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-uilebheist.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Adharcach",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-uilebheist.svg",
+      "bannerAlt": "Banner Tir na gClochán",
       "seat": "Foraoise",
       "parentId": "oberherrschaft-aislearneach-tir-na-adharcach",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Uilebheist/Herrschaft der An’Uilebheist.html",
-      "realmId": "tir-na-adharcach"
+      "realmId": "tir-na-adharcach",
+      "extent": "territorial",
+      "gloss": "Land der Trittsteine",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der eigenständige ländliche Verwaltungszweig der An’Uilebheist unter dem kirchlichen Gebiet.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/cloch%C3%A1n"
+      }
     },
     {
       "id": "herrschaft-aislearneach-cnogan",
-      "name": "Herrschaft der Nic’Cnogan",
+      "name": "Tir na gCoirceog",
       "type": "Herrschaft",
       "familyId": "haus-cnogan",
       "house": "Clan Nic’Cnogan",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-nic-cnogan.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-adharcach.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Adharcach",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-cnogan.svg",
+      "bannerAlt": "Banner Tir na gCoirceog",
       "seat": "Foraoise",
       "parentId": "oberherrschaft-aislearneach-tir-na-adharcach",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Nic’Cnogan/Herrschaft der Nic’Cnogan.html",
-      "realmId": "tir-na-adharcach"
+      "realmId": "tir-na-adharcach",
+      "extent": "territorial",
+      "gloss": "Land der Bienenkörbe",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die Biene im Wappen der Nic’Cnogan und ihr eigener ländlicher Verwaltungsbereich.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/coirceog"
+      }
     },
     {
       "id": "herrschaft-aislearneach-fiachiontach",
-      "name": "Herrschaft der Na’Fiachiontach",
+      "name": "Tir na Leabhar",
       "type": "Herrschaft",
       "familyId": "haus-fiachiontach",
       "house": "Clan Na’Fiachiontach",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-fiachiontach.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiachiontach.svg",
+      "bannerAlt": "Banner Tir na Leabhar",
       "seat": "Koldair",
       "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Fiachiontach/Herrschaft der Na’Fiachiontach.html",
-      "realmId": "tir-na-iomaire"
+      "realmId": "tir-na-iomaire",
+      "extent": "territorial",
+      "gloss": "Land der Bücher",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das offene Buch der Na’Fiachiontach.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/leabhar"
+      }
     },
     {
       "id": "herrschaft-aislearneach-tartarfhuil",
-      "name": "Herrschaft der Dal’Tartarfhuil",
+      "name": "Tir na Loingseoireachta",
       "type": "Herrschaft",
       "familyId": "haus-tartarfhuil",
       "house": "Clan Dal’Tartarfhuil",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-dal-tartarfhuil.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-tartarfhuil.svg",
+      "bannerAlt": "Banner Tir na Loingseoireachta",
       "seat": "Koldair",
       "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Dal’Tartarfhuil/Herrschaft der Dal’Tartarfhuil.html",
-      "realmId": "tir-na-iomaire"
+      "realmId": "tir-na-iomaire",
+      "extent": "territorial",
+      "gloss": "Land der Schifffahrt",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das Schiff der Dal’Tartarfhuil; die Seefahrt unterscheidet den Namen vom Segelland Uathneachs.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/loingseoireacht"
+      }
     },
     {
       "id": "herrschaft-aislearneach-gaisgh",
-      "name": "Herrschaft der An’Gaisgh",
+      "name": "Tir na dTuanna",
       "type": "Herrschaft",
       "familyId": "haus-gaisgh",
       "house": "Clan An’Gaisgh",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-gaisgh.svg",
+      "bannerAlt": "Banner Tir na dTuanna",
       "seat": "Broch an Traigh",
       "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
-      "realmId": "tir-na-iomaire"
+      "realmId": "tir-na-iomaire",
+      "extent": "territorial",
+      "gloss": "Land der Äxte",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die Doppeläxte im Wappen der An’Gaisgh.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/tua"
+      }
     },
     {
       "id": "herrschaft-aislearneach-luchdon",
-      "name": "Herrschaft der Na’Luchdon",
+      "name": "Tir na hEasóige",
       "type": "Herrschaft",
       "familyId": "haus-luchdon",
       "house": "Clan Na’Luchdon",
       "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
-      "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Iomaire",
+      "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-luchdon.svg",
+      "bannerAlt": "Banner Tir na hEasóige",
       "seat": "Broch an Creig",
       "parentId": "oberherrschaft-aislearneach-tir-na-iomaire",
       "href": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
-      "realmId": "tir-na-iomaire"
+      "realmId": "tir-na-iomaire",
+      "extent": "territorial",
+      "gloss": "Land des Hermelins",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das kleine weiße Mardertier der Na’Luchdon.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/eas%C3%B3g"
+      }
     },
     {
       "id": "aislearneach-offen-b2bfc8cc-cbaa-463b-81dd-73c4e350eee1",

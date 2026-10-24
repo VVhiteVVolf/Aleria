@@ -1,6 +1,6 @@
 # Leitheach
 
-Die 26 Herrschaftsseiten verwenden die gemeinsame Herrschaftsoberfläche. Inhalt,
+Die 27 Herrschaftsseiten verwenden die gemeinsame Herrschaftsoberfläche. Inhalt,
 Rat und Clanregister liegen in `pages.source.json`; Ziele und Hierarchie im
 Gebietskatalog `Karten/Leitheach/territories.import.json`.
 

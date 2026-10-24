@@ -1,3 +1,3 @@
-import { createTerritory } from '../../../modules/dunfal/territory-page.mjs?v=dunfal-20261022b';
+import { createTerritory } from '../../../modules/dunfal/territory-page.mjs?v=albic-fiefs-20261024';
 
 export default createTerritory('herrschaft-anbhair');

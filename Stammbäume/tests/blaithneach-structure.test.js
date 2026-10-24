@@ -17,6 +17,7 @@ import { createRegistryBrowserIndex, resolveRegistryLocation, searchRegistry } f
 import { loadFamilyById, listFamilyRecords } from '../assets/js/services/family-library.js';
 import { validateWorkspaceForPublishing } from '../../firebase/functions/src/families/family-validation.js';
 import { BLAITHNEACH_SOURCE_COUNTER_PATCHES } from '../assets/js/data/blaithneach-source-counter-patches.js';
+import territoryCatalog from '../../Karten/Blaithneach/territories.import.json' with { type: 'json' };
 
 const inventory = JSON.parse(fs.readFileSync(new URL('../assets/data/source-inventories/blaithneach-2026-10-07.json', import.meta.url), 'utf8'));
 const sourceCell = (id, row, column = 0) => inventory.sources.find(source => source.id === id).rows.find(entry => entry.row === row).cells[column];
@@ -58,7 +59,7 @@ test('one Leite record appears under both countries with separate ranks and is c
   const blaithneach = resolveRegistryLocation(index, ['Blaithneach']);
   assert.equal(blaithneach.totalCount, 11);
   assert.equal(blaithneach.children.length, 3);
-  assert.equal(blaithneach.children.reduce((sum, territory) => sum + territory.children.length, 0), 6);
+  assert.equal(blaithneach.children.reduce((sum, territory) => sum + territory.children.length, 0), 9);
   for (const [territory, count] of [['Tir na Beatha', 3], ['Tir na Dílse', 6], ['Tir na Méinnear', 2]]) {
     assert.equal(resolveRegistryLocation(index, ['Blaithneach', territory]).totalCount, count);
   }
@@ -137,7 +138,8 @@ test('names, seats, ranks and original emblems follow their source columns', () 
   assert.equal(sourceCell('tir-na-beatha', 57, 1).text, 'Donnagh Heaghra');
   assert.equal(sourceCell('tir-na-beatha', 55, 1).text, 'Réadlann');
   for (const definition of BLAITHNEACH_HOUSE_DEFINITIONS.filter(entry => entry.createFamily)) {
-    assert.equal(family(definition.familyId).document.houseProfile.barony, '');
+    const fief = territoryCatalog.territories.find(t => t.familyId === definition.familyId && t.extent);
+    assert.equal(family(definition.familyId).document.houseProfile.barony, fief?.name || '');
   }
 });
 

@@ -22,6 +22,6 @@ const dominions=[...territoriesById.values()].map(t=>({id:t.id,name:t.name,type:
 const state={pins,...context.KartoCategoryCatalog.upgrade({}),regions,dominions,regionTitle:'Fürstentum Dunfal',regionIcon:'/Stammbäume/assets/images/regions/Dunfal/dunfal.png',
   mapImages:{normal:'/Karten/Dunfal/Kartenbilder/normal.webp',regions:'',pins:''},layerNames:{normal:'Karte',regions:'Regionen',pins:'Markierungen'},
   dotSize:80,lblSize:50,displaySettingsVersion:1,markerPresentation:'symbols',pinVisibilityVersion:1,showMarkers:true,showPinLabels:false,alwaysShowLettering:false,extraLayers:[],dm:{sessions:[],notes:'',groupStatus:{}}};
-await writeGeneratedMap(root,'Dunfal/data.json',{schemaVersion:1,dataPath:'Dunfal/data.json',revision:1,updatedAt:'2026-10-22T17:30:00.000Z',generatedStateHash:stateHash(state),state},{check});
+await writeGeneratedMap(root,'Dunfal/data.json',{schemaVersion:1,dataPath:'Dunfal/data.json',revision:2,updatedAt:'2026-10-24T18:20:00.000Z',generatedStateHash:stateHash(state),state},{check});
 await updateGeneratedMapRegistry(root,'DUNFAL',[{id:'dunfal',title:'Fürstentum Dunfal',status:'active',type:'region',markerPresentation:'symbols',hierarchy:[{level:'region',slug:'dunfal',title:'Fürstentum Dunfal'}],folder:'Dunfal',images:{normal:'Dunfal/Kartenbilder/normal.webp'},dataPath:'Dunfal/data.json',link:'karte.html?map=dunfal'}],{check});
 console.log(`Dunfal: ${pins.length} Ortsmarker, ${regions.length} Grenzobjekte und ${dominions.length} Zuordnungen ${check?'geprüft':'vorbereitet'}.`);

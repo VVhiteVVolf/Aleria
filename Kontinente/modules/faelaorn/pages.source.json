@@ -24,7 +24,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         }
       ],
@@ -297,7 +297,8 @@
         "imageAlt": "Karte: Tir na Rann · Land der Verse",
         "href": "/Karten/karte.html?map=faelaorn-tir-na-rann"
       },
-      "councilNote": "An der Spitze des Fürstentums steht Cainneach Urquhart. Die weiteren Ratsämter sind noch nicht namentlich ausgearbeitet."
+      "councilNote": "An der Spitze des Fürstentums steht Cainneach Urquhart. Die weiteren Ratsämter sind noch nicht namentlich ausgearbeitet.",
+      "crestAlt": "Banner Fürstentum Faelaorn"
     },
     {
       "id": "faelaorn-tir-na-rann",
@@ -321,7 +322,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -494,7 +495,7 @@
               "name": "Clan Tir An Durachd",
               "familyId": "haus-durachd",
               "imageSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-durachd.png",
-              "seat": "Zufluchtsort nicht benannt",
+              "seat": "Culrain",
               "liege": "",
               "rank": "Dun-Tiarna-Clan",
               "featured": false
@@ -503,7 +504,7 @@
               "name": "Clan Tir An Ó Eoghainn",
               "familyId": "haus-eoghainn",
               "imageSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-eoghainn.png",
-              "seat": "Zufluchtsort nicht benannt",
+              "seat": "Càrn Bruach",
               "liege": "",
               "rank": "Mor-Tiarna-Clan",
               "featured": false
@@ -634,7 +635,8 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Oberherrschaft Tir na Rann"
     },
     {
       "id": "faelaorn-tir-na-mathgham",
@@ -658,7 +660,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -777,7 +779,7 @@
               "name": "Clan Ó Ard Duff",
               "familyId": "haus-duff",
               "imageSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-duff.png",
-              "seat": "Balgavrie",
+              "seat": "Dalriadh",
               "liege": "",
               "rank": "Dun-Tiarna-Clan",
               "featured": false
@@ -786,7 +788,7 @@
               "name": "Clan Dál Airdmhor",
               "familyId": "haus-airdmhor",
               "imageSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-airdmhor.png",
-              "seat": "Caisteal Gorm",
+              "seat": "Carnascal",
               "liege": "",
               "rank": "Dun-Tiarna-Clan",
               "featured": false
@@ -913,7 +915,8 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Die belegten Asylaufenthalte in Balgavrie und Caisteal Gorm bleiben von den alten Lehen getrennt."
-      }
+      },
+      "crestAlt": "Banner Oberherrschaft Tir na Mathgham"
     },
     {
       "id": "faelaorn-tir-na-braigh",
@@ -937,7 +940,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -1174,7 +1177,8 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Culloch mit den Lehen Borthwicks und Erskines; Grannd dient Erskine."
-      }
+      },
+      "crestAlt": "Banner Oberherrschaft Tir na Braigh"
     },
     {
       "id": "faelaorn-tir-na-faerna",
@@ -1198,7 +1202,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -1470,7 +1474,8 @@
           "bjerk"
         ],
         "note": "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
-      }
+      },
+      "crestAlt": "Banner Oberherrschaft Tir na Faerna"
     },
     {
       "id": "faelaorn-tir-na-damh",
@@ -1494,7 +1499,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -1740,7 +1745,8 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Oberherrschaft Tir na Damh"
     },
     {
       "id": "faelaorn-tir-na-brann",
@@ -1764,7 +1770,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -1984,12 +1990,13 @@
           "hrothgar"
         ],
         "note": "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
-      }
+      },
+      "crestAlt": "Banner Oberherrschaft Tir na Brann"
     },
     {
       "id": "faelaorn-herrschaft-stwatchn",
-      "title": "Herrschaft der Stwatchn",
-      "shortTitle": "Herrschaft der Stwatchn",
+      "title": "Tir na Sionnach",
+      "shortTitle": "Tir na Sionnach",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ru Stwatchn",
       "aliases": [],
@@ -2008,7 +2015,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2018,14 +2025,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Stwatchn",
+          "name": "Tir na Sionnach",
           "slug": "faelaorn-herrschaft-stwatchn"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-stwatchn.svg",
       "copy": {
         "overview": [
           "Clan Ru Stwatchn ist mit dem Sitz Invercalda in Tir na Rann belegt. Unmittelbarer Lehnsherr ist Clan Ui Urquhart."
+        ],
+        "geography": [
+          "Tir na Sionnach bedeutet „Land der Füchse“."
         ]
       },
       "cultureSections": [],
@@ -2088,7 +2098,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-stwatchn",
-          "title": "Herrschaft der Stwatchn",
+          "title": "Tir na Sionnach",
           "center": "Invercalda",
           "sections": [
             {
@@ -2111,7 +2121,8 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Tir na Sionnach"
     },
     {
       "id": "faelaorn-herrschaft-bhaird",
@@ -2135,7 +2146,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2149,7 +2160,7 @@
           "slug": "faelaorn-herrschaft-bhaird"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-bhaird.png",
       "copy": {
         "overview": [
           "Clan Ó / Dál Bhaird ist mit dem Sitz Piobarach in Tir na Rann belegt. Unmittelbarer Lehnsherr ist Clan Ui Urquhart."
@@ -2240,7 +2251,8 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Herrschaft der Bhaird"
     },
     {
       "id": "faelaorn-herrschaft-luthsach",
@@ -2264,7 +2276,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2278,7 +2290,7 @@
           "slug": "faelaorn-herrschaft-luthsach"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-luthsach.png",
       "copy": {
         "overview": [
           "Clan Ó / Dál Luthsach ist mit dem Sitz Piobarach in Tir na Rann belegt. Unmittelbarer Lehnsherr ist Clan Ui Urquhart."
@@ -2369,12 +2381,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Herrschaft der Luthsach"
     },
     {
       "id": "faelaorn-herrschaft-lachlann",
-      "title": "Herrschaft der Lachlann",
-      "shortTitle": "Herrschaft der Lachlann",
+      "title": "Tir na Sciath",
+      "shortTitle": "Tir na Sciath",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Breac Lachlann",
       "aliases": [],
@@ -2393,7 +2406,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2403,14 +2416,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Lachlann",
+          "name": "Tir na Sciath",
           "slug": "faelaorn-herrschaft-lachlann"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lachlann.svg",
       "copy": {
         "overview": [
           "Clan Breac Lachlann ist mit dem Sitz Dun Liath in Tir na Rann belegt. Unmittelbarer Lehnsherr ist Clan Ui Urquhart."
+        ],
+        "geography": [
+          "Tir na Sciath bedeutet „Land der Schilde“."
         ]
       },
       "cultureSections": [],
@@ -2475,7 +2491,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-lachlann",
-          "title": "Herrschaft der Lachlann",
+          "title": "Tir na Sciath",
           "center": "Dun Liath",
           "sections": [
             {
@@ -2498,12 +2514,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Tir na Sciath"
     },
     {
       "id": "faelaorn-herrschaft-drummond",
-      "title": "Herrschaft der Drummond",
-      "shortTitle": "Herrschaft der Drummond",
+      "title": "Tir na Sceiche",
+      "shortTitle": "Tir na Sceiche",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Breac Drummond",
       "aliases": [],
@@ -2522,7 +2539,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2532,14 +2549,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Drummond",
+          "name": "Tir na Sceiche",
           "slug": "faelaorn-herrschaft-drummond"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-drummond.svg",
       "copy": {
         "overview": [
           "Clan Breac Drummond ist mit dem Sitz Dun Grealach in Tir na Rann belegt. Unmittelbarer Lehnsherr ist Clan Ui Urquhart."
+        ],
+        "geography": [
+          "Tir na Sceiche bedeutet „Land des Weißdorns“."
         ]
       },
       "cultureSections": [],
@@ -2604,7 +2624,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-drummond",
-          "title": "Herrschaft der Drummond",
+          "title": "Tir na Sceiche",
           "center": "Dun Grealach",
           "sections": [
             {
@@ -2627,12 +2647,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Tir na Sceiche"
     },
     {
       "id": "faelaorn-herrschaft-dundas",
-      "title": "Herrschaft der Dundas",
-      "shortTitle": "Herrschaft der Dundas",
+      "title": "Tir na gCat",
+      "shortTitle": "Tir na gCat",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ó Dundas",
       "aliases": [],
@@ -2651,7 +2672,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2661,14 +2682,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dundas",
+          "name": "Tir na gCat",
           "slug": "faelaorn-herrschaft-dundas"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dundas.svg",
       "copy": {
         "overview": [
           "Clan Ó Dundas ist mit dem Sitz Dun Foirgneamh in Tir na Rann belegt. Unmittelbarer Lehnsherr ist Clan Ui Urquhart."
+        ],
+        "geography": [
+          "Tir na gCat bedeutet „Land der Katzen“."
         ]
       },
       "cultureSections": [],
@@ -2731,7 +2755,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-dundas",
-          "title": "Herrschaft der Dundas",
+          "title": "Tir na gCat",
           "center": "Dun Foirgneamh",
           "sections": [
             {
@@ -2754,12 +2778,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Tir na gCat"
     },
     {
       "id": "faelaorn-herrschaft-ffearnach",
-      "title": "Ehemalige Herrschaft der Ffearnach",
-      "shortTitle": "Ehemalige Herrschaft der Ffearnach",
+      "title": "Tir na nIarsmaí",
+      "shortTitle": "Tir na nIarsmaí",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Mac Ffearnach",
       "aliases": [],
@@ -2778,7 +2803,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2788,15 +2813,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Ehemalige Herrschaft der Ffearnach",
+          "name": "Tir na nIarsmaí",
           "slug": "faelaorn-herrschaft-ffearnach"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-rann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ffearnach.svg",
       "copy": {
         "overview": [
           "Clan Mac Ffearnach ist mit dem Sitz Caer Fionnach in Tir na Rann belegt.",
           "Mac Ffearnach ist als ausgestorbener Clan überliefert. Ein genauer früherer Rang ist nicht belegt."
+        ],
+        "geography": [
+          "Tir na nIarsmaí bedeutet „Land der Überreste“."
         ]
       },
       "cultureSections": [],
@@ -2847,7 +2875,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-ffearnach",
-          "title": "Ehemalige Herrschaft der Ffearnach",
+          "title": "Tir na nIarsmaí",
           "center": "Caer Fionnach",
           "sections": [
             {
@@ -2870,12 +2898,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Fürstliche Kernregion um Piobarach."
-      }
+      },
+      "crestAlt": "Banner Tir na nIarsmaí"
     },
     {
       "id": "faelaorn-herrschaft-lockart",
-      "title": "Herrschaft der Lockart",
-      "shortTitle": "Herrschaft der Lockart",
+      "title": "Tir na mBroc",
+      "shortTitle": "Tir na mBroc",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ó Lockart",
       "aliases": [],
@@ -2894,7 +2923,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -2904,14 +2933,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Lockart",
+          "name": "Tir na mBroc",
           "slug": "faelaorn-herrschaft-lockart"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lockart.svg",
       "copy": {
         "overview": [
           "Clan Ó Lockart ist mit dem Sitz Cnosbubh in Tir na Mathgham belegt. Unmittelbarer Lehnsherr ist Clan Mac Ard Diuid."
+        ],
+        "geography": [
+          "Tir na mBroc bedeutet „Land der Dachse“."
         ]
       },
       "cultureSections": [],
@@ -2976,7 +3008,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-lockart",
-          "title": "Herrschaft der Lockart",
+          "title": "Tir na mBroc",
           "center": "Cnosbubh",
           "sections": [
             {
@@ -2999,12 +3031,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Die belegten Asylaufenthalte in Balgavrie und Caisteal Gorm bleiben von den alten Lehen getrennt."
-      }
+      },
+      "crestAlt": "Banner Tir na mBroc"
     },
     {
       "id": "faelaorn-herrschaft-fiorghra",
-      "title": "Herrschaft der Fiorghra",
-      "shortTitle": "Herrschaft der Fiorghra",
+      "title": "Tir na Reithí",
+      "shortTitle": "Tir na Reithí",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Tir An Fiorghra",
       "aliases": [],
@@ -3023,7 +3056,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3033,14 +3066,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Fiorghra",
+          "name": "Tir na Reithí",
           "slug": "faelaorn-herrschaft-fiorghra"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-fiorghra.svg",
       "copy": {
         "overview": [
           "Clan Tir An Fiorghra ist mit dem Sitz Lochcaeron in Tir na Mathgham belegt. Unmittelbarer Lehnsherr ist Clan Mac Ard Diuid."
+        ],
+        "geography": [
+          "Tir na Reithí bedeutet „Land der Widder“."
         ]
       },
       "cultureSections": [],
@@ -3105,7 +3141,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-fiorghra",
-          "title": "Herrschaft der Fiorghra",
+          "title": "Tir na Reithí",
           "center": "Lochcaeron",
           "sections": [
             {
@@ -3128,12 +3164,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Die belegten Asylaufenthalte in Balgavrie und Caisteal Gorm bleiben von den alten Lehen getrennt."
-      }
+      },
+      "crestAlt": "Banner Tir na Reithí"
     },
     {
       "id": "faelaorn-herrschaft-ness",
-      "title": "Herrschaft der Ness",
-      "shortTitle": "Herrschaft der Ness",
+      "title": "Tir na gClaímhte",
+      "shortTitle": "Tir na gClaímhte",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan An Ness",
       "aliases": [],
@@ -3152,7 +3189,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3162,14 +3199,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Ness",
+          "name": "Tir na gClaímhte",
           "slug": "faelaorn-herrschaft-ness"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ness.svg",
       "copy": {
         "overview": [
           "Clan An Ness ist mit dem Sitz Glenshear in Tir na Mathgham belegt. Unmittelbarer Lehnsherr ist Clan Mac Ard Diuid."
+        ],
+        "geography": [
+          "Tir na gClaímhte bedeutet „Land der Schwerter“."
         ]
       },
       "cultureSections": [],
@@ -3234,7 +3274,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-ness",
-          "title": "Herrschaft der Ness",
+          "title": "Tir na gClaímhte",
           "center": "Glenshear",
           "sections": [
             {
@@ -3257,12 +3297,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Die belegten Asylaufenthalte in Balgavrie und Caisteal Gorm bleiben von den alten Lehen getrennt."
-      }
+      },
+      "crestAlt": "Banner Tir na gClaímhte"
     },
     {
       "id": "faelaorn-herrschaft-haig",
-      "title": "Herrschaft der Haig",
-      "shortTitle": "Herrschaft der Haig",
+      "title": "Tir na Mac Tíre",
+      "shortTitle": "Tir na Mac Tíre",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ó / Dál Haig",
       "aliases": [],
@@ -3281,7 +3322,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3291,14 +3332,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Haig",
+          "name": "Tir na Mac Tíre",
           "slug": "faelaorn-herrschaft-haig"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-haig.svg",
       "copy": {
         "overview": [
           "Clan Ó / Dál Haig ist mit dem Sitz Tur na Fala in Tir na Mathgham belegt. Unmittelbarer Lehnsherr ist Clan Mac Ard Diuid."
+        ],
+        "geography": [
+          "Tir na Mac Tíre bedeutet „Land der Wölfe“."
         ]
       },
       "cultureSections": [],
@@ -3363,7 +3407,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-haig",
-          "title": "Herrschaft der Haig",
+          "title": "Tir na Mac Tíre",
           "center": "Tur na Fala",
           "sections": [
             {
@@ -3386,12 +3430,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Die belegten Asylaufenthalte in Balgavrie und Caisteal Gorm bleiben von den alten Lehen getrennt."
-      }
+      },
+      "crestAlt": "Banner Tir na Mac Tíre"
     },
     {
       "id": "faelaorn-herrschaft-banlaoch",
-      "title": "Herrschaft der Banlaoch",
-      "shortTitle": "Herrschaft der Banlaoch",
+      "title": "Tir na Giúise",
+      "shortTitle": "Tir na Giúise",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Nic Banlaoch",
       "aliases": [],
@@ -3410,7 +3455,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3420,14 +3465,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Banlaoch",
+          "name": "Tir na Giúise",
           "slug": "faelaorn-herrschaft-banlaoch"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-mathgham.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-banlaoch.svg",
       "copy": {
         "overview": [
           "Clan Nic Banlaoch ist mit dem Sitz Caisteal Gorm in Tir na Mathgham belegt. Unmittelbarer Lehnsherr ist Clan Mac Ard Diuid."
+        ],
+        "geography": [
+          "Tir na Giúise bedeutet „Land der Kiefer“."
         ]
       },
       "cultureSections": [],
@@ -3490,7 +3538,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-banlaoch",
-          "title": "Herrschaft der Banlaoch",
+          "title": "Tir na Giúise",
           "center": "Caisteal Gorm",
           "sections": [
             {
@@ -3513,12 +3561,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Die belegten Asylaufenthalte in Balgavrie und Caisteal Gorm bleiben von den alten Lehen getrennt."
-      }
+      },
+      "crestAlt": "Banner Tir na Giúise"
     },
     {
       "id": "faelaorn-herrschaft-borthwick",
-      "title": "Herrschaft der Borthwick",
-      "shortTitle": "Herrschaft der Borthwick",
+      "title": "Tir na Deilfe",
+      "shortTitle": "Tir na Deilfe",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Tir An Borthwick",
       "aliases": [],
@@ -3537,7 +3586,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3547,14 +3596,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Borthwick",
+          "name": "Tir na Deilfe",
           "slug": "faelaorn-herrschaft-borthwick"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-borthwick.svg",
       "copy": {
         "overview": [
           "Clan Tir An Borthwick ist mit dem Sitz Morvay in Tir na Braigh belegt. Unmittelbarer Lehnsherr ist Clan Mac Culloch."
+        ],
+        "geography": [
+          "Tir na Deilfe bedeutet „Land des Delfins“."
         ]
       },
       "cultureSections": [],
@@ -3619,7 +3671,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-borthwick",
-          "title": "Herrschaft der Borthwick",
+          "title": "Tir na Deilfe",
           "center": "Morvay",
           "sections": [
             {
@@ -3642,12 +3694,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Culloch mit den Lehen Borthwicks und Erskines; Grannd dient Erskine."
-      }
+      },
+      "crestAlt": "Banner Tir na Deilfe"
     },
     {
       "id": "faelaorn-herrschaft-erskine",
-      "title": "Herrschaft der Erskine",
-      "shortTitle": "Herrschaft der Erskine",
+      "title": "Tir na Liús",
+      "shortTitle": "Tir na Liús",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan An Erskine",
       "aliases": [],
@@ -3666,7 +3719,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3676,14 +3729,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Erskine",
+          "name": "Tir na Liús",
           "slug": "faelaorn-herrschaft-erskine"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-erskine.svg",
       "copy": {
         "overview": [
           "Clan An Erskine ist mit dem Sitz Garadhain in Tir na Braigh belegt. Unmittelbarer Lehnsherr ist Clan Mac Culloch."
+        ],
+        "geography": [
+          "Tir na Liús bedeutet „Land der Hechte“."
         ]
       },
       "cultureSections": [],
@@ -3762,7 +3818,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-erskine",
-          "title": "Herrschaft der Erskine",
+          "title": "Tir na Liús",
           "center": "Garadhain",
           "sections": [
             {
@@ -3787,17 +3843,18 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Culloch mit den Lehen Borthwicks und Erskines; Grannd dient Erskine."
-      }
+      },
+      "crestAlt": "Banner Tir na Liús"
     },
     {
       "id": "faelaorn-herrschaft-grannd",
-      "title": "Herrschaft der Grannd",
-      "shortTitle": "Herrschaft der Grannd",
+      "title": "Tir na Sliogán",
+      "shortTitle": "Tir na Sliogán",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Na Grannd",
       "aliases": [],
       "parentHref": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Braigh/Herrschaft der Erskine/Herrschaft der Erskine.html",
-      "parentLabel": "Herrschaft der Erskine",
+      "parentLabel": "Tir na Liús",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -3811,7 +3868,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3821,19 +3878,22 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Erskine",
+          "name": "Tir na Liús",
           "slug": "faelaorn-herrschaft-erskine"
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Grannd",
+          "name": "Tir na Sliogán",
           "slug": "faelaorn-herrschaft-grannd"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-braigh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-grannd.svg",
       "copy": {
         "overview": [
           "Clan Na Grannd ist mit dem Sitz Dun Uisge in Tir na Braigh belegt. Unmittelbarer Lehnsherr ist Clan An Erskine."
+        ],
+        "geography": [
+          "Tir na Sliogán bedeutet „Land der Muscheln“."
         ]
       },
       "cultureSections": [],
@@ -3856,7 +3916,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Herrschaft der Erskine"
+              "value": "Tir na Liús"
             }
           ]
         }
@@ -3898,7 +3958,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-grannd",
-          "title": "Herrschaft der Grannd",
+          "title": "Tir na Sliogán",
           "center": "Dun Uisge",
           "sections": [
             {
@@ -3921,12 +3981,13 @@
         "status": "Albische Herrschaft",
         "occupied": false,
         "note": "Culloch mit den Lehen Borthwicks und Erskines; Grannd dient Erskine."
-      }
+      },
+      "crestAlt": "Banner Tir na Sliogán"
     },
     {
       "id": "faelaorn-herrschaft-durachd",
-      "title": "Herrschaft der Durachd",
-      "shortTitle": "Herrschaft der Durachd",
+      "title": "Tir na mBuailteán",
+      "shortTitle": "Tir na mBuailteán",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Tir An Durachd",
       "aliases": [],
@@ -3945,7 +4006,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -3955,15 +4016,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Durachd",
+          "name": "Tir na mBuailteán",
           "slug": "faelaorn-herrschaft-durachd"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-durachd.svg",
       "copy": {
         "overview": [
           "Clan Tir An Durachd ist mit dem Sitz Culrain in Tir na Faerna belegt. Unmittelbarer Lehnsherr ist Clan Ard Buadhtreun.",
           "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
+        ],
+        "geography": [
+          "Tir na mBuailteán bedeutet „Land der Dreschplätze“."
         ]
       },
       "cultureSections": [],
@@ -4028,7 +4092,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-durachd",
-          "title": "Herrschaft der Durachd",
+          "title": "Tir na mBuailteán",
           "center": "Culrain",
           "sections": [
             {
@@ -4054,12 +4118,13 @@
           "bjerk"
         ],
         "note": "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
-      }
+      },
+      "crestAlt": "Banner Tir na mBuailteán"
     },
     {
       "id": "faelaorn-herrschaft-muirgheal",
-      "title": "Herrschaft der Muirgheal",
-      "shortTitle": "Herrschaft der Muirgheal",
+      "title": "Tir na nEasanna",
+      "shortTitle": "Tir na nEasanna",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Tir An Muirgheal",
       "aliases": [],
@@ -4078,7 +4143,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4088,15 +4153,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Muirgheal",
+          "name": "Tir na nEasanna",
           "slug": "faelaorn-herrschaft-muirgheal"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-muirgheal.svg",
       "copy": {
         "overview": [
           "Clan Tir An Muirgheal ist mit dem Sitz Airdree in Tir na Faerna belegt. Unmittelbarer Lehnsherr ist Clan Ard Buadhtreun.",
           "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
+        ],
+        "geography": [
+          "Tir na nEasanna bedeutet „Land der Wasserfälle“."
         ]
       },
       "cultureSections": [],
@@ -4173,7 +4241,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-muirgheal",
-          "title": "Herrschaft der Muirgheal",
+          "title": "Tir na nEasanna",
           "center": "Airdree",
           "sections": [
             {
@@ -4201,17 +4269,18 @@
           "bjerk"
         ],
         "note": "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
-      }
+      },
+      "crestAlt": "Banner Tir na nEasanna"
     },
     {
       "id": "faelaorn-herrschaft-boyd",
-      "title": "Herrschaft der Boyd",
-      "shortTitle": "Herrschaft der Boyd",
+      "title": "Tir na nEascann",
+      "shortTitle": "Tir na nEascann",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Na Boyd",
       "aliases": [],
       "parentHref": "/Kontinente/Estryll/Fürstentum Faelaorn/Oberherrschaft Tir na Faerna/Herrschaft der Muirgheal/Herrschaft der Muirgheal.html",
-      "parentLabel": "Herrschaft der Muirgheal",
+      "parentLabel": "Tir na nEasanna",
       "hierarchy": [
         {
           "type": "Sammlung",
@@ -4225,7 +4294,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4235,20 +4304,23 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Muirgheal",
+          "name": "Tir na nEasanna",
           "slug": "faelaorn-herrschaft-muirgheal"
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Boyd",
+          "name": "Tir na nEascann",
           "slug": "faelaorn-herrschaft-boyd"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-faerna.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-boyd.svg",
       "copy": {
         "overview": [
           "Clan Na Boyd ist mit dem Sitz Ealach in Tir na Faerna belegt. Unmittelbarer Lehnsherr ist Clan Tir An Muirgheal.",
           "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
+        ],
+        "geography": [
+          "Tir na nEascann bedeutet „Land der Aale“."
         ]
       },
       "cultureSections": [],
@@ -4271,7 +4343,7 @@
             },
             {
               "label": "Oberherrschaft",
-              "value": "Herrschaft der Muirgheal"
+              "value": "Tir na nEasanna"
             }
           ]
         }
@@ -4311,7 +4383,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-boyd",
-          "title": "Herrschaft der Boyd",
+          "title": "Tir na nEascann",
           "center": "Ealach",
           "sections": [
             {
@@ -4337,12 +4409,13 @@
           "bjerk"
         ],
         "note": "Das ehemalige Land der Herden bildet das Jarltum der Bjerk."
-      }
+      },
+      "crestAlt": "Banner Tir na nEascann"
     },
     {
       "id": "faelaorn-herrschaft-agnew",
-      "title": "Herrschaft der Agnew",
-      "shortTitle": "Herrschaft der Agnew",
+      "title": "Tir na hAitinne",
+      "shortTitle": "Tir na hAitinne",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ó Nic Agnew",
       "aliases": [],
@@ -4361,7 +4434,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4371,15 +4444,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Agnew",
+          "name": "Tir na hAitinne",
           "slug": "faelaorn-herrschaft-agnew"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-agnew.svg",
       "copy": {
         "overview": [
           "Clan Ó Nic Agnew ist mit dem Sitz Tighlean in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
           "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
+        ],
+        "geography": [
+          "Tir na hAitinne bedeutet „Land des Ginsters“."
         ]
       },
       "cultureSections": [],
@@ -4442,7 +4518,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-agnew",
-          "title": "Herrschaft der Agnew",
+          "title": "Tir na hAitinne",
           "center": "Tighlean",
           "sections": [
             {
@@ -4469,12 +4545,13 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Tir na hAitinne"
     },
     {
       "id": "faelaorn-herrschaft-duff",
-      "title": "Herrschaft der Duff",
-      "shortTitle": "Herrschaft der Duff",
+      "title": "Tir na gCuileann",
+      "shortTitle": "Tir na gCuileann",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ó Ard Duff",
       "aliases": [],
@@ -4493,7 +4570,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4503,15 +4580,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Duff",
+          "name": "Tir na gCuileann",
           "slug": "faelaorn-herrschaft-duff"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-duff.svg",
       "copy": {
         "overview": [
           "Clan Ó Ard Duff ist mit dem Sitz Dalriadh in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
           "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
+        ],
+        "geography": [
+          "Tir na gCuileann bedeutet „Land der Stechpalmen“."
         ]
       },
       "cultureSections": [],
@@ -4574,7 +4654,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-duff",
-          "title": "Herrschaft der Duff",
+          "title": "Tir na gCuileann",
           "center": "Dalriadh",
           "sections": [
             {
@@ -4601,12 +4681,13 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Tir na gCuileann"
     },
     {
       "id": "faelaorn-herrschaft-dianaomh",
-      "title": "Herrschaft der Dianaomh",
-      "shortTitle": "Herrschaft der Dianaomh",
+      "title": "Tir na hUaighe",
+      "shortTitle": "Tir na hUaighe",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Sid Ard Dianaomh",
       "aliases": [],
@@ -4625,7 +4706,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4635,15 +4716,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dianaomh",
+          "name": "Tir na hUaighe",
           "slug": "faelaorn-herrschaft-dianaomh"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dianaomh.svg",
       "copy": {
         "overview": [
           "Clan Sid Ard Dianaomh ist mit dem Sitz Torbhreac in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
           "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
+        ],
+        "geography": [
+          "Tir na hUaighe bedeutet „Land des Grabes“."
         ]
       },
       "cultureSections": [],
@@ -4706,7 +4790,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-dianaomh",
-          "title": "Herrschaft der Dianaomh",
+          "title": "Tir na hUaighe",
           "center": "Torbhreac",
           "sections": [
             {
@@ -4733,12 +4817,13 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Tir na hUaighe"
     },
     {
       "id": "faelaorn-herrschaft-dobhar",
-      "title": "Herrschaft der Dobhar",
-      "shortTitle": "Herrschaft der Dobhar",
+      "title": "Tir na Madraí Uisce",
+      "shortTitle": "Tir na Madraí Uisce",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan An Dobhar",
       "aliases": [],
@@ -4757,7 +4842,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4767,15 +4852,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Dobhar",
+          "name": "Tir na Madraí Uisce",
           "slug": "faelaorn-herrschaft-dobhar"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dobhar.svg",
       "copy": {
         "overview": [
           "Clan An Dobhar ist mit dem Sitz Maolnair in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
           "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
+        ],
+        "geography": [
+          "Tir na Madraí Uisce bedeutet „Land der Fischotter“."
         ]
       },
       "cultureSections": [],
@@ -4838,7 +4926,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-dobhar",
-          "title": "Herrschaft der Dobhar",
+          "title": "Tir na Madraí Uisce",
           "center": "Maolnair",
           "sections": [
             {
@@ -4865,12 +4953,13 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Tir na Madraí Uisce"
     },
     {
       "id": "faelaorn-herrschaft-forsyth",
-      "title": "Herrschaft der Forsyth",
-      "shortTitle": "Herrschaft der Forsyth",
+      "title": "Tir na gCaorthann",
+      "shortTitle": "Tir na gCaorthann",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Ó Forsyth",
       "aliases": [],
@@ -4889,7 +4978,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -4899,16 +4988,19 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Forsyth",
+          "name": "Tir na gCaorthann",
           "slug": "faelaorn-herrschaft-forsyth"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-forsyth.svg",
       "copy": {
         "overview": [
           "Clan Ó Forsyth ist mit dem Sitz Inverfay in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
           "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung.",
           "Der südliche Forsyth-Bereich auf der heutigen Skjaerheim-Karte ist Niemandsland und Kriegszone. Daneben ist eine Forsyth-Exklave in Tir na Mathgham belegt. Der Clan wird keinem nordischen Jarl als Vasall zugeordnet."
+        ],
+        "geography": [
+          "Tir na gCaorthann bedeutet „Land der Ebereschen“."
         ]
       },
       "cultureSections": [],
@@ -4971,7 +5063,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-forsyth",
-          "title": "Herrschaft der Forsyth",
+          "title": "Tir na gCaorthann",
           "center": "Inverfay",
           "sections": [
             {
@@ -4998,7 +5090,8 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Tir na gCaorthann"
     },
     {
       "id": "faelaorn-herrschaft-elid",
@@ -5022,7 +5115,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5036,7 +5129,7 @@
           "slug": "faelaorn-herrschaft-elid"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/houses/Faelaorn/clan-elid.png",
       "copy": {
         "overview": [
           "Clan Ó Mall Elid ist mit dem Sitz Càrn Bruach in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
@@ -5130,12 +5223,13 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Herrschaft der Elid"
     },
     {
       "id": "faelaorn-herrschaft-oglivy",
-      "title": "Herrschaft der Oglivy",
-      "shortTitle": "Herrschaft der Oglivy",
+      "title": "Tir na Seabhac",
+      "shortTitle": "Tir na Seabhac",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Fir An Oglivy",
       "aliases": [],
@@ -5154,7 +5248,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5164,15 +5258,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Oglivy",
+          "name": "Tir na Seabhac",
           "slug": "faelaorn-herrschaft-oglivy"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-damh.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-oglivy.svg",
       "copy": {
         "overview": [
           "Clan Fir An Oglivy ist mit dem Sitz Inniscaer in Tir na Damh belegt. Unmittelbarer Lehnsherr ist Clan Tir An Ó Eoghainn.",
           "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
+        ],
+        "geography": [
+          "Tir na Seabhac bedeutet „Land der Falken“."
         ]
       },
       "cultureSections": [],
@@ -5235,7 +5332,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-oglivy",
-          "title": "Herrschaft der Oglivy",
+          "title": "Tir na Seabhac",
           "center": "Inniscaer",
           "sections": [
             {
@@ -5262,12 +5359,13 @@
           "stanleagh"
         ],
         "note": "Knything und Stanleagh teilen das besetzte Land der Haine. Der frühere Forsyth-Bereich im Süden ist als Niemandsland und Kriegszone markiert; daraus folgt keine nordische Clanzuweisung."
-      }
+      },
+      "crestAlt": "Banner Tir na Seabhac"
     },
     {
       "id": "faelaorn-herrschaft-cerneige",
-      "title": "Herrschaft der Cerneige",
-      "shortTitle": "Herrschaft der Cerneige",
+      "title": "Tir na nInbhear",
+      "shortTitle": "Tir na nInbhear",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Tair Carnegie",
       "aliases": [],
@@ -5286,7 +5384,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5296,15 +5394,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Cerneige",
+          "name": "Tir na nInbhear",
           "slug": "faelaorn-herrschaft-cerneige"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-cerneige.svg",
       "copy": {
         "overview": [
           "Clan Tair Carnegie ist mit dem Sitz Glenmohr in Tir na Brann belegt. Unmittelbarer Lehnsherr ist Clan Mac Dubglais.",
           "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
+        ],
+        "geography": [
+          "Tir na nInbhear bedeutet „Land der Flussmündungen“."
         ]
       },
       "cultureSections": [],
@@ -5367,7 +5468,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-cerneige",
-          "title": "Herrschaft der Cerneige",
+          "title": "Tir na nInbhear",
           "center": "Glenmohr",
           "sections": [
             {
@@ -5393,12 +5494,13 @@
           "hrothgar"
         ],
         "note": "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
-      }
+      },
+      "crestAlt": "Banner Tir na nInbhear"
     },
     {
       "id": "faelaorn-herrschaft-airdmhor",
-      "title": "Herrschaft der Airdmhor",
-      "shortTitle": "Herrschaft der Airdmhor",
+      "title": "Tir na Sceire",
+      "shortTitle": "Tir na Sceire",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Dál Airdmhor",
       "aliases": [],
@@ -5417,7 +5519,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5427,15 +5529,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Airdmhor",
+          "name": "Tir na Sceire",
           "slug": "faelaorn-herrschaft-airdmhor"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-airdmhor.svg",
       "copy": {
         "overview": [
           "Clan Dál Airdmhor ist mit dem Sitz Carnascal in Tir na Brann belegt. Unmittelbarer Lehnsherr ist Clan Mac Dubglais.",
           "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
+        ],
+        "geography": [
+          "Tir na Sceire bedeutet „Land des Riffs“."
         ]
       },
       "cultureSections": [],
@@ -5498,7 +5603,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-airdmhor",
-          "title": "Herrschaft der Airdmhor",
+          "title": "Tir na Sceire",
           "center": "Carnascal",
           "sections": [
             {
@@ -5524,12 +5629,13 @@
           "hrothgar"
         ],
         "note": "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
-      }
+      },
+      "crestAlt": "Banner Tir na Sceire"
     },
     {
       "id": "faelaorn-herrschaft-wemyss",
-      "title": "Herrschaft der Wemyss",
-      "shortTitle": "Herrschaft der Wemyss",
+      "title": "Tir na gCreag",
+      "shortTitle": "Tir na gCreag",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Clan Tir An Wemyss",
       "aliases": [],
@@ -5548,7 +5654,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5558,15 +5664,18 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Herrschaft der Wemyss",
+          "name": "Tir na gCreag",
           "slug": "faelaorn-herrschaft-wemyss"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-wemyss.svg",
       "copy": {
         "overview": [
           "Clan Tir An Wemyss ist mit dem Sitz Drumrath in Tir na Brann belegt. Unmittelbarer Lehnsherr ist Clan Mac Dubglais.",
           "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
+        ],
+        "geography": [
+          "Tir na gCreag bedeutet „Land der Felszacken“."
         ]
       },
       "cultureSections": [],
@@ -5629,7 +5738,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-wemyss",
-          "title": "Herrschaft der Wemyss",
+          "title": "Tir na gCreag",
           "center": "Drumrath",
           "sections": [
             {
@@ -5655,12 +5764,13 @@
           "hrothgar"
         ],
         "note": "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
-      }
+      },
+      "crestAlt": "Banner Tir na gCreag"
     },
     {
       "id": "faelaorn-herrschaft-dubhan",
-      "title": "Ehemalige Herrschaft der Dubhan",
-      "shortTitle": "Ehemalige Herrschaft der Dubhan",
+      "title": "Tir na Fuil",
+      "shortTitle": "Tir na Fuil",
       "type": "Herrschaft",
       "kicker": "Herrschaft · Sept Dubhan",
       "aliases": [],
@@ -5679,7 +5789,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5689,14 +5799,17 @@
         },
         {
           "type": "Herrschaft",
-          "name": "Ehemalige Herrschaft der Dubhan",
+          "name": "Tir na Fuil",
           "slug": "faelaorn-herrschaft-dubhan"
         }
       ],
-      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/tir-na-brann.png",
+      "crestSrc": "/Stammbäume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dubhan.svg",
       "copy": {
         "overview": [
           "Die Sept Dubhan, eine Nebenlinie des Clan Mac Dubglais aus Faelaorn, bewachte über Jahrhunderte die Grenzfeste Caer Dubhan in Tir na Fuil. Im Krieg gegen die Nordmänner (1718-1721) verlor der Clan seine Heimat; in den Jahren danach starb der Großteil der Familie nach und nach. Nur Breccan Dubhan, seine beiden Kinder Rogaire und Alpin sowie seine Nichte Ailbhe leben noch. Breccan zog mit Rogaire und Alpin nach Celtigerns Wacht, um Haus Draig einen neuen Eid anzubieten."
+        ],
+        "geography": [
+          "Tir na Fuil bedeutet „Land des Blutes“."
         ]
       },
       "cultureSections": [],
@@ -5746,7 +5859,7 @@
       "domains": [
         {
           "territoryId": "faelaorn-herrschaft-dubhan",
-          "title": "Ehemalige Herrschaft der Dubhan",
+          "title": "Tir na Fuil",
           "center": "Caer Dubhan",
           "sections": [
             {
@@ -5773,7 +5886,8 @@
           "hrothgar"
         ],
         "note": "Das ehemalige Land der Wälle bildet das fürstliche Jarltum der Hrothgar."
-      }
+      },
+      "crestAlt": "Banner Tir na Fuil"
     },
     {
       "id": "faelaorn-rann-verwaltung-offen",
@@ -5797,7 +5911,7 @@
         },
         {
           "type": "Fürstentum",
-          "name": "Faelaorn",
+          "name": "Fürstentum Faelaorn",
           "slug": "fuerstentum-faelaorn"
         },
         {
@@ -5849,7 +5963,8 @@
         "imageAlt": "Karte: Tir na Rann · Land der Verse",
         "href": "/Karten/karte.html?map=faelaorn-tir-na-rann"
       },
-      "pending": true
+      "pending": true,
+      "crestAlt": "Banner Ungeklärter Verwaltungsbereich in Tir na Rann"
     }
   ]
 }

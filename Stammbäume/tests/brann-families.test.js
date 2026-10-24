@@ -13,6 +13,7 @@ import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-reg
 import { resolveCanonicalFamilyId } from '../assets/js/modules/family-registry/family-id-aliases.js';
 import { validateWorkspaceForPublishing } from '../../firebase/functions/src/families/family-validation.js';
 import { brannFamilyFingerprint, brannCounterpartFingerprint } from './brann-invariants.js';
+import { HOUSE_DUBHAN_FAMILY } from '../assets/js/data/house-dubhan-family.js';
 
 const read = path => JSON.parse(fs.readFileSync(new URL('../'+path,import.meta.url),'utf8'));
 const audit = read('assets/data/source-inventories/brann-families-audit-2026-10-08.json');
@@ -93,7 +94,10 @@ test('Carnegie spelling and Torcall evidence retain existing person and family i
   const torcall=family('oglivy').persons.find(p=>p.id==='torcall-unknown-oglivy-41-1');
   assert.equal(torcall.name,'Torcall Dubglais');assert.equal(torcall.birth,'1609');assert.equal(torcall.houseId,'house-dubglais');
   assert.equal(pid('dubglais:50:2'),torcall.id);
-  assert.equal(brannFamilyFingerprint(family('dubhan')),baseline.families['haus-dubhan']);
+  const sourceDubhan = withBrannSourceCounterUpgrade(HOUSE_DUBHAN_FAMILY);
+  for (const collection of ['persons', 'partnerships', 'parentages', 'houses', 'cadetBranches']) {
+    assert.deepEqual(family('dubhan')[collection], sourceDubhan[collection], collection);
+  }
 });
 
 test('explicit partner lanes have one alignment owner and missing anchors still fail the authoring guard',()=>{

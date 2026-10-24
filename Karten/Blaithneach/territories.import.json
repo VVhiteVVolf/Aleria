@@ -57,87 +57,129 @@
     },
     {
       "id": "herrschaft-blaithneach-goidin",
-      "name": "Herrschaft der Ua’Goidin",
+      "name": "Tir na nÚll",
       "type": "Herrschaft",
       "familyId": "haus-goidin",
       "house": "Clan Ua’Goidin",
       "crest": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-goidin.png",
-      "banner": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-beatha.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Beatha",
+      "banner": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-goidin.svg",
+      "bannerAlt": "Banner Tir na nÚll",
       "seat": "Sioran",
       "parentId": "oberherrschaft-blaithneach-tir-na-beatha",
       "href": "/Kontinente/Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Goidin/Herrschaft der Ua’Goidin.html",
-      "realmId": "tir-na-beatha"
+      "realmId": "tir-na-beatha",
+      "extent": "territorial",
+      "gloss": "Land der Äpfel",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Das goldene Baumzeichen der Ua’Goidin und ihr eigener ländlicher Herrschaftszweig.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/%C3%BAll"
+      }
     },
     {
       "id": "herrschaft-blaithneach-haeghra",
-      "name": "Lehnsherrschaft der An’Haeghra",
+      "name": "Tir na Braiche",
       "type": "Lehnsherrschaft",
       "familyId": "haus-haeghra",
       "house": "Clan An’Haeghra",
       "crest": "/Stammbäume/assets/images/houses/Blaithneach/clan-an-haeghra.png",
-      "banner": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-beatha.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Beatha",
+      "banner": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-haeghra.svg",
+      "bannerAlt": "Banner Tir na Braiche",
       "seat": "Réadlann",
       "parentId": "oberherrschaft-blaithneach-tir-na-beatha",
       "href": "/Kontinente/Estryll/Fürstentum Blaithneach/Lehnsherrschaft der An’Haeghra/Lehnsherrschaft der An’Haeghra.html",
-      "realmId": "tir-na-beatha"
+      "realmId": "tir-na-beatha",
+      "extent": "territorial",
+      "gloss": "Land des Malzes",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Die Fässer im Wappen der An’Haeghra.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/braich"
+      }
     },
     {
       "id": "herrschaft-blaithneach-suiste",
-      "name": "Herrschaft der Ua’Suiste",
+      "name": "Tir na nGéanna",
       "type": "Herrschaft",
       "familyId": "haus-suiste",
       "house": "Clan Ua’Suiste",
       "crest": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-suiste.png",
-      "banner": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Dílse",
+      "banner": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-suiste.svg",
+      "bannerAlt": "Banner Tir na nGéanna",
       "seat": "Eorach",
       "parentId": "oberherrschaft-blaithneach-tir-na-dilse",
       "href": "/Kontinente/Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Suiste/Herrschaft der Ua’Suiste.html",
-      "realmId": "tir-na-dilse"
+      "realmId": "tir-na-dilse",
+      "extent": "territorial",
+      "gloss": "Land der Gänse",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der weiße Wasservogel der Ua’Suiste.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/g%C3%A9"
+      }
     },
     {
       "id": "herrschaft-blaithneach-gairner",
-      "name": "Herrschaft der Dal’Gáirnér",
+      "name": "Tir na Linnte",
       "type": "Herrschaft",
       "familyId": "haus-gairner",
       "house": "Clan Dal’Gáirnér",
       "crest": "/Stammbäume/assets/images/houses/Blaithneach/clan-dal-gairner.png",
-      "banner": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Dílse",
+      "banner": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-gairner.svg",
+      "bannerAlt": "Banner Tir na Linnte",
       "seat": "Eorach",
       "parentId": "oberherrschaft-blaithneach-tir-na-dilse",
       "href": "/Kontinente/Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Gáirnér/Herrschaft der Dal’Gáirnér.html",
-      "realmId": "tir-na-dilse"
+      "realmId": "tir-na-dilse",
+      "extent": "territorial",
+      "gloss": "Land der Wasserbecken",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der Schwan auf Wasser im Wappen der Dal’Gáirnér; die Wasserflächen unterscheiden das Gebiet vom Schwanenland.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/linn"
+      }
     },
     {
       "id": "herrschaft-blaithneach-leite",
-      "name": "Herrschaft der Dal’Leite",
+      "name": "Tir na Deoraíochta",
       "type": "Herrschaft",
       "familyId": "haus-dal-leite",
       "house": "Clan Dal’Leite",
       "crest": "/Stammbäume/assets/images/houses/Ceitheach/clan-dal-leite.png",
-      "banner": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-dilse.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Dílse",
+      "banner": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-leite.svg",
+      "bannerAlt": "Banner Tir na Deoraíochta",
       "seat": "Ardán",
       "parentId": "oberherrschaft-blaithneach-tir-na-dilse",
       "href": "/Kontinente/Estryll/Fürstentum Blaithneach/Herrschaft der Dal’Leite/Herrschaft der Dal’Leite.html",
-      "realmId": "tir-na-dilse"
+      "realmId": "tir-na-dilse",
+      "extent": "territorial",
+      "gloss": "Land des Exils",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der neue albische Sitz der vertriebenen Dal’Leite in Ardán; ihr früherer Rang wird dadurch nicht neu verliehen.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/deora%C3%ADocht"
+      }
     },
     {
       "id": "herrschaft-blaithneach-eala",
-      "name": "Herrschaft der Ua’Eala",
+      "name": "Tir na hEala",
       "type": "Herrschaft",
       "familyId": "haus-eala",
       "house": "Clan Ua’Eala",
       "crest": "/Stammbäume/assets/images/houses/Blaithneach/clan-ua-eala.png",
-      "banner": "/Stammbäume/assets/images/regions/Blaithneach/tir-na-meinnear.png",
-      "bannerAlt": "Banner Oberherrschaft Tir na Méinnear",
+      "banner": "/Stammbäume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-eala.svg",
+      "bannerAlt": "Banner Tir na hEala",
       "seat": "Cel Bearradh",
       "parentId": "oberherrschaft-blaithneach-tir-na-meinnear",
       "href": "/Kontinente/Estryll/Fürstentum Blaithneach/Herrschaft der Ua’Eala/Herrschaft der Ua’Eala.html",
-      "realmId": "tir-na-meinnear"
+      "realmId": "tir-na-meinnear",
+      "extent": "territorial",
+      "gloss": "Land des Schwans",
+      "territorialReview": {
+        "version": 1,
+        "rationale": "Der schwarze Schwan der Ua’Eala.",
+        "lexicalSource": "https://www.teanglann.ie/en/fgb/eala"
+      }
     },
     {
       "id": "blaithneach-offen-0b26c26d-9541-4aa0-82c3-7d91d1def03e",

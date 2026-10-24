@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Aislearneach/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T20:30:00.000Z",
-  "generatedStateHash": "13eddf7394f1e8cec8636223ab6409d8b59af6e18869b653b4b17d89ca972368",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "18fed905aa4d46b0dbc5c460ad7b3d73de9e7f9d33df156f54959976283543cd",
   "state": {
     "pins": [
       {
@@ -110,7 +110,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-feannag.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-feannag&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-faela.png",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-feannag.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Lehnsherrschaft der An’Feannag/Lehnsherrschaft der An’Feannag.html",
         "region": "Aislearneach",
         "house": "Clan An’Feannag",
@@ -201,7 +201,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-an-gaisgh.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-gaisgh.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der An’Gaisgh/Herrschaft der An’Gaisgh.html",
         "region": "Aislearneach",
         "house": "Clan An’Gaisgh",
@@ -846,7 +846,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-na-luchdon.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-iomaire.png",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-luchdon.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Herrschaft der Na’Luchdon/Herrschaft der Na’Luchdon.html",
         "region": "Aislearneach",
         "house": "Clan Na’Luchdon",
@@ -941,7 +941,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Aislearneach/clan-ua-muileach.png",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-muileach&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Aislearneach/tir-na-tirth.png",
+        "banner": "/Stammbäume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-muileach.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Aislearneach/Lehnsherrschaft der Ua’Muileach/Lehnsherrschaft der Ua’Muileach.html",
         "region": "Aislearneach",
         "house": "Clan Ua’Muileach",
@@ -2328,7 +2328,7 @@
       },
       {
         "id": "wa-13457cd8-54a0-4745-9927-2c8b96282cd8",
-        "name": "Herrschaft der Na’Luchdon",
+        "name": "Tir na hEasóige",
         "kind": "area",
         "paths": [
           [
@@ -2498,7 +2498,7 @@
       },
       {
         "id": "wa-0b23bb39-801a-4f35-9748-b476604b717a",
-        "name": "Herrschaft der An’Gaisgh",
+        "name": "Tir na dTuanna",
         "kind": "area",
         "paths": [
           [
@@ -2652,7 +2652,7 @@
       },
       {
         "id": "wa-70d692b4-9d63-4c79-a50f-cd3cb164e783",
-        "name": "Lehnsherrschaft der An’Feannag",
+        "name": "Tir na Meala",
         "kind": "area",
         "paths": [
           [
@@ -2826,7 +2826,7 @@
       },
       {
         "id": "wa-0420c4c4-7208-4138-81e3-800d9842c552",
-        "name": "Lehnsherrschaft der Ua’Muileach",
+        "name": "Tir na Srianta",
         "kind": "area",
         "paths": [
           [
@@ -4647,7 +4647,7 @@
       },
       {
         "id": "herrschaft-aislearneach-coronach",
-        "name": "Herrschaft der Ua’Coronach",
+        "name": "Tir na Nathrach",
         "type": "Herrschaft",
         "ruler": "Clan Ua’Coronach",
         "seat": "Gaelan",
@@ -4656,7 +4656,7 @@
       },
       {
         "id": "herrschaft-aislearneach-morgacht",
-        "name": "Herrschaft der Na’Morgacht",
+        "name": "Tir na nGeataí",
         "type": "Herrschaft",
         "ruler": "Clan Na’Morgacht",
         "seat": "Broch an Geata",
@@ -4665,7 +4665,7 @@
       },
       {
         "id": "herrschaft-aislearneach-rioga",
-        "name": "Herrschaft der An’Rioga",
+        "name": "Tir na nAncairí",
         "type": "Herrschaft",
         "ruler": "Clan An’Rioga",
         "seat": "Broch an Duhbach",
@@ -4674,7 +4674,7 @@
       },
       {
         "id": "herrschaft-aislearneach-fiantorc",
-        "name": "Herrschaft der Ua’Fiáintorc",
+        "name": "Tir na gCnoc",
         "type": "Herrschaft",
         "ruler": "Clan Ua’Fiáintorc",
         "seat": "Lorai",
@@ -4683,7 +4683,7 @@
       },
       {
         "id": "herrschaft-aislearneach-treada",
-        "name": "Herrschaft der Ua’Tréada",
+        "name": "Tir na Sméar",
         "type": "Herrschaft",
         "ruler": "Clan Ua’Tréada",
         "seat": "Lorai",
@@ -4692,7 +4692,7 @@
       },
       {
         "id": "herrschaft-aislearneach-muileach",
-        "name": "Lehnsherrschaft der Ua’Muileach",
+        "name": "Tir na Srianta",
         "type": "Lehnsherrschaft",
         "ruler": "Clan Ua’Muileach",
         "seat": "Athan",
@@ -4701,7 +4701,7 @@
       },
       {
         "id": "herrschaft-aislearneach-feannag",
-        "name": "Lehnsherrschaft der An’Feannag",
+        "name": "Tir na Meala",
         "type": "Lehnsherrschaft",
         "ruler": "Clan An’Feannag",
         "seat": "Ceatharlach",
@@ -4710,7 +4710,7 @@
       },
       {
         "id": "herrschaft-aislearneach-uilebheist",
-        "name": "Herrschaft der An’Uilebheist",
+        "name": "Tir na gClochán",
         "type": "Herrschaft",
         "ruler": "Clan An’Uilebheist",
         "seat": "Foraoise",
@@ -4719,7 +4719,7 @@
       },
       {
         "id": "herrschaft-aislearneach-cnogan",
-        "name": "Herrschaft der Nic’Cnogan",
+        "name": "Tir na gCoirceog",
         "type": "Herrschaft",
         "ruler": "Clan Nic’Cnogan",
         "seat": "Foraoise",
@@ -4728,7 +4728,7 @@
       },
       {
         "id": "herrschaft-aislearneach-fiachiontach",
-        "name": "Herrschaft der Na’Fiachiontach",
+        "name": "Tir na Leabhar",
         "type": "Herrschaft",
         "ruler": "Clan Na’Fiachiontach",
         "seat": "Koldair",
@@ -4737,7 +4737,7 @@
       },
       {
         "id": "herrschaft-aislearneach-tartarfhuil",
-        "name": "Herrschaft der Dal’Tartarfhuil",
+        "name": "Tir na Loingseoireachta",
         "type": "Herrschaft",
         "ruler": "Clan Dal’Tartarfhuil",
         "seat": "Koldair",
@@ -4746,7 +4746,7 @@
       },
       {
         "id": "herrschaft-aislearneach-gaisgh",
-        "name": "Herrschaft der An’Gaisgh",
+        "name": "Tir na dTuanna",
         "type": "Herrschaft",
         "ruler": "Clan An’Gaisgh",
         "seat": "Broch an Traigh",
@@ -4755,7 +4755,7 @@
       },
       {
         "id": "herrschaft-aislearneach-luchdon",
-        "name": "Herrschaft der Na’Luchdon",
+        "name": "Tir na hEasóige",
         "type": "Herrschaft",
         "ruler": "Clan Na’Luchdon",
         "seat": "Broch an Creig",

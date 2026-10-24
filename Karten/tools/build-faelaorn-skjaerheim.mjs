@@ -27,7 +27,7 @@ for(const realm of ['Faelaorn','Skjaerheim']){
       layerNames:{normal:'Karte',regions:'Regionen',pins:'Markierungen'},dotSize:80,lblSize:50,displaySettingsVersion:1,
       showMarkers:false,showPinLabels:false,alwaysShowLettering:false,extraLayers:[],dm:{sessions:[],notes:'',groupStatus:{}}};
     const dataPath=map.folder+'/data.json';
-    await writeGeneratedMap(root,dataPath,{schemaVersion:1,dataPath,revision:1,updatedAt:'2026-10-22T21:00:00.000Z',generatedStateHash:stateHash(state),state},{check});
+    await writeGeneratedMap(root,dataPath,{schemaVersion:1,dataPath,revision:realm==='Faelaorn'?2:1,updatedAt:realm==='Faelaorn'?'2026-10-24T18:20:00.000Z':'2026-10-22T21:00:00.000Z',generatedStateHash:stateHash(state),state},{check});
     registry.push({id:map.id,title:map.title,status:'active',type:'region',
       hierarchy:[{level:'kingdom',slug:realm.toLowerCase(),title:realm},{level:'region',slug:map.id,title:map.title}],
       folder:map.folder,images:{normal:map.imageSrc.replace('/Karten/',''),regions:map.regionsSrc.replace('/Karten/','')},

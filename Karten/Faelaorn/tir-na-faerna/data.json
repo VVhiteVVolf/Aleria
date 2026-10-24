@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Faelaorn/tir-na-faerna/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T21:00:00.000Z",
-  "generatedStateHash": "a9ed7761de409171a4092dcbe7f5ac9bcf2fd7165e422f8772fdf53537404e00",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "59888ecbce922315ff5e6b8b7eaf05b6747a88e2565fa6445980a765a8e0b699",
   "state": {
     "pins": [],
     "cats": [
@@ -616,7 +616,7 @@
       },
       {
         "id": "faelaorn-herrschaft-durachd",
-        "name": "Herrschaft der Durachd",
+        "name": "Tir na mBuailteán",
         "type": "Herrschaft",
         "ruler": "Clan Tir An Durachd",
         "seat": "Culrain",
@@ -625,7 +625,7 @@
       },
       {
         "id": "faelaorn-herrschaft-muirgheal",
-        "name": "Herrschaft der Muirgheal",
+        "name": "Tir na nEasanna",
         "type": "Herrschaft",
         "ruler": "Clan Tir An Muirgheal",
         "seat": "Airdree",
@@ -634,7 +634,7 @@
       },
       {
         "id": "faelaorn-herrschaft-boyd",
-        "name": "Herrschaft der Boyd",
+        "name": "Tir na nEascann",
         "type": "Herrschaft",
         "ruler": "Clan Na Boyd",
         "seat": "Ealach",

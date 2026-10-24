@@ -11,10 +11,10 @@ const context={window:{}};
 vm.runInNewContext(fs.readFileSync(new URL('../assets/js/herrschaft-data.js',import.meta.url),'utf8'),context);
 const data=context.window.ALERIA_HERRSCHAFT_DATA;
 
-test('thirteen prepared Dunfal pages share the existing shell and deliberately contain no prose',()=>{
+test('thirteen prepared Dunfal pages share the shell; only territorial name meanings supplement the empty prose',()=>{
   assert.equal(pages.pages.length,13);
   for(const source of pages.pages){
-    assert.deepEqual(source.copy,{});
+    assert.deepEqual(Object.keys(source.copy).filter(key=>key!=='geography'),[]);
     const page=createTerritory(source.id,data);assert.equal(page.meta.id,source.id);
     for(const member of source.councilGroups.flatMap(g=>g.members)){
       if(member.imageSrc)assert.ok(fs.existsSync(new URL('../..'+member.imageSrc,import.meta.url)),member.imageSrc);

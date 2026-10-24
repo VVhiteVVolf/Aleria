@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Faelaorn/tir-na-damh/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T21:00:00.000Z",
-  "generatedStateHash": "ec31fe798a34774291c610cee3414f365205b87980da44e10b8a144fea8d5b79",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "7067d93a5558d808cb5ab44103baee50f08f1a11f1ca432250a5cdb1f8064183",
   "state": {
     "pins": [],
     "cats": [
@@ -616,7 +616,7 @@
       },
       {
         "id": "faelaorn-herrschaft-agnew",
-        "name": "Herrschaft der Agnew",
+        "name": "Tir na hAitinne",
         "type": "Herrschaft",
         "ruler": "Clan Ó Nic Agnew",
         "seat": "Tighlean",
@@ -625,7 +625,7 @@
       },
       {
         "id": "faelaorn-herrschaft-duff",
-        "name": "Herrschaft der Duff",
+        "name": "Tir na gCuileann",
         "type": "Herrschaft",
         "ruler": "Clan Ó Ard Duff",
         "seat": "Dalriadh",
@@ -634,7 +634,7 @@
       },
       {
         "id": "faelaorn-herrschaft-dianaomh",
-        "name": "Herrschaft der Dianaomh",
+        "name": "Tir na hUaighe",
         "type": "Herrschaft",
         "ruler": "Clan Sid Ard Dianaomh",
         "seat": "Torbhreac",
@@ -643,7 +643,7 @@
       },
       {
         "id": "faelaorn-herrschaft-dobhar",
-        "name": "Herrschaft der Dobhar",
+        "name": "Tir na Madraí Uisce",
         "type": "Herrschaft",
         "ruler": "Clan An Dobhar",
         "seat": "Maolnair",
@@ -652,7 +652,7 @@
       },
       {
         "id": "faelaorn-herrschaft-forsyth",
-        "name": "Herrschaft der Forsyth",
+        "name": "Tir na gCaorthann",
         "type": "Herrschaft",
         "ruler": "Clan Ó Forsyth",
         "seat": "Inverfay",
@@ -670,7 +670,7 @@
       },
       {
         "id": "faelaorn-herrschaft-oglivy",
-        "name": "Herrschaft der Oglivy",
+        "name": "Tir na Seabhac",
         "type": "Herrschaft",
         "ruler": "Clan Fir An Oglivy",
         "seat": "Inniscaer",

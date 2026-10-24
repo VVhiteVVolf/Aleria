@@ -104,7 +104,7 @@ test('Hedds biologische Eltern und Cwingod-Pflegeeltern bleiben getrennt; March 
   const march=morgant.persons.find(p=>p.id==='march-morgant');
   assert.match(march.notes,/Stwatchn aus Faelaorn/);
   const stwatchn = getRegisteredFamily('haus-stwatchn');
-  assert.deepEqual(stwatchn.folderPath, ['Faelaorn', 'Tir na Rann', 'Invercalda']);
+  assert.deepEqual(stwatchn.folderPath, ['Faelaorn', 'Tir na Rann', 'Tir na Sionnach', 'Invercalda']);
   assert.equal(stwatchn.family.extensions.blankFamily, false);
   assert.ok(stwatchn.family.persons.length > 0);
   const branch=morgant.cadetBranches.find(b=>b.parentPersonId===march.id);

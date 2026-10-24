@@ -30,7 +30,8 @@ export const pages = territories.map(territory => {
   // The Lága hold both the principality and its core domain. Their six Mor
   // Tiarna belong on the realm page, not in the core domain's local register.
   const children = isRoot ? structure.clans.filter(c => c.rankId === 'mor-tiarna') : structure.clans.filter(c =>
-    c.liege === clan.id && (territory.type === 'Herrschaft' || c.regionId === territory.id));
+    c.liege === clan.id && c.territoryId !== territory.id &&
+    territoriesById.get(c.territoryId)?.parentId === territory.id);
   const groups = [ { title: isRoot ? 'Fürstenclan' : 'Herrschender Clan', houses: [family(clan, true)] } ];
   for (const [label, predicate] of [
     ['Mor Tiarna', c => c.rankId === 'mor-tiarna'], ['Dún Tiarna', c => c.rankId === 'dun-tiarna'],
@@ -51,7 +52,9 @@ export const pages = territories.map(territory => {
     aliases: isRoot ? ['uathneach'] : [], crestSrc: territory.banner || clan.crest,
     crestAlt: territory.bannerAlt || `Wappen ${clan.name}`, map,
     copy: { overview: paragraphs(territory, clan), history: [], culture: [], economy: [], defense: [],
-      geography: region ? [region.geography, `${region.name} bedeutet „${region.meaning}“.`] : [] },
+      geography: region ? [region.geography, `${region.name} bedeutet „${region.meaning}“.`]
+        : territory.gloss ? [`${territory.name} bedeutet „${territory.gloss}“.`]
+        : territory.extent === 'urban' ? [`Die Herrschaft liegt innerhalb von ${territory.seat}, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet.`] : [] },
     infobox: [{ title: 'Herrschaft', rows: [
       { label: 'Typ', value: territory.type }, { label: 'Herrschender Clan', value: clan.name, href: familyHref(clan) },
       { label: 'Rang', value: rank[clan.rankId] }, { label: 'Sitz', value: territory.seat },

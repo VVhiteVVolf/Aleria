@@ -85,7 +85,7 @@ test('asylum and the Forsyth exclave are additional views of the same canonical 
     assert.ok(resolveRegistryLocation(index, path).records.some(r => r.id === id && r.family === record.family));
     if (id !== 'haus-forsyth') assert.equal(record.additionalPlacements[0].houseProfile.liegeHouseId, '');
   }
-  assert.deepEqual(getRegisteredFamily('haus-forsyth').folderPath, ['Faelaorn', 'Tir na Damh', 'Inverfay']);
+  assert.deepEqual(getRegisteredFamily('haus-forsyth').folderPath, ['Faelaorn', 'Tir na Damh', 'Tir na gCaorthann', 'Inverfay']);
   assert.deepEqual(searchRegistry(index, 'Duff Balgavrie').families.map(x => x.record.id), ['haus-duff']);
   assert.deepEqual(searchRegistry(index, 'Durachd Asyl').families.map(x => x.record.id), ['haus-durachd']);
 });

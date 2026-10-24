@@ -14,13 +14,13 @@ for (const file of ['Kontinente/assets/js/herrschaft-data.js', 'Kontinente/konti
   vm.runInNewContext(fs.readFileSync(new URL(file, root), 'utf8'), context);
 }
 const stored = JSON.parse(fs.readFileSync(new URL('Karten/Uathneach/data.json', root), 'utf8'));
-const exists = href => fs.existsSync(new URL('.' + new URL(href, 'https://aleria.local').pathname, root));
+const exists = href => fs.existsSync(new URL('.' + new URL(href.startsWith('/') ? href : '/Stammbäume/' + href, 'https://aleria.local').pathname, root));
 
 test('Uathneach retains the seven territories and ranks of accepted version 1', () => {
   assert.equal(structure.selection.number, 1);
   assert.equal(structure.regions.length, 7);
   assert.equal(structure.clans.length, 26);
-  assert.equal(pages.length, 13);
+  assert.equal(pages.length, 27);
   assert.equal(structure.clans.find(c => c.id === 'midgna').rankId, 'mor-tiarna');
   assert.equal(structure.clans.find(c => c.id === 'midgna').liege, 'laga');
   assert.equal(structure.clans.find(c => c.id === 'fastaigh').liege, 'laga');
@@ -79,7 +79,8 @@ test('pages expose only their own settlements and immediately subordinate clans 
   assert.equal(placeCount, 18, 'every settlement occurs exactly once');
   const reithe = structure.settlements.find(p => p.id === 'reithe');
   assert.equal(reithe.mapRegionId, 'uathneach-tir-na-taoide');
-  assert.equal(reithe.territoryId, 'uathneach-tir-na-laimhe');
+  assert.equal(reithe.territoryId, 'uathneach-herrschaft-muirin');
+  assert.equal(territoriesById.get(reithe.territoryId).parentId, 'uathneach-tir-na-laimhe');
 });
 
 test('map positions round-trip from top-left source anchors and retain all 26 fixed residents', () => {

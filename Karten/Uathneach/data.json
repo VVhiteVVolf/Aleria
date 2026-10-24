@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Uathneach/data.json",
-  "revision": 4,
-  "updatedAt": "2026-10-24T17:30:00.000Z",
-  "generatedStateHash": "f4864eb71f87af482bee53cd9009885e765c288697d53953ac5c9c7438ed0b01",
+  "revision": 5,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "55d6ed581b9efbbf4b7aa4b63b1dabc16c3f92e83691262b604e261eea697c8b",
   "state": {
     "pins": [
       {
@@ -113,8 +113,8 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-einsiedlerkrebs.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Fánaíochta/Tir na Fánaíochta.html",
         "region": "Uathneach",
         "house": "Dál Siubhrán",
         "faction": "",
@@ -174,7 +174,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": "uathneach-tir-na-laimhe",
+        "dominionId": "uathneach-herrschaft-einsiedlerkrebs",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
           "source": "Uathneach Normale Karte.png",
@@ -204,7 +204,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/fastaigh.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fastaigh&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fastaigh.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Herrschaft von Bronnan/Herrschaft von Bronnan.html",
         "region": "Uathneach",
         "house": "Dál Fastaigh",
@@ -295,8 +295,8 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/muirin.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/laimhe.webp",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na Láimhe.html",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-muirin.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Láimhe/Tir na nGliomach/Tir na nGliomach.html",
         "region": "Uathneach",
         "house": "Ua Muirin",
         "faction": "",
@@ -359,12 +359,12 @@
           },
           {
             "k": "Lehenszugehörigkeit",
-            "v": "Tir na Dála · fürstliches Sonderlehen"
+            "v": "Tir na nGliomach · fürstliches Sonderlehen"
           }
         ],
         "text": "Broch an Reithe liegt geografisch in Tir na Seolta, dient als Lehen der Ua Muirin jedoch unmittelbar den Mac Ard’Lága und wird bei Tir na Dála geführt.",
         "secret": false,
-        "dominionId": "uathneach-tir-na-laimhe",
+        "dominionId": "uathneach-herrschaft-muirin",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
           "source": "Uathneach Normale Karte.png",
@@ -485,7 +485,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/luachra.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-luachra&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/sruthan.webp",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-luachra.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Sruthán/Herrschaft von Treabhair/Herrschaft von Treabhair.html",
         "region": "Uathneach",
         "house": "Nic Luachra",
@@ -667,8 +667,8 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/fiodhran.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/gcoillte.webp",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCoillte.html",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fiodhran.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na gCoillte/Tir na gCurach/Tir na gCurach.html",
         "region": "Uathneach",
         "house": "Na Fiodhrán",
         "faction": "",
@@ -728,7 +728,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": "uathneach-tir-na-gcoillte",
+        "dominionId": "uathneach-herrschaft-fiodhran",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
           "source": "Uathneach Normale Karte.png",
@@ -851,8 +851,8 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/cairge.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/taoide.webp",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na Taoide.html",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cairge.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Taoide/Tir na bPortán/Tir na bPortán.html",
         "region": "Uathneach",
         "house": "Ua Cairge",
         "faction": "",
@@ -912,7 +912,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": "uathneach-tir-na-taoide",
+        "dominionId": "uathneach-herrschaft-cairge",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
           "source": "Uathneach Normale Karte.png",
@@ -1034,8 +1034,8 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/cadhla.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/dtorc.webp",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na dTorc.html",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cadhla.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na dTorc/Tir na Líonta/Tir na Líonta.html",
         "region": "Uathneach",
         "house": "An Cadhla",
         "faction": "",
@@ -1095,7 +1095,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": "uathneach-tir-na-dtorc",
+        "dominionId": "uathneach-herrschaft-cadhla",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
           "source": "Uathneach Normale Karte.png",
@@ -1216,7 +1216,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-suilgeach&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-suilgeach.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Herrschaft von Caorthann/Herrschaft von Caorthann.html",
         "region": "Uathneach",
         "house": "Na Suilgeach",
@@ -1307,8 +1307,8 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/creagan.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/conaire.webp",
-        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na Conaire.html",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-creagan.svg",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Conaire/Tir na bhFeochadán/Tir na bhFeochadán.html",
         "region": "Uathneach",
         "house": "Tir An Creagán",
         "faction": "",
@@ -1368,7 +1368,7 @@
         ],
         "text": "",
         "secret": false,
-        "dominionId": "uathneach-tir-na-conaire",
+        "dominionId": "uathneach-herrschaft-creagan",
         "sourceRef": {
           "provider": "aleria-reviewed-map",
           "source": "Uathneach Normale Karte.png",
@@ -1491,7 +1491,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/lasgair.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-lasgair&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-lasgair.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Mhorcha/Herrschaft von Mhorcha.html",
         "region": "Uathneach",
         "house": "Ua Lasgair",
@@ -1582,7 +1582,7 @@
         "imgLink": "",
         "crest": "/Stammbäume/assets/images/houses/Uathneach/clannmhar.webp",
         "crestLink": "/Stammbäume/Stammbaum.html?family=haus-clannmhar&mode=view",
-        "banner": "/Stammbäume/assets/images/regions/Uathneach/cloiche.webp",
+        "banner": "/Stammbäume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-clannmhar.svg",
         "bannerLink": "/Kontinente/Estryll/Fürstentum Uathneach/Tir na Cloiche/Herrschaft von Rioghain/Herrschaft von Rioghain.html",
         "region": "Uathneach",
         "house": "Tir an Clannmhar",
@@ -1765,7 +1765,7 @@
       },
       {
         "id": "uathneach-herrschaft-fastaigh",
-        "name": "Herrschaft von Bronnan",
+        "name": "Tir na hAille",
         "type": "Herrschaft",
         "ruler": "Dál Fastaigh",
         "seat": "Bronnan",
@@ -1773,7 +1773,7 @@
       },
       {
         "id": "uathneach-herrschaft-lasgair",
-        "name": "Herrschaft von Mhorcha",
+        "name": "Tir na nEití",
         "type": "Herrschaft",
         "ruler": "Ua Lasgair",
         "seat": "Mhorcha",
@@ -1781,7 +1781,7 @@
       },
       {
         "id": "uathneach-herrschaft-suilgeach",
-        "name": "Herrschaft von Caorthann",
+        "name": "Tir na Réalta",
         "type": "Herrschaft",
         "ruler": "Na Suilgeach",
         "seat": "Caorthann",
@@ -1789,7 +1789,7 @@
       },
       {
         "id": "uathneach-herrschaft-luachra",
-        "name": "Herrschaft von Treabhair",
+        "name": "Tir na Raithní",
         "type": "Herrschaft",
         "ruler": "Nic Luachra",
         "seat": "Treabhair",
@@ -1797,11 +1797,123 @@
       },
       {
         "id": "uathneach-herrschaft-clannmhar",
-        "name": "Herrschaft von Rioghain",
+        "name": "Tir na Snaidhme",
         "type": "Herrschaft",
         "ruler": "Tir an Clannmhar",
         "seat": "Rioghain",
         "parentId": "uathneach-tir-na-cloiche"
+      },
+      {
+        "id": "uathneach-herrschaft-briccne",
+        "name": "Herrschaft der Na Briccne",
+        "type": "Herrschaft",
+        "ruler": "Na Briccne",
+        "seat": "Dunnean",
+        "parentId": "uathneach-tir-na-laimhe"
+      },
+      {
+        "id": "uathneach-herrschaft-arbhair",
+        "name": "Herrschaft der Dâl Arbhair",
+        "type": "Herrschaft",
+        "ruler": "Dâl Arbhair",
+        "seat": "Dunnean",
+        "parentId": "uathneach-tir-na-laimhe"
+      },
+      {
+        "id": "uathneach-herrschaft-scathain",
+        "name": "Herrschaft der An Scatháin",
+        "type": "Herrschaft",
+        "ruler": "An Scatháin",
+        "seat": "Dunnean",
+        "parentId": "uathneach-tir-na-laimhe"
+      },
+      {
+        "id": "uathneach-herrschaft-muirin",
+        "name": "Tir na nGliomach",
+        "type": "Herrschaft",
+        "ruler": "Ua Muirin",
+        "seat": "Broch an Reithe",
+        "parentId": "uathneach-tir-na-laimhe"
+      },
+      {
+        "id": "uathneach-herrschaft-cairbre",
+        "name": "Herrschaft der Ua Cairbre",
+        "type": "Herrschaft",
+        "ruler": "Ua Cairbre",
+        "seat": "Orglen",
+        "parentId": "uathneach-tir-na-taoide"
+      },
+      {
+        "id": "uathneach-herrschaft-reannachain",
+        "name": "Herrschaft der Ua Reannachain",
+        "type": "Herrschaft",
+        "ruler": "Ua Reannachain",
+        "seat": "Orglen",
+        "parentId": "uathneach-tir-na-taoide"
+      },
+      {
+        "id": "uathneach-herrschaft-cairge",
+        "name": "Tir na bPortán",
+        "type": "Herrschaft",
+        "ruler": "Ua Cairge",
+        "seat": "Broch an Mhor",
+        "parentId": "uathneach-tir-na-taoide"
+      },
+      {
+        "id": "uathneach-herrschaft-cuilen",
+        "name": "Herrschaft der Ua Cuilen",
+        "type": "Herrschaft",
+        "ruler": "Ua Cuilen",
+        "seat": "Rinnmara",
+        "parentId": "uathneach-tir-na-dtorc"
+      },
+      {
+        "id": "uathneach-herrschaft-cadhla",
+        "name": "Tir na Líonta",
+        "type": "Herrschaft",
+        "ruler": "An Cadhla",
+        "seat": "Broch an Cuan",
+        "parentId": "uathneach-tir-na-dtorc"
+      },
+      {
+        "id": "uathneach-herrschaft-marcaigh",
+        "name": "Herrschaft der Ruin Marcaigh",
+        "type": "Herrschaft",
+        "ruler": "Ruin Marcaigh",
+        "seat": "Kharanor",
+        "parentId": "uathneach-tir-na-cloiche"
+      },
+      {
+        "id": "uathneach-herrschaft-giolla",
+        "name": "Herrschaft der Ruin Giolla",
+        "type": "Herrschaft",
+        "ruler": "Ruin Giolla",
+        "seat": "Kharanor",
+        "parentId": "uathneach-tir-na-cloiche"
+      },
+      {
+        "id": "uathneach-herrschaft-fiodhran",
+        "name": "Tir na gCurach",
+        "type": "Herrschaft",
+        "ruler": "Na Fiodhrán",
+        "seat": "Dathuil",
+        "parentId": "uathneach-tir-na-gcoillte"
+      },
+      {
+        "id": "uathneach-herrschaft-creagan",
+        "name": "Tir na bhFeochadán",
+        "type": "Herrschaft",
+        "ruler": "Tir An Creagán",
+        "seat": "Ceithirn",
+        "parentId": "uathneach-tir-na-conaire"
+      },
+      {
+        "id": "uathneach-herrschaft-einsiedlerkrebs",
+        "name": "Tir na Fánaíochta",
+        "type": "Herrschaft",
+        "ruler": "Dál Siubhrán",
+        "seat": "Féthlinn",
+        "parentId": "uathneach-tir-na-laimhe"
       }
     ],
     "regionTitle": "Fürstentum Uathneach",

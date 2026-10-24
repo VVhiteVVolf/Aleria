@@ -29,7 +29,7 @@ test('the final supplied region names agree across pages, map dominions and the 
   }
   const reithe = data.state.pins.find(pin => pin.id === 'uathneach-reithe');
   assert.equal(reithe.table.find(row => row.k === 'Kartenregion').v, 'Tir na Seolta');
-  assert.equal(reithe.table.find(row => row.k === 'Lehenszugehörigkeit').v, 'Tir na Dála · fürstliches Sonderlehen');
+  assert.equal(reithe.table.find(row => row.k === 'Lehenszugehörigkeit').v, 'Tir na nGliomach · fürstliches Sonderlehen');
 });
 
 test('the normal and regional images are separate verified assets with a visible live marker overlay', () => {

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "dataPath": "Faelaorn/tir-na-braigh/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T21:00:00.000Z",
-  "generatedStateHash": "613e11f0f52b6926ad732cc9bd163033d3b78d735fa0d3a2ab8648ec47106cba",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:20:00.000Z",
+  "generatedStateHash": "7c66bfb249d405961648f1c5c4d6820d9f677432a7f4e45cbfd2f9f083700189",
   "state": {
     "pins": [],
     "cats": [
@@ -616,7 +616,7 @@
       },
       {
         "id": "faelaorn-herrschaft-borthwick",
-        "name": "Herrschaft der Borthwick",
+        "name": "Tir na Deilfe",
         "type": "Herrschaft",
         "ruler": "Clan Tir An Borthwick",
         "seat": "Morvay",
@@ -625,7 +625,7 @@
       },
       {
         "id": "faelaorn-herrschaft-erskine",
-        "name": "Herrschaft der Erskine",
+        "name": "Tir na Liús",
         "type": "Herrschaft",
         "ruler": "Clan An Erskine",
         "seat": "Garadhain",
@@ -634,7 +634,7 @@
       },
       {
         "id": "faelaorn-herrschaft-grannd",
-        "name": "Herrschaft der Grannd",
+        "name": "Tir na Sliogán",
         "type": "Herrschaft",
         "ruler": "Clan Na Grannd",
         "seat": "Dun Uisge",

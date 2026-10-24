@@ -313,7 +313,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-laimhe",
-      "territoryId": "uathneach-tir-na-laimhe"
+      "territoryId": "uathneach-herrschaft-briccne"
     },
     {
       "id": "arbhair",
@@ -326,7 +326,7 @@
       "rankId": "laird",
       "alias": "Dal Arbhair",
       "regionId": "uathneach-tir-na-laimhe",
-      "territoryId": "uathneach-tir-na-laimhe"
+      "territoryId": "uathneach-herrschaft-arbhair"
     },
     {
       "id": "scathain",
@@ -339,7 +339,7 @@
       "rankId": "laird",
       "alias": "An Scathain",
       "regionId": "uathneach-tir-na-laimhe",
-      "territoryId": "uathneach-tir-na-laimhe"
+      "territoryId": "uathneach-herrschaft-scathain"
     },
     {
       "id": "muirin",
@@ -352,7 +352,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-laimhe",
-      "territoryId": "uathneach-tir-na-laimhe"
+      "territoryId": "uathneach-herrschaft-muirin"
     },
     {
       "id": "cairbre",
@@ -365,7 +365,7 @@
       "rankId": "laird",
       "alias": "Ua Caibre",
       "regionId": "uathneach-tir-na-taoide",
-      "territoryId": "uathneach-tir-na-taoide"
+      "territoryId": "uathneach-herrschaft-cairbre"
     },
     {
       "id": "reannachain",
@@ -378,7 +378,7 @@
       "rankId": "laird",
       "alias": "Ua Reannchain",
       "regionId": "uathneach-tir-na-taoide",
-      "territoryId": "uathneach-tir-na-taoide"
+      "territoryId": "uathneach-herrschaft-reannachain"
     },
     {
       "id": "cairge",
@@ -391,7 +391,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-taoide",
-      "territoryId": "uathneach-tir-na-taoide"
+      "territoryId": "uathneach-herrschaft-cairge"
     },
     {
       "id": "cuilen",
@@ -404,7 +404,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-dtorc",
-      "territoryId": "uathneach-tir-na-dtorc"
+      "territoryId": "uathneach-herrschaft-cuilen"
     },
     {
       "id": "cadhla",
@@ -417,7 +417,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-dtorc",
-      "territoryId": "uathneach-tir-na-dtorc"
+      "territoryId": "uathneach-herrschaft-cadhla"
     },
     {
       "id": "marcaigh",
@@ -430,7 +430,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-cloiche",
-      "territoryId": "uathneach-tir-na-cloiche"
+      "territoryId": "uathneach-herrschaft-marcaigh"
     },
     {
       "id": "giolla",
@@ -443,7 +443,7 @@
       "rankId": "laird",
       "alias": "",
       "regionId": "uathneach-tir-na-cloiche",
-      "territoryId": "uathneach-tir-na-cloiche"
+      "territoryId": "uathneach-herrschaft-giolla"
     },
     {
       "id": "fiodhran",
@@ -456,7 +456,7 @@
       "rankId": "unknown",
       "alias": "",
       "regionId": "uathneach-tir-na-gcoillte",
-      "territoryId": "uathneach-tir-na-gcoillte"
+      "territoryId": "uathneach-herrschaft-fiodhran"
     },
     {
       "id": "creagan",
@@ -469,7 +469,7 @@
       "rankId": "unknown",
       "alias": "",
       "regionId": "uathneach-tir-na-conaire",
-      "territoryId": "uathneach-tir-na-conaire"
+      "territoryId": "uathneach-herrschaft-creagan"
     },
     {
       "id": "einsiedlerkrebs",
@@ -482,7 +482,7 @@
       "rankId": "unknown",
       "alias": "",
       "regionId": "uathneach-tir-na-laimhe",
-      "territoryId": "uathneach-tir-na-laimhe"
+      "territoryId": "uathneach-herrschaft-einsiedlerkrebs"
     }
   ],
   "settlements": [
@@ -510,7 +510,7 @@
         18
       ],
       "mapRegionId": "uathneach-tir-na-laimhe",
-      "territoryId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-herrschaft-einsiedlerkrebs",
       "residentFamilyIds": [
         "haus-siubhran"
       ]
@@ -536,7 +536,7 @@
         33
       ],
       "mapRegionId": "uathneach-tir-na-taoide",
-      "territoryId": "uathneach-tir-na-laimhe",
+      "territoryId": "uathneach-herrschaft-muirin",
       "residentFamilyIds": [
         "haus-muirin"
       ],
@@ -589,7 +589,7 @@
         31.8
       ],
       "mapRegionId": "uathneach-tir-na-gcoillte",
-      "territoryId": "uathneach-tir-na-gcoillte",
+      "territoryId": "uathneach-herrschaft-fiodhran",
       "residentFamilyIds": [
         "haus-fiodhran"
       ]
@@ -617,7 +617,7 @@
         64
       ],
       "mapRegionId": "uathneach-tir-na-taoide",
-      "territoryId": "uathneach-tir-na-taoide",
+      "territoryId": "uathneach-herrschaft-cairge",
       "residentFamilyIds": [
         "haus-cairge"
       ],
@@ -645,7 +645,7 @@
         87.4
       ],
       "mapRegionId": "uathneach-tir-na-dtorc",
-      "territoryId": "uathneach-tir-na-dtorc",
+      "territoryId": "uathneach-herrschaft-cadhla",
       "residentFamilyIds": [
         "haus-cadhla"
       ],
@@ -685,7 +685,7 @@
         23
       ],
       "mapRegionId": "uathneach-tir-na-conaire",
-      "territoryId": "uathneach-tir-na-conaire",
+      "territoryId": "uathneach-herrschaft-creagan",
       "residentFamilyIds": [
         "haus-creagan"
       ]
