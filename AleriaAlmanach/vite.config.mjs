@@ -5,6 +5,8 @@ import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-s
 import { copyCalendarIconAssets } from './modules/calendar/calendar-build-assets.mjs';
 import { copyWeddingAssets } from '../Ereignisse/modules/weddings/wedding-build-assets.mjs';
 import { copyBattleSourceAssets } from '../Ereignisse/modules/battles/battle-build-assets.mjs';
+import { copyWarSourceAssets } from '../Ereignisse/modules/praetendenten/war-build-assets.mjs';
+import { WAR_PAGES } from '../Ereignisse/modules/praetendenten/war-page-registry.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
 import { buildReligionModules, copyReligionModuleAssets } from '../Religionen/modules/almanach/religion-module-build.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
@@ -95,6 +97,7 @@ function preserveClassicAlmanachScripts() {
       await Promise.all(classicRootFiles.map(file => copyFile(resolve(almanachRoot, file), resolve(buildAlmanachRoot, file))));
       await copyWeddingAssets({ workspaceRoot, buildRoot });
       await copyBattleSourceAssets({ workspaceRoot, buildRoot });
+      await copyWarSourceAssets({ workspaceRoot, buildRoot });
       await cp(
         resolve(almanachRoot, 'public/assets'),
         resolve(buildAlmanachRoot, 'public/assets'),
@@ -145,6 +148,7 @@ export default defineConfig({
         kalender: resolve(almanachRoot, 'kalender.html'),
         ereignisse: resolve(workspaceRoot, 'Ereignisse/index.html'),
         schlachtWellenruh: resolve(workspaceRoot, 'Ereignisse/Schlachten/Erste-Seeschlacht-bei-Wellenruh.html'),
+        ...Object.fromEntries(WAR_PAGES.map(page => [`praetendenten-${page.id}`, resolve(workspaceRoot, 'Ereignisse/Kriege/krieg-der-praetendenten', page.file)])),
         hochzeitDraigPenderyn: resolve(workspaceRoot, 'Ereignisse/Hochzeiten/Haus-Draig-und-Penderyn.html'),
         hochzeiten: resolve(workspaceRoot, 'Ereignisse/hochzeit.html'),
         hochzeitsvorlage: resolve(workspaceRoot, 'Ereignisse/Hochzeitsevent.html'),

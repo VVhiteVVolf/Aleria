@@ -21,14 +21,23 @@ test('maps with drawn markers retain their existing visibility settings',()=>{
  for(const showMarkers of [true,false])assert.deepEqual(resolve({showMarkers},{images:{pins:'drawn-map.webp'}}),{showMarkers});
  assert.deepEqual(resolve(),{showMarkers:false});
 });
-test('all 17 affected maps keep their pins and borders byte-for-byte, with no changes to embedded-marker map policy',()=>{
+test('unchanged maps retain their baseline; reviewed Leitheach revision 2 retains the symbol-map policy',()=>{
  const baseline=JSON.parse(fs.readFileSync(new URL('Kontinente/modules/faelaorn-skjaerheim/sources/alben-pin-baseline.json',root),'utf8'));
  const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
  const ctx={window:{}};vm.runInNewContext(fs.readFileSync(new URL('Karten/karten.registry.js',root),'utf8'),ctx);
  assert.equal(baseline.length,17);
  for(const map of baseline){
-  const {state}=JSON.parse(fs.readFileSync(new URL('Karten/'+map.path,root),'utf8'));
-  assert.equal(hash(state.pins),map.pins,map.id);assert.equal(hash(state.regions),map.regions,map.id);
+  const stored=JSON.parse(fs.readFileSync(new URL('Karten/'+map.path,root),'utf8'));
+  const {state}=stored;
+  if(map.id==='leitheach'||map.id.startsWith('leitheach-')){
+   // The October 22 baseline had no Leitheach places and displaced borders.
+   // Exact corrected geometry and all source markers are covered separately.
+   assert.equal(stored.revision,2);
+   assert.ok(state.pins.length>0);
+   assert.ok(state.pins.every(pin=>pin.sourceRef?.markerId===pin.id));
+  }else{
+   assert.equal(hash(state.pins),map.pins,map.id);assert.equal(hash(state.regions),map.regions,map.id);
+  }
   assert.equal(state.showMarkers,true);assert.equal(state.pinVisibilityVersion,1);
   assert.equal(ctx.window.KartoMapRegistry.byId(map.id).markerPresentation,'symbols');
  }

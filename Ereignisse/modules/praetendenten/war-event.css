@@ -1,0 +1,58 @@
+/* Event reading spread: continuous report, compact reference column. */
+.war-event-hero h1{font-size:clamp(35px,4vw,60px)}
+.war-event-layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;align-items:start;gap:clamp(40px,5vw,90px);margin:55px 0 75px}
+.war-event-reading{grid-column:1;grid-row:1;min-width:0;max-width:850px}
+.war-event-info{grid-column:2;grid-row:1;position:sticky;top:78px;min-width:0;align-self:start}
+.war-event-info-inner{max-height:calc(100dvh - 105px);overflow:auto;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#a58a62 transparent;border:1px solid var(--war-rule);border-top:4px solid var(--party);background:#f4ead685;padding:22px}
+.war-event-info header h2{font:31px/1.15 WarInk,cursive;color:var(--party);margin-top:5px}
+.war-event-info header>p{font-size:10px;color:#816b4c;margin:8px 0 18px}
+.war-event-facts{font-size:13px;line-height:1.65;border-top:1px solid var(--war-rule)}
+.war-event-facts>div{display:grid;grid-template-columns:80px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid #9d8c6a44}
+.war-event-facts dt{font-size:10px;color:#876b46;padding-top:2px}
+.war-event-facts dd{overflow-wrap:anywhere}
+.war-event-original-facts{font-size:12px;margin-top:17px}
+.war-event-original-facts>summary{color:#735335;line-height:1.7;padding:3px 0}
+.war-event-original-facts .war-table-scroll{margin:15px 0}
+.war-event-original-facts .war-source-table{font-size:11px;line-height:1.65;table-layout:fixed}
+.war-event-original-facts .war-source-table td{padding:9px 7px;min-width:0;overflow-wrap:anywhere}
+.war-event-chapters{display:grid;gap:9px;border-top:1px solid var(--war-rule);padding-top:18px;margin-top:20px;font-size:12px;line-height:1.55}
+.war-event-chapters>span{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:#9d8056;margin-bottom:3px}
+.war-event-chapters>a{text-decoration:none;color:#71583a}
+.war-event-chapters>a:hover{text-decoration:underline}
+.war-event-context{border-left:3px solid var(--party);padding-left:25px;margin-bottom:42px}
+.war-event-context h2{font-size:27px;line-height:1.25;margin:10px 0 15px}
+.war-event-context>p{font-size:14px;line-height:1.9;color:#716048;margin-top:15px}
+.war-event-context>p:last-child{font-size:12px;color:#8e7046}
+.war-event-prose{max-width:none;margin:0}
+.war-event-prose>h2{font-size:32px}
+.war-event-relations{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;border-block:1px solid var(--war-rule);padding:25px 0;margin-top:50px}
+.war-event-relations>span{grid-column:1/-1;font:28px WarInk,cursive;color:#8d714b}
+.war-event-relations>a{padding-left:14px;border-left:2px solid var(--party);text-decoration:none;font-size:14px;line-height:1.6}
+.war-event-relations small{display:block;font-size:10px;color:#987c57;margin-top:4px}
+@media(max-width:1100px){
+  .war-event-layout{grid-template-columns:minmax(0,1fr) 310px;gap:35px}
+  .war-event-hero h1{font-size:41px}
+  .war-event-info-inner{padding:18px}
+  .war-event-facts>div{grid-template-columns:70px minmax(0,1fr);gap:10px}
+}
+@media(max-width:900px){
+  .war-event-layout{display:flex;flex-direction:column;gap:35px;margin:35px 0 50px}
+  .war-event-info{position:static;width:100%}
+  .war-event-info-inner{max-height:none;overflow:visible;padding:22px}
+  .war-event-facts>div{grid-template-columns:100px minmax(0,1fr)}
+  .war-event-original-facts .war-source-table{font-size:12px}
+  .war-event-chapters{grid-template-columns:1fr 1fr;gap:12px 20px}
+  .war-event-chapters>span{grid-column:1/-1}
+  .war-event-context{padding-left:20px;margin-bottom:35px}
+}
+@media(max-width:700px){
+  .war-event-hero h1{font-size:36px}
+  .war-event-info-inner{padding:18px}
+  .war-event-facts>div{grid-template-columns:80px minmax(0,1fr)}
+  .war-event-facts{font-size:12px}
+  .war-event-context h2{font-size:26px}
+  .war-event-context>p{font-size:13px}
+  .war-event-prose>h2{font-size:29px}
+  .war-event-relations{gap:20px;font-size:13px}
+  .war-event-relations>a{font-size:13px}
+}

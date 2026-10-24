@@ -1,11 +1,3668 @@
 {
   "schemaVersion": 1,
   "dataPath": "Leitheach/tir-na-tonn/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T16:10:00.000Z",
-  "generatedStateHash": "55d0182fb0a05a41617c24f5d5472f6ccf37d3b5143485675aaed3d953086802",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:00:00.000Z",
+  "generatedStateHash": "fc27518f3b6874ada5936d27cd6ae7ab290db91553e6f74371ba43aac1d2be57",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "b78beec3-eefd-42c9-8bf3-4b9509ea44c9",
+        "title": "Broch an Iar",
+        "x": 0.703125,
+        "y": 0.48819497334348816,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Iar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/b78beec3-eefd-42c9-8bf3-4b9509ea44c9/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "b78beec3-eefd-42c9-8bf3-4b9509ea44c9",
+          "url": "https://www.worldanvil.com/world/map/marker/b78beec3-eefd-42c9-8bf3-4b9509ea44c9/edit",
+          "coordinate": {
+            "x": 2880,
+            "y": 2016,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "3ddbb4cb-32ed-4ecf-938a-ba14288f0050",
+        "title": "Dun Rothar",
+        "x": 0.3876953125,
+        "y": 0.9075907590759076,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dun Rothar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/3ddbb4cb-32ed-4ecf-938a-ba14288f0050/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "3ddbb4cb-32ed-4ecf-938a-ba14288f0050",
+          "url": "https://www.worldanvil.com/world/map/marker/3ddbb4cb-32ed-4ecf-938a-ba14288f0050/edit",
+          "coordinate": {
+            "x": 1588,
+            "y": 364,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "70180594-d1de-4877-815d-a6459d2de116",
+        "title": "Broch an Ear",
+        "x": 0.302978515625,
+        "y": 0.41787255648641786,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Ear"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/70180594-d1de-4877-815d-a6459d2de116/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "70180594-d1de-4877-815d-a6459d2de116",
+          "url": "https://www.worldanvil.com/world/map/marker/70180594-d1de-4877-815d-a6459d2de116/edit",
+          "coordinate": {
+            "x": 1241,
+            "y": 2293,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "b1e5fc72-60cc-4eb2-9c4b-50baf8920eff",
+        "title": "Cluainfionn",
+        "x": 0.50390625,
+        "y": 0.27748159431327746,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cluainfionn"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/b1e5fc72-60cc-4eb2-9c4b-50baf8920eff/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "b1e5fc72-60cc-4eb2-9c4b-50baf8920eff",
+          "url": "https://www.worldanvil.com/world/map/marker/b1e5fc72-60cc-4eb2-9c4b-50baf8920eff/edit",
+          "coordinate": {
+            "x": 2064,
+            "y": 2846,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "94305405-4221-4b9c-815f-fe6df5110104",
+        "title": "Sligeach",
+        "x": 0.79248046875,
+        "y": 0.32140137090632137,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sligeach"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/94305405-4221-4b9c-815f-fe6df5110104/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "94305405-4221-4b9c-815f-fe6df5110104",
+          "url": "https://www.worldanvil.com/world/map/marker/94305405-4221-4b9c-815f-fe6df5110104/edit",
+          "coordinate": {
+            "x": 3246,
+            "y": 2673,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "965eb664-0b49-4d5b-b32e-6c3869c8f43a",
+        "title": "Torcallt",
+        "x": 0.69970703125,
+        "y": 0.3457730388423458,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Torcallt"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/965eb664-0b49-4d5b-b32e-6c3869c8f43a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "965eb664-0b49-4d5b-b32e-6c3869c8f43a",
+          "url": "https://www.worldanvil.com/world/map/marker/965eb664-0b49-4d5b-b32e-6c3869c8f43a/edit",
+          "coordinate": {
+            "x": 2866,
+            "y": 2577,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "98429c14-368a-41f0-b100-0d58508ed9e1",
+        "title": "Inbhirchlach",
+        "x": 0.950439453125,
+        "y": 0.19218075653719213,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Inbhirchlach"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/98429c14-368a-41f0-b100-0d58508ed9e1/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "98429c14-368a-41f0-b100-0d58508ed9e1",
+          "url": "https://www.worldanvil.com/world/map/marker/98429c14-368a-41f0-b100-0d58508ed9e1/edit",
+          "coordinate": {
+            "x": 3893,
+            "y": 3182,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "9905d263-2a3f-4b44-ba47-a79f8035e42a",
+        "title": "Maraois",
+        "x": 0.244873046875,
+        "y": 0.6742828128966742,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maraois"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/9905d263-2a3f-4b44-ba47-a79f8035e42a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "9905d263-2a3f-4b44-ba47-a79f8035e42a",
+          "url": "https://www.worldanvil.com/world/map/marker/9905d263-2a3f-4b44-ba47-a79f8035e42a/edit",
+          "coordinate": {
+            "x": 1003,
+            "y": 1283,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "99bb2bcc-e372-4f57-9115-d2b8008f4ed5",
+        "title": "Mòinchuim",
+        "x": 0.43310546875,
+        "y": 0.40314800710840315,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mòinchuim"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/99bb2bcc-e372-4f57-9115-d2b8008f4ed5/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "99bb2bcc-e372-4f57-9115-d2b8008f4ed5",
+          "url": "https://www.worldanvil.com/world/map/marker/99bb2bcc-e372-4f57-9115-d2b8008f4ed5/edit",
+          "coordinate": {
+            "x": 1774,
+            "y": 2351,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "9c7dda64-c8ee-4488-9b5e-94d6a059b3a3",
+        "title": "Camassgian",
+        "x": 0.31396484375,
+        "y": 0.6722518405686723,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Camassgian"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/9c7dda64-c8ee-4488-9b5e-94d6a059b3a3/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "9c7dda64-c8ee-4488-9b5e-94d6a059b3a3",
+          "url": "https://www.worldanvil.com/world/map/marker/9c7dda64-c8ee-4488-9b5e-94d6a059b3a3/edit",
+          "coordinate": {
+            "x": 1286,
+            "y": 1291,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "a5f18483-a10c-42dd-98e1-740e2dcf7ad8",
+        "title": "Inbhirruadh",
+        "x": 0.41162109375,
+        "y": 0.24600152322924596,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Inbhirruadh"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/a5f18483-a10c-42dd-98e1-740e2dcf7ad8/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "a5f18483-a10c-42dd-98e1-740e2dcf7ad8",
+          "url": "https://www.worldanvil.com/world/map/marker/a5f18483-a10c-42dd-98e1-740e2dcf7ad8/edit",
+          "coordinate": {
+            "x": 1686,
+            "y": 2970,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e",
+        "title": "Zur Wetterklaue",
+        "x": 0.45849609375,
+        "y": 0.5818735719725818,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zur Wetterklaue"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e/edit"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e",
+          "url": "https://www.worldanvil.com/world/map/marker/aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e/edit",
+          "coordinate": {
+            "x": 1878,
+            "y": 1647,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_tavern.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "aa2541e8-cd29-4e63-815d-6c276d98151a",
+        "title": "Bruthachmara",
+        "x": 0.86572265625,
+        "y": 0.36227468900736226,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bruthachmara"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/aa2541e8-cd29-4e63-815d-6c276d98151a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "aa2541e8-cd29-4e63-815d-6c276d98151a",
+          "url": "https://www.worldanvil.com/world/map/marker/aa2541e8-cd29-4e63-815d-6c276d98151a/edit",
+          "coordinate": {
+            "x": 3546,
+            "y": 2512,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "90f53c15-a7bd-4cc3-945d-3e92597fe499",
+        "title": "Cuansrath",
+        "x": 0.61962890625,
+        "y": 0.6768215283066767,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cuansrath"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/90f53c15-a7bd-4cc3-945d-3e92597fe499/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "90f53c15-a7bd-4cc3-945d-3e92597fe499",
+          "url": "https://www.worldanvil.com/world/map/marker/90f53c15-a7bd-4cc3-945d-3e92597fe499/edit",
+          "coordinate": {
+            "x": 2538,
+            "y": 1273,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "bc7d9d1a-503b-4235-84a6-36d052f73dff",
+        "title": "Druimghorm",
+        "x": 0.436279296875,
+        "y": 0.6537192180756537,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Druimghorm"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/bc7d9d1a-503b-4235-84a6-36d052f73dff/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "bc7d9d1a-503b-4235-84a6-36d052f73dff",
+          "url": "https://www.worldanvil.com/world/map/marker/bc7d9d1a-503b-4235-84a6-36d052f73dff/edit",
+          "coordinate": {
+            "x": 1787,
+            "y": 1364,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_village.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "bdf63228-8582-4f86-bd6a-fbc7e59bf48f",
+        "title": "Gartglaise",
+        "x": 0.383056640625,
+        "y": 0.5699416095455699,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gartglaise"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/bdf63228-8582-4f86-bd6a-fbc7e59bf48f/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "bdf63228-8582-4f86-bd6a-fbc7e59bf48f",
+          "url": "https://www.worldanvil.com/world/map/marker/bdf63228-8582-4f86-bd6a-fbc7e59bf48f/edit",
+          "coordinate": {
+            "x": 1569,
+            "y": 1694,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "c70820ac-b487-4551-88a4-b7787b79b246",
+        "title": "Stèidhfhionn",
+        "x": 0.528564453125,
+        "y": 0.8085808580858086,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Stèidhfhionn"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/c70820ac-b487-4551-88a4-b7787b79b246/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "c70820ac-b487-4551-88a4-b7787b79b246",
+          "url": "https://www.worldanvil.com/world/map/marker/c70820ac-b487-4551-88a4-b7787b79b246/edit",
+          "coordinate": {
+            "x": 2165,
+            "y": 754,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "dc3a04af-8a77-476e-9d8a-458ecb484a4f",
+        "title": "Broch an Tiomnaidh - Orden der Lilie",
+        "x": 0.279296875,
+        "y": 0.26275704493526275,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Tiomnaidh - Orden der Lilie"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/dc3a04af-8a77-476e-9d8a-458ecb484a4f/edit"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "dc3a04af-8a77-476e-9d8a-458ecb484a4f",
+          "url": "https://www.worldanvil.com/world/map/marker/dc3a04af-8a77-476e-9d8a-458ecb484a4f/edit",
+          "coordinate": {
+            "x": 1144,
+            "y": 2904,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "f30c320c1edecba0164470b8ba87a286.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "dc68535a-aa57-4399-bceb-18a564c88ab2",
+        "title": "Raithdubh",
+        "x": 0.602783203125,
+        "y": 0.22137598375222134,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Raithdubh"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/dc68535a-aa57-4399-bceb-18a564c88ab2/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "dc68535a-aa57-4399-bceb-18a564c88ab2",
+          "url": "https://www.worldanvil.com/world/map/marker/dc68535a-aa57-4399-bceb-18a564c88ab2/edit",
+          "coordinate": {
+            "x": 2469,
+            "y": 3067,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "f4628da2-cb33-47f8-b46c-77397294ab04",
+        "title": "Eileangorm",
+        "x": 0.24853515625,
+        "y": 0.8065498857578066,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eileangorm"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/f4628da2-cb33-47f8-b46c-77397294ab04/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "f4628da2-cb33-47f8-b46c-77397294ab04",
+          "url": "https://www.worldanvil.com/world/map/marker/f4628da2-cb33-47f8-b46c-77397294ab04/edit",
+          "coordinate": {
+            "x": 1018,
+            "y": 762,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "6836e709-5c5b-4ecd-8f75-eb816ac23a8f",
+        "title": "Achadhfraoch",
+        "x": 0.51904296875,
+        "y": 0.6448337141406448,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Achadhfraoch"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/6836e709-5c5b-4ecd-8f75-eb816ac23a8f/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "6836e709-5c5b-4ecd-8f75-eb816ac23a8f",
+          "url": "https://www.worldanvil.com/world/map/marker/6836e709-5c5b-4ecd-8f75-eb816ac23a8f/edit",
+          "coordinate": {
+            "x": 2126,
+            "y": 1399,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "1e76076b-007a-4f40-a2ac-7e03e9446c26",
+        "title": "Eaglais an Sìthein",
+        "x": 0.61669921875,
+        "y": 0.7936024371667936,
+        "cat": "mmflteurd4n5",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eaglais an Sìthein"
+          },
+          {
+            "k": "Typ",
+            "v": "Kirchensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/1e76076b-007a-4f40-a2ac-7e03e9446c26/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "1e76076b-007a-4f40-a2ac-7e03e9446c26",
+          "url": "https://www.worldanvil.com/world/map/marker/1e76076b-007a-4f40-a2ac-7e03e9446c26/edit",
+          "coordinate": {
+            "x": 2526,
+            "y": 813,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "229f536d-a9cb-456c-b38d-78c55bf7b489",
+        "title": "Broch an Òrd - Die Abkömmlinge",
+        "x": 0.50830078125,
+        "y": 0.4673775069814674,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Òrd - Die Abkömmlinge"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/229f536d-a9cb-456c-b38d-78c55bf7b489/edit"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "229f536d-a9cb-456c-b38d-78c55bf7b489",
+          "url": "https://www.worldanvil.com/world/map/marker/229f536d-a9cb-456c-b38d-78c55bf7b489/edit",
+          "coordinate": {
+            "x": 2082,
+            "y": 2098,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "f30c320c1edecba0164470b8ba87a286.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "2bda0258-0937-47c6-909a-bc294e342f65",
+        "title": "Talamhghlas",
+        "x": 0.666259765625,
+        "y": 0.1307438436151307,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Talamhghlas"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/2bda0258-0937-47c6-909a-bc294e342f65/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "2bda0258-0937-47c6-909a-bc294e342f65",
+          "url": "https://www.worldanvil.com/world/map/marker/2bda0258-0937-47c6-909a-bc294e342f65/edit",
+          "coordinate": {
+            "x": 2729,
+            "y": 3424,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "30439c16-0236-4da3-8863-ab2848da28c0",
+        "title": "Eaglais an Eilein",
+        "x": 0.1328125,
+        "y": 0.42523483117542527,
+        "cat": "mmflteurd4n5",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eaglais an Eilein"
+          },
+          {
+            "k": "Typ",
+            "v": "Kirchensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/30439c16-0236-4da3-8863-ab2848da28c0/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "30439c16-0236-4da3-8863-ab2848da28c0",
+          "url": "https://www.worldanvil.com/world/map/marker/30439c16-0236-4da3-8863-ab2848da28c0/edit",
+          "coordinate": {
+            "x": 544,
+            "y": 2264,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "369a265c-d091-4df3-a92f-f62b7b0dd5ad",
+        "title": "Ùrlachan",
+        "x": 0.9013671875,
+        "y": 0.1208428535161209,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ùrlachan"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/369a265c-d091-4df3-a92f-f62b7b0dd5ad/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "369a265c-d091-4df3-a92f-f62b7b0dd5ad",
+          "url": "https://www.worldanvil.com/world/map/marker/369a265c-d091-4df3-a92f-f62b7b0dd5ad/edit",
+          "coordinate": {
+            "x": 3692,
+            "y": 3463,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1e99474f238f704e5c17b306aa9a5c35.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "4923e33a-f5cf-4c98-8bc1-78afb49a1cbf",
+        "title": "Mèinngeal",
+        "x": 0.671875,
+        "y": 0.06397562833206394,
+        "cat": "mmflt1x3v22o",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bergbausiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Tir na Tonn",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mèinngeal"
+          },
+          {
+            "k": "Typ",
+            "v": "Bergbausiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/4923e33a-f5cf-4c98-8bc1-78afb49a1cbf/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "4923e33a-f5cf-4c98-8bc1-78afb49a1cbf",
+          "url": "https://www.worldanvil.com/world/map/marker/4923e33a-f5cf-4c98-8bc1-78afb49a1cbf/edit",
+          "coordinate": {
+            "x": 2752,
+            "y": 3687,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1e99474f238f704e5c17b306aa9a5c35.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "4c9547df-34ae-412b-a236-73cfeac2f80f",
+        "title": "Eaglais an Tòrr-mara",
+        "x": 0.685546875,
+        "y": 0.5953287636455953,
+        "cat": "mmflteurd4n5",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eaglais an Tòrr-mara"
+          },
+          {
+            "k": "Typ",
+            "v": "Kirchensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/4c9547df-34ae-412b-a236-73cfeac2f80f/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "4c9547df-34ae-412b-a236-73cfeac2f80f",
+          "url": "https://www.worldanvil.com/world/map/marker/4c9547df-34ae-412b-a236-73cfeac2f80f/edit",
+          "coordinate": {
+            "x": 2808,
+            "y": 1594,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "6373234d-75c8-469a-a932-90c82d69611a",
+        "title": "Srathghlas",
+        "x": 0.620849609375,
+        "y": 0.2982990606752983,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Srathghlas"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/6373234d-75c8-469a-a932-90c82d69611a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "6373234d-75c8-469a-a932-90c82d69611a",
+          "url": "https://www.worldanvil.com/world/map/marker/6373234d-75c8-469a-a932-90c82d69611a/edit",
+          "coordinate": {
+            "x": 2543,
+            "y": 2764,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_village.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "17bf8899-6942-4e23-b78c-65ded2d9eed3",
+        "title": "Uigedruim",
+        "x": 0.8564453125,
+        "y": 0.24422442244224418,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Uigedruim"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/17bf8899-6942-4e23-b78c-65ded2d9eed3/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "17bf8899-6942-4e23-b78c-65ded2d9eed3",
+          "url": "https://www.worldanvil.com/world/map/marker/17bf8899-6942-4e23-b78c-65ded2d9eed3/edit",
+          "coordinate": {
+            "x": 3508,
+            "y": 2977,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "6c0ada74-1d38-49de-9244-e6e4d4be9a1a",
+        "title": "Eaglais an Dòchas",
+        "x": 0.690673828125,
+        "y": 0.21375983752221372,
+        "cat": "mmflteurd4n5",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/klostersiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eaglais an Dòchas"
+          },
+          {
+            "k": "Typ",
+            "v": "Kirchensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/6c0ada74-1d38-49de-9244-e6e4d4be9a1a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "6c0ada74-1d38-49de-9244-e6e4d4be9a1a",
+          "url": "https://www.worldanvil.com/world/map/marker/6c0ada74-1d38-49de-9244-e6e4d4be9a1a/edit",
+          "coordinate": {
+            "x": 2829,
+            "y": 3097,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "6c6e3896-a53a-4de4-9480-448cde76fa07",
+        "title": "Zur Sprunghaften Axt",
+        "x": 0.55859375,
+        "y": 0.3726834221883727,
+        "cat": "mmflvj37jbh2",
+        "templateId": "gastbetrieb",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/taverne.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zur Sprunghaften Axt"
+          },
+          {
+            "k": "Typ",
+            "v": "Taverne"
+          },
+          {
+            "k": "Betreiber",
+            "v": ""
+          },
+          {
+            "k": "Speisen / Getränke",
+            "v": ""
+          },
+          {
+            "k": "Unterkunft",
+            "v": ""
+          },
+          {
+            "k": "Preislage",
+            "v": ""
+          },
+          {
+            "k": "Öffnungszeiten",
+            "v": ""
+          },
+          {
+            "k": "Stammgäste",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/6c6e3896-a53a-4de4-9480-448cde76fa07/edit"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "6c6e3896-a53a-4de4-9480-448cde76fa07",
+          "url": "https://www.worldanvil.com/world/map/marker/6c6e3896-a53a-4de4-9480-448cde76fa07/edit",
+          "coordinate": {
+            "x": 2288,
+            "y": 2471,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_tavern.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "6d4e3d0d-dbc8-4c19-9946-1bad22341f60",
+        "title": "Achadh Mòr - Viehzüchter Gilde",
+        "x": 0.423095703125,
+        "y": 0.7527291190657528,
+        "cat": "location-gildenhaus",
+        "templateId": "natur",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gildenzentrale.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Achadh Mòr - Viehzüchter Gilde"
+          },
+          {
+            "k": "Typ",
+            "v": "Gildenhaus"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Bewohner",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Legenden",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/6d4e3d0d-dbc8-4c19-9946-1bad22341f60/edit"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "6d4e3d0d-dbc8-4c19-9946-1bad22341f60",
+          "url": "https://www.worldanvil.com/world/map/marker/6d4e3d0d-dbc8-4c19-9946-1bad22341f60/edit",
+          "coordinate": {
+            "x": 1733,
+            "y": 974,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_guild.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "762af849-38a6-4121-85d2-1dfc704e95e8",
+        "title": "Fèithchuach",
+        "x": 0.565185546875,
+        "y": 0.5552170601675552,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fèithchuach"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/762af849-38a6-4121-85d2-1dfc704e95e8/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "762af849-38a6-4121-85d2-1dfc704e95e8",
+          "url": "https://www.worldanvil.com/world/map/marker/762af849-38a6-4121-85d2-1dfc704e95e8/edit",
+          "coordinate": {
+            "x": 2315,
+            "y": 1752,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_village.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "7d562b8c-4568-41d5-a8e3-14e7a47f9d48",
+        "title": "Brochsròin",
+        "x": 0.08837890625,
+        "y": 0.5722264534145722,
+        "cat": "location-burg",
+        "templateId": "militaer",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/gro-e-burg.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brochsròin"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/7d562b8c-4568-41d5-a8e3-14e7a47f9d48/edit"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "7d562b8c-4568-41d5-a8e3-14e7a47f9d48",
+          "url": "https://www.worldanvil.com/world/map/marker/7d562b8c-4568-41d5-a8e3-14e7a47f9d48/edit",
+          "coordinate": {
+            "x": 362,
+            "y": 1685,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_castle.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "82869c30-4976-4021-8d03-9550c50fe168",
+        "title": "Buardruim",
+        "x": 0.8154296875,
+        "y": 0.14216806296014217,
+        "cat": "mmflrqajby8b",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bauernsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Buardruim"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernsiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/82869c30-4976-4021-8d03-9550c50fe168/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "82869c30-4976-4021-8d03-9550c50fe168",
+          "url": "https://www.worldanvil.com/world/map/marker/82869c30-4976-4021-8d03-9550c50fe168/edit",
+          "coordinate": {
+            "x": 3340,
+            "y": 3379,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "8f3434df-4010-473f-9d7a-a435d946992d",
+        "title": "Caladhdubh",
+        "x": 0.299072265625,
+        "y": 0.5232292460015232,
+        "cat": "mmflry5furso",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/hafensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Tir na Tonn",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caladhdubh"
+          },
+          {
+            "k": "Typ",
+            "v": "Hafensiedlung"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/8f3434df-4010-473f-9d7a-a435d946992d/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "8f3434df-4010-473f-9d7a-a435d946992d",
+          "url": "https://www.worldanvil.com/world/map/marker/8f3434df-4010-473f-9d7a-a435d946992d/edit",
+          "coordinate": {
+            "x": 1225,
+            "y": 1878,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9",
+        "title": "Tòrrghrian",
+        "x": 0.750732421875,
+        "y": 0.1063721756791064,
+        "cat": "location-dorf",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/bardensiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Tir na Tonn",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tòrrghrian"
+          },
+          {
+            "k": "Typ",
+            "v": "Dorf"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+          "markerId": "90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9",
+          "url": "https://www.worldanvil.com/world/map/marker/90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9/edit",
+          "coordinate": {
+            "x": 3075,
+            "y": 3520,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3939
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "flat_white_village.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      }
+    ],
     "cats": [
       {
         "id": "mmflrbzxydg7",
@@ -604,351 +4261,351 @@
           [
             [
               0,
-              0.38588474
+              0.3857868
             ],
             [
               0,
-              0.43665905
+              0.43654822
             ],
             [
               0.04589844,
-              0.45087586
+              0.45076142
             ],
             [
               0.19042969,
-              0.47423204
+              0.47411168
             ],
             [
               0.21191406,
-              0.47524752
+              0.4751269
             ],
             [
               0.23144531,
-              0.47220107
+              0.47208122
             ],
             [
               0.3046875,
-              0.46915461
+              0.46903553
             ],
             [
               0.31933594,
-              0.46407718
+              0.46395939
             ],
             [
               0.37792969,
-              0.45290683
+              0.45279188
             ],
             [
               0.44140625,
-              0.45392232
+              0.45380711
             ],
             [
               0.47167969,
-              0.45696877
+              0.45685279
             ],
             [
               0.48144531,
-              0.43462808
+              0.43451777
             ],
             [
               0.4921875,
-              0.42244224
+              0.42233503
             ],
             [
               0.50488281,
-              0.41431835
+              0.4142132
             ],
             [
               0.5234375,
-              0.41431835
+              0.4142132
             ],
             [
               0.53320313,
-              0.40720995
+              0.4071066
             ],
             [
               0.54882813,
-              0.38283828
+              0.38274112
             ],
             [
               0.54882813,
-              0.36049759
+              0.36040609
             ],
             [
               0.55566406,
-              0.35542016
+              0.35532995
             ],
             [
               0.56347656,
-              0.3523737
+              0.35228426
             ],
             [
               0.58105469,
-              0.32394009
+              0.32385787
             ],
             [
               0.60546875,
-              0.29449099
+              0.29441624
             ],
             [
               0.61132813,
-              0.28332064
+              0.28324873
             ],
             [
               0.61914063,
-              0.27316578
+              0.27309645
             ],
             [
               0.63964844,
-              0.25894897
+              0.25888325
             ],
             [
               0.67480469,
-              0.21832953
+              0.21827411
             ],
             [
               0.67480469,
-              0.20614369
+              0.20609137
             ],
             [
               0.6953125,
-              0.18075654
+              0.18071066
             ],
             [
               0.70507813,
-              0.18786494
+              0.18781726
             ],
             [
               0.73046875,
-              0.13709063
+              0.13705584
             ],
             [
               0.734375,
-              0.10967251
+              0.10964467
             ],
             [
               0.72949219,
-              0.06397563
+              0.06395939
             ],
             [
               0.72265625,
-              0.04874334
+              0.04873096
             ],
             [
               0.71484375,
-              0.04265042
+              0.04263959
             ],
             [
               0.70703125,
-              0.0294491
+              0.02944162
             ],
             [
               0.70507813,
-              0.01523229
+              0.01522843
             ],
             [
               0.6953125,
-              0.00812389
+              0.00812183
             ],
             [
               0.67578125,
-              0.01218583
+              0.01218274
             ],
             [
               0.65820313,
-              0.00203097
+              0.00203046
             ],
             [
               0.60449219,
-              -0.00101549
+              -0.00101523
             ],
             [
               0.58691406,
-              0.01624778
+              0.01624365
             ],
             [
               0.58105469,
-              0.0365575
+              0.03654822
             ],
             [
               0.57617188,
-              0.04061945
+              0.04060914
             ],
             [
               0.56054688,
-              0.04163493
+              0.04162437
             ],
             [
               0.55175781,
-              0.05382077
+              0.05380711
             ],
             [
               0.55175781,
-              0.10357959
+              0.1035533
             ],
             [
               0.54492188,
-              0.11170348
+              0.11167513
             ],
             [
               0.53027344,
-              0.11881188
+              0.11878173
             ],
             [
               0.51757813,
-              0.14216806
+              0.14213198
             ],
             [
               0.49804688,
-              0.16247779
+              0.16243655
             ],
             [
               0.47558594,
-              0.16755522
+              0.16751269
             ],
             [
               0.45898438,
-              0.17669459
+              0.17664975
             ],
             [
               0.44140625,
-              0.17466362
+              0.17461929
             ],
             [
               0.41796875,
-              0.15536938
+              0.15532995
             ],
             [
               0.41113281,
-              0.15536938
+              0.15532995
             ],
             [
               0.39453125,
-              0.16653973
+              0.16649746
             ],
             [
               0.34570313,
-              0.17364813
+              0.17360406
             ],
             [
               0.33496094,
-              0.18888043
+              0.18883249
             ],
             [
               0.31933594,
-              0.1980198
+              0.19796954
             ],
             [
               0.30566406,
-              0.19903529
+              0.19898477
             ],
             [
               0.29199219,
-              0.19497334
+              0.19492386
             ],
             [
               0.27929688,
-              0.20715918
+              0.2071066
             ],
             [
               0.26757813,
-              0.21325209
+              0.21319797
             ],
             [
               0.26464844,
-              0.21832953
+              0.21827411
             ],
             [
               0.25976563,
-              0.23762376
+              0.23756345
             ],
             [
               0.24707031,
-              0.24676314
+              0.24670051
             ],
             [
               0.24316406,
-              0.25793349
+              0.25786802
             ],
             [
               0.2265625,
-              0.27215029
+              0.27208122
             ],
             [
               0.21582031,
-              0.27519675
+              0.2751269
             ],
             [
               0.20410156,
-              0.27215029
+              0.27208122
             ],
             [
               0.18359375,
-              0.26199543
+              0.26192893
             ],
             [
               0.17382813,
-              0.25996446
+              0.25989848
             ],
             [
               0.16894531,
-              0.26707286
+              0.26700508
             ],
             [
               0.16308594,
-              0.27113481
+              0.27106599
             ],
             [
               0.16113281,
-              0.28535161
+              0.28527919
             ],
             [
               0.15136719,
-              0.29855293
+              0.29847716
             ],
             [
               0.13769531,
-              0.30261488
+              0.30253807
             ],
             [
               0.1171875,
-              0.32089363
+              0.32081218
             ],
             [
               0.10449219,
-              0.3229246
+              0.32284264
             ],
             [
               0.09765625,
-              0.31683168
+              0.31675127
             ],
             [
               0.09277344,
-              0.31480071
+              0.31472081
             ],
             [
               0.08691406,
-              0.31683168
+              0.31675127
             ],
             [
               0.07324219,
-              0.330033
+              0.32994924
             ],
             [
               0.05957031,
-              0.36252856
+              0.36243655
             ],
             [
               0.04492188,
-              0.36862148
+              0.36852792
             ],
             [
               0.02929688,
-              0.36760599
+              0.36751269
             ],
             [
               0.01367188,
-              0.37471439
+              0.37461929
             ]
           ]
         ],
@@ -956,7 +4613,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.5,
         "parentId": "wa-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
-        "dominionId": "region-91845cb6-5ca1-487d-a3f0-7a7461862624",
+        "dominionId": "leitheach-herrschaft-gortach",
         "familyId": "haus-gortach",
         "targetMapId": "",
         "showLabel": true,
@@ -966,7 +4623,7 @@
           "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
           "markerId": "91845cb6-5ca1-487d-a3f0-7a7461862624",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/91845cb6-5ca1-487d-a3f0-7a7461862624/edit"
         },
         "familyName": "Ru’Gortach"
@@ -980,195 +4637,195 @@
           [
             [
               0.5546875,
-              0.45392232
+              0.45380711
             ],
             [
               0.55434496,
-              0.45935676
+              0.45924018
             ],
             [
               0.5533232,
-              0.46469823
+              0.46458029
             ],
             [
               0.55163971,
-              0.46985531
+              0.46973606
             ],
             [
               0.54932328,
-              0.47473978
+              0.47461929
             ],
             [
               0.54641356,
-              0.47926806
+              0.47914641
             ],
             [
               0.54296033,
-              0.48336266
+              0.48323998
             ],
             [
               0.53902267,
-              0.48695353
+              0.48682994
             ],
             [
               0.53466797,
-              0.48997922
+              0.48985486
             ],
             [
               0.52997072,
-              0.49238798
+              0.49226301
             ],
             [
               0.52501131,
-              0.49413857
+              0.49401316
             ],
             [
               0.51987458,
-              0.49520106
+              0.49507537
             ],
             [
               0.51464844,
-              0.49555725
+              0.49543147
             ],
             [
               0.50942229,
-              0.49520106
+              0.49507537
             ],
             [
               0.50428557,
-              0.49413857
+              0.49401316
             ],
             [
               0.49932615,
-              0.49238798
+              0.49226301
             ],
             [
               0.49462891,
-              0.48997922
+              0.48985486
             ],
             [
               0.4902742,
-              0.48695353
+              0.48682994
             ],
             [
               0.48633654,
-              0.48336266
+              0.48323998
             ],
             [
               0.48288331,
-              0.47926806
+              0.47914641
             ],
             [
               0.47997359,
-              0.47473978
+              0.47461929
             ],
             [
               0.47765717,
-              0.46985531
+              0.46973606
             ],
             [
               0.47597367,
-              0.46469823
+              0.46458029
             ],
             [
               0.47495191,
-              0.45935676
+              0.45924018
             ],
             [
               0.47460938,
-              0.45392232
+              0.45380711
             ],
             [
               0.47495191,
-              0.44848787
+              0.44837404
             ],
             [
               0.47597367,
-              0.4431464
+              0.44303393
             ],
             [
               0.47765717,
-              0.43798932
+              0.43787815
             ],
             [
               0.47997359,
-              0.43310485
+              0.43299492
             ],
             [
               0.48288331,
-              0.42857657
+              0.4284678
             ],
             [
               0.48633654,
-              0.42448197
+              0.42437424
             ],
             [
               0.4902742,
-              0.4208911
+              0.42078428
             ],
             [
               0.49462891,
-              0.41786541
+              0.41775935
             ],
             [
               0.49932615,
-              0.41545665
+              0.41535121
             ],
             [
               0.50428557,
-              0.41370606
+              0.41360106
             ],
             [
               0.50942229,
-              0.41264358
+              0.41253884
             ],
             [
               0.51464844,
-              0.41228738
+              0.41218274
             ],
             [
               0.51987458,
-              0.41264358
+              0.41253884
             ],
             [
               0.52501131,
-              0.41370606
+              0.41360106
             ],
             [
               0.52997072,
-              0.41545665
+              0.41535121
             ],
             [
               0.53466797,
-              0.41786541
+              0.41775935
             ],
             [
               0.53902267,
-              0.4208911
+              0.42078428
             ],
             [
               0.54296033,
-              0.42448197
+              0.42437424
             ],
             [
               0.54641356,
-              0.42857657
+              0.4284678
             ],
             [
               0.54932328,
-              0.43310485
+              0.43299492
             ],
             [
               0.55163971,
-              0.43798932
+              0.43787815
             ],
             [
               0.5533232,
-              0.4431464
+              0.44303393
             ],
             [
               0.55434496,
-              0.44848787
+              0.44837404
             ]
           ]
         ],
@@ -1186,7 +4843,7 @@
           "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
           "markerId": "bb32717e-6b8c-4730-a0fc-8912a634cd5a",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/bb32717e-6b8c-4730-a0fc-8912a634cd5a/edit"
         }
       },
@@ -1199,447 +4856,447 @@
           [
             [
               -0.00097656,
-              0.43767454
+              0.43756345
             ],
             [
               0.03808594,
-              0.44884488
+              0.44873096
             ],
             [
               0.11132813,
-              0.46306169
+              0.46294416
             ],
             [
               0.20703125,
-              0.47524752
+              0.4751269
             ],
             [
               0.28027344,
-              0.46915461
+              0.46903553
             ],
             [
               0.3046875,
-              0.46915461
+              0.46903553
             ],
             [
               0.37207031,
-              0.45392232
+              0.45380711
             ],
             [
               0.4453125,
-              0.45189134
+              0.45177665
             ],
             [
               0.4609375,
-              0.45392232
+              0.45380711
             ],
             [
               0.47167969,
-              0.46001523
+              0.45989848
             ],
             [
               0.47851563,
-              0.48032496
+              0.48020305
             ],
             [
               0.48632813,
-              0.48540239
+              0.48527919
             ],
             [
               0.50878906,
-              0.49047982
+              0.49035533
             ],
             [
               0.53808594,
-              0.48844884
+              0.48832487
             ],
             [
               0.54980469,
-              0.46915461
+              0.46903553
             ],
             [
               0.56054688,
-              0.46407718
+              0.46395939
             ],
             [
               0.56933594,
-              0.46407718
+              0.46395939
             ],
             [
               0.58398438,
-              0.47118558
+              0.47106599
             ],
             [
               0.6015625,
-              0.48235593
+              0.4822335
             ],
             [
               0.63183594,
-              0.50774308
+              0.50761421
             ],
             [
               0.66015625,
-              0.52399086
+              0.52385787
             ],
             [
               0.68457031,
-              0.52906829
+              0.52893401
             ],
             [
               0.73046875,
-              0.53008378
+              0.52994924
             ],
             [
               0.76367188,
-              0.53820767
+              0.53807107
             ],
             [
               0.90429688,
-              0.62249302
+              0.62233503
             ],
             [
               0.95605469,
-              0.65905052
+              0.65888325
             ],
             [
               0.94628906,
-              0.66209698
+              0.66192893
             ],
             [
               0.94238281,
-              0.66717441
+              0.66700508
             ],
             [
               0.94042969,
-              0.6752983
+              0.6751269
             ],
             [
               0.94140625,
-              0.68443767
+              0.68426396
             ],
             [
               0.93652344,
-              0.69053059
+              0.69035533
             ],
             [
               0.92675781,
-              0.69763899
+              0.69746193
             ],
             [
               0.91601563,
-              0.70271643
+              0.70253807
             ],
             [
               0.91015625,
-              0.7118558
+              0.71167513
             ],
             [
               0.91015625,
-              0.71997969
+              0.71979695
             ],
             [
               0.9140625,
-              0.73622747
+              0.73604061
             ],
             [
               0.91796875,
-              0.74333587
+              0.74314721
             ],
             [
               0.90917969,
-              0.74638233
+              0.74619289
             ],
             [
               0.89550781,
-              0.75856816
+              0.75837563
             ],
             [
               0.890625,
-              0.76567657
+              0.76548223
             ],
             [
               0.88964844,
-              0.79207921
+              0.79187817
             ],
             [
               0.86621094,
-              0.79614115
+              0.79593909
             ],
             [
               0.85351563,
-              0.79614115
+              0.79593909
             ],
             [
               0.84082031,
-              0.79918761
+              0.79898477
             ],
             [
               0.83300781,
-              0.80223407
+              0.80203046
             ],
             [
               0.83007813,
-              0.80934247
+              0.80913706
             ],
             [
               0.80175781,
-              0.81949733
+              0.81928934
             ],
             [
               0.79003906,
-              0.82863671
+              0.8284264
             ],
             [
               0.78320313,
-              0.84183803
+              0.84162437
             ],
             [
               0.77929688,
-              0.85605484
+              0.85583756
             ],
             [
               0.75878906,
-              0.85910129
+              0.85888325
             ],
             [
               0.74609375,
-              0.86316324
+              0.86294416
             ],
             [
               0.73535156,
-              0.88550394
+              0.88527919
             ],
             [
               0.71777344,
-              0.87636456
+              0.87614213
             ],
             [
               0.67773438,
-              0.88245748
+              0.8822335
             ],
             [
               0.65722656,
-              0.89261234
+              0.89238579
             ],
             [
               0.6484375,
-              0.91292206
+              0.91269036
             ],
             [
               0.65429688,
-              0.93526276
+              0.93502538
             ],
             [
               0.62890625,
-              0.95455699
+              0.95431472
             ],
             [
               0.62988281,
-              0.95963442
+              0.95939086
             ],
             [
               0.62597656,
-              0.97182026
+              0.9715736
             ],
             [
               0.62597656,
-              0.98400609
+              0.98375635
             ],
             [
               0.57421875,
-              0.99416095
+              0.99390863
             ],
             [
               0.56835938,
-              1.00228484
+              1.00203046
             ],
             [
               0.24414063,
-              1.00025387
+              1
             ],
             [
               0.23730469,
-              0.98299061
+              0.98274112
             ],
             [
               0.23144531,
-              0.9758822
+              0.97563452
             ],
             [
               0.22558594,
-              0.97182026
+              0.9715736
             ],
             [
               0.22460938,
-              0.95963442
+              0.95939086
             ],
             [
               0.21972656,
-              0.94440213
+              0.94416244
             ],
             [
               0.21484375,
-              0.93627824
+              0.93604061
             ],
             [
               0.20800781,
-              0.93018533
+              0.92994924
             ],
             [
               0.19335938,
-              0.92409241
+              0.92385787
             ],
             [
               0.19335938,
-              0.91089109
+              0.9106599
             ],
             [
               0.19042969,
-              0.89261234
+              0.89238579
             ],
             [
               0.1875,
-              0.88144199
+              0.88121827
             ],
             [
               0.18164063,
-              0.87433359
+              0.87411168
             ],
             [
               0.16796875,
-              0.86722518
+              0.86700508
             ],
             [
               0.14648438,
-              0.86722518
+              0.86700508
             ],
             [
               0.13378906,
-              0.86214775
+              0.86192893
             ],
             [
               0.125,
-              0.86113227
+              0.86091371
             ],
             [
               0.12207031,
-              0.8662097
+              0.86598985
             ],
             [
               0.11328125,
-              0.86722518
+              0.86700508
             ],
             [
               0.10644531,
-              0.86214775
+              0.86192893
             ],
             [
               0.1015625,
-              0.85605484
+              0.85583756
             ],
             [
               0.08691406,
-              0.84996192
+              0.84974619
             ],
             [
               0.08691406,
-              0.82660574
+              0.82639594
             ],
             [
               0.08105469,
-              0.80832699
+              0.80812183
             ],
             [
               0.08203125,
-              0.79817212
+              0.79796954
             ],
             [
               0.07519531,
-              0.78395532
+              0.78375635
             ],
             [
               0.0703125,
-              0.77887789
+              0.7786802
             ],
             [
               0.04882813,
-              0.76059914
+              0.76040609
             ],
             [
               0.03808594,
-              0.75653719
+              0.75634518
             ],
             [
               0.0234375,
-              0.75653719
+              0.75634518
             ],
             [
               0.00976563,
-              0.76567657
+              0.76548223
             ],
             [
               0.00585938,
-              0.76567657
+              0.76548223
             ],
             [
               0.00585938,
-              0.76059914
+              0.76040609
             ],
             [
               0.00976563,
-              0.74942879
+              0.74923858
             ],
             [
               0.00683594,
-              0.73724296
+              0.73705584
             ],
             [
               0,
-              0.72810358
+              0.72791878
             ],
             [
               0.00097656,
-              0.64483371
+              0.64467005
             ],
             [
               0.00683594,
-              0.64381823
+              0.64365482
             ],
             [
               0.01171875,
-              0.63366337
+              0.63350254
             ],
             [
               0.01660156,
-              0.60522975
+              0.60507614
             ],
             [
               0.01660156,
-              0.59202843
+              0.59187817
             ],
             [
               0.00878906,
-              0.5727342
+              0.57258883
             ],
             [
               0.01074219,
-              0.56359482
+              0.56345178
             ],
             [
               0.01269531,
-              0.53516121
+              0.53502538
             ],
             [
               0.01171875,
-              0.52195989
+              0.52182741
             ],
             [
               0.00097656,
-              0.50469662
+              0.50456853
             ],
             [
               0,
-              0.49758822
+              0.49746193
             ]
           ]
         ],
@@ -1647,7 +5304,7 @@
         "borderColor": "#d62828",
         "opacity": 0.5,
         "parentId": "",
-        "dominionId": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
+        "dominionId": "leitheach-tir-na-tonn",
         "familyId": "haus-fir-an-tarvo",
         "targetMapId": "",
         "showLabel": true,
@@ -1657,7 +5314,7 @@
           "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
           "markerId": "c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc/edit"
         },
         "familyName": "Clan Fir An’Tarvo"
@@ -1671,319 +5328,319 @@
           [
             [
               0.95507813,
-              0.65803503
+              0.65786802
             ],
             [
               0.76171875,
-              0.53719218
+              0.53705584
             ],
             [
               0.74609375,
-              0.53414572
+              0.53401015
             ],
             [
               0.73046875,
-              0.52805281
+              0.52791878
             ],
             [
               0.67675781,
-              0.52602183
+              0.52588832
             ],
             [
               0.64941406,
-              0.51891343
+              0.51878173
             ],
             [
               0.58398438,
-              0.46915461
+              0.46903553
             ],
             [
               0.57226563,
-              0.46407718
+              0.46395939
             ],
             [
               0.55664063,
-              0.46103072
+              0.46091371
             ],
             [
               0.55175781,
-              0.45189134
+              0.45177665
             ],
             [
               0.54785156,
-              0.42751968
+              0.42741117
             ],
             [
               0.54003906,
-              0.4183803
+              0.41827411
             ],
             [
               0.52734375,
-              0.4112719
+              0.41116751
             ],
             [
               0.53515625,
-              0.40619447
+              0.40609137
             ],
             [
               0.546875,
-              0.38690023
+              0.38680203
             ],
             [
               0.54980469,
-              0.37776085
+              0.37766497
             ],
             [
               0.54980469,
-              0.36557502
+              0.36548223
             ],
             [
               0.55175781,
-              0.3594821
+              0.35939086
             ],
             [
               0.55957031,
-              0.35338919
+              0.35329949
             ],
             [
               0.60644531,
-              0.29449099
+              0.29441624
             ],
             [
               0.62304688,
-              0.26808835
+              0.2680203
             ],
             [
               0.63867188,
-              0.25590251
+              0.25583756
             ],
             [
               0.65820313,
-              0.23660828
+              0.23654822
             ],
             [
               0.671875,
-              0.2203605
+              0.22030457
             ],
             [
               0.67480469,
-              0.20715918
+              0.2071066
             ],
             [
               0.68359375,
-              0.1980198
+              0.19796954
             ],
             [
               0.6953125,
-              0.18075654
+              0.18071066
             ],
             [
               0.70507813,
-              0.18684945
+              0.18680203
             ],
             [
               0.71777344,
-              0.15943133
+              0.15939086
             ],
             [
               0.73339844,
-              0.13302869
+              0.13299492
             ],
             [
               0.734375,
-              0.10154862
+              0.10152284
             ],
             [
               0.73242188,
-              0.0588982
+              0.05888325
             ],
             [
               0.72460938,
-              0.04874334
+              0.04873096
             ],
             [
               0.74121094,
-              0.05178979
+              0.05177665
             ],
             [
               0.75097656,
-              0.05788271
+              0.05786802
             ],
             [
               0.77441406,
-              0.06194466
+              0.06192893
             ],
             [
               0.80078125,
-              0.04366591
+              0.04365482
             ],
             [
               0.81738281,
-              0.04061945
+              0.04060914
             ],
             [
               0.82910156,
-              0.04468139
+              0.04467005
             ],
             [
               0.82910156,
-              0.05280528
+              0.05279188
             ],
             [
               0.8359375,
-              0.06092917
+              0.06091371
             ],
             [
               0.86425781,
-              0.07514598
+              0.0751269
             ],
             [
               0.87304688,
-              0.07616146
+              0.07614213
             ],
             [
               0.8828125,
-              0.07209952
+              0.07208122
             ],
             [
               0.88867188,
-              0.0660066
+              0.06598985
             ],
             [
               0.8984375,
-              0.06803757
+              0.0680203
             ],
             [
               0.90527344,
-              0.07514598
+              0.0751269
             ],
             [
               0.92675781,
-              0.08428535
+              0.08426396
             ],
             [
               0.94140625,
-              0.08733181
+              0.08730964
             ],
             [
               0.95898438,
-              0.08530084
+              0.08527919
             ],
             [
               0.96484375,
-              0.09240924
+              0.09238579
             ],
             [
               0.97070313,
-              0.10459507
+              0.10456853
             ],
             [
               0.97460938,
-              0.11982737
+              0.11979695
             ],
             [
               0.98339844,
-              0.12388931
+              0.12385787
             ],
             [
               1.00195313,
-              0.12896674
+              0.12893401
             ],
             [
               1,
-              0.30464585
+              0.30456853
             ],
             [
               0.99707031,
-              0.30972328
+              0.30964467
             ],
             [
               0.98730469,
-              0.3158162
+              0.31573604
             ],
             [
               0.98242188,
-              0.32394009
+              0.32385787
             ],
             [
               0.97558594,
-              0.35643564
+              0.35634518
             ],
             [
               0.97167969,
-              0.36252856
+              0.36243655
             ],
             [
               0.95214844,
-              0.37471439
+              0.37461929
             ],
             [
               0.94238281,
-              0.3960396
+              0.39593909
             ],
             [
               0.94238281,
-              0.40619447
+              0.40609137
             ],
             [
               0.95117188,
-              0.42650419
+              0.42639594
             ],
             [
               0.95507813,
-              0.44275197
+              0.44263959
             ],
             [
               0.96875,
-              0.4549378
+              0.45482234
             ],
             [
               0.97070313,
-              0.47220107
+              0.47208122
             ],
             [
               0.9765625,
-              0.48743336
+              0.48730964
             ],
             [
               0.98144531,
-              0.49555725
+              0.49543147
             ],
             [
               0.99902344,
-              0.50977405
+              0.50964467
             ],
             [
               1.00097656,
-              0.59507489
+              0.59492386
             ],
             [
               0.99023438,
-              0.61030718
+              0.61015228
             ],
             [
               0.98828125,
-              0.61741559
+              0.61725888
             ],
             [
               0.984375,
-              0.62147753
+              0.6213198
             ],
             [
               0.9765625,
-              0.6235085
+              0.62335025
             ],
             [
               0.96679688,
-              0.63670982
+              0.63654822
             ],
             [
               0.96484375,
-              0.64381823
+              0.64365482
             ],
             [
               0.95898438,
-              0.64991114
+              0.64974619
             ]
           ]
         ],
@@ -1991,7 +5648,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.5,
         "parentId": "wa-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
-        "dominionId": "region-47363827-41a3-482d-8ec1-6d30674955aa",
+        "dominionId": "leitheach-herrschaft-ruitheach",
         "familyId": "haus-ruitheach",
         "targetMapId": "",
         "showLabel": true,
@@ -2001,7 +5658,7 @@
           "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
           "markerId": "47363827-41a3-482d-8ec1-6d30674955aa",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/47363827-41a3-482d-8ec1-6d30674955aa/edit"
         },
         "familyName": "Dál’Ruitheach"
@@ -2009,31 +5666,31 @@
     ],
     "dominions": [
       {
-        "id": "region-91845cb6-5ca1-487d-a3f0-7a7461862624",
-        "name": "Herrschaft der Ru'Gortach",
-        "type": "Herrschaft",
-        "ruler": "Ru’Gortach",
-        "seat": "Broch an Ear",
-        "note": "",
-        "parentId": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc"
-      },
-      {
-        "id": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc",
-        "name": "Oberherrschaft - Tir na Tonn",
+        "id": "leitheach-tir-na-tonn",
+        "name": "Tir na Tonn",
         "type": "Oberherrschaft",
         "ruler": "Clan Fir An’Tarvo",
         "seat": "Dun Rothar",
-        "note": "",
-        "parentId": ""
+        "parentId": "",
+        "note": ""
       },
       {
-        "id": "region-47363827-41a3-482d-8ec1-6d30674955aa",
-        "name": "Herrschaft der Dal'Ruitheach",
+        "id": "leitheach-herrschaft-gortach",
+        "name": "Herrschaft der Ru’Gortach",
+        "type": "Herrschaft",
+        "ruler": "Ru’Gortach",
+        "seat": "Broch an Ear",
+        "parentId": "leitheach-tir-na-tonn",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-ruitheach",
+        "name": "Herrschaft der Dál’Ruitheach",
         "type": "Herrschaft",
         "ruler": "Dál’Ruitheach",
         "seat": "Broch an Iar",
-        "note": "",
-        "parentId": "region-c8b7a2c8-5c5b-45bf-b6c8-583ad28303fc"
+        "parentId": "leitheach-tir-na-tonn",
+        "note": ""
       }
     ],
     "regionTitle": "Tir na Tonn",

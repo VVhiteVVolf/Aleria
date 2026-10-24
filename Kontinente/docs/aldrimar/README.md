@@ -107,3 +107,13 @@ Der separate Playwright-CLI-Lauf wurde nicht ausgeführt; seine Testabhängigkei
 ist im Projekt nicht installiert.
 
 Es wurde nichts gepusht oder deployt.
+
+## Ergänzung: Bürgerkriegsabgleich vom 24. Oktober 2026
+
+Auf Nutzerauftrag sind die redigierten Biografien von Balgruuf, Roger, Galmar
+und Asger mit den Stammbaumdaten und der Prätendentenchronik abgeglichen:
+Eolas Tod 1608 vor der Thronbesteigung 1616; Roger zweiter Sohn/drittes Kind und
+21 Tage gekrönter König; Galmars Exil am 10.12.1627; Asger etwa 22 Jahre 1627
+und Neutralität 1638. Die elf Originaldateien sowie die ausdrücklich als alt
+beschrifteten `sourceFacts` sind unverändert. Der genaue Wortlautabgleich liegt in
+`Ereignisse/Kriege/krieg-der-praetendenten/redaktion/biografie-abgleich-2026-10-24.json`.

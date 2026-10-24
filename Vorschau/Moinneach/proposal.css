@@ -1,0 +1,172 @@
+:root {
+ --paper:#f5efdf; --ink:#292d27; --muted:#726c5e; --line:#cec3aa;
+ --green:#334e41; --gold:#a37a3f; --red:#79483b; --sans:Arial,Helvetica,sans-serif;
+ color-scheme:light;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth;scroll-padding-top:90px}
+body.proposal-workbench {margin:0;background:#e8e0ce;color:var(--ink);font:17px/1.65 Georgia,serif}
+button,select,textarea {font:inherit;touch-action:manipulation}
+button {cursor:pointer;padding:10px 15px;border:1px solid var(--line);border-radius:3px;background:#f7f1e5;color:var(--ink);font:13px/1.4 var(--sans)}
+button:hover {background:#e7deca}
+button:disabled {cursor:default;opacity:.6}
+button[aria-pressed=true],button.primary {background:var(--green);border-color:var(--green);color:#fff7e5}
+button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible {outline:3px solid var(--gold);outline-offset:4px}
+a {color:var(--green)}
+h1,h2,h3,p,figure {margin:0}
+h1,h2,h3 {font-weight:normal;line-height:1.15}
+h2 {font-size:clamp(27px,3vw,40px)}
+h3 {font-size:23px}
+img {max-width:100%}
+[hidden] {display:none!important}
+.proposal-toolbar {position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:25px;min-height:72px;padding:14px max(24px,calc((100vw - 1460px)/2));background:#292f28;color:#eee3c9;border-bottom:2px solid var(--gold)}
+.wordmark {color:#f3ead4;text-decoration:none;letter-spacing:4px;font-size:22px;white-space:nowrap}
+.wordmark span {font:10px var(--sans);letter-spacing:2px;text-transform:uppercase;margin-left:12px}
+.toolbar-label {font:12px var(--sans);color:#d0c2a1}
+.toolbar-actions {margin-left:auto;display:flex;gap:8px;flex-shrink:0}
+.proposal-toolbar button {color:#eee3c9;border-color:#756c54;background:transparent}
+.proposal-toolbar button:hover {background:#414c3e}
+.proposal-toolbar button[aria-pressed=true] {background:#ece2cc;color:#292d27}
+main {max-width:1460px;margin:0 auto;padding:0 36px}
+.eyebrow {text-transform:uppercase;letter-spacing:2.4px;font:11px/1.6 var(--sans);color:var(--gold)}
+.proposal-hero {display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:70px;align-items:center;padding:65px 0 46px;border-bottom:1px solid var(--line)}
+h1 {font-size:clamp(58px,8vw,110px);letter-spacing:-4px;color:var(--green);margin:15px 0 22px}
+.hero-line {font-size:clamp(24px,3vw,36px);line-height:1.3;color:#655238}
+.hero-description {max-width:680px;color:var(--muted);font-size:18px;margin-top:22px}
+.hero-stats {display:flex;gap:34px;flex-wrap:wrap;margin:30px 0 0}
+.hero-stats div {display:flex;flex-direction:column-reverse}
+.hero-stats dt {font:11px/1.8 var(--sans);color:var(--muted)}
+.hero-stats dd {margin:0;font-size:21px;color:var(--green)}
+.realm-emblem {text-align:center}
+.realm-emblem img {width:245px;aspect-ratio:1;object-fit:contain}
+.realm-emblem figcaption {font:10px/1.5 var(--sans);color:var(--muted);margin-top:16px}
+.draft-note {padding:22px 0;color:var(--muted);font:13px/1.7 var(--sans)}
+.draft-note strong {font-weight:normal;color:var(--red)}
+.proposal-section {padding:32px 0 44px;border-bottom:1px solid var(--line)}
+.proposal-section>.eyebrow {margin-bottom:10px}
+.variant-list {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.variant-card {text-align:left;color:var(--ink);display:flex;align-items:center;gap:18px;padding:22px;border:1px solid var(--line);background:#f8f2e6}
+.variant-card>span:first-child {font-size:27px;color:var(--gold)}
+.variant-card strong {font-size:19px;font-weight:normal;line-height:1.4}
+.variant-card small {display:block;font:12px/1.6 var(--sans);color:var(--muted);margin-top:5px}
+.variant-status {margin-left:auto;flex-shrink:0;font:10px var(--sans);text-transform:uppercase;letter-spacing:1px;padding:6px 9px;border:1px solid var(--line)}
+.variant-card[aria-pressed=true] {background:#f8f2e6;color:var(--ink);}
+.variant-card.is-current {border-color:#7b8f76;box-shadow:inset 3px 0 var(--green)}
+.region-summary {color:var(--muted);font-size:16px;margin-top:18px;max-width:800px}
+.region-hint {font:12px/1.7 var(--sans);color:var(--muted);margin-top:10px}
+.region-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.region-group {padding:20px;border:1px solid var(--line);border-left:4px solid var(--region-colour);background:#faf5ea;min-width:0}
+.region-heading h3 {font-size:21px;line-height:1.4}
+.region-heading>span {display:block;font:11px/1.6 var(--sans);color:var(--muted);margin-top:7px}
+.region-clans {display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.region-clans button {display:flex;align-items:center;gap:8px;padding:5px 9px;font-size:12px}
+.region-clans img {width:34px;height:34px;object-fit:contain}
+
+.section-heading {display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:25px}
+.section-heading h2 {margin-top:10px}
+.section-heading>p {font:11px/1.6 var(--sans);text-align:right;color:var(--muted)}
+.map-tools {display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:15px}
+.map-tools>span {margin-left:auto;font:11px/1.5 var(--sans);color:var(--muted)}
+.map-shell {border:1px solid #ad9877;min-width:0;max-width:100%;background:#ded6bd}
+.map-viewport {min-width:0;max-width:100%}
+.map-caption {font:11px/1.6 var(--sans);color:var(--muted);margin-top:13px}
+.settlement-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.seat-card {min-width:0;border:1px solid var(--line);border-top:3px solid var(--seat-colour);padding:23px 24px;background:#faf5ea}
+.seat-heading {display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:center;gap:16px;margin-bottom:13px}
+.seat-count {font:10px/1.5 var(--sans);color:var(--muted);white-space:nowrap}
+.seat-card h3 {color:var(--green)}
+.seat-clans {display:grid;gap:8px;margin-bottom:16px}
+.clan-entry {display:flex;gap:14px;align-items:center;min-width:0;padding:10px;border-color:#d9ceb7;text-align:left;background:#fffaf0}
+.clan-entry>img {width:52px;height:52px;object-fit:contain;flex-shrink:0}
+.clan-entry>span:not(.entry-arrow) {min-width:0}
+.clan-entry strong {display:block;font:19px/1.35 Georgia,serif;font-weight:normal;overflow-wrap:break-word}
+.clan-entry small {display:block;font:11px/1.6 var(--sans);color:var(--muted);margin-top:3px}
+.entry-arrow {margin-left:auto;color:var(--gold)}
+.seat-card>p {font-size:15px;line-height:1.65;color:#5a5e50}
+.seat-card>p.map-spelling {font:11px/1.6 var(--sans);color:var(--muted);margin-top:10px}
+.seat-card .empty-seat {font:12px/1.6 var(--sans);color:var(--muted);border:1px dashed var(--line);padding:14px}
+.proposal-reset {padding:25px 0;display:flex;align-items:center;justify-content:space-between;gap:25px;font:11px/1.6 var(--sans);color:var(--muted)}
+footer {display:flex;justify-content:space-between;gap:20px;padding:23px 0 35px;border-top:1px solid var(--line);font:10px/1.5 var(--sans);text-transform:uppercase;letter-spacing:1.4px;color:var(--muted)}
+.proposal-dialog {padding:0;border:1px solid #ac9776;background:var(--paper);color:var(--ink);max-height:94vh;max-width:96vw;box-shadow:0 20px 90px #0006}
+.proposal-dialog::backdrop {background:#1d261fc9;backdrop-filter:blur(3px)}
+.map-dialog {width:min(1550px,96vw)}
+.clan-dialog {width:min(740px,94vw)}
+.dialog-top {display:flex;align-items:center;justify-content:space-between;padding:14px 23px;background:#e8dec7;border-bottom:1px solid var(--line);gap:20px}
+.dialog-top>span {font:12px/1.5 var(--sans)}
+.dialog-top>button {font-size:18px;padding:2px 8px;border:0;background:transparent}
+.clan-dialog-content {max-height:calc(94vh - 65px);overflow-y:auto;padding:30px;overscroll-behavior:contain}
+.clan-dialog-content>h2 {font-size:37px;margin-bottom:26px;color:var(--green)}
+.clan-portrait {display:flex;gap:26px;align-items:center}
+.clan-portrait img {width:138px;height:138px;object-fit:contain;flex-shrink:0}
+.clan-portrait h3 {font-size:29px;margin:10px 0}
+.clan-portrait>div>p:last-child {font:11px var(--sans);color:var(--muted)}
+.clan-facts {display:grid;grid-template-columns:1fr 1fr;gap:20px;border-block:1px solid var(--line);padding:18px 0;margin:25px 0}
+.clan-facts dt {font:11px/1.6 var(--sans);color:var(--muted)}
+.clan-facts dd {margin:4px 0 0;font-size:17px}
+.clan-dialog-content h3 {margin-bottom:12px}
+.clan-dialog-content p {font-size:15px;line-height:1.7}
+.clan-dialog-content p.subtle {font:11px/1.7 var(--sans);color:var(--muted);margin-top:14px}
+.clan-dialog-content h3:not(.clan-portrait h3) {margin-top:23px}
+.neighbour-clans {display:flex;gap:10px;flex-wrap:wrap}
+.neighbour-clans>button {display:flex;gap:10px;align-items:center}
+.neighbour-clans img {object-fit:contain}
+.edit-detail {margin-top:25px}
+form label {display:block;font:12px/1.7 var(--sans);color:var(--muted);margin:15px 0 5px}
+select,textarea {display:block;width:100%;min-width:0;border:1px solid #baa98c;border-radius:2px;background:#fffaf0;color:var(--ink);padding:9px 11px;font:16px/1.5 Georgia,serif;margin-top:5px}
+textarea {resize:vertical;min-height:80px}
+.proposal-notice {position:fixed;z-index:120;bottom:18px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 30px);padding:12px 20px;background:var(--green);color:#fff3db;box-shadow:0 3px 15px #0003;font:12px/1.6 var(--sans)}
+@media(max-width:1050px) {
+ .toolbar-label,.wordmark span {display:none}
+ .proposal-hero {grid-template-columns:minmax(0,1fr) 180px;gap:30px}
+ .realm-emblem img {width:180px}
+ .map-tools>span {margin-left:0;width:100%;margin-top:5px}
+ .variant-list {grid-template-columns:1fr}
+ .variant-card {padding:18px;gap:12px}
+ .variant-status {margin-left:0}
+}
+@media(max-width:720px) {
+ html {scroll-padding-top:75px}
+ main {padding:0 18px}
+ .proposal-toolbar {min-height:62px;padding:11px 16px;gap:12px}
+ .wordmark {font-size:17px;letter-spacing:2px}
+ .toolbar-actions {gap:5px}
+ .proposal-toolbar button {font-size:11px;padding:8px 9px}
+ .proposal-hero {grid-template-columns:minmax(0,1fr) 85px;gap:12px;padding:35px 0 28px;align-items:start}
+ h1 {font-size:clamp(40px,9.5vw,60px);letter-spacing:-2px;overflow-wrap:anywhere}
+ .hero-line {font-size:23px}
+ .hero-description {font-size:15px}
+ .realm-emblem {padding-top:35px}
+ .realm-emblem img {width:85px}
+ .realm-emblem figcaption {display:none}
+ .hero-stats {gap:20px}
+ .hero-stats dd {font-size:18px}
+ .draft-note {font-size:12px}
+ .proposal-section {padding:27px 0 32px}
+ .variant-list,.region-grid,.settlement-grid {grid-template-columns:1fr;gap:14px}
+ .variant-card {flex-wrap:nowrap}
+ .variant-status {margin-left:auto}
+ .section-heading {display:block}
+ .section-heading>p {text-align:left;margin-top:15px}
+ .map-tools>button {padding:8px 10px;font-size:11px}
+ .seat-card {padding:18px}
+ .proposal-reset {align-items:flex-start;flex-direction:column;gap:12px}
+ footer {flex-direction:column;gap:8px}
+ .dialog-top {padding:12px 16px}
+ .clan-dialog-content {padding:22px}
+ .clan-dialog-content>h2 {font-size:31px}
+ .clan-portrait {gap:15px}
+ .clan-portrait img {width:92px;height:92px}
+ .clan-portrait h3 {font-size:24px}
+ .clan-facts {grid-template-columns:1fr;gap:12px}
+}
+@media print {
+ body.proposal-workbench {background:#fff}
+ .proposal-toolbar,.map-tools,dialog,.proposal-reset,.proposal-notice,.clan-tooltip {display:none}
+ main {padding:0;max-width:none}
+ .proposal-hero {padding-top:0}
+ .map-canvas {min-width:0}
+ .map-viewport {overflow:visible}
+ .seat-card {break-inside:avoid}
+ .proposal-section {break-inside:auto}
+ .variant-list,.settlement-grid {grid-template-columns:1fr 1fr}
+}

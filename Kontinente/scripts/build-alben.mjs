@@ -57,7 +57,7 @@ const metadata = {
 const files = new Map([
   ['Alben/Der Schild von Ailith.html', renderOverview({ fianna, culture, principalities, branches }, registryContext.window.KONTINENTE_REGISTRY)],
   ['Alben/aemter.html', renderOffices(offices)],
-  ['Alben/fuerstentum.html', renderPrincipalityEntries(principalities)],
+  ['Alben/fuerstentum.html', renderPrincipalityEntries(principalities, registryContext.window.KONTINENTE_REGISTRY)],
   ['Alben/alben.data.mjs', 'export default ' + JSON.stringify(metadata, null, 2) + ';\n'],
   ['modules/alben/presentation.generated.json', JSON.stringify(presentation, null, 2) + '\n'],
   ['kontinente.registry.js', registry],

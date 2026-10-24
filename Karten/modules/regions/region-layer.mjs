@@ -34,7 +34,7 @@ export function createRegionLayer(stage, runtime) {
         // not keep that outer transform from shrinking borders on an overview.
         outlines.push({node:path,width:selected?8:6});
         const title = svgElement('title'); title.textContent = region.name; path.append(title); svg.append(path);
-        if (region.kind !== 'boundary' && region.showLabel !== false && region.paths?.[0]?.length >= 3) {
+        if ((region.kind !== 'boundary' || region.labelPosition) && region.showLabel !== false && region.paths?.[0]?.length >= 3) {
           const point = region.labelPosition || labelPoint(region);
           const label = svgElement('text', { x: point[0] * width, y: point[1] * height, class: 'region-name', 'text-anchor': 'middle' });
           label.textContent = region.shortName || region.name;

@@ -1,0 +1,39 @@
+/* The player keeps its own stage; the chronicle has a continuous reading column. */
+.battle-reading-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:65px;align-items:start}
+.battle-reading-column{grid-column:1;grid-row:1;min-width:0}
+.battle-reading-info{grid-column:2;grid-row:1;position:sticky;top:25px;align-self:start;min-width:0}
+.battle-reading-info-inner{padding:22px;border:1px solid #a58f6370;border-top:4px solid #6c7e55;background:#e8d9b880;max-height:calc(100dvh - 50px);overflow:auto;overscroll-behavior-y:contain;scrollbar-width:thin}
+.battle-reading-info h3{font:29px/1.2 BattleInk,cursive;color:#655133;margin-bottom:18px}
+.battle-reading-info dl>div{display:grid;grid-template-columns:75px minmax(0,1fr);gap:10px;padding:11px 0;border-top:1px solid #a58f634d}
+.battle-reading-info dt{font:11px/1.6 BattleHand,serif;color:#8a7250}
+.battle-reading-info dd{font:12px/1.7 Georgia,serif;overflow-wrap:anywhere}
+.battle-reading-info-inner>p{font:13px/1.6 BattleHand,serif;color:#85704d;margin:17px 0}
+.battle-reading-forces{width:100%;border-collapse:collapse;font:11px/1.6 Georgia,serif;margin:20px 0}
+.battle-reading-forces caption{text-align:left;font:23px BattleInk,cursive;color:#6c5b3e;padding-bottom:12px}
+.battle-reading-forces :is(th,td){padding:8px 5px;border-block:1px solid #a58f634d;text-align:center;vertical-align:middle;font-weight:400}
+.battle-reading-forces th:first-child{text-align:left;font-size:10px;color:#8a7250}
+.battle-reading-forces thead th{font:14px BattleHand,serif;color:#5c6e43}
+.battle-reading-forces thead th:last-child{color:#914c40}
+.battle-reading-forces img{display:block;margin:0 auto 5px}
+.battle-reading-sections{display:grid;gap:9px;border-top:1px solid #a58f6370;margin-top:22px;padding-top:20px;font:13px/1.5 BattleHand,serif;color:#75613e}
+.battle-reading-sections>span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#937b54;margin-bottom:4px}
+.battle-reading-sections>a{text-decoration:none}
+.battle-reading-sections>a:hover{text-decoration:underline}
+.battle-reading-column .battle-ledger{display:block}
+.battle-reading-column .battle-full-section{grid-template-columns:1fr;gap:23px;padding-block:40px}
+.battle-reading-column .battle-full-section>header>span{float:left;font-size:37px;margin:0 15px 8px 0}
+.battle-reading-column .battle-full-section>header h2{font-size:36px;margin-top:0}
+.battle-reading-column .battle-full-section>header>a{margin-top:12px}
+.battle-reading-column .battle-full-section>header>p{margin-top:8px}
+.battle-reading-column .battle-muster-columns{gap:25px}
+.battle-reading-column .battle-muster-columns>article:first-child{padding-right:25px}
+.battle-reading-column .battle-plan-columns{grid-template-columns:1fr;gap:30px}
+.battle-reading-column .battle-casualties{grid-template-columns:1fr 1fr;gap:25px}
+.battle-reading-column .battle-casualties>div{grid-column:1/-1}
+.battle-reading-column .battle-casualties h2 br{display:none}
+.battle-reading-column .battle-duel{display:flow-root}
+.battle-reading-column .battle-duel figure{position:static;float:right;width:32%;max-width:240px;margin:0 0 25px 30px;transform:none}
+.battle-reading-column .battle-duel-prose p{font-size:14px}
+@media(max-width:1200px){.battle-reading-layout{grid-template-columns:minmax(0,1fr) 290px;gap:35px}.battle-reading-info-inner{padding:18px}}
+@media(max-width:1000px){.battle-reading-layout{display:flex;flex-direction:column;gap:30px}.battle-reading-info{position:static;width:100%}.battle-reading-info-inner{max-height:none;overflow:visible}.battle-reading-info dl>div{grid-template-columns:100px 1fr}.battle-reading-forces{max-width:420px}.battle-reading-sections{grid-template-columns:1fr 1fr;gap:10px 25px}.battle-reading-sections>span{grid-column:1/-1}}
+@media(max-width:760px){.battle-reading-info-inner{padding:18px 15px}.battle-reading-info dl>div{grid-template-columns:75px 1fr}.battle-reading-column .battle-muster-columns>article:first-child{padding-right:0}.battle-reading-column .battle-duel figure{float:none;width:100%;margin:0 auto 30px}.battle-reading-column .battle-full-section>header h2{font-size:32px}}

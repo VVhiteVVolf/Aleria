@@ -1,63 +1,9 @@
+import {createClanMap as createProposalClanMap} from '../shared/clan-map.mjs';
 import {previewAsset} from './preview-assets.mjs';
 import {clanRankLabel} from './clan-hierarchy.mjs';
 
-export function createClanMap({root,dialog,getVariant,escape,onClan}){
- const surfaces=[...root.querySelectorAll('[data-role="map-surface"]'),dialog.querySelector('[data-role="map-surface"]')];
- const tooltip=document.querySelector('#clan-tooltip');
- let showCrests=true,showNames=true,zoom=1;
- function sizeOverview(){
-  const width=Math.min(window.innerWidth*.92,(window.innerHeight*.93-115)*4096/3365);
-  const surface=dialog.querySelector('[data-role="map-surface"]');
-  surface.style.width=Math.max(240,width*zoom)+'px';
-  dialog.querySelector('[data-role="zoom-label"]').textContent=zoom===1?'Ganze Karte':Math.round(zoom*100)+' %';
- }
- function hideTooltip(){tooltip.hidden=true;}
- function surfaceMarkup(variant){
-  const groups=variant.settlements.filter(place=>variant.clans.some(c=>c.seat===place.id));
-  const lines=groups.map(p=>`<line x1="${p.point[0]}" y1="${p.point[1]}" x2="${p.pin[0]}" y2="${p.pin[1]}"/>`).join('');
-  const pins=groups.map(place=>`<div class="crest-group" style="left:${place.pin[0]}%;top:${place.pin[1]}%" data-city="${place.id}">${variant.clans.filter(c=>c.seat===place.id).map(clan=>`<button class="clan-pin" data-action="show-clan" data-clan="${clan.id}" aria-label="${escape(clan.name)} · ${escape(place.name)} · ${escape(clanRankLabel(clan))}"><img src="${previewAsset('assets/'+clan.crest)}" width="40" height="40" alt="Wappen ${escape(clan.name)}"></button>`).join('')}</div>`).join('');
-  const names=variant.settlements.map(place=>{const position=place.label??[place.point[0],place.point[1]+3.6];return `<span class="city-name" style="left:${position[0]}%;top:${position[1]}%">${escape(place.name)}</span>`;}).join('');
-  return `<img src="${previewAsset(variant.map)}" alt="${escape(variant.file)} – Karte der Variante ${variant.number}" width="4096" height="3365"><div class="crest-layer" ${showCrests?'':'hidden'}><svg class="crest-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>${pins}</div><div class="city-names" ${showNames&&variant.id!=='original'?'':'hidden'}>${names}</div>`;
- }
- function render(){
-  hideTooltip();
-  const variant=getVariant();
-  for(const surface of surfaces)surface.innerHTML=surfaceMarkup(variant);
-  document.querySelector('#map-caption').textContent=`Variante ${variant.number} · ${variant.file} · Wappen öffnen die Lehensdetails. Auf schmalen Bildschirmen die Karte seitlich verschieben.`;
-  dialog.querySelector('[data-role="map-title"]').textContent=`Variante ${variant.number} · ${variant.short}`;
-  const namesButton=root.querySelector('[data-action="toggle-names"]');
-  namesButton.disabled=variant.id==='original';
-  namesButton.textContent=variant.id==='original'?'Ortsnamen im Kartenbild':'Ortsnamen';
-  namesButton.setAttribute('aria-pressed',String(variant.id==='original'||showNames));
-  sizeOverview();
- }
- function tip(button){
-  const variant=getVariant(),clan=variant.clans.find(c=>c.id===button.dataset.clan);
-  const place=variant.settlements.find(p=>p.id===clan.seat),liege=variant.clans.find(c=>c.id===clan.liege);
-  (button.closest('dialog')??document.body).append(tooltip);
-  tooltip.innerHTML=`<strong>${escape(clan.name)}</strong><span>${escape(clanRankLabel(clan))} · ${escape(place.name)}</span><span>${liege?'Dient '+escape(liege.name):'Fürstenclan Uathneachs'}</span>`;
-  tooltip.hidden=false;
-  const rect=button.getBoundingClientRect();
-  tooltip.style.left=Math.max(8,Math.min(rect.left,window.innerWidth-tooltip.offsetWidth-8))+'px';
-  tooltip.style.top=Math.max(8,rect.top-tooltip.offsetHeight-9)+'px';
- }
- for(const surface of surfaces){
-  surface.addEventListener('pointerover',event=>{const button=event.target.closest('.clan-pin');if(button)tip(button);});
-  surface.addEventListener('focusin',event=>{const button=event.target.closest('.clan-pin');if(button)tip(button);});
-  surface.addEventListener('pointerout',event=>{if(!event.relatedTarget?.closest?.('.clan-pin'))hideTooltip();});
-  surface.addEventListener('focusout',hideTooltip);
-  surface.addEventListener('click',event=>{const button=event.target.closest('.clan-pin');if(button){hideTooltip();onClan(button.dataset.clan);}});
- }
- let mapTrigger;
- dialog.addEventListener('click',event=>{
-  const action=event.target.closest('[data-action]')?.dataset.action;
-  if(action==='close-map')dialog.close();
-  if(action==='zoom-in'){zoom=Math.min(3.5,zoom+.35);sizeOverview();}
-  if(action==='zoom-out'){zoom=Math.max(1,zoom-.35);sizeOverview();}
-  if(action==='fit-map'){zoom=1;sizeOverview();}
- });
- dialog.addEventListener('close',()=>{hideTooltip();mapTrigger?.focus({preventScroll:true});});
- window.addEventListener('scroll',hideTooltip,true);
- window.addEventListener('resize',()=>{hideTooltip();sizeOverview();});
- return {render,open(){mapTrigger=document.activeElement;zoom=1;dialog.showModal();sizeOverview();},toggleCrests(button){showCrests=!showCrests;button.setAttribute('aria-pressed',String(showCrests));render();},toggleNames(button){showNames=!showNames;button.setAttribute('aria-pressed',String(showNames));render();}};
+export function createClanMap(options){
+ return createProposalClanMap({...options,tooltip:document.querySelector('#clan-tooltip'),
+  assetUrl:previewAsset,rankLabel:clanRankLabel,imageSize:[4096,3365],
+  hasBakedNames:variant=>variant.id==='original',rootClanLabel:'Fürstenclan Uathneachs'});
 }

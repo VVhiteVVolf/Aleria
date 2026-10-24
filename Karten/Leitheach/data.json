@@ -1,11 +1,1356 @@
 {
   "schemaVersion": 1,
   "dataPath": "Leitheach/data.json",
-  "revision": 1,
-  "updatedAt": "2026-10-22T16:10:00.000Z",
-  "generatedStateHash": "dda358d180dc5cd8210359cb4289156c0aeaaf4fca69218a830bd35b8aebdc0f",
+  "revision": 2,
+  "updatedAt": "2026-10-24T18:00:00.000Z",
+  "generatedStateHash": "ba7730ca543923555c6c20141f71b147d1aed511883f4413c41513b83aa03af4",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "afef0b57-806f-41d7-86fd-29916806d1f5",
+        "title": "Broch an Iar",
+        "x": 0.59912109375,
+        "y": 0.7307584662748391,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-ruitheach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Dál’Ruitheach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Iar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál’Ruitheach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/afef0b57-806f-41d7-86fd-29916806d1f5/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-ruitheach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "afef0b57-806f-41d7-86fd-29916806d1f5",
+          "url": "https://www.worldanvil.com/world/map/marker/afef0b57-806f-41d7-86fd-29916806d1f5/edit",
+          "coordinate": {
+            "x": 2454,
+            "y": 962,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "fd376fff-bffb-4f2f-b1cc-309ff4226814",
+        "title": "Broch an Abhainn",
+        "x": 0.368896484375,
+        "y": 0.3137419535404422,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-mac-ard-cumhaill.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-mac-ard-cumhaill&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Mac Ard Cumhaill",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Abhainn"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Mac Ard Cumhaill"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/fd376fff-bffb-4f2f-b1cc-309ff4226814/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-sleagh",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "fd376fff-bffb-4f2f-b1cc-309ff4226814",
+          "url": "https://www.worldanvil.com/world/map/marker/fd376fff-bffb-4f2f-b1cc-309ff4226814/edit",
+          "coordinate": {
+            "x": 1511,
+            "y": 2452,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "f33bb3c3-ca1d-4c4b-b941-2d0bdd0be690",
+        "title": "Lochansail",
+        "x": 0.700439453125,
+        "y": 0.32185838231178276,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-dal-cruthin.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dal-cruthin&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-gortanna.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Dál’Cruthin",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lochansail"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Dál’Cruthin"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/f33bb3c3-ca1d-4c4b-b941-2d0bdd0be690/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-gortanna",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "f33bb3c3-ca1d-4c4b-b941-2d0bdd0be690",
+          "url": "https://www.worldanvil.com/world/map/marker/f33bb3c3-ca1d-4c4b-b941-2d0bdd0be690/edit",
+          "coordinate": {
+            "x": 2869,
+            "y": 2423,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "ed001765-c88b-4997-b86b-1f48cc991b90",
+        "title": "Nossail",
+        "x": 0.382080078125,
+        "y": 0.09571788413098237,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-gaelach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ua-gaelach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Ua’Gaelach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Nossail"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Ua’Gaelach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/ed001765-c88b-4997-b86b-1f48cc991b90/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-sinsear",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "ed001765-c88b-4997-b86b-1f48cc991b90",
+          "url": "https://www.worldanvil.com/world/map/marker/ed001765-c88b-4997-b86b-1f48cc991b90/edit",
+          "coordinate": {
+            "x": 1565,
+            "y": 3231,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "c873cd23-9a89-427d-8d24-7eb208cf7fbc",
+        "title": "Dun Laog",
+        "x": 0.551513671875,
+        "y": 0.1995521970333054,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ua-gaelach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ua-gaelach&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sinsear.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Ua’Gaelach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dun Laog"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Ua’Gaelach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/c873cd23-9a89-427d-8d24-7eb208cf7fbc/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-sinsear",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "c873cd23-9a89-427d-8d24-7eb208cf7fbc",
+          "url": "https://www.worldanvil.com/world/map/marker/c873cd23-9a89-427d-8d24-7eb208cf7fbc/edit",
+          "coordinate": {
+            "x": 2259,
+            "y": 2860,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "c644c534-bc03-4654-8c0e-5d558c5ab1c1",
+        "title": "Cel Leagan",
+        "x": 0.465087890625,
+        "y": 0.4713126224461237,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-tir-an-airgid.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-airgid&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Tir An’Airgid",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cel Leagan"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir An’Airgid"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/c644c534-bc03-4654-8c0e-5d558c5ab1c1/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-airgid",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "c644c534-bc03-4654-8c0e-5d558c5ab1c1",
+          "url": "https://www.worldanvil.com/world/map/marker/c644c534-bc03-4654-8c0e-5d558c5ab1c1/edit",
+          "coordinate": {
+            "x": 1905,
+            "y": 1889,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "0208adf4-3775-4323-8e2f-1b6f6fa9ed85",
+        "title": "Dun Athar",
+        "x": 0.053955078125,
+        "y": 0.09487825356842994,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-mac-ard-cumhaill.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-mac-ard-cumhaill&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sleagh.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Mac Ard Cumhaill",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dun Athar"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Mac Ard Cumhaill"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/0208adf4-3775-4323-8e2f-1b6f6fa9ed85/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-sleagh",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "0208adf4-3775-4323-8e2f-1b6f6fa9ed85",
+          "url": "https://www.worldanvil.com/world/map/marker/0208adf4-3775-4323-8e2f-1b6f6fa9ed85/edit",
+          "coordinate": {
+            "x": 221,
+            "y": 3234,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "a76bd182-2236-46f1-ad90-bf232def9c44",
+        "title": "Ceanntire",
+        "x": 0.198974609375,
+        "y": 0.6924153372516093,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-tir-an-cuinn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tir-an-cuinn&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-sruth.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Tir An’Cuinn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ceanntire"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Tir An’Cuinn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/a76bd182-2236-46f1-ad90-bf232def9c44/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-sruth",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "a76bd182-2236-46f1-ad90-bf232def9c44",
+          "url": "https://www.worldanvil.com/world/map/marker/a76bd182-2236-46f1-ad90-bf232def9c44/edit",
+          "coordinate": {
+            "x": 815,
+            "y": 1099,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "997f0eb6-8c38-47a9-a4ab-4bbe93b568e1",
+        "title": "Dun Rothar",
+        "x": 0.47802734375,
+        "y": 0.9221942345368038,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-fir-an-tarvo.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-fir-an-tarvo&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-tonn.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Fir An’Tarvo",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dun Rothar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Fir An’Tarvo"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/997f0eb6-8c38-47a9-a4ab-4bbe93b568e1/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-tonn",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "997f0eb6-8c38-47a9-a4ab-4bbe93b568e1",
+          "url": "https://www.worldanvil.com/world/map/marker/997f0eb6-8c38-47a9-a4ab-4bbe93b568e1/edit",
+          "coordinate": {
+            "x": 1958,
+            "y": 278,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "98ed1e99-86cc-4366-8c19-bacbf134a85d",
+        "title": "Broch an Ear",
+        "x": 0.4453125,
+        "y": 0.7128463476070529,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ru-gortach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Ru’Gortach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Ear"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ru’Gortach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/98ed1e99-86cc-4366-8c19-bacbf134a85d/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-gortach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "98ed1e99-86cc-4366-8c19-bacbf134a85d",
+          "url": "https://www.worldanvil.com/world/map/marker/98ed1e99-86cc-4366-8c19-bacbf134a85d/edit",
+          "coordinate": {
+            "x": 1824,
+            "y": 1026,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "8c2e3125-e026-473c-bf48-518d3e88e26a",
+        "title": "Sruthlann",
+        "x": 0.941162109375,
+        "y": 0.10719283515253286,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-mac-airt.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-mac-airt&mode=view",
+        "banner": "/Stammbäume/assets/images/regions/Leitheach/tir-na-comhchuibhis.png",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Mac Airt",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sruthlann"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Mac Airt"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/8c2e3125-e026-473c-bf48-518d3e88e26a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-comhchuibhis",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "8c2e3125-e026-473c-bf48-518d3e88e26a",
+          "url": "https://www.worldanvil.com/world/map/marker/8c2e3125-e026-473c-bf48-518d3e88e26a/edit",
+          "coordinate": {
+            "x": 3855,
+            "y": 3190,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "region-outline",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "766ed4af-aec6-4661-a5e2-87049fac4099",
+        "title": "Broch an Coill",
+        "x": 0.742919921875,
+        "y": 0.06912958298348726,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-na-mhuir.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-na-mhuir&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Clan Na’Mhuir",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Broch an Coill"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Clan Na’Mhuir"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/766ed4af-aec6-4661-a5e2-87049fac4099/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-tir-na-fancha",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "766ed4af-aec6-4661-a5e2-87049fac4099",
+          "url": "https://www.worldanvil.com/world/map/marker/766ed4af-aec6-4661-a5e2-87049fac4099/edit",
+          "coordinate": {
+            "x": 3043,
+            "y": 3326,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "66d525a9-802b-46ca-9d85-64647c6bb08a",
+        "title": "Lasbun",
+        "x": 0.72509765625,
+        "y": 0.5443604813881893,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ard-frisealach.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-frisealach&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Ard Frisealach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lasbun"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ard Frisealach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/66d525a9-802b-46ca-9d85-64647c6bb08a/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-frisealach",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "66d525a9-802b-46ca-9d85-64647c6bb08a",
+          "url": "https://www.worldanvil.com/world/map/marker/66d525a9-802b-46ca-9d85-64647c6bb08a/edit",
+          "coordinate": {
+            "x": 2970,
+            "y": 1628,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      },
+      {
+        "id": "0f85f286-c040-451d-a49d-49b3e2be4408",
+        "title": "Claisean",
+        "x": 0.87255859375,
+        "y": 0.45424013434089006,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Leitheach/clan-ruin-laidir.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-laidir&mode=view",
+        "banner": "",
+        "bannerLink": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
+        "region": "Fürstentum Leitheach",
+        "house": "Ruin’Laidir",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Claisean"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ruin’Laidir"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Quellenstand",
+            "v": "Beschreibung fehlt"
+          },
+          {
+            "k": "Quelle",
+            "v": "https://www.worldanvil.com/world/map/marker/0f85f286-c040-451d-a49d-49b3e2be4408/edit"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "leitheach-herrschaft-laidir",
+        "sourceRef": {
+          "type": "world-anvil",
+          "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
+          "markerId": "0f85f286-c040-451d-a49d-49b3e2be4408",
+          "url": "https://www.worldanvil.com/world/map/marker/0f85f286-c040-451d-a49d-49b3e2be4408/edit",
+          "coordinate": {
+            "x": 3574,
+            "y": 1950,
+            "origin": "bottom-left",
+            "imageSize": [
+              4096,
+              3573
+            ]
+          },
+          "assignment": "documented-seat",
+          "sourceIcon": "marker-icon-transparent.png",
+          "missing": [
+            "Beschreibung fehlt"
+          ]
+        }
+      }
+    ],
     "cats": [
       {
         "id": "mmflrbzxydg7",
@@ -604,191 +1949,191 @@
           [
             [
               0,
-              0.00111951
+              0.00111982
             ],
             [
               0,
-              0.29666947
+              0.29675252
             ],
             [
               0.03027344,
-              0.302267
+              0.30235162
             ],
             [
               0.03613281,
-              0.31346208
+              0.31354983
             ],
             [
               0.03808594,
-              0.32577666
+              0.32586786
             ],
             [
               0.04785156,
-              0.3313742
+              0.33146697
             ],
             [
               0.05566406,
-              0.34480828
+              0.34490482
             ],
             [
               0.05371094,
-              0.35376434
+              0.35386338
             ],
             [
               0.05957031,
-              0.35936188
+              0.35946249
             ],
             [
               0.06542969,
-              0.38287154
+              0.38297872
             ],
             [
               0.07128906,
-              0.39070809
+              0.39081747
             ],
             [
               0.10058594,
-              0.40526168
+              0.40537514
             ],
             [
               0.10351563,
-              0.40526168
+              0.40537514
             ],
             [
               0.1171875,
-              0.39742513
+              0.39753639
             ],
             [
               0.13574219,
-              0.39966415
+              0.39977604
             ],
             [
               0.14648438,
-              0.41533725
+              0.41545353
             ],
             [
               0.1484375,
-              0.42765183
+              0.42777156
             ],
             [
               0.18945313,
-              0.41869577
+              0.41881299
             ],
             [
               0.2265625,
-              0.39742513
+              0.39753639
             ],
             [
               0.28515625,
-              0.37279597
+              0.37290034
             ],
             [
               0.34277344,
-              0.36943745
+              0.36954087
             ],
             [
               0.36621094,
-              0.35376434
+              0.35386338
             ],
             [
               0.37695313,
-              0.3324937
+              0.33258679
             ],
             [
               0.38378906,
-              0.31346208
+              0.31354983
             ],
             [
               0.39160156,
-              0.3011475
+              0.3012318
             ],
             [
               0.40917969,
-              0.28883291
+              0.28891377
             ],
             [
               0.40917969,
-              0.27427932
+              0.2743561
             ],
             [
               0.40039063,
-              0.26532326
+              0.26539754
             ],
             [
               0.39257813,
-              0.26084523
+              0.26091825
             ],
             [
               0.37597656,
-              0.24629163
+              0.24636058
             ],
             [
               0.359375,
-              0.20598936
+              0.20604703
             ],
             [
               0.34570313,
-              0.1959138
+              0.19596865
             ],
             [
               0.31640625,
-              0.18695774
+              0.18701008
             ],
             [
               0.3046875,
-              0.17016513
+              0.17021277
             ],
             [
               0.30371094,
-              0.1656871
+              0.16573348
             ],
             [
               0.30664063,
-              0.15449202
+              0.15453527
             ],
             [
               0.31054688,
-              0.14777498
+              0.14781635
             ],
             [
               0.31152344,
-              0.13210188
+              0.13213886
             ],
             [
               0.30957031,
-              0.12650434
+              0.12653975
             ],
             [
               0.29199219,
-              0.11418976
+              0.11422172
             ],
             [
               0.29394531,
-              0.10411419
+              0.10414334
             ],
             [
               0.29882813,
-              0.09515813
+              0.09518477
             ],
             [
               0.3046875,
-              0.07836552
+              0.07838746
             ],
             [
               0.29589844,
-              0.06717045
+              0.06718925
             ],
             [
               0.29199219,
-              0.05933389
+              0.0593505
             ],
             [
               0.30273438,
-              0.04142177
+              0.04143337
             ],
             [
               0.30273438,
-              0.00111951
+              0.00111982
             ]
           ]
         ],
@@ -796,7 +2141,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.3,
         "parentId": "",
-        "dominionId": "region-f762e3f2-8628-4e78-8dbb-8d047ba645db",
+        "dominionId": "leitheach-tir-na-sleagh",
         "familyId": "haus-mac-ard-cumhaill",
         "targetMapId": "leitheach-tir-na-sleagh",
         "showLabel": true,
@@ -806,7 +2151,7 @@
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
           "markerId": "f762e3f2-8628-4e78-8dbb-8d047ba645db",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/f762e3f2-8628-4e78-8dbb-8d047ba645db/edit"
         },
         "familyName": "Clan Mac Ard Cumhaill"
@@ -820,331 +2165,331 @@
           [
             [
               0.796875,
-              0.01791212
+              0.01791713
             ],
             [
               0.80566406,
-              0.0145536
+              0.01455767
             ],
             [
               0.81640625,
-              0.01343409
+              0.01343785
             ],
             [
               0.83691406,
-              0.01791212
+              0.01791713
             ],
             [
               0.84667969,
-              0.01343409
+              0.01343785
             ],
             [
               0.85546875,
-              0.00111951
+              0.00111982
             ],
             [
               0.86914063,
-              0.00111951
+              0.00111982
             ],
             [
               0.88574219,
-              0.00671704
+              0.00671892
             ],
             [
               0.89746094,
-              0.00559754
+              0.0055991
             ],
             [
               0.91992188,
-              0.01007557
+              0.01007839
             ],
             [
               0.93359375,
-              0.00447803
+              0.00447928
             ],
             [
               0.93945313,
-              -0.00111951
+              -0.00111982
             ],
             [
               1.00097656,
-              -0.00111951
+              -0.00111982
             ],
             [
               1,
-              0.09291912
+              0.09294513
             ],
             [
               0.984375,
-              0.10299468
+              0.10302352
             ],
             [
               0.97949219,
-              0.11195074
+              0.11198208
             ],
             [
               0.97753906,
-              0.12202631
+              0.12206047
             ],
             [
               0.9765625,
-              0.13993843
+              0.1399776
             ],
             [
               0.97265625,
-              0.16008956
+              0.16013438
             ],
             [
               0.98046875,
-              0.17352365
+              0.17357223
             ],
             [
               0.97949219,
-              0.18359922
+              0.18365062
             ],
             [
               0.97558594,
-              0.19703331
+              0.19708847
             ],
             [
               0.97753906,
-              0.21942345
+              0.21948488
             ],
             [
               0.9765625,
-              0.23173804
+              0.23180291
             ],
             [
               0.97070313,
-              0.23957459
+              0.23964166
             ],
             [
               0.96875,
-              0.25076966
+              0.25083987
             ],
             [
               0.97753906,
-              0.26756227
+              0.26763718
             ],
             [
               0.97070313,
-              0.27315981
+              0.27323628
             ],
             [
               0.96386719,
-              0.28883291
+              0.28891377
             ],
             [
               0.96582031,
-              0.30002799
+              0.30011198
             ],
             [
               0.97070313,
-              0.30674503
+              0.30683091
             ],
             [
               0.97460938,
-              0.30674503
+              0.30683091
             ],
             [
               0.98144531,
-              0.31234257
+              0.31243001
             ],
             [
               0.97558594,
-              0.32465715
+              0.32474804
             ],
             [
               0.97460938,
-              0.33025469
+              0.33034714
             ],
             [
               0.9765625,
-              0.34256927
+              0.34266517
             ],
             [
               0.97949219,
-              0.35040582
+              0.35050392
             ],
             [
               0.98046875,
-              0.3616009
+              0.36170213
             ],
             [
               0.98339844,
-              0.36831794
+              0.36842105
             ],
             [
               0.97558594,
-              0.36943745
+              0.36954087
             ],
             [
               0.96484375,
-              0.38175203
+              0.3818589
             ],
             [
               0.95996094,
-              0.39070809
+              0.39081747
             ],
             [
               0.95800781,
-              0.40973971
+              0.40985442
             ],
             [
               0.94335938,
-              0.43548839
+              0.4356103
             ],
             [
               0.93457031,
-              0.44444444
+              0.44456887
             ],
             [
               0.92773438,
-              0.44332494
+              0.44344905
             ],
             [
               0.91113281,
-              0.44668346
+              0.44680851
             ],
             [
               0.90722656,
-              0.452281
+              0.45240761
             ],
             [
               0.890625,
-              0.46347607
+              0.46360582
             ],
             [
               0.88378906,
-              0.48922474
+              0.4893617
             ],
             [
               0.88183594,
-              0.51049538
+              0.5106383
             ],
             [
               0.87597656,
-              0.51833193
+              0.51847704
             ],
             [
               0.87109375,
-              0.50825637
+              0.50839866
             ],
             [
               0.85839844,
-              0.49706129
+              0.49720045
             ],
             [
               0.82421875,
-              0.47355164
+              0.47368421
             ],
             [
               0.80664063,
-              0.46571509
+              0.46584546
             ],
             [
               0.79492188,
-              0.45563952
+              0.45576708
             ],
             [
               0.79101563,
-              0.45004198
+              0.45016797
             ],
             [
               0.79785156,
-              0.44220543
+              0.44232923
             ],
             [
               0.80761719,
-              0.40973971
+              0.40985442
             ],
             [
               0.81445313,
-              0.39518612
+              0.39529675
             ],
             [
               0.83691406,
-              0.37951301
+              0.37961926
             ],
             [
               0.84667969,
-              0.36831794
+              0.36842105
             ],
             [
               0.8515625,
-              0.35600336
+              0.35610302
             ],
             [
               0.85253906,
-              0.34144976
+              0.34154535
             ],
             [
               0.84863281,
-              0.32689617
+              0.32698768
             ],
             [
               0.83691406,
-              0.31122306
+              0.31131019
             ],
             [
               0.81445313,
-              0.30786454
+              0.30795073
             ],
             [
               0.79589844,
-              0.2865939
+              0.28667413
             ],
             [
               0.76171875,
-              0.22949902
+              0.22956327
             ],
             [
               0.74804688,
-              0.21494542
+              0.2150056
             ],
             [
               0.73730469,
-              0.20710887
+              0.20716685
             ],
             [
               0.72363281,
-              0.20039183
+              0.20044793
             ],
             [
               0.71582031,
-              0.19255528
+              0.19260918
             ],
             [
               0.70996094,
-              0.17912119
+              0.17917133
             ],
             [
               0.70996094,
-              0.16232858
+              0.16237402
             ],
             [
               0.70507813,
-              0.14441646
+              0.14445689
             ],
             [
               0.72363281,
-              0.1052337
+              0.10526316
             ],
             [
               0.74902344,
-              0.08508256
+              0.08510638
             ],
             [
               0.78417969,
-              0.06381192
+              0.06382979
             ],
             [
               0.79101563,
-              0.05037783
+              0.05039194
             ],
             [
               0.79589844,
-              0.02910719
+              0.02911534
             ]
           ]
         ],
@@ -1152,7 +2497,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.4,
         "parentId": "",
-        "dominionId": "region-f50379c4-fef2-46b2-a0cd-f89d549e9bcd",
+        "dominionId": "leitheach-tir-na-comhchuibhis",
         "familyId": "haus-mac-airt",
         "targetMapId": "leitheach-tir-na-comhchuibhis",
         "showLabel": true,
@@ -1162,7 +2507,7 @@
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
           "markerId": "f50379c4-fef2-46b2-a0cd-f89d549e9bcd",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/f50379c4-fef2-46b2-a0cd-f89d549e9bcd/edit"
         },
         "familyName": "Clan Mac Airt"
@@ -1176,303 +2521,303 @@
           [
             [
               0.54101563,
-              0.56870977
+              0.56886898
             ],
             [
               0.52636719,
-              0.58438287
+              0.58454647
             ],
             [
               0.49902344,
-              0.60005598
+              0.60022396
             ],
             [
               0.46875,
-              0.61349006
+              0.61366181
             ],
             [
               0.42675781,
-              0.62692415
+              0.62709966
             ],
             [
               0.41015625,
-              0.65267282
+              0.65285554
             ],
             [
               0.39453125,
-              0.67170445
+              0.6718925
             ],
             [
               0.36035156,
-              0.70081164
+              0.70100784
             ],
             [
               0.33789063,
-              0.72656031
+              0.72676372
             ],
             [
               0.32617188,
-              0.75006997
+              0.75027996
             ],
             [
               0.30761719,
-              0.79820879
+              0.79843225
             ],
             [
               0.27832031,
-              0.84186958
+              0.84210526
             ],
             [
               0.2578125,
-              0.86873776
+              0.86898096
             ],
             [
               0.2265625,
-              0.88329135
+              0.88353863
             ],
             [
               0.21582031,
-              0.89224741
+              0.8924972
             ],
             [
               0.1875,
-              0.89224741
+              0.8924972
             ],
             [
               0.18652344,
-              0.88217184
+              0.88241881
             ],
             [
               0.1796875,
-              0.86873776
+              0.86898096
             ],
             [
               0.16503906,
-              0.8609012
+              0.86114222
             ],
             [
               0.15722656,
-              0.85866219
+              0.85890258
             ],
             [
               0.1484375,
-              0.86537923
+              0.8656215
             ],
             [
               0.140625,
-              0.86761825
+              0.86786114
             ],
             [
               0.12890625,
-              0.85754268
+              0.85778275
             ],
             [
               0.11425781,
-              0.85082564
+              0.85106383
             ],
             [
               0.10058594,
-              0.85418416
+              0.85442329
             ],
             [
               0.09570313,
-              0.84858662
+              0.84882419
             ],
             [
               0.09375,
-              0.83851106
+              0.8387458
             ],
             [
               0.08886719,
-              0.829555
+              0.82978723
             ],
             [
               0.08300781,
-              0.82283795
+              0.82306831
             ],
             [
               0.07617188,
-              0.81947943
+              0.81970885
             ],
             [
               0.07421875,
-              0.8004478
+              0.80067189
             ],
             [
               0.0703125,
-              0.79485027
+              0.79507279
             ],
             [
               0.046875,
-              0.78141618
+              0.78163494
             ],
             [
               0.0390625,
-              0.78029667
+              0.78051512
             ],
             [
               0.0234375,
-              0.78925273
+              0.78947368
             ],
             [
               0,
-              0.78925273
+              0.78947368
             ],
             [
               0,
-              0.57990484
+              0.58006719
             ],
             [
               0.01660156,
-              0.56870977
+              0.56886898
             ],
             [
               0.03417969,
-              0.56982928
+              0.5699888
             ],
             [
               0.04394531,
-              0.55975371
+              0.55991041
             ],
             [
               0.04882813,
-              0.55079765
+              0.55095185
             ],
             [
               0.04882813,
-              0.5440806
+              0.54423292
             ],
             [
               0.04394531,
-              0.52504898
+              0.52519597
             ],
             [
               0.05371094,
-              0.52280996
+              0.52295633
             ],
             [
               0.07128906,
-              0.5138539
+              0.51399776
             ],
             [
               0.07910156,
-              0.48922474
+              0.4893617
             ],
             [
               0.09179688,
-              0.49370277
+              0.49384099
             ],
             [
               0.10253906,
-              0.49034425
+              0.49048152
             ],
             [
               0.11328125,
-              0.47243213
+              0.47256439
             ],
             [
               0.1328125,
-              0.46459558
+              0.46472564
             ],
             [
               0.14257813,
-              0.45675903
+              0.4568869
             ],
             [
               0.14746094,
-              0.44780297
+              0.44792833
             ],
             [
               0.15039063,
-              0.42765183
+              0.42777156
             ],
             [
               0.19140625,
-              0.41757627
+              0.41769317
             ],
             [
               0.21582031,
-              0.40302267
+              0.4031355
             ],
             [
               0.28320313,
-              0.37279597
+              0.37290034
             ],
             [
               0.296875,
-              0.37055695
+              0.37066069
             ],
             [
               0.34375,
-              0.36943745
+              0.36954087
             ],
             [
               0.359375,
-              0.35936188
+              0.35946249
             ],
             [
               0.37011719,
-              0.34928631
+              0.3493841
             ],
             [
               0.37402344,
-              0.3616009
+              0.36170213
             ],
             [
               0.40234375,
-              0.37055695
+              0.37066069
             ],
             [
               0.421875,
-              0.37167646
+              0.37178052
             ],
             [
               0.43359375,
-              0.377274
+              0.37737962
             ],
             [
               0.45605469,
-              0.41757627
+              0.41769317
             ],
             [
               0.46875,
-              0.42541282
+              0.42553191
             ],
             [
               0.48535156,
-              0.42989085
+              0.4300112
             ],
             [
               0.51171875,
-              0.42877134
+              0.42889138
             ],
             [
               0.52148438,
-              0.43436888
+              0.43449048
             ],
             [
               0.53320313,
-              0.43660789
+              0.43673012
             ],
             [
               0.55175781,
-              0.44668346
+              0.44680851
             ],
             [
               0.55761719,
-              0.45675903
+              0.4568869
             ],
             [
               0.5625,
-              0.47019312
+              0.47032475
             ],
             [
               0.56347656,
-              0.51049538
+              0.5106383
             ],
             [
               0.55664063,
-              0.52952701
+              0.52967525
             ]
           ]
         ],
@@ -1480,7 +2825,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.4,
         "parentId": "",
-        "dominionId": "region-a89a5908-70c6-4b0e-b615-fe268e05afa9",
+        "dominionId": "leitheach-tir-na-sruth",
         "familyId": "haus-tir-an-cuinn",
         "targetMapId": "leitheach-tir-na-sruth",
         "showLabel": true,
@@ -1490,7 +2835,7 @@
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
           "markerId": "a89a5908-70c6-4b0e-b615-fe268e05afa9",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/a89a5908-70c6-4b0e-b615-fe268e05afa9/edit"
         },
         "familyName": "Clan Tir An’Cuinn"
@@ -1504,7 +2849,7 @@
           [
             [
               0.30371094,
-              0.00111951
+              0.00111982
             ],
             [
               0.78417969,
@@ -1512,167 +2857,167 @@
             ],
             [
               0.79492188,
-              0.01791212
+              0.01791713
             ],
             [
               0.79296875,
-              0.04030227
+              0.04031355
             ],
             [
               0.78710938,
-              0.05821439
+              0.05823068
             ],
             [
               0.77734375,
-              0.06828995
+              0.06830907
             ],
             [
               0.74804688,
-              0.08284355
+              0.08286674
             ],
             [
               0.73632813,
-              0.09179961
+              0.09182531
             ],
             [
               0.72558594,
-              0.10299468
+              0.10302352
             ],
             [
               0.71679688,
-              0.11530926
+              0.11534155
             ],
             [
               0.70214844,
-              0.14889449
+              0.14893617
             ],
             [
               0.69433594,
-              0.16232858
+              0.16237402
             ],
             [
               0.68359375,
-              0.17464316
+              0.17469205
             ],
             [
               0.66503906,
-              0.18807725
+              0.1881299
             ],
             [
               0.63964844,
-              0.20039183
+              0.20044793
             ],
             [
               0.62304688,
-              0.20486986
+              0.20492721
             ],
             [
               0.58398438,
-              0.20710887
+              0.20716685
             ],
             [
               0.54980469,
-              0.21382592
+              0.21388578
             ],
             [
               0.53808594,
-              0.22726001
+              0.22732363
             ],
             [
               0.48632813,
-              0.26420375
+              0.26427772
             ],
             [
               0.46582031,
-              0.27315981
+              0.27323628
             ],
             [
               0.41601563,
-              0.28995242
+              0.29003359
             ],
             [
               0.41503906,
-              0.27875735
+              0.27883539
             ],
             [
               0.3828125,
-              0.25300868
+              0.25307951
             ],
             [
               0.36328125,
-              0.21606493
+              0.21612542
             ],
             [
               0.35449219,
-              0.20375035
+              0.20380739
             ],
             [
               0.34472656,
-              0.19479429
+              0.19484882
             ],
             [
               0.33105469,
-              0.19255528
+              0.19260918
             ],
             [
               0.31835938,
-              0.18695774
+              0.18701008
             ],
             [
               0.30859375,
-              0.18024069
+              0.18029115
             ],
             [
               0.30371094,
-              0.16904562
+              0.16909295
             ],
             [
               0.30371094,
-              0.15897005
+              0.15901456
             ],
             [
               0.30859375,
-              0.14889449
+              0.14893617
             ],
             [
               0.3125,
-              0.1354604
+              0.13549832
             ],
             [
               0.30859375,
-              0.12538483
+              0.12541993
             ],
             [
               0.29882813,
-              0.11754828
+              0.11758119
             ],
             [
               0.29296875,
-              0.1052337
+              0.10526316
             ],
             [
               0.30371094,
-              0.08396306
+              0.08398656
             ],
             [
               0.30371094,
-              0.075007
+              0.075028
             ],
             [
               0.29394531,
-              0.05821439
+              0.05823068
             ],
             [
               0.29980469,
-              0.0447803
+              0.04479283
             ],
             [
               0.29980469,
-              0.03358522
+              0.03359462
             ],
             [
               0.30273438,
-              0.01231458
+              0.01231803
             ]
           ]
         ],
@@ -1680,7 +3025,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.3,
         "parentId": "",
-        "dominionId": "region-8ceb2324-db69-4194-a7b2-1876ca35691e",
+        "dominionId": "leitheach-tir-na-sinsear",
         "familyId": "haus-ua-gaelach",
         "targetMapId": "leitheach-tir-na-sinsear",
         "showLabel": true,
@@ -1690,7 +3035,7 @@
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
           "markerId": "8ceb2324-db69-4194-a7b2-1876ca35691e",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/8ceb2324-db69-4194-a7b2-1876ca35691e/edit"
         },
         "familyName": "Clan Ua’Gaelach"
@@ -1704,463 +3049,463 @@
           [
             [
               0.21679688,
-              0.8911279
+              0.89137738
             ],
             [
               0.2265625,
-              0.89672544
+              0.89697648
             ],
             [
               0.22753906,
-              0.90456199
+              0.90481523
             ],
             [
               0.23242188,
-              0.90904002
+              0.90929451
             ],
             [
               0.23730469,
-              0.91015953
+              0.91041433
             ],
             [
               0.24121094,
-              0.91463756
+              0.91489362
             ],
             [
               0.24316406,
-              0.9202351
+              0.92049272
             ],
             [
               0.25,
-              0.92247411
+              0.92273236
             ],
             [
               0.25585938,
-              0.94150574
+              0.94176932
             ],
             [
               0.24902344,
-              0.95493983
+              0.95520717
             ],
             [
               0.24707031,
-              0.95605933
+              0.95632699
             ],
             [
               0.25292969,
-              0.96389589
+              0.96416573
             ],
             [
               0.25585938,
-              0.9661349
+              0.96640538
             ],
             [
               0.26757813,
-              0.96277638
+              0.96304591
             ],
             [
               0.27929688,
-              0.96389589
+              0.96416573
             ],
             [
               0.29785156,
-              0.97509096
+              0.97536394
             ],
             [
               0.30566406,
-              0.97285195
+              0.9731243
             ],
             [
               0.31445313,
-              0.981808
+              0.98208287
             ],
             [
               0.31542969,
-              0.99188357
+              0.99216125
             ],
             [
               0.31835938,
-              0.99860062
+              0.99888018
             ],
             [
               0.42871094,
-              0.99972012
+              1
             ],
             [
               0.43554688,
-              0.98292751
+              0.98320269
             ],
             [
               0.45117188,
-              0.9806885
+              0.98096305
             ],
             [
               0.45507813,
-              0.98292751
+              0.98320269
             ],
             [
               0.47558594,
-              0.96837392
+              0.96864502
             ],
             [
               0.48535156,
-              0.96389589
+              0.96416573
             ],
             [
               0.49316406,
-              0.9661349
+              0.96640538
             ],
             [
               0.5,
-              0.97173244
+              0.97200448
             ],
             [
               0.5078125,
-              0.97509096
+              0.97536394
             ],
             [
               0.51660156,
-              0.97509096
+              0.97536394
             ],
             [
               0.52148438,
-              0.9806885
+              0.98096305
             ],
             [
               0.52539063,
-              0.98964456
+              0.98992161
             ],
             [
               0.52734375,
-              0.99972012
+              1
             ],
             [
               0.68847656,
-              0.99860062
+              0.99888018
             ],
             [
               0.69433594,
-              0.99524209
+              0.99552072
             ],
             [
               0.69238281,
-              0.98964456
+              0.98992161
             ],
             [
               0.69335938,
-              0.9806885
+              0.98096305
             ],
             [
               0.70117188,
-              0.96501539
+              0.96528555
             ],
             [
               0.70703125,
-              0.96053736
+              0.96080627
             ],
             [
               0.71972656,
-              0.95605933
+              0.95632699
             ],
             [
               0.72167969,
-              0.9515813
+              0.9518477
             ],
             [
               0.72167969,
-              0.94374475
+              0.94400896
             ],
             [
               0.72460938,
-              0.94262524
+              0.94288914
             ],
             [
               0.69628906,
-              0.94262524
+              0.94288914
             ],
             [
               0.6875,
-              0.9359082
+              0.93617021
             ],
             [
               0.67675781,
-              0.92247411
+              0.92273236
             ],
             [
               0.67578125,
-              0.90904002
+              0.90929451
             ],
             [
               0.67285156,
-              0.90008396
+              0.90033595
             ],
             [
               0.67382813,
-              0.89224741
+              0.8924972
             ],
             [
               0.68164063,
-              0.8754548
+              0.87569989
             ],
             [
               0.68652344,
-              0.87209628
+              0.87234043
             ],
             [
               0.68945313,
-              0.86314022
+              0.86338186
             ],
             [
               0.71191406,
-              0.84858662
+              0.84882419
             ],
             [
               0.71875,
-              0.84746711
+              0.84770437
             ],
             [
               0.72949219,
-              0.85194514
+              0.85218365
             ],
             [
               0.7421875,
-              0.83851106
+              0.8387458
             ],
             [
               0.75,
-              0.81947943
+              0.81970885
             ],
             [
               0.74023438,
-              0.80940386
+              0.80963046
             ],
             [
               0.74023438,
-              0.79485027
+              0.79507279
             ],
             [
               0.74707031,
-              0.77917716
+              0.7793953
             ],
             [
               0.76660156,
-              0.7702211
+              0.77043673
             ],
             [
               0.76855469,
-              0.76686258
+              0.76707727
             ],
             [
               0.76855469,
-              0.75790652
+              0.7581187
             ],
             [
               0.75097656,
-              0.7702211
+              0.77043673
             ],
             [
               0.74121094,
-              0.7702211
+              0.77043673
             ],
             [
               0.73242188,
-              0.76686258
+              0.76707727
             ],
             [
               0.7265625,
-              0.76014554
+              0.76035834
             ],
             [
               0.7265625,
-              0.75342849
+              0.75363942
             ],
             [
               0.73144531,
-              0.73439687
+              0.73460246
             ],
             [
               0.73730469,
-              0.72991884
+              0.73012318
             ],
             [
               0.74316406,
-              0.72879933
+              0.72900336
             ],
             [
               0.75390625,
-              0.72320179
+              0.72340426
             ],
             [
               0.76171875,
-              0.72320179
+              0.72340426
             ],
             [
               0.76855469,
-              0.72656031
+              0.72676372
             ],
             [
               0.77734375,
-              0.72767982
+              0.72788354
             ],
             [
               0.78808594,
-              0.72656031
+              0.72676372
             ],
             [
               0.7890625,
-              0.71760425
+              0.71780515
             ],
             [
               0.796875,
-              0.70417017
+              0.7043673
             ],
             [
               0.80664063,
-              0.69745312
+              0.69764838
             ],
             [
               0.79980469,
-              0.69745312
+              0.69764838
             ],
             [
               0.78320313,
-              0.68849706
+              0.68868981
             ],
             [
               0.77929688,
-              0.68178002
+              0.68197088
             ],
             [
               0.78125,
-              0.67170445
+              0.6718925
             ],
             [
               0.78613281,
-              0.65938987
+              0.65957447
             ],
             [
               0.79003906,
-              0.65491184
+              0.65509518
             ],
             [
               0.78808594,
-              0.65043381
+              0.6506159
             ],
             [
               0.78320313,
-              0.64819479
+              0.64837626
             ],
             [
               0.78125,
-              0.64259726
+              0.64277716
             ],
             [
               0.78027344,
-              0.63699972
+              0.63717805
             ],
             [
               0.78222656,
-              0.62468514
+              0.62486002
             ],
             [
               0.76855469,
-              0.62244612
+              0.62262038
             ],
             [
               0.66503906,
-              0.54743913
+              0.54759239
             ],
             [
               0.65234375,
-              0.54743913
+              0.54759239
             ],
             [
               0.64257813,
-              0.54967814
+              0.54983203
             ],
             [
               0.62207031,
-              0.5586342
+              0.55879059
             ],
             [
               0.61621094,
-              0.55303666
+              0.55319149
             ],
             [
               0.6015625,
-              0.53176602
+              0.53191489
             ],
             [
               0.59082031,
-              0.52504898
+              0.52519597
             ],
             [
               0.55957031,
-              0.52616849
+              0.52631579
             ],
             [
               0.54199219,
-              0.56311223
+              0.56326988
             ],
             [
               0.53125,
-              0.57990484
+              0.58006719
             ],
             [
               0.51757813,
-              0.59109992
+              0.5912654
             ],
             [
               0.49804688,
-              0.59781696
+              0.59798432
             ],
             [
               0.45703125,
-              0.61684859
+              0.61702128
             ],
             [
               0.42675781,
-              0.62692415
+              0.62709966
             ],
             [
               0.40234375,
-              0.66162888
+              0.66181411
             ],
             [
               0.38574219,
-              0.67842149
+              0.67861142
             ],
             [
               0.36035156,
-              0.69857263
+              0.6987682
             ],
             [
               0.33203125,
-              0.73439687
+              0.73460246
             ],
             [
               0.32519531,
-              0.75678701
+              0.75699888
             ],
             [
               0.3046875,
-              0.80156731
+              0.80179171
             ],
             [
               0.29492188,
-              0.81947943
+              0.81970885
             ],
             [
               0.28027344,
-              0.83627204
+              0.83650616
             ],
             [
               0.25976563,
-              0.86761825
+              0.86786114
             ],
             [
               0.22753906,
-              0.88329135
+              0.88353863
             ]
           ]
         ],
@@ -2168,7 +3513,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.4,
         "parentId": "",
-        "dominionId": "region-83ddba5a-162b-41d3-b8b9-d9cb93f06502",
+        "dominionId": "leitheach-tir-na-tonn",
         "familyId": "haus-fir-an-tarvo",
         "targetMapId": "leitheach-tir-na-tonn",
         "showLabel": true,
@@ -2178,7 +3523,7 @@
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
           "markerId": "83ddba5a-162b-41d3-b8b9-d9cb93f06502",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/83ddba5a-162b-41d3-b8b9-d9cb93f06502/edit"
         },
         "familyName": "Clan Fir An’Tarvo"
@@ -2192,339 +3537,339 @@
           [
             [
               0.703125,
-              0.57542681
+              0.57558791
             ],
             [
               0.76855469,
-              0.62244612
+              0.62262038
             ],
             [
               0.78027344,
-              0.62468514
+              0.62486002
             ],
             [
               0.78417969,
-              0.61572908
+              0.61590146
             ],
             [
               0.796875,
-              0.61125105
+              0.61142217
             ],
             [
               0.80175781,
-              0.60677302
+              0.60694289
             ],
             [
               0.80664063,
-              0.60565351
+              0.60582307
             ],
             [
               0.81347656,
-              0.60677302
+              0.60694289
             ],
             [
               0.82421875,
-              0.61237056
+              0.61254199
             ],
             [
               0.83886719,
-              0.60901203
+              0.60918253
             ],
             [
               0.84375,
-              0.59109992
+              0.5912654
             ],
             [
               0.86132813,
-              0.58102435
+              0.58118701
             ],
             [
               0.85546875,
-              0.5743073
+              0.57446809
             ],
             [
               0.85546875,
-              0.56311223
+              0.56326988
             ],
             [
               0.86425781,
-              0.5440806
+              0.54423292
             ],
             [
               0.86328125,
-              0.53624405
+              0.53639418
             ],
             [
               0.86523438,
-              0.52952701
+              0.52967525
             ],
             [
               0.87207031,
-              0.52280996
+              0.52295633
             ],
             [
               0.87402344,
-              0.51497341
+              0.51511758
             ],
             [
               0.86621094,
-              0.50489784
+              0.50503919
             ],
             [
               0.84179688,
-              0.48474671
+              0.48488242
             ],
             [
               0.82226563,
-              0.47243213
+              0.47256439
             ],
             [
               0.80761719,
-              0.46683459
+              0.46696529
             ],
             [
               0.796875,
-              0.45899804
+              0.45912654
             ],
             [
               0.79003906,
-              0.45004198
+              0.45016797
             ],
             [
               0.79882813,
-              0.43996641
+              0.44008959
             ],
             [
               0.80273438,
-              0.41869577
+              0.41881299
             ],
             [
               0.81152344,
-              0.39966415
+              0.39977604
             ],
             [
               0.81835938,
-              0.38958858
+              0.38969765
             ],
             [
               0.83691406,
-              0.37839351
+              0.37849944
             ],
             [
               0.84765625,
-              0.36607893
+              0.36618141
             ],
             [
               0.8515625,
-              0.35152533
+              0.35162374
             ],
             [
               0.8515625,
-              0.33697173
+              0.33706607
             ],
             [
               0.84765625,
-              0.32465715
+              0.32474804
             ],
             [
               0.83789063,
-              0.31010355
+              0.31019037
             ],
             [
               0.81445313,
-              0.30562552
+              0.30571109
             ],
             [
               0.79785156,
-              0.28771341
+              0.28779395
             ],
             [
               0.75,
-              0.21382592
+              0.21388578
             ],
             [
               0.72070313,
-              0.19815281
+              0.19820829
             ],
             [
               0.71386719,
-              0.18919675
+              0.18924972
             ],
             [
               0.7109375,
-              0.17912119
+              0.17917133
             ],
             [
               0.7109375,
-              0.1656871
+              0.16573348
             ],
             [
               0.70507813,
-              0.14553596
+              0.14557671
             ],
             [
               0.6953125,
-              0.16120907
+              0.1612542
             ],
             [
               0.68457031,
-              0.17128463
+              0.17133259
             ],
             [
               0.66894531,
-              0.18359922
+              0.18365062
             ],
             [
               0.63964844,
-              0.20039183
+              0.20044793
             ],
             [
               0.62304688,
-              0.20486986
+              0.20492721
             ],
             [
               0.56835938,
-              0.20822838
+              0.20828667
             ],
             [
               0.55078125,
-              0.21270641
+              0.21276596
             ],
             [
               0.51757813,
-              0.24293311
+              0.24300112
             ],
             [
               0.49804688,
-              0.25524769
+              0.25531915
             ],
             [
               0.48730469,
-              0.26420375
+              0.26427772
             ],
             [
               0.46679688,
-              0.26980129
+              0.26987682
             ],
             [
               0.40234375,
-              0.29666947
+              0.29675252
             ],
             [
               0.38671875,
-              0.31010355
+              0.31019037
             ],
             [
               0.37988281,
-              0.32241814
+              0.3225084
             ],
             [
               0.37792969,
-              0.3313742
+              0.33146697
             ],
             [
               0.37011719,
-              0.35040582
+              0.35050392
             ],
             [
               0.37207031,
-              0.35824237
+              0.35834267
             ],
             [
               0.37890625,
-              0.36383991
+              0.36394177
             ],
             [
               0.39160156,
-              0.36831794
+              0.36842105
             ],
             [
               0.42578125,
-              0.37167646
+              0.37178052
             ],
             [
               0.43652344,
-              0.377274
+              0.37737962
             ],
             [
               0.44726563,
-              0.4075007
+              0.40761478
             ],
             [
               0.46972656,
-              0.42765183
+              0.42777156
             ],
             [
               0.48730469,
-              0.43101036
+              0.43113102
             ],
             [
               0.50683594,
-              0.42765183
+              0.42777156
             ],
             [
               0.51953125,
-              0.43548839
+              0.4356103
             ],
             [
               0.54101563,
-              0.44108592
+              0.44120941
             ],
             [
               0.55566406,
-              0.44780297
+              0.44792833
             ],
             [
               0.55957031,
-              0.46235656
+              0.462486
             ],
             [
               0.56347656,
-              0.49370277
+              0.49384099
             ],
             [
               0.5625,
-              0.51721243
+              0.51735722
             ],
             [
               0.55957031,
-              0.52504898
+              0.52519597
             ],
             [
               0.59179688,
-              0.52952701
+              0.52967525
             ],
             [
               0.60253906,
-              0.53624405
+              0.53639418
             ],
             [
               0.61230469,
-              0.55303666
+              0.55319149
             ],
             [
               0.61914063,
-              0.55975371
+              0.55991041
             ],
             [
               0.62988281,
-              0.55975371
+              0.55991041
             ],
             [
               0.640625,
-              0.54967814
+              0.54983203
             ],
             [
               0.65234375,
-              0.54743913
+              0.54759239
             ],
             [
               0.66601563,
-              0.54855863
+              0.54871221
             ],
             [
               0.69628906,
-              0.57206829
+              0.57222844
             ]
           ]
         ],
@@ -2532,7 +3877,7 @@
         "borderColor": "#ff0000",
         "opacity": 0.4,
         "parentId": "",
-        "dominionId": "region-492718e8-e70d-481f-a5f2-cd7f76731789",
+        "dominionId": "leitheach-tir-na-gortanna",
         "familyId": "haus-dal-cruthin",
         "targetMapId": "leitheach-tir-na-gortanna",
         "showLabel": true,
@@ -2542,7 +3887,7 @@
           "mapId": "e4e40471-6f95-41a7-a54b-bb4500bf1fa6",
           "markerId": "492718e8-e70d-481f-a5f2-cd7f76731789",
           "coordinateSystem": "normalized-top-left",
-          "geometryMethod": "visible-svg",
+          "geometryMethod": "visible-svg-verified",
           "url": "https://www.worldanvil.com/world/map/marker/492718e8-e70d-481f-a5f2-cd7f76731789/edit"
         },
         "familyName": "Clan Dál’Cruthin"
@@ -2550,58 +3895,238 @@
     ],
     "dominions": [
       {
-        "id": "region-f762e3f2-8628-4e78-8dbb-8d047ba645db",
-        "name": "Fürstliche Herrschaft - Tir na Sleagh",
-        "type": "Herrschaft",
+        "id": "fuerstentum-leitheach",
+        "name": "Fürstentum Leitheach",
+        "type": "Fürstentum",
         "ruler": "Clan Mac Ard Cumhaill",
         "seat": "Dun Athar",
-        "note": "",
-        "parentId": ""
+        "parentId": "",
+        "note": ""
       },
       {
-        "id": "region-f50379c4-fef2-46b2-a0cd-f89d549e9bcd",
-        "name": "Oberherrschaft - Tir na Comhchuibhis",
+        "id": "leitheach-tir-na-sleagh",
+        "name": "Tir na Sleagh",
         "type": "Oberherrschaft",
-        "ruler": "Clan Mac Airt",
-        "seat": "Sruthlann",
-        "note": "",
-        "parentId": ""
+        "ruler": "Clan Mac Ard Cumhaill",
+        "seat": "Dun Athar",
+        "parentId": "fuerstentum-leitheach",
+        "note": ""
       },
       {
-        "id": "region-a89a5908-70c6-4b0e-b615-fe268e05afa9",
-        "name": "Oberherrschaft - Tir na Sruth",
-        "type": "Oberherrschaft",
-        "ruler": "Clan Tir An’Cuinn",
-        "seat": "Ceanntire",
-        "note": "",
-        "parentId": ""
-      },
-      {
-        "id": "region-8ceb2324-db69-4194-a7b2-1876ca35691e",
-        "name": "Oberherrschaft - Tir na Sinsear",
+        "id": "leitheach-tir-na-sinsear",
+        "name": "Tir na Sinsear",
         "type": "Oberherrschaft",
         "ruler": "Clan Ua’Gaelach",
         "seat": "Nossail",
-        "note": "",
-        "parentId": ""
+        "parentId": "fuerstentum-leitheach",
+        "note": ""
       },
       {
-        "id": "region-83ddba5a-162b-41d3-b8b9-d9cb93f06502",
-        "name": "Oberherrschaft - Tir na Tonn",
-        "type": "Oberherrschaft",
-        "ruler": "Clan Fir An’Tarvo",
-        "seat": "Dun Rothar",
-        "note": "",
-        "parentId": ""
+        "id": "leitheach-tir-na-fancha",
+        "name": "Tir na Fancha",
+        "type": "Herrschaft",
+        "ruler": "Clan Na’Mhuir",
+        "seat": "Broch an Coill",
+        "parentId": "leitheach-tir-na-sinsear",
+        "note": ""
       },
       {
-        "id": "region-492718e8-e70d-481f-a5f2-cd7f76731789",
-        "name": "Oberherrschaft - Tir na Gortanna",
+        "id": "leitheach-tir-na-coimhthioch",
+        "name": "Tir na Coimhthioch",
+        "type": "Lehensherrschaft",
+        "ruler": "Fir An’Gallchobhair",
+        "seat": "Dun Laog",
+        "parentId": "leitheach-tir-na-sinsear",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-cleir",
+        "name": "Herrschaft der Ua’Cleir",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Cleir",
+        "seat": "Cairn Fàire",
+        "parentId": "leitheach-tir-na-coimhthioch",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-ghaiscioch",
+        "name": "Herrschaft der Ua’Ghaiscíoch",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Ghaiscíoch",
+        "seat": "Dun Laog",
+        "parentId": "leitheach-tir-na-coimhthioch",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-ceardaiocht",
+        "name": "Herrschaft der Dál’Ceardaíocht",
+        "type": "Herrschaft",
+        "ruler": "Clan Dál’Ceardaíocht",
+        "seat": "Dun Laog",
+        "parentId": "leitheach-tir-na-coimhthioch",
+        "note": ""
+      },
+      {
+        "id": "leitheach-tir-na-gortanna",
+        "name": "Tir na Gortanna",
         "type": "Oberherrschaft",
         "ruler": "Clan Dál’Cruthin",
         "seat": "Lochansail",
-        "note": "",
-        "parentId": ""
+        "parentId": "fuerstentum-leitheach",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-ard-trodach",
+        "name": "Herrschaft der Ard Trodach",
+        "type": "Herrschaft",
+        "ruler": "Ard Trodach",
+        "seat": "Lochansail",
+        "parentId": "leitheach-tir-na-gortanna",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-nic-caoimhe",
+        "name": "Herrschaft der Nic Caoimhe",
+        "type": "Herrschaft",
+        "ruler": "Nic Caoimhe",
+        "seat": "Lochansail",
+        "parentId": "leitheach-tir-na-gortanna",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-frisealach",
+        "name": "Lehensherrschaft der Ard Frisealach",
+        "type": "Lehensherrschaft",
+        "ruler": "Ard Frisealach",
+        "seat": "Lasbun",
+        "parentId": "leitheach-tir-na-gortanna",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-somhairle",
+        "name": "Herrschaft der Sidhe Somhairle",
+        "type": "Herrschaft",
+        "ruler": "Sidhe Somhairle",
+        "seat": "Broch an Clais",
+        "parentId": "leitheach-tir-na-gortanna",
+        "note": ""
+      },
+      {
+        "id": "leitheach-tir-na-tonn",
+        "name": "Tir na Tonn",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Fir An’Tarvo",
+        "seat": "Dun Rothar",
+        "parentId": "fuerstentum-leitheach",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-gortach",
+        "name": "Herrschaft der Ru’Gortach",
+        "type": "Herrschaft",
+        "ruler": "Ru’Gortach",
+        "seat": "Broch an Ear",
+        "parentId": "leitheach-tir-na-tonn",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-ruitheach",
+        "name": "Herrschaft der Dál’Ruitheach",
+        "type": "Herrschaft",
+        "ruler": "Dál’Ruitheach",
+        "seat": "Broch an Iar",
+        "parentId": "leitheach-tir-na-tonn",
+        "note": ""
+      },
+      {
+        "id": "leitheach-tir-na-comhchuibhis",
+        "name": "Tir an Comhchuibhis",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Mac Airt",
+        "seat": "Sruthlann",
+        "parentId": "fuerstentum-leitheach",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-laidir",
+        "name": "Lehensherrschaft der Ruin’Laidir",
+        "type": "Lehensherrschaft",
+        "ruler": "Ruin’Laidir",
+        "seat": "Claisean",
+        "parentId": "leitheach-tir-na-comhchuibhis",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-choinnich",
+        "name": "Herrschaft der Ua’Choinnich",
+        "type": "Herrschaft",
+        "ruler": "Ua’Choinnich",
+        "seat": "Sruthlann",
+        "parentId": "leitheach-tir-na-comhchuibhis",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-nic-blar",
+        "name": "Herrschaft der Nic’Blar",
+        "type": "Herrschaft",
+        "ruler": "Nic’Blar · Leitheach",
+        "seat": "Sruthlann",
+        "parentId": "leitheach-tir-na-comhchuibhis",
+        "note": ""
+      },
+      {
+        "id": "leitheach-tir-na-sruth",
+        "name": "Tir na Sruth",
+        "type": "Oberherrschaft",
+        "ruler": "Clan Tir An’Cuinn",
+        "seat": "Ceanntire",
+        "parentId": "fuerstentum-leitheach",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-airgid",
+        "name": "Lehensherrschaft der Tir An’Airgid",
+        "type": "Lehensherrschaft",
+        "ruler": "Tir An’Airgid",
+        "seat": "Cel Leagan",
+        "parentId": "leitheach-tir-na-sruth",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-amhran",
+        "name": "Herrschaft der Ua’Amhran",
+        "type": "Herrschaft",
+        "ruler": "Ua’Amhran",
+        "seat": "Ceanntire",
+        "parentId": "leitheach-tir-na-sruth",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-eirce",
+        "name": "Herrschaft der Ua’Eirce",
+        "type": "Herrschaft",
+        "ruler": "Clan Ua’Eirce",
+        "seat": "Senanbail",
+        "parentId": "leitheach-tir-na-sleagh",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-fiachrach",
+        "name": "Herrschaft der Uí Fiachrach",
+        "type": "Herrschaft",
+        "ruler": "Clan Uí Fiachrach",
+        "seat": "Mârbail",
+        "parentId": "leitheach-tir-na-sleagh",
+        "note": ""
+      },
+      {
+        "id": "leitheach-herrschaft-laoch",
+        "name": "Herrschaft von Broch an Abhainn",
+        "type": "Herrschaft",
+        "ruler": "Ruin Ua Laoch",
+        "seat": "",
+        "parentId": "leitheach-tir-na-sleagh",
+        "note": ""
       }
     ],
     "regionTitle": "Fürstentum Leitheach",

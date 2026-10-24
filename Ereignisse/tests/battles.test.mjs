@@ -101,7 +101,7 @@ test('Schlachtkarte ist im Monats- und Tagesmodell sichtbar und führt zum vorha
   for (const name of ['wellenruh-szene-v1.png','wellenruh-szene-v1.webp','image-prompts.json']) await readFile(new URL(`../assets/battles/wellenruh/${name}`, import.meta.url));
 });
 
-test('Die vollständige Nutzerüberlieferung einschließlich Strategien und sieben Szenenabsätzen bleibt lesbar', async () => {
+test('Die archivierte Nutzerüberlieferung und alle 28 abgeglichenen Absätze einschließlich der Szene bleiben erhalten', async () => {
   const source=JSON.parse(await readFile(new URL('../modules/battles/wellenruh-source.json',import.meta.url),'utf8'));
   const original=await readFile(new URL('../Schlachten/sources/wellenruh-vorlage.html',import.meta.url));
   assert.equal(createHash('sha256').update(original).digest('hex'),source.sha256);
@@ -110,7 +110,10 @@ test('Die vollständige Nutzerüberlieferung einschließlich Strategien und sieb
   ]);
   const html=renderWellenruhPage();
   assert.equal((html.match(/data-source-paragraph=/g)||[]).length,28);
-  for(const section of source.sections)for(const text of section.paragraphs)assert.ok(html.includes(escapeEventText(text)),`${section.id}: ${text.slice(0,50)}`);
+  const {SOURCE_SECTIONS}=await import('../modules/battles/battle-chronicle-render.mjs');
+  assert.deepEqual(SOURCE_SECTIONS.map(section=>[section.id,section.paragraphs.length]),source.sections.map(section=>[section.id,section.paragraphs.length]));
+  for(const section of SOURCE_SECTIONS)for(const text of section.paragraphs)assert.ok(html.includes(escapeEventText(text)),`${section.id}: ${text.slice(0,50)}`);
+  assert.match(html,/vierten bis sechsten Monat 1630/);assert.doesNotMatch(html,/Kurz nach dieser verheerenden Niederlage trafen/);
   for(const name of ['Skeld Gullvig','Egil Ragnulf','Torvald Varangr','Fenrir Wellenschild','Ragnar Silberblut','Sverre Sturmgeborener'])assert.ok(html.includes(name));
   assert.match(html,/Trivia.*keine ausgefüllten Einträge/s);
   assert.doesNotMatch(html,/battle-fleet-seal[^>]*>[GR]</);

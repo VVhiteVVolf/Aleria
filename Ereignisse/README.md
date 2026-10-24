@@ -12,6 +12,17 @@ Almanach öffnet sie; der Kalender bleibt eine eigene Seite.
   Wellenruh mit neuem Szenenbild und steuerbarer Rekonstruktion. Der exakt
   überlieferte 11.04.1628 erscheint als einmaliger Quellenkalendereintrag.
   Architektur, Bildprompt und Prüfungen: `modules/battles/README.md`.
+- `modules/praetendenten`: illustrierte Kriegsoberseite, drei Fraktionsdossiers
+  und 16 Ereignisdossiers einschließlich acht bewusst knapper Eckdaten-Seiten,
+  dazu das verknüpfte Wellenruh-Dossier: alle 17 übergebenen Ereignisse zugänglich
+  und alle 24 neuen Anhänge archiviert. Alle 33 Punkte der Inhaltsprüfung wurden
+  anhand der Stammbäume und einer gemeinsamen Chronologie bereinigt; der aktuelle
+  Text und die unveränderten Archivoriginale sind getrennt. Entscheidungen und
+  weiterhin fehlende Einzelangaben stehen im Modul-README und Änderungsprotokoll.
+  Die Dossiers führen den Bericht links und eine mitlaufende Infotabelle rechts;
+  die Oberseite erschließt die Schauplätze über eine Jahres- und Parteienauswahl
+  auf der vorhandenen Aldrimar-Reichskarte.
+  `node Ereignisse/scripts/build-praetendenten.mjs` erzeugt die registrierten Seiten.
 - `assets/icons`: unveränderte Original-Icons der Vorlage, lokal gespeichert;
   `sources.json` dokumentiert die Bildquellen. Jedes Ereignis wählt sein eigenes
   Motiv über `icon`. Die statische Ausgabe und die Filteransichten verwenden

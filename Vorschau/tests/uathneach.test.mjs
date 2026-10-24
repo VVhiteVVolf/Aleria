@@ -12,7 +12,7 @@ test('the shared preview resolves all local module, stylesheet and image referen
   let imageCount = 0;
   for (const name of files) {
     const source = await readFile(new URL(name, root), 'utf8');
-    for (const match of source.matchAll(/(?:from\s+['"]|(?:src|href)="|url\(['"]?)(\.\/[^'"\s)]+|assets\/[^'"\s)]+|[\w-]+\.(?:mjs|css))/g)) {
+    for (const match of source.matchAll(/(?:from\s+['"]|(?:src|href)="|url\(['"]?)(\.\.?\/[^'"\s)]+|assets\/[^'"\s)]+|[\w-]+\.(?:mjs|css))/g)) {
       const target = previewAsset(match[1]);
       assert.ok((await stat(new URL(target, root))).isFile(), `${name}: ${target}`);
     }

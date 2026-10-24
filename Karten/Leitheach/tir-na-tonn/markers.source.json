@@ -1,0 +1,1152 @@
+{
+  "schemaVersion": 1,
+  "imageSize": [
+    4096,
+    3939
+  ],
+  "coordinateOrigin": "bottom-left",
+  "sourceMapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+  "mapId": "leitheach-tir-na-tonn",
+  "markers": [
+    {
+      "id": "b78beec3-eefd-42c9-8bf3-4b9509ea44c9",
+      "title": "Broch an Iar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "x": 2880,
+      "y": 2016,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "b78beec3-eefd-42c9-8bf3-4b9509ea44c9",
+        "url": "https://www.worldanvil.com/world/map/marker/b78beec3-eefd-42c9-8bf3-4b9509ea44c9/edit",
+        "coordinate": {
+          "x": 2880,
+          "y": 2016,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "documented-seat",
+        "sourceIcon": "marker-icon-transparent.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "3ddbb4cb-32ed-4ecf-938a-ba14288f0050",
+      "title": "Dun Rothar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "x": 1588,
+      "y": 364,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "3ddbb4cb-32ed-4ecf-938a-ba14288f0050",
+        "url": "https://www.worldanvil.com/world/map/marker/3ddbb4cb-32ed-4ecf-938a-ba14288f0050/edit",
+        "coordinate": {
+          "x": 1588,
+          "y": 364,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "documented-seat",
+        "sourceIcon": "marker-icon-transparent.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "70180594-d1de-4877-815d-a6459d2de116",
+      "title": "Broch an Ear",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "x": 1241,
+      "y": 2293,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "70180594-d1de-4877-815d-a6459d2de116",
+        "url": "https://www.worldanvil.com/world/map/marker/70180594-d1de-4877-815d-a6459d2de116/edit",
+        "coordinate": {
+          "x": 1241,
+          "y": 2293,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "documented-seat",
+        "sourceIcon": "marker-icon-transparent.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "b1e5fc72-60cc-4eb2-9c4b-50baf8920eff",
+      "title": "Cluainfionn",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 2064,
+      "y": 2846,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "b1e5fc72-60cc-4eb2-9c4b-50baf8920eff",
+        "url": "https://www.worldanvil.com/world/map/marker/b1e5fc72-60cc-4eb2-9c4b-50baf8920eff/edit",
+        "coordinate": {
+          "x": 2064,
+          "y": 2846,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "94305405-4221-4b9c-815f-fe6df5110104",
+      "title": "Sligeach",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 3246,
+      "y": 2673,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "94305405-4221-4b9c-815f-fe6df5110104",
+        "url": "https://www.worldanvil.com/world/map/marker/94305405-4221-4b9c-815f-fe6df5110104/edit",
+        "coordinate": {
+          "x": 3246,
+          "y": 2673,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "965eb664-0b49-4d5b-b32e-6c3869c8f43a",
+      "title": "Torcallt",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 2866,
+      "y": 2577,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "965eb664-0b49-4d5b-b32e-6c3869c8f43a",
+        "url": "https://www.worldanvil.com/world/map/marker/965eb664-0b49-4d5b-b32e-6c3869c8f43a/edit",
+        "coordinate": {
+          "x": 2866,
+          "y": 2577,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "98429c14-368a-41f0-b100-0d58508ed9e1",
+      "title": "Inbhirchlach",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 3893,
+      "y": 3182,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "98429c14-368a-41f0-b100-0d58508ed9e1",
+        "url": "https://www.worldanvil.com/world/map/marker/98429c14-368a-41f0-b100-0d58508ed9e1/edit",
+        "coordinate": {
+          "x": 3893,
+          "y": 3182,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "9905d263-2a3f-4b44-ba47-a79f8035e42a",
+      "title": "Maraois",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 1003,
+      "y": 1283,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "9905d263-2a3f-4b44-ba47-a79f8035e42a",
+        "url": "https://www.worldanvil.com/world/map/marker/9905d263-2a3f-4b44-ba47-a79f8035e42a/edit",
+        "coordinate": {
+          "x": 1003,
+          "y": 1283,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "99bb2bcc-e372-4f57-9115-d2b8008f4ed5",
+      "title": "Mòinchuim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 1774,
+      "y": 2351,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "99bb2bcc-e372-4f57-9115-d2b8008f4ed5",
+        "url": "https://www.worldanvil.com/world/map/marker/99bb2bcc-e372-4f57-9115-d2b8008f4ed5/edit",
+        "coordinate": {
+          "x": 1774,
+          "y": 2351,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "9c7dda64-c8ee-4488-9b5e-94d6a059b3a3",
+      "title": "Camassgian",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 1286,
+      "y": 1291,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "9c7dda64-c8ee-4488-9b5e-94d6a059b3a3",
+        "url": "https://www.worldanvil.com/world/map/marker/9c7dda64-c8ee-4488-9b5e-94d6a059b3a3/edit",
+        "coordinate": {
+          "x": 1286,
+          "y": 1291,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "a5f18483-a10c-42dd-98e1-740e2dcf7ad8",
+      "title": "Inbhirruadh",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 1686,
+      "y": 2970,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "a5f18483-a10c-42dd-98e1-740e2dcf7ad8",
+        "url": "https://www.worldanvil.com/world/map/marker/a5f18483-a10c-42dd-98e1-740e2dcf7ad8/edit",
+        "coordinate": {
+          "x": 1686,
+          "y": 2970,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e",
+      "title": "Zur Wetterklaue",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "x": 1878,
+      "y": 1647,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e",
+        "url": "https://www.worldanvil.com/world/map/marker/aa0bcb29-4bfa-4a3e-8f45-0f1d2440e19e/edit",
+        "coordinate": {
+          "x": 1878,
+          "y": 1647,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_tavern.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "aa2541e8-cd29-4e63-815d-6c276d98151a",
+      "title": "Bruthachmara",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 3546,
+      "y": 2512,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "aa2541e8-cd29-4e63-815d-6c276d98151a",
+        "url": "https://www.worldanvil.com/world/map/marker/aa2541e8-cd29-4e63-815d-6c276d98151a/edit",
+        "coordinate": {
+          "x": 3546,
+          "y": 2512,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "90f53c15-a7bd-4cc3-945d-3e92597fe499",
+      "title": "Cuansrath",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 2538,
+      "y": 1273,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "90f53c15-a7bd-4cc3-945d-3e92597fe499",
+        "url": "https://www.worldanvil.com/world/map/marker/90f53c15-a7bd-4cc3-945d-3e92597fe499/edit",
+        "coordinate": {
+          "x": 2538,
+          "y": 1273,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "bc7d9d1a-503b-4235-84a6-36d052f73dff",
+      "title": "Druimghorm",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "x": 1787,
+      "y": 1364,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "bc7d9d1a-503b-4235-84a6-36d052f73dff",
+        "url": "https://www.worldanvil.com/world/map/marker/bc7d9d1a-503b-4235-84a6-36d052f73dff/edit",
+        "coordinate": {
+          "x": 1787,
+          "y": 1364,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_village.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "bdf63228-8582-4f86-bd6a-fbc7e59bf48f",
+      "title": "Gartglaise",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 1569,
+      "y": 1694,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "bdf63228-8582-4f86-bd6a-fbc7e59bf48f",
+        "url": "https://www.worldanvil.com/world/map/marker/bdf63228-8582-4f86-bd6a-fbc7e59bf48f/edit",
+        "coordinate": {
+          "x": 1569,
+          "y": 1694,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "c70820ac-b487-4551-88a4-b7787b79b246",
+      "title": "Stèidhfhionn",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 2165,
+      "y": 754,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "c70820ac-b487-4551-88a4-b7787b79b246",
+        "url": "https://www.worldanvil.com/world/map/marker/c70820ac-b487-4551-88a4-b7787b79b246/edit",
+        "coordinate": {
+          "x": 2165,
+          "y": 754,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "dc3a04af-8a77-476e-9d8a-458ecb484a4f",
+      "title": "Broch an Tiomnaidh - Orden der Lilie",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "x": 1144,
+      "y": 2904,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "dc3a04af-8a77-476e-9d8a-458ecb484a4f",
+        "url": "https://www.worldanvil.com/world/map/marker/dc3a04af-8a77-476e-9d8a-458ecb484a4f/edit",
+        "coordinate": {
+          "x": 1144,
+          "y": 2904,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "f30c320c1edecba0164470b8ba87a286.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "dc68535a-aa57-4399-bceb-18a564c88ab2",
+      "title": "Raithdubh",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 2469,
+      "y": 3067,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "dc68535a-aa57-4399-bceb-18a564c88ab2",
+        "url": "https://www.worldanvil.com/world/map/marker/dc68535a-aa57-4399-bceb-18a564c88ab2/edit",
+        "coordinate": {
+          "x": 2469,
+          "y": 3067,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "f4628da2-cb33-47f8-b46c-77397294ab04",
+      "title": "Eileangorm",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 1018,
+      "y": 762,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "f4628da2-cb33-47f8-b46c-77397294ab04",
+        "url": "https://www.worldanvil.com/world/map/marker/f4628da2-cb33-47f8-b46c-77397294ab04/edit",
+        "coordinate": {
+          "x": 1018,
+          "y": 762,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "6836e709-5c5b-4ecd-8f75-eb816ac23a8f",
+      "title": "Achadhfraoch",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 2126,
+      "y": 1399,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "6836e709-5c5b-4ecd-8f75-eb816ac23a8f",
+        "url": "https://www.worldanvil.com/world/map/marker/6836e709-5c5b-4ecd-8f75-eb816ac23a8f/edit",
+        "coordinate": {
+          "x": 2126,
+          "y": 1399,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "1e76076b-007a-4f40-a2ac-7e03e9446c26",
+      "title": "Eaglais an Sìthein",
+      "category": "Kirchensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "x": 2526,
+      "y": 813,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "1e76076b-007a-4f40-a2ac-7e03e9446c26",
+        "url": "https://www.worldanvil.com/world/map/marker/1e76076b-007a-4f40-a2ac-7e03e9446c26/edit",
+        "coordinate": {
+          "x": 2526,
+          "y": 813,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "229f536d-a9cb-456c-b38d-78c55bf7b489",
+      "title": "Broch an Òrd - Die Abkömmlinge",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "x": 2082,
+      "y": 2098,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "229f536d-a9cb-456c-b38d-78c55bf7b489",
+        "url": "https://www.worldanvil.com/world/map/marker/229f536d-a9cb-456c-b38d-78c55bf7b489/edit",
+        "coordinate": {
+          "x": 2082,
+          "y": 2098,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "f30c320c1edecba0164470b8ba87a286.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "2bda0258-0937-47c6-909a-bc294e342f65",
+      "title": "Talamhghlas",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 2729,
+      "y": 3424,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "2bda0258-0937-47c6-909a-bc294e342f65",
+        "url": "https://www.worldanvil.com/world/map/marker/2bda0258-0937-47c6-909a-bc294e342f65/edit",
+        "coordinate": {
+          "x": 2729,
+          "y": 3424,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "30439c16-0236-4da3-8863-ab2848da28c0",
+      "title": "Eaglais an Eilein",
+      "category": "Kirchensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "x": 544,
+      "y": 2264,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "30439c16-0236-4da3-8863-ab2848da28c0",
+        "url": "https://www.worldanvil.com/world/map/marker/30439c16-0236-4da3-8863-ab2848da28c0/edit",
+        "coordinate": {
+          "x": 544,
+          "y": 2264,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "369a265c-d091-4df3-a92f-f62b7b0dd5ad",
+      "title": "Ùrlachan",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "x": 3692,
+      "y": 3463,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "369a265c-d091-4df3-a92f-f62b7b0dd5ad",
+        "url": "https://www.worldanvil.com/world/map/marker/369a265c-d091-4df3-a92f-f62b7b0dd5ad/edit",
+        "coordinate": {
+          "x": 3692,
+          "y": 3463,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1e99474f238f704e5c17b306aa9a5c35.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "4923e33a-f5cf-4c98-8bc1-78afb49a1cbf",
+      "title": "Mèinngeal",
+      "category": "Bergbausiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bergbausiedlung.png",
+      "x": 2752,
+      "y": 3687,
+      "territoryId": "leitheach-herrschaft-gortach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "4923e33a-f5cf-4c98-8bc1-78afb49a1cbf",
+        "url": "https://www.worldanvil.com/world/map/marker/4923e33a-f5cf-4c98-8bc1-78afb49a1cbf/edit",
+        "coordinate": {
+          "x": 2752,
+          "y": 3687,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1e99474f238f704e5c17b306aa9a5c35.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "4c9547df-34ae-412b-a236-73cfeac2f80f",
+      "title": "Eaglais an Tòrr-mara",
+      "category": "Kirchensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "x": 2808,
+      "y": 1594,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "4c9547df-34ae-412b-a236-73cfeac2f80f",
+        "url": "https://www.worldanvil.com/world/map/marker/4c9547df-34ae-412b-a236-73cfeac2f80f/edit",
+        "coordinate": {
+          "x": 2808,
+          "y": 1594,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "6373234d-75c8-469a-a932-90c82d69611a",
+      "title": "Srathghlas",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "x": 2543,
+      "y": 2764,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "6373234d-75c8-469a-a932-90c82d69611a",
+        "url": "https://www.worldanvil.com/world/map/marker/6373234d-75c8-469a-a932-90c82d69611a/edit",
+        "coordinate": {
+          "x": 2543,
+          "y": 2764,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_village.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "17bf8899-6942-4e23-b78c-65ded2d9eed3",
+      "title": "Uigedruim",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 3508,
+      "y": 2977,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "17bf8899-6942-4e23-b78c-65ded2d9eed3",
+        "url": "https://www.worldanvil.com/world/map/marker/17bf8899-6942-4e23-b78c-65ded2d9eed3/edit",
+        "coordinate": {
+          "x": 3508,
+          "y": 2977,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "6c0ada74-1d38-49de-9244-e6e4d4be9a1a",
+      "title": "Eaglais an Dòchas",
+      "category": "Kirchensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/klostersiedlung.png",
+      "x": 2829,
+      "y": 3097,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "6c0ada74-1d38-49de-9244-e6e4d4be9a1a",
+        "url": "https://www.worldanvil.com/world/map/marker/6c0ada74-1d38-49de-9244-e6e4d4be9a1a/edit",
+        "coordinate": {
+          "x": 2829,
+          "y": 3097,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "8e9abdca56e529dfc9d05ea078a79033.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "6c6e3896-a53a-4de4-9480-448cde76fa07",
+      "title": "Zur Sprunghaften Axt",
+      "category": "Taverne",
+      "templateId": "gastbetrieb",
+      "icon": "/Karten/assets/icons/welt/taverne.png",
+      "x": 2288,
+      "y": 2471,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "6c6e3896-a53a-4de4-9480-448cde76fa07",
+        "url": "https://www.worldanvil.com/world/map/marker/6c6e3896-a53a-4de4-9480-448cde76fa07/edit",
+        "coordinate": {
+          "x": 2288,
+          "y": 2471,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_tavern.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "6d4e3d0d-dbc8-4c19-9946-1bad22341f60",
+      "title": "Achadh Mòr - Viehzüchter Gilde",
+      "category": "Gildenhaus",
+      "templateId": "natur",
+      "icon": "/Karten/assets/icons/welt/gildenzentrale.png",
+      "x": 1733,
+      "y": 974,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "6d4e3d0d-dbc8-4c19-9946-1bad22341f60",
+        "url": "https://www.worldanvil.com/world/map/marker/6d4e3d0d-dbc8-4c19-9946-1bad22341f60/edit",
+        "coordinate": {
+          "x": 1733,
+          "y": 974,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_guild.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "762af849-38a6-4121-85d2-1dfc704e95e8",
+      "title": "Fèithchuach",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "x": 2315,
+      "y": 1752,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "762af849-38a6-4121-85d2-1dfc704e95e8",
+        "url": "https://www.worldanvil.com/world/map/marker/762af849-38a6-4121-85d2-1dfc704e95e8/edit",
+        "coordinate": {
+          "x": 2315,
+          "y": 1752,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_village.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "7d562b8c-4568-41d5-a8e3-14e7a47f9d48",
+      "title": "Brochsròin",
+      "category": "Burg",
+      "templateId": "militaer",
+      "icon": "/Karten/assets/icons/welt/gro-e-burg.png",
+      "x": 362,
+      "y": 1685,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "7d562b8c-4568-41d5-a8e3-14e7a47f9d48",
+        "url": "https://www.worldanvil.com/world/map/marker/7d562b8c-4568-41d5-a8e3-14e7a47f9d48/edit",
+        "coordinate": {
+          "x": 362,
+          "y": 1685,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_castle.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "82869c30-4976-4021-8d03-9550c50fe168",
+      "title": "Buardruim",
+      "category": "Bauernsiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bauernsiedlung.png",
+      "x": 3340,
+      "y": 3379,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "82869c30-4976-4021-8d03-9550c50fe168",
+        "url": "https://www.worldanvil.com/world/map/marker/82869c30-4976-4021-8d03-9550c50fe168/edit",
+        "coordinate": {
+          "x": 3340,
+          "y": 3379,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "7a19ab299924694cb61f5cc8f34caaf5.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "8f3434df-4010-473f-9d7a-a435d946992d",
+      "title": "Caladhdubh",
+      "category": "Hafensiedlung",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/hafensiedlung.png",
+      "x": 1225,
+      "y": 1878,
+      "territoryId": "leitheach-tir-na-tonn",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "8f3434df-4010-473f-9d7a-a435d946992d",
+        "url": "https://www.worldanvil.com/world/map/marker/8f3434df-4010-473f-9d7a-a435d946992d/edit",
+        "coordinate": {
+          "x": 1225,
+          "y": 1878,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "1a87ef5d71a5a5ecd4fb1a7e8a7318e0.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    },
+    {
+      "id": "90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9",
+      "title": "Tòrrghrian",
+      "category": "Dorf",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/bardensiedlung.png",
+      "x": 3075,
+      "y": 3520,
+      "territoryId": "leitheach-herrschaft-ruitheach",
+      "sourceRef": {
+        "type": "world-anvil",
+        "mapId": "49b0dc39-8bf6-4935-9080-ae7f164f1f65",
+        "markerId": "90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9",
+        "url": "https://www.worldanvil.com/world/map/marker/90b8f61e-fa2a-4a5a-a55a-56a750aaf5a9/edit",
+        "coordinate": {
+          "x": 3075,
+          "y": 3520,
+          "origin": "bottom-left",
+          "imageSize": [
+            4096,
+            3939
+          ]
+        },
+        "assignment": "region-outline",
+        "sourceIcon": "flat_white_village.png",
+        "missing": [
+          "Beschreibung fehlt"
+        ]
+      }
+    }
+  ]
+}

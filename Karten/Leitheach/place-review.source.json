@@ -1,0 +1,23 @@
+{
+  "connectionTolerancePixels": 52,
+  "connectionToleranceNote": "Die sichtbaren Clanlinien verbinden Ortszeichen. Alle geprüften Anschlüsse liegen höchstens 46 Originalbildpixel neben einem Stützpunkt; 52 berücksichtigt die Rundung der sichtbaren SVG-Koordinaten.",
+  "markers": {
+    "ad4e64fe-d865-43fd-91c1-b447fb9e00ee": { "territoryId": "leitheach-herrschaft-ghaiscioch", "reason": "Buarstrath: Quellentext nennt ausdrücklich die Ländereien der Ua'Ghaiscíoch." },
+    "8ead474a-02ea-419d-a2c8-c78264937542": { "territoryId": "leitheach-herrschaft-ghaiscioch", "reason": "Uisgebail: versorgt laut Ortsbeschreibung die Herrschaft der Ua'Ghaiscíoch." },
+    "cf3d0eb5-e530-4064-8213-8ab1d6406c60": { "territoryId": "leitheach-herrschaft-ghaiscioch", "reason": "Talamhgius: Quellentext nennt ausdrücklich die Ländereien der Ua'Ghaiscíoch." },
+    "88e3ffc8-ec74-4ac5-959d-e78d03b71dd6": { "territoryId": "leitheach-herrschaft-ghaiscioch", "reason": "Mòindair: Quellentext nennt ausdrücklich die Ländereien der Ua'Ghaiscíoch." },
+    "1c757391-93ad-4712-be6f-f720d822b5ed": { "territoryId": "leitheach-herrschaft-cleir", "reason": "Gartmòin liegt laut Ortsbeschreibung im Schutz der Ua'Cleir." },
+    "b7e05010-d8ae-4ca9-9319-53c4c8509a3d": { "territoryId": "leitheach-herrschaft-cleir", "residentFamilyIds": ["haus-cleir"], "reason": "Cairn Fàire wird ausdrücklich als Sitz der Ua'Cleir beschrieben." },
+    "70c25771-331d-47fd-b8f7-bf19cef36ac3": { "territoryId": "leitheach-herrschaft-eirce", "residentFamilyIds": ["haus-ua-eirce"], "reason": "Senanbail ist laut Ortsbeschreibung der eigentliche Hauptsitz der Ua'Eirce." },
+    "987c24d0-88e9-415e-97cb-b393a8ce7c4e": { "territoryId": "leitheach-herrschaft-fiachrach", "residentFamilyIds": ["haus-fiachrach"], "reason": "Mârbail wird ausdrücklich als Sitz der Fiachrach beschrieben." },
+    "72e7e1b6-4095-4418-88ca-ff20309ec87b": { "territoryId": "leitheach-tir-na-sleagh", "reason": "Capallachadh untersteht laut Ortsbeschreibung allein dem Fürsten und keinem der regionalen Clans." },
+    "3e87b001-8a61-4fe4-abe4-78f2c11726f3": { "category": "Wahrzeichen", "reason": "Das alte Säulensymbol bezeichnet laut vollständigem Quellentext Senans Statue, keine Ruine." }
+  },
+  "categoryIcons": {
+    "Hauptstadt": "stadt.png", "Stadt": "stadt.png", "Bauernsiedlung": "bauernsiedlung.png",
+    "Hafensiedlung": "hafensiedlung.png", "Burgsiedlung": "burgsiedlung.png",
+    "Handelssiedlung": "marktsiedlung.png", "Brückensiedlung": "br-ckensiedlung.png",
+    "Bergbausiedlung": "bergbausiedlung.png", "Waldsiedlung": "waldsiedlung.png",
+    "Kirchensiedlung": "klostersiedlung.png", "Taverne": "taverne.png"
+  }
+}

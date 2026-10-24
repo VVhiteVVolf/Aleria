@@ -6,7 +6,7 @@ const tests = (directory, extension = 'mjs') => ['--test', '--experimental-test-
     .sort().map(name => directory + '/' + name)];
 const territoryBuilders = ['aislearneach', 'alben', 'blaithneach', 'ceitheach', 'cenyr-court',
   'dunfal', 'dunkelhain', 'faelaorn', 'fjordheim', 'heldenwacht', 'ivarsheim',
-  'kraehenmoor', 'schwarzfenn', 'skjaerheim', 'vennyr'];
+  'kraehenmoor', 'leitheach', 'schwarzfenn', 'skjaerheim', 'vennyr'];
 
 // These tasks own the new world-content systems. Existing focused Roriksheim
 // and family-chart geometry checks remain in site-build-tasks.mjs.
@@ -22,7 +22,9 @@ export const WORLD_CONTENT_TASKS = [
     id: 'map-systems', label: 'Map sources, regions, marker editing and household crests',
     inputs: ['Karten/', 'Kontinente/modules/', 'Kontinente/kontinente.registry.js',
       'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/'],
-    commands: [['Karten/tools/build-households.mjs', '--check'], tests('Karten/tests')]
+    commands: [['Karten/tools/import-leitheach-source.mjs', '--check'],
+      ['Karten/tools/build-leitheach.mjs', '--check'],
+      ['Karten/tools/build-households.mjs', '--check'], tests('Karten/tests')]
   },
   {
     id: 'family-records', label: 'Reviewed territorial allegiance and Dunfal portrait update',
@@ -42,11 +44,11 @@ export const WORLD_CONTENT_TASKS = [
     id: 'events-calendar', label: 'Event pages, battles and calendar integration',
     inputs: ['Ereignisse/', 'AleriaAlmanach/modules/calendar/',
       'AleriaAlmanach/modules/core/aleria-calendar.js', 'AleriaAlmanach/tests/calendar-events.test.mjs'],
-    commands: ['events', 'weddings', 'battles'].map(name => ['Ereignisse/scripts/build-' + name + '.mjs', '--check'])
+    commands: ['events', 'weddings', 'battles', 'praetendenten'].map(name => ['Ereignisse/scripts/build-' + name + '.mjs', '--check'])
       .concat([tests('Ereignisse/tests'), ['--test', '--experimental-test-isolation=none', 'AleriaAlmanach/tests/calendar-events.test.mjs']])
   },
   {
-    id: 'uathneach-preview', label: 'Isolated Uathneach proposal and complete preview assets',
+    id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
     inputs: ['Vorschau/'],
     commands: [tests('Vorschau/tests')]
   }

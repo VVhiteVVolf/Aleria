@@ -80,9 +80,12 @@ test('Offene Einträge, Dossiers und Ausgabe-Escaping', () => {
   assert.doesNotMatch(renderEventCard(undated), /kalender.html\?/);
   assert.match(renderEventCard(EVENTS.find(event => event.id === 'hochzeit-bei-gwynthor')), /Hochzeiten\/Haus-Draig-und-Penderyn.html/);
   const linked = renderEventCard(EVENTS[0]);
-  assert.match(linked, /class="event-title-link" href="https:\/\/www.animexx.de\/zirkel\/ichbinreiter\/tafel\/\?seite=2021"/);
+  assert.match(linked, /class="event-title-link" href="Kriege\/krieg-der-praetendenten\/index.html"/);
   assert.match(linked, /class="event-icon-link"/);
-  assert.match(linked, /Ereignisseite öffnen · Animexx/);
+  assert.doesNotMatch(linked, /Ereignisseite öffnen · Animexx/);
+  const legacy = renderEventCard({ ...EVENTS[0], articleHref:null });
+  assert.match(legacy, /href="https:\/\/www.animexx.de\/zirkel\/ichbinreiter\/tafel\/\?seite=2021"/);
+  assert.match(legacy, /Ereignisseite öffnen · Animexx/);
   assert.doesNotMatch(renderEventCard(EVENTS.find(event => event.id === 'hochzeit-bei-gwynthor')), /href="https:\/\/www.animexx.de/);
   const html = renderEventCard({ ...EVENTS[0], title: '<img src=x onerror=alert(1)>', summary: '<script>x</script>' });
   assert.doesNotMatch(html, /<img src=x|<script>/);

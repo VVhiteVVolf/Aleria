@@ -3,7 +3,7 @@ import { officeGroup, officeSearch } from '../kingdom-court/office-directory.mjs
 import { albenPath, albenHome } from './principality-links.mjs';
 import { principalityCards, cultureContents, preparedPrincipality } from './content-template.mjs';
 
-const version='alben-20261022a';
+const version='alben-20261024a';
 const crest='/IconOrdner/Länder Icons/Estryll/Albische Fürstentümer.png';
 const stylesheet=`<link rel="stylesheet" href="/Kontinente/modules/alben/alben.css?v=${version}">`;
 const court=createCourtRenderer({kingdom:'Alben',realmLabel:'Schild von Ailith',assets:'/Kontinente/modules/kingdom-court',home:albenHome,bodyClass:'kingdom-court alben-page',buildSource:'Kontinente/scripts/build-alben.mjs',styleVersion:version,scriptVersion:'20261020',tabs:[{id:'overview',href:albenHome,label:'Der Schild von Ailith'},{id:'offices',href:albenPath+'aemter.html',label:'Ämter & Rollen'},{id:'principalities',href:albenHome+'#fuerstentuemer',label:'Fürstentümer'}],familyLink:{href:'/Kontinente/Estryll/Estryll.html#estryll-albisch',label:'Alben auf Estryll'}});
@@ -13,8 +13,8 @@ export function renderOffices(offices) {
   return court({title:'Ämter & Rollen der Alben',subtitle:'Fürstenrat, Clan & Fianna',description:'Die örtlichen Rats- und Clanämter sowie die Titel, Ehrungen und Ächtungen des albischen Volkes.',page:'offices',iconSrc:'/Kontinente/modules/cenyr-court/assets/aemter.png',extraHead:stylesheet,script:'offices-filter.js',navigation:[['uebersicht','Übersicht'],...offices.groups.map(g=>[g.id,g.title])],body:`<section id="uebersicht"><h2>Ämter und Verantwortung</h2>${paragraphs(offices.intro)}<p>Die folgenden Ratsämter gehören zu den örtlichen Fürsten- und Lehensräten. Der Rat der Fianna und seine fünf Verwaltungsstränge stehen darüber und werden auf der <a href="${albenHome}#fianna">gemeinsamen Übersicht</a> erläutert.</p></section>${officeSearch(count,'Zum Beispiel Fianna, Volkswahrer, Tiarna oder Vogt …')}<div id="aemter-verzeichnis" data-court-directory>${offices.groups.map(officeGroup).join('')}</div><p class="court-empty" data-role="search-empty" hidden>Keine passenden Einträge gefunden.</p>`});
 }
 
-export function renderPrincipalityEntries(principalities) {
-  return court({title:'Fürstentümer und Haine der Alben',subtitle:'Vorbereitete Einträge',description:'Belegte Anknüpfungspunkte für die wachsenden Fürstentumsseiten.',page:'principalities',iconSrc:crest,extraHead:stylesheet+`<script src="/Kontinente/kontinente.registry.js?v=${version}"></script><script type="module" src="/Kontinente/modules/alben/entry-page.mjs?v=${version}"></script>`,navigation:principalities.map(p=>[p.id,p.name]),body:`<div data-alben-entries>${principalities.map(preparedPrincipality).join('')}</div><p data-role="unknown-principality" hidden>Dieser Eintrag ist noch nicht im Verzeichnis enthalten. <a href="${albenHome}#fuerstentuemer">Zum Fürstentümerverzeichnis</a></p>`});
+export function renderPrincipalityEntries(principalities, registry) {
+  return court({title:'Fürstentümer und Haine der Alben',subtitle:'Vorbereitete Einträge',description:'Belegte Anknüpfungspunkte für die wachsenden Fürstentumsseiten.',page:'principalities',iconSrc:crest,extraHead:stylesheet+`<script src="/Kontinente/kontinente.registry.js?v=${version}"></script><script type="module" src="/Kontinente/modules/alben/entry-page.mjs?v=${version}"></script>`,navigation:principalities.map(p=>[p.id,p.name]),body:`<div data-alben-entries>${principalities.map(p=>preparedPrincipality(p,registry)).join('')}</div><p data-role="unknown-principality" hidden>Dieser Eintrag ist noch nicht im Verzeichnis enthalten. <a href="${albenHome}#fuerstentuemer">Zum Fürstentümerverzeichnis</a></p>`});
 }
 
 export function renderOverview({fianna,culture,principalities,branches},registry) {

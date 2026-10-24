@@ -722,85 +722,8 @@
         "normal": "Leitheach/Kartenbilder/normal.webp"
       },
       "dataPath": "Leitheach/data.json",
-      "link": "karte.html?map=leitheach"
-    },
-    {
-      "id": "leitheach-tir-na-sruth",
-      "title": "Tir na Sruth",
-      "status": "active",
-      "type": "region",
-      "markerPresentation": "symbols",
-      "hierarchy": [
-        {
-          "level": "region",
-          "slug": "leitheach",
-          "title": "Fürstentum Leitheach"
-        },
-        {
-          "level": "region",
-          "slug": "tir-na-sruth",
-          "title": "Tir na Sruth"
-        }
-      ],
-      "folder": "Leitheach/tir-na-sruth",
-      "images": {
-        "normal": "Leitheach/tir-na-sruth/Kartenbilder/normal.webp"
-      },
-      "dataPath": "Leitheach/tir-na-sruth/data.json",
-      "link": "karte.html?map=leitheach-tir-na-sruth",
-      "parentMapId": "leitheach"
-    },
-    {
-      "id": "leitheach-tir-na-gortanna",
-      "title": "Tir na Gortanna",
-      "status": "active",
-      "type": "region",
-      "markerPresentation": "symbols",
-      "hierarchy": [
-        {
-          "level": "region",
-          "slug": "leitheach",
-          "title": "Fürstentum Leitheach"
-        },
-        {
-          "level": "region",
-          "slug": "tir-na-gortanna",
-          "title": "Tir na Gortanna"
-        }
-      ],
-      "folder": "Leitheach/tir-na-gortanna",
-      "images": {
-        "normal": "Leitheach/tir-na-gortanna/Kartenbilder/normal.webp"
-      },
-      "dataPath": "Leitheach/tir-na-gortanna/data.json",
-      "link": "karte.html?map=leitheach-tir-na-gortanna",
-      "parentMapId": "leitheach"
-    },
-    {
-      "id": "leitheach-tir-na-comhchuibhis",
-      "title": "Tir an Comhchuibhis",
-      "status": "active",
-      "type": "region",
-      "markerPresentation": "symbols",
-      "hierarchy": [
-        {
-          "level": "region",
-          "slug": "leitheach",
-          "title": "Fürstentum Leitheach"
-        },
-        {
-          "level": "region",
-          "slug": "tir-na-comhchuibhis",
-          "title": "Tir an Comhchuibhis"
-        }
-      ],
-      "folder": "Leitheach/tir-na-comhchuibhis",
-      "images": {
-        "normal": "Leitheach/tir-na-comhchuibhis/Kartenbilder/normal.webp"
-      },
-      "dataPath": "Leitheach/tir-na-comhchuibhis/data.json",
-      "link": "karte.html?map=leitheach-tir-na-comhchuibhis",
-      "parentMapId": "leitheach"
+      "link": "karte.html?map=leitheach",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html"
     },
     {
       "id": "leitheach-tir-na-sleagh",
@@ -826,6 +749,7 @@
       },
       "dataPath": "Leitheach/tir-na-sleagh/data.json",
       "link": "karte.html?map=leitheach-tir-na-sleagh",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
       "parentMapId": "leitheach"
     },
     {
@@ -852,6 +776,34 @@
       },
       "dataPath": "Leitheach/tir-na-sinsear/data.json",
       "link": "karte.html?map=leitheach-tir-na-sinsear",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+      "parentMapId": "leitheach"
+    },
+    {
+      "id": "leitheach-tir-na-gortanna",
+      "title": "Tir na Gortanna",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "hierarchy": [
+        {
+          "level": "region",
+          "slug": "leitheach",
+          "title": "Fürstentum Leitheach"
+        },
+        {
+          "level": "region",
+          "slug": "tir-na-gortanna",
+          "title": "Tir na Gortanna"
+        }
+      ],
+      "folder": "Leitheach/tir-na-gortanna",
+      "images": {
+        "normal": "Leitheach/tir-na-gortanna/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Leitheach/tir-na-gortanna/data.json",
+      "link": "karte.html?map=leitheach-tir-na-gortanna",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
       "parentMapId": "leitheach"
     },
     {
@@ -878,6 +830,61 @@
       },
       "dataPath": "Leitheach/tir-na-tonn/data.json",
       "link": "karte.html?map=leitheach-tir-na-tonn",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+      "parentMapId": "leitheach"
+    },
+    {
+      "id": "leitheach-tir-na-comhchuibhis",
+      "title": "Tir an Comhchuibhis",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "hierarchy": [
+        {
+          "level": "region",
+          "slug": "leitheach",
+          "title": "Fürstentum Leitheach"
+        },
+        {
+          "level": "region",
+          "slug": "tir-na-comhchuibhis",
+          "title": "Tir an Comhchuibhis"
+        }
+      ],
+      "folder": "Leitheach/tir-na-comhchuibhis",
+      "images": {
+        "normal": "Leitheach/tir-na-comhchuibhis/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Leitheach/tir-na-comhchuibhis/data.json",
+      "link": "karte.html?map=leitheach-tir-na-comhchuibhis",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+      "parentMapId": "leitheach"
+    },
+    {
+      "id": "leitheach-tir-na-sruth",
+      "title": "Tir na Sruth",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "hierarchy": [
+        {
+          "level": "region",
+          "slug": "leitheach",
+          "title": "Fürstentum Leitheach"
+        },
+        {
+          "level": "region",
+          "slug": "tir-na-sruth",
+          "title": "Tir na Sruth"
+        }
+      ],
+      "folder": "Leitheach/tir-na-sruth",
+      "images": {
+        "normal": "Leitheach/tir-na-sruth/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Leitheach/tir-na-sruth/data.json",
+      "link": "karte.html?map=leitheach-tir-na-sruth",
+      "territoryHref": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
       "parentMapId": "leitheach"
     },
     // END LEITHEACH_GENERATED

@@ -1,0 +1,28 @@
+import { WAR,FACTIONS,WAR_EVENTS,SOURCE_NOTES } from './praetendenten-data.mjs';
+import { warSource,sourceSection } from './war-sources.mjs';
+import { renderReadingBook } from './war-source-render.mjs';
+import { renderWarShell } from './war-shell.mjs';
+import { renderWarTimeline } from './war-timeline-render.mjs';
+import { warEventHref } from './war-links.mjs';
+import { renderWarMap } from './war-map-render.mjs';
+import { escapeEventText as e } from '../catalog/events-model.mjs';
+
+function renderFactionSpread(){
+  return `<section class="war-factions" id="fraktionen"><header class="war-section-head"><span>I · Drei Parteien</span><h2>Ein Haus.<br>Drei Farben.</h2><p>Arn, Sinding und Bjoern: drei Söhne Balgruufs, drei Machtgrundlagen und drei Vorstellungen von Aldrimars Zukunft.</p></header><div class="war-faction-spread">${FACTIONS.map((faction,index)=>`<a class="war-faction-leaf war-color-${faction.color}" href="${faction.file}"><figure><img src="../../assets/praetendenten/${faction.image}" width="1024" height="1536" loading="lazy" alt="${e(faction.leader)} im Jahr 1627, ungefähr ${faction.age} Jahre alt."><span>${String(index+1).padStart(2,'0')} / ${e(faction.epithet)}</span></figure><div><p>${e(faction.leader)} <small>ca. ${faction.age} Jahre, 1627</small></p><h3>${e(faction.title)}</h3><p>${e(faction.summary)}</p><span>Die Kriegspartei kennenlernen ↗</span></div></a>`).join('')}</div><p class="war-art-note">Die Prinzen erscheinen hier zu Kriegsbeginn. Ihre Stammbaumporträts wurden als Identitätsreferenz verwendet und dem Jahr 1627 entsprechend verjüngt.</p></section>`;
+}
+
+export function renderWarHub(){
+  const source=warSource(WAR.source),background=sourceSection(source,'Hintergrund');
+  const dossiers=WAR_EVENTS.filter(event=>warEventHref(event));
+  const outlines=dossiers.filter(event=>event.content==='Eckdaten').length;
+  const content=`<header class="war-frontispiece" id="ueberblick"><figure class="war-throne"><img src="../../assets/praetendenten/${WAR.image}" width="1024" height="1536" alt="${e(WAR.imageAlt)}" fetchpriority="high"><figcaption>Die Krone bleibt. Ihre Erben fallen.<small>Symbolisches Frontispiz</small></figcaption></figure><div class="war-opening"><p class="war-kicker">Aldrimar / Der erste Bürgerkrieg</p><p class="war-years">1627 <span>—</span> 1647</p><h1>Der Krieg der<br><em>Prätendenten</em></h1><p class="war-deck">${e(WAR.summary)}</p><div class="war-opening-rule"></div><p>Ein vergifteter Hochzeitskelch beendet die kurze Herrschaft Rogers. In Heldenwacht, Moortal und Ivarsfels erheben sich neue Ansprüche. Aus einem Erbstreit wird der längste und blutigste Bürgerkrieg Aldrimars.</p><a class="war-text-link" href="#zeittafel">Den Spuren des Krieges folgen <span>↓</span></a><dl class="war-opening-facts"><div><dt>Schauplatz</dt><dd>Königreich Aldrimar</dd></div><div><dt>Ausgang</dt><dd>Galmar wird Hochkönig</dd></div><div><dt>Vermächtnis</dt><dd>Die Herdwächter</dd></div></dl></div></header>
+  <section class="war-prologue"><div><span class="war-kicker">Vor den Bannern</span><h2>Sieben Kinder.<br>Ein umstrittenes Erbe.</h2><p>${e(background[0]?.text||'')}</p></div><div class="war-family-note"><p>Balgruufs Kinder</p><div><h3>Mit Eola Sturmgeborene</h3><p>Ulfrik · Helga · Roger · Arn</p></div><div><h3>Mit Elisef Varangr</h3><p>Bjoern · Sinding · Galmar</p></div><a href="../../../Stammbäume/Stammbaum.html?family=haus-vaeren&mode=view">Die vollständige Linie der Vaeren ↗</a></div></section>
+  <a class="war-inciting" href="ereignisse/ermordung-roger-und-astrid.html"><figure><img src="../../assets/praetendenten/roger-astrid-kelch-v1.webp" width="1024" height="1536" loading="lazy" alt="Ein umgestürzter goldener Hochzeitskelch und vergossener Wein vor zwei leeren Stühlen."></figure><div><span class="war-kicker">25.06.1627 · Heldenwacht</span><h2>Die Hochzeit,<br>die das Reich zerriss.</h2><p>Roger und Astrid sterben durch vergifteten Wein. Die Beschuldigten werden ohne ordentliches Verfahren hingerichtet; die Quellen widersprechen sich bei der Frage nach ihrer Schuld.</p><span class="war-text-link">Das Ereignisdossier lesen ↗</span></div></a>
+  ${renderFactionSpread()}
+  <a class="war-wellenruh" href="../../Schlachten/Erste-Seeschlacht-bei-Wellenruh.html"><img src="../../assets/battles/wellenruh/v2/seekarte-v2.webp" width="1100" height="670" loading="lazy" alt="Illustrierte Seekarte vor Wellenruh."><div><span>11. Himmelsbogen 1628 / Bereits als Schlachtdossier</span><h2>Die See vor<br>Wellenruh.</h2><p>30 grüne Schiffe gegen 27 rote. Die erste Seeschlacht wird auf der eigenen Seekarte mit Schiffsbewegungen, Manövern und Retro-Klangkulisse rekonstruiert.</p><strong>Zum animierten Schlachtverlauf ↗</strong></div></a>
+  ${renderWarMap()}
+  ${renderWarTimeline()}
+  <section class="war-source-notes" id="quellen"><header class="war-section-head"><span>III · Überlieferung & offene Stellen</span><h2>Was die Quellen sagen.<br>Und was sie offenlassen.</h2></header><ol>${SOURCE_NOTES.map(note=>`<li>${e(note)}</li>`).join('')}</ol><p>Die Zeittafel erschließt ${dossiers.length} von ${WAR_EVENTS.length} Ereignissen über eigene Dossiers. Überlieferungsstand: ${dossiers.length-outlines} mit ausführlichem Bericht, ${outlines} mit Eckdaten. Die Fraktionsseiten und unveränderten Originalquellen bleiben direkt zugänglich; fehlende Verläufe, unbekannte Tage und die offene Täterschaft bleiben kenntlich.</p><a href="redaktion/abgleich-2026-10-24.md">Alle redaktionellen Entscheidungen lesen ↗</a> · <a href="sources/manifest.json">Das vollständige Quellenverzeichnis öffnen ↗</a></section>
+  ${renderReadingBook(source,'sources')}`;
+  return renderWarShell({title:WAR.title,description:WAR.summary,content});
+}

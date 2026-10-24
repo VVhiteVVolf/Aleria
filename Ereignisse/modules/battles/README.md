@@ -40,7 +40,7 @@ JavaScript lesbar; nur die interaktive Rekonstruktion benötigt JavaScript.
   getrennte Kamera-/Manöver-/Effekt-/Tonsteuerung. Kein Autoplay, Pause bei verborgenem
   Tab; bei reduzierter Bewegung bleibt die Kamerafahrt zunächst aus.
 - `battle-player-render.mjs`: statische Markierungen der interaktiven Bühne.
-- `battle-chronicle-render.mjs`: vollständige Originaltexte und Musterrolle.
+- `battle-chronicle-render.mjs`: vollständige abgeglichene Texte und Musterrolle. Die 28 Absätze verwenden dieselben Leseblöcke wie die Hauptchronik; `wellenruh-source.json` bleibt der Rohimport.
 - `battle-render.mjs`: Seitenhülle; `scripts/build-battles.mjs` erzeugt die HTML-Datei.
 - `battle-page.css` / `battle-player.css`: eigene Gestaltung von Chronik und Bühne.
 
@@ -69,15 +69,26 @@ Tales-of-Xillia/Frieren-Stil bleibt als Illustration bei der vollständigen Schl
 ## Quellenabweichungen
 
 Die Vorlage nennt für die Grünen „weniger als 800“ und andernorts 800 Gefallene.
-Die Vergleichsanzeige verwendet „bis zu 800“; beide Originalangaben bleiben im Text.
+Die aktuelle Lesefassung verwendet einheitlich „bis zu 800“; beide ursprünglichen Angaben bleiben im archivierten Original.
 Die 16 roten Schiffsverluste umfassen gesunkene und erbeutete Schiffe; die genaue
 Aufteilung ist unbekannt und die visuelle Aufteilung ausdrücklich illustrativ.
-Das zweite grüne Clanzeichen ist in der Vorlage mit Wellensänger beschriftet,
-wird im vorhandenen Wappenbestand aber unter Wellenschild geführt. Dies wird sichtbar
-erläutert. Leere Trivia, das Platzhalterzitat und unbenannte weitere Clans wurden
+Das falsch verknüpfte zweite grüne Clanzeichen der Vorlage ist durch das tatsächlich
+vorhandene Wellensänger-Wappen ersetzt. Leere Trivia, das Platzhalterzitat und unbenannte weitere Clans wurden
 nicht mit neuen Behauptungen aufgefüllt.
 
+Die Söldnerankunft ist auf 1630 abgeglichen, der rote Durchbruchsversuch auf das
+grüne Zentrum gerichtet. Vollständiger Abgleich mit alten und neuen Angaben:
+`Kriege/krieg-der-praetendenten/redaktion/abgleich-2026-10-24.md`.
+
 ## Prüfung
+
+Leselayout vom 24. Oktober 2026: Der Chroniktext läuft links fort; rechts steht
+eine mitlaufende kompakte Infospalte mit Datum, Ort, Ausgang, Widderzeichen,
+Flotten-/Verlustvergleich und Abschnittslinks. `battle-chronicle-info.mjs` rendert
+diese Angaben aus dem bestehenden Schlachtmodell; `battle-reading.css` besitzt
+den Leseaufbau. Bis 1000 Pixel stehen die Informationen über dem Bericht.
+Alle 28 Quellabsätze, die Rekonstruktion und die Tonsteuerung bleiben erhalten.
+320/768/1100 Pixel ohne Seitenüberlauf und der vorhandene Quellenumfang geprüft.
 
 ```powershell
 node Ereignisse/scripts/build-battles.mjs --check

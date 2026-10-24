@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "createdOn": "2026-10-24",
+  "tool": "Built-in image_gen",
+  "style": "anime-scene-portrait",
+  "reference": "Tales of Xillia/Frieren",
+  "aspectRatio": "2:3",
+  "birthSources": [
+    "Stammbäume/assets/js/data/house-vaeren-family.js",
+    "Stammbäume/assets/js/data/house-varulv-family.js"
+  ],
+  "note": "Ages are approximate because only birth years are known. Backgrounds and still lifes are editorial illustrations; they add no historical claims. Original tree portraits are unchanged.",
+  "assets": [
+    {
+      "id": "thron-1627-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-05d9aa7b-828d-4ae8-99c5-a13908d6aebf.png",
+      "file": "thron-1627-v1.webp",
+      "original": "originals/thron-1627-v1.png",
+      "reference": null,
+      "age": null,
+      "prompt": "Use case: illustration-story. Asset: symbolic frontispiece for Aleria's history dossier 'Der Krieg der Prätendenten', 1627–1647.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nPortrait 2:3 composition. A quiet, imposing empty Nordic fantasy throne in a shadowed timber-and-stone royal hall. A simple bronze ram motif carved into its high back, one dark iron crown resting on the empty seat. In the background exactly three plain hanging wool banners, one forest green, one deep red, one muted blue, divided by the throne's vertical silhouette. Cool light enters from a high narrow window; small warm reflections on the crown. Restrained composition with large simple shapes, strong beautiful lineart and cel shadows. The image is an allegorical editorial illustration of competing claims, not a depiction of a specific unrecorded event. No people, no battle, no writing, no map, no text, no watermark, no modern items. Keep the crown and empty throne visible in the central 70% of the image. Opaque scene background."
+    },
+    {
+      "id": "arn-1627-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-09bb5599-f320-4fed-b06a-33329b2d505b.png",
+      "file": "arn-1627-v1.webp",
+      "original": "originals/arn-1627-v1.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-trachwyll/arn-vaeren.png",
+      "age": {
+        "birthYear": 1608,
+        "year": 1627,
+        "approximateAge": 19,
+        "decision": "Younger scene-portrait; remove mature beard, deep wrinkles and later royal crown; preserve face, hair and eyes."
+      },
+      "prompt": "Use case: identity-preserve. Historical illustration for Aleria, Arn Vaeren at the opening of the War of the Pretenders, year 1627.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n2:3 portrait. The attached reference is Arn's established identity, NOT his age in 1627. Preserve his blond swept-back hair, pale blue eyes, recognizable brow and facial structure, dark clothing with gold ram emblem and pale fur mantle. Rejuvenate him to approximately NINETEEN years old (born 1608): smooth unlined skin, youthful jaw, no crow's feet, no deep forehead/cheek grooves, no mature moustache or goatee; only a faint youthful hint of stubble if needed. A proud, severe but unmistakably young prince. Half-body standing composition at a palace stone balustrade, one gloved hand resting on the stone, his other hand relaxed, a plain forest green banner behind him. Keep the ram motif; no crown on his head, no sword drawn, no army, no invented event. Restrained background, simple clear cel-shading and elegant linework. This is an editorial portrait in the context of 1627, not his later mature king portrait. No text, watermark or photorealism."
+    },
+    {
+      "id": "bjoern-1627-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-ff3cdee7-c611-4d4f-9947-7b74d493887a.png",
+      "file": "bjoern-1627-v1.webp",
+      "original": "originals/bjoern-1627-v1.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-skaal/bjoern-vaeren.png",
+      "age": {
+        "birthYear": 1610,
+        "year": 1627,
+        "approximateAge": 17,
+        "decision": "Younger scene-portrait; remove adult goatee, preserve braids, hair and green eyes."
+      },
+      "prompt": "Use case: identity-preserve. Historical scene-portrait for Aleria: Bjoern Vaeren in 1627, birth year 1610.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nPortrait 2:3. The reference shows his established identity at an older age. Preserve long pale-golden hair with loose braids at both sides, gentle green eyes and recognizable face, dark high-collared clothing with gold ram emblem and pale fur trim, a restrained fine gold circlet. Rejuvenate him to approximately SEVENTEEN: a slender young prince with soft youthful face, no facial hair at all, no adult goatee, no wrinkles, visibly a teenager. Show him in a calm three-quarter half-body pose in a simple northern stone chapel with a deep blue hanging banner and soft cool window light. His hands rest lightly together in front of him, expression thoughtful and slightly uncertain, sincere rather than triumphant. The background only suggests his religious faction; do not show a coronation, battle or named event. No bouquet, no weapons raised, no text, no watermark, no photorealism, no painterly texture. Simple uncluttered anime scene."
+    },
+    {
+      "id": "sinding-1627-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-fbb4274d-7ea0-48f2-9091-6df671b4808b.png",
+      "file": "sinding-1627-v1.webp",
+      "original": "originals/sinding-1627-v1.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-vaeren/sinding-vaeren.png",
+      "age": {
+        "birthYear": 1611,
+        "year": 1627,
+        "approximateAge": 16,
+        "decision": "Younger scene-portrait; remove moustache and goatee, preserve eyes, hair, confident expression and golden clothing."
+      },
+      "prompt": "Use case: identity-preserve. Historical illustration for Aleria: Sinding Vaeren at the beginning of the War of the Pretenders, year 1627; born 1611.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\n2:3 portrait. The supplied older character portrait is the identity reference. Keep his swept-back golden blond hair, green eyes, recognizable expressive eyebrows and confident, slightly smug manner. Rejuvenate to approximately SIXTEEN years old: unmistakably a teenage prince with smoother face and softer jaw, no moustache, no goatee, no wrinkles. Preserve the gold ornamental armor/clothing and dark red mantle motif from the reference, but no wine or goblet in hand. Half-body standing at a simple wooden table in a northern stone hall; one hand rests on the rim of the table; a few ordinary coins sit beside it, hinting at his faction's financial support, no treasure pile. Exactly one plain deep red hanging wool banner in the background, without additional invented heraldry. Warm late afternoon light; self-assured young expression, no crown on his head, no army, no throne scene. Quiet composition, clear cel shadows, no realistic texture, no text or watermark. This is an editorial scene-portrait of his 1627 appearance, not a claim that a particular meeting took place."
+    },
+    {
+      "id": "roger-astrid-kelch-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-4a1d9b85-1a41-4074-999c-a4e3fe3b27ab.png",
+      "file": "roger-astrid-kelch-v1.webp",
+      "original": "originals/roger-astrid-kelch-v1.png",
+      "reference": null,
+      "age": null,
+      "prompt": "Use case: illustration-story. Event scene for Aleria: the poisoning of newlywed Roger Vaeren and Astrid Varulv, Heldenwacht, 25.06.1627.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 anime scene still life, not an inventory icon. On the edge of a royal wedding banquet table in a northern fantasy hall, a SINGLE ornate gold wine goblet lies on its side, dark red WINE spilled across pale linen. A simple crown and one fallen white flower nearby, only these few objects. In the quiet out-of-focus background, two empty high-backed banquet chairs under warm fading candlelight. Clear readable silhouette of the goblet and wine, sober melancholy mood, dramatic but restrained cel-shaded lighting, elegant clean anime lineart. This is a symbolic illustration of the recorded shared poisoned chalice. Do not reveal or depict an assassin, poison bottle, secret witness or method of administering poison, since the source disputes responsibility. No people, no corpses, no blood (the red liquid is wine), no gore, no invented heraldry, no lettering, no watermark, no photorealism or painted texture. Leave enough simple surrounding hall for the scene to read as a real setting. Opaque background."
+    },
+    {
+      "reference": "Ereignisse/assets/praetendenten/arn-1627-v1.webp",
+      "originalPortraitReference": "Stammbäume/assets/images/portraits/haus-trachwyll/arn-vaeren.png",
+      "sourceIds": [
+        "source-06",
+        "source-07"
+      ],
+      "id": "uebernahme-heldenwacht-1627-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-961ca296-241b-4e7d-b17a-d046d01a0b7a.png",
+      "file": "uebernahme-heldenwacht-1627-v1.webp",
+      "original": "originals/uebernahme-heldenwacht-1627-v1.png",
+      "age": {
+        "personId": "arn-vaeren",
+        "birthYear": 1608,
+        "year": 1627,
+        "approximateAge": 19,
+        "decision": "Use the inspected 1627 portrait as the direct identity and age reference; retain the young clean-shaven face. Anonymous supporting figures are not assigned historical identities."
+      },
+      "prompt": "Use case: illustration-story, preserving character identity. An event illustration for Aleria: 'Die Übernahme von Heldenwacht', year 1627.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 anime scene. Use the attached image as the established identity and age reference for Arn Vaeren, approximately NINETEEN years old, born 1608. Keep his youthful clean-shaven face, swept blond hair, pale blue eyes, black-and-gold ram clothing, pale fur mantle and dark green cloak. No king's crown, no older beard or wrinkles.\nThree-quarter composition of young Arn walking at the head of a small visible part of his force through a northern fantasy city street toward a barricaded fortified manor gate. Arn is in the foreground seen from the front-side, his expression cold and intent, one gloved hand on the hilt of his SHEATHED sword. Behind him just three anonymous helmeted warriors in restrained silhouettes, not additional named historical figures. A closed timber gate reinforced by a simple barricade is visible deeper in the street, stone lower walls and timber upper stories, one plain dark green banner hanging nearby. Quiet, ominous, readable composition, spacious environmental framing: a story scene rather than another formal portrait. Restrained cool light with warm torch accents, clean anime lineart, clear cel shadows.\nSource boundary: the supplied account describes Arn mobilizing men against the barricaded Eisenbieger and Riesentod estates. The illustration evokes this action; it is not a surveyed street plan or a claim of an exact hour. Do not show an execution, corpses, captured named clan heads, a coronation or new heraldry. No invented named faces, no fire engulfing the city, no written text, no watermark.",
+      "batch": "step-02",
+      "sceneBoundary": "Illustrative scene based on the archived account. Architecture, lighting and anonymous escort figures are compositional reconstruction, not additional historical claims."
+    },
+    {
+      "reference": "Ereignisse/assets/praetendenten/bjoern-1627-v1.webp",
+      "originalPortraitReference": "Stammbäume/assets/images/portraits/haus-skaal/bjoern-vaeren.png",
+      "sourceIds": [
+        "source-08",
+        "source-09"
+      ],
+      "id": "aufruhr-ivarsfels-1627-v1",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-6cd0b8fa-c690-4c59-9ee9-18a33923bd1b.png",
+      "file": "aufruhr-ivarsfels-1627-v1.webp",
+      "original": "originals/aufruhr-ivarsfels-1627-v1.png",
+      "age": {
+        "personId": "bjoern-vaeren",
+        "birthYear": 1610,
+        "year": 1627,
+        "approximateAge": 17,
+        "decision": "Use the inspected 1627 portrait as the direct identity and age reference; retain the young clean-shaven face. Anonymous supporting figures are not assigned historical identities."
+      },
+      "prompt": "Use case: illustration-story, preserving character identity. A historical fantasy event illustration for Aleria: 'Der Aufruhr in Ivarsfels', year 1627.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 composition. The supplied image is the established youthful identity reference for Bjoern Vaeren, approximately SEVENTEEN, born 1610. Preserve his adolescent smooth clean-shaven face, gentle green eyes, long pale golden hair with two side braids, fine gold circlet with green stone, black high-collared garment, gold ram emblem and light fur trim. He must remain recognizably a teenager, not a bearded adult.\nA story scene of Bjoern arriving as part of a retinue at the entrance to a troubled northern fantasy city. Three-quarter view from the side-front, Bjoern in the right foreground looking anxiously toward the stone city gate to the left, his hand lightly gathering his cloak. A couple of anonymous helmeted escort figures farther back, their faces hidden; no additional identifiable historical character. Through the gate, a sparse view of a stone castle wall, a few damaged wooden barricades and a thin haze rising above distant rooftops hint at recent fighting. A single plain muted blue cloth standard behind the retinue, without religious symbols, invented heraldry or writing. Restrained cool daylight, small warm lantern accent, simple clear environmental forms and dramatic but calm anime lighting. Bjoern is arriving and observing; do not make him command an attack, duel, wave a sword or personally defeat anyone.\nSource boundary: the supplied text says Arvid's retinue, including Bjoern, arrives while Ivarsfels is already fighting. This image evokes Bjoern's arrival and uncertainty, not an unrecorded deed, an exact date or a surveyed view of the city. Do not draw Arvid or other named leaders without their references. No coronation, no corpses, no gore, no huge burning city, no text, no watermark or realistic textures.",
+      "batch": "step-02",
+      "sceneBoundary": "Illustrative scene based on the archived account. Architecture, lighting and anonymous escort figures are compositional reconstruction, not additional historical claims."
+    },
+    {
+      "id": "belagerung-trauerwald-1628-v1",
+      "file": "belagerung-trauerwald-1628-v1.webp",
+      "original": "originals/belagerung-trauerwald-1628-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-01",
+        "source-11"
+      ],
+      "batch": "step-03",
+      "sceneBoundary": "Illustrative view of the marshy approaches during the siege. Architecture, weather and anonymous soldiers are compositional reconstruction; no named person or exact day is depicted.",
+      "prompt": "Use case: illustration-story.\nAsset: scene illustration for Aleria's historical dossier 'Die Belagerung von Trauerwald', siege beginning in the third month of 1628.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 environmental story scene. A narrow stone bridge crosses dark marsh water toward the CLOSED timber gate of a modest northern fantasy fortified town. Low defensive stone walls, a few simple timber-and-stone roofs behind them; swamp reeds and bare crooked trees flank the approach. The bridge and constrained approach are the visual focus. In the near foreground, on firm ground before the bridge, exactly three small anonymous helmeted warriors seen from behind guard the approach, with one plain dark forest-green cloth standard. Their faces are hidden, they are not named characters. A small plain deep-red banner hangs on the distant town wall. Soft cool overcast light, a thin layer of mist over the water, restrained ochre reeds and green-gray stone; a few tiny warm lights at the gate. Beautiful clean anime linework, clear cel-shaded shapes, spacious quiet ominous composition. Large legible forms, no texture overload.\nSource boundary: the archived account describes a city in marshland, narrow bridges and gates, blockade and isolation. Evoke the siege approaches rather than a surveyed city plan. Do not depict a surrender, a newly invented assault, named leaders, a broken wall, burning town, corpses or blood. No huge castle, no mountains, no snow, no writing, no emblems beyond the plain colored cloth, no watermark. Opaque scene background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-49a1e4ce-7d3b-403f-a9d5-a4b4c8899121.png"
+    },
+    {
+      "id": "schaendung-flusswall-1628-v1",
+      "file": "schaendung-flusswall-1628-v1.webp",
+      "original": "originals/schaendung-flusswall-1628-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-13"
+      ],
+      "batch": "step-03",
+      "sceneBoundary": "Illustrative aftermath of the recorded destruction. The bridge remains intact. No survivor, perpetrator, victim count or unrecorded act is depicted; architecture and lighting are editorial reconstruction.",
+      "prompt": "Use case: illustration-story.\nAsset: scene illustration for Aleria's historical dossier 'Die Schändung von Flusswall', 22.07.1628.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 environmental aftermath scene, with NO PEOPLE. A small ruined Nordic fantasy riverside town after a devastating fire. From a low viewpoint beside the river, a few charred heavy timber beams and a broken plain clay bowl in ash fill the foreground; behind them skeletal timber house frames and a damaged low gate mark the devastated settlement. A modest stone arch bridge in the middle distance remains INTACT and passable, spanning the wide gray-blue river toward the far bank. The bridge is the strategic crossing, NOT destroyed. Thin smoke drifts above blackened roofs; a few muted orange embers glow low among the ruins, without a wall of flames. Sober soft light under an ash-gray sky, subdued charcoal and cold blue palette, restrained warm ember reflections in the still water. Strong clean anime lineart and simple cel shadows, clear restrained composition, readable negative space, no painterly rendering or photorealistic textures.\nSource boundary: the account records the town's destruction by fire and the capture of the bridge toward Ivarsfels. The image evokes the aftermath without depicting the massacre or inventing any individual action. Architecture, exact time and lighting are illustrative. Do not depict Gulda, her boat, Arn, corpses, blood, victims, weapons, executions, identifiable historical people, banners or newly invented heraldry. No triumphant army, no destroyed bridge, no modern ruins, no writing or watermark. Opaque scene background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-cdd51993-9f76-4c53-accc-add33c4a2ebb.png"
+    },
+    {
+      "id": "schlacht-hurinn-v1",
+      "file": "schlacht-hurinn-v1.webp",
+      "original": "originals/schlacht-hurinn-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-14"
+      ],
+      "batch": "step-04",
+      "sceneBoundary": "Anonymous ranks and banners evoke the rain and mud described in the account. No named portrait, exact year, map, flank direction or newly resolved chronology is depicted.",
+      "prompt": "Use case: illustration-story. Scene illustration for Aleria's historical dossier 'Die Schlacht am Fluss Hurinn'. The year is DISPUTED between 1628 and 1629; do not mark a date.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 anime story scene. At human height behind a small group of anonymous helmeted northern fantasy infantry, look across their shoulders toward the meeting of two shield lines on a muddy riverbank in driving rain. Only three or four large readable silhouettes in the foreground, further ranks simplified in the haze. A wind-tossed forest-green ram banner rises above the near ranks, a small deep-red banner with the same cream ram-head motif marks the opposing line in the distance. Their wool cloaks and ordinary round wooden shields are muddy; faces are obscured by helmets and rain. The river and a modest bridge are glimpsed on one side in the mist, without presenting a tactical map. Focus on the contrast of readable cloth banners above the indistinct, mud-darkened armor below. Cool slate sky, subdued green and burgundy, clear strong ink outlines and clean cel shadows, wet sheen suggested with simple shapes. Tense, immediate but restrained composition, no chaotic crowd collage.\nSource boundary: the archive describes close ranks, river fighting, rain and mud obscuring faction colors; the banners are the visual anchor. These are anonymous soldiers, NOT portraits of Jorleif Gullvig, Fodnir or Waldmir. Do not invent named faces, an exact year, a definitive flank layout, specific deaths, floating bodies, blood, gore, siege engines or burning buildings. No writing, numbers, logos, watermark or photorealistic texture. Opaque background.",
+      "initialGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-41478ba7-9c20-4e3c-addb-cc4b315c73bc.png",
+      "editPrompt": "Edit this illustration with one precise correction only. On the SMALL RED BANNER in the distance, replace its dark wolf-like animal with a SIMPLE CREAM-COLORED RAM HEAD WITH CURLED HORNS, matching the ram motif on the large foreground GREEN banner. It must clearly be a ram, not a wolf, lion, bird or dragon. Keep the existing green ram banner, all soldiers, faces hidden, muddy armor, river, bridge, rain, lighting, framing, anime lineart and every other part of the image unchanged. Keep the 2:3 composition and opaque background. No text or watermark.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-43c52252-6ffd-4801-b09d-6b062840d5a5.png"
+    },
+    {
+      "id": "schlacht-yogrim-1629-v1",
+      "file": "schlacht-yogrim-1629-v1.webp",
+      "original": "originals/schlacht-yogrim-1629-v1.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-varulv/eldar-varulv.png",
+      "originalPortraitReference": "Stammbäume/assets/images/portraits/haus-varulv/eldar-varulv.png",
+      "sourceIds": [
+        "source-15"
+      ],
+      "birthSource": "Stammbäume/assets/js/data/house-varulv-family.js",
+      "age": {
+        "personId": "eldar-varulv",
+        "birthYear": 1599,
+        "year": 1629,
+        "approximateAge": 30,
+        "decision": "The inspected portrait appears middle-aged. Rejuvenate to approximately thirty: remove mature facial creases, retain adult full blond beard with a shorter braid, long blond hair, blue eyes, gold wolf circlet and red surcoat with white wolf. The personal house colors do not change his green faction allegiance."
+      },
+      "batch": "step-04",
+      "sceneBoundary": "Eldar leads his men near the northern bridge as described in the source. Exact river geography, lighting and anonymous soldiers are illustrative; no additional named opponent or specific injury is shown.",
+      "prompt": "Use case: illustration-story, preserving character identity. An event illustration for Aleria: 'Die Schlacht bei Schwertfall am Yogrim', second month of 1629.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nInput image: the attached portrait is the established IDENTITY reference for Eldar Varulv, not his age in this scene. He was born in 1599 and must look approximately THIRTY years old. Keep his long golden blond hair, vivid blue eyes, strong recognizable eyebrows and facial structure, adult blond beard with a SHORTER braided end, gold circlet with a small silver wolf emblem, dark practical armor, pale fur shoulder trim, and RED wool surcoat bearing a WHITE WOLF. Remove the older deep facial creases and the long mature beard from the reference. He is a forceful young adult jarl, neither an adolescent nor an elderly king. His red personal house clothing stays red even though he fights for the GREEN faction.\nVertical 2:3 story scene, three-quarter action view. Eldar in the left foreground advances on foot at the head of a small part of his infantry toward a narrow stone river bridge. He grips his ordinary steel sword low and forward in one hand, blade angled safely away from his body; free hand held back in a terse rallying gesture. Determined, intent expression. Behind him only two anonymous helmeted warriors with round shields, with a plain forest-green army standard. On the bridge beyond him, a small knot of anonymous blue-cloaked soldiers is held in a congested crossing, their details simplified. The river cuts diagonally through the scene, the far bank barely suggested. Quiet clear staging rather than a crowded battle panorama. Cool late-winter daylight with a pale break in the clouds, muted environment, strong readable cel shadows, elegant crisp anime lineart. The bridge remains intact.\nSource boundary: Eldar personally leads the northern bridge force and attacks the crossing. The picture evokes that documented action, not a surveyed view of both bridges. No additional identifiable historical people, no Herleif duel or depicted wound, no blue leader's portrait, no coronation, no severed limbs, no blood, no corpses. Do not turn his personal red wolf surcoat into a red faction banner. No writing, lettering or watermark, no painterly or photographic textures. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-b96f3e80-bbd8-4b16-9ee6-7fc9ca2778df.png"
+    },
+    {
+      "id": "belagerung-schwertfall-1629-v1",
+      "file": "belagerung-schwertfall-1629-v1.webp",
+      "original": "originals/belagerung-schwertfall-1629-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-16",
+        "source-17"
+      ],
+      "batch": "step-04",
+      "sceneBoundary": "Illustrative view during the retreat to the river-island castle, after the city walls are breached. The castle still holds in this phase; neither its storming nor a new withdrawal route is invented. No identifiable figures.",
+      "prompt": "Use case: illustration-story. Scene illustration for Aleria's 'Die Belagerung von Schwertfall', 1629, specifically the account's third phase, retreat to the castle.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 environmental anime scene, no identifiable people. From an embattled city rampart look across a broad dark river channel toward a compact, strongly fortified stone CASTLE ON A RIVER ISLAND, the water visibly wrapping around both sides of its small rocky foundation. The island castle is INTACT, its gates closed, one plain muted BLUE banner above the wall. In the near foreground a damaged parapet and a fallen unoccupied wooden round shield suggest the fighting in the captured outer town; a plain forest-GREEN standard stands above the near parapet. A few simple timber roofs of the town are visible low at one edge, separated from the island by the river. Focus on the spatial and emotional separation: the town has fallen, the isolated castle still holds. Tall strong silhouette of the keep, restrained composition with large shapes and generous gray sky. Cool evening light across the river, a few small amber windows in the stronghold, light river mist, crisp clean anime lineart and simple cel shadows. No photo or painterly rendering, no excessive stone textures.\nSource boundary: the supplied account explicitly says the defenders retreat from the city into the river-island castle, the attackers fail to take that castle by force, and it is later abandoned. Show the holding phase only. Architecture, weather and light are illustrative reconstruction, not a canonical city plan. No siege ladder on the island keep, no breached island castle, no assault succeeding there, no evacuation boats, no fire consuming the fortress, no named leaders or victims. No dead bodies, blood, invented heraldry, lettering, numbers, writing or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-edb133db-5d48-42ad-9328-bb21c4f39a20.png"
+    },
+    {
+      "id": "aufruhr-rorikshall-1627-v1",
+      "file": "aufruhr-rorikshall-1627-v1.webp",
+      "original": "originals/aufruhr-rorikshall-1627-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-10"
+      ],
+      "batch": "step-05",
+      "sceneBoundary": "Symbolic empty council hall representing the recorded internal revolt. Furniture positions and architecture are editorial allegory, not evidence of a particular meeting, fight, document or participant.",
+      "prompt": "Use case: illustration-story. Symbolic scene for Aleria's event dossier 'Der Aufruhr in Rorikshall', year 1627; the exact day and month are unknown.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 anime environmental still life, NO PEOPLE. Inside a modest northern fantasy council hall with rough stone lower walls and dark timber roof beams. A small round oak council table occupies the middle of the composition. Two sturdy plain wooden chairs are turned away from one another on opposite sides of the table; one plain low stool lies on its side nearby. A single forest-green wool banner with a SIMPLE CREAM RAM HEAD AND CURLED HORNS hangs straight behind the empty table, softly lit by a tall narrow window. A single deep-red cloth is folded on one chair, without a crest or writing. The room is intact and empty; the unsettled seating arrangement quietly evokes divided loyalties and a thwarted internal revolt. Soft cool window light and one small warm brazier accent, elegant clean anime linework, simple legible cel shadows, restrained uncluttered composition. Strong large shapes, clear readable space, not a tabletop item icon.\nSource boundary: only participants, strengths, losses and the suppression of the revolt are supplied in the event's table. This is an EDITORIAL ALLEGORY, not a reconstruction of a documented council meeting. Do not invent a signed oath, letter, map, bloody massacre, burning city, specific confrontation, victor's ceremony, named character or canonical room design. No readable text, runes, lettering, watermark, photorealistic surface detail or painterly textures. Opaque scene background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-fcc32591-6953-4d8a-9ae1-a95be16b5b81.png"
+    },
+    {
+      "id": "angriff-wolfswacht-1630-v1",
+      "file": "angriff-wolfswacht-1630-v1.webp",
+      "original": "originals/angriff-wolfswacht-1630-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-18"
+      ],
+      "batch": "step-05",
+      "sceneBoundary": "Illustrative change of control at an anonymous city gate. The red victory is recorded; this is not a reconstructed assault route, gate breach, surrender ritual or scene of a named person.",
+      "prompt": "Use case: illustration-story. Scene illustration for Aleria's dossier 'Der Angriff auf Wolfswacht', 20.07.1630.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 quiet anime environmental scene, NO PEOPLE. View from within an empty cobbled courtyard toward a modest fortified northern town gate. The stone gatehouse and heavy timber gates are intact, the gate stands slightly open. A single deep-RED wool standard with a clearly recognizable CREAM RAM HEAD WITH CURLED HORNS hangs above the archway. In the near foreground a forest-GREEN cloth standard has been taken down and rests bundled beside its wooden pole against the courtyard wall. A few plain wooden defensive stakes have been set aside, no rubble heap, no corpses, no vast destruction. Behind the arch, a simple lane and two timber house roofs suggest a town. Restrained summer daylight after cloud cover, soft warm stone and muted red, green and blue-gray, strong clean anime outlines and uncomplicated cel shading. The red banner and lowered green cloth are the compositional focus, a visual sign of changed control. Spacious, dignified, melancholic image rather than a triumphal propaganda scene.\nSource boundary: the table records that the Red faction took Wolfswacht, but supplies no detailed attack sequence. This scene is an illustrative symbol of the outcome, NOT a claim about a particular gate, breach, hour, surrender gesture or level of building damage. Do not add named leaders, prisoners, executions, invented siege machinery, fire, blood, weapons attacking anyone or newly invented heraldry. Do not draw a wolf on the red banner: the faction sign is a RAM. No writing, numbers, runes, text or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-d7cd1635-0130-42cc-9199-0620395248ca.png"
+    },
+    {
+      "id": "zweite-seeschlacht-wellenruh-1630-v1",
+      "file": "zweite-seeschlacht-wellenruh-1630-v1.webp",
+      "original": "originals/zweite-seeschlacht-wellenruh-1630-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-19"
+      ],
+      "batch": "step-05",
+      "sceneBoundary": "Symbolic deck still life for the recorded defeat of the Green navy. The illustration does not reconstruct ship maneuvers, a particular vessel, deaths, sinking, weather or an exact fleet count.",
+      "prompt": "Use case: illustration-story. Symbolic maritime scene for Aleria's dossier 'Die II. Seeschlacht bei Wellenruh', 11.12.1630.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 anime scene still life on the empty wooden deck of a northern fantasy sailing vessel, NO PEOPLE. In the lower foreground a lowered, torn forest-GREEN wool flag with a simple CREAM RAM HEAD WITH CURLED HORNS lies across the low ship rail beside a coiled hemp rope and a single broken wooden oar. These few objects carry the mood of naval defeat. Beyond the rail, cold dark blue open water under a broad overcast winter sky; in the middle distance only two or three small Nordic sailing ship silhouettes with deep-red rectangular cloth sails, no writing or detailed new crest. The ships are distant atmospheric context, not a complete fleet or battle formation. Calm heavy sea swells, pale cold light at the horizon, a little sea spray, restrained sea-blue and weathered-brown palette with the green cloth as foreground focus. Clean expressive anime ink contours, clear elegant cel shading, simple soft anime material textures, beautiful quiet composition with generous sky and no clutter. The rail, rope and flag must read as one coherent deck scene.\nSource boundary: the table records a Red victory and the breaking of Green sea power, but no maneuver sequence or detailed battle narrative. This is an EDITORIAL SYMBOL of defeat, not a documented object, named ship, survivor's viewpoint or surveyed coastline. Do not depict a tactical plan, arrows, fleet counts, named people, a specific death, sinking ships, fires, cannons, explosions, gore, corpses, modern boats, flags with wolves or newly invented heraldry. No lettering, numbers, text or watermark, no photorealism or painterly textures. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-4b086f35-ff94-4f20-a2ae-d323c1662de9.png"
+    },
+    {
+      "id": "belagerung-heldenwacht-1631-1637-v1",
+      "file": "belagerung-heldenwacht-1631-1637-v1.webp",
+      "original": "originals/belagerung-heldenwacht-1631-1637-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-20"
+      ],
+      "batch": "step-06",
+      "sceneBoundary": "Symbolic view from an anonymous city rampart during the prolonged siege. Winter and camp layout are illustrative, not a dated year, recorded tactic or surveyed plan. No named people.",
+      "prompt": "Use case: illustration-story. Scene for Aleria's historical dossier 'Die Belagerung von Heldenwacht', 1631–1637; sources disagree about the duration.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 environmental anime scene, NO PEOPLE. From an old northern fantasy city rampart look past a sturdy weathered stone parapet toward a distant besieging camp across open frost-pale ground. Near the parapet a battered forest-GREEN wool standard with a simple CREAM RAM HEAD WITH CURLED HORNS hangs from a wooden pole; several visible sewn patches suggest a long ordeal. A small plain brazier glows on the walkway. Farther out, a restrained few dark canvas tents and two tiny deep-RED standards in the haze suggest the besieging force; they are not a complete camp diagram. Winter cloud cover, cold blue-gray light, sparse snow caught on stone edges, warm ember accent, a quiet sense of exhausting years rather than a single dramatic assault. Clean anime ink lines and elegant uncomplicated cel shadows, simple soft material textures, spacious readable composition. Keep the near parapet and worn banner the main focus.\nSource boundary: the supplied table records a long siege, a later Green breakthrough and changing forces. There are no filled year-by-year accounts. The image is a symbolic view of endurance, not a surveyed city or a specific year, season, exact weather, camp formation or breakthrough tactic. Do not show an assault, invented siege engines, attack arrows, destruction of the whole city, named leaders, ships attacking, corpses, executions, blood, or newly invented heraldry. No writing, dates, numbers, text or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-d473867d-c8ac-46a0-a151-9d6e24f7e8a2.png"
+    },
+    {
+      "id": "hinterhalt-rorikshall-1632-v1",
+      "file": "hinterhalt-rorikshall-1632-v1.webp",
+      "original": "originals/hinterhalt-rorikshall-1632-v1.png",
+      "reference": null,
+      "age": null,
+      "sourceIds": [
+        "source-21"
+      ],
+      "batch": "step-06",
+      "sceneBoundary": "Symbolic battlefield still life evokes the heavy losses of both sides. Shields, path and landscape are editorial elements; no ambush position, initiating side, named victim or exact battlefield is reconstructed.",
+      "prompt": "Use case: illustration-story. Symbolic scene for Aleria's dossier 'Der Hinterhalt bei Rorikshall', 13.04.1632.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nVertical 2:3 quiet environmental anime still life, NO PEOPLE. Two battered round wooden shields lie close together beside a simple low fieldstone at the edge of an empty muddy country path: one shield painted muted forest GREEN, the other deep RED. Each bears the SAME simple pale cream RAM HEAD WITH CURLED HORNS, with scuffs through the paint. A snapped spear shaft rests low beside them, without a blade or blood. The path recedes into a broad misty northern countryside with a few bare shrubs and indistinct low rooftops very far away. Clear foreground silhouettes, generous quiet mist above, a subdued spring palette of brown soil, cold pale sky, green and burgundy, soft daylight after cloud cover. Clean expressive anime lineart, simple clear cel shading, no photo textures or painterly rendering. The paired worn shields, not the distant town, carry the image's emotion: a costly victory in a civil war.\nSource boundary: the archive lists both sides and very heavy losses but no ambush maneuver sequence, initiating party, route or exact terrain. This is an editorial still life, not the discovery of particular historical objects or a mapped battlefield. Do not add hiding troops, flanking troops, arrows, a trap, a burning wagon, bodies, gore, named fallen warriors, an execution, a precise town plan or an invented victor's ceremony. No writing, letters, runes, numbers, text or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-7242fbf4-97d1-4cbb-8cd2-fba43f9a01e1.png"
+    },
+    {
+      "id": "bjoern-gedenkbild-1633-v1",
+      "file": "bjoern-gedenkbild-1633-v1.webp",
+      "original": "originals/bjoern-gedenkbild-1633-v1.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-skaal/bjoern-vaeren.png",
+      "originalPortraitReference": "Stammbäume/assets/images/portraits/haus-skaal/bjoern-vaeren.png",
+      "birthSource": "Stammbäume/assets/js/data/house-vaeren-family.js",
+      "sourceIds": [
+        "source-22"
+      ],
+      "batch": "step-06",
+      "age": {
+        "personId": "bjoern-vaeren",
+        "birthYear": 1610,
+        "year": 1633,
+        "approximateAge": 23,
+        "decision": "The inspected canonical portrait already fits a young adult of about 23. Retain his small blond goatee, green eyes, long side-braided hair and gold-green circlet. Do not reuse the adolescent 1627 face unchanged, or add older wrinkles. Remove the unrecorded bouquet. The cathedral is memorial framing, not a reconstruction of his last moments."
+      },
+      "sceneBoundary": "Memorial portrait with Bjoern alive at his age in 1633. The named place is the cathedral in Finstermoor, but no murder method, culprit, last action, eyewitness or exact architecture is depicted.",
+      "prompt": "Use case: illustration-story, preserving character identity. Memorial scene for Aleria's event dossier 'Die Ermordung von Prinz Bjoern Vaeren', 13.08.1633.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nInput image: the attached CANONICAL TREE PORTRAIT supplies Bjoern Vaeren's identity. He was born in 1610 and is approximately TWENTY-THREE in 1633. This reference's young adult appearance is appropriate: keep his long golden blond hair, the two loose side braids, gentle GREEN eyes, distinctive eyebrows and face, SMALL BLOND GOATEE, thin gold circlet with a green central gemstone, black high-collared garment with gold ram ornament, light fur trim and green throat jewel. Keep him recognizably a young adult, not the clean-shaven 17-year-old portrait from 1627, not a middle-aged man. No new crown or wrinkles. REMOVE the bouquet and any flowers from his hands.\nVertical 2:3 memorial anime scene. Bjoern is ALIVE, standing quietly beside a broad stone pillar inside a northern fantasy cathedral, three-quarter half-body view, hands resting loosely together at his waist, a gentle grave thoughtful expression. Soft cool light from a tall arched window falls across his face, with a few small warm candles far in the background. A single plain dark BLUE hanging cloth without any symbol adds a restrained faction color. Simple spatial framing, large calm architectural shapes, excellent clear anime lineart and clean cel shadows, graceful quiet composition rather than another frontal headshot. No other people.\nSource boundary: the event table records the cathedral in Finstermoor as the place of his murder but does not describe the attack or identify the perpetrators. This is an EDITORIAL MEMORIAL PORTRAIT set in that context, NOT a literal final moment or a claim that he performed this gesture there. Do not depict an assassin, hooded stranger, suspect, weapon, attack, poison, dead prince, blood, wounds, bodyguard, secret witness, written last words or specific religious ritual. NO crosses, crucifixes, church statues, new religious emblems, invented heraldry, writing, runes, text or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-5b041fa7-a9fc-46ff-ae7c-80eefb8457d5.png"
+    },
+    {
+      "id": "ceitheach-rorikshall-1637-v1",
+      "file": "ceitheach-rorikshall-1637-v1.webp",
+      "original": "originals/ceitheach-rorikshall-1637-v1.png",
+      "reference": "Stammbäume/assets/images/houses/Ceitheach/clan-ui-rochraide.png",
+      "age": null,
+      "sourceIds": [
+        "source-23",
+        "source-01"
+      ],
+      "batch": "step-07",
+      "sceneBoundary": "Symbolic empty command tent for Ceitheach as an external power. The existing Ui’Rochraide emblem supplies colors and its painted motif only. No commanders, attack maneuver or date of protectorate installation are depicted.",
+      "prompt": "Use case: illustration-story. A symbolic historical scene for Aleria's dossier 'Ceitheachs Angriff auf Rorikshall', attack 11.11.1637; the chronicle lists the later protectorate in 03.1638.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nInput image: use the supplied EXISTING Ui'Rochraide house emblem only as the heraldic reference. Retain its deep navy BLUE and warm GOLD colors and its EXACT ROUND emblem: an armored figure holding a small crown in an outstretched hand and a sword upright. That figure is a PAINTED HERALDIC MOTIF, not a living person or a portrait. Do not invent a new crest, ram, wolf or religious symbol for Ceitheach.\nVertical 2:3 anime environmental still life, NO LIVING PEOPLE. Inside the open front of a simple field command tent, a navy-and-gold hanging cloth carries the existing ROUND Ui'Rochraide emblem as a painted medallion at its center. The medallion is circular, fully contained on the fabric, without projecting ornaments. In front stands a small empty oak table with a plain sheathed sword resting on it, no documents or maps. Beyond the tent opening, distant indistinct rooftops and low walls of a northern fantasy town sit under a pale autumn sky; a small rolled-up green cloth lies at the tent edge as an editorial hint of the defeated Green faction, without a surrender ceremony. Quiet spacious composition, restrained navy, gold, ochre and cool stone palette; gentle window-like light through the open tent, clean strong anime contours and simple cel shadows, no painterly or photographic texture. Focus on the foreign house standard and empty command space, not an army spectacle.\nSource boundary: the table records Ceitheach's victory near Rorikshall and names commanders, but provides no battle narrative. This is an EDITORIAL SYMBOL of external intervention, not a documented command post, an exact town plan, a signed treaty or an installation ceremony. Do not portray Turlough or Cinaed, a king receiving an actual crown, prisoners, troops charging, a siege assault, executions, corpses, blood, a new political border or a date written on anything. Ceitheach is an outside force, not a new Red or Blue pretender faction. No writing, runes, numbers, labels, text or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-aa036e1f-f337-47cc-a225-8e10057f876e.png"
+    },
+    {
+      "id": "dunkelmoor-arn-1639-v1",
+      "file": "dunkelmoor-arn-1639-v1.webp",
+      "original": "originals/dunkelmoor-arn-1639-v1.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-trachwyll/arn-vaeren.png",
+      "originalPortraitReference": "Stammbäume/assets/images/portraits/haus-trachwyll/arn-vaeren.png",
+      "birthSource": "Stammbäume/assets/js/data/house-vaeren-family.js",
+      "sourceIds": [
+        "source-24"
+      ],
+      "batch": "step-07",
+      "age": {
+        "personId": "arn-vaeren",
+        "birthYear": 1608,
+        "year": 1639,
+        "approximateAge": 31,
+        "decision": "Rejuvenate the inspected mature canonical portrait to about 31: retain short blond hair, pale blue eyes, stern brow, short blond moustache and goatee, but reduce deep mature facial grooves. Remove the crown because Arn has not been crowned. Keep his dark gold-ram armor, pale fur and green cloak. Do not reuse his adolescent 1627 face."
+      },
+      "sceneBoundary": "Editorial scene-portrait of Arn at his age in 1639 near the marshland named by the source. His pose, anonymous escort, terrain and weather are illustration; no tactical sequence, exact day or individual death is reconstructed.",
+      "prompt": "Use case: illustration-story, preserving character identity. A scene for Aleria's historical dossier 'Die Schlacht im Dunkelmoor', eighth month of 1639; exact day unknown.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nInput image: the attached canonical portrait gives Arn Vaeren's established identity at a more mature age. For 1639 he was born in 1608 and must look approximately THIRTY-ONE. Preserve his swept-back SHORT blond hair, PALE BLUE eyes, recognizable severe eyebrows and facial structure, short blond moustache and goatee, dark black-and-gold armor with a GOLD RAM emblem, pale fur shoulder trim. Reduce the older deep facial grooves and heavy mature wrinkles: he is a strong adult in his early thirties, not an older king and not his clean-shaven teenage self. REMOVE THE CROWN COMPLETELY; he has not been crowned. Give him a plain dark forest-GREEN travel cloak over the armor.\nVertical 2:3 anime story scene. Arn stands on firm ground at the edge of a broad reed-filled marsh, three-quarter half-body view, one gloved hand resting on his SHEATHED sword's hilt, the other relaxed at his side. His expression is stern and exhausted rather than triumphantly smiling. Behind him only two small anonymous helmeted warriors in green cloaks, faces hidden, and one simple green cloth standard, recede into light marsh haze. Open water channels, low reeds and a few distant crooked trees provide a simple, spacious northern fantasy setting. Cool muted late-summer daylight under a pale overcast sky, restrained green-gray and brown colors, elegant crisp anime lineart, clear clean cel shadows, soft simple material textures. Arn remains the main readable figure, with ample environmental framing.\nSource boundary: Arn is named among the Green participants; the table records a Green victory and heavy losses, but no filled tactical narrative. This is an editorial scene-portrait in that context, not his exact action, a surveyed battlefield, a definitive date or a description of the weather that day. Do not show named Trachwyll princes without references, a defeated leader's corpse, Tiberius Abor's death, an attack, a coronation, captured red banners, burning cities or invented dialogue. No crown, no throne, no blood, no corpses, no writing, runes, text or watermark. Opaque background.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-f136a856-8b60-4d63-94a4-2b8b95a1b206.png",
+      "status": "superseded",
+      "supersededBy": "dunkelmoor-arn-1639-v2.webp",
+      "correctionReason": "Standing battlefield depiction conflicts with permanent confinement to bed since 1636."
+    },
+    {
+      "id": "dunkelmoor-arn-1639-v2",
+      "file": "dunkelmoor-arn-1639-v2.webp",
+      "original": "originals/dunkelmoor-arn-1639-v2.png",
+      "reference": "Stammbäume/assets/images/portraits/haus-trachwyll/arn-vaeren.png",
+      "originalPortraitReference": "Stammbäume/assets/images/portraits/haus-trachwyll/arn-vaeren.png",
+      "birthSource": "Stammbäume/assets/js/data/house-vaeren-family.js",
+      "sourceIds": [
+        "source-24"
+      ],
+      "batch": "canon-correction-2026-10-24",
+      "age": {
+        "personId": "arn-vaeren",
+        "birthYear": 1608,
+        "year": 1639,
+        "approximateAge": 31,
+        "decision": "Preserve canonical identity at about 31; physically weak and permanently bedridden, not standing in battle. No crown."
+      },
+      "sceneBoundary": "Symbolic command from a sickbed in 1639. Arn is permanently bedridden after the 1636 siege injury. No standing battlefield role, armour or crown. The room and dispatch are illustrative, not a documented specific meeting.",
+      "prompt": "Use case: historical-scene. Asset: Aleria illustrated chronicle, corrected scene for the battle of Dunkelmoor, eighth month 1639. Reference 1 is the canonical identity portrait of Arn Vaeren: preserve recognisable face shape, pale blue-grey eyes, short swept-back blond hair, blond moustache and short pointed goatee, stern angular brows. Reference 2 shows his face adjusted to age 31 and the established scene style; use its identity/age only, replace its incorrect standing battlefield pose entirely.\nBildformat 2:3. Tales of Xillia/Frieren Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung.\nCreate a quiet, strong, historically coherent scene: Arn, age about 31, seriously disabled since a siege injury in 1636, now permanently confined to bed. He is RECLINING in a visible wooden sickbed with high pillows and a blanket covering his legs. The entire bed including horizontal mattress and blanket must be visible enough that he cannot be mistaken for standing or sitting in a throne. Pale, tired, persistent expression; not elderly. Plain dark sleeping tunic, small green coverlet with subtle gold ram motif, NO armour and NO crown. His right hand rests beside a folded dispatch on the blanket; no sword. A simple bedside stand with a small unlabelled parchment military map, green seal and one candle. Interior of a modest northern medieval room, muted green hanging and cool mist through a narrow distant window. No specific new person, no healer performing a procedure, no graphic wound, no magical cure. Restrained atmosphere of command from a sickbed, facial identity clear. Sparse composition, crisp lineart and flat cel-shadow shapes, no photorealism, no painterly textures, no text or lettering. This is a symbolic illustration of his documented condition, not a claimed specific meeting or exact room.",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16533-e3f5-7431-a5ee-c4d0b7ca7a3a\\exec-1c2ef75f-698a-4e3d-8a2f-cf3a9ad1bca3.png",
+      "tool": "built-in image_gen",
+      "additionalReferences": [
+        "Ereignisse/assets/praetendenten/dunkelmoor-arn-1639-v1.webp"
+      ]
+    }
+  ],
+  "updatedOn": "2026-10-24"
+}

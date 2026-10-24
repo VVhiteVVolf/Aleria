@@ -14,7 +14,9 @@ export function cultureContents(culture) {
     culture.prefixGroups.map(group=>`<h3>${esc(group.title)}</h3>${group.entries.map(entry=>`<details class="alben-topic"><summary>${esc(entry.title)}</summary>${paragraphs(entry.paragraphs)}</details>`).join('')}`).join('');
 }
 
-export function preparedPrincipality(p) {
+export function preparedPrincipality(p, registry = []) {
+  const page = registry.find(entry=>entry.id===p.pageId && entry.page);
+  if (page) return `<section class="alben-entry" data-principality="${p.id}" id="${p.id}"><p class="alben-label">${p.historical ? 'Historisches Fürstentum' : p.type}</p><h2>${esc(p.name)}</h2><p>${esc(p.summary)}</p><p><a href="${esc(principalityHref(p,registry))}">Fürstentumsseite von ${esc(p.name)} öffnen →</a></p><p><a href="${esc(albenHome)}#fuerstentuemer">← Alle Fürstentümer der Alben</a></p></section>`;
   return `<section class="alben-entry" data-principality="${p.id}" id="${p.id}">
     <p class="alben-label">${p.historical ? 'Untergegangenes Fürstentum' : 'Fürstlicher Eintrag · im Aufbau'}</p><h2>${esc(p.name)}</h2>
     ${p.imageSrc ? `<img class="alben-entry-crest" src="${esc(p.imageSrc)}" width="140" height="140" alt="Wappen ${esc(p.name)}">` : ''}

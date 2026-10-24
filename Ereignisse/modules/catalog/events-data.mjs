@@ -16,8 +16,8 @@ export const EVENTS = Object.freeze([
   {
     id: 'krieg-der-praetendenten', chapter: 'kriege', title: 'Der Krieg der Prätendenten', type: 'Bürgerkrieg',
     icon: 'buergerkrieg', sourceHref: 'https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2021',
-    startYear: 1627, endYear: 1647, duration: '20 Jahre', note: 'Erster Bürgerkrieg', articleHref: null,
-    summary: 'Der Krieg der Prätendenten war der blutigste und längste Bürgerkrieg in der Geschichte Aldrimars. Über einen Zeitraum von zwanzig Jahren verwüstete er das Königreich und drohte, die Linie des Königshauses vollständig auszulöschen. Der verheerende Konflikt entflammte nach der brutalen Ermordung des frisch gekrönten Hochkönigs, die durch ein heimtückisches Mordkomplott zweier seiner Halbgeschwister inszeniert wurde. Diese Tat löste einen erbitterten Kampf um den Thron aus, bei dem verschiedene Fraktionen und Prätendenten um die Macht rangen, während das Land in Blut und Chaos versank.'
+    startYear: 1627, endYear: 1647, duration: '20 Jahre', note: 'Erster Bürgerkrieg · Experimentelles Kriegsdossier', articleHref: 'Kriege/krieg-der-praetendenten/index.html', experimental: true,
+    summary: 'Der Krieg der Prätendenten war der blutigste und längste Bürgerkrieg in der Geschichte Aldrimars. Über einen Zeitraum von zwanzig Jahren verwüstete er das Königreich und drohte, die Linie des Königshauses vollständig auszulöschen. Auslöser war der Giftmord am frisch gekrönten Hochkönig Roger und seiner Braut Astrid. Die beschuldigten Geschwister Ulfrik und Helga wurden ohne ordentliches Verfahren hingerichtet; die Überlieferungen widersprechen sich bei ihrer Schuld. Arn, Sinding und Bjoern wurden zu den Prätendenten dreier rivalisierender Parteien, die um die Krone rangen.'
   },
   {
     id: 'krieg-um-estryll', chapter: 'kriege', title: 'Der Krieg um Estryll', type: 'Großer Krieg',

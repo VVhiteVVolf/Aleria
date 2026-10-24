@@ -21,6 +21,7 @@ export function createReviewedPins(source, { catalog, presets, describePlace, re
       banner: details.banner, bannerLink: details.bannerHref || details.territory.href, region, house: details.house,
       faction: details.faction, table, text: details.text, secret: false, dominionId: details.territory.id,
       ...(marker.sourceRef ? { sourceRef: structuredClone(marker.sourceRef) } : {}),
+      ...(Array.isArray(marker.residentFamilyIds) ? { residentFamilyIds: [...marker.residentFamilyIds] } : {}),
       ...(Number.isFinite(marker.pinMarkerScale) && marker.pinMarkerScale > 0 ? { pinMarkerScale: marker.pinMarkerScale } : {}),
       ...(details.coRulers?.length ? { coRulers: details.coRulers } : {}),
     };

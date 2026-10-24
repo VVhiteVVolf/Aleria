@@ -1,6 +1,6 @@
 import { cloneRegion, validateRegion } from './region-model.mjs';
 import { createRegionSession } from './region-session.mjs';
-import { createRegionLayer } from './region-layer.mjs?v=20261022b';
+import { createRegionLayer } from './region-layer.mjs?v=20261024c';
 import { createRegionPanel } from './region-panel.mjs';
 import { bindRegionInteraction } from './region-interaction.mjs';
 

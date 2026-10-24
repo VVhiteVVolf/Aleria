@@ -1,4 +1,945 @@
 window.KONTINENTE_REGISTRY = [
+  // BEGIN LEITHEACH_GENERATED
+  {
+    "id": "fuerstentum-leitheach",
+    "slug": "fuerstentum-leitheach",
+    "aliases": [
+      "leitheach"
+    ],
+    "name": "Fürstentum Leitheach",
+    "type": "Fürstentum",
+    "page": "Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+    "data": "Estryll/Fürstentum Leitheach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-sleagh",
+    "slug": "leitheach-tir-na-sleagh",
+    "aliases": [],
+    "name": "Oberherrschaft Tir na Sleagh",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-sinsear",
+    "slug": "leitheach-tir-na-sinsear",
+    "aliases": [],
+    "name": "Oberherrschaft Tir na Sinsear",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-fancha",
+    "slug": "leitheach-tir-na-fancha",
+    "aliases": [],
+    "name": "Tir na Fancha",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/Tir na Fancha.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Fancha/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Tir na Fancha",
+        "slug": "leitheach-tir-na-fancha"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-coimhthioch",
+    "slug": "leitheach-tir-na-coimhthioch",
+    "aliases": [],
+    "name": "Tir na Coimhthioch",
+    "type": "Lehensherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Tir na Coimhthioch.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-cleir",
+    "slug": "leitheach-herrschaft-cleir",
+    "aliases": [],
+    "name": "Herrschaft der Ua’Cleir",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/Herrschaft der Ua’Cleir.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Cleir/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua’Cleir",
+        "slug": "leitheach-herrschaft-cleir"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-ghaiscioch",
+    "slug": "leitheach-herrschaft-ghaiscioch",
+    "aliases": [],
+    "name": "Herrschaft der Ua’Ghaiscíoch",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/Herrschaft der Ua’Ghaiscíoch.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Ua’Ghaiscíoch/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua’Ghaiscíoch",
+        "slug": "leitheach-herrschaft-ghaiscioch"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-ceardaiocht",
+    "slug": "leitheach-herrschaft-ceardaiocht",
+    "aliases": [],
+    "name": "Herrschaft der Dál’Ceardaíocht",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/Herrschaft der Dál’Ceardaíocht.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Coimhthioch/Herrschaft der Dál’Ceardaíocht/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sinsear",
+        "slug": "leitheach-tir-na-sinsear"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Tir na Coimhthioch",
+        "slug": "leitheach-tir-na-coimhthioch"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dál’Ceardaíocht",
+        "slug": "leitheach-herrschaft-ceardaiocht"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-gortanna",
+    "slug": "leitheach-tir-na-gortanna",
+    "aliases": [],
+    "name": "Oberherrschaft Tir na Gortanna",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-ard-trodach",
+    "slug": "leitheach-herrschaft-ard-trodach",
+    "aliases": [],
+    "name": "Herrschaft der Ard Trodach",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/Herrschaft der Ard Trodach.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Ard Trodach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ard Trodach",
+        "slug": "leitheach-herrschaft-ard-trodach"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-nic-caoimhe",
+    "slug": "leitheach-herrschaft-nic-caoimhe",
+    "aliases": [],
+    "name": "Herrschaft der Nic Caoimhe",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/Herrschaft der Nic Caoimhe.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Nic Caoimhe/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Nic Caoimhe",
+        "slug": "leitheach-herrschaft-nic-caoimhe"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-frisealach",
+    "slug": "leitheach-herrschaft-frisealach",
+    "aliases": [],
+    "name": "Lehensherrschaft der Ard Frisealach",
+    "type": "Lehensherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/Lehensherrschaft der Ard Frisealach.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Lehensherrschaft der Ard Frisealach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Lehensherrschaft der Ard Frisealach",
+        "slug": "leitheach-herrschaft-frisealach"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-somhairle",
+    "slug": "leitheach-herrschaft-somhairle",
+    "aliases": [],
+    "name": "Herrschaft der Sidhe Somhairle",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/Herrschaft der Sidhe Somhairle.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Gortanna/Herrschaft der Sidhe Somhairle/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Gortanna",
+        "slug": "leitheach-tir-na-gortanna"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Sidhe Somhairle",
+        "slug": "leitheach-herrschaft-somhairle"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-tonn",
+    "slug": "leitheach-tir-na-tonn",
+    "aliases": [],
+    "name": "Oberherrschaft Tir na Tonn",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Tonn",
+        "slug": "leitheach-tir-na-tonn"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-gortach",
+    "slug": "leitheach-herrschaft-gortach",
+    "aliases": [],
+    "name": "Herrschaft der Ru’Gortach",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/Herrschaft der Ru’Gortach.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Ru’Gortach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Tonn",
+        "slug": "leitheach-tir-na-tonn"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ru’Gortach",
+        "slug": "leitheach-herrschaft-gortach"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-ruitheach",
+    "slug": "leitheach-herrschaft-ruitheach",
+    "aliases": [],
+    "name": "Herrschaft der Dál’Ruitheach",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/Herrschaft der Dál’Ruitheach.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Tonn/Herrschaft der Dál’Ruitheach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Tonn",
+        "slug": "leitheach-tir-na-tonn"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Dál’Ruitheach",
+        "slug": "leitheach-herrschaft-ruitheach"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-comhchuibhis",
+    "slug": "leitheach-tir-na-comhchuibhis",
+    "aliases": [],
+    "name": "Oberherrschaft Tir an Comhchuibhis",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-laidir",
+    "slug": "leitheach-herrschaft-laidir",
+    "aliases": [],
+    "name": "Lehensherrschaft der Ruin’Laidir",
+    "type": "Lehensherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/Lehensherrschaft der Ruin’Laidir.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Lehensherrschaft der Ruin’Laidir/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Lehensherrschaft der Ruin’Laidir",
+        "slug": "leitheach-herrschaft-laidir"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-choinnich",
+    "slug": "leitheach-herrschaft-choinnich",
+    "aliases": [],
+    "name": "Herrschaft der Ua’Choinnich",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/Herrschaft der Ua’Choinnich.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Ua’Choinnich/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua’Choinnich",
+        "slug": "leitheach-herrschaft-choinnich"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-nic-blar",
+    "slug": "leitheach-herrschaft-nic-blar",
+    "aliases": [],
+    "name": "Herrschaft der Nic’Blar",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/Herrschaft der Nic’Blar.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Herrschaft der Nic’Blar/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir an Comhchuibhis",
+        "slug": "leitheach-tir-na-comhchuibhis"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Nic’Blar",
+        "slug": "leitheach-herrschaft-nic-blar"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-tir-na-sruth",
+    "slug": "leitheach-tir-na-sruth",
+    "aliases": [],
+    "name": "Oberherrschaft Tir na Sruth",
+    "type": "Oberherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sruth",
+        "slug": "leitheach-tir-na-sruth"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-airgid",
+    "slug": "leitheach-herrschaft-airgid",
+    "aliases": [],
+    "name": "Lehensherrschaft der Tir An’Airgid",
+    "type": "Lehensherrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/Lehensherrschaft der Tir An’Airgid.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/Lehensherrschaft der Tir An’Airgid/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sruth",
+        "slug": "leitheach-tir-na-sruth"
+      },
+      {
+        "type": "Lehensherrschaft",
+        "name": "Lehensherrschaft der Tir An’Airgid",
+        "slug": "leitheach-herrschaft-airgid"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-amhran",
+    "slug": "leitheach-herrschaft-amhran",
+    "aliases": [],
+    "name": "Herrschaft der Ua’Amhran",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/Herrschaft der Ua’Amhran.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sruth/Herrschaft der Ua’Amhran/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sruth",
+        "slug": "leitheach-tir-na-sruth"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua’Amhran",
+        "slug": "leitheach-herrschaft-amhran"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-eirce",
+    "slug": "leitheach-herrschaft-eirce",
+    "aliases": [],
+    "name": "Herrschaft der Ua’Eirce",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/Herrschaft der Ua’Eirce.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Ua’Eirce/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Ua’Eirce",
+        "slug": "leitheach-herrschaft-eirce"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-fiachrach",
+    "slug": "leitheach-herrschaft-fiachrach",
+    "aliases": [],
+    "name": "Herrschaft der Uí Fiachrach",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/Herrschaft der Uí Fiachrach.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft der Uí Fiachrach/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft der Uí Fiachrach",
+        "slug": "leitheach-herrschaft-fiachrach"
+      }
+    ]
+  },
+  {
+    "id": "leitheach-herrschaft-laoch",
+    "slug": "leitheach-herrschaft-laoch",
+    "aliases": [],
+    "name": "Herrschaft von Broch an Abhainn",
+    "type": "Herrschaft",
+    "page": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/Herrschaft von Broch an Abhainn.html",
+    "data": "Estryll/Fürstentum Leitheach/Tir na Sleagh/Herrschaft von Broch an Abhainn/herrschaft.data.mjs?v=leitheach-20261024c",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Estryll",
+        "slug": "estryll"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Leitheach",
+        "slug": "fuerstentum-leitheach"
+      },
+      {
+        "type": "Oberherrschaft",
+        "name": "Tir na Sleagh",
+        "slug": "leitheach-tir-na-sleagh"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft von Broch an Abhainn",
+        "slug": "leitheach-herrschaft-laoch"
+      }
+    ]
+  },
+  // END LEITHEACH_GENERATED
   // BEGIN SKJAERHEIM_GENERATED
   {
     "id": "reiktum-skjaerheim",

@@ -34,6 +34,6 @@ test('all continent links resolve without exposing the experimental Uathneach pr
     assert.ok(fs.existsSync(new URL('.' + destination(href), root)), href);
   }
   assert.ok(html.includes('/Kontinente/Alben/Der Schild von Ailith.html'));
-  assert.ok(html.includes('id=leitheach'));
+  assert.ok(html.includes('/Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html'));
   assert.doesNotMatch(html, /\/Vorschau\/|uathneach-vorschau/);
 });

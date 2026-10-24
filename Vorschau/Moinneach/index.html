@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Moinneach · Vorschlag für Patrick</title>
+ <meta name="description" content="Drei Gebietsaufteilungen Moinneachs im Vergleich, mit elf Clans bei ihren zehn Städten.">
+ <link rel="stylesheet" href="proposal.css">
+ <link rel="stylesheet" href="../shared/clan-map.css">
+ <link rel="stylesheet" href="regional-designs.css">
+ <script type="module" src="proposal-page.mjs"></script>
+</head>
+<body class="proposal-workbench" data-moinneach-proposal>
+ <header class="proposal-toolbar"><a class="wordmark" href="#anfang">ALERIA <span>Werkstatt</span></a><span class="toolbar-label">Moinneach · Vorschlag für Patrick</span><div class="toolbar-actions"><button data-action="toggle-edit" aria-pressed="false">Bearbeiten</button><button data-action="print">Druckansicht</button></div></header>
+ <main id="anfang">
+  <section class="proposal-hero"><div><p class="eyebrow">Albische Lande · Fürstentum</p><h1>Moinneach</h1><p class="hero-line">Elf Clans.<br>Zehn Städte. Drei Möglichkeiten.</p><p class="hero-description">Drei gelieferte Gebietsaufteilungen mit den Wappen an den jeweiligen Städten. Zum Anschauen, Vergleichen und gemeinsamen Weiterdenken.</p><dl class="hero-stats"><div><dt>Clans</dt><dd>11</dd></div><div><dt>Städte</dt><dd>10</dd></div><div><dt>Gebietsaufteilungen</dt><dd>3 im Vergleich</dd></div></dl></div><figure class="realm-emblem"><img src="assets/moinneach.png" alt="Wappen des Fürstentums Moinneach" width="392" height="399"><figcaption>Das gelieferte Fürstentumswappen</figcaption></figure></section>
+  <aside class="draft-note"><p><strong>Ein Vorschlag zum Besprechen.</strong> Die Clan-Zuordnungen folgen deinen Angaben. Die Dreier- und Fünferaufteilung erhalten Namens- und Bannerentwürfe. Auch jedes Einzelgebiet hat ein Banner; dort bleiben die bisherigen Stadtbezeichnungen stehen. Ränge und Lehnsherren sind noch offen. Änderungen im Bearbeitungsmodus gelten nur bis zum Neuladen dieser geöffneten Seite.</p></aside>
+  <aside class="swamp-context"><p><strong>Moinneach ist ein gewaltiges Sumpfland.</strong> Mangrovenwurzeln, schwarzes Wasser, Pilze und versunkene Wege prägen eine gefährliche, lebensfeindliche Landschaft. Jeder bewohnbare Platz ist dem Sumpf mühsam abgerungen. Die groben, abgenutzten Banner greifen diesen Alltag auf.</p></aside>
+  <section class="proposal-section" aria-labelledby="variants-title"><p class="eyebrow">Die Gebietsaufteilung</p><h2 id="variants-title">Drei Wege, Moinneach zu gliedern.</h2><div class="variant-list" data-role="variants"></div></section>
+  <section class="proposal-section" data-role="map-section" aria-labelledby="map-title"><div class="section-heading"><div><p class="eyebrow">01 · Das Land & seine Clans</p><h2 id="map-title" data-role="active-map-title">Wer sitzt wo?</h2></div><p>Wappen berühren oder öffnen<br>für Clan und Stadt ↗</p></div><div class="map-tools"><button data-action="toggle-crests" aria-pressed="true">Familienwappen</button><button data-action="toggle-names" aria-pressed="true" disabled>Ortsnamen im Kartenbild</button><button data-action="open-map">Großansicht ↗</button><span>Wappen und Sitz sind durch Linien verbunden</span></div><div class="map-shell"><div class="map-viewport" tabindex="0" aria-label="Moinneachs Regionskarte, seitlich verschiebbar"><div class="map-canvas" data-role="map-surface"></div></div></div><p id="map-caption" class="map-caption"></p><noscript><p>Die interaktiven Clanwappen benötigen JavaScript.</p><img src="assets/map.webp" alt="Erste Gebietsaufteilung Moinneachs"></noscript></section>
+  <section class="proposal-section" aria-labelledby="regions-title"><p class="eyebrow">Gebiete der gewählten Variante</p><h2 id="regions-title" data-role="active-variant"></h2><p class="region-summary" data-role="variant-summary"></p><p class="region-hint">Namen und Banner sind Vorschläge für diese Grenzen. Ein Banner öffnet Motiv, Bedeutung und Landschaft. Gemeinsames Gebiet bedeutet noch kein festgelegtes Lehnsverhältnis.</p><div class="region-grid" data-role="regions"></div></section>
+  <section class="proposal-section" aria-labelledby="seats-title"><div class="section-heading"><div><p class="eyebrow">02 · Clans & Städte</p><h2 id="seats-title">Die Zuordnungen im Überblick</h2></div><p>Ein Wappen öffnen<br>für Lage und Entwurfsnotizen ↗</p></div><div class="settlement-grid" data-role="settlements"></div></section>
+  <div class="proposal-reset"><p>Die Vorschau schreibt keine Änderungen in den Almanach oder die Stammbäume.</p><button data-action="reset-proposal">Diese Variante zurücksetzen</button></div>
+  <footer><span>Moinneach · Vorschau für Patrick</span><span>Drei Gebietsaufteilungen · im Aufbau</span></footer>
+ </main>
+ <dialog id="map-dialog" class="proposal-dialog map-dialog" aria-labelledby="large-map-title"><div class="dialog-top"><span id="large-map-title" data-role="map-title"></span><button data-action="close-map" aria-label="Großansicht schließen">✕</button></div><div class="map-zoom"><button data-action="zoom-out" aria-label="Karte verkleinern">−</button><button data-action="fit-map" data-role="zoom-label">Ganze Karte</button><button data-action="zoom-in" aria-label="Karte vergrößern">+</button><span>Wappen öffnen · vergrößerte Karte seitlich verschieben</span></div><div class="map-viewport" tabindex="0" aria-label="Große Moinneach-Karte, seitlich verschiebbar"><div class="map-canvas" data-role="map-surface"></div></div></dialog>
+ <dialog id="clan-dialog" class="proposal-dialog clan-dialog" aria-labelledby="clan-title"><div class="dialog-top"><span>Clan & Stadt · Vorschau</span><button data-action="close-clan" aria-label="Clanfenster schließen">✕</button></div><div class="clan-dialog-content"><h2 id="clan-title" data-role="clan-title"></h2><div data-role="clan-detail"></div></div></dialog>
+ <dialog id="region-dialog" class="proposal-dialog region-dialog" aria-labelledby="region-title"><div class="dialog-top"><span>Region · Name & Bannerentwurf</span><button data-action="close-region" aria-label="Regionsentwurf schließen">✕</button></div><div class="region-dialog-content"><h2 id="region-title" data-role="region-title"></h2><div data-role="region-detail"></div></div></dialog>
+ <div id="clan-tooltip" class="clan-tooltip" role="tooltip" hidden></div>
+ <div class="proposal-notice" data-role="status" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

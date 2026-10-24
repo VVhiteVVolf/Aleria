@@ -1,67 +1,84 @@
-# Leitheach – Regionsübertragung vom 22. Oktober 2026
+# Leitheach – Kartenkorrektur vom 24. Oktober 2026
 
-Einstieg: `Karten/karte.html?map=leitheach`. Die sechs beschrifteten Hauptregionen
-verlinken ihre Teilkarten. Jede Teilkarte führt über **Gebiete → Übergeordnete
-Karte** zur Übersicht zurück. Alle sieben Karten verwenden die vom Nutzer
-gelieferten Bilder aus `Downloads/Leitheach`, verlustfrei als WebP übernommen.
+Einstieg: `Karten/karte.html?map=leitheach`. Die sechs Hauptregionen verlinken ihre
+Teilkarten. Alle sieben Karten verwenden die gelieferten Bilder aus
+`Downloads/Leitheach`, verlustfrei als WebP übernommen. Jede Karte führt zurück
+zur passenden Herrschaftsseite. Estryll und der Schild von Ailith verlinken das
+Fürstentum.
 
-| Karte | Bildgröße | Grenzobjekte |
-| --- | --- | ---: |
-| Leitheach | 4096 × 3573 | 6 |
-| Tir na Sleagh | 4096 × 3191 | 6 |
-| Tir na Sinsear | 4096 × 2085 | 6 |
-| Tir na Gortanna | 4096 × 3079 | 6 |
-| Tir na Tonn | 4096 × 3939 | 4 |
-| Tir an Comhchuibhis | 2662 × 4097 | 5 |
-| Tir na Sruth | 4096 × 3168 | 3 |
-| **Gesamt** | | **36** |
+| Karte | Bildgröße | Gebietsobjekte | Ortsmarker |
+| --- | --- | ---: | ---: |
+| Leitheach | 4096 × 3573 | 6 | 14 |
+| Tir na Sleagh | 4096 × 3191 | 6 | 48 |
+| Tir na Sinsear | 4096 × 2085 | 6 | 56 |
+| Tir na Gortanna | 4096 × 3079 | 6 | 72 |
+| Tir na Tonn | 4096 × 3939 | 4 | 38 |
+| Tir an Comhchuibhis | 2662 × 4097 | 5 | 43 |
+| Tir na Sruth | 4096 × 3168 | 3 | 47 |
+| **Gesamt** | | **36** | **318** |
 
-## Erfassung
+## Korrektur und Belege
 
-Die Bearbeitungsansichten aller sieben World-Anvil-Karten wurden über die
-verbundene Chrome-Erweiterung geprüft. Erfasst wurden die sichtbaren SVG-Grenzen,
-ihre Bild-/Ansichtsmaße, Markierungslisten und Quellenmarker-IDs. Es wurde keine
-World-Anvil-Karte verändert. Die dort gesperrte Polygonbearbeitung wurde nicht
-umgangen.
+Der frühere Stand vom 22. Oktober enthielt keine Ortsmarker und teilweise versetzte
+SVG-Geometrie. Alle sieben Bearbeitungsansichten und alle 324 koordinatenhaltigen
+Markereinträge wurden erneut über die verbundene Chrome-Erweiterung erfasst.
+`sources/maps-20261024.capture.json` und `sources/markers-20261024.capture.json`
+enthalten die neuen Belege. Das alte Archiv bleibt unverändert erhalten.
 
-`sources/world-anvil.capture.json` hält diesen Rohbeleg. Die Umrechnung erfolgt
-über die sichtbare SVG-ViewBox und die tatsächliche Bildposition und Bildgröße,
-ohne Y-Spiegelung. Die dargestellten SVG-Punkte sind vom Quellrenderer gerundet:
-Die Grenzen entsprechen der sichtbaren Vorlage, nicht behaupteten originalen
-nativen Polygonkoordinaten. Die sichtbare Auflösung liegt bei ungefähr 4–8
-Quellbildpixeln. Alle Punkte lassen sich im neuen Regionswerkzeug korrigieren.
+Jede SVG-Geometrie wird vor der Umrechnung gegen ihre tatsächlich dargestellte
+Begrenzungsbox geprüft. Bild- und SVG-Position, ViewBox und beide Bildachsen werden
+berücksichtigt. Die gerundeten sichtbaren SVG-Punkte sind keine behaupteten nativen
+Polygonkoordinaten; die Auflösung beträgt etwa 4–8 Quellbildpixel.
 
-Offene Grenzlinien und getrennte Abschnitte bleiben offen/getrennt; daraus wurden
-keine künstlich geschlossenen Herrschaftsflächen konstruiert. Die zwei örtlichen
-Kreisbereiche (Rhosmeres Rösser und Schwanenorden) bleiben eigene Bereiche ohne
-erfundene Clan-Zuordnung. Das Grenzgebiet und unbelegte Zugehörigkeiten bleiben offen.
+Ortskoordinaten stammen aus den jeweiligen Markerformularen: Pixelwerte mit
+Ursprung unten links. Aleria speichert `x / Bildbreite` und `1 - y / Bildhöhe`.
+Ein unabhängiger Test vergleicht jeden Wert mit dem sichtbaren DOM-Anker der
+World-Anvil-Markierung (Abweichung unter zwei CSS-Pixeln).
 
-## Zuordnung und Nutzerkorrektur
+Die 324 Einträge bestehen aus 318 Ortsmarkern und sechs Navigationsmarkern zu den
+Teilkarten. Letztere sind im Abgleich dokumentiert, erscheinen aber nicht als
+künstliche Orte. Alle ursprünglichen Marker-IDs bleiben Quellenkennungen.
+Alle 98 vorhandenen Ortsbeschreibungen bleiben vollständig erhalten. 220 Marker
+haben keinen Quellentext und werden entsprechend gekennzeichnet. Ortsnamen werden
+gegebenenfalls aus der vorhandenen Beschreibungsüberschrift gewonnen.
 
-Häuser werden nur über vorhandene kanonische Familienakten zugeordnet. Die
-Familienquellen sind unter `sources/families.snapshot.json` festgehalten; deren
-Originaldaten wurden nicht geändert. Cleir, Ghaiscioch und Dal Ceardaiocht bleiben
-in Sinsear unter Coimhthioch verschachtelt.
+## Herrschaftszuordnung
 
-Die ursprünglich unbenannte Fläche mit Quellenmarker
-`397f74eb-6a69-4e7a-9ef3-0b435b2ede97` ist laut ausdrücklicher Nutzerbestätigung
-**Herrschaft Tir na Fancha**, Haus **Na Mhuir**. Ihr veralteter Buarstrath-Text
-wurde nicht als Regionsbeschreibung übernommen. Der unveränderte Rohbeleg bleibt
-im Quellenarchiv erhalten.
+Viele alte Clanlinien sind Verbindungsnetze zwischen Siedlungen und kreuzen sich.
+Sie bleiben offene Linien und werden nicht künstlich zu Gebietsflächen geschlossen.
+Die Anschlusspunkte belegen die Zugehörigkeit der angeschlossenen Orte. Der geprüfte
+Abstand in Originalbildpixeln und ausdrückliche Korrekturen stehen in
+`place-review.source.json`. Flächenzugehörigkeit wird nur aus tatsächlichen Flächen
+ermittelt. Örtliche Gildenbereiche sind keine zusätzlichen Clan-Herrschaften.
 
-## Datenstand und Schutz
+Die bestätigte Fläche `397f74eb-6a69-4e7a-9ef3-0b435b2ede97` ist Tir na Fancha
+unter Na’Mhuir; ihr veralteter Buarstrath-Text ist keine Regionsbeschreibung.
+Cleir, Ghaiscioch und Ceardaiocht bleiben unter Coimhthioch verschachtelt.
+Ua’Eirce, Uí Fiachrach und Ruin Ua Laoch haben eigene Sleagh-Herrschaftsseiten.
+Die Ortsbeschreibungen belegen Cairn Fàire als Sitz der Ua’Cleir, Senanbail als Sitz
+der Ua’Eirce und Mârbail als Sitz der Fiachrach. Diese Nachweise stehen im Gebietskatalog.
 
-Die 24 gelieferten HTML-Artikel sind unverändert als `sources/article-00.html`
-bis `article-23.html` archiviert. Das Artikel- und Bildermanifest enthält
-SHA-256-Prüfsummen und ursprüngliche Dateipfade. Alte HTML-Gestaltung wird nicht
-in die Kartenoberfläche übernommen.
+Die 26 Herrschaftsseiten verwenden den gemeinsamen Seitentyp und zeigen jeweils
+nur ihre eigenen Orte nach Ortsart. Unterherrschaften werden verlinkt. Die 24
+gelieferten HTML-Artikel bleiben unverändert archiviert; alte Gestaltung wird nicht
+übernommen. Einzelheiten: `Kontinente/modules/leitheach/README.md`.
 
-Dieser Arbeitsschritt umfasst Karten und Regionsgrenzen. Eine vollständige
-Siedlungsmarker-/Artikelmigration ist noch kein Bestandteil dieser Datensätze;
-`pins` bleibt dafür leer. Die Quelllisten sind für die spätere Übertragung gesichert.
-Bestehende Karten anderer Regionen wurden nicht geändert.
+## Wiederholbarer Aufbau und Schutz
 
-`node Karten/tools/build-leitheach.mjs --check` prüft Daten und Register gegen die
-Quellen. Der Builder verweigert das Überschreiben von bereits manuell veränderten
-Kartendaten anhand ihres generierten State-Hashes. Browserentwürfe bleiben im
-bisherigen separaten Speichersystem. Es wurde nichts gepusht oder veröffentlicht.
+1. `node Karten/tools/import-leitheach-source.mjs --check`
+2. `node Karten/tools/build-leitheach.mjs --check`
+3. `node Kontinente/scripts/build-leitheach.mjs --check`
+
+Ohne `--check` werden die jeweiligen abgeleiteten Dateien erzeugt. Der Kartenbuilder
+verweigert das Überschreiben manuell geänderter Kartendaten anhand ihres generierten
+State-Hashes. Browserentwürfe und globale Familienakten werden nicht überschrieben.
+Andere Karten, Online-Daten und Live-Ressourcen bleiben erhalten. Am 24. Oktober
+hat der Nutzer die Veröffentlichung sämtlicher lokalen Neuheiten freigegeben;
+die Prüfung dieser Korrektur ist Teil dieser Gesamtveröffentlichung.
+
+Während der Erfassung wurde Nossail vorübergehend versehentlich der Gruppe
+„Herrschaften“ zugewiesen; die ursprüngliche Gruppe „Markierungen“ wurde sofort
+wiederhergestellt und über die sichtbare Liste bestätigt. Danach wurden ausschließlich
+exakt geprüfte Marker-Bearbeitungslinks gelesen. Inhalte und Koordinaten in
+World Anvil wurden nicht gespeichert; die dort gesperrte Polygonbearbeitung wurde
+nicht umgangen.

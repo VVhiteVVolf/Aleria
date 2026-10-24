@@ -10,6 +10,8 @@ if(root){
     const missing=document.querySelector('[data-role="unknown-principality"]');
     missing.hidden=Boolean(selected);
     if(selected){
+      const page=(window.KONTINENTE_REGISTRY || []).find(entry=>entry.id===selected.pageId && entry.page);
+      if(page)location.replace(principalityHref(selected,window.KONTINENTE_REGISTRY));
       document.querySelector('h1').textContent=`${selected.type} ${selected.name}`;
       document.title=`${selected.name} · Schild von Ailith`;
     }
