@@ -59,6 +59,13 @@ Alle 29 bestehenden Release-Prüfgruppen wurden erfolgreich abgeschlossen;
 die nach Folgeabgleichen wiederholten Gruppen sind separat protokolliert.
 Der vollständige Almanach-Build ist ebenfalls erfolgreich.
 
+Der erste Netlify-Lauf deckte eine fehlende Archivregel auf: Git normalisierte
+die Zeilenenden der fünf Fraktions-Quellregister auf Linux, obwohl deren
+Importmanifest die unveränderten Originalbytes prüft. Die vorhandene
+`-text`-Archivregel wurde gezielt auf `Fraktionen/docs/sources/*.html`
+erweitert. Die Originaldateien und ihre Prüfsummen bleiben unverändert;
+die Registerprüfung bleibt strikt und aktiv.
+
 Firebase-Daten, Live-Ressourcen, Online-IDs und bisherige Kampfverläufe werden
 nicht migriert oder neu ausgewertet. Die Veröffentlichung folgt dem bestehenden
 GitHub-/Netlify-Ablauf auf `master`.
