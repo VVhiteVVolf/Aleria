@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Seegefecht</title>
+  <desc id="desc">Ein Langschiff über gekreuzten Äxten auf quadratischem Pergament.</desc>
+  <defs>
+    <radialGradient id="paper"><stop stop-color="#ecd098"/><stop offset=".7" stop-color="#dabc80"/><stop offset="1" stop-color="#c8a162"/></radialGradient>
+    <filter id="parchment" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="17" result="grain"/><feColorMatrix in="grain" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <g id="corner" stroke="#896434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 74V20h54M24 64c13-12 5-23 11-30s17 2 29-10M25 53c-1-13 15-16 16-25M53 25c-13-1-16 15-25 16"/><path d="M26 27c3 8 10 10 16 15-5-6-7-13-15-16Zm-3 41c15-12 19-17 21-26 7-1 17-8 24-19" fill="#a67f42" fill-opacity=".35"/></g>
+  </defs>
+  <path d="M0 0h256v256H0Z" fill="url(#paper)" filter="url(#parchment)"/>
+  <path d="M8 8h240v240H8Z" stroke="#896434" stroke-width="3"/><path d="M14 14h228v228H14Z" stroke="#aa854d" stroke-width="1.5"/>
+  <use href="#corner"/><use href="#corner" transform="rotate(90 128 128)"/><use href="#corner" transform="rotate(180 128 128)"/><use href="#corner" transform="rotate(270 128 128)"/>
+  <g stroke="#573c24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m71 73 111 119M185 73 74 192"/>
+    <path d="m62 60 25-8 19 20-29 25-22-19Zm132 0-25-8-19 20 29 25 22-19Z" fill="#956244"/>
+    <path d="M128 50v100"/>
+    <path d="M137 59q38 22 43 63h-43Z" fill="#8a4435"/>
+    <path d="M119 69q-32 17-37 53h37Z" fill="#f3da9e"/>
+    <path d="M48 143q79 26 160-2l-17 30q-61 32-126 0Z" fill="#895d36"/>
+    <path d="m49 143-8-20 16 3m150 16 8-22-15 4"/>
+    <path d="M43 199q17-13 34 0t34 0 34 0 34 0 34 0" stroke="#446365"/>
+    <path d="M64 216q17-13 34 0t34 0 34 0 34 0" stroke="#446365" stroke-width="5"/>
+  </g>
+</svg>

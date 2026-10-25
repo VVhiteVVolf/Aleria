@@ -2,5 +2,94 @@
   "reviewedAt": "2026-10-24",
   "sourceBaselineHash": "fb2191afef8de64e1101fba58c15a019ede681eda466a1f942577dfabb2eeae5",
   "sha256": "66ef5761e92b36e1064040cc19e06629ab01f1a2300b166a801f6b767e7483f1",
-  "protectedSha256": "2dcc4a8ecad2a1d487a8e575a4acb0e1aafda1b8aa07fb66996c76dc083211a6"
+  "protectedSha256": "babbbf02091c0fbc47c9a42d54a0a2b8d256ff2f3cc2f2250f672753eff9b87b",
+  "previousProtectedSha256": "2dcc4a8ecad2a1d487a8e575a4acb0e1aafda1b8aa07fb66996c76dc083211a6",
+  "followupReview": {
+    "reviewedAt": "2026-10-25",
+    "reason": "Already prepared Laga counterpart reconciliation: Laoise receives the canonical dated world-person reference; two existing sons have their source-confirmed male sex. Person IDs, counts, parentage and partnerships are unchanged.",
+    "changedFamilies": [
+      {
+        "id": "haus-gallchobhair",
+        "before": "0b5ad3606da288f6711698bcdc33614e6e5906e18e80be533ba12ed5eaf74712",
+        "after": "2d05bd216252164c6e06310149ff0d4085485e53b777b2e46a6a2b4b90656feb",
+        "beforePersons": 69,
+        "afterPersons": 69
+      },
+      {
+        "id": "haus-chulainn",
+        "before": "3a7ac63afbe64ab6043442a39efd714e3fafc3bb7910bdce301c44d794deecdc",
+        "after": "3eedd6bef966390e314369d5bb0cf91353bf839f6aaa3a8ff86f0ca92ec7e364",
+        "beforePersons": 70,
+        "afterPersons": 70
+      },
+      {
+        "id": "haus-durthacht",
+        "before": "18254646d854ac57849138c168a8020c5c50b3a556ff414e83d9f3ad4eda32b1",
+        "after": "8e95d180ef42fa7d5f5ca31d3112fc026174f7676ab83f66cf884a122e3e16cd",
+        "beforePersons": 90,
+        "afterPersons": 90
+      }
+    ],
+    "fields": [
+      {
+        "path": "haus-gallchobhair.family.persons.9.worldPersonId",
+        "before": "person--haus-laga--laoise-laga",
+        "after": "person--haus-laga--laoise-1125-laga"
+      },
+      {
+        "path": "haus-gallchobhair.family.persons.9.extensions.registryManagedFieldRevisions.worldPersonId",
+        "after": 11
+      },
+      {
+        "path": "haus-gallchobhair.family.persons.9.extensions.registryManagedFields",
+        "after": [
+          "worldPersonId"
+        ]
+      },
+      {
+        "path": "haus-gallchobhair.family.extensions.registryManagedExtensionFields.10",
+        "after": "lagaCounterpartRevision"
+      },
+      {
+        "path": "haus-gallchobhair.family.extensions.lagaCounterpartRevision",
+        "after": 1
+      },
+      {
+        "path": "haus-chulainn.family.persons.42.sex",
+        "before": "unknown",
+        "after": "male"
+      },
+      {
+        "path": "haus-chulainn.family.persons.42.extensions.registryManagedFieldRevisions.sex",
+        "before": 2,
+        "after": 8
+      },
+      {
+        "path": "haus-chulainn.family.extensions.registryManagedExtensionFields.12",
+        "after": "lagaCounterpartRevision"
+      },
+      {
+        "path": "haus-chulainn.family.extensions.lagaCounterpartRevision",
+        "after": 1
+      },
+      {
+        "path": "haus-durthacht.family.persons.65.sex",
+        "before": "unknown",
+        "after": "male"
+      },
+      {
+        "path": "haus-durthacht.family.persons.65.extensions.registryManagedFieldRevisions.sex",
+        "before": 2,
+        "after": 4
+      },
+      {
+        "path": "haus-durthacht.family.extensions.registryManagedExtensionFields.8",
+        "after": "lagaCounterpartRevision"
+      },
+      {
+        "path": "haus-durthacht.family.extensions.lagaCounterpartRevision",
+        "after": 1
+      }
+    ]
+  }
 }

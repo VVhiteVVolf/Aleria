@@ -1,7 +1,7 @@
 import {
   needsRegisteredFamilyUpgrade,
   resolveRegisteredFamilyUpgrade
-} from '../../services/family-registry-upgrade.js?v=20261024-housebio-v1';
+} from '../../services/family-registry-upgrade.js?v=20261024-vortigerns-v1';
 
 export function reconcileFamilyWithProjectOrigin({ family, projectOriginFamily }) {
   if (

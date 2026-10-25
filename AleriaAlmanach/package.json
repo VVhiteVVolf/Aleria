@@ -75,8 +75,8 @@
     "check:brewer-guilds": "node scripts/build-brewer-guilds.mjs --check && npm run check:gortach",
     "test:brewer-guilds": "node --test tests/brewer-guilds.test.mjs tests/aldrimar-breweries.test.mjs tests/trade-catalog-pricing.test.mjs tests/trade-catalog-money.test.mjs tests/gortach-brewery.test.mjs",
     "check:languages": "node modules/language/morgar/morgar-build.mjs --check && node modules/language/laerelis/laerelis-build.mjs --check",
-    "build:events": "node ../Ereignisse/scripts/build-events.mjs && node ../Ereignisse/scripts/build-weddings.mjs && node ../Ereignisse/scripts/build-battles.mjs && node ../Ereignisse/scripts/build-praetendenten.mjs",
-    "check:events": "node ../Ereignisse/scripts/build-events.mjs --check && node ../Ereignisse/scripts/build-weddings.mjs --check && node ../Ereignisse/scripts/build-battles.mjs --check && node ../Ereignisse/scripts/build-praetendenten.mjs --check",
+    "build:events": "node ../Ereignisse/scripts/build-events.mjs && node ../Ereignisse/scripts/build-weddings.mjs && node ../Ereignisse/scripts/build-battles.mjs && node ../Ereignisse/scripts/build-praetendenten.mjs && node ../Ereignisse/scripts/build-coastal-history.mjs",
+    "check:events": "node ../Ereignisse/scripts/build-events.mjs --check && node ../Ereignisse/scripts/build-weddings.mjs --check && node ../Ereignisse/scripts/build-battles.mjs --check && node ../Ereignisse/scripts/build-praetendenten.mjs --check && node ../Ereignisse/scripts/build-coastal-history.mjs --check",
     "test:events": "node --test ../Ereignisse/tests/*.test.mjs",
     "build:religions": "node ../Religionen/scripts/build-religions.mjs",
     "build:astrology": "node ../Astrologie/scripts/build-astrology.mjs",
@@ -124,7 +124,10 @@
     "check:skalli-retinue": "node scripts/build-skalli-retinue.mjs --check",
     "test:skalli-retinue": "node --test --experimental-test-isolation=none tests/skalli-retinue.test.mjs tests/group-section-migration.test.mjs",
     "build:group-section-migration": "node scripts/build-group-section-migration.mjs",
-    "check:group-section-migration": "node scripts/build-group-section-migration.mjs --check"
+    "check:group-section-migration": "node scripts/build-group-section-migration.mjs --check",
+    "build:coastal-history": "node ../Ereignisse/scripts/build-coastal-history.mjs && node ../Ereignisse/scripts/build-events.mjs && node ../Fraktionen/scripts/build-factions.mjs",
+    "check:coastal-history": "node ../Ereignisse/scripts/build-coastal-history.mjs --check",
+    "test:coastal-history": "node --test --experimental-test-isolation=none ../Ereignisse/tests/coastal-history.test.mjs"
   },
   "dependencies": {
     "@3d-dice/dice-box": "1.1.4",

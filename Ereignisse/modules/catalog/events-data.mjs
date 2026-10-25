@@ -1,4 +1,6 @@
 import { WELLENRUH } from '../battles/wellenruh-data.mjs';
+import { LEITHEACH_INCIDENTS } from '../coastal-history/coastal-incidents.mjs';
+import { LEITHEACH_DURATION } from '../../../shared/coastal-history/leitheach-chronology.mjs';
 
 // Inhalt der alten Ereignisübersicht. Unbekannte Daten bleiben ausdrücklich offen.
 // articleHref ist relativ zu Ereignisse/index.html; nur vorhandene Seiten verlinken.
@@ -28,7 +30,7 @@ export const EVENTS = Object.freeze([
   {
     id: 'invasion-von-vennyr', chapter: 'kriege', title: 'Die Invasion von Vennyr', type: 'Invasion',
     icon: 'krieg', sourceHref: 'https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2178',
-    startYear: 1717, endYear: 1720, duration: '3 Jahre', note: 'Vennyr wird zu Fjordheim', articleHref: null,
+    startYear: 1717, endYear: 1720, duration: '3 Jahre', note: 'Vennyr wird zu Fjordheim', articleHref: 'Kriege/invasion-von-vennyr/index.html', experimental: true,
     summary: 'Die Invasion von Vennyr im Jahr 1717 markiert einen Wendepunkt in der Geschichte des Königreichs, als die Nordmänner des Hohen Nordens, angeführt von den mächtigen Clans der Nordmannen, einen erneuten Versuch unternahmen, das Land zu erobern, das sie als ihre angestammte Heimat betrachteten.'
   },
   {
@@ -40,9 +42,10 @@ export const EVENTS = Object.freeze([
   {
     id: 'raubzug-durch-leitheach', chapter: 'kriege', title: 'Raubzug durch Leitheach', type: 'Raubzug',
     icon: 'raubzug', sourceHref: 'https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=2467',
-    startYear: 1733, endYear: 1733, duration: 'Ein Tag', note: 'Beinahe Auslöschung des Hauses Iomrach', articleHref: null,
-    summary: 'Im Jahr 1733 wagte eine größere Gruppe der Schwarzblut Marodeure einen Raubzug an der Südküste Leitheachs. Die Piraten griffen im Schutz der Nacht die Burg Broch an Clais an und töteten oder verschleppten den gesamten Clan der Iomrach. Ohne den Schutz, den Broch an Clais an der Flussmündung bot, konnten die Schiffe der Piraten bis nach Dun Laog hinaufsegeln, um es direkt anzugreifen. Bei diesem Streifzug verschleppten, raubten und töteten die Piraten viele Alben, bevor Verstärkung aus Westen und Osten eintreffen konnte. Letztlich wurden die Piraten zwar zurückgeschlagen, jedoch waren zu jenem Zeitpunkt die meisten der Räuber bereits entkommen und mit ihnen auch viele der Alben.'
+    startYear: 1733, endYear: 1733, duration: LEITHEACH_DURATION, note: 'Winter 1733 · Fall von Broch an Clais', articleHref: 'Kriege/raubzug-durch-leitheach/index.html', experimental: true,
+    summary: 'Im Winter 1733 überfielen vier Banden des Schwarzblut-Kollektivs Leitheach. Nach dem Fall von Broch an Clais drangen Teilverbände entlang des Flusses bis nach Dun Laog vor. Die Piraten töteten oder verschleppten die an der Burg anwesenden Iomrach, plünderten zahlreiche Siedlungen und entführten viele Alben. Dun Laog konnte gehalten werden; der Großteil der Piraten entkam mit Beute und Gefangenen.'
   },
+  ...LEITHEACH_INCIDENTS.map(event => ({ id: `leitheach-${event.id}`, chapter: 'schlachten', title: event.title, type: event.type, icon: 'raubzug', startYear: 1733, endYear: 1733, duration: event.duration, note: `Winter 1733 · ${event.time}`, summary: event.lead, articleHref: event.file.replace('Ereignisse/', ''), experimental: true })),
   {
     id: WELLENRUH.id, chapter: 'schlachten', title: WELLENRUH.title, type: 'Seeschlacht',
     icon: 'seeschlacht', startYear: WELLENRUH.date.year, endYear: WELLENRUH.date.year,

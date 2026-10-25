@@ -11,6 +11,8 @@ kleinehaeuser.html?haus=kleinehaeuser-vorlage
 
 Wichtige Dateien:
 
+- [VORTIGERNS-RUH-2026-10-24.md](VORTIGERNS-RUH-2026-10-24.md) dokumentiert die 17 lokal ergänzten Hausseiten, übernommenen Originalbilder und neuen Darstellungen. Push und Deploy sind vorläufig gestoppt.
+
 - [CELTIGERNS-WACHT-2026-10-24.md](CELTIGERNS-WACHT-2026-10-24.md) beschreibt den aktuellen Ausbau auf 92 Familien, ausgefüllte Bios und den neu freigegebenen Hausfigurenstil.
 
 - `haus.html` ist die zentrale Vorlagenseite für größere Häuser, Familien und Clans.

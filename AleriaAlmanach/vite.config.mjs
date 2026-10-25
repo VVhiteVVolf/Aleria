@@ -7,6 +7,7 @@ import { copyWeddingAssets } from '../Ereignisse/modules/weddings/wedding-build-
 import { copyBattleSourceAssets } from '../Ereignisse/modules/battles/battle-build-assets.mjs';
 import { copyWarSourceAssets } from '../Ereignisse/modules/praetendenten/war-build-assets.mjs';
 import { WAR_PAGES } from '../Ereignisse/modules/praetendenten/war-page-registry.mjs';
+import { coastalPageInputs, copyCoastalAssets } from '../Ereignisse/modules/coastal-history/coastal-build-assets.mjs';
 import { getReligionPageInputs } from '../Religionen/modules/content/content-repository.mjs';
 import { buildReligionModules, copyReligionModuleAssets } from '../Religionen/modules/almanach/religion-module-build.mjs';
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
@@ -98,6 +99,7 @@ function preserveClassicAlmanachScripts() {
       await copyWeddingAssets({ workspaceRoot, buildRoot });
       await copyBattleSourceAssets({ workspaceRoot, buildRoot });
       await copyWarSourceAssets({ workspaceRoot, buildRoot });
+      await copyCoastalAssets({ workspaceRoot, buildRoot });
       await cp(
         resolve(almanachRoot, 'public/assets'),
         resolve(buildAlmanachRoot, 'public/assets'),
@@ -147,6 +149,7 @@ export default defineConfig({
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
         ereignisse: resolve(workspaceRoot, 'Ereignisse/index.html'),
+        ...coastalPageInputs(workspaceRoot),
         schlachtWellenruh: resolve(workspaceRoot, 'Ereignisse/Schlachten/Erste-Seeschlacht-bei-Wellenruh.html'),
         ...Object.fromEntries(WAR_PAGES.map(page => [`praetendenten-${page.id}`, resolve(workspaceRoot, 'Ereignisse/Kriege/krieg-der-praetendenten', page.file)])),
         hochzeitDraigPenderyn: resolve(workspaceRoot, 'Ereignisse/Hochzeiten/Haus-Draig-und-Penderyn.html'),

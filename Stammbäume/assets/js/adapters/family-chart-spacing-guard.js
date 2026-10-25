@@ -7,6 +7,7 @@ import {
   shiftNodeAlongCrossAxis
 } from './family-chart-collision-geometry.js';
 import { familyChartCadetRelationshipBlock } from './family-chart-relationship-block.js';
+import { createFamilyChartBranchGraph as familyGraph, collectFamilyChartBranchNodes as displayedBranchNodes } from './family-chart-branch-membership.js';
 
 function finiteNodes(nodes) {
   return (nodes || []).filter(node => (
@@ -17,18 +18,6 @@ function finiteNodes(nodes) {
 
 function nodeIdentifier(node, index) {
   return String(node?.data?.id || node?.id || `node-${index}`);
-}
-
-function familyGraph(family) {
-  const persons = family?.persons || [];
-  const partnerships = family?.partnerships || [];
-  const parentages = family?.parentages || [];
-  return {
-    personById: new Map(persons.map(person => [person.id, person])),
-    partnershipById: new Map(partnerships.map(partnership => [partnership.id, partnership])),
-    partnerships,
-    parentages
-  };
 }
 
 function upstreamParentage(graph, personId) {
@@ -60,68 +49,6 @@ function branchRootForCollision(graph, personId, otherPersonId) {
     .flatMap(partnership => partnership.participantIds)
     .find(partnerId => partnerId !== personId && upstreamParentage(graph, partnerId));
   return partnerWithOrigin || personId;
-}
-
-function descendantBranchPersonIds(graph, rootPersonId) {
-  const personIds = new Set([rootPersonId]);
-  const queue = [rootPersonId];
-  while (queue.length) {
-    const personId = queue.shift();
-    graph.partnerships
-      .filter(partnership => partnership.participantIds?.includes(personId))
-      .forEach(partnership => {
-        partnership.participantIds
-          .filter(partnerId => partnerId !== personId && graph.personById.has(partnerId))
-          .forEach(partnerId => personIds.add(partnerId));
-        graph.parentages
-          .filter(parentage => parentage.partnershipId === partnership.id)
-          .forEach(parentage => {
-            if (personIds.has(parentage.childId)) return;
-            personIds.add(parentage.childId);
-            queue.push(parentage.childId);
-          });
-      });
-
-    graph.parentages
-      .filter(parentage => (
-        parentage.type === 'foster'
-        && !parentage.partnershipId
-        && !parentage.extensions?.timeJumpId
-        && parentage.parentIds?.includes(personId)
-      ))
-      .forEach(parentage => {
-        if (personIds.has(parentage.childId)) return;
-        personIds.add(parentage.childId);
-        queue.push(parentage.childId);
-      });
-  }
-  return personIds;
-}
-
-function displayedBranchNodes(nodes, graph, rootPersonId) {
-  const branchIds = descendantBranchPersonIds(graph, rootPersonId);
-  let changed = true;
-  while (changed) {
-    changed = false;
-    nodes.forEach(node => {
-      const id = nodeIdentifier(node, -1);
-      if (!id || branchIds.has(id)) return;
-      const parents = Array.isArray(node?.data?.rels?.parents)
-        ? node.data.rels.parents.filter(Boolean)
-        : [];
-      const spouses = Array.isArray(node?.data?.rels?.spouses)
-        ? node.data.rels.spouses.filter(Boolean)
-        : [];
-      if (
-        parents.some(parentId => branchIds.has(parentId))
-        || spouses.some(spouseId => branchIds.has(spouseId))
-      ) {
-        branchIds.add(id);
-        changed = true;
-      }
-    });
-  }
-  return nodes.filter(node => branchIds.has(nodeIdentifier(node, -1)));
 }
 
 function branchMovePriority(graph, rootPersonId, nodeCount) {

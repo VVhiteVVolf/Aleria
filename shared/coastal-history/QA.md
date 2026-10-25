@@ -1,0 +1,19 @@
+# Lokale Prüfung vom 25. Oktober 2026
+
+- 101 automatisierte Prüfungen bestanden: vollständige Ereignis- und Fraktionstests, Kalender-Integration und Buildplan. Die zehn neuen Küstenchronik-Tests prüfen Originalhashes, geschützte Textkorrekturen, Gliederung, Modul-IDs, Flottenzählung, genealogische Porträtalter, aktive Bilder, Marker, Dialoglinks und sämtliche internen Ziele der 53 neuen HTML-Seiten.
+- Almanach-Vite-Build erfolgreich. Die bestehenden Hinweise zu großen Chunks und klassischen, separat kopierten Skripten bleiben bestehen. Der Quellenserver unter Port 5500 liefert das gesamte Projekt. Der Vite-Teilbuild enthält die eigenständigen Stammbaum- und Kartenanwendungen erwartungsgemäß nicht; diese vier Querverweise wurden gegen den vorhandenen vollständigen Quellbestand geprüft.
+- Im Browser geprüft: Leitheach-Hauptseite, alle vier Phasen, Umschaltung zwischen Gesamtkarte und Raubzugsgebiet, schematische Verbindungen, Link vom Schlachtmarker nach Dun Laog, Flutbeißer-Popup samt korrigiertem Bild, Schließen mit Escape, richtige Modul- und Fraktionslinks.
+- Der Almanach wurde auf einem eigenen lokalen Buildserver mit blockierten externen Datenverbindungen geprüft. Kein Live-Konto und kein Firebase-Import. Der Direktlink öffnet das Flutbeißer-Modul; 23 neue Module und ihre gewünschten Pfade sind sichtbar. Der Testserver wird nach der Prüfung beendet.
+- Vennyr: vier geladene Porträts, Jahr und Alter anhand der tatsächlichen drei Stammbaumdatensätze geprüft. Porträtproportionen im Browser gemessen und auf 2:3 korrigiert.
+- Schmale Ansichten sind in CSS berücksichtigt, einschließlich seitlich verschiebbarer Karte. Der verfügbare Browser ignorierte die angeforderte Viewport-Verkleinerung; eine tatsächliche mobile Bildschirmprüfung konnte deshalb nicht bestätigt werden. Die Desktopansicht wurde visuell kontrolliert.
+- Kein Push, Deploy und keine externen Inhaltsänderungen. Die World-Anvil-Karte wurde ausschließlich gelesen.
+
+## Nachprüfung: mehrtägiger Leitheach-Zeitplan, 25. Oktober 2026
+
+- 105 automatisierte Prüfungen bestanden. Die vier zusätzlichen Chronologieprüfungen decken alle elf Fahrtabschnitte bei 30, 35 und 40 km Referenzmaßstab ab, einschließlich des Wegzuschlags, separat abgezogener Ruheintervalle, der Anschlüsse beider Teilverbände und des beladenen Rückzugs. Die 18 Originalhashes bleiben identisch.
+- Hauptdossier, sieben Einzelberichte, Kartenbeschriftungen, Quellentabellen der Lesefassung und Ereigniskatalog verwenden dieselbe zentrale Zeitplanung. Kein bestimmter Monat oder Kalendertag ergänzt; keine Änderung der Play-Tageszählung. Auch Bradans Erinnerung an den Fall von Clais wurde von Morgen auf Abend abgestimmt.
+- Beide Generatorprüfungen melden einen aktuellen Stand. Der Offline-Kalibrator ist syntaktisch gültig; seine sieben Ereigniszuordnungen entsprechen der Geometrie-JSON. Er besitzt keine eigenen Zeiten und kann die alte Chronologie nicht wieder einführen.
+- Abschließender lokaler Almanach-Vite-Build erfolgreich: `.tmp/leitheach-timeline-build`, Protokoll `.tmp/leitheach-timeline-build.log`. Die bekannten Hinweise zu klassischen Skripten und großen Chunks bleiben bestehen.
+- Im vorhandenen Browser unter Port 5500 geprüft: sieben Tagesgruppen, rechte kompakte Infotabelle, ausklappbare Tabelle mit elf Fahrtabschnitten, neue Kartenphasen und getrennte Zeitbeschriftungen der Siedlungspaare. Der Ceòdraig-Marker öffnet per Tastatur die gemeinsame Akte mit zwei unterschiedlichen Angriffstagen. Der automatisierte Mausklick auf diesen SVG-Link lief in ein Zeitlimit; die Tastaturaktivierung wurde erfolgreich überprüft.
+- Keine neue mobile Bildschirmprüfung; die bereits dokumentierte Einschränkung der Viewport-Verkleinerung besteht fort. Desktopansicht ohne seitlichen Seitenüberlauf. Screenshot: `.tmp/leitheach-chronology.png`.
+- Ausschließlich lokal gearbeitet; kein Push, Deploy oder Firebase-Schreibzugriff.

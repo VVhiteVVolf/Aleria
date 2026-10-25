@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <radialGradient id="paper"><stop stop-color="#ecd098"/><stop offset=".7" stop-color="#dabc80"/><stop offset="1" stop-color="#c8a162"/></radialGradient>
+    <linearGradient id="cloth" x1="95" y1="53" x2="163" y2="199" gradientUnits="userSpaceOnUse"><stop stop-color="#d1a35b"/><stop offset="1" stop-color="#aa7939"/></linearGradient>
+    <filter id="parchment" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="17" result="grain"/>
+      <feColorMatrix in="grain" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <g id="corner" stroke="#896434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 74V20h54M24 64c13-12 5-23 11-30s17 2 29-10M25 53c-1-13 15-16 16-25M53 25c-13-1-16 15-25 16"/>
+      <path d="M26 27c3 8 10 10 16 15-5-6-7-13-15-16Zm-3 41c15-12 19-17 21-26 7-1 17-8 24-19" fill="#a67f42" fill-opacity=".35"/>
+    </g>
+  </defs>
+  <path d="M0 0h256v256H0Z" fill="url(#paper)" filter="url(#parchment)"/>
+  <path d="M8 8h240v240H8Z" stroke="#896434" stroke-width="3"/>
+  <path d="M14 14h228v228H14Z" stroke="#aa854d" stroke-width="1.5"/>
+  <use href="#corner"/><use href="#corner" transform="rotate(90 128 128)"/><use href="#corner" transform="rotate(180 128 128)"/><use href="#corner" transform="rotate(270 128 128)"/>
+  <path d="M61 44Q128 14 195 44M30 87Q16 128 35 176M226 87Q240 128 221 176" stroke="#ad874b" stroke-width="1.5"/>
+<g stroke="#67451f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M60 74v104M128 47v143M196 74v104"/><path d="M61 78h41l-10 25 10 25H61ZM129 51h52l-13 29 13 29h-52ZM197 78h-35l9 25-9 25h35Z" fill="#b28347"/><path d="M41 173q19 9 39 0l-8 17H49Zm62 17q25 10 50 0l-10 20h-30Zm72-17q19 9 39 0l-8 17h-22Z" fill="#d8af70"/><path d="M43 219q20-10 40 0t40 0t40 0t40 0"/></g>
+</svg>

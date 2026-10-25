@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Sturm auf eine Befestigung</title>
+  <desc id="desc">Ein offenes Burgtor hinter einer Ramme auf quadratischem Pergament.</desc>
+  <defs>
+    <radialGradient id="paper"><stop stop-color="#ecd098"/><stop offset=".7" stop-color="#dabc80"/><stop offset="1" stop-color="#c8a162"/></radialGradient>
+    <filter id="parchment" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="17" result="grain"/><feColorMatrix in="grain" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <g id="corner" stroke="#896434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 74V20h54M24 64c13-12 5-23 11-30s17 2 29-10M25 53c-1-13 15-16 16-25M53 25c-13-1-16 15-25 16"/><path d="M26 27c3 8 10 10 16 15-5-6-7-13-15-16Zm-3 41c15-12 19-17 21-26 7-1 17-8 24-19" fill="#a67f42" fill-opacity=".35"/></g>
+  </defs>
+  <path d="M0 0h256v256H0Z" fill="url(#paper)" filter="url(#parchment)"/>
+  <path d="M8 8h240v240H8Z" stroke="#896434" stroke-width="3"/><path d="M14 14h228v228H14Z" stroke="#aa854d" stroke-width="1.5"/>
+  <use href="#corner"/><use href="#corner" transform="rotate(90 128 128)"/><use href="#corner" transform="rotate(180 128 128)"/><use href="#corner" transform="rotate(270 128 128)"/>
+  <g stroke="#573c24" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M55 166V64h20v17h20V64h20v39h26V64h20v17h20V64h20v102Z" fill="#ae9869"/>
+    <path d="M100 164v-31c0-37 56-37 56 0v31" fill="#674832"/>
+    <path d="M73 109h12m86 0h12M73 137h12m86 0h12M119 115v39m19-39v39" stroke-width="5"/>
+    <path d="m58 166 118-9 25 13-25 13-118-1Z" fill="#8c5234"/>
+    <path d="m72 160 6 29m79-31 7 28M79 189l-12 15m98-18 16 18"/>
+    <circle cx="67" cy="209" r="10" fill="#6f4b2c"/><circle cx="182" cy="209" r="10" fill="#6f4b2c"/>
+  </g>
+</svg>

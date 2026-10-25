@@ -8,10 +8,10 @@ import { renderEventCard, renderEventCatalog } from '../modules/catalog/events-r
 import { renderCalendarChronicle } from '../../AleriaAlmanach/modules/calendar/calendar-chronicle.mjs';
 import { renderCalendarPreview } from '../../AleriaAlmanach/modules/calendar/calendar-preview.mjs';
 
-test('Elf benannte Ereignisse und sechs Kapitel; keine erfundene Reise oder Datierung', () => {
-  assert.equal(EVENTS.length, 11);
+test('Achtzehn benannte Ereignisse und sechs Kapitel; keine erfundene Reise oder Datierung', () => {
+  assert.equal(EVENTS.length, 18);
   assert.equal(EVENT_CHAPTERS.length, 6);
-  assert.equal(new Set(EVENTS.map(event => event.id)).size, 11);
+  assert.equal(new Set(EVENTS.map(event => event.id)).size, 18);
   assert.equal(EVENTS.filter(event => event.chapter === 'reisen').length, 0);
   assert.deepEqual(EVENTS.filter(event => event.startYear === null).map(event => event.id), ['seeschlacht-rhonwens-traenen']);
   for (const event of EVENTS) {
@@ -26,7 +26,7 @@ test('Jahresfilter berücksichtigt komplette Zeiträume einschließlich beider G
   for (const year of [1627, 1635, 1647]) assert.ok(eventOccursInYear(war, year));
   for (const year of [1626, 1648, null, '', 'abc']) assert.equal(eventOccursInYear(war, year), false);
   assert.deepEqual(selectEvents({ year: 1720 }).map(event => event.id), ['krieg-um-estryll', 'invasion-von-vennyr', 'aufstieg-der-triarchie', 'ritter-der-tafelrunde']);
-  assert.equal(selectEvents({ year: 1733 })[0].duration, 'Ein Tag');
+  assert.equal(selectEvents({ year: 1733 })[0].duration, 'Sieben Raubzugstage');
   assert.deepEqual(selectEvents({ year: 1740 }).map(event => event.id), ['hochzeit-bei-gwynthor']);
 });
 

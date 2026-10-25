@@ -2146,5 +2146,8 @@ const SECTIONS = [
 ];
 
 
+// Prepared feature sections are appended without changing the established tab order.
+SECTIONS.push(...createPiracySections());
+
 // ── COMMENTS ─────────────────────────────────────────────────────────────────
 

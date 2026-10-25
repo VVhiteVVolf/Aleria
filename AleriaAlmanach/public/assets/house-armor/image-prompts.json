@@ -4,6 +4,25 @@
   "regionId": "celtigerns-wacht",
   "houses": [
     {
+      "id": "craigddu",
+      "name": "Haus Craigddu",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=craigddu&mode=view",
+      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
+      "sourceIllustrationId": "bild-3b3adf1f46d9b259",
+      "file": "craigddu-harnisch-v1.png",
+      "prompt": "Single empty torso armor of Haus Craigddu, square inventory item art. HOUSE DESIGN: simple gray iron shoulder caps, BLUE chest cloth bearing PALE THREE-TOWER CASTLE on dark rocky crag. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+      "generated": true,
+      "generator": "Built-in image_gen",
+      "styleReferences": [
+        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+      ],
+      "sha256": "21672dec974b3fef71ca861bd142baee8066503eaa800e083546d61f19372f6a",
+      "sourceSha256": "3b3adf1f46d9b259da04f84ab5002831ea76110a9af414df45a08fd8cf4a74ae"
+    },
+    {
       "id": "haus-aelmor",
       "name": "Haus Aelmor",
       "regionId": "celtigerns-wacht",
@@ -310,6 +329,19 @@
       "generated": false
     },
     {
+      "id": "haus-celynfor",
+      "name": "Familie Celynfor",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-celynfor&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-celynfor-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
       "id": "haus-cenfig",
       "name": "Haus Cenfig",
       "regionId": "celtigerns-wacht",
@@ -403,25 +435,6 @@
       ],
       "sha256": "c73a6cd2bdfa3240404a7cc3423b081cf8207be181167fd0bd4a9baf7145977e",
       "sourceSha256": "0557ab9b39f38150899acf9ac10afe3371ade1eddbd3bff7fc63edbbce93a9c4"
-    },
-    {
-      "id": "craigddu",
-      "name": "Haus Craigddu",
-      "regionId": "celtigerns-wacht",
-      "region": "Celtigerns Wacht",
-      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
-      "tree": "Stammbäume/Stammbaum.html?family=craigddu&mode=view",
-      "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
-      "sourceIllustrationId": "bild-3b3adf1f46d9b259",
-      "file": "craigddu-harnisch-v1.png",
-      "prompt": "Single empty torso armor of Haus Craigddu, square inventory item art. HOUSE DESIGN: simple gray iron shoulder caps, BLUE chest cloth bearing PALE THREE-TOWER CASTLE on dark rocky crag. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
-      "generated": true,
-      "generator": "Built-in image_gen",
-      "styleReferences": [
-        "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
-      ],
-      "sha256": "21672dec974b3fef71ca861bd142baee8066503eaa800e083546d61f19372f6a",
-      "sourceSha256": "3b3adf1f46d9b259da04f84ab5002831ea76110a9af414df45a08fd8cf4a74ae"
     },
     {
       "id": "haus-cymrath-o-traethlan",
@@ -526,6 +539,19 @@
       "sourceSha256": "3046ebfb3dc1a1b5349d7cf41c86436dc55e1eeb2f678f45f85660b25d7df785"
     },
     {
+      "id": "haus-dubhdarach",
+      "name": "Haus Dubhdarach",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-dubhdarach&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-dubhdarach-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
       "id": "haus-edmy",
       "name": "Haus Edmy",
       "regionId": "celtigerns-wacht",
@@ -600,6 +626,32 @@
       ],
       "sha256": "70e5344241a1339d46eef6ad69423a5271f2a6ee6a81cd16d7e037997cd2eed0",
       "sourceSha256": "b06dccc8354e2d3459a7a6a1c6be7beefd1e7780be43554d55cb1f001cfd4749"
+    },
+    {
+      "id": "haus-fearnan",
+      "name": "Familie Fearnan",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-fearnan&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-fearnan-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-fontani",
+      "name": "Haus Fontani",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-fontani&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-fontani-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
     },
     {
       "id": "haus-gafyr",
@@ -684,6 +736,19 @@
       "sourceSha256": "b78ef990b70b9bc856dc10dd225650943e81ac76f471db6100f9c03534c003e6"
     },
     {
+      "id": "haus-gofrann",
+      "name": "Haus Gofrann",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gofrann&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-gofrann-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
       "id": "haus-gostyn",
       "name": "Haus Gostyn",
       "regionId": "celtigerns-wacht",
@@ -758,6 +823,19 @@
       ],
       "sha256": "a1de384a0c0340581226cd3dc246db3030df7d1acff1942f1fd2e6ea7c444848",
       "sourceSha256": "b6721bb29b7a27bf6b8621d67f81741b205d0868e02c4ac315b31ecbee3f0682"
+    },
+    {
+      "id": "haus-gwregysdu",
+      "name": "Haus Gwregysdu",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwregysdu&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-gwregysdu-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
     },
     {
       "id": "haus-gwyllach",
@@ -983,6 +1061,19 @@
       "generated": false
     },
     {
+      "id": "haus-penrudd",
+      "name": "Haus Penrudd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Bannkreis Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-penrudd-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
       "id": "haus-penwyn",
       "name": "Haus Penwyn",
       "regionId": "celtigerns-wacht",
@@ -1000,6 +1091,19 @@
       ],
       "sha256": "5e8aaf27ddd0ade17aee0c4d075a1cceb5b08a983dc1ad3743163ce210d0f7a9",
       "sourceSha256": "39f32951c5e6571e3a9b350b661266ede798e9cafecc2a38b6ce94b7b712fd66"
+    },
+    {
+      "id": "haus-raves",
+      "name": "Haus Raves",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-raves&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-raves-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
     },
     {
       "id": "haus-rhen",
@@ -1051,6 +1155,19 @@
       ],
       "sha256": "c77b5f9f3f86344700fc9558c635dfa4d0c3077a73ed242e8ee083dc81830e7d",
       "sourceSha256": "9bce9b3757f1a67606db4e105c01717b9eba5abd89f4bf971643edd339ee56f0"
+    },
+    {
+      "id": "haus-rhwyd",
+      "name": "Haus Rhwyd",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-rhwyd&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-rhwyd-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
     },
     {
       "id": "haus-rhyddid",
@@ -1165,6 +1282,19 @@
       ],
       "sha256": "750808631768a4cf4c691a6d8d52cbf18ccf1b45c1468723dcd3bfd038983258",
       "sourceSha256": "5beddeff606318fe8974391b7e657141bda305ee0636037a8e80320e6a2f063d"
+    },
+    {
+      "id": "haus-svathamar",
+      "name": "Haus Svathamar",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-svathamar&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-svathamar-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
     },
     {
       "id": "haus-swyll",
@@ -1307,6 +1437,32 @@
       "generated": false
     },
     {
+      "id": "haus-torvik",
+      "name": "Familie Torvik",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-torvik&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-torvik-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-trevoryn",
+      "name": "Haus Trevoryn",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-trevoryn&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-trevoryn-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
       "id": "haus-trydar",
       "name": "Haus Trydar",
       "regionId": "celtigerns-wacht",
@@ -1343,6 +1499,32 @@
       ],
       "sha256": "a1d5e16f23399899ba40ee1582cb419b2ed54ee1c5fd3fcbdf2cc603f309647b",
       "sourceSha256": "7023ff76310f03eb0c9a4221647238b473ee9d862d6c2e705c92687799a876b8"
+    },
+    {
+      "id": "haus-valerus",
+      "name": "Haus Valerus",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Bürgerliche · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-valerus&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-valerus-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
+    },
+    {
+      "id": "haus-vann",
+      "name": "Haus Vann",
+      "regionId": "celtigerns-wacht",
+      "region": "Celtigerns Wacht",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-vann&mode=view",
+      "sourceImage": "",
+      "sourceIllustrationId": "",
+      "file": "haus-vann-harnisch-v1.png",
+      "prompt": "",
+      "generated": false
     },
     {
       "id": "haus-wyrm",

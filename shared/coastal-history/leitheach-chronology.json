@@ -1,0 +1,582 @@
+{
+  "version": 1,
+  "revisedOn": "2026-10-25",
+  "basis": "Vom Nutzer ausdrücklich autorisierte zeitliche Überarbeitung nach Kartenentfernungen; keine überlieferten exakten Uhrzeiten.",
+  "period": "Winter 1733",
+  "dayMeaning": "Relative Raubzugstage, keine Kalendertage oder Play-Tage. Tag und Monat bleiben unbekannt.",
+  "assumptions": {
+    "referenceKm": 35,
+    "sensitivityKm": [
+      30,
+      40
+    ],
+    "routeFactor": 1.35,
+    "speedsKmH": {
+      "coastal": 5.5,
+      "upstream": 4,
+      "retreat": 6
+    },
+    "note": "Planungswerte über Grund, keine nachgewiesenen Schiffsleistungen. 35 km für Dun Athar–Dunbaile ist eine Arbeitsannahme innerhalb der ungenauen Nutzervorgabe 30+ km. 35 % Wegzuschlag ersetzt keine Vermessung der Fahrwasser."
+  },
+  "stages": [
+    {
+      "id": "diversion",
+      "title": "Ablenkung und Inselangriff",
+      "start": "feints",
+      "end": "seann-end",
+      "eventIds": [
+        "seannbail"
+      ]
+    },
+    {
+      "id": "clais",
+      "title": "Anfahrt und Fall von Broch an Clais",
+      "start": "seann-end",
+      "end": "river-departure",
+      "eventIds": [
+        "broch-an-clais"
+      ]
+    },
+    {
+      "id": "river-raids",
+      "title": "Plünderungen am Fluss",
+      "start": "river-departure",
+      "end": "tor-end",
+      "eventIds": [
+        "gleannbuar",
+        "dairchoill-ceodraig",
+        "abhainnclachan-srathonn",
+        "torrachadh"
+      ]
+    },
+    {
+      "id": "dun-laog",
+      "title": "Dun Laog und Rückzug zur See",
+      "start": "dun-start",
+      "end": "end",
+      "eventIds": [
+        "dun-laog"
+      ]
+    }
+  ],
+  "incidents": {
+    "seannbail": [
+      {
+        "markerId": "seannbail",
+        "place": "Seannbail",
+        "start": "seann-start",
+        "end": "seann-end"
+      }
+    ],
+    "broch-an-clais": [
+      {
+        "markerId": "broch-an-clais",
+        "place": "Broch an Clais",
+        "start": "clais-start",
+        "end": "clais-end"
+      }
+    ],
+    "gleannbuar": [
+      {
+        "markerId": "gleannbuar",
+        "place": "Gleannbuar",
+        "start": "gleann-start",
+        "end": "gleann-end"
+      }
+    ],
+    "dairchoill-ceodraig": [
+      {
+        "markerId": "dairchoill",
+        "place": "Dairchoill",
+        "start": "dair-start",
+        "end": "dair-end"
+      },
+      {
+        "markerId": "ceodraig",
+        "place": "Ceòdraig",
+        "start": "ceod-start",
+        "end": "ceod-end"
+      }
+    ],
+    "abhainnclachan-srathonn": [
+      {
+        "markerId": "abhainnclachan",
+        "place": "Abhainnclachan",
+        "start": "abhainn-start",
+        "end": "abhainn-end"
+      },
+      {
+        "markerId": "srathonn",
+        "place": "Srathonn",
+        "start": "srath-start",
+        "end": "srath-end"
+      }
+    ],
+    "torrachadh": [
+      {
+        "markerId": "torrachadh",
+        "place": "Tòrrachadh",
+        "start": "tor-start",
+        "end": "tor-end"
+      }
+    ],
+    "dun-laog": [
+      {
+        "markerId": "dun-laog",
+        "place": "Dun Laog",
+        "start": "dun-start",
+        "end": "withdrawal"
+      }
+    ]
+  },
+  "milestones": [
+    {
+      "id": "feints",
+      "day": 1,
+      "time": "03:00",
+      "text": "Scheinangriffe auf Fionnmara und Torrinbhir. Die dort bereits eingesetzten Ablenkungskräfte sind nicht die eine Stunde später bei Seannbail angreifenden Schiffe."
+    },
+    {
+      "id": "seann-start",
+      "day": 1,
+      "time": "04:00",
+      "text": "Beginn des Angriffs auf Seannbail; Landung, Plünderung und Zerstörung der Inselsiedlungen."
+    },
+    {
+      "id": "seann-end",
+      "day": 1,
+      "time": "07:00",
+      "text": "Ende des Inselangriffs; Beginn der Küstenfahrt nach Broch an Clais. Für die rund 45 km geschätzten Weges sind zehn Stunden vorgesehen."
+    },
+    {
+      "id": "clais-approach",
+      "day": 1,
+      "time": "17:00",
+      "text": "Ankunft vor Broch an Clais. Kleine Boote nähern sich der Flussfestung."
+    },
+    {
+      "id": "clais-gate",
+      "day": 1,
+      "time": "17:30",
+      "text": "Infiltratoren öffnen das Tor von innen."
+    },
+    {
+      "id": "clais-start",
+      "day": 1,
+      "time": "18:00",
+      "text": "Beginn des Sturms auf Broch an Clais. Die anwesenden Iomrach werden getötet oder verschleppt."
+    },
+    {
+      "id": "clais-end",
+      "day": 1,
+      "time": "21:30",
+      "text": "Broch an Clais ist gefallen. Die Nacht dient der Sicherung, dem Verstauen der Beute und der Ruhe; die Flotte fährt noch nicht weiter."
+    },
+    {
+      "id": "river-departure",
+      "day": 2,
+      "time": "05:30",
+      "text": "Aufbruch flussaufwärts nach acht Stunden Aufenthalt bei Clais. Die Angriffe auf beide Ufer erfolgen durch getrennte Teilverbände. Nachrichten über die Küstenangriffe ermöglichen inzwischen Alarmierung und Sammlung der Verteidiger."
+    },
+    {
+      "id": "gleann-start",
+      "day": 2,
+      "time": "16:00",
+      "text": "Beginn der Plünderung von Gleannbuar am Nordufer."
+    },
+    {
+      "id": "dair-start",
+      "day": 2,
+      "time": "16:00",
+      "text": "Ein anderer Teilverband greift Dairchoill am Südufer an. Ceòdraig wird erst am folgenden Tag erreicht."
+    },
+    {
+      "id": "gleann-end",
+      "day": 2,
+      "time": "18:00",
+      "text": "Ende des Angriffs auf Gleannbuar; anschließende Weiterfahrt und nächtlicher Halt vor Abhainnclachan."
+    },
+    {
+      "id": "dair-end",
+      "day": 2,
+      "time": "18:00",
+      "text": "Ende des Angriffs auf Dairchoill; Weiterfahrt in Richtung Ceòdraig mit nächtlichem Halt."
+    },
+    {
+      "id": "abhainn-start",
+      "day": 3,
+      "time": "10:00",
+      "text": "Angriff auf Abhainnclachan nach der Etappe von Gleannbuar und zehn Stunden Nachtruhe."
+    },
+    {
+      "id": "abhainn-end",
+      "day": 3,
+      "time": "12:00",
+      "text": "Ende der Plünderung von Abhainnclachan. Der Weg nach Srathonn nimmt den weiteren Tag und den nächsten Vormittag in Anspruch; dazwischen liegt eine Nachtruhe."
+    },
+    {
+      "id": "ceod-start",
+      "day": 3,
+      "time": "18:00",
+      "text": "Der südliche Teilverband erreicht Ceòdraig und beginnt den Überfall."
+    },
+    {
+      "id": "ceod-end",
+      "day": 3,
+      "time": "20:00",
+      "text": "Ende des Angriffs auf Ceòdraig. Nach der Nachtruhe folgt die Anschlussfahrt zur weiteren Flussroute."
+    },
+    {
+      "id": "srath-start",
+      "day": 4,
+      "time": "13:00",
+      "text": "Beginn des Angriffs auf Srathonn. Abhainnclachan und Srathonn werden ausdrücklich nicht gleichzeitig angegriffen."
+    },
+    {
+      "id": "srath-end",
+      "day": 4,
+      "time": "15:00",
+      "text": "Ende der Plünderung von Srathonn; Vorstoß in Richtung Tòrrachadh mit nächtlichem Halt. Die von Ceòdraig kommenden Schiffe folgen zeitversetzt."
+    },
+    {
+      "id": "tor-start",
+      "day": 5,
+      "time": "10:30",
+      "text": "Angriff auf Tòrrachadh; die Plünderung und Landung erhalten ein eigenes Zeitfenster."
+    },
+    {
+      "id": "tor-end",
+      "day": 5,
+      "time": "12:00",
+      "text": "Abfahrt von Tòrrachadh in Richtung Dun Laog; für etwa 25 km geschätzten Weges sind siebeneinhalb Stunden vorgesehen."
+    },
+    {
+      "id": "dun-start",
+      "day": 5,
+      "time": "19:30",
+      "text": "Angriff auf Dun Laogs Vorstadt bei Dunkelheit. Die Stadt ist bereits alarmiert: 920 Verteidiger halten die inneren Viertel und Festungen, können jedoch die gesamte Vorstadt nicht schützen."
+    },
+    {
+      "id": "dun-followers",
+      "day": 5,
+      "time": "22:30",
+      "text": "Auch die zeitversetzt aus dem südlichen Flussabschnitt nachrückenden Schiffe können Dun Laog nun erreicht haben. Eine exakte Verteilung der Banden und Schiffe wird daraus nicht abgeleitet."
+    },
+    {
+      "id": "dun-relief",
+      "day": 5,
+      "time": "23:00",
+      "text": "Die im Verlauf der vorausgehenden Tage alarmierte Verstärkung der Häuser Choinnich, Airgid, Caoimhe und Airt trifft über den Fluss ein. Ihr Eintreffen beendet den Vorstoß der Piraten; der Großteil der zuvor abgegangenen Beuteschiffe hat bereits Vorsprung."
+    },
+    {
+      "id": "withdrawal",
+      "day": 6,
+      "time": "01:00",
+      "text": "Die verbliebene Hauptflotte löst sich von Dun Laog und beginnt den beladenen Rückzug flussabwärts. Sie hat damit noch nicht die offene See erreicht."
+    },
+    {
+      "id": "retreat-day",
+      "day": 6,
+      "time": "11:00",
+      "text": "Fortsetzung der Fahrt nach einem siebenstündigen Halt. Verfolger stellen einzelne Nachzügler; ein weiterer achtstündiger Halt ist in der folgenden Nacht vorgesehen."
+    },
+    {
+      "id": "retreat-resume",
+      "day": 7,
+      "time": "06:00",
+      "text": "Letzte Tagesetappe flussabwärts nach der Nachtruhe. Die Hauptflotte hat für die gesamte Strecke von Dun Laog zur Mündung rund 150 km geschätzten Weg und insgesamt 29 Fahrstunden zur Verfügung."
+    },
+    {
+      "id": "estuary",
+      "day": 7,
+      "time": "21:00",
+      "text": "Die letzten Schiffe der Hauptflotte passieren Broch an Clais und die Flussmündung in Richtung Küstengewässer."
+    },
+    {
+      "id": "end",
+      "day": 7,
+      "time": "23:00",
+      "text": "Die örtliche Verfolgung läuft aus; die entkommenen Piraten setzen sich auf See ab. Damit endet dieser Raubzug, nicht die unbestimmte Heimreise zu ihren Stützpunkten."
+    }
+  ],
+  "voyages": [
+    {
+      "id": "coast",
+      "title": "Seannbail → Broch an Clais",
+      "markers": [
+        "seannbail",
+        "broch-an-clais"
+      ],
+      "start": [
+        1,
+        "07:00"
+      ],
+      "end": [
+        1,
+        "17:00"
+      ],
+      "rests": [],
+      "mode": "coastal"
+    },
+    {
+      "id": "north",
+      "title": "Clais → Gleannbuar",
+      "markers": [
+        "broch-an-clais",
+        "gleannbuar"
+      ],
+      "start": [
+        2,
+        "05:30"
+      ],
+      "end": [
+        2,
+        "16:00"
+      ],
+      "rests": [],
+      "mode": "upstream"
+    },
+    {
+      "id": "south",
+      "title": "Clais → Dairchoill",
+      "markers": [
+        "broch-an-clais",
+        "dairchoill"
+      ],
+      "start": [
+        2,
+        "05:30"
+      ],
+      "end": [
+        2,
+        "16:00"
+      ],
+      "rests": [],
+      "mode": "upstream"
+    },
+    {
+      "id": "abhainn",
+      "title": "Gleannbuar → Abhainnclachan",
+      "markers": [
+        "gleannbuar",
+        "abhainnclachan"
+      ],
+      "start": [
+        2,
+        "18:00"
+      ],
+      "end": [
+        3,
+        "10:00"
+      ],
+      "rests": [
+        [
+          [
+            2,
+            "20:00"
+          ],
+          [
+            3,
+            "06:00"
+          ]
+        ]
+      ],
+      "mode": "upstream"
+    },
+    {
+      "id": "ceod",
+      "title": "Dairchoill → Ceòdraig",
+      "markers": [
+        "dairchoill",
+        "ceodraig"
+      ],
+      "start": [
+        2,
+        "18:00"
+      ],
+      "end": [
+        3,
+        "18:00"
+      ],
+      "rests": [
+        [
+          [
+            2,
+            "20:00"
+          ],
+          [
+            3,
+            "06:00"
+          ]
+        ]
+      ],
+      "mode": "upstream"
+    },
+    {
+      "id": "srath",
+      "title": "Abhainnclachan → Srathonn",
+      "markers": [
+        "abhainnclachan",
+        "srathonn"
+      ],
+      "start": [
+        3,
+        "12:00"
+      ],
+      "end": [
+        4,
+        "13:00"
+      ],
+      "rests": [
+        [
+          [
+            3,
+            "20:00"
+          ],
+          [
+            4,
+            "06:00"
+          ]
+        ]
+      ],
+      "mode": "upstream"
+    },
+    {
+      "id": "south-join",
+      "title": "Ceòdraig → Anschluss bei Srathonn",
+      "markers": [
+        "ceodraig",
+        "srathonn"
+      ],
+      "start": [
+        4,
+        "06:00"
+      ],
+      "end": [
+        4,
+        "20:00"
+      ],
+      "rests": [],
+      "mode": "upstream"
+    },
+    {
+      "id": "tor",
+      "title": "Srathonn → Tòrrachadh",
+      "markers": [
+        "srathonn",
+        "torrachadh"
+      ],
+      "start": [
+        4,
+        "15:00"
+      ],
+      "end": [
+        5,
+        "10:30"
+      ],
+      "rests": [
+        [
+          [
+            4,
+            "20:00"
+          ],
+          [
+            5,
+            "06:00"
+          ]
+        ]
+      ],
+      "mode": "upstream"
+    },
+    {
+      "id": "dun",
+      "title": "Tòrrachadh → Dun Laog",
+      "markers": [
+        "torrachadh",
+        "dun-laog"
+      ],
+      "start": [
+        5,
+        "12:00"
+      ],
+      "end": [
+        5,
+        "19:30"
+      ],
+      "rests": [],
+      "mode": "upstream"
+    },
+    {
+      "id": "south-follow",
+      "title": "Nachrückende Schiffe: Srathonn → Tòrrachadh → Dun Laog",
+      "markers": [
+        "srathonn",
+        "torrachadh",
+        "dun-laog"
+      ],
+      "start": [
+        5,
+        "04:00"
+      ],
+      "end": [
+        5,
+        "22:30"
+      ],
+      "rests": [
+        [
+          [
+            5,
+            "12:00"
+          ],
+          [
+            5,
+            "14:00"
+          ]
+        ]
+      ],
+      "mode": "upstream"
+    },
+    {
+      "id": "retreat",
+      "title": "Dun Laog → Flussmündung bei Clais",
+      "markers": [
+        "dun-laog",
+        "torrachadh",
+        "srathonn",
+        "abhainnclachan",
+        "broch-an-clais"
+      ],
+      "start": [
+        6,
+        "01:00"
+      ],
+      "end": [
+        7,
+        "21:00"
+      ],
+      "rests": [
+        [
+          [
+            6,
+            "04:00"
+          ],
+          [
+            6,
+            "11:00"
+          ]
+        ],
+        [
+          [
+            6,
+            "22:00"
+          ],
+          [
+            7,
+            "06:00"
+          ]
+        ]
+      ],
+      "mode": "retreat"
+    }
+  ]
+}

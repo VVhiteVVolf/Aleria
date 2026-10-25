@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Überfall</title>
+  <desc id="desc">Gekreuzte Klingen und eine brennende Fackel auf quadratischem Pergament.</desc>
+  <defs>
+    <radialGradient id="paper"><stop stop-color="#ecd098"/><stop offset=".7" stop-color="#dabc80"/><stop offset="1" stop-color="#c8a162"/></radialGradient>
+    <filter id="parchment" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="17" result="grain"/><feColorMatrix in="grain" type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <g id="corner" stroke="#896434" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 74V20h54M24 64c13-12 5-23 11-30s17 2 29-10M25 53c-1-13 15-16 16-25M53 25c-13-1-16 15-25 16"/><path d="M26 27c3 8 10 10 16 15-5-6-7-13-15-16Zm-3 41c15-12 19-17 21-26 7-1 17-8 24-19" fill="#a67f42" fill-opacity=".35"/></g>
+  </defs>
+  <path d="M0 0h256v256H0Z" fill="url(#paper)" filter="url(#parchment)"/>
+  <path d="M8 8h240v240H8Z" stroke="#896434" stroke-width="3"/><path d="M14 14h228v228H14Z" stroke="#aa854d" stroke-width="1.5"/>
+  <use href="#corner"/><use href="#corner" transform="rotate(90 128 128)"/><use href="#corner" transform="rotate(180 128 128)"/><use href="#corner" transform="rotate(270 128 128)"/>
+  <g stroke="#573c24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m60 62 28 10 102 113-20 20L68 91Z" fill="#c9bd9a"/>
+    <path d="m196 62-28 10L66 185l20 20L188 91Z" fill="#c9bd9a"/>
+    <path d="m56 170 44 42m56 0 44-42M66 207l-14 15m138-15 14 15"/>
+    <path d="M117 123h23l-6 83h-11Z" fill="#88552f"/>
+    <path d="M102 99c-14-28 10-38 16-65 4 18 16 19 14 36 10-7 11-15 14-23 7 18 20 34 13 52-5 15-15 23-30 23s-23-7-27-23Z" fill="#9b4030"/>
+    <path d="M117 104c-4-12 8-20 10-35 4 14 14 18 13 29-1 12-6 18-12 18-5 0-9-4-11-12Z" fill="#e4af58" stroke-width="4"/>
+    <path d="M113 124h31m-30 11h29"/>
+  </g>
+</svg>

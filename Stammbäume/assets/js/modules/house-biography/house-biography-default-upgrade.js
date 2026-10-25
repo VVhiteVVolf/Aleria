@@ -1,6 +1,6 @@
 import { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
 export { houseBiographyDefaultFingerprint } from './house-biography-fingerprint.js';
-import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261024-housebio-v1';
+import { HOUSE_BIOGRAPHY_DEFAULTS } from '../../data/house-biographies.registry.js?v=20261024-vortigerns-v1';
 
 const REPLACED_DEFAULTS = Object.freeze({
   // Draig revision 8: full biography, replaced by the requested short overview.

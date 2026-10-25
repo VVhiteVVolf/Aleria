@@ -10291,8 +10291,8 @@
       "name": "Clan Fiachraoin",
       "crest": "/Stammbäume/assets/images/houses/Vortigerns Ruh/Antike Häuser/clan-fiachraoin.png",
       "href": "/Stammbäume/Stammbaum.html?family=haus-fiachraoin&mode=view",
-      "status": "active",
-      "formerSeat": "",
+      "status": "extinct",
+      "formerSeat": "Antikes Calon",
       "territories": [
         {
           "name": "Antike Häuser",
@@ -10301,16 +10301,7 @@
         }
       ],
       "priority": 9,
-      "residences": [
-        {
-          "seat": "Antikes Calon",
-          "role": "Hauptsitz",
-          "kingdom": "Cenyr",
-          "county": "Vortigerns Ruh",
-          "territory": "Antike Häuser",
-          "rank": "dun-tiarna"
-        }
-      ]
+      "residences": []
     },
     {
       "id": "haus-dinefwr",

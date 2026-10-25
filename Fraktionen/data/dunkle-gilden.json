@@ -15,11 +15,6 @@
       "parentId": "loge-der-daemmerung"
     },
     {
-      "id": "piraten-gefolge",
-      "title": "Unterbanner der Blutsegel",
-      "parentId": "blutsegel-marodeure"
-    },
-    {
       "id": "raeuber-verbrecher-banditen",
       "title": "Räuber, Verbrecher & Banditen",
       "parentId": "loge-der-daemmerung"
@@ -39,6 +34,21 @@
       "id": "diebe",
       "title": "Diebe",
       "parentId": "loge-der-daemmerung"
+    },
+    {
+      "id": "piraten-banden-klauen-des-leviathan",
+      "title": "Banden der Klauen des Leviathan",
+      "parentId": "klauen-des-leviathan"
+    },
+    {
+      "id": "piraten-banden-schwarzblut-marodeure",
+      "title": "Banden der Schwarzblut Marodeure",
+      "parentId": "schwarzblut-marodeure"
+    },
+    {
+      "id": "piraten-banden-sirenenzahn",
+      "title": "Banden der Sirenenzahn",
+      "parentId": "sirenenzahn"
     }
   ],
   "entries": [
@@ -120,14 +130,16 @@
         "image": "https://i.imgur.com/siRgG2e.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=537"
       },
-      "symbol": "assets/emblems/dunkle-gilden/blutsegel-marodeure.webp"
+      "symbol": "../Fraktionen/assets/emblems/dunkle-gilden/blutsegel-marodeure.webp",
+      "href": "Piraten/blutsegel-marodeure.html",
+      "summary": "Eine der vier Großpiraten-Gruppierungen. Ihre eigene Geschichte, Führung und untergeordneten Banden sind in der beigefügten Vorlage noch nicht ausgearbeitet."
     },
     {
       "id": "klauen-des-leviathan",
       "name": "Klauen des Leviathan",
       "kind": "",
-      "groupId": "piraten-gefolge",
-      "parentId": "blutsegel-marodeure",
+      "groupId": "piraten",
+      "parentId": "loge-der-daemmerung",
       "source": {
         "document": "docs/sources/dunkle-gilden.html",
         "row": 17,
@@ -136,14 +148,16 @@
         "image": "https://i.imgur.com/WNDuxOy.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=540"
       },
-      "symbol": "assets/emblems/dunkle-gilden/klauen-des-leviathan.webp"
+      "symbol": "../Fraktionen/assets/emblems/dunkle-gilden/klauen-des-leviathan.webp",
+      "href": "Piraten/klauen-des-leviathan.html",
+      "summary": "Eine der vier Großpiraten-Gruppierungen. Die überlieferte Gliederung nennt fünf angeschlossene Banden; die übrigen Profilabschnitte bleiben vorerst offen."
     },
     {
       "id": "schwarzblut-marodeure",
       "name": "Schwarzblut Marodeure",
       "kind": "",
-      "groupId": "piraten-gefolge",
-      "parentId": "blutsegel-marodeure",
+      "groupId": "piraten",
+      "parentId": "loge-der-daemmerung",
       "source": {
         "document": "docs/sources/dunkle-gilden.html",
         "row": 17,
@@ -152,14 +166,16 @@
         "image": "https://i.imgur.com/8EWayPB.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=538"
       },
-      "symbol": "assets/emblems/dunkle-gilden/schwarzblut-marodeure.webp"
+      "symbol": "../Fraktionen/assets/emblems/dunkle-gilden/schwarzblut-marodeure.webp",
+      "href": "Piraten/schwarzblut-marodeure.html",
+      "summary": "Ein loses Kollektiv eigenständiger Piratenbanden ohne gemeinsame zentrale Führung. Neun benannte Banden sind in der Gliederung belegt."
     },
     {
       "id": "sirenenzahn",
       "name": "Sirenenzahn",
       "kind": "",
-      "groupId": "piraten-gefolge",
-      "parentId": "blutsegel-marodeure",
+      "groupId": "piraten",
+      "parentId": "loge-der-daemmerung",
       "source": {
         "document": "docs/sources/dunkle-gilden.html",
         "row": 17,
@@ -168,7 +184,9 @@
         "image": "https://i.imgur.com/7Wp1ESJ.png",
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=539"
       },
-      "symbol": "assets/emblems/dunkle-gilden/sirenenzahn.webp"
+      "symbol": "../Fraktionen/assets/emblems/dunkle-gilden/sirenenzahn.webp",
+      "href": "Piraten/sirenenzahn.html",
+      "summary": "Eine der vier Großpiraten-Gruppierungen. Drei angeschlossene Banden sind benannt; Führung, Geschichte und Stützpunkte sind noch nicht ausgearbeitet."
     },
     {
       "id": "raeubergilde",
@@ -345,6 +363,312 @@
         "href": "https://www.animexx.de/zirkel/ichbinreiter/tafel/?seite=544"
       },
       "symbol": "assets/emblems/dunkle-gilden/die-nachtfluegel.webp"
+    },
+    {
+      "id": "graubart-piraten",
+      "kind": "Piratenbande",
+      "name": "Graubart Piraten",
+      "groupId": "piraten-banden-klauen-des-leviathan",
+      "parentId": "klauen-des-leviathan",
+      "href": "Piraten/graubart-piraten.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-16-04.png",
+      "summary": "Graubart Piraten sind in der Gliederung der Klauen des Leviathan als große Bande innerhalb der Klauen aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/16.html",
+        "name": "Graubart Piraten",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/WNDuxOy.png"
+      }
+    },
+    {
+      "id": "truebwasser-hehler",
+      "kind": "Piratenbande",
+      "name": "Trübwasser Hehler",
+      "groupId": "piraten-banden-klauen-des-leviathan",
+      "parentId": "klauen-des-leviathan",
+      "href": "Piraten/truebwasser-hehler.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-16-05.png",
+      "summary": "Trübwasser Hehler sind in der Gliederung der Klauen des Leviathan als große Bande innerhalb der Klauen aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/16.html",
+        "name": "Trübwasser Hehler",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/WNDuxOy.png"
+      }
+    },
+    {
+      "id": "sturmbucht-schurken",
+      "kind": "Piratenbande",
+      "name": "Sturmbucht Schurken",
+      "groupId": "piraten-banden-klauen-des-leviathan",
+      "parentId": "klauen-des-leviathan",
+      "href": "Piraten/sturmbucht-schurken.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-16-06.png",
+      "summary": "Sturmbucht Schurken sind in der Gliederung der Klauen des Leviathan als große Bande innerhalb der Klauen aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/16.html",
+        "name": "Sturmbucht Schurken",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/WNDuxOy.png"
+      }
+    },
+    {
+      "id": "doppelkoeder-piraten",
+      "kind": "Piratenbande",
+      "name": "Doppelköder Piraten",
+      "groupId": "piraten-banden-klauen-des-leviathan",
+      "parentId": "klauen-des-leviathan",
+      "href": "Piraten/doppelkoeder-piraten.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-16-07.png",
+      "summary": "Doppelköder Piraten sind in der Gliederung der Klauen des Leviathan als große Bande innerhalb der Klauen aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/16.html",
+        "name": "Doppelköder Piraten",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/WNDuxOy.png"
+      }
+    },
+    {
+      "id": "hoellenpforte",
+      "kind": "Piratenbande",
+      "name": "Höllenpforte",
+      "groupId": "piraten-banden-klauen-des-leviathan",
+      "parentId": "klauen-des-leviathan",
+      "href": "Piraten/hoellenpforte.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-16-08.png",
+      "summary": "Höllenpforte sind in der Gliederung der Klauen des Leviathan als kleinere Bande aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/16.html",
+        "name": "Höllenpforte",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/WNDuxOy.png"
+      }
+    },
+    {
+      "id": "schwarzbucht-marodeure",
+      "kind": "Piratenbande",
+      "name": "Schwarzbucht Marodeure",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/schwarzbucht-marodeure.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-04.png",
+      "summary": "Eine der größten Einzelbanden des Schwarzblut-Kollektivs. Unter Skorviðr beteiligt sie sich mit sechs Schiffen am Raubzug durch Leitheach 1733.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/10.html",
+        "name": "Schwarzbucht Marodeure",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/7L4aoxO.png"
+      }
+    },
+    {
+      "id": "blutegel-piraten",
+      "kind": "Piratenbande",
+      "name": "Blutegel Piraten",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/blutegel-piraten.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-05.png",
+      "summary": "Blutegel Piraten sind in der Gliederung der Schwarzblut Marodeure als große Einzelbande aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/14.html",
+        "name": "Blutegel Piraten",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/8EWayPB.png"
+      }
+    },
+    {
+      "id": "meeres-fledderer",
+      "kind": "Piratenbande",
+      "name": "Meeres Fledderer",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/meeres-fledderer.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-06.png",
+      "summary": "Meeres Fledderer sind in der Gliederung der Schwarzblut Marodeure als große Einzelbande aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/14.html",
+        "name": "Meeres Fledderer",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/8EWayPB.png"
+      }
+    },
+    {
+      "id": "silberne-hand",
+      "kind": "Piratenbande",
+      "name": "Silberne Hand",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/silberne-hand.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-07.png",
+      "summary": "Silberne Hand sind in der Gliederung der Schwarzblut Marodeure als kleinere Bande aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/14.html",
+        "name": "Silberne Hand",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/8EWayPB.png"
+      }
+    },
+    {
+      "id": "koeder-piraten",
+      "kind": "Piratenbande",
+      "name": "Köder Piraten",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/koeder-piraten.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-08.png",
+      "summary": "Köder Piraten sind in der Gliederung der Schwarzblut Marodeure als kleinere Bande aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/14.html",
+        "name": "Köder Piraten",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/8EWayPB.png"
+      }
+    },
+    {
+      "id": "weisspranken-gesindel",
+      "kind": "Piratenbande",
+      "name": "Weißpranken Gesindel",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/weisspranken-gesindel.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-09.png",
+      "summary": "Weißpranken Gesindel sind in der Gliederung der Schwarzblut Marodeure als kleinere Bande aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/14.html",
+        "name": "Weißpranken Gesindel",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/8EWayPB.png"
+      }
+    },
+    {
+      "id": "flutbeisser",
+      "kind": "Piratenbande",
+      "name": "Flutbeißer",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/flutbeisser.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-10.png",
+      "summary": "Eine albische Piratenbande mit ceithischen Deserteuren, die sich als Händler und Fischer tarnt. 1733 segeln zwei ihrer Schiffe unter Tharn nach Leitheach.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/12.html",
+        "name": "Flutbeißer",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/E47nd7t.png"
+      }
+    },
+    {
+      "id": "nebelschnitter",
+      "kind": "Piratenbande",
+      "name": "Nebelschnitter",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/nebelschnitter.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-11.png",
+      "summary": "Aus dem aldrimarischen Bürgerkrieg hervorgegangene Piratenkultur, die über Generationen weiterbesteht. Bekannt für nächtliche Überfälle und Täuschung; 1733 unter Halrjarn.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/11.html",
+        "name": "Nebelschnitter",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/WM2LQUT.png"
+      }
+    },
+    {
+      "id": "zungenfresser",
+      "kind": "Piratenbande",
+      "name": "Zungenfresser",
+      "groupId": "piraten-banden-schwarzblut-marodeure",
+      "parentId": "schwarzblut-marodeure",
+      "href": "Piraten/zungenfresser.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-14-12.png",
+      "summary": "Ein abgeschlossener raubender Clan aus Yrmandrall. Die als Tungungrífr bekannten Zungenfresser beteiligen sich 1733 unter Vargund mit vier Schiffen am Raubzug.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/13.html",
+        "name": "Zungenfresser",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/gCmFLwq.png"
+      }
+    },
+    {
+      "id": "wilde-korsaren",
+      "kind": "Piratenbande",
+      "name": "Wilde Korsaren",
+      "groupId": "piraten-banden-sirenenzahn",
+      "parentId": "sirenenzahn",
+      "href": "Piraten/wilde-korsaren.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-18-04.png",
+      "summary": "Wilde Korsaren sind in der Gliederung der Sirenenzahn als große Bande innerhalb der Sirenenzahn aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/18.html",
+        "name": "Wilde Korsaren",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/7Wp1ESJ.png"
+      }
+    },
+    {
+      "id": "flinke-hetzer",
+      "kind": "Piratenbande",
+      "name": "Flinke Hetzer",
+      "groupId": "piraten-banden-sirenenzahn",
+      "parentId": "sirenenzahn",
+      "href": "Piraten/flinke-hetzer.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-18-05.png",
+      "summary": "Flinke Hetzer sind in der Gliederung der Sirenenzahn als große Bande innerhalb der Sirenenzahn aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/18.html",
+        "name": "Flinke Hetzer",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/7Wp1ESJ.png"
+      }
+    },
+    {
+      "id": "sirenenschaender",
+      "kind": "Piratenbande",
+      "name": "Sirenenschänder",
+      "groupId": "piraten-banden-sirenenzahn",
+      "parentId": "sirenenzahn",
+      "href": "Piraten/sirenenschaender.html",
+      "symbol": "../Archiv/Quellen/kuestenchroniken-2026-10-24/assets/source-18-06.png",
+      "summary": "Sirenenschänder sind in der Gliederung der Sirenenzahn als große Bande innerhalb der Sirenenzahn aufgeführt. Ein eigenständiger ausgearbeiteter Bericht liegt noch nicht vor.",
+      "source": {
+        "document": "../Archiv/Quellen/kuestenchroniken-2026-10-24/18.html",
+        "name": "Sirenenschänder",
+        "kind": "coastal-pirate-source",
+        "row": null,
+        "column": null,
+        "image": "https://i.imgur.com/7Wp1ESJ.png"
+      }
     }
   ]
 }

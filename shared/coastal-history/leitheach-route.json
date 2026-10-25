@@ -1,0 +1,930 @@
+{
+  "version": 2,
+  "id": "leitheach-raid-1733",
+  "title": "Der Raubzug durch Leitheach",
+  "year": 1733,
+  "season": "Winter",
+  "datePrecision": "season",
+  "map": {
+    "image": "/Karten/Leitheach/Kartenbilder/normal.webp",
+    "width": 4096,
+    "height": 3573,
+    "coordinateOrigin": "top-left",
+    "coordinates": "normalized",
+    "href": "/Karten/karte.html?map=leitheach",
+    "focusBounds": {
+      "x": 0.01,
+      "y": 0.02,
+      "width": 0.6,
+      "height": 0.43
+    }
+  },
+  "sourceMap": {
+    "url": "https://www.worldanvil.com/world/map/27cd3b5b-5a6c-414d-afc4-dcd4bf50771e/edit",
+    "image": "Archiv/Quellen/kuestenchroniken-2026-10-24/assets/leitheach-raid-worldanvil.jpg",
+    "width": 4096,
+    "height": 2755,
+    "coordinateOrigin": "bottom-left",
+    "sha256": "d7bf9a50435c9010a022658da70ba4c0514ff5e557c4ed48bdbec679a0a598b1",
+    "markerEvidence": "Archiv/Quellen/kuestenchroniken-2026-10-24/worldanvil-markers.capture.json"
+  },
+  "calibration": {
+    "method": "six-window-normalized-cross-correlation-and-axis-aligned-least-squares",
+    "xScale": 0.6395472326447511,
+    "xOffsetPx": 5.029044208751897,
+    "yScale": 0.6395444447591725,
+    "yOffsetPx": 3.1467403399871747,
+    "formula": {
+      "x": "(xScale * sourceX + xOffsetPx) / 4096",
+      "y": "(yScale * (2755 - sourceYFromBottom) + yOffsetPx) / 3573"
+    },
+    "targetSha256": "3765c2563f5471c2bfe0ec10d8b6094311b993429276b62abc2acd2db90fea23",
+    "fitRmsPx": 0.18882734151909006,
+    "registrationTolerancePx": 4,
+    "matches": [
+      {
+        "sourceBox": [
+          3150,
+          800,
+          3700,
+          1260
+        ],
+        "ncc": 0.852520763874054,
+        "localScale": 0.6389999999999997,
+        "sourceCenter": [
+          3425.0,
+          1030.0
+        ],
+        "targetCenter": [
+          2195.5,
+          662.0
+        ],
+        "fitResidualPx": 0.12438620174177409
+      },
+      {
+        "sourceBox": [
+          1800,
+          100,
+          2140,
+          420
+        ],
+        "ncc": 0.8121747970581055,
+        "localScale": 0.6419999999999993,
+        "sourceCenter": [
+          1970.0,
+          260.0
+        ],
+        "targetCenter": [
+          1265.0,
+          169.5
+        ],
+        "fitResidualPx": 0.0953877247758676
+      },
+      {
+        "sourceBox": [
+          190,
+          350,
+          520,
+          700
+        ],
+        "ncc": 0.8859079480171204,
+        "localScale": 0.6409999999999995,
+        "sourceCenter": [
+          355.0,
+          525.0
+        ],
+        "targetCenter": [
+          232.0,
+          339.0
+        ],
+        "fitResidualPx": 0.11493083579478713
+      },
+      {
+        "sourceBox": [
+          1100,
+          900,
+          1450,
+          1260
+        ],
+        "ncc": 0.8446547985076904,
+        "localScale": 0.6374999999999998,
+        "sourceCenter": [
+          1275.0,
+          1080.0
+        ],
+        "targetCenter": [
+          820.5,
+          693.5
+        ],
+        "fitResidualPx": 0.3580048673535482
+      },
+      {
+        "sourceBox": [
+          2300,
+          2100,
+          2680,
+          2450
+        ],
+        "ncc": 0.8857911229133606,
+        "localScale": 0.6404999999999995,
+        "sourceCenter": [
+          2490.0,
+          2275.0
+        ],
+        "targetCenter": [
+          1597.5,
+          1458.0
+        ],
+        "fitResidualPx": 0.11036455421775782
+      },
+      {
+        "sourceBox": [
+          3460,
+          2290,
+          3900,
+          2650
+        ],
+        "ncc": 0.8141174912452698,
+        "localScale": 0.6394999999999996,
+        "sourceCenter": [
+          3680.0,
+          2470.0
+        ],
+        "targetCenter": [
+          2358.5,
+          1583.0
+        ],
+        "fitResidualPx": 0.18922718440101594
+      }
+    ],
+    "note": "Die Toleranz beschreibt die Bildregistrierung, nicht die historische Genauigkeit der Quellmarkierung."
+  },
+  "events": [
+    {
+      "id": "seannbail",
+      "title": "Angriff auf Seannbail",
+      "sourceDocumentId": "coastal-03",
+      "kind": "raid",
+      "markerIds": [
+        "seannbail"
+      ],
+      "stageId": "diversion"
+    },
+    {
+      "id": "broch-an-clais",
+      "title": "Sturm auf Broch an Clais",
+      "sourceDocumentId": "coastal-04",
+      "kind": "siege",
+      "markerIds": [
+        "broch-an-clais"
+      ],
+      "stageId": "clais"
+    },
+    {
+      "id": "gleannbuar",
+      "title": "Plünderung von Gleannbuar",
+      "sourceDocumentId": "coastal-05",
+      "kind": "raid",
+      "markerIds": [
+        "gleannbuar"
+      ],
+      "stageId": "river-raids"
+    },
+    {
+      "id": "dairchoill-ceodraig",
+      "title": "Überfall auf Dairchoill und Ceòdraig",
+      "sourceDocumentId": "coastal-06",
+      "kind": "raid",
+      "markerIds": [
+        "dairchoill",
+        "ceodraig"
+      ],
+      "stageId": "river-raids"
+    },
+    {
+      "id": "abhainnclachan-srathonn",
+      "title": "Angriff auf Abhainnclachan und Srathonn",
+      "sourceDocumentId": "coastal-07",
+      "kind": "raid",
+      "markerIds": [
+        "abhainnclachan",
+        "srathonn"
+      ],
+      "stageId": "river-raids"
+    },
+    {
+      "id": "torrachadh",
+      "title": "Plünderung von Tòrrachadh",
+      "sourceDocumentId": "coastal-08",
+      "kind": "raid",
+      "markerIds": [
+        "torrachadh"
+      ],
+      "stageId": "river-raids"
+    },
+    {
+      "id": "dun-laog",
+      "title": "Angriff auf Dun Laog",
+      "sourceDocumentId": "coastal-09",
+      "kind": "siege",
+      "markerIds": [
+        "dun-laog"
+      ],
+      "stageId": "dun-laog"
+    }
+  ],
+  "markers": [
+    {
+      "id": "sea-cluainslige",
+      "title": "Seescharmützel vor Cluainslige",
+      "kind": "sea-battle",
+      "eventId": null,
+      "stageId": "dun-laog",
+      "sourceMapPhase": "III",
+      "x": 0.282591102889305,
+      "y": 0.3219953748217024,
+      "targetPixels": {
+        "x": 1157.4931574345933,
+        "y": 1150.4894742379427
+      },
+      "source": {
+        "markerId": "5c167f09-daeb-44e1-92ef-7a8a3578a6d9",
+        "x": 1802,
+        "yFromBottom": 961,
+        "yFromTop": 1794,
+        "url": "https://www.worldanvil.com/world/map/marker/5c167f09-daeb-44e1-92ef-7a8a3578a6d9/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      },
+      "time": null,
+      "timeNote": "Die Karte benennt das Gefecht; eine genaue Uhrzeit ist nicht überliefert."
+    },
+    {
+      "id": "torrachadh",
+      "title": "Plünderung von Tòrrachadh",
+      "kind": "raid",
+      "eventId": "torrachadh",
+      "stageId": "river-raids",
+      "sourceMapPhase": "II",
+      "x": 0.5155511788429107,
+      "y": 0.21406218137368085,
+      "targetPixels": {
+        "x": 2111.697628540562,
+        "y": 764.8441740481617
+      },
+      "source": {
+        "markerId": "c8bf4ce6-6783-48bb-a751-a89d15332074",
+        "x": 3294,
+        "yFromBottom": 1564,
+        "yFromTop": 1191,
+        "url": "https://www.worldanvil.com/world/map/marker/c8bf4ce6-6783-48bb-a751-a89d15332074/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "river-reinforcement",
+      "title": "Verstärkung via des Flusses",
+      "kind": "reinforcement",
+      "eventId": null,
+      "stageId": "dun-laog",
+      "sourceMapPhase": "III",
+      "x": 0.5597386463327703,
+      "y": 0.2187160172437448,
+      "targetPixels": {
+        "x": 2292.689495379027,
+        "y": 781.4723296119001
+      },
+      "source": {
+        "markerId": "c14a1c9a-4fcb-45d7-aeb3-084e4226b33f",
+        "x": 3577,
+        "yFromBottom": 1538,
+        "yFromTop": 1217,
+        "url": "https://www.worldanvil.com/world/map/marker/c14a1c9a-4fcb-45d7-aeb3-084e4226b33f/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      },
+      "locationNote": "Richtungsmarkierung der Quelle, kein Ortsmittelpunkt."
+    },
+    {
+      "id": "dairchoill",
+      "title": "Überfall auf Dairchoill und Ceòdraig",
+      "kind": "raid",
+      "eventId": "dairchoill-ceodraig",
+      "stageId": "river-raids",
+      "sourceMapPhase": "II",
+      "x": 0.40250620901019585,
+      "y": 0.35904706809490383,
+      "targetPixels": {
+        "x": 1648.6654321057622,
+        "y": 1282.8751743030914
+      },
+      "source": {
+        "markerId": "c0008418-022b-4410-9a2b-880270db8e5a",
+        "x": 2570,
+        "yFromBottom": 754,
+        "yFromTop": 2001,
+        "url": "https://www.worldanvil.com/world/map/marker/c0008418-022b-4410-9a2b-880270db8e5a/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "escape-direction",
+      "title": "Fluchtroute der Piraten",
+      "kind": "retreat",
+      "eventId": null,
+      "stageId": "dun-laog",
+      "sourceMapPhase": "III",
+      "x": 0.04510298256394701,
+      "y": 0.41185020585139864,
+      "targetPixels": {
+        "x": 184.74181658192694,
+        "y": 1471.5407855070473
+      },
+      "source": {
+        "markerId": "bf248832-5724-472f-be2f-e6f22acbcc4a",
+        "x": 281,
+        "yFromBottom": 459,
+        "yFromTop": 2296,
+        "url": "https://www.worldanvil.com/world/map/marker/bf248832-5724-472f-be2f-e6f22acbcc4a/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      },
+      "locationNote": "Richtungsmarkierung der Quelle, kein Ortsmittelpunkt."
+    },
+    {
+      "id": "southern-islands-west",
+      "title": "Angriff auf die Inseln",
+      "kind": "raid",
+      "eventId": null,
+      "stageId": "diversion",
+      "sourceMapPhase": "I",
+      "x": 0.274003432529085,
+      "y": 0.4243797639631092,
+      "targetPixels": {
+        "x": 1122.3180596391321,
+        "y": 1516.3088966401892
+      },
+      "source": {
+        "markerId": "7f346bad-211b-4e80-b401-3fafe5a9d9b0",
+        "x": 1747,
+        "yFromBottom": 389,
+        "yFromTop": 2366,
+        "url": "https://www.worldanvil.com/world/map/marker/7f346bad-211b-4e80-b401-3fafe5a9d9b0/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "southern-islands-east",
+      "title": "Angriff auf die Inseln",
+      "kind": "raid",
+      "eventId": null,
+      "stageId": "diversion",
+      "sourceMapPhase": "I",
+      "x": 0.31116462426967356,
+      "y": 0.39341385605845297,
+      "targetPixels": {
+        "x": 1274.530301008583,
+        "y": 1405.6677076968524
+      },
+      "source": {
+        "markerId": "72ed29fb-30de-4997-84de-7d412a2a3365",
+        "x": 1985,
+        "yFromBottom": 562,
+        "yFromTop": 2193,
+        "url": "https://www.worldanvil.com/world/map/marker/72ed29fb-30de-4997-84de-7d412a2a3365/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "diversion-torrinbhir",
+      "title": "Scheinangriff auf Torrinbhir",
+      "kind": "diversion",
+      "eventId": null,
+      "stageId": "diversion",
+      "sourceMapPhase": "I",
+      "x": 0.14284628520936063,
+      "y": 0.07212018733673044,
+      "targetPixels": {
+        "x": 585.0983842175411,
+        "y": 257.68542935413785
+      },
+      "source": {
+        "markerId": "6b148e06-e7b4-472c-8b7a-15f300a4e1c7",
+        "x": 907,
+        "yFromBottom": 2357,
+        "yFromTop": 398,
+        "url": "https://www.worldanvil.com/world/map/marker/6b148e06-e7b4-472c-8b7a-15f300a4e1c7/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "dun-laog",
+      "title": "Angriff auf Dun Laog",
+      "kind": "siege",
+      "eventId": "dun-laog",
+      "stageId": "dun-laog",
+      "sourceMapPhase": "II",
+      "x": 0.5472474894451774,
+      "y": 0.20027966745079914,
+      "targetPixels": {
+        "x": 2241.5257167674467,
+        "y": 715.5992518017053
+      },
+      "source": {
+        "markerId": "608f0e87-cca3-4646-a14e-ca6d35c83150",
+        "x": 3497,
+        "yFromBottom": 1641,
+        "yFromTop": 1114,
+        "url": "https://www.worldanvil.com/world/map/marker/608f0e87-cca3-4646-a14e-ca6d35c83150/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "broch-an-clais",
+      "title": "Plünderung von Broch an Clais",
+      "kind": "siege",
+      "eventId": "broch-an-clais",
+      "stageId": "clais",
+      "sourceMapPhase": "II",
+      "x": 0.3922010045779318,
+      "y": 0.32593323594252577,
+      "targetPixels": {
+        "x": 1606.4553147512086,
+        "y": 1164.5594520226446
+      },
+      "source": {
+        "markerId": "0223cb2b-b854-4166-89ce-4ef809c84956",
+        "x": 2504,
+        "yFromBottom": 939,
+        "yFromTop": 1816,
+        "url": "https://www.worldanvil.com/world/map/marker/0223cb2b-b854-4166-89ce-4ef809c84956/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "gleannbuar",
+      "title": "Plünderung von Gleannbuar",
+      "kind": "raid",
+      "eventId": "gleannbuar",
+      "stageId": "river-raids",
+      "sourceMapPhase": "II",
+      "x": 0.39266942296121654,
+      "y": 0.27241412343679033,
+      "targetPixels": {
+        "x": 1608.373956449143,
+        "y": 973.3356630396519
+      },
+      "source": {
+        "markerId": "561ea720-2dfe-4c61-8000-23167f437fc6",
+        "x": 2507,
+        "yFromBottom": 1238,
+        "yFromTop": 1517,
+        "url": "https://www.worldanvil.com/world/map/marker/561ea720-2dfe-4c61-8000-23167f437fc6/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "abhainnclachan",
+      "title": "Angriff auf Abhainnclachan und Srathonn",
+      "kind": "raid",
+      "eventId": "abhainnclachan-srathonn",
+      "stageId": "river-raids",
+      "sourceMapPhase": "II",
+      "x": 0.4196815497306359,
+      "y": 0.2702661991890685,
+      "targetPixels": {
+        "x": 1719.0156276966848,
+        "y": 965.6611297025419
+      },
+      "source": {
+        "markerId": "50146155-04e6-431e-bd2b-657dcff7a5a7",
+        "x": 2680,
+        "yFromBottom": 1250,
+        "yFromTop": 1505,
+        "url": "https://www.worldanvil.com/world/map/marker/50146155-04e6-431e-bd2b-657dcff7a5a7/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "diversion-fionnmara",
+      "title": "Scheinangriff auf Fionnmara",
+      "kind": "diversion",
+      "eventId": null,
+      "stageId": "diversion",
+      "sourceMapPhase": "I",
+      "x": 0.2458983295320012,
+      "y": 0.053146856481854333,
+      "targetPixels": {
+        "x": 1007.1995577630769,
+        "y": 189.89371820966554
+      },
+      "source": {
+        "markerId": "38ac790b-1b95-4204-b7f5-65e8e0203dca",
+        "x": 1567,
+        "yFromBottom": 2463,
+        "yFromTop": 292,
+        "url": "https://www.worldanvil.com/world/map/marker/38ac790b-1b95-4204-b7f5-65e8e0203dca/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "dun-athar-reinforcement",
+      "title": "Verstärkung aus Dun Athar",
+      "kind": "reinforcement",
+      "eventId": null,
+      "stageId": "dun-laog",
+      "sourceMapPhase": "III",
+      "x": 0.14815502688658758,
+      "y": 0.31859449476280954,
+      "targetPixels": {
+        "x": 606.8429901274627,
+        "y": 1138.3381297875185
+      },
+      "source": {
+        "markerId": "23cd8adf-9790-4788-a92d-fa70e295aff5",
+        "x": 941,
+        "yFromBottom": 980,
+        "yFromTop": 1775,
+        "url": "https://www.worldanvil.com/world/map/marker/23cd8adf-9790-4788-a92d-fa70e295aff5/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      },
+      "locationNote": "Richtungsmarkierung der Quelle, kein Ortsmittelpunkt."
+    },
+    {
+      "id": "srathonn",
+      "title": "Angriff auf Abhainnclachan und Srathonn",
+      "kind": "raid",
+      "eventId": "abhainnclachan-srathonn",
+      "stageId": "river-raids",
+      "sourceMapPhase": "II",
+      "x": 0.48244961309078976,
+      "y": 0.24413312084178637,
+      "targetPixels": {
+        "x": 1976.1136152198749,
+        "y": 872.2876407677027
+      },
+      "source": {
+        "markerId": "1d7a8c12-078c-4d84-9f0c-6f818b3b7284",
+        "x": 3082,
+        "yFromBottom": 1396,
+        "yFromTop": 1359,
+        "url": "https://www.worldanvil.com/world/map/marker/1d7a8c12-078c-4d84-9f0c-6f818b3b7284/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "seannbail",
+      "title": "Eroberung und Plünderung von Seannbail",
+      "kind": "raid",
+      "eventId": "seannbail",
+      "stageId": "diversion",
+      "sourceMapPhase": "I",
+      "x": 0.33942586672785224,
+      "y": 0.3594050554695241,
+      "targetPixels": {
+        "x": 1390.2883501172828,
+        "y": 1284.1542631926097
+      },
+      "source": {
+        "markerId": "16d67180-612d-42ff-9c48-fa0beb0ce385",
+        "x": 2166,
+        "yFromBottom": 752,
+        "yFromTop": 2003,
+        "url": "https://www.worldanvil.com/world/map/marker/16d67180-612d-42ff-9c48-fa0beb0ce385/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    },
+    {
+      "id": "ceodraig",
+      "title": "Überfall auf Dairchoill und Ceòdraig",
+      "kind": "raid",
+      "eventId": "dairchoill-ceodraig",
+      "stageId": "river-raids",
+      "sourceMapPhase": "II",
+      "x": 0.443883166200347,
+      "y": 0.3039170124033771,
+      "targetPixels": {
+        "x": 1818.1454487566214,
+        "y": 1085.8954853172663
+      },
+      "source": {
+        "markerId": "091b59c5-f553-40b0-9fa5-d4662ef888e6",
+        "x": 2835,
+        "yFromBottom": 1062,
+        "yFromTop": 1693,
+        "url": "https://www.worldanvil.com/world/map/marker/091b59c5-f553-40b0-9fa5-d4662ef888e6/edit"
+      },
+      "accuracy": {
+        "registrationTolerancePx": 4,
+        "scope": "original-marker-anchor"
+      }
+    }
+  ],
+  "distanceReference": {
+    "id": "dun-athar-dunbaile",
+    "label": "Dun Athar – Dunbaile",
+    "display": "30+ km, ungefährer Mindest-Richtwert",
+    "sourceType": "user-instruction",
+    "nominalMinimumKm": 30,
+    "precision": "approximate-minimum-guideline",
+    "actualTravelRouteKnown": false,
+    "measurementBasis": "same-submap-pin-separation-transferred-to-main-map",
+    "mainMapDistancePx": 258.13096829577967,
+    "pins": [
+      {
+        "id": "6530d8ac-656c-42f3-836d-087d9b67b3bb",
+        "title": "Dun Athar",
+        "sourceNormalized": {
+          "x": 0.13525390625,
+          "y": 0.2732685678470699
+        },
+        "sourcePixels": {
+          "x": 554.0,
+          "y": 872.0
+        },
+        "targetPixels": {
+          "x": 223.71725928307285,
+          "y": 357.8504649182557
+        },
+        "x": 0.05461847150465646,
+        "y": 0.10015406238966014
+      },
+      {
+        "id": "e15e9db3-0611-445f-836a-0c62543cf9cc",
+        "title": "Dunbaile",
+        "sourceNormalized": {
+          "x": 0.2626953125,
+          "y": 0.3791914760263241
+        },
+        "sourcePixels": {
+          "x": 1076.0,
+          "y": 1210.0000000000002
+        },
+        "targetPixels": {
+          "x": 440.3988635267636,
+          "y": 498.1383089237054
+        },
+        "x": 0.10751925379071377,
+        "y": 0.13941738285018343
+      }
+    ],
+    "source": {
+      "data": "Karten/Leitheach/tir-na-sleagh/data.json",
+      "image": "Karten/Leitheach/tir-na-sleagh/Kartenbilder/normal.webp",
+      "width": 4096,
+      "height": 3191,
+      "imageSha256": "ac1c6ebc53d210c54f3d57e66dda1c6c01461608bb7bb0dfba54343bff839273",
+      "dataSha256": "1ed679875335c899933a0422671ecb87070db52af994c2266d698ad5628a82b4"
+    },
+    "registration": {
+      "xScale": 0.41509885870438834,
+      "xOffsetPx": -6.24750843915828,
+      "yScale": 0.4150527929155313,
+      "yOffsetPx": -4.075570504087613,
+      "fitRmsPx": 0.17493398609013097,
+      "registrationTolerancePx": 4,
+      "matches": [
+        {
+          "sourceBox": [
+            200,
+            700,
+            900,
+            1250
+          ],
+          "ncc": 0.8929163217544556,
+          "localScale": 0.41724999999999896,
+          "sourceCenter": [
+            550.0,
+            975.0
+          ],
+          "targetCenter": [
+            222.0,
+            400.5
+          ],
+          "fitResidualPx": 0.11582240549905268
+        },
+        {
+          "sourceBox": [
+            900,
+            1500,
+            1500,
+            2000
+          ],
+          "ncc": 0.8511104583740234,
+          "localScale": 0.4139999999999993,
+          "sourceCenter": [
+            1200.0,
+            1750.0
+          ],
+          "targetCenter": [
+            492.0,
+            722.5
+          ],
+          "fitResidualPx": 0.26642785712431855
+        },
+        {
+          "sourceBox": [
+            1700,
+            1750,
+            2200,
+            2250
+          ],
+          "ncc": 0.8552418351173401,
+          "localScale": 0.416999999999999,
+          "sourceCenter": [
+            1950.0,
+            2000.0
+          ],
+          "targetCenter": [
+            803.0,
+            826.0
+          ],
+          "fitResidualPx": 0.1975594696371575
+        },
+        {
+          "sourceBox": [
+            2000,
+            2400,
+            2450,
+            2800
+          ],
+          "ncc": 0.7592767477035522,
+          "localScale": 0.41624999999999907,
+          "sourceCenter": [
+            2225.0,
+            2600.0
+          ],
+          "targetCenter": [
+            917.5,
+            1075.0
+          ],
+          "fitResidualPx": 0.1645497701577255
+        },
+        {
+          "sourceBox": [
+            2600,
+            2000,
+            3000,
+            2400
+          ],
+          "ncc": 0.8202916383743286,
+          "localScale": 0.41624999999999907,
+          "sourceCenter": [
+            2800.0,
+            2200.0
+          ],
+          "targetCenter": [
+            1156.0,
+            909.0
+          ],
+          "fitResidualPx": 0.050044918595119524
+        }
+      ]
+    },
+    "caveats": [
+      "Die Nutzervorgabe ist ein ungefährer Mindest-Richtwert, keine exakte Vermessung.",
+      "Es ist nicht festgelegt, ob die 30+ km eine Luftlinie oder eine konkrete Wegstrecke meinen. Die Übertragung dient nur der groben Plausibilitätsprüfung.",
+      "Beide Referenzanker stammen aus derselben Teilkarte. Der abweichende Hauptkarten-Pin Dun Athars wird nicht mit dem Teilkarten-Pin vermischt.",
+      "Flussbiegungen, Strömung, Wetter, Anlanden, Kämpfe und Aufenthalt sind in den geometrischen Abständen nicht enthalten."
+    ]
+  },
+  "markerAssets": {
+    "sea-battle": "/Ereignisse/assets/coastal-history/markers/sea-battle.svg",
+    "raid": "/Ereignisse/assets/coastal-history/markers/raid.svg",
+    "siege": "/Ereignisse/assets/coastal-history/markers/siege.svg"
+  },
+  "routes": [
+    {
+      "id": "main-advance",
+      "title": "Hauptangriff und Vorstoß flussaufwärts",
+      "kind": "attack",
+      "stageIds": [
+        "clais",
+        "river-raids",
+        "dun-laog"
+      ],
+      "markerIds": [
+        "seannbail",
+        "broch-an-clais",
+        "gleannbuar",
+        "abhainnclachan",
+        "srathonn",
+        "torrachadh",
+        "dun-laog"
+      ]
+    },
+    {
+      "id": "southern-branch",
+      "title": "Überfälle auf die südlichen Siedlungen",
+      "kind": "attack",
+      "stageIds": [
+        "river-raids",
+        "dun-laog"
+      ],
+      "markerIds": [
+        "broch-an-clais",
+        "dairchoill",
+        "ceodraig",
+        "srathonn",
+        "torrachadh",
+        "dun-laog"
+      ]
+    },
+    {
+      "id": "reinforcement-river",
+      "title": "Verstärkung über den Fluss",
+      "kind": "reinforcement",
+      "stageIds": [
+        "dun-laog"
+      ],
+      "markerIds": [
+        "river-reinforcement",
+        "dun-laog"
+      ]
+    },
+    {
+      "id": "reinforcement-dun-athar",
+      "title": "Verstärkungsrichtung aus Dun Athar",
+      "kind": "reinforcement",
+      "stageIds": [
+        "dun-laog"
+      ],
+      "markerIds": [
+        "dun-athar-reinforcement",
+        "sea-cluainslige"
+      ]
+    },
+    {
+      "id": "retreat",
+      "title": "Rückzugsrichtung der Piraten",
+      "kind": "retreat",
+      "stageIds": [
+        "dun-laog"
+      ],
+      "markerIds": [
+        "dun-laog",
+        "torrachadh",
+        "srathonn",
+        "abhainnclachan",
+        "broch-an-clais",
+        "sea-cluainslige",
+        "escape-direction"
+      ]
+    }
+  ],
+  "routeGeometry": "schematic-marker-connections",
+  "routeNote": "Die Linien verbinden die überlieferten Ereignisorte und Richtungsmarker schematisch. Sie geben keine metergenaue Schiffsroute oder gleichförmige Fahrgeschwindigkeit vor.",
+  "editorialNotes": [
+    "Die drei Kartenphasen der Quelle werden separat erhalten. Die vier Erzählphasen folgen coastal-02:B030–B037.",
+    "Die Zeiten werden ausschließlich aus leitheach-chronology.json ergänzt; die Bildkalibrierung besitzt keine eigene Chronologie.",
+    "Für die beiden Inselüberfälle und das Seescharmützel vor Cluainslige gibt es keine eigene ausgearbeitete Ereignisvorlage und keine genaue Zeit.",
+    "Der heutige Orts-Pin Dun Laogs wird nicht mit dem historischen Angriffsmarker gleichgesetzt. Beide liegen am selben Stadtmotiv, haben aber verschiedene Anker.",
+    "Dun Athar und die Fluchtroute sind in der Quelle als Richtungen im Seegebiet markiert; die Punkte sind keine erfundenen Siedlungen."
+  ],
+  "chronologyFile": "shared/coastal-history/leitheach-chronology.json"
+}

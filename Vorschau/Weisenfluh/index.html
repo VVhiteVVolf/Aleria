@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="robots" content="noindex,nofollow">
+ <title>Weisenfluh · Von Bànneach zum Erlenkönigreich</title>
+ <meta name="description" content="Temporärer Königreichsentwurf für Weisenfluh mit seiner albischen Herkunft Bànneach, fünf Provinzen und frei verschiebbaren Hauswappen.">
+ <link rel="stylesheet" href="../shared/clan-map.css">
+ <link rel="stylesheet" href="proposal.css">
+ <script type="module" src="proposal-page.mjs"></script>
+</head>
+<body data-weisenfluh-proposal>
+ <header class="toolbar"><a href="#anfang" class="wordmark">ALERIA <span>Werkstatt</span></a><span class="draft-label">Weisenfluh · Vorschlag</span><nav aria-label="Seitenbereiche"><a href="#geschichte">Herkunft</a><a href="#ordnung">Adel</a><a href="#karte">Karte</a><a href="#haeuser">Häuser</a></nav></header>
+ <main id="anfang">
+  <section class="hero">
+   <div><p class="eyebrow">Das Erlenkönigreich · Ein Land im Wandel</p><h1>Weisenfluh</h1><p class="hero-line">Ein helles Land.<br>Eine alte Herkunft.</p><p class="lead">Einst das albische Fürstentum <strong>Bànneach</strong>. Heute ein Königreich, dessen Sprache, höfische Kultur und führende Aristokratie ihren eigenen Weg gegangen sind.</p><dl class="hero-stats"><div><dt>Krone</dt><dd>Erlenkönig</dd></div><div><dt>Provinzen</dt><dd>5</dd></div><div><dt>Alte Clans</dt><dd>7 im Entwurf</dd></div></dl></div>
+   <figure class="realm-crest"><img src="assets/weisenfluh.webp" width="512" height="510" alt="Das heutige Wappen Weisenfluhs"><figcaption>Das heutige Königreich</figcaption></figure>
+  </section>
+  <aside class="draft-note"><strong>Eine vorläufige Anordnung zum Ausprobieren.</strong> Die Ausgangszuordnung folgt deinen Hausordnern. Die albischen Lairds bleiben zunächst offen. Verschiebungen sind persönliche Vorschläge und werden nur in diesem Browser gespeichert. Du kannst einen Entwurf auch als Datei mitnehmen.</aside>
+  <section id="geschichte" class="section history">
+   <figure class="ancient-crest"><a href="assets/banneach.png" target="_blank" rel="noopener"><img src="assets/banneach.png" width="400" height="400" alt="Antiker Wappenentwurf Bànneachs: ein weißer Stier auf schieferblauem Holz"></a><figcaption>Bànneach · Der weiße Stier<br><span>Antiker Wappenentwurf</span></figcaption></figure>
+   <div><p class="eyebrow">01 · Die Wurzeln</p><h2>Aus Bànneach wurde Weisenfluh.</h2><p>Bànneach bedeutet sinngemäß <em>das weiße Land</em> oder <em>das helle Land</em>. Über Jahrhunderte wirkten die Kaiserstadt, die heutige Blutstadt, sowie die umliegenden Fürstentümer, Aldingen und Goldmund auf das Land ein. Besonders die Eliten öffneten sich ihrem Einfluss.</p><p>Die albischen Wurzeln wurden allmählich eingetauscht: Die Sprache veränderte sich, und mit ihr wandelten sich Sitten, höfisches Selbstverständnis und Kultur. Die führende Aristokratie versteht sich heute als weisenfluhisch.</p><p>Alte albische Clans bestehen weiterhin. Manche passten sich an und nahmen neue Namen an. Andere hielten an ihrer Herkunft fest und verloren in den langen Konflikten zunehmend Besitz und Bedeutung. Ihre noch offenen Sitze können wir in dieser Vorschau gemeinsam ausprobieren.</p></div>
+  </section>
+  <section id="ordnung" class="section">
+   <p class="eyebrow">02 · Die politische Ordnung</p><h2>Eine Krone, fünf Provinzen.</h2>
+   <p class="section-intro">Der Erlenkönig ist seiner tatsächlichen Stellung nach eher ein Fürst. Die Freiherren entsprechen Baronen; die Landmänner stehen auf der Ebene der Ritterfürsten.</p>
+   <div data-role="royal-house" class="royal-house"></div>
+   <div data-role="provinces" class="province-grid"></div>
+   <aside class="order-note"><img src="assets/die-ritter-der-kornahre.webp" width="92" height="92" alt="Wappen der Ritter der Kornähre"><div><h3>Ährensass · Ein eigenes Ordensgebiet</h3><p>Die kleine Ordensburg ist an einen geistlichen Ritterorden verpachtet. Ihre Herrschaft entspricht einem kleinen Ritterfürstentum und wird gesondert von den fünf Freiherrentümern betrachtet.</p></div></aside>
+  </section>
+  <section id="karte" class="section" data-role="map-section">
+   <div class="section-heading"><div><p class="eyebrow">03 · Wappen & Orte</p><h2>Wer könnte wo seinen Sitz haben?</h2></div><button data-action="open-map">Karte vergrößern ↗</button></div>
+   <div class="placement-toolbar" aria-label="Ein Haus versetzen">
+    <label>Haus wählen<select data-role="house-select"><option value="">Ein Wappen auswählen …</option></select></label>
+    <label>Neuer Sitz<select data-role="seat-select"><option value="">Noch unzugeordnet</option></select></label>
+    <button data-action="move-selected" class="primary" disabled>Wappen versetzen</button><button data-action="cancel-selection" disabled>Auswahl lösen</button>
+   </div>
+   <p class="placement-instruction" data-role="selection-hint">Ein Wappen wählen und einen Ort auf der Karte anklicken – oder Wappen direkt auf einen Ort ziehen.</p>
+   <div class="map-tools"><button data-action="toggle-crests" aria-pressed="true">Hauswappen</button><button data-action="toggle-names" aria-pressed="true" disabled>Ortsnamen im Kartenbild</button><span>Linien verbinden Wappen und Sitz.</span></div>
+   <div class="map-shell"><div class="map-viewport" tabindex="0" aria-label="Karte Weisenfluhs, auf kleinen Bildschirmen seitlich verschiebbar"><div class="map-canvas" data-role="map-surface"></div></div></div>
+   <p class="map-caption" id="map-caption"></p>
+   <div class="unassigned" data-drop-seat="unassigned"><div class="section-heading"><div><p class="eyebrow">Noch ohne Sitz</p><h3>Häuser & albische Clans</h3></div><span data-role="unassigned-count"></span></div><p>Die sieben albischen Clans beginnen hier ohne Zuordnung. Diese Wappen können zu jedem Ort wandern. Ziehe ein bereits platziertes Wappen hierher zurück, um seinen Sitz wieder offenzulassen.</p><div class="house-grid" data-role="unassigned-houses"></div></div>
+  </section>
+  <section id="haeuser" class="section"><p class="eyebrow">04 · Das Hausregister des Entwurfs</p><h2>Die Häuser an ihren gewählten Sitzen.</h2><p class="section-intro">Die Sitzanordnung folgt deinem aktuellen Entwurf. Rang und ursprüngliche Provinzzugehörigkeit bleiben bei jedem Haus sichtbar.</p><div class="seat-grid" data-role="settlements"></div></section>
+  <section class="section draft-tools"><div><h2>Deinen Vorschlag mitnehmen.</h2><p>Zurücksetzen stellt die gelieferten Zuordnungen wieder her und lässt die sieben albischen Clans erneut offen.</p></div><div class="action-row"><button data-action="undo" disabled>Letzte Änderung zurück</button><button data-action="export">Entwurf herunterladen</button><button data-action="import">Entwurf laden</button><button data-action="reset">Ausgangsstand</button><button data-action="print">Drucken</button></div><input type="file" accept=".json,application/json" data-role="import-file" hidden></section>
+  <footer><span>Weisenfluh · Vorschlagsseite</span><span>Bànneach → Erlenkönigreich</span><a href="../Moinneach/">Moinneach-Vorschau ↗</a></footer>
+ </main>
+ <dialog id="map-dialog" class="proposal-dialog" aria-labelledby="large-map-title"><div class="dialog-top"><span id="large-map-title" data-role="map-title">Weisenfluh</span><button data-action="close-map" aria-label="Große Karte schließen">✕</button></div><div class="map-zoom"><button data-action="zoom-out" aria-label="Karte verkleinern">−</button><button data-action="fit-map" data-role="zoom-label">Ganze Karte</button><button data-action="zoom-in" aria-label="Karte vergrößern">+</button><span>Wappen ziehen oder im Hauptfenster ein Haus auswählen</span></div><div class="map-viewport" tabindex="0" aria-label="Große Karte Weisenfluhs"><div class="map-canvas" data-role="map-surface"></div></div></dialog>
+ <dialog id="house-dialog" class="proposal-dialog house-dialog" aria-labelledby="house-title"><div class="dialog-top"><span>Haus & Sitz · Entwurf</span><button data-action="close-house" aria-label="Hausfenster schließen">✕</button></div><div data-role="house-details"></div></dialog>
+ <div id="clan-tooltip" class="clan-tooltip" role="tooltip" hidden></div><div class="notice" data-role="status" role="status" aria-live="polite" hidden></div>
+ <noscript><p class="noscript">Zum Verschieben und Anzeigen der Hauswappen bitte JavaScript aktivieren. <a href="assets/originals/map.png">Die gelieferte Karte öffnen</a>.</p></noscript>
+</body>
+</html>

@@ -24,6 +24,7 @@ import { applyFamilyChartSpacingGuard } from './family-chart-spacing-guard.js';
 import { updateFamilyChartLayoutBounds } from './family-chart-layout-bounds.js';
 import { applyFamilyChartReferenceSpacing } from './family-chart-reference-spacing.js';
 import { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';
+import { applyFamilyChartBranchCompaction } from './family-chart-branch-compaction.js';
 
 /**
  * Owns the order of every post-library layout pass.
@@ -95,6 +96,7 @@ export function applyFamilyChartLayoutPipeline({
     orientation,
     maximumScale: maximumSpacingScale
   });
+  const branchCompaction = applyFamilyChartBranchCompaction({ tree, family: layoutFamily, orientation });
   const referenceSpacing = applyFamilyChartReferenceSpacing({ tree, family: layoutFamily, orientation });
   const bounds = updateFamilyChartLayoutBounds(tree);
 
@@ -111,6 +113,7 @@ export function applyFamilyChartLayoutPipeline({
     descendantAlignment,
     pairPlacement,
     pairCompaction,
+    branchCompaction,
     houseLinkAlignment,
     lineageOriginAlignment,
     bounds,

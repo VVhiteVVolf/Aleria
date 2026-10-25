@@ -1,5 +1,14 @@
 # Dauerhafte Bildstil-Vorgaben
 
+## Aktuelle Veröffentlichungsfreigabe
+
+Aktuelle Nutzeranweisung vom 25. Oktober 2026: Nach Fertigstellung der temporären
+Weisenfluh-Vorschlagsseite **alle lokalen Neuerungen sammeln, pushen und deployen**.
+Diese ausdrückliche Freigabe hebt den allgemeinen Push-/Deploy-Stopp vom
+24. Oktober für diesen Gesamtstand auf. Die experimentellen Vorschlagsseiten
+bleiben als solche erkennbar; ihre Entwurfszuordnungen werden nicht automatisch
+in kanonische Register oder Firebase-Daten übernommen.
+
 ## Getrennter Skyrim-Arbeitsbereich
 
 Seit dem 21. Oktober 2026 liegen Skyrim-/Nolvus-Werkzeuge, XTTS, die Skyrim-Kataloge,
@@ -25,6 +34,12 @@ Stil ohne erneute Erinnerung verwenden:
 - **Clan-, Haus- und Familienwappen:** `fantasy-heraldic-emblem`, 1:1, **ausnahmslos kreisrund**, damit alle Wappen in die vorhandenen Frames passen (Nutzervorgabe vom 16. Oktober 2026). Auch bei italienischer oder anderer kultureller Ornamentik bleibt die äußere Kontur ein exakter Kreis; keine Spitzschilde oder überstehenden Verzierungen. Nordisch-keltische Fantasy-Heraldik auf bemalten Holzbrettern mit vollständig geschlossenem Rahmen, sofern der aktuelle Auftrag keine andere Kultur vorgibt. Den vollständigen Universellen Wappen-Prompt aus dem Preset verwenden. Vor Vorschlägen die Wappen der passenden Kultur oder Region aus der **Stammbaum-Liste** tatsächlich ansehen; Registerquellen und Ablauf stehen im Preset. Für einen neuen Aldrimar-Clan die vorhandenen Aldrimar-Clanwappen heranziehen (lokale Bilder unter `Stammbäume/assets/images/houses/Aldrimar`). Zuerst konkrete Vorschläge für Symbol, Farben, Rahmenmaterial und Verzierungen machen, danach den gewählten Entwurf gemeinsam erstellen. Das vollständige Wappen frontal und mittig bei ungefähr 85–90 % Bildbreite zeigen. Ausschließlich außerhalb der äußersten Kontur Alpha = 0; die gesamte Fläche innerhalb des Rahmens einschließlich aller Zwischenräume bleibt deckend (Alpha = 255). Keine äußeren Schatten, Glows, überstehenden Elemente oder transparenten Innenlöcher. Eigenständige Wappen verwenden diesen Stil; Ausrüstungsschilde bleiben im Inventarstil.
 
 **Kulturelles Ausrüstungsdesign (Klarstellung vom 24. Oktober 2026):** Die neue Freigabe betrifft den künstlerischen Stil. Rüstung, Helm, Waffen und Kleidung folgen unabhängig davon Kultur, Beruf und Hausgeschichte. Venalysisch geprägte Häuser wie Cymrath kombinieren Ritter-, Legionärs- und byzantinische Lamellenrüstung mit geschlossenen legionärsartigen Helmen. Die westliche Plattenrüstung des freigegebenen Referenzritters ist keine allgemeine Designvorgabe.
+
+**Vorhandene Hausdarstellungen zuerst (weitere Klarstellung vom 24. Oktober 2026):**
+Liegt einer Hausvorlage bereits eine passende Rüstung oder Darstellung bei, diese
+direkt für das jeweilige Haus übernehmen. Das gilt ausdrücklich für Fiachraoin.
+Solche Originale erhalten und lokal einbinden; neue Darstellungen nur für fehlende
+Motive ergänzen. Der aktuelle Zeichenstil gilt für diese neu erzeugten Ergänzungen.
 
 Die fünf Stilrichtungen nach Verwendungszweck getrennt verwenden. Vorhandene Figurenporträts und
 Wappen als Motivreferenzen berücksichtigen. Ausdrückliche Vorgaben des aktuellen

@@ -51,9 +51,12 @@ export const WORLD_CONTENT_TASKS = [
   {
     id: 'events-calendar', label: 'Event pages, battles and calendar integration',
     inputs: ['Ereignisse/', 'AleriaAlmanach/modules/calendar/',
+      'shared/coastal-history/', 'Piraterie/', 'Fraktionen/data/dunkle-gilden.json',
+      'Archiv/Quellen/kuestenchroniken-2026-10-24/',
+      'AleriaAlmanach/modules/piracy/', 'IconOrdner/ReiterIcons/Piraterie.svg', 'IconOrdner/ReiterIcons/Piratenbanden.svg',
       'AleriaAlmanach/modules/core/aleria-calendar.js', 'AleriaAlmanach/tests/calendar-events.test.mjs'],
-    commands: ['events', 'weddings', 'battles', 'praetendenten'].map(name => ['Ereignisse/scripts/build-' + name + '.mjs', '--check'])
-      .concat([tests('Ereignisse/tests'), ['--test', '--experimental-test-isolation=none', 'AleriaAlmanach/tests/calendar-events.test.mjs']])
+    commands: ['events', 'weddings', 'battles', 'praetendenten', 'coastal-history'].map(name => ['Ereignisse/scripts/build-' + name + '.mjs', '--check'])
+      .concat([['Fraktionen/scripts/build-factions.mjs', '--check'], tests('Fraktionen/tests'), tests('Ereignisse/tests'), ['--test', '--experimental-test-isolation=none', 'AleriaAlmanach/tests/calendar-events.test.mjs']])
   },
   {
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',

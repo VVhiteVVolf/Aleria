@@ -1,0 +1,176 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "10-rothirsch",
+      "file": "10-rothirsch-v1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a170fe-2da7-7561-b3f8-e75e0fd0d49e\\exec-ffe971dd-d828-47f1-b4c1-9df09a9786a8.png",
+      "sourceSha256": "c9d0752fad623455b09f5bc6f12ae8a6c35307d0958f759390139ed74b8250ce",
+      "finalSha256": "7c94edf5b985491c72229e482fd32782a6a6fd8c049aa57d619f499d42386fb9",
+      "size": [
+        1402,
+        1402
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "silhouetteBounds": [
+        85,
+        92,
+        1318,
+        1311
+      ],
+      "occupiedWidth": 0.8795,
+      "occupiedHeight": 0.8695,
+      "rgbPreservedWithoutRescaling": true,
+      "originalPreserved": true,
+      "opaqueInteriorVerified": true,
+      "transparentOuterMarginVerified": true,
+      "postprocess": {
+        "existingHelper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+        "operations": [
+          "normalize alpha only",
+          "add transparent outer margin"
+        ],
+        "offset": [
+          78,
+          84
+        ]
+      },
+      "alphaCleanup": {
+        "file": "output\\heraldry\\2026-10-25-waldtiere\\10-rothirsch-v1.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaValues": [
+          0,
+          255
+        ],
+        "opaquePixels": 1178690,
+        "silhouetteBounds": [
+          7,
+          8,
+          1240,
+          1227
+        ],
+        "rgbUnchanged": true
+      }
+    },
+    {
+      "id": "09-wildschwein",
+      "file": "09-wildschwein-v1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a170fe-2da7-7561-b3f8-e75e0fd0d49e\\exec-c3583cb4-65af-4a1c-8365-219af2dbdfce.png",
+      "sourceSha256": "ebdc3268bdb2ff7796f083729bd3a1e2f8d39c7ab8fff9bb455b0aeea2f5d2bf",
+      "finalSha256": "472a4348a18d53af6660b5b33703e55a3fd44fc4664b6fd82fae60b65dff7734",
+      "size": [
+        1420,
+        1420
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "silhouetteBounds": [
+        85,
+        92,
+        1334,
+        1328
+      ],
+      "occupiedWidth": 0.8796,
+      "occupiedHeight": 0.8704,
+      "rgbPreservedWithoutRescaling": true,
+      "originalPreserved": true,
+      "opaqueInteriorVerified": true,
+      "transparentOuterMarginVerified": true,
+      "postprocess": {
+        "existingHelper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+        "operations": [
+          "normalize alpha only",
+          "add transparent outer margin"
+        ],
+        "offset": [
+          84,
+          90
+        ]
+      },
+      "alphaCleanup": {
+        "file": "output\\heraldry\\2026-10-25-waldtiere\\09-wildschwein-v1.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaValues": [
+          0,
+          255
+        ],
+        "opaquePixels": 1205538,
+        "silhouetteBounds": [
+          1,
+          2,
+          1250,
+          1238
+        ],
+        "rgbUnchanged": true
+      }
+    },
+    {
+      "id": "07-wildkatze",
+      "file": "07-wildkatze-v1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a170fe-2da7-7561-b3f8-e75e0fd0d49e\\exec-95aa410e-7865-40f7-97dd-85bfa2334781.png",
+      "sourceSha256": "142ba6e4b467015399e8d0a3620e3fa61ffc8e1cef89de4beb131235d0bde958",
+      "finalSha256": "813bdb1d54752e7125ee1807bdb9be31edf5720e29ce272e188716ebf705a997",
+      "size": [
+        1418,
+        1418
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "silhouetteBounds": [
+        85,
+        91,
+        1332,
+        1327
+      ],
+      "occupiedWidth": 0.8794,
+      "occupiedHeight": 0.8717,
+      "rgbPreservedWithoutRescaling": true,
+      "originalPreserved": true,
+      "opaqueInteriorVerified": true,
+      "transparentOuterMarginVerified": true,
+      "postprocess": {
+        "existingHelper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+        "operations": [
+          "normalize alpha only",
+          "add transparent outer margin"
+        ],
+        "offset": [
+          82,
+          89
+        ]
+      },
+      "alphaCleanup": {
+        "file": "output\\heraldry\\2026-10-25-waldtiere\\07-wildkatze-v1.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaValues": [
+          0,
+          255
+        ],
+        "opaquePixels": 1203991,
+        "silhouetteBounds": [
+          3,
+          2,
+          1250,
+          1238
+        ],
+        "rgbUnchanged": true
+      }
+    }
+  ]
+}

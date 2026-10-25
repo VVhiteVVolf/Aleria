@@ -1,0 +1,231 @@
+{
+  "createdDate": "2026-10-25",
+  "tool": "built-in image_gen",
+  "preset": "fantasy-heraldic-emblem",
+  "status": "complete",
+  "selectedNumbers": [
+    10,
+    9,
+    7
+  ],
+  "references": [
+    {
+      "house": "Ua Fiaintorc",
+      "path": "E:/Aleria/Stammbäume/assets/images/houses/Aislearneach/clan-ua-fiaintorc.png"
+    },
+    {
+      "house": "Tir An Durachd",
+      "path": "E:/Aleria/Stammbäume/assets/images/houses/Faelaorn/clan-durachd.png"
+    },
+    {
+      "house": "Nic Luachra",
+      "path": "E:/Aleria/Stammbäume/assets/images/houses/Uathneach/luachra.webp"
+    }
+  ],
+  "images": [
+    {
+      "number": 10,
+      "id": "10-rothirsch",
+      "name": "Ruhender Rothirsch",
+      "symbol": "Ein einziger erwachsener Rothirsch als silbernes heraldisches Ganzkoerpertier, ruhig lagernd mit untergeschlagenen Beinen und erhobenem aufmerksamen Kopf. Das prachtvolle verzweigte Geweih ist vollstaendig sichtbar und bleibt mit deutlichem Abstand innerhalb des Rahmens. Klare elegante Silhouette, kein einzelner Hirschkopf. Der Hirsch und sein Geweih sind silbern auf einer durchgaengig dunkelblau bemalten Holzflaeche, der Ring ist aus altem Gold. Keine Landschaft, Baeume, Bodenflaeche oder weitere Tiere.",
+      "palette": [
+        "Silber",
+        "Dunkelblau",
+        "Gold"
+      ],
+      "frame": "altem Gold",
+      "ornament": "Schmales stilisiertes Eichenlaub gleichmaessig im geschlossenen goldenen Aussenring, alles vollstaendig innerhalb der Kreisform. Keine Schrift, Runen, Kronen, Buchstaben oder Wappenhalter.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Ruhender Rothirsch\n\n**Zentrales Symbol:** Ein einziger erwachsener Rothirsch als silbernes heraldisches Ganzkoerpertier, ruhig lagernd mit untergeschlagenen Beinen und erhobenem aufmerksamen Kopf. Das prachtvolle verzweigte Geweih ist vollstaendig sichtbar und bleibt mit deutlichem Abstand innerhalb des Rahmens. Klare elegante Silhouette, kein einzelner Hirschkopf. Der Hirsch und sein Geweih sind silbern auf einer durchgaengig dunkelblau bemalten Holzflaeche, der Ring ist aus altem Gold. Keine Landschaft, Baeume, Bodenflaeche oder weitere Tiere.\n\n**Farbpalette:** Silber · Dunkelblau · Gold\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus altem Gold mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchmales stilisiertes Eichenlaub gleichmaessig im geschlossenen goldenen Aussenring, alles vollstaendig innerhalb der Kreisform. Keine Schrift, Runen, Kronen, Buchstaben oder Wappenhalter.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nErgaenzende Ausfuehrung: Genau EIN fertiges Wappen, keine Auswahltafel und keine Beschriftung. Die beigefuegten Bestandswappen dienen ausschliesslich als Stilreferenz fuer die klare heraldische Silhouette, bemalte Holzmaterialitaet und ringfoermige Ornamentik. Ihre Tiermotive, Hauszeichen und fehlerhaften Aussenhintergruende nicht kopieren. Das neu gewaehlte Motiv und die oben festgelegten Farben sind verbindlich. Ansicht exakt frontal und die Aussenkontur exakt kreisrund ohne perspektivische Verkuerzung. Ziel: hochaufloesendes quadratisches PNG mit wirklich transparentem Aussenbereich und lueckenlos deckendem Inneren.",
+      "file": "10-rothirsch-v1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a170fe-2da7-7561-b3f8-e75e0fd0d49e\\exec-ffe971dd-d828-47f1-b4c1-9df09a9786a8.png",
+      "sourceSha256": "c9d0752fad623455b09f5bc6f12ae8a6c35307d0958f759390139ed74b8250ce",
+      "finalSha256": "7c94edf5b985491c72229e482fd32782a6a6fd8c049aa57d619f499d42386fb9",
+      "size": [
+        1402,
+        1402
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "silhouetteBounds": [
+        85,
+        92,
+        1318,
+        1311
+      ],
+      "occupiedWidth": 0.8795,
+      "occupiedHeight": 0.8695,
+      "rgbPreservedWithoutRescaling": true,
+      "originalPreserved": true,
+      "opaqueInteriorVerified": true,
+      "transparentOuterMarginVerified": true,
+      "postprocess": {
+        "existingHelper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+        "operations": [
+          "normalize alpha only",
+          "add transparent outer margin"
+        ],
+        "offset": [
+          78,
+          84
+        ]
+      },
+      "alphaCleanup": {
+        "file": "output\\heraldry\\2026-10-25-waldtiere\\10-rothirsch-v1.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaValues": [
+          0,
+          255
+        ],
+        "opaquePixels": 1178690,
+        "silhouetteBounds": [
+          7,
+          8,
+          1240,
+          1227
+        ],
+        "rgbUnchanged": true
+      }
+    },
+    {
+      "number": 9,
+      "id": "09-wildschwein",
+      "name": "Wachsames Wildschwein",
+      "symbol": "Ein einziges kraeftiges Wildschwein als schwarzes heraldisches Ganzkoerpertier im Profil, auf allen vier Laeufen stehend, den Kopf deutlich gesenkt und leicht zum Betrachter gewendet. Beide hellgoldenen Hauer sind klar sichtbar; die borstigen Konturen bleiben markant und gut lesbar. Schwarzes Tier mit dezenten roten Akzenten an Zunge und Auge auf einer durchgaengig goldocker bemalten Holzflaeche. Der schwere Eisenring hat wenige flache regelmaessig angeordnete Nieten. Keine Landschaft, Bodenflaeche, Pflanzen oder weiteren Tiere.",
+      "palette": [
+        "Schwarz",
+        "Gold",
+        "Rot"
+      ],
+      "frame": "dunklem Eisen",
+      "ornament": "Nur wenige schlichte flache Eisennieten gleichmaessig im geschlossenen schweren Eisenring. Keine Schrift, Runen, Buchstaben, Kronen oder Wappenhalter.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Wachsames Wildschwein\n\n**Zentrales Symbol:** Ein einziges kraeftiges Wildschwein als schwarzes heraldisches Ganzkoerpertier im Profil, auf allen vier Laeufen stehend, den Kopf deutlich gesenkt und leicht zum Betrachter gewendet. Beide hellgoldenen Hauer sind klar sichtbar; die borstigen Konturen bleiben markant und gut lesbar. Schwarzes Tier mit dezenten roten Akzenten an Zunge und Auge auf einer durchgaengig goldocker bemalten Holzflaeche. Der schwere Eisenring hat wenige flache regelmaessig angeordnete Nieten. Keine Landschaft, Bodenflaeche, Pflanzen oder weiteren Tiere.\n\n**Farbpalette:** Schwarz · Gold · Rot\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nNur wenige schlichte flache Eisennieten gleichmaessig im geschlossenen schweren Eisenring. Keine Schrift, Runen, Buchstaben, Kronen oder Wappenhalter.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nErgaenzende Ausfuehrung: Genau EIN fertiges Wappen, keine Auswahltafel und keine Beschriftung. Die beigefuegten Bestandswappen dienen ausschliesslich als Stilreferenz fuer die klare heraldische Silhouette, bemalte Holzmaterialitaet und ringfoermige Ornamentik. Ihre Tiermotive, Hauszeichen und fehlerhaften Aussenhintergruende nicht kopieren. Das neu gewaehlte Motiv und die oben festgelegten Farben sind verbindlich. Ansicht exakt frontal und die Aussenkontur exakt kreisrund ohne perspektivische Verkuerzung. Ziel: hochaufloesendes quadratisches PNG mit wirklich transparentem Aussenbereich und lueckenlos deckendem Inneren.",
+      "file": "09-wildschwein-v1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a170fe-2da7-7561-b3f8-e75e0fd0d49e\\exec-c3583cb4-65af-4a1c-8365-219af2dbdfce.png",
+      "sourceSha256": "ebdc3268bdb2ff7796f083729bd3a1e2f8d39c7ab8fff9bb455b0aeea2f5d2bf",
+      "finalSha256": "472a4348a18d53af6660b5b33703e55a3fd44fc4664b6fd82fae60b65dff7734",
+      "size": [
+        1420,
+        1420
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "silhouetteBounds": [
+        85,
+        92,
+        1334,
+        1328
+      ],
+      "occupiedWidth": 0.8796,
+      "occupiedHeight": 0.8704,
+      "rgbPreservedWithoutRescaling": true,
+      "originalPreserved": true,
+      "opaqueInteriorVerified": true,
+      "transparentOuterMarginVerified": true,
+      "postprocess": {
+        "existingHelper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+        "operations": [
+          "normalize alpha only",
+          "add transparent outer margin"
+        ],
+        "offset": [
+          84,
+          90
+        ]
+      },
+      "alphaCleanup": {
+        "file": "output\\heraldry\\2026-10-25-waldtiere\\09-wildschwein-v1.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaValues": [
+          0,
+          255
+        ],
+        "opaquePixels": 1205538,
+        "silhouetteBounds": [
+          1,
+          2,
+          1250,
+          1238
+        ],
+        "rgbUnchanged": true
+      }
+    },
+    {
+      "number": 7,
+      "id": "07-wildkatze",
+      "name": "Wachsame Wildkatze",
+      "symbol": "Eine einzige europaeische Wildkatze als silbergraues heraldisches Ganzkoerpertier mit deutlich schwarzen Fellstreifen, geduckt und aufmerksam schleichend, kraftvoller kompakter Koerper, kurze runde Ohren ohne Luchspinsel. Der dicke stumpf endende Schwanz zeigt breite schwarze Ringe und eine schwarze Spitze und ist gut sichtbar nach oben gebogen. Erkennbar eine europaeische Waldwildkatze, kein Luchs, Leopard oder Hauskaetzchen. Das Tier liegt als klares heraldisches Motiv auf einer durchgaengig dunkelroten Holzflaeche. Keine Landschaft, Pflanzen, Bodenflaeche oder weiteren Tiere.",
+      "palette": [
+        "Silbergrau",
+        "Schwarz",
+        "Dunkelrot"
+      ],
+      "frame": "dunklem Eisen",
+      "ornament": "Schmale stilisierte Dornenranken als gravierte Verzierung innerhalb des geschlossenen Eisenrings. Die Dornen ragen nicht ueber den exakten Kreis hinaus. Keine Schrift, Runen, Buchstaben, Kronen oder Wappenhalter.",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Wachsame Wildkatze\n\n**Zentrales Symbol:** Eine einzige europaeische Wildkatze als silbergraues heraldisches Ganzkoerpertier mit deutlich schwarzen Fellstreifen, geduckt und aufmerksam schleichend, kraftvoller kompakter Koerper, kurze runde Ohren ohne Luchspinsel. Der dicke stumpf endende Schwanz zeigt breite schwarze Ringe und eine schwarze Spitze und ist gut sichtbar nach oben gebogen. Erkennbar eine europaeische Waldwildkatze, kein Luchs, Leopard oder Hauskaetzchen. Das Tier liegt als klares heraldisches Motiv auf einer durchgaengig dunkelroten Holzflaeche. Keine Landschaft, Pflanzen, Bodenflaeche oder weiteren Tiere.\n\n**Farbpalette:** Silbergrau · Schwarz · Dunkelrot\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchmale stilisierte Dornenranken als gravierte Verzierung innerhalb des geschlossenen Eisenrings. Die Dornen ragen nicht ueber den exakten Kreis hinaus. Keine Schrift, Runen, Buchstaben, Kronen oder Wappenhalter.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nErgaenzende Ausfuehrung: Genau EIN fertiges Wappen, keine Auswahltafel und keine Beschriftung. Die beigefuegten Bestandswappen dienen ausschliesslich als Stilreferenz fuer die klare heraldische Silhouette, bemalte Holzmaterialitaet und ringfoermige Ornamentik. Ihre Tiermotive, Hauszeichen und fehlerhaften Aussenhintergruende nicht kopieren. Das neu gewaehlte Motiv und die oben festgelegten Farben sind verbindlich. Ansicht exakt frontal und die Aussenkontur exakt kreisrund ohne perspektivische Verkuerzung. Ziel: hochaufloesendes quadratisches PNG mit wirklich transparentem Aussenbereich und lueckenlos deckendem Inneren.",
+      "file": "07-wildkatze-v1.png",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a170fe-2da7-7561-b3f8-e75e0fd0d49e\\exec-95aa410e-7865-40f7-97dd-85bfa2334781.png",
+      "sourceSha256": "142ba6e4b467015399e8d0a3620e3fa61ffc8e1cef89de4beb131235d0bde958",
+      "finalSha256": "813bdb1d54752e7125ee1807bdb9be31edf5720e29ce272e188716ebf705a997",
+      "size": [
+        1418,
+        1418
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "silhouetteBounds": [
+        85,
+        91,
+        1332,
+        1327
+      ],
+      "occupiedWidth": 0.8794,
+      "occupiedHeight": 0.8717,
+      "rgbPreservedWithoutRescaling": true,
+      "originalPreserved": true,
+      "opaqueInteriorVerified": true,
+      "transparentOuterMarginVerified": true,
+      "postprocess": {
+        "existingHelper": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+        "operations": [
+          "normalize alpha only",
+          "add transparent outer margin"
+        ],
+        "offset": [
+          82,
+          89
+        ]
+      },
+      "alphaCleanup": {
+        "file": "output\\heraldry\\2026-10-25-waldtiere\\07-wildkatze-v1.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "alphaValues": [
+          0,
+          255
+        ],
+        "opaquePixels": 1203991,
+        "silhouetteBounds": [
+          3,
+          2,
+          1250,
+          1238
+        ],
+        "rgbUnchanged": true
+      }
+    }
+  ]
+}

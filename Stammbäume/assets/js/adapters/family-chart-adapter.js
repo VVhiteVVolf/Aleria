@@ -1339,6 +1339,10 @@ export function createFamilyChartSession(config) {
       alignPersonAppearances: true
     });
     container.dataset.layoutCollisionCount = String(layout.spacingGuard.remainingCollisions.length);
+    container.dataset.layoutBranchCompactionCount = String(layout.branchCompaction.resolutions.length);
+    container.dataset.layoutBranchCompactionDistanceSaved = String(layout.branchCompaction.resolutions.reduce(
+      (total, resolution) => total + resolution.distanceBefore - resolution.distanceAfter, 0
+    ));
     container.dataset.layoutSpacingScale = String(layout.spacingGuard.scale);
     container.dataset.layoutLocalResolutionCount = String(
       layout.spacingGuard.localResolutions.length

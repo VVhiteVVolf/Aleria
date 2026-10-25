@@ -295,9 +295,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-airdmhor",
       "haus-wemyss",
       "haus-urquhart",
+      "haus-stwatchn",
       "haus-bhaird",
       "haus-luthsach",
-      "haus-stwatchn",
       "haus-lachlann",
       "haus-drummond",
       "haus-dundas",
@@ -324,10 +324,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-buadhtreun",
       "haus-muirgheal",
       "haus-boyd",
-      "haus-elid",
       "haus-agnew",
       "haus-dianaomh",
       "haus-dobhar",
+      "haus-elid",
       "haus-oglivy",
       "haus-wolfshorn",
       "haus-vangandr",
@@ -494,19 +494,19 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-tir-an-tordarroch",
       "haus-an-bhaird",
       "haus-ronain",
-      "haus-suiste",
-      "haus-gairner",
       "haus-cleirigh",
       "haus-abhrach",
+      "haus-suiste",
+      "haus-gairner",
       "haus-nessa",
       "haus-goidin",
       "haus-haeghra",
       "haus-magach",
       "haus-eala",
+      "haus-mac-ard-cumhaill",
       "haus-ua-eirce",
       "haus-fiachrach",
       "haus-ruin-ua-laoch",
-      "haus-mac-ard-cumhaill",
       "haus-ua-gaelach",
       "haus-gallchobhair",
       "haus-cleir",
@@ -516,9 +516,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-gruenhand",
       "haus-dal-cruthin",
       "haus-suileach",
+      "haus-frisealach",
       "haus-ard-trodach",
       "haus-nic-caoimhe",
-      "haus-frisealach",
       "haus-iomrach",
       "haus-fir-an-tarvo",
       "haus-ruitheach",
@@ -526,11 +526,11 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-mac-airt",
       "haus-choinnich",
       "haus-nic-blar-leitheach",
-      "haus-dal-t-saor",
       "haus-laidir",
+      "haus-dal-t-saor",
       "haus-tir-an-cuinn",
-      "haus-amrhan",
       "haus-airgid",
+      "haus-amrhan",
       "haus-chulainn",
       "haus-ailella",
       "haus-cein",
@@ -538,12 +538,12 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-morath",
       "haus-duilb",
       "haus-nuadat",
-      "sept-ferbend",
       "haus-anbhair",
       "haus-casur",
       "haus-aonghusa",
       "haus-riangabra",
       "haus-eachtrai",
+      "sept-ferbend",
       "haus-morna",
       "haus-coronach",
       "haus-morgacht",
@@ -564,10 +564,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-cnogan",
       "sept-techtmar",
       "haus-laga",
+      "haus-fastaigh",
       "haus-briccne",
       "haus-arbhair",
       "haus-scathain",
-      "haus-fastaigh",
       "haus-muirin",
       "haus-siubhran",
       "haus-gealan",
@@ -585,10 +585,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-suilgeach",
       "haus-creagan",
       "haus-luga",
-      "haus-marcaigh",
-      "haus-giolla",
       "haus-lasgair",
       "haus-clannmhar",
+      "haus-marcaigh",
+      "haus-giolla",
       "haus-veltrane",
       "haus-bielle",
       "haus-desele",
@@ -3861,7 +3861,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "path": [
       "Faelaorn"
     ],
-    "image": "/AleriaAlmanach/public/assets/regional-equipment/heraldry/faelaorn.png",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/faelaorn.png",
     "countryId": "faelaorn",
     "regionId": "",
     "children": [
@@ -3879,9 +3879,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-airdmhor",
       "haus-wemyss",
       "haus-urquhart",
+      "haus-stwatchn",
       "haus-bhaird",
       "haus-luthsach",
-      "haus-stwatchn",
       "haus-lachlann",
       "haus-drummond",
       "haus-dundas",
@@ -3908,10 +3908,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-buadhtreun",
       "haus-muirgheal",
       "haus-boyd",
-      "haus-elid",
       "haus-agnew",
       "haus-dianaomh",
       "haus-dobhar",
+      "haus-elid",
       "haus-oglivy"
     ]
   },
@@ -3923,15 +3923,15 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "Faelaorn",
       "Tir na Brann"
     ],
-    "image": "/AleriaAlmanach/public/assets/regional-equipment/heraldry/tir-na-brann.png",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/tir-na-brann.png",
     "countryId": "faelaorn",
     "regionId": "tir-na-brann",
     "children": [
       "faelaorn/tir-na-brann/tir-na-fuil",
       "faelaorn/tir-na-brann/sgurrfail",
-      "faelaorn/tir-na-brann/glenmohr",
-      "faelaorn/tir-na-brann/carnascal",
-      "faelaorn/tir-na-brann/drumrath"
+      "faelaorn/tir-na-brann/tir-na-ninbhear",
+      "faelaorn/tir-na-brann/tir-na-sceire",
+      "faelaorn/tir-na-brann/tir-na-gcreag"
     ],
     "houseIds": [
       "haus-dubhan",
@@ -3950,7 +3950,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "Tir na Brann",
       "Tir na Fuil"
     ],
-    "image": "",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dubhan.svg",
     "countryId": "faelaorn",
     "regionId": "tir-na-brann",
     "children": [
@@ -3996,12 +3996,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-brann/glenmohr",
+    "id": "faelaorn/tir-na-brann/tir-na-ninbhear",
     "parentId": "faelaorn/tir-na-brann",
+    "name": "Tir na nInbhear",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Tir na nInbhear"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-cerneige.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [
+      "faelaorn/tir-na-brann/tir-na-ninbhear/glenmohr"
+    ],
+    "houseIds": [
+      "haus-cerneige"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/tir-na-ninbhear/glenmohr",
+    "parentId": "faelaorn/tir-na-brann/tir-na-ninbhear",
     "name": "Glenmohr",
     "path": [
       "Faelaorn",
       "Tir na Brann",
+      "Tir na nInbhear",
       "Glenmohr"
     ],
     "image": "",
@@ -4013,12 +4033,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-brann/carnascal",
+    "id": "faelaorn/tir-na-brann/tir-na-sceire",
     "parentId": "faelaorn/tir-na-brann",
+    "name": "Tir na Sceire",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Tir na Sceire"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-airdmhor.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [
+      "faelaorn/tir-na-brann/tir-na-sceire/carnascal"
+    ],
+    "houseIds": [
+      "haus-airdmhor"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/tir-na-sceire/carnascal",
+    "parentId": "faelaorn/tir-na-brann/tir-na-sceire",
     "name": "Carnascal",
     "path": [
       "Faelaorn",
       "Tir na Brann",
+      "Tir na Sceire",
       "Carnascal"
     ],
     "image": "",
@@ -4030,12 +4070,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-brann/drumrath",
+    "id": "faelaorn/tir-na-brann/tir-na-gcreag",
     "parentId": "faelaorn/tir-na-brann",
+    "name": "Tir na gCreag",
+    "path": [
+      "Faelaorn",
+      "Tir na Brann",
+      "Tir na gCreag"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-wemyss.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-brann",
+    "children": [
+      "faelaorn/tir-na-brann/tir-na-gcreag/drumrath"
+    ],
+    "houseIds": [
+      "haus-wemyss"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-brann/tir-na-gcreag/drumrath",
+    "parentId": "faelaorn/tir-na-brann/tir-na-gcreag",
     "name": "Drumrath",
     "path": [
       "Faelaorn",
       "Tir na Brann",
+      "Tir na gCreag",
       "Drumrath"
     ],
     "image": "",
@@ -4059,18 +4119,20 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-rann",
     "children": [
       "faelaorn/tir-na-rann/piobarach",
-      "faelaorn/tir-na-rann/invercalda",
-      "faelaorn/tir-na-rann/dun-liath",
-      "faelaorn/tir-na-rann/dun-grealach",
-      "faelaorn/tir-na-rann/dun-foirgneamh",
-      "faelaorn/tir-na-rann/caer-fionnach",
+      "faelaorn/tir-na-rann/tir-na-sionnach",
+      "faelaorn/tir-na-rann/herrschaft-der-bhaird",
+      "faelaorn/tir-na-rann/herrschaft-der-luthsach",
+      "faelaorn/tir-na-rann/tir-na-sciath",
+      "faelaorn/tir-na-rann/tir-na-sceiche",
+      "faelaorn/tir-na-rann/tir-na-gcat",
+      "faelaorn/tir-na-rann/tir-na-niarsmai",
       "faelaorn/tir-na-rann/clans-im-asyl"
     ],
     "houseIds": [
       "haus-urquhart",
+      "haus-stwatchn",
       "haus-bhaird",
       "haus-luthsach",
-      "haus-stwatchn",
       "haus-lachlann",
       "haus-drummond",
       "haus-dundas",
@@ -4093,18 +4155,36 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-rann",
     "children": [],
     "houseIds": [
-      "haus-urquhart",
-      "haus-bhaird",
-      "haus-luthsach"
+      "haus-urquhart"
     ]
   },
   {
-    "id": "faelaorn/tir-na-rann/invercalda",
+    "id": "faelaorn/tir-na-rann/tir-na-sionnach",
     "parentId": "faelaorn/tir-na-rann",
+    "name": "Tir na Sionnach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Tir na Sionnach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-stwatchn.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/tir-na-sionnach/invercalda"
+    ],
+    "houseIds": [
+      "haus-stwatchn"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/tir-na-sionnach/invercalda",
+    "parentId": "faelaorn/tir-na-rann/tir-na-sionnach",
     "name": "Invercalda",
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na Sionnach",
       "Invercalda"
     ],
     "image": "",
@@ -4116,12 +4196,106 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-rann/dun-liath",
+    "id": "faelaorn/tir-na-rann/herrschaft-der-bhaird",
     "parentId": "faelaorn/tir-na-rann",
+    "name": "Herrschaft der Bhaird",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Herrschaft der Bhaird"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-bhaird.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/herrschaft-der-bhaird/piobarach"
+    ],
+    "houseIds": [
+      "haus-bhaird"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/herrschaft-der-bhaird/piobarach",
+    "parentId": "faelaorn/tir-na-rann/herrschaft-der-bhaird",
+    "name": "Piobarach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Herrschaft der Bhaird",
+      "Piobarach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-bhaird"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/herrschaft-der-luthsach",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Herrschaft der Luthsach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Herrschaft der Luthsach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-luthsach.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/herrschaft-der-luthsach/piobarach"
+    ],
+    "houseIds": [
+      "haus-luthsach"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/herrschaft-der-luthsach/piobarach",
+    "parentId": "faelaorn/tir-na-rann/herrschaft-der-luthsach",
+    "name": "Piobarach",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Herrschaft der Luthsach",
+      "Piobarach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [],
+    "houseIds": [
+      "haus-luthsach"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/tir-na-sciath",
+    "parentId": "faelaorn/tir-na-rann",
+    "name": "Tir na Sciath",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Tir na Sciath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lachlann.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/tir-na-sciath/dun-liath"
+    ],
+    "houseIds": [
+      "haus-lachlann"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/tir-na-sciath/dun-liath",
+    "parentId": "faelaorn/tir-na-rann/tir-na-sciath",
     "name": "Dun Liath",
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na Sciath",
       "Dun Liath"
     ],
     "image": "",
@@ -4133,12 +4307,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-rann/dun-grealach",
+    "id": "faelaorn/tir-na-rann/tir-na-sceiche",
     "parentId": "faelaorn/tir-na-rann",
+    "name": "Tir na Sceiche",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Tir na Sceiche"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-drummond.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/tir-na-sceiche/dun-grealach"
+    ],
+    "houseIds": [
+      "haus-drummond"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/tir-na-sceiche/dun-grealach",
+    "parentId": "faelaorn/tir-na-rann/tir-na-sceiche",
     "name": "Dun Grealach",
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na Sceiche",
       "Dun Grealach"
     ],
     "image": "",
@@ -4150,12 +4344,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-rann/dun-foirgneamh",
+    "id": "faelaorn/tir-na-rann/tir-na-gcat",
     "parentId": "faelaorn/tir-na-rann",
+    "name": "Tir na gCat",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Tir na gCat"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dundas.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/tir-na-gcat/dun-foirgneamh"
+    ],
+    "houseIds": [
+      "haus-dundas"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/tir-na-gcat/dun-foirgneamh",
+    "parentId": "faelaorn/tir-na-rann/tir-na-gcat",
     "name": "Dun Foirgneamh",
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na gCat",
       "Dun Foirgneamh"
     ],
     "image": "",
@@ -4167,12 +4381,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-rann/caer-fionnach",
+    "id": "faelaorn/tir-na-rann/tir-na-niarsmai",
     "parentId": "faelaorn/tir-na-rann",
+    "name": "Tir na nIarsmaí",
+    "path": [
+      "Faelaorn",
+      "Tir na Rann",
+      "Tir na nIarsmaí"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ffearnach.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-rann",
+    "children": [
+      "faelaorn/tir-na-rann/tir-na-niarsmai/caer-fionnach"
+    ],
+    "houseIds": [
+      "haus-ffearnach"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-rann/tir-na-niarsmai/caer-fionnach",
+    "parentId": "faelaorn/tir-na-rann/tir-na-niarsmai",
     "name": "Caer Fionnach",
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na nIarsmaí",
       "Caer Fionnach"
     ],
     "image": "",
@@ -4214,11 +4448,11 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-mathgham",
     "children": [
       "faelaorn/tir-na-mathgham/balgavrie",
-      "faelaorn/tir-na-mathgham/cnosbubh",
-      "faelaorn/tir-na-mathgham/lochcaeron",
-      "faelaorn/tir-na-mathgham/glenshear",
-      "faelaorn/tir-na-mathgham/tur-na-fala",
-      "faelaorn/tir-na-mathgham/caisteal-gorm",
+      "faelaorn/tir-na-mathgham/tir-na-mbroc",
+      "faelaorn/tir-na-mathgham/tir-na-reithi",
+      "faelaorn/tir-na-mathgham/tir-na-gclaimhte",
+      "faelaorn/tir-na-mathgham/tir-na-mac-tire",
+      "faelaorn/tir-na-mathgham/tir-na-giuise",
       "faelaorn/tir-na-mathgham/clans-im-asyl",
       "faelaorn/tir-na-mathgham/exklaven"
     ],
@@ -4252,12 +4486,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-mathgham/cnosbubh",
+    "id": "faelaorn/tir-na-mathgham/tir-na-mbroc",
     "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Tir na mBroc",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tir na mBroc"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-lockart.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/tir-na-mbroc/cnosbubh"
+    ],
+    "houseIds": [
+      "haus-lockart"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/tir-na-mbroc/cnosbubh",
+    "parentId": "faelaorn/tir-na-mathgham/tir-na-mbroc",
     "name": "Cnosbubh",
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na mBroc",
       "Cnosbubh"
     ],
     "image": "",
@@ -4269,12 +4523,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-mathgham/lochcaeron",
+    "id": "faelaorn/tir-na-mathgham/tir-na-reithi",
     "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Tir na Reithí",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tir na Reithí"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-fiorghra.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/tir-na-reithi/lochcaeron"
+    ],
+    "houseIds": [
+      "haus-fiorghra"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/tir-na-reithi/lochcaeron",
+    "parentId": "faelaorn/tir-na-mathgham/tir-na-reithi",
     "name": "Lochcaeron",
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na Reithí",
       "Lochcaeron"
     ],
     "image": "",
@@ -4286,12 +4560,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-mathgham/glenshear",
+    "id": "faelaorn/tir-na-mathgham/tir-na-gclaimhte",
     "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Tir na gClaímhte",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tir na gClaímhte"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-ness.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/tir-na-gclaimhte/glenshear"
+    ],
+    "houseIds": [
+      "haus-ness"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/tir-na-gclaimhte/glenshear",
+    "parentId": "faelaorn/tir-na-mathgham/tir-na-gclaimhte",
     "name": "Glenshear",
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na gClaímhte",
       "Glenshear"
     ],
     "image": "",
@@ -4303,12 +4597,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-mathgham/tur-na-fala",
+    "id": "faelaorn/tir-na-mathgham/tir-na-mac-tire",
     "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Tir na Mac Tíre",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tir na Mac Tíre"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-haig.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/tir-na-mac-tire/tur-na-fala"
+    ],
+    "houseIds": [
+      "haus-haig"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/tir-na-mac-tire/tur-na-fala",
+    "parentId": "faelaorn/tir-na-mathgham/tir-na-mac-tire",
     "name": "Tur na Fala",
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na Mac Tíre",
       "Tur na Fala"
     ],
     "image": "",
@@ -4320,12 +4634,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-mathgham/caisteal-gorm",
+    "id": "faelaorn/tir-na-mathgham/tir-na-giuise",
     "parentId": "faelaorn/tir-na-mathgham",
+    "name": "Tir na Giúise",
+    "path": [
+      "Faelaorn",
+      "Tir na Mathgham",
+      "Tir na Giúise"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-banlaoch.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-mathgham",
+    "children": [
+      "faelaorn/tir-na-mathgham/tir-na-giuise/caisteal-gorm"
+    ],
+    "houseIds": [
+      "haus-banlaoch"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-mathgham/tir-na-giuise/caisteal-gorm",
+    "parentId": "faelaorn/tir-na-mathgham/tir-na-giuise",
     "name": "Caisteal Gorm",
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na Giúise",
       "Caisteal Gorm"
     ],
     "image": "",
@@ -4443,9 +4777,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-braigh",
     "children": [
       "faelaorn/tir-na-braigh/eldrimuir",
-      "faelaorn/tir-na-braigh/morvay",
-      "faelaorn/tir-na-braigh/garadhain",
-      "faelaorn/tir-na-braigh/dun-uisge"
+      "faelaorn/tir-na-braigh/tir-na-deilfe",
+      "faelaorn/tir-na-braigh/tir-na-lius"
     ],
     "houseIds": [
       "sept-malairt",
@@ -4477,12 +4810,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-braigh/morvay",
+    "id": "faelaorn/tir-na-braigh/tir-na-deilfe",
     "parentId": "faelaorn/tir-na-braigh",
+    "name": "Tir na Deilfe",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Tir na Deilfe"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-borthwick.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [
+      "faelaorn/tir-na-braigh/tir-na-deilfe/morvay"
+    ],
+    "houseIds": [
+      "haus-borthwick"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/tir-na-deilfe/morvay",
+    "parentId": "faelaorn/tir-na-braigh/tir-na-deilfe",
     "name": "Morvay",
     "path": [
       "Faelaorn",
       "Tir na Braigh",
+      "Tir na Deilfe",
       "Morvay"
     ],
     "image": "",
@@ -4494,12 +4847,34 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-braigh/garadhain",
+    "id": "faelaorn/tir-na-braigh/tir-na-lius",
     "parentId": "faelaorn/tir-na-braigh",
+    "name": "Tir na Liús",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Tir na Liús"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-erskine.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [
+      "faelaorn/tir-na-braigh/tir-na-lius/garadhain",
+      "faelaorn/tir-na-braigh/tir-na-lius/tir-na-sliogan"
+    ],
+    "houseIds": [
+      "haus-erskine",
+      "haus-grannd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/tir-na-lius/garadhain",
+    "parentId": "faelaorn/tir-na-braigh/tir-na-lius",
     "name": "Garadhain",
     "path": [
       "Faelaorn",
       "Tir na Braigh",
+      "Tir na Liús",
       "Garadhain"
     ],
     "image": "",
@@ -4511,12 +4886,34 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-braigh/dun-uisge",
-    "parentId": "faelaorn/tir-na-braigh",
+    "id": "faelaorn/tir-na-braigh/tir-na-lius/tir-na-sliogan",
+    "parentId": "faelaorn/tir-na-braigh/tir-na-lius",
+    "name": "Tir na Sliogán",
+    "path": [
+      "Faelaorn",
+      "Tir na Braigh",
+      "Tir na Liús",
+      "Tir na Sliogán"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-grannd.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-braigh",
+    "children": [
+      "faelaorn/tir-na-braigh/tir-na-lius/tir-na-sliogan/dun-uisge"
+    ],
+    "houseIds": [
+      "haus-grannd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-braigh/tir-na-lius/tir-na-sliogan/dun-uisge",
+    "parentId": "faelaorn/tir-na-braigh/tir-na-lius/tir-na-sliogan",
     "name": "Dun Uisge",
     "path": [
       "Faelaorn",
       "Tir na Braigh",
+      "Tir na Liús",
+      "Tir na Sliogán",
       "Dun Uisge"
     ],
     "image": "",
@@ -4540,9 +4937,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-faerna",
     "children": [
       "faelaorn/tir-na-faerna/beinnstir",
-      "faelaorn/tir-na-faerna/culrain",
-      "faelaorn/tir-na-faerna/airdree",
-      "faelaorn/tir-na-faerna/ealach"
+      "faelaorn/tir-na-faerna/tir-na-mbuailtean",
+      "faelaorn/tir-na-faerna/tir-na-neasanna"
     ],
     "houseIds": [
       "haus-buadhtreun",
@@ -4569,12 +4965,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-faerna/culrain",
+    "id": "faelaorn/tir-na-faerna/tir-na-mbuailtean",
     "parentId": "faelaorn/tir-na-faerna",
+    "name": "Tir na mBuailteán",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Tir na mBuailteán"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-durachd.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [
+      "faelaorn/tir-na-faerna/tir-na-mbuailtean/culrain"
+    ],
+    "houseIds": [
+      "haus-durachd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/tir-na-mbuailtean/culrain",
+    "parentId": "faelaorn/tir-na-faerna/tir-na-mbuailtean",
     "name": "Culrain",
     "path": [
       "Faelaorn",
       "Tir na Faerna",
+      "Tir na mBuailteán",
       "Culrain"
     ],
     "image": "",
@@ -4586,12 +5002,34 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-faerna/airdree",
+    "id": "faelaorn/tir-na-faerna/tir-na-neasanna",
     "parentId": "faelaorn/tir-na-faerna",
+    "name": "Tir na nEasanna",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Tir na nEasanna"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-muirgheal.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [
+      "faelaorn/tir-na-faerna/tir-na-neasanna/airdree",
+      "faelaorn/tir-na-faerna/tir-na-neasanna/tir-na-neascann"
+    ],
+    "houseIds": [
+      "haus-muirgheal",
+      "haus-boyd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/tir-na-neasanna/airdree",
+    "parentId": "faelaorn/tir-na-faerna/tir-na-neasanna",
     "name": "Airdree",
     "path": [
       "Faelaorn",
       "Tir na Faerna",
+      "Tir na nEasanna",
       "Airdree"
     ],
     "image": "",
@@ -4603,12 +5041,34 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-faerna/ealach",
-    "parentId": "faelaorn/tir-na-faerna",
+    "id": "faelaorn/tir-na-faerna/tir-na-neasanna/tir-na-neascann",
+    "parentId": "faelaorn/tir-na-faerna/tir-na-neasanna",
+    "name": "Tir na nEascann",
+    "path": [
+      "Faelaorn",
+      "Tir na Faerna",
+      "Tir na nEasanna",
+      "Tir na nEascann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-boyd.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-faerna",
+    "children": [
+      "faelaorn/tir-na-faerna/tir-na-neasanna/tir-na-neascann/ealach"
+    ],
+    "houseIds": [
+      "haus-boyd"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-faerna/tir-na-neasanna/tir-na-neascann/ealach",
+    "parentId": "faelaorn/tir-na-faerna/tir-na-neasanna/tir-na-neascann",
     "name": "Ealach",
     "path": [
       "Faelaorn",
       "Tir na Faerna",
+      "Tir na nEasanna",
+      "Tir na nEascann",
       "Ealach"
     ],
     "image": "",
@@ -4632,21 +5092,22 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-damh",
     "children": [
       "faelaorn/tir-na-damh/carn-bruach",
-      "faelaorn/tir-na-damh/tighlean",
-      "faelaorn/tir-na-damh/dalriadh",
-      "faelaorn/tir-na-damh/torbhreac",
-      "faelaorn/tir-na-damh/maolnair",
-      "faelaorn/tir-na-damh/inverfay",
-      "faelaorn/tir-na-damh/inniscaer"
+      "faelaorn/tir-na-damh/tir-na-haitinne",
+      "faelaorn/tir-na-damh/tir-na-gcuileann",
+      "faelaorn/tir-na-damh/tir-na-huaighe",
+      "faelaorn/tir-na-damh/tir-na-madrai-uisce",
+      "faelaorn/tir-na-damh/tir-na-gcaorthann",
+      "faelaorn/tir-na-damh/herrschaft-der-elid",
+      "faelaorn/tir-na-damh/tir-na-seabhac"
     ],
     "houseIds": [
       "haus-eoghainn",
-      "haus-elid",
       "haus-agnew",
       "haus-duff",
       "haus-dianaomh",
       "haus-dobhar",
       "haus-forsyth",
+      "haus-elid",
       "haus-oglivy"
     ]
   },
@@ -4664,17 +5125,36 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-damh",
     "children": [],
     "houseIds": [
-      "haus-eoghainn",
-      "haus-elid"
+      "haus-eoghainn"
     ]
   },
   {
-    "id": "faelaorn/tir-na-damh/tighlean",
+    "id": "faelaorn/tir-na-damh/tir-na-haitinne",
     "parentId": "faelaorn/tir-na-damh",
+    "name": "Tir na hAitinne",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tir na hAitinne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-agnew.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/tir-na-haitinne/tighlean"
+    ],
+    "houseIds": [
+      "haus-agnew"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-haitinne/tighlean",
+    "parentId": "faelaorn/tir-na-damh/tir-na-haitinne",
     "name": "Tighlean",
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na hAitinne",
       "Tighlean"
     ],
     "image": "",
@@ -4686,12 +5166,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-damh/dalriadh",
+    "id": "faelaorn/tir-na-damh/tir-na-gcuileann",
     "parentId": "faelaorn/tir-na-damh",
+    "name": "Tir na gCuileann",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tir na gCuileann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-duff.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/tir-na-gcuileann/dalriadh"
+    ],
+    "houseIds": [
+      "haus-duff"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-gcuileann/dalriadh",
+    "parentId": "faelaorn/tir-na-damh/tir-na-gcuileann",
     "name": "Dalriadh",
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na gCuileann",
       "Dalriadh"
     ],
     "image": "",
@@ -4703,12 +5203,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-damh/torbhreac",
+    "id": "faelaorn/tir-na-damh/tir-na-huaighe",
     "parentId": "faelaorn/tir-na-damh",
+    "name": "Tir na hUaighe",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tir na hUaighe"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dianaomh.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/tir-na-huaighe/torbhreac"
+    ],
+    "houseIds": [
+      "haus-dianaomh"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-huaighe/torbhreac",
+    "parentId": "faelaorn/tir-na-damh/tir-na-huaighe",
     "name": "Torbhreac",
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na hUaighe",
       "Torbhreac"
     ],
     "image": "",
@@ -4720,12 +5240,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-damh/maolnair",
+    "id": "faelaorn/tir-na-damh/tir-na-madrai-uisce",
     "parentId": "faelaorn/tir-na-damh",
+    "name": "Tir na Madraí Uisce",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tir na Madraí Uisce"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-dobhar.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/tir-na-madrai-uisce/maolnair"
+    ],
+    "houseIds": [
+      "haus-dobhar"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-madrai-uisce/maolnair",
+    "parentId": "faelaorn/tir-na-damh/tir-na-madrai-uisce",
     "name": "Maolnair",
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na Madraí Uisce",
       "Maolnair"
     ],
     "image": "",
@@ -4737,12 +5277,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-damh/inverfay",
+    "id": "faelaorn/tir-na-damh/tir-na-gcaorthann",
     "parentId": "faelaorn/tir-na-damh",
+    "name": "Tir na gCaorthann",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tir na gCaorthann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-forsyth.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/tir-na-gcaorthann/inverfay"
+    ],
+    "houseIds": [
+      "haus-forsyth"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-gcaorthann/inverfay",
+    "parentId": "faelaorn/tir-na-damh/tir-na-gcaorthann",
     "name": "Inverfay",
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na gCaorthann",
       "Inverfay"
     ],
     "image": "",
@@ -4754,12 +5314,69 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "faelaorn/tir-na-damh/inniscaer",
+    "id": "faelaorn/tir-na-damh/herrschaft-der-elid",
     "parentId": "faelaorn/tir-na-damh",
+    "name": "Herrschaft der Elid",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Herrschaft der Elid"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Faelaorn/clan-elid.png",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/herrschaft-der-elid/carn-bruach"
+    ],
+    "houseIds": [
+      "haus-elid"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/herrschaft-der-elid/carn-bruach",
+    "parentId": "faelaorn/tir-na-damh/herrschaft-der-elid",
+    "name": "Càrn Bruach",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Herrschaft der Elid",
+      "Càrn Bruach"
+    ],
+    "image": "",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [],
+    "houseIds": [
+      "haus-elid"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-seabhac",
+    "parentId": "faelaorn/tir-na-damh",
+    "name": "Tir na Seabhac",
+    "path": [
+      "Faelaorn",
+      "Tir na Damh",
+      "Tir na Seabhac"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Faelaorn/fiefs/faelaorn-herrschaft-oglivy.svg",
+    "countryId": "faelaorn",
+    "regionId": "tir-na-damh",
+    "children": [
+      "faelaorn/tir-na-damh/tir-na-seabhac/inniscaer"
+    ],
+    "houseIds": [
+      "haus-oglivy"
+    ]
+  },
+  {
+    "id": "faelaorn/tir-na-damh/tir-na-seabhac/inniscaer",
+    "parentId": "faelaorn/tir-na-damh/tir-na-seabhac",
     "name": "Inniscaer",
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na Seabhac",
       "Inniscaer"
     ],
     "image": "",
@@ -7717,7 +8334,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-cruach",
     "children": [
       "ceitheach/tir-na-cruach/carraigreach",
-      "ceitheach/tir-na-cruach/tineach"
+      "ceitheach/tir-na-cruach/herrschaft-der-tir-an-craobhan",
+      "ceitheach/tir-na-cruach/herrschaft-der-faill-ua-eldath",
+      "ceitheach/tir-na-cruach/tir-na-tairsi"
     ],
     "houseIds": [
       "haus-ui-rochraide",
@@ -7740,18 +8359,110 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-cruach",
     "children": [],
     "houseIds": [
-      "haus-ui-rochraide",
-      "haus-craobhan",
+      "haus-ui-rochraide"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-cruach/herrschaft-der-tir-an-craobhan",
+    "parentId": "ceitheach/tir-na-cruach",
+    "name": "Herrschaft der Tir an Craobhan",
+    "path": [
+      "Ceitheach",
+      "Tir na Cruach",
+      "Herrschaft der Tir an Craobhan"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Ceitheach/clan-tir-an-craobhan.png",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-cruach",
+    "children": [
+      "ceitheach/tir-na-cruach/herrschaft-der-tir-an-craobhan/carraigreach"
+    ],
+    "houseIds": [
+      "haus-craobhan"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-cruach/herrschaft-der-tir-an-craobhan/carraigreach",
+    "parentId": "ceitheach/tir-na-cruach/herrschaft-der-tir-an-craobhan",
+    "name": "Carraigreach",
+    "path": [
+      "Ceitheach",
+      "Tir na Cruach",
+      "Herrschaft der Tir an Craobhan",
+      "Carraigreach"
+    ],
+    "image": "",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-cruach",
+    "children": [],
+    "houseIds": [
+      "haus-craobhan"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-cruach/herrschaft-der-faill-ua-eldath",
+    "parentId": "ceitheach/tir-na-cruach",
+    "name": "Herrschaft der Fáill Ua’Eldath",
+    "path": [
+      "Ceitheach",
+      "Tir na Cruach",
+      "Herrschaft der Fáill Ua’Eldath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Ceitheach/clan-faill-ua-eldath.png",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-cruach",
+    "children": [
+      "ceitheach/tir-na-cruach/herrschaft-der-faill-ua-eldath/carraigreach"
+    ],
+    "houseIds": [
       "haus-eldath"
     ]
   },
   {
-    "id": "ceitheach/tir-na-cruach/tineach",
+    "id": "ceitheach/tir-na-cruach/herrschaft-der-faill-ua-eldath/carraigreach",
+    "parentId": "ceitheach/tir-na-cruach/herrschaft-der-faill-ua-eldath",
+    "name": "Carraigreach",
+    "path": [
+      "Ceitheach",
+      "Tir na Cruach",
+      "Herrschaft der Fáill Ua’Eldath",
+      "Carraigreach"
+    ],
+    "image": "",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-cruach",
+    "children": [],
+    "houseIds": [
+      "haus-eldath"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-cruach/tir-na-tairsi",
     "parentId": "ceitheach/tir-na-cruach",
+    "name": "Tir na Tairsí",
+    "path": [
+      "Ceitheach",
+      "Tir na Cruach",
+      "Tir na Tairsí"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-eamhra.svg",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-cruach",
+    "children": [
+      "ceitheach/tir-na-cruach/tir-na-tairsi/tineach"
+    ],
+    "houseIds": [
+      "haus-eamhra"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-cruach/tir-na-tairsi/tineach",
+    "parentId": "ceitheach/tir-na-cruach/tir-na-tairsi",
     "name": "Tineach",
     "path": [
       "Ceitheach",
       "Tir na Cruach",
+      "Tir na Tairsí",
       "Tineach"
     ],
     "image": "",
@@ -7811,6 +8522,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [
       "ceitheach/tir-na-dorcha/lochanach",
       "ceitheach/tir-na-dorcha/tir-na-droma",
+      "ceitheach/tir-na-dorcha/tir-na-leon",
       "ceitheach/tir-na-dorcha/glaennmor"
     ],
     "houseIds": [
@@ -7875,6 +8587,43 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
+    "id": "ceitheach/tir-na-dorcha/tir-na-leon",
+    "parentId": "ceitheach/tir-na-dorcha",
+    "name": "Tir na Leon",
+    "path": [
+      "Ceitheach",
+      "Tir na Dorcha",
+      "Tir na Leon"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-seaghda.svg",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-dorcha",
+    "children": [
+      "ceitheach/tir-na-dorcha/tir-na-leon/glaennmor"
+    ],
+    "houseIds": [
+      "haus-seaghda"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-dorcha/tir-na-leon/glaennmor",
+    "parentId": "ceitheach/tir-na-dorcha/tir-na-leon",
+    "name": "Glaennmor",
+    "path": [
+      "Ceitheach",
+      "Tir na Dorcha",
+      "Tir na Leon",
+      "Glaennmor"
+    ],
+    "image": "",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-dorcha",
+    "children": [],
+    "houseIds": [
+      "haus-seaghda"
+    ]
+  },
+  {
     "id": "ceitheach/tir-na-dorcha/glaennmor",
     "parentId": "ceitheach/tir-na-dorcha",
     "name": "Glaennmor",
@@ -7890,7 +8639,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "ceitheach/tir-na-dorcha/glaennmor/bun-na-h-aibhne"
     ],
     "houseIds": [
-      "haus-seaghda",
       "sept-cneacail"
     ]
   },
@@ -7925,7 +8673,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-dun",
     "children": [
       "ceitheach/tir-na-dun/greinmhar",
-      "ceitheach/tir-na-dun/glaennmor"
+      "ceitheach/tir-na-dun/tir-na-bhfasach"
     ],
     "houseIds": [
       "haus-dal-leite",
@@ -7950,12 +8698,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "ceitheach/tir-na-dun/glaennmor",
+    "id": "ceitheach/tir-na-dun/tir-na-bhfasach",
     "parentId": "ceitheach/tir-na-dun",
+    "name": "Tir na bhFásach",
+    "path": [
+      "Ceitheach",
+      "Tir na Dun",
+      "Tir na bhFásach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-somhairle.svg",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-dun",
+    "children": [
+      "ceitheach/tir-na-dun/tir-na-bhfasach/glaennmor"
+    ],
+    "houseIds": [
+      "haus-somhairle"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-dun/tir-na-bhfasach/glaennmor",
+    "parentId": "ceitheach/tir-na-dun/tir-na-bhfasach",
     "name": "Glaennmor",
     "path": [
       "Ceitheach",
       "Tir na Dun",
+      "Tir na bhFásach",
       "Glaennmor"
     ],
     "image": "",
@@ -7979,7 +8747,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-ceo",
     "children": [
       "ceitheach/tir-na-ceo/tirscath",
-      "ceitheach/tir-na-ceo/sruthbruach"
+      "ceitheach/tir-na-ceo/tir-na-gceanna"
     ],
     "houseIds": [
       "haus-nic-holloran",
@@ -8004,12 +8772,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "ceitheach/tir-na-ceo/sruthbruach",
+    "id": "ceitheach/tir-na-ceo/tir-na-gceanna",
     "parentId": "ceitheach/tir-na-ceo",
+    "name": "Tir na gCéanna",
+    "path": [
+      "Ceitheach",
+      "Tir na Ceo",
+      "Tir na gCéanna"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-an-morchoe.svg",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-ceo",
+    "children": [
+      "ceitheach/tir-na-ceo/tir-na-gceanna/sruthbruach"
+    ],
+    "houseIds": [
+      "haus-an-morchoe"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-ceo/tir-na-gceanna/sruthbruach",
+    "parentId": "ceitheach/tir-na-ceo/tir-na-gceanna",
     "name": "Sruthbruach",
     "path": [
       "Ceitheach",
       "Tir na Ceo",
+      "Tir na gCéanna",
       "Sruthbruach"
     ],
     "image": "",
@@ -8033,8 +8821,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-toraidh",
     "children": [
       "ceitheach/tir-na-toraidh/bruachan",
-      "ceitheach/tir-na-toraidh/teorannach",
-      "ceitheach/tir-na-toraidh/lochmorach"
+      "ceitheach/tir-na-toraidh/tir-na-mbachlog",
+      "ceitheach/tir-na-toraidh/tir-na-doimhne"
     ],
     "houseIds": [
       "haus-ua-nic-ceinselaig",
@@ -8060,12 +8848,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "ceitheach/tir-na-toraidh/teorannach",
+    "id": "ceitheach/tir-na-toraidh/tir-na-mbachlog",
     "parentId": "ceitheach/tir-na-toraidh",
+    "name": "Tir na mBachlóg",
+    "path": [
+      "Ceitheach",
+      "Tir na Toraidh",
+      "Tir na mBachlóg"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-tir-an-tordarroch.svg",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-toraidh",
+    "children": [
+      "ceitheach/tir-na-toraidh/tir-na-mbachlog/teorannach"
+    ],
+    "houseIds": [
+      "haus-tir-an-tordarroch"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-toraidh/tir-na-mbachlog/teorannach",
+    "parentId": "ceitheach/tir-na-toraidh/tir-na-mbachlog",
     "name": "Teorannach",
     "path": [
       "Ceitheach",
       "Tir na Toraidh",
+      "Tir na mBachlóg",
       "Teorannach"
     ],
     "image": "",
@@ -8077,12 +8885,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "ceitheach/tir-na-toraidh/lochmorach",
+    "id": "ceitheach/tir-na-toraidh/tir-na-doimhne",
     "parentId": "ceitheach/tir-na-toraidh",
+    "name": "Tir na Doimhne",
+    "path": [
+      "Ceitheach",
+      "Tir na Toraidh",
+      "Tir na Doimhne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Ceitheach/fiefs/herrschaft-ceitheach-an-bhaird.svg",
+    "countryId": "ceitheach",
+    "regionId": "tir-na-toraidh",
+    "children": [
+      "ceitheach/tir-na-toraidh/tir-na-doimhne/lochmorach"
+    ],
+    "houseIds": [
+      "haus-an-bhaird"
+    ]
+  },
+  {
+    "id": "ceitheach/tir-na-toraidh/tir-na-doimhne/lochmorach",
+    "parentId": "ceitheach/tir-na-toraidh/tir-na-doimhne",
     "name": "Lochmorach",
     "path": [
       "Ceitheach",
       "Tir na Toraidh",
+      "Tir na Doimhne",
       "Lochmorach"
     ],
     "image": "",
@@ -8111,10 +8939,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "houseIds": [
       "haus-dal-leite",
       "haus-ronain",
-      "haus-suiste",
-      "haus-gairner",
       "haus-cleirigh",
       "haus-abhrach",
+      "haus-suiste",
+      "haus-gairner",
       "haus-nessa",
       "haus-goidin",
       "haus-haeghra",
@@ -8134,25 +8962,47 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "blaithneach",
     "regionId": "tir-na-dilse",
     "children": [
-      "blaithneach/tir-na-dilse/ardan",
-      "blaithneach/tir-na-dilse/eorach"
+      "blaithneach/tir-na-dilse/tir-na-deoraiochta",
+      "blaithneach/tir-na-dilse/eorach",
+      "blaithneach/tir-na-dilse/tir-na-ngeanna",
+      "blaithneach/tir-na-dilse/tir-na-linnte"
     ],
     "houseIds": [
       "haus-dal-leite",
       "haus-ronain",
-      "haus-suiste",
-      "haus-gairner",
       "haus-cleirigh",
-      "haus-abhrach"
+      "haus-abhrach",
+      "haus-suiste",
+      "haus-gairner"
     ]
   },
   {
-    "id": "blaithneach/tir-na-dilse/ardan",
+    "id": "blaithneach/tir-na-dilse/tir-na-deoraiochta",
     "parentId": "blaithneach/tir-na-dilse",
+    "name": "Tir na Deoraíochta",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Tir na Deoraíochta"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-leite.svg",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [
+      "blaithneach/tir-na-dilse/tir-na-deoraiochta/ardan"
+    ],
+    "houseIds": [
+      "haus-dal-leite"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/tir-na-deoraiochta/ardan",
+    "parentId": "blaithneach/tir-na-dilse/tir-na-deoraiochta",
     "name": "Ardán",
     "path": [
       "Blaithneach",
       "Tir na Dílse",
+      "Tir na Deoraíochta",
       "Ardán"
     ],
     "image": "",
@@ -8178,10 +9028,82 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-ronain",
-      "haus-suiste",
-      "haus-gairner",
       "haus-cleirigh",
       "haus-abhrach"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/tir-na-ngeanna",
+    "parentId": "blaithneach/tir-na-dilse",
+    "name": "Tir na nGéanna",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Tir na nGéanna"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-suiste.svg",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [
+      "blaithneach/tir-na-dilse/tir-na-ngeanna/eorach"
+    ],
+    "houseIds": [
+      "haus-suiste"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/tir-na-ngeanna/eorach",
+    "parentId": "blaithneach/tir-na-dilse/tir-na-ngeanna",
+    "name": "Eorach",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Tir na nGéanna",
+      "Eorach"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [],
+    "houseIds": [
+      "haus-suiste"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/tir-na-linnte",
+    "parentId": "blaithneach/tir-na-dilse",
+    "name": "Tir na Linnte",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Tir na Linnte"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-gairner.svg",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [
+      "blaithneach/tir-na-dilse/tir-na-linnte/eorach"
+    ],
+    "houseIds": [
+      "haus-gairner"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-dilse/tir-na-linnte/eorach",
+    "parentId": "blaithneach/tir-na-dilse/tir-na-linnte",
+    "name": "Eorach",
+    "path": [
+      "Blaithneach",
+      "Tir na Dílse",
+      "Tir na Linnte",
+      "Eorach"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-dilse",
+    "children": [],
+    "houseIds": [
+      "haus-gairner"
     ]
   },
   {
@@ -8197,7 +9119,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-beatha",
     "children": [
       "blaithneach/tir-na-beatha/sioran",
-      "blaithneach/tir-na-beatha/readlann"
+      "blaithneach/tir-na-beatha/tir-na-null",
+      "blaithneach/tir-na-beatha/tir-na-braiche"
     ],
     "houseIds": [
       "haus-nessa",
@@ -8219,17 +9142,73 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-beatha",
     "children": [],
     "houseIds": [
-      "haus-nessa",
+      "haus-nessa"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-beatha/tir-na-null",
+    "parentId": "blaithneach/tir-na-beatha",
+    "name": "Tir na nÚll",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Tir na nÚll"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-goidin.svg",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-beatha",
+    "children": [
+      "blaithneach/tir-na-beatha/tir-na-null/sioran"
+    ],
+    "houseIds": [
       "haus-goidin"
     ]
   },
   {
-    "id": "blaithneach/tir-na-beatha/readlann",
+    "id": "blaithneach/tir-na-beatha/tir-na-null/sioran",
+    "parentId": "blaithneach/tir-na-beatha/tir-na-null",
+    "name": "Sioran",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Tir na nÚll",
+      "Sioran"
+    ],
+    "image": "",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-beatha",
+    "children": [],
+    "houseIds": [
+      "haus-goidin"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-beatha/tir-na-braiche",
     "parentId": "blaithneach/tir-na-beatha",
+    "name": "Tir na Braiche",
+    "path": [
+      "Blaithneach",
+      "Tir na Beatha",
+      "Tir na Braiche"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-haeghra.svg",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-beatha",
+    "children": [
+      "blaithneach/tir-na-beatha/tir-na-braiche/readlann"
+    ],
+    "houseIds": [
+      "haus-haeghra"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-beatha/tir-na-braiche/readlann",
+    "parentId": "blaithneach/tir-na-beatha/tir-na-braiche",
     "name": "Réadlann",
     "path": [
       "Blaithneach",
       "Tir na Beatha",
+      "Tir na Braiche",
       "Réadlann"
     ],
     "image": "",
@@ -8253,7 +9232,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-meinnear",
     "children": [
       "blaithneach/tir-na-meinnear/cairmor",
-      "blaithneach/tir-na-meinnear/cel-bearradh"
+      "blaithneach/tir-na-meinnear/tir-na-heala"
     ],
     "houseIds": [
       "haus-magach",
@@ -8278,12 +9257,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "blaithneach/tir-na-meinnear/cel-bearradh",
+    "id": "blaithneach/tir-na-meinnear/tir-na-heala",
     "parentId": "blaithneach/tir-na-meinnear",
+    "name": "Tir na hEala",
+    "path": [
+      "Blaithneach",
+      "Tir na Méinnear",
+      "Tir na hEala"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Blaithneach/fiefs/herrschaft-blaithneach-eala.svg",
+    "countryId": "blaithneach",
+    "regionId": "tir-na-meinnear",
+    "children": [
+      "blaithneach/tir-na-meinnear/tir-na-heala/cel-bearradh"
+    ],
+    "houseIds": [
+      "haus-eala"
+    ]
+  },
+  {
+    "id": "blaithneach/tir-na-meinnear/tir-na-heala/cel-bearradh",
+    "parentId": "blaithneach/tir-na-meinnear/tir-na-heala",
     "name": "Cel Bearradh",
     "path": [
       "Blaithneach",
       "Tir na Méinnear",
+      "Tir na hEala",
       "Cel Bearradh"
     ],
     "image": "",
@@ -8313,10 +9312,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "leitheach/tir-na-sruth"
     ],
     "houseIds": [
+      "haus-mac-ard-cumhaill",
       "haus-ua-eirce",
       "haus-fiachrach",
       "haus-ruin-ua-laoch",
-      "haus-mac-ard-cumhaill",
       "haus-ua-gaelach",
       "haus-gallchobhair",
       "haus-cleir",
@@ -8326,9 +9325,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-gruenhand",
       "haus-dal-cruthin",
       "haus-suileach",
+      "haus-frisealach",
       "haus-ard-trodach",
       "haus-nic-caoimhe",
-      "haus-frisealach",
       "haus-iomrach",
       "haus-somhairle",
       "haus-fir-an-tarvo",
@@ -8337,11 +9336,11 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-mac-airt",
       "haus-choinnich",
       "haus-nic-blar-leitheach",
-      "haus-dal-t-saor",
       "haus-laidir",
+      "haus-dal-t-saor",
       "haus-tir-an-cuinn",
-      "haus-amrhan",
-      "haus-airgid"
+      "haus-airgid",
+      "haus-amrhan"
     ]
   },
   {
@@ -8356,13 +9355,16 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "leitheach",
     "regionId": "tir-na-sleagh",
     "children": [
-      "leitheach/tir-na-sleagh/dun-athar"
+      "leitheach/tir-na-sleagh/dun-athar",
+      "leitheach/tir-na-sleagh/tir-na-niur",
+      "leitheach/tir-na-sleagh/tir-na-seamroige",
+      "leitheach/tir-na-sleagh/tir-na-gcoireal"
     ],
     "houseIds": [
+      "haus-mac-ard-cumhaill",
       "haus-ua-eirce",
       "haus-fiachrach",
-      "haus-ruin-ua-laoch",
-      "haus-mac-ard-cumhaill"
+      "haus-ruin-ua-laoch"
     ]
   },
   {
@@ -8383,6 +9385,117 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
+    "id": "leitheach/tir-na-sleagh/tir-na-niur",
+    "parentId": "leitheach/tir-na-sleagh",
+    "name": "Tir na nIúr",
+    "path": [
+      "Leitheach",
+      "Tir na Sleagh",
+      "Tir na nIúr"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-eirce.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sleagh",
+    "children": [
+      "leitheach/tir-na-sleagh/tir-na-niur/senanbail"
+    ],
+    "houseIds": [
+      "haus-ua-eirce"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sleagh/tir-na-niur/senanbail",
+    "parentId": "leitheach/tir-na-sleagh/tir-na-niur",
+    "name": "Senanbail",
+    "path": [
+      "Leitheach",
+      "Tir na Sleagh",
+      "Tir na nIúr",
+      "Senanbail"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sleagh",
+    "children": [],
+    "houseIds": [
+      "haus-ua-eirce"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sleagh/tir-na-seamroige",
+    "parentId": "leitheach/tir-na-sleagh",
+    "name": "Tir na Seamróige",
+    "path": [
+      "Leitheach",
+      "Tir na Sleagh",
+      "Tir na Seamróige"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-fiachrach.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sleagh",
+    "children": [
+      "leitheach/tir-na-sleagh/tir-na-seamroige/marbail"
+    ],
+    "houseIds": [
+      "haus-fiachrach"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sleagh/tir-na-seamroige/marbail",
+    "parentId": "leitheach/tir-na-sleagh/tir-na-seamroige",
+    "name": "Mârbail",
+    "path": [
+      "Leitheach",
+      "Tir na Sleagh",
+      "Tir na Seamróige",
+      "Mârbail"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sleagh",
+    "children": [],
+    "houseIds": [
+      "haus-fiachrach"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sleagh/tir-na-gcoireal",
+    "parentId": "leitheach/tir-na-sleagh",
+    "name": "Tir na gCoiréal",
+    "path": [
+      "Leitheach",
+      "Tir na Sleagh",
+      "Tir na gCoiréal"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-laoch.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sleagh",
+    "children": [
+      "leitheach/tir-na-sleagh/tir-na-gcoireal/broch-an-abhainn"
+    ],
+    "houseIds": [
+      "haus-ruin-ua-laoch"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sleagh/tir-na-gcoireal/broch-an-abhainn",
+    "parentId": "leitheach/tir-na-sleagh/tir-na-gcoireal",
+    "name": "Broch an Abhainn",
+    "path": [
+      "Leitheach",
+      "Tir na Sleagh",
+      "Tir na gCoiréal",
+      "Broch an Abhainn"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sleagh",
+    "children": [],
+    "houseIds": [
+      "haus-ruin-ua-laoch"
+    ]
+  },
+  {
     "id": "leitheach/tir-na-sinsear",
     "parentId": "leitheach",
     "name": "Tir na Sinsear",
@@ -8395,7 +9508,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-sinsear",
     "children": [
       "leitheach/tir-na-sinsear/nossail",
-      "leitheach/tir-na-sinsear/lehnsherrschaft-der-fir-an-gallchobhair",
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch",
       "leitheach/tir-na-sinsear/tir-na-fancha"
     ],
     "houseIds": [
@@ -8426,19 +9539,22 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "leitheach/tir-na-sinsear/lehnsherrschaft-der-fir-an-gallchobhair",
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch",
     "parentId": "leitheach/tir-na-sinsear",
-    "name": "Lehnsherrschaft der Fir An’Gallchobhair",
+    "name": "Tir na Coimhthioch",
     "path": [
       "Leitheach",
       "Tir na Sinsear",
-      "Lehnsherrschaft der Fir An’Gallchobhair"
+      "Tir na Coimhthioch"
     ],
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Leitheach/clan-fir-an-gallchobhair.png",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-tir-na-coimhthioch.svg",
     "countryId": "leitheach",
     "regionId": "tir-na-sinsear",
     "children": [
-      "leitheach/tir-na-sinsear/lehnsherrschaft-der-fir-an-gallchobhair/dun-laog"
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/dun-laog",
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-bhfiach",
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-narmur",
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-hinneonach"
     ],
     "houseIds": [
       "haus-gallchobhair",
@@ -8448,13 +9564,13 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "leitheach/tir-na-sinsear/lehnsherrschaft-der-fir-an-gallchobhair/dun-laog",
-    "parentId": "leitheach/tir-na-sinsear/lehnsherrschaft-der-fir-an-gallchobhair",
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/dun-laog",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch",
     "name": "Dun Laog",
     "path": [
       "Leitheach",
       "Tir na Sinsear",
-      "Lehnsherrschaft der Fir An’Gallchobhair",
+      "Tir na Coimhthioch",
       "Dun Laog"
     ],
     "image": "",
@@ -8462,9 +9578,123 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-sinsear",
     "children": [],
     "houseIds": [
-      "haus-gallchobhair",
-      "haus-cleir",
-      "haus-ghaiscioch",
+      "haus-gallchobhair"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-bhfiach",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch",
+    "name": "Tir na bhFiach",
+    "path": [
+      "Leitheach",
+      "Tir na Sinsear",
+      "Tir na Coimhthioch",
+      "Tir na bhFiach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-cleir.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sinsear",
+    "children": [
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-bhfiach/cairn-faire"
+    ],
+    "houseIds": [
+      "haus-cleir"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-bhfiach/cairn-faire",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-bhfiach",
+    "name": "Cairn Fàire",
+    "path": [
+      "Leitheach",
+      "Tir na Sinsear",
+      "Tir na Coimhthioch",
+      "Tir na bhFiach",
+      "Cairn Fàire"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sinsear",
+    "children": [],
+    "houseIds": [
+      "haus-cleir"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-narmur",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch",
+    "name": "Tir na nArmúr",
+    "path": [
+      "Leitheach",
+      "Tir na Sinsear",
+      "Tir na Coimhthioch",
+      "Tir na nArmúr"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ghaiscioch.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sinsear",
+    "children": [
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-narmur/dun-laog"
+    ],
+    "houseIds": [
+      "haus-ghaiscioch"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-narmur/dun-laog",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-narmur",
+    "name": "Dun Laog",
+    "path": [
+      "Leitheach",
+      "Tir na Sinsear",
+      "Tir na Coimhthioch",
+      "Tir na nArmúr",
+      "Dun Laog"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sinsear",
+    "children": [],
+    "houseIds": [
+      "haus-ghaiscioch"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-hinneonach",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch",
+    "name": "Tir na hInneonach",
+    "path": [
+      "Leitheach",
+      "Tir na Sinsear",
+      "Tir na Coimhthioch",
+      "Tir na hInneonach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ceardaiocht.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sinsear",
+    "children": [
+      "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-hinneonach/dun-laog"
+    ],
+    "houseIds": [
+      "haus-dal-ceardaiocht"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-hinneonach/dun-laog",
+    "parentId": "leitheach/tir-na-sinsear/tir-na-coimhthioch/tir-na-hinneonach",
+    "name": "Dun Laog",
+    "path": [
+      "Leitheach",
+      "Tir na Sinsear",
+      "Tir na Coimhthioch",
+      "Tir na hInneonach",
+      "Dun Laog"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sinsear",
+    "children": [],
+    "houseIds": [
       "haus-dal-ceardaiocht"
     ]
   },
@@ -8520,15 +9750,17 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-gortanna",
     "children": [
       "leitheach/tir-na-gortanna/lochansail",
-      "leitheach/tir-na-gortanna/lehensherrschaft-der-ard-frisealach",
-      "leitheach/tir-na-gortanna/herrschaft-von-broch-an-clais"
+      "leitheach/tir-na-gortanna/tir-na-luibe",
+      "leitheach/tir-na-gortanna/tir-na-gcomhrac",
+      "leitheach/tir-na-gortanna/tir-na-lasrach",
+      "leitheach/tir-na-gortanna/tir-na-soilse"
     ],
     "houseIds": [
       "haus-dal-cruthin",
       "haus-suileach",
+      "haus-frisealach",
       "haus-ard-trodach",
       "haus-nic-caoimhe",
-      "haus-frisealach",
       "haus-iomrach",
       "haus-somhairle"
     ]
@@ -8548,38 +9780,36 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-dal-cruthin",
-      "haus-suileach",
-      "haus-ard-trodach",
-      "haus-nic-caoimhe"
+      "haus-suileach"
     ]
   },
   {
-    "id": "leitheach/tir-na-gortanna/lehensherrschaft-der-ard-frisealach",
+    "id": "leitheach/tir-na-gortanna/tir-na-luibe",
     "parentId": "leitheach/tir-na-gortanna",
-    "name": "Lehensherrschaft der Ard Frisealach",
+    "name": "Tir na Lúibe",
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Lehensherrschaft der Ard Frisealach"
+      "Tir na Lúibe"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/lehensherrschaft-ard-frisealach.png",
     "countryId": "leitheach",
     "regionId": "tir-na-gortanna",
     "children": [
-      "leitheach/tir-na-gortanna/lehensherrschaft-der-ard-frisealach/lasbun"
+      "leitheach/tir-na-gortanna/tir-na-luibe/lasbun"
     ],
     "houseIds": [
       "haus-frisealach"
     ]
   },
   {
-    "id": "leitheach/tir-na-gortanna/lehensherrschaft-der-ard-frisealach/lasbun",
-    "parentId": "leitheach/tir-na-gortanna/lehensherrschaft-der-ard-frisealach",
+    "id": "leitheach/tir-na-gortanna/tir-na-luibe/lasbun",
+    "parentId": "leitheach/tir-na-gortanna/tir-na-luibe",
     "name": "Lasbun",
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Lehensherrschaft der Ard Frisealach",
+      "Tir na Lúibe",
       "Lasbun"
     ],
     "image": "",
@@ -8591,19 +9821,93 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "leitheach/tir-na-gortanna/herrschaft-von-broch-an-clais",
+    "id": "leitheach/tir-na-gortanna/tir-na-gcomhrac",
     "parentId": "leitheach/tir-na-gortanna",
-    "name": "Herrschaft von Broch an Clais",
+    "name": "Tir na gComhrac",
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Herrschaft von Broch an Clais"
+      "Tir na gComhrac"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-ard-trodach.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-gortanna",
+    "children": [
+      "leitheach/tir-na-gortanna/tir-na-gcomhrac/lochansail"
+    ],
+    "houseIds": [
+      "haus-ard-trodach"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-gortanna/tir-na-gcomhrac/lochansail",
+    "parentId": "leitheach/tir-na-gortanna/tir-na-gcomhrac",
+    "name": "Lochansail",
+    "path": [
+      "Leitheach",
+      "Tir na Gortanna",
+      "Tir na gComhrac",
+      "Lochansail"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-gortanna",
+    "children": [],
+    "houseIds": [
+      "haus-ard-trodach"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-gortanna/tir-na-lasrach",
+    "parentId": "leitheach/tir-na-gortanna",
+    "name": "Tir na Lasrach",
+    "path": [
+      "Leitheach",
+      "Tir na Gortanna",
+      "Tir na Lasrach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-nic-caoimhe.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-gortanna",
+    "children": [
+      "leitheach/tir-na-gortanna/tir-na-lasrach/lochansail"
+    ],
+    "houseIds": [
+      "haus-nic-caoimhe"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-gortanna/tir-na-lasrach/lochansail",
+    "parentId": "leitheach/tir-na-gortanna/tir-na-lasrach",
+    "name": "Lochansail",
+    "path": [
+      "Leitheach",
+      "Tir na Gortanna",
+      "Tir na Lasrach",
+      "Lochansail"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-gortanna",
+    "children": [],
+    "houseIds": [
+      "haus-nic-caoimhe"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-gortanna/tir-na-soilse",
+    "parentId": "leitheach/tir-na-gortanna",
+    "name": "Tir na Soilse",
+    "path": [
+      "Leitheach",
+      "Tir na Gortanna",
+      "Tir na Soilse"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/herrschaft-broch-an-clais.png",
     "countryId": "leitheach",
     "regionId": "tir-na-gortanna",
     "children": [
-      "leitheach/tir-na-gortanna/herrschaft-von-broch-an-clais/broch-an-clais"
+      "leitheach/tir-na-gortanna/tir-na-soilse/broch-an-clais"
     ],
     "houseIds": [
       "haus-iomrach",
@@ -8611,13 +9915,13 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "leitheach/tir-na-gortanna/herrschaft-von-broch-an-clais/broch-an-clais",
-    "parentId": "leitheach/tir-na-gortanna/herrschaft-von-broch-an-clais",
+    "id": "leitheach/tir-na-gortanna/tir-na-soilse/broch-an-clais",
+    "parentId": "leitheach/tir-na-gortanna/tir-na-soilse",
     "name": "Broch an Clais",
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Herrschaft von Broch an Clais",
+      "Tir na Soilse",
       "Broch an Clais"
     ],
     "image": "",
@@ -8642,8 +9946,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-tonn",
     "children": [
       "leitheach/tir-na-tonn/dun-rothar",
-      "leitheach/tir-na-tonn/herrschaft-der-dal-ruitheach",
-      "leitheach/tir-na-tonn/herrschaft-der-ru-gortach"
+      "leitheach/tir-na-tonn/tir-na-ndambai",
+      "leitheach/tir-na-tonn/tir-na-breithe"
     ],
     "houseIds": [
       "haus-fir-an-tarvo",
@@ -8669,32 +9973,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "leitheach/tir-na-tonn/herrschaft-der-dal-ruitheach",
+    "id": "leitheach/tir-na-tonn/tir-na-ndambai",
     "parentId": "leitheach/tir-na-tonn",
-    "name": "Herrschaft der Dál’Ruitheach",
+    "name": "Tir na nDambaí",
     "path": [
       "Leitheach",
       "Tir na Tonn",
-      "Herrschaft der Dál’Ruitheach"
+      "Tir na nDambaí"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/herrschaft-dal-ruitheach.png",
     "countryId": "leitheach",
     "regionId": "tir-na-tonn",
     "children": [
-      "leitheach/tir-na-tonn/herrschaft-der-dal-ruitheach/broch-an-iar"
+      "leitheach/tir-na-tonn/tir-na-ndambai/broch-an-iar"
     ],
     "houseIds": [
       "haus-ruitheach"
     ]
   },
   {
-    "id": "leitheach/tir-na-tonn/herrschaft-der-dal-ruitheach/broch-an-iar",
-    "parentId": "leitheach/tir-na-tonn/herrschaft-der-dal-ruitheach",
+    "id": "leitheach/tir-na-tonn/tir-na-ndambai/broch-an-iar",
+    "parentId": "leitheach/tir-na-tonn/tir-na-ndambai",
     "name": "Broch an Iar",
     "path": [
       "Leitheach",
       "Tir na Tonn",
-      "Herrschaft der Dál’Ruitheach",
+      "Tir na nDambaí",
       "Broch an Iar"
     ],
     "image": "",
@@ -8706,32 +10010,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "leitheach/tir-na-tonn/herrschaft-der-ru-gortach",
+    "id": "leitheach/tir-na-tonn/tir-na-breithe",
     "parentId": "leitheach/tir-na-tonn",
-    "name": "Herrschaft der Ru’Gortach",
+    "name": "Tir na Breithe",
     "path": [
       "Leitheach",
       "Tir na Tonn",
-      "Herrschaft der Ru’Gortach"
+      "Tir na Breithe"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/herrschaft-ru-gortach.png",
     "countryId": "leitheach",
     "regionId": "tir-na-tonn",
     "children": [
-      "leitheach/tir-na-tonn/herrschaft-der-ru-gortach/broch-an-ear"
+      "leitheach/tir-na-tonn/tir-na-breithe/broch-an-ear"
     ],
     "houseIds": [
       "haus-gortach"
     ]
   },
   {
-    "id": "leitheach/tir-na-tonn/herrschaft-der-ru-gortach/broch-an-ear",
-    "parentId": "leitheach/tir-na-tonn/herrschaft-der-ru-gortach",
+    "id": "leitheach/tir-na-tonn/tir-na-breithe/broch-an-ear",
+    "parentId": "leitheach/tir-na-tonn/tir-na-breithe",
     "name": "Broch an Ear",
     "path": [
       "Leitheach",
       "Tir na Tonn",
-      "Herrschaft der Ru’Gortach",
+      "Tir na Breithe",
       "Broch an Ear"
     ],
     "image": "",
@@ -8755,14 +10059,17 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-an-comhchuibhis",
     "children": [
       "leitheach/tir-an-comhchuibhis/sruthlann",
-      "leitheach/tir-an-comhchuibhis/lehensherrschaft-der-ruin-laidir"
+      "leitheach/tir-an-comhchuibhis/tir-na-gcrub",
+      "leitheach/tir-an-comhchuibhis/tir-na-run",
+      "leitheach/tir-an-comhchuibhis/tir-na-didine",
+      "leitheach/tir-an-comhchuibhis/herrschaft-der-dal-t-saor"
     ],
     "houseIds": [
       "haus-mac-airt",
       "haus-choinnich",
       "haus-nic-blar-leitheach",
-      "haus-dal-t-saor",
-      "haus-laidir"
+      "haus-laidir",
+      "haus-dal-t-saor"
     ]
   },
   {
@@ -8779,39 +10086,110 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-an-comhchuibhis",
     "children": [],
     "houseIds": [
-      "haus-mac-airt",
-      "haus-choinnich",
-      "haus-nic-blar-leitheach",
-      "haus-dal-t-saor"
+      "haus-mac-airt"
     ]
   },
   {
-    "id": "leitheach/tir-an-comhchuibhis/lehensherrschaft-der-ruin-laidir",
+    "id": "leitheach/tir-an-comhchuibhis/tir-na-gcrub",
     "parentId": "leitheach/tir-an-comhchuibhis",
-    "name": "Lehensherrschaft der Ruin’Laidir",
+    "name": "Tir na gCrúb",
     "path": [
       "Leitheach",
       "Tir an Comhchuibhis",
-      "Lehensherrschaft der Ruin’Laidir"
+      "Tir na gCrúb"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/herrschaft-ua-choinnich.png",
+    "countryId": "leitheach",
+    "regionId": "tir-an-comhchuibhis",
+    "children": [
+      "leitheach/tir-an-comhchuibhis/tir-na-gcrub/sruthlann"
+    ],
+    "houseIds": [
+      "haus-choinnich"
+    ]
+  },
+  {
+    "id": "leitheach/tir-an-comhchuibhis/tir-na-gcrub/sruthlann",
+    "parentId": "leitheach/tir-an-comhchuibhis/tir-na-gcrub",
+    "name": "Sruthlann",
+    "path": [
+      "Leitheach",
+      "Tir an Comhchuibhis",
+      "Tir na gCrúb",
+      "Sruthlann"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-an-comhchuibhis",
+    "children": [],
+    "houseIds": [
+      "haus-choinnich"
+    ]
+  },
+  {
+    "id": "leitheach/tir-an-comhchuibhis/tir-na-run",
+    "parentId": "leitheach/tir-an-comhchuibhis",
+    "name": "Tir na Rún",
+    "path": [
+      "Leitheach",
+      "Tir an Comhchuibhis",
+      "Tir na Rún"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/herrschaft-nic-blar.png",
+    "countryId": "leitheach",
+    "regionId": "tir-an-comhchuibhis",
+    "children": [
+      "leitheach/tir-an-comhchuibhis/tir-na-run/sruthlann"
+    ],
+    "houseIds": [
+      "haus-nic-blar-leitheach"
+    ]
+  },
+  {
+    "id": "leitheach/tir-an-comhchuibhis/tir-na-run/sruthlann",
+    "parentId": "leitheach/tir-an-comhchuibhis/tir-na-run",
+    "name": "Sruthlann",
+    "path": [
+      "Leitheach",
+      "Tir an Comhchuibhis",
+      "Tir na Rún",
+      "Sruthlann"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-an-comhchuibhis",
+    "children": [],
+    "houseIds": [
+      "haus-nic-blar-leitheach"
+    ]
+  },
+  {
+    "id": "leitheach/tir-an-comhchuibhis/tir-na-didine",
+    "parentId": "leitheach/tir-an-comhchuibhis",
+    "name": "Tir na Dídine",
+    "path": [
+      "Leitheach",
+      "Tir an Comhchuibhis",
+      "Tir na Dídine"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/lehensherrschaft-ruin-laidir.png",
     "countryId": "leitheach",
     "regionId": "tir-an-comhchuibhis",
     "children": [
-      "leitheach/tir-an-comhchuibhis/lehensherrschaft-der-ruin-laidir/claisean"
+      "leitheach/tir-an-comhchuibhis/tir-na-didine/claisean"
     ],
     "houseIds": [
       "haus-laidir"
     ]
   },
   {
-    "id": "leitheach/tir-an-comhchuibhis/lehensherrschaft-der-ruin-laidir/claisean",
-    "parentId": "leitheach/tir-an-comhchuibhis/lehensherrschaft-der-ruin-laidir",
+    "id": "leitheach/tir-an-comhchuibhis/tir-na-didine/claisean",
+    "parentId": "leitheach/tir-an-comhchuibhis/tir-na-didine",
     "name": "Claisean",
     "path": [
       "Leitheach",
       "Tir an Comhchuibhis",
-      "Lehensherrschaft der Ruin’Laidir",
+      "Tir na Dídine",
       "Claisean"
     ],
     "image": "",
@@ -8820,6 +10198,43 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-laidir"
+    ]
+  },
+  {
+    "id": "leitheach/tir-an-comhchuibhis/herrschaft-der-dal-t-saor",
+    "parentId": "leitheach/tir-an-comhchuibhis",
+    "name": "Herrschaft der Dál T’Saor",
+    "path": [
+      "Leitheach",
+      "Tir an Comhchuibhis",
+      "Herrschaft der Dál T’Saor"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Leitheach/clan-dal-t-saor.png",
+    "countryId": "leitheach",
+    "regionId": "tir-an-comhchuibhis",
+    "children": [
+      "leitheach/tir-an-comhchuibhis/herrschaft-der-dal-t-saor/sruthlann"
+    ],
+    "houseIds": [
+      "haus-dal-t-saor"
+    ]
+  },
+  {
+    "id": "leitheach/tir-an-comhchuibhis/herrschaft-der-dal-t-saor/sruthlann",
+    "parentId": "leitheach/tir-an-comhchuibhis/herrschaft-der-dal-t-saor",
+    "name": "Sruthlann",
+    "path": [
+      "Leitheach",
+      "Tir an Comhchuibhis",
+      "Herrschaft der Dál T’Saor",
+      "Sruthlann"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-an-comhchuibhis",
+    "children": [],
+    "houseIds": [
+      "haus-dal-t-saor"
     ]
   },
   {
@@ -8835,12 +10250,13 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-sruth",
     "children": [
       "leitheach/tir-na-sruth/ceanntire",
-      "leitheach/tir-na-sruth/lehensherrschaft-der-tir-an-airgid"
+      "leitheach/tir-na-sruth/tir-na-gcorr",
+      "leitheach/tir-na-sruth/tir-na-heisteachta"
     ],
     "houseIds": [
       "haus-tir-an-cuinn",
-      "haus-amrhan",
-      "haus-airgid"
+      "haus-airgid",
+      "haus-amrhan"
     ]
   },
   {
@@ -8857,37 +10273,36 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-sruth",
     "children": [],
     "houseIds": [
-      "haus-tir-an-cuinn",
-      "haus-amrhan"
+      "haus-tir-an-cuinn"
     ]
   },
   {
-    "id": "leitheach/tir-na-sruth/lehensherrschaft-der-tir-an-airgid",
+    "id": "leitheach/tir-na-sruth/tir-na-gcorr",
     "parentId": "leitheach/tir-na-sruth",
-    "name": "Lehensherrschaft der Tir An’Airgid",
+    "name": "Tir na gCorr",
     "path": [
       "Leitheach",
       "Tir na Sruth",
-      "Lehensherrschaft der Tir An’Airgid"
+      "Tir na gCorr"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/lehensherrschaft-tir-an-airgid.png",
     "countryId": "leitheach",
     "regionId": "tir-na-sruth",
     "children": [
-      "leitheach/tir-na-sruth/lehensherrschaft-der-tir-an-airgid/cel-leagan"
+      "leitheach/tir-na-sruth/tir-na-gcorr/cel-leagan"
     ],
     "houseIds": [
       "haus-airgid"
     ]
   },
   {
-    "id": "leitheach/tir-na-sruth/lehensherrschaft-der-tir-an-airgid/cel-leagan",
-    "parentId": "leitheach/tir-na-sruth/lehensherrschaft-der-tir-an-airgid",
+    "id": "leitheach/tir-na-sruth/tir-na-gcorr/cel-leagan",
+    "parentId": "leitheach/tir-na-sruth/tir-na-gcorr",
     "name": "Cel Leagan",
     "path": [
       "Leitheach",
       "Tir na Sruth",
-      "Lehensherrschaft der Tir An’Airgid",
+      "Tir na gCorr",
       "Cel Leagan"
     ],
     "image": "",
@@ -8896,6 +10311,43 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-airgid"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sruth/tir-na-heisteachta",
+    "parentId": "leitheach/tir-na-sruth",
+    "name": "Tir na hÉisteachta",
+    "path": [
+      "Leitheach",
+      "Tir na Sruth",
+      "Tir na hÉisteachta"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Leitheach/fiefs/leitheach-herrschaft-amhran.svg",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sruth",
+    "children": [
+      "leitheach/tir-na-sruth/tir-na-heisteachta/ceanntire"
+    ],
+    "houseIds": [
+      "haus-amrhan"
+    ]
+  },
+  {
+    "id": "leitheach/tir-na-sruth/tir-na-heisteachta/ceanntire",
+    "parentId": "leitheach/tir-na-sruth/tir-na-heisteachta",
+    "name": "Ceanntire",
+    "path": [
+      "Leitheach",
+      "Tir na Sruth",
+      "Tir na hÉisteachta",
+      "Ceanntire"
+    ],
+    "image": "",
+    "countryId": "leitheach",
+    "regionId": "tir-na-sruth",
+    "children": [],
+    "houseIds": [
+      "haus-amrhan"
     ]
   },
   {
@@ -8920,12 +10372,12 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-morath",
       "haus-duilb",
       "haus-nuadat",
-      "sept-ferbend",
       "haus-anbhair",
       "haus-casur",
       "haus-aonghusa",
       "haus-riangabra",
-      "haus-eachtrai"
+      "haus-eachtrai",
+      "sept-ferbend"
     ]
   },
   {
@@ -8941,10 +10393,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-rithe",
     "children": [
       "dunfal/tir-na-rithe/dunfal",
-      "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella",
-      "dunfal/tir-na-rithe/herrschaft-der-mac-cein",
-      "dunfal/tir-na-rithe/herrschaft-der-dal-birn",
-      "dunfal/tir-na-rithe/herrschaft-der-ruin-morath",
+      "dunfal/tir-na-rithe/tir-na-bpeiteal",
+      "dunfal/tir-na-rithe/tir-na-dteorainneacha",
+      "dunfal/tir-na-rithe/tir-na-mionn",
+      "dunfal/tir-na-rithe/tir-na-nealaion",
       "dunfal/tir-na-rithe/ausgestorbene-clans"
     ],
     "houseIds": [
@@ -8974,33 +10426,33 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella",
+    "id": "dunfal/tir-na-rithe/tir-na-bpeiteal",
     "parentId": "dunfal/tir-na-rithe",
-    "name": "Herrschaft der Mac Sidhe’Ailella",
+    "name": "Tir na bPeiteal",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Mac Sidhe’Ailella"
+      "Tir na bPeiteal"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-mac-sidhe-ailella.png",
     "countryId": "dunfal",
     "regionId": "tir-na-rithe",
     "children": [
-      "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella/dunfal"
+      "dunfal/tir-na-rithe/tir-na-bpeiteal/braighmor"
     ],
     "houseIds": [
       "haus-ailella"
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella/dunfal",
-    "parentId": "dunfal/tir-na-rithe/herrschaft-der-mac-sidhe-ailella",
-    "name": "Dunfal",
+    "id": "dunfal/tir-na-rithe/tir-na-bpeiteal/braighmor",
+    "parentId": "dunfal/tir-na-rithe/tir-na-bpeiteal",
+    "name": "Braighmòr",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Mac Sidhe’Ailella",
-      "Dunfal"
+      "Tir na bPeiteal",
+      "Braighmòr"
     ],
     "image": "",
     "countryId": "dunfal",
@@ -9011,33 +10463,33 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-cein",
+    "id": "dunfal/tir-na-rithe/tir-na-dteorainneacha",
     "parentId": "dunfal/tir-na-rithe",
-    "name": "Herrschaft der Mac’Céin",
+    "name": "Tir na dTeorainneacha",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Mac’Céin"
+      "Tir na dTeorainneacha"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-mac-cein.png",
     "countryId": "dunfal",
     "regionId": "tir-na-rithe",
     "children": [
-      "dunfal/tir-na-rithe/herrschaft-der-mac-cein/dunfal"
+      "dunfal/tir-na-rithe/tir-na-dteorainneacha/caerthalas"
     ],
     "houseIds": [
       "haus-cein"
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-mac-cein/dunfal",
-    "parentId": "dunfal/tir-na-rithe/herrschaft-der-mac-cein",
-    "name": "Dunfal",
+    "id": "dunfal/tir-na-rithe/tir-na-dteorainneacha/caerthalas",
+    "parentId": "dunfal/tir-na-rithe/tir-na-dteorainneacha",
+    "name": "Caerthalas",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Mac’Céin",
-      "Dunfal"
+      "Tir na dTeorainneacha",
+      "Caerthalas"
     ],
     "image": "",
     "countryId": "dunfal",
@@ -9048,33 +10500,33 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-dal-birn",
+    "id": "dunfal/tir-na-rithe/tir-na-mionn",
     "parentId": "dunfal/tir-na-rithe",
-    "name": "Herrschaft der Dál’Birn",
+    "name": "Tir na Mionn",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Dál’Birn"
+      "Tir na Mionn"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-dal-birn.png",
     "countryId": "dunfal",
     "regionId": "tir-na-rithe",
     "children": [
-      "dunfal/tir-na-rithe/herrschaft-der-dal-birn/dunfal"
+      "dunfal/tir-na-rithe/tir-na-mionn/dunthairne"
     ],
     "houseIds": [
       "haus-birn"
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-dal-birn/dunfal",
-    "parentId": "dunfal/tir-na-rithe/herrschaft-der-dal-birn",
-    "name": "Dunfal",
+    "id": "dunfal/tir-na-rithe/tir-na-mionn/dunthairne",
+    "parentId": "dunfal/tir-na-rithe/tir-na-mionn",
+    "name": "Dùnthàirne",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Dál’Birn",
-      "Dunfal"
+      "Tir na Mionn",
+      "Dùnthàirne"
     ],
     "image": "",
     "countryId": "dunfal",
@@ -9085,32 +10537,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-ruin-morath",
+    "id": "dunfal/tir-na-rithe/tir-na-nealaion",
     "parentId": "dunfal/tir-na-rithe",
-    "name": "Herrschaft der Ruin’Morath",
+    "name": "Tir na nEalaíon",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Ruin’Morath"
+      "Tir na nEalaíon"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-ruin-morath.png",
     "countryId": "dunfal",
     "regionId": "tir-na-rithe",
     "children": [
-      "dunfal/tir-na-rithe/herrschaft-der-ruin-morath/iarthar"
+      "dunfal/tir-na-rithe/tir-na-nealaion/iarthar"
     ],
     "houseIds": [
       "haus-morath"
     ]
   },
   {
-    "id": "dunfal/tir-na-rithe/herrschaft-der-ruin-morath/iarthar",
-    "parentId": "dunfal/tir-na-rithe/herrschaft-der-ruin-morath",
+    "id": "dunfal/tir-na-rithe/tir-na-nealaion/iarthar",
+    "parentId": "dunfal/tir-na-rithe/tir-na-nealaion",
     "name": "Iarthar",
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Ruin’Morath",
+      "Tir na nEalaíon",
       "Iarthar"
     ],
     "image": "",
@@ -9170,39 +10622,39 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "dunfal",
     "regionId": "tir-na-fathach",
     "children": [
-      "dunfal/tir-na-fathach/cradh-na-frinne",
+      "dunfal/tir-na-fathach/cradh-na-firinne",
       "dunfal/tir-na-fathach/herrschaft-der-ua-anbhair",
       "dunfal/tir-na-fathach/herrschaft-der-ua-casur",
       "dunfal/tir-na-fathach/herrschaft-der-dal-aonghusa",
-      "dunfal/tir-na-fathach/herrschaft-der-na-riangabra",
-      "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai"
+      "dunfal/tir-na-fathach/tir-na-fuaime",
+      "dunfal/tir-na-fathach/tir-na-lamhainne",
+      "dunfal/tir-na-fathach/cradh-na-frinne"
     ],
     "houseIds": [
       "haus-nuadat",
-      "sept-ferbend",
       "haus-anbhair",
       "haus-casur",
       "haus-aonghusa",
       "haus-riangabra",
-      "haus-eachtrai"
+      "haus-eachtrai",
+      "sept-ferbend"
     ]
   },
   {
-    "id": "dunfal/tir-na-fathach/cradh-na-frinne",
+    "id": "dunfal/tir-na-fathach/cradh-na-firinne",
     "parentId": "dunfal/tir-na-fathach",
-    "name": "Cradh na Frinne",
+    "name": "Cradh na Fírinne",
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Cradh na Frinne"
+      "Cradh na Fírinne"
     ],
     "image": "",
     "countryId": "dunfal",
     "regionId": "tir-na-fathach",
     "children": [],
     "houseIds": [
-      "haus-nuadat",
-      "sept-ferbend"
+      "haus-nuadat"
     ]
   },
   {
@@ -9317,32 +10769,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "dunfal/tir-na-fathach/herrschaft-der-na-riangabra",
+    "id": "dunfal/tir-na-fathach/tir-na-fuaime",
     "parentId": "dunfal/tir-na-fathach",
-    "name": "Herrschaft der Na’Riangabra",
+    "name": "Tir na Fuaime",
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Herrschaft der Na’Riangabra"
+      "Tir na Fuaime"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-na-riangabra.png",
     "countryId": "dunfal",
     "regionId": "tir-na-fathach",
     "children": [
-      "dunfal/tir-na-fathach/herrschaft-der-na-riangabra/baile-begg"
+      "dunfal/tir-na-fathach/tir-na-fuaime/baile-begg"
     ],
     "houseIds": [
       "haus-riangabra"
     ]
   },
   {
-    "id": "dunfal/tir-na-fathach/herrschaft-der-na-riangabra/baile-begg",
-    "parentId": "dunfal/tir-na-fathach/herrschaft-der-na-riangabra",
+    "id": "dunfal/tir-na-fathach/tir-na-fuaime/baile-begg",
+    "parentId": "dunfal/tir-na-fathach/tir-na-fuaime",
     "name": "Baile Begg",
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Herrschaft der Na’Riangabra",
+      "Tir na Fuaime",
       "Baile Begg"
     ],
     "image": "",
@@ -9354,32 +10806,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai",
+    "id": "dunfal/tir-na-fathach/tir-na-lamhainne",
     "parentId": "dunfal/tir-na-fathach",
-    "name": "Herrschaft der Mac’Eachtrai",
+    "name": "Tir na Lámhainne",
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Herrschaft der Mac’Eachtrai"
+      "Tir na Lámhainne"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Dunfal/herrschaft-mac-eachtrai.png",
     "countryId": "dunfal",
     "regionId": "tir-na-fathach",
     "children": [
-      "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai/athenry"
+      "dunfal/tir-na-fathach/tir-na-lamhainne/athenry"
     ],
     "houseIds": [
       "haus-eachtrai"
     ]
   },
   {
-    "id": "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai/athenry",
-    "parentId": "dunfal/tir-na-fathach/herrschaft-der-mac-eachtrai",
+    "id": "dunfal/tir-na-fathach/tir-na-lamhainne/athenry",
+    "parentId": "dunfal/tir-na-fathach/tir-na-lamhainne",
     "name": "Athenry",
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Herrschaft der Mac’Eachtrai",
+      "Tir na Lámhainne",
       "Athenry"
     ],
     "image": "",
@@ -9388,6 +10840,23 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-eachtrai"
+    ]
+  },
+  {
+    "id": "dunfal/tir-na-fathach/cradh-na-frinne",
+    "parentId": "dunfal/tir-na-fathach",
+    "name": "Cradh na Frinne",
+    "path": [
+      "Dunfal",
+      "Tir na Fathach",
+      "Cradh na Frinne"
+    ],
+    "image": "",
+    "countryId": "dunfal",
+    "regionId": "tir-na-fathach",
+    "children": [],
+    "houseIds": [
+      "sept-ferbend"
     ]
   },
   {
@@ -9441,7 +10910,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "aislearneach",
     "regionId": "tir-na-geach",
     "children": [
-      "aislearneach/tir-na-geach/gaelan"
+      "aislearneach/tir-na-geach/gaelan",
+      "aislearneach/tir-na-geach/tir-na-nathrach",
+      "aislearneach/tir-na-geach/tir-na-ngeatai",
+      "aislearneach/tir-na-geach/tir-na-nancairi"
     ],
     "houseIds": [
       "haus-morna",
@@ -9464,9 +10936,117 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-geach",
     "children": [],
     "houseIds": [
-      "haus-morna",
-      "haus-coronach",
-      "haus-morgacht",
+      "haus-morna"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/tir-na-nathrach",
+    "parentId": "aislearneach/tir-na-geach",
+    "name": "Tir na Nathrach",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Tir na Nathrach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-coronach.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [
+      "aislearneach/tir-na-geach/tir-na-nathrach/gaelan"
+    ],
+    "houseIds": [
+      "haus-coronach"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/tir-na-nathrach/gaelan",
+    "parentId": "aislearneach/tir-na-geach/tir-na-nathrach",
+    "name": "Gaelan",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Tir na Nathrach",
+      "Gaelan"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [],
+    "houseIds": [
+      "haus-coronach"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/tir-na-ngeatai",
+    "parentId": "aislearneach/tir-na-geach",
+    "name": "Tir na nGeataí",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Tir na nGeataí"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-morgacht.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [
+      "aislearneach/tir-na-geach/tir-na-ngeatai/broch-an-geata"
+    ],
+    "houseIds": [
+      "haus-morgacht"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/tir-na-ngeatai/broch-an-geata",
+    "parentId": "aislearneach/tir-na-geach/tir-na-ngeatai",
+    "name": "Broch an Geata",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Tir na nGeataí",
+      "Broch an Geata"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [],
+    "houseIds": [
+      "haus-morgacht"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/tir-na-nancairi",
+    "parentId": "aislearneach/tir-na-geach",
+    "name": "Tir na nAncairí",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Tir na nAncairí"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-rioga.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [
+      "aislearneach/tir-na-geach/tir-na-nancairi/broch-an-duhbach"
+    ],
+    "houseIds": [
+      "haus-rioga"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-geach/tir-na-nancairi/broch-an-duhbach",
+    "parentId": "aislearneach/tir-na-geach/tir-na-nancairi",
+    "name": "Broch an Duhbach",
+    "path": [
+      "Aislearneach",
+      "Tir na Geach",
+      "Tir na nAncairí",
+      "Broch an Duhbach"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-geach",
+    "children": [],
+    "houseIds": [
       "haus-rioga"
     ]
   },
@@ -9483,8 +11063,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-iomaire",
     "children": [
       "aislearneach/tir-na-iomaire/koldair",
-      "aislearneach/tir-na-iomaire/broch-an-traigh",
-      "aislearneach/tir-na-iomaire/broch-an-creig"
+      "aislearneach/tir-na-iomaire/tir-na-leabhar",
+      "aislearneach/tir-na-iomaire/tir-na-loingseoireachta",
+      "aislearneach/tir-na-iomaire/tir-na-dtuanna",
+      "aislearneach/tir-na-iomaire/tir-na-heasoige"
     ],
     "houseIds": [
       "haus-ceallaigh",
@@ -9508,18 +11090,110 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-iomaire",
     "children": [],
     "houseIds": [
-      "haus-ceallaigh",
-      "haus-fiachiontach",
+      "haus-ceallaigh"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/tir-na-leabhar",
+    "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Tir na Leabhar",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Tir na Leabhar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiachiontach.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [
+      "aislearneach/tir-na-iomaire/tir-na-leabhar/koldair"
+    ],
+    "houseIds": [
+      "haus-fiachiontach"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/tir-na-leabhar/koldair",
+    "parentId": "aislearneach/tir-na-iomaire/tir-na-leabhar",
+    "name": "Koldair",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Tir na Leabhar",
+      "Koldair"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [],
+    "houseIds": [
+      "haus-fiachiontach"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/tir-na-loingseoireachta",
+    "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Tir na Loingseoireachta",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Tir na Loingseoireachta"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-tartarfhuil.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [
+      "aislearneach/tir-na-iomaire/tir-na-loingseoireachta/koldair"
+    ],
+    "houseIds": [
       "haus-tartarfhuil"
     ]
   },
   {
-    "id": "aislearneach/tir-na-iomaire/broch-an-traigh",
+    "id": "aislearneach/tir-na-iomaire/tir-na-loingseoireachta/koldair",
+    "parentId": "aislearneach/tir-na-iomaire/tir-na-loingseoireachta",
+    "name": "Koldair",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Tir na Loingseoireachta",
+      "Koldair"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [],
+    "houseIds": [
+      "haus-tartarfhuil"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/tir-na-dtuanna",
     "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Tir na dTuanna",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Tir na dTuanna"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-gaisgh.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [
+      "aislearneach/tir-na-iomaire/tir-na-dtuanna/broch-an-traigh"
+    ],
+    "houseIds": [
+      "haus-gaisgh"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/tir-na-dtuanna/broch-an-traigh",
+    "parentId": "aislearneach/tir-na-iomaire/tir-na-dtuanna",
     "name": "Broch an Traigh",
     "path": [
       "Aislearneach",
       "Tir na Iomaire",
+      "Tir na dTuanna",
       "Broch an Traigh"
     ],
     "image": "",
@@ -9531,12 +11205,32 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "aislearneach/tir-na-iomaire/broch-an-creig",
+    "id": "aislearneach/tir-na-iomaire/tir-na-heasoige",
     "parentId": "aislearneach/tir-na-iomaire",
+    "name": "Tir na hEasóige",
+    "path": [
+      "Aislearneach",
+      "Tir na Iomaire",
+      "Tir na hEasóige"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-luchdon.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-iomaire",
+    "children": [
+      "aislearneach/tir-na-iomaire/tir-na-heasoige/broch-an-creig"
+    ],
+    "houseIds": [
+      "haus-luchdon"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-iomaire/tir-na-heasoige/broch-an-creig",
+    "parentId": "aislearneach/tir-na-iomaire/tir-na-heasoige",
     "name": "Broch an Creig",
     "path": [
       "Aislearneach",
       "Tir na Iomaire",
+      "Tir na hEasóige",
       "Broch an Creig"
     ],
     "image": "",
@@ -9560,7 +11254,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-faela",
     "children": [
       "aislearneach/tir-na-faela/croga",
-      "aislearneach/tir-na-faela/caetharlach"
+      "aislearneach/tir-na-faela/tir-na-meala"
     ],
     "houseIds": [
       "haus-fintain",
@@ -9585,13 +11279,33 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "aislearneach/tir-na-faela/caetharlach",
+    "id": "aislearneach/tir-na-faela/tir-na-meala",
     "parentId": "aislearneach/tir-na-faela",
-    "name": "Caetharlach",
+    "name": "Tir na Meala",
     "path": [
       "Aislearneach",
       "Tir na Faela",
-      "Caetharlach"
+      "Tir na Meala"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-feannag.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-faela",
+    "children": [
+      "aislearneach/tir-na-faela/tir-na-meala/ceatharlach"
+    ],
+    "houseIds": [
+      "haus-feannag"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-faela/tir-na-meala/ceatharlach",
+    "parentId": "aislearneach/tir-na-faela/tir-na-meala",
+    "name": "Ceatharlach",
+    "path": [
+      "Aislearneach",
+      "Tir na Faela",
+      "Tir na Meala",
+      "Ceatharlach"
     ],
     "image": "",
     "countryId": "aislearneach",
@@ -9614,7 +11328,9 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-tirth",
     "children": [
       "aislearneach/tir-na-tirth/lorai",
-      "aislearneach/tir-na-tirth/athan",
+      "aislearneach/tir-na-tirth/tir-na-gcnoc",
+      "aislearneach/tir-na-tirth/tir-na-smear",
+      "aislearneach/tir-na-tirth/tir-na-srianta",
       "aislearneach/tir-na-tirth/cliath"
     ],
     "houseIds": [
@@ -9639,18 +11355,110 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-tirth",
     "children": [],
     "houseIds": [
-      "haus-durthacht",
-      "haus-fiantorc",
+      "haus-durthacht"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/tir-na-gcnoc",
+    "parentId": "aislearneach/tir-na-tirth",
+    "name": "Tir na gCnoc",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Tir na gCnoc"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-fiantorc.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [
+      "aislearneach/tir-na-tirth/tir-na-gcnoc/lorai"
+    ],
+    "houseIds": [
+      "haus-fiantorc"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/tir-na-gcnoc/lorai",
+    "parentId": "aislearneach/tir-na-tirth/tir-na-gcnoc",
+    "name": "Lorai",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Tir na gCnoc",
+      "Lorai"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [],
+    "houseIds": [
+      "haus-fiantorc"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/tir-na-smear",
+    "parentId": "aislearneach/tir-na-tirth",
+    "name": "Tir na Sméar",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Tir na Sméar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-treada.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [
+      "aislearneach/tir-na-tirth/tir-na-smear/lorai"
+    ],
+    "houseIds": [
       "haus-treada"
     ]
   },
   {
-    "id": "aislearneach/tir-na-tirth/athan",
+    "id": "aislearneach/tir-na-tirth/tir-na-smear/lorai",
+    "parentId": "aislearneach/tir-na-tirth/tir-na-smear",
+    "name": "Lorai",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Tir na Sméar",
+      "Lorai"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [],
+    "houseIds": [
+      "haus-treada"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/tir-na-srianta",
     "parentId": "aislearneach/tir-na-tirth",
+    "name": "Tir na Srianta",
+    "path": [
+      "Aislearneach",
+      "Tir na Tirth",
+      "Tir na Srianta"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-muileach.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-tirth",
+    "children": [
+      "aislearneach/tir-na-tirth/tir-na-srianta/athan"
+    ],
+    "houseIds": [
+      "haus-muileach"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-tirth/tir-na-srianta/athan",
+    "parentId": "aislearneach/tir-na-tirth/tir-na-srianta",
     "name": "Athan",
     "path": [
       "Aislearneach",
       "Tir na Tirth",
+      "Tir na Srianta",
       "Athan"
     ],
     "image": "",
@@ -9690,12 +11498,88 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "aislearneach",
     "regionId": "tir-na-adharcach",
     "children": [
+      "aislearneach/tir-na-adharcach/tir-na-gclochan",
+      "aislearneach/tir-na-adharcach/tir-na-gcoirceog",
       "aislearneach/tir-na-adharcach/foraoise"
     ],
     "houseIds": [
       "haus-uilebheist",
       "haus-cnogan",
       "sept-techtmar"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-adharcach/tir-na-gclochan",
+    "parentId": "aislearneach/tir-na-adharcach",
+    "name": "Tir na gClochán",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Tir na gClochán"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-uilebheist.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-adharcach",
+    "children": [
+      "aislearneach/tir-na-adharcach/tir-na-gclochan/foraoise"
+    ],
+    "houseIds": [
+      "haus-uilebheist"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-adharcach/tir-na-gclochan/foraoise",
+    "parentId": "aislearneach/tir-na-adharcach/tir-na-gclochan",
+    "name": "Foraoise",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Tir na gClochán",
+      "Foraoise"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-adharcach",
+    "children": [],
+    "houseIds": [
+      "haus-uilebheist"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-adharcach/tir-na-gcoirceog",
+    "parentId": "aislearneach/tir-na-adharcach",
+    "name": "Tir na gCoirceog",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Tir na gCoirceog"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Aislearneach/fiefs/herrschaft-aislearneach-cnogan.svg",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-adharcach",
+    "children": [
+      "aislearneach/tir-na-adharcach/tir-na-gcoirceog/foraoise"
+    ],
+    "houseIds": [
+      "haus-cnogan"
+    ]
+  },
+  {
+    "id": "aislearneach/tir-na-adharcach/tir-na-gcoirceog/foraoise",
+    "parentId": "aislearneach/tir-na-adharcach/tir-na-gcoirceog",
+    "name": "Foraoise",
+    "path": [
+      "Aislearneach",
+      "Tir na Adharcach",
+      "Tir na gCoirceog",
+      "Foraoise"
+    ],
+    "image": "",
+    "countryId": "aislearneach",
+    "regionId": "tir-na-adharcach",
+    "children": [],
+    "houseIds": [
+      "haus-cnogan"
     ]
   },
   {
@@ -9712,8 +11596,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "tir-na-adharcach",
     "children": [],
     "houseIds": [
-      "haus-uilebheist",
-      "haus-cnogan",
       "sept-techtmar"
     ]
   },
@@ -9728,20 +11610,20 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "uathneach",
     "regionId": "",
     "children": [
-      "uathneach/tir-na-laimhe",
-      "uathneach/tir-na-sruthan",
-      "uathneach/tir-na-gcoillte",
-      "uathneach/tir-na-taoide",
-      "uathneach/tir-na-dtorc",
-      "uathneach/tir-na-conaire",
-      "uathneach/tir-na-cloiche"
+      "uathneach/tir-na-dala",
+      "uathneach/tir-na-ngleannta",
+      "uathneach/tir-na-gairme",
+      "uathneach/tir-na-seolta",
+      "uathneach/tir-na-machairi",
+      "uathneach/tir-na-faire",
+      "uathneach/tir-na-gclog"
     ],
     "houseIds": [
       "haus-laga",
+      "haus-fastaigh",
       "haus-briccne",
       "haus-arbhair",
       "haus-scathain",
-      "haus-fastaigh",
       "haus-muirin",
       "haus-siubhran",
       "haus-gealan",
@@ -9759,144 +11641,295 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-suilgeach",
       "haus-creagan",
       "haus-luga",
-      "haus-marcaigh",
-      "haus-giolla",
       "haus-lasgair",
-      "haus-clannmhar"
+      "haus-clannmhar",
+      "haus-marcaigh",
+      "haus-giolla"
     ]
   },
   {
-    "id": "uathneach/tir-na-laimhe",
+    "id": "uathneach/tir-na-dala",
     "parentId": "uathneach",
-    "name": "Tir na Láimhe",
+    "name": "Tir na Dála",
     "path": [
       "Uathneach",
-      "Tir na Láimhe"
+      "Tir na Dála"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/laimhe.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-laimhe",
+    "regionId": "tir-na-dala",
     "children": [
-      "uathneach/tir-na-laimhe/dunnean",
-      "uathneach/tir-na-laimhe/herrschaft-von-bronnan",
-      "uathneach/tir-na-laimhe/broch-an-reithe",
-      "uathneach/tir-na-laimhe/fethlinn"
+      "uathneach/tir-na-dala/dunnean",
+      "uathneach/tir-na-dala/tir-na-haille",
+      "uathneach/tir-na-dala/herrschaft-der-na-briccne",
+      "uathneach/tir-na-dala/herrschaft-der-dal-arbhair",
+      "uathneach/tir-na-dala/herrschaft-der-an-scathain",
+      "uathneach/tir-na-dala/tir-na-ngliomach",
+      "uathneach/tir-na-dala/tir-na-fanaiochta"
     ],
     "houseIds": [
       "haus-laga",
+      "haus-fastaigh",
       "haus-briccne",
       "haus-arbhair",
       "haus-scathain",
-      "haus-fastaigh",
       "haus-muirin",
       "haus-siubhran"
     ]
   },
   {
-    "id": "uathneach/tir-na-laimhe/dunnean",
-    "parentId": "uathneach/tir-na-laimhe",
+    "id": "uathneach/tir-na-dala/dunnean",
+    "parentId": "uathneach/tir-na-dala",
     "name": "Dunnean",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
       "Dunnean"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-laimhe",
+    "regionId": "tir-na-dala",
     "children": [],
     "houseIds": [
-      "haus-laga",
-      "haus-briccne",
-      "haus-arbhair",
-      "haus-scathain"
+      "haus-laga"
     ]
   },
   {
-    "id": "uathneach/tir-na-laimhe/herrschaft-von-bronnan",
-    "parentId": "uathneach/tir-na-laimhe",
-    "name": "Herrschaft von Bronnan",
+    "id": "uathneach/tir-na-dala/tir-na-haille",
+    "parentId": "uathneach/tir-na-dala",
+    "name": "Tir na hAille",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
-      "Herrschaft von Bronnan"
+      "Tir na Dála",
+      "Tir na hAille"
     ],
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/fastaigh.webp",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fastaigh.svg",
     "countryId": "uathneach",
-    "regionId": "tir-na-laimhe",
+    "regionId": "tir-na-dala",
     "children": [
-      "uathneach/tir-na-laimhe/herrschaft-von-bronnan/bronnan"
+      "uathneach/tir-na-dala/tir-na-haille/bronnan"
     ],
     "houseIds": [
       "haus-fastaigh"
     ]
   },
   {
-    "id": "uathneach/tir-na-laimhe/herrschaft-von-bronnan/bronnan",
-    "parentId": "uathneach/tir-na-laimhe/herrschaft-von-bronnan",
+    "id": "uathneach/tir-na-dala/tir-na-haille/bronnan",
+    "parentId": "uathneach/tir-na-dala/tir-na-haille",
     "name": "Bronnan",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
-      "Herrschaft von Bronnan",
+      "Tir na Dála",
+      "Tir na hAille",
       "Bronnan"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-laimhe",
+    "regionId": "tir-na-dala",
     "children": [],
     "houseIds": [
       "haus-fastaigh"
     ]
   },
   {
-    "id": "uathneach/tir-na-laimhe/broch-an-reithe",
-    "parentId": "uathneach/tir-na-laimhe",
+    "id": "uathneach/tir-na-dala/herrschaft-der-na-briccne",
+    "parentId": "uathneach/tir-na-dala",
+    "name": "Herrschaft der Na Briccne",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Herrschaft der Na Briccne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/briccne.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [
+      "uathneach/tir-na-dala/herrschaft-der-na-briccne/dunnean"
+    ],
+    "houseIds": [
+      "haus-briccne"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/herrschaft-der-na-briccne/dunnean",
+    "parentId": "uathneach/tir-na-dala/herrschaft-der-na-briccne",
+    "name": "Dunnean",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Herrschaft der Na Briccne",
+      "Dunnean"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [],
+    "houseIds": [
+      "haus-briccne"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/herrschaft-der-dal-arbhair",
+    "parentId": "uathneach/tir-na-dala",
+    "name": "Herrschaft der Dâl Arbhair",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Herrschaft der Dâl Arbhair"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/arbhair.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [
+      "uathneach/tir-na-dala/herrschaft-der-dal-arbhair/dunnean"
+    ],
+    "houseIds": [
+      "haus-arbhair"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/herrschaft-der-dal-arbhair/dunnean",
+    "parentId": "uathneach/tir-na-dala/herrschaft-der-dal-arbhair",
+    "name": "Dunnean",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Herrschaft der Dâl Arbhair",
+      "Dunnean"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [],
+    "houseIds": [
+      "haus-arbhair"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/herrschaft-der-an-scathain",
+    "parentId": "uathneach/tir-na-dala",
+    "name": "Herrschaft der An Scatháin",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Herrschaft der An Scatháin"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/scathain.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [
+      "uathneach/tir-na-dala/herrschaft-der-an-scathain/dunnean"
+    ],
+    "houseIds": [
+      "haus-scathain"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/herrschaft-der-an-scathain/dunnean",
+    "parentId": "uathneach/tir-na-dala/herrschaft-der-an-scathain",
+    "name": "Dunnean",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Herrschaft der An Scatháin",
+      "Dunnean"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [],
+    "houseIds": [
+      "haus-scathain"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/tir-na-ngliomach",
+    "parentId": "uathneach/tir-na-dala",
+    "name": "Tir na nGliomach",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Tir na nGliomach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-muirin.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [
+      "uathneach/tir-na-dala/tir-na-ngliomach/broch-an-reithe"
+    ],
+    "houseIds": [
+      "haus-muirin"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/tir-na-ngliomach/broch-an-reithe",
+    "parentId": "uathneach/tir-na-dala/tir-na-ngliomach",
     "name": "Broch an Reithe",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Tir na nGliomach",
       "Broch an Reithe"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-laimhe",
+    "regionId": "tir-na-dala",
     "children": [],
     "houseIds": [
       "haus-muirin"
     ]
   },
   {
-    "id": "uathneach/tir-na-laimhe/fethlinn",
-    "parentId": "uathneach/tir-na-laimhe",
+    "id": "uathneach/tir-na-dala/tir-na-fanaiochta",
+    "parentId": "uathneach/tir-na-dala",
+    "name": "Tir na Fánaíochta",
+    "path": [
+      "Uathneach",
+      "Tir na Dála",
+      "Tir na Fánaíochta"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-einsiedlerkrebs.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-dala",
+    "children": [
+      "uathneach/tir-na-dala/tir-na-fanaiochta/fethlinn"
+    ],
+    "houseIds": [
+      "haus-siubhran"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-dala/tir-na-fanaiochta/fethlinn",
+    "parentId": "uathneach/tir-na-dala/tir-na-fanaiochta",
     "name": "Féthlinn",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Tir na Fánaíochta",
       "Féthlinn"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-laimhe",
+    "regionId": "tir-na-dala",
     "children": [],
     "houseIds": [
       "haus-siubhran"
     ]
   },
   {
-    "id": "uathneach/tir-na-sruthan",
+    "id": "uathneach/tir-na-ngleannta",
     "parentId": "uathneach",
-    "name": "Tir na Sruthán",
+    "name": "Tir na nGleannta",
     "path": [
       "Uathneach",
-      "Tir na Sruthán"
+      "Tir na nGleannta"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/sruthan.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-sruthan",
+    "regionId": "tir-na-ngleannta",
     "children": [
-      "uathneach/tir-na-sruthan/moineal",
-      "uathneach/tir-na-sruthan/herrschaft-von-treabhair"
+      "uathneach/tir-na-ngleannta/moineal",
+      "uathneach/tir-na-ngleannta/tir-na-raithni"
     ],
     "houseIds": [
       "haus-gealan",
@@ -9904,73 +11937,73 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "uathneach/tir-na-sruthan/moineal",
-    "parentId": "uathneach/tir-na-sruthan",
+    "id": "uathneach/tir-na-ngleannta/moineal",
+    "parentId": "uathneach/tir-na-ngleannta",
     "name": "Moineal",
     "path": [
       "Uathneach",
-      "Tir na Sruthán",
+      "Tir na nGleannta",
       "Moineal"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-sruthan",
+    "regionId": "tir-na-ngleannta",
     "children": [],
     "houseIds": [
       "haus-gealan"
     ]
   },
   {
-    "id": "uathneach/tir-na-sruthan/herrschaft-von-treabhair",
-    "parentId": "uathneach/tir-na-sruthan",
-    "name": "Herrschaft von Treabhair",
+    "id": "uathneach/tir-na-ngleannta/tir-na-raithni",
+    "parentId": "uathneach/tir-na-ngleannta",
+    "name": "Tir na Raithní",
     "path": [
       "Uathneach",
-      "Tir na Sruthán",
-      "Herrschaft von Treabhair"
+      "Tir na nGleannta",
+      "Tir na Raithní"
     ],
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/luachra.webp",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-luachra.svg",
     "countryId": "uathneach",
-    "regionId": "tir-na-sruthan",
+    "regionId": "tir-na-ngleannta",
     "children": [
-      "uathneach/tir-na-sruthan/herrschaft-von-treabhair/treabhair"
+      "uathneach/tir-na-ngleannta/tir-na-raithni/treabhair"
     ],
     "houseIds": [
       "haus-luachra"
     ]
   },
   {
-    "id": "uathneach/tir-na-sruthan/herrschaft-von-treabhair/treabhair",
-    "parentId": "uathneach/tir-na-sruthan/herrschaft-von-treabhair",
+    "id": "uathneach/tir-na-ngleannta/tir-na-raithni/treabhair",
+    "parentId": "uathneach/tir-na-ngleannta/tir-na-raithni",
     "name": "Treabhair",
     "path": [
       "Uathneach",
-      "Tir na Sruthán",
-      "Herrschaft von Treabhair",
+      "Tir na nGleannta",
+      "Tir na Raithní",
       "Treabhair"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-sruthan",
+    "regionId": "tir-na-ngleannta",
     "children": [],
     "houseIds": [
       "haus-luachra"
     ]
   },
   {
-    "id": "uathneach/tir-na-gcoillte",
+    "id": "uathneach/tir-na-gairme",
     "parentId": "uathneach",
-    "name": "Tir na gCoillte",
+    "name": "Tir na Gairme",
     "path": [
       "Uathneach",
-      "Tir na gCoillte"
+      "Tir na Gairme"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/gcoillte.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-gcoillte",
+    "regionId": "tir-na-gairme",
     "children": [
-      "uathneach/tir-na-gcoillte/cathair",
-      "uathneach/tir-na-gcoillte/dathuil"
+      "uathneach/tir-na-gairme/cathair",
+      "uathneach/tir-na-gairme/tir-na-gcurach"
     ],
     "houseIds": [
       "haus-conchobhair",
@@ -9978,53 +12011,75 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "uathneach/tir-na-gcoillte/cathair",
-    "parentId": "uathneach/tir-na-gcoillte",
+    "id": "uathneach/tir-na-gairme/cathair",
+    "parentId": "uathneach/tir-na-gairme",
     "name": "Cathair",
     "path": [
       "Uathneach",
-      "Tir na gCoillte",
+      "Tir na Gairme",
       "Cathair"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-gcoillte",
+    "regionId": "tir-na-gairme",
     "children": [],
     "houseIds": [
       "haus-conchobhair"
     ]
   },
   {
-    "id": "uathneach/tir-na-gcoillte/dathuil",
-    "parentId": "uathneach/tir-na-gcoillte",
+    "id": "uathneach/tir-na-gairme/tir-na-gcurach",
+    "parentId": "uathneach/tir-na-gairme",
+    "name": "Tir na gCurach",
+    "path": [
+      "Uathneach",
+      "Tir na Gairme",
+      "Tir na gCurach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-fiodhran.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gairme",
+    "children": [
+      "uathneach/tir-na-gairme/tir-na-gcurach/dathuil"
+    ],
+    "houseIds": [
+      "haus-fiodhran"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gairme/tir-na-gcurach/dathuil",
+    "parentId": "uathneach/tir-na-gairme/tir-na-gcurach",
     "name": "Dathuil",
     "path": [
       "Uathneach",
-      "Tir na gCoillte",
+      "Tir na Gairme",
+      "Tir na gCurach",
       "Dathuil"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-gcoillte",
+    "regionId": "tir-na-gairme",
     "children": [],
     "houseIds": [
       "haus-fiodhran"
     ]
   },
   {
-    "id": "uathneach/tir-na-taoide",
+    "id": "uathneach/tir-na-seolta",
     "parentId": "uathneach",
-    "name": "Tir na Taoide",
+    "name": "Tir na Seolta",
     "path": [
       "Uathneach",
-      "Tir na Taoide"
+      "Tir na Seolta"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/taoide.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-taoide",
+    "regionId": "tir-na-seolta",
     "children": [
-      "uathneach/tir-na-taoide/orglen",
-      "uathneach/tir-na-taoide/broch-an-mhor"
+      "uathneach/tir-na-seolta/orglen",
+      "uathneach/tir-na-seolta/herrschaft-der-ua-cairbre",
+      "uathneach/tir-na-seolta/herrschaft-der-ua-reannachain",
+      "uathneach/tir-na-seolta/tir-na-bportan"
     ],
     "houseIds": [
       "haus-roich",
@@ -10034,55 +12089,148 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "uathneach/tir-na-taoide/orglen",
-    "parentId": "uathneach/tir-na-taoide",
+    "id": "uathneach/tir-na-seolta/orglen",
+    "parentId": "uathneach/tir-na-seolta",
     "name": "Orglen",
     "path": [
       "Uathneach",
-      "Tir na Taoide",
+      "Tir na Seolta",
       "Orglen"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-taoide",
+    "regionId": "tir-na-seolta",
     "children": [],
     "houseIds": [
-      "haus-roich",
-      "haus-cairbre",
+      "haus-roich"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-seolta/herrschaft-der-ua-cairbre",
+    "parentId": "uathneach/tir-na-seolta",
+    "name": "Herrschaft der Ua Cairbre",
+    "path": [
+      "Uathneach",
+      "Tir na Seolta",
+      "Herrschaft der Ua Cairbre"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cairbre.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-seolta",
+    "children": [
+      "uathneach/tir-na-seolta/herrschaft-der-ua-cairbre/orglen"
+    ],
+    "houseIds": [
+      "haus-cairbre"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-seolta/herrschaft-der-ua-cairbre/orglen",
+    "parentId": "uathneach/tir-na-seolta/herrschaft-der-ua-cairbre",
+    "name": "Orglen",
+    "path": [
+      "Uathneach",
+      "Tir na Seolta",
+      "Herrschaft der Ua Cairbre",
+      "Orglen"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-seolta",
+    "children": [],
+    "houseIds": [
+      "haus-cairbre"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-seolta/herrschaft-der-ua-reannachain",
+    "parentId": "uathneach/tir-na-seolta",
+    "name": "Herrschaft der Ua Reannachain",
+    "path": [
+      "Uathneach",
+      "Tir na Seolta",
+      "Herrschaft der Ua Reannachain"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/reannachain.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-seolta",
+    "children": [
+      "uathneach/tir-na-seolta/herrschaft-der-ua-reannachain/orglen"
+    ],
+    "houseIds": [
       "haus-reannachain"
     ]
   },
   {
-    "id": "uathneach/tir-na-taoide/broch-an-mhor",
-    "parentId": "uathneach/tir-na-taoide",
+    "id": "uathneach/tir-na-seolta/herrschaft-der-ua-reannachain/orglen",
+    "parentId": "uathneach/tir-na-seolta/herrschaft-der-ua-reannachain",
+    "name": "Orglen",
+    "path": [
+      "Uathneach",
+      "Tir na Seolta",
+      "Herrschaft der Ua Reannachain",
+      "Orglen"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-seolta",
+    "children": [],
+    "houseIds": [
+      "haus-reannachain"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-seolta/tir-na-bportan",
+    "parentId": "uathneach/tir-na-seolta",
+    "name": "Tir na bPortán",
+    "path": [
+      "Uathneach",
+      "Tir na Seolta",
+      "Tir na bPortán"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cairge.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-seolta",
+    "children": [
+      "uathneach/tir-na-seolta/tir-na-bportan/broch-an-mhor"
+    ],
+    "houseIds": [
+      "haus-cairge"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-seolta/tir-na-bportan/broch-an-mhor",
+    "parentId": "uathneach/tir-na-seolta/tir-na-bportan",
     "name": "Broch an Mhor",
     "path": [
       "Uathneach",
-      "Tir na Taoide",
+      "Tir na Seolta",
+      "Tir na bPortán",
       "Broch an Mhor"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-taoide",
+    "regionId": "tir-na-seolta",
     "children": [],
     "houseIds": [
       "haus-cairge"
     ]
   },
   {
-    "id": "uathneach/tir-na-dtorc",
+    "id": "uathneach/tir-na-machairi",
     "parentId": "uathneach",
-    "name": "Tir na dTorc",
+    "name": "Tir na Machairí",
     "path": [
       "Uathneach",
-      "Tir na dTorc"
+      "Tir na Machairí"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/dtorc.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-dtorc",
+    "regionId": "tir-na-machairi",
     "children": [
-      "uathneach/tir-na-dtorc/rinnmara",
-      "uathneach/tir-na-dtorc/broch-an-cuan"
+      "uathneach/tir-na-machairi/rinnmara",
+      "uathneach/tir-na-machairi/herrschaft-der-ua-cuilen",
+      "uathneach/tir-na-machairi/tir-na-lionta"
     ],
     "houseIds": [
       "haus-midgna",
@@ -10091,55 +12239,111 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "uathneach/tir-na-dtorc/rinnmara",
-    "parentId": "uathneach/tir-na-dtorc",
+    "id": "uathneach/tir-na-machairi/rinnmara",
+    "parentId": "uathneach/tir-na-machairi",
     "name": "Rinnmara",
     "path": [
       "Uathneach",
-      "Tir na dTorc",
+      "Tir na Machairí",
       "Rinnmara"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-dtorc",
+    "regionId": "tir-na-machairi",
     "children": [],
     "houseIds": [
-      "haus-midgna",
+      "haus-midgna"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-machairi/herrschaft-der-ua-cuilen",
+    "parentId": "uathneach/tir-na-machairi",
+    "name": "Herrschaft der Ua Cuilen",
+    "path": [
+      "Uathneach",
+      "Tir na Machairí",
+      "Herrschaft der Ua Cuilen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cuilen.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-machairi",
+    "children": [
+      "uathneach/tir-na-machairi/herrschaft-der-ua-cuilen/rinnmara"
+    ],
+    "houseIds": [
       "haus-cuilen"
     ]
   },
   {
-    "id": "uathneach/tir-na-dtorc/broch-an-cuan",
-    "parentId": "uathneach/tir-na-dtorc",
+    "id": "uathneach/tir-na-machairi/herrschaft-der-ua-cuilen/rinnmara",
+    "parentId": "uathneach/tir-na-machairi/herrschaft-der-ua-cuilen",
+    "name": "Rinnmara",
+    "path": [
+      "Uathneach",
+      "Tir na Machairí",
+      "Herrschaft der Ua Cuilen",
+      "Rinnmara"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-machairi",
+    "children": [],
+    "houseIds": [
+      "haus-cuilen"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-machairi/tir-na-lionta",
+    "parentId": "uathneach/tir-na-machairi",
+    "name": "Tir na Líonta",
+    "path": [
+      "Uathneach",
+      "Tir na Machairí",
+      "Tir na Líonta"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-cadhla.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-machairi",
+    "children": [
+      "uathneach/tir-na-machairi/tir-na-lionta/broch-an-cuan"
+    ],
+    "houseIds": [
+      "haus-cadhla"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-machairi/tir-na-lionta/broch-an-cuan",
+    "parentId": "uathneach/tir-na-machairi/tir-na-lionta",
     "name": "Broch an Cuan",
     "path": [
       "Uathneach",
-      "Tir na dTorc",
+      "Tir na Machairí",
+      "Tir na Líonta",
       "Broch an Cuan"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-dtorc",
+    "regionId": "tir-na-machairi",
     "children": [],
     "houseIds": [
       "haus-cadhla"
     ]
   },
   {
-    "id": "uathneach/tir-na-conaire",
+    "id": "uathneach/tir-na-faire",
     "parentId": "uathneach",
-    "name": "Tir na Conaire",
+    "name": "Tir na Faire",
     "path": [
       "Uathneach",
-      "Tir na Conaire"
+      "Tir na Faire"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/conaire.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-conaire",
+    "regionId": "tir-na-faire",
     "children": [
-      "uathneach/tir-na-conaire/temair",
-      "uathneach/tir-na-conaire/herrschaft-von-caorthann",
-      "uathneach/tir-na-conaire/ceithirn"
+      "uathneach/tir-na-faire/temair",
+      "uathneach/tir-na-faire/tir-na-realta",
+      "uathneach/tir-na-faire/tir-na-bhfeochadan"
     ],
     "houseIds": [
       "haus-mata",
@@ -10148,191 +12352,285 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "uathneach/tir-na-conaire/temair",
-    "parentId": "uathneach/tir-na-conaire",
+    "id": "uathneach/tir-na-faire/temair",
+    "parentId": "uathneach/tir-na-faire",
     "name": "Temair",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
+      "Tir na Faire",
       "Temair"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-conaire",
+    "regionId": "tir-na-faire",
     "children": [],
     "houseIds": [
       "haus-mata"
     ]
   },
   {
-    "id": "uathneach/tir-na-conaire/herrschaft-von-caorthann",
-    "parentId": "uathneach/tir-na-conaire",
-    "name": "Herrschaft von Caorthann",
+    "id": "uathneach/tir-na-faire/tir-na-realta",
+    "parentId": "uathneach/tir-na-faire",
+    "name": "Tir na Réalta",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
-      "Herrschaft von Caorthann"
+      "Tir na Faire",
+      "Tir na Réalta"
     ],
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/suilgeach.webp",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-suilgeach.svg",
     "countryId": "uathneach",
-    "regionId": "tir-na-conaire",
+    "regionId": "tir-na-faire",
     "children": [
-      "uathneach/tir-na-conaire/herrschaft-von-caorthann/caorthann"
+      "uathneach/tir-na-faire/tir-na-realta/caorthann"
     ],
     "houseIds": [
       "haus-suilgeach"
     ]
   },
   {
-    "id": "uathneach/tir-na-conaire/herrschaft-von-caorthann/caorthann",
-    "parentId": "uathneach/tir-na-conaire/herrschaft-von-caorthann",
+    "id": "uathneach/tir-na-faire/tir-na-realta/caorthann",
+    "parentId": "uathneach/tir-na-faire/tir-na-realta",
     "name": "Caorthann",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
-      "Herrschaft von Caorthann",
+      "Tir na Faire",
+      "Tir na Réalta",
       "Caorthann"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-conaire",
+    "regionId": "tir-na-faire",
     "children": [],
     "houseIds": [
       "haus-suilgeach"
     ]
   },
   {
-    "id": "uathneach/tir-na-conaire/ceithirn",
-    "parentId": "uathneach/tir-na-conaire",
+    "id": "uathneach/tir-na-faire/tir-na-bhfeochadan",
+    "parentId": "uathneach/tir-na-faire",
+    "name": "Tir na bhFeochadán",
+    "path": [
+      "Uathneach",
+      "Tir na Faire",
+      "Tir na bhFeochadán"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-creagan.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-faire",
+    "children": [
+      "uathneach/tir-na-faire/tir-na-bhfeochadan/ceithirn"
+    ],
+    "houseIds": [
+      "haus-creagan"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-faire/tir-na-bhfeochadan/ceithirn",
+    "parentId": "uathneach/tir-na-faire/tir-na-bhfeochadan",
     "name": "Ceithirn",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
+      "Tir na Faire",
+      "Tir na bhFeochadán",
       "Ceithirn"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-conaire",
+    "regionId": "tir-na-faire",
     "children": [],
     "houseIds": [
       "haus-creagan"
     ]
   },
   {
-    "id": "uathneach/tir-na-cloiche",
+    "id": "uathneach/tir-na-gclog",
     "parentId": "uathneach",
-    "name": "Tir na Cloiche",
+    "name": "Tir na gClog",
     "path": [
       "Uathneach",
-      "Tir na Cloiche"
+      "Tir na gClog"
     ],
     "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/cloiche.webp",
     "countryId": "uathneach",
-    "regionId": "tir-na-cloiche",
+    "regionId": "tir-na-gclog",
     "children": [
-      "uathneach/tir-na-cloiche/kharanor",
-      "uathneach/tir-na-cloiche/herrschaft-von-mhorcha",
-      "uathneach/tir-na-cloiche/herrschaft-von-rioghain"
+      "uathneach/tir-na-gclog/kharanor",
+      "uathneach/tir-na-gclog/tir-na-neiti",
+      "uathneach/tir-na-gclog/tir-na-snaidhme",
+      "uathneach/tir-na-gclog/herrschaft-der-ruin-marcaigh",
+      "uathneach/tir-na-gclog/herrschaft-der-ruin-giolla"
     ],
     "houseIds": [
       "haus-luga",
-      "haus-marcaigh",
-      "haus-giolla",
       "haus-lasgair",
-      "haus-clannmhar"
-    ]
-  },
-  {
-    "id": "uathneach/tir-na-cloiche/kharanor",
-    "parentId": "uathneach/tir-na-cloiche",
-    "name": "Kharanor",
-    "path": [
-      "Uathneach",
-      "Tir na Cloiche",
-      "Kharanor"
-    ],
-    "image": "",
-    "countryId": "uathneach",
-    "regionId": "tir-na-cloiche",
-    "children": [],
-    "houseIds": [
-      "haus-luga",
+      "haus-clannmhar",
       "haus-marcaigh",
       "haus-giolla"
     ]
   },
   {
-    "id": "uathneach/tir-na-cloiche/herrschaft-von-mhorcha",
-    "parentId": "uathneach/tir-na-cloiche",
-    "name": "Herrschaft von Mhorcha",
+    "id": "uathneach/tir-na-gclog/kharanor",
+    "parentId": "uathneach/tir-na-gclog",
+    "name": "Kharanor",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
-      "Herrschaft von Mhorcha"
+      "Tir na gClog",
+      "Kharanor"
     ],
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/lasgair.webp",
+    "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-cloiche",
+    "regionId": "tir-na-gclog",
+    "children": [],
+    "houseIds": [
+      "haus-luga"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gclog/tir-na-neiti",
+    "parentId": "uathneach/tir-na-gclog",
+    "name": "Tir na nEití",
+    "path": [
+      "Uathneach",
+      "Tir na gClog",
+      "Tir na nEití"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-lasgair.svg",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gclog",
     "children": [
-      "uathneach/tir-na-cloiche/herrschaft-von-mhorcha/mhorcha"
+      "uathneach/tir-na-gclog/tir-na-neiti/mhorcha"
     ],
     "houseIds": [
       "haus-lasgair"
     ]
   },
   {
-    "id": "uathneach/tir-na-cloiche/herrschaft-von-mhorcha/mhorcha",
-    "parentId": "uathneach/tir-na-cloiche/herrschaft-von-mhorcha",
+    "id": "uathneach/tir-na-gclog/tir-na-neiti/mhorcha",
+    "parentId": "uathneach/tir-na-gclog/tir-na-neiti",
     "name": "Mhorcha",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
-      "Herrschaft von Mhorcha",
+      "Tir na gClog",
+      "Tir na nEití",
       "Mhorcha"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-cloiche",
+    "regionId": "tir-na-gclog",
     "children": [],
     "houseIds": [
       "haus-lasgair"
     ]
   },
   {
-    "id": "uathneach/tir-na-cloiche/herrschaft-von-rioghain",
-    "parentId": "uathneach/tir-na-cloiche",
-    "name": "Herrschaft von Rioghain",
+    "id": "uathneach/tir-na-gclog/tir-na-snaidhme",
+    "parentId": "uathneach/tir-na-gclog",
+    "name": "Tir na Snaidhme",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
-      "Herrschaft von Rioghain"
+      "Tir na gClog",
+      "Tir na Snaidhme"
     ],
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/clannmhar.webp",
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Uathneach/fiefs/uathneach-herrschaft-clannmhar.svg",
     "countryId": "uathneach",
-    "regionId": "tir-na-cloiche",
+    "regionId": "tir-na-gclog",
     "children": [
-      "uathneach/tir-na-cloiche/herrschaft-von-rioghain/rioghain"
+      "uathneach/tir-na-gclog/tir-na-snaidhme/rioghain"
     ],
     "houseIds": [
       "haus-clannmhar"
     ]
   },
   {
-    "id": "uathneach/tir-na-cloiche/herrschaft-von-rioghain/rioghain",
-    "parentId": "uathneach/tir-na-cloiche/herrschaft-von-rioghain",
+    "id": "uathneach/tir-na-gclog/tir-na-snaidhme/rioghain",
+    "parentId": "uathneach/tir-na-gclog/tir-na-snaidhme",
     "name": "Rioghain",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
-      "Herrschaft von Rioghain",
+      "Tir na gClog",
+      "Tir na Snaidhme",
       "Rioghain"
     ],
     "image": "",
     "countryId": "uathneach",
-    "regionId": "tir-na-cloiche",
+    "regionId": "tir-na-gclog",
     "children": [],
     "houseIds": [
       "haus-clannmhar"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gclog/herrschaft-der-ruin-marcaigh",
+    "parentId": "uathneach/tir-na-gclog",
+    "name": "Herrschaft der Ruin Marcaigh",
+    "path": [
+      "Uathneach",
+      "Tir na gClog",
+      "Herrschaft der Ruin Marcaigh"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/marcaigh.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gclog",
+    "children": [
+      "uathneach/tir-na-gclog/herrschaft-der-ruin-marcaigh/kharanor"
+    ],
+    "houseIds": [
+      "haus-marcaigh"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gclog/herrschaft-der-ruin-marcaigh/kharanor",
+    "parentId": "uathneach/tir-na-gclog/herrschaft-der-ruin-marcaigh",
+    "name": "Kharanor",
+    "path": [
+      "Uathneach",
+      "Tir na gClog",
+      "Herrschaft der Ruin Marcaigh",
+      "Kharanor"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gclog",
+    "children": [],
+    "houseIds": [
+      "haus-marcaigh"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gclog/herrschaft-der-ruin-giolla",
+    "parentId": "uathneach/tir-na-gclog",
+    "name": "Herrschaft der Ruin Giolla",
+    "path": [
+      "Uathneach",
+      "Tir na gClog",
+      "Herrschaft der Ruin Giolla"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/giolla.webp",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gclog",
+    "children": [
+      "uathneach/tir-na-gclog/herrschaft-der-ruin-giolla/kharanor"
+    ],
+    "houseIds": [
+      "haus-giolla"
+    ]
+  },
+  {
+    "id": "uathneach/tir-na-gclog/herrschaft-der-ruin-giolla/kharanor",
+    "parentId": "uathneach/tir-na-gclog/herrschaft-der-ruin-giolla",
+    "name": "Kharanor",
+    "path": [
+      "Uathneach",
+      "Tir na gClog",
+      "Herrschaft der Ruin Giolla",
+      "Kharanor"
+    ],
+    "image": "",
+    "countryId": "uathneach",
+    "regionId": "tir-na-gclog",
+    "children": [],
+    "houseIds": [
+      "haus-giolla"
     ]
   },
   {
@@ -12136,6 +14434,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Cruach",
+      "Herrschaft der Tir an Craobhan",
       "Carraigreach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-craobhan&mode=view"
@@ -12147,6 +14446,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Cruach",
+      "Herrschaft der Fáill Ua’Eldath",
       "Carraigreach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-eldath&mode=view"
@@ -12158,6 +14458,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Cruach",
+      "Tir na Tairsí",
       "Tineach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-eamhra&mode=view"
@@ -12169,6 +14470,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Dorcha",
+      "Tir na Leon",
       "Glaennmor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-seaghda&mode=view"
@@ -12180,6 +14482,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Ceo",
+      "Tir na gCéanna",
       "Sruthbruach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-an-morchoe&mode=view"
@@ -12191,6 +14494,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Toraidh",
+      "Tir na mBachlóg",
       "Teorannach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-tir-an-tordarroch&mode=view"
@@ -12202,6 +14506,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Ceitheach",
       "Tir na Toraidh",
+      "Tir na Doimhne",
       "Lochmorach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-an-bhaird&mode=view"
@@ -12223,7 +14528,9 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Leitheach/clan-ua-eirce.png",
     "path": [
       "Leitheach",
-      "Tir na Sleagh"
+      "Tir na Sleagh",
+      "Tir na nIúr",
+      "Senanbail"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ua-eirce&mode=view"
   },
@@ -12233,7 +14540,9 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Leitheach/clan-ui-fiachrach.png",
     "path": [
       "Leitheach",
-      "Tir na Sleagh"
+      "Tir na Sleagh",
+      "Tir na Seamróige",
+      "Mârbail"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-fiachrach&mode=view"
   },
@@ -12243,7 +14552,9 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Leitheach/clan-ruin-ua-laoch.png",
     "path": [
       "Leitheach",
-      "Tir na Sleagh"
+      "Tir na Sleagh",
+      "Tir na gCoiréal",
+      "Broch an Abhainn"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ruin-ua-laoch&mode=view"
   },
@@ -12265,7 +14576,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Sinsear",
-      "Lehnsherrschaft der Fir An’Gallchobhair",
+      "Tir na Coimhthioch",
       "Dun Laog"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-gallchobhair&mode=view"
@@ -12277,8 +14588,9 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Sinsear",
-      "Lehnsherrschaft der Fir An’Gallchobhair",
-      "Dun Laog"
+      "Tir na Coimhthioch",
+      "Tir na bhFiach",
+      "Cairn Fàire"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cleir&mode=view"
   },
@@ -12289,7 +14601,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Sinsear",
-      "Lehnsherrschaft der Fir An’Gallchobhair",
+      "Tir na Coimhthioch",
+      "Tir na nArmúr",
       "Dun Laog"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ghaiscioch&mode=view"
@@ -12301,7 +14614,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Sinsear",
-      "Lehnsherrschaft der Fir An’Gallchobhair",
+      "Tir na Coimhthioch",
+      "Tir na hInneonach",
       "Dun Laog"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-dal-ceardaiocht&mode=view"
@@ -12359,7 +14673,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Lehensherrschaft der Ard Frisealach",
+      "Tir na Lúibe",
       "Lasbun"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-frisealach&mode=view"
@@ -12371,6 +14685,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Gortanna",
+      "Tir na gComhrac",
       "Lochansail"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ard-trodach&mode=view"
@@ -12382,6 +14697,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Gortanna",
+      "Tir na Lasrach",
       "Lochansail"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view"
@@ -12393,7 +14709,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Herrschaft von Broch an Clais",
+      "Tir na Soilse",
       "Broch an Clais"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-iomrach&mode=view"
@@ -12405,7 +14721,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Gortanna",
-      "Herrschaft von Broch an Clais",
+      "Tir na Soilse",
       "Broch an Clais"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-somhairle&mode=view"
@@ -12428,7 +14744,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Tonn",
-      "Herrschaft der Dál’Ruitheach",
+      "Tir na nDambaí",
       "Broch an Iar"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ruitheach&mode=view"
@@ -12440,7 +14756,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Tonn",
-      "Herrschaft der Ru’Gortach",
+      "Tir na Breithe",
       "Broch an Ear"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-gortach&mode=view"
@@ -12463,6 +14779,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir an Comhchuibhis",
+      "Tir na gCrúb",
       "Sruthlann"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view"
@@ -12474,6 +14791,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir an Comhchuibhis",
+      "Tir na Rún",
       "Sruthlann"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-nic-blar-leitheach&mode=view"
@@ -12485,7 +14803,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir an Comhchuibhis",
-      "Lehensherrschaft der Ruin’Laidir",
+      "Tir na Dídine",
       "Claisean"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-laidir&mode=view"
@@ -12497,6 +14815,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir an Comhchuibhis",
+      "Herrschaft der Dál T’Saor",
       "Sruthlann"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-dal-t-saor&mode=view"
@@ -12519,7 +14838,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Sruth",
-      "Lehensherrschaft der Tir An’Airgid",
+      "Tir na gCorr",
       "Cel Leagan"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-airgid&mode=view"
@@ -12531,6 +14850,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Leitheach",
       "Tir na Sruth",
+      "Tir na hÉisteachta",
       "Ceanntire"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-amrhan&mode=view"
@@ -12553,8 +14873,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Mac Sidhe’Ailella",
-      "Dunfal"
+      "Tir na bPeiteal",
+      "Braighmòr"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ailella&mode=view"
   },
@@ -12565,8 +14885,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Mac’Céin",
-      "Dunfal"
+      "Tir na dTeorainneacha",
+      "Caerthalas"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cein&mode=view"
   },
@@ -12577,8 +14897,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Dál’Birn",
-      "Dunfal"
+      "Tir na Mionn",
+      "Dùnthàirne"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-birn&mode=view"
   },
@@ -12589,7 +14909,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Rithe",
-      "Herrschaft der Ruin’Morath",
+      "Tir na nEalaíon",
       "Iarthar"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-morath&mode=view"
@@ -12613,7 +14933,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Cradh na Frinne"
+      "Cradh na Fírinne"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view"
   },
@@ -12660,7 +14980,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Herrschaft der Na’Riangabra",
+      "Tir na Fuaime",
       "Baile Begg"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-riangabra&mode=view"
@@ -12672,7 +14992,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Dunfal",
       "Tir na Fathach",
-      "Herrschaft der Mac’Eachtrai",
+      "Tir na Lámhainne",
       "Athenry"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-eachtrai&mode=view"
@@ -12739,6 +15059,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Geach",
+      "Tir na Nathrach",
       "Gaelan"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-coronach&mode=view"
@@ -12750,7 +15071,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Geach",
-      "Gaelan"
+      "Tir na nGeataí",
+      "Broch an Geata"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-morgacht&mode=view"
   },
@@ -12761,7 +15083,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Geach",
-      "Gaelan"
+      "Tir na nAncairí",
+      "Broch an Duhbach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-rioga&mode=view"
   },
@@ -12772,6 +15095,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Tirth",
+      "Tir na gCnoc",
       "Lorai"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-fiantorc&mode=view"
@@ -12783,6 +15107,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Tirth",
+      "Tir na Sméar",
       "Lorai"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-treada&mode=view"
@@ -12794,6 +15119,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Tirth",
+      "Tir na Srianta",
       "Athan"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-muileach&mode=view"
@@ -12816,7 +15142,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Faela",
-      "Caetharlach"
+      "Tir na Meala",
+      "Ceatharlach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-feannag&mode=view"
   },
@@ -12827,6 +15154,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Adharcach",
+      "Tir na gClochán",
       "Foraoise"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-uilebheist&mode=view"
@@ -12838,6 +15166,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Adharcach",
+      "Tir na gCoirceog",
       "Foraoise"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cnogan&mode=view"
@@ -12860,6 +15189,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Iomaire",
+      "Tir na Leabhar",
       "Koldair"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-fiachiontach&mode=view"
@@ -12871,6 +15201,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Iomaire",
+      "Tir na Loingseoireachta",
       "Koldair"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-tartarfhuil&mode=view"
@@ -12882,6 +15213,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Iomaire",
+      "Tir na dTuanna",
       "Broch an Traigh"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-gaisgh&mode=view"
@@ -12893,6 +15225,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Aislearneach",
       "Tir na Iomaire",
+      "Tir na hEasóige",
       "Broch an Creig"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-luchdon&mode=view"
@@ -12915,6 +15248,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Blaithneach",
       "Tir na Beatha",
+      "Tir na nÚll",
       "Sioran"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-goidin&mode=view"
@@ -12926,6 +15260,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Blaithneach",
       "Tir na Beatha",
+      "Tir na Braiche",
       "Réadlann"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-haeghra&mode=view"
@@ -12948,6 +15283,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Blaithneach",
       "Tir na Dílse",
+      "Tir na nGéanna",
       "Eorach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-suiste&mode=view"
@@ -12959,6 +15295,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Blaithneach",
       "Tir na Dílse",
+      "Tir na Linnte",
       "Eorach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-gairner&mode=view"
@@ -13003,6 +15340,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Blaithneach",
       "Tir na Méinnear",
+      "Tir na hEala",
       "Cel Bearradh"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-eala&mode=view"
@@ -13025,6 +15363,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na Sionnach",
       "Invercalda"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-stwatchn&mode=view"
@@ -13036,6 +15375,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Herrschaft der Bhaird",
       "Piobarach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-bhaird&mode=view"
@@ -13047,6 +15387,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Herrschaft der Luthsach",
       "Piobarach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-luthsach&mode=view"
@@ -13058,6 +15399,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na Sciath",
       "Dun Liath"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-lachlann&mode=view"
@@ -13069,6 +15411,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na Sceiche",
       "Dun Grealach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-drummond&mode=view"
@@ -13080,6 +15423,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na gCat",
       "Dun Foirgneamh"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-dundas&mode=view"
@@ -13091,6 +15435,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Rann",
+      "Tir na nIarsmaí",
       "Caer Fionnach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ffearnach&mode=view"
@@ -13113,6 +15458,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na mBroc",
       "Cnosbubh"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-lockart&mode=view"
@@ -13124,6 +15470,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na Reithí",
       "Lochcaeron"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-fiorghra&mode=view"
@@ -13135,6 +15482,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na gClaímhte",
       "Glenshear"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-ness&mode=view"
@@ -13146,6 +15494,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na Mac Tíre",
       "Tur na Fala"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-haig&mode=view"
@@ -13157,6 +15506,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Mathgham",
+      "Tir na Giúise",
       "Caisteal Gorm"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view"
@@ -13179,6 +15529,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Braigh",
+      "Tir na Deilfe",
       "Morvay"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-borthwick&mode=view"
@@ -13190,6 +15541,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Braigh",
+      "Tir na Liús",
       "Garadhain"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-erskine&mode=view"
@@ -13201,6 +15553,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Braigh",
+      "Tir na Liús",
+      "Tir na Sliogán",
       "Dun Uisge"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-grannd&mode=view"
@@ -13273,6 +15627,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Faerna",
+      "Tir na mBuailteán",
       "Culrain"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-durachd&mode=view"
@@ -13284,6 +15639,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Faerna",
+      "Tir na nEasanna",
       "Airdree"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-muirgheal&mode=view"
@@ -13295,6 +15651,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Faerna",
+      "Tir na nEasanna",
+      "Tir na nEascann",
       "Ealach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-boyd&mode=view"
@@ -13317,6 +15675,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na hAitinne",
       "Tighlean"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-agnew&mode=view"
@@ -13328,6 +15687,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na gCuileann",
       "Dalriadh"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-duff&mode=view"
@@ -13339,6 +15699,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na hUaighe",
       "Torbhreac"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-dianaomh&mode=view"
@@ -13350,6 +15711,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na Madraí Uisce",
       "Maolnair"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-dobhar&mode=view"
@@ -13361,6 +15723,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na gCaorthann",
       "Inverfay"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-forsyth&mode=view"
@@ -13372,6 +15735,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Herrschaft der Elid",
       "Càrn Bruach"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-elid&mode=view"
@@ -13383,6 +15747,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Damh",
+      "Tir na Seabhac",
       "Inniscaer"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-oglivy&mode=view"
@@ -13405,6 +15770,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Brann",
+      "Tir na nInbhear",
       "Glenmohr"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cerneige&mode=view"
@@ -13416,6 +15782,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Brann",
+      "Tir na Sceire",
       "Carnascal"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-airdmhor&mode=view"
@@ -13427,6 +15794,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "path": [
       "Faelaorn",
       "Tir na Brann",
+      "Tir na gCreag",
       "Drumrath"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
@@ -13437,7 +15805,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/laga.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
       "Dunnean"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-laga&mode=view"
@@ -13448,7 +15816,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/gealan.webp",
     "path": [
       "Uathneach",
-      "Tir na Sruthán",
+      "Tir na nGleannta",
       "Moineal"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-gealan&mode=view"
@@ -13459,7 +15827,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/conchobhair.webp",
     "path": [
       "Uathneach",
-      "Tir na gCoillte",
+      "Tir na Gairme",
       "Cathair"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-conchobhair&mode=view"
@@ -13470,7 +15838,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/roich.webp",
     "path": [
       "Uathneach",
-      "Tir na Taoide",
+      "Tir na Seolta",
       "Orglen"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-roich&mode=view"
@@ -13481,7 +15849,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/midgna.webp",
     "path": [
       "Uathneach",
-      "Tir na dTorc",
+      "Tir na Machairí",
       "Rinnmara"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-midgna&mode=view"
@@ -13492,7 +15860,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/mata.webp",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
+      "Tir na Faire",
       "Temair"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-mata&mode=view"
@@ -13503,7 +15871,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/luga.webp",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
+      "Tir na gClog",
       "Kharanor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-luga&mode=view"
@@ -13514,8 +15882,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/fastaigh.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
-      "Herrschaft von Bronnan",
+      "Tir na Dála",
+      "Tir na hAille",
       "Bronnan"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-fastaigh&mode=view"
@@ -13526,8 +15894,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/lasgair.webp",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
-      "Herrschaft von Mhorcha",
+      "Tir na gClog",
+      "Tir na nEití",
       "Mhorcha"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-lasgair&mode=view"
@@ -13538,8 +15906,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/suilgeach.webp",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
-      "Herrschaft von Caorthann",
+      "Tir na Faire",
+      "Tir na Réalta",
       "Caorthann"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-suilgeach&mode=view"
@@ -13550,8 +15918,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/luachra.webp",
     "path": [
       "Uathneach",
-      "Tir na Sruthán",
-      "Herrschaft von Treabhair",
+      "Tir na nGleannta",
+      "Tir na Raithní",
       "Treabhair"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-luachra&mode=view"
@@ -13562,8 +15930,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/clannmhar.webp",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
-      "Herrschaft von Rioghain",
+      "Tir na gClog",
+      "Tir na Snaidhme",
       "Rioghain"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-clannmhar&mode=view"
@@ -13574,7 +15942,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/briccne.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Herrschaft der Na Briccne",
       "Dunnean"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-briccne&mode=view"
@@ -13585,7 +15954,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/arbhair.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Herrschaft der Dâl Arbhair",
       "Dunnean"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-arbhair&mode=view"
@@ -13596,7 +15966,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/scathain.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Herrschaft der An Scatháin",
       "Dunnean"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-scathain&mode=view"
@@ -13607,7 +15978,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/muirin.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Tir na nGliomach",
       "Broch an Reithe"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-muirin&mode=view"
@@ -13618,7 +15990,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cairbre.webp",
     "path": [
       "Uathneach",
-      "Tir na Taoide",
+      "Tir na Seolta",
+      "Herrschaft der Ua Cairbre",
       "Orglen"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cairbre&mode=view"
@@ -13629,7 +16002,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/reannachain.webp",
     "path": [
       "Uathneach",
-      "Tir na Taoide",
+      "Tir na Seolta",
+      "Herrschaft der Ua Reannachain",
       "Orglen"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-reannachain&mode=view"
@@ -13640,7 +16014,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cairge.webp",
     "path": [
       "Uathneach",
-      "Tir na Taoide",
+      "Tir na Seolta",
+      "Tir na bPortán",
       "Broch an Mhor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cairge&mode=view"
@@ -13651,7 +16026,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cuilen.webp",
     "path": [
       "Uathneach",
-      "Tir na dTorc",
+      "Tir na Machairí",
+      "Herrschaft der Ua Cuilen",
       "Rinnmara"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cuilen&mode=view"
@@ -13662,7 +16038,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/cadhla.webp",
     "path": [
       "Uathneach",
-      "Tir na dTorc",
+      "Tir na Machairí",
+      "Tir na Líonta",
       "Broch an Cuan"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-cadhla&mode=view"
@@ -13673,7 +16050,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/marcaigh.webp",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
+      "Tir na gClog",
+      "Herrschaft der Ruin Marcaigh",
       "Kharanor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-marcaigh&mode=view"
@@ -13684,7 +16062,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/giolla.webp",
     "path": [
       "Uathneach",
-      "Tir na Cloiche",
+      "Tir na gClog",
+      "Herrschaft der Ruin Giolla",
       "Kharanor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-giolla&mode=view"
@@ -13695,7 +16074,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/fiodhran.webp",
     "path": [
       "Uathneach",
-      "Tir na gCoillte",
+      "Tir na Gairme",
+      "Tir na gCurach",
       "Dathuil"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-fiodhran&mode=view"
@@ -13706,7 +16086,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/creagan.webp",
     "path": [
       "Uathneach",
-      "Tir na Conaire",
+      "Tir na Faire",
+      "Tir na bhFeochadán",
       "Ceithirn"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-creagan&mode=view"
@@ -13717,7 +16098,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Uathneach/einsiedlerkrebs.webp",
     "path": [
       "Uathneach",
-      "Tir na Láimhe",
+      "Tir na Dála",
+      "Tir na Fánaíochta",
       "Féthlinn"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-siubhran&mode=view"

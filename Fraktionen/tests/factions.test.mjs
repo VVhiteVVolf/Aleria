@@ -25,7 +25,7 @@ test('Klangheims Skaldenakademie is a distinct musical and magical institute wit
 
 test('all five supplied registers retain their records, provenance, ambiguous names and strike markings', () => {
   assert.deepEqual(catalog.map(category => [category.id, category.entries.length]), [
-    ['gilden', 94], ['orden', 41], ['organisationen', 43], ['dunkle-gilden', 19], ['kulte', 28],
+    ['gilden', 94], ['orden', 41], ['organisationen', 43], ['dunkle-gilden', 36], ['kulte', 28],
   ]);
   for (const source of json('../docs/import-manifest.json')) {
     const original = readFileSync(new URL(`../${source.file}`, import.meta.url));
@@ -48,7 +48,7 @@ test('supervisory bodies and subordinate banners remain explicit, without puttin
     'mariels-gabe': 'markt-der-fortuna', 'geeinte-haende': 'markt-der-fortuna',
     'formwandler': 'musen-der-maid', 'narrenzunft': 'musen-der-maid',
     'eidbrecher': 'loge-der-daemmerung', 'blutsegel-marodeure': 'loge-der-daemmerung',
-    'sirenenzahn': 'blutsegel-marodeure', 'sanktoren-orden': 'die-alerische-kirche',
+    'sirenenzahn': 'loge-der-daemmerung', 'sanktoren-orden': 'die-alerische-kirche',
     'die-hainsprecher': 'erben-des-ersten-schwurs', 'balthors-soehne': 'der-schwanen-orden',
     'sturmrufer': 'die-blauschwingen', 'blauschwingen': 'die-blauschwingen',
   })) assert.equal(byId.get(id).parentId, parentId, id);
@@ -95,7 +95,10 @@ test('guild families, order branches and banners share their parent bundle witho
   assert.deepEqual(directChildren('markt-der-fortuna'), ['mariels-gabe', 'geeinte-haende']);
   assert.ok(directChildren('wolken-der-daemmerung').includes('markt-der-fortuna'));
   assert.ok(!directChildren('wolken-der-daemmerung').includes('mariels-gabe'));
-  assert.deepEqual(directChildren('blutsegel-marodeure'), ['klauen-des-leviathan', 'schwarzblut-marodeure', 'sirenenzahn']);
+  assert.deepEqual(directChildren('blutsegel-marodeure'), []);
+  assert.equal(directChildren('schwarzblut-marodeure').length, 9);
+  assert.equal(directChildren('klauen-des-leviathan').length, 5);
+  assert.equal(directChildren('sirenenzahn').length, 3);
   assert.equal(directChildren('musen-der-maid').length, 7);
   assert.equal(directChildren('der-schwanen-orden').length, 6);
   assert.equal(directChildren('die-blauschwingen').length, 6);

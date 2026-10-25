@@ -1,0 +1,490 @@
+{
+  "version": 1,
+  "date": "2026-10-24",
+  "changes": [
+    {
+      "sourceId": "coastal-01",
+      "block": 15,
+      "before": "Im 17. Jahrhundert jedoch begann sich die Machtbalance zu verschieben. Durch Kriege und politische Umwälzungen in anderen Teilen der Welt war das Königreich Vennyr zunehmend isoliert. Die Blodyn-Dynastie konnte sich nicht länger auf ihre mächtigen Verbündeten verlassen, und im Hohen Norden wurden die Clans, angeführt vom ehrgeizigen Ketill dem Roten Drachen, wieder einmal mutiger. Die Draca, Geit, Ulf, Hjort und Orn, alteingesessene Clans, die einst die Krieger des Nordens stellten, sahen ihre Chance gekommen.",
+      "after": "Im frühen 18. Jahrhundert jedoch begann sich die Machtbalance zu verschieben. Durch Kriege und politische Umwälzungen in anderen Teilen der Welt war das Königreich Vennyr zunehmend isoliert. Die Blodyn-Dynastie konnte sich nicht länger auf ihre mächtigen Verbündeten verlassen, und im Hohen Norden wurden die Clans, angeführt vom ehrgeizigen Ketill dem Roten Drachen, wieder einmal mutiger. Die Draca, Geit, Ulf, Hjort und Orn, alteingesessene Clans, die einst die Krieger des Nordens stellten, sahen ihre Chance gekommen.",
+      "reason": "1717 liegt im 18. Jahrhundert."
+    },
+    {
+      "sourceId": "coastal-01",
+      "block": 28,
+      "before": "4.c) Kriegsverlauf - Jahr 1720",
+      "after": "4.d) Kriegsverlauf - Jahr 1720",
+      "reason": "Fortlaufende Abschnittszählung."
+    },
+    {
+      "sourceId": "coastal-01",
+      "block": 30,
+      "before": "Die Nordmänner können das erste mal zurückgedrängt werden",
+      "after": "Die Nordmänner werden im Meer der Geister erneut zurückgedrängt.",
+      "reason": "Die Chronik nennt bereits zuvor einen Abwehrerfolg bei Caer Ynys.",
+      "cell": [
+        19,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-01",
+      "block": 30,
+      "before": "Die Glaedwyld können der Belagerung standhalten, die Nordmänner beißen sich die Zähne an der Burg aus und müssen sich neu formieren",
+      "after": "Die Gwaedlyd können der Belagerung standhalten, die Nordmänner beißen sich die Zähne an der Burg aus und müssen sich neu formieren",
+      "reason": "Schreibweise nach vorhandenen Haus- und Ortsdaten vereinheitlicht.",
+      "cell": [
+        10,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-01",
+      "block": 30,
+      "before": "Das Volk soll nach Mynydharbwr und zu den Rettungsschiffen, um nach Cenyr zu fliehen",
+      "after": "Das Volk soll nach Mynyddharbwr und zu den Rettungsschiffen, um nach Cenyr zu fliehen",
+      "reason": "Schreibweise nach vorhandenen Haus- und Ortsdaten vereinheitlicht.",
+      "cell": [
+        49,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-01",
+      "block": 30,
+      "before": "Haus Dyfrgi und Mynydharbwr fungieren als letzte Bastion um das Volk zu sammeln und auf die Verstärkung von Cenyr zu warten",
+      "after": "Haus Dyfrgi und Mynyddharbwr fungieren als letzte Bastion um das Volk zu sammeln und auf die Verstärkung von Cenyr zu warten",
+      "reason": "Schreibweise nach vorhandenen Haus- und Ortsdaten vereinheitlicht.",
+      "cell": [
+        62,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-01",
+      "block": 30,
+      "before": "Clan Arngull besetzen Treath, fortan als Strandr bekannt",
+      "after": "Clan Arngull besetzen Traeth, fortan als Strandr bekannt",
+      "reason": "Schreibweise nach vorhandenen Haus- und Ortsdaten vereinheitlicht.",
+      "cell": [
+        75,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 4,
+      "before": "Im Jahr 1733 führten die Schwarzblut-Marodeure einen verheerenden Überfall auf die Südküste Leitheachs durch. Sie überrannten Broch an Clais , löschten den dort ansässigen Clan Iomrach aus und nutzten die offene Flussmündung , um bis nach Dun Laog vorzudringen. Dort kam es zu Plünderungen , Entführungen und zahlreichen Toten , bevor Verstärkung eintraf. Die Piraten konnten größtenteils entkommen – mitsamt Beute und Gefangenen , vor allem Alben , von denen viele nie zurückkehrten.",
+      "after": "Im Jahr 1733 führten die Schwarzblut-Marodeure einen verheerenden Überfall auf die Südküste Leitheachs durch. Sie überrannten Broch an Clais , töteten oder verschleppten die dort anwesenden Iomrach und nutzten die offene Flussmündung , um bis nach Dun Laog vorzudringen. Dort kam es zu Plünderungen , Entführungen und zahlreichen Toten , bevor Verstärkung eintraf. Die Piraten konnten größtenteils entkommen – mitsamt Beute und Gefangenen , vor allem Alben , von denen viele nie zurückkehrten.",
+      "reason": "Keine vollständige Auslöschung einer genealogischen Linie aus dem Verlust der Burg ableiten."
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 10,
+      "before": "Ab dem Jahr 1730 kam es an den südlichen und östlichen Küsten Estrylls vermehrt zu kleineren Überfällen. Die Übergriffe blieben zunächst vereinzelt, doch schon bald häuften sich Berichte über verschwundene Schiffe, entführte Dorfbewohner und niedergebrannte Lagerhäuser. Im Jahr 1733 trat schließlich eine der Hauptgruppierungen der Schwarzblut-Flotte offen in Erscheinung: die Schwarzbucht-Marodeure . Unter einem unbekannten, aber offenbar strategisch denkenden Anführer wagten sie einen koordinierten Angriff auf die Südküste Leitheachs – mit dem Ziel, junge Sklaven , wertvolle Geiseln und Beute zu erlangen.",
+      "after": "Ab dem Jahr 1730 kam es an den südlichen und östlichen Küsten Estrylls vermehrt zu kleineren Überfällen. Die Übergriffe blieben zunächst vereinzelt, doch schon bald häuften sich Berichte über verschwundene Schiffe, entführte Dorfbewohner und niedergebrannte Lagerhäuser. Im Jahr 1733 trat schließlich eine der Hauptgruppierungen der Schwarzblut-Flotte offen in Erscheinung: die Schwarzbucht-Marodeure . Unter ihrem Kapitän Skorviðr wagten sie einen koordinierten Angriff auf die Südküste Leitheachs – mit dem Ziel, junge Sklaven , wertvolle Geiseln und Beute zu erlangen.",
+      "reason": "Der Kapitän ist in derselben Quelle und im Bandenprofil ausdrücklich benannt."
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 27,
+      "before": "Das Königreich Leitheach",
+      "after": "Das Fürstentum Leitheach",
+      "reason": "Leitheach ist ein Fürstentum.",
+      "cell": [
+        1,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 27,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande und Dachkollektiv unterscheiden.",
+      "cell": [
+        9,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 27,
+      "before": "Cumhaill",
+      "after": "Choinnich",
+      "reason": "Verstärkung nach ausgearbeitetem Verlauf und Zeittafel derselben Quelle.",
+      "cell": [
+        6,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 27,
+      "before": "Gaelach",
+      "after": "Airgid",
+      "reason": "Verstärkung nach ausgearbeitetem Verlauf und Zeittafel derselben Quelle.",
+      "cell": [
+        6,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 27,
+      "before": "Airt",
+      "after": "Caoimhe",
+      "reason": "Verstärkung nach ausgearbeitetem Verlauf und Zeittafel derselben Quelle.",
+      "cell": [
+        6,
+        2
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 27,
+      "before": "Choinnich",
+      "after": "Airt",
+      "reason": "Verstärkung nach ausgearbeitetem Verlauf und Zeittafel derselben Quelle.",
+      "cell": [
+        6,
+        3
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 33,
+      "before": "Noch in derselben Nacht landeten Kommandoeinheiten der Piraten bei Broch an Clais. Durch einen Überraschungsangriff öffneten sie die Tore der Burg von innen und ließen die Haupttruppe ein. Die Verteidiger wurden vollständig überrumpelt; der Clan Iomrach wurde ausgelöscht oder verschleppt. Mit dem Fall der Flussfestung war der Weg ins Landesinnere frei, und die Flotte der Marodeure konnte den Fluss hinauffahren – ungehindert und mit voller Schlagkraft.",
+      "after": "Noch in derselben Nacht landeten Kommandoeinheiten der Piraten bei Broch an Clais. Durch einen Überraschungsangriff öffneten sie die Tore der Burg von innen und ließen die Haupttruppe ein. Die Verteidiger wurden vollständig überrumpelt; die dort anwesenden Iomrach wurden getötet oder verschleppt. Mit dem Fall der Flussfestung war der Weg ins Landesinnere frei, und die Flotte der Marodeure konnte den Fluss hinauffahren – ungehindert und mit voller Schlagkraft.",
+      "reason": "Verlust der örtlichen Besatzung, keine unbelegte genealogische Gesamtauslöschung."
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 35,
+      "before": "Im weiteren Verlauf zogen die Marodeure flussaufwärts und überfielen nacheinander die Siedlungen Gleannbuar, Dairchoill, Ceòdraig, sowie die Hafendörfer Abhainnclachan und Srathonn. Überall wurden Vorräte, Vieh, Waffen und Menschen geraubt. Die Überfälle erfolgten mit brutaler Effizienz und ohne nennenswerte Gegenwehr. Kurz vor Erreichen der Hauptstadt wurde auch Tòrrachadh überfallen. Die Geschwindigkeit der Angreifer ließ keine organisierte Verteidigung zu.",
+      "after": "Im weiteren Verlauf zogen die Marodeure flussaufwärts und überfielen im Tagesverlauf die Siedlungen Gleannbuar, Dairchoill, Ceòdraig, sowie die Hafendörfer Abhainnclachan und Srathonn. Überall wurden Vorräte, Vieh, Waffen und Menschen geraubt. Die Überfälle erfolgten mit brutaler Effizienz und ohne nennenswerte Gegenwehr. Kurz vor Erreichen der Hauptstadt wurde auch Tòrrachadh überfallen. Die Geschwindigkeit der Angreifer ließ keine organisierte Verteidigung zu.",
+      "reason": "Entfernungsanker 30+ km: keine gemeinsame Fahrt aller Schiffe durch gleichzeitig angegriffene, räumlich getrennte Orte behaupten; genaue Verteilung der Teilverbände bleibt offen."
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 38,
+      "before": "Massaker an der Bevölkerung; der Clan Iomrach wird ausgelöscht.",
+      "after": "Massaker an der Bevölkerung; die anwesenden Iomrach werden getötet oder verschleppt.",
+      "reason": "Genealogische Reichweite nicht unbelegt verallgemeinern.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-02",
+      "block": 38,
+      "before": "24:00 Uhr",
+      "after": "Mitternacht",
+      "reason": "Mitternacht ohne ein unbekanntes Folgedatum zu erfinden.",
+      "cell": [
+        21,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-03",
+      "block": 6,
+      "before": "1733 Winter | 05:00 Uhr",
+      "after": "1733 Winter | 04:00 Uhr",
+      "reason": "Beginn laut übergeordneter detaillierter Chronologie.",
+      "cell": [
+        1,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-03",
+      "block": 6,
+      "before": "Insel Seanbail in Tir na Sleagh",
+      "after": "Insel Seannbail in Tir na Sleagh",
+      "reason": "Einheitliche historische Schreibweise; nicht mit Senanbail gleichsetzen.",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-04",
+      "block": 6,
+      "before": "1733 Winter | 05:00 Uhr",
+      "after": "1733 Winter | 06:00 Uhr",
+      "reason": "Sturm der Hauptstreitmacht 06:00; Annäherung ab 05:00.",
+      "cell": [
+        1,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-04",
+      "block": 6,
+      "before": "Insel Seanbail in Tir na Sleagh",
+      "after": "Broch an Clais · Flussmündung in Tír na Gortanna",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-04",
+      "block": 6,
+      "before": "Sieg der Marodeure",
+      "after": "Fall von Broch an Clais",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-04",
+      "block": 6,
+      "before": "Vernichtung Seannbails",
+      "after": "Fall der Flussfestung; der Zugang ins Landesinnere liegt offen.",
+      "reason": "Kopierte Folge aus Seannbail korrigiert.",
+      "cell": [
+        4,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-04",
+      "block": 6,
+      "before": "| Laird Puirseil",
+      "after": "Besatzung der Iomrach",
+      "reason": "Keinen kopierten oder zeitlich unbelegten Burgherrn als Befehlshaber ausgeben.",
+      "cell": [
+        9,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-05",
+      "block": 6,
+      "before": "Glaennbuar in Tir na Sleagh",
+      "after": "Gleannbuar · Tír na Sleagh",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-05",
+      "block": 6,
+      "before": "Sieg der Marodeure",
+      "after": "Plünderung von Gleannbuar",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-05",
+      "block": 6,
+      "before": "Triath von Puirseil",
+      "after": "Örtliche Verteidiger",
+      "reason": "Keinen kopierten oder zeitlich unbelegten Burgherrn als Befehlshaber ausgeben.",
+      "cell": [
+        9,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-06",
+      "block": 6,
+      "before": "Tir na Gortanna",
+      "after": "Dairchoill und Ceòdraig · Tír na Gortanna",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-06",
+      "block": 6,
+      "before": "Sieg der Marodeure",
+      "after": "Plünderung von Dairchoill und Ceòdraig",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-06",
+      "block": 6,
+      "before": "Verteidigung von Seannbail",
+      "after": "Örtliche Verteidiger",
+      "reason": "Keinen kopierten oder zeitlich unbelegten Burgherrn als Befehlshaber ausgeben.",
+      "cell": [
+        8,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-07",
+      "block": 6,
+      "before": "Tir na Sinsear",
+      "after": "Abhainnclachan und Srathonn · Tír na Sinsear",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-07",
+      "block": 6,
+      "before": "Sieg der Marodeure",
+      "after": "Plünderung von Abhainnclachan und Srathonn",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-08",
+      "block": 6,
+      "before": "Tir na Sinsear",
+      "after": "Tòrrachadh · Tír na Sinsear",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-08",
+      "block": 6,
+      "before": "Sieg der Marodeure",
+      "after": "Plünderung von Tòrrachadh",
+      "reason": "Offensichtlich kopierte Vorlagenzelle an das benannte Ereignis angepasst.",
+      "cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-09",
+      "block": 6,
+      "before": "Triath von Torrachadh",
+      "after": "Verteidiger von Dun Laog",
+      "reason": "Kopierter Befehlshaber aus einem anderen Ereignis.",
+      "cell": [
+        9,
+        0
+      ]
+    },
+    {
+      "sourceId": "coastal-03",
+      "block": 6,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande von Schwarzblut unterscheiden.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-04",
+      "block": 6,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande von Schwarzblut unterscheiden.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-05",
+      "block": 6,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande von Schwarzblut unterscheiden.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-07",
+      "block": 6,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande von Schwarzblut unterscheiden.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-08",
+      "block": 6,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande von Schwarzblut unterscheiden.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-09",
+      "block": 6,
+      "before": "Schwarzb. Marodeure",
+      "after": "Schwarzbucht Marodeure",
+      "reason": "Einzelbande von Schwarzblut unterscheiden.",
+      "cell": [
+        9,
+        1
+      ]
+    },
+    {
+      "sourceId": "coastal-11",
+      "block": 0,
+      "before": "Die Nebelschitter",
+      "after": "Die Nebelschnitter",
+      "reason": "Titel-Schreibfehler, Name durchgehend im Quelltext und Dublette belegt."
+    },
+    {
+      "sourceId": "coastal-05",
+      "block": 0,
+      "before": "Plünderung von Glaennbuar",
+      "after": "Plünderung von Gleannbuar",
+      "reason": "Schreibweise der übergeordneten Chronik und Quellkarte."
+    },
+    {
+      "sourceId": "coastal-15",
+      "block": 0,
+      "before": "Die Nebelschitter",
+      "after": "Die Nebelschnitter",
+      "reason": "Identische Titelkorrektur der erhaltenen Dublette."
+    },
+    {
+      "sourceId": "coastal-16",
+      "block": 0,
+      "before": "Die Sirenenzahn Piraten",
+      "after": "Die Klauen des Leviathan",
+      "reason": "Wappen WNDuxOy und Unterbanden stimmen mit dem vorhandenen Klauen-Fraktionsdatensatz überein; falscher kopierter Titel."
+    },
+    {
+      "sourceId": "coastal-10",
+      "block": 8,
+      "before": "Ihr hauptsächliches Jagdgebiet ist die cenyrische Westküste , insbesondere die Gewässer rund um die Inselgruppe, die unter dem Namen Rhonswens Tränen bekannt ist. Diese schwer einsehbaren Buchten und Klippen dienen als Rückzugsort, Stützpunkt und Umschlagplatz. Darüber hinaus überfallen sie regelmäßig die südlichen Küsten der albischen Fürstentümer , wo politische Zersplitterung und Grenzstreitigkeiten häufig ungeschützte Handelsrouten und Dörfer hinterlassen.",
+      "after": "Ihr hauptsächliches Jagdgebiet ist die cenyrische Westküste , insbesondere die Gewässer rund um die Inselgruppe, die unter dem Namen Rhonwens Tränen bekannt ist. Diese schwer einsehbaren Buchten und Klippen dienen als Rückzugsort, Stützpunkt und Umschlagplatz. Darüber hinaus überfallen sie regelmäßig die südlichen Küsten der albischen Fürstentümer , wo politische Zersplitterung und Grenzstreitigkeiten häufig ungeschützte Handelsrouten und Dörfer hinterlassen.",
+      "reason": "Einheitlicher vorhandener Regionsname."
+    }
+  ]
+}

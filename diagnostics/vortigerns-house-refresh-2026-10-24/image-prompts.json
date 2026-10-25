@@ -1,0 +1,105 @@
+{
+  "scope": "Nur fehlende Darstellungen ergänzen; die acht gelieferten Originale bleiben unverändert.",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-pendrag",
+      "prompt": "Use case: stylized-concept. One transparent 2:3 full-body representative knight of the royal House Pendrag, not a portrait of any named king. Reference 1 provides ONLY the approved artistic rendering style: quietly posed simplified hand-painted fantasy RPG figure, matte muted gouache colors, soft fine painted contours, subtle even pigment grain, very restrained shading. Reference 2 provides ONLY heraldry and colors: a golden slender dragon with RED wings on BLACK. Design a distinct Cenyr chivalric plate-and-mail harness in dark iron with modest aged-gold trim, black surcoat carrying that dragon emblem, muted red cloak and red helmet plume. Closed knightly helmet, all face covered. He stands calmly in three-quarter view, holding a straight sword tip downward and a round black shield with the same gold dragon and red wings. Complete figure from plume to both feet, ample clear margin around weapons, no cropping. Use broad readable forms, no tiny fussy surface details, no bright photorealistic reflections. True transparent PNG alpha outside the figure and in open gaps. Absolutely no painted background, halo, floor, cast shadow, vignette, glow, scene, labels, lettering, border or watermark. Do NOT copy reference 1 blue colors or griffin. Keep the approved painterly comic simplification and calm posture.",
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-955e07e9-6e42-485a-8796-5543f8ae2b27.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Pendrag/assets/hausdarstellung-2026-10-24.png",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/haus-pendrag.png"
+      ]
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-pengair",
+      "prompt": "Use case: stylized-concept. Create one complete transparent 2:3 standing representative knight of House Pengair of Cenyr, publisher of the Kronenspiegel. Reference 1 is ONLY the approved art style: simplified matte hand-painted fantasy RPG figure, soft thin painted contours, restrained gouache shading and fine even pigment grain. Reference 2 defines heraldry: on deep blue a pale upright feather forming a sword blade with a small crossguard, inside a modest gold shield outline. Show that exact simple feather-sword device on a blue surcoat and modest round shield. Distinct practical steel plate over mail, subdued gold piping, blue shoulder cape, closed rounded knight helmet with a short pale feather plume. Calm upright three-quarter pose holding a straight sword point down, with a small rolled parchment tucked into his belt as a subtle reference to his house's publishing task. No readable writing. No named person's likeness. Both boots and all weapon tips inside canvas, clear margins. Broad simple forms and muted earthy colors, no realism or shiny CGI. True PNG transparency in every background gap, no atmosphere, glow, ground, cast shadow, paper, lettering, labels or frame. Do not use the griffin motif from the style reference.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-pengair.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-c3e0df10-e352-47cc-9d53-534f87dd2d25.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Pengair/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-morwyn",
+      "prompt": "Use case: stylized-concept. One full-body standing knight of House Morwyn, a minor Cenyr knightly house. The first reference defines only the approved matte painterly comic RPG style, fine even pigment grain, simplified forms and calm pose. The second defines ONLY house heraldry: a seated golden bear holding a small golden pot, on muted dark red with gold accents. Design a distinct sturdy knight: rounded slightly heavy steel plate and mail, simple closed great helm with narrow visor, no large plume, a short burgundy cape and burgundy surcoat bearing the golden bear-with-pot emblem. A plain brown belt and practical armored boots. Hold a short battle mace vertically in one gauntlet and a small round red shield with the exact bear-and-pot device in the other. Calm three-quarter upright figure, both boots and mace fully visible, ample margins. No claim to be a named person. Earthy muted burgundy and old gold, soft painted edges, sparse shading, broad readable armor panels; avoid fussy realism or glossy metal. TRUE transparent PNG background and open gaps; no painted backdrop, floor, halo, cast shadow, vignette, glow, text, frame or lettering. Do not copy the blue griffin costume of reference 1.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-morwyn.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-b571de33-4753-4782-805a-eaacf0a8339f.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Morwyn/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-rhavaen",
+      "prompt": "Use case: stylized-concept. A single full-body representative knight of House Rhavaen from Cenyr, true transparent 2:3 PNG. Use image 1 ONLY for the artistic treatment: matte muted gouache RPG handbook figure, quiet readable silhouette, thin soft painted contours and even fine pigment grain. Change the armor DESIGN: a flat-topped cylindrical closed great helm with a narrow black horizontal eye slit and simple breathing holes, a short mail mantle, a simple cuirass and separate practical arm and leg plates, no plume. Muted dark-red surcoat and a short dark-brown cloak. Image 2 gives exact heraldry: a seated golden fox carrying a large gold key horizontally in its mouth, on dark red, with restrained gold knotwork. Put this fox-and-key on the surcoat and on his round red shield. He holds one plain spear upright, a sheathed short sword at his belt. Relaxed standing three-quarter pose, not combat; full helm, spear tip and both boots inside the canvas with ample margins. This is an unnamed representative house warrior, no invented personal identity. Simple broad material forms, no photo skin, no detailed realistic metal reflections, no copied griffin emblem. No scenery, ground plane, cast shadow, background texture, atmospheric halo, lettering, vignette or frame. All exterior background and gaps alpha zero.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-rhavaen.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-a6001d4a-5f53-4662-a77d-dc225a66760c.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Rhavaen/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-iwrell",
+      "prompt": "Use case: stylized-concept. Make a full-body representative knight of minor Cenyr House Iwrell, no named personal identity, on true transparent 2:3 PNG. Image 1 defines ONLY art style: simplified matte hand-painted RPG figure, fine uniform pigment grain, soft thin contours, broad clear armor shapes and sparse gentle shading. Design different equipment: a rounded closed sallet-style helmet with a low visor and an attached neck bevor, no plume, a broad unadorned breastplate over mail with small shoulder cops, a blue-grey cloak folded over one shoulder. Use a muted slate-blue surcoat with old-gold edging. Image 2 defines the heraldry: a seated golden wolf on dark slate-blue, with modest gold knotwork rim. Paint that exact seated wolf device on the surcoat and round shield. Calm standing three-quarter pose holding a straight sword pointed downward and the shield at the other side. Complete full silhouette with both boots, visor and sword tip inside frame, generous transparent margins. Historical fantasy knight, not futuristic and not hyperrealistic. No scenery, floor, cast shadow, glow, halo, paper backdrop, text, border, vignette or copied blue griffin. Background and all open gaps must have real zero alpha.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-iwrell.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-3e95ab9e-ba56-4a85-8f98-ccf88ddb4881.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Iwrell/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-oenfyr",
+      "prompt": "Use case: stylized-concept. One full-body Cenyr knight representing House Oenfyr. Image 1 controls only the approved rendering style: calm matte painterly comic RPG figure, simplified broad forms, soft fine painted contours and uniform subtle pigment texture. Image 2 supplies the house device: a golden eagle standing on a golden fish, against blue, within a simple gold ring. Show that emblem clearly on a muted blue tabard and his blue round shield. Distinct equipment design: closed pointed bascinet with a narrow beaked visor, small gold-brown feather crest, steel breastplate over mail, compact articulated shoulders, blue cloak and brown belt; simple steel greaves over leather boots. Calm three-quarter standing pose holding an upright spear and shield; sword sheathed at the hip. House imagery does not invent a specific profession or personal identity. Render complete spear tip, helmet and both feet inside generous margins on 2:3 canvas. Muted ochre-gold, blue and steel. No realism, dramatic action, specular gloss or heavy black outlines. True transparent PNG exterior and gaps. No ground, background color, scenery, halo, shadow, vignette, lettering or frame. Do not use the griffin from the style reference.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-oenfyr.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-e5f6fc20-681a-4626-8e5a-cfac806f2321.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Oenfyr/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-saivor",
+      "prompt": "Use case: stylized-concept. Full-body representative knight for minor Cenyr House Saivor. Reference 1 defines only the approved quiet matte painted comic/RPG rendering, simplified broad material shapes, soft thin contours and fine even pigment grain. Reference 2 defines heraldry and palette: an ivory-silver falcon perched on a leafy branch on dark navy blue, surrounded by modest brown knotwork. Keep that falcon-on-branch device clear on a dark-blue chest surcoat and round shield. Equipment design: a simple tall conical closed helmet with a flat narrow visor, no plume; mail coif and mail sleeves beneath a modest steel breastplate, restrained leather straps, dark navy cloak, steel knee guards and brown boots. No ostentatious gold decorations. Calm three-quarter standing figure holding a straight sword tip down and the round shield; no battle motion. Show the whole body and sword with ample transparent margins, 2:3 portrait. Unnamed representative figure, not a new canon individual. Muted blue, ivory and brown. No photorealism, dramatic lighting, floor, scenery, ground, shadow, halo, vignette, text or frame. TRUE alpha transparency everywhere outside the silhouette and in open spaces.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-saivor.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-f413ffd7-08c9-4955-a219-4a7cac22c787.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Saivor/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-ynllym",
+      "prompt": "Use case: stylized-concept. A single complete standing representative knight of House Ynllym, minor Cenyr nobility. Reference 1 gives only approved art style: matte hand-painted fantasy comic/RPG character, simplified calm silhouette, soft thin painted contour and subtle even gouache pigment grain. Reference 2 gives the heraldry: brown wooden barrel with pale metal hoops before two crossed straight swords on a dark muted red field, black rim with pale accents. Use the barrel-and-crossed-swords device on his chest and round shield, without copying the outer lettering. Clothing dark brick-red surcoat, brown cloak, mail with a modest rounded steel breastplate, articulated forearm guards, sturdy plate greaves, closed rounded helmet without a large crest. Practical Cenyr knight design, no invented brewing occupation. Hold a plain upright spear at one side and shield at the other, with a sword sheathed at the belt. Quiet three-quarter stance, full feet and spear tip visible, generous clear margins within 2:3. Muted red, brown and ivory metals, no bright gold or photo-realistic reflections. True transparent PNG outside silhouette and between objects. No ground, scene, cast shadow, halo, paper, background, lettering, vignette or frame. No named individual or griffin symbol.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-ynllym.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-da0da577-1dc1-4bf6-8ca9-1a5e0f52fb08.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Ynllym/assets/hausdarstellung-2026-10-24.png"
+    },
+    {
+      "tool": "built-in image_gen",
+      "id": "haus-cyfrif",
+      "prompt": "Use case: stylized-concept. One complete standing CIVILIAN representative of the commoner family Cyfrif from Mathragon, not a knight and not a named character. No occupation has been specified: do NOT invent a smith, innkeeper, clerk or merchant uniform. Reference 1 supplies ONLY the matte painterly comic/RPG art style: simplified gentle figure proportions, soft thin painted outlines, broad readable shapes, sparse soft shading, fine even pigment texture and muted earthy colors. Reference 2 supplies family colors and motif: gold stag bending to drink from a gold jug on dark green. A middle-aged man in simple well-kept dark forest-green wool tunic, warm brown sleeveless long coat, linen collar, plain leather belt and soft brown boots. Small subtle embroidered stag-and-jug badge on the tunic, no giant military crest. Wavy short brown hair and a short beard, clearly illustrated stylized facial features, not photographic. Calm friendly three-quarter upright pose, holding one simple small household ceramic jug low by his side as an allusion to the family motif; other hand rests loosely at belt. No specialized trade tools. Head, both hands, jug and both feet fully inside 2:3 with generous clear margins. NO helmet, armor, mail, weapon, shield, apron or crown. True transparent PNG background and open gaps. No environment, floor, cast shadow, halo, vignette, lettering, frame or paper surface.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/Vortigerns Ruh/Tanwens Flamme/haus-cyfrif.png"
+      ],
+      "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a16f18-cbf0-7c11-a880-4e7c6b6910ce\\exec-51d60353-3825-4bbb-98fa-0e4fb34fbe10.png",
+      "destination": "E:/Aleria/Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Cyfrif/assets/hausdarstellung-2026-10-24.png"
+    }
+  ]
+}

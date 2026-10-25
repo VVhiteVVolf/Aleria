@@ -36,8 +36,13 @@ test('all confirmed clans have unique files, crests, ranks, seats and direct lie
     assert.equal(family.document.houseProfile.seat, structure.settlements.find(p => p.id === clan.seat).name);
     assert.equal(family.document.houseProfile.liegeHouseId, structure.clans.find(c => c.id === clan.liege)?.familyId || '');
     assert.ok(exists(clan.crest));
-    assert.equal(family.persons.length, 0, 'no invented genealogy');
-    assert.equal(family.partnerships.length, 0);
+    if (clan.id === 'laga') {
+      assert.equal(family.extensions.lagaSkeleton, true, 'explicitly requested Laga family skeleton');
+      assert.ok(family.persons.some(person => person.id === 'lugaid-1690-laga'));
+    } else {
+      assert.equal(family.persons.length, 0, 'other clans remain genealogically unassigned');
+      assert.equal(family.partnerships.length, 0);
+    }
     for (const icon of family.document.houseProfile.folderIcons.filter(Boolean)) assert.ok(exists(icon), icon);
   }
   for (const id of ['fiodhran', 'creagan', 'einsiedlerkrebs']) assert.equal(structure.clans.find(c => c.id === id).rankId, 'unknown');
