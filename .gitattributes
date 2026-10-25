@@ -14,5 +14,7 @@ Kontinente/**/sources/*.html -text whitespace=-blank-at-eol
 Ereignisse/**/sources/*.html -text whitespace=-blank-at-eol
 # Faction import manifests also verify the supplied HTML snapshots byte-for-byte.
 Fraktionen/docs/sources/*.html -text whitespace=-blank-at-eol
+# Preserve all eighteen original coastal-history attachments and their manifest hashes.
+Archiv/Quellen/kuestenchroniken-2026-10-24/*.html -text whitespace=-blank-at-eol
 # Generated Bestiarium bundle preserves upstream CSS template-literal whitespace.
 AleriaAlmanach/DokumentenWerkstatt/assets/book-reader.bundle.js linguist-generated whitespace=-blank-at-eol

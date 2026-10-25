@@ -66,6 +66,11 @@ Importmanifest die unveränderten Originalbytes prüft. Die vorhandene
 erweitert. Die Originaldateien und ihre Prüfsummen bleiben unverändert;
 die Registerprüfung bleibt strikt und aktiv.
 
+Dieselbe Archivregel gilt für die 18 originalen HTML-Anhänge der
+Küstenchroniken. Beide Quellbestände werden zusätzlich direkt aus dem
+Git-Index gegen ihre ursprünglichen Prüfsummen geprüft, um die auf Linux
+ausgecheckten Bytes vor dem erneuten Push zu bestätigen.
+
 Firebase-Daten, Live-Ressourcen, Online-IDs und bisherige Kampfverläufe werden
 nicht migriert oder neu ausgewertet. Die Veröffentlichung folgt dem bestehenden
 GitHub-/Netlify-Ablauf auf `master`.
