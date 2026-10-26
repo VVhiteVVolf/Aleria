@@ -1,6 +1,6 @@
-import {settlements,provinces,rankLabels} from './realm-data.mjs?v=20261026-2';
-import {escapeHtml} from './proposal-render.mjs?v=20261026-2';
-import {warriors} from './warrior-data.mjs?v=20261026-2';
+import {settlements,provinces,rankLabels} from './realm-data.mjs?v=20261026-3';
+import {escapeHtml} from './proposal-render.mjs?v=20261026-3';
+import {warriors} from './warrior-data.mjs?v=20261026-3';
 import {renderHouseDossier} from '../shared/house-detail-render.mjs?v=20261026-1';
 
 export function renderHouseDetails(house,placements) {

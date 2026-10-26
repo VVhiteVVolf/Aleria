@@ -1,4 +1,4 @@
-import {sourceHouses} from './source-houses.mjs?v=20261026-2';
+import {sourceHouses} from './source-houses.mjs?v=20261026-3';
 
 export const rankLabels = Object.freeze({king:'Erlenkönig',baron:'Freiherr',landmann:'Landmann',order:'Geistlicher Ritterorden',laird:'Albischer Laird'});
 export const houses = sourceHouses;

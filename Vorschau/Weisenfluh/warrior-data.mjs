@@ -11,8 +11,8 @@ export const warriors = Object.freeze([
     "palette": "Rot · Elfenbein · Gold",
     "motif": "Rot-elfenbeinfarbener Schild und goldener Lorbeerkranz.",
     "reason": "Der königliche Lorbeer und die klaren Schildfarben passen zu einem besonders feinen Landsprotektor.",
-    "equipment": "Schwert, Schild, Lorbeerzier und elfenbeinfarbener Topfhelm.",
-    "helmet": "A cylindrical FLAT-TOP GREAT HELM with completely straight vertical sides, flat lid, narrow horizontal eye slit and tiny round breathing holes. Ivory-painted steel with a red chevron; gold laurel crest and three short cream ostrich feathers. Absolutely NOT a pointed armet.",
+    "equipment": "Schwert, Schild, goldene Lorbeerkrone und runder geschlossener Helm.",
+    "helmet": "ROUNDED CLOSED royal helmet with smooth domed skull, short curved visor, narrow eye slit and small breathing holes. Ivory steel with red chevron. A broad gold laurel circlet completely encircles the brow, with upright laurel-leaf clusters forming a prominent CROWN. Cream ostrich plume, no flat cylindrical lid.",
     "image": "assets/warriors/previews/goldkranz.webp",
     "fullsize": "assets/warriors/production/goldkranz.png"
   },
@@ -140,7 +140,7 @@ export const warriors = Object.freeze([
     "motif": "Rosen und Ähren in roten, weißen und blauen Schildfeldern.",
     "reason": "Die aufwendige geteilte Heraldik passt zu einem fein gearbeiteten Landsprotektorharnisch.",
     "equipment": "Langschwert, Wappenschild und geriffelter Silberharnisch.",
-    "helmet": "MAXIMILIAN HELMET with a ribbed rounded skull and rounded visor made of stacked HORIZONTAL accordion-like metal ridges; visually unmistakable, not a pointed perforated faceplate. Short red-white plume.",
+    "helmet": "CLOSED SILVER ARMET with a naturally rounded domed skull, two hinged cheek pieces meeting cleanly at the chin, a short smooth one-piece visor, narrow horizontal eye slit and small regular circular breathing holes. Restrained fluting on crown only. Red-white plume and floral side rosette. No accordion or shutter-like face slats.",
     "image": "assets/warriors/previews/blumenthal.webp",
     "fullsize": "assets/warriors/production/blumenthal.png"
   },
@@ -188,7 +188,7 @@ export const warriors = Object.freeze([
     "motif": "Weißes Einhorn auf Schwarz mit goldener Rahmung.",
     "reason": "Das helle Einhorn und die elegante Palette legen einen leichten Reiterritter mit Erlenglanz nahe.",
     "equipment": "Speer, Silberkürass, schwarzer Samt und Erlenglanz.",
-    "helmet": "OPEN BURGONET with high single comb, small peak and separate hinged cheek plates; no visor. Tiny ivory unicorn-head crest fixed behind comb, never a living horn on forehead.",
+    "helmet": "CLOSED silver close helmet with gently pointed oval skull, compact one-piece visor, enclosed chin/bevor, narrow eye slit and neat ventilation holes. Small attached ivory unicorn-head crest with ONE golden horn, gold edging. Face fully covered.",
     "image": "assets/warriors/previews/edelweiss.webp",
     "fullsize": "assets/warriors/production/edelweiss.png"
   },

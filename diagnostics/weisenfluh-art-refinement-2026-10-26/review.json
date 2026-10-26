@@ -1,0 +1,413 @@
+{
+  "requested": [
+    "goldkranz",
+    "cnagallan",
+    "blumenthal",
+    "edelweiss"
+  ],
+  "entries": [
+    {
+      "realm": "Goldmund",
+      "id": "an-brenn",
+      "beforeSha256": "d8830c223dff3b71a67ea2d3abbec62a0ea0da8881bdab263569657f164d058f",
+      "afterSha256": "d8830c223dff3b71a67ea2d3abbec62a0ea0da8881bdab263569657f164d058f",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "aurelshain",
+      "beforeSha256": "07f90e1c5f8a68570368f0bd3b45b26e646d60d2693d1243c28548a69fbd18eb",
+      "afterSha256": "07f90e1c5f8a68570368f0bd3b45b26e646d60d2693d1243c28548a69fbd18eb",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "broeck",
+      "beforeSha256": "bb853c02b556b55f22c5356c9b36c1e9011cfe958ded825325b083419da7cc64",
+      "afterSha256": "bb853c02b556b55f22c5356c9b36c1e9011cfe958ded825325b083419da7cc64",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "eitelborn",
+      "beforeSha256": "aedb8ba8535cf03deebe5c7c9a005c64cf98aef6b59aa17a48dc21e8bf92da75",
+      "afterSha256": "aedb8ba8535cf03deebe5c7c9a005c64cf98aef6b59aa17a48dc21e8bf92da75",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "falkengold",
+      "beforeSha256": "60f0cfed66ef9f361598dae0cd0af3521b3ea264c4cefe076a2142cc59239f74",
+      "afterSha256": "60f0cfed66ef9f361598dae0cd0af3521b3ea264c4cefe076a2142cc59239f74",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "goldveld",
+      "beforeSha256": "c18188b9ff81c6e42923ee48ed68ae85789b9e75c9aa6e802231ec04ab774540",
+      "afterSha256": "c18188b9ff81c6e42923ee48ed68ae85789b9e75c9aa6e802231ec04ab774540",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "greifenau",
+      "beforeSha256": "4efab719eb6c9951f5a719cd9a483149e799797627e49649f472834f43deed6e",
+      "afterSha256": "4efab719eb6c9951f5a719cd9a483149e799797627e49649f472834f43deed6e",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "gueldenfels",
+      "beforeSha256": "3dbc26636ad842ae47f8e91379f60a88bea0a415d1dae03814879ee89c5263f2",
+      "afterSha256": "3dbc26636ad842ae47f8e91379f60a88bea0a415d1dae03814879ee89c5263f2",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "herzau",
+      "beforeSha256": "c52eee3c261cce3b565910cd6b72c34a796a3bab06457c3aec1e36b0f6cc7530",
+      "afterSha256": "c52eee3c261cce3b565910cd6b72c34a796a3bab06457c3aec1e36b0f6cc7530",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "lanette",
+      "beforeSha256": "40071db513b6fc42c64f4bf477d21eb962b593cee3d8e65498bcc35f2f1b77df",
+      "afterSha256": "40071db513b6fc42c64f4bf477d21eb962b593cee3d8e65498bcc35f2f1b77df",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "mac-callan",
+      "beforeSha256": "15e6f41aa557a901d928d403139033178bd3f2e25adf6574d1b81301da3eb1b4",
+      "afterSha256": "15e6f41aa557a901d928d403139033178bd3f2e25adf6574d1b81301da3eb1b4",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "mac-ruan",
+      "beforeSha256": "9765462d9b8db9ec309fb94cf2ae592d466ae5692a45153c44feb6c3809baac8",
+      "afterSha256": "9765462d9b8db9ec309fb94cf2ae592d466ae5692a45153c44feb6c3809baac8",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "na-fenn",
+      "beforeSha256": "f2e3194421e126d69b89337a59a5be79b08f6ca61de381e19d2751a5d97733dc",
+      "afterSha256": "f2e3194421e126d69b89337a59a5be79b08f6ca61de381e19d2751a5d97733dc",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "rebenkron",
+      "beforeSha256": "c57abed7be7f3e66133b8644d88b2341d1da75dfaf74c4232ede25d49143e6e0",
+      "afterSha256": "c57abed7be7f3e66133b8644d88b2341d1da75dfaf74c4232ede25d49143e6e0",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "roden",
+      "beforeSha256": "1201a797129e31bf88c8e514f51b8b5238fba072004f3c7102a2db8412b93979",
+      "afterSha256": "1201a797129e31bf88c8e514f51b8b5238fba072004f3c7102a2db8412b93979",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "roosenvelt",
+      "beforeSha256": "5b88f81d8e83961eb328021793936fff04bc3bbc8104d81f0d2ba98029bd874b",
+      "afterSha256": "5b88f81d8e83961eb328021793936fff04bc3bbc8104d81f0d2ba98029bd874b",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "samtborn",
+      "beforeSha256": "a654681b566fe62c0f22c82ca6e676591d60c8b0e375c78ecfd0fa4083026bfe",
+      "afterSha256": "a654681b566fe62c0f22c82ca6e676591d60c8b0e375c78ecfd0fa4083026bfe",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "seidenwarth",
+      "beforeSha256": "d84714af1cfd6f911d37bddd2e01caa94f104020f51fae267a47b065d2edf98d",
+      "afterSha256": "d84714af1cfd6f911d37bddd2e01caa94f104020f51fae267a47b065d2edf98d",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "silberhorst",
+      "beforeSha256": "4eb367f8cd8d5cc8436cc0cdce7e170c72a2d056fbae0d44a324cffb645c40b7",
+      "afterSha256": "4eb367f8cd8d5cc8436cc0cdce7e170c72a2d056fbae0d44a324cffb645c40b7",
+      "changed": false
+    },
+    {
+      "realm": "Goldmund",
+      "id": "weisshorn",
+      "beforeSha256": "9884be536bba687b4d76d6b213ca8b024377ba614235775bdab03137175a98ab",
+      "afterSha256": "9884be536bba687b4d76d6b213ca8b024377ba614235775bdab03137175a98ab",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "blumenthal",
+      "beforeSha256": "b4203dc7615e3a76a24bc39b204d58f71cb8ecafac9b878a3c63443c133d3f44",
+      "afterSha256": "db81300087659533e1f7cca197b6f100742227de688609d329d332496252f1dd",
+      "changed": true
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "borgenicht",
+      "beforeSha256": "17249b570dbbae88d5897e7068f4cf5ce666ce3e5f8851ca8e987406c8643a90",
+      "afterSha256": "17249b570dbbae88d5897e7068f4cf5ce666ce3e5f8851ca8e987406c8643a90",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "bruggemann",
+      "beforeSha256": "8805e4b7dc2ce1bef21ab8617728418cec3505251b9e40de3f6e214dbd92e9a2",
+      "afterSha256": "8805e4b7dc2ce1bef21ab8617728418cec3505251b9e40de3f6e214dbd92e9a2",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "catrannoch",
+      "beforeSha256": "542570eac0aac822c1532e2a01e0e462dd8f1e0bf7286d147634df553f962a0b",
+      "afterSha256": "542570eac0aac822c1532e2a01e0e462dd8f1e0bf7286d147634df553f962a0b",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "cnagallan",
+      "beforeSha256": "34222fad73ef39488a422078ebdba42b396af9b651224d9c9fee97c39b57aa7c",
+      "afterSha256": "5b6738b1fab8d7c1ce611b688b8e62c36c7758fe241cba0010d052f5d5f4569e",
+      "changed": true
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "damhcallan",
+      "beforeSha256": "bcb37755e5cbaf7e5d70c618f18c706af9bbce3ae2a972f1307be2398b95c500",
+      "afterSha256": "bcb37755e5cbaf7e5d70c618f18c706af9bbce3ae2a972f1307be2398b95c500",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "die-ritter-der-kornahre",
+      "beforeSha256": "e1bc8adc43506dcd681c4db2d8d50cf4c6d5514deb5a5887332f094dc9ad77c6",
+      "afterSha256": "e1bc8adc43506dcd681c4db2d8d50cf4c6d5514deb5a5887332f094dc9ad77c6",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "edelweiss",
+      "beforeSha256": "048451ff0a14107fe6a0f6cdb6449b2fc9af3bd5ca9c673357def683b50b8c5b",
+      "afterSha256": "c935d0c8d962f9574a6927a298eb7bb28f08974ccc3b91523a27e664870c9299",
+      "changed": true
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "feuerstein",
+      "beforeSha256": "fa81f426018f4e60002cafc26922dd87cbb8e158bfad6478e728c45e9968201a",
+      "afterSha256": "fa81f426018f4e60002cafc26922dd87cbb8e158bfad6478e728c45e9968201a",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "freudenthal",
+      "beforeSha256": "1d9e87f5416e9fba4b8567ae1c8002a12d67e64782fc795c2c34bf8db1f4bd1a",
+      "afterSha256": "1d9e87f5416e9fba4b8567ae1c8002a12d67e64782fc795c2c34bf8db1f4bd1a",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "goldberg",
+      "beforeSha256": "a9ceb576ffa44f1568946d8ad1b8af7706f93b2d73cc69dee8a92f280cc62f20",
+      "afterSha256": "a9ceb576ffa44f1568946d8ad1b8af7706f93b2d73cc69dee8a92f280cc62f20",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "goldkranz",
+      "beforeSha256": "c63115ff7d9e9b263538eb8db305e0d9f222249bab4450c779bdd7fa5465fc71",
+      "afterSha256": "f96c38671219562351f5f850bbe0eefc9958c61321a54146c2b5ae62d13cf0f2",
+      "changed": true
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "honigfeld",
+      "beforeSha256": "2f66b877dff1a91dd567f3c1a22a501faf158e5f14850ebe8912be72d2895f2f",
+      "afterSha256": "2f66b877dff1a91dd567f3c1a22a501faf158e5f14850ebe8912be72d2895f2f",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "immergluck",
+      "beforeSha256": "4f004b7549263b8b1e7e9142a1e0f89714a56baf6c5908eb4e0925989ccae1cd",
+      "afterSha256": "4f004b7549263b8b1e7e9142a1e0f89714a56baf6c5908eb4e0925989ccae1cd",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "iorcallan",
+      "beforeSha256": "d499c08f8ad427e972bec516a8f7607435f67fb662754519df0d25f47bed0bed",
+      "afterSha256": "d499c08f8ad427e972bec516a8f7607435f67fb662754519df0d25f47bed0bed",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "kaltwasser",
+      "beforeSha256": "5ca617fe3eb8e657c7a8b6b688c21f4f596b384e12dfe244bebea6d746a723ea",
+      "afterSha256": "5ca617fe3eb8e657c7a8b6b688c21f4f596b384e12dfe244bebea6d746a723ea",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "otterberg",
+      "beforeSha256": "4021b0cc042d9a573219e2b864cf9130ec6b3285238fd388c3a5d53f1cfc4e80",
+      "afterSha256": "4021b0cc042d9a573219e2b864cf9130ec6b3285238fd388c3a5d53f1cfc4e80",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "rosenblatt",
+      "beforeSha256": "973a6e999f6df89d20c10df74da5b6e5b7bb84c0bf1fc677bf4938c49e8fb0c2",
+      "afterSha256": "973a6e999f6df89d20c10df74da5b6e5b7bb84c0bf1fc677bf4938c49e8fb0c2",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "rosenbluth",
+      "beforeSha256": "23c416b273273c60e6359a12d4bfb512789380c0c9a64788f3cb4120db54461b",
+      "afterSha256": "23c416b273273c60e6359a12d4bfb512789380c0c9a64788f3cb4120db54461b",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "rosenstolz",
+      "beforeSha256": "ec1489b073aa9f10fffa28356405fdf5dc96525bac08b41043d94ecbcc7ef02f",
+      "afterSha256": "ec1489b073aa9f10fffa28356405fdf5dc96525bac08b41043d94ecbcc7ef02f",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "sgaireag",
+      "beforeSha256": "53c42ddb539474c77b14289e4ca36e68accc192a732b3145e8002e01c74fa77a",
+      "afterSha256": "53c42ddb539474c77b14289e4ca36e68accc192a732b3145e8002e01c74fa77a",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "silberthal",
+      "beforeSha256": "b9c900b20d4797651a42daf63bed34ff945243d0cf0a4c0aa8a714f0c6d31496",
+      "afterSha256": "b9c900b20d4797651a42daf63bed34ff945243d0cf0a4c0aa8a714f0c6d31496",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "sommerfeld",
+      "beforeSha256": "1721bef7617116acfbd0d6e231a507de6b7e4d6710d54124131f6bfb74bff085",
+      "afterSha256": "1721bef7617116acfbd0d6e231a507de6b7e4d6710d54124131f6bfb74bff085",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "sonnenfeld",
+      "beforeSha256": "c1653589b9ce5b009595c0a50e7db3c2d8067c73430cab4fbe69e42246b3dca7",
+      "afterSha256": "c1653589b9ce5b009595c0a50e7db3c2d8067c73430cab4fbe69e42246b3dca7",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "taghradan",
+      "beforeSha256": "d1761dc70a3d83a1fa24cc9879834b9f5a44c85033bd82a871926fa9d9593a73",
+      "afterSha256": "d1761dc70a3d83a1fa24cc9879834b9f5a44c85033bd82a871926fa9d9593a73",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "thalmann",
+      "beforeSha256": "f800a09ba7eb5e9389d773a6fe013ab958e8eb857e352f889f49a681ef400869",
+      "afterSha256": "f800a09ba7eb5e9389d773a6fe013ab958e8eb857e352f889f49a681ef400869",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "torcradan",
+      "beforeSha256": "66274dfed5bcbecdd825db4193a7c122ef8c631338007f45fb538fee0234ce94",
+      "afterSha256": "66274dfed5bcbecdd825db4193a7c122ef8c631338007f45fb538fee0234ce94",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "weissberg",
+      "beforeSha256": "750336bdecc88e3ca096b7f829498b7529d682df58e09782021b7cff5686e254",
+      "afterSha256": "750336bdecc88e3ca096b7f829498b7529d682df58e09782021b7cff5686e254",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "weissmann",
+      "beforeSha256": "f0d37c1dd9be652162e6db326899d2bbab18669eb918e7cd8a2a03a7cc73f0c8",
+      "afterSha256": "f0d37c1dd9be652162e6db326899d2bbab18669eb918e7cd8a2a03a7cc73f0c8",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "weizmann",
+      "beforeSha256": "d00cb27bb6bd4dc81b9b271ff475f786ccb18542dc2b6ef27ffc87871d35a885",
+      "afterSha256": "d00cb27bb6bd4dc81b9b271ff475f786ccb18542dc2b6ef27ffc87871d35a885",
+      "changed": false
+    },
+    {
+      "realm": "Weisenfluh",
+      "id": "wolfenstein",
+      "beforeSha256": "e62bebf5f267279dc9c43f18c97679b254048a969a5161758cf3a71fb0163813",
+      "afterSha256": "e62bebf5f267279dc9c43f18c97679b254048a969a5161758cf3a71fb0163813",
+      "changed": false
+    }
+  ],
+  "result": {
+    "reviewed": 51,
+    "changed": [
+      "Weisenfluh/blumenthal",
+      "Weisenfluh/cnagallan",
+      "Weisenfluh/edelweiss",
+      "Weisenfluh/goldkranz"
+    ],
+    "unchanged": 47,
+    "originalsRetained": true,
+    "tool": "built-in image_gen"
+  },
+  "corrections": [
+    {
+      "id": "goldkranz",
+      "reason": "Runderer geschlossener Helm mit ausgeprägtem goldenem Lorbeerkranz in Kronenform.",
+      "editSourceArchive": "assets/warriors/generated-archive/goldkranz-refinement-edit-input-v1.png",
+      "selectedOutput": "assets/warriors/generated/goldkranz.png"
+    },
+    {
+      "id": "cnagallan",
+      "reason": "Laute als vollständiges Saiteninstrument mit schlüssigem Tragegurt und natürlichem Griff am Hals darstellen.",
+      "editSourceArchive": "assets/warriors/generated-archive/cnagallan-refinement-edit-input-v1.png",
+      "selectedOutput": "assets/warriors/generated/cnagallan.png"
+    },
+    {
+      "id": "blumenthal",
+      "reason": "Unförmigen Lamellenvisor durch einen schlüssig gebauten geschlossenen Armet ersetzen; korrigiertes Schwert erhalten.",
+      "editSourceArchive": "assets/warriors/generated-archive/blumenthal-refinement-edit-input-v1.png",
+      "selectedOutput": "assets/warriors/generated/blumenthal.png"
+    },
+    {
+      "id": "edelweiss",
+      "reason": "Geschlossenen Einhornhelm gestalten und Pferdeschweif anatomisch korrekt hinter die Kruppe, getrennt vom Ritter, verlegen.",
+      "editSourceArchive": "assets/warriors/generated-archive/edelweiss-refinement-edit-input-v1.png",
+      "selectedOutput": "assets/warriors/generated/edelweiss.png"
+    }
+  ],
+  "checks": {
+    "houseTestsPassed": 16,
+    "alphaAudit": {
+      "checked": 31,
+      "failures": 0
+    },
+    "lightAndDarkVisualReview": true
+  }
+}

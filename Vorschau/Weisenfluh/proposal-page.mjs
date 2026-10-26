@@ -1,7 +1,7 @@
-import {renderHouseDetails} from './house-details.mjs?v=20261026-2';
-import {houses,settlements,rankLabels,createMapProposal} from './realm-data.mjs?v=20261026-2';
+import {renderHouseDetails} from './house-details.mjs?v=20261026-3';
+import {houses,settlements,rankLabels,createMapProposal} from './realm-data.mjs?v=20261026-3';
 import {createPlacementState} from './proposal-state.mjs?v=20261026-1';
-import {escapeHtml,houseCard,renderRoyalHouse,renderProvinces,renderSettlements} from './proposal-render.mjs?v=20261026-2';
+import {escapeHtml,houseCard,renderRoyalHouse,renderProvinces,renderSettlements} from './proposal-render.mjs?v=20261026-3';
 import {createPlacementControls} from './placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 

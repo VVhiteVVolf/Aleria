@@ -90,3 +90,11 @@ senkrechte Ruhehaltung ersetzt. Frühere Fassungen und der verworfene erste
 Korrekturlauf bleiben unter `assets/warriors/generated-archive/` erhalten;
 `corrections.json` und das Promptmanifest dokumentieren die Eingriffe. Der
 Prüfbeleg liegt unter `diagnostics/warrior-object-review-2026-10-26/review.json`.
+
+Die anschließende Nutzerüberarbeitung betrifft ausschließlich Goldkranz,
+Cnagallan, Blumenthal und Edelweiss: runder Lorbeer-Kronenhelm, vollständige
+Laute mit natürlichem Griff, geschlossener Armet und geschlossener Einhornhelm
+mit anatomisch getrenntem Pferdeschweif. Die bereits korrigierte gerade
+Schwertführung Blumenthals bleibt erhalten. Vorfassungen und genaue Editprompts
+sind archiviert; `diagnostics/weisenfluh-art-refinement-2026-10-26/review.json`
+belegt vier geänderte und 47 bytegleich erhaltene Darstellungen beider Länder.
