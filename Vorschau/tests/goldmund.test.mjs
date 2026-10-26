@@ -10,19 +10,19 @@ const root=new URL('../Goldmund/',import.meta.url);
 const readJson=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 
-test('Goldmund covers three counties, eight regions and twenty-one independently assignable houses',()=>{
+test('Goldmund covers three counties, eight regions and sixteen houses with the retained source families',()=>{
  assert.equal(counties.length,3);
  assert.equal(regions.length,8);
  assert.equal(settlements.length,8);
- assert.equal(houses.length,21);
+ assert.equal(houses.length,16);
  for(const list of [counties,regions,settlements,houses,realmDesigns])assert.equal(new Set(list.map(item=>item.id)).size,list.length);
  assert.deepEqual(houses.filter(house=>house.sourceSeat!==null).map(({id,sourceSeat,rank})=>({id,sourceSeat,rank})),[
   {id:'goldveld',sourceSeat:'thronholt',rank:'prince'},
   {id:'roden',sourceSeat:'thronholt',rank:'knight-prince'}
  ]);
- assert.equal(houses.filter(house=>house.source==='Geliefertes Haus').length,10);
+ assert.equal(houses.filter(house=>house.source==='Geliefertes Haus').length,5);
  assert.equal(houses.filter(house=>house.proposed).length,11);
- assert.equal(houses.filter(house=>house.sourceSeat===null).length,19);
+ assert.equal(houses.filter(house=>house.sourceSeat===null).length,14);
  assert.ok(houses.filter(house=>house.proposed).every(house=>house.original===null&&house.sourceSeat===null));
  assert.ok(houses.find(house=>house.id==='aurelshain').theme.includes('Pferdezucht'));
  for(const region of regions){
@@ -39,24 +39,24 @@ test('locked Thronholt families cannot move while local house placements support
  assert.equal(state.move('goldveld','bregen'),false);
  assert.equal(state.move('roden',null),false);
  assert.deepEqual(state.current(),baseline);
- assert.equal(state.move('adrard','haarlen'),true);
- assert.equal(state.move('adrard','haarlen'),false);
+ assert.equal(state.move('broeck','haarlen'),true);
+ assert.equal(state.move('broeck','haarlen'),false);
  assert.equal(state.move('aurelshain','bramsen'),true);
  assert.equal(state.undo(),true);
  assert.equal(state.currentPlacements().aurelshain,null);
- assert.equal(state.currentPlacements().adrard,'haarlen');
+ assert.equal(state.currentPlacements().broeck,'haarlen');
  assert.equal(state.reset(),true);
  assert.deepEqual(state.current(),baseline);
  assert.equal(state.undo(),true);
- assert.equal(state.currentPlacements().adrard,'haarlen');
+ assert.equal(state.currentPlacements().broeck,'haarlen');
  assert.deepEqual(houses,source);
- const exposed=state.current();exposed.placements.adrard='bregen';exposed.design.collectiveName='Changed';
- assert.equal(state.currentPlacements().adrard,'haarlen');
+ const exposed=state.current();exposed.placements.broeck='bregen';exposed.design.collectiveName='Changed';
+ assert.equal(state.currentPlacements().broeck,'haarlen');
  assert.notEqual(state.currentDesign().collectiveName,'Changed');
  const map=createMapProposal(state.currentPlacements());
  assert.equal(map.clans.find(house=>house.id==='goldveld').seat,'thronholt');
- assert.equal(map.clans.find(house=>house.id==='adrard').seat,'haarlen');
- assert.equal(createDesignState().currentPlacements().adrard,null);
+ assert.equal(map.clans.find(house=>house.id==='broeck').seat,'haarlen');
+ assert.equal(createDesignState().currentPlacements().broeck,null);
 });
 
 test('names, realm crest choice and placements round-trip together and restore atomically',()=>{
@@ -71,7 +71,7 @@ test('names, realm crest choice and placements round-trip together and restore a
  const saved=second.current();
  const invalidSnapshots=[
   {},{...saved,realm:'other'},
-  {...saved,placements:{adrard:'bregen'}},
+  {...saved,placements:{broeck:'bregen'}},
   {...saved,placements:{...saved.placements,roden:'bregen'}},
   {...saved,placements:{...saved.placements,adrard:'unknown'}},
   {...saved,design:{...saved.design,realmCrest:'unknown'}},
@@ -80,7 +80,7 @@ test('names, realm crest choice and placements round-trip together and restore a
   {...saved,design:{...saved.design,collectiveName:'\u0000Bad'}}
  ];
  for(const value of invalidSnapshots){assert.throws(()=>second.restore(value));assert.deepEqual(second.current(),saved);}
- for(const change of [()=>second.move('unknown','bregen'),()=>second.move('adrard','unknown'),()=>second.rename('county','unknown','Name'),()=>second.rename('region',regions[0].id,'x'),()=>second.chooseCrest('unknown')]){
+ for(const change of [()=>second.move('unknown','bregen'),()=>second.move('broeck','unknown'),()=>second.rename('county','unknown','Name'),()=>second.rename('region',regions[0].id,'x'),()=>second.chooseCrest('unknown')]){
   assert.throws(change);assert.deepEqual(second.current(),saved);
  }
  assert.equal(state.undo(),true);
@@ -90,7 +90,7 @@ test('names, realm crest choice and placements round-trip together and restore a
  assert.deepEqual(state.current(),createDesignState().current());
 });
 
-test('all supplied originals retain their SHA256 and old revised crests stay available for comparison',async()=>{
+test('all supplied originals retain their SHA256 and retired crests remain archived',async()=>{
  const manifest=await readJson('assets.source.json');
  assert.equal(manifest.length,12);
  assert.equal(new Set(manifest.map(entry=>entry.sourceFile)).size,12);
@@ -111,20 +111,25 @@ test('all supplied originals retain their SHA256 and old revised crests stay ava
  }
 });
 
-test('the original sixteen-house draft migrates without losing placements or design choices',()=>{
+test('both complete historical rosters migrate while preserving surviving assignments and rejecting invalid data',()=>{
  const state=createDesignState(),added=['eitelborn','herzau','silberhorst','samtborn','weisshorn'];
- state.move('adrard','haarlen');state.rename('collective',null,'Der Goldene Bund');state.chooseCrest(realmDesigns[2].id);
+ state.move('broeck','haarlen');state.rename('collective',null,'Der Goldene Bund');state.chooseCrest(realmDesigns[2].id);
  const legacy=JSON.parse(state.serialize());
+ Object.assign(legacy.placements,{adrard:'bregen',rielle:null,vandergard:null,waalen:null,witten:null});
+ const prior=structuredClone(legacy);
  for(const id of added)delete legacy.placements[id];
  const source=structuredClone(legacy),restored=createDesignState();
  restored.restore(legacy);
  assert.deepEqual(restored.current(),state.current());
  assert.deepEqual(legacy,source);
  for(const id of added)assert.equal(restored.currentPlacements()[id],null);
+ restored.restore(prior);
+ assert.deepEqual(restored.current(),state.current());
+ assert.equal(Object.hasOwn(restored.currentPlacements(),'adrard'),false);
  const saved=restored.current(),missing=structuredClone(legacy),unknown=structuredClone(legacy);
- delete missing.placements.adrard;
- delete unknown.placements.adrard;unknown.placements.unknown=null;
- for(const invalid of [missing,unknown,{...legacy,placements:{...legacy.placements,roden:'bregen'}}]){
+ delete missing.placements.broeck;
+ delete unknown.placements.broeck;unknown.placements.unknown=null;
+ for(const invalid of [missing,unknown,{...legacy,placements:{...legacy.placements,roden:'bregen'}},{...prior,placements:{...prior.placements,adrard:'unknown'}}]){
   assert.throws(()=>restored.restore(invalid));assert.deepEqual(restored.current(),saved);
  }
 });

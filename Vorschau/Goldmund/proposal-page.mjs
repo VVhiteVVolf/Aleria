@@ -1,6 +1,6 @@
-import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-2';
-import {createDesignState} from './design-state.mjs?v=20261026-2';
-import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderRevisedHouses,renderHouseDetails} from './proposal-render.mjs?v=20261026-2';
+import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-4';
+import {createDesignState} from './design-state.mjs?v=20261026-4';
+import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderRevisedHouses,renderHouseDetails} from './proposal-render.mjs?v=20261026-4';
 import {createPlacementControls} from '../shared/placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 
@@ -75,7 +75,7 @@ houseSelect.insertAdjacentHTML('beforeend',['Geliefertes Haus','Neuer Hausvorsch
 seatSelect.insertAdjacentHTML('beforeend',settlements.map(seat=>`<option value="${seat.id}">${escapeHtml(seat.name)}</option>`).join(''));
 try{const saved=localStorage.getItem(storageKey);if(saved){
  const draft=JSON.parse(saved);state.restore(draft);
- if(Object.keys(draft.placements).length<houses.length){save();notice('Der bisherige Entwurf wurde um fünf neue, noch unzugeordnete Häuser ergänzt.');}
+ if(Object.keys(draft.placements).length!==houses.length||houses.some(house=>!Object.hasOwn(draft.placements,house.id))){save();notice('Der bisherige Entwurf wurde auf die aktuelle Hausauswahl übertragen. Die Zuordnungen der beibehaltenen Häuser bleiben erhalten.');}
 }}
 catch{notice('Der gespeicherte Entwurf konnte nicht geladen werden. Die ursprünglichen Vorschläge werden angezeigt.');}
 

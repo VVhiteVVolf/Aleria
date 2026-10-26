@@ -2,15 +2,15 @@
 
 Einstieg: `index.html`. Die eigenständige Seite entwickelt die gelieferte
 Goldmund-Karte als besprechbaren Entwurf: drei Grafschaften, acht einzelne
-Regionen, elf eigene Banner, zehn gelieferte Häuser, elf neue Hausvorschläge
-und vier auswählbare Fürstentumswappen. Insgesamt sind 21 Häuser und 29 neue
+Regionen, elf eigene Banner, fünf beibehaltene Häuser, elf neue Hausvorschläge
+und vier auswählbare Fürstentumswappen. Insgesamt sind 16 Häuser und 29 neue
 Bildmotive enthalten: 18 Kreiswappen (elf neue Häuser, drei Überarbeitungen,
 vier Fürstentumsvorschläge) sowie elf Banner. Neue Namen, Motive und Rollenansätze
 sind ausdrücklich Vorschläge. Die Seite schreibt weder kanonische Register
 noch Firebase-Daten.
 
 Goldveld als Fürstenfamilie und Roden als Ritterfürstenfamilie sind gemäß
-Nutzervorgabe fest in Thronholt gesetzt. Die übrigen 19 Häuser beginnen ohne
+Nutzervorgabe fest in Thronholt gesetzt. Die übrigen 14 Häuser beginnen ohne
 Sitz und erhalten durch Verschieben keinen zusätzlichen Rang. Hochreuth wird
 nicht ergänzt; seine alte Burg ist auf dieser Karte nicht verortet.
 
@@ -29,12 +29,14 @@ Fest gesetzte Thronholt-Zuordnungen lassen sich auch durch Import nicht lösen.
 Persönliche Änderungen liegen unter dem eigenen Browser-Schlüssel
 `aleria:proposal:goldmund:draft:v1`.
 
-Die Ergänzung um de Waelmont, van Aerenwyck, Veldraedt, Vaelsteyn und van Breughen besitzt
-eine eng begrenzte Migration: Ein vollständiger ursprünglicher Entwurf mit
-genau den früheren 16 Haus-IDs erhält diese fünf neuen Häuser mit offenem Sitz.
-Vorhandene Namen, Wappenauswahl und Hauszuordnungen bleiben erhalten. Das gilt
-für Browserstände und JSON-Importe. Andere unvollständige oder unbekannte
-Hauslisten werden weiter abgelehnt; alle festen Sitzregeln bleiben verbindlich.
+Roosenvelt und Broeck behalten auf ausdrücklichen Nutzerwunsch Namen und Wappen.
+Roden, Goldveld und Lanette behalten ihre Namen und verwenden die neuen Wappen.
+Adrard, Rielle, Vandergard, Waalen und Witten entfallen nur aus dieser Vorbereitung;
+die gelieferten Dateien bleiben unverändert im Archiv. Eine eng begrenzte Migration
+akzeptiert die vollständigen früheren Hauslisten mit 16 oder 21 Einträgen:
+Zuordnungen der verbleibenden Häuser, Gebietsnamen und Wappenauswahl bleiben erhalten,
+fehlende neue Häuser beginnen ohne Sitz. Unvollständige oder fremde Hauslisten und
+unbekannte Orte werden weiterhin abgelehnt; alle festen Sitzregeln bleiben verbindlich.
 
 Freie Wappen lassen sich mit Maus oder Stift ziehen. Auswahlbuttons und die
 Haus-/Ortslisten bieten denselben Weg für Tastatur und Touch. Die Kartenpins
@@ -45,13 +47,13 @@ sind über eigene Namenseditoren veränderbar.
 `assets/originals/` enthält die unveränderten Lieferdateien; `assets.source.json`
 dokumentiert Quellen, Abmessungen und Prüfsummen. Aktive Hauswappen liegen unter
 `assets/crests/`, Regions- und Grafschaftsbanner unter `assets/banners/`, die vier
-Fürstentumsentwürfe unter `assets/realm/`. Das gelieferte Fürstentumswappen bleibt
-als Vergleich unter `assets/source-realm.webp` erhalten. Die ursprünglichen
-Wappen von Roden, Goldveld und Lanette sind im sichtbaren Vergleich verlinkt.
+Fürstentumsentwürfe unter `assets/realm/`. Das gelieferte Fürstentumswappen und
+die ursprünglichen Wappen von Roden, Goldveld und Lanette bleiben als Archiv
+erhalten. Auf Nutzerwunsch vom 26. Oktober zeigt die Seite nur die neuen Fassungen.
 
 Die Farbkorrektur des Nutzers verteilt die Hauptfarben auf Gold, Silber,
-Bronze, Schwarz und satte Farbfelder. Insbesondere de Veyr und Rheynvaert
-verwenden schwarze Wappentiere, Veylenbroeck einen silbernen Kelch und van Velhaeren
+Bronze, Schwarz und satte Farbfelder. Insbesondere Severin und Marholt
+verwenden schwarze Wappentiere, Belcourt einen silbernen Kelch und Lanvier
 einen saphir-/petrolblauen Pfau. Goldvelds Löwe und Lanettes Reiter bleiben
 gemäß Motivvorgabe golden. Der Doppeladler ist schwarz; der Fürstentumskelch
 ist silbern. Die Namens-IDs bleiben zur Stabilität vorhandener Entwürfe erhalten.
@@ -62,22 +64,23 @@ deren WebP-Anzeigen; die rohen Generatorfassungen unter `assets/generated/`
 bleiben als Archiv getrennt erhalten. Gelieferte Hausoriginale bleiben unter
 `assets/originals/houses/` erreichbar.
 
-Die elf neuen Namen folgen der aktualisierten Nutzervorgabe: flämisch-
-niederländisch geprägte Fantasy-Familiennamen mit einem deutschen Einschlag.
-Alle bleiben Namensvorschläge. Anzeigenamen und interne IDs sind bewusst
+Die elf neuen Namen folgen der aktualisierten Nutzervorgabe: kurze, gut lesbare
+Familiennamen näher an Roden, Goldveld und Lanette, mit höfischen sowie deutschen
+und französisch-belgischen Anklängen. Die erste stark niederländische Fassung wurde
+verworfen. Alle bleiben Namensvorschläge. Anzeigenamen und interne IDs sind bewusst
 getrennt; die früheren Motiv-IDs und sämtliche Assetpfade bleiben stabil, damit
 gespeicherte Entwürfe und exportierte Hauszuordnungen weiterhin funktionieren.
 
 | Anzeigename | Stabile Haus-ID |
 | --- | --- |
-| van Aelrath | `aurelshain` |
-| Vossendael | `gueldenfels` |
-| de Veyr | `falkengold` |
-| Veylenbroeck | `rebenkron` |
-| van Velhaeren | `seidenwarth` |
-| Rheynvaert | `greifenau` |
-| de Waelmont | `eitelborn` |
-| van Aerenwyck | `herzau` |
-| Veldraedt | `silberhorst` |
-| Vaelsteyn | `samtborn` |
-| van Breughen | `weisshorn` |
+| Arenberg | `aurelshain` |
+| Velten | `gueldenfels` |
+| Severin | `falkengold` |
+| Belcourt | `rebenkron` |
+| Lanvier | `seidenwarth` |
+| Marholt | `greifenau` |
+| Belmont | `eitelborn` |
+| Arden | `herzau` |
+| Berden | `silberhorst` |
+| Sorel | `samtborn` |
+| Wolter | `weisshorn` |

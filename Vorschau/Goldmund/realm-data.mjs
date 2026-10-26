@@ -1,4 +1,4 @@
-import {sourceHouses} from './source-houses.mjs?v=20261026-2';
+import {sourceHouses} from './source-houses.mjs?v=20261026-4';
 
 export const houses = sourceHouses;
 export const rankLabels = Object.freeze({prince:'Fürstenfamilie','knight-prince':'Ritterfürstenfamilie',open:'Rang noch offen'});

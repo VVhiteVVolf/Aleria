@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: Goldmund covers three counties, eight regions and sixteen houses with the retained source families
+ok 1 - Goldmund covers three counties, eight regions and sixteen houses with the retained source families
+  ---
+  duration_ms: 2.0684
+  type: 'test'
+  ...
+# Subtest: locked Thronholt families cannot move while local house placements support undo and reset
+ok 2 - locked Thronholt families cannot move while local house placements support undo and reset
+  ---
+  duration_ms: 2.1083
+  type: 'test'
+  ...
+# Subtest: names, realm crest choice and placements round-trip together and restore atomically
+ok 3 - names, realm crest choice and placements round-trip together and restore atomically
+  ---
+  duration_ms: 1.8554
+  type: 'test'
+  ...
+# Subtest: all supplied originals retain their SHA256 and retired crests remain archived
+ok 4 - all supplied originals retain their SHA256 and retired crests remain archived
+  ---
+  duration_ms: 83.013
+  type: 'test'
+  ...
+# Subtest: both complete historical rosters migrate while preserving surviving assignments and rejecting invalid data
+ok 5 - both complete historical rosters migrate while preserving surviving assignments and rejecting invalid data
+  ---
+  duration_ms: 1.397
+  type: 'test'
+  ...
+# Subtest: the discussion view renders every territory and escapes imported names
+ok 6 - the discussion view renders every territory and escapes imported names
+  ---
+  duration_ms: 1.2886
+  type: 'test'
+  ...
+# Subtest: the art deliverable contains eighteen new crests and eleven distinct territorial banners
+ok 7 - the art deliverable contains eighteen new crests and eleven distinct territorial banners
+  ---
+  duration_ms: 170.0505
+  type: 'test'
+  ...
+# Subtest: the planning page uses local modules, no inline handlers and no canonical data writes
+ok 8 - the planning page uses local modules, no inline handlers and no canonical data writes
+  ---
+  duration_ms: 3.825
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 292.6154
