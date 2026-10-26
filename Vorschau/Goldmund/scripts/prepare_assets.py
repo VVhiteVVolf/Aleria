@@ -177,7 +177,7 @@ def prepare_pending() -> None:
     manifest = ROOT / "assets.generated.json"
     previous = json.loads(manifest.read_text(encoding="utf-8")) if manifest.exists() else []
     entries = {(entry["category"], entry["id"]): entry for entry in previous}
-    categories = {"crest": "crests", "realm": "realm", "banner": "banners"}
+    categories = {"crest": "crests", "realm": "realm", "banner": "banners", "historic": "history"}
     groups = {category: [] for category in categories.values()}
     missing = []
     for job in direction["jobs"]:
@@ -273,6 +273,7 @@ def main() -> None:
     generated_parser.add_argument("--crest", nargs="*", default=[])
     generated_parser.add_argument("--realm", nargs="*", default=[])
     generated_parser.add_argument("--banner", nargs="*", default=[])
+    generated_parser.add_argument("--historic", nargs="*", default=[])
     probe_parser = commands.add_parser("circle-probe", help="Create separate exact-circle alpha samples for visual approval")
     probe_parser.add_argument("--id", nargs="+", required=True)
     commands.add_parser("audit", help="Verify originals, preview hashes and dimensions")
@@ -281,7 +282,7 @@ def main() -> None:
     if args.command == "source":
         prepare_sources(args.source_dir)
     elif args.command == "generated":
-        prepare_generated({"crests": args.crest, "realm": args.realm, "banners": args.banner})
+        prepare_generated({"crests": args.crest, "realm": args.realm, "banners": args.banner, "history": args.historic})
     elif args.command == "circle-probe":
         circle_probes(args.id)
     elif args.command == "pending":

@@ -1,7 +1,7 @@
-import {sourceHouses} from './source-houses.mjs?v=20261026-5';
+import {sourceHouses} from './source-houses.mjs?v=20261026-6';
 
 export const houses = sourceHouses;
-export const rankLabels = Object.freeze({prince:'Fürstenfamilie','knight-prince':'Ritterfürstenfamilie',open:'Rang noch offen'});
+export const rankLabels = Object.freeze({prince:'Fürstenfamilie','knight-prince':'Ritterfürstenfamilie',laird:'Laird-Clan',open:'Rang noch offen'});
 export const collectiveName = 'Die Goldenen Grafschaften';
 
 export const counties = Object.freeze([
@@ -34,7 +34,7 @@ export const settlements = Object.freeze([
 
 export const realmDesigns = Object.freeze([
  {id:'sonnenkrone',name:'Die Sonnenkrone',motif:'Goldene Sonne auf Bordeaux',description:'Fürstliche Würde und Strahlkraft in warmem Gold auf tiefem Bordeauxrot.'},
- {id:'doppeladler',name:'Schwarzer Doppeladler',motif:'Schwarzer Adler · Silberkrone · Bronzerahmen',description:'Ein schwarzer imperialer Doppeladler auf Elfenbein. Der stärkste Bezug zur Bildsprache des Heiligen Römischen Reiches.'},
+ {id:'doppeladler',name:'Schwarzer Doppeladler',motif:'Schwarzer Adler · Silberkrone · Bronzerahmen',description:'Ein schwarzer imperialer Doppeladler auf Elfenbein. Ein betont imperiales Zeichen für den Anspruch, das kaiserliche Erbe zu bewahren.'},
  {id:'aurelianerkrone',name:'Die Aurelianerkrone',motif:'Goldene Pferde · Dunkelgrün · Silberrahmen',description:'Goldene Aurelianerpferde auf dunklem Grün, in Silber gefasst. Edle Pferde und fürstliche Repräsentation als eigenes Zeichen.'},
  {id:'goldkelch',name:'Prunkkelch',motif:'Silberner Kelch · Purpur · Bronzerahmen',description:'Ein silberner Prunkkelch auf dunklem Purpur, in Bronze gefasst. Eine höfische Interpretation von Wohlstand und edlen Gütern.'}
 ].map(design=>({...design,fullsize:`assets/production/${design.id}.png`})));

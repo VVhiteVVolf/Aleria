@@ -1,3 +1,5 @@
+import {goldmundContext} from '../../Kontinente/modules/goldmund/goldmund-context.mjs';
+import {renderGoldmundContext} from '../Goldmund/context-render.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,stat,readdir} from 'node:fs/promises';
@@ -57,6 +59,24 @@ test('locked Thronholt families cannot move while local house placements support
  assert.equal(map.clans.find(house=>house.id==='goldveld').seat,'thronholt');
  assert.equal(map.clans.find(house=>house.id==='broeck').seat,'haarlen');
  assert.equal(createDesignState().currentPlacements().broeck,null);
+});
+
+test('Albic clans retain stable placement identities while prefix decisions remain open and Laird rank is explicit',()=>{
+ const clans=houses.filter(house=>house.clan);
+ assert.deepEqual(clans.map(({id,name,rank})=>({id,name,rank})),[
+  {id:'mac-ruan',name:'Ruan',rank:'laird'},
+  {id:'mac-callan',name:'Callan',rank:'laird'},
+  {id:'an-brenn',name:'Brenn',rank:'laird'},
+  {id:'na-fenn',name:'Fenn',rank:'laird'}
+ ]);
+ const state=createDesignState(),restored=createDesignState();
+ for(const [index,clan] of clans.entries())state.move(clan.id,settlements[index+1].id);
+ restored.restore(JSON.parse(state.serialize()));
+ assert.deepEqual(restored.currentPlacements(),state.currentPlacements());
+ assert.deepEqual(goldmundContext.lineage.branches.map(branch=>branch.people),['Alwener','Aldinger','Kaiservolk']);
+ assert.equal(goldmundContext.lineage.origin,'Aulvernath');
+ assert.equal(goldmundContext.lineage.successor,'Aulverner');
+ assert.equal(goldmundContext.ancientRealm.emblemId,'orneach');
 });
 
 test('names, realm crest choice and placements round-trip together and restore atomically',()=>{
@@ -159,15 +179,16 @@ test('the discussion view renders every territory and escapes imported names',()
  assert.doesNotMatch(seatCards,/data-drag-house="(?:goldveld|roden)"/);
 });
 
-test('the art deliverable contains twenty-two new crests and eleven distinct territorial banners',async()=>{
+test('the art deliverable contains twenty-three new crests and eleven distinct territorial banners',async()=>{
  const direction=await readJson('art-direction.json'),manifest=await readJson('assets.generated.json');
- assert.equal(direction.jobs.length,33);
+ assert.equal(direction.jobs.length,34);
  assert.equal(direction.jobs.filter(job=>job.kind==='crest').length,18);
  assert.equal(direction.jobs.filter(job=>job.kind==='realm').length,4);
  assert.equal(direction.jobs.filter(job=>job.kind==='banner').length,11);
- assert.equal(manifest.length,33);
- assert.equal(new Set(direction.jobs.map(job=>job.id)).size,33);
- assert.equal(new Set(manifest.map(entry=>entry.sha256)).size,33);
+ assert.equal(direction.jobs.filter(job=>job.kind==='historic').length,1);
+ assert.equal(manifest.length,34);
+ assert.equal(new Set(direction.jobs.map(job=>job.id)).size,34);
+ assert.equal(new Set(manifest.map(entry=>entry.sha256)).size,34);
  for(const house of houses.filter(item=>item.proposed||item.revised))assert.ok(direction.jobs.some(job=>job.kind==='crest'&&job.id===house.id),house.id);
  for(const job of direction.jobs){
   const entry=manifest.find(item=>item.id===job.id);
@@ -195,7 +216,7 @@ test('the art deliverable contains twenty-two new crests and eleven distinct ter
  for(const item of realmDesigns)assert.ok(direction.jobs.some(job=>job.kind==='realm'&&job.id===item.id),item.id);
  assert.equal(new Set(manifest.filter(entry=>entry.category==='banners').map(entry=>entry.sha256)).size,11);
  const state=createDesignState(),design=state.currentDesign(),placements=state.currentPlacements();
- const views=[await readFile(new URL('index.html',root),'utf8'),renderCounties(design),renderSettlements(placements,null,design),renderRealmDesigns(design.realmCrest),...houses.map(house=>renderHouseDetails(house,placements,design))].join('');
+ const views=[renderGoldmundContext(),await readFile(new URL('index.html',root),'utf8'),renderCounties(design),renderSettlements(placements,null,design),renderRealmDesigns(design.realmCrest),...houses.map(house=>renderHouseDetails(house,placements,design))].join('');
  const pngLinks=new Set([...views.matchAll(/\bhref="([^"]+\.png)"/g)].map(match=>match[1]));
  for(const path of pngLinks)await stat(new URL(path,root));
  for(const job of direction.jobs)assert.ok(pngLinks.has(`assets/production/${job.id}.png`),`${job.id}: production full-size link`);

@@ -4,8 +4,9 @@ Einstieg: `index.html`. Die eigenständige Seite entwickelt die gelieferte
 Goldmund-Karte als besprechbaren Entwurf: drei Grafschaften, acht einzelne
 Regionen, elf eigene Banner, fünf beibehaltene Häuser, elf neue Hausvorschläge,
 vier albische Clans und vier auswählbare Fürstentumswappen. Insgesamt sind
-20 Häuser und Clans sowie 33 neue Bildmotive enthalten: 22 Kreiswappen
-(elf neue Häuser, vier Clans, drei Überarbeitungen, vier Fürstentumsvorschläge)
+20 Häuser und Clans sowie 34 neue Bildmotive enthalten: 23 Kreiswappen
+(elf neue Häuser, vier Clans, drei Überarbeitungen, vier Fürstentumsvorschläge,
+ein antikes Wappen Órneachs)
 sowie elf Banner. Neue Namen, Motive und Rollenansätze
 sind ausdrücklich Vorschläge. Die Seite schreibt weder kanonische Register
 noch Firebase-Daten.
@@ -14,6 +15,15 @@ Goldveld als Fürstenfamilie und Roden als Ritterfürstenfamilie sind gemäß
 Nutzervorgabe fest in Thronholt gesetzt. Die übrigen 18 Häuser und Clans beginnen ohne
 Sitz und erhalten durch Verschieben keinen zusätzlichen Rang. Hochreuth wird
 nicht ergänzt; seine alte Burg ist auf dieser Karte nicht verortet.
+
+Der grundlegende Kontext folgt der verbindlichen Nutzerfestlegung vom
+26. Oktober 2026 und liegt wiederverwendbar unter
+`Kontinente/modules/goldmund/goldmund-context.mjs`. `context-render.mjs` und
+`context.css` besitzen ausschließlich seine Darstellung auf der Vorbereitungsseite.
+Herkunft, kaiserliches Erbe, Bankwesen, Goldvorkommen, Handelsabhängigkeiten und
+gesellschaftliche Benachteiligung der Alben sind damit vom Zuordnungsentwurf getrennt.
+Órneachs goldener Schwan ist ein historisches Wappen unter `assets/history/`;
+er wird nicht zur fünften Auswahl für das heutige Fürstentumswappen.
 
 `realm-data.mjs` besitzt die Grafschaften, Regionen, Ortskoordinaten und
 Wappenauswahl. `source-houses.mjs` beschreibt die gelieferten und vorgeschlagenen
@@ -40,7 +50,9 @@ Zuordnungen der verbleibenden Häuser, Gebietsnamen und Wappenauswahl bleiben er
 fehlende neue Häuser beginnen ohne Sitz. Unvollständige oder fremde Hauslisten und
 unbekannte Orte werden weiterhin abgelehnt; alle festen Sitzregeln bleiben verbindlich.
 
-Mac Ruan, Mac Callan, An’Brenn und Na’Fenn verwenden auf Wunsch keine Ua-/Ó-Präfixe.
+Ruan, Callan, Brenn und Fenn tragen auf Wunsch vorerst überhaupt keine Präfixe.
+Diese werden später gemeinsam festgelegt. Die alten internen IDs bleiben für
+gespeicherte Zuordnungen erhalten; ihre Rollen sind ausdrücklich Laird-Clans.
 Ihre Zeichen bleiben materiell bescheiden, unterscheiden sich aber ausdrücklich
 auch im Aufbau: grünes Bretterfeld mit dunklem Holzring; geteiltes ocker-graues
 Feld mit schrägen Brettern und vernietetem Eisenring; rostrotes Feld mit schwarzem

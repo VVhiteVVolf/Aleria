@@ -38,6 +38,16 @@ Der sechste historische Strang, die **Arkane der Fürsten**, kümmerte sich um m
 - Diese Gemeinschaften hielten die gegnerischen Mächte in Schach und bezwangen bedeutende Einzelgegner, darunter die Hexenmeisterin des Kults und infernale **Avatare Dagons**. **Sir Tristan** und **Sir Galahad Draig** bezwangen diese Avatare. Dies bedeutet keine Vernichtung Dagons selbst.
 - Andere Gegner und weitere Kriegsdetails sind noch nicht ausgearbeitet. Hagar nicht ohne zusätzliche Quelle mit jeder genannten gegnerischen Rolle oder einer der beiden infernalen Fürsten gleichsetzen.
 
+## Órneach und die östlichen Nachfolgevölker
+
+Ergänzung vom 26. Oktober 2026: Das antike Fürstentum Órneach gehört zur
+Vorgeschichte der Aulvernath. Über die Aulverner entstehen daraus Alwener,
+Aldinger und Kaiservolk, später die Blutstädter. Goldmund ist ein Fürstentum,
+Aldingen ein Herzogtum; beide grenzen sich trotz gemeinsamer Herkunft kulturell
+von den Alben ab. Ihre gesellschaftliche Benachteiligung der verbliebenen
+albischen Laird-Clans ist im [Goldmund-Kontext](../goldmund/LORE-KONTEXT.md)
+mit der kaiserlichen Geschichte, dem Bankwesen und den Handelsabhängigkeiten gesichert.
+
 ## Ausbau und Navigation
 
 Die gemeinsame Ansicht ist ausdrücklich im Aufbau. Sie bündelt den Zugang zu sämtlichen belegten Fürstentümern und fürstlichen Hainen. Einzelne Länder bleiben auf ihren jeweiligen Kontinentseiten erreichbar und erhalten später ihre eigenen ausgearbeiteten Seiten. Das gemeinsame Verzeichnis verändert ihre territoriale Hierarchie nicht.

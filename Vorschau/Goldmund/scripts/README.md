@@ -24,6 +24,7 @@ unter `assets/production/{id}.png`; erst daraus wird das WebP erzeugt:
 
 ```powershell
 python Vorschau/Goldmund/scripts/prepare_assets.py generated --crest roden goldveld lanette --realm sonnenkrone --banner thronmark
+python Vorschau/Goldmund/scripts/prepare_assets.py generated --historic orneach
 python Vorschau/Goldmund/scripts/prepare_assets.py pending
 python Vorschau/Goldmund/scripts/prepare_assets.py audit
 ```

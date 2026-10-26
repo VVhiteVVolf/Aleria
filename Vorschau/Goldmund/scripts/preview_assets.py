@@ -39,7 +39,7 @@ def contact_sheet(categories: list[str], columns: int, tile_size: int) -> Path:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--category", nargs="+", choices=("crests", "realm", "banners"), default=["crests", "realm", "banners"])
+    parser.add_argument("--category", nargs="+", choices=("crests", "realm", "banners", "history"), default=["crests", "realm", "banners", "history"])
     parser.add_argument("--columns", type=int, default=6)
     parser.add_argument("--tile-size", type=int, default=320)
     args = parser.parse_args()

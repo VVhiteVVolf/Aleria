@@ -1,6 +1,7 @@
-import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-5';
-import {createDesignState} from './design-state.mjs?v=20261026-5';
-import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses,renderHouseDetails} from './proposal-render.mjs?v=20261026-5';
+import {renderGoldmundContext} from './context-render.mjs?v=20261026-6';
+import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-6';
+import {createDesignState} from './design-state.mjs?v=20261026-6';
+import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses,renderHouseDetails} from './proposal-render.mjs?v=20261026-6';
 import {createPlacementControls} from '../shared/placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 
@@ -68,6 +69,7 @@ function download() {
 const map=createClanMap({root:root.querySelector('[data-role="map-section"]'),dialog:root.querySelector('#map-dialog'),tooltip:root.querySelector('#clan-tooltip'),getVariant:()=>createMapProposal(state.currentPlacements()),escape:escapeHtml,onClan:showHouse,rankLabel:house=>rankLabels[house.rank],rootClanLabel:'Weitere Lehenszugehörigkeit offen',caption:proposal=>`${proposal.clans.filter(house=>house.seat!==null).length} zugeordnete Hauswappen · 8 Orte · Goldveld und Roden fest in Thronholt. Die Karte behält ihre gelieferten Beschriftungen.`});
 const controls=createPlacementControls({root,getSelected:()=>selected,onMove:move,escape:escapeHtml,canMove:id=>state.canMove(id)});
 
+root.querySelector('[data-role="realm-context"]').innerHTML=renderGoldmundContext();
 root.querySelector('[data-role="fixed-houses"]').innerHTML=renderFixedHouses();
 root.querySelector('[data-role="new-houses"]').innerHTML=renderNewHouses();
 root.querySelector('[data-role="albic-clans"]').innerHTML=renderAlbicClans();
