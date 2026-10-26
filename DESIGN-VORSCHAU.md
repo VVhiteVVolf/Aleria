@@ -1,5 +1,15 @@
 # Sämtliche Links zur Designvorschau
 
+## Temporäre Länderwerkstatt
+
+- [Goldmund · Regionen, Banner und Hauszuordnungen](http://127.0.0.1:8879/Vorschau/Goldmund/)
+- [Weisenfluh · Königreichsentwurf](http://127.0.0.1:8879/Vorschau/Weisenfluh/)
+
+Goldmund enthält drei Grafschaften, acht Regionen, elf Banner und 21 verschiebbare
+Hausvorschläge. Goldveld und Roden bleiben fest in Thronholt. Die Namensvorschläge,
+Wappenauswahl und Sitzänderungen werden im eigenen Browserentwurf gespeichert.
+Die Werkstattseiten übertragen diese Zuordnungen nicht in die kanonischen Register.
+
 Stand: 18. September 2026. Die Links zeigen auf den lokalen Projektserver unter **http://127.0.0.1:5500**.
 
 In VS Code mit **Strg+Umschalt+V** die Markdown-Vorschau öffnen. Für die Anzeige innerhalb von VS Code: **Simple Browser: Show** über die Befehlspalette öffnen und die gewünschte URL einfügen.

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "images": 63,
+  "uniqueImageLinks": 40,
+  "houseCount": 21,
+  "newHouseCount": 11,
+  "checks": [
+    "Alle Bilder dekodierbar",
+    "Alle PNG-/WebP-Großansichten HTTP 200",
+    "Echtes Pointer-Drag auf Kartenort und zurück",
+    "Roden und Goldveld nicht verschiebbar",
+    "Tastatureingabe für Grafschaftsnamen",
+    "Wappenwahl",
+    "Browserdownload und Dateiupload",
+    "Reload und gemeinsames Undo",
+    "Mapdialog und Zoom",
+    "Mobile Haus-/Ortsauswahl mit Undo",
+    "Mobil ohne horizontalen Seitenüberlauf"
+  ],
+  "mobile": {
+    "screen": 390,
+    "page": 375,
+    "overflow": false
+  },
+  "runtimeErrors": [],
+  "httpErrors": [],
+  "failedRequests": [],
+  "screenshots": [
+    "desktop-hero-names-v2.png",
+    "desktop-counties-names-v2.png",
+    "desktop-map-names-v2.png",
+    "desktop-realm-designs-names-v2.png",
+    "desktop-new-houses-names-v2.png",
+    "desktop-additional-houses-names-v2.png",
+    "mobile-hero-names-v2.png",
+    "mobile-regions-names-v2.png"
+  ],
+  "displayNameReview": "name-update-checks.json",
+  "displayNamesUpdatedAt": "2026-10-26T02:10:41.546Z"
+}

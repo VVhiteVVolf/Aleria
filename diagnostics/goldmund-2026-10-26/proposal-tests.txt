@@ -1,0 +1,196 @@
+﻿TAP version 13
+# Subtest: Goldmund covers three counties, eight regions and twenty-one independently assignable houses
+ok 1 - Goldmund covers three counties, eight regions and twenty-one independently assignable houses
+  ---
+  duration_ms: 2.0345
+  type: 'test'
+  ...
+# Subtest: locked Thronholt families cannot move while local house placements support undo and reset
+ok 2 - locked Thronholt families cannot move while local house placements support undo and reset
+  ---
+  duration_ms: 1.8608
+  type: 'test'
+  ...
+# Subtest: names, realm crest choice and placements round-trip together and restore atomically
+ok 3 - names, realm crest choice and placements round-trip together and restore atomically
+  ---
+  duration_ms: 2.6295
+  type: 'test'
+  ...
+# Subtest: all supplied originals retain their SHA256 and old revised crests stay available for comparison
+ok 4 - all supplied originals retain their SHA256 and old revised crests stay available for comparison
+  ---
+  duration_ms: 82.431
+  type: 'test'
+  ...
+# Subtest: the original sixteen-house draft migrates without losing placements or design choices
+ok 5 - the original sixteen-house draft migrates without losing placements or design choices
+  ---
+  duration_ms: 1.1472
+  type: 'test'
+  ...
+# Subtest: the discussion view renders every territory and escapes imported names
+ok 6 - the discussion view renders every territory and escapes imported names
+  ---
+  duration_ms: 1.3104
+  type: 'test'
+  ...
+# Subtest: the art deliverable contains eighteen new crests and eleven distinct territorial banners
+ok 7 - the art deliverable contains eighteen new crests and eleven distinct territorial banners
+  ---
+  duration_ms: 159.4786
+  type: 'test'
+  ...
+# Subtest: the planning page uses local modules, no inline handlers and no canonical data writes
+ok 8 - the planning page uses local modules, no inline handlers and no canonical data writes
+  ---
+  duration_ms: 2.8675
+  type: 'test'
+  ...
+# Subtest: all eleven supplied clans retain their explicit seats, including both clans in Tarvex
+ok 9 - all eleven supplied clans retain their explicit seats, including both clans in Tarvex
+  ---
+  duration_ms: 0.6275
+  type: 'test'
+  ...
+# Subtest: eight named alternatives and all ten individual territories have square tribal banners
+ok 10 - eight named alternatives and all ten individual territories have square tribal banners
+  ---
+  duration_ms: 23.0826
+  type: 'test'
+  ...
+# Subtest: territorial alternatives cover every city exactly once and keep independent working assignments
+ok 11 - territorial alternatives cover every city exactly once and keep independent working assignments
+  ---
+  duration_ms: 1.1982
+  type: 'test'
+  ...
+# Subtest: editing a proposal preserves the original assignments and can be reset without persistence
+ok 12 - editing a proposal preserves the original assignments and can be reset without persistence
+  ---
+  duration_ms: 0.648
+  type: 'test'
+  ...
+# Subtest: map and crests preserve the supplied original image bytes and actual image dimensions
+ok 13 - map and crests preserve the supplied original image bytes and actual image dimensions
+  ---
+  duration_ms: 83.3506
+  type: 'test'
+  ...
+# Subtest: all local proposal dependencies resolve, with no canonical registry or remote persistence coupling
+ok 14 - all local proposal dependencies resolve, with no canonical registry or remote persistence coupling
+  ---
+  duration_ms: 6.0738
+  type: 'test'
+  ...
+# Subtest: target activation supports the selection path used by keyboard and touch, with locked houses excluded
+ok 15 - target activation supports the selection path used by keyboard and touch, with locked houses excluded
+  ---
+  duration_ms: 0.7169
+  type: 'test'
+  ...
+# Subtest: pointer dragging waits for movement and ignores unrelated pointers before committing once
+ok 16 - pointer dragging waits for movement and ignores unrelated pointers before committing once
+  ---
+  duration_ms: 0.603
+  type: 'test'
+  ...
+# Subtest: cancelled or external drops and locked drags cannot change placements
+ok 17 - cancelled or external drops and locked drags cannot change placements
+  ---
+  duration_ms: 0.2157
+  type: 'test'
+  ...
+# Subtest: touch panning does not start a mouse-style drag
+ok 18 - touch panning does not start a mouse-style drag
+  ---
+  duration_ms: 0.1298
+  type: 'test'
+  ...
+# Subtest: map refresh keeps one target layer and excludes fixed map pins from dragging
+ok 19 - map refresh keeps one target layer and excludes fixed map pins from dragging
+  ---
+  duration_ms: 0.261
+  type: 'test'
+  ...
+# Subtest: fixed houses keep their supplied seat through moves, undo and reset
+ok 20 - fixed houses keep their supplied seat through moves, undo and reset
+  ---
+  duration_ms: 0.4272
+  type: 'test'
+  ...
+# Subtest: export and import preserve fixed seats and reject altered, missing or foreign assignments atomically
+ok 21 - export and import preserve fixed seats and reject altered, missing or foreign assignments atomically
+  ---
+  duration_ms: 0.567
+  type: 'test'
+  ...
+# Subtest: state isolates caller data, snapshots and imported objects
+ok 22 - state isolates caller data, snapshots and imported objects
+  ---
+  duration_ms: 0.2591
+  type: 'test'
+  ...
+# Subtest: bad initial or fixed-seat configuration fails before a draft can be used
+ok 23 - bad initial or fixed-seat configuration fails before a draft can be used
+  ---
+  duration_ms: 0.2391
+  type: 'test'
+  ...
+# Subtest: a composed owner can disable the internal undo history and restore its own snapshots
+ok 24 - a composed owner can disable the internal undo history and restore its own snapshots
+  ---
+  duration_ms: 0.1367
+  type: 'test'
+  ...
+# Subtest: the shared preview resolves all local module, stylesheet and image references
+ok 25 - the shared preview resolves all local module, stylesheet and image references
+  ---
+  duration_ms: 12.1376
+  type: 'test'
+  ...
+# Subtest: all three variants retain their clan assignments and distinct editable drafts
+ok 26 - all three variants retain their clan assignments and distinct editable drafts
+  ---
+  duration_ms: 0.3539
+  type: 'test'
+  ...
+# Subtest: Weisenfluh follows the supplied five provinces, eight Landmann seats and separate leased order
+ok 27 - Weisenfluh follows the supplied five provinces, eight Landmann seats and separate leased order
+  ---
+  duration_ms: 0.2973
+  type: 'test'
+  ...
+# Subtest: moves, undo and reset affect draft seats while source roles and allegiance stay intact
+ok 28 - moves, undo and reset affect draft seats while source roles and allegiance stay intact
+  ---
+  duration_ms: 0.5409
+  type: 'test'
+  ...
+# Subtest: draft files round-trip and reject unknown or incomplete assignments atomically
+ok 29 - draft files round-trip and reject unknown or incomplete assignments atomically
+  ---
+  duration_ms: 0.392
+  type: 'test'
+  ...
+# Subtest: source originals remain byte-identical and every supplied crest is present
+ok 30 - source originals remain byte-identical and every supplied crest is present
+  ---
+  duration_ms: 62.3618
+  type: 'test'
+  ...
+# Subtest: proposal output is escaped, complete and independent of canonical world data
+ok 31 - proposal output is escaped, complete and independent of canonical world data
+  ---
+  duration_ms: 5.1549
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 621.9593

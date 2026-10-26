@@ -1,0 +1,56 @@
+import {createPlacementState} from '../shared/placement-state.mjs?v=20261026-1';
+import {houses,settlements,counties,regions,collectiveName,realmDesigns} from './realm-data.mjs?v=20261026-2';
+
+const initialDesign = ()=>({collectiveName,countyNames:Object.fromEntries(counties.map(item=>[item.id,item.name])),regionNames:Object.fromEntries(regions.map(item=>[item.id,item.name])),realmCrest:realmDesigns[0].id});
+const copy = value=>JSON.parse(JSON.stringify(value));
+const isObject = value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
+const addedHouseIds=Object.freeze(['eitelborn','herzau','silberhorst','samtborn','weisshorn']);
+const originalHouseIds=houses.filter(house=>!addedHouseIds.includes(house.id)).map(house=>house.id);
+
+// The first draft had exactly 16 houses. Preserve it and add only the five later proposals.
+function migrateInitialDraft(snapshot) {
+ const existing=snapshot?.placements;
+ if(isObject(existing)&&Object.keys(existing).length===originalHouseIds.length&&originalHouseIds.every(id=>Object.hasOwn(existing,id))) {
+  return {...snapshot,placements:{...existing,...Object.fromEntries(addedHouseIds.map(id=>[id,null]))}};
+ }
+ return snapshot;
+}
+
+function validName(value) {
+ if(typeof value!=='string'||value.trim().length<2||value.trim().length>80||/[\u0000-\u001f\u007f]/u.test(value))throw Error('Namen müssen 2 bis 80 Zeichen lang sein und dürfen keine Steuerzeichen enthalten.');
+ return value.trim();
+}
+function namedItems(value,items) {
+ if(!isObject(value)||Object.keys(value).length!==items.length||items.some(item=>!Object.hasOwn(value,item.id)))throw Error('Die Gebietsnamen in der Entwurfsdatei sind unvollständig oder unbekannt.');
+ return Object.fromEntries(items.map(item=>[item.id,validName(value[item.id])]));
+}
+function validateDesign(value) {
+ if(!isObject(value)||Object.keys(value).length!==4||!['collectiveName','countyNames','regionNames','realmCrest'].every(key=>Object.hasOwn(value,key)))throw Error('Die Entwurfsdatei enthält keinen vollständigen Goldmund-Gestaltungsstand.');
+ if(!realmDesigns.some(design=>design.id===value.realmCrest))throw Error('Dieser Fürstentumswappenentwurf ist unbekannt.');
+ return {collectiveName:validName(value.collectiveName),countyNames:namedItems(value.countyNames,counties),regionNames:namedItems(value.regionNames,regions),realmCrest:value.realmCrest};
+}
+
+/** Owns the local design and composes the shared placement engine into one undoable draft. */
+export function createDesignState() {
+ const placements=createPlacementState({realm:'goldmund',realmLabel:'Goldmund',houseIds:houses.map(h=>h.id),seatIds:settlements.map(s=>s.id),initialPlacements:Object.fromEntries(houses.map(h=>[h.id,h.sourceSeat])),lockedPlacements:{goldveld:'thronholt',roden:'thronholt'},trackHistory:false});
+ let design=initialDesign();
+ const history=[];
+ const current=()=>({...JSON.parse(placements.serialize()),design:copy(design)});
+ function remember(before){history.push(before);if(history.length>100)history.shift();}
+ function replace(snapshot){const next=validateDesign(snapshot?.design);placements.restore(migrateInitialDraft(snapshot));design=next;}
+ function changeDesign(next){if(JSON.stringify(design)===JSON.stringify(next))return false;const before=current();design=next;remember(before);return true;}
+ return {
+  current,
+  currentPlacements:()=>placements.current(),
+  currentDesign:()=>copy(design),
+  canMove:id=>placements.canMove(id),
+  canUndo:()=>history.length>0,
+  move(id,seat){const before=current();if(!placements.move(id,seat))return false;remember(before);return true;},
+  rename(scope,id,value){const name=validName(value),next=copy(design);if(scope==='collective')next.collectiveName=name;else{const key=scope==='county'?'countyNames':scope==='region'?'regionNames':null;if(!key||!Object.hasOwn(next[key],id))throw Error('Dieses Gebiet ist unbekannt.');next[key][id]=name;}return changeDesign(next);},
+  chooseCrest(id){if(!realmDesigns.some(item=>item.id===id))throw Error('Dieser Wappenentwurf ist unbekannt.');return changeDesign({...copy(design),realmCrest:id});},
+  undo(){if(!history.length)return false;replace(history.pop());return true;},
+  reset(){const before=current();placements.reset();design=initialDesign();if(JSON.stringify(before)===JSON.stringify(current()))return false;remember(before);return true;},
+  serialize:()=>JSON.stringify(current(),null,2),
+  restore(snapshot){const before=current();replace(snapshot);if(JSON.stringify(before)===JSON.stringify(current()))return false;remember(before);return true;}
+ };
+}

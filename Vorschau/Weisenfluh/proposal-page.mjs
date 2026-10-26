@@ -1,7 +1,7 @@
 import {houses,settlements,rankLabels,createMapProposal} from './realm-data.mjs';
-import {createPlacementState} from './proposal-state.mjs';
+import {createPlacementState} from './proposal-state.mjs?v=20261026-1';
 import {escapeHtml,houseCard,renderRoyalHouse,renderProvinces,renderSettlements,renderHouseDetails} from './proposal-render.mjs';
-import {createPlacementControls} from './placement-controls.mjs';
+import {createPlacementControls} from './placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 
 const root=document.querySelector('[data-weisenfluh-proposal]');
