@@ -1,0 +1,13 @@
+{
+  "corrections": [
+    {
+      "id": "silberhorst",
+      "reason": "Säbel aus dem Helm-/Halsbereich herausführen und Griff/Klinge schlüssig ausrichten.",
+      "prompt": "Use case: precise-object-edit. Asset: an existing full-body transparent fantasy house warrior. FIRST attached image is the approved painting STYLE REFERENCE ONLY, never a costume or helmet replacement. SECOND image is the EDIT TARGET and must remain recognizably the same illustration. Retain matte hand-painted muted colours, thin soft painted contours, gentle simplified shapes and uniform fine pigment grain. Keep 2:3 portrait, 1024 x 1536, complete figure from the top of the plume to both boot tips, true transparent background including open gaps. No scenery, ground, glow, shadow, halo or text. Preserve house heraldry, colours, face/helmet, plume, clothing, armor, belt equipment, silhouette and composition except the explicitly necessary local weapon/hand adjustment. Do not redesign or embellish anything else. Correct ONLY the saber and the warrior's raised right hand/wrist on the LEFT side of the image, with at most a small forearm adjustment. REMOVE the existing horizontal curved blade passing behind/through the helmet and neck completely. Give him ONE coherent real curved cavalry saber, its blade, guard, grip and pommel mechanically continuous, held firmly in the raised right hand. The blade must point clearly UPWARD on the LEFT side of the helmet, tilted slightly outward toward the left edge, with its complete tip visible and a clear gap from the head and neck. It may sit IN FRONT of the white-and-gold feather wing but must remain an unmistakable separate steel object, with no merging into feathers. A natural relaxed bent elbow and wrist, a properly gripped hilt, one single blade. Keep the left hand holding spare gloves, the blue/silver/gold buzzard heraldry, open helmet, feather wing and ALL other parts of the target exactly as they are. Do not copy the reference knight's helmet, lion or costume.",
+      "styleReference": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "editSourceArchive": "assets/warriors/generated-archive/silberhorst-weapon-edit-input-v1.png",
+      "originalGeneratorArchive": "assets/warriors/generated-archive/silberhorst-weapon-v1.png",
+      "selectedOutput": "assets/warriors/generated/silberhorst.png"
+    }
+  ]
+}

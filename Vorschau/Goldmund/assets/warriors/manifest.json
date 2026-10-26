@@ -1877,11 +1877,11 @@
     {
       "id": "silberhorst",
       "source": "assets/warriors/generated/silberhorst.png",
-      "sourceSha256": "a19e696c34b8156a00f08ed75650942e50c809a01100ea299d52daa69c11ae12",
+      "sourceSha256": "11b6ba3e097c4119367c5e2e43b3e88a7d7235e024cc592be52008879c3952c1",
       "production": "assets/warriors/production/silberhorst.png",
-      "productionSha256": "1ee5cf94aa5972f0d95f64a5f72fb66315de77e3e96661d66eb6c5552804e237",
+      "productionSha256": "4eb367f8cd8d5cc8436cc0cdce7e170c72a2d056fbae0d44a324cffb645c40b7",
       "preview": "assets/warriors/previews/silberhorst.webp",
-      "previewSha256": "0ff2176301f8a6cd0b35b4c18357d38abf5f13dbbb539820453f7871866c1f12",
+      "previewSha256": "fa4bd109f27397db10ec236ba62f4381bb973feb211e4df5156ad3765f615153",
       "processing": {
         "version": 1,
         "outsideThreshold": 160,
@@ -1894,22 +1894,22 @@
           1536
         ],
         "boundingBox": [
+          43,
           0,
-          0,
-          1004,
-          1508
+          1005,
+          1509
         ],
         "margins": {
-          "left": 0,
+          "left": 43,
           "top": 0,
-          "right": 20,
-          "bottom": 28
+          "right": 19,
+          "bottom": 27
         },
         "minimumMarginPixels": 0,
         "touchesCanvas": true,
-        "transparentPixels": 961417,
+        "transparentPixels": 967632,
         "opaquePixels": 0,
-        "partialAlphaPixels": 611447,
+        "partialAlphaPixels": 605232,
         "alphaRange": [
           0,
           254
@@ -1921,22 +1921,22 @@
           1536
         ],
         "boundingBox": [
-          132,
+          126,
           9,
-          952,
+          915,
           1505
         ],
         "margins": {
-          "left": 132,
+          "left": 126,
           "top": 9,
-          "right": 72,
+          "right": 109,
           "bottom": 31
         },
         "minimumMarginPixels": 9,
         "touchesCanvas": false,
-        "transparentPixels": 991851,
-        "opaquePixels": 575335,
-        "partialAlphaPixels": 5678,
+        "transparentPixels": 992295,
+        "opaquePixels": 575859,
+        "partialAlphaPixels": 4710,
         "alphaRange": [
           0,
           255
@@ -1948,22 +1948,22 @@
           1152
         ],
         "boundingBox": [
-          97,
+          92,
           4,
-          716,
+          689,
           1131
         ],
         "margins": {
-          "left": 97,
+          "left": 92,
           "top": 4,
-          "right": 52,
+          "right": 79,
           "bottom": 21
         },
         "minimumMarginPixels": 4,
         "touchesCanvas": false,
-        "transparentPixels": 549881,
-        "opaquePixels": 316066,
-        "partialAlphaPixels": 18789,
+        "transparentPixels": 550523,
+        "opaquePixels": 316639,
+        "partialAlphaPixels": 17574,
         "alphaRange": [
           0,
           255

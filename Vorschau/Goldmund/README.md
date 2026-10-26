@@ -136,3 +136,9 @@ gespeicherte Entwürfe und exportierte Hauszuordnungen weiterhin funktionieren.
 | Berden | `silberhorst` |
 | Sorel | `samtborn` |
 | Wolter | `weisshorn` |
+
+Die Gegenstandsprüfung vom 26. Oktober 2026 umfasst alle 51 Krieger Goldmunds
+und Weisenfluhs. Bei Haus Berden (`silberhorst`) wurde die Säbelführung gezielt
+korrigiert. Frühere Fassungen bleiben unter `assets/warriors/generated-archive/`
+erhalten; `corrections.json` und das Promptmanifest dokumentieren den Eingriff.
+Der Prüfbeleg liegt unter `diagnostics/warrior-object-review-2026-10-26/review.json`.

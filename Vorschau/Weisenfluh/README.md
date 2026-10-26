@@ -83,3 +83,10 @@ enthält den Prüfbeleg. Eine frühere Wind-Fassung wird nicht eingebunden.
 
 Prüfung: `node --test --experimental-test-isolation=none Vorschau/tests/weisenfluh.test.mjs`.
 Die vorhandene Netlify-Prüfgruppe für `Vorschau/` entdeckt diese Tests automatisch.
+
+Die Gegenstandsprüfung vom 26. Oktober 2026 umfasst alle 51 Krieger Goldmunds
+und Weisenfluhs. Bei Blumenthal wurde die verdrehte Schwertachse durch eine
+senkrechte Ruhehaltung ersetzt. Frühere Fassungen und der verworfene erste
+Korrekturlauf bleiben unter `assets/warriors/generated-archive/` erhalten;
+`corrections.json` und das Promptmanifest dokumentieren die Eingriffe. Der
+Prüfbeleg liegt unter `diagnostics/warrior-object-review-2026-10-26/review.json`.

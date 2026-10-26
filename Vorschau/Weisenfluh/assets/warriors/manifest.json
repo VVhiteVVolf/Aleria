@@ -5,11 +5,11 @@
     {
       "id": "blumenthal",
       "source": "assets/warriors/generated/blumenthal.png",
-      "sourceSha256": "cae72efdb875a7ea8bbdb4e195d2aeffbe484c26fcc229b5fe475d407a1a2b5c",
+      "sourceSha256": "96bebc176e41864cda916731b43bca5274e9640c2b04fe9e0e44ab684d73a31d",
       "production": "assets/warriors/production/blumenthal.png",
-      "productionSha256": "64298e9f180f437d027764bc2f4ad7eb21ff86f74f742ffab5f4d3bec721b721",
+      "productionSha256": "b4203dc7615e3a76a24bc39b204d58f71cb8ecafac9b878a3c63443c133d3f44",
       "preview": "assets/warriors/previews/blumenthal.webp",
-      "previewSha256": "1616fbb1832385954ddcc6afc3eeab266f7ab16e34fd3ab1a978412949d28749",
+      "previewSha256": "e3de22720ab7a8226bd777fbb27deb62d32bc2f1df9fd4eeaee433fb92ff3186",
       "processing": {
         "version": 1,
         "outsideThreshold": 160,
@@ -22,22 +22,22 @@
           1536
         ],
         "boundingBox": [
+          33,
           0,
-          0,
-          1006,
-          1516
+          1008,
+          1514
         ],
         "margins": {
-          "left": 0,
+          "left": 33,
           "top": 0,
-          "right": 18,
-          "bottom": 20
+          "right": 16,
+          "bottom": 22
         },
         "minimumMarginPixels": 0,
         "touchesCanvas": true,
-        "transparentPixels": 900476,
+        "transparentPixels": 901673,
         "opaquePixels": 0,
-        "partialAlphaPixels": 672388,
+        "partialAlphaPixels": 671191,
         "alphaRange": [
           0,
           254
@@ -49,22 +49,22 @@
           1536
         ],
         "boundingBox": [
-          69,
-          11,
-          1000,
-          1511
+          65,
+          12,
+          885,
+          1509
         ],
         "margins": {
-          "left": 69,
-          "top": 11,
-          "right": 24,
-          "bottom": 25
+          "left": 65,
+          "top": 12,
+          "right": 139,
+          "bottom": 27
         },
-        "minimumMarginPixels": 11,
+        "minimumMarginPixels": 12,
         "touchesCanvas": false,
-        "transparentPixels": 926857,
-        "opaquePixels": 640854,
-        "partialAlphaPixels": 5153,
+        "transparentPixels": 927135,
+        "opaquePixels": 641186,
+        "partialAlphaPixels": 4543,
         "alphaRange": [
           0,
           255
@@ -76,22 +76,22 @@
           1152
         ],
         "boundingBox": [
-          49,
-          6,
-          752,
-          1136
+          46,
+          7,
+          666,
+          1134
         ],
         "margins": {
-          "left": 49,
-          "top": 6,
-          "right": 16,
-          "bottom": 16
+          "left": 46,
+          "top": 7,
+          "right": 102,
+          "bottom": 18
         },
-        "minimumMarginPixels": 6,
+        "minimumMarginPixels": 7,
         "touchesCanvas": false,
-        "transparentPixels": 514627,
-        "opaquePixels": 354385,
-        "partialAlphaPixels": 15724,
+        "transparentPixels": 515005,
+        "opaquePixels": 354709,
+        "partialAlphaPixels": 15022,
         "alphaRange": [
           0,
           255
