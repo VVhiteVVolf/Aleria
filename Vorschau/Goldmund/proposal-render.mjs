@@ -1,4 +1,4 @@
-import {houses,counties,regions,settlements,rankLabels,realmDesigns} from './realm-data.mjs?v=20261026-8';
+import {houses,counties,regions,settlements,rankLabels,realmDesigns} from './realm-data.mjs?v=20261026-9';
 
 export const escapeHtml = value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const e=escapeHtml;

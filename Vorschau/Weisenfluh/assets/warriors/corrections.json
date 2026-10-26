@@ -1,0 +1,12 @@
+{
+  "corrections": [
+    {
+      "id": "feuerstein",
+      "reason": "Gesicht unter dem offenen Eisenhut sichtbar machen.",
+      "prompt": "Edit the SECOND attached image, the existing Feuerstein knight and horse, as a precise local correction. FIRST image is mandatory painting-style reference ONLY; do not copy its helmet. KEEP the entire horse, all hooves, spear, black broad-brim kettle hat, plume, pose, heraldry, armour, clothing, colours, composition and transparent background exactly as in second image. CHANGE ONLY the faceless grey area below the knight's OPEN kettle hat: paint a clearly visible ordinary adult human male face with eyes, nose, short trimmed brown beard, natural warm skin, relaxed expression in the same softly stylized matte painted style. Helmet remains OPEN with no visor and no mask. A little grey padded coif may frame cheeks and neck but must not cover mouth, nose or eyes. Do not otherwise repaint or redesign. Full body and full horse preserved, no cropping, no text, no scene or outer glow. True transparent cutout.",
+      "styleReference": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "editSourceArchive": "assets/warriors/generated-archive/feuerstein-face-v1.png",
+      "selectedOutput": "assets/warriors/generated/feuerstein.png"
+    }
+  ]
+}

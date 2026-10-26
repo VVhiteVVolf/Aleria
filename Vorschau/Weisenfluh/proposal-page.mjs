@@ -1,6 +1,7 @@
-import {houses,settlements,rankLabels,createMapProposal} from './realm-data.mjs';
+import {renderHouseDetails} from './house-details.mjs?v=20261026-2';
+import {houses,settlements,rankLabels,createMapProposal} from './realm-data.mjs?v=20261026-2';
 import {createPlacementState} from './proposal-state.mjs?v=20261026-1';
-import {escapeHtml,houseCard,renderRoyalHouse,renderProvinces,renderSettlements,renderHouseDetails} from './proposal-render.mjs';
+import {escapeHtml,houseCard,renderRoyalHouse,renderProvinces,renderSettlements} from './proposal-render.mjs?v=20261026-2';
 import {createPlacementControls} from './placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 
@@ -13,7 +14,7 @@ const dialog=root.querySelector('#house-dialog');
 let selected=null,noticeTimer,houseTrigger;
 function notice(message){const box=root.querySelector('[data-role="status"]');box.textContent=message;box.hidden=false;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>box.hidden=true,6500);}
 function save(){try{localStorage.setItem(storageKey,state.serialize());}catch{notice('Die Änderung bleibt für diese Ansicht erhalten. Der Browser konnte sie nicht speichern.');}}
-function showHouse(id){const house=houses.find(h=>h.id===id);if(!house)return;houseTrigger=document.activeElement;dialog.querySelector('[data-role="house-details"]').innerHTML=renderHouseDetails(house,state.current());dialog.showModal();}
+function showHouse(id){const house=houses.find(h=>h.id===id);if(!house)return;houseTrigger=document.activeElement;dialog.querySelector('[data-role="house-details"]').innerHTML=renderHouseDetails(house,state.current());dialog.showModal();dialog.scrollTop=0;}
 function render(){
  const placements=state.current(),unassigned=houses.filter(h=>placements[h.id]===null);
  root.querySelector('[data-role="settlements"]').innerHTML=renderSettlements(placements,selected);

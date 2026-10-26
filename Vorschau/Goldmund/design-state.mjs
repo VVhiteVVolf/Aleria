@@ -1,5 +1,5 @@
 import {createPlacementState} from '../shared/placement-state.mjs?v=20261026-1';
-import {houses,settlements,counties,regions,collectiveName,realmDesigns} from './realm-data.mjs?v=20261026-8';
+import {houses,settlements,counties,regions,collectiveName,realmDesigns} from './realm-data.mjs?v=20261026-9';
 
 const initialDesign = ()=>({collectiveName,countyNames:Object.fromEntries(counties.map(item=>[item.id,item.name])),regionNames:Object.fromEntries(regions.map(item=>[item.id,item.name])),realmCrest:realmDesigns[0].id});
 const copy = value=>JSON.parse(JSON.stringify(value));

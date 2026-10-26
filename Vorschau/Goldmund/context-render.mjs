@@ -1,5 +1,5 @@
-import {goldmundContext} from '../../Kontinente/modules/goldmund/goldmund-context.mjs?v=goldmund-20261026-8';
-import {escapeHtml as e} from './proposal-render.mjs?v=20261026-8';
+import {goldmundContext} from '../../Kontinente/modules/goldmund/goldmund-context.mjs?v=goldmund-20261026-9';
+import {escapeHtml as e} from './proposal-render.mjs?v=20261026-9';
 
 export function renderGoldmundContext() {
  const {lineage,ancientRealm,sections}=goldmundContext;

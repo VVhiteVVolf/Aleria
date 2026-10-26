@@ -35,7 +35,8 @@ Placement-Engine unter `../shared/`; sie dupliziert keine Zuordnungslogik.
 
 Die Hausfenster zeigen für alle 20 aktuellen Häuser und Clans einen vollständigen
 Kriegerentwurf neben Wappen, Klassenbegründung, Palette, Ausrüstung und Sitz.
-`house-details.mjs` und `house-details.css` besitzen diese Ansicht; die bestehende
+`house-details.mjs` adaptiert die Daten für `../shared/house-detail-render.mjs` und
+`../shared/house-details.css`, gemeinsam mit Weisenfluh. Die bestehende
 Zuordnungslogik bleibt gemeinsam genutzt. Desktop: zwei Spalten; mobil: vollständige
 Figur vor dem Hausprofil, ein scrollbares Dialogfenster mit erreichbarem Schließen.
 Alle Klassen bleiben gestalterische Vorschläge, keine kanonischen Hausfestlegungen.

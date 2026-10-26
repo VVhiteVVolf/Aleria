@@ -1,8 +1,8 @@
-import {renderHouseDetails} from './house-details.mjs?v=20261026-8';
-import {renderGoldmundContext} from './context-render.mjs?v=20261026-8';
-import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-8';
-import {createDesignState} from './design-state.mjs?v=20261026-8';
-import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses} from './proposal-render.mjs?v=20261026-8';
+import {renderHouseDetails} from './house-details.mjs?v=20261026-9';
+import {renderGoldmundContext} from './context-render.mjs?v=20261026-9';
+import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-9';
+import {createDesignState} from './design-state.mjs?v=20261026-9';
+import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses} from './proposal-render.mjs?v=20261026-9';
 import {createPlacementControls} from '../shared/placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 

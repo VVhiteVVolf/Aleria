@@ -5,6 +5,8 @@ import {createHash} from 'node:crypto';
 import {houses,provinces,settlements,createMapProposal} from '../Weisenfluh/realm-data.mjs';
 import {createPlacementState} from '../Weisenfluh/proposal-state.mjs';
 import {escapeHtml,renderProvinces,renderSettlements} from '../Weisenfluh/proposal-render.mjs';
+import {renderHouseDetails} from '../Weisenfluh/house-details.mjs';
+import {warriors} from '../Weisenfluh/warrior-data.mjs';
 
 const root=new URL('../Weisenfluh/',import.meta.url);
 
@@ -24,6 +26,37 @@ test('Weisenfluh follows the supplied five provinces, eight Landmann seats and s
  assert.equal(settlements.find(s=>s.id==='wolfrieden').sourceName,'Wolfenried');
  for(const id of ['silbermundt','weissklippe','hohenklamm'])assert.ok(!houses.some(h=>h.sourceSeat===id),id);
  for(const p of provinces)assert.ok(houses.some(h=>h.id===p.ruler));
+});
+
+test('all 31 families and the order receive distinct full-body warrior proposals without changing draft roles',async()=>{
+ assert.equal(warriors.length,31);
+ assert.deepEqual(warriors.map(item=>item.id).sort(),houses.map(item=>item.id).sort());
+ assert.deepEqual([...new Set(warriors.map(item=>item.classId))].sort(),['harlekin','kurassier','landsjager','landsmariner','landsprotektor']);
+ const manifest=JSON.parse(await readFile(new URL('assets/warriors/manifest.json',root),'utf8'));
+ assert.equal(manifest.entries.length,31);
+ assert.equal(new Set(manifest.entries.map(entry=>entry.sourceSha256)).size,31);
+ const classes=await readFile(new URL('../../Klassenordner/Klassenseite.html',root),'utf8');
+ const state=createPlacementState(),before=state.serialize();
+ for(const house of houses){
+  const warrior=warriors.find(item=>item.id===house.id),entry=manifest.entries.find(item=>item.id===house.id);
+  assert.ok(entry,house.name);
+  assert.equal(entry.production,warrior.fullsize);
+  assert.equal(entry.preview,warrior.image);
+  assert.deepEqual(entry.alpha.dimensions,[1024,1536]);
+  assert.equal(entry.alpha.touchesCanvas,false,house.name);
+  assert.equal(entry.proof.rgbUnchanged,true,house.name);
+  assert.equal(entry.proof.sourceTransparentPixelsExposed,0,house.name);
+  for(const kind of ['source','production','preview'])assert.equal(createHash('sha256').update(await readFile(new URL(entry[kind],root))).digest('hex'),entry[`${kind}Sha256`],`${house.name} ${kind}`);
+  assert.ok(classes.includes(`id="klasse-weisenfluh-${warrior.classId}"`),house.name);
+  const html=renderHouseDetails(house,state.current());
+  assert.ok(html.includes(warrior.image)&&html.includes(warrior.fullsize),house.name);
+  assert.match(html,/Klassenvorschlag/);
+  assert.match(html,/Ganzkörperentwurf/);
+  assert.ok(html.includes('data-action="select-from-dialog"'),house.name);
+ }
+ assert.equal(warriors.filter(item=>item.horse).length,5);
+ assert.ok(warriors.filter(item=>item.horse).every(item=>['erlenglanz','goldmaehne'].includes(item.horse)));
+ assert.equal(state.serialize(),before);
 });
 
 test('moves, undo and reset affect draft seats while source roles and allegiance stay intact',()=>{
