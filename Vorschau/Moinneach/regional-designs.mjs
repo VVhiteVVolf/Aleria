@@ -99,7 +99,7 @@ export const individualBanners = {
   'Die Fledermaus nimmt Avernax’ Wappen auf. Der schmale Steig und die dunklen Wasserflächen darunter passen zu Arvonax’ engem Übergang zwischen Höhen und Sumpfsenken.'),
  taranux:{
   banner:'assets/marcach-banner-tribal.png',
-  motif:'Ein schwarzer Reiter mit schlichtem Speer auf einem schreitenden Pferd, darunter ein heller Steig zwischen dunklen Sumpfstrichen.',
+  motif:'Ein schwarzer Speerreiter auf einem vierbeinigen Drúchtán mit Stirnhorn, darunter ein heller Steig zwischen dunklen Sumpfstrichen.',
   colours:'Stumpfes Ocker, dunkles Oliv und Kohlschwarz',
   rationale:'Das Reitermotiv kommt aus dem Wappen der Brigantex. Ein schmaler Steig greift die begrenzten Übergänge zwischen Taranux’ nassen Talflächen und den umliegenden Höhen auf.'
  },

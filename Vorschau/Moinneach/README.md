@@ -21,7 +21,7 @@ in `proposal-data.mjs`, der gekapselte Arbeitszustand in `proposal-state.mjs`.
 Kartenwappen, Verbindungslinien, Tastatur-/Hover-Details und Zoom verwenden dieselbe
 Komponente wie Uathneach: `../shared/clan-map.mjs` und `clan-map.css`.
 
-Alle Bilder wurden aus dem gelieferten Downloadordner unverändert kopiert.
+Die fünfzehn gelieferten Originalbilder bleiben unverändert erhalten.
 `assets.source.json` dokumentiert die Originaldateinamen und SHA-256-Werte.
 Der Clan heißt nach ausdrücklicher Nutzerkorrektur **Adruinna**. Die abweichende
 Schreibweise der Quelldatei wird ausschließlich dort dokumentiert.
@@ -47,3 +47,40 @@ lokalen `region-dialog.mjs`; die Stile sind in `regional-designs.css` gekapselt.
 `individualBanners` ordnet der ersten Aufteilung alle zehn unterschiedlichen
 Bilddateien zu. Ihre Einträge sind ausdrücklich `banner-only`; die alternativen
 Tir-na-Namen werden dadurch nicht zu Namen der einzelnen Stadtgebiete.
+
+## Clankrieger vom 26. Oktober 2026
+
+Alle elf Clans besitzen eine eigene Ganzkörperdarstellung. Leder, Fell, Wolle,
+Druchtanschuppen und funktionale Knochenplatten folgen dem neuen gallisch-keltischen
+Kulturauftrag. Metall bleibt auf nachvollziehbare Ausrüstungsteile begrenzt.
+Versorgungsangaben sind Entwürfe aus Lage und Nutzerkontext; sie behaupten keine
+neuen Erzvorkommen. Avernax behält vorerst den gelieferten Sitz Arvonax und erhält
+die ausdrücklich gewünschte abgeschottete Versorgung.
+
+`warrior-art-direction.mjs` besitzt Gestaltung und vollständigen gemeinsamen Prompt.
+`node Vorschau/Moinneach/scripts/build-warrior-catalog.mjs` erzeugt daraus den
+Laufzeitkatalog `warrior-data.mjs` und `assets/warriors/prompts.json`. Dort stehen
+sämtliche Einzelprompts und tatsächlich verwendeten Bildreferenzen. Die Klassen
+verweisen auf die vorhandenen Einträge der Klassenseite; sie legen keinen Rang fest.
+
+Alle Figuren wurden einzeln mit dem eingebauten `image_gen` erstellt. Unveränderte
+Generatororiginale liegen unter `assets/warriors/generated`, freigestellte PNGs
+unter `production` und WebP-Vorschaubilder unter `previews`. Der lokale Adapter
+`scripts/prepare_warriors.py` verwendet die gemeinsame Alpha-Pipeline unter
+`../shared/warrior-artifacts`. Er verändert bei PNGs ausschließlich den Alphakanal.
+`manifest.json` dokumentiert Parameter, Prüfsummen und Freistellungsnachweise.
+Adruinna verwendet einen Alpha-Kernschwellwert von 200 statt 240, damit die dünne
+Bogensehne erhalten bleibt. Reproduktion nach einem allgemeinen Lauf:
+`python -B Vorschau/Moinneach/scripts/prepare_warriors.py build --ids adruinna --core-threshold 200`.
+
+Brigantex' Wappen wurde vor den Figuren anhand des Bestiarium-Eintrags auf einen
+vierbeinigen Drúchtán korrigiert; das zugehörige Taranux-Banner ebenfalls.
+`brigantex-art.json` enthält die vollständigen Bearbeitungsprompts. Die gelieferten
+beziehungsweise vorherigen Fassungen liegen unter `assets/originals`; die rohen
+Generatorausgaben unter `assets/generated`. `scripts/prepare_brigantex_crest.py`
+bereinigt ausschließlich die Wappentransparenz und zentriert den exakten Kreis.
+
+`clan-details.mjs` verbindet den gemeinsamen Hausfenster-Renderer mit Moinneachs
+Geografie und bestehender Sitzbearbeitung. Desktop zeigt Figur und Clanangaben
+nebeneinander, Mobilansicht untereinander. Alle drei Varianten behalten ihren
+eigenen flüchtigen Arbeitsstand; kanonische Register bleiben unverändert.

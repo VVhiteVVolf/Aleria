@@ -6,8 +6,64 @@ import {sourceProposal,sourceProposals,variants} from '../Moinneach/proposal-dat
 import {createProposalState} from '../Moinneach/proposal-state.mjs';
 import {escapeHtml,renderSettlements,renderVariants,renderRegions} from '../Moinneach/proposal-render.mjs';
 import {regionalDesigns,individualBanners} from '../Moinneach/regional-designs.mjs';
+import {warriors} from '../Moinneach/warrior-data.mjs';
+import {renderClanDetails} from '../Moinneach/clan-details.mjs';
 
 const root=new URL('../Moinneach/',import.meta.url);
+
+test('every clan has a preserved warrior, a real class link and editable variant-specific details',async()=>{
+ const manifest=JSON.parse(await readFile(new URL('assets/warriors/manifest.json',root),'utf8'));
+ const prompts=JSON.parse(await readFile(new URL('assets/warriors/prompts.json',root),'utf8'));
+ const classes=await readFile(new URL('../../Klassenordner/Klassenseite.html',root),'utf8');
+ assert.deepEqual(warriors.map(item=>item.id).sort(),sourceProposal.clans.map(item=>item.id).sort());
+ assert.equal(manifest.entries.length,11);
+ assert.equal(prompts.prompts.length,11);
+ for(const warrior of warriors){
+  const entry=manifest.entries.find(item=>item.id===warrior.id);
+  assert.ok(entry&&warrior.materials&&warrior.resourceBasis&&warrior.helmet,warrior.id);
+  assert.ok(classes.includes(`id="klasse-moinneach-${warrior.classId}"`),warrior.classId);
+  assert.deepEqual(entry.alpha.dimensions,[1024,1536]);
+  assert.equal(entry.alpha.touchesCanvas,false,warrior.id);
+  assert.equal(entry.proof.rgbUnchanged,true);
+  for(const [file,hash] of [[entry.source,entry.sourceSha256],[entry.production,entry.productionSha256],[entry.preview,entry.previewSha256]]){
+   assert.equal(createHash('sha256').update(await readFile(new URL(file,root))).digest('hex'),hash,file);
+  }
+  const prompt=prompts.prompts.find(item=>item.id===warrior.id);
+  assert.ok(prompt.prompt.length>1000&&prompt.references.length>=3,warrior.id);
+  for(const proposal of sourceProposals){
+   const clan=proposal.clans.find(item=>item.id===warrior.id);
+   const html=renderClanDetails(proposal,clan,true);
+   assert.ok(html.includes(warrior.image)&&html.includes(warrior.fullsize));
+   assert.ok(html.includes(`#klasse-moinneach-${warrior.classId}`));
+   assert.ok(html.includes(`value="${clan.seat}" selected`));
+   assert.match(html,/data-role="clan-form"/);
+  }
+ }
+ const state=createProposalState(sourceProposals);
+ state.update('barrex',{seat:'gergonax',note:'<draft>'});
+ assert.match(renderClanDetails(state.current(),state.current().clans[0],false),/&lt;draft&gt;/);
+ assert.equal(sourceProposal.clans[0].seat,'tarvex');
+});
+
+test('Brigantex uses its corrected Druchtan crest and bestiary reference, preserving the supplied original',async()=>{
+ const art=JSON.parse(await readFile(new URL('brigantex-art.json',root),'utf8'));
+ const audit=JSON.parse(await readFile(new URL('brigantex-alpha-audit.json',root),'utf8'));
+ const supplied=JSON.parse(await readFile(new URL('assets.source.json',root),'utf8'));
+ const original=supplied.find(item=>item.file===art.original);
+ assert.ok(original);
+ assert.equal(createHash('sha256').update(await readFile(new URL(art.original,root))).digest('hex'),original.sha256);
+ assert.notDeepEqual(await readFile(new URL(art.original,root)),await readFile(new URL(art.production,root)));
+ assert.equal(audit.rgbUnchanged,true);
+ const clan=sourceProposal.clans.find(item=>item.id==='brigantex');
+ const html=renderClanDetails(sourceProposal,clan,false);
+ assert.ok(html.includes(warriors.find(item=>item.id==='brigantex').creatureHref));
+ assert.match(html,/auf einem Drúchtán/);
+ assert.doesNotMatch(html,/zu Pferd/);
+ assert.ok(html.includes(art.original));
+ await stat(new URL(art.bestiary,root));
+ assert.match(art.prompt,/FOUR/);
+ assert.match(art.bannerCorrection.prompt,/FOUR-LEGGED/);
+});
 
 test('all eleven supplied clans retain their explicit seats, including both clans in Tarvex',()=>{
  const expected={Barrex:'tarvex',Cethrenn:'tarvex',Kerlaouen:'druanax',Damona:'drunemax',Caddach:'amabactoix',Adruinna:'vironax',Avernax:'arvonax',Brigantex:'taranux',Keravel:'senodex',Nemetex:'camulax',Rowak:'gergonax'};

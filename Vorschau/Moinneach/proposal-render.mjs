@@ -5,7 +5,7 @@ export function renderSettlements(proposal){
   const clans=proposal.clans.filter(clan=>clan.seat===place.id);
   return `<article class="seat-card" data-seat="${place.id}" style="--seat-colour:${place.colour}">
    <div class="seat-heading"><span class="seat-count">${clans.length} ${clans.length===1?'Clan':'Clans'}</span><h3>${escapeHtml(place.name)}</h3></div>
-   <div class="seat-clans">${clans.map(clan=>`<button class="clan-entry" data-action="show-clan" data-clan="${clan.id}" aria-label="${escapeHtml(clan.name)} · ${escapeHtml(place.name)} · Details öffnen"><img src="assets/${clan.crest}" width="52" height="52" alt="Wappen ${escapeHtml(clan.name)}"><span><strong>${escapeHtml(clan.name)}</strong><small>Clan in ${escapeHtml(place.name)}</small></span><span class="entry-arrow" aria-hidden="true">↗</span></button>`).join('')||'<p class="empty-seat">Noch kein Clan zugeordnet.</p>'}</div>
+   <div class="seat-clans">${clans.map(clan=>`<button class="clan-entry" data-action="show-clan" data-clan="${clan.id}" aria-label="${escapeHtml(clan.name)} · ${escapeHtml(place.name)} · Clan und Krieger öffnen"><img src="assets/${clan.crest}" width="52" height="52" alt="Wappen ${escapeHtml(clan.name)}"><span><strong>${escapeHtml(clan.name)}</strong><small>Clan in ${escapeHtml(place.name)}</small></span><span class="entry-arrow" aria-hidden="true">↗</span></button>`).join('')||'<p class="empty-seat">Noch kein Clan zugeordnet.</p>'}</div>
    <p>${escapeHtml(place.geography)}</p>
    ${place.mapLabel?`<p class="map-spelling">Kartenbeschriftung: ${escapeHtml(place.mapLabel)}</p>`:''}
   </article>`;

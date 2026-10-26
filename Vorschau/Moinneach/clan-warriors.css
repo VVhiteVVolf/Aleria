@@ -1,0 +1,8 @@
+.house-dialog .dialog-top>button{width:40px;height:40px;flex-shrink:0}
+.clan-supplement{border-top:1px solid var(--line);margin-top:28px;padding-top:24px}
+.clan-supplement h3{font-size:22px;margin:0 0 12px}
+.clan-supplement p{font-size:14px;line-height:1.7;margin:0 0 14px;color:var(--muted)}
+.clan-supplement .subtle{font:11px/1.7 var(--sans);color:var(--muted);margin:14px 0}
+.clan-supplement .neighbour-clans+h3,.clan-supplement form{margin-top:24px}
+.clan-supplement form .primary{margin-top:16px}
+.clan-creature{font:12px/1.7 var(--sans)}

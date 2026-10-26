@@ -1,7 +1,7 @@
-import {sourceProposals,variants} from './proposal-data.mjs';
+import {sourceProposals,variants} from './proposal-data.mjs?v=20261026-1';
 import {createProposalState} from './proposal-state.mjs';
-import {escapeHtml,renderSettlements,renderVariants,renderRegions} from './proposal-render.mjs';
-import {createClanDialog} from './clan-dialog.mjs';
+import {escapeHtml,renderSettlements,renderVariants,renderRegions} from './proposal-render.mjs?v=20261026-1';
+import {createClanDialog} from './clan-dialog.mjs?v=20261026-1';
 import {createRegionDialog} from './region-dialog.mjs';
 import {createClanMap} from '../shared/clan-map.mjs';
 

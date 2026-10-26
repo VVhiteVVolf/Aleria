@@ -121,12 +121,30 @@
     "file": "assets/marcach-banner-tribal.png",
     "generator": "built-in image_gen",
     "style": "tribal-worn-v2",
-    "generatedFile": "exec-d9c51ee8-bcbd-4b91-9297-444effa3ce08.png",
-    "sha256": "f673527c1f4baddbfbde075faaffafb0989f6323e5e05432d71c2a05e259bf4a",
+    "generatedFile": "exec-60a769cb-95e0-4f0e-b681-4863a5b384d5.png",
+    "sha256": "d08d879e200ca76bba148743a75dd955fa183ead2ff61a2121acc65fab0d365f",
     "dimensions": [
       1254,
       1254
     ],
-    "prompt": "Create ONE additional matching Moinneach tribal regional banner by editing this worn spear-banner reference. Keep its frontal hanging tattered peat-brown cloth, crooked raw branch, rough rope ties, ragged torn lower edge, crude repair stitches, thin broken bone-painted outline and sparse tally strokes. Same SQUARE 1:1 PNG, centered full object, transparent exterior. REMOVE spear, round shield disc and red field completely. New motif for Taranux and Clan Brigantex: ONE plain near-black horse and rider in calm walking side profile. The rider is a severe very simple blocky human silhouette with ONE horizontal spear, no crown, no elaborate armour, no facial details. Horse has four easily readable sturdy legs, simple mane and tail, not a cartoon pony. Below only ONE narrow pale crooked causeway stroke between TWO dark wet-ground marks. Background paint patch faded dead ochre with a little dark olive, charcoal silhouettes, dirty bone line accents. Main emblem should feel like a rough prehistoric clan pictograph painted onto old cloth: extremely simple flat 2D shapes, solemn, weathered and utilitarian. No luxury gold trim, interlace, scenery, photorealistic horse, complicated anatomy, cute faces, embossed detail, gradients or glossy effects. Title Reitersteig is context only, NO TEXT. Full object inside square canvas; real alpha outside and at missing frayed edges; cloth otherwise opaque, no exterior cast shadow."
+    "prompt": "Use case: precise-object-edit. Image 1 is the EXISTING tribal Taranux/Brigantex banner to edit; keep exactly its square transparent canvas, old peat-brown cloth, crude repairs, frayed lower edge, crooked raw branch crossbar, cords and simple flat ochre/black/olive pigment style. Image 2 is SPECIES ANATOMY ONLY: the Druchtan. CHANGE ONLY the painted HORSE AND RIDER motif to ONE rider on a LOW FOUR-LEGGED HORNED DRUCHTAN. No horse head, horse mane, horse tail or upright dinosaur. A compact bulky reptile in quiet side profile facing right, ONE forehead horn, FOUR short powerful legs with four separate broad clawed feet touching a common implied ground line, long tapering muscular tail curved behind. One simple human spear rider, plain tribal silhouette with one straight spear, no plate armour or crown. Keep all four feet separately countable. No fussy scales or detailed face, this is a crude painted tribal pictograph, not a naturalistic creature painting. Preserve the narrow pale causeway stroke and wet-ground marks below, faded ochre paint patch, all fabric and hanging support unchanged. No new frame, gold ornament, scenery, text or glow. Entire branch, cords, cloth tatters visible with genuine transparent space around and inside open suspension gaps. 1:1 square PNG with true transparent background.",
+    "previous": {
+      "id": "marcach",
+      "file": "assets/originals/marcach-banner-v2.png",
+      "generator": "built-in image_gen",
+      "style": "tribal-worn-v2",
+      "generatedFile": "exec-d9c51ee8-bcbd-4b91-9297-444effa3ce08.png",
+      "sha256": "f673527c1f4baddbfbde075faaffafb0989f6323e5e05432d71c2a05e259bf4a",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "prompt": "Create ONE additional matching Moinneach tribal regional banner by editing this worn spear-banner reference. Keep its frontal hanging tattered peat-brown cloth, crooked raw branch, rough rope ties, ragged torn lower edge, crude repair stitches, thin broken bone-painted outline and sparse tally strokes. Same SQUARE 1:1 PNG, centered full object, transparent exterior. REMOVE spear, round shield disc and red field completely. New motif for Taranux and Clan Brigantex: ONE plain near-black horse and rider in calm walking side profile. The rider is a severe very simple blocky human silhouette with ONE horizontal spear, no crown, no elaborate armour, no facial details. Horse has four easily readable sturdy legs, simple mane and tail, not a cartoon pony. Below only ONE narrow pale crooked causeway stroke between TWO dark wet-ground marks. Background paint patch faded dead ochre with a little dark olive, charcoal silhouettes, dirty bone line accents. Main emblem should feel like a rough prehistoric clan pictograph painted onto old cloth: extremely simple flat 2D shapes, solemn, weathered and utilitarian. No luxury gold trim, interlace, scenery, photorealistic horse, complicated anatomy, cute faces, embossed detail, gradients or glossy effects. Title Reitersteig is context only, NO TEXT. Full object inside square canvas; real alpha outside and at missing frayed edges; cloth otherwise opaque, no exterior cast shadow."
+    },
+    "generatedSource": "assets/generated/marcach-druchtan-banner.png",
+    "references": [
+      "assets/originals/marcach-banner-v2.png",
+      "../../Bestiarium/assets/species-entries/reptilien/druchtan.webp"
+    ]
   }
 ]

@@ -1,4 +1,4 @@
-import {withRegionalDesigns} from './regional-designs.mjs';
+import {withRegionalDesigns} from './regional-designs.mjs?v=20261026-1';
 
 // Supplied clan names and seats. Rank and allegiance remain unset.
 const suppliedProposal = {
