@@ -1,8 +1,8 @@
-import {renderHouseDetails} from './house-details.mjs?v=20261026-7';
-import {renderGoldmundContext} from './context-render.mjs?v=20261026-7';
-import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-7';
-import {createDesignState} from './design-state.mjs?v=20261026-7';
-import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses} from './proposal-render.mjs?v=20261026-7';
+import {renderHouseDetails} from './house-details.mjs?v=20261026-8';
+import {renderGoldmundContext} from './context-render.mjs?v=20261026-8';
+import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-8';
+import {createDesignState} from './design-state.mjs?v=20261026-8';
+import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses} from './proposal-render.mjs?v=20261026-8';
 import {createPlacementControls} from '../shared/placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 
@@ -27,6 +27,7 @@ function showHouse(id) {
  houseTrigger=document.activeElement;
  dialog.querySelector('[data-role="house-details"]').innerHTML=renderHouseDetails(house,state.currentPlacements(),state.currentDesign());
  dialog.showModal();
+ dialog.scrollTop=0;
 }
 function render() {
  const placements=state.currentPlacements(),design=state.currentDesign();

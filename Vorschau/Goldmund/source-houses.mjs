@@ -1,4 +1,4 @@
-import {albicClans} from './albic-clans.mjs?v=20261026-7';
+import {albicClans} from './albic-clans.mjs?v=20261026-8';
 
 const delivered = [
  ['broeck','Broeck'],['goldveld','Goldveld'],['lanette','Lanette'],

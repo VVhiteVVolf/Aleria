@@ -1,6 +1,6 @@
-import {settlements,regions,rankLabels} from './realm-data.mjs?v=20261026-7';
-import {escapeHtml as e} from './proposal-render.mjs?v=20261026-7';
-import {warriors} from './warrior-data.mjs?v=20261026-7';
+import {settlements,regions,rankLabels} from './realm-data.mjs?v=20261026-8';
+import {escapeHtml as e} from './proposal-render.mjs?v=20261026-8';
+import {warriors} from './warrior-data.mjs?v=20261026-8';
 
 function warriorFigure(house,warrior) {
  const title=`${house.clan?'Clan':'Haus'} ${house.name} · ${warrior.className}`;
