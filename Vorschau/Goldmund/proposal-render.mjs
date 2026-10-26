@@ -1,4 +1,4 @@
-import {houses,counties,regions,settlements,rankLabels,realmDesigns} from './realm-data.mjs?v=20261026-6';
+import {houses,counties,regions,settlements,rankLabels,realmDesigns} from './realm-data.mjs?v=20261026-7';
 
 export const escapeHtml = value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const e=escapeHtml;
@@ -12,7 +12,7 @@ function nameEditor(scope,id,name,label) {
 
 export function houseCard(house,selected=null) {
  const locked=Boolean(house.sourceSeat);
- return `<article class="house-card ${selected===house.id?'is-selected':''} ${locked?'is-locked':''}" ${locked?'':`data-drag-house="${house.id}"`}><button class="house-choice" data-action="${locked?'show-house':'choose-house'}" data-house="${house.id}" ${locked?'':`aria-pressed="${selected===house.id}"`} aria-label="${e(house.name)} ${locked?'– Hausdetails öffnen':'zum Versetzen auswählen'}"><img src="assets/${house.crest}" alt="Wappen ${e(house.name)}" width="76" height="76" loading="lazy"><span><strong>${e(house.name)}</strong><small>${e(rankLabels[house.rank])}</small><small>${locked?'Fest in Thronholt':e(house.source)}</small></span></button><button class="details-link" data-action="show-house" data-house="${house.id}">Haus & Wappen ↗</button></article>`;
+ return `<article class="house-card ${selected===house.id?'is-selected':''} ${locked?'is-locked':''}" ${locked?'':`data-drag-house="${house.id}"`}><button class="house-choice" data-action="${locked?'show-house':'choose-house'}" data-house="${house.id}" ${locked?'':`aria-pressed="${selected===house.id}"`} aria-label="${e(house.name)} ${locked?'– Hausdetails öffnen':'zum Versetzen auswählen'}"><img src="assets/${house.crest}" alt="Wappen ${e(house.name)}" width="76" height="76" loading="lazy"><span><strong>${e(house.name)}</strong><small>${e(rankLabels[house.rank])}</small><small>${locked?'Fest in Thronholt':e(house.source)}</small></span></button><button class="details-link" data-action="show-house" data-house="${house.id}">Haus & Krieger ↗</button></article>`;
 }
 
 export function renderCollectiveName(design) {
@@ -35,7 +35,7 @@ export function renderSettlements(placements,selected,design) {
 }
 
 export function renderFixedHouses() {
- return ['goldveld','roden'].map(id=>{const house=houseById(id);return `<article class="fixed-house"><img src="assets/${house.crest}" width="160" height="160" alt="Wappen ${e(familyTitle(house))}"><div><p class="eyebrow">${e(rankLabels[house.rank])}</p><h3>Haus ${e(house.name)}</h3><p>Fest gesetzter Sitz: <strong>Thronholt</strong></p><button class="text-button" data-action="show-house" data-house="${house.id}">Wappen ansehen ↗</button></div></article>`;}).join('');
+ return ['goldveld','roden'].map(id=>{const house=houseById(id);return `<article class="fixed-house"><img src="assets/${house.crest}" width="160" height="160" alt="Wappen ${e(familyTitle(house))}"><div><p class="eyebrow">${e(rankLabels[house.rank])}</p><h3>Haus ${e(house.name)}</h3><p>Fest gesetzter Sitz: <strong>Thronholt</strong></p><button class="text-button" data-action="show-house" data-house="${house.id}">Haus & Krieger ansehen ↗</button></div></article>`;}).join('');
 }
 
 export function renderRealmDesigns(selected) {
@@ -56,10 +56,4 @@ function renderHouseGallery(collection) {
 
 export function renderRevisedHouses() {
  return ['roden','goldveld','lanette'].map(id=>{const house=houseById(id);return `<article class="revision-card"><p class="eyebrow">Überarbeiteter Hausentwurf</p><h3>${e(house.name)}</h3><button class="crest-button revision-art" data-action="show-house" data-house="${id}"><img src="assets/${house.crest}" alt="Wappen ${e(familyTitle(house))}" width="300" height="300" loading="lazy"></button><p>${e(house.description)}</p></article>`;}).join('');
-}
-
-export function renderHouseDetails(house,placements,design) {
- const seat=settlements.find(item=>item.id===placements[house.id]);
- const region=seat?regions.find(item=>item.id===seat.region):null;
- return `<p class="eyebrow">${e(house.source)}</p><h2 id="house-title">${e(familyTitle(house))}</h2><a class="detail-art" href="${e(house.fullsize)}" target="_blank" rel="noopener"><img class="detail-crest" src="assets/${house.crest}" width="400" height="400" alt="Wappen ${e(familyTitle(house))}"></a><p>${e(house.description)}</p><dl><div><dt>Rolle im Entwurf</dt><dd>${e(rankLabels[house.rank])}</dd></div><div><dt>Sitz im Entwurf</dt><dd>${seat?`${e(seat.name)} · ${e(design.regionNames[region.id])}`:'Noch offen'}</dd></div><div><dt>Zuordnung</dt><dd>${house.sourceSeat?'Thronholt ist durch deine Vorgabe fest gesetzt.':'Freie Hauszuordnung; eine Platzierung legt keinen zusätzlichen Rang fest.'}</dd></div></dl><p class="detail-links"><a href="${e(house.fullsize)}" target="_blank" rel="noopener">Wappen in Großansicht ↗</a>${house.original&&!house.revised?`<a href="${house.original}" target="_blank" rel="noopener">Geliefertes Original ↗</a>`:''}</p>${house.sourceSeat?'':`<button class="primary" data-action="select-from-dialog" data-house="${house.id}">Dieses Haus auf der Karte platzieren</button>`}`;
 }

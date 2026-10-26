@@ -6,7 +6,9 @@ import {readFile,stat,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {houses,counties,regions,settlements,realmDesigns,createMapProposal} from '../Goldmund/realm-data.mjs';
 import {createDesignState} from '../Goldmund/design-state.mjs';
-import {escapeHtml,renderCollectiveName,renderCounties,renderSettlements,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses,renderHouseDetails} from '../Goldmund/proposal-render.mjs';
+import {escapeHtml,renderCollectiveName,renderCounties,renderSettlements,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses} from '../Goldmund/proposal-render.mjs';
+import {renderHouseDetails} from '../Goldmund/house-details.mjs';
+import {warriors} from '../Goldmund/warrior-data.mjs';
 
 const root=new URL('../Goldmund/',import.meta.url);
 const readJson=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
@@ -236,4 +238,34 @@ test('the planning page uses local modules, no inline handlers and no canonical 
    await stat(new URL(match[1],new URL(file,root)));
   }
  }
+});
+
+test('every current house has a complete distinct warrior proposal with a working full-body asset',async()=>{
+ assert.deepEqual(warriors.map(item=>item.id).sort(),houses.map(item=>item.id).sort());
+ const allowed=new Set(['oraner','guldner','husar','aldmar','eldner','schirmer']);
+ const manifest=await readJson('assets/warriors/manifest.json');
+ assert.equal(manifest.entries.length,20);
+ assert.equal(new Set(manifest.entries.map(entry=>entry.sourceSha256)).size,20);
+ const state=createDesignState(),before=state.serialize();
+ for(const house of houses){
+  const warrior=warriors.find(item=>item.id===house.id);
+  assert.ok(allowed.has(warrior.classId),house.name);
+  const entry=manifest.entries.find(item=>item.id===house.id);
+  assert.ok(entry,house.name);
+  assert.equal(entry.preview,warrior.image);
+  assert.equal(entry.production,warrior.fullsize);
+  assert.deepEqual(entry.alpha.dimensions,[1024,1536]);
+  assert.equal(entry.alpha.touchesCanvas,false,house.name);
+  assert.equal(entry.proof.rgbUnchanged,true,house.name);
+  assert.equal(entry.proof.sourceTransparentPixelsExposed,0,house.name);
+  for(const kind of ['source','production','preview'])assert.equal(hash(await readFile(new URL(entry[kind],root))),entry[`${kind}Sha256`],`${house.name} ${kind}`);
+  const html=renderHouseDetails(house,state.currentPlacements(),state.currentDesign());
+  assert.ok(html.includes(warrior.image)&&html.includes(warrior.fullsize),house.name);
+  assert.match(html,/Klassenvorschlag/);
+  assert.match(html,/Ganzkörperentwurf/);
+  assert.equal(html.includes('data-action="select-from-dialog"'),!house.sourceSeat);
+ }
+ assert.equal(warriors.find(item=>item.id==='aurelshain').mounted,true);
+ assert.equal(warriors.find(item=>item.id==='falkengold').classId,'husar');
+ assert.equal(state.serialize(),before);
 });

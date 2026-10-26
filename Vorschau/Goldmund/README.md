@@ -33,6 +33,33 @@ Placement-Engine unter `../shared/`; sie dupliziert keine Zuordnungslogik.
 `proposal-render.mjs` rendert die featurebezogenen Ansichten,
 `proposal-page.mjs` verbindet delegierte Ereignisse mit State und Darstellung.
 
+Die Hausfenster zeigen für alle 20 aktuellen Häuser und Clans einen vollständigen
+Kriegerentwurf neben Wappen, Klassenbegründung, Palette, Ausrüstung und Sitz.
+`house-details.mjs` und `house-details.css` besitzen diese Ansicht; die bestehende
+Zuordnungslogik bleibt gemeinsam genutzt. Desktop: zwei Spalten; mobil: vollständige
+Figur vor dem Hausprofil, ein scrollbares Dialogfenster mit erreichbarem Schließen.
+Alle Klassen bleiben gestalterische Vorschläge, keine kanonischen Hausfestlegungen.
+
+`warrior-art-direction.mjs` besitzt die 20 individuellen Produktionsentwürfe.
+`node Vorschau/Goldmund/scripts/build-warrior-catalog.mjs` erzeugt daraus den kleinen
+Laufzeitkatalog `warrior-data.mjs` und die vollständigen Prompts unter
+`assets/warriors/prompts.json`. Stilreferenz ist der am 24. Oktober freigegebene
+Hausritter; jedes aktuelle Hauswappen wurde als eigene Motivreferenz mitgegeben.
+Werkzeug: eingebautes `image_gen`, ein Aufruf pro Haus, keine API-/CLI-Generierung.
+Die Klassenquelle ist `Klassenordner/Klassenseite.html`; detaillierte Waffenangaben
+folgen der Nutzeranweisung. Die Anzeige verwendet „Aldmer“, die bestehende Klassen-ID
+bleibt `aldmar`; Güldner verwendet die vorhandene ID `guldner`.
+
+Kriegerbilder liegen getrennt von der Heraldik unter `assets/warriors/`:
+`generated/` enthält unveränderte Generatororiginale, `production/` die nur am
+Alphakanal bereinigten PNGs (1024 × 1536), `previews/` die WebP-Anzeigen (768 × 1152).
+Die ausdrücklich erlaubte Alphabereinigung erhält alle RGB-Bytes sowie transparente
+Zwischenräume. Sie verwendet keine geschlossene Wappen-/Kreismaske.
+`python -B Vorschau/Goldmund/scripts/prepare_warriors.py build` verarbeitet die Bilder;
+`audit --expected-count 20` prüft Prüfsummen, Freistellung und unbeschnittene Ränder;
+`contact` erstellt die visuelle QA-Übersicht. Der unabhängige Bildbeleg steht in
+`assets/warriors/manifest.json`.
+
 `design-state.mjs` komponiert die gemeinsame Zuordnungs-Engine mit
 Grafschafts-/Regionsnamen, gemeinsamem Landschaftsnamen und Wappenauswahl.
 Rücknahme, Ausgangsstand und JSON-Import/-Export umfassen den gesamten Entwurf.

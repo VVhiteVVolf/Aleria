@@ -1,0 +1,32 @@
+.house-dialog{width:1080px;overflow:auto}
+.house-dialog .dialog-top{position:sticky;top:0;z-index:2;background:var(--paper)}
+.house-dialog [data-role=house-details]{padding:28px 34px 34px}
+.house-detail-heading{border-bottom:1px solid var(--line);padding-bottom:22px}
+.house-detail-heading .eyebrow{margin:0 0 10px}
+.house-dialog h2{font-size:40px;margin:0 0 8px}
+.house-class-label{margin:0;font:13px var(--sans);color:var(--ink)}
+.house-class-label span{color:var(--muted);font-size:11px}
+.house-detail-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:34px;padding-top:24px}
+.house-warrior{margin:0;align-self:start;position:sticky;top:90px}
+.house-warrior>a{display:flex;align-items:center;justify-content:center;min-height:360px;height:min(65vh,700px);border:1px solid var(--line);background:#e9e1d24a;padding:12px}
+.house-warrior img{display:block;max-width:100%;width:100%;height:100%;object-fit:contain}
+.house-warrior figcaption{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;margin-top:12px;font:10px/1.6 var(--sans);color:var(--muted)}
+.detail-crest{display:block;width:180px;height:180px;object-fit:contain;margin:0 auto 20px}
+.house-description,.warrior-concept p{font-size:14px;line-height:1.7;color:var(--muted)}
+.warrior-concept{border-top:1px solid var(--line);padding-top:18px;margin-top:18px}
+.warrior-concept h3{font:16px Georgia,'Times New Roman',serif;margin:0 0 9px}
+.house-dialog dl{margin:16px 0}
+.house-dialog dl>div{border-top:1px solid var(--line);padding:10px 0}
+.house-dialog dt{font:10px var(--sans);color:var(--muted);margin-bottom:5px}
+.house-dialog dd{margin:0;font-size:14px;line-height:1.6}
+.detail-links{display:flex;gap:12px 18px;flex-wrap:wrap;font:11px/1.7 var(--sans)}
+.house-profile>.primary{width:100%;margin-top:10px}
+@media(max-width:700px){
+ .house-dialog [data-role=house-details]{padding:22px 20px 26px}
+ .house-dialog h2{font-size:32px}
+ .house-detail-layout{grid-template-columns:minmax(0,1fr);gap:25px}
+ .house-warrior{position:static}
+ .house-warrior>a{height:min(64vh,560px);min-height:300px}
+ .detail-crest{width:150px;height:150px;margin-bottom:18px}
+ .house-description{font-size:14px}
+}
