@@ -2,21 +2,23 @@
 
 Einstieg: `index.html`. Die eigenständige Seite entwickelt die gelieferte
 Goldmund-Karte als besprechbaren Entwurf: drei Grafschaften, acht einzelne
-Regionen, elf eigene Banner, fünf beibehaltene Häuser, elf neue Hausvorschläge
-und vier auswählbare Fürstentumswappen. Insgesamt sind 16 Häuser und 29 neue
-Bildmotive enthalten: 18 Kreiswappen (elf neue Häuser, drei Überarbeitungen,
-vier Fürstentumsvorschläge) sowie elf Banner. Neue Namen, Motive und Rollenansätze
+Regionen, elf eigene Banner, fünf beibehaltene Häuser, elf neue Hausvorschläge,
+vier albische Clans und vier auswählbare Fürstentumswappen. Insgesamt sind
+20 Häuser und Clans sowie 33 neue Bildmotive enthalten: 22 Kreiswappen
+(elf neue Häuser, vier Clans, drei Überarbeitungen, vier Fürstentumsvorschläge)
+sowie elf Banner. Neue Namen, Motive und Rollenansätze
 sind ausdrücklich Vorschläge. Die Seite schreibt weder kanonische Register
 noch Firebase-Daten.
 
 Goldveld als Fürstenfamilie und Roden als Ritterfürstenfamilie sind gemäß
-Nutzervorgabe fest in Thronholt gesetzt. Die übrigen 14 Häuser beginnen ohne
+Nutzervorgabe fest in Thronholt gesetzt. Die übrigen 18 Häuser und Clans beginnen ohne
 Sitz und erhalten durch Verschieben keinen zusätzlichen Rang. Hochreuth wird
 nicht ergänzt; seine alte Burg ist auf dieser Karte nicht verortet.
 
 `realm-data.mjs` besitzt die Grafschaften, Regionen, Ortskoordinaten und
 Wappenauswahl. `source-houses.mjs` beschreibt die gelieferten und vorgeschlagenen
-Häuser. Die Seite verwendet die gemeinsame Kartenansicht und die gemeinsame
+Häuser. `albic-clans.mjs` besitzt die vier zusätzlichen Clanvorschläge.
+Die Seite verwendet die gemeinsame Kartenansicht und die gemeinsame
 Placement-Engine unter `../shared/`; sie dupliziert keine Zuordnungslogik.
 `proposal-render.mjs` rendert die featurebezogenen Ansichten,
 `proposal-page.mjs` verbindet delegierte Ereignisse mit State und Darstellung.
@@ -37,6 +39,16 @@ akzeptiert die vollständigen früheren Hauslisten mit 16 oder 21 Einträgen:
 Zuordnungen der verbleibenden Häuser, Gebietsnamen und Wappenauswahl bleiben erhalten,
 fehlende neue Häuser beginnen ohne Sitz. Unvollständige oder fremde Hauslisten und
 unbekannte Orte werden weiterhin abgelehnt; alle festen Sitzregeln bleiben verbindlich.
+
+Mac Ruan, Mac Callan, An’Brenn und Na’Fenn verwenden auf Wunsch keine Ua-/Ó-Präfixe.
+Ihre Zeichen bleiben materiell bescheiden, unterscheiden sich aber ausdrücklich
+auch im Aufbau: grünes Bretterfeld mit dunklem Holzring; geteiltes ocker-graues
+Feld mit schrägen Brettern und vernietetem Eisenring; rostrotes Feld mit schwarzem
+Querbalken, heller Birke und Clanrunen; Wasserbänder mit einem Hanfseilring.
+Die gemeinsame malerische Heraldik bleibt erhalten. Ihre Orte sind frei zuweisbar.
+Der vollständige Stand vor dieser Ergänzung wird ebenfalls migriert; alle vier
+Clans beginnen dabei ohne Sitz. Die ersten, zu gleichförmigen drei Varianten
+liegen getrennt unter `assets/generated-archive/albic-first-drafts/`.
 
 Freie Wappen lassen sich mit Maus oder Stift ziehen. Auswahlbuttons und die
 Haus-/Ortslisten bieten denselben Weg für Tastatur und Touch. Die Kartenpins

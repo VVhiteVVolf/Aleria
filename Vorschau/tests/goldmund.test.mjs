@@ -4,25 +4,25 @@ import {readFile,stat,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {houses,counties,regions,settlements,realmDesigns,createMapProposal} from '../Goldmund/realm-data.mjs';
 import {createDesignState} from '../Goldmund/design-state.mjs';
-import {escapeHtml,renderCollectiveName,renderCounties,renderSettlements,renderRealmDesigns,renderNewHouses,renderRevisedHouses,renderHouseDetails} from '../Goldmund/proposal-render.mjs';
+import {escapeHtml,renderCollectiveName,renderCounties,renderSettlements,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses,renderHouseDetails} from '../Goldmund/proposal-render.mjs';
 
 const root=new URL('../Goldmund/',import.meta.url);
 const readJson=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 
-test('Goldmund covers three counties, eight regions and sixteen houses with the retained source families',()=>{
+test('Goldmund covers three counties, eight regions and twenty houses and clans with the retained source families',()=>{
  assert.equal(counties.length,3);
  assert.equal(regions.length,8);
  assert.equal(settlements.length,8);
- assert.equal(houses.length,16);
+ assert.equal(houses.length,20);
  for(const list of [counties,regions,settlements,houses,realmDesigns])assert.equal(new Set(list.map(item=>item.id)).size,list.length);
  assert.deepEqual(houses.filter(house=>house.sourceSeat!==null).map(({id,sourceSeat,rank})=>({id,sourceSeat,rank})),[
   {id:'goldveld',sourceSeat:'thronholt',rank:'prince'},
   {id:'roden',sourceSeat:'thronholt',rank:'knight-prince'}
  ]);
  assert.equal(houses.filter(house=>house.source==='Geliefertes Haus').length,5);
- assert.equal(houses.filter(house=>house.proposed).length,11);
- assert.equal(houses.filter(house=>house.sourceSeat===null).length,14);
+ assert.equal(houses.filter(house=>house.proposed).length,15);
+ assert.equal(houses.filter(house=>house.sourceSeat===null).length,18);
  assert.ok(houses.filter(house=>house.proposed).every(house=>house.original===null&&house.sourceSeat===null));
  assert.ok(houses.find(house=>house.id==='aurelshain').theme.includes('Pferdezucht'));
  for(const region of regions){
@@ -111,10 +111,12 @@ test('all supplied originals retain their SHA256 and retired crests remain archi
  }
 });
 
-test('both complete historical rosters migrate while preserving surviving assignments and rejecting invalid data',()=>{
+test('all complete historical rosters migrate while preserving surviving assignments and rejecting invalid data',()=>{
  const state=createDesignState(),added=['eitelborn','herzau','silberhorst','samtborn','weisshorn'];
  state.move('broeck','haarlen');state.rename('collective',null,'Der Goldene Bund');state.chooseCrest(realmDesigns[2].id);
- const legacy=JSON.parse(state.serialize());
+ const preAlbic=JSON.parse(state.serialize());
+ for(const id of ['mac-ruan','mac-callan','an-brenn','na-fenn'])delete preAlbic.placements[id];
+ const legacy=structuredClone(preAlbic);
  Object.assign(legacy.placements,{adrard:'bregen',rielle:null,vandergard:null,waalen:null,witten:null});
  const prior=structuredClone(legacy);
  for(const id of added)delete legacy.placements[id];
@@ -123,6 +125,8 @@ test('both complete historical rosters migrate while preserving surviving assign
  assert.deepEqual(restored.current(),state.current());
  assert.deepEqual(legacy,source);
  for(const id of added)assert.equal(restored.currentPlacements()[id],null);
+ restored.restore(preAlbic);
+ assert.deepEqual(restored.current(),state.current());
  restored.restore(prior);
  assert.deepEqual(restored.current(),state.current());
  assert.equal(Object.hasOwn(restored.currentPlacements(),'adrard'),false);
@@ -149,20 +153,21 @@ test('the discussion view renders every territory and escapes imported names',()
  assert.equal((countyCards.match(/class="county-card"/g)||[]).length,3);
  assert.equal((seatCards.match(/class="seat-card"/g)||[]).length,8);
  assert.equal((renderRealmDesigns(design.realmCrest).match(/class="realm-design /g)||[]).length,4);
+ assert.equal((renderAlbicClans().match(/class="new-house"/g)||[]).length,4);
  assert.equal((renderNewHouses().match(/class="new-house"/g)||[]).length,11);
  assert.equal((renderRevisedHouses().match(/class="revision-card"/g)||[]).length,3);
  assert.doesNotMatch(seatCards,/data-drag-house="(?:goldveld|roden)"/);
 });
 
-test('the art deliverable contains eighteen new crests and eleven distinct territorial banners',async()=>{
+test('the art deliverable contains twenty-two new crests and eleven distinct territorial banners',async()=>{
  const direction=await readJson('art-direction.json'),manifest=await readJson('assets.generated.json');
- assert.equal(direction.jobs.length,29);
- assert.equal(direction.jobs.filter(job=>job.kind==='crest').length,14);
+ assert.equal(direction.jobs.length,33);
+ assert.equal(direction.jobs.filter(job=>job.kind==='crest').length,18);
  assert.equal(direction.jobs.filter(job=>job.kind==='realm').length,4);
  assert.equal(direction.jobs.filter(job=>job.kind==='banner').length,11);
- assert.equal(manifest.length,29);
- assert.equal(new Set(direction.jobs.map(job=>job.id)).size,29);
- assert.equal(new Set(manifest.map(entry=>entry.sha256)).size,29);
+ assert.equal(manifest.length,33);
+ assert.equal(new Set(direction.jobs.map(job=>job.id)).size,33);
+ assert.equal(new Set(manifest.map(entry=>entry.sha256)).size,33);
  for(const house of houses.filter(item=>item.proposed||item.revised))assert.ok(direction.jobs.some(job=>job.kind==='crest'&&job.id===house.id),house.id);
  for(const job of direction.jobs){
   const entry=manifest.find(item=>item.id===job.id);

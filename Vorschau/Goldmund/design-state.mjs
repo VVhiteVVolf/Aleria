@@ -1,5 +1,5 @@
 import {createPlacementState} from '../shared/placement-state.mjs?v=20261026-1';
-import {houses,settlements,counties,regions,collectiveName,realmDesigns} from './realm-data.mjs?v=20261026-4';
+import {houses,settlements,counties,regions,collectiveName,realmDesigns} from './realm-data.mjs?v=20261026-5';
 
 const initialDesign = ()=>({collectiveName,countyNames:Object.fromEntries(counties.map(item=>[item.id,item.name])),regionNames:Object.fromEntries(regions.map(item=>[item.id,item.name])),realmCrest:realmDesigns[0].id});
 const copy = value=>JSON.parse(JSON.stringify(value));
@@ -7,14 +7,15 @@ const isObject = value=>value!==null&&typeof value==='object'&&!Array.isArray(va
 const addedHouseIds=Object.freeze(['eitelborn','herzau','silberhorst','samtborn','weisshorn']);
 const retiredHouseIds=Object.freeze(['adrard','rielle','vandergard','waalen','witten']);
 const currentHouseIds=houses.map(house=>house.id);
-const priorHouseIds=[...currentHouseIds,...retiredHouseIds];
+const preAlbicHouseIds=houses.filter(house=>!house.clan).map(house=>house.id);
+const priorHouseIds=[...preAlbicHouseIds,...retiredHouseIds];
 const initialHouseIds=priorHouseIds.filter(id=>!addedHouseIds.includes(id));
 const hasExactly=(value,ids)=>Object.keys(value).length===ids.length&&ids.every(id=>Object.hasOwn(value,id));
 
-// Accept only the two complete historical rosters; retain surviving assignments and design.
+// Accept only complete historical rosters; retain surviving assignments and design.
 function migratePriorDraft(snapshot) {
  const existing=snapshot?.placements;
- if(!isObject(existing)||![priorHouseIds,initialHouseIds].some(ids=>hasExactly(existing,ids)))return snapshot;
+ if(!isObject(existing)||![preAlbicHouseIds,priorHouseIds,initialHouseIds].some(ids=>hasExactly(existing,ids)))return snapshot;
  const validSeats=new Set(settlements.map(seat=>seat.id));
  if(Object.values(existing).some(seat=>seat!==null&&!validSeats.has(seat)))throw Error('Der ältere Entwurf enthält einen unbekannten Ort.');
  return {...snapshot,placements:Object.fromEntries(currentHouseIds.map(id=>[id,Object.hasOwn(existing,id)?existing[id]:null]))};

@@ -1,0 +1,172 @@
+{
+  "recordedAt": "2026-10-26T02:52:50.122Z",
+  "passed": true,
+  "scope": "Final house roster, individual Albic designs, browser placement and undo, artifact audit",
+  "houses": [
+    {
+      "id": "broeck",
+      "name": "Broeck",
+      "type": "house"
+    },
+    {
+      "id": "goldveld",
+      "name": "Goldveld",
+      "type": "house"
+    },
+    {
+      "id": "lanette",
+      "name": "Lanette",
+      "type": "house"
+    },
+    {
+      "id": "roden",
+      "name": "Roden",
+      "type": "house"
+    },
+    {
+      "id": "roosenvelt",
+      "name": "Roosenvelt",
+      "type": "house"
+    },
+    {
+      "id": "aurelshain",
+      "name": "Arenberg",
+      "type": "house"
+    },
+    {
+      "id": "gueldenfels",
+      "name": "Velten",
+      "type": "house"
+    },
+    {
+      "id": "falkengold",
+      "name": "Severin",
+      "type": "house"
+    },
+    {
+      "id": "rebenkron",
+      "name": "Belcourt",
+      "type": "house"
+    },
+    {
+      "id": "seidenwarth",
+      "name": "Lanvier",
+      "type": "house"
+    },
+    {
+      "id": "greifenau",
+      "name": "Marholt",
+      "type": "house"
+    },
+    {
+      "id": "eitelborn",
+      "name": "Belmont",
+      "type": "house"
+    },
+    {
+      "id": "herzau",
+      "name": "Arden",
+      "type": "house"
+    },
+    {
+      "id": "silberhorst",
+      "name": "Berden",
+      "type": "house"
+    },
+    {
+      "id": "samtborn",
+      "name": "Sorel",
+      "type": "house"
+    },
+    {
+      "id": "weisshorn",
+      "name": "Wolter",
+      "type": "house"
+    },
+    {
+      "id": "mac-ruan",
+      "name": "Mac Ruan",
+      "type": "clan"
+    },
+    {
+      "id": "mac-callan",
+      "name": "Mac Callan",
+      "type": "clan"
+    },
+    {
+      "id": "an-brenn",
+      "name": "An’Brenn",
+      "type": "clan"
+    },
+    {
+      "id": "na-fenn",
+      "name": "Na’Fenn",
+      "type": "clan"
+    }
+  ],
+  "retainedOriginals": [
+    "Broeck",
+    "Roosenvelt"
+  ],
+  "revisedFamilies": [
+    "Roden",
+    "Goldveld",
+    "Lanette"
+  ],
+  "retiredFromPreview": [
+    "Adrard",
+    "Rielle",
+    "Vandergard",
+    "Waalen",
+    "Witten"
+  ],
+  "newAlbicClans": [
+    {
+      "name": "Mac Ruan",
+      "id": "mac-ruan",
+      "crest": "crests/mac-ruan.webp",
+      "production": "assets/production/mac-ruan.png"
+    },
+    {
+      "name": "Mac Callan",
+      "id": "mac-callan",
+      "crest": "crests/mac-callan.webp",
+      "production": "assets/production/mac-callan.png"
+    },
+    {
+      "name": "An’Brenn",
+      "id": "an-brenn",
+      "crest": "crests/an-brenn.webp",
+      "production": "assets/production/an-brenn.png"
+    },
+    {
+      "name": "Na’Fenn",
+      "id": "na-fenn",
+      "crest": "crests/na-fenn.webp",
+      "production": "assets/production/na-fenn.png"
+    }
+  ],
+  "activeHouseCount": 20,
+  "freeHouseCount": 18,
+  "generatedImages": 33,
+  "assetAudit": {
+    "checkedImages": 45,
+    "failures": []
+  },
+  "tests": {
+    "passed": 8,
+    "failed": 0,
+    "command": "node --test --experimental-test-isolation=none Vorschau/tests/goldmund.test.mjs"
+  },
+  "browserChecks": {
+    "allFourAlbicCardsVisible": true,
+    "macRuanSelected": true,
+    "macRuanAssignedTo": "Brakenstein",
+    "undoRestored18Unassigned": true,
+    "oldComparisonCardsRemoved": true
+  },
+  "screenshots": [
+    "albic-clans-final.png",
+    "revised-crests-only.png"
+  ]
+}

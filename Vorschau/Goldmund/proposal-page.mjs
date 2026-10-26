@@ -1,6 +1,6 @@
-import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-4';
-import {createDesignState} from './design-state.mjs?v=20261026-4';
-import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderRevisedHouses,renderHouseDetails} from './proposal-render.mjs?v=20261026-4';
+import {houses,settlements,rankLabels,realmDesigns,createMapProposal} from './realm-data.mjs?v=20261026-5';
+import {createDesignState} from './design-state.mjs?v=20261026-5';
+import {escapeHtml,houseCard,renderCollectiveName,renderCounties,renderSettlements,renderFixedHouses,renderRealmDesigns,renderNewHouses,renderAlbicClans,renderRevisedHouses,renderHouseDetails} from './proposal-render.mjs?v=20261026-5';
 import {createPlacementControls} from '../shared/placement-controls.mjs?v=20261026-1';
 import {createClanMap} from '../shared/clan-map.mjs';
 
@@ -70,8 +70,9 @@ const controls=createPlacementControls({root,getSelected:()=>selected,onMove:mov
 
 root.querySelector('[data-role="fixed-houses"]').innerHTML=renderFixedHouses();
 root.querySelector('[data-role="new-houses"]').innerHTML=renderNewHouses();
+root.querySelector('[data-role="albic-clans"]').innerHTML=renderAlbicClans();
 root.querySelector('[data-role="revised-houses"]').innerHTML=renderRevisedHouses();
-houseSelect.insertAdjacentHTML('beforeend',['Geliefertes Haus','Neuer Hausvorschlag'].map(source=>`<optgroup label="${escapeHtml(source)}">${houses.filter(house=>house.source===source&&state.canMove(house.id)).map(house=>`<option value="${house.id}">${escapeHtml(house.name)}</option>`).join('')}</optgroup>`).join(''));
+houseSelect.insertAdjacentHTML('beforeend',['Geliefertes Haus','Neuer Hausvorschlag','Albischer Clanvorschlag'].map(source=>`<optgroup label="${escapeHtml(source)}">${houses.filter(house=>house.source===source&&state.canMove(house.id)).map(house=>`<option value="${house.id}">${escapeHtml(house.name)}</option>`).join('')}</optgroup>`).join(''));
 seatSelect.insertAdjacentHTML('beforeend',settlements.map(seat=>`<option value="${seat.id}">${escapeHtml(seat.name)}</option>`).join(''));
 try{const saved=localStorage.getItem(storageKey);if(saved){
  const draft=JSON.parse(saved);state.restore(draft);

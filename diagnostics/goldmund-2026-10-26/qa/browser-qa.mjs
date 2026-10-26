@@ -45,15 +45,16 @@ try{
  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:1100,deviceScaleFactor:1,mobile:false});
  await send('Page.reload',{ignoreCache:true});
  await until('document.readyState==="complete"&&document.querySelectorAll(".new-house").length===11');
+ assert.equal(await evaluate('document.querySelectorAll("[data-role=albic-clans] .new-house").length'),4);
  await click('[data-action="reset"]');
  const images=await evaluate(`(async()=>{const images=[...document.images];images.forEach(image=>image.loading='eager');await Promise.all(images.map(image=>image.decode().catch(()=>{})));return images.map(image=>({src:image.getAttribute('src'),width:image.naturalWidth,height:image.naturalHeight}));})()`);
  assert.ok(images.length>50);assert.deepEqual(images.filter(image=>!image.width||!image.height),[],'Alle sichtbaren Bilder sind dekodierbar.');
- const imageLinks=await evaluate(`(async()=>{const data=await import('/Vorschau/Goldmund/realm-data.mjs?v=20261026-2');const links=[...new Set([...document.querySelectorAll('a[href]')].map(link=>link.getAttribute('href')).filter(href=>/\.(?:png|webp)$/i.test(href)).concat(data.houses.flatMap(house=>[house.fullsize,house.original].filter(Boolean)),data.realmDesigns.map(design=>design.fullsize),data.counties.concat(data.regions).map(area=>'assets/production/'+area.id+'.png')))];return Promise.all(links.map(async href=>({href,status:(await fetch(href,{method:'HEAD'})).status})));})()`);
+ const imageLinks=await evaluate(`(async()=>{const data=await import('/Vorschau/Goldmund/realm-data.mjs?v=20261026-5');const links=[...new Set([...document.querySelectorAll('a[href]')].map(link=>link.getAttribute('href')).filter(href=>/\.(?:png|webp)$/i.test(href)).concat(data.houses.flatMap(house=>[house.fullsize,house.original].filter(Boolean)),data.realmDesigns.map(design=>design.fullsize),data.counties.concat(data.regions).map(area=>'assets/production/'+area.id+'.png')))];return Promise.all(links.map(async href=>({href,status:(await fetch(href,{method:'HEAD'})).status})));})()`);
  assert.deepEqual(imageLinks.filter(link=>link.status!==200),[],'Alle Bildgroßansichten sind erreichbar.');
- await drag('[data-role="unassigned-houses"] [data-drag-house="adrard"]','[data-role="map-section"] .placement-target[data-drop-seat="bramsen"]');
- assert.equal((await draft()).placements.adrard,'bramsen','Echtes Pointer-Drag weist Adrard auf der Karte zu.');
- await drag('[data-role="map-section"] .clan-pin[data-clan="adrard"]','[data-drop-seat="unassigned"] .section-heading');
- assert.equal((await draft()).placements.adrard,null,'Echtes Pointer-Drag gibt den Sitz wieder frei.');
+ await drag('[data-role="unassigned-houses"] [data-drag-house="broeck"]','[data-role="map-section"] .placement-target[data-drop-seat="bramsen"]');
+ assert.equal((await draft()).placements.broeck,'bramsen','Echtes Pointer-Drag weist Broeck auf der Karte zu.');
+ await drag('[data-role="map-section"] .clan-pin[data-clan="broeck"]','[data-drop-seat="unassigned"] .section-heading');
+ assert.equal((await draft()).placements.broeck,null,'Echtes Pointer-Drag gibt den Sitz wieder frei.');
  for(const id of ['roden','goldveld']){
   assert.equal(await evaluate(`document.querySelector('[data-role="map-section"] .clan-pin[data-clan="${id}"]').hasAttribute('data-drag-house')`),false);
   await drag(`[data-role="map-section"] .clan-pin[data-clan="${id}"]`,'[data-role="map-section"] .placement-target[data-drop-seat="bramsen"]',{locked:true});
@@ -96,6 +97,6 @@ try{
  await click('[data-action="undo"]');assert.equal((await draft()).placements.eitelborn,null);
  const mobile=await evaluate('({screen:innerWidth,page:document.documentElement.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth})');assert.equal(mobile.overflow,false);
  assert.deepEqual(runtimeErrors,[]);assert.deepEqual(httpErrors,[]);assert.deepEqual(failedRequests,[]);
- const result={passed:true,images:images.length,uniqueImageLinks:imageLinks.length,houseCount:21,newHouseCount:11,checks:['Alle Bilder dekodierbar','Alle PNG-/WebP-Großansichten HTTP 200','Echtes Pointer-Drag auf Kartenort und zurück','Roden und Goldveld nicht verschiebbar','Tastatureingabe für Grafschaftsnamen','Wappenwahl','Browserdownload und Dateiupload','Reload und gemeinsames Undo','Mapdialog und Zoom','Mobile Haus-/Ortsauswahl mit Undo','Mobil ohne horizontalen Seitenüberlauf'],mobile,runtimeErrors,httpErrors,failedRequests,screenshots:['desktop-hero.png','desktop-counties.png','desktop-map.png','desktop-realm-designs.png','desktop-new-houses.png','desktop-additional-houses.png','mobile-hero.png','mobile-regions.png']};
+ const result={passed:true,images:images.length,uniqueImageLinks:imageLinks.length,houseCount:20,newHouseCount:11,albicClanCount:4,checks:['Alle Bilder dekodierbar','Alle PNG-/WebP-Großansichten HTTP 200','Echtes Pointer-Drag auf Kartenort und zurück','Roden und Goldveld nicht verschiebbar','Tastatureingabe für Grafschaftsnamen','Wappenwahl','Browserdownload und Dateiupload','Reload und gemeinsames Undo','Mapdialog und Zoom','Mobile Haus-/Ortsauswahl mit Undo','Mobil ohne horizontalen Seitenüberlauf'],mobile,runtimeErrors,httpErrors,failedRequests,screenshots:['desktop-hero.png','desktop-counties.png','desktop-map.png','desktop-realm-designs.png','desktop-new-houses.png','desktop-additional-houses.png','mobile-hero.png','mobile-regions.png']};
  await fs.writeFile(path.join(directory,'browser-checks.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 }finally{socket.close();}

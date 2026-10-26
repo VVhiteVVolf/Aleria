@@ -1,3 +1,5 @@
+import {albicClans} from './albic-clans.mjs?v=20261026-5';
+
 const delivered = [
  ['broeck','Broeck'],['goldveld','Goldveld'],['lanette','Lanette'],
  ['roden','Roden'],['roosenvelt','Roosenvelt']
@@ -19,5 +21,6 @@ const newHouses = [
 
 export const sourceHouses = Object.freeze([
  ...delivered.map(([id,name])=>Object.freeze({id,name,crest:`crests/${id}.webp`,original:`assets/originals/houses/${id}.png`,fullsize:['goldveld','roden','lanette'].includes(id)?`assets/production/${id}.png`:`assets/originals/houses/${id}.png`,rank:id==='goldveld'?'prince':id==='roden'?'knight-prince':'open',sourceSeat:['goldveld','roden'].includes(id)?'thronholt':null,source:'Geliefertes Haus',revised:['goldveld','roden','lanette'].includes(id),description:id==='goldveld'?'Die Fürstenfamilie in Thronholt. Der neue Entwurf verwendet einen goldenen Löwen und einen goldenen Rahmen.':id==='roden'?'Die Ritterfürstenfamilie in Thronholt. Der neue Entwurf zeigt eine Prunkkutsche, gezogen von goldenen Aurelianerpferden.':id==='lanette'?'Der neue Entwurf zeigt einen golden gerüsteten Reiter mit vorgehaltener Lanze.':'Geliefertes Hauswappen. Sitz und weitere Rolle sind in dieser Vorbereitung noch offen.'})),
- ...newHouses.map(house=>Object.freeze({...house,crest:`crests/${house.id}.webp`,original:null,sourceOriginal:null,fullsize:`assets/production/${house.id}.png`,rank:'open',sourceSeat:null,source:'Neuer Hausvorschlag',proposed:true,isNew:true}))
+ ...newHouses.map(house=>Object.freeze({...house,crest:`crests/${house.id}.webp`,original:null,sourceOriginal:null,fullsize:`assets/production/${house.id}.png`,rank:'open',sourceSeat:null,source:'Neuer Hausvorschlag',proposed:true,isNew:true})),
+ ...albicClans
 ]);
