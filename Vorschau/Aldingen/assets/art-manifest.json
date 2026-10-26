@@ -1,0 +1,1320 @@
+{
+  "schema": "aleria.aldingen.heraldic-art",
+  "version": 1,
+  "entries": [
+    {
+      "id": "adharcan",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/adharcan.png",
+      "sourceSha256": "2c64ddac39a289cdd019ff304bbaf1948b48e1b753a1d5675073e168c42aba46",
+      "production": "assets/production/adharcan.png",
+      "productionSha256": "b60eeaf8c355600f4e9ef06359f98c1e97e6bed5d9382e9560082c9ef758562e",
+      "preview": "assets/crests/adharcan.webp",
+      "previewSha256": "c183686e3b2a384bd273499f3c46dfcc69a7f0ed7d39be95d34226b5e32cd15c",
+      "dimensions": [
+        1356,
+        1356
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 52,
+        "top": 54
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 583,
+        "centre": [
+          678,
+          678
+        ]
+      }
+    },
+    {
+      "id": "aldershafen",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/aldershafen.png",
+      "sourceSha256": "bacbaf8533215ca0830b2949114e40e690b4cd18686d53731e93440afee0c4d1",
+      "production": "assets/production/aldershafen.png",
+      "productionSha256": "45faeb7dacb24c1e328ab7e3de8fe4025136d8b6845f9993a9c030af03156d8b",
+      "preview": "assets/shields/aldershafen.webp",
+      "previewSha256": "e69f760ee648173c2debeb06a5eaa71757299d206e6b36f16c5e8e48ddb856af",
+      "dimensions": [
+        1428,
+        1428
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 88,
+        "top": 94
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "aldingen",
+      "kind": "realm",
+      "shape": "circle",
+      "source": "assets/generated/aldingen.png",
+      "sourceSha256": "702377381510b1de641f960b4f9df33b269d158b3b3031a5b020bacb1e0c4a04",
+      "production": "assets/production/aldingen.png",
+      "productionSha256": "f4d443ff241c2c2da922746e94d8e457d617bf76ca81047927e60efc25d2ba9f",
+      "preview": "assets/crests/aldingen.webp",
+      "previewSha256": "259c437e460cea8239627c7c314f3248bc55eb5831c6aed00b0012b699470572",
+      "dimensions": [
+        1384,
+        1384
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 68,
+        "top": 76
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 595,
+        "centre": [
+          692,
+          692
+        ]
+      }
+    },
+    {
+      "id": "ankerhold",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/ankerhold.png",
+      "sourceSha256": "1e39eab1662947dcc8a388281ae8c84aaf2f1e14c4de142fc020ce5df554869d",
+      "production": "assets/production/ankerhold.png",
+      "productionSha256": "dffb9cbac65d2838c305c94ad8d7b431b1c77b6fef0f01a8370d9f5a30834d5d",
+      "preview": "assets/crests/ankerhold.webp",
+      "previewSha256": "374159b5edf178fb1b83dca232f248d8e3fe7efeda0cba957f6326b09e55078a",
+      "dimensions": [
+        1380,
+        1380
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 64,
+        "top": 68
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 593,
+        "centre": [
+          690,
+          690
+        ]
+      }
+    },
+    {
+      "id": "barenstadt",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/barenstadt.png",
+      "sourceSha256": "3f7d99f34ca96e9f8aff245963bb787f8ad9c9cb18a2654a7bbfe0711d329260",
+      "production": "assets/production/barenstadt.png",
+      "productionSha256": "5b372ec34f713829754115e73902d2b108c07bf9a25c0c54641248de0f9eb7b2",
+      "preview": "assets/shields/barenstadt.webp",
+      "previewSha256": "b7f9130df46e0134737e2c4b4c5dfcddef3799cf4d5472ebe99ffe7b3db2c0e4",
+      "dimensions": [
+        1414,
+        1414
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 81,
+        "top": 91
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "borgeln",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/borgeln.png",
+      "sourceSha256": "81378de559de661bac4f3387ca40415b73297ffc39367bc8e2f79bf6722e97ae",
+      "production": "assets/production/borgeln.png",
+      "productionSha256": "884437fa89654ce45d7d80f416825d12aa7ac3426358945e4a7fcdfeb9c92d34",
+      "preview": "assets/shields/borgeln.webp",
+      "previewSha256": "c4d0cc736e0ad52090fb84ff52288235f76b638ef1ba369d24a68603b72a38ae",
+      "dimensions": [
+        1434,
+        1434
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 91,
+        "top": 93
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "brechten",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/brechten.png",
+      "sourceSha256": "03f1bb4d9e71c92194cedf6c083bae09d25ac9bc2938df9be510f17f05d0251c",
+      "production": "assets/production/brechten.png",
+      "productionSha256": "caa80eb9b07738a7de86b4b94526b3508e67e238358229bfc5f62bc52ed1a473",
+      "preview": "assets/crests/brechten.webp",
+      "previewSha256": "98eca5e2b8899d5470fd7d97de1512f0ef6cfabdd61ebd2d7d597074493a1dca",
+      "dimensions": [
+        1398,
+        1398
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 75,
+        "top": 79
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 601,
+        "centre": [
+          699,
+          699
+        ]
+      }
+    },
+    {
+      "id": "bruchen",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/bruchen.png",
+      "sourceSha256": "2f02ca886dbe81b40bdcaeb1b3a473b23cb5acbc40d76d65aa4126a9863d4f51",
+      "production": "assets/production/bruchen.png",
+      "productionSha256": "6dc08d29b92ab5f0359c436f2786a6af004d77aff4647a2bdde187a721bef1df",
+      "preview": "assets/shields/bruchen.webp",
+      "previewSha256": "e6bca70f206f29269884234f4fb90dd46e7d4dd9c399705f46cfd246e2c799c1",
+      "dimensions": [
+        1434,
+        1434
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 90,
+        "top": 97
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "county-barenstadt",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/county-barenstadt.png",
+      "sourceSha256": "70017dcf4bf5519e25b16929f9d45bae4c61742a452efb5530d9769f6d0f97a6",
+      "production": "assets/production/county-barenstadt.png",
+      "productionSha256": "85a34ada187ab1084ea0b652f8df712e585da19ce10b02a3f8d9a7fd8e9455e8",
+      "preview": "assets/shields/county-barenstadt.webp",
+      "previewSha256": "f40335c2b59164bff440e99f5b9cf6f2e46ae5ad39c8379dd33f4cff59093add",
+      "dimensions": [
+        1420,
+        1420
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 84,
+        "top": 96
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "county-borgeln",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/county-borgeln.png",
+      "sourceSha256": "ad75599c1ff15b64dd2cdf87e1a4ce7330d37d62dadb3984d44cde0a3bdd9f5e",
+      "production": "assets/production/county-borgeln.png",
+      "productionSha256": "3b04a6a1244ec3b98e0e5496057ab37e52bddc479d44e3cf51ab286b60f275b2",
+      "preview": "assets/shields/county-borgeln.webp",
+      "previewSha256": "d8819d4207ae6913bd04790d9b33c53e29e505989dbb01b724b34fb90934adc1",
+      "dimensions": [
+        1422,
+        1422
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 83,
+        "top": 91
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "county-grimberg",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/county-grimberg.png",
+      "sourceSha256": "1725abfe9867336c428476ff4bf34b9cd5485d472344eaed96e06b35b371f1b4",
+      "production": "assets/production/county-grimberg.png",
+      "productionSha256": "e736d593270fd1e7e3430487e9c568ff51c6e044aa6ef4f31956ec4111f000ee",
+      "preview": "assets/shields/county-grimberg.webp",
+      "previewSha256": "0e2e12c6c2877e02b063d2a02fd6f09285bde8ae1b5e47f429cdfa2b4a49a6cf",
+      "dimensions": [
+        1436,
+        1436
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 90,
+        "top": 102
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "county-zollern",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/county-zollern.png",
+      "sourceSha256": "75f453b43ed3ea2eb242747f4cd126e390ae9a0e65600064e7c2f3499cff1d66",
+      "production": "assets/production/county-zollern.png",
+      "productionSha256": "6dfcac6e9e4c5e45c8485a96fd5f24e542afdbc719705268a30fe3f453d4e34d",
+      "preview": "assets/shields/county-zollern.webp",
+      "previewSha256": "f6c7b2872a40d032cd1ea52975cc0ffa74fa5b0d7b35964ed9034f2bda80ec08",
+      "dimensions": [
+        1420,
+        1420
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 84,
+        "top": 88
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "dreiken",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/dreiken.png",
+      "sourceSha256": "2275067754bc326025d04f66d238262930cbef162b875d96bb4246d08766d7dc",
+      "production": "assets/production/dreiken.png",
+      "productionSha256": "1d97d0dfb45aed952731d2dd133ebc9262746f4639b9302d0ac18706884adc4b",
+      "preview": "assets/shields/dreiken.webp",
+      "previewSha256": "057bcf2c85902e53a1a85fceac1285e1631ac8717440921cad12b01750f4cb32",
+      "dimensions": [
+        1444,
+        1444
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 96,
+        "top": 98
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "dublann",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/dublann.png",
+      "sourceSha256": "42c7e7c36d0d6ecd6917c81d300cbd91e5bc48173fd78a40d74794c91f058227",
+      "production": "assets/production/dublann.png",
+      "productionSha256": "f031943c95929d33b2efca1299e206b99fa7bc8e501f521dd05d5197470c443e",
+      "preview": "assets/crests/dublann.webp",
+      "previewSha256": "ba2d6265418335d94c44997411b57fab792bd31daeb3af6ee422f55f71b86cbf",
+      "dimensions": [
+        1382,
+        1382
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 65,
+        "top": 67
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 594,
+        "centre": [
+          691,
+          691
+        ]
+      }
+    },
+    {
+      "id": "ehrenfeld",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/ehrenfeld.png",
+      "sourceSha256": "63969d817aa1f2b525647530ed3dc576d92a13cf350ec4247b83f1fa9a85fa70",
+      "production": "assets/production/ehrenfeld.png",
+      "productionSha256": "f1c873fd090ed9265cd4d1cb69c97af817ccd264bee6c587ff6f7d3624e4700d",
+      "preview": "assets/crests/ehrenfeld.webp",
+      "previewSha256": "dea61a3736e2b3ca18dcd1fd2e639d1c839d64fdf01f23c5e015d8b28827fa53",
+      "dimensions": [
+        1412,
+        1412
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 80,
+        "top": 91
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 607,
+        "centre": [
+          706,
+          706
+        ]
+      }
+    },
+    {
+      "id": "graven",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/graven.png",
+      "sourceSha256": "4c234857e25a5a228f9527d40347dc5c078ab69f085a4cdc20149e1a7edea025",
+      "production": "assets/production/graven.png",
+      "productionSha256": "0400c1a86a918616d082567d92ec1a12f2fe90173bf71d81a1e9e4af48473216",
+      "preview": "assets/crests/graven.webp",
+      "previewSha256": "1b7171b2a09d4ffb0e940db9fd5ff3cfcd1ec7c4e908fb57c3bb8c006b9ab1b9",
+      "dimensions": [
+        1388,
+        1388
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 72,
+        "top": 87
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 596,
+        "centre": [
+          694,
+          694
+        ]
+      }
+    },
+    {
+      "id": "grimberg",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/grimberg.png",
+      "sourceSha256": "78d366ebddf164d94feea59369585cd8771f6e8747bcfb3c00415c7fe6a3e5e5",
+      "production": "assets/production/grimberg.png",
+      "productionSha256": "62420633ed367bd063a8466fcabc4d4cff1205f4ab18fca3367a9378ce3eba18",
+      "preview": "assets/shields/grimberg.webp",
+      "previewSha256": "f311fa9ce158e0f2a40498489f332ceef4977af232facd436122921334a40a49",
+      "dimensions": [
+        1424,
+        1424
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 86,
+        "top": 98
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "halbrecht",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/halbrecht.png",
+      "sourceSha256": "f63342d0e4bda46940d667cb00c0d9a8a74c2388d377c49b00445344860b064a",
+      "production": "assets/production/halbrecht.png",
+      "productionSha256": "b87f12236013bdceb2d53b8b021602e3846c6af3f43a51da5ff11c546b6fc9c7",
+      "preview": "assets/crests/halbrecht.webp",
+      "previewSha256": "97f36ad32326da05b13bd3550f9d705d3d451a99612abea2f7d58e654c5bb72c",
+      "dimensions": [
+        1406,
+        1406
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 78,
+        "top": 84
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 604,
+        "centre": [
+          703,
+          703
+        ]
+      }
+    },
+    {
+      "id": "haldren",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/haldren.png",
+      "sourceSha256": "11eda3698161edb650cbb317f0f1fdf2d27a088443164b2d3c20c428984de72b",
+      "production": "assets/production/haldren.png",
+      "productionSha256": "1f53d9a9d7e04f0bcdf5788d8742bdf8de4973f313a3c31bcd74d3cd5ab3879a",
+      "preview": "assets/crests/haldren.webp",
+      "previewSha256": "0831447675682980de240a9fd2d706d7f8b32322ea28a1a536acf3b625422064",
+      "dimensions": [
+        1388,
+        1388
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 70,
+        "top": 74
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 596,
+        "centre": [
+          694,
+          694
+        ]
+      }
+    },
+    {
+      "id": "hasselt",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/hasselt.png",
+      "sourceSha256": "3c2300e7fdefafd48abadcb5ec67d8f52abee9a9a357714be6f28e461fc4ea0d",
+      "production": "assets/production/hasselt.png",
+      "productionSha256": "257327121d70244958a0156e21a2d19176b520e297d193064300fbd128130234",
+      "preview": "assets/shields/hasselt.webp",
+      "previewSha256": "dfae8faf5c65e2a75854f7cc653ba9a97ef8917c26eaa9a90cf73349b1bfba0c",
+      "dimensions": [
+        1438,
+        1438
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 92,
+        "top": 95
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "hohenmund",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/hohenmund.png",
+      "sourceSha256": "d0de2ad267a0a3cd1da0b89e32a40afa91a47acf64b314de59a5dfc88afa854a",
+      "production": "assets/production/hohenmund.png",
+      "productionSha256": "b59e3f2b7c160fb9b2f4640a4423d7b3422a426a09c15297a150d1a50d2cd173",
+      "preview": "assets/crests/hohenmund.webp",
+      "previewSha256": "f1b9dd18848e1eb187e8d7a61103e34f4a9870cbae49f448c37dc37d80ad1c3e",
+      "dimensions": [
+        1370,
+        1370
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 59,
+        "top": 71
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 589,
+        "centre": [
+          685,
+          685
+        ]
+      }
+    },
+    {
+      "id": "klingen",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/klingen.png",
+      "sourceSha256": "a8c4820cf61fe51577499946837498274bfbee2d3d1e1bbe22879f7c660dbe91",
+      "production": "assets/production/klingen.png",
+      "productionSha256": "b10666b2494bf575bd135038d0aa9812a72d35f29601461278e4cac642efcd86",
+      "preview": "assets/crests/klingen.webp",
+      "previewSha256": "3724db7ed8d4d2fa01e2242ae3c451dadd59f1efb026d1a16bf41f4bb95500c6",
+      "dimensions": [
+        1388,
+        1388
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 70,
+        "top": 76
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 596,
+        "centre": [
+          694,
+          694
+        ]
+      }
+    },
+    {
+      "id": "klingenhagen",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/klingenhagen.png",
+      "sourceSha256": "174c71f67c62c05a764c61df5da4935a1a03169d534783df9cc4862caddb11dd",
+      "production": "assets/production/klingenhagen.png",
+      "productionSha256": "1c7767d23ff44fae012b52ac822b0430f1536a88b5626163b57afd21d8ffb515",
+      "preview": "assets/shields/klingenhagen.webp",
+      "previewSha256": "63060e3605138874562257588f0c9dcffe23854319609cb3fd9aa7abc085d592",
+      "dimensions": [
+        1456,
+        1456
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 100,
+        "top": 102
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "lachmund",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/lachmund.png",
+      "sourceSha256": "eb56671c67e357eac08604f0fec43072fc3f8e1eac7308e2024d1aa75c3f6147",
+      "production": "assets/production/lachmund.png",
+      "productionSha256": "3e03fdda2f8de2d603ef10a8a1739d2b513d5c52aedf1ddb1ac041ac46558d15",
+      "preview": "assets/crests/lachmund.webp",
+      "previewSha256": "bb01b5576c033b8fce9631692f556999d5fb6721d38b146a7fb76246ecc969e1",
+      "dimensions": [
+        1418,
+        1418
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 83,
+        "top": 84
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 609,
+        "centre": [
+          709,
+          709
+        ]
+      }
+    },
+    {
+      "id": "rebhart",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/rebhart.png",
+      "sourceSha256": "3b81f03f7d648d709a17078de134b7fc0e095631ede4f9e04098923bd27b99df",
+      "production": "assets/production/rebhart.png",
+      "productionSha256": "06945d67939a2df7f8b4f61fe65684db4a6b646044e3e89cacf0cc1b639f0237",
+      "preview": "assets/crests/rebhart.webp",
+      "previewSha256": "49580448a6f39612d4f2606ba4c17f77ff9a4f8fc560e1f3a9dd69e3c7e59775",
+      "dimensions": [
+        1388,
+        1388
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 70,
+        "top": 76
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 596,
+        "centre": [
+          694,
+          694
+        ]
+      }
+    },
+    {
+      "id": "riedenfeld",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/riedenfeld.png",
+      "sourceSha256": "d36fa7203f02341e1b81b0b8ba55d68db1881fea9a82a946e210d8986fddba12",
+      "production": "assets/production/riedenfeld.png",
+      "productionSha256": "d6d5ab04913d59e5e08c89fec4def458c8bb896d6194957231a3e3a6e99339a1",
+      "preview": "assets/crests/riedenfeld.webp",
+      "previewSha256": "e1d1ff183c021f4f4523363a57b18115773ea75ba67339c8e789d945a497be4b",
+      "dimensions": [
+        1374,
+        1374
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 61,
+        "top": 63
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 590,
+        "centre": [
+          687,
+          687
+        ]
+      }
+    },
+    {
+      "id": "ritten",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/ritten.png",
+      "sourceSha256": "a7dc4fc04b5e01ff5ad0167874ddb4104ddc95f840d928f96acc2d96f1a181fa",
+      "production": "assets/production/ritten.png",
+      "productionSha256": "d863be86ee685f100bb8a9b74b4eb7036e0799c71cf6ba65acc1779c5bd33966",
+      "preview": "assets/crests/ritten.webp",
+      "previewSha256": "4bbb2176a01c477a3bb730182fd0005c27f51e7944e843f46769b55f76ad536d",
+      "dimensions": [
+        1408,
+        1408
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 82,
+        "top": 84
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 605,
+        "centre": [
+          704,
+          704
+        ]
+      }
+    },
+    {
+      "id": "ronnach",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/ronnach-turtle.png",
+      "sourceSha256": "fec0aa36e38cd5b0acd5b6b0ab4d813f5d598156a7b67ff583e32e858f14cb56",
+      "production": "assets/production/ronnach.png",
+      "productionSha256": "9c1ec581b4d5fa37cd72dc1a1af15ee4d0ec186d24aaa7d15db8bc68739aac5a",
+      "preview": "assets/crests/ronnach.webp",
+      "previewSha256": "258893b19d7f650819a68d797e4ab5980e1ca847eec4c93201f69df7bc3cf607",
+      "dimensions": [
+        1360,
+        1360
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 54,
+        "top": 59
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 584,
+        "centre": [
+          680,
+          680
+        ]
+      }
+    },
+    {
+      "id": "rosswarth",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/rosswarth.png",
+      "sourceSha256": "92674c792a96a7d93c7640c3efbbe38543ccdd62bba685966ba85483758b6cfa",
+      "production": "assets/production/rosswarth.png",
+      "productionSha256": "df2099b9be6bdf1270dfd5e6c813765ed0c13e829f45de307797bb3539559c1e",
+      "preview": "assets/crests/rosswarth.webp",
+      "previewSha256": "a58e3c68b1f5320d939ac020356d198a26f7565b8d4605f43c548394a41c0d9b",
+      "dimensions": [
+        1418,
+        1418
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 83,
+        "top": 85
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 609,
+        "centre": [
+          709,
+          709
+        ]
+      }
+    },
+    {
+      "id": "rothmann",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/rothmann.png",
+      "sourceSha256": "8a15d5c89e05632c58a1d5d240339bc4cce847e36489c98808f298ab2c663d35",
+      "production": "assets/production/rothmann.png",
+      "productionSha256": "318a943d1908c34249f934650691ce2a0a2cec16a1f35fbee2974f76e95aa007",
+      "preview": "assets/crests/rothmann.webp",
+      "previewSha256": "5c656692de3423bd5dc5fd5ded0a0736643c8b8eb247684cefe85a1a8bbf3b7d",
+      "dimensions": [
+        1400,
+        1400
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 74,
+        "top": 80
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 602,
+        "centre": [
+          700,
+          700
+        ]
+      }
+    },
+    {
+      "id": "sassel",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/sassel.png",
+      "sourceSha256": "02638905fc2f4a90adfff190bac4e993a6c8225c911d5d23741c8d39c84971a4",
+      "production": "assets/production/sassel.png",
+      "productionSha256": "928beb05b3e783070c7a04d8e94b288c98c30b674f62f42213894f9ba87fa2a9",
+      "preview": "assets/shields/sassel.webp",
+      "previewSha256": "c83352aaad9eee778123669deb06abcb7a7a72f6635d4f7ee9de3d608b0b3c6a",
+      "dimensions": [
+        1432,
+        1432
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 90,
+        "top": 100
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "schenk",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/schenk.png",
+      "sourceSha256": "3a07352f6f93509f4178f85027c8dc349b36c71f77948093cc0e442a8e10ee10",
+      "production": "assets/production/schenk.png",
+      "productionSha256": "ac4dbf6c1143a35810781a08f21a391b488577e011f65fb4a8efd1d26e242aa9",
+      "preview": "assets/crests/schenk.webp",
+      "previewSha256": "64189e31e03c1967fd8bcd3638ec3c787735d6f4d3cb159e46f8c38654f21ea3",
+      "dimensions": [
+        1396,
+        1396
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 72,
+        "top": 76
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 600,
+        "centre": [
+          698,
+          698
+        ]
+      }
+    },
+    {
+      "id": "sgiathan",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/sgiathan.png",
+      "sourceSha256": "a30ad7aad4b53fc5dc73a00fd2a15e9cd39a136aa1b294bf54873ec9ebd4a7a9",
+      "production": "assets/production/sgiathan.png",
+      "productionSha256": "acec04766ed2776ddf188642343cd92e48c779b16b27dd757d24f132d983c943",
+      "preview": "assets/crests/sgiathan.webp",
+      "previewSha256": "979c635df87e0063ebbce52d2009fa0e328c57fe262e91f47afcd366fb177b52",
+      "dimensions": [
+        1364,
+        1364
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 56,
+        "top": 60
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 586,
+        "centre": [
+          682,
+          682
+        ]
+      }
+    },
+    {
+      "id": "truchsen",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/truchsen.png",
+      "sourceSha256": "5e96873e6aa4fa1abf1397c905ea1cc9919e72f0109d8e30dc9b723fc560aaf9",
+      "production": "assets/production/truchsen.png",
+      "productionSha256": "3f01190bdad9796c5399c79474fb89c906ae730b9934ce743672f24c43095b0c",
+      "preview": "assets/crests/truchsen.webp",
+      "previewSha256": "60599154538aee846971c3f7fbabd308e988ecce1720dd2beca92745e795a06e",
+      "dimensions": [
+        1388,
+        1388
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 72,
+        "top": 78
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 596,
+        "centre": [
+          694,
+          694
+        ]
+      }
+    },
+    {
+      "id": "velten",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/velten.png",
+      "sourceSha256": "752043c121ba83f4d89efeb6de9550f8bf20d272b76aa9413cde794484cf7c44",
+      "production": "assets/production/velten.png",
+      "productionSha256": "98180acc1f9b3c2f7568563b742db9bbfa9417638f1d8162fff77375c6335248",
+      "preview": "assets/crests/velten.webp",
+      "previewSha256": "b4357ce41f4d3661a5dc50c1d35c2686837c7d07d65e3656087b5ca78924c3be",
+      "dimensions": [
+        1414,
+        1414
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 81,
+        "top": 94
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 608,
+        "centre": [
+          707,
+          707
+        ]
+      }
+    },
+    {
+      "id": "welden",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/welden.png",
+      "sourceSha256": "3473189aafb01e047a0fdfd67b3c65dbc32b77cbecec12e9b9a13a558dab2c02",
+      "production": "assets/production/welden.png",
+      "productionSha256": "a142b868bb3e9504980834ef3b2bd4ce5be998e946a04634a6f6abfe09ba8ead",
+      "preview": "assets/shields/welden.webp",
+      "previewSha256": "a2ac523b185f2306abf9aa3b710988df696c1316988b51f22ae38b9c53994d8e",
+      "dimensions": [
+        1420,
+        1420
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 83,
+        "top": 92
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    },
+    {
+      "id": "welf",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/welf.png",
+      "sourceSha256": "451605d93a8175ae90bfad66e6c8e6a986f43fb1de8f673e7fd8700301ba03c8",
+      "production": "assets/production/welf.png",
+      "productionSha256": "8c945aab658eba983ea513e7e68aeaede9487c08a04cf0aeb414df9623f7ef64",
+      "preview": "assets/crests/welf.webp",
+      "previewSha256": "4b95b26e82a4fb34e6a365215a583f777c79be3dd86c4f1d5a7b803aa778b925",
+      "dimensions": [
+        1398,
+        1398
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 73,
+        "top": 75
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 601,
+        "centre": [
+          699,
+          699
+        ]
+      }
+    },
+    {
+      "id": "wolfram",
+      "kind": "house",
+      "shape": "circle",
+      "source": "assets/generated/wolfram.png",
+      "sourceSha256": "8bd6b00485b25d322bccb86a2b885de2b628fa47b0cc38160ad7e25a746b8cc8",
+      "production": "assets/production/wolfram.png",
+      "productionSha256": "dc927594afd502ae9e93ac9a5ba09bc5821565199bfbf21cac1b3f23294316cf",
+      "preview": "assets/crests/wolfram.webp",
+      "previewSha256": "8c3271c2486e24377d94510a8b15db4a95941c7fb1aea5a61454b627bb435119",
+      "dimensions": [
+        1396,
+        1396
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 72,
+        "top": 78
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": {
+        "radius": 600,
+        "centre": [
+          698,
+          698
+        ]
+      }
+    },
+    {
+      "id": "zollern",
+      "kind": "territory",
+      "shape": "kite",
+      "source": "assets/generated/zollern.png",
+      "sourceSha256": "4262ad1d1ad6bd39b12e1e983746cf0f4331237aabdbaa4e2bf57e3873e9c950",
+      "production": "assets/production/zollern.png",
+      "productionSha256": "34dff8629f8f1aee9324705fb195e8dc4da6a9e31a6231346656cdccba12349b",
+      "preview": "assets/shields/zollern.webp",
+      "previewSha256": "1f5aa5c4a84da02eb0bd12a0193502635d33af80d2e44d14360aedb909fca702",
+      "dimensions": [
+        1438,
+        1438
+      ],
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 93,
+        "top": 93
+      },
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "interiorOpaque": true,
+      "circle": null
+    }
+  ]
+}
