@@ -1,0 +1,23 @@
+{
+  "tool": "built-in image_gen",
+  "corrections": [
+    {
+      "id": "rosswarth",
+      "reason": "Schweif war unnatürlich an Brust und Vorderbeinen angesetzt; vom Nutzer ebenfalls ausdrücklich beanstandet.",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "Vorschau/Aldingen/assets/warriors/generated-archive/rosswarth-tail-edit-input-v1.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Edit the SECOND image: House Rosswarth knight standing beside a black Herzogsschimmer. FIRST image is binding matte painted STYLE reference ONLY, do not copy its character or haze. Correct ONLY the horse's anatomically misplaced TAIL. REMOVE the entire large silver hanging hair mass at the FAR LEFT of the picture, beside the horse's CHEST and FRONT LEGS, including its wrong root just below the breast strap. That left side must instead have the natural clean BLACK CHEST and front-leg silhouette. Keep the genuine silver MANE along the horse's NECK exactly intact. The real tail belongs at the CROUP/HINDQUARTERS at the BACK of this horse, to the RIGHT behind the standing knight; in this existing composition its root and tail are naturally FULLY OCCLUDED BY THE KNIGHT. Do NOT draw any new visible tail, do NOT move the erroneous tail to another exposed side, and do not make a second mane. Preserve EVERYTHING ELSE: same entire knight, pose, armour, feather frame, horse head, black body, silver mane, all visible legs and hooves, blue horse heraldry, reins, saddle, sword, matte grainy hand-painted style, full-body framing and portrait 2:3 at 1024x1536. No scenery, shadow, glow, haze or backdrop. TRUE TRANSPARENT PNG outside the two actual silhouettes and in open gaps; painted subjects opaque. This is a small anatomy correction, not a redesign."
+    },
+    {
+      "id": "brechten",
+      "reason": "Schweif war unnatürlich neben Hals und Vorderbeinen sichtbar.",
+      "references": [
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "Vorschau/Aldingen/assets/warriors/generated-archive/brechten-tail-edit-input-v1.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Edit the SECOND attached image: House Brechten cavalryman standing next to a white/light-grey Goldmaehne horse with honey-gold mane. FIRST image is matte painting style ONLY, not a costume or glow reference. Correct ONLY the horse's anatomically misplaced TAIL. REMOVE the long downward honey-gold hair mass on the FAR RIGHT below the horse's neck and beside its FRONT LEGS; its root is erroneously near the front chest. Retain the true honey-gold MANE ALONG THE NECK around its cheek and withers. Reconstruct a clean natural pale horse CHEST/front-leg silhouette where that extra hair was removed. The real tail belongs on the hindquarters at the BACK LEFT of this horse, behind the standing knight and rear body; in this exact composition it is naturally FULLY OCCLUDED. Do not draw any new visible tail, do not relocate the erroneous tail to another exposed side. Preserve everything else: the entire male knight, original open burgonet, single feather frame, brick-red coat and ivory horse-head heraldry, practical steel armour, correctly held curved saber, reins, saddle, entire horse head/body/visible legs and all hooves, full-body framing and quiet matte grainy painted style. Keep portrait 2:3 at 1024x1536 and existing character scale. TRUE TRANSPARENT PNG exterior and gaps, opaque painted subjects. No scenery, paper, floor, glow, fog, cast shadow or backdrop. A small anatomy correction, not a redesign."
+    }
+  ]
+}

@@ -21,7 +21,43 @@ Vier gemeinsame Grafschaftsschilde und elf einzelne Gebietsschilde ergeben
 fünfzehn Kite-Schilde auf quadratischer Bildfläche. Klingenhagens einziges Schild
 wird für die eigene Grafschaft und Baronie gemeinsam verwendet. Es gibt kein
 zusätzliches doppeltes herzogliches Grafschaftsbild. Haus- und Landeswappen bleiben
-kreisrund. Es werden keine Kriegerbilder erzeugt.
+kreisrund.
+
+## Kriegerdarstellungen
+
+Seit dem 27. Oktober 2026 erhalten alle 23 Familien eine eigene Ganzkörperfigur.
+Die sieben Husaren, sechs Aldmer, fünf Havner, drei Flamberger sowie je ein Eldner
+und Schirmer sind ausdrücklich Darstellungsvorschläge, keine kanonischen
+Klassenzuweisungen. Die vier albischen Clans behalten Kilt und Plaid. Alle Figuren
+folgen dem freigegebenen matten Stil; Aldingens praktische, deutsch-imperiale
+Rüstungsformen haben Vorrang vor Prunk. Havner tragen Säbel und Rückenköcher,
+keine sichtbaren Fernkampfwaffen.
+
+`warrior-art-direction.mjs` besitzt die hausbezogenen Entwürfe;
+`scripts/build-warrior-catalog.mjs` erzeugt daraus `warrior-data.mjs` und die
+vollständigen Prompts unter `assets/warriors/prompts.json`. Die Motivreferenzen
+sind die finalen Aldinger Wappen. Pferde erhalten ihre tatsächlichen
+Bestiarium-Verweise. `warrior-view.mjs` rendert nur die Darstellung und die
+Klassenbeschreibung im Hausfenster; es verwaltet keinen Zuordnungszustand.
+
+Generatororiginale werden unter `assets/warriors/generated` erhalten. Der dünne
+Wrapper `scripts/prepare_warriors.py` verwendet dieselbe gemeinsame Alpha-Pipeline
+wie Goldmund, Weisenfluh und Moinneach. Die freigegebene Bereinigung verändert
+keine RGB-Pixel. Produktions-PNGs, WebP-Vorschauen und Prüfbelege bleiben getrennt.
+Die gezielten Schweifkorrekturen für Rosswarth und Brechten stehen vollständig in
+`assets/warriors/corrections.json`; vorherige Fassungen und ihre Eingabebilder
+bleiben unter `generated-archive` erhalten. `provenance.json` verzeichnet sämtliche
+Generatorausgaben. Der Kontaktbogen wurde auf grobe Waffen-, Schild-, Griff- und
+Anatomiefehler geprüft; kleinere malerische Abweichungen bleiben bestehen.
+
+Die lokale Vorschau läuft unter `http://127.0.0.1:8881/Vorschau/Aldingen/`.
+Bei Bedarf vom Projektstamm mit `python -m http.server 8881 --bind 127.0.0.1`
+erneut starten. Kriegerprüfung:
+`python -B Vorschau/Aldingen/scripts/prepare_warriors.py audit --expected-count 23`.
+
+**Veröffentlichung:** Der Nutzer hat am 27. Oktober 2026 mit „Pushe und deploy
+dieses“ die bisherige Sperre für den fertigen Stand ausdrücklich aufgehoben.
+Die allgemeine Arbeitsvorlage steht in `../COUNTRY_PREPARATION_TEMPLATE.md`.
 
 `house-data.mjs` und `territory-data.mjs` besitzen Motive und Zuordnungen.
 `realm-context.mjs` besitzt ausschließlich den erzählerischen Kontext.

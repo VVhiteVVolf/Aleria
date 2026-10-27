@@ -2,6 +2,24 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
+Neueste Nutzeranweisung vom 27. Oktober 2026: **„Pushe und deploy dieses“**.
+Die Aldingen-Vorbereitungsseite einschließlich aller 23 Kriegerdarstellungen und
+der korrigierten Pferdeschweife ist damit für Push und Deployment freigegeben.
+Diese Freigabe hebt die zuvor am selben Tag ausgesprochene Sperre für diesen
+fertigen Stand auf. Künftige neue Arbeiten benötigen ihre jeweils geltende
+Veröffentlichungsfreigabe. Entwurfszuordnungen bleiben außerhalb kanonischer
+Register und Firebase-Daten.
+
+## Vorlage für Länder-Vorbereitungsseiten
+
+Für weitere Länder die [Arbeitsvorlage](Vorschau/COUNTRY_PREPARATION_TEMPLATE.md)
+lesen. Aldingen ist die ausführbare Referenz, `Vorschau/shared` besitzt die
+gemeinsame Karten-, Drag-, Zuordnungs- und Bildaufbereitungslogik. Kultur,
+Herrschaftsstruktur, Kartenregionen und Bildformate folgen dem aktuellen Auftrag;
+keine Aldinger Namen, Zahlen, Klassen oder Sitze ungeprüft übernehmen.
+
+## Bisherige Veröffentlichungsfreigabe
+
 Aktuelle Nutzeranweisung vom 25. Oktober 2026: Nach Fertigstellung der temporären
 Weisenfluh-Vorschlagsseite **alle lokalen Neuerungen sammeln, pushen und deployen**.
 Diese ausdrückliche Freigabe hebt den allgemeinen Push-/Deploy-Stopp vom

@@ -8,10 +8,31 @@ import {context} from '../Aldingen/realm-context.mjs';
 import {createPlacementState,createMapProposal} from '../Aldingen/placement-state.mjs';
 import {renderSeats,renderCounties,renderContext,escapeHtml} from '../Aldingen/proposal-render.mjs';
 import {renderHouseDetails,renderTerritoryDetails} from '../Aldingen/art-dialogs.mjs';
+import {warriors} from '../Aldingen/warrior-data.mjs';
 import {FAMILY_REGISTRY} from '../../Stammbäume/assets/js/data/families.registry.js';
 
 const root=new URL('../Aldingen/',import.meta.url),workspace=new URL('../../',root);
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+
+test('every Aldingen family has one complete warrior asset set with real class, heraldry and horse references',async()=>{
+ assert.deepEqual(warriors.map(w=>w.id).sort(),houses.map(h=>h.id).sort());
+ const {prompts,corrections,tool}=JSON.parse(await readFile(new URL('assets/warriors/prompts.json',root),'utf8'));
+ const {entries}=JSON.parse(await readFile(new URL('assets/warriors/manifest.json',root),'utf8'));
+ assert.equal(tool,'built-in image_gen');
+ assert.equal(prompts.length,23);assert.equal(entries.length,23);
+ const classPage=await readFile(new URL('Klassenordner/Klassenseite.html',workspace),'utf8');
+ for(const warrior of warriors){
+  const house=houses.find(h=>h.id===warrior.id),entry=entries.find(e=>e.id===warrior.id),prompt=prompts.find(p=>p.id===warrior.id);
+  assert.ok(entry&&prompt,warrior.id);assert.ok(classPage.includes(`id="klasse-goldmund-${warrior.classId}"`),warrior.id);
+  assert.deepEqual(warrior.palette,house.palette);assert.equal(warrior.albic,Boolean(house.clan));
+  for(const ref of prompt.references)await stat(new URL(ref,workspace));
+  for(const path of [warrior.image,warrior.fullsize,entry.source])await stat(new URL(path,root));
+  if(warrior.bestiary)await stat(new URL(warrior.bestiary,root));
+  assert.equal(entry.alpha.touchesCanvas,false);assert.equal(entry.proof.rgbUnchanged,true);
+ }
+ for(const correction of corrections)for(const ref of correction.references)await stat(new URL(ref,workspace));
+ for(const id of ['brechten','rosswarth'])assert.ok(corrections.some(c=>c.id===id));
+});
 
 test('Aldingen retains fifteen supplied houses, adds eight distinct unprefixed families and starts with only four specified seats',()=>{
  assert.equal(houses.length,23);
@@ -99,7 +120,7 @@ test('all sixteen supplied crests remain byte-identical and the large original m
 test('the rendered discussion page includes all families, all district targets, the new history and safe independent draft dependencies',async()=>{
  const placements=createPlacementState().current(),seats=renderSeats(placements,null);
  assert.equal((seats.match(/class="seat-card"/g)||[]).length,11);
- for(const house of houses){const html=renderHouseDetails(house,placements);assert.ok(html.includes(house.crest)&&html.includes(house.name));assert.doesNotMatch(html,/Kriegerdarstellung/);}
+ for(const house of houses){const html=renderHouseDetails(house,placements);assert.ok(html.includes(house.crest)&&html.includes(house.name));assert.match(html,/Kriegerdarstellung/);assert.ok(html.includes(`assets/warriors/previews/${house.id}.webp`));}
  for(const territory of territoryShields)assert.ok(renderTerritoryDetails(territory).includes(territory.id+'.webp'));
  assert.equal(escapeHtml('<draft>"&'),'&lt;draft&gt;&quot;&amp;');
  const story=renderContext();for(const name of ['Órneach','Aulvernath','Iathneach','Lothir','Champania','Triarichie'])assert.ok(story.includes(name),name);

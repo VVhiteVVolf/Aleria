@@ -1,0 +1,14 @@
+.house-showcase{display:grid;grid-template-columns:minmax(180px,.8fr) minmax(0,1.2fr);gap:35px;align-items:center;margin:0 0 32px}
+.house-showcase figure{margin:0;text-align:center}
+.house-showcase img{display:block;width:100%;height:auto;object-fit:contain}
+.house-showcase .house-heraldry img{max-width:310px;margin:auto}
+.house-showcase .house-warrior img{max-height:620px}
+.house-showcase figcaption{font:11px/1.9 var(--sans);margin-top:10px;color:var(--muted)}
+.house-facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:35px;border-top:1px solid var(--line);padding-top:26px}
+.house-facts p{font-size:15px;line-height:1.8;color:var(--muted)}
+.house-facts dl>div{padding:11px 0;border-top:1px solid var(--line)}
+.house-facts dt{font:10px var(--sans);color:var(--muted);margin-bottom:5px}
+.house-facts dd{font-size:15px;line-height:1.6;margin:0}
+.house-facts .subtle,.house-facts .original-link{font:11px/1.7 var(--sans);margin-top:20px}
+.warrior-description h3{font-size:27px;margin:8px 0 12px}
+@media(max-width:700px){.house-showcase{grid-template-columns:1fr;gap:24px}.house-showcase .house-heraldry img{max-width:190px}.house-showcase .house-warrior img{max-height:560px}.house-facts{grid-template-columns:1fr;gap:24px}.warrior-description{border-top:1px solid var(--line);padding-top:24px}}
