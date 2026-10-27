@@ -1,0 +1,87 @@
+{
+  "removedBuildFiles": 73081,
+  "removedBuildBytes": 24993312121,
+  "removedNpmCacheBytes": 305454124,
+  "totalRemovedGiB": 23.56,
+  "skippedFiles": 0,
+  "reasons": {
+    "reachable-in-pushed-git": 71993,
+    "generated-vite-bundle": 1088
+  },
+  "allRemovedFilesHadSingleLink": true,
+  "preservedBuildContextFiles": 14623,
+  "remaining": [
+    {
+      "build": "wellenruh-build",
+      "retainedFiles": 1166
+    },
+    {
+      "build": "praetendenten-build",
+      "retainedFiles": 1197
+    },
+    {
+      "build": "praetendenten-step2-build",
+      "retainedFiles": 1199
+    },
+    {
+      "build": "praetendenten-step3-build",
+      "retainedFiles": 1201
+    },
+    {
+      "build": "praetendenten-step4-build",
+      "retainedFiles": 1204
+    },
+    {
+      "build": "praetendenten-step5-build",
+      "retainedFiles": 1207
+    },
+    {
+      "build": "praetendenten-step6-build",
+      "retainedFiles": 1210
+    },
+    {
+      "build": "praetendenten-step7-build",
+      "retainedFiles": 1212
+    },
+    {
+      "build": "praetendenten-canon-build",
+      "retainedFiles": 1216
+    },
+    {
+      "build": "praetendenten-layout-build",
+      "retainedFiles": 1212
+    },
+    {
+      "build": "leitheach-timeline-build",
+      "retainedFiles": 1301
+    },
+    {
+      "build": "coastal-history-build",
+      "retainedFiles": 1298
+    }
+  ],
+  "diskNow": {
+    "total": 1000186310656,
+    "used": 901550936064,
+    "free": 98635374592
+  },
+  "recoveryManifestSha256": "466041335426f48d5171ae92a5c4b5f40c5e230603e80c1276f94b88bb574664",
+  "recoveryArchiveBytes": 3750484,
+  "release": {
+    "deployId": "6ae0fc59f61edd9f87793fa7",
+    "commit": "a8622e93eec4bbafc766381b2846b35901ca2332",
+    "verifiedFiles": 28232,
+    "functions": [
+      "document-publisher",
+      "family-publisher",
+      "imgur-album",
+      "karten-publisher",
+      "wedding-publisher",
+      "world-content-publisher"
+    ],
+    "url": "https://dieweltvonaleria.netlify.app",
+    "verifiedAt": "2026-10-27T19:33:58.944Z"
+  },
+  "stageRemoved": true,
+  "functionSnapshotRemoved": true
+}
