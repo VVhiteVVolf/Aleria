@@ -1,6 +1,7 @@
 /* Reader owns bounded text and the navigation of independently stored sheets. */
 .notice-text-window { min-width: 0; }
-.notice-scroll-copy { max-height: var(--notice-text-height, min(420px, 60dvh)); overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; padding-right: .65rem; overflow-wrap: anywhere; }
+/* Explicit template limits take precedence over height matched to a facts column. */
+.notice-scroll-copy { max-height: var(--notice-template-text-height, var(--notice-text-height, min(420px, 60dvh))); overflow-y: auto; overflow-x: hidden; scrollbar-gutter: stable; padding-right: .65rem; overflow-wrap: anywhere; }
 .notice-scroll-copy:focus-visible { outline: 1px solid #9d7a3f; outline-offset: 4px; }
 .notice-scroll-copy::-webkit-scrollbar { width: 8px; }
 .notice-scroll-copy::-webkit-scrollbar-track { background: #a7864e2d; border-radius: 5px; }
@@ -40,5 +41,5 @@
   .notice-stack-nav { padding-left: .5rem; gap: .3rem; }
   .notice-stack-nav > button { padding: .4rem; }
   .notice-stack-nav > button span { display: none; }
-  .notice-scroll-copy { max-height: var(--notice-text-height, 48dvh); }
+  .notice-scroll-copy { max-height: var(--notice-template-text-height, var(--notice-text-height, 48dvh)); }
 }

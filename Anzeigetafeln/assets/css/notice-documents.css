@@ -17,7 +17,11 @@
 .notice-document--vermisst { --notice-accent: #575968; --notice-tint: #dedacc; --notice-paper: #eee7d5; }
 .notice-document--steckbrief { --notice-accent: #71372b; --notice-tint: #decaac; --notice-paper: #ecdbb9; }
 .notice-document--zeitung { --notice-accent: #39372e; --notice-tint: #e0dbca; --notice-paper: #eee9d9; }
-.notice-document--ankuendigung { --notice-accent: #3d5948; --notice-tint: #d5d9bc; }
+.notice-document--ankuendigung {
+  --notice-accent: #3d5948;
+  --notice-tint: #d5d9bc;
+  --notice-template-text-height: min(720px, 75dvh);
+}
 .notice-document--handel { --notice-accent: #79512e; --notice-tint: #e4cf9f; --notice-paper: #f1e3c2; }
 .notice-document--erlass { --notice-accent: #763c36; --notice-tint: #e7d5bf; }
 .notice-document--einladung { --notice-accent: #6c5267; --notice-tint: #e6d7d8; --notice-paper: #f3e9d9; }
@@ -45,6 +49,7 @@
 .notice-proclamation > div { min-width: 0; }
 .notice-wording > .notice-facts { margin: 1.6rem 0 0; }
 .notice-copy { max-width: 68ch; margin-inline: auto; font-size: 1.2rem; line-height: 1.75; }
+.notice-document--ankuendigung .notice-copy { max-width: none; }
 .notice-copy p { margin: 0 0 .9em; }
 .notice-copy > :last-child { margin-bottom: 0; }
 .notice-copy ul, .notice-copy ol { padding-left: 1.4em; margin-bottom: .85em; }
