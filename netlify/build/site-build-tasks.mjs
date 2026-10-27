@@ -54,6 +54,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'notice-boards', label: 'Notice templates, typography, stacks, bounded text and goods rewards',
     inputs: ['Anzeigetafeln/', 'AleriaAlmanach/modules/archive/archive-entry-links.js', 'Orte/assets/js/orte-notice-board.js', 'Orte/tests/poi-bridges.test.mjs',
+      'IconOrdner/Steckis/', 'netlify/functions/world-content-publisher.mjs',
       'Fonts/', 'AleriaAlmanach/modules/language/', 'AleriaAlmanach/DokumentenWerkstatt/js/fonts/',
       'AleriaAlmanach/modules/comments/comments-spell-fonts.js',
       'AleriaAlmanach/scripts/check-comment-language-bubbles.js',
@@ -66,6 +67,7 @@ export const SITE_BUILD_TASKS = [
       ['Anzeigetafeln/tools/validate-tafeln-structure.mjs'],
       ['AleriaAlmanach/scripts/check-comment-language-bubbles.js'],
       testCommand('Anzeigetafeln/tests/authored-notices.test.mjs', 'Anzeigetafeln/tests/gwynthor-board.test.mjs',
+        'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs',
         'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs',
         'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs', 'Anzeigetafeln/tests/notice-seals.test.mjs', 'Anzeigetafeln/tests/notice-signoffs.test.mjs', 'Anzeigetafeln/tests/notice-module-links.test.mjs',
         'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Orte/tests/poi-bridges.test.mjs',

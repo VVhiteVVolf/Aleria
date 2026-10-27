@@ -7,7 +7,13 @@
   const draftKey = `aleria.tafeln.draft.${boardId}`;
   const endpoint = '/.netlify/functions/world-content-publisher';
   let publishedRevision = 0;
+  let workingRevision = 0;
   let publishSessionKey = '';
+  let loaded = false;
+  let publishing = false;
+  let knownDraft = null;
+  let sourceIncomplete = false;
+  let writeProblem = '';
 
   function setStatus(state) {
     const dot = document.getElementById('sdot');
@@ -16,7 +22,7 @@
     if (label) {
       if (state === 'sv') label.textContent = 'wird lokal gesichert';
       else if (state === 'er') label.textContent = 'Speicherfehler';
-      else label.textContent = readDraft() ? 'lokaler Entwurf' : 'veröffentlicht';
+      else label.textContent = sourceIncomplete ? 'Altstand fehlt · lokaler Entwurf' : readDraft() ? 'lokaler Entwurf' : 'veröffentlicht';
     }
   }
 
@@ -31,20 +37,31 @@
   }
 
   function writeDraft(state) {
+    writeProblem = '';
     try {
-      localStorage.setItem(draftKey, JSON.stringify({ basedOnRevision: publishedRevision, savedAt: new Date().toISOString(), state }));
+      if (localStorage.getItem(draftKey) !== knownDraft) {
+        writeProblem = 'Ein anderer Tab hat diesen Entwurf geändert. Bitte deinen Stand als JSON sichern und die Tafel neu öffnen.';
+        return false;
+      }
+      const value = JSON.stringify({ basedOnRevision: workingRevision, savedAt: new Date().toISOString(), ...(sourceIncomplete ? { sourceIncomplete: true } : {}), state });
+      localStorage.setItem(draftKey, value);
+      knownDraft = value;
       window.dispatchEvent(new CustomEvent('aleria:tafel:draft-status', { detail: { hasDraft: true } }));
       return true;
     } catch (error) {
       console.warn('[tafel-storage] Lokaler Entwurf konnte nicht gespeichert werden:', error);
+      writeProblem = 'Speichern fehlgeschlagen. Der lokale Speicher ist voll oder nicht verfügbar. Den Stand bitte als JSON sichern.';
       return false;
     }
   }
 
   function clearDraft() {
     try {
+      if (localStorage.getItem(draftKey) !== knownDraft) return false;
       localStorage.removeItem(draftKey);
+      knownDraft = null;
       window.dispatchEvent(new CustomEvent('aleria:tafel:draft-status', { detail: { hasDraft: false } }));
+      return true;
     } catch {
       /* Der veröffentlichte Stand bleibt davon unberührt. */
     }
@@ -54,7 +71,7 @@
     if (!dataPath) return null;
     try {
       const response = await fetch(dataPath, { cache: 'no-store' });
-      return response.ok ? response.json() : null;
+      return response.ok ? await response.json() : null;
     } catch (error) {
       console.warn('[tafel-storage] GitHub-Fassung konnte nicht geladen werden:', error);
       return null;
@@ -90,51 +107,71 @@
       return typeof value === 'string' ? JSON.parse(value) : value || null;
     } catch (error) {
       console.warn('[tafel-storage] Alte Firebase-Fassung ist nicht lesbar:', error);
+      sourceIncomplete = true;
       return null;
     }
   }
 
   window._fb = {
     async saveAll(state) {
+      if (!loaded) return false;
       setStatus('sv');
       if (!writeDraft(state)) {
         setStatus('er');
-        window.TafelRuntime?.toast('Speichern fehlgeschlagen: Der lokale Speicher ist voll. Bilder verkleinern oder Bildlinks verwenden; den Entwurf bei Bedarf als JSON sichern.');
+        window.TafelRuntime?.toast(writeProblem);
         return false;
       }
       setTimeout(() => setStatus(''), 250);
       return true;
     },
     sub(callback) {
-      (async () => {
+      return (async () => {
         const [published, authored] = await Promise.all([
           fetchPublished(), window.TafelAuthoredNotices.load(storageConfig.authoredNoticesPath),
         ]);
         const withAuthored = state => window.TafelAuthoredNotices.merge(state, authored);
         publishedRevision = Math.max(0, Number(published?.revision || 0));
+        workingRevision = publishedRevision;
+        knownDraft = localStorage.getItem(draftKey);
         const draft = readDraft();
         if (draft?.state) {
+          sourceIncomplete = Boolean(draft.sourceIncomplete);
+          workingRevision = Math.max(0, Number(draft.basedOnRevision) || 0);
           if (published && Number(draft.basedOnRevision || 0) < publishedRevision) {
             window.setTimeout(() => window.TafelRuntime?.toast?.('Auf GitHub liegt eine neuere Fassung als dein lokaler Entwurf.'), 0);
           }
+          loaded = true;
           callback(withAuthored(draft.state));
           setStatus('');
           return;
         }
         if (published?.state) {
+          loaded = true;
           callback(withAuthored(published.state));
           setStatus('');
           return;
         }
         const legacyState = await fetchLegacyFirebase();
+        // Migration may take time. A draft created by another tab takes priority.
+        knownDraft = localStorage.getItem(draftKey);
+        const lateDraft = readDraft();
+        loaded = true;
+        if (lateDraft?.state) {
+          sourceIncomplete = Boolean(lateDraft.sourceIncomplete);
+          workingRevision = Math.max(0, Number(lateDraft.basedOnRevision) || 0);
+          callback(withAuthored(lateDraft.state));
+          setStatus('');
+          return;
+        }
         if (legacyState) {
           const merged = withAuthored(legacyState);
           writeDraft(merged);
           callback(merged);
           window.setTimeout(() => window.TafelRuntime?.toast?.('Firebase-Altstand lokal gesichert · bitte online veröffentlichen'), 0);
-        } else if (authored.zettel.length) {
-          callback(withAuthored(null));
+        } else {
+          callback(withAuthored({ zettel: [] }));
         }
+        setStatus('');
       })();
     },
   };
@@ -144,6 +181,8 @@
     hasSession: () => Boolean(publishSessionKey),
     hasLocalDraft: () => Boolean(readDraft()),
     publishedRevision: () => publishedRevision,
+    isReady: () => loaded,
+    useImportedState: () => { sourceIncomplete = false; },
     async authenticate(key) {
       const candidate = String(key || '').trim();
       if (!candidate) throw new Error('Bitte den Veröffentlichungsschlüssel eingeben.');
@@ -157,12 +196,19 @@
       publishSessionKey = '';
     },
     async publish(state) {
+      if (!loaded) throw new Error('Die Tafel wird noch geladen.');
+      if (sourceIncomplete) throw new Error('Der bisherige Firebase-Stand konnte nicht geladen werden. Veröffentlichung gesperrt: Bitte einen vollständigen JSON-Stand importieren. Dein lokaler Entwurf bleibt erhalten.');
+      if (publishing) throw new Error('Eine Veröffentlichung läuft bereits.');
       if (!publishSessionKey) throw new Error('Bitte zuerst den Veröffentlichungsschlüssel eingeben.');
       if (!dataPath) throw new Error('Diese Tafel besitzt noch keinen dataPath.');
+      if (localStorage.getItem(draftKey) !== knownDraft) throw new Error('Ein anderer Tab hat den Entwurf geändert. Bitte zuerst deinen Stand als JSON sichern.');
+      const sent = JSON.parse(JSON.stringify(state));
+      publishing = true;
+      try {
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: { Authorization: `Bearer ${publishSessionKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ scope: 'anzeigetafeln', dataPath, state, expectedRevision: publishedRevision }),
+        body: JSON.stringify({ scope: 'anzeigetafeln', dataPath, state: sent, expectedRevision: workingRevision }),
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
@@ -171,9 +217,16 @@
         throw error;
       }
       publishedRevision = payload.revision;
-      clearDraft();
+      workingRevision = payload.revision;
+      const current = window.TafelState?.snapshot() || state;
+      const stored = readDraft()?.state;
+      if (JSON.stringify(current) === JSON.stringify(sent) && (!stored || JSON.stringify(stored) === JSON.stringify(sent))) clearDraft();
+      else if (!writeDraft(current)) window.TafelRuntime?.toast('Online gespeichert; den neueren lokalen Stand bitte zusätzlich als JSON sichern.');
       setStatus('');
       return payload;
+      } finally {
+        publishing = false;
+      }
     },
   });
 

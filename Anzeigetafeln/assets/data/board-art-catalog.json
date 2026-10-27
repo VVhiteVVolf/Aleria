@@ -1,0 +1,1019 @@
+{
+  "version": 1,
+  "posters": [
+    {
+      "id": "angebot-haendler",
+      "name": "Angebot des Händlers",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Angebot des Händlers.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 25,
+        "y": 33,
+        "w": 358,
+        "h": 551
+      },
+      "aspect": 0.649728
+    },
+    {
+      "id": "ankuendigung-quer",
+      "name": "Ankündigung – großes Querformat",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_31_05-removebg-preview.png",
+      "width": 612,
+      "height": 408,
+      "bounds": {
+        "x": 4,
+        "y": 18,
+        "w": 602,
+        "h": 378
+      },
+      "aspect": 1.592593
+    },
+    {
+      "id": "ankuendigung-bier",
+      "name": "Ankündigung – Krug und Bildfeld",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_05_01-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 16,
+        "y": 10,
+        "w": 381,
+        "h": 594
+      },
+      "aspect": 0.641414
+    },
+    {
+      "id": "ankuendigung-bild",
+      "name": "Ankündigung mit Bildfeld",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/Ankünidgung.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 14,
+        "y": 25,
+        "w": 384,
+        "h": 562
+      },
+      "aspect": 0.683274
+    },
+    {
+      "id": "ankuendigung",
+      "name": "Ankündigung mit Siegel",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/Ankündigung.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 22,
+        "y": 30,
+        "w": 367,
+        "h": 557
+      },
+      "aspect": 0.658887
+    },
+    {
+      "id": "arbeit",
+      "name": "Arbeit!",
+      "category": "Handel & Arbeit",
+      "src": "../Anzeigetafeln/assets/images/board-posters/arbeit-v1.png",
+      "width": 994,
+      "height": 1582,
+      "bounds": {
+        "x": 60,
+        "y": 108,
+        "w": 881,
+        "h": 1394
+      },
+      "aspect": 0.631994,
+      "provenance": "Reconstructed from original Gwynthor board using built-in image_gen; prompts in generation-prompts.json",
+      "alphaValidation": {
+        "zero": 360820,
+        "opaque": 256,
+        "total": 1572508
+      }
+    },
+    {
+      "id": "arena",
+      "name": "Arena",
+      "category": "Veranstaltungen",
+      "src": "../IconOrdner/Steckis/Arena.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 5,
+        "y": 9,
+        "w": 399,
+        "h": 597
+      },
+      "aspect": 0.668342
+    },
+    {
+      "id": "baecker-gesucht",
+      "name": "Bäcker gesucht",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__00_44_45-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 12,
+        "y": 17,
+        "w": 386,
+        "h": 576
+      },
+      "aspect": 0.670139
+    },
+    {
+      "id": "beerdigung",
+      "name": "Beerdigung",
+      "category": "Ankündigungen",
+      "src": "../Anzeigetafeln/assets/images/board-posters/beerdigung-v1.png",
+      "width": 1003,
+      "height": 1568,
+      "bounds": {
+        "x": 44,
+        "y": 109,
+        "w": 923,
+        "h": 1372
+      },
+      "aspect": 0.672741,
+      "provenance": "Reconstructed from original Gwynthor board using built-in image_gen; prompts in generation-prompts.json",
+      "alphaValidation": {
+        "zero": 343947,
+        "opaque": 1086,
+        "total": 1572704
+      }
+    },
+    {
+      "id": "vampir",
+      "name": "Blutsauger!",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Vampir.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 7,
+        "y": 5,
+        "w": 396,
+        "h": 603
+      },
+      "aspect": 0.656716
+    },
+    {
+      "id": "blutbund",
+      "name": "Der Blutbund",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Blutbund.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 4,
+        "y": 1,
+        "w": 404,
+        "h": 609
+      },
+      "aspect": 0.663383
+    },
+    {
+      "id": "barden-gesucht",
+      "name": "Der rostige Haken stellt Barden ein",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__00_48_17-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 0,
+        "w": 393,
+        "h": 612
+      },
+      "aspect": 0.642157
+    },
+    {
+      "id": "abtruennige",
+      "name": "Die Abtrünnigen",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Abtrünnige.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 36,
+        "y": 71,
+        "w": 346,
+        "h": 485
+      },
+      "aspect": 0.713402
+    },
+    {
+      "id": "fianna",
+      "name": "Die Fianna",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Fianna - II.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 17,
+        "y": 16,
+        "w": 378,
+        "h": 585
+      },
+      "aspect": 0.646154
+    },
+    {
+      "id": "fianna-rolle",
+      "name": "Die Fianna – Schriftrolle",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Fianna - I.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 7,
+        "y": 21,
+        "w": 397,
+        "h": 575
+      },
+      "aspect": 0.690435
+    },
+    {
+      "id": "klingende-muenze",
+      "name": "Die Klingende Münze",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Klingende Münze.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 17,
+        "y": 18,
+        "w": 380,
+        "h": 581
+      },
+      "aspect": 0.654045
+    },
+    {
+      "id": "richter",
+      "name": "Die Richter",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Richter.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 6,
+        "y": 8,
+        "w": 397,
+        "h": 601
+      },
+      "aspect": 0.660566
+    },
+    {
+      "id": "wache-rekruten",
+      "name": "Die Wache sucht Rekruten",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_16._Juni_2025__11_56_32-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 11,
+        "y": 9,
+        "w": 389,
+        "h": 593
+      },
+      "aspect": 0.655987
+    },
+    {
+      "id": "diebe",
+      "name": "Diebe",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/Diebe.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 19,
+        "y": 20,
+        "w": 373,
+        "h": 576
+      },
+      "aspect": 0.647569
+    },
+    {
+      "id": "erlass",
+      "name": "Erlass",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/Gesetz.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 18,
+        "y": 16,
+        "w": 376,
+        "h": 585
+      },
+      "aspect": 0.642735
+    },
+    {
+      "id": "geist",
+      "name": "Erscheinung!",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Geist.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 9,
+        "y": 7,
+        "w": 394,
+        "h": 601
+      },
+      "aspect": 0.655574
+    },
+    {
+      "id": "feiertag",
+      "name": "Feiertag",
+      "category": "Veranstaltungen",
+      "src": "../IconOrdner/Steckis/Feiertag.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 18,
+        "y": 15,
+        "w": 377,
+        "h": 586
+      },
+      "aspect": 0.643345
+    },
+    {
+      "id": "formling",
+      "name": "Formling?",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Formling.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 9,
+        "y": 8,
+        "w": 394,
+        "h": 600
+      },
+      "aspect": 0.656667
+    },
+    {
+      "id": "gesucht-leer",
+      "name": "Gesucht – freies Bildfeld",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__00_51_29-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 16,
+        "y": 16,
+        "w": 379,
+        "h": 578
+      },
+      "aspect": 0.655709
+    },
+    {
+      "id": "gesucht-kapuzenmann",
+      "name": "Gesucht – Kapuzenmann",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__03_23_18-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 12,
+        "y": 16,
+        "w": 384,
+        "h": 574
+      },
+      "aspect": 0.66899
+    },
+    {
+      "id": "federkiel",
+      "name": "Gilde Federkiel",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Federkiel.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 9,
+        "y": 4,
+        "w": 394,
+        "h": 608
+      },
+      "aspect": 0.648026
+    },
+    {
+      "id": "goldglanz",
+      "name": "Goldglanz Brauerei",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Goldglanz.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 12,
+        "y": 28,
+        "w": 385,
+        "h": 560
+      },
+      "aspect": 0.6875
+    },
+    {
+      "id": "grabmal",
+      "name": "Grabmal",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Grab.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 15,
+        "y": 13,
+        "w": 381,
+        "h": 589
+      },
+      "aspect": 0.646859
+    },
+    {
+      "id": "grimmlinge",
+      "name": "Grimmlinge",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_16._Juni_2025__11_35_05-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 15,
+        "y": 11,
+        "w": 381,
+        "h": 593
+      },
+      "aspect": 0.642496
+    },
+    {
+      "id": "hexe",
+      "name": "Hexe?",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Hexe.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 11,
+        "y": 23,
+        "w": 388,
+        "h": 569
+      },
+      "aspect": 0.681898
+    },
+    {
+      "id": "hilfe",
+      "name": "Hilfe!",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_07_52-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 10,
+        "y": 12,
+        "w": 393,
+        "h": 590
+      },
+      "aspect": 0.666102
+    },
+    {
+      "id": "hochzeit",
+      "name": "Hochzeit - Tudwal Draig & Revelyn Penderyn",
+      "category": "Ankündigungen",
+      "src": "../Anzeigetafeln/assets/images/board-posters/hochzeit-v1.png",
+      "width": 1583,
+      "height": 994,
+      "bounds": {
+        "x": 52,
+        "y": 69,
+        "w": 1484,
+        "h": 870
+      },
+      "aspect": 1.705747,
+      "provenance": "Reconstructed from original Gwynthor board using built-in image_gen; prompts in generation-prompts.json",
+      "alphaValidation": {
+        "zero": 292183,
+        "opaque": 696,
+        "total": 1573502
+      }
+    },
+    {
+      "id": "hornlinge",
+      "name": "Hornlinge",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/ChatGPT Image 14. Juni 2025, 22_10_56.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 51,
+        "y": 64,
+        "w": 926,
+        "h": 1414
+      },
+      "aspect": 0.65488
+    },
+    {
+      "id": "melwyn",
+      "name": "Ist Melwyn ein Doppelgänger?",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Melwyn.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "w": 394,
+        "h": 601
+      },
+      "aspect": 0.655574
+    },
+    {
+      "id": "jagdklingen",
+      "name": "Jagdklingen",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Jagdklingen.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 11,
+        "w": 394,
+        "h": 593
+      },
+      "aspect": 0.664418
+    },
+    {
+      "id": "kampf",
+      "name": "Kampf!",
+      "category": "Veranstaltungen",
+      "src": "../IconOrdner/Steckis/Kampf.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 12,
+        "y": 10,
+        "w": 386,
+        "h": 594
+      },
+      "aspect": 0.649832
+    },
+    {
+      "id": "blank-lang",
+      "name": "Leeres Pergament – Querformat",
+      "category": "Leere Plakate",
+      "src": "../IconOrdner/Steckis/Blank Lang.png",
+      "width": 785,
+      "height": 318,
+      "bounds": {
+        "x": 6,
+        "y": 23,
+        "w": 771,
+        "h": 282
+      },
+      "aspect": 2.734043
+    },
+    {
+      "id": "blank-verbrannt",
+      "name": "Leeres zerrissenes Plakat",
+      "category": "Leere Plakate",
+      "src": "../Anzeigetafeln/assets/images/board-posters/blank-verbrannt-v1.png",
+      "width": 1064,
+      "height": 1479,
+      "bounds": {
+        "x": 94,
+        "y": 81,
+        "w": 889,
+        "h": 1319
+      },
+      "aspect": 0.673995,
+      "provenance": "Reconstructed from original Gwynthor board using built-in image_gen; prompts in generation-prompts.json",
+      "alphaValidation": {
+        "zero": 581276,
+        "opaque": 1443,
+        "total": 1573656
+      }
+    },
+    {
+      "id": "magiergilde",
+      "name": "Magiergilde",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Magiergilde.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 10,
+        "y": 12,
+        "w": 390,
+        "h": 590
+      },
+      "aspect": 0.661017
+    },
+    {
+      "id": "fortuna",
+      "name": "Markt der Fortuna",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Markt der Fortuna.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 10,
+        "y": 31,
+        "w": 391,
+        "h": 557
+      },
+      "aspect": 0.701975
+    },
+    {
+      "id": "moerder",
+      "name": "Mörder!",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/Mörder.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 25,
+        "y": 28,
+        "w": 362,
+        "h": 562
+      },
+      "aspect": 0.644128
+    },
+    {
+      "id": "moewensang",
+      "name": "Möwensang",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Möwensang.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "w": 400,
+        "h": 602
+      },
+      "aspect": 0.664452
+    },
+    {
+      "id": "lilienorden",
+      "name": "Orden der Lilie",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Lilien Orden.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "w": 391,
+        "h": 599
+      },
+      "aspect": 0.652755
+    },
+    {
+      "id": "pamphlet",
+      "name": "Pamphlet",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/Pamphlet.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 15,
+        "y": 8,
+        "w": 381,
+        "h": 599
+      },
+      "aspect": 0.63606
+    },
+    {
+      "id": "penderyn",
+      "name": "Penderyn Destillerie",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Penderyn.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 6,
+        "y": 9,
+        "w": 395,
+        "h": 601
+      },
+      "aspect": 0.657238
+    },
+    {
+      "id": "pferdediebe",
+      "name": "Pferdediebe",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_14._Juni_2025__21_58_11-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 32,
+        "y": 26,
+        "w": 348,
+        "h": 565
+      },
+      "aspect": 0.615929
+    },
+    {
+      "id": "pickende-spechte",
+      "name": "Pickende Spechte",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juli_2025__18_47_21-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 5,
+        "y": 7,
+        "w": 399,
+        "h": 595
+      },
+      "aspect": 0.670588
+    },
+    {
+      "id": "rhosmere",
+      "name": "Rhosmeres Rösser",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Rhosmere-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 9,
+        "y": 6,
+        "w": 393,
+        "h": 600
+      },
+      "aspect": 0.655
+    },
+    {
+      "id": "ruinenpforte",
+      "name": "Ruinenpforte",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Ruinenpforte.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 11,
+        "y": 7,
+        "w": 389,
+        "h": 588
+      },
+      "aspect": 0.661565
+    },
+    {
+      "id": "schiffsbauer",
+      "name": "Schiffsbauer-Gilde",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Schiffsbauer.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 7,
+        "w": 394,
+        "h": 603
+      },
+      "aspect": 0.6534
+    },
+    {
+      "id": "schiffswrack",
+      "name": "Schiffswrack!",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Schiffswrack.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 8,
+        "y": 7,
+        "w": 397,
+        "h": 601
+      },
+      "aspect": 0.660566
+    },
+    {
+      "id": "zeitung",
+      "name": "Schwarzbote-Zeitung",
+      "category": "Zeitungen",
+      "src": "../IconOrdner/Steckis/Zeitung.png",
+      "width": 612,
+      "height": 408,
+      "bounds": {
+        "x": 23,
+        "y": 14,
+        "w": 582,
+        "h": 378
+      },
+      "aspect": 1.539683
+    },
+    {
+      "id": "schwarzdorn",
+      "name": "Schwarzdorn Brauerei",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Schwarzdorn.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 21,
+        "y": 23,
+        "w": 374,
+        "h": 563
+      },
+      "aspect": 0.664298
+    },
+    {
+      "id": "sirenen",
+      "name": "Sirenen!",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Sirene.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 15,
+        "y": 19,
+        "w": 382,
+        "h": 575
+      },
+      "aspect": 0.664348
+    },
+    {
+      "id": "soeldner",
+      "name": "Söldner gesucht",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_13_51-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 12,
+        "y": 4,
+        "w": 389,
+        "h": 608
+      },
+      "aspect": 0.639803
+    },
+    {
+      "id": "teyrngarch",
+      "name": "Teyrngarch Brauerzunft",
+      "category": "Handel & Arbeit",
+      "src": "../IconOrdner/Steckis/Teyrngarch Brauer.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 17,
+        "y": 57,
+        "w": 376,
+        "h": 513
+      },
+      "aspect": 0.732943
+    },
+    {
+      "id": "troll",
+      "name": "Troll!",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Troll-removebg-preview (1).png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 16,
+        "y": 18,
+        "w": 379,
+        "h": 582
+      },
+      "aspect": 0.651203
+    },
+    {
+      "id": "untote",
+      "name": "Untote!",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/Untote.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 15,
+        "y": 15,
+        "w": 383,
+        "h": 587
+      },
+      "aspect": 0.65247
+    },
+    {
+      "id": "kirche",
+      "name": "Verlautbarung – Kirche",
+      "category": "Ankündigungen",
+      "src": "../IconOrdner/Steckis/Kirche.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 3,
+        "y": 10,
+        "w": 405,
+        "h": 595
+      },
+      "aspect": 0.680672
+    },
+    {
+      "id": "mabli",
+      "name": "Vermisst – Mabli",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/image-removebg-preview (30).png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 11,
+        "y": 20,
+        "w": 386,
+        "h": 572
+      },
+      "aspect": 0.674825
+    },
+    {
+      "id": "vermisst",
+      "name": "Vermisst!",
+      "category": "Gesuche & Steckbriefe",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_12_05-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 14,
+        "y": 12,
+        "w": 384,
+        "h": 590
+      },
+      "aspect": 0.650847
+    },
+    {
+      "id": "versunkene",
+      "name": "Versunkene",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/ChatGPT Image 14. Juni 2025, 22_13_30.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 52,
+        "y": 61,
+        "w": 918,
+        "h": 1418
+      },
+      "aspect": 0.647391
+    },
+    {
+      "id": "vorsicht",
+      "name": "Vorsicht",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__00_57_31-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 13,
+        "y": 10,
+        "w": 385,
+        "h": 595
+      },
+      "aspect": 0.647059
+    },
+    {
+      "id": "warnung",
+      "name": "Warnung",
+      "category": "Warnungen & Kreaturen",
+      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__00_55_24-removebg-preview.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 12,
+        "y": 12,
+        "w": 385,
+        "h": 589
+      },
+      "aspect": 0.65365
+    },
+    {
+      "id": "windreiter",
+      "name": "Windreiter",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Windreiter.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 11,
+        "y": 13,
+        "w": 390,
+        "h": 593
+      },
+      "aspect": 0.657673
+    },
+    {
+      "id": "wolken-daemmerung",
+      "name": "Wolken der Dämmerung",
+      "category": "Gilden & Orden",
+      "src": "../IconOrdner/Steckis/Wolken der Dämmerung.png",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 7,
+        "y": 10,
+        "w": 398,
+        "h": 599
+      },
+      "aspect": 0.664441
+    }
+  ]
+}

@@ -32,9 +32,6 @@
 
   function applyState(incoming) {
     window.TafelState.apply(incoming);
-    window.TafelBoard.applyImage();
-    window.TafelEditor?.applyMeta();
-    renderZettel();
   }
 
   window.TafelRuntime = Object.freeze({
@@ -64,9 +61,18 @@
     window.TafelEditor.init();
     window.TafelNoticeRegister.init();
     window.TafelZettelBoard.attachDragListeners();
+    window.TafelBoardComposition?.bind();
+    // Local drafts are written synchronously before saveNow's first await.
+    window.addEventListener('pagehide', () => window.TafelState.flushPending());
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') window.TafelState.flushPending();
+    });
 
     const loadPublishedOrDraft = () => window._fb.sub(remote => {
       if (remote) applyState(remote);
+    }).catch(error => {
+      console.warn('[tafel-load]', error);
+      toast('Der vorhandene Tafelstand konnte nicht übernommen werden. Die gespeicherten Daten bleiben erhalten.');
     });
     if (window._fb) loadPublishedOrDraft();
     else window.addEventListener('fb-ready', loadPublishedOrDraft, { once: true });

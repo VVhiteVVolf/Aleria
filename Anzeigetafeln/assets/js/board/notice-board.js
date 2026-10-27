@@ -10,6 +10,8 @@
   let panning = false;
   let panOrigin = { x: 0, y: 0 };
   let placementHandler = null;
+  let placementOptions = {};
+  let panPointerId = null;
 
   const viewport = () => document.getElementById('board-viewport');
   const stage = () => document.getElementById('board-stage');
@@ -31,12 +33,13 @@
 
   function source() {
     const stateImage = window.TafelState.get().boardImages?.board;
-    return stateImage || config.images?.board || placeholder(window.TafelState.get().regionTitle);
+    return window.TafelBoardComposition?.background() || stateImage || config.images?.board || placeholder(window.TafelState.get().regionTitle);
   }
 
   function applyTransform() {
     const element = stage();
     if (element) element.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoom})`;
+    element?.style.setProperty('--board-view-scale', String(zoom));
     const readout = document.getElementById('board-zoom');
     if (readout) readout.textContent = `${Math.round(zoom * 100)} %`;
   }
@@ -84,13 +87,17 @@
     };
   }
 
-  function startPlacement(handler) {
+  function startPlacement(handler, options = {}) {
+    cancelPlacement();
     placementHandler = typeof handler === 'function' ? handler : null;
+    placementOptions = options;
     viewport().classList.toggle('is-placing', Boolean(placementHandler));
-    cursor().hidden = !placementHandler;
+    cursor().hidden = !placementHandler || Boolean(options.onMove);
   }
 
   function cancelPlacement() {
+    placementOptions.onCancel?.();
+    placementOptions = {};
     placementHandler = null;
     viewport().classList.remove('is-placing');
     cursor().hidden = true;
@@ -120,8 +127,10 @@
     }, { passive: false });
 
     wrap.addEventListener('pointerdown', event => {
-      if (event.button !== 0 || placementHandler || event.target.closest('[data-notice-id]')) return;
+      if (event.button !== 0 || placementHandler || event.target.closest('[data-notice-id], [data-role="poster-pin"]')) return;
+      if (window.TafelEditor?.isEditMode() && event.target.closest('[data-poster-id]')) return;
       panning = true;
+      panPointerId = event.pointerId;
       panOrigin = { x: event.clientX, y: event.clientY };
       wrap.setPointerCapture?.(event.pointerId);
       wrap.classList.add('is-panning');
@@ -131,6 +140,7 @@
       if (placementHandler) {
         placementCursor.style.left = `${event.clientX}px`;
         placementCursor.style.top = `${event.clientY}px`;
+        if (width && height) placementOptions.onMove?.(normalizedPointFromClient(event.clientX, event.clientY));
       }
       if (!panning) return;
       translateX += event.clientX - panOrigin.x;
@@ -141,20 +151,27 @@
     wrap.addEventListener('pointerup', event => {
       if (panning) {
         panning = false;
+        panPointerId = null;
         wrap.releasePointerCapture?.(event.pointerId);
         wrap.classList.remove('is-panning');
         return;
       }
-      if (!placementHandler || event.target.closest('[data-notice-id]')) return;
+      if (!placementHandler || (!placementOptions.allowOnNotices && event.target.closest('[data-notice-id]'))) return;
+      const raw = pointFromClient(event.clientX, event.clientY);
+      if (!width || !height || raw.x < 0 || raw.y < 0 || raw.x > width || raw.y > height) return;
       const handler = placementHandler;
       const position = normalizedPointFromClient(event.clientX, event.clientY);
       cancelPlacement();
       handler(position);
     });
-    wrap.addEventListener('pointerleave', () => {
-      if (panning) wrap.classList.remove('is-panning');
+    const stopPan = event => {
+      if (!panning || event.pointerId !== panPointerId) return;
       panning = false;
-    });
+      panPointerId = null;
+      wrap.classList.remove('is-panning');
+    };
+    wrap.addEventListener('pointercancel', stopPan);
+    wrap.addEventListener('lostpointercapture', stopPan);
     wrap.addEventListener('contextmenu', event => event.preventDefault());
   }
 
@@ -184,6 +201,7 @@
     applyImage,
     startPlacement,
     cancelPlacement,
+    isPlacing: () => Boolean(placementHandler),
     focusNotice,
     pointFromClient,
     imageSize: () => ({ w: width, h: height }),

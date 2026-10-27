@@ -1,10 +1,9 @@
 (function(){
   'use strict';
 
-  let dragId = null;
-  let dragOffsetX = 0;
-  let dragOffsetY = 0;
-  let dragMoved = false;
+  let drag = null;
+  let bound = false;
+  let tooltipTimer = null;
   const noticePinImages = Object.freeze([
     'assets/images/notice-pins/nail-straight.png',
     'assets/images/notice-pins/nail-left.png',
@@ -33,9 +32,12 @@
     const size = boardSize();
     if(!zl || !size.w) return;
     zl.innerHTML = '';
+    window.TafelBoardComposition?.render(zl);
+    const covered = window.TafelBoardComposition?.coveredNoticeIds() || new Set();
 
     const S = state();
     window.TafelNoticeStacks.groups(S.zettel || [], { includeSecret: rt().isEditMode() }).forEach(group => {
+      if(group.notices.some(notice => covered.has(notice.id))) return;
       const z = group.notices[0];
       const type = typeById(z.typ);
       const el = document.createElement('button');
@@ -53,61 +55,12 @@
         cursor:${rt().canEditZettel() ? 'grab' : 'pointer'};`;
       el.innerHTML = `<img class="tafel-notice-nail" src="${pinImage.src}" alt="" draggable="false">`;
 
-      let downX = 0;
-      let downY = 0;
-      el.addEventListener('mouseenter', e => {
-        if(!rt().isEditMode()) showTooltip(z, e.clientX, e.clientY, group.notices);
-      });
-      el.addEventListener('mousemove', e => {
-        if(!rt().isEditMode()) moveTooltip(e.clientX, e.clientY);
-      });
-      el.addEventListener('mouseleave', hideTooltip);
-      el.addEventListener('focus', () => {
-        if (!rt().isEditMode()) {
-          const rect = el.getBoundingClientRect();
-          showTooltip(z, rect.right, rect.top + rect.height / 2, group.notices);
-        }
-      });
-      el.addEventListener('blur', hideTooltip);
-      el.addEventListener('click', event => {
-        if (event.detail !== 0) return;
-        hideTooltip();
-        if (rt().canEditZettel()) window.openZettelSidebar(z.id, 'edit');
-        else window.openZettelScroll(z.id);
-      });
-      el.addEventListener('mousedown', e => {
-        if(e.button !== 0) return;
-        e.stopPropagation();
-        downX = e.clientX;
-        downY = e.clientY;
-        if(rt().canEditZettel()){
-          dragId = z.id;
-          dragMoved = false;
-          const point = rt().boardPointFromClient(e.clientX, e.clientY);
-          dragOffsetX = point.x - z.x * size.w;
-          dragOffsetY = point.y - z.y * size.h;
-        }
-      });
-      el.addEventListener('mouseup', e => {
-        if(e.button !== 0) return;
-        e.stopPropagation();
-        const dist = Math.hypot(e.clientX - downX, e.clientY - downY);
-        if(dist < 5){
-          hideTooltip();
-          if(rt().canEditZettel()) window.openZettelSidebar(z.id, 'edit');
-          else window.openZettelScroll(z.id);
-        }
-        if(dragId){
-          rt().save();
-          dragId = null;
-          render();
-        }
-      });
       zl.appendChild(el);
     });
   }
 
   function showTooltip(z, cx, cy, members = [z]){
+    clearTimeout(tooltipTimer);
     const tt = document.getElementById('notice-tooltip');
     if(!tt) return;
     const entries = window.TafelNoticeStacks.publications(members, { includeSecret: rt().isEditMode() });
@@ -142,32 +95,81 @@
   function hideTooltip(){
     const tip = document.getElementById('notice-tooltip');
     if(!tip) return;
-    setTimeout(() => tip.classList.remove('show'), 80);
+    clearTimeout(tooltipTimer);
+    tooltipTimer = setTimeout(() => tip.classList.remove('show'), 80);
   }
 
   function attachDragListeners(){
-    boardViewport().addEventListener('mousemove', e => {
-      if(!dragId||!rt().canEditZettel()) return;
-      dragMoved = true;
-      const S = state();
+    if(bound) return;
+    bound = true;
+    const viewport = boardViewport();
+    const marker = event => event.target.closest('.tafel-notice-marker');
+    const notice = element => state().zettel.find(item => item.id === element?.dataset.noticeId);
+    let suppressClick = false;
+    viewport.addEventListener('pointerdown', event => {
+      const el = marker(event);
+      const z = notice(el);
+      if(!z || event.button !== 0 || window.TafelBoard.isPlacing()) return;
+      suppressClick = false;
+      if(!rt().canEditZettel()) return;
+      const point = rt().boardPointFromClient(event.clientX, event.clientY);
+      drag = { id: z.id, x: z.x, y: z.y, point, clientX: event.clientX, clientY: event.clientY, moved: false, pointerId: event.pointerId, el };
+      viewport.setPointerCapture(event.pointerId);
+    });
+    viewport.addEventListener('pointermove', event => {
+      if(!drag || !rt().canEditZettel() || event.pointerId !== drag.pointerId) return;
+      if(!drag.moved && Math.hypot(event.clientX - drag.clientX, event.clientY - drag.clientY) < 5) return;
+      drag.moved = true;
+      const point = rt().boardPointFromClient(event.clientX, event.clientY);
       const size = boardSize();
-      const z = S.zettel.find(x => x.id === dragId);
-      if(!z || !size.w) return;
-      const point = rt().boardPointFromClient(e.clientX, e.clientY);
-      window.TafelNoticeStacks.position(S.zettel, z.id, (point.x - dragOffsetX) / size.w, (point.y - dragOffsetY) / size.h);
-      render();
+      const x = Math.max(0, Math.min(1, drag.x + (point.x - drag.point.x) / size.w));
+      const y = Math.max(0, Math.min(1, drag.y + (point.y - drag.point.y) / size.h));
+      // Keep the capture and focused element alive until the gesture finishes.
+      drag.el.style.left = `${x * size.w}px`;
+      drag.el.style.top = `${y * size.h}px`;
+      drag.position = { x, y };
     });
-    boardViewport().addEventListener('mouseup', () => {
-      if(dragId && dragMoved){
+    const finish = event => {
+      if(!drag || event.pointerId !== drag.pointerId) return;
+      const current = drag; drag = null;
+      suppressClick = current.moved;
+      if(event.type === 'pointerup' && current.position) {
+        window.TafelNoticeStacks.position(state().zettel, current.id, current.position.x, current.position.y);
         rt().save();
-        dragId = null;
-        render();
       }
+      if(event.type === 'pointerup' && !current.moved) {
+        suppressClick = true;
+        hideTooltip();
+        window.openZettelSidebar(current.id, 'edit');
+      }
+      if(current.moved) render();
+      if(viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    };
+    for(const event of ['pointerup', 'pointercancel', 'lostpointercapture']) viewport.addEventListener(event, finish);
+    viewport.addEventListener('click', event => {
+      const z = notice(marker(event));
+      if(!z || (suppressClick && event.detail !== 0) || window.TafelBoard.isPlacing()) return;
+      hideTooltip();
+      if(rt().canEditZettel()) window.openZettelSidebar(z.id, 'edit');
+      else window.openZettelScroll(z.id);
     });
+    const show = event => {
+      const el = marker(event);
+      const z = notice(el);
+      if(!z || rt().isEditMode() || el.contains(event.relatedTarget)) return;
+      const rect = el.getBoundingClientRect();
+      showTooltip(z, event.clientX || rect.right, event.clientY || rect.top, window.TafelNoticeStacks.members(state().zettel, z.id));
+    };
+    viewport.addEventListener('pointerover', show);
+    viewport.addEventListener('focusin', show);
+    viewport.addEventListener('pointerout', event => { if(marker(event)) hideTooltip(); });
+    viewport.addEventListener('focusout', hideTooltip);
   }
 
   window.TafelZettelBoard = {
     render,
-    attachDragListeners
+    attachDragListeners,
+    showTooltip,
+    hideTooltip,
   };
 })();

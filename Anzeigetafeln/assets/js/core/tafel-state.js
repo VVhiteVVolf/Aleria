@@ -15,6 +15,7 @@
     regionIcon: config.regionIcon || '',
     regionTitle: config.title || 'Anzeigetafel',
     boardImages: {},
+    boardLayout: null,
     cardWidth: 1100,
   };
 
@@ -52,18 +53,21 @@
       regionIcon: state.regionIcon,
       regionTitle: state.regionTitle,
       boardImages: state.boardImages,
+      ...(state.boardLayout ? { boardLayout: state.boardLayout } : {}),
       cardWidth: state.cardWidth,
     });
   }
 
   function apply(incoming) {
     if (!incoming || typeof incoming !== 'object') return;
+    incoming = window.TafelBoardComposition?.prepareState(incoming) || incoming;
     if (Array.isArray(incoming.zettel)) {
       state.zettel = incoming.zettel.map(normalizeNotice).filter(notice => notice?.id);
       state.appliedAuthoredNoticeIds = Array.isArray(incoming.appliedAuthoredNoticeIds)
         ? [...new Set(incoming.appliedAuthoredNoticeIds.filter(id => typeof id === 'string' && id))] : [];
       state.appliedAuthoredUpdateIds = Array.isArray(incoming.appliedAuthoredUpdateIds)
         ? [...new Set(incoming.appliedAuthoredUpdateIds.filter(id => typeof id === 'string' && id))] : [];
+      state.boardLayout = incoming.boardLayout ? clone(incoming.boardLayout) : null;
     }
     if (incoming.regionIcon !== undefined) state.regionIcon = String(incoming.regionIcon || '');
     if (incoming.regionTitle) state.regionTitle = String(incoming.regionTitle);
@@ -83,6 +87,7 @@
 
   async function saveNow() {
     clearTimeout(saveTimer);
+    saveTimer = null;
     const saved = await window._fb?.saveAll(snapshot());
     if (saved !== true) return false;
     window.dispatchEvent(new CustomEvent('aleria:tafel:state-saved'));
@@ -131,5 +136,6 @@
     backup,
     backups: readBackups,
     restoreBackup,
+    flushPending: () => saveTimer !== null ? saveNow() : Promise.resolve(true),
   });
 })();

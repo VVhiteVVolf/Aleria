@@ -1,0 +1,959 @@
+{
+  "version": 1,
+  "name": "Gwynthor · Plakattafel zur Erprobung",
+  "legacyScale": {
+    "x": 0.8727272727272726,
+    "y": 0.6545454545454545
+  },
+  "bindings": [
+    {
+      "posterId": "gwynthor-poster-hilfe",
+      "noticeId": "gwynthor-fearnan-die-verschwundene-schatulle",
+      "legacyPin": {
+        "x": 0.705078125,
+        "y": 0.17317708333333334
+      }
+    },
+    {
+      "posterId": "gwynthor-poster-gesucht",
+      "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+      "legacyPin": {
+        "x": 0.5712890625,
+        "y": 0.556640625
+      }
+    },
+    {
+      "posterId": "gwynthor-poster-vermisst",
+      "noticeId": "gwynthor-herluin-angestellte-vermisst",
+      "legacyPin": {
+        "x": 0.703857421875,
+        "y": 0.4912109375
+      }
+    }
+  ],
+  "layout": {
+    "version": 1,
+    "posters": [
+      {
+        "id": "gwynthor-poster-feiertag",
+        "assetId": "feiertag",
+        "x": 0.199043,
+        "y": 0.275279,
+        "width": 0.05933,
+        "rotation": -4,
+        "layer": 2000,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1854036743637283,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-kirche",
+        "assetId": "kirche",
+        "x": 0.277751,
+        "y": 0.276236,
+        "width": 0.06555,
+        "rotation": 0,
+        "layer": 2001,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16781083142639205,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-ankuendigung-quer",
+        "assetId": "ankuendigung-quer",
+        "x": 0.410048,
+        "y": 0.307576,
+        "width": 0.155981,
+        "rotation": 3,
+        "layer": 2002,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.0705214096588687,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-hochzeit",
+        "assetId": "hochzeit",
+        "x": 0.57799,
+        "y": 0.320255,
+        "width": 0.157895,
+        "rotation": -1,
+        "layer": 3003,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.06966655055574907,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-rhosmere",
+        "assetId": "rhosmere",
+        "x": 0.657177,
+        "y": 0.270734,
+        "width": 0.056938,
+        "rotation": -13,
+        "layer": 2004,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1931925954547051,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-hilfe-hinten",
+        "assetId": "hilfe",
+        "x": 0.722488,
+        "y": 0.285088,
+        "width": 0.067943,
+        "rotation": -5,
+        "layer": 1005,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16190041652561704,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-hilfe",
+        "assetId": "hilfe",
+        "x": 0.714833,
+        "y": 0.291308,
+        "width": 0.0689,
+        "rotation": 8,
+        "layer": 3006,
+        "noticeId": "gwynthor-fearnan-die-verschwundene-schatulle",
+        "pin": {
+          "assetId": "straight",
+          "x": 0.1,
+          "y": 0.04,
+          "size": 0.15965166908563133,
+          "rotation": 0,
+          "enabled": true
+        }
+      },
+      {
+        "id": "gwynthor-poster-soeldner",
+        "assetId": "soeldner",
+        "x": 0.799043,
+        "y": 0.281738,
+        "width": 0.065072,
+        "rotation": 0,
+        "layer": 2007,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16904352102286696,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-windreiter",
+        "assetId": "windreiter",
+        "x": 0.205263,
+        "y": 0.376475,
+        "width": 0.064115,
+        "rotation": 0,
+        "layer": 2008,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1715667160570849,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-moerder",
+        "assetId": "moerder",
+        "x": 0.282775,
+        "y": 0.373365,
+        "width": 0.053589,
+        "rotation": 0,
+        "layer": 2009,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.205266006083338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-ankuendigung-hinten",
+        "assetId": "ankuendigung",
+        "x": 0.339234,
+        "y": 0.369059,
+        "width": 0.055502,
+        "rotation": 14,
+        "layer": 2010,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.19819105617815572,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-ankuendigung",
+        "assetId": "ankuendigung",
+        "x": 0.345455,
+        "y": 0.373365,
+        "width": 0.055502,
+        "rotation": 0,
+        "layer": 3011,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.19819105617815572,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-blank-verbrannt-hinten",
+        "assetId": "blank-verbrannt",
+        "x": 0.423684,
+        "y": 0.391547,
+        "width": 0.063636,
+        "rotation": -18,
+        "layer": 2012,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17285813061788924,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-blank-verbrannt",
+        "assetId": "blank-verbrannt",
+        "x": 0.41555,
+        "y": 0.391308,
+        "width": 0.067464,
+        "rotation": -6,
+        "layer": 3013,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1630499229218546,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-klingende-muenze",
+        "assetId": "klingende-muenze",
+        "x": 0.479426,
+        "y": 0.422887,
+        "width": 0.058373,
+        "rotation": 0,
+        "layer": 2014,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.18844328713617595,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-hexe",
+        "assetId": "hexe",
+        "x": 0.690431,
+        "y": 0.378868,
+        "width": 0.060287,
+        "rotation": -10,
+        "layer": 2015,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1824605636372684,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-angebot",
+        "assetId": "angebot-haendler",
+        "x": 0.705263,
+        "y": 0.393939,
+        "width": 0.060287,
+        "rotation": 0,
+        "layer": 3016,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1824605636372684,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-diebe-hinten",
+        "assetId": "diebe",
+        "x": 0.788517,
+        "y": 0.393222,
+        "width": 0.063158,
+        "rotation": -5,
+        "layer": 2017,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17416637638937266,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-diebe",
+        "assetId": "diebe",
+        "x": 0.77512,
+        "y": 0.396093,
+        "width": 0.063158,
+        "rotation": 0,
+        "layer": 3018,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17416637638937266,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-penderyn-hinten",
+        "assetId": "ankuendigung-bild",
+        "x": 0.549522,
+        "y": 0.425518,
+        "width": 0.06555,
+        "rotation": 16,
+        "layer": 2019,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16781083142639205,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-penderyn",
+        "assetId": "penderyn",
+        "x": 0.566746,
+        "y": 0.425518,
+        "width": 0.070335,
+        "rotation": 0,
+        "layer": 3020,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1563943982370086,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-fortuna",
+        "assetId": "fortuna",
+        "x": 0.637321,
+        "y": 0.424561,
+        "width": 0.066029,
+        "rotation": 0,
+        "layer": 3021,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16659346650714077,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-schiffsbauer",
+        "assetId": "schiffsbauer",
+        "x": 0.205742,
+        "y": 0.490351,
+        "width": 0.072727,
+        "rotation": -4,
+        "layer": 2022,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.15125056718962696,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-ankuendigung-bier-hinten",
+        "assetId": "ankuendigung-bier",
+        "x": 0.282057,
+        "y": 0.480303,
+        "width": 0.055024,
+        "rotation": -5,
+        "layer": 2023,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.19991276533876123,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-ankuendigung-bier",
+        "assetId": "ankuendigung-bier",
+        "x": 0.275359,
+        "y": 0.485088,
+        "width": 0.055024,
+        "rotation": 8,
+        "layer": 3024,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.19991276533876123,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-erlass",
+        "assetId": "erlass",
+        "x": 0.343301,
+        "y": 0.476954,
+        "width": 0.056938,
+        "rotation": 0,
+        "layer": 3025,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1931925954547051,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-federkiel",
+        "assetId": "federkiel",
+        "x": 0.401914,
+        "y": 0.492982,
+        "width": 0.054545,
+        "rotation": 0,
+        "layer": 3026,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.20166834723622695,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-abtruennige",
+        "assetId": "abtruennige",
+        "x": 0.471053,
+        "y": 0.518341,
+        "width": 0.060766,
+        "rotation": 0,
+        "layer": 3027,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.18102228219728136,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-blutbund",
+        "assetId": "blutbund",
+        "x": 0.531579,
+        "y": 0.513557,
+        "width": 0.051675,
+        "rotation": 0,
+        "layer": 3028,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21286889211417512,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-gesucht-hinten-2",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.600718,
+        "y": 0.521691,
+        "width": 0.051196,
+        "rotation": -14,
+        "layer": 2029,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21486053597937338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-gesucht-hinten",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.600718,
+        "y": 0.522169,
+        "width": 0.051196,
+        "rotation": 10,
+        "layer": 2130,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21486053597937338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-gesucht",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.596411,
+        "y": 0.524083,
+        "width": 0.051196,
+        "rotation": 0,
+        "layer": 3031,
+        "noticeId": "gwynthor-egon-schwarze-zitteraale-gesucht",
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21486053597937338,
+          "rotation": 0,
+          "enabled": true
+        }
+      },
+      {
+        "id": "gwynthor-poster-ruinenpforte",
+        "assetId": "ruinenpforte",
+        "x": 0.65,
+        "y": 0.514992,
+        "width": 0.051196,
+        "rotation": 0,
+        "layer": 3032,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21486053597937338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-vermisst-hinten",
+        "assetId": "vermisst",
+        "x": 0.712919,
+        "y": 0.492026,
+        "width": 0.05933,
+        "rotation": 0,
+        "layer": 2033,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1854036743637283,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-vermisst",
+        "assetId": "vermisst",
+        "x": 0.705742,
+        "y": 0.492026,
+        "width": 0.05933,
+        "rotation": 11,
+        "layer": 3034,
+        "noticeId": "gwynthor-herluin-angestellte-vermisst",
+        "pin": {
+          "assetId": "left",
+          "x": 0.07,
+          "y": 0.05,
+          "size": 0.1854036743637283,
+          "rotation": 0,
+          "enabled": true
+        }
+      },
+      {
+        "id": "gwynthor-poster-pferdediebe-hinten",
+        "assetId": "pferdediebe",
+        "x": 0.792823,
+        "y": 0.493939,
+        "width": 0.05933,
+        "rotation": 0,
+        "layer": 2035,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1854036743637283,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-pferdediebe",
+        "assetId": "pferdediebe",
+        "x": 0.794258,
+        "y": 0.496332,
+        "width": 0.055502,
+        "rotation": -8,
+        "layer": 3036,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.19819105617815572,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-wolken-daemmerung",
+        "assetId": "wolken-daemmerung",
+        "x": 0.142823,
+        "y": 0.57193,
+        "width": 0.050239,
+        "rotation": 15,
+        "layer": 3037,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21895340273492703,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-blank-verbrannt-unten-hinten",
+        "assetId": "blank-verbrannt",
+        "x": 0.204306,
+        "y": 0.59681,
+        "width": 0.062201,
+        "rotation": 0,
+        "layer": 2038,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17684603141428593,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-blank-verbrannt-unten",
+        "assetId": "blank-verbrannt",
+        "x": 0.2,
+        "y": 0.596332,
+        "width": 0.062201,
+        "rotation": 0,
+        "layer": 3039,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17684603141428593,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-vampir",
+        "assetId": "vampir",
+        "x": 0.271292,
+        "y": 0.599442,
+        "width": 0.058373,
+        "rotation": -3,
+        "layer": 2040,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.18844328713617595,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-beerdigung",
+        "assetId": "beerdigung",
+        "x": 0.332536,
+        "y": 0.569777,
+        "width": 0.054545,
+        "rotation": 11,
+        "layer": 2041,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.20166834723622695,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-jagdklingen",
+        "assetId": "jagdklingen",
+        "x": 0.329426,
+        "y": 0.598246,
+        "width": 0.064593,
+        "rotation": 0,
+        "layer": 3042,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17029709101605436,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-lilienorden",
+        "assetId": "lilienorden",
+        "x": 0.400957,
+        "y": 0.598006,
+        "width": 0.061244,
+        "rotation": 0,
+        "layer": 3043,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17960943112794722,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-arbeit-hinten",
+        "assetId": "arbeit",
+        "x": 0.455502,
+        "y": 0.632695,
+        "width": 0.053589,
+        "rotation": -5,
+        "layer": 2044,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.205266006083338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-arbeit",
+        "assetId": "arbeit",
+        "x": 0.454545,
+        "y": 0.634609,
+        "width": 0.053589,
+        "rotation": 11,
+        "layer": 3045,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.205266006083338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-wache",
+        "assetId": "wache-rekruten",
+        "x": 0.534211,
+        "y": 0.603987,
+        "width": 0.062679,
+        "rotation": 0,
+        "layer": 3046,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.17549737551652067,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-moewensang",
+        "assetId": "moewensang",
+        "x": 0.632775,
+        "y": 0.607576,
+        "width": 0.066507,
+        "rotation": 0,
+        "layer": 3047,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16539612371630052,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-schiffswrack-hinten",
+        "assetId": "schiffswrack",
+        "x": 0.725837,
+        "y": 0.594418,
+        "width": 0.067943,
+        "rotation": 3,
+        "layer": 2048,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16190041652561704,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-schiffswrack",
+        "assetId": "schiffswrack",
+        "x": 0.71244,
+        "y": 0.59059,
+        "width": 0.067943,
+        "rotation": 6,
+        "layer": 3049,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16190041652561704,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-geist",
+        "assetId": "geist",
+        "x": 0.79378,
+        "y": 0.595136,
+        "width": 0.065072,
+        "rotation": 0,
+        "layer": 3050,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16904352102286696,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-pamphlet-hinten",
+        "assetId": "pamphlet",
+        "x": 0.201435,
+        "y": 0.699681,
+        "width": 0.053589,
+        "rotation": 14,
+        "layer": 2051,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.205266006083338,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "gwynthor-poster-pamphlet",
+        "assetId": "pamphlet",
+        "x": 0.220574,
+        "y": 0.702552,
+        "width": 0.053589,
+        "rotation": 0,
+        "layer": 3052,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.205266006083338,
+          "rotation": 0,
+          "enabled": false
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "originalBoard": "Bilder/GwynthorAnzeigetafel.webp",
+    "emptyBoardSource": "D:\\0-KI Generierte\\01 Bilder\\Questtafeln\\681aafe5-9671-477f-acef-dff540eb7876.png",
+    "mapping": {
+      "referenceSize": [
+        1824,
+        1368
+      ],
+      "scale": 0.6,
+      "offset": [
+        96,
+        158
+      ]
+    },
+    "note": "53 frei bewegliche Blätter einschließlich der überlappenden Rückblätter; vier fehlende Motive aus der Originaltafel rekonstruiert. Texte, Beiblätter, Kommentare und IDs bleiben im bestehenden Aushangmodell."
+  }
+}

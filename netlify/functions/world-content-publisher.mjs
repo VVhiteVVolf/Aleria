@@ -70,6 +70,26 @@ function validateBoardState(state) {
       throw new Error(`Aushang "${notice?.title || notice?.id || '?'}" besitzt keine gültige id/x/y-Struktur.`);
     }
   }
+  if (state.boardLayout !== undefined) {
+    const layout = state.boardLayout;
+    if (layout?.version !== 1 || !Array.isArray(layout.posters) || layout.posters.length > 500) throw new Error('Ungültige Plakatanordnung.');
+    if (layout.useBoardImageOverride !== undefined && typeof layout.useBoardImageOverride !== 'boolean') throw new Error('Ungültige Tafelbildauswahl.');
+    const ids = new Set();
+    const bounded = (value, min, max) => typeof value === 'number' && Number.isFinite(value) && value >= min && value <= max;
+    for (const poster of layout.posters) {
+      if (!poster || typeof poster.id !== 'string' || !poster.id || poster.id.length > 200 || ids.has(poster.id)
+        || typeof poster.assetId !== 'string' || !/^[a-z0-9-]{1,100}$/.test(poster.assetId)
+        || !bounded(poster.x, 0, 1) || !bounded(poster.y, 0, 1) || !bounded(poster.width, .015, .8)
+        || !bounded(poster.rotation, -180, 180) || !Number.isInteger(poster.layer) || !bounded(poster.layer, -10000, 10000)
+        || (poster.noticeId !== undefined && (typeof poster.noticeId !== 'string' || poster.noticeId.length > 200))
+        || !['straight', 'left', 'right'].includes(poster.pin?.assetId)
+        || !bounded(poster.pin.x, 0, 1) || !bounded(poster.pin.y, 0, 1) || !bounded(poster.pin.size, .04, .65)
+        || !bounded(poster.pin.rotation, -180, 180) || typeof poster.pin.enabled !== 'boolean') {
+        throw new Error('Ein Plakat enthält ungültige Positions-, Ebenen- oder Nageldaten.');
+      }
+      ids.add(poster.id);
+    }
+  }
   return state;
 }
 

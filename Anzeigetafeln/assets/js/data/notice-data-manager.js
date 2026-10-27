@@ -33,10 +33,11 @@
     reader.onload = () => {
       try {
         const payload = JSON.parse(String(reader.result || '{}'));
-        const incoming = payload.kind === 'aleria-anzeigetafel' ? payload.state : payload;
+        const incoming = payload.state && Array.isArray(payload.state.zettel) ? payload.state : payload;
         if (!incoming || !Array.isArray(incoming.zettel)) throw new Error('Die Datei enthält keine gültigen Aushänge.');
         window.TafelState.backup('Vor JSON-Import');
         window.TafelRuntime.applyState(incoming);
+        window.TafelPublish?.useImportedState();
         window.TafelState.save();
         document.getElementById('datamgr-mo')?.classList.remove('open');
         window.TafelRuntime.toast(`${incoming.zettel.length} Aushänge importiert`);

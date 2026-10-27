@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/tafel.css?v=20261002">
   <link rel="stylesheet" href="assets/css/notice-board.css?v=20261002">
+  <link rel="stylesheet" href="assets/css/board-composition.css?v=20261027-posters-v1">
   <link rel="stylesheet" href="assets/css/notice-documents.css?v=20261002">
   <link rel="stylesheet" href="assets/css/notice-media.css?v=20261002">
   <link rel="stylesheet" href="assets/css/notice-theme.css?v=20261002">
@@ -47,7 +48,7 @@
     }
 
     window.TAFEL_BOOT_STATUS = 'active';
-    if (entry.config) document.write(`<script src="${entry.config}"><\/script>`);
+    if (entry.config) document.write(`<script src="${entry.config}?v=20261027-posters-v1"><\/script>`);
     else fallback(entry.title, 'active');
   })();
   </script>
@@ -79,7 +80,7 @@
     }
   })();
   </script>
-  <script src="assets/js/tafel-storage.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/tafel-storage.js?v=20261027-posters-v1"></script>
   <script src="assets/js/notes/zettel-config.js?v=20261020-notices-v2"></script>
 </head>
 <body>
@@ -278,10 +279,10 @@
   <div id="hint"></div>
   <div id="toast"></div>
 
-  <script src="assets/js/core/tafel-state.js?v=20261021-wanted-v1"></script>
+  <script src="assets/js/core/tafel-state.js?v=20261027-posters-v1"></script>
   <script src="assets/js/data/authored-notices.js?v=20261021-fill-empty-signoff-v1"></script>
-  <script src="assets/js/board/notice-board.js?v=20261021-wanted-v1"></script>
-  <script src="assets/js/tafel-app.js?v=20261002"></script>
+  <script src="assets/js/board/notice-board.js?v=20261027-posters-v1"></script>
+  <script src="assets/js/tafel-app.js?v=20261027-posters-v1"></script>
   <script src="assets/js/notes/zettel-rich-text.js?v=20261021-notice-links-v1"></script>
   <script src="assets/js/notes/notice-search.js?v=20261021-wanted-v1"></script>
   <script src="assets/js/board/notice-register.js?v=20261021-wanted-v1"></script>
@@ -299,13 +300,13 @@
   <script src="assets/js/notes/zettel-scroll-views.js?v=20261021-notice-links-v1"></script>
   <script src="assets/js/notes/notice-reader.js?v=20261021-wanted-v1"></script>
   <script src="assets/js/editor/notice-stack-editor.js?v=20261021-wanted-v1"></script>
-  <script src="assets/js/notes/zettel-editor.js?v=20261021-default-seals-v1"></script>
-  <script src="assets/js/notes/zettel-board.js?v=20261021-wanted-v1"></script>
-  <script src="assets/js/data/notice-data-manager.js?v=20261002"></script>
-  <script src="assets/js/editor/notice-editor.js?v=20261021-wanted-v1"></script>
-  <script src="assets/js/core/tafel-publish-ui.js?v=20261002"></script>
+  <script src="assets/js/notes/zettel-editor.js?v=20261027-posters-v1"></script>
+  <script src="assets/js/notes/zettel-board.js?v=20261027-posters-v1"></script>
+  <script src="assets/js/data/notice-data-manager.js?v=20261027-posters-v1"></script>
+  <script src="assets/js/editor/notice-editor.js?v=20261027-posters-v1"></script>
+  <script src="assets/js/core/tafel-publish-ui.js?v=20261027-posters-v1"></script>
   <script src="assets/js/core/tafel-actions.js?v=20261021-default-seals-v1"></script>
   <script src="assets/js/integrations/orte-notice-bridge.js?v=20261021-wanted-v1"></script>
-  <script type="module" src="assets/js/core/tafel-bootstrap.js?v=20261021-notice-links-v1"></script>
+  <script type="module" src="assets/js/core/tafel-bootstrap.js?v=20261027-posters-v1"></script>
 </body>
 </html>

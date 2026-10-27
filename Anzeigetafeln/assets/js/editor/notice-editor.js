@@ -6,6 +6,7 @@
   let editMode = false;
   let pendingPosition = null;
   let selectedType = null;
+  let onNoticeCreated = null;
   let stopPreviewLayout = () => {};
   let stopPreviewTypography = () => {};
 
@@ -44,6 +45,10 @@
   }
 
   function toggleEdit() {
+    if (window.TafelPublish?.isReady && !window.TafelPublish.isReady()) {
+      rt().toast('Die Tafel wird noch geladen. Bitte einen Moment warten.');
+      return;
+    }
     if (editMode) exitEdit();
     else {
       modal('pw-mo', true);
@@ -166,7 +171,7 @@
 
   function openBoardImages() {
     if (!editMode) return;
-    const value = state().boardImages?.board || window.TAFEL_CONFIG?.images?.board || '';
+    const value = window.TafelBoardComposition?.background() || state().boardImages?.board || window.TAFEL_CONFIG?.images?.board || '';
     document.getElementById('boardimg-board').value = value;
     previewBoardImage();
     modal('boardimg-mo', true);
@@ -181,6 +186,7 @@
   function saveBoardImages() {
     const value = document.getElementById('boardimg-board').value.trim();
     state().boardImages = value ? { board: value } : {};
+    if (state().boardLayout) state().boardLayout.useBoardImageOverride = Boolean(value);
     window.TafelBoard.applyImage({ fit: true });
     window.TafelState.save();
     modal('boardimg-mo', false);
@@ -189,6 +195,7 @@
 
   function clearBoardImages() {
     state().boardImages = {};
+    if (state().boardLayout) delete state().boardLayout.useBoardImageOverride;
     window.TafelBoard.applyImage({ fit: true });
     window.TafelState.save();
     modal('boardimg-mo', false);
@@ -197,12 +204,18 @@
 
   function startAddZettel() {
     if (!editMode) return;
+    if (window.TafelBoardComposition?.isEnabled()) {
+      cancelPlacement();
+      window.TafelBoardComposition.startAdd();
+      return;
+    }
     setHint('Auf die gewünschte Stelle der Tafel klicken · Esc bricht ab');
     window.TafelBoard.startPlacement(position => openTypePicker(position));
   }
 
-  function openTypePicker(position) {
+  function openTypePicker(position, onCreated = null) {
     pendingPosition = position;
+    onNoticeCreated = onCreated;
     selectedType = null;
     document.getElementById('zettel-type-grid').innerHTML = window.TafelZettelConfig.renderTypeCards(rt().esc);
     document.getElementById('zettel-tpl-apply-btn').disabled = true;
@@ -229,9 +242,12 @@
     if (!pendingPosition || !selectedType) return;
     const notice = window.TafelZettelConfig.createDraft(selectedType, pendingPosition, rt().uid);
     state().zettel.push(notice);
+    const onCreated = onNoticeCreated;
+    onNoticeCreated = null;
     pendingPosition = null;
     selectedType = null;
     modal('zettel-tpl-mo', false);
+    onCreated?.(notice);
     rt().renderZettel();
     window.TafelState.save();
     window.openZettelSidebar(notice.id, 'edit');
@@ -240,7 +256,9 @@
   function cancelPlacement() {
     pendingPosition = null;
     selectedType = null;
+    onNoticeCreated = null;
     window.TafelBoard.cancelPlacement();
+    window.TafelBoardComposition?.cancelPlacement();
     modal('zettel-tpl-mo', false);
     setHint('');
   }
@@ -250,7 +268,7 @@
     if (!notice) return;
 
     const anchor = window.TafelNoticeStacks.members(state().zettel, id, { includeSecret: editMode })[0] || notice;
-    window.TafelBoard.focusNotice(anchor);
+    window.TafelBoard.focusNotice(window.TafelBoardComposition?.focusPoint(id) || anchor);
     window.setTimeout(() => openZettelScroll(id), 220);
   }
 
@@ -403,6 +421,7 @@
   window.TafelEditor = Object.freeze({
     init,
     isEditMode: () => editMode,
+    setHint,
     applyMeta,
     toggleEdit,
     closePassword,
@@ -419,6 +438,7 @@
     saveBoardImages,
     clearBoardImages,
     startAddZettel,
+    openTypePicker,
     selectType,
     applyTemplate,
     cancelPlacement,

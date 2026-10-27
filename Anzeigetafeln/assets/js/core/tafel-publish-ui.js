@@ -31,7 +31,8 @@
     button.disabled = true;
     resultElement.hidden = true;
     try {
-      const result = await window.TafelPublish.publish(window.TafelRuntime.state());
+      if (!await window.TafelState.saveNow()) throw new Error('Der lokale Entwurf konnte nicht gesichert werden.');
+      const result = await window.TafelPublish.publish(window.TafelState.snapshot());
       resultElement.style.color = '#3a7a3a';
       resultElement.innerHTML = `Online gespeichert (Revision ${result.revision}). <a href="${result.commitUrl}" target="_blank" rel="noopener">Commit ansehen</a>`;
       resultElement.hidden = false;
