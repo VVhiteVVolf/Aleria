@@ -7,7 +7,11 @@ window.TAFEL_CONFIG = {
   title: "Anzeigetafel — Llysfaen",
   documentTitle: "Llysfaens Anzeigetafel - Aleria",
   images: {
-    board: "Bilder/LlysfaenTafel.webp",
+    board: "assets/images/boards/town-square-v1.png",
+  },
+  boardComposition: {
+    presetPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/board-layout.json",
+    background: "assets/images/boards/town-square-v1.png",
   },
   firebase: {
     collection: "anzeigetafeln",

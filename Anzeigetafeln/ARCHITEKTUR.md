@@ -2,11 +2,11 @@
 
 Anzeigetafeln sind ein eigenständiges Feature und keine Sonderform einer Karte. Die gemeinsame Shell lädt anhand der Tafel-ID ausschließlich die passende Konfiguration und den Registry-Eintrag.
 
-Seit 27. Oktober 2026 erprobt ausschließlich Gwynthor zusätzlich eine physische
+Seit 27. Oktober 2026 verwenden alle Tafeln zusätzlich eine physische
 Plakatanordnung. `assets/js/composition/` kapselt Papier, frei positionierte
 Befestigung, Ebenen und Werkzeuge. Das optionale `boardLayout` ergänzt den
 bestehenden Speicherzustand; Inhalte und Stapel bleiben in `zettel`. Einzelheiten,
-Bildquellen und Speicherprüfung: [Gwynthors Plakattafel](PLAKATTAFEL_GWYNTHOR.md).
+Bildquellen und Speicherprüfung: [Gemeinsame Plakattafeln](PLAKATTAFEL.md).
 
 ## Verantwortlichkeiten
 

@@ -1,0 +1,970 @@
+{
+  "version": 1,
+  "board": "morddyn",
+  "sourceSize": {
+    "width": 4096,
+    "height": 2829
+  },
+  "referenceSize": {
+    "width": 1900,
+    "height": 1312
+  },
+  "targetSize": {
+    "width": 1254,
+    "height": 1254
+  },
+  "backgroundSource": "D:\\0-KI Generierte\\01 Bilder\\Questtafeln\\681aafe5-9671-477f-acef-dff540eb7876.png",
+  "mapping": {
+    "scaleX": 0.6,
+    "scaleY": 0.6,
+    "offsetX": 78,
+    "offsetY": 175,
+    "space": "reference pixels to target pixels"
+  },
+  "normalizedAffine": {
+    "scaleX": 0.9090909090909091,
+    "scaleY": 0.6277511961722487,
+    "offsetX": 0.06220095693779904,
+    "offsetY": 0.13955342902711323
+  },
+  "pieces": [
+    {
+      "id": "morddyn-poster-vorsicht",
+      "assetId": "morddyn-vorsicht",
+      "x": 0.223684,
+      "y": 0.304864,
+      "width": 0.08186500372047627,
+      "rotation": 5,
+      "layer": 2000,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.1301467417182462,
+        "y": 0.10996670839572797,
+        "size": 0.1168920937654155,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.13,
+        "y": 0.165396,
+        "w": 0.095263,
+        "h": 0.195884
+      },
+      "legacyReferenceBounds": {
+        "x": 247,
+        "y": 217,
+        "w": 181,
+        "h": 257
+      },
+      "inspectionNote": "Original inserts a stone arch/door into the blank picture field."
+    },
+    {
+      "id": "morddyn-poster-gefahr",
+      "assetId": "morddyn-gefahr",
+      "x": 0.311722,
+      "y": 0.32185,
+      "width": 0.07608527179632406,
+      "rotation": 0,
+      "layer": 2001,
+      "pin": {
+        "assetId": "left",
+        "x": 0.07476842447761173,
+        "y": 0.04999999999999982,
+        "size": 0.12577135056593605,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.232105,
+        "y": 0.199695,
+        "w": 0.084737,
+        "h": 0.181402
+      },
+      "legacyReferenceBounds": {
+        "x": 441,
+        "y": 262,
+        "w": 161,
+        "h": 238
+      },
+      "inspectionNote": "Original heading GEFAHR and skull/crossbones; no exact catalog asset."
+    },
+    {
+      "id": "morddyn-poster-ankuendigung-quer",
+      "assetId": "ankuendigung-quer",
+      "x": 0.45933,
+      "y": 0.32807,
+      "width": 0.177033,
+      "rotation": 0,
+      "layer": 2002,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.054054,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.339474,
+        "y": 0.212271,
+        "w": 0.194737,
+        "h": 0.176067
+      },
+      "legacyReferenceBounds": {
+        "x": 645,
+        "y": 278.5,
+        "w": 370,
+        "h": 231
+      }
+    },
+    {
+      "id": "morddyn-poster-regionalkarte",
+      "assetId": "morddyn-regionalkarte",
+      "x": 0.691148,
+      "y": 0.346013,
+      "width": 0.27512,
+      "rotation": 0,
+      "layer": 2003,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.1,
+        "y": 0.17,
+        "size": 0.04,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.540526,
+        "y": 0.172256,
+        "w": 0.302632,
+        "h": 0.313262
+      },
+      "legacyReferenceBounds": {
+        "x": 1027,
+        "y": 226,
+        "w": 575,
+        "h": 411
+      },
+      "inspectionNote": "Distinctive exact Morddyn-to-Rotthor-Haarn regional map; retain exact image."
+    },
+    {
+      "id": "morddyn-poster-gesucht-hinten-2",
+      "assetId": "gesucht-kapuzenmann",
+      "x": 0.224402,
+      "y": 0.445295,
+      "width": 0.07177,
+      "rotation": 8,
+      "layer": 2004,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.133333,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.138947,
+        "y": 0.399009,
+        "w": 0.078947,
+        "h": 0.176067
+      },
+      "legacyReferenceBounds": {
+        "x": 264,
+        "y": 523.5,
+        "w": 150,
+        "h": 231
+      }
+    },
+    {
+      "id": "morddyn-poster-gesucht-hinten-1",
+      "assetId": "gesucht-kapuzenmann",
+      "x": 0.2311,
+      "y": 0.445774,
+      "width": 0.072249,
+      "rotation": 0,
+      "layer": 2005,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.13245,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.146053,
+        "y": 0.399771,
+        "w": 0.079474,
+        "h": 0.176067
+      },
+      "legacyReferenceBounds": {
+        "x": 277.5,
+        "y": 524.5,
+        "w": 151,
+        "h": 231
+      }
+    },
+    {
+      "id": "morddyn-poster-gesucht",
+      "assetId": "gesucht-kapuzenmann",
+      "x": 0.241627,
+      "y": 0.440989,
+      "width": 0.076555,
+      "rotation": -11,
+      "layer": 2006,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.125,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.155263,
+        "y": 0.386814,
+        "w": 0.084211,
+        "h": 0.186738
+      },
+      "legacyReferenceBounds": {
+        "x": 295,
+        "y": 507.5,
+        "w": 160,
+        "h": 245
+      }
+    },
+    {
+      "id": "morddyn-poster-arbeit-hinten",
+      "assetId": "arbeit",
+      "x": 0.325359,
+      "y": 0.44051,
+      "width": 0.069856,
+      "rotation": -3,
+      "layer": 2007,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.136986,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.251053,
+        "y": 0.39596,
+        "w": 0.076842,
+        "h": 0.166921
+      },
+      "legacyReferenceBounds": {
+        "x": 477,
+        "y": 519.5,
+        "w": 146,
+        "h": 219
+      }
+    },
+    {
+      "id": "morddyn-poster-arbeit",
+      "assetId": "morddyn-arbeit",
+      "x": 0.329904,
+      "y": 0.438836,
+      "width": 0.07073932355498103,
+      "rotation": 0,
+      "layer": 2008,
+      "pin": {
+        "assetId": "right",
+        "x": 0.07671859871931663,
+        "y": 0.04999999999999977,
+        "size": 0.13527670459786553,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.255263,
+        "y": 0.394817,
+        "w": 0.078421,
+        "h": 0.163872
+      },
+      "legacyReferenceBounds": {
+        "x": 485,
+        "y": 518,
+        "w": 149,
+        "h": 215
+      },
+      "inspectionNote": "Original shows a black anvil inside the picture field."
+    },
+    {
+      "id": "morddyn-poster-wettbewerb",
+      "assetId": "morddyn-wettbewerb",
+      "x": 0.426316,
+      "y": 0.446252,
+      "width": 0.08331510816663745,
+      "rotation": 4,
+      "layer": 2009,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.14141531965996323,
+        "y": 0.0768081333632124,
+        "size": 0.11485790746211803,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.357895,
+        "y": 0.395579,
+        "w": 0.085263,
+        "h": 0.185976
+      },
+      "legacyReferenceBounds": {
+        "x": 680,
+        "y": 519,
+        "w": 162,
+        "h": 244
+      },
+      "inspectionNote": "Original picture field says Wettbewerb."
+    },
+    {
+      "id": "morddyn-poster-ankuendigung",
+      "assetId": "ankuendigung",
+      "x": 0.507177,
+      "y": 0.445774,
+      "width": 0.06555,
+      "rotation": -5,
+      "layer": 2010,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.145985,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.453421,
+        "y": 0.408918,
+        "w": 0.072105,
+        "h": 0.157774
+      },
+      "legacyReferenceBounds": {
+        "x": 861.5,
+        "y": 536.5,
+        "w": 137,
+        "h": 207
+      }
+    },
+    {
+      "id": "morddyn-poster-mabli",
+      "assetId": "mabli",
+      "x": 0.585646,
+      "y": 0.498405,
+      "width": 0.069378,
+      "rotation": 0,
+      "layer": 2011,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.137931,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.537632,
+        "y": 0.488567,
+        "w": 0.076316,
+        "h": 0.166159
+      },
+      "legacyReferenceBounds": {
+        "x": 1021.5,
+        "y": 641,
+        "w": 145,
+        "h": 218
+      }
+    },
+    {
+      "id": "morddyn-poster-versunkene",
+      "assetId": "versunkene",
+      "x": 0.276077,
+      "y": 0.575917,
+      "width": 0.070813,
+      "rotation": -4,
+      "layer": 2012,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.135135,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.196316,
+        "y": 0.607851,
+        "w": 0.077895,
+        "h": 0.174543
+      },
+      "legacyReferenceBounds": {
+        "x": 373,
+        "y": 797.5,
+        "w": 148,
+        "h": 229
+      }
+    },
+    {
+      "id": "morddyn-poster-grimmlinge",
+      "assetId": "grimmlinge",
+      "x": 0.237799,
+      "y": 0.576874,
+      "width": 0.070813,
+      "rotation": 0,
+      "layer": 2013,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.135135,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.154211,
+        "y": 0.609375,
+        "w": 0.077895,
+        "h": 0.174543
+      },
+      "legacyReferenceBounds": {
+        "x": 293,
+        "y": 799.5,
+        "w": 148,
+        "h": 229
+      }
+    },
+    {
+      "id": "morddyn-poster-troll",
+      "assetId": "troll",
+      "x": 0.215789,
+      "y": 0.577831,
+      "width": 0.070335,
+      "rotation": 8,
+      "layer": 2014,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.136054,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.130263,
+        "y": 0.61128,
+        "w": 0.077368,
+        "h": 0.17378
+      },
+      "legacyReferenceBounds": {
+        "x": 247.5,
+        "y": 802,
+        "w": 147,
+        "h": 228
+      }
+    },
+    {
+      "id": "morddyn-poster-schiffswrack",
+      "assetId": "schiffswrack",
+      "x": 0.349761,
+      "y": 0.558214,
+      "width": 0.074163,
+      "rotation": 2,
+      "layer": 2015,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.129032,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.275526,
+        "y": 0.577744,
+        "w": 0.081579,
+        "h": 0.178354
+      },
+      "legacyReferenceBounds": {
+        "x": 523.5,
+        "y": 758,
+        "w": 155,
+        "h": 234
+      }
+    },
+    {
+      "id": "morddyn-poster-angebot",
+      "assetId": "angebot-haendler",
+      "x": 0.431579,
+      "y": 0.576874,
+      "width": 0.072727,
+      "rotation": -7,
+      "layer": 2016,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.131579,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.366316,
+        "y": 0.608232,
+        "w": 0.08,
+        "h": 0.176829
+      },
+      "legacyReferenceBounds": {
+        "x": 696,
+        "y": 798,
+        "w": 152,
+        "h": 232
+      }
+    },
+    {
+      "id": "morddyn-poster-barden",
+      "assetId": "barden-gesucht",
+      "x": 0.498565,
+      "y": 0.574003,
+      "width": 0.0689,
+      "rotation": 3,
+      "layer": 2017,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.138889,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.442105,
+        "y": 0.604802,
+        "w": 0.075789,
+        "h": 0.174543
+      },
+      "legacyReferenceBounds": {
+        "x": 840,
+        "y": 793.5,
+        "w": 144,
+        "h": 229
+      }
+    },
+    {
+      "id": "morddyn-poster-zeitung",
+      "assetId": "zeitung",
+      "x": 0.59378,
+      "y": 0.597448,
+      "width": 0.139234,
+      "rotation": -9,
+      "layer": 2018,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.068729,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.508158,
+        "y": 0.655107,
+        "w": 0.153158,
+        "h": 0.148628
+      },
+      "legacyReferenceBounds": {
+        "x": 965.5,
+        "y": 859.5,
+        "w": 291,
+        "h": 195
+      },
+      "inspectionNote": "The catalog newspaper already contains drawn multiple-page edge lines; do not add fake separate back sheets."
+    },
+    {
+      "id": "morddyn-poster-leer",
+      "assetId": "morddyn-leer",
+      "x": 0.737321,
+      "y": 0.545534,
+      "width": 0.157895,
+      "rotation": 0,
+      "layer": 2019,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.060606,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.655789,
+        "y": 0.489329,
+        "w": 0.173684,
+        "h": 0.314787
+      },
+      "legacyReferenceBounds": {
+        "x": 1246,
+        "y": 642,
+        "w": 330,
+        "h": 413
+      },
+      "inspectionNote": "Original is a whole, almost rectangular blank sheet. Catalog blank-verbrannt is torn, so a whole blank asset is needed for exact reproduction."
+    }
+  ],
+  "bindings": [],
+  "layout": {
+    "version": 1,
+    "posters": [
+      {
+        "id": "morddyn-poster-vorsicht",
+        "assetId": "morddyn-vorsicht",
+        "x": 0.223684,
+        "y": 0.304864,
+        "width": 0.08186500372047627,
+        "rotation": 5,
+        "layer": 2000,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.1301467417182462,
+          "y": 0.10996670839572797,
+          "size": 0.1168920937654155,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-gefahr",
+        "assetId": "morddyn-gefahr",
+        "x": 0.311722,
+        "y": 0.32185,
+        "width": 0.07608527179632406,
+        "rotation": 0,
+        "layer": 2001,
+        "pin": {
+          "assetId": "left",
+          "x": 0.07476842447761173,
+          "y": 0.04999999999999982,
+          "size": 0.12577135056593605,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-ankuendigung-quer",
+        "assetId": "ankuendigung-quer",
+        "x": 0.45933,
+        "y": 0.32807,
+        "width": 0.177033,
+        "rotation": 0,
+        "layer": 2002,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.054054,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-regionalkarte",
+        "assetId": "morddyn-regionalkarte",
+        "x": 0.691148,
+        "y": 0.346013,
+        "width": 0.27512,
+        "rotation": 0,
+        "layer": 2003,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.1,
+          "y": 0.17,
+          "size": 0.04,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-gesucht-hinten-2",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.224402,
+        "y": 0.445295,
+        "width": 0.07177,
+        "rotation": 8,
+        "layer": 2004,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.133333,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-gesucht-hinten-1",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.2311,
+        "y": 0.445774,
+        "width": 0.072249,
+        "rotation": 0,
+        "layer": 2005,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.13245,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-gesucht",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.241627,
+        "y": 0.440989,
+        "width": 0.076555,
+        "rotation": -11,
+        "layer": 2006,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.125,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-arbeit-hinten",
+        "assetId": "arbeit",
+        "x": 0.325359,
+        "y": 0.44051,
+        "width": 0.069856,
+        "rotation": -3,
+        "layer": 2007,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.136986,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-arbeit",
+        "assetId": "morddyn-arbeit",
+        "x": 0.329904,
+        "y": 0.438836,
+        "width": 0.07073932355498103,
+        "rotation": 0,
+        "layer": 2008,
+        "pin": {
+          "assetId": "right",
+          "x": 0.07671859871931663,
+          "y": 0.04999999999999977,
+          "size": 0.13527670459786553,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-wettbewerb",
+        "assetId": "morddyn-wettbewerb",
+        "x": 0.426316,
+        "y": 0.446252,
+        "width": 0.08331510816663745,
+        "rotation": 4,
+        "layer": 2009,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.14141531965996323,
+          "y": 0.0768081333632124,
+          "size": 0.11485790746211803,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-ankuendigung",
+        "assetId": "ankuendigung",
+        "x": 0.507177,
+        "y": 0.445774,
+        "width": 0.06555,
+        "rotation": -5,
+        "layer": 2010,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.145985,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-mabli",
+        "assetId": "mabli",
+        "x": 0.585646,
+        "y": 0.498405,
+        "width": 0.069378,
+        "rotation": 0,
+        "layer": 2011,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.137931,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-versunkene",
+        "assetId": "versunkene",
+        "x": 0.276077,
+        "y": 0.575917,
+        "width": 0.070813,
+        "rotation": -4,
+        "layer": 2012,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.135135,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-grimmlinge",
+        "assetId": "grimmlinge",
+        "x": 0.237799,
+        "y": 0.576874,
+        "width": 0.070813,
+        "rotation": 0,
+        "layer": 2013,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.135135,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-troll",
+        "assetId": "troll",
+        "x": 0.215789,
+        "y": 0.577831,
+        "width": 0.070335,
+        "rotation": 8,
+        "layer": 2014,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.136054,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-schiffswrack",
+        "assetId": "schiffswrack",
+        "x": 0.349761,
+        "y": 0.558214,
+        "width": 0.074163,
+        "rotation": 2,
+        "layer": 2015,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.129032,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-angebot",
+        "assetId": "angebot-haendler",
+        "x": 0.431579,
+        "y": 0.576874,
+        "width": 0.072727,
+        "rotation": -7,
+        "layer": 2016,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.131579,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-barden",
+        "assetId": "barden-gesucht",
+        "x": 0.498565,
+        "y": 0.574003,
+        "width": 0.0689,
+        "rotation": 3,
+        "layer": 2017,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.138889,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-zeitung",
+        "assetId": "zeitung",
+        "x": 0.59378,
+        "y": 0.597448,
+        "width": 0.139234,
+        "rotation": -9,
+        "layer": 2018,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.068729,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "morddyn-poster-leer",
+        "assetId": "morddyn-leer",
+        "x": 0.737321,
+        "y": 0.545534,
+        "width": 0.157895,
+        "rotation": 0,
+        "layer": 2019,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.060606,
+          "rotation": 0,
+          "enabled": false
+        }
+      }
+    ]
+  },
+  "legacyScale": {
+    "x": 0.9090909090909091,
+    "y": 0.6277511961722487
+  },
+  "artwork": "Nine standalone regional motifs reconstructed with built-in imagegen. Original map and blank paper preserved by CSS crop."
+}

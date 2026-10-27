@@ -67,7 +67,7 @@ export const SITE_BUILD_TASKS = [
       ['Anzeigetafeln/tools/validate-tafeln-structure.mjs'],
       ['AleriaAlmanach/scripts/check-comment-language-bubbles.js'],
       testCommand('Anzeigetafeln/tests/authored-notices.test.mjs', 'Anzeigetafeln/tests/gwynthor-board.test.mjs',
-        'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs',
+        'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-composition-migration.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs',
         'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs',
         'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs', 'Anzeigetafeln/tests/notice-seals.test.mjs', 'Anzeigetafeln/tests/notice-signoffs.test.mjs', 'Anzeigetafeln/tests/notice-module-links.test.mjs',
         'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Orte/tests/poi-bridges.test.mjs',

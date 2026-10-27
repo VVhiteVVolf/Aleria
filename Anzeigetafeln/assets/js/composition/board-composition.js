@@ -1,21 +1,24 @@
-import { normalizeLayout, normalizePoster, groupForPoster, pinPosition, moveLayer, unlinkDeletedNotice } from './board-composition-model.mjs';
-import { createPosterElement, positionElement } from './board-composition-view.mjs';
-import { createPosterWizard } from './board-composition-creator.mjs';
-import { createPosterInspector } from './board-composition-inspector.mjs';
+import { normalizeLayout, normalizePoster, groupForPoster, pinPosition, moveLayer, unlinkDeletedNotice } from './board-composition-model.mjs?v=20261027-all-boards-v3';
+import { createPosterElement, positionElement } from './board-composition-view.mjs?v=20261027-all-boards-v3';
+import { createPosterWizard } from './board-composition-creator.mjs?v=20261027-all-boards-v3';
+import { createPosterInspector } from './board-composition-inspector.mjs?v=20261027-all-boards-v3';
+import { compositionConfig } from './board-composition-config.mjs?v=20261027-all-boards-v3';
+import { prepareBoardState } from './board-composition-migration.mjs?v=20261027-all-boards-v3';
 
 export async function initializeBoardComposition() {
-  const config = window.TAFEL_CONFIG?.boardComposition;
-  if (!config?.presetPath) return;
+  const config = compositionConfig(window.TAFEL_CONFIG);
+  if (!config.enabled) return;
   const rt = () => window.TafelRuntime;
   const state = () => window.TafelState.get();
   const stacks = () => window.TafelNoticeStacks;
   let assets, preset;
   try {
-    const responses = await Promise.all([fetch('assets/data/board-art-catalog.json'), fetch(config.presetPath)]);
+    const responses = await Promise.all([fetch('assets/data/board-art-catalog.json?v=20261027-all-boards-v3'),
+      ...(config.presetPath ? [fetch(config.presetPath, { cache: 'no-store' })] : [])]);
     if (responses.some(response => !response.ok)) throw new Error('Plakatbibliothek oder Tafelanordnung fehlt.');
     const sources = await Promise.all(responses.map(response => response.json()));
     assets = sources[0].posters;
-    preset = sources[1];
+    preset = sources[1] || { layout: { version: 1, posters: [] } };
     if (!assets?.length || !normalizeLayout(preset.layout, assets)) throw new Error('Ungültige Tafelanordnung.');
   } catch (error) {
     console.warn('[board-composition]', error);
@@ -24,8 +27,9 @@ export async function initializeBoardComposition() {
   }
   const assetMap = new Map(assets.map(asset => [asset.id, asset]));
   const assetIds = new Set(assetMap.keys());
-  const editing = () => Boolean(rt()?.canEditZettel());
+  const editing = () => Boolean(layout() && rt()?.canEditZettel());
   const layout = () => state().boardLayout;
+  const initialLayout = normalizeLayout(preset.layout, assets);
   const allGroups = () => stacks().groups(state().zettel, { includeSecret: true });
   let selectedId = null;
   let drag = null;
@@ -38,25 +42,7 @@ export async function initializeBoardComposition() {
   const elementFor = posterId => document.querySelector(`[data-poster-id="${CSS.escape(posterId)}"]`);
 
   function prepareState(incoming) {
-    if (!Array.isArray(incoming.zettel)) return incoming;
-    if (Object.hasOwn(incoming, 'boardLayout')) {
-      const normalized = normalizeLayout(incoming.boardLayout, assets);
-      if (!normalized) throw new Error('Die Datei enthält eine ungültige Plakatanordnung.');
-      return { ...incoming, boardLayout: normalized };
-    }
-    const initial = normalizeLayout(preset.layout, assets);
-    // Old drafts retain their own nail positions. Apply their delta to the
-    // authored visual placement without rewriting any notice text or metadata.
-    for (const binding of preset.bindings || []) {
-      const poster = initial.posters.find(item => item.id === binding.posterId);
-      const notice = incoming.zettel.find(item => item.id === binding.noticeId);
-      if (!poster || !notice || !binding.legacyPin) continue;
-      poster.x += (notice.x - binding.legacyPin.x) * preset.legacyScale.x;
-      poster.y += (notice.y - binding.legacyPin.y) * preset.legacyScale.y;
-      poster.x = Math.max(0, Math.min(1, poster.x));
-      poster.y = Math.max(0, Math.min(1, poster.y));
-    }
-    return { ...incoming, boardLayout: initial };
+    return prepareBoardState(incoming, { assets, preset, stacks: stacks() });
   }
 
   function background() {
@@ -66,9 +52,11 @@ export async function initializeBoardComposition() {
   }
 
   function render(root) {
-    if (!layout()) return;
+    // Show authored paper while a slow legacy read is pending. This read-only
+    // preview never enters the persisted state.
+    const visibleLayout = layout() || initialLayout;
     const board = window.TafelBoard.imageSize();
-    for (const poster of [...layout().posters].sort((a, b) => a.layer - b.layer)) {
+    for (const poster of [...visibleLayout.posters].sort((a, b) => a.layer - b.layer)) {
       const asset = assetMap.get(poster.assetId);
       if (!asset) continue;
       const visibleGroup = group(poster);
@@ -276,7 +264,8 @@ export async function initializeBoardComposition() {
 
   window.TafelBoardComposition = Object.freeze({
     prepareState, background, render, coveredNoticeIds,
-    isEnabled: () => Boolean(layout()), startAdd: () => wizard.open(), bind,
+    isEnabled: () => true,
+    startAdd: () => layout() ? wizard.open() : rt().toast('Der vorhandene Tafelstand wird noch geladen.'), bind,
     cancelPlacement: () => { pending = null; wizard?.close(); },
     focusPoint(id) {
       const poster = layout()?.posters.find(item => group(item)?.notices.some(notice => notice.id === id));

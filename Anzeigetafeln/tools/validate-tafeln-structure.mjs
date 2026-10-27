@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import vm from "node:vm";
+import { validateBoardArt } from './validate-board-art.mjs';
 
 const ROOT = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const REGISTRY_FILE = path.join(ROOT, "tafeln.registry.js");
@@ -218,6 +219,7 @@ function validateRegistry() {
   });
 
   validateDuplicateImages();
+  validateBoardArt(ROOT, registry, reportError);
 
   return registry;
 }

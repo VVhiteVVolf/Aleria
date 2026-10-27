@@ -30,7 +30,7 @@
       folder: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn",
       config: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/tafel.config.js",
       images: {
-        board: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafel.png",
+        board: "assets/images/boards/town-square-v1.png",
       },
       dataPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",
       firebase: {
@@ -61,7 +61,7 @@
       folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen",
       config: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/tafel.config.js",
       images: {
-        board: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/Bilder/LlysfaenTafel.webp",
+        board: "assets/images/boards/town-square-v1.png",
       },
       dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/data.json",
       firebase: {
@@ -87,7 +87,7 @@
       folder: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor",
       config: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/tafel.config.js",
       images: {
-        board: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/Bilder/GwynthorAnzeigetafel.webp",
+        board: "assets/images/boards/town-square-v1.png",
       },
       dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/data.json",
       firebase: {

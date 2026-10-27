@@ -22,7 +22,9 @@
     if (label) {
       if (state === 'sv') label.textContent = 'wird lokal gesichert';
       else if (state === 'er') label.textContent = 'Speicherfehler';
-      else label.textContent = sourceIncomplete ? 'Altstand fehlt · lokaler Entwurf' : readDraft() ? 'lokaler Entwurf' : 'veröffentlicht';
+      else label.textContent = sourceIncomplete
+        ? readDraft() ? 'Altimport fehlt · Entwurf' : 'Altimport nicht verfügbar'
+        : readDraft() ? 'lokaler Entwurf' : 'veröffentlicht';
     }
   }
 

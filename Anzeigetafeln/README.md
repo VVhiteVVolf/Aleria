@@ -2,6 +2,10 @@
 
 `Anzeigetafeln` ist ein eigenes Aushangsystem. Es verwendet weder das Kartenmodul noch dessen Orts-Pins, Regionen, Markierungen, Kategorien oder Reiseverwaltung.
 
+Alle Tafeln verwenden die [gemeinsame Plakattafel](PLAKATTAFEL.md): leeres Brett,
+einzelne Plakatbilder mit sichtbaren Nägeln, gemeinsame Verschiebung, Drehung und
+Ebenen. Die Bildbibliothek enthält auch zehn zusätzliche allgemeine Motive.
+
 Jede Tafel besitzt genau:
 
 - ein Tafelbild

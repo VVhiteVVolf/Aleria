@@ -1,5 +1,5 @@
-import { NAILS } from './board-composition-model.mjs';
-import { previewMarkup } from './board-composition-view.mjs';
+import { NAILS } from './board-composition-model.mjs?v=20261027-all-boards-v3';
+import { previewMarkup } from './board-composition-view.mjs?v=20261027-all-boards-v3';
 
 export function createPosterInspector({ esc, assets, getSelected, getAsset, groups, change, action }) {
   const root = document.createElement('aside');

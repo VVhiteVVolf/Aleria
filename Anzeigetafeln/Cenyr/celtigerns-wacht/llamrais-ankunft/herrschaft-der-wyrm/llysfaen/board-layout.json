@@ -1,0 +1,1585 @@
+{
+  "version": 1,
+  "board": "llysfaen",
+  "sourceSize": {
+    "width": 4096,
+    "height": 3072
+  },
+  "referenceSize": {
+    "width": 1823,
+    "height": 1367
+  },
+  "targetSize": {
+    "width": 1254,
+    "height": 1254
+  },
+  "backgroundSource": "D:\\0-KI Generierte\\01 Bilder\\Questtafeln\\681aafe5-9671-477f-acef-dff540eb7876.png",
+  "mapping": {
+    "scaleX": 0.6,
+    "scaleY": 0.6,
+    "offsetX": 80,
+    "offsetY": 150,
+    "space": "reference pixels to target pixels"
+  },
+  "normalizedAffine": {
+    "scaleX": 0.8722488038277512,
+    "scaleY": 0.6540669856459329,
+    "offsetX": 0.06379585326953748,
+    "offsetY": 0.11961722488038277
+  },
+  "pieces": [
+    {
+      "id": "llysfaen-poster-arbeit-links-hinten-3",
+      "assetId": "arbeit",
+      "x": 0.214514,
+      "y": 0.287081,
+      "width": 0.067943,
+      "rotation": 15,
+      "layer": 2000,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.133845,
+        "y": 0.17703,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 244,
+        "y": 242,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-arbeit-links-hinten-2",
+      "assetId": "arbeit",
+      "x": 0.221212,
+      "y": 0.282775,
+      "width": 0.067943,
+      "rotation": 8,
+      "layer": 2001,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.141525,
+        "y": 0.170446,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 258,
+        "y": 233,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-arbeit-links-hinten-1",
+      "assetId": "arbeit",
+      "x": 0.220255,
+      "y": 0.278469,
+      "width": 0.067943,
+      "rotation": 0,
+      "layer": 2002,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.140428,
+        "y": 0.163862,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 256,
+        "y": 224,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-arbeit-links",
+      "assetId": "llysfaen-arbeit",
+      "x": 0.230303,
+      "y": 0.278947,
+      "width": 0.07084966309648805,
+      "rotation": -12,
+      "layer": 2003,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.4332996983686857,
+        "y": 0.2771336058048822,
+        "size": 0.1575781316108108,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.142622,
+        "y": 0.163131,
+        "w": 0.096544,
+        "h": 0.160936
+      },
+      "legacyReferenceBounds": {
+        "x": 260,
+        "y": 223,
+        "w": 176,
+        "h": 220
+      },
+      "noticeId": "llysfaen-hof-glyn",
+      "legacyAnchor": {
+        "x": 0.18,
+        "y": 0.21
+      },
+      "inspectionNote": "Original shows three wheat ears inside the picture field."
+    },
+    {
+      "id": "llysfaen-poster-hilfe-links-hinten-3",
+      "assetId": "hilfe",
+      "x": 0.307815,
+      "y": 0.288517,
+      "width": 0.066986,
+      "rotation": 18,
+      "layer": 2004,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.142857,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.24136,
+        "y": 0.181053,
+        "w": 0.076796,
+        "h": 0.154353
+      },
+      "legacyReferenceBounds": {
+        "x": 440,
+        "y": 247.5,
+        "w": 140,
+        "h": 211
+      }
+    },
+    {
+      "id": "llysfaen-poster-hilfe-links-hinten-2",
+      "assetId": "hilfe",
+      "x": 0.3126,
+      "y": 0.286603,
+      "width": 0.066986,
+      "rotation": 13,
+      "layer": 2005,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.142857,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.246846,
+        "y": 0.178127,
+        "w": 0.076796,
+        "h": 0.154353
+      },
+      "legacyReferenceBounds": {
+        "x": 450,
+        "y": 243.5,
+        "w": 140,
+        "h": 211
+      }
+    },
+    {
+      "id": "llysfaen-poster-hilfe-links-hinten-1",
+      "assetId": "hilfe",
+      "x": 0.316906,
+      "y": 0.283254,
+      "width": 0.066986,
+      "rotation": 8,
+      "layer": 2006,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.142857,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.251783,
+        "y": 0.173007,
+        "w": 0.076796,
+        "h": 0.154353
+      },
+      "legacyReferenceBounds": {
+        "x": 459,
+        "y": 236.5,
+        "w": 140,
+        "h": 211
+      }
+    },
+    {
+      "id": "llysfaen-poster-hilfe-links",
+      "assetId": "llysfaen-hilfe-links",
+      "x": 0.32504,
+      "y": 0.283971,
+      "width": 0.06780089766920719,
+      "rotation": 2,
+      "layer": 2007,
+      "pin": {
+        "assetId": "left",
+        "x": 0.39060414958904865,
+        "y": 0.2614412861406865,
+        "size": 0.1646611879162535,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.259462,
+        "y": 0.171909,
+        "w": 0.080088,
+        "h": 0.158742
+      },
+      "legacyReferenceBounds": {
+        "x": 473,
+        "y": 235,
+        "w": 146,
+        "h": 217
+      },
+      "noticeId": "llysfaen-bobi-erlenglanz",
+      "legacyAnchor": {
+        "x": 0.292,
+        "y": 0.213
+      },
+      "inspectionNote": "Original adds a leaping black horse beside the scroll symbol."
+    },
+    {
+      "id": "llysfaen-poster-ankuendigung-quer",
+      "assetId": "ankuendigung-quer",
+      "x": 0.481499,
+      "y": 0.303349,
+      "width": 0.183732,
+      "rotation": 0,
+      "layer": 2008,
+      "pin": {
+        "assetId": "right",
+        "x": 0.495818,
+        "y": 0.188706,
+        "size": 0.060764,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.37356,
+        "y": 0.193124,
+        "w": 0.210642,
+        "h": 0.175567
+      },
+      "legacyReferenceBounds": {
+        "x": 681,
+        "y": 264,
+        "w": 384,
+        "h": 240
+      },
+      "noticeId": "llysfaen-hoher-besuch",
+      "legacyAnchor": {
+        "x": 0.478,
+        "y": 0.226
+      }
+    },
+    {
+      "id": "llysfaen-poster-mabli-hinten-2",
+      "assetId": "mabli",
+      "x": 0.626954,
+      "y": 0.305742,
+      "width": 0.078469,
+      "rotation": -2,
+      "layer": 2009,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.121951,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.600658,
+        "y": 0.193489,
+        "w": 0.089962,
+        "h": 0.182151
+      },
+      "legacyReferenceBounds": {
+        "x": 1095,
+        "y": 264.5,
+        "w": 164,
+        "h": 249
+      }
+    },
+    {
+      "id": "llysfaen-poster-mabli-hinten-1",
+      "assetId": "mabli",
+      "x": 0.623604,
+      "y": 0.305263,
+      "width": 0.078469,
+      "rotation": 3,
+      "layer": 2010,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.121951,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.596818,
+        "y": 0.192758,
+        "w": 0.089962,
+        "h": 0.182151
+      },
+      "legacyReferenceBounds": {
+        "x": 1088,
+        "y": 263.5,
+        "w": 164,
+        "h": 249
+      }
+    },
+    {
+      "id": "llysfaen-poster-mabli",
+      "assetId": "mabli",
+      "x": 0.620734,
+      "y": 0.305742,
+      "width": 0.078469,
+      "rotation": 5,
+      "layer": 2011,
+      "pin": {
+        "assetId": "right",
+        "x": 0.454735,
+        "y": 0.194578,
+        "size": 0.142276,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.593527,
+        "y": 0.193489,
+        "w": 0.089962,
+        "h": 0.182151
+      },
+      "legacyReferenceBounds": {
+        "x": 1082,
+        "y": 264.5,
+        "w": 164,
+        "h": 249
+      },
+      "noticeId": "llysfaen-mabli",
+      "legacyAnchor": {
+        "x": 0.638,
+        "y": 0.23
+      }
+    },
+    {
+      "id": "llysfaen-poster-hilfe-rechts-hinten",
+      "assetId": "hilfe",
+      "x": 0.707815,
+      "y": 0.289474,
+      "width": 0.066029,
+      "rotation": 0,
+      "layer": 2012,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.144928,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.700494,
+        "y": 0.182882,
+        "w": 0.075699,
+        "h": 0.153621
+      },
+      "legacyReferenceBounds": {
+        "x": 1277,
+        "y": 250,
+        "w": 138,
+        "h": 210
+      }
+    },
+    {
+      "id": "llysfaen-poster-hilfe-rechts",
+      "assetId": "hilfe",
+      "x": 0.707815,
+      "y": 0.287081,
+      "width": 0.066029,
+      "rotation": 0,
+      "layer": 2013,
+      "pin": {
+        "assetId": "left",
+        "x": 0.455833,
+        "y": 0.242436,
+        "size": 0.169082,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.700494,
+        "y": 0.179225,
+        "w": 0.075699,
+        "h": 0.153621
+      },
+      "legacyReferenceBounds": {
+        "x": 1277,
+        "y": 245,
+        "w": 138,
+        "h": 210
+      },
+      "noticeId": "llysfaen-brogars-hilfe",
+      "legacyAnchor": {
+        "x": 0.735,
+        "y": 0.217
+      }
+    },
+    {
+      "id": "llysfaen-poster-arbeit-rechts-hinten-2",
+      "assetId": "arbeit",
+      "x": 0.778628,
+      "y": 0.295215,
+      "width": 0.067943,
+      "rotation": 12,
+      "layer": 2014,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.780581,
+        "y": 0.189466,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 1423,
+        "y": 259,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-arbeit-rechts-hinten-1",
+      "assetId": "arbeit",
+      "x": 0.782935,
+      "y": 0.292344,
+      "width": 0.067943,
+      "rotation": 5,
+      "layer": 2015,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.785518,
+        "y": 0.185077,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 1432,
+        "y": 253,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-arbeit-rechts",
+      "assetId": "llysfaen-arbeit",
+      "x": 0.789155,
+      "y": 0.290431,
+      "width": 0.0690022219293538,
+      "rotation": -5,
+      "layer": 2016,
+      "pin": {
+        "assetId": "left",
+        "x": 0.4870612652704228,
+        "y": 0.24859871774241243,
+        "size": 0.16179544662243242,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.787713,
+        "y": 0.182882,
+        "w": 0.087767,
+        "h": 0.156547
+      },
+      "legacyReferenceBounds": {
+        "x": 1436,
+        "y": 250,
+        "w": 160,
+        "h": 214
+      },
+      "noticeId": "llysfaen-crewe-hof",
+      "legacyAnchor": {
+        "x": 0.828,
+        "y": 0.222
+      },
+      "inspectionNote": "Original shows three wheat ears inside the picture field."
+    },
+    {
+      "id": "llysfaen-poster-pferdediebe",
+      "assetId": "pferdediebe",
+      "x": 0.220255,
+      "y": 0.403349,
+      "width": 0.067943,
+      "rotation": 0,
+      "layer": 2017,
+      "pin": {
+        "assetId": "right",
+        "x": 0.508028,
+        "y": 0.252171,
+        "size": 0.164319,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.140428,
+        "y": 0.353694,
+        "w": 0.077894,
+        "h": 0.160205
+      },
+      "legacyReferenceBounds": {
+        "x": 256,
+        "y": 483.5,
+        "w": 142,
+        "h": 219
+      },
+      "noticeId": "llysfaen-pferdediebstahl",
+      "legacyAnchor": {
+        "x": 0.18,
+        "y": 0.392
+      },
+      "inspectionNote": "Original title uses two lines PFERDE-/DIEBE!!; exact opaque original variant exists among catalog-extras."
+    },
+    {
+      "id": "llysfaen-poster-baecker-hinten",
+      "assetId": "baecker-gesucht",
+      "x": 0.329825,
+      "y": 0.415311,
+      "width": 0.057895,
+      "rotation": 15,
+      "layer": 2018,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.165289,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.271805,
+        "y": 0.384784,
+        "w": 0.066374,
+        "h": 0.134601
+      },
+      "legacyReferenceBounds": {
+        "x": 495.5,
+        "y": 526,
+        "w": 121,
+        "h": 184
+      }
+    },
+    {
+      "id": "llysfaen-poster-baecker",
+      "assetId": "baecker-gesucht",
+      "x": 0.340351,
+      "y": 0.405742,
+      "width": 0.057895,
+      "rotation": 0,
+      "layer": 2019,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.165289,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.283873,
+        "y": 0.370154,
+        "w": 0.066374,
+        "h": 0.134601
+      },
+      "legacyReferenceBounds": {
+        "x": 517.5,
+        "y": 506,
+        "w": 121,
+        "h": 184
+      }
+    },
+    {
+      "id": "llysfaen-poster-gesucht-hinten-links",
+      "assetId": "gesucht-kapuzenmann",
+      "x": 0.441786,
+      "y": 0.430144,
+      "width": 0.067943,
+      "rotation": 0,
+      "layer": 2020,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.394405,
+        "y": 0.395757,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 719,
+        "y": 541,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-gesucht-hinten-rechts",
+      "assetId": "gesucht-kapuzenmann",
+      "x": 0.505423,
+      "y": 0.435407,
+      "width": 0.067943,
+      "rotation": 0,
+      "layer": 2021,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.140845,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.467361,
+        "y": 0.403804,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 852,
+        "y": 552,
+        "w": 142,
+        "h": 216
+      }
+    },
+    {
+      "id": "llysfaen-poster-gesucht",
+      "assetId": "gesucht-kapuzenmann",
+      "x": 0.466667,
+      "y": 0.426794,
+      "width": 0.067943,
+      "rotation": 0,
+      "layer": 2022,
+      "pin": {
+        "assetId": "left",
+        "x": 0.51443,
+        "y": 0.186738,
+        "size": 0.164319,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.422929,
+        "y": 0.390636,
+        "w": 0.077894,
+        "h": 0.15801
+      },
+      "legacyReferenceBounds": {
+        "x": 771,
+        "y": 534,
+        "w": 142,
+        "h": 216
+      },
+      "noticeId": "llysfaen-schwarzer-zitteraal",
+      "legacyAnchor": {
+        "x": 0.463,
+        "y": 0.421
+      }
+    },
+    {
+      "id": "llysfaen-poster-vorsicht-schafe",
+      "assetId": "llysfaen-vorsicht-schafe",
+      "x": 0.612839,
+      "y": 0.449761,
+      "width": 0.07044203535964658,
+      "rotation": 0,
+      "layer": 2023,
+      "pin": {
+        "assetId": "right",
+        "x": 0.5191066241077272,
+        "y": 0.2635630000000001,
+        "size": 0.1584885290863636,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.590236,
+        "y": 0.425018,
+        "w": 0.078442,
+        "h": 0.159473
+      },
+      "legacyReferenceBounds": {
+        "x": 1076,
+        "y": 581,
+        "w": 143,
+        "h": 218
+      },
+      "noticeId": "llysfaen-feuerstollen",
+      "legacyAnchor": {
+        "x": 0.631,
+        "y": 0.467
+      },
+      "inspectionNote": "Original picture field has a flock of sheep; preserve link despite unexpected motif."
+    },
+    {
+      "id": "llysfaen-poster-ankuendigung-portrait",
+      "assetId": "llysfaen-ankuendigung-portrait",
+      "x": 0.737719,
+      "y": 0.429187,
+      "width": 0.09633043668806424,
+      "rotation": -6,
+      "layer": 2024,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.47672611626406103,
+        "y": 0.26790658190179134,
+        "size": 0.11589635099602233,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.712013,
+        "y": 0.361375,
+        "w": 0.121229,
+        "h": 0.223848
+      },
+      "legacyReferenceBounds": {
+        "x": 1298,
+        "y": 494,
+        "w": 221,
+        "h": 306
+      },
+      "noticeId": "llysfaen-gemeinschaft",
+      "legacyAnchor": {
+        "x": 0.766,
+        "y": 0.422
+      },
+      "inspectionNote": "Original contains male portrait; generic Ankündigung with Bildfeld would preserve structure better."
+    },
+    {
+      "id": "llysfaen-poster-warnung-hinten-3",
+      "assetId": "warnung",
+      "x": 0.2126,
+      "y": 0.532057,
+      "width": 0.057895,
+      "rotation": 20,
+      "layer": 2025,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.165289,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.137411,
+        "y": 0.56218,
+        "w": 0.066374,
+        "h": 0.136796
+      },
+      "legacyReferenceBounds": {
+        "x": 250.5,
+        "y": 768.5,
+        "w": 121,
+        "h": 187
+      }
+    },
+    {
+      "id": "llysfaen-poster-warnung-hinten-2",
+      "assetId": "warnung",
+      "x": 0.216427,
+      "y": 0.530622,
+      "width": 0.057895,
+      "rotation": 12,
+      "layer": 2026,
+      "pin": {
+        "assetId": "right",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.165289,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.141799,
+        "y": 0.559985,
+        "w": 0.066374,
+        "h": 0.136796
+      },
+      "legacyReferenceBounds": {
+        "x": 258.5,
+        "y": 765.5,
+        "w": 121,
+        "h": 187
+      }
+    },
+    {
+      "id": "llysfaen-poster-warnung-hinten-1",
+      "assetId": "warnung",
+      "x": 0.223126,
+      "y": 0.528708,
+      "width": 0.057895,
+      "rotation": 4,
+      "layer": 2027,
+      "pin": {
+        "assetId": "straight",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.165289,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.149479,
+        "y": 0.557059,
+        "w": 0.066374,
+        "h": 0.136796
+      },
+      "legacyReferenceBounds": {
+        "x": 272.5,
+        "y": 761.5,
+        "w": 121,
+        "h": 187
+      }
+    },
+    {
+      "id": "llysfaen-poster-warnung",
+      "assetId": "warnung",
+      "x": 0.228389,
+      "y": 0.525837,
+      "width": 0.057895,
+      "rotation": -10,
+      "layer": 2028,
+      "pin": {
+        "assetId": "left",
+        "x": 0.08,
+        "y": 0.05,
+        "size": 0.165289,
+        "rotation": 0,
+        "enabled": false
+      },
+      "legacyBounds": {
+        "x": 0.155513,
+        "y": 0.55267,
+        "w": 0.066374,
+        "h": 0.136796
+      },
+      "legacyReferenceBounds": {
+        "x": 283.5,
+        "y": 755.5,
+        "w": 121,
+        "h": 187
+      }
+    },
+    {
+      "id": "llysfaen-poster-vorsicht-aal",
+      "assetId": "llysfaen-vorsicht-aal",
+      "x": 0.323604,
+      "y": 0.538278,
+      "width": 0.06895563947566243,
+      "rotation": 10,
+      "layer": 2029,
+      "pin": {
+        "assetId": "right",
+        "x": 0.36590402547299294,
+        "y": 0.2730734288699176,
+        "size": 0.161905334805,
+        "rotation": 0,
+        "enabled": true
+      },
+      "legacyBounds": {
+        "x": 0.253428,
+        "y": 0.562546,
+        "w": 0.088865,
+        "h": 0.155084
+      },
+      "legacyReferenceBounds": {
+        "x": 462,
+        "y": 769,
+        "w": 162,
+        "h": 212
+      },
+      "noticeId": "llysfaen-wasserloch",
+      "legacyAnchor": {
+        "x": 0.292,
+        "y": 0.603
+      },
+      "inspectionNote": "Original picture field contains a fish/eel."
+    }
+  ],
+  "bindings": [
+    {
+      "posterId": "llysfaen-poster-arbeit-links",
+      "noticeId": "llysfaen-hof-glyn",
+      "legacyPin": {
+        "x": 0.18,
+        "y": 0.21
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-hilfe-links",
+      "noticeId": "llysfaen-bobi-erlenglanz",
+      "legacyPin": {
+        "x": 0.292,
+        "y": 0.213
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-ankuendigung-quer",
+      "noticeId": "llysfaen-hoher-besuch",
+      "legacyPin": {
+        "x": 0.478,
+        "y": 0.226
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-mabli",
+      "noticeId": "llysfaen-mabli",
+      "legacyPin": {
+        "x": 0.638,
+        "y": 0.23
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-hilfe-rechts",
+      "noticeId": "llysfaen-brogars-hilfe",
+      "legacyPin": {
+        "x": 0.735,
+        "y": 0.217
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-arbeit-rechts",
+      "noticeId": "llysfaen-crewe-hof",
+      "legacyPin": {
+        "x": 0.828,
+        "y": 0.222
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-pferdediebe",
+      "noticeId": "llysfaen-pferdediebstahl",
+      "legacyPin": {
+        "x": 0.18,
+        "y": 0.392
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-gesucht",
+      "noticeId": "llysfaen-schwarzer-zitteraal",
+      "legacyPin": {
+        "x": 0.463,
+        "y": 0.421
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-vorsicht-schafe",
+      "noticeId": "llysfaen-feuerstollen",
+      "legacyPin": {
+        "x": 0.631,
+        "y": 0.467
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-ankuendigung-portrait",
+      "noticeId": "llysfaen-gemeinschaft",
+      "legacyPin": {
+        "x": 0.766,
+        "y": 0.422
+      }
+    },
+    {
+      "posterId": "llysfaen-poster-vorsicht-aal",
+      "noticeId": "llysfaen-wasserloch",
+      "legacyPin": {
+        "x": 0.292,
+        "y": 0.603
+      }
+    }
+  ],
+  "layout": {
+    "version": 1,
+    "posters": [
+      {
+        "id": "llysfaen-poster-arbeit-links-hinten-3",
+        "assetId": "arbeit",
+        "x": 0.214514,
+        "y": 0.287081,
+        "width": 0.067943,
+        "rotation": 15,
+        "layer": 2000,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-arbeit-links-hinten-2",
+        "assetId": "arbeit",
+        "x": 0.221212,
+        "y": 0.282775,
+        "width": 0.067943,
+        "rotation": 8,
+        "layer": 2001,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-arbeit-links-hinten-1",
+        "assetId": "arbeit",
+        "x": 0.220255,
+        "y": 0.278469,
+        "width": 0.067943,
+        "rotation": 0,
+        "layer": 2002,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-arbeit-links",
+        "assetId": "llysfaen-arbeit",
+        "x": 0.230303,
+        "y": 0.278947,
+        "width": 0.07084966309648805,
+        "rotation": -12,
+        "layer": 2003,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.4332996983686857,
+          "y": 0.2771336058048822,
+          "size": 0.1575781316108108,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-hof-glyn"
+      },
+      {
+        "id": "llysfaen-poster-hilfe-links-hinten-3",
+        "assetId": "hilfe",
+        "x": 0.307815,
+        "y": 0.288517,
+        "width": 0.066986,
+        "rotation": 18,
+        "layer": 2004,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.142857,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-hilfe-links-hinten-2",
+        "assetId": "hilfe",
+        "x": 0.3126,
+        "y": 0.286603,
+        "width": 0.066986,
+        "rotation": 13,
+        "layer": 2005,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.142857,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-hilfe-links-hinten-1",
+        "assetId": "hilfe",
+        "x": 0.316906,
+        "y": 0.283254,
+        "width": 0.066986,
+        "rotation": 8,
+        "layer": 2006,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.142857,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-hilfe-links",
+        "assetId": "llysfaen-hilfe-links",
+        "x": 0.32504,
+        "y": 0.283971,
+        "width": 0.06780089766920719,
+        "rotation": 2,
+        "layer": 2007,
+        "pin": {
+          "assetId": "left",
+          "x": 0.39060414958904865,
+          "y": 0.2614412861406865,
+          "size": 0.1646611879162535,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-bobi-erlenglanz"
+      },
+      {
+        "id": "llysfaen-poster-ankuendigung-quer",
+        "assetId": "ankuendigung-quer",
+        "x": 0.481499,
+        "y": 0.303349,
+        "width": 0.183732,
+        "rotation": 0,
+        "layer": 2008,
+        "pin": {
+          "assetId": "right",
+          "x": 0.495818,
+          "y": 0.188706,
+          "size": 0.060764,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-hoher-besuch"
+      },
+      {
+        "id": "llysfaen-poster-mabli-hinten-2",
+        "assetId": "mabli",
+        "x": 0.626954,
+        "y": 0.305742,
+        "width": 0.078469,
+        "rotation": -2,
+        "layer": 2009,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.121951,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-mabli-hinten-1",
+        "assetId": "mabli",
+        "x": 0.623604,
+        "y": 0.305263,
+        "width": 0.078469,
+        "rotation": 3,
+        "layer": 2010,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.121951,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-mabli",
+        "assetId": "mabli",
+        "x": 0.620734,
+        "y": 0.305742,
+        "width": 0.078469,
+        "rotation": 5,
+        "layer": 2011,
+        "pin": {
+          "assetId": "right",
+          "x": 0.454735,
+          "y": 0.194578,
+          "size": 0.142276,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-mabli"
+      },
+      {
+        "id": "llysfaen-poster-hilfe-rechts-hinten",
+        "assetId": "hilfe",
+        "x": 0.707815,
+        "y": 0.289474,
+        "width": 0.066029,
+        "rotation": 0,
+        "layer": 2012,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.144928,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-hilfe-rechts",
+        "assetId": "hilfe",
+        "x": 0.707815,
+        "y": 0.287081,
+        "width": 0.066029,
+        "rotation": 0,
+        "layer": 2013,
+        "pin": {
+          "assetId": "left",
+          "x": 0.455833,
+          "y": 0.242436,
+          "size": 0.169082,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-brogars-hilfe"
+      },
+      {
+        "id": "llysfaen-poster-arbeit-rechts-hinten-2",
+        "assetId": "arbeit",
+        "x": 0.778628,
+        "y": 0.295215,
+        "width": 0.067943,
+        "rotation": 12,
+        "layer": 2014,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-arbeit-rechts-hinten-1",
+        "assetId": "arbeit",
+        "x": 0.782935,
+        "y": 0.292344,
+        "width": 0.067943,
+        "rotation": 5,
+        "layer": 2015,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-arbeit-rechts",
+        "assetId": "llysfaen-arbeit",
+        "x": 0.789155,
+        "y": 0.290431,
+        "width": 0.0690022219293538,
+        "rotation": -5,
+        "layer": 2016,
+        "pin": {
+          "assetId": "left",
+          "x": 0.4870612652704228,
+          "y": 0.24859871774241243,
+          "size": 0.16179544662243242,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-crewe-hof"
+      },
+      {
+        "id": "llysfaen-poster-pferdediebe",
+        "assetId": "pferdediebe",
+        "x": 0.220255,
+        "y": 0.403349,
+        "width": 0.067943,
+        "rotation": 0,
+        "layer": 2017,
+        "pin": {
+          "assetId": "right",
+          "x": 0.508028,
+          "y": 0.252171,
+          "size": 0.164319,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-pferdediebstahl"
+      },
+      {
+        "id": "llysfaen-poster-baecker-hinten",
+        "assetId": "baecker-gesucht",
+        "x": 0.329825,
+        "y": 0.415311,
+        "width": 0.057895,
+        "rotation": 15,
+        "layer": 2018,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.165289,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-baecker",
+        "assetId": "baecker-gesucht",
+        "x": 0.340351,
+        "y": 0.405742,
+        "width": 0.057895,
+        "rotation": 0,
+        "layer": 2019,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.165289,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-gesucht-hinten-links",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.441786,
+        "y": 0.430144,
+        "width": 0.067943,
+        "rotation": 0,
+        "layer": 2020,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-gesucht-hinten-rechts",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.505423,
+        "y": 0.435407,
+        "width": 0.067943,
+        "rotation": 0,
+        "layer": 2021,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.140845,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-gesucht",
+        "assetId": "gesucht-kapuzenmann",
+        "x": 0.466667,
+        "y": 0.426794,
+        "width": 0.067943,
+        "rotation": 0,
+        "layer": 2022,
+        "pin": {
+          "assetId": "left",
+          "x": 0.51443,
+          "y": 0.186738,
+          "size": 0.164319,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-schwarzer-zitteraal"
+      },
+      {
+        "id": "llysfaen-poster-vorsicht-schafe",
+        "assetId": "llysfaen-vorsicht-schafe",
+        "x": 0.612839,
+        "y": 0.449761,
+        "width": 0.07044203535964658,
+        "rotation": 0,
+        "layer": 2023,
+        "pin": {
+          "assetId": "right",
+          "x": 0.5191066241077272,
+          "y": 0.2635630000000001,
+          "size": 0.1584885290863636,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-feuerstollen"
+      },
+      {
+        "id": "llysfaen-poster-ankuendigung-portrait",
+        "assetId": "llysfaen-ankuendigung-portrait",
+        "x": 0.737719,
+        "y": 0.429187,
+        "width": 0.09633043668806424,
+        "rotation": -6,
+        "layer": 2024,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.47672611626406103,
+          "y": 0.26790658190179134,
+          "size": 0.11589635099602233,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-gemeinschaft"
+      },
+      {
+        "id": "llysfaen-poster-warnung-hinten-3",
+        "assetId": "warnung",
+        "x": 0.2126,
+        "y": 0.532057,
+        "width": 0.057895,
+        "rotation": 20,
+        "layer": 2025,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.165289,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-warnung-hinten-2",
+        "assetId": "warnung",
+        "x": 0.216427,
+        "y": 0.530622,
+        "width": 0.057895,
+        "rotation": 12,
+        "layer": 2026,
+        "pin": {
+          "assetId": "right",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.165289,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-warnung-hinten-1",
+        "assetId": "warnung",
+        "x": 0.223126,
+        "y": 0.528708,
+        "width": 0.057895,
+        "rotation": 4,
+        "layer": 2027,
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.165289,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-warnung",
+        "assetId": "warnung",
+        "x": 0.228389,
+        "y": 0.525837,
+        "width": 0.057895,
+        "rotation": -10,
+        "layer": 2028,
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.165289,
+          "rotation": 0,
+          "enabled": false
+        }
+      },
+      {
+        "id": "llysfaen-poster-vorsicht-aal",
+        "assetId": "llysfaen-vorsicht-aal",
+        "x": 0.323604,
+        "y": 0.538278,
+        "width": 0.06895563947566243,
+        "rotation": 10,
+        "layer": 2029,
+        "pin": {
+          "assetId": "right",
+          "x": 0.36590402547299294,
+          "y": 0.2730734288699176,
+          "size": 0.161905334805,
+          "rotation": 0,
+          "enabled": true
+        },
+        "noticeId": "llysfaen-wasserloch"
+      }
+    ]
+  },
+  "legacyScale": {
+    "x": 0.8722488038277512,
+    "y": 0.6540669856459329
+  },
+  "artwork": "Nine standalone regional motifs reconstructed with built-in imagegen. Original map and blank paper preserved by CSS crop."
+}

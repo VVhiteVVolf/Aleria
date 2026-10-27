@@ -1,8 +1,10 @@
-import { dimensions, NAILS } from './board-composition-model.mjs';
+import { dimensions, NAILS } from './board-composition-model.mjs?v=20261027-all-boards-v3';
 
 export function paperMarkup(asset, esc) {
   const { x, y, w, h } = asset.bounds;
-  return `<span class="board-paper"><img src="${esc(asset.src)}" alt="" draggable="false" style="width:${asset.width / w * 100}%;height:${asset.height / h * 100}%;left:${-x / w * 100}%;top:${-y / h * 100}%"></span>`;
+  const clip = asset.clipPolygon?.map(point => `${point[0]}% ${point[1]}%`).join(',');
+  const mask = clip ? ` style="clip-path:polygon(${esc(clip)})"` : '';
+  return `<span class="board-paper"><span class="board-paper-crop"${mask}><img src="${esc(asset.src)}" alt="" draggable="false" style="width:${asset.width / w * 100}%;height:${asset.height / h * 100}%;left:${-x / w * 100}%;top:${-y / h * 100}%"></span></span>`;
 }
 
 export function nailMarkup(pin, esc, label = '', interactive = false) {

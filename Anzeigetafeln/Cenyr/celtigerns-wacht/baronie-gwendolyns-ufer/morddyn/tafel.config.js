@@ -3,10 +3,14 @@ window.TAFEL_CONFIG = {
   title: "Anzeigetafel — Morddyn",
   documentTitle: "Anzeigetafel Morddyn - Aleria",
   images: {
-    board: "Bilder/MorddynTafel.png",
+    board: "assets/images/boards/town-square-v1.png",
   },
   storage: {
     dataPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",
+  },
+  boardComposition: {
+    presetPath: "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/board-layout.json",
+    background: "assets/images/boards/town-square-v1.png",
   },
   firebase: {
     collection: "anzeigetafeln",

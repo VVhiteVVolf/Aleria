@@ -5,6 +5,7 @@
   touch-action: none;
 }
 .board-paper { position: absolute; inset: 0; display: block; overflow: hidden; }
+.board-paper-crop { position: absolute; inset: 0; display: block; }
 .board-paper img { position: absolute; max-width: none; pointer-events: none; user-select: none; }
 .board-poster > .board-paper {
   filter: drop-shadow(1px 2px 1px rgb(33 15 4 / 38%)) drop-shadow(3px 7px 4px rgb(30 14 3 / 26%));
@@ -74,7 +75,8 @@ button.board-poster-pin::after { content: ''; position: absolute; inset: min(-6p
 }
 .board-art-catalog { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .7rem; max-height: 52dvh; min-height: 240px; overflow-y: auto; padding: 4px; }
 .board-art-choice { display: flex; flex-direction: column; align-items: center; gap: .3rem; text-align: center; }
-.board-art-choice img { width: 100%; height: 125px; object-fit: contain; }
+.board-art-thumbnail { display: flex; align-items: center; justify-content: center; width: 100%; height: 125px; }
+.board-art-thumbnail > span { position: relative; width: min(100%, calc(125px * var(--asset-aspect))); }
 .board-art-choice strong { font-size: .85rem; }
 .board-art-choice small { color: #725530; font-size: .72rem; }
 .board-art-choice.is-chosen { outline: 3px solid #836024; background: #ffedbd; }
@@ -106,7 +108,8 @@ button.board-poster-pin::after { content: ''; position: absolute; inset: min(-6p
 .tafel-workspace { position: relative; }
 @media (max-width: 700px) {
   .board-art-catalog { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .board-art-choice img { height: 96px; }
+  .board-art-thumbnail { height: 96px; }
+  .board-art-thumbnail > span { width: min(100%, calc(96px * var(--asset-aspect))); }
   .board-art-filters, .board-art-fastener { grid-template-columns: 1fr; }
   .board-art-fastener .board-art-preview { width: 130px; }
   .board-art-steps { gap: .65rem; font-size: .85rem; }

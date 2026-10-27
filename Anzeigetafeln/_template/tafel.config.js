@@ -2,11 +2,6 @@ window.TAFEL_CONFIG = {
   boardId: "template-tafel",
   title: "Anzeigetafel-Vorlage",
   documentTitle: "Anzeigetafel-Vorlage - Aleria",
-  images: {
-    board: "Bilder/tafel.png",
-  },
-  firebase: {
-    collection: "anzeigetafeln",
-    docId: "template-tafel",
-  },
+  images: { board: "assets/images/boards/town-square-v1.png" },
+  storage: { dataPath: "<tafel-ordner>/data.json" },
 };

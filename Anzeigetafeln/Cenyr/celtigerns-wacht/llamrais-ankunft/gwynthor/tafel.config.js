@@ -3,11 +3,11 @@ window.TAFEL_CONFIG = {
   title: "Anzeigetafel — Gwynthor",
   documentTitle: "Gwynthors Anzeigetafel - Aleria",
   images: {
-    board: "Bilder/GwynthorAnzeigetafel.webp",
+    board: "assets/images/boards/town-square-v1.png",
   },
   boardComposition: {
     presetPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/board-layout.json",
-    background: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/Bilder/GwynthorLeer-v1.png",
+    background: "assets/images/boards/town-square-v1.png",
   },
   storage: {
     dataPath: "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/data.json",

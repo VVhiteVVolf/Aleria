@@ -1,8 +1,9 @@
 # Gwynthors Plakattafel · Erprobung vom 27. Oktober 2026
 
-Die neue Darstellung ist ausschließlich in Gwynthors `tafel.config.js` aktiviert.
-Die übrigen Tafeln verwenden weiterhin ihr bisheriges Hintergrundbild und ihre
-Nägel. Der Nutzer hat mit seiner Klarstellung vom 27. Oktober 2026 ausdrücklich
+Nach Freigabe des Gwynthor-Ergebnisses wurde die Darstellung auf alle Tafeln
+und die Vorlage übertragen. Die aktuelle gemeinsame Anleitung steht unter
+[Gemeinsame Plakattafeln](PLAKATTAFEL.md). Dieser Beleg beschreibt die erste
+Gwynthor-Umsetzung. Der Nutzer hat mit seiner Klarstellung vom 27. Oktober 2026 ausdrücklich
 die öffentliche Bereitstellung dieses Gwynthor-Stands beauftragt. Die Auslieferung
 erfolgt über das bestehende GitHub-/Netlify-System; es wird nicht nach Firebase geschrieben.
 

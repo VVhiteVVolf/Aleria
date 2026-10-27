@@ -39,7 +39,7 @@
         <span class="notice-register-copy"><small>${esc(template?.label || 'Aushang')}${notice.secret ? ' · Geheim' : ''}${stackSize > 1 ? ` · ${stackSize} Blätter` : ''}</small><strong>${esc(notice.title || template?.label || 'Ohne Titel')}</strong>${preview ? `<span>${esc(preview)}</span>` : ''}</span>
         <span class="notice-register-arrow" aria-hidden="true">›</span>
       </button>`;
-    }).join('') : `<p class="notice-register-empty">${query || type ? 'Kein Aushang passt zu dieser Suche.' : 'Noch ist das Brett unbeschrieben.'}</p>`;
+    }).join('') : `<p class="notice-register-empty">${query || type ? 'Kein Aushang passt zu dieser Suche.' : 'Noch keine verknüpften Aushänge.'}</p>`;
   }
 
   function search(value) {

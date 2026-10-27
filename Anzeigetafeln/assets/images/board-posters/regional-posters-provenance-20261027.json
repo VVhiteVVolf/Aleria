@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "date": "2026-10-27",
+  "purpose": "Nine original regional paper motifs reconstructed as standalone transparent sprites, without baked fasteners or wood. Wheat design reused on both sides.",
+  "a": {
+    "version": 1,
+    "created": "2026-10-27",
+    "mode": "built-in image_gen",
+    "note": "Four separate built-in calls reconstruct board motifs as complete independent papers. Original board and standalone style references inspected. Generated alpha preserved without raster modification.",
+    "jobs": [
+      {
+        "id": "morddyn-vorsicht",
+        "name": "Vorsicht · steinernes Tor",
+        "motif": "Original board upper-left paper: VORSICHT and a small skull at upper right, framed very simple squat stone doorway/standing lintel shape like a dolmen with two straight stone uprights. Large headline Text (verbatim): \"VORSICHT\". The gate symbol is centered inside a plain thin rectangular ink panel beneath. Small skull symbol by the heading; 6 wavy ink lines below the framed gate. Preserve simple original silhouette; no ornate ruin, heraldry or extra architecture.",
+        "ref": "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+        "category": "Tafelbestand · Morddyn",
+        "scope": "regional",
+        "boardId": "morddyn",
+        "prompt": "Use case: stylized-concept. Asset type: ONE independent full physical paper poster for a composited fantasy notice-board website. Image 1 is the original Morddyn notice board: reconstruct ONLY the specified paper motif from it, not the board or surrounding notices. Image 2 is an already approved standalone poster and is a STYLE reference for flat warm ochre parchment, thick dark-brown hand-inked outlines, simple readable ink shapes, matte subtle even paper grain and wavy placeholder body lines. Match the original specified motif and headline. Make the entire paper frontal, upright and unrotated, portrait roughly 2:3, full irregular paper outline visible within clear margins. Remove the original's perspective and all its fixings. TRUE transparent PNG alpha outside the paper, including transparent margin around all edges. NO nails, pin heads, tacks, fixings, metal circles, nail holes, dark dots in corners, wood, cork, wall, board, frame from environment, scene, external cast shadow or glow. All graphics are flat ink ON the paper, not objects in front. Only the exact requested heading(s) readable; otherwise 5–7 wavy ink placeholder lines. No other text, names, locations, watermark or added emblem. Original board upper-left paper: VORSICHT and a small skull at upper right, framed very simple squat stone doorway/standing lintel shape like a dolmen with two straight stone uprights. Large headline Text (verbatim): \"VORSICHT\". The gate symbol is centered inside a plain thin rectangular ink panel beneath. Small skull symbol by the heading; 6 wavy ink lines below the framed gate. Preserve simple original silhouette; no ornate ruin, heraldry or extra architecture.",
+        "referenced_image_paths": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\baronie-gwendolyns-ufer\\morddyn\\Bilder\\MorddynTafel.png",
+          "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png"
+        ],
+        "transparent_background": true,
+        "mode": "built-in image_gen",
+        "intent": "generate",
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-b14267e4-f6b7-44c6-8615-ed370965d6f0.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-a\\morddyn-vorsicht-v1.png",
+        "validation": {
+          "visuallyInspected": true,
+          "headlineCorrect": true,
+          "originalMotifPreserved": true,
+          "noNailOrPin": true,
+          "noEnvironment": true,
+          "noExternalVisibleShadow": true
+        }
+      },
+      {
+        "id": "morddyn-gefahr",
+        "name": "Gefahr · Totenkopf",
+        "motif": "Original board top row second small paper from left: large headline Text (verbatim): \"GEFAHR\", centered dark brown skull and crossed bones within a simple rectangular ink picture panel, followed by 4–5 wavy ink placeholder lines. Original full paper had two visible nail heads at top corners: remove those entirely, leave plain paper there.",
+        "ref": "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+        "category": "Tafelbestand · Morddyn",
+        "scope": "regional",
+        "boardId": "morddyn",
+        "prompt": "Use case: stylized-concept. Asset type: ONE independent full physical paper poster for a composited fantasy notice-board website. Image 1 is the original Morddyn notice board: reconstruct ONLY the specified paper motif from it, not the board or surrounding notices. Image 2 is an already approved standalone poster and is a STYLE reference for flat warm ochre parchment, thick dark-brown hand-inked outlines, simple readable ink shapes, matte subtle even paper grain and wavy placeholder body lines. Match the original specified motif and headline. Make the entire paper frontal, upright and unrotated, portrait roughly 2:3, full irregular paper outline visible within clear margins. Remove the original's perspective and all its fixings. TRUE transparent PNG alpha outside the paper, including transparent margin around all edges. NO nails, pin heads, tacks, fixings, metal circles, nail holes, dark dots in corners, wood, cork, wall, board, frame from environment, scene, external cast shadow or glow. All graphics are flat ink ON the paper, not objects in front. Only the exact requested heading(s) readable; otherwise 5–7 wavy ink placeholder lines. No other text, names, locations, watermark or added emblem. Original board top row second small paper from left: large headline Text (verbatim): \"GEFAHR\", centered dark brown skull and crossed bones within a simple rectangular ink picture panel, followed by 4–5 wavy ink placeholder lines. Original full paper had two visible nail heads at top corners: remove those entirely, leave plain paper there.",
+        "referenced_image_paths": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\baronie-gwendolyns-ufer\\morddyn\\Bilder\\MorddynTafel.png",
+          "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png"
+        ],
+        "transparent_background": true,
+        "mode": "built-in image_gen",
+        "intent": "generate",
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-aad7ab86-0e93-414d-8fe8-2af168fdc794.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-a\\morddyn-gefahr-v1.png",
+        "validation": {
+          "visuallyInspected": true,
+          "headlineCorrect": true,
+          "originalMotifPreserved": true,
+          "noNailOrPin": true,
+          "noEnvironment": true,
+          "noExternalVisibleShadow": true
+        }
+      },
+      {
+        "id": "morddyn-arbeit",
+        "name": "Arbeit · Amboss",
+        "motif": "Original board middle-left paper immediately to right of the wanted portrait: large headline Text (verbatim): \"ARBEIT!\". Centered blacksmith's anvil as a simple solid dark brown ink silhouette inside a rectangular picture panel, with pointed horn facing right; below it 5 wavy placeholder lines. Thin hand-inked rectangular border inside entire paper. Original top corner nail heads must be absent.",
+        "ref": "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png",
+        "category": "Tafelbestand · Morddyn",
+        "scope": "regional",
+        "boardId": "morddyn",
+        "prompt": "Use case: stylized-concept. Asset type: ONE independent full physical paper poster for a composited fantasy notice-board website. Image 1 is the original Morddyn notice board: reconstruct ONLY the specified paper motif from it, not the board or surrounding notices. Image 2 is an already approved standalone poster and is a STYLE reference for flat warm ochre parchment, thick dark-brown hand-inked outlines, simple readable ink shapes, matte subtle even paper grain and wavy placeholder body lines. Match the original specified motif and headline. Make the entire paper frontal, upright and unrotated, portrait roughly 2:3, full irregular paper outline visible within clear margins. Remove the original's perspective and all its fixings. TRUE transparent PNG alpha outside the paper, including transparent margin around all edges. NO nails, pin heads, tacks, fixings, metal circles, nail holes, dark dots in corners, wood, cork, wall, board, frame from environment, scene, external cast shadow or glow. All graphics are flat ink ON the paper, not objects in front. Only the exact requested heading(s) readable; otherwise 5–7 wavy ink placeholder lines. No other text, names, locations, watermark or added emblem. Original board middle-left paper immediately to right of the wanted portrait: large headline Text (verbatim): \"ARBEIT!\". Centered blacksmith's anvil as a simple solid dark brown ink silhouette inside a rectangular picture panel, with pointed horn facing right; below it 5 wavy placeholder lines. Thin hand-inked rectangular border inside entire paper. Original top corner nail heads must be absent.",
+        "referenced_image_paths": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\baronie-gwendolyns-ufer\\morddyn\\Bilder\\MorddynTafel.png",
+          "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png"
+        ],
+        "transparent_background": true,
+        "mode": "built-in image_gen",
+        "intent": "generate",
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-5431a9bc-7e58-4e25-ba52-10c50d0d5f63.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-a\\morddyn-arbeit-v1.png",
+        "validation": {
+          "visuallyInspected": true,
+          "headlineCorrect": true,
+          "originalMotifPreserved": true,
+          "noNailOrPin": true,
+          "noEnvironment": true,
+          "noExternalVisibleShadow": true
+        }
+      },
+      {
+        "id": "morddyn-wettbewerb",
+        "name": "Ankündigung · Wettbewerb",
+        "motif": "Original board middle paper beneath the large landscape announcement, to right of the anvil: large headline Text (verbatim): \"ANKÜNDIGUNG\" and a small simple brown ink beer mug with handle beside the heading. Beneath, a rectangular ink title panel containing the exact word \"Wettbewerb\" in informal hand-lettered script. Beneath that 6–7 wavy placeholder body lines. This is a modest portrait announcement, simple upright rectangular warm paper with small worn edge nicks, not a guild emblem or ornate brewery advertisement. No proper names or brewery name. Original nail at top-left must be absent.",
+        "ref": "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+        "category": "Tafelbestand · Morddyn",
+        "scope": "regional",
+        "boardId": "morddyn",
+        "prompt": "Use case: stylized-concept. Asset type: ONE independent full physical paper poster for a composited fantasy notice-board website. Image 1 is the original Morddyn notice board: reconstruct ONLY the specified paper motif from it, not the board or surrounding notices. Image 2 is an already approved standalone poster and is a STYLE reference for flat warm ochre parchment, thick dark-brown hand-inked outlines, simple readable ink shapes, matte subtle even paper grain and wavy placeholder body lines. Match the original specified motif and headline. Make the entire paper frontal, upright and unrotated, portrait roughly 2:3, full irregular paper outline visible within clear margins. Remove the original's perspective and all its fixings. TRUE transparent PNG alpha outside the paper, including transparent margin around all edges. NO nails, pin heads, tacks, fixings, metal circles, nail holes, dark dots in corners, wood, cork, wall, board, frame from environment, scene, external cast shadow or glow. All graphics are flat ink ON the paper, not objects in front. Only the exact requested heading(s) readable; otherwise 5–7 wavy ink placeholder lines. No other text, names, locations, watermark or added emblem. Original board middle paper beneath the large landscape announcement, to right of the anvil: large headline Text (verbatim): \"ANKÜNDIGUNG\" and a small simple brown ink beer mug with handle beside the heading. Beneath, a rectangular ink title panel containing the exact word \"Wettbewerb\" in informal hand-lettered script. Beneath that 6–7 wavy placeholder body lines. This is a modest portrait announcement, simple upright rectangular warm paper with small worn edge nicks, not a guild emblem or ornate brewery advertisement. No proper names or brewery name. Original nail at top-left must be absent.",
+        "referenced_image_paths": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\baronie-gwendolyns-ufer\\morddyn\\Bilder\\MorddynTafel.png",
+          "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png"
+        ],
+        "transparent_background": true,
+        "mode": "built-in image_gen",
+        "intent": "generate",
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-7df6e93e-dfe5-4668-b9f1-466f33001e26.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-a\\morddyn-wettbewerb-v1.png",
+        "validation": {
+          "visuallyInspected": true,
+          "headlineCorrect": true,
+          "originalMotifPreserved": true,
+          "noNailOrPin": true,
+          "noEnvironment": true,
+          "noExternalVisibleShadow": true
+        }
+      }
+    ]
+  },
+  "b": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-10-27",
+    "preset": "fantasy-inventory-item",
+    "role": "Regional Llysfaen poster reconstruction, outside generic ten additions",
+    "assets": [
+      {
+        "id": "llysfaen-hilfe-links",
+        "headline": "HILFE!",
+        "styleRef": "E:\\Aleria\\IconOrdner\\Steckis\\ChatGPT_Image_5._Juni_2025__01_07_52-removebg-preview.png",
+        "detail": "Reconstruct the top LEFT HILFE! poster near the board's left work notices. Beneath the headline place the small dark ink silhouette of a LEAPING HORSE on the left and a SMALL SCROLL on the right, just as the first reference shows. Six wavy text placeholder lines below. Preserve the reference's irregular double-outlined paper edge, WITHOUT its painted nail.",
+        "prompt": "Use case: stylized-concept. Reconstruct ONE existing poster from the first reference (the Llysfaen notice board) as an independent transparent PNG asset. Reference 1 provides the exact historical poster motif and headline; Reference 2 provides a close full-size template for the corresponding parchment paper style and layout.\nOutput ONLY a SINGLE complete front-facing portrait parchment paper, centered, fully visible with a clear margin around it. Isolated paper object with TRUE transparent PNG alpha outside the paper. No board, wood, environment, background, extra sheets, nail, pin, tack, attachment, nail-hole, shadow or outer glow. Remove any painted nail from the template. Paper inside remains opaque.\nStyle: match the existing warm ochre parchment, simplified dark brown hand-inked outlines and uneven paper edges, flat matte hand-painted fantasy inventory item illustration. Subtle grain inside paper only, no photorealism, no CGI, no glossy 3D or perspective. The motif is an ink illustration PRINTED ON the parchment, not a separate real animal in front of it.\nKeep the requested motif and headline, with simple wavy dark ink placeholder lines below, not readable body text. No additional names, place names, dates, emblems, watermark or text.\nThis explicit flat poster design and required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"HILFE!\", uppercase, exactly as given; no other readable text.\nReconstruct the top LEFT HILFE! poster near the board's left work notices. Beneath the headline place the small dark ink silhouette of a LEAPING HORSE on the left and a SMALL SCROLL on the right, just as the first reference shows. Six wavy text placeholder lines below. Preserve the reference's irregular double-outlined paper edge, WITHOUT its painted nail.",
+        "references": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\llamrais-ankunft\\herrschaft-der-wyrm\\llysfaen\\Bilder\\LlysfaenTafel.webp",
+          "E:\\Aleria\\IconOrdner\\Steckis\\ChatGPT_Image_5._Juni_2025__01_07_52-removebg-preview.png"
+        ],
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-65ece7a5-6117-45b3-9fef-2d923e3d499e.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-b\\llysfaen-hilfe-links-v1.png",
+        "tool": "built-in image_gen",
+        "transparentBackground": true
+      },
+      {
+        "id": "llysfaen-vorsicht-schafe",
+        "headline": "VORSICHT",
+        "styleRef": "E:\\Aleria\\IconOrdner\\Steckis\\ChatGPT_Image_5._Juni_2025__00_57_31-removebg-preview.png",
+        "detail": "Reconstruct the VORSICHT poster on the middle RIGHT of the board, showing a small SHEEP FLOCK. Small simple dark skull at top right beside headline; beneath headline a rectangular thin ink picture frame containing a compact flock of several small sheep, in the historic reference's simple drawing language. Five wavy placeholder lines below.",
+        "prompt": "Use case: stylized-concept. Reconstruct ONE existing poster from the first reference (the Llysfaen notice board) as an independent transparent PNG asset. Reference 1 provides the exact historical poster motif and headline; Reference 2 provides a close full-size template for the corresponding parchment paper style and layout.\nOutput ONLY a SINGLE complete front-facing portrait parchment paper, centered, fully visible with a clear margin around it. Isolated paper object with TRUE transparent PNG alpha outside the paper. No board, wood, environment, background, extra sheets, nail, pin, tack, attachment, nail-hole, shadow or outer glow. Remove any painted nail from the template. Paper inside remains opaque.\nStyle: match the existing warm ochre parchment, simplified dark brown hand-inked outlines and uneven paper edges, flat matte hand-painted fantasy inventory item illustration. Subtle grain inside paper only, no photorealism, no CGI, no glossy 3D or perspective. The motif is an ink illustration PRINTED ON the parchment, not a separate real animal in front of it.\nKeep the requested motif and headline, with simple wavy dark ink placeholder lines below, not readable body text. No additional names, place names, dates, emblems, watermark or text.\nThis explicit flat poster design and required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"VORSICHT\", uppercase, exactly as given; no other readable text.\nReconstruct the VORSICHT poster on the middle RIGHT of the board, showing a small SHEEP FLOCK. Small simple dark skull at top right beside headline; beneath headline a rectangular thin ink picture frame containing a compact flock of several small sheep, in the historic reference's simple drawing language. Five wavy placeholder lines below.",
+        "references": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\llamrais-ankunft\\herrschaft-der-wyrm\\llysfaen\\Bilder\\LlysfaenTafel.webp",
+          "E:\\Aleria\\IconOrdner\\Steckis\\ChatGPT_Image_5._Juni_2025__00_57_31-removebg-preview.png"
+        ],
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-352413f8-d32f-44e0-89d5-9dbc056ed4de.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-b\\llysfaen-vorsicht-schafe-v1.png",
+        "tool": "built-in image_gen",
+        "transparentBackground": true
+      },
+      {
+        "id": "llysfaen-vorsicht-aal",
+        "headline": "VORSICHT",
+        "styleRef": "E:\\Aleria\\IconOrdner\\Steckis\\ChatGPT_Image_5._Juni_2025__00_57_31-removebg-preview.png",
+        "detail": "Reconstruct the VORSICHT poster at the lower LEFT-center of the board (right of the WARNING stack). It shows the compact curved aquatic creature in the original: a simple bent fish/eel-like silhouette with a small dorsal fin, arched body and tail, above a tiny wavy waterline. Preserve this historic small ink motif rather than designing a new creature; no large scene. Small simple dark skull at top right beside headline, rectangular thin ink picture frame around the water creature, five wavy placeholder lines below.",
+        "prompt": "Use case: stylized-concept. Reconstruct ONE existing poster from the first reference (the Llysfaen notice board) as an independent transparent PNG asset. Reference 1 provides the exact historical poster motif and headline; Reference 2 provides a close full-size template for the corresponding parchment paper style and layout.\nOutput ONLY a SINGLE complete front-facing portrait parchment paper, centered, fully visible with a clear margin around it. Isolated paper object with TRUE transparent PNG alpha outside the paper. No board, wood, environment, background, extra sheets, nail, pin, tack, attachment, nail-hole, shadow or outer glow. Remove any painted nail from the template. Paper inside remains opaque.\nStyle: match the existing warm ochre parchment, simplified dark brown hand-inked outlines and uneven paper edges, flat matte hand-painted fantasy inventory item illustration. Subtle grain inside paper only, no photorealism, no CGI, no glossy 3D or perspective. The motif is an ink illustration PRINTED ON the parchment, not a separate real animal in front of it.\nKeep the requested motif and headline, with simple wavy dark ink placeholder lines below, not readable body text. No additional names, place names, dates, emblems, watermark or text.\nThis explicit flat poster design and required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"VORSICHT\", uppercase, exactly as given; no other readable text.\nReconstruct the VORSICHT poster at the lower LEFT-center of the board (right of the WARNING stack). It shows the compact curved aquatic creature in the original: a simple bent fish/eel-like silhouette with a small dorsal fin, arched body and tail, above a tiny wavy waterline. Preserve this historic small ink motif rather than designing a new creature; no large scene. Small simple dark skull at top right beside headline, rectangular thin ink picture frame around the water creature, five wavy placeholder lines below.",
+        "references": [
+          "E:\\Aleria\\Anzeigetafeln\\Cenyr\\celtigerns-wacht\\llamrais-ankunft\\herrschaft-der-wyrm\\llysfaen\\Bilder\\LlysfaenTafel.webp",
+          "E:\\Aleria\\IconOrdner\\Steckis\\ChatGPT_Image_5._Juni_2025__00_57_31-removebg-preview.png"
+        ],
+        "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-bb57140e-dd8d-4d68-b3ac-804fd141636b.png",
+        "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\regional-b\\llysfaen-vorsicht-aal-v1.png",
+        "tool": "built-in image_gen",
+        "transparentBackground": true
+      }
+    ]
+  },
+  "c": {
+    "mode": "built-in imagegen",
+    "reference": "Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/Bilder/LlysfaenTafel.webp",
+    "preset": "fantasy-inventory-item; explicit original poster design/style overrides general item design and no-text rule",
+    "prompts": [
+      {
+        "id": "llysfaen-arbeit",
+        "prompt": "Use case: precise-object-edit. Asset type: one isolated medieval notice-paper sprite for the existing Aleria notice board. Input image 1 is the exact design/style reference, the Llysfaen board. Reconstruct ONLY ONE of the ARBEIT! papers with three black wheat ears (the top left and top right notices show the same design). It will be reused for both places.\nMatch the warm honey-ochre parchment, slightly uneven dark brown outlines, double thin rectangular border, hand-drawn bold serif capitals, simple ink pictogram, and dark wavy faux-writing lines of the reference. The wheat icon is THREE wheat ears in a rectangular picture box below the heading. Preserve the original general title exactly: \"ARBEIT!\" at the top. Below the picture are about eight short wavy ink text lines, not extra readable names. No named person or place.\nView it perfectly frontally, upright, entire single portrait-oriented paper with straight non-perspective sides and tiny natural irregularities; paper aspect about 0.65, centered in a square 1:1 image with 10% clear margins. Keep all four paper edges fully inside canvas. Paper itself fully opaque.\nThis is an extraction/reconstruction of the PAPER ONLY: remove every iron nail, round metal pinhead, nail hole, stacked backing paper, wood, wall, rope, lantern, environmental lighting and baked cast shadow. No pin-shaped circles anywhere. TRUE transparent PNG alpha around the exact paper silhouette, no checkerboard image content, no halo, no gray/white rectangle, no floor, no frame outside paper, no drop shadow. Existing poster reference style takes precedence over any broader illustration style. Crisp dark lines and warm subtle paper texture; no photorealism, 3D or glossy render."
+      },
+      {
+        "id": "llysfaen-ankuendigung-portrait",
+        "prompt": "Use case: precise-object-edit, identity-preserve. Asset type: one isolated medieval notice-paper sprite for the existing Aleria notice board. Input image 1 is the exact design and identity reference, the Llysfaen board. Reconstruct ONLY the tall ANKÜNDIGUNG! paper on the RIGHT MIDDLE of this image (approximately x71–83%, y36–59% of the board). Its image box contains an UNHOODED man with thick tousled swept-back shoulder-length brown hair, broad square face and jaw, heavy brows, distinctive broad nose, slight confident crooked grin, short scruffy moustache/beard and a broad folded collar with small diamond clasp. This is NOT either hooded wanted man near the board's center. The unhooded man's face must remain immediately recognizable as the SAME illustrated man, preserving the hairstyle, broad face, eyes, nose, grin, collar and expression. Reconstruct his portrait as the same brown sepia ink drawing, not a new color portrait, actor or anime character.\nPreserve the reference notice design: heading exactly \"ANKÜNDIGUNG!\" in dark bold serif capitals at the top; a large thin rectangular portrait box beneath; seven or eight dark wavy faux-writing lines below the box; small plain ochre wax seal at lower right; thin double dark border on warm honey-brown parchment. Preserve this specific man and the general heading, add no names, dates or invented readable text.\nOne entire upright portrait paper, perfectly front-on, no original skew/perspective; paper aspect about 0.66, centered in a square 1:1 image with 10% clear margin, all four edges intact and fully inside canvas. Match hand-drawn dark brown linework and warm flat sepia paper colors of the original board. Paper itself fully opaque.\nPAPER ONLY. No iron nails, metal pinheads, round metal circles, nail holes, stacked backs, wood, board, wall, rope, lantern, scenery, outer glow, cast shadow or baked drop shadow. TRUE transparent PNG alpha around the paper silhouette. No checkerboard as image content, no gray or white background rectangle, no photo, 3D, glossy render or unrelated characters. The existing poster reference style and exact portrait identity take precedence over any general character preset."
+      }
+    ]
+  }
+}

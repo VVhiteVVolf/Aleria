@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-27T18:29:35.675Z",
+  "boards": {
+    "morddyn": 20,
+    "llysfaen": 30,
+    "gwynthor": 53
+  },
+  "catalogMotifs": 87,
+  "newGenericPosters": 10,
+  "reconstructedRegionalPosters": 9,
+  "existingSourceImagesInspected": 70,
+  "noticeTests": 82,
+  "fullBuildTasks": [
+    "build-policy",
+    "regional-catalog",
+    "map-media",
+    "notice-boards",
+    "schwarze-zitteraale",
+    "gwynthor-map",
+    "almanach-runtime",
+    "rotes-tor",
+    "arkaneum",
+    "gwynthor-heime",
+    "economy-calculator",
+    "gameplay-guides",
+    "gwregysdu-harbor",
+    "gestiefelte-muschi",
+    "letzter-heller",
+    "markt-der-fortuna-gwynthor",
+    "klingende-muenze-gwynthor",
+    "rote-klaue",
+    "klingende-krone",
+    "natural-resources",
+    "skalli-retinue",
+    "regional-equipment",
+    "aldrimar-roriksheim",
+    "family-charts",
+    "territory-pages",
+    "map-systems",
+    "family-records",
+    "events-calendar",
+    "uathneach-preview"
+  ],
+  "validation": "Full project build succeeded. Notice checks rerun after final loading-preview/status changes.",
+  "browser": [
+    "Morddyn and Llysfaen visual layout",
+    "Llysfaen existing content opens from the new fastener",
+    "New generic motifs in shared library",
+    "Visible nail / disabled click / decoration choice",
+    "Existing inspector, layers, all 16 templates",
+    "Gwynthor retains 53 physical sheets, 3 linked anchor groups and 4 logical publications"
+  ],
+  "preserved": [
+    "All existing canonical data.json files",
+    "Existing notice IDs, stack membership, text and comments",
+    "Explicit layouts and empty layouts",
+    "Revision protection and incomplete-legacy-source publication guard"
+  ],
+  "limitation": "Morddyn legacy Firebase content remains inaccessible to the existing read-only client. No unknown contents overwritten or invented.",
+  "backgroundCompatibility": "The former Gwynthor empty-background URL intentionally remains byte-identical to the shared default."
+}

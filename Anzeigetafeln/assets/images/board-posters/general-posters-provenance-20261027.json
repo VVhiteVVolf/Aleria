@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "date": "2026-10-27",
+  "selection": "All 70 existing source images inspected. Ten reusable motifs fill gaps, with no people, places or unique events.",
+  "assets": [
+    {
+      "id": "hochzeit-allgemein",
+      "output": "hochzeit-allgemein-v1.png",
+      "width": 1586,
+      "height": 992,
+      "bounds": {
+        "x": 55,
+        "y": 70,
+        "w": 1477,
+        "h": 853
+      }
+    },
+    {
+      "id": "unterkunft",
+      "output": "unterkunft-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 48,
+        "y": 84,
+        "w": 929,
+        "h": 1370
+      }
+    },
+    {
+      "id": "vermietung",
+      "output": "vermietung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 48,
+        "y": 77,
+        "w": 932,
+        "h": 1397
+      }
+    },
+    {
+      "id": "geleit",
+      "output": "geleit-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 47,
+        "y": 80,
+        "w": 937,
+        "h": 1386
+      }
+    },
+    {
+      "id": "lieferung",
+      "output": "lieferung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 49,
+        "y": 85,
+        "w": 925,
+        "h": 1363
+      }
+    },
+    {
+      "id": "verloren",
+      "output": "verloren-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 78,
+        "y": 77,
+        "w": 875,
+        "h": 1372
+      }
+    },
+    {
+      "id": "gefunden",
+      "output": "gefunden-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 65,
+        "y": 100,
+        "w": 897,
+        "h": 1341
+      }
+    },
+    {
+      "id": "heilung",
+      "output": "heilung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 62,
+        "y": 100,
+        "w": 900,
+        "h": 1350
+      }
+    },
+    {
+      "id": "lehrlinge",
+      "output": "lehrlinge-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 56,
+        "y": 88,
+        "w": 916,
+        "h": 1378
+      }
+    },
+    {
+      "id": "versammlung",
+      "output": "versammlung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 68,
+        "y": 107,
+        "w": 888,
+        "h": 1338
+      }
+    }
+  ],
+  "generation": {
+    "a": {
+      "version": 1,
+      "created": "2026-10-27",
+      "mode": "built-in image_gen",
+      "skill": "C:/Users/fhg_r/.codex/skills/.system/imagegen/SKILL.md",
+      "note": "Five separate built-in calls. References are style only. Existing originals preserved. Generated alpha is preserved without raster modification.",
+      "jobs": [
+        {
+          "id": "hochzeit-allgemein",
+          "name": "Hochzeit",
+          "category": "Veranstaltungen",
+          "prompt": "Use case: stylized-concept. Asset type: one reusable fantasy notice-board poster image, as a separate physical paper layer for an existing game website. Create ONE new isolated poster; input images are STYLE REFERENCES ONLY, not edit targets. Image 1 (Ankündigung) establishes simple flat warm ochre parchment with dark brown hand-inked outlines; image 2 (ARBEIT) establishes large bold legible German header and wavy placeholder body lines; image 3 (HOCHZEIT) establishes parchment and wedding ornament style ONLY. Match this modest illustrated paper series: matte warm ochre paper, subtle even grain, simple crisp irregular dark brown outlines, flat hand-inked decorative symbols, no realistic depth or ornate illuminated manuscript treatment. Full paper shown frontally, small gently worn/crooked edges, entire silhouette comfortably inside transparent canvas. TRUE transparent PNG alpha outside the paper, no backdrop or checkerboard. No nail, pin, tack, knife, fixing, hand, scene, board, photograph, or external drop shadow; shadows are added later by the app. The ONLY readable words may be the exact requested headline; all body content consists of 5–7 irregular wavy ink lines like the references, no pseudo-readable sentences. No names, proper nouns, dates, locations, guilds, heraldry, logo, watermark or extra labels. Subject: a general wedding announcement usable for any wedding. Broad landscape parchment sheet, approximately 1.6:1 paper aspect ratio; roses and two intertwined rings as simple brown ink ornaments, like the wedding reference. Large centered headline Text (verbatim): \"HOCHZEIT\". Below it a small empty decorative name panel with NO text, followed by wavy placeholder lines. Remove every reference-specific person name. This is a generic wedding design, no bride or groom portraits.",
+          "referenced_image_paths": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\hochzeit-v1.png"
+          ],
+          "transparent_background": true,
+          "mode": "built-in image_gen",
+          "intent": "generate",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-24977d71-2d23-4c3d-a041-19b37b4f0308.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-a\\hochzeit-allgemein-v1.png",
+          "validation": {
+            "visuallyInspected": true,
+            "headlineCorrect": true,
+            "onlyGenericMotif": true,
+            "noNamesOrLocations": true,
+            "noNailOrPin": true,
+            "noExternalVisibleShadow": true
+          }
+        },
+        {
+          "id": "unterkunft",
+          "name": "Unterkunft",
+          "category": "Handel & Arbeit",
+          "prompt": "Use case: stylized-concept. Asset type: one reusable fantasy notice-board poster image, as a separate physical paper layer for an existing game website. Create ONE new isolated poster; input images are STYLE REFERENCES ONLY, not edit targets. Image 1 (Ankündigung) establishes simple flat warm ochre parchment with dark brown hand-inked outlines; image 2 (ARBEIT) establishes large bold legible German header and wavy placeholder body lines; image 3 (HOCHZEIT) establishes parchment and wedding ornament style ONLY. Match this modest illustrated paper series: matte warm ochre paper, subtle even grain, simple crisp irregular dark brown outlines, flat hand-inked decorative symbols, no realistic depth or ornate illuminated manuscript treatment. Full paper shown frontally, small gently worn/crooked edges, entire silhouette comfortably inside transparent canvas. TRUE transparent PNG alpha outside the paper, no backdrop or checkerboard. No nail, pin, tack, knife, fixing, hand, scene, board, photograph, or external drop shadow; shadows are added later by the app. The ONLY readable words may be the exact requested headline; all body content consists of 5–7 irregular wavy ink lines like the references, no pseudo-readable sentences. No names, proper nouns, dates, locations, guilds, heraldry, logo, watermark or extra labels. Subject: generic accommodation notice. Portrait parchment paper about 2:3 aspect ratio inside a square transparent canvas. Large clear single-line headline Text (verbatim): \"UNTERKUNFT\" (U N T E R K U N F T). A small simple brown ink pictogram of a bed beneath a roof under the headline; modest clean silhouette, no inn name, no figures. Five or six wavy lines in the lower portion. Plain unmarked amber wax seal optional in lower corner.",
+          "referenced_image_paths": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\hochzeit-v1.png"
+          ],
+          "transparent_background": true,
+          "mode": "built-in image_gen",
+          "intent": "generate",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-3a0a5816-c655-4201-a5eb-af85a10f9662.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-a\\unterkunft-v1.png",
+          "validation": {
+            "visuallyInspected": true,
+            "headlineCorrect": true,
+            "onlyGenericMotif": true,
+            "noNamesOrLocations": true,
+            "noNailOrPin": true,
+            "noExternalVisibleShadow": true
+          }
+        },
+        {
+          "id": "vermietung",
+          "name": "Zu vermieten",
+          "category": "Handel & Arbeit",
+          "prompt": "Use case: stylized-concept. Asset type: one reusable fantasy notice-board poster image, as a separate physical paper layer for an existing game website. Create ONE new isolated poster; input images are STYLE REFERENCES ONLY, not edit targets. Image 1 (Ankündigung) establishes simple flat warm ochre parchment with dark brown hand-inked outlines; image 2 (ARBEIT) establishes large bold legible German header and wavy placeholder body lines; image 3 (HOCHZEIT) establishes parchment and wedding ornament style ONLY. Match this modest illustrated paper series: matte warm ochre paper, subtle even grain, simple crisp irregular dark brown outlines, flat hand-inked decorative symbols, no realistic depth or ornate illuminated manuscript treatment. Full paper shown frontally, small gently worn/crooked edges, entire silhouette comfortably inside transparent canvas. TRUE transparent PNG alpha outside the paper, no backdrop or checkerboard. No nail, pin, tack, knife, fixing, hand, scene, board, photograph, or external drop shadow; shadows are added later by the app. The ONLY readable words may be the exact requested headline; all body content consists of 5–7 irregular wavy ink lines like the references, no pseudo-readable sentences. No names, proper nouns, dates, locations, guilds, heraldry, logo, watermark or extra labels. Subject: a generic rental notice, without specifying an address or item. Portrait parchment paper about 2:3 aspect ratio inside a square transparent canvas. Large bold centered two-line headline Text (verbatim): \"ZU\" then \"VERMIETEN\". Small simple brown ink pictogram of an old door and a key beneath the header. Five or six wavy ink lines below. No price, address, names, numbers or other readable text.",
+          "referenced_image_paths": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\hochzeit-v1.png"
+          ],
+          "transparent_background": true,
+          "mode": "built-in image_gen",
+          "intent": "generate",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-d1bd445d-58f8-48ae-bdbb-d0a8d0f1477c.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-a\\vermietung-v1.png",
+          "validation": {
+            "visuallyInspected": true,
+            "headlineCorrect": true,
+            "onlyGenericMotif": true,
+            "noNamesOrLocations": true,
+            "noNailOrPin": true,
+            "noExternalVisibleShadow": true
+          }
+        },
+        {
+          "id": "geleit",
+          "name": "Geleit gesucht",
+          "category": "Gesuche & Steckbriefe",
+          "prompt": "Use case: stylized-concept. Asset type: one reusable fantasy notice-board poster image, as a separate physical paper layer for an existing game website. Create ONE new isolated poster; input images are STYLE REFERENCES ONLY, not edit targets. Image 1 (Ankündigung) establishes simple flat warm ochre parchment with dark brown hand-inked outlines; image 2 (ARBEIT) establishes large bold legible German header and wavy placeholder body lines; image 3 (HOCHZEIT) establishes parchment and wedding ornament style ONLY. Match this modest illustrated paper series: matte warm ochre paper, subtle even grain, simple crisp irregular dark brown outlines, flat hand-inked decorative symbols, no realistic depth or ornate illuminated manuscript treatment. Full paper shown frontally, small gently worn/crooked edges, entire silhouette comfortably inside transparent canvas. TRUE transparent PNG alpha outside the paper, no backdrop or checkerboard. No nail, pin, tack, knife, fixing, hand, scene, board, photograph, or external drop shadow; shadows are added later by the app. The ONLY readable words may be the exact requested headline; all body content consists of 5–7 irregular wavy ink lines like the references, no pseudo-readable sentences. No names, proper nouns, dates, locations, guilds, heraldry, logo, watermark or extra labels. Subject: a generic escort request for a journey. Portrait parchment paper about 2:3 aspect ratio inside a square transparent canvas. Large bold centered two-line headline Text (verbatim): \"GELEIT\" then \"GESUCHT\". Below the headline, a small simple brown ink symbol: a pair of travel boots alongside a curving path and a plain shield silhouette without any emblem. Simple medieval illustrative notice icon, not a battle scene. Five or six wavy body ink lines below. No destination, persons, routes, coat of arms or other words.",
+          "referenced_image_paths": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\hochzeit-v1.png"
+          ],
+          "transparent_background": true,
+          "mode": "built-in image_gen",
+          "intent": "generate",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-dbb41fa6-cee5-48cb-9054-033d7fe79792.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-a\\geleit-v1.png",
+          "validation": {
+            "visuallyInspected": true,
+            "headlineCorrect": true,
+            "onlyGenericMotif": true,
+            "noNamesOrLocations": true,
+            "noNailOrPin": true,
+            "noExternalVisibleShadow": true
+          }
+        },
+        {
+          "id": "lieferung",
+          "name": "Lieferung",
+          "category": "Handel & Arbeit",
+          "prompt": "Use case: stylized-concept. Asset type: one reusable fantasy notice-board poster image, as a separate physical paper layer for an existing game website. Create ONE new isolated poster; input images are STYLE REFERENCES ONLY, not edit targets. Image 1 (Ankündigung) establishes simple flat warm ochre parchment with dark brown hand-inked outlines; image 2 (ARBEIT) establishes large bold legible German header and wavy placeholder body lines; image 3 (HOCHZEIT) establishes parchment and wedding ornament style ONLY. Match this modest illustrated paper series: matte warm ochre paper, subtle even grain, simple crisp irregular dark brown outlines, flat hand-inked decorative symbols, no realistic depth or ornate illuminated manuscript treatment. Full paper shown frontally, small gently worn/crooked edges, entire silhouette comfortably inside transparent canvas. TRUE transparent PNG alpha outside the paper, no backdrop or checkerboard. No nail, pin, tack, knife, fixing, hand, scene, board, photograph, or external drop shadow; shadows are added later by the app. The ONLY readable words may be the exact requested headline; all body content consists of 5–7 irregular wavy ink lines like the references, no pseudo-readable sentences. No names, proper nouns, dates, locations, guilds, heraldry, logo, watermark or extra labels. Subject: a generic delivery notice usable for any parcel or transport task. Portrait parchment paper about 2:3 aspect ratio inside a square transparent canvas. Large bold headline Text (verbatim): \"LIEFERUNG\". Beneath it a small simple brown ink pictogram: a tied square parcel resting on a tiny two-wheel handcart, no brands, insignia or labels. Five or six wavy body ink lines below. No merchant, place, goods names or other readable words.",
+          "referenced_image_paths": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\hochzeit-v1.png"
+          ],
+          "transparent_background": true,
+          "mode": "built-in image_gen",
+          "intent": "generate",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-9ca9-7773-8361-faf1b7b622f3\\exec-4a11e4de-bdfe-4e51-91ea-6c0e3ab7c87b.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-a\\lieferung-v1.png",
+          "validation": {
+            "visuallyInspected": true,
+            "headlineCorrect": true,
+            "onlyGenericMotif": true,
+            "noNamesOrLocations": true,
+            "noNailOrPin": true,
+            "noExternalVisibleShadow": true
+          }
+        }
+      ]
+    },
+    "b": {
+      "schemaVersion": 1,
+      "generatedAt": "2026-10-27",
+      "preset": "fantasy-inventory-item",
+      "styleOverride": "Existing approved flat parchment poster art; required generic headline; frontal paper, no outer shadow.",
+      "assets": [
+        {
+          "id": "verloren",
+          "headline": "VERLOREN!",
+          "detail": "Illustration: a simple open empty coin pouch with a single large question mark above it, drawn in the same dark-brown ink on the parchment. No specific owner.",
+          "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a reusable generic notice-board parchment poster, a new sibling variant of the two attached poster artworks.\nInput images: Reference 1 defines the flat parchment drawing language, warm ochre paper and dark brown hand-inked outlines; Reference 2 defines the larger poster drawing language and clean readability. Both are STYLE references only; do not copy their existing words. Match their hand-painted fantasy inventory style: crisp dark outlines, simplified matte shading, muted warm colors, subtle even paper grain, gentle illustrated highlights, readable shapes at small thumbnail size. Not photorealistic, not CGI or glossy 3D.\nComposition: a SINGLE upright portrait paper approximately 2:3 shape, entirely visible front-on with slightly irregular edges; centered on a square transparent artboard, taking about 85% of height. Flat paper artwork, no 3D perspective. Bold legible dark-brown medieval serif headline at top, one simple relevant ink illustration beneath it, then four short wavy dark-brown placeholder lines near the bottom. Those lines are NOT words. An optional plain unbranded small wax seal may sit on the paper; no insignia.\nTRUE transparent PNG alpha outside the paper, no environment, wall, wood, backdrop, painted checkerboard or floor, NO outer shadow or contact shadow, no glow or halo. NO nail, pin, tack, knife or attachment; a movable nail will be a separate UI layer. No extra objects outside the paper. No proper names, places, dates, house/guild emblems, specific quest details or watermark. Only the requested exact headline is readable text.\nThis explicit flat poster design with required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"VERLOREN!\". Spell it exactly as given, all uppercase, no other readable words.\nIllustration: a simple open empty coin pouch with a single large question mark above it, drawn in the same dark-brown ink on the parchment. No specific owner.",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-c00cf6a8-3e57-4362-a7c7-55c733becff5.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-b\\verloren-v1.png",
+          "references": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparentBackground": true
+        },
+        {
+          "id": "gefunden",
+          "headline": "GEFUNDEN!",
+          "detail": "Illustration: a small simple old key just above a stylized open palm, dark-brown ink printed ON the paper, clearly a generic found-object pictogram. No actual hand outside the paper.",
+          "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a reusable generic notice-board parchment poster, a new sibling variant of the two attached poster artworks.\nInput images: Reference 1 defines the flat parchment drawing language, warm ochre paper and dark brown hand-inked outlines; Reference 2 defines the larger poster drawing language and clean readability. Both are STYLE references only; do not copy their existing words. Match their hand-painted fantasy inventory style: crisp dark outlines, simplified matte shading, muted warm colors, subtle even paper grain, gentle illustrated highlights, readable shapes at small thumbnail size. Not photorealistic, not CGI or glossy 3D.\nComposition: a SINGLE upright portrait paper approximately 2:3 shape, entirely visible front-on with slightly irregular edges; centered on a square transparent artboard, taking about 85% of height. Flat paper artwork, no 3D perspective. Bold legible dark-brown medieval serif headline at top, one simple relevant ink illustration beneath it, then four short wavy dark-brown placeholder lines near the bottom. Those lines are NOT words. An optional plain unbranded small wax seal may sit on the paper; no insignia.\nTRUE transparent PNG alpha outside the paper, no environment, wall, wood, backdrop, painted checkerboard or floor, NO outer shadow or contact shadow, no glow or halo. NO nail, pin, tack, knife or attachment; a movable nail will be a separate UI layer. No extra objects outside the paper. No proper names, places, dates, house/guild emblems, specific quest details or watermark. Only the requested exact headline is readable text.\nThis explicit flat poster design with required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"GEFUNDEN!\". Spell it exactly as given, all uppercase, no other readable words.\nIllustration: a small simple old key just above a stylized open palm, dark-brown ink printed ON the paper, clearly a generic found-object pictogram. No actual hand outside the paper.",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-a8888d20-112a-4128-b6ff-4d5bcc868791.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-b\\gefunden-v1.png",
+          "references": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparentBackground": true
+        },
+        {
+          "id": "heilung",
+          "headline": "HEILUNG",
+          "detail": "Illustration: a small simple mortar and pestle with a few herb leaves and a rolled bandage, drawn as one generic dark-brown ink pictogram printed on the paper. No modern medical cross, no red cross, no modern equipment.",
+          "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a reusable generic notice-board parchment poster, a new sibling variant of the two attached poster artworks.\nInput images: Reference 1 defines the flat parchment drawing language, warm ochre paper and dark brown hand-inked outlines; Reference 2 defines the larger poster drawing language and clean readability. Both are STYLE references only; do not copy their existing words. Match their hand-painted fantasy inventory style: crisp dark outlines, simplified matte shading, muted warm colors, subtle even paper grain, gentle illustrated highlights, readable shapes at small thumbnail size. Not photorealistic, not CGI or glossy 3D.\nComposition: a SINGLE upright portrait paper approximately 2:3 shape, entirely visible front-on with slightly irregular edges; centered on a square transparent artboard, taking about 85% of height. Flat paper artwork, no 3D perspective. Bold legible dark-brown medieval serif headline at top, one simple relevant ink illustration beneath it, then four short wavy dark-brown placeholder lines near the bottom. Those lines are NOT words. An optional plain unbranded small wax seal may sit on the paper; no insignia.\nTRUE transparent PNG alpha outside the paper, no environment, wall, wood, backdrop, painted checkerboard or floor, NO outer shadow or contact shadow, no glow or halo. NO nail, pin, tack, knife or attachment; a movable nail will be a separate UI layer. No extra objects outside the paper. No proper names, places, dates, house/guild emblems, specific quest details or watermark. Only the requested exact headline is readable text.\nThis explicit flat poster design with required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"HEILUNG\". Spell it exactly as given, all uppercase, no other readable words.\nIllustration: a small simple mortar and pestle with a few herb leaves and a rolled bandage, drawn as one generic dark-brown ink pictogram printed on the paper. No modern medical cross, no red cross, no modern equipment.",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-b8f8ca91-1669-474f-85ef-ccc48f20bb8e.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-b\\heilung-v1.png",
+          "references": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparentBackground": true
+        },
+        {
+          "id": "lehrlinge",
+          "headline": "LEHRLINGE GESUCHT",
+          "detail": "Illustration: a simple hammer and quill crossed at a gentle angle, dark-brown ink pictogram printed on the paper. Headline may be two centered lines, LEHRLINGE above GESUCHT, with both words large and clear.",
+          "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a reusable generic notice-board parchment poster, a new sibling variant of the two attached poster artworks.\nInput images: Reference 1 defines the flat parchment drawing language, warm ochre paper and dark brown hand-inked outlines; Reference 2 defines the larger poster drawing language and clean readability. Both are STYLE references only; do not copy their existing words. Match their hand-painted fantasy inventory style: crisp dark outlines, simplified matte shading, muted warm colors, subtle even paper grain, gentle illustrated highlights, readable shapes at small thumbnail size. Not photorealistic, not CGI or glossy 3D.\nComposition: a SINGLE upright portrait paper approximately 2:3 shape, entirely visible front-on with slightly irregular edges; centered on a square transparent artboard, taking about 85% of height. Flat paper artwork, no 3D perspective. Bold legible dark-brown medieval serif headline at top, one simple relevant ink illustration beneath it, then four short wavy dark-brown placeholder lines near the bottom. Those lines are NOT words. An optional plain unbranded small wax seal may sit on the paper; no insignia.\nTRUE transparent PNG alpha outside the paper, no environment, wall, wood, backdrop, painted checkerboard or floor, NO outer shadow or contact shadow, no glow or halo. NO nail, pin, tack, knife or attachment; a movable nail will be a separate UI layer. No extra objects outside the paper. No proper names, places, dates, house/guild emblems, specific quest details or watermark. Only the requested exact headline is readable text.\nThis explicit flat poster design with required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"LEHRLINGE GESUCHT\". Spell it exactly as given, all uppercase, no other readable words.\nIllustration: a simple hammer and quill crossed at a gentle angle, dark-brown ink pictogram printed on the paper. Headline may be two centered lines, LEHRLINGE above GESUCHT, with both words large and clear.",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-4d4782fe-c072-437c-8dae-441ef85680b4.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-b\\lehrlinge-v1.png",
+          "references": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparentBackground": true
+        },
+        {
+          "id": "versammlung",
+          "headline": "VERSAMMLUNG",
+          "detail": "Illustration: a simple small ringing bell, dark-brown ink pictogram printed on the paper. No heraldic crest or organization.",
+          "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a reusable generic notice-board parchment poster, a new sibling variant of the two attached poster artworks.\nInput images: Reference 1 defines the flat parchment drawing language, warm ochre paper and dark brown hand-inked outlines; Reference 2 defines the larger poster drawing language and clean readability. Both are STYLE references only; do not copy their existing words. Match their hand-painted fantasy inventory style: crisp dark outlines, simplified matte shading, muted warm colors, subtle even paper grain, gentle illustrated highlights, readable shapes at small thumbnail size. Not photorealistic, not CGI or glossy 3D.\nComposition: a SINGLE upright portrait paper approximately 2:3 shape, entirely visible front-on with slightly irregular edges; centered on a square transparent artboard, taking about 85% of height. Flat paper artwork, no 3D perspective. Bold legible dark-brown medieval serif headline at top, one simple relevant ink illustration beneath it, then four short wavy dark-brown placeholder lines near the bottom. Those lines are NOT words. An optional plain unbranded small wax seal may sit on the paper; no insignia.\nTRUE transparent PNG alpha outside the paper, no environment, wall, wood, backdrop, painted checkerboard or floor, NO outer shadow or contact shadow, no glow or halo. NO nail, pin, tack, knife or attachment; a movable nail will be a separate UI layer. No extra objects outside the paper. No proper names, places, dates, house/guild emblems, specific quest details or watermark. Only the requested exact headline is readable text.\nThis explicit flat poster design with required headline overrides the generic inventory preset's no-text and three-quarter-view conventions.\nText (verbatim): \"VERSAMMLUNG\". Spell it exactly as given, all uppercase, no other readable words.\nIllustration: a simple small ringing bell, dark-brown ink pictogram printed on the paper. No heraldic crest or organization.",
+          "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a17e8a-e3a4-7fc0-ab19-f5980da0cb5d\\exec-64b31e7b-d618-45db-bbf1-06535b229806.png",
+          "outputPath": "E:\\Aleria\\.tmp\\notice-rollout-20261027\\generic-b\\versammlung-v1.png",
+          "references": [
+            "E:\\Aleria\\IconOrdner\\Steckis\\Ankündigung.png",
+            "E:\\Aleria\\Anzeigetafeln\\assets\\images\\board-posters\\arbeit-v1.png"
+          ],
+          "tool": "built-in image_gen",
+          "transparentBackground": true
+        }
+      ]
+    }
+  }
+}

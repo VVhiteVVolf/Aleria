@@ -1014,6 +1014,525 @@
         "h": 599
       },
       "aspect": 0.664441
+    },
+    {
+      "id": "hochzeit-allgemein",
+      "name": "Hochzeit",
+      "category": "Veranstaltungen",
+      "scope": "general",
+      "src": "assets/images/board-posters/hochzeit-allgemein-v1.png",
+      "width": 1586,
+      "height": 992,
+      "bounds": {
+        "x": 55,
+        "y": 70,
+        "w": 1477,
+        "h": 853
+      },
+      "aspect": 1.731535756154748
+    },
+    {
+      "id": "unterkunft",
+      "name": "Unterkunft",
+      "category": "Handel & Arbeit",
+      "scope": "general",
+      "src": "assets/images/board-posters/unterkunft-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 48,
+        "y": 84,
+        "w": 929,
+        "h": 1370
+      },
+      "aspect": 0.6781021897810219
+    },
+    {
+      "id": "vermietung",
+      "name": "Zu vermieten",
+      "category": "Handel & Arbeit",
+      "scope": "general",
+      "src": "assets/images/board-posters/vermietung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 48,
+        "y": 77,
+        "w": 932,
+        "h": 1397
+      },
+      "aspect": 0.6671438797423049
+    },
+    {
+      "id": "geleit",
+      "name": "Geleit gesucht",
+      "category": "Gesuche & Steckbriefe",
+      "scope": "general",
+      "src": "assets/images/board-posters/geleit-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 47,
+        "y": 80,
+        "w": 937,
+        "h": 1386
+      },
+      "aspect": 0.676046176046176
+    },
+    {
+      "id": "lieferung",
+      "name": "Lieferung",
+      "category": "Handel & Arbeit",
+      "scope": "general",
+      "src": "assets/images/board-posters/lieferung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 49,
+        "y": 85,
+        "w": 925,
+        "h": 1363
+      },
+      "aspect": 0.6786500366837858
+    },
+    {
+      "id": "verloren",
+      "name": "Verloren",
+      "category": "Suchen & Finden",
+      "scope": "general",
+      "src": "assets/images/board-posters/verloren-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 78,
+        "y": 77,
+        "w": 875,
+        "h": 1372
+      },
+      "aspect": 0.6377551020408163
+    },
+    {
+      "id": "gefunden",
+      "name": "Gefunden",
+      "category": "Suchen & Finden",
+      "scope": "general",
+      "src": "assets/images/board-posters/gefunden-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 65,
+        "y": 100,
+        "w": 897,
+        "h": 1341
+      },
+      "aspect": 0.668903803131991
+    },
+    {
+      "id": "heilung",
+      "name": "Heilung",
+      "category": "Hilfe & Versorgung",
+      "scope": "general",
+      "src": "assets/images/board-posters/heilung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 62,
+        "y": 100,
+        "w": 900,
+        "h": 1350
+      },
+      "aspect": 0.6666666666666666
+    },
+    {
+      "id": "lehrlinge",
+      "name": "Lehrlinge gesucht",
+      "category": "Handel & Arbeit",
+      "scope": "general",
+      "src": "assets/images/board-posters/lehrlinge-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 56,
+        "y": 88,
+        "w": 916,
+        "h": 1378
+      },
+      "aspect": 0.6647314949201741
+    },
+    {
+      "id": "versammlung",
+      "name": "Versammlung",
+      "category": "Veranstaltungen",
+      "scope": "general",
+      "src": "assets/images/board-posters/versammlung-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 68,
+        "y": 107,
+        "w": 888,
+        "h": 1338
+      },
+      "aspect": 0.6636771300448431
+    },
+    {
+      "id": "morddyn-regionalkarte",
+      "name": "Regionalkarte von Morddyn",
+      "category": "Tafelbestand · Morddyn",
+      "scope": "regional",
+      "boardId": "morddyn",
+      "src": "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafel.png",
+      "width": 4096,
+      "height": 2829,
+      "bounds": {
+        "x": 2214,
+        "y": 487,
+        "w": 1240,
+        "h": 886
+      },
+      "aspect": 1.399549,
+      "clipPolygon": [
+        [
+          0,
+          12
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          20,
+          7
+        ],
+        [
+          30,
+          6
+        ],
+        [
+          35,
+          7
+        ],
+        [
+          45,
+          9
+        ],
+        [
+          50,
+          7
+        ],
+        [
+          65,
+          7
+        ],
+        [
+          70,
+          2
+        ],
+        [
+          80,
+          3
+        ],
+        [
+          95,
+          0
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          95,
+          15
+        ],
+        [
+          99,
+          82
+        ],
+        [
+          100,
+          88
+        ],
+        [
+          98,
+          94
+        ],
+        [
+          91,
+          95
+        ],
+        [
+          89,
+          90
+        ],
+        [
+          60,
+          92
+        ],
+        [
+          53,
+          96
+        ],
+        [
+          35,
+          91
+        ],
+        [
+          30,
+          95
+        ],
+        [
+          5,
+          100
+        ],
+        [
+          3,
+          75
+        ],
+        [
+          2,
+          62
+        ],
+        [
+          2,
+          40
+        ]
+      ]
+    },
+    {
+      "id": "morddyn-leer",
+      "name": "Leeres ganzes Plakat",
+      "category": "Tafelbestand · Morddyn",
+      "scope": "regional",
+      "boardId": "morddyn",
+      "src": "Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/Bilder/MorddynTafel.png",
+      "width": 4096,
+      "height": 2829,
+      "bounds": {
+        "x": 2686,
+        "y": 1384,
+        "w": 711,
+        "h": 891
+      },
+      "aspect": 0.79798,
+      "clipPolygon": [
+        [
+          2,
+          3
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          47,
+          2
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          85,
+          3
+        ],
+        [
+          96,
+          1
+        ],
+        [
+          99,
+          3
+        ],
+        [
+          99,
+          98
+        ],
+        [
+          3,
+          99
+        ],
+        [
+          0,
+          92
+        ],
+        [
+          2,
+          76
+        ],
+        [
+          0,
+          60
+        ],
+        [
+          2,
+          44
+        ],
+        [
+          0,
+          37
+        ],
+        [
+          2,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "morddyn-vorsicht",
+      "name": "Vorsicht · steinernes Tor",
+      "category": "Tafelbestand · Morddyn",
+      "scope": "regional",
+      "boardId": "morddyn",
+      "src": "assets/images/board-posters/morddyn-vorsicht-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 59,
+        "y": 89,
+        "w": 917,
+        "h": 1378
+      },
+      "aspect": 0.6654571843251088
+    },
+    {
+      "id": "morddyn-gefahr",
+      "name": "Gefahr · Totenkopf",
+      "category": "Tafelbestand · Morddyn",
+      "scope": "regional",
+      "boardId": "morddyn",
+      "src": "assets/images/board-posters/morddyn-gefahr-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 46,
+        "y": 80,
+        "w": 938,
+        "h": 1404
+      },
+      "aspect": 0.6680911680911681
+    },
+    {
+      "id": "morddyn-arbeit",
+      "name": "Arbeit · Amboss",
+      "category": "Tafelbestand · Morddyn",
+      "scope": "regional",
+      "boardId": "morddyn",
+      "src": "assets/images/board-posters/morddyn-arbeit-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 48,
+        "y": 102,
+        "w": 937,
+        "h": 1365
+      },
+      "aspect": 0.6864468864468865
+    },
+    {
+      "id": "morddyn-wettbewerb",
+      "name": "Ankündigung · Wettbewerb",
+      "category": "Tafelbestand · Morddyn",
+      "scope": "regional",
+      "boardId": "morddyn",
+      "src": "assets/images/board-posters/morddyn-wettbewerb-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 55,
+        "y": 140,
+        "w": 915,
+        "h": 1283
+      },
+      "aspect": 0.7131722525331254
+    },
+    {
+      "id": "llysfaen-hilfe-links",
+      "name": "Hilfe · Pferd",
+      "category": "Tafelbestand · Llysfaen",
+      "scope": "regional",
+      "boardId": "llysfaen",
+      "src": "assets/images/board-posters/llysfaen-hilfe-links-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 49,
+        "y": 61,
+        "w": 927,
+        "h": 1421
+      },
+      "aspect": 0.6523574947220268
+    },
+    {
+      "id": "llysfaen-vorsicht-schafe",
+      "name": "Vorsicht · Schafe",
+      "category": "Tafelbestand · Llysfaen",
+      "scope": "regional",
+      "boardId": "llysfaen",
+      "src": "assets/images/board-posters/llysfaen-vorsicht-schafe-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 51,
+        "y": 85,
+        "w": 924,
+        "h": 1370
+      },
+      "aspect": 0.6744525547445256
+    },
+    {
+      "id": "llysfaen-vorsicht-aal",
+      "name": "Vorsicht · Aal",
+      "category": "Tafelbestand · Llysfaen",
+      "scope": "regional",
+      "boardId": "llysfaen",
+      "src": "assets/images/board-posters/llysfaen-vorsicht-aal-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 48,
+        "y": 81,
+        "w": 932,
+        "h": 1370
+      },
+      "aspect": 0.6802919708029197
+    },
+    {
+      "id": "llysfaen-arbeit",
+      "name": "Arbeit · Ähren",
+      "category": "Tafelbestand · Llysfaen",
+      "scope": "regional",
+      "boardId": "llysfaen",
+      "src": "assets/images/board-posters/llysfaen-arbeit-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "bounds": {
+        "x": 258,
+        "y": 80,
+        "w": 740,
+        "h": 1100
+      },
+      "aspect": 0.6727272727272727
+    },
+    {
+      "id": "llysfaen-ankuendigung-portrait",
+      "name": "Ankündigung · Porträt",
+      "category": "Tafelbestand · Llysfaen",
+      "scope": "regional",
+      "boardId": "llysfaen",
+      "src": "assets/images/board-posters/llysfaen-ankuendigung-portrait-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bounds": {
+        "x": 68,
+        "y": 90,
+        "w": 895,
+        "h": 1360
+      },
+      "aspect": 0.6580882352941176
     }
   ]
 }

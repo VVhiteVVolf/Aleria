@@ -1,5 +1,5 @@
-import { NAILS } from './board-composition-model.mjs';
-import { previewMarkup } from './board-composition-view.mjs';
+import { NAILS } from './board-composition-model.mjs?v=20261027-all-boards-v3';
+import { previewMarkup, paperMarkup } from './board-composition-view.mjs?v=20261027-all-boards-v3';
 
 // Temporary wizard state never enters the board until placement is confirmed.
 export function createPosterWizard({ assets, esc, place, groups, isEditing }) {
@@ -24,13 +24,13 @@ export function createPosterWizard({ assets, esc, place, groups, isEditing }) {
       && `${asset.name} ${asset.category}`.toLocaleLowerCase('de').includes(needle));
     dialog.querySelector('[data-role="poster-catalog"]').innerHTML = filtered.length ? filtered.map(asset => `
       <button type="button" class="board-art-choice${draft.assetId === asset.id ? ' is-chosen' : ''}" data-create-action="asset" data-asset-id="${esc(asset.id)}" aria-pressed="${draft.assetId === asset.id}">
-        <img src="${esc(asset.src)}" alt="" loading="lazy" draggable="false"><strong>${esc(asset.name)}</strong><small>${esc(asset.category)}</small>
+        <span class="board-art-thumbnail"><span style="--asset-aspect:${asset.aspect};aspect-ratio:${asset.aspect}">${paperMarkup(asset, esc)}</span></span><strong>${esc(asset.name)}</strong><small>${esc(asset.category)}</small>
       </button>`).join('') : '<p>Kein passendes Plakat gefunden.</p>';
   }
 
   function render() {
     const asset = assets.find(item => item.id === draft.assetId);
-    dialog.innerHTML = `<header class="board-art-heading"><div><small>Gwynthors Schreibstube</small><h2>Ein Plakat anbringen</h2></div><button type="button" data-create-action="cancel" aria-label="Abbrechen">×</button></header>
+    dialog.innerHTML = `<header class="board-art-heading"><div><small>Alerias Schreibstube</small><h2>Ein Plakat anbringen</h2></div><button type="button" data-create-action="cancel" aria-label="Abbrechen">×</button></header>
       <ol class="board-art-steps">${['Plakat', 'Befestigung', 'Inhalt'].map((name, index) => `<li${step === index + 1 ? ' aria-current="step"' : ''}>${index + 1}. ${name}</li>`).join('')}</ol>
       <div class="board-art-body">${step === 1 ? `
         <p>Wähle das sichtbare Plakat. Die Textvorlage legst du anschließend fest.</p>
