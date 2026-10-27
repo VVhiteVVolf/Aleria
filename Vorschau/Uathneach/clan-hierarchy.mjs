@@ -1,4 +1,5 @@
 import {previewAsset} from './preview-assets.mjs';
+import {renderClanDossier} from './clan-warriors.mjs';
 
 export const clanRankLabel=clan=>clan.rank||'Rang offen';
 
@@ -35,9 +36,9 @@ export function createClanDetails({dialog,getVariant,escape}){
   const change=variant.changes.filter(c=>c.clan===id);
   const home=[...path].reverse().map(c=>variant.regions.find(r=>r.rulerId===c.id)).find(Boolean);
   const direct=variant.clans.filter(c=>c.liege===id);
-  dialog.querySelector('[data-role="clan-title"]').textContent=clan.name;
-  dialog.querySelector('[data-role="clan-detail"]').innerHTML=`<div class="clan-portrait"><img src="${previewAsset('assets/'+clan.crest)}" alt="Wappen ${escape(clan.name)}"><div><p class="eyebrow">Variante ${variant.number} · ${escape(clanRankLabel(clan))}</p><p class="clan-seat">${escape(place.name)}</p></div></div><dl class="clan-facts"><div><dt>Unmittelbarer Lehnsherr</dt><dd>${escape(liege?.name??'Fürst des Landes')}</dd></div><div><dt>Kartenfläche des Sitzes</dt><dd>${escape(region.name)}</dd></div><div><dt>Lehenskette</dt><dd>${path.map(c=>escape(c.name)).join(' → ')}</dd></div></dl>${home?.id!==region.id?'<p class="change-note">Fürstliches Sonderlehen: Die direkte Bindung an die Lága gilt unabhängig von der umgebenden Kartenfläche.</p>':''}<p class="subtle">${['Ard Tiarna','Mor Tiarna'].includes(clan.rank)?'Das Wappen kennzeichnet den Herrschaftssitz.':'Das Wappen kennzeichnet ein örtliches Lehen und dessen Bannkreis; es bedeutet keine alleinige Herrschaft über die gesamte Stadt.'}</p>${clan.alias?`<p class="subtle">Auch als „${escape(clan.alias)}“ genannt; Schreibweise hier nach der gelieferten Wappendatei.</p>`:''}${change.map(c=>`<p class="change-note"><strong>Vorschlag dieser Variante:</strong> ${escape(c.text)}</p>`).join('')}${direct.length?'<h3>Untergeordnete Clans</h3>'+renderClanTree(variant,id,{escape,compact:true}):''}`;
+  dialog.querySelector('[data-role="clan-detail"]').innerHTML=`${renderClanDossier({clan,variant,place,region,path,liege},escape)}${home?.id!==region.id?'<p class="change-note">Fürstliches Sonderlehen: Die direkte Bindung an die Lága gilt unabhängig von der umgebenden Kartenfläche.</p>':''}<p class="subtle">${['Ard Tiarna','Mor Tiarna'].includes(clan.rank)?'Das Wappen kennzeichnet den Herrschaftssitz.':'Das Wappen kennzeichnet ein örtliches Lehen und dessen Bannkreis; es bedeutet keine alleinige Herrschaft über die gesamte Stadt.'}</p>${clan.alias?`<p class="subtle">Auch als „${escape(clan.alias)}“ genannt; Schreibweise hier nach der gelieferten Wappendatei.</p>`:''}${change.map(c=>`<p class="change-note"><strong>Vorschlag dieser Variante:</strong> ${escape(c.text)}</p>`).join('')}${direct.length?'<h3>Untergeordnete Clans</h3>'+renderClanTree(variant,id,{escape,compact:true}):''}`;
   if(!dialog.open)dialog.showModal();
+  dialog.querySelector('.clan-dialog-body').scrollTop=0;
  }
  dialog.addEventListener('click',event=>{
   if(event.target.closest('[data-action="close-clan"]'))dialog.close();

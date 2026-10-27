@@ -2,13 +2,15 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
-Neueste Nutzeranweisung vom 27. Oktober 2026: **„Pushe und deploy dieses“**.
-Die Aldingen-Vorbereitungsseite einschließlich aller 23 Kriegerdarstellungen und
-der korrigierten Pferdeschweife ist damit für Push und Deployment freigegeben.
-Diese Freigabe hebt die zuvor am selben Tag ausgesprochene Sperre für diesen
-fertigen Stand auf. Künftige neue Arbeiten benötigen ihre jeweils geltende
-Veröffentlichungsfreigabe. Entwurfszuordnungen bleiben außerhalb kanonischer
-Register und Firebase-Daten.
+Neueste Nutzeranweisung vom 27. Oktober 2026: **„Versuche alle änderungen nochmal
+zu deployen. Alles“**. Damit ist der gesamte vorhandene lokale Änderungsstand
+für Commit, Push und Produktivveröffentlichung freigegeben, einschließlich
+Uathneachs Hausbios, Hausseiten und Kriegergalerie, der Iathneach- und
+Triarchie-Vorbereitungsseiten, Aldingens besetzter Gebiete, des Ideenwerks und
+des bereits gepushten Gwynthor-Plakattafelstands. Diese Freigabe erweitert die
+vorherige Aldingen-Freigabe auf diesen Gesamtstand. Künftige neue Arbeiten
+benötigen ihre jeweils geltende Veröffentlichungsfreigabe. Entwurfszuordnungen
+bleiben außerhalb kanonischer Register und Firebase-Daten.
 
 ## Vorlage für Länder-Vorbereitungsseiten
 

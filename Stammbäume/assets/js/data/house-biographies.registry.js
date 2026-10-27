@@ -107,6 +107,32 @@ import { HOUSE_BIOGRAPHY as haus_saivor } from "../../../../Familien Häuser und
 import { HOUSE_BIOGRAPHY as haus_ynllym } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Tanwens_Flamme/Haus_Ynllym/haus.biography.mjs?v=20261024-vortigerns-v1";
 import { HOUSE_BIOGRAPHY as haus_ceirwyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Vortigerns_Ruh/Uthers_Aufstieg/Haus_Ceirwyn/haus.biography.mjs?v=20261024-vortigerns-v1";
 import { HOUSE_BIOGRAPHY as haus_von_hochreuth } from "../../../../Familien Häuser und Clans/Estryll/Goldmund/Unsortiert/Unsortiert/Haus_von_Hochreuth/haus.biography.mjs?v=gwendolyn-20260911h";
+import { HOUSE_BIOGRAPHY as haus_arbhair } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_arbhair/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_briccne } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_briccne/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_cadhla } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_cadhla/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_cairbre } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_cairbre/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_cairge } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_cairge/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_clannmhar } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_clannmhar/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_conchobhair } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_conchobhair/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_creagan } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_creagan/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_cuilen } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_cuilen/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_siubhran } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_einsiedlerkrebs/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_fastaigh } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_fastaigh/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_fiodhran } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_fiodhran/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_gealan } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_gealan/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_giolla } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_giolla/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_laga } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_laga/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_lasgair } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_lasgair/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_luachra } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_luachra/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_luga } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_luga/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_marcaigh } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_marcaigh/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_mata } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_mata/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_midgna } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_midgna/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_muirin } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_muirin/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_reannachain } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_reannachain/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_roich } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_roich/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_scathain } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_scathain/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_suilgeach } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_suilgeach/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
 
 export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-ard-conbhron": Object.freeze({ sourceRevision: 2, biography: haus_ard_conbhron, replacedDefaultFingerprints: Object.freeze(["1947:11ab1423:793d2af9"]) }),
@@ -217,4 +243,30 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-ynllym": Object.freeze({ sourceRevision: 1, biography: haus_ynllym, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-ceirwyn": Object.freeze({ sourceRevision: 4, biography: haus_ceirwyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-von-hochreuth": Object.freeze({ sourceRevision: 4, biography: haus_von_hochreuth, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-arbhair": Object.freeze({ sourceRevision: 5, biography: haus_arbhair, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-briccne": Object.freeze({ sourceRevision: 5, biography: haus_briccne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-cadhla": Object.freeze({ sourceRevision: 5, biography: haus_cadhla, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-cairbre": Object.freeze({ sourceRevision: 5, biography: haus_cairbre, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-cairge": Object.freeze({ sourceRevision: 5, biography: haus_cairge, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-clannmhar": Object.freeze({ sourceRevision: 5, biography: haus_clannmhar, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-conchobhair": Object.freeze({ sourceRevision: 5, biography: haus_conchobhair, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-creagan": Object.freeze({ sourceRevision: 5, biography: haus_creagan, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-cuilen": Object.freeze({ sourceRevision: 5, biography: haus_cuilen, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-siubhran": Object.freeze({ sourceRevision: 5, biography: haus_siubhran, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-fastaigh": Object.freeze({ sourceRevision: 5, biography: haus_fastaigh, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-fiodhran": Object.freeze({ sourceRevision: 5, biography: haus_fiodhran, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-gealan": Object.freeze({ sourceRevision: 5, biography: haus_gealan, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-giolla": Object.freeze({ sourceRevision: 5, biography: haus_giolla, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-laga": Object.freeze({ sourceRevision: 5, biography: haus_laga, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-lasgair": Object.freeze({ sourceRevision: 5, biography: haus_lasgair, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-luachra": Object.freeze({ sourceRevision: 5, biography: haus_luachra, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-luga": Object.freeze({ sourceRevision: 5, biography: haus_luga, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-marcaigh": Object.freeze({ sourceRevision: 5, biography: haus_marcaigh, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-mata": Object.freeze({ sourceRevision: 5, biography: haus_mata, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-midgna": Object.freeze({ sourceRevision: 5, biography: haus_midgna, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-muirin": Object.freeze({ sourceRevision: 5, biography: haus_muirin, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-reannachain": Object.freeze({ sourceRevision: 5, biography: haus_reannachain, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-roich": Object.freeze({ sourceRevision: 5, biography: haus_roich, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-scathain": Object.freeze({ sourceRevision: 5, biography: haus_scathain, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-suilgeach": Object.freeze({ sourceRevision: 5, biography: haus_suilgeach, replacedDefaultFingerprints: Object.freeze([]) }),
 });

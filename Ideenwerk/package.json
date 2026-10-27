@@ -1,0 +1,15 @@
+{
+  "name": "patrick-ideenwerk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lokaler Ideen-Editor mit Pinnwand, Vorlagen und portablen Projektsicherungen",
+  "scripts": {
+    "start": "node scripts/serve.mjs --open",
+    "dev": "node scripts/serve.mjs",
+    "build": "esbuild app.mjs --bundle --format=iife --target=es2022 --outfile=.build/app.js && node scripts/build-standalone.mjs",
+    "test": "node --test --experimental-test-isolation=none tests/*.test.mjs",
+    "check": "node --experimental-vm-modules scripts/check.mjs"
+  },
+  "devDependencies": {"esbuild": "0.28.1"}
+}

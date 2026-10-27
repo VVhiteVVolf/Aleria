@@ -1,7 +1,7 @@
 {
   "schema": "aleria.warrior-gallery",
   "version": 1,
-  "reviewedAt": "2026-10-24",
+  "reviewedAt": "2026-10-27",
   "scope": "Projektdateien, Hausbios, Stammbaumregister einschließlich benannter Häuser innerhalb der Stammbäume und veröffentlichter Familien; zusätzlich die lokalen Sammlungen Bilder für Krieger, Gilden sowie Götter und Geistliche. Keine Klassen-Icons, Wappen, reinen Gegenstandsbilder oder gewöhnlichen Personenporträts. Private, ausschließlich online gespeicherte Entwürfe sind nicht enthalten.",
   "houses": [
     {
@@ -315,7 +315,9 @@
         "haus-haeghra",
         "haus-durachd"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-78bc3f1305060935"
+      ],
       "missingNote": ""
     },
     {
@@ -496,7 +498,9 @@
         "haus-conchobhair",
         "haus-nessa"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-34f6964667634518"
+      ],
       "missingNote": ""
     },
     {
@@ -1077,7 +1081,9 @@
         "haus-fiorghra",
         "haus-durachd"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-6127ba86234088fa"
+      ],
       "missingNote": ""
     },
     {
@@ -1112,7 +1118,9 @@
       "sources": [
         "haus-siubhran"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-fb052fd069f31397"
+      ],
       "missingNote": ""
     },
     {
@@ -2598,7 +2606,9 @@
         "haus-eoghainn",
         "haus-tylluan"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-d78e8f1dd0e7f2d3"
+      ],
       "missingNote": ""
     },
     {
@@ -3142,7 +3152,9 @@
         "haus-lachlann",
         "haus-ness"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-d32d78cad5bd65a1"
+      ],
       "missingNote": ""
     },
     {
@@ -3156,7 +3168,9 @@
       "sources": [
         "haus-fiodhran"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-2abb326f06b38c28"
+      ],
       "missingNote": ""
     },
     {
@@ -4812,7 +4826,9 @@
         "haus-dobhar",
         "haus-forsyth"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-07d585df7b6d62b4"
+      ],
       "missingNote": ""
     },
     {
@@ -4826,7 +4842,9 @@
       "sources": [
         "haus-creagan"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-fdfae9246702e870"
+      ],
       "missingNote": ""
     },
     {
@@ -5194,7 +5212,9 @@
         "haus-boyd",
         "haus-dobhar"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-ef349fa2d5417fbc"
+      ],
       "missingNote": ""
     },
     {
@@ -5296,7 +5316,9 @@
         "haus-boyd",
         "haus-oglivy"
       ],
-      "illustrationIds": [],
+      "illustrationIds": [
+        "bild-5d3be7bb46945095"
+      ],
       "missingNote": ""
     },
     {
@@ -8332,9 +8354,7 @@
         "haus-wemyss",
         "haus-aderyn"
       ],
-      "illustrationIds": [
-        "bild-34f6964667634518"
-      ],
+      "illustrationIds": [],
       "missingNote": ""
     },
     {
@@ -14551,6 +14571,106 @@
       "localGroup": "quelle-395"
     },
     {
+      "id": "bild-1a172cccbe6d00e5",
+      "name": "An Cadhla · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-cadhla/krieger.png",
+      "sha256": "80d30c662385dfd1ea657dcf5c464f9cd67ee38258a336ee2f9475d1c03b4e4d",
+      "houseIds": [
+        "haus-cadhla"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_cadhla/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Cadhla.png",
+          "sourceSha256": "80d30c662385dfd1ea657dcf5c464f9cd67ee38258a336ee2f9475d1c03b4e4d"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-cadhla/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-cadhla/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/80d30c662385dfd1ea65.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-cadhla/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/80d30c662385dfd1ea65.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/80d30c662385dfd1ea65.webp",
+          "sha256": "1a172cccbe6d00e5bac4fbe7df12e4e2fabd2ac70726631986806d03d6a87cb5",
+          "sourceSha256": "80d30c662385dfd1ea657dcf5c464f9cd67ee38258a336ee2f9475d1c03b4e4d",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Cadhla.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-524"
+    },
+    {
+      "id": "bild-3f6c4863e6e3d9b2",
+      "name": "An Gealân · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-gealan/krieger.png",
+      "sha256": "92ae72175c198f59ebbdb6e39429d3d36b23a894ef47015e074c1500ee9178b5",
+      "houseIds": [
+        "haus-gealan"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_gealan/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Gaelan.png",
+          "sourceSha256": "92ae72175c198f59ebbdb6e39429d3d36b23a894ef47015e074c1500ee9178b5"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-gealan/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-gealan/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/92ae72175c198f59ebbd.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-gealan/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/92ae72175c198f59ebbd.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/92ae72175c198f59ebbd.webp",
+          "sha256": "3f6c4863e6e3d9b2bb953ba5980dbc63e311a9e8c05a67d85912b8afeaa562e5",
+          "sourceSha256": "92ae72175c198f59ebbdb6e39429d3d36b23a894ef47015e074c1500ee9178b5",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Gaelan.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-531"
+    },
+    {
       "id": "bild-e4110572577ff660",
       "name": "An Mac Bhaird · Entwurf 2",
       "category": "Benannte Clanreferenzen",
@@ -14625,13 +14745,23 @@
     },
     {
       "id": "bild-78bc3f1305060935",
-      "name": "An Scatháin · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "An Scatháin · Name der Bildquelle",
-      "image": "Gallerien/krieger/assets/references/8b92ec95bae723bbdb11.webp",
-      "sha256": "78bc3f130506093552c78ed7595a745a9b2d277d9cb6d0a5ec447923a4b44f15",
-      "houseIds": [],
+      "name": "An Scatháin · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-scathain/krieger.png",
+      "sha256": "8b92ec95bae723bbdb11284d288c05208ff08b5a18a6f3893f720b7bf1f85b7c",
+      "houseIds": [
+        "haus-scathain"
+      ],
       "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_scathain/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
         {
           "path": "Gallerien/krieger/data/local-source-review.json",
           "label": "Bilder für Krieger/Uathneach/An Scatháin.png",
@@ -14639,14 +14769,25 @@
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/8b92ec95bae723bbdb11.webp"
+        "Stammbäume/assets/images/references/haus-scathain/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-scathain/krieger.png"
       ],
-      "note": "Die Herkunftsmappe ist dokumentiert. Eine Hauszuordnung wird daraus allein nicht abgeleitet.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/8b92ec95bae723bbdb11.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/8b92ec95bae723bbdb11.webp",
       "variants": [
         {
+          "image": "Stammbäume/assets/images/references/haus-scathain/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
           "image": "Gallerien/krieger/assets/references/8b92ec95bae723bbdb11.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/8b92ec95bae723bbdb11.webp",
+          "sha256": "78bc3f130506093552c78ed7595a745a9b2d277d9cb6d0a5ec447923a4b44f15",
+          "sourceSha256": "8b92ec95bae723bbdb11284d288c05208ff08b5a18a6f3893f720b7bf1f85b7c",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/An Scatháin.png"
+          ],
           "label": "Quellfassung"
         }
       ],
@@ -14693,6 +14834,56 @@
         "Stammbäume/assets/images/references/haus-an-morchoe/krieger.png"
       ],
       "note": ""
+    },
+    {
+      "id": "bild-34f6964667634518",
+      "name": "Ard Conchobhair · Serf",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-conchobhair/krieger.png",
+      "sha256": "69b314b596e05fb97b0c0104f8b81f3c2f314e29f63612fb2aaa63abd07c500a",
+      "houseIds": [
+        "haus-conchobhair"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_conchobhair/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Conochbhair.png",
+          "sourceSha256": "69b314b596e05fb97b0c0104f8b81f3c2f314e29f63612fb2aaa63abd07c500a"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-conchobhair/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-conchobhair/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/69b314b596e05fb97b0c.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-conchobhair/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/69b314b596e05fb97b0c.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/69b314b596e05fb97b0c.webp",
+          "sha256": "34f6964667634518f4184030dff4a3f640a3ea3e501a3062ce848cf98d692a4a",
+          "sourceSha256": "69b314b596e05fb97b0c0104f8b81f3c2f314e29f63612fb2aaa63abd07c500a",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Conochbhair.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-527"
     },
     {
       "id": "bild-1cf9016d62a86a5a",
@@ -14829,68 +15020,6 @@
         "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-bogenschuetze.png"
       ],
       "note": "Milwr · ausgebildeter Waffenknecht mit dem Bogen."
-    },
-    {
-      "id": "bild-1a172cccbe6d00e5",
-      "name": "Cadhla · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/80d30c662385dfd1ea65.webp",
-      "sha256": "1a172cccbe6d00e5bac4fbe7df12e4e2fabd2ac70726631986806d03d6a87cb5",
-      "houseIds": [
-        "haus-cadhla"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Cadhla.png",
-          "sourceSha256": "80d30c662385dfd1ea657dcf5c464f9cd67ee38258a336ee2f9475d1c03b4e4d"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/80d30c662385dfd1ea65.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/80d30c662385dfd1ea65.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/80d30c662385dfd1ea65.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-524"
-    },
-    {
-      "id": "bild-07175e4beedba5a3",
-      "name": "Cairge · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/e3cf13759937456ef76c.webp",
-      "sha256": "07175e4beedba5a36059200b518210b416078925003cbb8699fd06abd5953b0e",
-      "houseIds": [
-        "haus-cairge"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Cairge.png",
-          "sourceSha256": "e3cf13759937456ef76c728c38f726a67be2243299998f94266ae92d09b723cb"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/e3cf13759937456ef76c.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/e3cf13759937456ef76c.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/e3cf13759937456ef76c.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-525"
     },
     {
       "id": "bild-2638dcd56cd7bc5a",
@@ -16258,35 +16387,6 @@
       "note": ""
     },
     {
-      "id": "bild-07d585df7b6d62b4",
-      "name": "Clannmhar · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "Clannmhar · Name der Bildquelle",
-      "image": "Gallerien/krieger/assets/references/720cab0f6fd1d41d727b.webp",
-      "sha256": "07d585df7b6d62b4189d4bb9bcbe545905aecb89ed8b9a6cc28edb965eb893c2",
-      "houseIds": [],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Clannmhar.png",
-          "sourceSha256": "720cab0f6fd1d41d727bf8bc0035db6badb90dcf1c0259aaf611172ce8ded88c"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/720cab0f6fd1d41d727b.webp"
-      ],
-      "note": "Die Herkunftsmappe ist dokumentiert. Eine Hauszuordnung wird daraus allein nicht abgeleitet.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/720cab0f6fd1d41d727b.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/720cab0f6fd1d41d727b.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-526"
-    },
-    {
       "id": "bild-c725b9966a50346a",
       "name": "Cochllamwyr",
       "category": "Stadt- & Ortswachen",
@@ -16306,76 +16406,24 @@
       "note": "Örtlicher Wachdienst. Eine Lage im Herrschaftsgebiet begründet keine persönliche Hauszugehörigkeit."
     },
     {
-      "id": "bild-34f6964667634518",
-      "name": "Conochbhair · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/69b314b596e05fb97b0c.webp",
-      "sha256": "34f6964667634518f4184030dff4a3f640a3ea3e501a3062ce848cf98d692a4a",
-      "houseIds": [
-        "house-conochbhair"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Conochbhair.png",
-          "sourceSha256": "69b314b596e05fb97b0c0104f8b81f3c2f314e29f63612fb2aaa63abd07c500a"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/69b314b596e05fb97b0c.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/69b314b596e05fb97b0c.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/69b314b596e05fb97b0c.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-527"
-    },
-    {
-      "id": "bild-2bb582fcee1def7f",
-      "name": "Cuilen · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/a22de1c3b034527f4146.webp",
-      "sha256": "2bb582fcee1def7fb8369a82e90403c65b964f44d3107c30995ce997965bf2d8",
-      "houseIds": [
-        "haus-cuilen"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Cuilen.png",
-          "sourceSha256": "a22de1c3b034527f4146938f90c8a3c75da6db05b3ef98aedbc519909c824e22"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/a22de1c3b034527f4146.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/a22de1c3b034527f4146.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/a22de1c3b034527f4146.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-528"
-    },
-    {
       "id": "bild-6127ba86234088fa",
-      "name": "Dâl Arbhair · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "Dâl Arbhair · Name der Bildquelle",
-      "image": "Gallerien/krieger/assets/references/cbd5095a50867c1c0a10.webp",
-      "sha256": "6127ba86234088fa8f8dcf897cc87971fbe4bd421425d1c2913ca525744bb6b7",
-      "houseIds": [],
+      "name": "Dâl Arbhair · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-arbhair/krieger.png",
+      "sha256": "cbd5095a50867c1c0a10192859e09c05d8796f90db7c2ad8095034bee3da6fef",
+      "houseIds": [
+        "haus-arbhair"
+      ],
       "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_arbhair/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
         {
           "path": "Gallerien/krieger/data/local-source-review.json",
           "label": "Bilder für Krieger/Uathneach/Dâl Arbhair.png",
@@ -16383,18 +16431,105 @@
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/cbd5095a50867c1c0a10.webp"
+        "Stammbäume/assets/images/references/haus-arbhair/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-arbhair/krieger.png"
       ],
-      "note": "Die Herkunftsmappe ist dokumentiert. Eine Hauszuordnung wird daraus allein nicht abgeleitet.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/cbd5095a50867c1c0a10.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/cbd5095a50867c1c0a10.webp",
       "variants": [
         {
+          "image": "Stammbäume/assets/images/references/haus-arbhair/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
           "image": "Gallerien/krieger/assets/references/cbd5095a50867c1c0a10.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/cbd5095a50867c1c0a10.webp",
+          "sha256": "6127ba86234088fa8f8dcf897cc87971fbe4bd421425d1c2913ca525744bb6b7",
+          "sourceSha256": "cbd5095a50867c1c0a10192859e09c05d8796f90db7c2ad8095034bee3da6fef",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Dâl Arbhair.png"
+          ],
           "label": "Quellfassung"
         }
       ],
       "localGroup": "quelle-529"
+    },
+    {
+      "id": "bild-fd8394cacd9b14fe",
+      "name": "Dál Fastaigh · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-fastaigh/krieger.png",
+      "sha256": "ef46a0fb99d68d9f1e32c4553333dd5027e6e46f30d7877b61b6dd56e3ed2ba2",
+      "houseIds": [
+        "haus-fastaigh"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_fastaigh/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Fastaigh.png",
+          "sourceSha256": "ef46a0fb99d68d9f1e32c4553333dd5027e6e46f30d7877b61b6dd56e3ed2ba2"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-fastaigh/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-fastaigh/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/ef46a0fb99d68d9f1e32.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-fastaigh/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/ef46a0fb99d68d9f1e32.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/ef46a0fb99d68d9f1e32.webp",
+          "sha256": "fd8394cacd9b14fef7311dfabc5826df94fe57ab40e737c56ffb85b7b61b86dd",
+          "sourceSha256": "ef46a0fb99d68d9f1e32c4553333dd5027e6e46f30d7877b61b6dd56e3ed2ba2",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Fastaigh.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-530"
+    },
+    {
+      "id": "bild-fb052fd069f31397",
+      "name": "Dál Siubhrán · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-siubhran/krieger.png",
+      "sha256": "fb052fd069f31397a7e3159e7b38c1c0810248da72ebbb628e9d0c05563a11ad",
+      "houseIds": [
+        "haus-siubhran"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_einsiedlerkrebs/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-siubhran/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-siubhran/krieger.png"
+      ],
+      "note": ""
     },
     {
       "id": "bild-7082598f13816502",
@@ -16740,37 +16875,6 @@
       "note": ""
     },
     {
-      "id": "bild-fd8394cacd9b14fe",
-      "name": "Fastaigh · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/ef46a0fb99d68d9f1e32.webp",
-      "sha256": "fd8394cacd9b14fef7311dfabc5826df94fe57ab40e737c56ffb85b7b61b86dd",
-      "houseIds": [
-        "haus-fastaigh"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Fastaigh.png",
-          "sourceSha256": "ef46a0fb99d68d9f1e32c4553333dd5027e6e46f30d7877b61b6dd56e3ed2ba2"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/ef46a0fb99d68d9f1e32.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/ef46a0fb99d68d9f1e32.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/ef46a0fb99d68d9f1e32.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-530"
-    },
-    {
       "id": "bild-6b9bae30fc74483f",
       "name": "Fíorghrá · Kriegerdarstellung",
       "category": "Benannte Clanreferenzen",
@@ -16813,68 +16917,6 @@
         }
       ],
       "localGroup": "quelle-405"
-    },
-    {
-      "id": "bild-3f6c4863e6e3d9b2",
-      "name": "Gaelan · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/92ae72175c198f59ebbd.webp",
-      "sha256": "3f6c4863e6e3d9b2bb953ba5980dbc63e311a9e8c05a67d85912b8afeaa562e5",
-      "houseIds": [
-        "haus-gealan"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Gaelan.png",
-          "sourceSha256": "92ae72175c198f59ebbdb6e39429d3d36b23a894ef47015e074c1500ee9178b5"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/92ae72175c198f59ebbd.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/92ae72175c198f59ebbd.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/92ae72175c198f59ebbd.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-531"
-    },
-    {
-      "id": "bild-b30e4e9bcd0c04d8",
-      "name": "Giolla · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/437c9f3cb6aee786cfb7.webp",
-      "sha256": "b30e4e9bcd0c04d8023fd05edbaf5821c57b38128c2b14314abc99ef0642abe0",
-      "houseIds": [
-        "haus-giolla"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Giolla.png",
-          "sourceSha256": "437c9f3cb6aee786cfb79a1f87c7877263939d2cdc96f27f429488debe550130"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/437c9f3cb6aee786cfb7.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/437c9f3cb6aee786cfb7.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/437c9f3cb6aee786cfb7.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-532"
     },
     {
       "id": "bild-cfe71720c186e5aa",
@@ -16923,6 +16965,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/be6c65f638ab844f68f4.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Almarch/assets/krieger.png",
@@ -16967,6 +17010,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/ff814fb276e52c621b46.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Althin/assets/krieger.png",
@@ -17016,6 +17060,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f7c7ebe44822fb48d44d.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Annwyl/assets/hausmotiv.png",
@@ -17138,6 +17183,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/9fdfec5b720a82b1c679.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/assets/hausmotiv.png",
@@ -17197,6 +17243,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/88e637e20304063711b8.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenydd/assets/hausmotiv.png",
@@ -17277,6 +17324,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/14824e30f8c6538f71e5.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Balchder/assets/hausmotiv.png",
@@ -17336,6 +17384,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/e70464476c35cce4f7af.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Barus/assets/hausmotiv.png",
@@ -17421,6 +17470,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f1733ac9c0f80b63a7af.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/assets/krieger-g850v6f.png",
@@ -17560,6 +17610,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/0bee1fa2fffe15c17754.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Brinmarch/assets/krieger.png",
@@ -17714,6 +17765,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/e463b2c6a95e161b30d8.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cenfig/assets/hausmotiv.png",
@@ -17773,6 +17825,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/83465d105418612f463a.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/assets/hausmotiv.png",
@@ -17832,6 +17885,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/30c7426aeff962a44764.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/assets/hausmotiv.png",
@@ -17907,6 +17961,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/9c223f59c96a0e6b0e7e.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Coedvarn/assets/krieger.png",
@@ -18040,6 +18095,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/98d305817550e11697ea.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Cysgodion/assets/hausmotiv.png",
@@ -18099,6 +18155,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/e31b2b572073d129709d.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Daran/assets/hausmotiv.png",
@@ -18226,6 +18283,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/4ac5aa7e9cafa886ee14.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Dubhan/assets/krieger-M3xsR4U.png",
@@ -18328,6 +18386,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f5c9e5f9fc0fc49aff2d.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Edmy/assets/hausmotiv.png",
@@ -18382,6 +18441,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/c052b8f0db69a9a4236a.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Eirfael/assets/krieger.png",
@@ -18431,6 +18491,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/16968947d05b5f794dd0.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Eneiniog/assets/hausmotiv.png",
@@ -18489,6 +18550,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/7b9e8528660d69fa8aad.webp",
       "variants": [
         {
           "image": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
@@ -18580,6 +18642,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/48c992d1788ed9cabc58.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Camruisge/Haus_Garrael/assets/hausmotiv.png",
@@ -18639,6 +18702,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/00c4faf13b738a95d954.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gelyn/assets/hausmotiv.png",
@@ -18693,6 +18757,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/838ac24efb86302cc670.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Ghorswyn/assets/krieger.png",
@@ -18763,6 +18828,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/144eb357bb3f5eeb518e.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gostyn/assets/hausmotiv.png",
@@ -18859,6 +18925,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/706f39636eac8a65cc75.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwardin/assets/krieger.png",
@@ -18908,6 +18975,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/7e5c9bf551d8f226cbe6.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/assets/krieger.png",
@@ -19046,6 +19114,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/993811657b75c086f327.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Gwynrhos/assets/krieger.png",
@@ -19095,6 +19164,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/675ae139630f511e2bb8.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Gwyntog/assets/hausmotiv.png",
@@ -19259,6 +19329,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f451a0578703e71e7bb9.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Madryn/assets/krieger.png",
@@ -19381,6 +19452,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/e2f753bb56293e21007d.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Merek/assets/krieger.png",
@@ -19503,6 +19575,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/428fef494fa24b036b37.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Morveth/assets/krieger.png",
@@ -19793,6 +19866,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/a7a18a04151646fed9f9.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Rhenna/assets/krieger.png",
@@ -19852,6 +19926,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/e17bc2dae07a2a816916.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Rhuddgar/assets/hausmotiv.png",
@@ -19932,6 +20007,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/116d6288ec79794a54e4.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Rhyddid/assets/hausmotiv.png",
@@ -20054,6 +20130,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/19d00fa98b696c3acdd4.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Selog/assets/hausmotiv.png",
@@ -20155,6 +20232,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/735a31ad89ed9324d424.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Skellor/assets/krieger.png",
@@ -20256,6 +20334,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/40fbed9a48715f19a4e4.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Talinvyr/assets/krieger.png",
@@ -20310,6 +20389,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/32916507ac798d58517b.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Talmeirch/assets/krieger.png",
@@ -20359,6 +20439,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/2341f1ea4d56690655af.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Taranvyr/assets/hausmotiv.png",
@@ -20418,6 +20499,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/715aac173a207a90dc27.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Tawelgar/assets/hausmotiv.png",
@@ -20472,6 +20554,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f75aaec26ef55ff29ba3.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Artus_Streben/Haus_Tirwyn/assets/krieger.png",
@@ -20579,6 +20662,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/48a9a37fac02b422b58a.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Trydar/assets/hausmotiv.png",
@@ -20733,6 +20817,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Cenyr",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/2e6d783b4a5dbd144bd9.webp",
       "variants": [
         {
           "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/assets/hausmotiv.png",
@@ -30375,35 +30460,6 @@
       "localGroup": "quelle-615"
     },
     {
-      "id": "bild-5d3be7bb46945095",
-      "name": "Lasgair · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "Lasgair · Name der Bildquelle",
-      "image": "Gallerien/krieger/assets/references/0fcbe2c6256d54faffd0.webp",
-      "sha256": "5d3be7bb469450958d6346673143f19d8d946f60307946b066614e35979be6f8",
-      "houseIds": [],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Lasgair.png",
-          "sourceSha256": "0fcbe2c6256d54faffd00a2ea22669f9488138afcf08a691efa427d28fb77bc2"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/0fcbe2c6256d54faffd0.webp"
-      ],
-      "note": "Die Herkunftsmappe ist dokumentiert. Eine Hauszuordnung wird daraus allein nicht abgeleitet.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/0fcbe2c6256d54faffd0.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/0fcbe2c6256d54faffd0.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-533"
-    },
-    {
       "id": "bild-24d20074463b50a6",
       "name": "Leibgardist",
       "category": "Hausdarstellung",
@@ -30423,68 +30479,6 @@
         "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-leibgardist-v1.png"
       ],
       "note": "Handverlesener persönlicher Wächter · Teil der Draig-Hausmacht."
-    },
-    {
-      "id": "bild-d51bfdca78b3e06f",
-      "name": "Luachra · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/fc53955fc3d0e964ab9b.webp",
-      "sha256": "d51bfdca78b3e06f93826dd7549bb8f4a716c1760726eaf6b3a40b2bd886095b",
-      "houseIds": [
-        "haus-luachra"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Luachra.png",
-          "sourceSha256": "fc53955fc3d0e964ab9b7529cba32248b8b6337ea718a15c8333c7ad75642ac5"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/fc53955fc3d0e964ab9b.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/fc53955fc3d0e964ab9b.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/fc53955fc3d0e964ab9b.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-534"
-    },
-    {
-      "id": "bild-4171985a755e7778",
-      "name": "Luga · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/c4c6b33761b4c394fa4e.webp",
-      "sha256": "4171985a755e7778fa76641a05d8115509cb758941dc89211b97e2aa77388441",
-      "houseIds": [
-        "haus-luga"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Luga.png",
-          "sourceSha256": "c4c6b33761b4c394fa4e18bbec9317a7789bc46c195a4155e4be39726eddd8da"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/c4c6b33761b4c394fa4e.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/c4c6b33761b4c394fa4e.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/c4c6b33761b4c394fa4e.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-535"
     },
     {
       "id": "bild-a981b43c148c2b81",
@@ -30594,6 +30588,32 @@
         }
       ],
       "localGroup": "quelle-407"
+    },
+    {
+      "id": "bild-d78e8f1dd0e7f2d3",
+      "name": "Mac Ard’Lága · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-laga/krieger.png",
+      "sha256": "d78e8f1dd0e7f2d3a4c5ee58511c87d92fe5e42eb972bcde5ab3351af6d6de5a",
+      "houseIds": [
+        "haus-laga"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_laga/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-laga/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-laga/krieger.png"
+      ],
+      "note": ""
     },
     {
       "id": "bild-2b977a7a1f77ffe9",
@@ -31254,6 +31274,56 @@
       "localGroup": "quelle-422"
     },
     {
+      "id": "bild-955c4a889918c87c",
+      "name": "Mac Midgna · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-midgna/krieger.png",
+      "sha256": "ebb19bdf0caeb60653c44fc7208a0f722c5470b37d24404591b594435f37b7e4",
+      "houseIds": [
+        "haus-midgna"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_midgna/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Midga.png",
+          "sourceSha256": "ebb19bdf0caeb60653c44fc7208a0f722c5470b37d24404591b594435f37b7e4"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-midgna/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-midgna/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/ebb19bdf0caeb60653c4.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-midgna/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/ebb19bdf0caeb60653c4.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/ebb19bdf0caeb60653c4.webp",
+          "sha256": "955c4a889918c87c1652b7471793d4012d29ed34847868d431b5ec4d7b3a16f8",
+          "sourceSha256": "ebb19bdf0caeb60653c44fc7208a0f722c5470b37d24404591b594435f37b7e4",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Midga.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-539"
+    },
+    {
       "id": "bild-3b90a93826a82ace",
       "name": "Mac Ness · Kriegerdarstellung",
       "category": "Benannte Clanreferenzen",
@@ -31347,15 +31417,23 @@
     },
     {
       "id": "bild-6dc80eacb82e2ef2",
-      "name": "Mac Roich · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
+      "name": "Mac Roich · Currach",
+      "category": "Clandarstellung",
       "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/4c70ec48c647a334d3d3.webp",
-      "sha256": "6dc80eacb82e2ef2f1ab4b16b153c6609322baa856d8860b6c9217065ea7827f",
+      "image": "Stammbäume/assets/images/references/haus-roich/krieger.png",
+      "sha256": "4c70ec48c647a334d3d30a311db5ff87756ab6afa1081f2b6d681aa88e4af758",
       "houseIds": [
         "haus-roich"
       ],
       "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_roich/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
         {
           "path": "Gallerien/krieger/data/local-source-review.json",
           "label": "Bilder für Krieger/Uathneach/Mac Roich.png",
@@ -31363,14 +31441,25 @@
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/4c70ec48c647a334d3d3.webp"
+        "Stammbäume/assets/images/references/haus-roich/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-roich/krieger.png"
       ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/4c70ec48c647a334d3d3.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/4c70ec48c647a334d3d3.webp",
       "variants": [
         {
+          "image": "Stammbäume/assets/images/references/haus-roich/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
           "image": "Gallerien/krieger/assets/references/4c70ec48c647a334d3d3.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/4c70ec48c647a334d3d3.webp",
+          "sha256": "6dc80eacb82e2ef2f1ab4b16b153c6609322baa856d8860b6c9217065ea7827f",
+          "sourceSha256": "4c70ec48c647a334d3d30a311db5ff87756ab6afa1081f2b6d681aa88e4af758",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Mac Roich.png"
+          ],
           "label": "Quellfassung"
         }
       ],
@@ -31490,37 +31579,6 @@
       "note": ""
     },
     {
-      "id": "bild-1bbc228f3aa98915",
-      "name": "Marcaigh · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/05e8791c85f9f6cce7ce.webp",
-      "sha256": "1bbc228f3aa98915cc307364a5532345df2ec42d392399637bf13a5e64fa02e5",
-      "houseIds": [
-        "haus-marcaigh"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Marcaigh.png",
-          "sourceSha256": "05e8791c85f9f6cce7ce858906006d75852570e0962ef0f10ae74475cc53d1bb"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/05e8791c85f9f6cce7ce.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/05e8791c85f9f6cce7ce.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/05e8791c85f9f6cce7ce.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-537"
-    },
-    {
       "id": "bild-49b680d2d2224e5e",
       "name": "Mariner Waffenknecht",
       "category": "Hausdarstellung",
@@ -31540,68 +31598,6 @@
         "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/assets/krieger/draig-mariner-waffenknecht.png"
       ],
       "note": "Milwr · professioneller Waffendienst auf See."
-    },
-    {
-      "id": "bild-394195905d034af2",
-      "name": "Mata · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/88925094b5e21c98ba17.webp",
-      "sha256": "394195905d034af2a0e2d876502b7d6df4df6b3ee14e398a4626fb9a4831f862",
-      "houseIds": [
-        "haus-mata"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Mata.png",
-          "sourceSha256": "88925094b5e21c98ba179a673af33940c88b602d576085cbcdee15708fd8a25a"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/88925094b5e21c98ba17.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/88925094b5e21c98ba17.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/88925094b5e21c98ba17.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-538"
-    },
-    {
-      "id": "bild-955c4a889918c87c",
-      "name": "Midga · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/ebb19bdf0caeb60653c4.webp",
-      "sha256": "955c4a889918c87c1652b7471793d4012d29ed34847868d431b5ec4d7b3a16f8",
-      "houseIds": [
-        "haus-midgna"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Midga.png",
-          "sourceSha256": "ebb19bdf0caeb60653c44fc7208a0f722c5470b37d24404591b594435f37b7e4"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/ebb19bdf0caeb60653c4.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/ebb19bdf0caeb60653c4.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/ebb19bdf0caeb60653c4.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-539"
     },
     {
       "id": "bild-fad55cae9c92416a",
@@ -31648,45 +31644,24 @@
       "localGroup": "quelle-427"
     },
     {
-      "id": "bild-59655e2544e62674",
-      "name": "Muirin · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/af6eedb1b5742670889b.webp",
-      "sha256": "59655e2544e6267491dbc23dd15f8f79d895dc9e3bace9943792bb5190f12c87",
-      "houseIds": [
-        "haus-muirin"
-      ],
-      "sources": [
-        {
-          "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Muirin.png",
-          "sourceSha256": "af6eedb1b5742670889b522304718f81321b289cb2e7f58bd70c9f0c28a94eed"
-        }
-      ],
-      "copies": [
-        "Gallerien/krieger/assets/references/af6eedb1b5742670889b.webp"
-      ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/af6eedb1b5742670889b.webp",
-      "collection": "Bilder für Krieger · Uathneach",
-      "variants": [
-        {
-          "image": "Gallerien/krieger/assets/references/af6eedb1b5742670889b.webp",
-          "label": "Quellfassung"
-        }
-      ],
-      "localGroup": "quelle-540"
-    },
-    {
       "id": "bild-d32d78cad5bd65a1",
-      "name": "Na Briccne · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "Na Briccne · Name der Bildquelle",
-      "image": "Gallerien/krieger/assets/references/f130f8b7157b2b68aba6.webp",
-      "sha256": "d32d78cad5bd65a1755ba2ea1b18df91d74f3f496d86ce02e5b96aca31b58502",
-      "houseIds": [],
+      "name": "Na Briccne · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-briccne/krieger.png",
+      "sha256": "f130f8b7157b2b68aba6013242fcd49a664b41072ebd8875e6507c2d85fca5c8",
+      "houseIds": [
+        "haus-briccne"
+      ],
       "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_briccne/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
         {
           "path": "Gallerien/krieger/data/local-source-review.json",
           "label": "Bilder für Krieger/Uathneach/Na Briccne.png",
@@ -31694,18 +31669,155 @@
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/f130f8b7157b2b68aba6.webp"
+        "Stammbäume/assets/images/references/haus-briccne/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-briccne/krieger.png"
       ],
-      "note": "Die Herkunftsmappe ist dokumentiert. Eine Hauszuordnung wird daraus allein nicht abgeleitet.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/f130f8b7157b2b68aba6.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f130f8b7157b2b68aba6.webp",
       "variants": [
         {
+          "image": "Stammbäume/assets/images/references/haus-briccne/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
           "image": "Gallerien/krieger/assets/references/f130f8b7157b2b68aba6.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/f130f8b7157b2b68aba6.webp",
+          "sha256": "d32d78cad5bd65a1755ba2ea1b18df91d74f3f496d86ce02e5b96aca31b58502",
+          "sourceSha256": "f130f8b7157b2b68aba6013242fcd49a664b41072ebd8875e6507c2d85fca5c8",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Na Briccne.png"
+          ],
           "label": "Quellfassung"
         }
       ],
       "localGroup": "quelle-541"
+    },
+    {
+      "id": "bild-2abb326f06b38c28",
+      "name": "Na Fiodhrán · Currach",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-fiodhran/krieger.png",
+      "sha256": "2abb326f06b38c28c7bb2e43595920fe939d158f132733ef6c0b26f05f3628a6",
+      "houseIds": [
+        "haus-fiodhran"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_fiodhran/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-fiodhran/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-fiodhran/krieger.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-7a4600f5c897d4f1",
+      "name": "Na Suilgeach · Serf",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-suilgeach/krieger.png",
+      "sha256": "967a518cfe836f9180258778c7af71cada019eeb3d08dcbe1afdc442fe60ca12",
+      "houseIds": [
+        "haus-suilgeach"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_suilgeach/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Suilgeach.png",
+          "sourceSha256": "967a518cfe836f9180258778c7af71cada019eeb3d08dcbe1afdc442fe60ca12"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-suilgeach/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-suilgeach/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/967a518cfe836f918025.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-suilgeach/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/967a518cfe836f918025.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/967a518cfe836f918025.webp",
+          "sha256": "7a4600f5c897d4f1ab68effb1c9fe63cf49416794be030c8ba6dd5e47749f6c4",
+          "sourceSha256": "967a518cfe836f9180258778c7af71cada019eeb3d08dcbe1afdc442fe60ca12",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Suilgeach.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-542"
+    },
+    {
+      "id": "bild-d51bfdca78b3e06f",
+      "name": "Nic Luachra · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-luachra/krieger.png",
+      "sha256": "fc53955fc3d0e964ab9b7529cba32248b8b6337ea718a15c8333c7ad75642ac5",
+      "houseIds": [
+        "haus-luachra"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_luachra/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Luachra.png",
+          "sourceSha256": "fc53955fc3d0e964ab9b7529cba32248b8b6337ea718a15c8333c7ad75642ac5"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-luachra/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-luachra/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/fc53955fc3d0e964ab9b.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-luachra/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/fc53955fc3d0e964ab9b.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/fc53955fc3d0e964ab9b.webp",
+          "sha256": "d51bfdca78b3e06f93826dd7549bb8f4a716c1760726eaf6b3a40b2bd886095b",
+          "sourceSha256": "fc53955fc3d0e964ab9b7529cba32248b8b6337ea718a15c8333c7ad75642ac5",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Luachra.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-534"
     },
     {
       "id": "bild-4262415355aab363",
@@ -31757,6 +31869,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/01993b7627ad8af49380.webp",
       "variants": [
         {
           "image": "BilderRüstungen/aelthar_paladin.png",
@@ -31809,6 +31922,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/9c52e27ad545ad9b44f3.webp",
       "variants": [
         {
           "image": "BilderRüstungen/auron_paladin.png",
@@ -31856,6 +31970,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/a76c45423d1d8721bb94.webp",
       "variants": [
         {
           "image": "BilderRüstungen/baldran_paladin.png",
@@ -31908,6 +32023,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/47264fa445f907e7967f.webp",
       "variants": [
         {
           "image": "BilderRüstungen/jovena_paladin.png",
@@ -31955,6 +32071,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/97de9bc5fb4c571b55bf.webp",
       "variants": [
         {
           "image": "BilderRüstungen/kharon_paladin.png",
@@ -32012,6 +32129,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/0c59746cf7a2614cc5c8.webp",
       "variants": [
         {
           "image": "BilderRüstungen/lyris_paladin.png",
@@ -32069,6 +32187,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/ab4b151e4f4136be027f.webp",
       "variants": [
         {
           "image": "BilderRüstungen/maldras_paladin.png",
@@ -32126,6 +32245,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/d0d2047fbf3428e89501.webp",
       "variants": [
         {
           "image": "BilderRüstungen/mariel_paladin.png",
@@ -32183,6 +32303,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/ed83b45e5ef00f5a13d2.webp",
       "variants": [
         {
           "image": "BilderRüstungen/nimue_paladin.png",
@@ -32240,6 +32361,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/339783c50a7d39f747ec.webp",
       "variants": [
         {
           "image": "BilderRüstungen/ordan_paladin.png",
@@ -32297,6 +32419,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/b10374b648ef6c2dde22.webp",
       "variants": [
         {
           "image": "BilderRüstungen/orin_paladin.png",
@@ -32349,6 +32472,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/de299da621c3efabe431.webp",
       "variants": [
         {
           "image": "BilderRüstungen/orith_paladin.png",
@@ -32396,6 +32520,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/c2de7c14b8dfc075262b.webp",
       "variants": [
         {
           "image": "BilderRüstungen/rhea_paladin.png",
@@ -32448,6 +32573,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/f89e421b095562eb512f.webp",
       "variants": [
         {
           "image": "BilderRüstungen/selarion_paladin.png",
@@ -32495,6 +32621,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/54c70d2cd50aac7f864b.webp",
       "variants": [
         {
           "image": "BilderRüstungen/sylvana_paladin.png",
@@ -32547,6 +32674,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/5b0c56471c98f2c642e9.webp",
       "variants": [
         {
           "image": "BilderRüstungen/tethyra_paladin.png",
@@ -32594,6 +32722,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/eff071814004dc897417.webp",
       "variants": [
         {
           "image": "BilderRüstungen/tharim_paladin.png",
@@ -32651,6 +32780,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/67f56e07544a161f2249.webp",
       "variants": [
         {
           "image": "BilderRüstungen/thyrael_paladin.png",
@@ -32708,6 +32838,7 @@
       ],
       "note": "",
       "collection": "Bilder für Krieger · Allgemeine Sammlung",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/65d78cb046883c07aaa2.webp",
       "variants": [
         {
           "image": "BilderRüstungen/zephyr_paladin.png",
@@ -32758,35 +32889,104 @@
       "note": "Ritterlicher Dienst auf den Schiffen des Hauses."
     },
     {
-      "id": "bild-7a4600f5c897d4f1",
-      "name": "Suilgeach · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
+      "id": "bild-b30e4e9bcd0c04d8",
+      "name": "Ruin Giolla · Airig",
+      "category": "Clandarstellung",
       "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/967a518cfe836f918025.webp",
-      "sha256": "7a4600f5c897d4f1ab68effb1c9fe63cf49416794be030c8ba6dd5e47749f6c4",
+      "image": "Stammbäume/assets/images/references/haus-giolla/krieger.png",
+      "sha256": "437c9f3cb6aee786cfb79a1f87c7877263939d2cdc96f27f429488debe550130",
       "houseIds": [
-        "haus-suilgeach"
+        "haus-giolla"
       ],
       "sources": [
         {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_giolla/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
           "path": "Gallerien/krieger/data/local-source-review.json",
-          "label": "Bilder für Krieger/Uathneach/Suilgeach.png",
-          "sourceSha256": "967a518cfe836f9180258778c7af71cada019eeb3d08dcbe1afdc442fe60ca12"
+          "label": "Bilder für Krieger/Uathneach/Giolla.png",
+          "sourceSha256": "437c9f3cb6aee786cfb79a1f87c7877263939d2cdc96f27f429488debe550130"
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/967a518cfe836f918025.webp"
+        "Stammbäume/assets/images/references/haus-giolla/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-giolla/krieger.png"
       ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/967a518cfe836f918025.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/437c9f3cb6aee786cfb7.webp",
       "variants": [
         {
-          "image": "Gallerien/krieger/assets/references/967a518cfe836f918025.webp",
+          "image": "Stammbäume/assets/images/references/haus-giolla/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/437c9f3cb6aee786cfb7.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/437c9f3cb6aee786cfb7.webp",
+          "sha256": "b30e4e9bcd0c04d8023fd05edbaf5821c57b38128c2b14314abc99ef0642abe0",
+          "sourceSha256": "437c9f3cb6aee786cfb79a1f87c7877263939d2cdc96f27f429488debe550130",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Giolla.png"
+          ],
           "label": "Quellfassung"
         }
       ],
-      "localGroup": "quelle-542"
+      "localGroup": "quelle-532"
+    },
+    {
+      "id": "bild-1bbc228f3aa98915",
+      "name": "Ruin Marcaigh · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-marcaigh/krieger.png",
+      "sha256": "05e8791c85f9f6cce7ce858906006d75852570e0962ef0f10ae74475cc53d1bb",
+      "houseIds": [
+        "haus-marcaigh"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_marcaigh/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Marcaigh.png",
+          "sourceSha256": "05e8791c85f9f6cce7ce858906006d75852570e0962ef0f10ae74475cc53d1bb"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-marcaigh/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-marcaigh/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/05e8791c85f9f6cce7ce.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-marcaigh/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/05e8791c85f9f6cce7ce.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/05e8791c85f9f6cce7ce.webp",
+          "sha256": "1bbc228f3aa98915cc307364a5532345df2ec42d392399637bf13a5e64fa02e5",
+          "sourceSha256": "05e8791c85f9f6cce7ce858906006d75852570e0962ef0f10ae74475cc53d1bb",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Marcaigh.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-537"
     },
     {
       "id": "bild-b81ceeeb69d9fa4b",
@@ -32811,6 +33011,56 @@
       "note": ""
     },
     {
+      "id": "bild-07d585df7b6d62b4",
+      "name": "Tir an Clannmhar · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-clannmhar/krieger.png",
+      "sha256": "720cab0f6fd1d41d727bf8bc0035db6badb90dcf1c0259aaf611172ce8ded88c",
+      "houseIds": [
+        "haus-clannmhar"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_clannmhar/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Clannmhar.png",
+          "sourceSha256": "720cab0f6fd1d41d727bf8bc0035db6badb90dcf1c0259aaf611172ce8ded88c"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-clannmhar/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-clannmhar/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/720cab0f6fd1d41d727b.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-clannmhar/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/720cab0f6fd1d41d727b.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/720cab0f6fd1d41d727b.webp",
+          "sha256": "07d585df7b6d62b4189d4bb9bcbe545905aecb89ed8b9a6cc28edb965eb893c2",
+          "sourceSha256": "720cab0f6fd1d41d727bf8bc0035db6badb90dcf1c0259aaf611172ce8ded88c",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Clannmhar.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-526"
+    },
+    {
       "id": "bild-044e248cd6e1da52",
       "name": "Tir an Craobhan · Kriegerreferenz",
       "category": "Archivierte Kriegerreferenz",
@@ -32830,6 +33080,82 @@
         "Stammbäume/assets/images/references/haus-craobhan/krieger.png"
       ],
       "note": ""
+    },
+    {
+      "id": "bild-fdfae9246702e870",
+      "name": "Tir An Creagán · Riada",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-creagan/krieger.png",
+      "sha256": "fdfae9246702e870c55f7f34c11720e39eb547b0cc50b94ef9a86a58f5351912",
+      "houseIds": [
+        "haus-creagan"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_creagan/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-creagan/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-creagan/krieger.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-394195905d034af2",
+      "name": "Tir an Máta · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-mata/krieger.png",
+      "sha256": "88925094b5e21c98ba179a673af33940c88b602d576085cbcdee15708fd8a25a",
+      "houseIds": [
+        "haus-mata"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_mata/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Mata.png",
+          "sourceSha256": "88925094b5e21c98ba179a673af33940c88b602d576085cbcdee15708fd8a25a"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-mata/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-mata/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/88925094b5e21c98ba17.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-mata/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/88925094b5e21c98ba17.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/88925094b5e21c98ba17.webp",
+          "sha256": "394195905d034af2a0e2d876502b7d6df4df6b3ee14e398a4626fb9a4831f862",
+          "sourceSha256": "88925094b5e21c98ba179a673af33940c88b602d576085cbcdee15708fd8a25a",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Mata.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-538"
     },
     {
       "id": "bild-b312532396b7a857",
@@ -32854,13 +33180,23 @@
     },
     {
       "id": "bild-ef349fa2d5417fbc",
-      "name": "Ua Cairbre · Entwurf 2",
-      "category": "Benannte Clanreferenzen",
-      "affiliation": "Ua Cairbre · Name der Bildquelle",
-      "image": "Gallerien/krieger/assets/references/02c7259e9ec85ff0dfc5.webp",
-      "sha256": "ef349fa2d5417fbc4dca98e87f503a625a1bbe39bf0dc1510341bcd435dfc8d1",
-      "houseIds": [],
+      "name": "Ua Cairbre · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-cairbre/krieger.png",
+      "sha256": "02c7259e9ec85ff0dfc5098d9353aacd3c9f212eef11c099a317d0e3cb43c5b3",
+      "houseIds": [
+        "haus-cairbre"
+      ],
       "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_cairbre/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
         {
           "path": "Gallerien/krieger/data/local-source-review.json",
           "label": "Bilder für Krieger/Uathneach/Ua Cairbre2.png",
@@ -32868,30 +33204,249 @@
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/02c7259e9ec85ff0dfc5.webp"
+        "Stammbäume/assets/images/references/haus-cairbre/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-cairbre/krieger.png"
       ],
-      "note": "Die Herkunftsmappe ist dokumentiert. Eine Hauszuordnung wird daraus allein nicht abgeleitet.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/02c7259e9ec85ff0dfc5.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/02c7259e9ec85ff0dfc5.webp",
       "variants": [
         {
+          "image": "Stammbäume/assets/images/references/haus-cairbre/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
           "image": "Gallerien/krieger/assets/references/02c7259e9ec85ff0dfc5.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/02c7259e9ec85ff0dfc5.webp",
+          "sha256": "ef349fa2d5417fbc4dca98e87f503a625a1bbe39bf0dc1510341bcd435dfc8d1",
+          "sourceSha256": "02c7259e9ec85ff0dfc5098d9353aacd3c9f212eef11c099a317d0e3cb43c5b3",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Ua Cairbre2.png"
+          ],
           "label": "Quellfassung"
         }
       ],
       "localGroup": "quelle-543"
     },
     {
-      "id": "bild-d8a5b7a0b38d15da",
-      "name": "Ua Reannachain · Kriegerdarstellung",
-      "category": "Benannte Clanreferenzen",
+      "id": "bild-07175e4beedba5a3",
+      "name": "Ua Cairge · Serf",
+      "category": "Clandarstellung",
       "affiliation": "",
-      "image": "Gallerien/krieger/assets/references/b1c8d99ca593a9d306d1.webp",
-      "sha256": "d8a5b7a0b38d15da14f080dc7836883a54135e5580d71b5a59535f124be24f3e",
+      "image": "Stammbäume/assets/images/references/haus-cairge/krieger.png",
+      "sha256": "e3cf13759937456ef76c728c38f726a67be2243299998f94266ae92d09b723cb",
+      "houseIds": [
+        "haus-cairge"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_cairge/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Cairge.png",
+          "sourceSha256": "e3cf13759937456ef76c728c38f726a67be2243299998f94266ae92d09b723cb"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-cairge/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-cairge/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/e3cf13759937456ef76c.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-cairge/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/e3cf13759937456ef76c.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/e3cf13759937456ef76c.webp",
+          "sha256": "07175e4beedba5a36059200b518210b416078925003cbb8699fd06abd5953b0e",
+          "sourceSha256": "e3cf13759937456ef76c728c38f726a67be2243299998f94266ae92d09b723cb",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Cairge.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-525"
+    },
+    {
+      "id": "bild-2bb582fcee1def7f",
+      "name": "Ua Cuilen · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-cuilen/krieger.png",
+      "sha256": "a22de1c3b034527f4146938f90c8a3c75da6db05b3ef98aedbc519909c824e22",
+      "houseIds": [
+        "haus-cuilen"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_cuilen/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Cuilen.png",
+          "sourceSha256": "a22de1c3b034527f4146938f90c8a3c75da6db05b3ef98aedbc519909c824e22"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-cuilen/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-cuilen/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/a22de1c3b034527f4146.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-cuilen/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/a22de1c3b034527f4146.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/a22de1c3b034527f4146.webp",
+          "sha256": "2bb582fcee1def7fb8369a82e90403c65b964f44d3107c30995ce997965bf2d8",
+          "sourceSha256": "a22de1c3b034527f4146938f90c8a3c75da6db05b3ef98aedbc519909c824e22",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Cuilen.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-528"
+    },
+    {
+      "id": "bild-5d3be7bb46945095",
+      "name": "Ua Lasgair · Currach",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-lasgair/krieger.png",
+      "sha256": "0fcbe2c6256d54faffd00a2ea22669f9488138afcf08a691efa427d28fb77bc2",
+      "houseIds": [
+        "haus-lasgair"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_lasgair/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Lasgair.png",
+          "sourceSha256": "0fcbe2c6256d54faffd00a2ea22669f9488138afcf08a691efa427d28fb77bc2"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-lasgair/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-lasgair/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/0fcbe2c6256d54faffd0.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-lasgair/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/0fcbe2c6256d54faffd0.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/0fcbe2c6256d54faffd0.webp",
+          "sha256": "5d3be7bb469450958d6346673143f19d8d946f60307946b066614e35979be6f8",
+          "sourceSha256": "0fcbe2c6256d54faffd00a2ea22669f9488138afcf08a691efa427d28fb77bc2",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Lasgair.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-533"
+    },
+    {
+      "id": "bild-59655e2544e62674",
+      "name": "Ua Muirin · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-muirin/krieger.png",
+      "sha256": "af6eedb1b5742670889b522304718f81321b289cb2e7f58bd70c9f0c28a94eed",
+      "houseIds": [
+        "haus-muirin"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_muirin/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Muirin.png",
+          "sourceSha256": "af6eedb1b5742670889b522304718f81321b289cb2e7f58bd70c9f0c28a94eed"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-muirin/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-muirin/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/af6eedb1b5742670889b.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-muirin/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/af6eedb1b5742670889b.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/af6eedb1b5742670889b.webp",
+          "sha256": "59655e2544e6267491dbc23dd15f8f79d895dc9e3bace9943792bb5190f12c87",
+          "sourceSha256": "af6eedb1b5742670889b522304718f81321b289cb2e7f58bd70c9f0c28a94eed",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Muirin.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-540"
+    },
+    {
+      "id": "bild-d8a5b7a0b38d15da",
+      "name": "Ua Reannachain · Airig",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-reannachain/krieger.png",
+      "sha256": "b1c8d99ca593a9d306d131f86dfc4dbc48d4a8dca0e97ac6a5e3fe52bce04997",
       "houseIds": [
         "haus-reannachain"
       ],
       "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_reannachain/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
         {
           "path": "Gallerien/krieger/data/local-source-review.json",
           "label": "Bilder für Krieger/Uathneach/Ua Reannachain.png",
@@ -32899,18 +33454,79 @@
         }
       ],
       "copies": [
-        "Gallerien/krieger/assets/references/b1c8d99ca593a9d306d1.webp"
+        "Stammbäume/assets/images/references/haus-reannachain/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-reannachain/krieger.png"
       ],
-      "note": "Zuordnung über den benannten Bilddateinamen zum gleichnamigen Hausnamen im Stammbaum. Verkürzte Namen bleiben im Verzeichnis getrennt von anderen Namensvarianten.",
-      "thumbnail": "Gallerien/krieger/assets/thumbnails/b1c8d99ca593a9d306d1.webp",
+      "note": "",
       "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/b1c8d99ca593a9d306d1.webp",
       "variants": [
         {
+          "image": "Stammbäume/assets/images/references/haus-reannachain/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
           "image": "Gallerien/krieger/assets/references/b1c8d99ca593a9d306d1.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/b1c8d99ca593a9d306d1.webp",
+          "sha256": "d8a5b7a0b38d15da14f080dc7836883a54135e5580d71b5a59535f124be24f3e",
+          "sourceSha256": "b1c8d99ca593a9d306d131f86dfc4dbc48d4a8dca0e97ac6a5e3fe52bce04997",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Ua Reannachain.png"
+          ],
           "label": "Quellfassung"
         }
       ],
       "localGroup": "quelle-544"
+    },
+    {
+      "id": "bild-4171985a755e7778",
+      "name": "Ua’Luga · Cateran",
+      "category": "Clandarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/references/haus-luga/krieger.png",
+      "sha256": "c4c6b33761b4c394fa4e18bbec9317a7789bc46c195a4155e4be39726eddd8da",
+      "houseIds": [
+        "haus-luga"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Uathneach/Clan_luga/haus.content.mjs",
+          "original": ""
+        },
+        {
+          "path": "Stammbäume/assets/data/source-inventories/uathneach-warriors-2026-10-27.json",
+          "original": ""
+        },
+        {
+          "path": "Gallerien/krieger/data/local-source-review.json",
+          "label": "Bilder für Krieger/Uathneach/Luga.png",
+          "sourceSha256": "c4c6b33761b4c394fa4e18bbec9317a7789bc46c195a4155e4be39726eddd8da"
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/references/haus-luga/krieger.png",
+        "Familien Häuser und Clans/../Stammbäume/assets/images/references/haus-luga/krieger.png"
+      ],
+      "note": "",
+      "collection": "Bilder für Krieger · Uathneach",
+      "thumbnail": "Gallerien/krieger/assets/thumbnails/c4c6b33761b4c394fa4e.webp",
+      "variants": [
+        {
+          "image": "Stammbäume/assets/images/references/haus-luga/krieger.png",
+          "label": "Geliefertes Original"
+        },
+        {
+          "image": "Gallerien/krieger/assets/references/c4c6b33761b4c394fa4e.webp",
+          "thumbnail": "Gallerien/krieger/assets/thumbnails/c4c6b33761b4c394fa4e.webp",
+          "sha256": "4171985a755e7778fa76641a05d8115509cb758941dc89211b97e2aa77388441",
+          "sourceSha256": "c4c6b33761b4c394fa4e18bbec9317a7789bc46c195a4155e4be39726eddd8da",
+          "sourceFiles": [
+            "Bilder für Krieger/Uathneach/Luga.png"
+          ],
+          "label": "Quellfassung"
+        }
+      ],
+      "localGroup": "quelle-535"
     },
     {
       "id": "bild-7dcd42b54910923d",

@@ -1,2 +1,3 @@
-// Lossless WebP copies of the approved preview artwork.
-export const previewAsset = path => path.replace(/\.png$/i, '.webp');
+// Only legacy artwork in the flat assets directory has lossless WebP aliases.
+// Nested production PNGs retain their actual format and path.
+export const previewAsset = path => path.replace(/^(assets\/[^/]+)\.png$/i, '$1.webp');

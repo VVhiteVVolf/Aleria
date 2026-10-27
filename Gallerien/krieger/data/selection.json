@@ -1,34 +1,151 @@
 {
-  "reviewedAt": "2026-10-24",
+  "reviewedAt": "2026-10-27",
   "excludedHouses": [],
   "additionalImages": [
     {
       "file": "Familien Häuser und Clans/assets/images/scenes/haus-albholz.png",
-      "houseId": "haus-albholz", "name": "Clan Albholz · Krieger",
+      "houseId": "haus-albholz",
+      "name": "Clan Albholz · Krieger",
       "source": "Familien Häuser und Clans/data/haus-albholz.data.js"
     },
     {
       "file": "Familien Häuser und Clans/assets/images/scenes/haus-suedstahl.png",
-      "houseId": "haus-suedstahl", "name": "Clan Südstahl · Krieger",
+      "houseId": "haus-suedstahl",
+      "name": "Clan Südstahl · Krieger",
       "source": "Familien Häuser und Clans/data/haus-suedstahl.data.js"
     },
     {
       "file": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
-      "houseId": "haus-falchdyn", "name": "Haus Falchdyn · bewaffnete Hausdarstellung",
+      "houseId": "haus-falchdyn",
+      "name": "Haus Falchdyn · bewaffnete Hausdarstellung",
       "source": "Stammbäume/assets/js/data/house-falchdyn-family.js",
       "note": "Hausmotiv mit Schuppenrüstung und Seitenwaffe. Kein schwerer Hausritter."
     },
     {
       "file": "AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-krieger.png",
-      "houseId": "haus-draig", "name": "Drachengarde · frühere Rüstungsreferenz",
+      "houseId": "haus-draig",
+      "name": "Drachengarde · frühere Rüstungsreferenz",
       "source": "AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-krieger.png",
       "note": "Zusätzliche vorhandene Referenz der Draig-Leibgarde; neben der aktuellen Hausbio-Serie erhalten."
     },
     {
       "file": "Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/kriegerentwicklung.webp",
-      "name": "Lysfaen · Entwicklung der Wachen", "category": "Stadt- & Ortswachen",
+      "name": "Lysfaen · Entwicklung der Wachen",
+      "category": "Stadt- & Ortswachen",
       "affiliation": "Stadt / Ort · Lysfaen",
       "source": "Orte/Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/assets/kriegerentwicklung.webp"
+    }
+  ],
+  "localGroupPrimaries": [
+    {
+      "group": "quelle-523",
+      "file": "Stammbäume/assets/images/references/haus-scathain/krieger.png",
+      "legacyId": "bild-78bc3f1305060935"
+    },
+    {
+      "group": "quelle-524",
+      "file": "Stammbäume/assets/images/references/haus-cadhla/krieger.png",
+      "legacyId": "bild-1a172cccbe6d00e5"
+    },
+    {
+      "group": "quelle-525",
+      "file": "Stammbäume/assets/images/references/haus-cairge/krieger.png",
+      "legacyId": "bild-07175e4beedba5a3"
+    },
+    {
+      "group": "quelle-526",
+      "file": "Stammbäume/assets/images/references/haus-clannmhar/krieger.png",
+      "legacyId": "bild-07d585df7b6d62b4"
+    },
+    {
+      "group": "quelle-527",
+      "file": "Stammbäume/assets/images/references/haus-conchobhair/krieger.png",
+      "legacyId": "bild-34f6964667634518"
+    },
+    {
+      "group": "quelle-528",
+      "file": "Stammbäume/assets/images/references/haus-cuilen/krieger.png",
+      "legacyId": "bild-2bb582fcee1def7f"
+    },
+    {
+      "group": "quelle-529",
+      "file": "Stammbäume/assets/images/references/haus-arbhair/krieger.png",
+      "legacyId": "bild-6127ba86234088fa"
+    },
+    {
+      "group": "quelle-530",
+      "file": "Stammbäume/assets/images/references/haus-fastaigh/krieger.png",
+      "legacyId": "bild-fd8394cacd9b14fe"
+    },
+    {
+      "group": "quelle-531",
+      "file": "Stammbäume/assets/images/references/haus-gealan/krieger.png",
+      "legacyId": "bild-3f6c4863e6e3d9b2"
+    },
+    {
+      "group": "quelle-532",
+      "file": "Stammbäume/assets/images/references/haus-giolla/krieger.png",
+      "legacyId": "bild-b30e4e9bcd0c04d8"
+    },
+    {
+      "group": "quelle-533",
+      "file": "Stammbäume/assets/images/references/haus-lasgair/krieger.png",
+      "legacyId": "bild-5d3be7bb46945095"
+    },
+    {
+      "group": "quelle-534",
+      "file": "Stammbäume/assets/images/references/haus-luachra/krieger.png",
+      "legacyId": "bild-d51bfdca78b3e06f"
+    },
+    {
+      "group": "quelle-535",
+      "file": "Stammbäume/assets/images/references/haus-luga/krieger.png",
+      "legacyId": "bild-4171985a755e7778"
+    },
+    {
+      "group": "quelle-536",
+      "file": "Stammbäume/assets/images/references/haus-roich/krieger.png",
+      "legacyId": "bild-6dc80eacb82e2ef2"
+    },
+    {
+      "group": "quelle-537",
+      "file": "Stammbäume/assets/images/references/haus-marcaigh/krieger.png",
+      "legacyId": "bild-1bbc228f3aa98915"
+    },
+    {
+      "group": "quelle-538",
+      "file": "Stammbäume/assets/images/references/haus-mata/krieger.png",
+      "legacyId": "bild-394195905d034af2"
+    },
+    {
+      "group": "quelle-539",
+      "file": "Stammbäume/assets/images/references/haus-midgna/krieger.png",
+      "legacyId": "bild-955c4a889918c87c"
+    },
+    {
+      "group": "quelle-540",
+      "file": "Stammbäume/assets/images/references/haus-muirin/krieger.png",
+      "legacyId": "bild-59655e2544e62674"
+    },
+    {
+      "group": "quelle-541",
+      "file": "Stammbäume/assets/images/references/haus-briccne/krieger.png",
+      "legacyId": "bild-d32d78cad5bd65a1"
+    },
+    {
+      "group": "quelle-542",
+      "file": "Stammbäume/assets/images/references/haus-suilgeach/krieger.png",
+      "legacyId": "bild-7a4600f5c897d4f1"
+    },
+    {
+      "group": "quelle-543",
+      "file": "Stammbäume/assets/images/references/haus-cairbre/krieger.png",
+      "legacyId": "bild-ef349fa2d5417fbc"
+    },
+    {
+      "group": "quelle-544",
+      "file": "Stammbäume/assets/images/references/haus-reannachain/krieger.png",
+      "legacyId": "bild-d8a5b7a0b38d15da"
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { structure, territories, territoriesById, clansById, settlementsById, regionsById,
-  territoryAncestors, familyHref } from '../../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
+  territoryAncestors, houseHref } from '../../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
 import { markers } from '../../../Karten/Uathneach/places.mjs';
 
 const map = { title: 'Karte des Fürstentums Uathneach', imageSrc: '/Karten/Uathneach/Kartenbilder/normal.webp',
@@ -9,7 +9,7 @@ const westCoast = regionsById.get('uathneach-tir-na-taoide');
 const rank = { 'ard-tiarna': 'Ard Tiarna · Fürstenclan', 'mor-tiarna': 'Mor-Tiarna-Clan',
   'dun-tiarna': 'Dún-Tiarna-Clan', laird: 'Laird-Clan', unknown: 'Offen' };
 const family = (clan, featured = false) => ({ familyId: clan.familyId, name: clan.name, imageSrc: clan.crest, imageAlt: `Wappen ${clan.name}`,
-  href: familyHref(clan), seat: settlementsById.get(clan.seat).name, liege: clansById.get(clan.liege)?.name || '',
+  href: houseHref(clan), seat: settlementsById.get(clan.seat).name, liege: clansById.get(clan.liege)?.name || '',
   rank: rank[clan.rankId], featured, ...(featured ? { featuredLabel: rank[clan.rankId] } : {}) });
 const paragraphs = (territory, clan) => {
   if (territory.type === 'Fürstentum') return [
@@ -56,7 +56,7 @@ export const pages = territories.map(territory => {
         : territory.gloss ? [`${territory.name} bedeutet „${territory.gloss}“.`]
         : territory.extent === 'urban' ? [`Die Herrschaft liegt innerhalb von ${territory.seat}, der Stadt des unmittelbaren Lehnsherrn. Sie bildet kein eigenes Landschaftsgebiet.`] : [] },
     infobox: [{ title: 'Herrschaft', rows: [
-      { label: 'Typ', value: territory.type }, { label: 'Herrschender Clan', value: clan.name, href: familyHref(clan) },
+      { label: 'Typ', value: territory.type }, { label: 'Herrschender Clan', value: clan.name, href: houseHref(clan) },
       { label: 'Rang', value: rank[clan.rankId] }, { label: 'Sitz', value: territory.seat },
       ...(parent ? [{ label: 'Oberherrschaft', value: parent.name, href: parent.href }] : []),
     ] }], families: groups, councilGroups: [], vassalGroups: [],

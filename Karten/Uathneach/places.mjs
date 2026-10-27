@@ -1,4 +1,4 @@
-import { structure, territoriesById, clansById, familyHref } from '../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
+import { structure, territoriesById, clansById, houseHref } from '../../Stammbäume/assets/js/data/uathneach-territorial-catalog.js';
 import { classifyCity, cityDefinition } from './city-classification.mjs';
 import mapImages from './map-images.source.json' with { type: 'json' };
 
@@ -22,7 +22,7 @@ export function describePlace(marker) {
   const residents = place.residentFamilyIds.map(id => structure.clans.find(clan => clan.familyId === id));
   const primary = residents[0] || clansById.get(territory.rulerId);
   const city = cityClassifications.get(place.id);
-  return { territory, house: primary.name, houseHref: familyHref(primary), crest: primary.crest,
+  return { territory, house: primary.name, houseHref: houseHref(primary), crest: primary.crest,
     banner: territory.banner || territoriesById.get(territory.parentId)?.banner || '', bannerHref: territory.href,
     text: place.id === 'reithe' ? structure.decisions.find(decision => decision.id === 'reithe-special-fief').text : '',
     trade: '', faction: '', fields: { 'Bekannte Familien': residents.map(clan => clan.name).join(', '),

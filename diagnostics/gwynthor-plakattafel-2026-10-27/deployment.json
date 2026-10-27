@@ -1,0 +1,73 @@
+{
+  "siteId": "0c2f7016-08c4-421a-baaa-9da6e306806a",
+  "name": "dieweltvonaleria",
+  "url": "https://dieweltvonaleria.netlify.app",
+  "published": {
+    "id": "6adffbc091d7d80c59dc815a",
+    "state": "ready",
+    "commit": "628de5dbc75e24554c8e2282ffa43486d76fd906",
+    "context": "production",
+    "createdAt": "2026-10-27T01:17:52.124Z",
+    "publishedAt": "2026-10-27T01:30:23.596Z",
+    "url": "https://master--dieweltvonaleria.netlify.app",
+    "error": null,
+    "buildId": "6adffbc091d7d80c59dc8158"
+  },
+  "deploys": [
+    {
+      "id": "6ae0d5a15900c9f3fb5b69c2",
+      "state": "building",
+      "commit": null,
+      "context": "production",
+      "createdAt": "2026-10-27T16:47:29.360Z",
+      "publishedAt": null,
+      "url": "https://master--dieweltvonaleria.netlify.app",
+      "error": null,
+      "buildId": "6ae0d5a15900c9f3fb5b69c0"
+    },
+    {
+      "id": "6ae0ceba480fbb100ce535a3",
+      "state": "error",
+      "commit": "4dabed586a12c1e391054cd9b1091d063d9d897c",
+      "context": "production",
+      "createdAt": "2026-10-27T16:18:02.080Z",
+      "publishedAt": null,
+      "url": "https://master--dieweltvonaleria.netlify.app",
+      "error": "Canceled build",
+      "buildId": "6ae0ceba480fbb100ce535a1"
+    },
+    {
+      "id": "6adffbc091d7d80c59dc815a",
+      "state": "ready",
+      "commit": "628de5dbc75e24554c8e2282ffa43486d76fd906",
+      "context": "production",
+      "createdAt": "2026-10-27T01:17:52.124Z",
+      "publishedAt": "2026-10-27T01:30:23.596Z",
+      "url": "https://master--dieweltvonaleria.netlify.app",
+      "error": null,
+      "buildId": "6adffbc091d7d80c59dc8158"
+    },
+    {
+      "id": "6adf693147ff2f83dd38b638",
+      "state": "ready",
+      "commit": "a88e2d402518956c5421c5806ee106736093ed40",
+      "context": "production",
+      "createdAt": "2026-10-26T14:52:33.507Z",
+      "publishedAt": "2026-10-26T15:05:17.047Z",
+      "url": "https://master--dieweltvonaleria.netlify.app",
+      "error": null,
+      "buildId": "6adf693147ff2f83dd38b636"
+    },
+    {
+      "id": "6adf5860cf6541c1d1e59f0e",
+      "state": "ready",
+      "commit": "44609b216b1ba53c94e98582ddb87739779257c9",
+      "context": "production",
+      "createdAt": "2026-10-26T13:40:48.837Z",
+      "publishedAt": "2026-10-26T13:51:07.435Z",
+      "url": "https://master--dieweltvonaleria.netlify.app",
+      "error": null,
+      "buildId": "6adf5860cf6541c1d1e59f0c"
+    }
+  ]
+}

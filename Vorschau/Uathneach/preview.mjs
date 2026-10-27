@@ -1,4 +1,5 @@
 import {variants} from './variants.mjs';
+import {renderClanWarriorGallery} from './clan-warriors.mjs';
 import usedNames from './used-names.mjs';
 import {previewAsset} from './preview-assets.mjs';
 import {createRegionEditor} from './editor.mjs';
@@ -16,6 +17,7 @@ const byId=id=>current().regions.find(region=>region.id===id);
 const normalize=value=>value.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[’']/g,'').replace(/\s+/g,' ').trim();
 const existingNames=new Set(usedNames.map(normalize));
 const escape=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+document.querySelector('[data-role="warrior-gallery"]').innerHTML=renderClanWarriorGallery(variants[0].clans,escape);
 function notice(message){const box=document.querySelector('#notice');box.textContent=message;box.classList.add('is-visible');clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>box.classList.remove('is-visible'),3500);}
 function validateName(name,id){
  const value=normalize(name);

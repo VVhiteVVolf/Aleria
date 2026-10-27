@@ -9,6 +9,7 @@ export const clansById = new Map(structure.clans.map(clan => [clan.id, clan]));
 export const settlementsById = new Map(structure.settlements.map(place => [place.id, place]));
 export const regionsById = new Map(structure.regions.map(region => [region.id, region]));
 export const familyHref = clan => `/Stammbäume/Stammbaum.html?family=${clan.familyId}&mode=view`;
+export const houseHref = clan => `/Familien Häuser und Clans/kleinehaeuser.html?haus=${encodeURIComponent(clan.familyId)}`;
 
 const root = { id: structure.realm.id, name: 'Fürstentum Uathneach', type: 'Fürstentum', parentId: '',
   rulerId: structure.realm.rulerId, banner: structure.realm.banner, href: realmPath + 'Fürstentum Uathneach.html' };

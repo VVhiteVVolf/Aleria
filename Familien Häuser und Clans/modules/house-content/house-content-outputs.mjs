@@ -62,7 +62,7 @@ export function createHouseBiography(content) {
     description: summary.overview, quote: content.showMotto ? profile.motto : '', quoteBy: '', commentSequence: [],
     stats: [
       ['Voller Name', content.name], ['Rang', profile.highestTitle], ['Stammsitz', profile.seat],
-      ['Grafschaft', content.county], [content.extinct ? 'Letztes Oberhaupt' : 'Oberhaupt', content.currentHead ?? content.heads.at(-1)?.name ?? ''],
+      [content.countyLabel || 'Grafschaft', content.county], [content.extinct ? 'Letztes Oberhaupt' : 'Oberhaupt', content.currentHead ?? content.heads.at(-1)?.name ?? ''],
       ...(content.extinct ? [['Status', content.extinctionText || 'Ausgestorben · Zeitpunkt offen']] : [['Erbe', content.firstHeir ?? content.heirs[0]?.name ?? '']]), ['Lehnsherr', content.liege],
       ['Ursprung', profile.origin], ['Schutzpatronin', profile.patronDeities],
     ].filter(([, value]) => String(value || '').trim()),

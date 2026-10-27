@@ -79,6 +79,6 @@ export async function collectIllustrations(root, houseCatalog, selection) {
     const place = file.split('/').at(-3).replaceAll('_', ' ');
     add({ file, name: file.includes('cochllamwyr') ? 'Cochllamwyr' : `Wache · ${place}`, category: 'Stadt- & Ortswachen', affiliation: `Stadt / Ort · ${place}`, source: file, note: 'Örtlicher Wachdienst. Eine Lage im Herrschaftsgebiet begründet keine persönliche Hauszugehörigkeit.' });
   }
-  appendLocalIllustrations(root, entries, add);
+  appendLocalIllustrations(root, entries, add, selection);
   return [...entries.values()].sort((a, b) => a.name.localeCompare(b.name, 'de'));
 }

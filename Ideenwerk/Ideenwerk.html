@@ -1,0 +1,1335 @@
+<!doctype html>
+<!-- Generated from modular source. Rebuild with npm run build. -->
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Patricks lokale Werkstatt für Figuren, Geschichten und große Ideen.">
+  <meta name="theme-color" content="#183d38">
+  <title>Ideenwerk · Patricks Studio</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTUiIGZpbGw9IiNkZmZmOWUiLz48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMxODNkMzgiIHN0cm9rZS13aWR0aD0iMi43IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik0xNyAyOGMtOC04IDItMTkgMTAtMTMgNiA1IDIgMTEgMCAxM2wtMSA1aC04bC0xLTVaIi8+PHBhdGggZD0iTTE5IDM3aDZNMjMgN1Y0TTkgMTRsLTMtMk0zNyAxNGwzLTJNMzQgMzFsMyAyTTExIDMwbC0zIDJNMjEgMjl2LTdsLTMtM20zIDMgNC0zIi8+PC9nPjwvc3ZnPgo=" type="image/svg+xml">
+  <style>
+@layer reset,base,components;
+@layer reset{*{box-sizing:border-box}body,h1,h2,h3,p{margin:0}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.4}img{display:block;max-width:100%}button,a,input,textarea,select{ -webkit-tap-highlight-color:transparent}button{color:inherit}a{color:inherit;text-decoration:none}}
+@layer base{
+:root{font-family:'Segoe UI',Arial,sans-serif;color:#263d38;background:#f7f8f2;font-synthesis:none;--ink:#263d38;--muted:#7a8580;--green:#183d38;--accent:#e87951;--line:#e1e5db;--peach:#f6dfd1;--sage:#dfe9d7;--lavender:#e5e0f1;--sand:#eee3ce;--rose:#eedbe0;--butter:#f5edc6}
+body{min-width:360px}button{border:0;background:none}input,textarea,select{color:var(--ink)}button:focus-visible,a:focus-visible{outline:3px solid #cb6a44;outline-offset:4px}input:focus,textarea:focus,select:focus{outline:2px solid #78a08a;outline-offset:2px}::selection{background:#d5e6b2}::backdrop{background:#122f2bd1;backdrop-filter:blur(5px)}[hidden]{display:none!important}.icon{width:19px;height:19px;flex:none;vertical-align:middle}.icon-button{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border-radius:7px;color:#7b857e}.icon-button:hover{background:#e8ece2;color:var(--green)}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;font-size:12px;font-weight:600;min-height:38px;padding:9px 14px;white-space:nowrap;transition:background .15s,transform .15s}.button:hover{transform:translateY(-1px)}.primary{background:var(--green);color:#fff}.primary:hover{background:#28544a}.subtle{background:transparent}.subtle:hover{background:#e9ede4}.secondary{border:1px solid #d6ddd0;background:#fff}.danger{color:#ab4636}.eyebrow{font-size:10px;font-weight:700;letter-spacing:1.8px;display:flex;align-items:center;gap:10px}.eyebrow-line{width:23px;height:2px;background:var(--accent)}.muted{color:var(--muted)}.field-label{display:block;font-size:11px;font-weight:650;letter-spacing:.4px;margin-bottom:8px}.field-input{width:100%;border:1px solid #dfe4da;background:white;border-radius:7px;padding:11px 12px}.field-input::placeholder{color:#a2aaa0}.field-input:disabled{background:#f1f3ec}textarea.field-input{resize:vertical;min-height:110px;line-height:1.7}.form-field{margin:18px 0}.form-help{font-size:11px;line-height:1.7;color:#77837a;margin-top:7px}.error-box{padding:12px;border:1px solid #efc1b5;background:#fff2ec;color:#9c3d2c;border-radius:8px;font-size:12px;line-height:1.6}.modal{border:1px solid #e1e6da;border-radius:17px;background:#fafbf6;padding:32px;color:var(--ink);box-shadow:0 24px 100px #122d2940;max-height:92dvh;width:min(760px,calc(100vw - 30px));overflow:auto}.modal h2{font-size:29px;letter-spacing:-1px;line-height:1.3;margin:8px 0}.modal-intro{font-size:13px;color:#7b867e;line-height:1.7;margin:8px 0 23px}.modal-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.close-button{flex:none}.modal-footer{display:flex;align-items:center;justify-content:flex-end;gap:10px;border-top:1px solid var(--line);margin-top:24px;padding-top:18px}.small-dialog{width:min(440px,calc(100vw - 30px))}.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);padding:13px 22px;border-radius:10px;background:var(--green);color:#fff;z-index:1000;box-shadow:0 7px 30px #183d3825;font-size:13px;max-width:85vw;line-height:1.6}.tone-peach{--tone:var(--peach);--tone-ink:#966449}.tone-sage{--tone:var(--sage);--tone-ink:#5a7952}.tone-lavender{--tone:var(--lavender);--tone-ink:#7d6f9c}.tone-sand{--tone:var(--sand);--tone-ink:#9b7b4e}.tone-rose{--tone:var(--rose);--tone-ink:#a26e80}.tone-butter{--tone:var(--butter);--tone-ink:#9e8a3f}
+}
+@layer components{
+.studio{display:grid;grid-template-columns:242px minmax(0,1fr);min-height:100dvh}.sidebar{background:var(--green);color:#f0f4e9;padding:30px 20px 16px;display:flex;flex-direction:column;position:sticky;top:0;height:100dvh;min-height:740px}.brand{display:flex;align-items:center;gap:11px;padding:0 8px;font-weight:700;letter-spacing:-1.3px;font-size:27px}.brand img{width:35px;height:35px;border-radius:10px}.brand-dot{color:#dbfa9a}.studio-owner{display:flex;align-items:center;gap:10px;padding:28px 8px 27px;border-bottom:1px solid #ffffff13;margin-bottom:26px}.avatar{width:33px;height:33px;display:grid;place-items:center;border-radius:50%;background:#40605a;font-size:12px}.studio-owner strong{display:block;font-size:12px;font-weight:600}.studio-owner small{display:block;color:#99b4aa;font-size:10px;margin-top:4px}.sidebar-label{display:flex;justify-content:space-between;padding:0 10px;font-size:9px;letter-spacing:1.6px;font-weight:600;color:#92ada2;margin-bottom:13px}.sidebar-label>span{letter-spacing:0;color:#74948a}.board-nav{display:grid;gap:5px}.board-nav>button{display:flex;align-items:center;gap:10px;text-align:left;width:100%;padding:12px 11px;border-radius:7px;font-size:12px;color:#c9dbcf}.board-nav>button.active{background:#33564a;color:#e8ffc4}.board-nav>button:hover{background:#2b4d42}.board-nav .icon{width:17px;height:17px}.board-nav .board-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.nav-count{margin-left:auto;font-size:10px;opacity:.65}.sidebar-add{display:flex;align-items:center;gap:11px;color:#a2bcb0;padding:13px 12px;font-size:11px;text-align:left}.sidebar-add>span{font-size:18px}.templates-label{margin-top:36px}.template-nav{display:grid;gap:4px}.template-nav button{display:flex;align-items:center;gap:12px;padding:10px 12px;text-align:left;font-size:12px;color:#bdd0c4;border-radius:7px}.template-nav button:hover{background:#2b4d42;color:#e9ffc8}.template-nav .icon{width:17px;height:17px;opacity:.8}.template-nav button>span:last-child{margin-left:auto;opacity:0}.template-nav button:hover>span:last-child{opacity:1}.sidebar-bottom{margin-top:auto;padding-top:36px}.local-note{border:1px solid #6b8c773d;border-radius:9px;padding:14px 13px;position:relative}.local-dot,.live-dot{display:inline-block;border-radius:50%;background:#c4df9c;width:6px;height:6px;margin-right:5px}.local-note strong{font-size:10px;font-weight:500}.local-note p{font-size:10px;line-height:1.8;color:#90afa0;padding-left:15px;margin-top:7px}.sidebar-help{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;font-size:11px;color:#a6bdb0;padding:20px 6px 2px}.sidebar-help>span:first-child{margin-right:auto}.main{padding:0 38px;min-width:0}.topbar{height:83px;display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line)}.breadcrumb{font-size:9px;letter-spacing:1.1px;color:#8e968d;white-space:nowrap}.breadcrumb>span{margin:0 14px;color:#bdc5b8}.breadcrumb strong{font-size:10px;letter-spacing:.2px;font-weight:500;color:#48594f}.top-actions{display:flex;align-items:center;gap:4px}.save-state{font-size:10px;color:#7d8d76;margin-right:15px;white-space:nowrap}.save-state::before{content:' ';display:inline-block;width:5px;height:5px;background:#89a577;border-radius:50%;margin-right:6px}.save-state[data-state="error"]{color:#b64735}.save-state[data-state="error"]::before{background:#b64735}.github-button{border:1px solid #dce1d5;margin-left:6px;background:#fff8}.tiny-tag{font-size:7px;letter-spacing:1px;margin-left:2px;color:#89977c;background:#eff2e7;border-radius:3px;padding:3px 4px}.workspace-heading{display:flex;align-items:center;justify-content:space-between;padding:38px 0 32px;gap:20px}.workspace-heading .eyebrow{font-size:8px;letter-spacing:1.8px;color:#86917c}.heading-row{display:flex;align-items:center;gap:12px;margin-top:10px}.heading-row h1{font-size:42px;letter-spacing:-1.9px;line-height:1.2;font-weight:650;overflow-wrap:anywhere}.heading-row h1>span{color:var(--accent)}.heading-row .icon-button{opacity:.45}.workspace-heading p{font-size:12px;line-height:1.9;color:#8a9386;margin-top:11px}.new-module{align-self:flex-end;margin-bottom:4px;font-size:12px;padding:12px 18px;box-shadow:0 3px 5px #153a3420}.workspace-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.view-switch{display:flex;gap:3px;background:#e9ede2;border:1px solid #e4e9dc;border-radius:8px;padding:3px}.view-switch button{display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:5px;font-size:11px;color:#8b9586}.view-switch button[aria-pressed="true"]{background:#fff;color:#334e41;box-shadow:0 1px 3px #364f3910}.view-switch .icon{width:14px;height:14px}.filter-tools{display:flex;align-items:center;gap:10px}.search{display:flex;align-items:center;gap:7px;color:#9da695}.search .icon{width:15px;height:15px}.search input{border:0;background:transparent;font-size:11px;width:157px;padding:8px 3px;outline-offset:0}.search input::placeholder{color:#a1aa99}.filter-tools select{font-size:10px;border:1px solid var(--line);border-radius:6px;background:transparent;padding:8px 7px;max-width:140px}.filter-tools>.icon-button{width:26px}.workspace-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 1px 26px;font-size:10px;color:#9aa28f}.workspace-footer strong{color:#78856d;font-weight:500}.workspace-footer>span:last-child{font-size:7px;letter-spacing:1.4px;display:flex;align-items:center;gap:12px}.footer-star{font-size:21px;color:#b6bd9e}.template-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.template-choice{text-align:left;background:#fff;border:1px solid #e1e5da;border-radius:10px;padding:20px;transition:transform .15s,border-color .15s}.template-choice:hover{transform:translateY(-3px);border-color:#96ad87}.template-choice .template-icon{display:grid;place-items:center;width:39px;height:39px;border-radius:11px;background:var(--tone);color:var(--tone-ink);margin-bottom:15px}.template-choice h3{font-size:15px;margin-bottom:8px;font-weight:600}.template-choice p{font-size:11px;line-height:1.7;color:#8a9386}.template-choice small{display:block;font-size:9px;color:#6e8065;margin-top:12px}.github-dialog{width:min(540px,calc(100vw - 30px))}.github-banner{border:1px solid #dae4cf;border-radius:8px;background:#ecf1e5;padding:12px;font-size:11px;line-height:1.8}.github-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.help-steps{display:grid;gap:17px;margin:20px 0}.help-step{display:flex;gap:14px;font-size:12px;line-height:1.8}.help-step>b{background:#e5edda;flex:none;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;font-size:11px}.help-step strong{display:block}.help-step p{color:#85907c}.storage-error{position:fixed;bottom:0;left:242px;right:0;z-index:1500;background:#fde5d9;color:#8a382a;padding:12px 20px;font-size:12px;text-align:center;line-height:1.7}
+@media(min-width:1700px){.main{padding:0 58px}.workspace-heading{padding-top:48px;padding-bottom:40px}.heading-row h1{font-size:49px}}
+@media(max-width:1200px){.studio{grid-template-columns:205px minmax(0,1fr)}.sidebar{padding-left:14px;padding-right:14px}.main{padding:0 25px}.save-state{margin-right:7px;font-size:9px}.top-actions .button{padding:8px 9px;font-size:10px}.tiny-tag{display:none}.breadcrumb{font-size:8px}.workspace-heading p{font-size:11px}.search input{width:125px}.storage-error{left:205px}}
+@media(max-width:960px){.topbar{height:auto;min-height:76px;align-items:flex-start;padding:16px 0;flex-direction:column;gap:12px}.top-actions{width:100%}.save-state{margin-right:auto}.workspace-toolbar{align-items:flex-start;flex-wrap:wrap}.filter-tools{width:100%;justify-content:flex-end}.search{margin-right:auto}.search input{width:175px}.heading-row h1{font-size:34px}.workspace-heading{padding-top:26px}.workspace-heading .eyebrow{font-size:7px}.workspace-footer>span:last-child{display:none}}
+@media(max-width:680px){.studio{display:block}.sidebar{position:relative;height:auto;min-height:0;padding:15px 18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}.brand{font-size:23px;padding:0}.brand img{width:29px;height:29px}.studio-owner,.sidebar-label,.template-nav,.sidebar-bottom{display:none}.board-nav{grid-column:1/-1;display:flex;overflow:auto;grid-row:2}.board-nav>button{width:auto;flex:none;padding:8px 10px;font-size:11px}.board-nav .nav-count{margin-left:8px}.sidebar-add{padding:0;font-size:10px;grid-row:1;grid-column:2}.main{padding:0 18px}.topbar{padding:14px 0;min-height:62px}.breadcrumb{display:none}.top-actions .button{padding:8px;font-size:10px}.top-actions .icon{width:15px;height:15px}.save-state{max-width:110px;white-space:normal;line-height:1.7}.workspace-heading{align-items:flex-start;flex-wrap:wrap;gap:16px;padding-bottom:22px}.new-module{padding:10px 14px}.heading-row h1{font-size:36px}.workspace-heading p{font-size:11px}.workspace-toolbar{gap:12px}.view-switch{width:100%}.view-switch button{flex:1;justify-content:center}.filter-tools{gap:6px}.search input{width:140px}.filter-tools select{max-width:120px}.template-grid{grid-template-columns:1fr}.modal{padding:23px}.modal h2{font-size:25px}.storage-error{left:0}.github-fields{grid-template-columns:1fr}.workspace-footer{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+}
+
+</style>
+  <style>
+.canvas-shell{background:#f0f3e9;border:1px solid #e1e6d7;border-radius:11px;overflow:hidden;position:relative}.canvas-topline{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;font-size:9px;color:#8c9980;position:relative;z-index:1;gap:8px}.canvas-topline>span:first-child{display:flex;align-items:center;gap:5px}.live-dot{background:#a5b98f;width:5px;height:5px}.demo-badge{font-size:6px;border:1px solid #dce3cf;border-radius:3px;margin-left:8px;padding:3px 5px;letter-spacing:1px;color:#95a285}.canvas-hint{font-size:8px}.board-viewport{height:620px;overflow:auto;background-image:radial-gradient(#b9c8a982 .8px,transparent .8px);background-size:19px 19px;position:relative;scrollbar-width:thin;scrollbar-color:#c0cdb0 transparent}.board-surface{position:relative;transform-origin:0 0}.idea-card{width:290px;border-radius:11px;background:#fdfefa;border:1px solid #e0e5d6;box-shadow:0 3px 3px #53623f04,0 9px 18px #53623f07;overflow:hidden;transition:box-shadow .15s}.view-board .idea-card{position:absolute;left:var(--x);top:var(--y)}.idea-card:hover{box-shadow:0 8px 26px #364e3514}.card-top{padding:12px 15px 8px;display:flex;align-items:center;justify-content:space-between}.card-type{display:flex;align-items:center;gap:6px;font-size:8px;color:var(--tone-ink);text-transform:uppercase;font-weight:650;letter-spacing:1.1px}.card-type .icon{width:13px;height:13px}.card-tools{display:flex;gap:1px}.card-tools .icon-button{width:22px;height:22px;color:#9ba58e}.card-tools .icon{width:13px;height:13px}.card-drag{touch-action:none;cursor:grab}.is-dragging{z-index:20;box-shadow:0 16px 35px #183d382a}.is-dragging .card-drag{cursor:grabbing}.card-open{padding:0 16px 15px;width:100%;text-align:left;display:flex;flex-direction:column;align-items:stretch}.card-open:focus-visible{outline-offset:-3px}.card-preview{display:block;background:var(--tone);border-radius:6px;overflow:hidden;min-height:135px;margin-bottom:15px;color:var(--tone-ink)}.card-title{font-size:17px;font-weight:650;letter-spacing:-.45px;line-height:1.4;overflow-wrap:anywhere}.card-subtitle{font-size:10px;color:#96a08a;line-height:1.8;margin-top:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:12px 16px;border-top:1px solid #ecf0e5;font-size:8px;color:#9ba58c}.status-label{display:flex;align-items:center;gap:5px}.status-label i{display:inline-block;width:4px;height:4px;background:#c1c9b2;border-radius:50%}.status-label .status-developing{background:#e7b075}.status-label .status-ready{background:#7b9f6d}.card-arrow{font-size:12px;color:#7d9070;margin-left:12px}.character-preview{display:flex;padding:17px 10px;gap:12px;min-height:147px;align-items:center}.portrait-preview{width:82px;height:110px;flex:none;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;border:1px solid #b5805b40;background:#ffffff26;border-radius:50% 50% 5px 5px;overflow:hidden}.portrait-preview>.icon{width:51px;height:60px;opacity:.5;stroke-width:1}.portrait-preview small{font-size:5px;letter-spacing:1.4px;margin-top:10px}.portrait-preview img{width:100%;height:100%;object-fit:cover}.trait-preview{display:grid;gap:10px}.trait-preview>span{font-size:9px;line-height:1.6;display:flex;gap:7px}.trait-preview>span::before{content:' ';width:3px;height:3px;background:currentColor;border-radius:50%;flex:none;margin-top:6px;opacity:.6}.text-preview{display:block;font-family:Georgia,serif;line-height:1.75;font-size:16px;padding:21px;min-height:150px;overflow-wrap:anywhere}.text-preview small{font-family:'Segoe UI',sans-serif;display:block;font-size:6px;letter-spacing:1.6px;margin-bottom:12px;opacity:.7}.quote-preview{font-size:17px;font-style:italic}.map-preview{display:block;height:165px;background:#f0edf6}.map-preview svg{width:100%;height:100%}.mood-preview{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:70px 70px;gap:4px;padding:7px}.mood-preview>span:nth-child(1){background:#918f83;border-radius:4px}.mood-preview>span:nth-child(2){background:#d3b8a4;border-radius:4px}.mood-preview>span:nth-child(3){background:#bfc9b0;border-radius:4px}.mood-preview>span:nth-child(4){background:#ece0cc;border-radius:4px}.mood-preview>img{width:100%;height:145px;object-fit:cover;grid-column:1/-1;grid-row:1/-1}.place-preview{display:block;height:160px}.place-preview img{width:100%;height:100%;object-fit:cover}.is-collapsed{width:195px;background:var(--tone);border-color:#ffffffaa}.is-collapsed .card-top{padding:8px 11px 3px}.is-collapsed .card-open{padding:0 12px 13px;flex-direction:row;align-items:center;gap:10px}.is-collapsed .card-preview{width:49px;min-height:49px;height:49px;flex:none;margin:0;border-radius:8px;background:#ffffff4d}.is-collapsed .card-title{font-size:12px;letter-spacing:-.1px}.is-collapsed .card-bottom{display:none}.is-collapsed .card-type{font-size:7px}.is-collapsed .character-preview{padding:0}.is-collapsed .portrait-preview{width:49px;height:49px;border:0}.is-collapsed .portrait-preview .icon{width:30px;height:35px}.is-collapsed .portrait-preview small,.is-collapsed .trait-preview{display:none}.is-collapsed .text-preview{font-size:4px;padding:6px;min-height:49px;line-height:1.7}.is-collapsed .text-preview small{font-size:2px;margin-bottom:3px}.is-collapsed .map-preview{height:49px}.is-collapsed .place-preview{height:49px}.is-collapsed .mood-preview{height:49px;grid-template-rows:1fr 1fr;padding:3px;gap:2px}.canvas-bottomline{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 19px 14px;color:#a1ab93;font-family:Georgia,serif;font-style:italic;font-size:11px}.zoom-controls{display:flex;gap:3px;align-items:center;font-family:'Segoe UI',sans-serif;font-style:normal;font-size:9px;border:1px solid #dce3ce;background:#f9fbf3;border-radius:6px;padding:3px}.zoom-controls button{height:24px;min-width:24px;border-radius:4px;padding:0 6px}.zoom-controls button:hover{background:#e5ebda}.zoom-controls .icon{width:13px;height:13px}.zoom-divider{height:14px;width:1px;background:#dce3ce;margin:0 3px}.view-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;padding:25px 30px;min-height:610px;align-content:start;align-items:start}.view-grid .idea-card{width:100%}.view-grid .card-drag,.view-grid [data-action="collapse"]{display:none}.view-list{display:flex;flex-direction:column;gap:9px;padding:25px;min-height:610px}.view-list .idea-card{width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) 130px;align-items:center;flex:none}.view-list .card-tools,.view-list .card-preview{display:none}.view-list .card-top{padding:18px 15px}.view-list .card-open{padding:14px 15px}.view-list .card-title{font-size:14px}.view-list .card-bottom{border:0;flex-direction:column;align-items:flex-end;padding:14px;gap:10px}.board-empty{padding:90px 35px;text-align:center;max-width:700px}.board-empty>.icon{width:40px;height:40px;color:#b5c3a5;margin-bottom:15px}.board-empty h2{font-size:23px;letter-spacing:-.6px}.board-empty p{font-size:12px;color:#8d9a81;margin:13px 0 24px;line-height:1.8}.view-grid .board-empty{grid-column:1/-1}.view-list .board-empty{align-self:center}
+@media(min-width:1700px){.board-viewport{height:690px}}
+@media(max-width:960px){.canvas-hint{display:none}.view-grid{padding:20px;gap:16px}.view-list .idea-card{grid-template-columns:80px 1fr}.view-list .card-bottom{display:none}.view-list .card-type{letter-spacing:.2px;font-size:7px;flex-direction:column;gap:7px}.view-list .card-top{justify-content:center}}
+@media(max-width:680px){.board-viewport{height:540px}.canvas-topline{padding:13px}.demo-badge{font-size:5px;letter-spacing:.6px}.canvas-bottomline{padding:10px 12px}.canvas-bottomline>span{font-size:9px}.view-grid{grid-template-columns:1fr;padding:18px}.view-list{padding:12px}.view-grid .idea-card{max-width:none}.view-list .card-subtitle{font-size:9px}}
+
+</style>
+  <style>
+.editor-dialog{width:min(1180px,calc(100vw - 36px));padding:0;height:min(850px,92dvh);overflow:hidden}.editor-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 24px;border-bottom:1px solid #e2e7dc;background:#fdfef9}.editor-template{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:600;color:var(--tone-ink)}.editor-template .icon{background:var(--tone);width:31px;height:31px;padding:6px;border-radius:8px}.editor-saving{font-size:10px;color:#8c9b80;margin-left:auto;margin-right:10px}.editor-layout{display:grid;grid-template-columns:205px 1fr;height:calc(100% - 64px)}.editor-sidebar{display:flex;flex-direction:column;background:#f0f3e8;border-right:1px solid #e2e7d9;padding:26px 15px;overflow:auto}.editor-sidebar-label{font-size:8px;letter-spacing:1.7px;color:#99a38c;padding:0 12px}.editor-module-name{font-size:15px;font-weight:600;line-height:1.6;margin:12px 12px 23px;overflow-wrap:anywhere}.page-tabs{display:grid;gap:5px}.page-tabs button{padding:11px 10px;text-align:left;display:flex;gap:9px;border-radius:7px;font-size:11px;line-height:1.5;color:#859277}.page-tabs button[aria-current="page"]{background:#e1e8d4;color:#3c5633}.page-tabs button:hover{background:#e6ecd9}.page-tabs button>span{font-size:9px;opacity:.55;flex:none;margin-top:1px}.add-page{font-size:10px;color:#7a8e69;text-align:left;padding:14px 10px}.editor-sidebar-bottom{margin-top:auto;padding-top:30px}.editor-sidebar-bottom p{font-family:Georgia,serif;color:#a0ac90;font-size:12px;font-style:italic;line-height:1.9;padding:0 12px 20px}.editor-sidebar-bottom .button{font-size:10px;width:100%;justify-content:flex-start;min-height:32px}.editor-sidebar-bottom .icon{width:14px;height:14px}.editor-main{overflow:auto;padding:25px 34px 40px}.module-title-input{font-size:29px;font-weight:650;letter-spacing:-1.1px;width:100%;padding:4px 0;border:0;background:none}.module-subtitle-input{width:100%;border:0;background:none;font-size:12px;color:#8f9b84;padding:12px 0}.module-properties{display:flex;align-items:center;gap:18px;margin-top:8px;padding-bottom:22px;border-bottom:1px solid var(--line);flex-wrap:wrap}.module-properties label{font-size:9px;color:#97a18c;display:flex;align-items:center;gap:6px}.module-properties select,.module-properties input{font-size:10px;border:1px solid #e1e5d7;background:#f6f8f0;border-radius:5px;padding:7px;max-width:190px}.tags-field{flex:1}.tags-field input{min-width:80px;width:100%}.color-picker{display:flex;gap:4px}.color-swatch{width:17px;height:17px;border-radius:50%;background:var(--tone);border:2px solid transparent}.color-swatch[aria-pressed="true"]{outline:1px solid #859478;outline-offset:2px}.editor-page{padding-top:25px}.page-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}.page-heading .eyebrow{font-size:7px;color:#a3ab95;letter-spacing:1.7px}.page-heading h2{font-size:20px;letter-spacing:-.45px;margin-top:7px}.page-heading .icon-button{width:27px;height:27px}.page-heading .icon{width:14px;height:14px}.content-blocks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}.content-block{padding:17px;background:#fff;border:1px solid #e3e8db;border-radius:9px;min-width:0}.block-heading{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-bottom:8px}.block-label{font-size:10px;font-weight:600;border:0;background:transparent;min-width:0;width:100%;padding:4px 0;letter-spacing:.15px}.block-heading .icon-button{opacity:.3;width:23px;height:23px}.content-block:hover .block-heading .icon-button{opacity:1}.block-heading .icon{width:13px;height:13px}.content-text{border:0;background:none;resize:vertical;width:100%;font-size:12px;line-height:1.9;min-height:110px;padding:2px 0;color:#687b5f}.content-text::placeholder{color:#b3bba7;font-size:11px}.bullet-text{background:repeating-linear-gradient(transparent 0 22px,#f0f3e9 22px 23px);line-height:23px;padding-left:12px}.bullet-hint{font-size:8px;color:#a4ae96;display:block;margin-top:7px}.image-upload{height:230px;display:flex;position:relative;align-items:center;justify-content:center;background:#f5f2eb;border:1px dashed #d7daca;border-radius:6px;overflow:hidden}.image-upload>img{object-fit:contain;width:100%;height:100%}.image-upload>.button{position:absolute;right:8px;bottom:8px;font-size:9px;min-height:27px;padding:5px 8px;opacity:.8}.upload-label{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;cursor:pointer;height:100%;width:100%;padding:20px}.upload-label>.icon{width:36px;height:36px;opacity:.25}.upload-label strong{font-size:12px;font-weight:500;color:#8e9a7e}.upload-label>span{font-size:9px;color:#b0b7a1}.upload-label input{font-size:9px;max-width:180px;color:#8e9a7e;margin-top:6px}.add-block-bar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:flex-end;margin-top:20px;padding:12px 0}.add-block-bar>span{font-size:10px;color:#9aa68b;margin-right:auto}.add-block-bar>button{font-size:10px;border:1px dashed #cbd7bb;border-radius:5px;padding:6px 9px;color:#7e946b}.add-block-bar>button:hover{background:#e9f0de}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){.editor-layout{grid-template-columns:160px 1fr}.editor-main{padding:20px}.content-blocks{grid-template-columns:1fr}.editor-sidebar{padding:22px 9px}.editor-module-name{font-size:13px}.module-title-input{font-size:25px}.module-properties{gap:10px}.tags-field{flex-basis:100%}.module-properties input{max-width:none}.editor-saving{font-size:8px}.mindmap-toolbar>span{margin-left:0}}
+@media(max-width:600px){.editor-dialog{width:calc(100vw - 12px);height:96dvh;max-height:96dvh;border-radius:10px}.editor-header{padding:10px 15px}.editor-layout{display:flex;flex-direction:column;height:calc(100% - 53px)}.editor-sidebar{display:block;padding:9px;flex:none;border-right:0;border-bottom:1px solid #dbe4ce;overflow:visible}.editor-sidebar-label,.editor-module-name,.editor-sidebar-bottom{display:none}.page-tabs{display:flex;overflow:auto;gap:6px;max-width:100%}.page-tabs button{flex:none;max-width:210px;font-size:10px;padding:8px}.add-page{padding:7px;font-size:9px}.editor-main{padding:18px;flex:1;min-height:0}.editor-saving{display:none}.editor-template{font-size:10px}.module-title-input{font-size:25px}.module-properties label{font-size:8px}.content-blocks{gap:12px}.mindmap-inspector{flex-wrap:wrap}.mindmap-inspector .button{padding-left:0}.page-heading{margin-bottom:14px}}
+
+</style>
+  <style>
+.mindmap-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}.mindmap-toolbar .button{font-size:10px;padding:8px 11px;min-height:33px}.mindmap-toolbar>span{font-size:10px;color:#98a18f;margin-left:auto}.mindmap-scroll{border:1px solid #e2e2e6;border-radius:10px;overflow:auto;background:#f3f1f7;background-image:radial-gradient(#c4bdcf88 1px,transparent 1px);background-size:20px 20px;max-height:430px}.mindmap-canvas{width:100%;min-width:700px;aspect-ratio:1450/950}.mindmap-svg{display:block;width:100%;height:100%;user-select:none}.map-node{cursor:grab;touch-action:none}.map-node:focus-visible rect{stroke:#315e4b;stroke-width:4}.map-node:focus{outline:none}.map-node.connecting rect{stroke:#bd693e;stroke-width:4;stroke-dasharray:7 4}.map-edge{cursor:pointer}.map-edge path{pointer-events:stroke}.map-edge:hover path,.map-edge:focus path{stroke:#786b92;stroke-width:5}.map-node text,.map-edge text{pointer-events:none}.mindmap-inspector{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-top:16px}.mindmap-inspector>p{font-size:11px;color:#8c9982;line-height:1.7}.node-label{flex:1;max-width:420px}.mindmap-inspector .button{font-size:10px}.node-label .field-input{font-size:12px}
+.map-edge .edge-hit{pointer-events:stroke;stroke:transparent;stroke-width:24}.map-edge:hover .edge-hit,.map-edge:focus .edge-hit{stroke:transparent;stroke-width:24}.map-edge .edge-line{pointer-events:none}.map-edge text{pointer-events:all;paint-order:stroke;stroke:#f3f1f7;stroke-width:4;stroke-linejoin:round}
+
+</style>
+  <script type="module">
+(() => {
+  // modules/ui/html.mjs
+  function escapeHtml(value = "") {
+    return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+  }
+  var uid = () => crypto.randomUUID();
+  function closeButton() {
+    return '<button type="button" class="icon-button close-button" data-action="close" aria-label="Schlie\xDFen">\u2715</button>';
+  }
+  function imageSource(value) {
+    return /^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(value || "") ? value : "";
+  }
+  function downloadJson(project, filename) {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(project)], { type: "application/json" }));
+    const link = Object.assign(document.createElement("a"), { href: url, download: filename });
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1e3);
+  }
+
+  // modules/templates/catalog.mjs
+  var page = (title, blocks) => ({ id: uid(), title, blocks: blocks.map(([kind, label, value = ""]) => ({ id: uid(), kind, label, value })) });
+  var TEMPLATES = Object.freeze([
+    { id: "character", name: "Charakterdesign", short: "Charakter", icon: "character", color: "peach", description: "Ein Gesicht, viele Facetten. Finde heraus, wer deine Figur wirklich ist.", hint: "Portrait \xB7 Eigenschaften \xB7 Entwicklung", pages: () => [
+      page("Die Figur", [["image", "Portrait"], ["text", "Wer ist diese Figur?"], ["bullets", "Eigenschaften"], ["text", "Stimme & Auftreten"]]),
+      page("Unter der Oberfl\xE4che", [["text", "Gr\xF6\xDFter Wunsch"], ["text", "\xC4ngste & Widerspr\xFCche"], ["bullets", "St\xE4rken & Schw\xE4chen"], ["text", "Ein Geheimnis"]]),
+      page("Entwicklung", [["text", "Wo beginnt die Reise?"], ["text", "Was ver\xE4ndert die Figur?"], ["text", "Wo k\xF6nnte sie ankommen?"], ["bullets", "Offene Fragen"]])
+    ] },
+    { id: "story", name: "Storydesign", short: "Story", icon: "story", color: "sage", description: "Von der ersten Was-w\xE4re-wenn-Frage bis zum letzten Kapitel.", hint: "Pr\xE4misse \xB7 Konflikt \xB7 Handlungsbogen", pages: () => [
+      page("Der Funke", [["text", "Die Idee in einem Satz"], ["text", "Was w\xE4re, wenn \u2026"], ["bullets", "Themen & Motive"], ["text", "Die Atmosph\xE4re"]]),
+      page("Der Konflikt", [["text", "Was steht auf dem Spiel?"], ["text", "Wer will was \u2013 und warum?"], ["bullets", "Hindernisse"], ["text", "Der Wendepunkt"]]),
+      page("Der rote Faden", [["text", "Anfang"], ["text", "Mitte"], ["text", "Ende"], ["bullets", "Szenen, die unbedingt vorkommen sollen"]])
+    ] },
+    { id: "mindmap", name: "Mindmap", short: "Mindmap", icon: "mindmap", color: "lavender", description: "Gedanken verzweigen, Verbindungen ziehen und neue Zusammenh\xE4nge finden.", hint: "Freie Knoten \xB7 Linien \xB7 Beziehungen", pages: () => [page("Gedankennetz", []), page("Weiterdenken", [["bullets", "Neue Ans\xE4tze"], ["text", "Was verbindet diese Ideen?"]])] },
+    { id: "place", name: "Welten & Orte", short: "Ort", icon: "place", color: "sand", description: "Orte mit Atmosph\xE4re. Welten, in denen Geschichten zu Hause sind.", hint: "Atmosph\xE4re \xB7 Details \xB7 Geschichte", pages: () => [
+      page("Ein Ort entsteht", [["image", "Ansicht oder Inspiration"], ["text", "Der erste Eindruck"], ["bullets", "Sehen, h\xF6ren, riechen"], ["text", "Was macht diesen Ort besonders?"]]),
+      page("Hinter den Kulissen", [["text", "Geschichte & Geheimnisse"], ["bullets", "Menschen & Begegnungen"], ["text", "Regeln dieser Welt"]])
+    ] },
+    { id: "moodboard", name: "Moodboard", short: "Moodboard", icon: "moodboard", color: "rose", description: "Bilder, Farben und Stimmung. Ein Gef\xFChl, das du festhalten m\xF6chtest.", hint: "Bildsammlung \xB7 Farbstimmung \xB7 Notizen", pages: () => [
+      page("Inspiration", [["image", "Stimmung"], ["image", "Farben & Formen"], ["image", "Details"], ["text", "Das Gef\xFChl dahinter"], ["bullets", "Stichworte"]])
+    ] },
+    { id: "note", name: "Freie Idee", short: "Notiz", icon: "note", color: "butter", description: "Ein Satz, ein Dialog, ein ziemlich verr\xFCckter Einfall. Alles darf hier rein.", hint: "Freier Text \xB7 Listen \xB7 Zus\xE4tzliche Seiten", pages: () => [page("Gedanken", [["text", "Platz f\xFCr deinen Gedanken"], ["bullets", "Zum Weiterdenken"]])] }
+  ]);
+  var COLORS = ["peach", "sage", "lavender", "sand", "rose", "butter"];
+  var templateFor = (type) => TEMPLATES.find((template) => template.id === type) || TEMPLATES.at(-1);
+  function createModule(type, position2 = { x: 48, y: 48 }) {
+    const template = templateFor(type);
+    return { id: uid(), type: template.id, title: `Neue ${template.short === "Charakter" ? "Figur" : template.short === "Ort" ? "Welt" : template.short === "Moodboard" ? "Inspiration" : template.short === "Mindmap" ? "Mindmap" : template.short === "Story" ? "Geschichte" : "Idee"}`, subtitle: "", color: template.color, status: "sketch", tags: "", collapsed: false, ...position2, pages: template.pages(), mindmap: { nodes: template.id === "mindmap" ? [{ id: uid(), text: "Meine Idee", x: 420, y: 230, color: "lavender" }] : [], edges: [] } };
+  }
+
+  // modules/workspace/schema.mjs
+  var FORMAT = "ideenwerk-project";
+  var VERSION = 1;
+  var MAX_FILE_BYTES = 32 * 1024 * 1024;
+  var fail = (message) => {
+    throw new Error(`Ung\xFCltige Projektdatei: ${message}`);
+  };
+  var object = (value) => value && typeof value === "object" && !Array.isArray(value);
+  function string(value, name, max = 1e5) {
+    if (typeof value !== "string" || value.length > max) fail(`${name} fehlt oder ist zu lang.`);
+    return value;
+  }
+  function array(value, name, max) {
+    if (!Array.isArray(value) || value.length > max) fail(`${name} ist keine zul\xE4ssige Liste (maximal ${max}).`);
+    return value;
+  }
+  function id(value) {
+    return string(value, "Kennung", 100);
+  }
+  function unique(items) {
+    const ids = items.map((item) => item.id);
+    if (ids.some((value) => !value) || new Set(ids).size !== ids.length) fail("Doppelte oder leere Kennungen.");
+    return items;
+  }
+  function position(value, max) {
+    if (typeof value !== "number" || !Number.isFinite(value) || value < 0 || value > max) fail("Position au\xDFerhalb der Arbeitsfl\xE4che.");
+    return value;
+  }
+  function color(value) {
+    if (!COLORS.includes(value)) fail("Unbekannte Farbe.");
+    return value;
+  }
+  function parsePage(raw) {
+    if (!object(raw)) fail("Ung\xFCltige Seite.");
+    return { id: id(raw.id), title: string(raw.title, "Seitentitel", 200), blocks: unique(array(raw.blocks, "Inhalte", 100).map((block) => {
+      if (!object(block) || !["text", "bullets", "image"].includes(block.kind)) fail("Unbekannter Inhaltsblock.");
+      const value = string(block.value, "Inhalt", block.kind === "image" ? 6e6 : 1e5);
+      if (block.kind === "image" && value && !imageSource(value)) fail("Nur eingebettete PNG-, JPEG- oder WebP-Bilder sind erlaubt.");
+      return { id: id(block.id), kind: block.kind, label: string(block.label, "Beschriftung", 200), value };
+    })) };
+  }
+  function parseModule(raw) {
+    if (!object(raw) || !TEMPLATES.some((template) => template.id === raw.type)) fail("Unbekannte Modulvorlage.");
+    if (!["sketch", "developing", "ready"].includes(raw.status)) fail("Unbekannter Ideenstatus.");
+    const pages = unique(array(raw.pages, "Seiten", 50).map(parsePage));
+    if (!pages.length) fail("Ein Modul ben\xF6tigt mindestens eine Seite.");
+    const nodes = unique(array(raw.mindmap?.nodes, "Mindmap-Knoten", 200).map((node) => ({ id: id(node.id), text: string(node.text, "Knotentext", 200), x: position(node.x, 1300), y: position(node.y, 850), color: color(node.color) })));
+    const nodeIds = new Set(nodes.map((node) => node.id));
+    const edgePairs = /* @__PURE__ */ new Set();
+    const edges = unique(array(raw.mindmap?.edges, "Verbindungen", 500).map((edge) => {
+      if (!nodeIds.has(edge.from) || !nodeIds.has(edge.to) || edge.from === edge.to) fail("Verbindung ohne g\xFCltige Endpunkte.");
+      const pair = [edge.from, edge.to].sort().join("|");
+      if (edgePairs.has(pair)) fail("Doppelte Mindmap-Verbindung.");
+      edgePairs.add(pair);
+      return { id: id(edge.id), from: id(edge.from), to: id(edge.to), label: string(edge.label, "Verbindungstext", 120) };
+    }));
+    return { id: id(raw.id), type: raw.type, title: string(raw.title, "Modultitel", 200), subtitle: string(raw.subtitle, "Untertitel", 500), color: color(raw.color), status: raw.status, tags: string(raw.tags, "Schlagworte", 500), collapsed: raw.collapsed === true, x: position(raw.x, 3500), y: position(raw.y, 2500), pages, mindmap: { nodes, edges } };
+  }
+  function parseWorkspace(raw) {
+    if (!object(raw) || raw.format !== FORMAT || raw.version !== VERSION) fail("Diese Datei geh\xF6rt nicht zur unterst\xFCtzten Ideenwerk-Version 1.");
+    const boards = unique(array(raw.boards, "Pinnw\xE4nde", 30).map((board) => ({ id: id(board.id), name: string(board.name, "Pinnwandname", 120), example: board.example === true, modules: unique(array(board.modules, "Module", 500).map(parseModule)) })));
+    if (!boards.length) fail("Mindestens eine Pinnwand wird ben\xF6tigt.");
+    return { format: FORMAT, version: VERSION, id: id(raw.id), name: string(raw.name, "Projektname", 120), boards, updatedAt: typeof raw.updatedAt === "string" ? raw.updatedAt : "" };
+  }
+  function parseProjectText(text) {
+    if (new TextEncoder().encode(text).length > MAX_FILE_BYTES) throw new Error("Die Projektdatei ist gr\xF6\xDFer als 32 MB. Bitte kleinere Bilddateien verwenden.");
+    let raw;
+    try {
+      raw = JSON.parse(text);
+    } catch {
+      throw new Error("Diese Datei enth\xE4lt kein lesbares JSON-Projekt.");
+    }
+    return parseWorkspace(raw);
+  }
+
+  // modules/workspace/seed.mjs
+  function createWorkspace() {
+    const character = createModule("character", { x: 40, y: 34 });
+    character.title = "Mara, die Kartografin";
+    character.subtitle = "Sie zeichnet Orte, die es noch nicht gibt.";
+    character.tags = "Protagonistin, Entdeckung";
+    character.status = "developing";
+    character.pages[0].blocks[1].value = "Eine junge Kartografin entdeckt, dass ihre Karten die Welt ver\xE4ndern. Jeder neue Strich hat einen Preis.";
+    character.pages[0].blocks[2].value = "Unstillbar neugierig\nSieht Muster, wo andere Chaos sehen\nVertraut lieber Karten als Menschen";
+    const story = createModule("story", { x: 365, y: 70 });
+    story.title = "Die letzte Kartografin";
+    story.subtitle = "Was, wenn eine Karte kein Abbild ist, sondern ein Versprechen?";
+    story.tags = "Abenteuer, Magischer Realismus";
+    story.pages[0].blocks[0].value = "Eine verschwundene Stadt. Eine Karte ohne Grenzen. Und eine Frau, die lernen muss, sich zu verirren.";
+    story.pages[0].blocks[2].value = "Heimat & Aufbruch\nDie Macht von Erinnerungen\nMut zum Unbekannten";
+    const mindmap = createModule("mindmap", { x: 700, y: 35 });
+    mindmap.title = "Alles h\xE4ngt zusammen";
+    mindmap.subtitle = "Erste F\xE4den zwischen Figur, Welt und Konflikt";
+    const nodes = [["Die Karte", 410, 220, "lavender"], ["Mara", 120, 100, "peach"], ["Die verlorene Stadt", 730, 80, "sage"], ["Ein Versprechen", 720, 400, "butter"], ["Erinnerung", 140, 410, "rose"]].map(([text, x, y, color2]) => ({ id: uid(), text, x, y, color: color2 }));
+    mindmap.mindmap = { nodes, edges: nodes.slice(1).map((node, i) => ({ id: uid(), from: nodes[0].id, to: node.id, label: ["zeichnet", "verbirgt", "fordert", "bewahrt"][i] })) };
+    const note = createModule("note", { x: 400, y: 460 });
+    note.title = "Ein Gedanke f\xFCr sp\xE4ter";
+    note.color = "butter";
+    note.pages[0].blocks[0].value = "\u201EVielleicht sind die Orte, die wir suchen, gar nicht die, die wir brauchen.\u201C";
+    note.subtitle = "Dialogidee \xB7 Kapitel 1";
+    note.collapsed = true;
+    const place = createModule("place", { x: 740, y: 420 });
+    place.title = "Die Stadt ohne Namen";
+    place.subtitle = "Ein Ort, der nur in Erinnerungen existiert.";
+    place.pages[0].blocks[1].value = "Salz in der Luft. Schiefe D\xE4cher. Stra\xDFen, die im Nebel ihre Richtung \xE4ndern.";
+    place.tags = "Weltenbau";
+    place.collapsed = true;
+    return { format: FORMAT, version: VERSION, id: uid(), name: "Patricks Ideenwerk", updatedAt: (/* @__PURE__ */ new Date()).toISOString(), boards: [{ id: uid(), name: "Dein Ideenraum", example: true, modules: [character, story, mindmap, note, place] }] };
+  }
+
+  // modules/workspace/store.mjs
+  function createWorkspaceStore(initial) {
+    let state = structuredClone(initial);
+    const past = [], future = [], listeners = /* @__PURE__ */ new Set();
+    let group = null;
+    function publish(reason) {
+      listeners.forEach((listener) => listener(state, reason));
+    }
+    return {
+      get: () => state,
+      subscribe(listener) {
+        listeners.add(listener);
+        return () => listeners.delete(listener);
+      },
+      change(mutator, { reason = "change", groupKey = null } = {}) {
+        const next = structuredClone(state);
+        mutator(next);
+        const serialized = JSON.stringify(next);
+        if (serialized === JSON.stringify(state)) return;
+        if (new TextEncoder().encode(serialized).length > MAX_FILE_BYTES - 1024) throw new Error("Das Projekt erreicht die portable Dateigrenze von 32 MB. Bitte Bilder entfernen oder verkleinern.");
+        if (!groupKey || group?.key !== groupKey || Date.now() - group.time > 900) {
+          past.push(state);
+          if (past.length > 30) past.shift();
+        }
+        group = groupKey ? { key: groupKey, time: Date.now() } : null;
+        next.updatedAt = (/* @__PURE__ */ new Date()).toISOString();
+        state = next;
+        future.length = 0;
+        publish(reason);
+      },
+      undo() {
+        if (!past.length) return;
+        future.push(state);
+        state = past.pop();
+        group = null;
+        publish("history");
+      },
+      redo() {
+        if (!future.length) return;
+        past.push(state);
+        state = future.pop();
+        group = null;
+        publish("history");
+      },
+      canUndo: () => past.length > 0,
+      canRedo: () => future.length > 0
+    };
+  }
+
+  // modules/workspace/storage.mjs
+  var DATABASE = "patrick-ideenwerk-v1";
+  async function openWorkspaceStorage() {
+    const database = await new Promise((resolve, reject) => {
+      const request = indexedDB.open(DATABASE, 1);
+      request.onupgradeneeded = () => request.result.createObjectStore("documents");
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(new Error("Der lokale Browserspeicher ist nicht verf\xFCgbar. Import und Export bleiben nutzbar."));
+    });
+    return {
+      load: () => new Promise((resolve, reject) => {
+        const transaction = database.transaction("documents", "readonly");
+        const request = transaction.objectStore("documents").get("workspace");
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error);
+      }),
+      save: (workspace) => new Promise((resolve, reject) => {
+        const transaction = database.transaction("documents", "readwrite");
+        transaction.objectStore("documents").put(workspace, "workspace");
+        transaction.oncomplete = () => resolve();
+        transaction.onabort = transaction.onerror = () => reject(new Error("Lokal speichern fehlgeschlagen. Bitte jetzt als Datei exportieren. M\xF6glicherweise ist der Browserspeicher voll."));
+      })
+    };
+  }
+  function createAutosave(storage, onStatus) {
+    let pending = null, running = null, timer = null, failed = false;
+    async function flush() {
+      clearTimeout(timer);
+      if (running) {
+        await running;
+        if (pending) return flush();
+        return;
+      }
+      if (!pending) return;
+      const document2 = pending;
+      pending = null;
+      running = storage.save(document2).then(() => {
+        failed = false;
+        onStatus("saved");
+      }).catch((error) => {
+        failed = true;
+        onStatus("error", error.message);
+      }).finally(() => {
+        running = null;
+      });
+      await running;
+      if (pending) return flush();
+    }
+    return {
+      queue(workspace) {
+        pending = structuredClone(workspace);
+        onStatus("saving");
+        clearTimeout(timer);
+        timer = setTimeout(flush, 250);
+      },
+      flush,
+      isPending: () => Boolean(pending || running || failed)
+    };
+  }
+
+  // modules/ui/icons.mjs
+  var paths = {
+    plus: "M12 5v14M5 12h14",
+    character: "M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2",
+    story: "M4 4h7a4 4 0 0 1 4 4v13a5 5 0 0 0-4-2H4V4Zm11 4a4 4 0 0 1 4-4h2v15h-2a5 5 0 0 0-4 2M7 8h4M7 12h4",
+    mindmap: "M10 10h4v4h-4zM3 3h4v4H3zM17 3h4v4h-4zM3 17h4v4H3zM17 17h4v4h-4zM7 7l3 3m4 0 3-3M7 17l3-3m4 0 3 3",
+    place: "M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z",
+    moodboard: "M3 3h7v10H3zM14 3h7v6h-7zM14 13h7v8h-7zM3 17h7v4H3z",
+    note: "M5 3h10l4 4v14H5V3Zm10 0v5h4M8 12h8M8 16h6",
+    board: "M3 3h7v7H3zM14 3h7v11h-7zM3 14h7v7H3zM14 18h7v3",
+    grid: "M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z",
+    list: "M9 5h12M9 12h12M9 19h12M3 5h1M3 12h1M3 19h1",
+    search: "M16 10a6 6 0 1 1-12 0 6 6 0 0 1 12 0Zm-2 4 6 6",
+    import: "M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5",
+    export: "M12 16V3m-5 5 5-5 5 5M4 16v5h16v-5",
+    github: "M9 19c-5 2-5-3-7-3m14 6v-4a4 4 0 0 0-1-3c4-.5 7-2 7-7a5 5 0 0 0-1-3 5 5 0 0 0 0-4s-2-1-5 2a17 17 0 0 0-8 0C5 0 3 1 3 1a5 5 0 0 0 0 4 5 5 0 0 0-1 3c0 5 3 6.5 7 7a4 4 0 0 0-1 3v4",
+    edit: "m15 4 5 5M4 16 16 4a3 3 0 0 1 4 4L8 20H4v-4Z",
+    undo: "M9 4 3 10l6 6M3 10h11a7 7 0 0 1 7 7v3",
+    redo: "m15 4 6 6-6 6m6-6H10a7 7 0 0 0-7 7v3",
+    arrange: "M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z",
+    link: "m10 13 4-4m-6 1L5 13a4 4 0 0 0 6 6l3-3m-4-8 3-3a4 4 0 0 1 6 6l-3 3",
+    image: "M3 3h18v18H3zM3 17l6-7 5 5 3-3 4 5M17 7h.01",
+    trash: "M3 6h18M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7",
+    copy: "M9 9h12v12H9zM15 9V3H3v12h6",
+    fold: "m5 8 7 7 7-7",
+    expand: "m5 15 7-7 7 7",
+    check: "m5 12 4 4L19 6",
+    grip: "M9 5h.01M15 5h.01M9 12h.01M15 12h.01M9 19h.01M15 19h.01"
+  };
+  function icon(name, className = "") {
+    return `<svg class="icon ${className}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name] || paths.note}"/></svg>`;
+  }
+  function mountIcons(root = document) {
+    root.querySelectorAll("[data-icon]").forEach((element) => {
+      element.innerHTML = icon(element.dataset.icon);
+    });
+  }
+
+  // modules/ui/dialogs.mjs
+  function createDialogs({ root, toastRoot }) {
+    let timer;
+    function toast(message) {
+      clearTimeout(timer);
+      toastRoot.textContent = message;
+      toastRoot.hidden = false;
+      timer = setTimeout(() => {
+        toastRoot.hidden = true;
+      }, 5e3);
+    }
+    async function ask({ title, label, value = "", confirm = "Speichern", description = "", input = true, maxLength = 120, danger = false }) {
+      root.innerHTML = `<form method="dialog"><div class="modal-top"><div><div class="eyebrow">IDEENWERK</div><h2 id="text-dialog-title">${escapeHtml(title)}</h2></div>${closeButton()}</div>${description ? `<p class="modal-intro">${escapeHtml(description)}</p>` : ""}${input ? `<label class="form-field field-label">${escapeHtml(label || "Name")}<input class="field-input" name="value" value="${escapeHtml(value)}" maxlength="${maxLength}" required></label>` : ""}<div class="modal-footer"><button value="cancel" type="button" data-action="close" class="button secondary">Abbrechen</button><button value="save" type="submit" class="button ${danger ? "danger secondary" : "primary"}">${escapeHtml(confirm)}</button></div></form>`;
+      root.returnValue = "cancel";
+      root.showModal();
+      root.querySelector("input")?.select();
+      return new Promise((resolve) => {
+        root.addEventListener("close", () => resolve(root.returnValue === "save" ? input ? root.querySelector("input").value.trim() : true : null), { once: true });
+      });
+    }
+    root.addEventListener("click", (event) => {
+      if (event.target.closest('[data-action="close"]')) root.close("cancel");
+    });
+    return { toast, ask };
+  }
+
+  // modules/templates/template-picker.mjs
+  function mountTemplatePicker(root, onChoose) {
+    root.innerHTML = `<div class="modal-top"><div><div class="eyebrow">EIN ANFANG F\xDCR ALLES</div><h2 id="template-title">Was geht dir durch den Kopf?</h2></div>${closeButton()}</div><p class="modal-intro">Starte mit einer Vorlage. Erg\xE4nze eigene Seiten und Inhalte, sobald deine Idee w\xE4chst.</p><div class="template-grid">${TEMPLATES.map((template) => `<button data-action="choose-template" data-template="${template.id}" class="template-choice tone-${template.color}"><span class="template-icon">${icon(template.icon)}</span><h3>${escapeHtml(template.name)}</h3><p>${escapeHtml(template.description)}</p><small>${escapeHtml(template.hint)} \u2197</small></button>`).join("")}</div>`;
+    root.addEventListener("click", (event) => {
+      if (event.target.closest('[data-action="close"]')) root.close();
+      const choice = event.target.closest("[data-template]");
+      if (choice) {
+        root.close();
+        onChoose(choice.dataset.template);
+      }
+    });
+    return () => root.showModal();
+  }
+
+  // modules/mindmap/mindmap-geometry.mjs
+  function edgeGeometry(from, to) {
+    const x1 = from.x + 75, y1 = from.y + 27, x2 = to.x + 75, y2 = to.y + 27;
+    return { path: `M${x1} ${y1} Q${(x1 + x2) / 2} ${y1} ${x2} ${y2}`, labelX: (x1 + x2) / 2, labelY: (3 * y1 + y2) / 4 - 9 };
+  }
+
+  // modules/mindmap/mindmap-view.mjs
+  var fill = { peach: "#f6dfd1", sage: "#dfe9d7", lavender: "#e5e0f1", sand: "#eee3ce", rose: "#eedbe0", butter: "#f5edc6" };
+  function renderMapSvg(map, { mini = false, selected = null, connecting = null } = {}) {
+    const nodes = new Map(map.nodes.map((node) => [node.id, node]));
+    const left = Math.min(0, ...map.nodes.map((node) => node.x - 50)), top = Math.min(0, ...map.nodes.map((node) => node.y - 50));
+    const box = mini ? `${left} ${top} ${Math.max(500, ...map.nodes.map((node) => node.x + 220)) - left} ${Math.max(320, ...map.nodes.map((node) => node.y + 130)) - top}` : "0 0 1450 950";
+    return `<svg viewBox="${box}" ${mini ? 'aria-hidden="true"' : 'role="group" aria-label="Mindmap: Knoten ausw\xE4hlen oder verschieben"'} class="mindmap-svg">${map.edges.map((edge) => {
+      const from = nodes.get(edge.from), to = nodes.get(edge.to);
+      if (!from || !to) return "";
+      const geometry = edgeGeometry(from, to);
+      return `<g class="map-edge" ${mini ? "" : `data-edge="${escapeHtml(edge.id)}" tabindex="0" role="button" aria-label="Verbindung ${escapeHtml(edge.label || "ohne Beschriftung")} bearbeiten"`}>${mini ? "" : `<path class="edge-hit" d="${geometry.path}" fill="none" stroke="transparent" stroke-width="24"/>`}<path class="edge-line" d="${geometry.path}" fill="none" stroke="#b9afcc" stroke-width="${mini ? 5 : 3}"/><text x="${geometry.labelX}" y="${geometry.labelY}" text-anchor="middle" fill="#9686ab" font-size="15">${escapeHtml(edge.label)}</text></g>`;
+    }).join("")}${map.nodes.map((node) => `<g class="map-node ${selected === node.id ? "selected" : ""} ${connecting === node.id ? "connecting" : ""}" transform="translate(${node.x},${node.y})" ${mini ? "" : `data-node="${escapeHtml(node.id)}" tabindex="0" role="button" aria-label="${escapeHtml(node.text)}: ausw\xE4hlen; mit Pfeiltasten verschieben"`}><rect width="150" height="56" rx="12" fill="${fill[node.color]}" stroke="${selected === node.id ? "#315e4b" : "#ffffff"}" stroke-width="${selected === node.id ? 3 : 2}"/><text x="75" y="33" text-anchor="middle" fill="#665e70" font-family="Segoe UI, sans-serif" font-size="${mini ? 20 : 16}">${escapeHtml(node.text.length > 19 ? `${node.text.slice(0, 18)}\u2026` : node.text)}</text></g>`).join("")}</svg>`;
+  }
+  function renderMindmap(map, state) {
+    const selected = map.nodes.find((node) => node.id === state.selected);
+    const edge = map.edges.find((item) => item.id === state.edge);
+    return `<div class="mindmap-editor"><div class="mindmap-toolbar"><button class="button secondary" data-action="add-node">${icon("plus")} Neuer Gedanke</button><button class="button secondary" data-action="connect-nodes" ${selected ? "" : "disabled"} aria-pressed="${Boolean(state.connecting)}">${icon("link")} ${state.connecting ? "Verbindung abbrechen" : "Verbinden"}</button><span>${state.connecting ? "Jetzt einen zweiten Gedanken anklicken." : "Knoten ziehen \xB7 Ausw\xE4hlen zum Bearbeiten"}</span></div><div class="mindmap-scroll"><div class="mindmap-canvas">${renderMapSvg(map, state)}</div></div><div class="mindmap-inspector">${selected ? `<label class="node-label"><span class="field-label">GEDANKE</span><input class="field-input" data-map-field="text" maxlength="200" value="${escapeHtml(selected.text)}"></label><button class="button danger" data-action="delete-node">${icon("trash")} Knoten entfernen</button>` : edge ? `<label class="node-label"><span class="field-label">VERBINDUNG BESCHRIFTEN</span><input class="field-input" data-map-field="label" maxlength="120" value="${escapeHtml(edge.label)}"></label><button class="button danger" data-action="delete-edge">${icon("trash")} Linie entfernen</button>` : "<p>Jeder Gedanke kann ein Anfang sein. W\xE4hle einen Knoten oder eine Linie aus.</p>"}</div></div>`;
+  }
+
+  // modules/board/board-view.mjs
+  var STATUS_LABELS = { sketch: "Erste Skizze", developing: "In Entwicklung", ready: "Ausgearbeitet" };
+  function textBlocks(module) {
+    return module.pages.flatMap((page2) => page2.blocks).filter((block) => block.kind !== "image" && block.value);
+  }
+  function moduleMatches(module, query, type) {
+    if (type !== "all" && module.type !== type) return false;
+    const content = [module.title, module.subtitle, module.tags, ...module.pages.flatMap((page2) => [page2.title, ...page2.blocks.filter((block) => block.kind !== "image").map((block) => block.value)]), ...module.mindmap.nodes.map((node) => node.text)].join(" ").toLocaleLowerCase("de");
+    return content.includes(query.toLocaleLowerCase("de").trim());
+  }
+  function preview(module) {
+    const blocks = textBlocks(module);
+    const image = module.pages.flatMap((page2) => page2.blocks).find((block) => block.kind === "image" && imageSource(block.value));
+    if (module.type === "mindmap") return `<span class="map-preview">${renderMapSvg(module.mindmap, { mini: true })}</span>`;
+    if (module.type === "character") return `<span class="character-preview"><span class="portrait-preview">${image ? `<img src="${imageSource(image.value)}" alt="Portrait">` : `${icon("character")}<small>DEIN PORTRAIT</small>`}</span><span class="trait-preview">${(blocks.find((block) => block.kind === "bullets")?.value || "Ein Wunsch\nEin Widerspruch\nEine Geschichte").split("\n").filter(Boolean).slice(0, 3).map((text) => `<span>${escapeHtml(text)}</span>`).join("")}</span></span>`;
+    if (module.type === "moodboard") return `<span class="mood-preview">${image ? `<img src="${imageSource(image.value)}" alt="Moodboard">` : "<span></span><span></span><span></span><span></span>"}</span>`;
+    if (module.type === "place" && image) return `<span class="place-preview"><img src="${imageSource(image.value)}" alt="Ortsansicht"></span>`;
+    return `<span class="text-preview ${module.type === "note" ? "quote-preview" : ""}">${module.type === "story" ? "<small>DIE IDEE IN EINEM SATZ</small>" : ""}${escapeHtml(blocks[0]?.value || "Eine neue Idee wartet darauf, entdeckt zu werden.").slice(0, 400)}</span>`;
+  }
+  function renderCard(module, view) {
+    const template = templateFor(module.type);
+    const collapsed = module.collapsed && view === "board";
+    return `<article class="idea-card tone-${module.color} ${collapsed ? "is-collapsed" : ""}" data-module="${escapeHtml(module.id)}" style="--x:${module.x}px;--y:${module.y}px">
+    <div class="card-top"><span class="card-type">${icon(template.icon)}<span>${escapeHtml(template.short)}</span></span><div class="card-tools"><button class="icon-button card-drag" data-action="drag" title="Verschieben; mit den Pfeiltasten in der Pinnwand bewegen" aria-label="${escapeHtml(module.title)} verschieben">${icon("grip")}</button><button class="icon-button" data-action="collapse" title="${collapsed ? "Vorschau ausklappen" : "Zur Miniatur einklappen"}" aria-label="${collapsed ? "Vorschau ausklappen" : "Zur Miniatur einklappen"}">${icon(collapsed ? "expand" : "fold")}</button></div></div>
+    <button class="card-open" data-action="open-module" aria-label="${escapeHtml(module.title)} \xF6ffnen"><span class="card-preview">${preview(module)}</span><span class="card-title">${escapeHtml(module.title || "Unbenannte Idee")}</span>${module.subtitle && !collapsed ? `<span class="card-subtitle">${escapeHtml(module.subtitle)}</span>` : ""}</button>
+    <div class="card-bottom"><span class="status-label"><i class="status-${module.status}"></i>${STATUS_LABELS[module.status]}</span><span>${module.pages.length} Seiten <span class="card-arrow">\u2197</span></span></div>
+  </article>`;
+  }
+  function renderBoard(root, board, { view, query, type, zoom }) {
+    const modules = board.modules.filter((module) => moduleMatches(module, query, type));
+    root.className = `board-surface view-${view}`;
+    root.style.zoom = "";
+    root.style.width = view === "board" ? `${Math.max(1080, ...modules.map((module) => module.x + 340))}px` : "";
+    root.style.height = view === "board" ? `${Math.max(650, ...modules.map((module) => module.y + (module.collapsed ? 180 : 390)))}px` : "";
+    root.style.transform = view === "board" ? `scale(${zoom})` : "";
+    root.innerHTML = modules.length ? modules.map((module) => renderCard(module, view)).join("") : `<div class="board-empty">${icon(query || type !== "all" ? "search" : "plus")}<h2>${query || type !== "all" ? "Noch kein Treffer." : "Hier beginnt etwas Neues."}</h2><p>${query || type !== "all" ? "Versuche einen anderen Suchbegriff oder eine andere Vorlage." : "W\xE4hle eine Vorlage und gib deiner ersten Idee einen Platz."}</p><button class="button primary" data-action="${query || type !== "all" ? "clear-filter" : "templates"}">${query || type !== "all" ? "Filter zur\xFCcksetzen" : "Erstes Modul erstellen"}</button></div>`;
+    return modules.length;
+  }
+
+  // modules/board/board-drag.mjs
+  function mountBoardDrag(root, { getView, getZoom, onMove }) {
+    let drag = null;
+    root.addEventListener("pointerdown", (event) => {
+      const handle = event.target.closest('[data-action="drag"]');
+      if (!handle || getView() !== "board" || event.button !== 0) return;
+      const card = handle.closest("[data-module]");
+      const x = parseFloat(card.style.getPropertyValue("--x")), y = parseFloat(card.style.getPropertyValue("--y"));
+      drag = { id: card.dataset.module, card, handle, pointer: event.pointerId, startX: event.clientX, startY: event.clientY, x, y, newX: x, newY: y, zoom: getZoom() };
+      handle.setPointerCapture(event.pointerId);
+      card.classList.add("is-dragging");
+      event.preventDefault();
+    });
+    root.addEventListener("pointermove", (event) => {
+      if (!drag || event.pointerId !== drag.pointer) return;
+      drag.newX = Math.max(0, Math.min(3500, Math.round(drag.x + (event.clientX - drag.startX) / drag.zoom)));
+      drag.newY = Math.max(0, Math.min(2500, Math.round(drag.y + (event.clientY - drag.startY) / drag.zoom)));
+      drag.card.style.setProperty("--x", `${drag.newX}px`);
+      drag.card.style.setProperty("--y", `${drag.newY}px`);
+    });
+    const finish = (event) => {
+      if (!drag || event.pointerId !== drag.pointer) return;
+      const completed = drag;
+      drag = null;
+      completed.card.classList.remove("is-dragging");
+      if (event.type === "pointercancel") {
+        completed.card.style.setProperty("--x", `${completed.x}px`);
+        completed.card.style.setProperty("--y", `${completed.y}px`);
+        return;
+      }
+      onMove(completed.id, completed.newX, completed.newY);
+    };
+    root.addEventListener("pointerup", finish);
+    root.addEventListener("pointercancel", finish);
+    root.addEventListener("lostpointercapture", finish);
+    root.addEventListener("keydown", (event) => {
+      if (!event.target.closest('[data-action="drag"]') || getView() !== "board" || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(event.key)) return;
+      event.preventDefault();
+      const card = event.target.closest("[data-module]");
+      const step = event.shiftKey ? 50 : 10;
+      const x = parseFloat(card.style.getPropertyValue("--x")), y = parseFloat(card.style.getPropertyValue("--y"));
+      onMove(card.dataset.module, Math.max(0, Math.min(3500, x + ({ "ArrowLeft": -step, "ArrowRight": step }[event.key] || 0))), Math.max(0, Math.min(2500, y + ({ "ArrowUp": -step, "ArrowDown": step }[event.key] || 0))));
+      root.querySelector(`[data-module="${CSS.escape(card.dataset.module)}"] [data-action="drag"]`)?.focus();
+    });
+  }
+
+  // modules/editor/editor-view.mjs
+  function renderBlock(block) {
+    const image = block.kind === "image";
+    return `<section class="content-block ${image ? "image-block" : ""}" data-block="${escapeHtml(block.id)}"><div class="block-heading"><input class="block-label" data-block-field="label" value="${escapeHtml(block.label)}" maxlength="200" aria-label="Bezeichnung des Inhaltsblocks"><button class="icon-button" data-action="remove-block" aria-label="Inhaltsblock entfernen" title="Inhaltsblock entfernen">${icon("trash")}</button></div>${image ? `<div class="image-upload">${imageSource(block.value) ? `<img src="${imageSource(block.value)}" alt="${escapeHtml(block.label)}"><button class="button secondary" data-action="remove-image">Bild entfernen</button>` : `<label class="upload-label">${icon("image")}<strong>Platz f\xFCr ein Bild</strong><span>PNG, JPEG oder WebP ausw\xE4hlen</span><input type="file" data-image-upload accept="image/png,image/jpeg,image/webp" aria-label="${escapeHtml(block.label)} hochladen"></label>`}</div>` : `<textarea class="content-text ${block.kind === "bullets" ? "bullet-text" : ""}" data-block-field="value" maxlength="100000" rows="${block.kind === "bullets" ? 4 : 5}" placeholder="${block.kind === "bullets" ? "Ein Gedanke pro Zeile \u2026" : "Die Idee muss noch nicht fertig sein \u2026"}" aria-label="${escapeHtml(block.label)}">${escapeHtml(block.value)}</textarea>${block.kind === "bullets" ? '<small class="bullet-hint">Eine Zeile = ein Listenpunkt \xB7 erscheint auf der Pinnwand als Liste</small>' : ""}`}</section>`;
+  }
+  function renderEditor(module, { pageId, mapState }) {
+    const template = templateFor(module.type), page2 = module.pages.find((item) => item.id === pageId) || module.pages[0];
+    const mapPage = module.type === "mindmap" && page2.id === module.pages[0].id;
+    return `<div class="editor-header"><span class="editor-template tone-${module.color}">${icon(template.icon)} ${escapeHtml(template.name)}</span><span class="editor-saving">\xC4nderungen werden lokal gespeichert</span>${closeButton()}</div><div class="editor-layout"><aside class="editor-sidebar"><div class="editor-sidebar-label">DEIN MODUL</div><div class="editor-module-name">${escapeHtml(module.title || "Unbenannte Idee")}</div><nav class="page-tabs" aria-label="Modulseiten">${module.pages.map((item, index) => `<button data-action="select-page" data-page="${escapeHtml(item.id)}" aria-current="${page2.id === item.id ? "page" : "false"}"><span>${String(index + 1).padStart(2, "0")}</span>${escapeHtml(item.title)}</button>`).join("")}</nav><button class="add-page" data-action="add-page">\uFF0B Seite hinzuf\xFCgen</button><div class="editor-sidebar-bottom"><p>Gedanken d\xFCrfen wachsen.<br>Und ihre Richtung \xE4ndern.</p><button class="button subtle" data-action="duplicate-module">${icon("copy")} Duplizieren</button><button class="button subtle danger" data-action="delete-module">${icon("trash")} Modul entfernen</button></div></aside><div class="editor-main"><section class="module-meta"><label class="sr-only" for="module-title">Modultitel</label><input id="module-title" class="module-title-input" data-module-field="title" maxlength="200" value="${escapeHtml(module.title)}" placeholder="Gib deiner Idee einen Namen"><input class="module-subtitle-input" data-module-field="subtitle" maxlength="500" value="${escapeHtml(module.subtitle)}" placeholder="Ein Satz, der neugierig macht \u2026" aria-label="Untertitel"><div class="module-properties"><label>Status <select data-module-field="status">${Object.entries(STATUS_LABELS).map(([value, label]) => `<option value="${value}" ${value === module.status ? "selected" : ""}>${label}</option>`).join("")}</select></label><label class="tags-field">Schlagworte <input data-module-field="tags" maxlength="500" value="${escapeHtml(module.tags)}" placeholder="z. B. Figur, Abenteuer"></label><div class="color-picker" role="group" aria-label="Modulfarbe">${COLORS.map((color2) => `<button class="color-swatch tone-${color2}" data-action="module-color" data-color="${color2}" aria-label="Farbe ${escapeHtml({ peach: "Pfirsich", sage: "Salbei", lavender: "Lavendel", sand: "Sand", rose: "Ros\xE9", butter: "Gelb" }[color2])}" aria-pressed="${module.color === color2}"></button>`).join("")}</div></div></section><section class="editor-page"><div class="page-heading"><div><div class="eyebrow">SEITE ${String(module.pages.indexOf(page2) + 1).padStart(2, "0")}</div><h2>${escapeHtml(page2.title)}</h2></div><div><button class="icon-button" data-action="rename-page" title="Seite umbenennen" aria-label="Seite umbenennen">${icon("edit")}</button><button class="icon-button" data-action="delete-page" ${module.pages.length === 1 ? "disabled" : ""} title="Seite entfernen" aria-label="Seite entfernen">${icon("trash")}</button></div></div>${mapPage ? renderMindmap(module.mindmap, mapState) : ""}<div class="content-blocks">${page2.blocks.map(renderBlock).join("")}</div><div class="add-block-bar"><span>Deine Idee braucht mehr Platz?</span><button data-action="add-block" data-kind="text">\uFF0B Text</button><button data-action="add-block" data-kind="bullets">\uFF0B Liste</button><button data-action="add-block" data-kind="image">\uFF0B Bild</button></div></section></div></div>`;
+  }
+
+  // modules/editor/image-import.mjs
+  async function importLocalImage(file) {
+    if (!["image/png", "image/jpeg", "image/webp"].includes(file?.type)) throw new Error("Bitte ein PNG-, JPEG- oder WebP-Bild ausw\xE4hlen.");
+    if (file.size > 12 * 1024 * 1024) throw new Error("Bitte ein Bild unter 12 MB verwenden.");
+    const bitmap = await createImageBitmap(file).catch(() => {
+      throw new Error("Dieses Bild konnte nicht gelesen werden.");
+    });
+    try {
+      const scale = Math.min(1, 1200 / Math.max(bitmap.width, bitmap.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+      canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+      canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+      return canvas.toDataURL("image/webp", 0.88);
+    } finally {
+      bitmap.close();
+    }
+  }
+
+  // modules/mindmap/mindmap-controller.mjs
+  function createMindmapController(root, { getModule, updateMap, render, toast }) {
+    const state = { selected: null, edge: null, connecting: null };
+    let drag = null, suppressClick = false;
+    function select(nodeId) {
+      if (state.connecting && state.connecting !== nodeId) {
+        const from = state.connecting, to = nodeId;
+        const duplicate = getModule().mindmap.edges.some((edge) => [edge.from, edge.to].includes(from) && [edge.from, edge.to].includes(to));
+        if (!duplicate) updateMap((map) => {
+          if (map.edges.length >= 500) throw new Error("Maximal 500 Verbindungen pro Mindmap.");
+          map.edges.push({ id: uid(), from, to, label: "" });
+        });
+        else toast("Diese Gedanken sind bereits verbunden.");
+        state.connecting = null;
+      }
+      state.selected = nodeId;
+      state.edge = null;
+      render();
+    }
+    const actions = {
+      "add-node": () => {
+        const map = getModule().mindmap;
+        if (map.nodes.length >= 200) {
+          toast("Maximal 200 Gedanken pro Mindmap.");
+          return;
+        }
+        const node = { id: uid(), text: "Neuer Gedanke", x: 80 + map.nodes.length % 5 * 220, y: 100 + Math.floor(map.nodes.length / 5) % 6 * 120, color: getModule().color };
+        updateMap((item) => item.nodes.push(node));
+        state.selected = node.id;
+        state.edge = null;
+        render();
+        root.querySelector('[data-map-field="text"]')?.select();
+      },
+      "connect-nodes": () => {
+        state.connecting = state.connecting ? null : state.selected;
+        render();
+      },
+      "delete-node": () => {
+        const id2 = state.selected;
+        updateMap((map) => {
+          map.nodes = map.nodes.filter((node) => node.id !== id2);
+          map.edges = map.edges.filter((edge) => edge.from !== id2 && edge.to !== id2);
+        });
+        state.selected = null;
+        state.connecting = null;
+        render();
+      },
+      "delete-edge": () => {
+        const id2 = state.edge;
+        updateMap((map) => {
+          map.edges = map.edges.filter((edge) => edge.id !== id2);
+        });
+        state.edge = null;
+        render();
+      }
+    };
+    root.addEventListener("click", (event) => {
+      if (!getModule() || !event.target.closest(".mindmap-editor")) return;
+      if (suppressClick) {
+        suppressClick = false;
+        return;
+      }
+      const node = event.target.closest("[data-node]"), edge = event.target.closest("[data-edge]");
+      if (node) {
+        select(node.dataset.node);
+        return;
+      }
+      if (edge) {
+        state.edge = edge.dataset.edge;
+        state.selected = null;
+        state.connecting = null;
+        render();
+      }
+    });
+    root.addEventListener("input", (event) => {
+      const field = event.target.dataset.mapField;
+      if (!field) return;
+      updateMap((map) => {
+        const target = field === "text" ? map.nodes.find((node) => node.id === state.selected) : map.edges.find((edge) => edge.id === state.edge);
+        if (target) target[field] = event.target.value;
+      }, { groupKey: `map-${state.selected || state.edge}` });
+      if (field === "text") {
+        const group = root.querySelector(`[data-node="${CSS.escape(state.selected)}"]`);
+        group.querySelector("text").textContent = event.target.value.length > 19 ? `${event.target.value.slice(0, 18)}\u2026` : event.target.value;
+        group.setAttribute("aria-label", `${event.target.value}: ausw\xE4hlen; mit Pfeiltasten verschieben`);
+      } else {
+        const group = root.querySelector(`[data-edge="${CSS.escape(state.edge)}"]`);
+        group.querySelector("text").textContent = event.target.value;
+        group.setAttribute("aria-label", `Verbindung ${event.target.value || "ohne Beschriftung"} bearbeiten`);
+      }
+    });
+    root.addEventListener("pointerdown", (event) => {
+      const nodeElement = event.target.closest("[data-node]");
+      if (!nodeElement || event.button !== 0) return;
+      const node = getModule().mindmap.nodes.find((item) => item.id === nodeElement.dataset.node), svg = nodeElement.closest("svg");
+      drag = { nodeElement, svg, id: node.id, x: node.x, y: node.y, startX: event.clientX, startY: event.clientY, pointer: event.pointerId, newX: node.x, newY: node.y, moved: false };
+      nodeElement.setPointerCapture(event.pointerId);
+    });
+    root.addEventListener("pointermove", (event) => {
+      if (!drag || event.pointerId !== drag.pointer) return;
+      const scale = 1450 / drag.svg.getBoundingClientRect().width;
+      const dx = (event.clientX - drag.startX) * scale, dy = (event.clientY - drag.startY) * scale;
+      if (Math.abs(dx) + Math.abs(dy) < 5 && !drag.moved) return;
+      drag.moved = true;
+      drag.newX = Math.min(1300, Math.max(0, Math.round(drag.x + dx)));
+      drag.newY = Math.min(850, Math.max(0, Math.round(drag.y + dy)));
+      drag.nodeElement.setAttribute("transform", `translate(${drag.newX},${drag.newY})`);
+      const preview2 = structuredClone(getModule().mindmap);
+      const node = preview2.nodes.find((item) => item.id === drag.id);
+      node.x = drag.newX;
+      node.y = drag.newY;
+      preview2.edges.forEach((edge) => {
+        if (edge.from !== drag.id && edge.to !== drag.id) return;
+        const from = preview2.nodes.find((item) => item.id === edge.from), to = preview2.nodes.find((item) => item.id === edge.to);
+        const geometry = edgeGeometry(from, to), group = drag.svg.querySelector(`[data-edge="${CSS.escape(edge.id)}"]`);
+        group?.querySelectorAll("path").forEach((path) => path.setAttribute("d", geometry.path));
+        const text = group?.querySelector("text");
+        text?.setAttribute("x", geometry.labelX);
+        text?.setAttribute("y", geometry.labelY);
+      });
+    });
+    const finish = (event) => {
+      if (!drag || event.pointerId !== drag.pointer) return;
+      const done = drag;
+      drag = null;
+      if (event.type === "pointercancel") {
+        render();
+        return;
+      }
+      if (done.moved) {
+        suppressClick = true;
+        updateMap((map) => {
+          const node = map.nodes.find((item) => item.id === done.id);
+          node.x = done.newX;
+          node.y = done.newY;
+        });
+        state.selected = done.id;
+        state.edge = null;
+        render();
+        setTimeout(() => {
+          suppressClick = false;
+        }, 0);
+      }
+    };
+    root.addEventListener("pointerup", finish);
+    root.addEventListener("pointercancel", finish);
+    root.addEventListener("keydown", (event) => {
+      const node = event.target.closest("[data-node]"), edge = event.target.closest("[data-edge]");
+      if ((node || edge) && ["Enter", " "].includes(event.key)) {
+        event.preventDefault();
+        if (node) select(node.dataset.node);
+        else {
+          state.edge = edge.dataset.edge;
+          state.selected = null;
+          render();
+        }
+      }
+      if (node && ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+        event.preventDefault();
+        const id2 = node.dataset.node;
+        updateMap((map) => {
+          const target = map.nodes.find((item) => item.id === id2);
+          target.x = Math.max(0, Math.min(1300, target.x + ({ "ArrowLeft": -20, "ArrowRight": 20 }[event.key] || 0)));
+          target.y = Math.max(0, Math.min(850, target.y + ({ "ArrowUp": -20, "ArrowDown": 20 }[event.key] || 0)));
+        });
+        render();
+        root.querySelector(`[data-node="${CSS.escape(id2)}"]`)?.focus();
+      }
+    });
+    return { state, action: (name) => {
+      if (!actions[name]) return false;
+      actions[name]();
+      return true;
+    }, reset() {
+      Object.assign(state, { selected: null, edge: null, connecting: null });
+      drag = null;
+    } };
+  }
+
+  // modules/editor/editor-controller.mjs
+  function createEditor(root, { getModule, updateModule, onDuplicate, onDelete, ask, toast }) {
+    let moduleId = null, pageId = null;
+    const current = () => getModule(moduleId);
+    const update = (mutator, options = {}) => updateModule(moduleId, mutator, { reason: "editor-input", ...options });
+    function render() {
+      const module = current();
+      if (!module) {
+        root.close();
+        return;
+      }
+      if (!module.pages.some((page3) => page3.id === pageId)) pageId = module.pages[0].id;
+      root.innerHTML = renderEditor(module, { pageId, mapState: map.state });
+    }
+    const map = createMindmapController(root, { getModule: current, updateMap: (mutator, options) => update((module) => mutator(module.mindmap), options), render, toast });
+    function page2(module) {
+      return module.pages.find((item) => item.id === pageId);
+    }
+    root.addEventListener("click", async (event) => {
+      const button = event.target.closest("[data-action]");
+      if (!button) return;
+      const action = button.dataset.action;
+      if (action === "close") {
+        root.close();
+        return;
+      }
+      try {
+        if (map.action(action)) return;
+        if (action === "select-page") {
+          pageId = button.dataset.page;
+          map.reset();
+          render();
+        }
+        if (action === "add-page") {
+          if (current().pages.length >= 50) {
+            toast("Maximal 50 Seiten pro Modul.");
+            return;
+          }
+          const title = await ask({ title: "Mehr Platz f\xFCr Ideen", label: "Seitenname", value: "Neue Seite", maxLength: 200 });
+          if (!title) return;
+          pageId = uid();
+          update((module) => module.pages.push({ id: pageId, title, blocks: [{ id: uid(), kind: "text", label: "Gedanken", value: "" }] }));
+          render();
+        }
+        if (action === "rename-page") {
+          const title = await ask({ title: "Seite umbenennen", label: "Seitenname", value: page2(current()).title, maxLength: 200 });
+          if (title) {
+            update((module) => {
+              page2(module).title = title;
+            });
+            render();
+          }
+        }
+        if (action === "delete-page" && current().pages.length > 1) {
+          if (!await ask({ title: "Seite entfernen?", description: "Diese Seite mit ihren Inhalten entfernen. Du kannst die \xC4nderung \xFCber R\xFCckg\xE4ngig wiederherstellen.", input: false, confirm: "Seite entfernen", danger: true })) return;
+          update((module) => {
+            module.pages = module.pages.filter((item) => item.id !== pageId);
+          });
+          pageId = current().pages[0].id;
+          map.reset();
+          render();
+        }
+        if (action === "module-color") {
+          update((module) => {
+            module.color = button.dataset.color;
+          });
+          render();
+        }
+        if (action === "add-block") {
+          if (page2(current()).blocks.length >= 100) {
+            toast("Maximal 100 Inhalte pro Seite.");
+            return;
+          }
+          const kind = button.dataset.kind;
+          update((module) => page2(module).blocks.push({ id: uid(), kind, label: { text: "Ein neuer Gedanke", bullets: "Eine neue Liste", image: "Eine neue Inspiration" }[kind], value: "" }));
+          render();
+        }
+        const blockId = button.closest("[data-block]")?.dataset.block;
+        if (action === "remove-block") {
+          update((module) => {
+            page2(module).blocks = page2(module).blocks.filter((block) => block.id !== blockId);
+          });
+          render();
+        }
+        if (action === "remove-image") {
+          update((module) => {
+            page2(module).blocks.find((block) => block.id === blockId).value = "";
+          });
+          render();
+        }
+        if (action === "duplicate-module") {
+          onDuplicate(moduleId);
+          toast("Eine Kopie liegt auf deiner Pinnwand.");
+        }
+        if (action === "delete-module") {
+          if (await ask({ title: "Modul entfernen?", description: "Das Modul mit allen Seiten entfernen. Du kannst es \xFCber R\xFCckg\xE4ngig wiederherstellen.", input: false, confirm: "Modul entfernen", danger: true })) {
+            const id2 = moduleId;
+            root.close();
+            onDelete(id2);
+          }
+        }
+      } catch (error) {
+        toast(error.message);
+      }
+    });
+    root.addEventListener("input", (event) => {
+      const moduleField = event.target.dataset.moduleField, blockField = event.target.dataset.blockField;
+      if (moduleField) {
+        update((module) => {
+          module[moduleField] = event.target.value;
+        }, { groupKey: `${moduleId}-${moduleField}` });
+        if (moduleField === "title") root.querySelector(".editor-module-name").textContent = event.target.value;
+      }
+      if (blockField) {
+        const blockId = event.target.closest("[data-block]").dataset.block;
+        update((module) => {
+          page2(module).blocks.find((block) => block.id === blockId)[blockField] = event.target.value;
+        }, { groupKey: `${blockId}-${blockField}` });
+      }
+    });
+    root.addEventListener("change", async (event) => {
+      if (!event.target.matches("[data-image-upload]") || !event.target.files[0]) return;
+      const id2 = moduleId, selectedPage = pageId, blockId = event.target.closest("[data-block]").dataset.block, file = event.target.files[0];
+      try {
+        const value = await importLocalImage(file);
+        updateModule(id2, (module) => {
+          const block = module.pages.find((item) => item.id === selectedPage)?.blocks.find((item) => item.id === blockId);
+          if (block) block.value = value;
+        }, { reason: "editor-input" });
+        if (moduleId === id2) render();
+        toast("Bild lokal eingef\xFCgt. Es wird beim Export mitgesichert.");
+      } catch (error) {
+        toast(error.message);
+      }
+    });
+    root.addEventListener("close", () => {
+      moduleId = null;
+      map.reset();
+    });
+    return { open(id2) {
+      moduleId = id2;
+      pageId = current().pages[0].id;
+      map.reset();
+      render();
+      root.showModal();
+    }, refresh() {
+      if (root.open) render();
+    } };
+  }
+
+  // modules/github/github-backup.mjs
+  var BACKUP_BRANCH = "ideenwerk-backup";
+  var MARKER = ".ideenwerk-backup.json";
+  var COMMIT_MESSAGE = "Ideenwerk: Projektsicherung [skip ci] [skip netlify]";
+  function encodePath(path) {
+    return path.split("/").map(encodeURIComponent).join("/");
+  }
+  function createGitHubBackupClient({ token, repository, fetchRef = globalThis.fetch }) {
+    if (!/^[A-Za-z0-9][A-Za-z0-9-]*\/[A-Za-z0-9_.-]+$/.test(repository)) throw new Error("Repository bitte als Benutzer/Repository eintragen.");
+    if (!token.trim()) throw new Error("Bitte einen GitHub-Zugriffstoken eintragen.");
+    const base = `https://api.github.com/repos/${repository}`;
+    async function request(path, { method = "GET", body, allow404 = false } = {}) {
+      let response;
+      try {
+        response = await fetchRef(`${base}${path}`, { method, headers: { Accept: "application/vnd.github+json", Authorization: `Bearer ${token.trim()}`, "X-GitHub-Api-Version": "2026-03-10", ...body ? { "Content-Type": "application/json" } : {} }, ...body ? { body: JSON.stringify(body) } : {}, signal: AbortSignal.timeout(3e4), cache: "no-store", credentials: "omit", redirect: "error" });
+      } catch {
+        throw new Error("GitHub ist gerade nicht erreichbar. Deine lokale Arbeit ist weiterhin vorhanden.");
+      }
+      if (response.status === 404 && allow404) return null;
+      if (!response.ok) {
+        const error = new Error({ 401: "Der GitHub-Token ist ung\xFCltig oder abgelaufen.", 403: "Kein Schreibzugriff. Der Token ben\xF6tigt f\xFCr dieses Repository \u201EContents: Read and write\u201C.", 404: "Repository oder Backup-Branch nicht gefunden. Bitte Ziel und Token-Berechtigungen pr\xFCfen.", 409: "Das Repository ist leer oder wurde gleichzeitig ver\xE4ndert. Bitte mit einer README initialisieren bzw. das Ziel erneut pr\xFCfen.", 422: "Der Backup-Branch wurde gleichzeitig ver\xE4ndert oder ist gesch\xFCtzt. Bitte das Ziel erneut pr\xFCfen." }[response.status] || `GitHub-Anfrage fehlgeschlagen (HTTP ${response.status}).`);
+        error.status = response.status;
+        throw error;
+      }
+      return response.json();
+    }
+    async function inspect() {
+      const repo = await request("");
+      if (repo.default_branch === BACKUP_BRANCH) throw new Error("Der Backup-Branch darf nicht der Standardbranch sein. Bitte ein eigenes, initialisiertes Backup-Repository verwenden.");
+      if (repo.archived || repo.disabled) throw new Error("Dieses Repository ist archiviert oder deaktiviert.");
+      if (repo.permissions?.push === false) throw new Error("F\xFCr dieses Repository besteht kein Schreibzugriff.");
+      const ref = await request(`/git/ref/heads/${BACKUP_BRANCH}`, { allow404: true });
+      let treeSha = null;
+      if (ref) {
+        const commit = await request(`/git/commits/${encodeURIComponent(ref.object.sha)}`);
+        treeSha = commit.tree.sha;
+        const tree = await request(`/git/trees/${encodeURIComponent(treeSha)}?recursive=1`);
+        if (tree.truncated) throw new Error("Der Backup-Branch ist zu gro\xDF, um ihn sicher zu pr\xFCfen.");
+        const files = tree.tree.filter((item) => item.type !== "tree");
+        if (!files.some((item) => item.path === MARKER) || files.some((item) => item.type !== "blob" || item.mode !== "100644" || !(item.path === MARKER || /^projects\/[A-Za-z0-9-]+\.json$/.test(item.path)))) throw new Error("Der vorhandene Branch \u201Eideenwerk-backup\u201C geh\xF6rt nicht ausschlie\xDFlich zu Ideenwerk. Bitte ein anderes Repository w\xE4hlen.");
+      } else {
+        const baseRef = await request(`/git/ref/heads/${encodePath(repo.default_branch)}`, { allow404: true });
+        if (!baseRef) throw new Error("Bitte das Repository zuerst mit einer README initialisieren.");
+      }
+      return { repository: repo.full_name || repository, visibility: repo.private ? "Privat" : "\xD6ffentlich", head: ref?.object.sha || null, treeSha, branch: BACKUP_BRANCH };
+    }
+    async function push(document2, plan) {
+      if (!/^[A-Za-z0-9-]+$/.test(document2.id)) throw new Error("Die Projektkennung ist f\xFCr eine GitHub-Sicherung ungeeignet. Bitte einen normalen Dateiexport verwenden.");
+      const text = JSON.stringify(document2, null, 2);
+      if (new TextEncoder().encode(text).length > 25 * 1024 * 1024) throw new Error("Die GitHub-Sicherung ist auf 25 MB begrenzt. Bitte einen Dateiexport verwenden oder Bilder verkleinern.");
+      const latest = await inspect();
+      if (latest.head !== plan.head) throw new Error("Der Backup-Branch wurde seit der Pr\xFCfung ver\xE4ndert. Bitte das Ziel erneut pr\xFCfen; es wird nichts \xFCberschrieben.");
+      const entries = [{ path: `projects/${document2.id}.json`, mode: "100644", type: "blob", content: text }];
+      if (!plan.head) entries.push({ path: MARKER, mode: "100644", type: "blob", content: JSON.stringify({ format: "ideenwerk-backup-branch", version: 1 }) });
+      const tree = await request("/git/trees", { method: "POST", body: { ...plan.treeSha ? { base_tree: plan.treeSha } : {}, tree: entries } });
+      const commit = await request("/git/commits", { method: "POST", body: { message: COMMIT_MESSAGE, tree: tree.sha, parents: plan.head ? [plan.head] : [] } });
+      if (plan.head) await request(`/git/refs/heads/${BACKUP_BRANCH}`, { method: "PATCH", body: { sha: commit.sha, force: false } });
+      else await request("/git/refs", { method: "POST", body: { ref: `refs/heads/${BACKUP_BRANCH}`, sha: commit.sha } });
+      return { sha: commit.sha, url: `https://github.com/${repository}/blob/${BACKUP_BRANCH}/${encodePath(`projects/${document2.id}.json`)}` };
+    }
+    return { inspect, push };
+  }
+
+  // modules/github/github-dialog.mjs
+  function mountGitHubDialog(root, { getWorkspace, toast }) {
+    let client = null, plan = null, snapshot = null, busy = false;
+    function error(message) {
+      const box = root.querySelector("[data-github-error]");
+      box.textContent = message;
+      box.hidden = false;
+    }
+    function render() {
+      root.innerHTML = `<div class="modal-top"><div><div class="eyebrow">EINE SICHERUNG F\xDCR DEINE IDEEN</div><h2 id="github-title">Ab ins GitHub-Regal.</h2></div>${closeButton()}</div><p class="modal-intro">Sichere dein gesamtes Projekt einschlie\xDFlich Bildern in einem Repository deiner Wahl.</p><div class="github-banner">Eigener Branch: <strong>${BACKUP_BRANCH}</strong><br>Enth\xE4lt ausschlie\xDFlich Projektsicherungen. Dein Standardbranch bleibt unber\xFChrt. Der Editor ruft kein Deployment auf.</div><form id="github-form"><div class="form-field"><label class="field-label" for="github-repo">REPOSITORY</label><input class="field-input" id="github-repo" placeholder="patrick/meine-ideen" required autocomplete="off"><p class="form-help">Ein eigenes, mit README initialisiertes Backup-Repository ohne angebundenes Hosting verwenden. Bei einem \xF6ffentlichen Repository sind auch deine Ideen \xF6ffentlich.</p></div><div class="form-field"><label class="field-label" for="github-token">GITHUB-ZUGRIFFSTOKEN</label><input class="field-input" id="github-token" type="password" required autocomplete="off" spellcheck="false" placeholder="Fine-grained Personal Access Token"><p class="form-help">Nur das gew\xE4hlte Repository freigeben, mit \u201EContents: Read and write\u201C. Der Token wird beim Schlie\xDFen verworfen und niemals gespeichert oder exportiert. <a href="https://github.com/settings/personal-access-tokens" target="_blank" rel="noreferrer">Token bei GitHub verwalten \u2197</a></p></div><div class="error-box" data-github-error hidden></div><div data-github-review hidden></div><div class="modal-footer"><button class="button secondary" type="button" data-action="close">Schlie\xDFen</button><button class="button primary" type="submit" data-github-submit>${icon("github")} Ziel pr\xFCfen</button></div></form>`;
+    }
+    root.addEventListener("click", (event) => {
+      if (event.target.closest('[data-action="close"]') && !busy) root.close();
+    });
+    root.addEventListener("cancel", (event) => {
+      if (busy) event.preventDefault();
+    });
+    root.addEventListener("close", () => {
+      client = null;
+      plan = null;
+      snapshot = null;
+      root.innerHTML = "";
+    });
+    root.addEventListener("input", () => {
+      plan = null;
+      client = null;
+      snapshot = null;
+      root.querySelector("[data-github-review]").hidden = true;
+      root.querySelector("[data-github-submit]").innerHTML = `${icon("github")} Ziel pr\xFCfen`;
+    });
+    root.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (busy) return;
+      const button = root.querySelector("[data-github-submit]");
+      root.querySelector("[data-github-error]").hidden = true;
+      busy = true;
+      button.disabled = true;
+      root.querySelectorAll('input,[data-action="close"]').forEach((element) => {
+        element.disabled = true;
+      });
+      try {
+        if (!plan) {
+          client = createGitHubBackupClient({ token: root.querySelector("#github-token").value, repository: root.querySelector("#github-repo").value.trim() });
+          plan = await client.inspect();
+          snapshot = structuredClone(getWorkspace());
+          const review = root.querySelector("[data-github-review]");
+          review.hidden = false;
+          review.innerHTML = `<div class="github-banner"><strong>${escapeHtml(plan.repository)}</strong> \xB7 ${escapeHtml(plan.visibility)}<br>${snapshot.boards.length} Pinnw\xE4nde \xB7 ${snapshot.boards.reduce((sum, board) => sum + board.modules.length, 0)} Module \xB7 ${(new Blob([JSON.stringify(snapshot)]).size / 1024 / 1024).toFixed(2)} MB<br>${plan.head ? "Neuer Sicherungsstand auf dem vorhandenen Backup-Branch." : "Neuer, unabh\xE4ngiger Backup-Branch ohne Anwendungscode."}</div><p class="form-help">\u201EJetzt sichern\u201C \xFCbertr\xE4gt dieses Projekt an GitHub. Externe Automationen deines Repositorys werden durch den Editor nicht verwaltet.</p>`;
+          button.innerHTML = `${icon("export")} Jetzt sichern`;
+        } else {
+          button.textContent = "Sicherung l\xE4uft \u2026";
+          const result = await client.push(snapshot, plan);
+          root.querySelector("[data-github-review]").innerHTML = `<div class="github-banner">${icon("check")} <strong>Sicherung gespeichert.</strong><br>Commit ${escapeHtml(result.sha.slice(0, 8))}<br><a href="${escapeHtml(result.url)}" target="_blank" rel="noreferrer">Projektdatei bei GitHub ansehen \u2197</a></div>`;
+          root.querySelector("#github-token").value = "";
+          client = null;
+          plan = null;
+          snapshot = null;
+          button.hidden = true;
+          toast("Dein Projekt wurde auf GitHub gesichert.");
+        }
+      } catch (cause) {
+        error(cause.message);
+        plan = null;
+        client = null;
+        snapshot = null;
+        button.innerHTML = `${icon("github")} Ziel erneut pr\xFCfen`;
+      } finally {
+        busy = false;
+        button.disabled = false;
+        root.querySelectorAll('input,[data-action="close"]').forEach((element) => {
+          element.disabled = false;
+        });
+      }
+    });
+    return () => {
+      render();
+      root.showModal();
+    };
+  }
+
+  // modules/workspace/project-transfer.mjs
+  function createProjectTransfer({ input, store, ask, toast, onImported }) {
+    input.addEventListener("change", async () => {
+      const file = input.files[0];
+      input.value = "";
+      if (!file) return;
+      try {
+        if (file.size > MAX_FILE_BYTES) throw new Error("Die Projektdatei darf h\xF6chstens 32 MB gro\xDF sein.");
+        const project = parseProjectText(await file.text());
+        if (store.get().boards.length + project.boards.length > 30) throw new Error("Es sind maximal 30 Pinnw\xE4nde m\xF6glich.");
+        const confirmed = await ask({ title: "Ideen hereinlassen?", description: `${project.boards.length} Pinnw\xE4nde aus \u201E${project.name}\u201C hinzuf\xFCgen. Deine vorhandenen Pinnw\xE4nde bleiben erhalten.`, input: false, confirm: "Pinnw\xE4nde importieren" });
+        if (!confirmed) return;
+        const boards = project.boards.map((board) => ({ ...board, id: uid(), name: `${board.name} \xB7 Import`.slice(0, 120), example: false }));
+        store.change((workspace) => workspace.boards.push(...boards), { reason: "import" });
+        onImported(boards[0].id);
+        toast("Importiert \u2013 einschlie\xDFlich Bildern, Seiten und Mindmap-Verbindungen.");
+      } catch (error) {
+        toast(error.message);
+      }
+    });
+    return {
+      import: () => input.click(),
+      export: () => {
+        const workspace = store.get();
+        downloadJson(workspace, `Ideenwerk-${(/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}.json`);
+        toast("Projektdatei mit allen Pinnw\xE4nden und Bildern exportiert.");
+      }
+    };
+  }
+
+  // modules/workspace/preferences.mjs
+  var KEY = "ideenwerk-view-v1";
+  function loadPreferences() {
+    try {
+      const data = JSON.parse(localStorage.getItem(KEY));
+      return { boardId: typeof data?.boardId === "string" ? data.boardId : null, view: ["board", "grid", "list"].includes(data?.view) ? data.view : "board", zoom: typeof data?.zoom === "number" ? Math.max(0.5, Math.min(1.3, data.zoom)) : 1 };
+    } catch {
+      return { boardId: null, view: "board", zoom: 1 };
+    }
+  }
+  function savePreferences(preferences) {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(preferences));
+    } catch {
+    }
+  }
+
+  // modules/workspace/workspace-controller.mjs
+  function mountWorkspace({ store, autosave }) {
+    const find = (id2) => document.getElementById(id2), surface = find("board-surface"), preferences = loadPreferences();
+    let activeId = preferences.boardId, view = preferences.view, zoom = preferences.zoom, query = "", type = "all";
+    const { ask, toast } = createDialogs({ root: find("text-dialog"), toastRoot: find("toast") });
+    const active = () => store.get().boards.find((board) => board.id === activeId) || store.get().boards[0];
+    const remember = () => savePreferences({ boardId: active().id, view, zoom });
+    function modifyModule(id2, mutator, options = {}) {
+      const boardId = active().id;
+      store.change((workspace) => {
+        const module = workspace.boards.find((board) => board.id === boardId)?.modules.find((item) => item.id === id2);
+        if (module) mutator(module);
+      }, options);
+    }
+    function duplicateModule(id2) {
+      if (active().modules.length >= 500) {
+        toast("Maximal 500 Module pro Pinnwand.");
+        return;
+      }
+      const copy = structuredClone(active().modules.find((item) => item.id === id2));
+      copy.id = uid();
+      copy.title = `${copy.title} \xB7 Kopie`.slice(0, 200);
+      copy.x = Math.min(3500, copy.x + 35);
+      copy.y = Math.min(2500, copy.y + 35);
+      store.change((workspace) => workspace.boards.find((board) => board.id === active().id).modules.push(copy));
+    }
+    const editor = createEditor(find("editor-dialog"), { getModule: (id2) => active().modules.find((module) => module.id === id2), updateModule: modifyModule, onDuplicate: duplicateModule, onDelete: (id2) => store.change((workspace) => {
+      const board = workspace.boards.find((item) => item.id === active().id);
+      board.modules = board.modules.filter((module) => module.id !== id2);
+    }), ask, toast });
+    function createIdea(template) {
+      if (active().modules.length >= 500) {
+        toast("Maximal 500 Module pro Pinnwand.");
+        return;
+      }
+      const index = active().modules.length, module = createModule(template, { x: 40 + index % 3 * 330, y: 35 + Math.floor(index / 3) * 385 });
+      module.y = Math.min(2500, module.y);
+      const boardId = active().id;
+      store.change((workspace) => workspace.boards.find((board) => board.id === boardId).modules.push(module));
+      query = "";
+      type = "all";
+      find("search").value = "";
+      find("type-filter").value = "all";
+      render();
+      editor.open(module.id);
+    }
+    const openTemplates = mountTemplatePicker(find("template-dialog"), createIdea);
+    const openGitHub = mountGitHubDialog(find("github-dialog"), { getWorkspace: store.get, toast });
+    const transfer = createProjectTransfer({ input: find("import-file"), store, ask, toast, onImported: (id2) => {
+      activeId = id2;
+      query = "";
+      type = "all";
+      find("search").value = "";
+      find("type-filter").value = "all";
+      render();
+    } });
+    mountIcons();
+    find("template-nav").innerHTML = TEMPLATES.map((template) => `<button data-action="create-idea" data-template="${template.id}">${icon(template.icon)}${escapeHtml(template.name)}<span>\uFF0B</span></button>`).join("");
+    find("type-filter").insertAdjacentHTML("beforeend", TEMPLATES.map((template) => `<option value="${template.id}">${escapeHtml(template.name)}</option>`).join(""));
+    find("help-dialog").innerHTML = `<div class="modal-top"><div><div class="eyebrow">WILLKOMMEN IN DEINER WERKSTATT</div><h2 id="help-title">Von einem Funken zur Geschichte.</h2></div>${closeButton()}</div><div class="help-steps">${[
+      ["Gib der Idee eine Form.", "W\xE4hle links eine Vorlage oder klicke auf \u201ENeues Modul\u201C. Charaktere, Storys, Orte, Mindmaps, Moodboards und freie Notizen warten auf dich."],
+      ["Mach dir die Pinnwand zu eigen.", "Ziehe ein Modul am Punktgriff an seinen Platz. Der kleine Pfeil klappt es zur Miniatur ein. Raster und Liste helfen beim Sortieren. Am Griff kannst du auch die Pfeiltasten verwenden."],
+      ["Gehe in die Tiefe.", "Klicke eine Karte an. Erg\xE4nze Portraits, Texte und Stichpunkte, erstelle weitere Seiten oder ziehe in einer Mindmap Verbindungen zwischen Gedanken. Die Eingabe \u201EListe\u201C verwendet einen Punkt pro Zeile."],
+      ["Nimm deine Ideen mit.", "\xC4nderungen werden automatisch in diesem Browser gespeichert. Export sichert alle Pinnw\xE4nde und Bilder in einer JSON-Datei. Import f\xFCgt Pinnw\xE4nde aus einer Sicherung hinzu. Browserdaten zu l\xF6schen entfernt auch lokale Projekte \u2013 deshalb regelm\xE4\xDFig exportieren."],
+      ["Ein Backup, wenn du es m\xF6chtest.", "\xDCber \u201EGitHub\u201C kannst du das Projekt in deinem eigenen Backup-Repository sichern. Dein Token bleibt nur w\xE4hrend des ge\xF6ffneten Dialogs im Arbeitsspeicher. Die Sicherung enth\xE4lt keine Anwendung und startet kein Deployment."],
+      ["Ein paar kleine Abk\xFCrzungen.", "Strg+Z macht die letzte Projekt\xE4nderung r\xFCckg\xE4ngig, Strg+Umschalt+Z wiederholt sie. In Textfeldern gelten die gewohnten Textabk\xFCrzungen. Strg+S exportiert dein Projekt."]
+    ].map(([title, text], index) => `<div class="help-step"><b>${index + 1}</b><div><strong>${escapeHtml(title)}</strong><p>${escapeHtml(text)}</p></div></div>`).join("")}</div><div class="modal-footer"><button class="button primary" data-action="close">Los geht\u2019s</button></div>`;
+    function render() {
+      const board = active();
+      activeId = board.id;
+      find("boards").innerHTML = store.get().boards.map((item) => `<button data-action="select-board" data-board="${escapeHtml(item.id)}" class="${item.id === activeId ? "active" : ""}" ${item.id === activeId ? 'aria-current="page"' : ""}>${icon("board")}<span class="board-name">${escapeHtml(item.name)}</span><span class="nav-count">${item.modules.length}</span></button>`).join("");
+      find("board-title").innerHTML = `${escapeHtml(board.name)}<span>.</span>`;
+      find("board-crumb").textContent = board.name;
+      document.title = `${board.name} \xB7 Ideenwerk`;
+      document.querySelectorAll('[data-action="view"]').forEach((button) => button.setAttribute("aria-pressed", button.dataset.view === view));
+      const count = renderBoard(surface, board, { view, zoom, query, type });
+      find("module-count").textContent = `${count} ${count === 1 ? "Idee" : "Ideen"}${count !== board.modules.length ? ` von ${board.modules.length}` : ""}`;
+      find("demo-badge").hidden = !board.example;
+      find("zoom-controls").hidden = view !== "board";
+      find("zoom-label").textContent = `${Math.round(zoom * 100)} %`;
+      document.querySelector('[data-action="undo"]').disabled = !store.canUndo();
+      document.querySelector('[data-action="redo"]').disabled = !store.canRedo();
+      remember();
+    }
+    store.subscribe((state, reason) => {
+      render();
+      autosave?.queue(state);
+      if (reason === "history") editor.refresh();
+    });
+    mountBoardDrag(surface, { getView: () => view, getZoom: () => zoom, onMove: (id2, x, y) => modifyModule(id2, (module) => {
+      module.x = x;
+      module.y = y;
+    }, { reason: "move" }) });
+    async function action(button) {
+      const name = button.dataset.action, id2 = button.closest("[data-module]")?.dataset.module;
+      if (name === "templates") openTemplates();
+      if (name === "create-idea") createIdea(button.dataset.template);
+      if (name === "select-board") {
+        activeId = button.dataset.board;
+        render();
+        find("board-viewport").scrollTo(0, 0);
+      }
+      if (name === "new-board") {
+        if (store.get().boards.length >= 30) {
+          toast("Maximal 30 Pinnw\xE4nde pro Projekt.");
+          return;
+        }
+        const name2 = await ask({ title: "Ein neuer Ideenraum", label: "Name der Pinnwand", value: "Meine neue Pinnwand" });
+        if (!name2) return;
+        const board = { id: uid(), name: name2, example: false, modules: [] };
+        activeId = board.id;
+        store.change((workspace) => workspace.boards.push(board));
+        find("board-viewport").scrollTo(0, 0);
+      }
+      if (name === "rename-board") {
+        const name2 = await ask({ title: "Pinnwand umbenennen", label: "Name", value: active().name });
+        if (name2) store.change((workspace) => {
+          workspace.boards.find((board) => board.id === activeId).name = name2;
+        });
+      }
+      if (name === "delete-board") {
+        if (!await ask({ title: "Pinnwand entfernen?", description: `\u201E${active().name}\u201C mit allen Modulen entfernen. \xDCber R\xFCckg\xE4ngig kannst du sie wiederherstellen.`, input: false, confirm: "Pinnwand entfernen", danger: true })) return;
+        const id3 = activeId;
+        store.change((workspace) => {
+          workspace.boards = workspace.boards.filter((board) => board.id !== id3);
+          if (!workspace.boards.length) workspace.boards.push({ id: uid(), name: "Mein Ideenraum", example: false, modules: [] });
+        });
+      }
+      if (name === "view") {
+        view = button.dataset.view;
+        render();
+        find("board-viewport").scrollTo(0, 0);
+      }
+      if (name === "open-module") editor.open(id2);
+      if (name === "collapse") modifyModule(id2, (module) => {
+        module.collapsed = !module.collapsed;
+      });
+      if (name === "zoom-in" || name === "zoom-out" || name === "zoom-reset") {
+        zoom = name === "zoom-reset" ? 1 : Math.max(0.5, Math.min(1.3, Math.round((zoom + (name === "zoom-in" ? 0.1 : -0.1)) * 10) / 10));
+        render();
+      }
+      if (name === "arrange") store.change((workspace) => workspace.boards.find((board) => board.id === activeId).modules.forEach((module, index) => {
+        module.x = 40 + index % 3 * 330;
+        module.y = Math.min(2500, 35 + Math.floor(index / 3) * 385);
+      }));
+      if (name === "clear-filter") {
+        query = "";
+        type = "all";
+        find("search").value = "";
+        find("type-filter").value = "all";
+        render();
+      }
+      if (name === "undo") store.undo();
+      if (name === "redo") store.redo();
+      if (name === "import") transfer.import();
+      if (name === "export") transfer.export();
+      if (name === "github") openGitHub();
+      if (name === "help") find("help-dialog").showModal();
+    }
+    document.getElementById("app").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-action]");
+      if (button) action(button).catch((error) => toast(error.message));
+    });
+    find("help-dialog").addEventListener("click", (event) => {
+      if (event.target.closest('[data-action="close"]')) find("help-dialog").close();
+    });
+    find("search").addEventListener("input", (event) => {
+      query = event.target.value;
+      render();
+    });
+    find("type-filter").addEventListener("change", (event) => {
+      type = event.target.value;
+      render();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (!event.ctrlKey && !event.metaKey) return;
+      if (event.key.toLowerCase() === "s") {
+        event.preventDefault();
+        transfer.export();
+        return;
+      }
+      if (event.target.matches('input,textarea,select,[contenteditable="true"]')) return;
+      if (event.key.toLowerCase() === "z") {
+        event.preventDefault();
+        event.shiftKey ? store.redo() : store.undo();
+      }
+    });
+    render();
+    return { toast, render };
+  }
+
+  // app.mjs
+  function storageStatus(status, message) {
+    const element = document.getElementById("save-state");
+    element.dataset.state = status;
+    element.textContent = { saved: "Lokal gespeichert", saving: "Wird gespeichert \u2026", error: "Nicht gespeichert \u2013 bitte exportieren" }[status];
+    element.title = message || "Automatisch in diesem Browser gespeichert";
+    let banner = document.getElementById("storage-error");
+    if (status === "error") {
+      if (!banner) {
+        banner = document.createElement("div");
+        banner.id = "storage-error";
+        banner.className = "storage-error";
+        banner.setAttribute("role", "alert");
+        document.body.append(banner);
+      }
+      banner.textContent = message || "Automatisches Speichern ist nicht verf\xFCgbar. Bitte deine Arbeit regelm\xE4\xDFig exportieren.";
+    } else if (status === "saved") banner?.remove();
+  }
+  async function start() {
+    let storage = null, initial = null, loadError = null;
+    try {
+      storage = await openWorkspaceStorage();
+      const saved = await storage.load();
+      initial = saved ? parseWorkspace(saved) : null;
+    } catch (error) {
+      loadError = error;
+      storage = null;
+    }
+    const store = createWorkspaceStore(initial || createWorkspace());
+    const autosave = storage ? createAutosave(storage, storageStatus) : null;
+    mountWorkspace({ store, autosave });
+    if (loadError) storageStatus("error", `Deine bisherigen Browserdaten wurden nicht \xFCberschrieben. ${loadError.message} Du kannst eine Sicherung importieren und als Datei weiterarbeiten.`);
+    else if (!initial) autosave.queue(store.get());
+    else storageStatus("saved");
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") autosave?.flush();
+    });
+    window.addEventListener("beforeunload", (event) => {
+      if (autosave?.isPending() || !storage) {
+        event.preventDefault();
+        event.returnValue = "";
+      }
+    });
+  }
+  if (navigator.locks) {
+    let started = false;
+    navigator.locks.request("ideenwerk-document-writer", { ifAvailable: true }, async (lock) => {
+      if (!lock) {
+        document.getElementById("app").innerHTML = '<main style="padding:60px;max-width:600px"><h1>Dein Studio ist schon ge\xF6ffnet.</h1><p style="margin:20px 0;line-height:1.8">Bitte im anderen Ideenwerk-Tab weiterarbeiten. So bleiben deine lokalen \xC4nderungen zusammen. Schlie\xDFe den anderen Tab und lade diese Seite neu, um hier weiterzuarbeiten.</p><a href="">Erneut \xF6ffnen \u2197</a></main>';
+        return;
+      }
+      started = true;
+      await start();
+      await new Promise((resolve) => window.addEventListener("pagehide", resolve, { once: true }));
+    }).catch((error) => {
+      if (!started) start().catch((cause) => storageStatus("error", cause.message));
+      else storageStatus("error", error.message);
+    });
+  } else start().catch((error) => storageStatus("error", error.message));
+})();
+
+</script>
+</head>
+<body>
+  <div id="app" class="studio">
+    <aside class="sidebar" aria-label="Studio-Navigation">
+      <a class="brand" href="" aria-label="Ideenwerk Startseite"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTUiIGZpbGw9IiNkZmZmOWUiLz48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMxODNkMzgiIHN0cm9rZS13aWR0aD0iMi43IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxwYXRoIGQ9Ik0xNyAyOGMtOC04IDItMTkgMTAtMTMgNiA1IDIgMTEgMCAxM2wtMSA1aC04bC0xLTVaIi8+PHBhdGggZD0iTTE5IDM3aDZNMjMgN1Y0TTkgMTRsLTMtMk0zNyAxNGwzLTJNMzQgMzFsMyAyTTExIDMwbC0zIDJNMjEgMjl2LTdsLTMtM20zIDMgNC0zIi8+PC9nPjwvc3ZnPgo=" alt=""><span>ideenwerk<span class="brand-dot">.</span></span></a>
+      <div class="studio-owner"><span class="avatar">P</span><span><strong>Patricks Studio</strong><small>Ein guter Ort für neue Ideen</small></span></div>
+      <div class="sidebar-label">DEINE WERKSTATT <span>01</span></div>
+      <div id="boards" class="board-nav"></div>
+      <button class="sidebar-add" data-action="new-board"><span>＋</span> Neue Pinnwand</button>
+      <div class="sidebar-label templates-label">BAUKASTEN <span>06</span></div>
+      <div id="template-nav" class="template-nav"></div>
+      <div class="sidebar-bottom"><div class="local-note"><span class="local-dot"></span><strong>Deine Ideen bleiben bei dir.</strong><p>Lokal arbeiten. Frei denken.<br>Bei Bedarf als Datei sichern.</p></div><button data-action="help" class="sidebar-help">ⓘ <span>Ein kleiner Rundgang</span><span>↗</span></button></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="breadcrumb">MEIN STUDIO <span>/</span> <strong id="board-crumb">Ideenraum</strong></div><div class="top-actions"><span id="save-state" class="save-state" role="status">Wird geladen …</span><button class="button subtle" data-action="import" title="Eine Projektdatei importieren"><span data-icon="import"></span><span>Import</span></button><button class="button subtle" data-action="export"><span data-icon="export"></span><span>Export</span></button><button class="button github-button" data-action="github"><span data-icon="github"></span><span>GitHub</span><span class="tiny-tag">BACKUP</span></button></div></header>
+      <section class="workspace-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> GEDANKEN SAMMELN. WELTEN BAUEN.</div><div class="heading-row"><h1 id="board-title">Dein Ideenraum<span>.</span></h1><button data-action="rename-board" class="icon-button" aria-label="Pinnwand umbenennen" title="Pinnwand umbenennen"><span data-icon="edit"></span></button><button data-action="delete-board" class="icon-button" aria-label="Pinnwand entfernen" title="Pinnwand entfernen"><span data-icon="trash"></span></button></div><p>Eine Figur. Ein loser Gedanke. Der Anfang einer Geschichte.<br>Gib deinen Ideen einen Platz – und schau, was daraus wird.</p></div><button class="button primary new-module" data-action="templates"><span data-icon="plus"></span> Neues Modul</button></section>
+      <section class="workspace-toolbar" aria-label="Darstellung und Suche"><div class="view-switch" role="group" aria-label="Darstellung"><button data-action="view" data-view="board" aria-pressed="true"><span data-icon="board"></span> Pinnwand</button><button data-action="view" data-view="grid" aria-pressed="false"><span data-icon="grid"></span> Raster</button><button data-action="view" data-view="list" aria-pressed="false"><span data-icon="list"></span> Liste</button></div><div class="filter-tools"><label class="search"><span data-icon="search"></span><input id="search" type="search" placeholder="Ideen durchsuchen …" aria-label="Ideen durchsuchen"></label><select id="type-filter" aria-label="Nach Vorlage filtern"><option value="all">Alle Vorlagen</option></select><button class="icon-button" data-action="undo" title="Rückgängig (Strg+Z)" aria-label="Rückgängig"><span data-icon="undo"></span></button><button class="icon-button" data-action="redo" title="Wiederholen (Strg+Umschalt+Z)" aria-label="Wiederholen"><span data-icon="redo"></span></button></div></section>
+      <section class="canvas-shell" aria-label="Deine Ideen"><div class="canvas-topline"><span><span class="live-dot"></span> <span id="module-count">0 Ideen</span><span id="demo-badge" class="demo-badge">BEISPIELPINNWAND</span></span><span class="canvas-hint">Am Griff verschieben · Anklicken zum Öffnen</span></div><div id="board-viewport" class="board-viewport"><div id="board-surface" class="board-surface"></div></div><div class="canvas-bottomline"><span>Hier darf noch alles möglich sein.</span><div id="zoom-controls" class="zoom-controls"><button data-action="zoom-out" aria-label="Verkleinern">−</button><button data-action="zoom-reset" title="Zoom zurücksetzen" id="zoom-label">100 %</button><button data-action="zoom-in" aria-label="Vergrößern">＋</button><span class="zoom-divider"></span><button data-action="arrange" title="Module ordentlich anordnen" aria-label="Module ordentlich anordnen"><span data-icon="arrange"></span></button></div></div></section>
+      <footer class="workspace-footer"><span><strong>Eine kleine Idee reicht.</strong> Den Rest findest du unterwegs.</span><span>MIT PLATZ FÜR DAS UNFERTIGE <span class="footer-star">✳</span></span></footer>
+    </main>
+  </div>
+  <dialog id="template-dialog" class="modal template-dialog" aria-labelledby="template-title"></dialog>
+  <dialog id="editor-dialog" class="modal editor-dialog" aria-label="Ideenmodul bearbeiten"></dialog>
+  <dialog id="github-dialog" class="modal github-dialog" aria-labelledby="github-title"></dialog>
+  <dialog id="text-dialog" class="modal small-dialog" aria-labelledby="text-dialog-title"></dialog>
+  <dialog id="help-dialog" class="modal help-dialog" aria-labelledby="help-title"></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript>Bitte JavaScript aktivieren. Ideenwerk speichert deine Inhalte lokal in diesem Browser.</noscript>
+</body>
+</html>
