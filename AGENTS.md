@@ -12,6 +12,22 @@ vorherige Aldingen-Freigabe auf diesen Gesamtstand. Künftige neue Arbeiten
 benötigen ihre jeweils geltende Veröffentlichungsfreigabe. Entwurfszuordnungen
 bleiben außerhalb kanonischer Register und Firebase-Daten.
 
+## Optimierter Veröffentlichungsweg und temporäre Daten
+
+Für lokale Veröffentlichungen den [geprüften Releaseweg](netlify/docs/LOCAL_RELEASES.md)
+verwenden: letzter Release-Commit mit `[skip netlify]`, dann
+`node netlify/release/release.mjs --publish --push`. Der Befehl führt die
+Fachprüfungen aus, erstellt eine unveränderliche Git-Momentaufnahme, pusht ohne
+Force-Push und verifiziert den direkten Netlify-Deploy samt Functions und
+Dateihashes. Die globale Netlify-Automatik für Web-Publisher nicht abschalten.
+Generatorarchive und Diagnosematerial bleiben Quellen, gehören aber nicht ins
+statische Auslieferungspaket. Aktive Bilder und Originaldownloads erhalten.
+
+Temporäre Daten nur nach [Bereinigungsanleitung](netlify/docs/TEMPORARY_STORAGE.md)
+mit Plan und erneuter Dateiprüfung entfernen. Methoden, Vorlagen, Kontext,
+unbekannte Originale, Browser-IndexedDB und private Sicherungen erhalten.
+Keine pauschale Löschung von `.tmp`, `.codex-temp`, `diagnostics` oder `.git`.
+
 ## Vorlage für Länder-Vorbereitungsseiten
 
 Für weitere Länder die [Arbeitsvorlage](Vorschau/COUNTRY_PREPARATION_TEMPLATE.md)

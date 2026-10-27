@@ -1,6 +1,7 @@
 import { copyFile, link, lstat, mkdir, readFile, realpath, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { BUILD_RECEIPT_PATH } from './site-build-receipt.mjs';
+import { isAuthoringArchive } from './publication-policy.mjs';
 
 export const PUBLISH_DIRECTORY = '.site-publish';
 const OWNER_FILE = '.aleria-publish-stage';
@@ -14,6 +15,7 @@ export function shouldPublish(file) {
   if (!file || file.startsWith('/') || file.includes('\\') || file.split('/').some(part => part === '..')) return false;
   if (file.split('/').some(part => part === 'node_modules' || (part.startsWith('.') && part !== '.well-known'))) return false;
   if (file.split('/').includes('tests')) return false;
+  if (isAuthoringArchive(file)) return false;
   if (PRIVATE_ROOTS.some(root => file.startsWith(root)) || AUTHORING_DIRECTORIES.some(root => file.startsWith(root))) return false;
   if (file === 'netlify.toml' || file === 'firebase.json' || /(?:^|\/)AGENTS\.md$/.test(file) || file === 'CODEX_BRIEFING.md') return false;
   // This Node-only data builder imports fs/assert and the Rossmarkt extractor.

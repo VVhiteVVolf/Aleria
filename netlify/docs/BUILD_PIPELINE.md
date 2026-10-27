@@ -1,5 +1,11 @@
 # Website-Build und Veröffentlichung
 
+Seit 27. Oktober 2026 steht der [geprüfte lokale Releaseweg](LOCAL_RELEASES.md)
+zur Verfügung. Er umgeht den großen Server-Checkout und nutzt dieselben
+Fachprüfungen. `[skip netlify]` vermeidet einen zweiten Cloud-Build für den lokalen
+Release; Web-Publisher behalten ihre normalen Git-Auslöser. Die vorsichtige
+[temporäre Bereinigung](TEMPORARY_STORAGE.md) besitzt einen separaten engen Scope.
+
 ## Zuständigkeiten
 
 `netlify.toml` ruft `netlify/build/run-site-build.mjs` auf. Die einzelnen Aufgaben,

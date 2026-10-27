@@ -39,8 +39,8 @@ const economySourceInputs = [
 export const SITE_BUILD_TASKS = [
   {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
-    inputs: ['netlify/build/', 'netlify/tests/'],
-    commands: [testCommand('netlify/tests/site-build.test.mjs')]
+    inputs: ['netlify/build/', 'netlify/release/', 'netlify/tests/'],
+    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs')]
   },
   {
     id: 'regional-catalog', label: 'Generate regional equipment catalog', always: true,
