@@ -46,9 +46,12 @@
 .notice-highlight dd { color: var(--notice-accent); font: 600 clamp(1.2rem, 2.8cqi, 1.8rem)/1.3 'EB Garamond', Georgia, serif; }
 .notice-proclamation { display: grid; gap: 1.5rem; }
 .notice-proclamation.has-illustration { grid-template-columns: minmax(130px, .7fr) minmax(0, 1.3fr); }
+.notice-proclamation:not(.has-illustration) { --notice-template-text-height: min(720px, 75dvh); }
 .notice-proclamation > div { min-width: 0; }
 .notice-wording > .notice-facts { margin: 1.6rem 0 0; }
 .notice-copy { max-width: 68ch; margin-inline: auto; font-size: 1.2rem; line-height: 1.75; }
+/* Single-column notices place their facts above the full-width reading area. */
+.notice-proclamation:not(.has-illustration) .notice-copy { max-width: none; }
 .notice-document--ankuendigung .notice-copy { max-width: none; }
 .notice-copy p { margin: 0 0 .9em; }
 .notice-copy > :last-child { margin-bottom: 0; }
