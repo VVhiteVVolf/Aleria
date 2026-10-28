@@ -20,6 +20,7 @@ export const WORLD_CONTENT_TASKS = [
     inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
       'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
     commands: [['Kontinente/scripts/review-albic-territories.mjs', '--check'],
+      ['Kontinente/scripts/build-administration-vassals.mjs', '--check'],
       ...territoryBuilders.map(name => ['Kontinente/scripts/build-' + name + '.mjs', '--check']),
       tests('Kontinente/tests')]
   },

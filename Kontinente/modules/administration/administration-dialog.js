@@ -19,6 +19,7 @@
   let lastTrigger;
   let activeAreaId;
   let activeScopeId;
+  let officeDialogReady;
 
   function normalize(value) {
     return String(value || "")
@@ -113,6 +114,7 @@
   }
 
   async function loadArea(area, scopeId) {
+    await officeDialogReady;
     const { renderStructuredAdministration } = await import(structuredUrl.href);
     const structured = await renderStructuredAdministration(scopeId, area.id);
     if (structured) return structured;
@@ -196,7 +198,7 @@
 
   function enhanceRenderedCards() {
     const scopeId = currentScopeId();
-    document.querySelectorAll("[data-administration-key]").forEach((element) => {
+    document.querySelectorAll(".administration-card[data-administration-key], .herrschaft-administration-card[data-administration-key]").forEach((element) => {
       const area = areaById.get(element.dataset.administrationKey)
         || areaByName.get(normalize(element.textContent));
       if (!area) return;
@@ -234,7 +236,7 @@
 
   function init() {
     dialog = createDialog();
-    import(new URL('./administration-office-dialog.mjs?v=20261028', moduleRoot).href)
+    officeDialogReady = import(new URL('./administration-office-dialog.mjs?v=20261028', moduleRoot).href)
       .then(({ mountOfficeDialog }) => mountOfficeDialog(dialog));
     enhanceRenderedCards();
     document.addEventListener("aleria:administration-rendered", enhanceRenderedCards);

@@ -14,7 +14,7 @@ const loaders = {
 
 export async function renderStructuredAdministration(scopeId, areaId) {
   if (scopeId !== 'grafschaft-celtigerns-wacht' || !loaders[areaId]) return null;
-  const [{ default: source }, { default: vassals }] = await Promise.all([
+  const [{ default: source }, { default: vassals, territorialContacts }] = await Promise.all([
     loaders[areaId](), import('./data/celtigerns-vassals.generated.mjs?v=20261028'),
   ]);
   const area = withVassals(source, vassals);
@@ -24,13 +24,19 @@ export async function renderStructuredAdministration(scopeId, areaId) {
   intro.append(element('span', 'administration-eyebrow', 'Ämter · Menschen · Verantwortung'), element('p', '', area.intro));
   const legend = element('div', 'administration-rank-legend');
   legend.setAttribute('aria-label', 'Rangabzeichen');
-  [['gold', 'Leitung'], ['silver', 'Adjutantur · Vasallen · Kernämter'], ['bronze', 'Sonderrollen · Dienste']].forEach(([tier, label]) => {
+  [['gold', area.id === 'militaer' ? 'Leitung · Marschälle' : 'Leitung'], ['silver', area.id === 'militaer' ? 'Adjutantur · Kriegswarte' : 'Adjutantur · Vasallen · Kernämter'], ['bronze', 'Sonderrollen · Dienste']].forEach(([tier, label]) => {
     const item = element('span', `is-${tier}`, label);
     legend.append(item);
   });
   intro.append(legend);
   view.append(intro);
   area.groups.forEach(group => view.append(renderRoleGroup(group, area)));
+  if (territorialContacts?.length) {
+    view.append(renderRoleGroup({ id: 'territorial-contacts', title: 'Territoriale Verbindungen', kind: 'service',
+      description: 'Ansprechstellen ohne ausgearbeiteten eigenen Fachrat. Eine territoriale Verbindung begründet kein zusätzliches Fachamt.',
+      roles: territorialContacts.map(contact => ({ ...contact, links: [{ label: 'Territoriale Zuständigkeit ansehen', href: contact.href }] })),
+    }, area));
+  }
   if (area.sources?.length) {
     const sources = element('details', 'administration-dialog-details');
     sources.append(element('summary', '', 'Quellen und weiterführende Artikel'));
