@@ -1,0 +1,1844 @@
+[
+  {
+    "area": "militaer",
+    "id": "egon-gafyr",
+    "title": "Marschall der Grafschaft",
+    "name": "Egon Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg",
+    "description": "Egon verantwortet die militärische Gesamtordnung Celtigerns Wacht. Er setzt die Vorgaben des Grafen um, bestimmt übergeordnete Einsatzschwerpunkte und führt Feld- und Seemarschall zusammen. Die eigenen Truppen und Befehlshaber der Vasallen bleiben örtlich organisiert und müssen ihm im Rahmen der Grafschaftsordnung Rechenschaft ablegen.",
+    "reportsTo": "Graf von Celtigerns Wacht",
+    "tier": "gold",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=egon-gafyr"
+      }
+    ],
+    "authority": "Oberste militärische Befehlsgewalt der Grafschaft im Auftrag des Grafen; zivile Rechtsprechung und Haushaltsbewilligung liegen bei den zuständigen Ämtern.",
+    "connections": [
+      {
+        "area": "finanzen",
+        "label": "Sold und Wehrbedarf",
+        "description": "Stimmt Mittel, Versorgung und Rüstungsvorhaben mit dem Kämmerer ab."
+      },
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Militärordnung und Recht",
+        "description": "Wahrt die Zuständigkeit der Grafschaftsjustiz bei Rechtsfragen und Beschwerden."
+      },
+      {
+        "area": "diplomatie",
+        "label": "Aufgebot und Bündnisdienst",
+        "description": "Koordiniert die Umsetzung zugesagter militärischer Verpflichtungen mit der Heroldskanzlei."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "maredudd-draig",
+    "title": "Feldmarschall",
+    "name": "Maredudd Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/maredudd-draig.jpg",
+    "description": "Führt die Landstreitkräfte, bereitet Aufstellungen und Feldzüge vor und verantwortet die Einsatzbereitschaft der Garnisonen. Die fünf Kriegswarte betreuen unter ihm Sicherheit, Logistik, Ausbildung, Aufklärung und Disziplin.",
+    "reportsTo": "Marschall der Grafschaft · Egon Gafyr",
+    "tier": "gold",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=maredudd-draig"
+      }
+    ],
+    "connections": [
+      {
+        "area": "spionage",
+        "label": "Feldlage",
+        "description": "Gleicht militärische Aufklärung mit den geprüften Lageberichten des Schattens ab."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "huw-saethwyr",
+    "title": "Seemarschall und Admiral",
+    "name": "Huw Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/huw-saethwyr.jpg",
+    "description": "Führt Flotte, Küsten- und Seewacht und stimmt Einsätze, Hafenordnung und die Sicherheit der Seewege ab. Rhonwen leitet als Vizeadmiralin die operative Abstimmung; Niniane führt seine persönliche Adjutantur. Seine eigene Schiffsmannschaft erhält ein gesondertes Mannschaftsbanner.",
+    "reportsTo": "Marschall der Grafschaft · Egon Gafyr",
+    "tier": "gold",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-saethwyr&mode=view&person=huw-saethwyr"
+      }
+    ],
+    "crew": {
+      "label": "Schiffsmannschaft des Seemarschalls · vorbereitet"
+    },
+    "connections": [
+      {
+        "area": "finanzen",
+        "label": "Häfen und Versorgung",
+        "description": "Stimmt Werftbedarf, Proviant, Heuer und Hafenabgaben mit der Kämmerei ab."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "rhys-draig",
+    "title": "Adjutant des Feldmarschalls",
+    "name": "Rhys Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/rhys-draig.jpg",
+    "description": "Unterstützt Maredudd in der Tagesführung, bereitet Befehlsausgaben vor und verfolgt Rückmeldungen von Kriegswarten und Truppenführern. Er hält den Befehlslauf zusammen, ohne ein sechstes Kriegswartamt zu bilden.",
+    "reportsTo": "Feldmarschall · Maredudd Draig",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=rhys-draig"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "anaraut-draig",
+    "title": "Adjutant des Marschalls",
+    "name": "Anaraut Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/anaraut-draig.jpg",
+    "description": "Führt Egons persönliche militärische Korrespondenz, koordiniert Termine und hält gemeinsame Aufträge von Heer und Flotte nach. Vertretungsbefugnisse entstehen nur aus einem konkreten Auftrag des Marschalls.",
+    "reportsTo": "Marschall der Grafschaft · Egon Gafyr",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=anaraut-draig"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "niniane-chwedlonol",
+    "title": "Adjutantin des Seemarschalls",
+    "name": "Niniane Chwedlonol",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/niniane-chwedlonol.jpg",
+    "description": "Hält Huws persönliche Befehle, Termine und Rückmeldungen zusammen und vermittelt zwischen Admiral, Vizeadmiralin und Flottenführung. Ihre Adjutantur ersetzt Rhonwens operatives Flottenkommando nicht. Auch Niniane erhält eine eigene, gesondert vorbereitete Schiffsmannschaft.",
+    "reportsTo": "Seemarschall und Admiral · Huw Saethwyr",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=niniane-chwedlonol"
+      }
+    ],
+    "crew": {
+      "label": "Ninianes Schiffsmannschaft · vorbereitet"
+    }
+  },
+  {
+    "area": "militaer",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Marschall des Barons",
+    "name": "Gwynnan Gwyvern",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/gwynnan-gwywern.jpg",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "gold",
+    "reportsTo": "Marschall der Grafschaft",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "vassal-arthus-streben",
+    "title": "Marschall des Barons",
+    "name": "Thomos Gwefrydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyvern/thomos-gwefrydd.jpg",
+    "description": "Führt den Bereich in Baronie Arthus Streben. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Arthus Streben",
+    "tier": "gold",
+    "reportsTo": "Marschall der Grafschaft",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Arthus Streben · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Arthus Streben/Baronie Arthus Streben.html"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "vassal-gafyr",
+    "title": "Marschall des Ritterfürsten",
+    "name": "Rheinallt Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg",
+    "description": "Führt den Bereich in Herrschaft der Gafyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Gafyr",
+    "tier": "gold",
+    "reportsTo": "Marschall der Grafschaft",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Gafyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "vassal-saethwyr",
+    "title": "Marschall des Ritterfürsten",
+    "name": "Marmaduke Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/marmaduke-saethwyr.jpg",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "gold",
+    "reportsTo": "Marschall der Grafschaft",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "vassal-wyrm",
+    "title": "Marschall des Ritterfürsten",
+    "name": "Eiddon Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/eiddon-wyrm.jpg",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "gold",
+    "reportsTo": "Marschall der Grafschaft",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "vassal-rhonwens-traenen",
+    "title": "Marschall des Ritterfürsten",
+    "name": "Ianto Arwydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/ianto-arwydd.jpg",
+    "description": "Führt den Bereich in Herrschaft Rhonwens Tränen. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft Rhonwens Tränen",
+    "tier": "gold",
+    "reportsTo": "Marschall der Grafschaft",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft Rhonwens Tränen · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "gwaeron-awenor",
+    "title": "Kriegswart der Sicherheit",
+    "name": "Gwaeron Awenor",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/gwaeron-awenor.jpg",
+    "description": "Verantwortet Wachordnung, Burgen, Stadttore und Grenzposten. Er prüft Schutzpläne und Dienstbereitschaft und stimmt Vorgaben mit den örtlichen Kommandanten ab. Wach- und Sicherungsaufträge werden über deren Befehlskette umgesetzt.",
+    "reportsTo": "Feldmarschall · Maredudd Draig",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-awenor&mode=view&person=gwaeron-awenor"
+      }
+    ],
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Wache und Recht",
+        "description": "Stimmt rechtmäßige Sicherungen und die Übergabe festgehaltener Personen mit der Justiz ab."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "ffraid-awenor",
+    "title": "Kriegswartin der Logistik",
+    "name": "Ffraid Awenor",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/ffraid-awenor.jpg",
+    "description": "Bündelt Proviant, Fuhrwesen, Lager und Material. Zeug-, Quartier- und Proviantmeister melden Bestände und Bedarf an sie. Sie plant die Versorgung, während die Kämmerei die bewilligten Mittel und Rechnungen verantwortet.",
+    "reportsTo": "Feldmarschall · Maredudd Draig",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-awenor&mode=view&person=ffraid-awenor"
+      }
+    ],
+    "connections": [
+      {
+        "area": "finanzen",
+        "label": "Wehrhaushalt",
+        "description": "Legt Bedarf, Ausgabenbelege und Bestandsnachweise zur gemeinsamen Abrechnung vor."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "duncan-gafyr",
+    "title": "Kriegswart der Ausbildung",
+    "name": "Duncan Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg",
+    "description": "Führt die Fachaufsicht über Schulen, Übungen und militärische Ausbildung. Er stimmt Ausbildungsziele mit den Kommandanten ab und lässt Lehrhauptleute und Instruktoren die Befähigung der Truppen prüfen.",
+    "reportsTo": "Feldmarschall · Maredudd Draig",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=duncan-gafyr"
+      }
+    ],
+    "connections": [
+      {
+        "area": "magie",
+        "label": "Abgestimmte Ausbildung",
+        "description": "Organisiert die notwendige Zusammenarbeit zwischen bewaffneten Kräften und den zuständigen Magiediensten."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "derfel-awenydd",
+    "title": "Kriegswart der Disziplin",
+    "name": "Derfel Awenydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/derfel-awenydd.jpg",
+    "description": "Beaufsichtigt militärische Dienstordnung, Inspektionen und geordneten Vollzug. Er dokumentiert Verstöße und sorgt für nachvollziehbare Verfahren. Heeresschöffen beraten in Rechtsfragen; rechtliche Zuständigkeiten der Grafschaftsjustiz bleiben erhalten.",
+    "reportsTo": "Feldmarschall · Maredudd Draig",
+    "tier": "silver",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-awenydd&mode=view&person=derfel-awenydd"
+      }
+    ],
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Verfahren und Rechtsaufsicht",
+        "description": "Übergibt Beschwerden und zuständige Verfahren an die Justiz und dokumentiert militärische Entscheidungen."
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "ferydnand-gafyr",
+    "title": "Kommandant der Cochllamwyr und von Gwynthor",
+    "name": "Ferydnand Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/ferydnand-gafyr.jpg",
+    "description": "Ferydnand führt die Cochllamwyr und das Kommando von Gwynthor. Er setzt Einsatz- und Wachvorgaben praktisch um, verteilt Kräfte und verantwortet die Bereitschaft seines Verbands. Unmittelbar unter ihm stehen zwei Stellvertreter und danach die vier Hauptmänner der Cochllamwyr.",
+    "reportsTo": "Feldmarschall · Maredudd Draig",
+    "tier": "bronze",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=ferydnand-gafyr"
+      }
+    ],
+    "authority": "Operatives Kommando im zugewiesenen Verband und Standort; fachliche Vorgaben der Kriegswarte bleiben verbindlich."
+  },
+  {
+    "area": "militaer",
+    "id": "rhonwen-chwedlonol",
+    "title": "Vizeadmiralin",
+    "name": "Rhonwen Chwedlonol",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/rhonwen-chwedlonol.jpg",
+    "description": "Rhonwen führt die operative Abstimmung der Flotte, koordiniert Geschwader und überwacht die Umsetzung von Huws Einsatzvorgaben. Ihr überlieferter Rang ist Vizeadmiralin. Die persönliche Adjutantur Ninianes und die Befehlsverantwortung Rhonwens sind getrennte Aufgaben.",
+    "reportsTo": "Seemarschall und Admiral · Huw Saethwyr",
+    "tier": "bronze",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=rhonwen-chwedlonol"
+      }
+    ]
+  },
+  {
+    "area": "militaer",
+    "id": "meredithe-1677-chwedlonol",
+    "title": "Kapitänin zur See",
+    "name": "Meredithe Chwedlonol",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/meredithe-1677-chwedlonol.jpg",
+    "description": "Führt das ihr zugeteilte Schiff, verantwortet dessen Seetüchtigkeit, Bordordnung und Gefechtsführung und leitet ihre Bordoffiziere. Ein Schiffsname und eine bestimmte Flottillenzuordnung sind hier noch nicht überliefert.",
+    "reportsTo": "Zuständiges See- oder Flottillenkommando · übergeordnet Huw Saethwyr",
+    "tier": "bronze",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=meredithe-1677-chwedlonol"
+      }
+    ],
+    "crew": {
+      "label": "Meredithes Schiffsmannschaft · vorbereitet"
+    }
+  },
+  {
+    "area": "militaer",
+    "id": "idwal-draig",
+    "title": "Kapitän der Tiefenwyrm",
+    "name": "Idwal Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg",
+    "description": "Idwal führt die schwere Kriegskogge Tiefenwyrm mit ihrer bestehenden Besatzung von fünfzig Mitgliedern. Vom Hafen Gwynthors aus dient sie dem Küstenschutz, der Piratenbekämpfung und dem Geleitschutz. Das Mannschaftswappen öffnet das bereits vorhandene Almanach-Modul.",
+    "reportsTo": "Zuständiges See- oder Flottillenkommando · übergeordnet Huw Saethwyr",
+    "tier": "bronze",
+    "links": [
+      {
+        "label": "Idwals Schiffsmannschaft im Almanach",
+        "href": "/AleriaAlmanach/AleriaAlmanach.html?entry=idwals-schiffsmannschaft"
+      },
+      {
+        "label": "Idwal in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=idwal-draig"
+      }
+    ],
+    "crew": {
+      "label": "Mannschaft der Tiefenwyrm",
+      "href": "/AleriaAlmanach/AleriaAlmanach.html?entry=idwals-schiffsmannschaft",
+      "image": "/Kontinente/modules/administration/assets/tiefenwyrm-mannschaft.png"
+    },
+    "connections": [
+      {
+        "area": "spionage",
+        "label": "Meldungen von See",
+        "description": "Gibt Beobachtungen über Piraterie, fremde Schiffe und gefährdete Küstenwege an die Flottenführung weiter."
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "klerus-patriarch",
+    "title": "Patriarch von Celtigerns Wacht",
+    "name": "Gwalchgwyn Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg",
+    "description": "Oberster Geistlicher Celtigerns Wacht und der Gemeinde Gwynthors. Er verantwortet Seelsorge, kirchliche Ordnung und den persönlichen Stab der Kathedrale. Seine neun hohen Prälaten beraten und unterstützen ihn. Der nächste Patriarch geht nach seinem Tod aus ihrem Kreis hervor; ein nicht überliefertes Wahlverfahren wird hier nicht festgelegt.",
+    "reportsTo": "Erzpatriarch Yvain Neidr · cenyrische Landeskirche",
+    "authority": "Geistliche Leitung der Grafschaft; weltliche Urteile bleiben Sache der zuständigen Gerichtsbarkeit.",
+    "links": [
+      {
+        "label": "Große Kathedrale der Neun",
+        "href": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-kathedrale-der-neun",
+        "image": "/AleriaAlmanach/assets/gwynthor-cathedral/scenes/kathedrale.png"
+      },
+      {
+        "label": "Berufungen und Rangordnungen des Klerus",
+        "href": "/Religionen/klerus/index.html"
+      }
+    ],
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Buße und weltliches Recht",
+        "description": "Geistliche Begleitung und vereinbarte Buße ergänzen die weltliche Rechtsprechung; der Patriarch übernimmt nicht das Amt des Justiziars."
+      },
+      {
+        "area": "finanzen",
+        "label": "Fürsorge und kirchlicher Haushalt",
+        "description": "Almosen, Versorgung und zugesagte Hilfe werden mit den zuständigen Haushalten abgestimmt."
+      },
+      {
+        "area": "diplomatie",
+        "label": "Gelübde und Vermittlung",
+        "description": "Geistlicher Beistand begleitet Eide, höfische Gespräche und verbindliche Zusagen."
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "klerus-peredur",
+    "title": "Hoher Prälat · Priester des Vaters",
+    "name": "Peredur Eneiniog",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-eneiniog/peredur-eneiniog.jpg",
+    "description": "Einer der neun hohen Prälaten Gwalchgwyns und Priester Ordans. Ruhige Güte und maßvolle Autorität prägen seinen Dienst. Sein Prälatenamt ist nicht an einen eigenen Ort gebunden; ein besonderes Ressort ist bisher nicht festgelegt.",
+    "reportsTo": "Patriarch von Celtigerns Wacht",
+    "links": [
+      {
+        "label": "Große Kathedrale der Neun",
+        "href": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-kathedrale-der-neun",
+        "image": "/AleriaAlmanach/assets/gwynthor-cathedral/scenes/kathedrale.png"
+      },
+      {
+        "label": "Ordans Klerus",
+        "href": "/Religionen/klerus/gottheiten/ordan/index.html"
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Vikar des Barons",
+    "name": "Gwenydd Anghof",
+    "portrait": "https://i.imgur.com/yEiU1My.png",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Patriarch von Celtigerns Wacht",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "vassal-gafyr",
+    "title": "Vikarin des Ritterfürsten",
+    "name": "Eleri Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/eleri-marwolaeth.jpg",
+    "description": "Führt den Bereich in Herrschaft der Gafyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Gafyr",
+    "tier": "silver",
+    "reportsTo": "Patriarch von Celtigerns Wacht",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Gafyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html"
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "vassal-saethwyr",
+    "title": "Vikarin des Ritterfürsten",
+    "name": "Jenniffer Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/jenniffer-marwolaeth.jpg",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Patriarch von Celtigerns Wacht",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "vassal-wyrm",
+    "title": "Vikar des Ritterfürsten",
+    "name": "Torri",
+    "portrait": "https://i.imgur.com/Vn4wYAD.png",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "silver",
+    "reportsTo": "Patriarch von Celtigerns Wacht",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "klerus-angharad",
+    "title": "Paladin im persönlichen Stab des Patriarchen",
+    "name": "Angharad Eneiniog",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-eneiniog/angharad-eneiniog.jpg",
+    "description": "Eine von sechs Paladinen des persönlichen Stabes Gwalchgwyns. Ein Hochpaladin führt diesen Stab; Glaubensritter, Schwurknechte, Knappen und Pagen ergänzen ihn. Zwei Militärkapläne begleiten ihn geistlich. Die vollständige örtliche Gliederung steht im Kathedralenmodul.",
+    "reportsTo": "Hochpaladin des Patriarchen · unter Gwalchgwyn Saethwyr",
+    "links": [
+      {
+        "label": "Große Kathedrale der Neun",
+        "href": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-kathedrale-der-neun",
+        "image": "/AleriaAlmanach/assets/gwynthor-cathedral/scenes/kathedrale.png"
+      },
+      {
+        "label": "Berufungen und Rangordnungen des Klerus",
+        "href": "/Religionen/klerus/index.html"
+      }
+    ],
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Schutz und Geleit",
+        "description": "Kirchliche Wachen und weltliche Kräfte stimmen Geleit, Reisen und den Schutz gemeinsamer Wege ab. Ihre jeweiligen Befehlsketten bleiben nachvollziehbar."
+      }
+    ]
+  },
+  {
+    "area": "klerus",
+    "id": "klerus-arianwen",
+    "title": "Bußgängerin unter persönlicher geistlicher Leitung",
+    "name": "Arianwen Bradrhith",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-bradrhith/arianwen-bradrhith.png",
+    "description": "Arianwen befindet sich in laufender Buße unter Gwalchgwyns persönlicher Führung. Bußgänger leisten den individuell vereinbarten Dienst unter Eid und Schweigegelübde. Nach anerkannter Vollendung endet diese Verpflichtung: Geläuterte dürfen als freie Menschen in die Gesellschaft zurückkehren. Eine Bußdauer oder ein lebenslanger Dienst wird nicht ergänzt.",
+    "reportsTo": "Gwalchgwyn Saethwyr · persönlicher Bußvater",
+    "links": [
+      {
+        "label": "Große Kathedrale der Neun",
+        "href": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-kathedrale-der-neun",
+        "image": "/AleriaAlmanach/assets/gwynthor-cathedral/scenes/kathedrale.png"
+      },
+      {
+        "label": "Berufungen und Rangordnungen des Klerus",
+        "href": "/Religionen/klerus/index.html"
+      }
+    ],
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Urteil und Wiedereingliederung",
+        "description": "Anlass, Bedingungen und Abschluss einer Buße werden verantwortet, ohne frühere Urteile umzudeuten oder eine zusätzliche Bestrafung zu erfinden."
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "justiziar",
+    "title": "Justiziar des Grafen",
+    "name": "Meurig Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg",
+    "description": "Wacht über die Gerichte, bestätigt oder beanstandet Urteile im Rahmen der gräflichen Vollmacht und entscheidet über Zuständigkeitskonflikte zwischen Herrschaften.",
+    "reportsTo": "Graf von Celtigerns Wacht",
+    "authority": "Oberste Rechtsaufsicht der Grafschaft. Übergeordnete königliche Zuständigkeiten bleiben erhalten."
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "adjutant",
+    "title": "Adjutant des Justiziars",
+    "name": "Neithon Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/neithon-1718-draig.jpg",
+    "description": "Führt Termine, Ladungen, Siegel und Eingangsbücher. Sorgt für die Zustellung von Entscheidungen und die Weiterleitung von Berufungen.",
+    "reportsTo": "Justiziar des Grafen"
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Justiziar des Barons",
+    "name": "Lleward Cenfig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-edmy/lleward-cenfig.png",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Justiziar des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "vassal-gafyr",
+    "title": "Justiziar des Ritterfürsten",
+    "name": "Hywell Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/hywell-gafyr.jpg",
+    "description": "Führt den Bereich in Herrschaft der Gafyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Gafyr",
+    "tier": "silver",
+    "reportsTo": "Justiziar des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Gafyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html"
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "vassal-saethwyr",
+    "title": "Justiziarin des Ritterfürsten",
+    "name": "Morwenna Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/morwenna-gwyvern.jpg",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Justiziar des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "vassal-wyrm",
+    "title": "Justiziar des Ritterfürsten",
+    "name": "Derwen Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/derwen-wyrm.jpg",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "silver",
+    "reportsTo": "Justiziar des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "vassal-rhonwens-traenen",
+    "title": "Justiziarin des Ritterfürsten",
+    "name": "Deliah Mwyalchen",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/deliah-mwyalchen.jpg",
+    "description": "Führt den Bereich in Herrschaft Rhonwens Tränen. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft Rhonwens Tränen",
+    "tier": "silver",
+    "reportsTo": "Justiziar des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft Rhonwens Tränen · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html"
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "gerichte",
+    "title": "Rechtsvorsteherin der Gerichte",
+    "name": "Ceridwen Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/ceridwen-draig.jpg",
+    "description": "Beaufsichtigt Burg-, Stadt-, Markt- und Dorfgerichte. Prüft Verfahrensfehler, Schöffenbestellung und Berufungswege.",
+    "reportsTo": "Justiziar des Grafen",
+    "authority": "Fachaufsicht über Verfahren; örtliche Justiziare behalten ihre eigene gerichtliche Zuständigkeit."
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "akten",
+    "title": "Rechtsvorsteher der Akten",
+    "name": "Kimball Balchder",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-balchder/kimball-balchder.jpg",
+    "description": "Sichert Urkunden, Zeugenaussagen, Beweismittel und Abschriften. Dokumentiert Herkunft, Übergaben und Zugang zu den Akten.",
+    "reportsTo": "Justiziar des Grafen",
+    "connections": [
+      {
+        "area": "spionage",
+        "label": "Ermittlungsakten",
+        "description": "Übernimmt belegte Ermittlungsergebnisse; Ermittler sprechen keine Urteile."
+      }
+    ]
+  },
+  {
+    "area": "gerichtsbarkeit",
+    "id": "ausruf",
+    "title": "Öffentliche Gerichtsverkündung",
+    "name": "Godwyn Sgrechiwr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/godwyn-sgrechiwr.jpg",
+    "description": "Als Schreier des Offenen Gerichts verkündet Godwyn freigegebene Ladungen, Gerichtstermine und Entscheidungen. Sein Sonderamt ist bei der Hofunterhaltung geführt.",
+    "reportsTo": "Gerichtskanzlei für den jeweiligen Ausruf",
+    "authority": "Verkündet, ohne selbst Recht zu sprechen.",
+    "connections": [
+      {
+        "area": "unterhaltung",
+        "label": "Schreier des Offenen Gerichts",
+        "description": "Gemeinsames Sonderamt zwischen Gerichtskanzlei und Hoföffentlichkeit."
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "kaemmerer",
+    "title": "Kämmerer des Grafen",
+    "name": "Odyar Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg",
+    "description": "Verantwortet Haushalt, Schatz und Abgabenordnung. Bewilligt Ausgaben innerhalb gräflicher Vollmacht und fordert die Jahresrechnungen der Vasallen an.",
+    "reportsTo": "Graf von Celtigerns Wacht",
+    "authority": "Haushalts- und Rechnungsaufsicht; neue Abgaben und außergewöhnliche Verpflichtungen bedürfen der gräflichen Entscheidung."
+  },
+  {
+    "area": "finanzen",
+    "id": "adjutant",
+    "title": "Adjutant des Kämmerers",
+    "name": "Tudwal Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/tudwal-draig.jpg",
+    "description": "Führt die Tagesgeschäfte, Termine, Laufstellen und Amtssiegel; leitet Aufträge an die zuständigen Kammerämter.",
+    "reportsTo": "Kämmerer des Grafen"
+  },
+  {
+    "area": "finanzen",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Kämmerer des Barons",
+    "name": "Olwen Gwyvern",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/olwen-wyrm.jpg",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Kämmerer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "vassal-gafyr",
+    "title": "Kämmerer des Ritterfürsten",
+    "name": "Kelyddon Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/kelyddon-gafyr.jpg",
+    "description": "Führt den Bereich in Herrschaft der Gafyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Gafyr",
+    "tier": "silver",
+    "reportsTo": "Kämmerer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Gafyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html"
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "vassal-saethwyr",
+    "title": "Kämmererin des Ritterfürsten",
+    "name": "Imogen Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/imogen-arwydd.jpg",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Kämmerer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "vassal-wyrm",
+    "title": "Kämmererin des Ritterfürsten",
+    "name": "Sorcha Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/sorcha-cein.jpg",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "silver",
+    "reportsTo": "Kämmerer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "kasse",
+    "title": "Kammerherrin der Kasse",
+    "name": "Wynonna Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg",
+    "description": "Verwahrt den Schatz, veranlasst bewilligte Zahlungen und führt Quittungs- und Lohnlisten.",
+    "reportsTo": "Kämmerer des Grafen",
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Sold und Versorgung",
+        "description": "Zahlt bestätigte Soldlisten aus; militärische Einsatzbefehle bleiben beim Marschall."
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "abgaben",
+    "title": "Kammerherrin der Abgaben",
+    "name": "Beibhinn Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/beibhinn-eirce.jpg",
+    "description": "Beaufsichtigt Pacht, Zölle, Zehnt und Rückstände. Erfasst die Abgaben der Vasallen und prüft geltende Befreiungen.",
+    "reportsTo": "Kämmerer des Grafen",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Strittige Abgaben",
+        "description": "Gibt Rechtsstreit und angefochtene Pfändungen an die Justiz."
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "rechnung",
+    "title": "Kammerherr der Rechnung",
+    "name": "Avan Balchder",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-rhyddid/avan-balchder.jpg",
+    "description": "Prüft Bücher, Register und Jahresrechnungen. Kontrolliert Auszahlungen unabhängig von der Kasse und dokumentiert Beanstandungen.",
+    "reportsTo": "Kämmerer des Grafen",
+    "connections": [
+      {
+        "area": "spionage",
+        "label": "Unterschlagung",
+        "description": "Übergibt konkrete Verdachtsbelege zur Ermittlung; entscheidet nicht selbst über Schuld."
+      }
+    ]
+  },
+  {
+    "area": "finanzen",
+    "id": "kane",
+    "title": "Kassenritter · Beauftragter für gesicherte Zahlungen",
+    "name": "Kane Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/kane-draig.jpg",
+    "description": "Begleitet wichtige Auszahlungen, versiegelte Geldsendungen und wertvolle Lieferungen. Bestätigt Übergaben und meldet Unregelmäßigkeiten unmittelbar an Odyar.",
+    "reportsTo": "Kämmerer des Grafen",
+    "authority": "Auftragsgebundener Schutz und Übergabekontrolle; keine eigene Steuer-, Prüfungs- oder Haushaltsgewalt.",
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Geleit der Wacht",
+        "description": "Fordert abgestimmten Begleitschutz an; führt keine unabhängige Truppe."
+      },
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Übergabebelege",
+        "description": "Sichert Quittungen und meldet beschlagnahmte Gelder ordnungsgemäß."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "rhovan-gwyllach",
+    "title": "Schatten des Grafen",
+    "name": "Rhovan Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/rhovan-gwyllach.jpg",
+    "description": "Rhovan (*1659, 81 Jahre) ist das amtierende Oberhaupt der Gwyllach. Er bestimmt die Schwerpunkte des Nachrichtennetzes, schützt seine Quellen und legt dem Grafen die Lage dar. Er trennt unbestätigte Gerüchte von belastbaren Erkenntnissen und entscheidet, welcher Fachbereich einen Auftrag übernimmt.",
+    "reportsTo": "Graf von Celtigerns Wacht",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=rhovan-gwyllach"
+      }
+    ],
+    "authority": "Leitet das Nachrichtennetz der Grafschaft. Er erteilt keine Gerichtsurteile und hebt weder die Befugnisse des Justiziars noch die Befehlskette der Marschälle auf.",
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Gefahrenlage",
+        "description": "Gibt Warnungen über feindliche Bewegungen und gefährdete Wege an die Marschälle weiter."
+      },
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Belastbare Erkenntnisse",
+        "description": "Übergibt prüfbare Hinweise an die Justiz; die rechtliche Entscheidung bleibt beim Justiziar."
+      },
+      {
+        "area": "diplomatie",
+        "label": "Vertrauliche Lageberichte",
+        "description": "Stimmt die Bewertung auswärtiger Nachrichten mit der Heroldskanzlei ab."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "meirion-gwyllach",
+    "title": "Adjutant des Schattens",
+    "name": "Meirion Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/meirion-gwyllach.jpg",
+    "description": "Meirion (*1710, 30 Jahre), Sohn Drystans und zweiter vorgesehener Erbe des Hauses, führt Auftragslisten, bereitet Lagebesprechungen vor und hält die Verbindung zwischen Rhovan, den fünf Netzmeistern und den örtlichen Zellen. Er verfolgt Fristen und Rückmeldungen, ohne die fachliche Verantwortung der Netzmeister zu übernehmen.",
+    "reportsTo": "Schatten des Grafen · Rhovan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirion-gwyllach"
+      }
+    ],
+    "authority": "Koordiniert im Auftrag Rhovans. Eine Vertretung der Leitung erfordert dessen ausdrücklichen Auftrag."
+  },
+  {
+    "area": "spionage",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Schatten des Barons",
+    "name": "Gronw Cysgodion",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-cysgodion/gronw-cysgodion.png",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Schatten des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "vassal-saethwyr",
+    "title": "Schatten des Ritterfürsten",
+    "name": "Arawn",
+    "portrait": "https://i.imgur.com/7yB9PR6.png",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Schatten des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "vassal-wyrm",
+    "title": "Schatten des Ritterfürsten",
+    "name": "Tegyr",
+    "portrait": "https://i.imgur.com/MsmQR0F.png",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "silver",
+    "reportsTo": "Schatten des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "efael-gwyllach",
+    "title": "Netzmeister der Aufklärung",
+    "name": "Efael Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/efael-gwyllach.jpg",
+    "description": "Efael (*1692, 48 Jahre), Sohn Rhydderchs, behält die Aufklärung. Er plant Beobachtungen, prüft die Verlässlichkeit von Quellen und führt Meldungen über Fremde, Truppenbewegungen und drohende Gefahren zusammen. Seine Kundschafter beschaffen Erkenntnisse; sie eröffnen keine eigenmächtigen Feldzüge.",
+    "reportsTo": "Schatten des Grafen · Rhovan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=efael-gwyllach"
+      }
+    ],
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Kundschaft und Warnung",
+        "description": "Liefert den Kriegswarten und örtlichen Befehlshabern geprüfte Lagehinweise."
+      },
+      {
+        "area": "magie",
+        "label": "Ungewöhnliche Spuren",
+        "description": "Zieht die zuständigen Magier hinzu, wenn Beobachtungen einer arkanen Prüfung bedürfen."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "talaneth-gwyllach",
+    "title": "Netzmeisterin der Gegenspionage",
+    "name": "Talaneth Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/talaneth-gwyllach.jpg",
+    "description": "Talaneth (*1681, 59 Jahre), gebürtige Gwyllach und Tochter Rhydderchs, überwacht den Schutz des eigenen Nachrichtennetzes. Sie prüft verdächtige Kontaktketten, erkennt mögliche Täuschungen und begrenzt den Zugang zu vertraulichen Informationen auf die jeweils Zuständigen.",
+    "reportsTo": "Schatten des Grafen · Rhovan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=talaneth-gwyllach"
+      }
+    ],
+    "authority": "Prüft die Sicherheit von Quellen und Meldungen. Verdachtsfälle gegen Personen werden der zuständigen Justiz vorgelegt.",
+    "connections": [
+      {
+        "area": "diplomatie",
+        "label": "Sichere Verbindungen",
+        "description": "Berät die Herolde zum Schutz vertraulicher Nachrichten und zur Prüfung fragwürdiger Kontakte."
+      },
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Verdachtsprüfung",
+        "description": "Gibt belastbare Verdachtsmomente weiter, ohne selbst über Schuld zu entscheiden."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "meredydd-gwyllach",
+    "title": "Netzmeister der Fahndung",
+    "name": "Meredydd Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/meredydd-gwyllach.jpg",
+    "description": "Meredydd (*1683, 57 Jahre), Sohn Rhydderchs, behält die Fahndung. Er führt Personenbeschreibungen, vermisste Personen und angeordnete Suchaufträge zusammen. Seine Leute verfolgen Spuren und Aufenthaltsorte; Festnahmen erfolgen nur im Rahmen der zuständigen Vollzugsgewalt.",
+    "reportsTo": "Schatten des Grafen · Rhovan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meredydd-gwyllach"
+      }
+    ],
+    "authority": "Verantwortet Suche und Ermittlung. Haftbefehle, Vernehmungsanordnungen und Urteile bleiben Sache der Justiz.",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Fahndungsaufträge",
+        "description": "Übernimmt rechtmäßig angeordnete Suchaufträge und übergibt Ergebnisse an die Gerichte."
+      },
+      {
+        "area": "finanzen",
+        "label": "Abgabenbetrug und Schmuggel",
+        "description": "Prüft Hinweise der Kämmerei gemeinsam mit den zuständigen Zoll- und Justizstellen."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "anelen-gwyllach",
+    "title": "Netzmeisterin der Wege und Nachrichten",
+    "name": "Anelen Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/anelen-gwyllach.jpg",
+    "description": "Anelen (*1687, 53 Jahre), gebürtige Gwyllach und Tochter Rhovans, hält Kurierwege, Übergabepunkte und örtliche Kontakte zusammen. Sie legt fest, wie dringende Meldungen den Hof erreichen, und hält für unterbrochene Verbindungen sichere Ausweichwege bereit.",
+    "reportsTo": "Schatten des Grafen · Rhovan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=anelen-gwyllach"
+      }
+    ],
+    "connections": [
+      {
+        "area": "diplomatie",
+        "label": "Botenwege",
+        "description": "Stimmt vertrauliche Zustellungen mit der Heroldskanzlei ab."
+      },
+      {
+        "area": "finanzen",
+        "label": "Handels- und Zollwege",
+        "description": "Gleicht Gefahrenmeldungen mit Zollstellen und der Kämmerei ab."
+      },
+      {
+        "area": "militaer",
+        "label": "Warnketten",
+        "description": "Sichert die rasche Weitergabe bestätigter Warnungen an Garnisonen und Flotte."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "drystan-gwyllach",
+    "title": "Netzmeister der Beweise",
+    "name": "Drystan Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/drystan-gwyllach.jpg",
+    "description": "Drystan (*1685, 55 Jahre), Sohn Rhovans und vorgesehener Erbe des Hauses, behält die Beweisführung. Er bewahrt Originalmeldungen, vermerkt Herkunft und Übergaben und trennt Beobachtung, Aussage und Schlussfolgerung. So bleibt erkennbar, welche Erkenntnisse vor Gericht einer Prüfung standhalten können.",
+    "reportsTo": "Schatten des Grafen · Rhovan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=drystan-gwyllach"
+      }
+    ],
+    "authority": "Verantwortet Sicherung und Nachvollziehbarkeit der Unterlagen. Über ihre rechtliche Verwertbarkeit entscheiden die Gerichte.",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Beweiskette",
+        "description": "Übergibt Belege mit dokumentierter Herkunft an die zuständige Gerichtsstelle."
+      },
+      {
+        "area": "magie",
+        "label": "Fachprüfung",
+        "description": "Lässt ungewöhnliche oder möglicherweise veränderte Spuren durch zuständige Fachkundige prüfen."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "talyfer-gwyllach",
+    "title": "Zellenführer für Burg und Hof",
+    "name": "Talyfer Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/talyfer-gwyllach.jpg",
+    "description": "Talyfer (*1708, 32 Jahre), Sohn Meredydds, koordiniert die Meldestelle im Umfeld von Burg und Hof. Er hält Kontakte zu Bediensteten und Lieferanten, erfasst ungewöhnliche Vorgänge und leitet Hinweise an den passenden Fachbereich weiter.",
+    "reportsTo": "Adjutantur des Schattens · fachlich dem zuständigen Netzmeister",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=talyfer-gwyllach"
+      }
+    ],
+    "connections": [
+      {
+        "area": "unterhaltung",
+        "label": "Hofveranstaltungen",
+        "description": "Stimmt Hinweise auf Gefahren bei Festen und öffentlichen Auftritten mit deren Verantwortlichen ab."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "saerwyn-gwyllach",
+    "title": "Zellenführerin für Stadt und Markt",
+    "name": "Saerwyn Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/saerwyn-gwyllach.jpg",
+    "description": "Saerwyn (*1710, 30 Jahre), Tochter Meredydds, bündelt Meldungen aus Gwynthors Straßen, Märkten und Herbergen. Sie hält den Kontakt zu Fuhrleuten und Reisenden und unterscheidet alltägliches Marktgerede von Hinweisen, die eine weitere Prüfung rechtfertigen.",
+    "reportsTo": "Adjutantur des Schattens · fachlich dem zuständigen Netzmeister",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=saerwyn-gwyllach"
+      }
+    ],
+    "connections": [
+      {
+        "area": "finanzen",
+        "label": "Märkte und Handel",
+        "description": "Gibt Hinweise auf Schmuggel oder falsche Abgabenbelege an Fahndung und Kämmerei weiter."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "olyndor-gwyllach",
+    "title": "Zellenführer für Grenzorte und Fernwege",
+    "name": "Olyndor Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/olyndor-gwyllach.jpg",
+    "description": "Olyndor (*1713, 27 Jahre), Sohn Drystans, hält die Meldestellen entlang der Fernwege und an den Grenzorten zusammen. Er sammelt Berichte über gesperrte Wege, verdächtige Durchreisen und ausgebliebene Kuriere und meldet dringende Gefahren entlang der vereinbarten Warnkette.",
+    "reportsTo": "Adjutantur des Schattens · fachlich dem zuständigen Netzmeister",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=olyndor-gwyllach"
+      }
+    ],
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Grenzmeldungen",
+        "description": "Leitet bestätigte Gefahren an die örtlichen Befehlshaber weiter; deren militärische Befehlsgewalt bleibt bestehen."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "rhufaed-gwyllach",
+    "title": "Nachtgreif · gesicherte Zugriffe",
+    "name": "Rhufaed Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/rhufaed-gwyllach.jpg",
+    "description": "Rhufaed (*1715, 25 Jahre), Sohn Drystans, gehört zu den Nachtgreifen. Dieser Sonderdienst begleitet ausdrücklich angeordnete Sicherungen, schützt die Übergabe empfindlicher Belege und unterstützt den zuständigen Vollzug bei vorbereiteten Zugriffen. Er ist kein eigener Polizeibefehl und keine Ermächtigung zu heimlichen Verhaftungen.",
+    "reportsTo": "Netzmeister der Fahndung · Meredydd Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=rhufaed-gwyllach"
+      }
+    ],
+    "authority": "Handelt nur mit klar benanntem Auftrag und in Abstimmung mit der zuständigen Justiz- oder Wachstelle.",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Geordneter Vollzug",
+        "description": "Unterstützt rechtmäßig angeordnete Sicherungen und Übergaben unter Verantwortung der zuständigen Vollzugsstelle."
+      }
+    ]
+  },
+  {
+    "area": "spionage",
+    "id": "meirawen-gwyllach",
+    "title": "Ermittlerin",
+    "name": "Meirawen Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg",
+    "description": "Meirawen (*1716, 24 Jahre), Tochter Efaels und Zwillingsschwester Morwellas, prüft einzelne Hinweise, gleicht Aussagen ab und dokumentiert Widersprüche. Sie arbeitet an zugewiesenen Fällen und legt ihre Ergebnisse dem Netzmeister der Beweise vor.",
+    "reportsTo": "Netzmeister der Beweise · Drystan Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=meirawen-gwyllach"
+      }
+    ],
+    "authority": "Ermittelt im zugewiesenen Fall; sie verfügt weder über ein eigenes Netz noch über richterliche Befugnisse."
+  },
+  {
+    "area": "spionage",
+    "id": "morwella-gwyllach",
+    "title": "Fahnderin",
+    "name": "Morwella Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/morwella-gwyllach.jpg",
+    "description": "Morwella (*1716, 24 Jahre), Tochter Efaels und Zwillingsschwester Meirawens, verfolgt konkrete Suchaufträge. Sie gleicht Personenbeschreibungen und Reisehinweise ab und meldet mögliche Aufenthaltsorte, bevor der zuständige Vollzug tätig wird.",
+    "reportsTo": "Netzmeister der Fahndung · Meredydd Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=morwella-gwyllach"
+      }
+    ],
+    "authority": "Führt zugewiesene Fahndungen aus und meldet Ergebnisse; keine eigenständige Haft- oder Befehlsgewalt."
+  },
+  {
+    "area": "spionage",
+    "id": "eryndor-gwyllach",
+    "title": "Kundschafter",
+    "name": "Eryndor Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/eryndor-gwyllach.jpg",
+    "description": "Eryndor (*1720, 20 Jahre), Sohn Drystans, übernimmt begrenzte Erkundungsaufträge auf bekannten Wegen. Er beobachtet Reisebedingungen und erkennbare Gefahren und liefert kurze, überprüfbare Meldungen. Umfang und Begleitung seiner Aufträge bestimmt der Netzmeister der Aufklärung.",
+    "reportsTo": "Netzmeister der Aufklärung · Efael Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=eryndor-gwyllach"
+      }
+    ],
+    "authority": "Hat einen persönlichen Beobachtungsauftrag und führt keine eigene Zelle."
+  },
+  {
+    "area": "spionage",
+    "id": "liora-gwyllach",
+    "title": "Kuriergehilfin in Ausbildung",
+    "name": "Liora Gwyllach",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/liora-gwyllach.jpg",
+    "description": "Liora (*1723, 17 Jahre), Tochter Drystans, lernt das Nachrichtenwesen an sicheren örtlichen Botengängen, Abschriften und Empfangsvermerken. Sie arbeitet unter Aufsicht, befördert keine gefährlichen Geheimaufträge und wird weder zu Zugriffen noch zu Erkundungen in Gefahrengebieten eingesetzt.",
+    "reportsTo": "Netzmeisterin der Wege und Nachrichten · Anelen Gwyllach",
+    "links": [
+      {
+        "label": "Person in der Familienakte",
+        "href": "/Stammbäume/Stammbaum.html?family=haus-gwyllach&mode=view&person=liora-gwyllach"
+      }
+    ],
+    "authority": "Begrenzte Hilfs- und Lernaufgaben unter Aufsicht, ohne eigene Weisungsbefugnis."
+  },
+  {
+    "area": "diplomatie",
+    "id": "herold",
+    "title": "Herold des Grafen",
+    "name": "Cadfan Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+    "description": "Vertritt die Grafschaft mit gräflicher Vollmacht. Beaufsichtigt Gesandtschaften, verbindliche Zusagen, Anerkennungen und diplomatische Rangfragen.",
+    "reportsTo": "Graf von Celtigerns Wacht",
+    "authority": "Verhandelt innerhalb des erteilten Mandats; grundsätzliche Bündnisse bleiben Entscheidung des Grafen."
+  },
+  {
+    "area": "diplomatie",
+    "id": "adjutant",
+    "title": "Adjutantin des Herolds",
+    "name": "Branwen Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg",
+    "description": "Ordnet Audienzen, Reiseaufträge, Botenketten und Siegelumlauf. Koordiniert die Herolde der Vasallen und die fünf Fachämter.",
+    "reportsTo": "Herold des Grafen"
+  },
+  {
+    "area": "diplomatie",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Herold des Barons",
+    "name": "Jeannae Gwyvern",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "vassal-gafyr",
+    "title": "Heroldin des Ritterfürsten",
+    "name": "Alicyn Gafyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/alicyn-draig.jpg",
+    "description": "Führt den Bereich in Herrschaft der Gafyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Gafyr",
+    "tier": "silver",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Gafyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html"
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "vassal-saethwyr",
+    "title": "Herold des Ritterfürsten",
+    "name": "Anwyll Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/anwyll-saethwyr.jpg",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "vassal-wyrm",
+    "title": "Herold des Ritterfürsten",
+    "name": "Padrig Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/padrig-wyrm.jpg",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "silver",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "vassal-rhonwens-traenen",
+    "title": "Herold des Ritterfürsten",
+    "name": "Tecwyn Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/tecwyn-draig.jpg",
+    "description": "Führt den Bereich in Herrschaft Rhonwens Tränen. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft Rhonwens Tränen",
+    "tier": "silver",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft Rhonwens Tränen · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft Rhonwens Tränen/Herrschaft Rhonwens Tränen.html"
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "gesandtschaft",
+    "title": "Gesandtschaftsmeisterin",
+    "name": "Neala Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/neala-wylan.jpg",
+    "description": "Führt Missionen und Verhandlungsmandate. Stimmt Schutzbriefe, Geleit und Kontakte zu Nachbarhöfen ab.",
+    "reportsTo": "Herold des Grafen",
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Gesandtschaftsgeleit",
+        "description": "Die militärische Führung stellt abgestimmten Schutz; das diplomatische Mandat bleibt beim Herold."
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "protokoll",
+    "title": "Protokollmeister",
+    "name": "Cadogan Sgrechiwr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg",
+    "description": "Wahrt Rang, Anrede, Sitzordnung und Audienzregeln. Protokolliert Verhandlungsgänge und verhindert widersprüchliche öffentliche Zusagen.",
+    "reportsTo": "Herold des Grafen",
+    "connections": [
+      {
+        "area": "unterhaltung",
+        "label": "Hofzeremoniell",
+        "description": "Stimmt Empfänge und Ehrungen mit der Unterhaltung ab."
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "vertraege",
+    "title": "Vertragsmeister",
+    "name": "Kamber Balchder",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg",
+    "description": "Führt Klauseln, Fristen, Sicherheiten und Gegensiegel. Prüft die Vollmacht der Unterzeichnenden und übergibt beglaubigte Fassungen an das Archiv.",
+    "reportsTo": "Herold des Grafen",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Rechtsprüfung",
+        "description": "Die Justiz prüft strittige Rechtsfolgen und Zuständigkeiten."
+      },
+      {
+        "area": "finanzen",
+        "label": "Vertragliche Lasten",
+        "description": "Finanzielle Verpflichtungen werden vor Abschluss mit der Kämmerei abgestimmt."
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "verbindung",
+    "title": "Verbindungsmeister",
+    "name": "Iestyn Swyll",
+    "portrait": "/Stammbäume/assets/images/published/haus-swyll/person-iestyn-swyll-r1.webp",
+    "description": "Pflegt dauerhafte Verbindungen zu Burgen, Städten, Klöstern und Zünften. Nimmt Anliegen an und führt sie an die zuständigen Ämter weiter.",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Gleichrangiges Kernamt mit unmittelbarem Bericht an Cadfan."
+  },
+  {
+    "area": "diplomatie",
+    "id": "zeichen",
+    "title": "Wappen- und Zeichenmeisterin",
+    "name": "Rhiannon Draenmelyn",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draenmelyn/rhiannon-draenmelyn.png",
+    "description": "Bestätigt Wappen, Geleitzeichen und Siegelidentitäten. Verhindert falsche Anerkennung und gefälschte Vollmachten.",
+    "reportsTo": "Herold des Grafen",
+    "authority": "Gleichrangiges Kernamt mit unmittelbarem Bericht an Cadfan.",
+    "connections": [
+      {
+        "area": "spionage",
+        "label": "Zeichenfälschung",
+        "description": "Verdächtige Identitäten und gefälschte Zeichen gehen zur Ermittlung."
+      }
+    ]
+  },
+  {
+    "area": "diplomatie",
+    "id": "gareth",
+    "title": "Schreibgehilfe der Verbindungsstube",
+    "name": "Gareth Swyll",
+    "portrait": "",
+    "description": "Iestyn Swylls Sohn führt Abschriften, Eingangslisten und vorbereitete Antwortschreiben. Unterstützt die Verbindungsstube bei der geordneten Weitergabe von Anliegen.",
+    "reportsTo": "Iestyn Swyll · Verbindungsmeister",
+    "authority": "Keine eigene Verhandlungs-, Siegel- oder Zeichnungsvollmacht."
+  },
+  {
+    "area": "magie",
+    "id": "ratszauberer",
+    "title": "Ratszauberer des Grafen",
+    "name": "Myrddin Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg",
+    "description": "Berät den Grafen in magischen Fragen und koordiniert bei herrschaftsübergreifenden Gefahren die zuständigen Ratsmagier.",
+    "reportsTo": "Graf von Celtigerns Wacht",
+    "connections": [
+      {
+        "area": "militaer",
+        "label": "Magische Unterstützung",
+        "description": "Magische Einsätze werden mit der militärischen Führung abgestimmt."
+      },
+      {
+        "area": "klerus",
+        "label": "Glaube und Magie",
+        "description": "Geistliche und arkane Fragen werden mit klaren Zuständigkeiten abgestimmt."
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "lehrling",
+    "title": "Lehrling und Nachfolgerin des Ratszauberers",
+    "name": "Rhiannon Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/rhiannon-draig.jpg",
+    "description": "Rhiannon steht als designierte Nachfolgerin unmittelbar unter Myrddin und ist die zweithöchste Autorität seines Kreises. Er vertraut ihr den Großteil seiner Angelegenheiten an; ihre Ausbildung, arkanes Wachstum und Reife bleiben zentral.",
+    "reportsTo": "Myrddin Draig",
+    "authority": "Handelt in Myrddins Namen. Dienste, die ausschließlich ihm vorbehalten sind, dürfen ihr verweigert werden. Ihr Zugriff hängt von Vertrauen, bewiesener Kompetenz und Myrddins aktueller Billigung ab."
+  },
+  {
+    "area": "magie",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Ratsmagier des Barons",
+    "name": "Ceridwen Lhuyd",
+    "portrait": "https://i.imgur.com/yTbQ4Mq.png",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Ratszauberer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "vassal-arthus-streben",
+    "title": "Ratsmagierin des Barons",
+    "name": "Maelona Gwefrydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-gwefrydd/maelona-ceirwyn.jpg",
+    "description": "Führt den Bereich in Baronie Arthus Streben. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Arthus Streben",
+    "tier": "silver",
+    "reportsTo": "Ratszauberer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Arthus Streben · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Arthus Streben/Baronie Arthus Streben.html"
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "vassal-saethwyr",
+    "title": "Ratsmagierin des Ritterfürsten",
+    "name": "Ceridwyn Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/ceridwyn-saethwyr.jpg",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Ratszauberer des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "hofgesandter",
+    "title": "Hofgesandte und Stimme des Zauberers",
+    "name": "Rhianu Penwyn",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-penwyn/rhianu-penwyn.png",
+    "description": "Führt Myrddins Terminkalender, spricht in seinem Auftrag und erledigt tägliche Verpflichtungen am Hof. Rhys und Rhyd begleiten sie meist zu ihrer Sicherheit.",
+    "reportsTo": "Ratszauberer des Grafen",
+    "connections": [
+      {
+        "area": "diplomatie",
+        "label": "Botschaften am Hof",
+        "description": "Förmliche auswärtige Zusagen werden mit dem Herold abgestimmt."
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "haushaelt",
+    "title": "Haushälterin des Ratsmagiers",
+    "name": "Rhoswyn Awenydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/rhoswyn-penwyn.jpg",
+    "description": "Verwaltet Myrddins Anwesen in Morddyn: Einkäufe, Vorräte, Diener und Alltag. Die geborene Penwyn ist Brychans Ehefrau.",
+    "reportsTo": "Ratszauberer des Grafen"
+  },
+  {
+    "area": "magie",
+    "id": "bote",
+    "title": "Beschaffer und persönlicher Bote",
+    "name": "Brychan Awenydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/brychan-awenydd.jpg",
+    "description": "Beschafft Edelsteine, Artefakte, Ruinenfunde und vergessene Steintafeln. Meist begleiten ihn seine Söhne Bors und Ludd; gefährliche Aufträge übernimmt er allein.",
+    "reportsTo": "Ratszauberer des Grafen",
+    "connections": [
+      {
+        "area": "finanzen",
+        "label": "Private Beschaffung",
+        "description": "Gethor führt Myrddins private Beschaffungskosten; bewilligte Grafschaftsaufträge bleiben separat belegt."
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "ritter-rhys",
+    "title": "Lehensritter und Problemlöser",
+    "name": "Rhys Awenor",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/rhys-awenor.jpg",
+    "description": "Sichert mit seinem Zwillingsbruder Rhyd Myrddins Anwesen in Morddyn und schützt dessen Diener. Übernimmt beauftragte Probleme, die Präsenz, Einschüchterung oder Waffengewalt erfordern.",
+    "reportsTo": "Ratszauberer des Grafen"
+  },
+  {
+    "area": "magie",
+    "id": "ritter-rhyd",
+    "title": "Lehensritter und Problemlöser",
+    "name": "Rhyd Awenor",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/rhyd-awenor.jpg",
+    "description": "Sichert mit seinem Zwillingsbruder Rhys Myrddins Anwesen in Morddyn und schützt dessen Diener. Begleitet Rhianu und erfüllt die unmittelbaren Aufträge des Zauberers.",
+    "reportsTo": "Ratszauberer des Grafen"
+  },
+  {
+    "area": "magie",
+    "id": "bors",
+    "title": "Bursche des Ratsmagiers",
+    "name": "Bors Awenydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/bors-awenydd.jpg",
+    "description": "Unterstützt die Hausdienste und begleitet seinen Vater Brychan bei geeigneten Beschaffungen.",
+    "reportsTo": "Ratszauberer des Grafen · Aufträge mit Brychan abgestimmt"
+  },
+  {
+    "area": "magie",
+    "id": "ludd",
+    "title": "Bursche des Ratsmagiers",
+    "name": "Ludd Awenydd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/ludd-awenydd.jpg",
+    "description": "Unterstützt die Hausdienste und begleitet seinen Vater Brychan bei geeigneten Beschaffungen.",
+    "reportsTo": "Ratszauberer des Grafen · Aufträge mit Brychan abgestimmt"
+  },
+  {
+    "area": "magie",
+    "id": "schmied",
+    "title": "Schmied des Ratsmagiers",
+    "name": "Ruarc Balguen",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/ruarc-balguen.jpg",
+    "description": "Der aus Morgorn stammende Schmied wurde aus der Gilde der Seelenschmiede abgeworben. Fertigt für Myrddin und hält als Handwerksmeister des Hauses Draig Waffen, Rüstungen und Gerät instand. Haltbarkeit und Funktion stehen im Vordergrund.",
+    "reportsTo": "Ratszauberer des Grafen"
+  },
+  {
+    "area": "magie",
+    "id": "archivar",
+    "title": "Archivarin und Gefährtin des Ratsmagiers",
+    "name": "Afallith „Lilith“ Tanwyn",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/afallith-lilith-tanwyn.jpg",
+    "description": "Myrddins Archivarin und Lebensgefährtin verwaltet im Magierturm Artefakte, Schriftrollen, Zauberbücher und Dokumente. Sie führt Buch über seine Aktivitäten und bewahrt das Gedächtnis seines Wirkens.",
+    "reportsTo": "Ratszauberer des Grafen",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Beweiskundige Auskunft",
+        "description": "Magische Gutachten werden mit Herkunft und Grenzen dokumentiert."
+      }
+    ]
+  },
+  {
+    "area": "magie",
+    "id": "hofmeier",
+    "title": "Hofmeier und privater Kämmerer Myrddins",
+    "name": "Gethor Awenor",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/gethor-awenor.jpg",
+    "description": "Verwaltet ausschließlich Myrddins private Finanzen: Einnahmen, Rücklagen, Naturalabgaben, Ausgaben und diskrete Sonderzahlungen. Finanzielle Anliegen an Myrddin laufen über Gethor.",
+    "reportsTo": "Myrddin Draig persönlich",
+    "authority": "Rein private Verwaltung; keine politische, arkane oder gräfliche Finanzhoheit."
+  },
+  {
+    "area": "unterhaltung",
+    "id": "barde",
+    "title": "Barde des Grafen",
+    "name": "Rihanna Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg",
+    "description": "Verantwortet Hofunterhaltung, Feste, Turniere und die öffentliche Erinnerung des Hofes. Setzt Programm und Rahmen im Auftrag des Grafen.",
+    "reportsTo": "Graf von Celtigerns Wacht"
+  },
+  {
+    "area": "unterhaltung",
+    "id": "adjutant",
+    "title": "Adjutantin der Barde",
+    "name": "Isobel Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/isobel-1719-draig.jpg",
+    "description": "Führt Gästelisten, Proben, Einladungen und Laufstellen. Stimmt Küche, Hofdienste, Wache und Herold auf den Ablauf ab.",
+    "reportsTo": "Barde des Grafen"
+  },
+  {
+    "area": "unterhaltung",
+    "id": "vassal-gwendolyns-ufer",
+    "title": "Barde des Barons",
+    "name": "Jinell Harddwch",
+    "portrait": "https://i.imgur.com/YdNY8rx.png",
+    "description": "Führt den Bereich in Baronie Gwendolyns Ufer. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Baronie Gwendolyns Ufer",
+    "tier": "silver",
+    "reportsTo": "Barde des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Baronie Gwendolyns Ufer · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html"
+      }
+    ]
+  },
+  {
+    "area": "unterhaltung",
+    "id": "vassal-gafyr",
+    "title": "Bardin des Ritterfürsten",
+    "name": "Modlen Tlawd",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-tlawd/modlen-tlawd.jpg",
+    "description": "Führt den Bereich in Herrschaft der Gafyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Gafyr",
+    "tier": "silver",
+    "reportsTo": "Barde des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Gafyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Gafyr/Herrschaft der Gafyr.html"
+      }
+    ]
+  },
+  {
+    "area": "unterhaltung",
+    "id": "vassal-saethwyr",
+    "title": "Bardin des Ritterfürsten",
+    "name": "Maelys Saethwyr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/maelys-ceirwyn.png",
+    "description": "Führt den Bereich in Herrschaft der Saethwyr. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Saethwyr",
+    "tier": "silver",
+    "reportsTo": "Barde des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Saethwyr · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Saethwyr/Herrschaft der Saethwyr.html"
+      }
+    ]
+  },
+  {
+    "area": "unterhaltung",
+    "id": "vassal-wyrm",
+    "title": "Bardin des Ritterfürsten",
+    "name": "Anouk Wyrm",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/anouk-rosenblueht.jpg",
+    "description": "Führt den Bereich in Herrschaft der Wyrm. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.",
+    "jurisdiction": "Herrschaft der Wyrm",
+    "tier": "silver",
+    "reportsTo": "Barde des Grafen",
+    "authority": "Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.",
+    "links": [
+      {
+        "label": "Herrschaft der Wyrm · eigene Verwaltung",
+        "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Herrschaft der Wyrm/Herrschaft der Wyrm.html"
+      }
+    ]
+  },
+  {
+    "area": "unterhaltung",
+    "id": "godwyn",
+    "title": "Schreier des Offenen Gerichts",
+    "name": "Godwyn Sgrechiwr",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/godwyn-sgrechiwr.jpg",
+    "description": "Verkündet freigegebene Ladungen, Termine und Entscheidungen des Offenen Gerichts. Übernimmt öffentliche Ausrufe und feierliche Ansagen nach abgestimmtem Wortlaut.",
+    "reportsTo": "Barde des Grafen; bei Gerichtsausrufen die Gerichtskanzlei",
+    "authority": "Öffentliche Stimme, keine richterliche oder heraldische Entscheidungsgewalt.",
+    "connections": [
+      {
+        "area": "gerichtsbarkeit",
+        "label": "Offenes Gericht",
+        "description": "Die Gerichtskanzlei verantwortet Inhalt und Freigabe gerichtlicher Bekanntmachungen."
+      },
+      {
+        "area": "diplomatie",
+        "label": "Anreden und Titel",
+        "description": "Amtliche Rangbezeichnungen werden mit dem Herold abgestimmt."
+      }
+    ]
+  },
+  {
+    "area": "unterhaltung",
+    "id": "tegan",
+    "title": "Zweite Schreierin · Hofausrufe",
+    "name": "Tegan Draig",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-draig/tegan-draig.jpg",
+    "description": "Unterstützt Godwyn bei vorbereiteten Hofausrufen, Festankündigungen und Ansagen. Übt die öffentliche Rede im Umfeld Rihannas und Isobels.",
+    "reportsTo": "Isobel Draig; fachlich Godwyn Sgrechiwr",
+    "authority": "Angeleitete Sonderrolle ohne eigene amtliche Verkündungs- oder Siegelvollmacht."
+  },
+  {
+    "id": "aberllan",
+    "name": "Lyonnel Garrael",
+    "title": "Lehenswart Aberllans",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-garrael/lyonnel-garrael.jpg",
+    "jurisdiction": "Aberllan · nördliches Camruisge",
+    "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/Insel Camruisge.html",
+    "source": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js",
+    "description": "Der Lehenswart vertritt Aberllan im nördlichen Camruisge unter der administrativen Gewalt der Grafschaft Celtigerns Wacht. Für die örtlichen Fachämter sind noch keine einzelnen Zuständigkeiten oder Amtsinhaber belegt. Der südliche Inselteil Oilean untersteht Leitheach beziehungsweise Tír na Sleagh und gehört nicht zu dieser Grafschaftsverbindung."
+  }
+]

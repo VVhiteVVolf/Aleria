@@ -1,0 +1,48 @@
+{
+  "deployId": "6ae1573d6dbf95541fcae663",
+  "commit": "76021a6ed2878849a616b43e06a6c9fb3d91f5c7",
+  "verifiedFiles": 28351,
+  "functions": [
+    "document-publisher",
+    "family-publisher",
+    "imgur-album",
+    "karten-publisher",
+    "wedding-publisher",
+    "world-content-publisher"
+  ],
+  "url": "https://dieweltvonaleria.netlify.app",
+  "verifiedAt": "2026-10-28T02:01:58.951Z",
+  "publicLinks": [
+    {
+      "url": "https://dieweltvonaleria.netlify.app/anzeigetafeln/tafel?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel",
+      "status": 200
+    },
+    {
+      "url": "https://dieweltvonaleria.netlify.app/vorschau/deitheach/",
+      "status": 200
+    }
+  ],
+  "fleischsammlerPages": [
+    {
+      "id": "gwynthor-fleischsammler",
+      "title": "Achtung vor dem Fleischsammler!",
+      "order": 0
+    },
+    {
+      "id": "gwynthor-fleischsammler-belohnung",
+      "title": "Ausgesetzte Belohnung",
+      "order": 1
+    },
+    {
+      "id": "gwynthor-fleischsammler-fahndung",
+      "title": "Aufruf zur Mitteilung von Beobachtungen",
+      "order": 2
+    },
+    {
+      "id": "gwynthor-fleischsammler-taeterblatt",
+      "title": "Der Fleischsammler · Täter unbekannt",
+      "order": 3
+    }
+  ],
+  "checkedAt": "2026-10-28T02:06:43.059Z"
+}
