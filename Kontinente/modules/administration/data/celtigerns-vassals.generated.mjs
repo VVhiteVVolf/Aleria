@@ -29,7 +29,7 @@ export default [
       "klerus": {
         "title": "Vikar des Barons",
         "name": "Gwenydd Anghof",
-        "portrait": "https://i.imgur.com/yEiU1My.png"
+        "portrait": "/Kontinente/modules/administration/assets/portraits/gwenydd-anghof.png"
       },
       "gerichtsbarkeit": {
         "title": "Justiziar des Barons",
@@ -54,12 +54,12 @@ export default [
       "magie": {
         "title": "Ratsmagier des Barons",
         "name": "Ceridwen Lhuyd",
-        "portrait": "https://i.imgur.com/yTbQ4Mq.png"
+        "portrait": "/Kontinente/modules/administration/assets/portraits/ceridwen-lhuyd.png"
       },
       "unterhaltung": {
         "title": "Barde des Barons",
         "name": "Jinell Harddwch",
-        "portrait": "https://i.imgur.com/YdNY8rx.png"
+        "portrait": "/Kontinente/modules/administration/assets/portraits/jinell-harddwch.png"
       }
     }
   },
@@ -191,7 +191,7 @@ export default [
       "spionage": {
         "title": "Schatten des Ritterfürsten",
         "name": "Arawn",
-        "portrait": "https://i.imgur.com/7yB9PR6.png"
+        "portrait": "/Kontinente/modules/administration/assets/portraits/arawn.png"
       },
       "diplomatie": {
         "title": "Herold des Ritterfürsten",
@@ -225,7 +225,7 @@ export default [
       "klerus": {
         "title": "Vikar des Ritterfürsten",
         "name": "Torri",
-        "portrait": "https://i.imgur.com/Vn4wYAD.png"
+        "portrait": "/Kontinente/modules/administration/assets/portraits/torri.png"
       },
       "gerichtsbarkeit": {
         "title": "Justiziar des Ritterfürsten",
@@ -240,7 +240,7 @@ export default [
       "spionage": {
         "title": "Schatten des Ritterfürsten",
         "name": "Tegyr",
-        "portrait": "https://i.imgur.com/MsmQR0F.png"
+        "portrait": "/Kontinente/modules/administration/assets/portraits/tegyr.png"
       },
       "diplomatie": {
         "title": "Herold des Ritterfürsten",

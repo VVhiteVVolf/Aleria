@@ -82,6 +82,16 @@ Die fünf Stilrichtungen nach Verwendungszweck getrennt verwenden. Vorhandene Fi
 Wappen als Motivreferenzen berücksichtigen. Ausdrückliche Vorgaben des aktuellen
 Auftrags haben Vorrang; die Standards nicht bei jedem Bildauftrag erneut abfragen.
 
+# Private Charakterdossiers und geheime Vorgeschichten
+
+Ausdrücklich private Figuren und ihre Bilder bleiben außerhalb des Repositorys
+und sämtlicher Webserver-Wurzeln. Der persönliche lokale Index liegt unter
+`%USERPROFILE%\.codex\private\aleria\index.json`. Dortige Datensätze nicht in
+öffentliche Charakterregister, Suchindizes, Exporte, Tests, Buildpakete oder
+Firebase übernehmen. Ausblenden im Browser ist kein Zugriffsschutz. Allgemeine
+Freigaben wie „alle lokalen Änderungen veröffentlichen“ schließen ausdrücklich
+geheime Dossiers nicht ein; ihre Offenlegung benötigt eine eigene Freigabe.
+
 # Dauerhafter Arbeitsablauf für Charakteravatare
 
 Die am 11. Oktober 2026 eingerichtete [AvatarWerkstatt](AleriaAlmanach/AvatarWerkstatt/README.md) enthält die drei originalen Avatar-Anleitungen mit vollständigen Text-Lesefassungen, den Avatar Splitter Pro V3, sechs angesehene 9er-Beispiele sowie die übernommenen Bestände von Idwals Crew, Lachende Nixe, Schwarzfische, Yvain und Gawains Hochzeit. Vor Avatar-Aufträgen die Werkstatt-Anweisungen und den Master-Prompt lesen und das verbindliche Charakterporträt tatsächlich ansehen. Reaktionssheets verwenden **1:1 mit 3×3 Feldern**; Identität, Kleidung, Stil, Hintergrund und Beleuchtung erhalten, jede Reaktion mit eigener Mimik und passender Gestik. Das 2:3-Format normaler Porträts gilt nicht für diese Sheets. Künftige Figuren bekommen Einzel- oder Gruppenordner nach der dortigen Vorlage. Originale erhalten; die verschiebende Ordnerverarbeitung des Splitterers ausschließlich mit Arbeitskopien verwenden. Auftrag, Sheets und fertige Einzelavatare im jeweiligen Charakterordner getrennt ablegen.

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<title>Verwaltung · Prüfung aller Portraits</title>
+<link rel="stylesheet" href="/Kontinente/modules/administration/administration-dialog.css?v=portrait-audit-20261028">
+<style>body{margin:0;padding:24px;background:#fffbf3}.administration-dialog{position:static;display:block;width:100%;height:auto;max-height:none;margin:0;padding:20px;overflow:visible}h1{font-family:Georgia,serif}</style>
+<h1>Portraitprüfung aller acht Verwaltungsbereiche</h1>
+<main class="administration-dialog" data-role="gallery"></main>
+<script type="module">
+import { renderStructuredAdministration } from '/Kontinente/modules/administration/administration-structured.mjs?v=portrait-audit-20261028';
+import { renderLegacyContent } from '/Kontinente/modules/administration/administration-renderer.mjs?v=portrait-audit-20261028';
+const gallery = document.querySelector('main');
+try {
+  for (const id of ['militaer', 'klerus', 'gerichtsbarkeit', 'finanzen', 'spionage', 'diplomatie', 'magie', 'unterhaltung']) {
+    gallery.append(await renderStructuredAdministration('grafschaft-celtigerns-wacht', id));
+    const response = await fetch(`/Kontinente/modules/administration/content/gwendolyns-ufer/${id}.html`);
+    if (!response.ok) throw new Error(`Altquelle fehlt: ${id}`);
+    const legacy = document.createElement('section');
+    legacy.dataset.legacyArea = id;
+    legacy.append(renderLegacyContent(await response.text(), { id, title: `Gwendolyns Ufer · ${id}` }));
+    gallery.append(legacy);
+  }
+  const images = [...gallery.querySelectorAll('img')];
+  images.forEach(image => { image.loading = 'eager'; });
+  const broken = [];
+  await Promise.all(images.map(async image => {
+    try { await image.decode(); } catch { broken.push(image.getAttribute('src')); }
+  }));
+  gallery.dataset.imageCount = String(images.length);
+  gallery.dataset.brokenImages = JSON.stringify(broken);
+  gallery.dataset.qaStatus = broken.length ? 'error' : 'ok';
+} catch (error) {
+  gallery.dataset.qaStatus = 'error';
+  gallery.dataset.error = error.message;
+}
+</script>
+</html>

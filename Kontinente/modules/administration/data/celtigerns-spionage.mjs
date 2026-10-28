@@ -1,5 +1,9 @@
 const portraitRoot = '/Stammbäume/assets/images/portraits/haus-gwyllach';
 
+function vacancy(id, title, description, reportsTo, options = {}) {
+  return { id, title, name: '', portrait: '', description, reportsTo, ...options };
+}
+
 function member(id, title, name, description, reportsTo, options = {}) {
   return {
     id,
@@ -75,11 +79,10 @@ export default {
             ],
           },
         ),
-        member(
-          'talaneth-gwyllach',
-          'Netzmeisterin der Gegenspionage',
-          'Talaneth',
-          'Talaneth (*1681, 59 Jahre), gebürtige Gwyllach und Tochter Rhydderchs, überwacht den Schutz des eigenen Nachrichtennetzes. Sie prüft verdächtige Kontaktketten, erkennt mögliche Täuschungen und begrenzt den Zugang zu vertraulichen Informationen auf die jeweils Zuständigen.',
+        vacancy(
+          'gegenspionage',
+          'Netzmeister der Gegenspionage',
+          'Verantwortet den Schutz des eigenen Nachrichtennetzes. Prüft verdächtige Kontaktketten, erkennt mögliche Täuschungen und begrenzt den Zugang zu vertraulichen Informationen auf die jeweils Zuständigen. Das Amt ist noch nicht besetzt.',
           'Schatten des Grafen · Rhovan Gwyllach',
           {
             authority: 'Prüft die Sicherheit von Quellen und Meldungen. Verdachtsfälle gegen Personen werden der zuständigen Justiz vorgelegt.',
@@ -147,19 +150,17 @@ export default {
           'Adjutantur des Schattens · fachlich dem zuständigen Netzmeister',
           { connections: [{ area: 'unterhaltung', label: 'Hofveranstaltungen', description: 'Stimmt Hinweise auf Gefahren bei Festen und öffentlichen Auftritten mit deren Verantwortlichen ab.' }] },
         ),
-        member(
-          'saerwyn-gwyllach',
-          'Zellenführerin für Stadt und Markt',
-          'Saerwyn',
-          'Saerwyn (*1710, 30 Jahre), Tochter Meredydds, bündelt Meldungen aus Gwynthors Straßen, Märkten und Herbergen. Sie hält den Kontakt zu Fuhrleuten und Reisenden und unterscheidet alltägliches Marktgerede von Hinweisen, die eine weitere Prüfung rechtfertigen.',
+        vacancy(
+          'zellenleitung-stadt',
+          'Zellenleitung für Stadt und Markt',
+          'Bündelt Meldungen aus Gwynthors Straßen, Märkten und Herbergen. Hält den Kontakt zu Fuhrleuten und Reisenden und unterscheidet alltägliches Marktgerede von Hinweisen, die eine weitere Prüfung rechtfertigen.',
           'Adjutantur des Schattens · fachlich dem zuständigen Netzmeister',
           { connections: [{ area: 'finanzen', label: 'Märkte und Handel', description: 'Gibt Hinweise auf Schmuggel oder falsche Abgabenbelege an Fahndung und Kämmerei weiter.' }] },
         ),
-        member(
-          'olyndor-gwyllach',
-          'Zellenführer für Grenzorte und Fernwege',
-          'Olyndor',
-          'Olyndor (*1713, 27 Jahre), Sohn Drystans, hält die Meldestellen entlang der Fernwege und an den Grenzorten zusammen. Er sammelt Berichte über gesperrte Wege, verdächtige Durchreisen und ausgebliebene Kuriere und meldet dringende Gefahren entlang der vereinbarten Warnkette.',
+        vacancy(
+          'zellenleitung-grenze',
+          'Zellenleitung für Grenzorte und Fernwege',
+          'Hält die Meldestellen entlang der Fernwege und an den Grenzorten zusammen. Sammelt Berichte über gesperrte Wege, verdächtige Durchreisen und ausgebliebene Kuriere und meldet dringende Gefahren entlang der vereinbarten Warnkette.',
           'Adjutantur des Schattens · fachlich dem zuständigen Netzmeister',
           { connections: [{ area: 'militaer', label: 'Grenzmeldungen', description: 'Leitet bestätigte Gefahren an die örtlichen Befehlshaber weiter; deren militärische Befehlsgewalt bleibt bestehen.' }] },
         ),
@@ -171,11 +172,10 @@ export default {
       kind: 'special',
       description: 'Persönliche Dienste mit begrenztem Auftrag und ohne eigenes Führungsamt. Die Angehörigen unter 27 Jahren führen weder einen Fachbereich noch eine Ortszelle; Ausbildung und Befugnisse richten sich nach dem konkreten Auftrag.',
       roles: [
-        member(
-          'rhufaed-gwyllach',
+        vacancy(
+          'nachtgreif',
           'Nachtgreif · gesicherte Zugriffe',
-          'Rhufaed',
-          'Rhufaed (*1715, 25 Jahre), Sohn Drystans, gehört zu den Nachtgreifen. Dieser Sonderdienst begleitet ausdrücklich angeordnete Sicherungen, schützt die Übergabe empfindlicher Belege und unterstützt den zuständigen Vollzug bei vorbereiteten Zugriffen. Er ist kein eigener Polizeibefehl und keine Ermächtigung zu heimlichen Verhaftungen.',
+          'Dieser Sonderdienst begleitet ausdrücklich angeordnete Sicherungen, schützt die Übergabe empfindlicher Belege und unterstützt den zuständigen Vollzug bei vorbereiteten Zugriffen. Er ist kein eigener Polizeibefehl und keine Ermächtigung zu heimlichen Verhaftungen.',
           'Netzmeister der Fahndung · Meredydd Gwyllach',
           {
             authority: 'Handelt nur mit klar benanntem Auftrag und in Abstimmung mit der zuständigen Justiz- oder Wachstelle.',
@@ -198,19 +198,17 @@ export default {
           'Netzmeister der Fahndung · Meredydd Gwyllach',
           { authority: 'Führt zugewiesene Fahndungen aus und meldet Ergebnisse; keine eigenständige Haft- oder Befehlsgewalt.' },
         ),
-        member(
-          'eryndor-gwyllach',
+        vacancy(
+          'kundschafter',
           'Kundschafter',
-          'Eryndor',
-          'Eryndor (*1720, 20 Jahre), Sohn Drystans, übernimmt begrenzte Erkundungsaufträge auf bekannten Wegen. Er beobachtet Reisebedingungen und erkennbare Gefahren und liefert kurze, überprüfbare Meldungen. Umfang und Begleitung seiner Aufträge bestimmt der Netzmeister der Aufklärung.',
+          'Übernimmt begrenzte Erkundungsaufträge auf bekannten Wegen, beobachtet Reisebedingungen und erkennbare Gefahren und liefert kurze, überprüfbare Meldungen. Umfang und Begleitung der Aufträge bestimmt der Netzmeister der Aufklärung.',
           'Netzmeister der Aufklärung · Efael Gwyllach',
           { authority: 'Hat einen persönlichen Beobachtungsauftrag und führt keine eigene Zelle.' },
         ),
-        member(
-          'liora-gwyllach',
-          'Kuriergehilfin in Ausbildung',
-          'Liora',
-          'Liora (*1723, 17 Jahre), Tochter Drystans, lernt das Nachrichtenwesen an sicheren örtlichen Botengängen, Abschriften und Empfangsvermerken. Sie arbeitet unter Aufsicht, befördert keine gefährlichen Geheimaufträge und wird weder zu Zugriffen noch zu Erkundungen in Gefahrengebieten eingesetzt.',
+        vacancy(
+          'kurier',
+          'Kurierdienst und Ausbildung',
+          'Überbringt versiegelte Nachrichten zwischen vereinbarten Meldestellen und dokumentiert die Übergabe. Hilfs- und Lernaufgaben umfassen örtliche Botengänge, Abschriften und Empfangsvermerke unter Aufsicht.',
           'Netzmeisterin der Wege und Nachrichten · Anelen Gwyllach',
           { authority: 'Begrenzte Hilfs- und Lernaufgaben unter Aufsicht, ohne eigene Weisungsbefugnis.' },
         ),

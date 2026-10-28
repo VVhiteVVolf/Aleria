@@ -7,6 +7,7 @@ Gemeinsame Ansicht für bestehende und künftige Herrschaften. Gestaltung und Zu
 - `administration-structured.mjs` lädt die getrennten redaktionellen Bereichsmodule für Celtigerns Wacht und setzt die Ansicht zusammen.
 - `administration-model.mjs` enthält das kleine Amtsmodell und die Einordnung der Vasallenämter. Die Ergänzung verändert ihre Datenquellen nicht.
 - `administration-cards.mjs` rendert Amtskarten, 2:3-Portraits, Rangabzeichen und Mannschaftslinks. Ein lokales WeakMap ordnet den Buttons ihre Amtsdaten zu; es gibt keinen globalen Personenstate.
+- `administration-portrait-sources.mjs` löst exakt belegte externe Original-URLs auf lokale Archivkopien auf. Renderer und Vasallengenerator verwenden dieselbe Zuordnung.
 - `administration-office-dialog.mjs` besitzt das Amtsfenster mit Portrait, Vorgänger, Fakten, Aufgaben und Schnittstellen. Ein unbekannter Vorgänger erscheint nur als ausgegraute Silhouette mit „Vorgänger“.
 - `administration-renderer.mjs` und `administration-hierarchy.mjs` erhalten die älteren HTML-Quellen anderer Herrschaften einschließlich Aufgaben-Tabellen. Erkannte Hierarchien verwenden dieselben Amtskarten; unbekannte Tabellenformen bleiben erhalten.
 - `administration.css` besitzt ausschließlich die einzeilige äußere Kachelauswahl. Hauptfenster, Amtskarten und Amtsdetails besitzen eigene CSS-Dateien. Keine Überschreibungen in `herrschaft.css`.
@@ -33,7 +34,11 @@ Nach Änderungen an den territorialen Räten den Generator erneut ausführen. De
 
 Eine vorbereitete `crew` ohne `href` öffnet über die SVG-Flagge den Mannschaftsabschnitt des Amtsfensters. Es werden keine leeren Almanach-Module oder erfundenen Schiffe angelegt. Mit echtem `href` führt die Flagge direkt zum bestehenden Modul. Idwal verwendet das unveränderte Mannschaftswappen aus seinem Almanach-Modul; Herkunft unter `assets/tiefenwyrm-mannschaft.source.json`.
 
-Noch nicht eindeutig lokal zugeordnete Altportraits (etwa Ceridwen Lhuyd, Gwenydd Anghof, Torri, Jinell und der unbenannte Küstenkommandant) behalten ihre Originalquelle mit Silhouetten-Fallback. Keine gleichnamigen Personen anderer Häuser einsetzen. Frühere Abgleiche stehen in [Personal-Korrekturen](PERSONAL-KORREKTUREN.md).
+Die sieben früher extern geladenen Bilder von Gwenydd Anghof, Torri, Arawn, Tegyr, Ceridwen Lhuyd, Jinell und Gwydion Seon sind unverändert unter `assets/portraits/` gesichert. Quellen und Dateihashes stehen dort in `portrait-sources.json`. Arawns überlieferte Quelle ist selbst nur eine Silhouette; daraus wird kein individuelles Portrait abgeleitet. Keine gleichnamigen Personen anderer Häuser einsetzen.
+
+Gareths Portrait wird aus der aktuellen veröffentlichten Swyll-Fassung und der unveränderten Referenzkopie vom 18. Oktober übernommen. Es liegt im gemeinsamen Swyll-Portraitordner und ist auch in dessen lokaler Portraitliste eingetragen. Die Prüfung gleicht Herkunft und Dateihash ab, damit die ältere lokale Liste kein vorhandenes Portrait mehr verdrängt.
+
+Nutzerkorrektur vom 28. Oktober: Talaneth, Saerwyn, Olyndor, Rhufaed, Eryndor und Liora Gwyllach erhalten keine Verwaltungsämter. Die entsprechenden Stellen bleiben offen; Familienakten und dortige Portraits bleiben erhalten. Frühere Abgleiche stehen in [Personal-Korrekturen](PERSONAL-KORREKTUREN.md).
 
 ## Prüfung
 

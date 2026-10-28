@@ -1,11 +1,14 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { access, readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 import { PORTRAIT_PLACEHOLDER, tierFor, withVassals } from '../modules/administration/administration-model.mjs';
 import { renderStructuredAdministration } from '../modules/administration/administration-structured.mjs';
 import vassals, { territorialContacts } from '../modules/administration/data/celtigerns-vassals.generated.mjs';
 import { HOUSE_GWYLLACH_FAMILY } from '../../Stammbäume/assets/js/data/house-gwyllach-family.js';
+import { HOUSE_SWYLL_PORTRAITS } from '../../Stammbäume/assets/js/data/house-swyll-portraits.js';
+import { ADMINISTRATION_PORTRAIT_ARCHIVE, resolveAdministrationPortrait } from '../modules/administration/administration-portrait-sources.mjs';
 
 const areaIds = ['militaer', 'klerus', 'gerichtsbarkeit', 'finanzen', 'spionage', 'diplomatie', 'magie', 'unterhaltung'];
 const sources = Object.fromEntries(await Promise.all(areaIds.map(async id => [
@@ -16,6 +19,33 @@ const repositoryRoot = new URL('../../', import.meta.url);
 const rolesIn = area => area.groups.flatMap(group => group.roles);
 const roleNamed = (area, name) => rolesIn(area).find(role => role.name === name);
 const groupById = (area, id) => area.groups.find(group => group.id === id);
+
+test('Gareths vorhandenes veröffentlichtes Portrait wird unverändert statt einer Silhouette übernommen', async () => {
+  const role = roleNamed(areas.diplomatie, 'Gareth Swyll');
+  const sourceUrl = new URL('../../AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Gareth Swyll/Referenzen/', import.meta.url);
+  const evidence = JSON.parse(await readFile(new URL('quellen.json', sourceUrl), 'utf8'));
+  const family = JSON.parse(await readFile(new URL('../../Stammbäume/assets/data/published-families/haus-swyll.json', import.meta.url), 'utf8'));
+  assert.equal(evidence.bindingPortrait.source, family.family.persons.find(person => person.id === 'gareth-swyll').portrait);
+  assert.equal(role.portrait, `/Stammbäume/${HOUSE_SWYLL_PORTRAITS['gareth-swyll']}`);
+  const bytes = await readFile(new URL(`.${role.portrait}`, repositoryRoot));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), evidence.bindingPortrait.sha256);
+});
+
+test('Jede benannte Verwaltungskarte besitzt eine lokale Bildquelle; externe Altquellen werden lokal aufgelöst', async () => {
+  const roles = [...Object.values(areas).flatMap(rolesIn), ...territorialContacts];
+  for (const role of roles.filter(role => role.name)) {
+    const portrait = resolveAdministrationPortrait(role.portrait);
+    assert.ok(portrait?.startsWith('/'), `${role.name}: vorhandenes Bild darf nicht leer oder nur extern sein`);
+    await access(new URL(`.${portrait}`, repositoryRoot));
+    assert.ok(!portrait.includes('/placeholders/'), `${role.name}: kein technisch eingesetzter Ersatz für ein vorhandenes Portrait`);
+  }
+  for (const archived of ADMINISTRATION_PORTRAIT_ARCHIVE) {
+    assert.equal(resolveAdministrationPortrait(archived.source), archived.local);
+    await access(new URL(`.${archived.local}`, repositoryRoot));
+  }
+  assert.equal(ADMINISTRATION_PORTRAIT_ARCHIVE.find(entry => entry.source === 'https://i.imgur.com/7yB9PR6.png').placeholder, true, 'Arawns überlieferte Quelle ist selbst eine Silhouette');
+  assert.equal(resolveAdministrationPortrait('https://example.org/unbekannt.png'), 'https://example.org/unbekannt.png', 'Unbekannte Bilder nicht anderen Personen zuordnen');
+});
 
 test('Fünf Kernämter bleiben je Bereich gleichrangig und haben dieselbe unmittelbare Leitung', () => {
   for (const id of ['militaer', 'gerichtsbarkeit', 'finanzen', 'spionage', 'diplomatie', 'unterhaltung']) {
@@ -76,20 +106,26 @@ test('Sechs Vasallenämter werden in jeden Bereich eingefügt, ohne die Quellen 
   assert.equal(areas.gerichtsbarkeit.groups.find(group => group.kind === 'vassals').roles.find(role => role.id === 'vassal-wyrm').name, 'Derwen Wyrm');
 });
 
-test('Alle lebenden gebürtigen Gwyllach sind einmal vertreten; unter 27 erhalten sie nur Sonderrollen', () => {
+test('Freigegebene gebürtige Gwyllach sind einmal vertreten; ausgeschlossene Angehörige bleiben ohne Amt', () => {
+  const excludedIds = new Set(['talaneth-gwyllach', 'saerwyn-gwyllach', 'eryndor-gwyllach', 'liora-gwyllach', 'rhufaed-gwyllach', 'olyndor-gwyllach']);
   const bornMembers = HOUSE_GWYLLACH_FAMILY.persons.filter(person =>
     person.houseId === 'house-gwyllach' && person.familyRole === 'core' && person.status === 'alive' && !person.death,
   );
   assert.equal(bornMembers.length, 15, 'Abgleich gegen die tatsächliche Familienakte');
-  const assignments = sources.spionage.groups.flatMap(group => group.roles.map(role => ({ role, kind: group.kind })));
-  assert.deepEqual(assignments.map(({ role }) => role.id).sort(), bornMembers.map(person => person.id).sort(), 'Keine angeheirateten, historischen oder ausgelassenen Familienmitglieder');
-  for (const person of bornMembers) {
+  const allOffices = sources.spionage.groups.flatMap(group => group.roles.map(role => ({ role, kind: group.kind })));
+  const assignments = allOffices.filter(({ role }) => role.name);
+  const eligible = bornMembers.filter(person => !excludedIds.has(person.id));
+  assert.equal(eligible.length, 9);
+  assert.deepEqual(assignments.map(({ role }) => role.id).sort(), eligible.map(person => person.id).sort(), 'Keine angeheirateten, historischen oder ausdrücklich ausgeschlossenen Familienmitglieder');
+  for (const id of excludedIds) assert.ok(!JSON.stringify(sources.spionage).includes(id), `${id}: keine versteckte Zuordnung`);
+  assert.equal(allOffices.find(({ role }) => role.id === 'gegenspionage').role.name, '');
+  for (const person of eligible) {
     const matching = assignments.filter(({ role }) => role.id === person.id);
     assert.equal(matching.length, 1, person.id);
     assert.equal(matching[0].role.name, person.name);
     if (1740 - Number(person.birth) < 27) assert.equal(matching[0].kind, 'special', `${person.id}: keine Führungsstelle unter 27`);
   }
-  assert.match(assignments.find(({ role }) => role.id === 'rhufaed-gwyllach').role.title, /Nachtgreif/u);
+  assert.match(allOffices.find(({ role }) => role.id === 'nachtgreif').role.title, /Nachtgreif/u);
   assert.ok(!assignments.some(({ role }) => role.title === 'Zugriffsdienst'));
 });
 

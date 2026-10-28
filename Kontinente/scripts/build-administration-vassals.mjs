@@ -1,6 +1,7 @@
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
+import { resolveAdministrationPortrait } from '../modules/administration/administration-portrait-sources.mjs';
 
 // The territorial council remains the owner of its office holders. This build
 // exposes those same records to the county without maintaining a second roster.
@@ -27,12 +28,6 @@ const officePatterns = {
   magie: /^Ratsmagier(?:in)?\b/u,
   unterhaltung: /^Bard(?:e|in)\b/u,
 };
-// Exact source URL matches from the local portrait-sources.json archives.
-// These map image provenance only and do not determine a person's identity.
-const archivedPortraits = new Map([
-  ['https://i.imgur.com/kCRKZhW.png', '/Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg'],
-  ['https://64.media.tumblr.com/69616b8e034bfa486227434056a75e61/ba9bff75417640f7-6c/s1280x1920/4d324ea625deb68171d90699dfe59355f0daa5a5.pnj', '/Stammbäume/assets/images/portraits/haus-wyrm/olwen-wyrm.jpg'],
-]);
 
 function named(value) {
   const text = String(value || '').trim();
@@ -42,7 +37,7 @@ function named(value) {
 async function localPortrait(value, source) {
   // Keep a valid original when no exact locally archived source is known.
   // Runtime image fallback belongs to the portrait component.
-  if (archivedPortraits.has(value)) value = archivedPortraits.get(value);
+  value = resolveAdministrationPortrait(value);
   if (/^https:\/\//u.test(value || '')) {
     const url = new URL(value);
     return url.protocol === 'https:' && url.hostname ? value : '';

@@ -1,4 +1,5 @@
 import { PORTRAIT_PLACEHOLDER, tierFor } from './administration-model.mjs';
+import { resolveAdministrationPortrait } from './administration-portrait-sources.mjs';
 
 const roleByButton = new WeakMap();
 const assets = '/Kontinente/modules/administration/assets';
@@ -12,7 +13,7 @@ export function element(tag, className, text) {
 
 export function portraitImage(src, name = '') {
   const image = element('img', 'administration-role-image');
-  image.src = src || PORTRAIT_PLACEHOLDER;
+  image.src = resolveAdministrationPortrait(src) || PORTRAIT_PLACEHOLDER;
   image.alt = name ? `Portrait von ${name}` : '';
   image.loading = 'lazy';
   image.decoding = 'async';

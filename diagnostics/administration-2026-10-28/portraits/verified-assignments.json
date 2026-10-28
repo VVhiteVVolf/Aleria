@@ -1,0 +1,501 @@
+{
+  "date": "2026-10-28",
+  "uniquePeople": 96,
+  "namedCards": 97,
+  "emptyPortraits": [],
+  "remotePortraits": [],
+  "excludedPeople": [
+    "Talaneth Gwyllach",
+    "Saerwyn Gwyllach",
+    "Eryndor Gwyllach",
+    "Liora Gwyllach",
+    "Rhufaed Gwyllach",
+    "Olyndor Gwyllach"
+  ],
+  "assignments": [
+    {
+      "area": "militaer",
+      "name": "Egon Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/egon-gafyr.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Maredudd Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/maredudd-draig.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Huw Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/huw-saethwyr.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Rhys Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/rhys-draig.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Anaraut Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/anaraut-draig.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Niniane Chwedlonol",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/niniane-chwedlonol.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Gwynnan Gwyvern",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/gwynnan-gwywern.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Thomos Gwefrydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyvern/thomos-gwefrydd.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Rheinallt Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Marmaduke Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/marmaduke-saethwyr.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Eiddon Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/eiddon-wyrm.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Ianto Arwydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/ianto-arwydd.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Gwaeron Awenor",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/gwaeron-awenor.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Ffraid Awenor",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/ffraid-awenor.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Duncan Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Derfel Awenydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/derfel-awenydd.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Ferydnand Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/ferydnand-gafyr.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Rhonwen Chwedlonol",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/rhonwen-chwedlonol.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Meredithe Chwedlonol",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-chwedlonol/meredithe-1677-chwedlonol.jpg"
+    },
+    {
+      "area": "militaer",
+      "name": "Idwal Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/idwal-draig.jpg"
+    },
+    {
+      "area": "klerus",
+      "name": "Gwalchgwyn Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/gwalchgwyn-saethwyr.jpg"
+    },
+    {
+      "area": "klerus",
+      "name": "Peredur Eneiniog",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-eneiniog/peredur-eneiniog.jpg"
+    },
+    {
+      "area": "klerus",
+      "name": "Gwenydd Anghof",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/gwenydd-anghof.png"
+    },
+    {
+      "area": "klerus",
+      "name": "Eleri Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/eleri-marwolaeth.jpg"
+    },
+    {
+      "area": "klerus",
+      "name": "Jenniffer Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/jenniffer-marwolaeth.jpg"
+    },
+    {
+      "area": "klerus",
+      "name": "Torri",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/torri.png"
+    },
+    {
+      "area": "klerus",
+      "name": "Angharad Eneiniog",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-eneiniog/angharad-eneiniog.jpg"
+    },
+    {
+      "area": "klerus",
+      "name": "Arianwen Bradrhith",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-bradrhith/arianwen-bradrhith.png"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Meurig Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/meurig-draig.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Neithon Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/neithon-1718-draig.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Lleward Cenfig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-edmy/lleward-cenfig.png"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Hywell Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/hywell-gafyr.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Morwenna Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/morwenna-gwyvern.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Derwen Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/derwen-wyrm.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Deliah Mwyalchen",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/deliah-mwyalchen.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Ceridwen Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/ceridwen-draig.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Kimball Balchder",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-balchder/kimball-balchder.jpg"
+    },
+    {
+      "area": "gerichtsbarkeit",
+      "name": "Godwyn Sgrechiwr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/godwyn-sgrechiwr.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Odyar Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/odyar-draig.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Tudwal Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/tudwal-draig.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Olwen Gwyvern",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/olwen-wyrm.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Kelyddon Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/kelyddon-gafyr.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Imogen Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/imogen-arwydd.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Sorcha Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/sorcha-cein.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Wynonna Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Beibhinn Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/beibhinn-eirce.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Avan Balchder",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-rhyddid/avan-balchder.jpg"
+    },
+    {
+      "area": "finanzen",
+      "name": "Kane Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/kane-draig.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Rhovan Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/rhovan-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Meirion Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/meirion-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Gronw Cysgodion",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-cysgodion/gronw-cysgodion.png"
+    },
+    {
+      "area": "spionage",
+      "name": "Arawn",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/arawn.png"
+    },
+    {
+      "area": "spionage",
+      "name": "Tegyr",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/tegyr.png"
+    },
+    {
+      "area": "spionage",
+      "name": "Efael Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/efael-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Meredydd Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/meredydd-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Anelen Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/anelen-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Drystan Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/drystan-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Talyfer Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/talyfer-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Meirawen Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/meirawen-gwyllach.jpg"
+    },
+    {
+      "area": "spionage",
+      "name": "Morwella Gwyllach",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyllach/morwella-gwyllach.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Cadfan Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Branwen Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/branwen-gwefrydd.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Jeannae Gwyvern",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Alicyn Gafyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/alicyn-draig.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Anwyll Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/anwyll-saethwyr.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Padrig Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/padrig-wyrm.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Tecwyn Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-arwydd/tecwyn-draig.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Neala Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/neala-wylan.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Cadogan Sgrechiwr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/cadogan-sgrechiwr.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Kamber Balchder",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Iestyn Swyll",
+      "portrait": "/Stammbäume/assets/images/published/haus-swyll/person-iestyn-swyll-r1.webp"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Rhiannon Draenmelyn",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draenmelyn/rhiannon-draenmelyn.png"
+    },
+    {
+      "area": "diplomatie",
+      "name": "Gareth Swyll",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-swyll/gareth-swyll.png"
+    },
+    {
+      "area": "magie",
+      "name": "Myrddin Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/myrddin-draig.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Rhiannon Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/rhiannon-draig.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Ceridwen Lhuyd",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/ceridwen-lhuyd.png"
+    },
+    {
+      "area": "magie",
+      "name": "Maelona Gwefrydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-gwefrydd/maelona-ceirwyn.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Ceridwyn Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/ceridwyn-saethwyr.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Rhianu Penwyn",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-penwyn/rhianu-penwyn.png"
+    },
+    {
+      "area": "magie",
+      "name": "Rhoswyn Awenydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/rhoswyn-penwyn.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Brychan Awenydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/brychan-awenydd.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Rhys Awenor",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/rhys-awenor.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Rhyd Awenor",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/rhyd-awenor.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Bors Awenydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/bors-awenydd.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Ludd Awenydd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/ludd-awenydd.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Ruarc Balguen",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenydd/ruarc-balguen.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Afallith „Lilith“ Tanwyn",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/afallith-lilith-tanwyn.jpg"
+    },
+    {
+      "area": "magie",
+      "name": "Gethor Awenor",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-awenor/gethor-awenor.jpg"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Rihanna Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/rihanna-ceirwynn.jpg"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Isobel Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/isobel-1719-draig.jpg"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Jinell Harddwch",
+      "portrait": "/Kontinente/modules/administration/assets/portraits/jinell-harddwch.png"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Modlen Tlawd",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-tlawd/modlen-tlawd.jpg"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Maelys Saethwyr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-saethwyr/maelys-ceirwyn.png"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Anouk Wyrm",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/anouk-rosenblueht.jpg"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Godwyn Sgrechiwr",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-sgrechiwr/godwyn-sgrechiwr.jpg"
+    },
+    {
+      "area": "unterhaltung",
+      "name": "Tegan Draig",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-draig/tegan-draig.jpg"
+    },
+    {
+      "name": "Lyonnel Garrael",
+      "portrait": "/Stammbäume/assets/images/portraits/haus-garrael/lyonnel-garrael.jpg"
+    }
+  ]
+}
