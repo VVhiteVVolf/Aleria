@@ -9,6 +9,8 @@ import vassals, { territorialContacts } from '../modules/administration/data/cel
 import { HOUSE_GWYLLACH_FAMILY } from '../../Stammbäume/assets/js/data/house-gwyllach-family.js';
 import { HOUSE_SWYLL_PORTRAITS } from '../../Stammbäume/assets/js/data/house-swyll-portraits.js';
 import { ADMINISTRATION_PORTRAIT_ARCHIVE, resolveAdministrationPortrait } from '../modules/administration/administration-portrait-sources.mjs';
+import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { protectedAlbicFamilies, reviewHash } from './support/albic-review-baseline.mjs';
 
 const areaIds = ['militaer', 'klerus', 'gerichtsbarkeit', 'finanzen', 'spionage', 'diplomatie', 'magie', 'unterhaltung'];
 const sources = Object.fromEntries(await Promise.all(areaIds.map(async id => [
@@ -29,6 +31,18 @@ test('Gareths vorhandenes veröffentlichtes Portrait wird unverändert statt ein
   assert.equal(role.portrait, `/Stammbäume/${HOUSE_SWYLL_PORTRAITS['gareth-swyll']}`);
   const bytes = await readFile(new URL(`.${role.portrait}`, repositoryRoot));
   assert.equal(createHash('sha256').update(bytes).digest('hex'), evidence.bindingPortrait.sha256);
+});
+
+test('Die freigegebene Portraitergänzung ist die einzige Änderung am geschützten historischen Familienbestand', async () => {
+  const review = JSON.parse(await readFile(new URL('./support/albic-family-review-20261024.json', import.meta.url), 'utf8'));
+  const capturedIds = new Set(JSON.parse(await readFile(new URL('./support/family-baseline-20261023.json', import.meta.url), 'utf8')));
+  const captured = protectedAlbicFamilies(FAMILY_REGISTRY.filter(record => capturedIds.has(record.id)));
+  const approval = review.portraitFollowupReview;
+  assert.equal(reviewHash(captured), review.protectedSha256);
+  const person = captured.find(record => record.id === approval.familyId).family.persons.find(person => person.id === approval.personId);
+  assert.equal(person.portrait, approval.after);
+  person.portrait = approval.before;
+  assert.equal(reviewHash(captured), approval.previousProtectedSha256, 'Keine andere Person, Verwandtschaft, Unterstellung oder Bildzuordnung darf sich nebenbei ändern');
 });
 
 test('Jede benannte Verwaltungskarte besitzt eine lokale Bildquelle; externe Altquellen werden lokal aufgelöst', async () => {

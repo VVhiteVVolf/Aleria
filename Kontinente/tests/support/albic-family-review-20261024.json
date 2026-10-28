@@ -2,7 +2,19 @@
   "reviewedAt": "2026-10-24",
   "sourceBaselineHash": "fb2191afef8de64e1101fba58c15a019ede681eda466a1f942577dfabb2eeae5",
   "sha256": "66ef5761e92b36e1064040cc19e06629ab01f1a2300b166a801f6b767e7483f1",
-  "protectedSha256": "babbbf02091c0fbc47c9a42d54a0a2b8d256ff2f3cc2f2250f672753eff9b87b",
+  "protectedSha256": "9b8b850e3068dcfb54ea6f2e90e9aa96bc9c3ae3dadc79139256d6f590bfd98a",
+  "portraitFollowupReview": {
+    "reviewedAt": "2026-10-28",
+    "reason": "Restore Gareth Swyll's already published portrait in the local family portrait list. Replacing only this field with its former empty value exactly reproduces the previous protected checksum; all identities, relationships, ranks, allegiances and other portraits are unchanged.",
+    "previousProtectedSha256": "babbbf02091c0fbc47c9a42d54a0a2b8d256ff2f3cc2f2250f672753eff9b87b",
+    "familyId": "haus-swyll",
+    "personId": "gareth-swyll",
+    "field": "portrait",
+    "before": "",
+    "after": "assets/images/portraits/haus-swyll/gareth-swyll.png",
+    "sourceUrl": "https://i.imgur.com/DpqoWhn.png",
+    "portraitSha256": "eafb7bc2c98247b7f697309a4df85def11fe8a8d7a462fe37b9439847e168e8c"
+  },
   "previousProtectedSha256": "2dcc4a8ecad2a1d487a8e575a4acb0e1aafda1b8aa07fb66996c76dc083211a6",
   "followupReview": {
     "reviewedAt": "2026-10-25",
