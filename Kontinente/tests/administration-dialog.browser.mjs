@@ -100,6 +100,16 @@ async function checkOfficeDetail(page, dialog, label, width) {
   await detail.waitFor();
   assert.equal(await detail.locator('#administration-office-title').innerText(), title, `${label}: role detail opens`);
   assert.equal(await detail.locator('.administration-predecessor').count(), 1, `${label}: predecessor reference retained`);
+  const layout = await detail.evaluate(node => {
+    const person = node.querySelector('.administration-office-person').getBoundingClientRect();
+    const portrait = node.querySelector('.administration-office-identity .administration-portrait-frame').getBoundingClientRect();
+    const facts = node.querySelector('.administration-office-facts').getBoundingClientRect();
+    const text = node.querySelector('.administration-office-content').getBoundingClientRect();
+    return { leftHeight: person.height, rightHeight: text.height, factsBelow: facts.top >= portrait.bottom, tasks: node.querySelectorAll('.administration-office-duties li').length };
+  });
+  assert.ok(layout.factsBelow, `${label}: facts stay below the portrait`);
+  if (width > 650) assert.ok(layout.rightHeight <= layout.leftHeight + 1, `${label}: prose cannot grow beyond the person column`);
+  assert.ok(layout.tasks >= 3 && layout.tasks <= 5, `${label}: three to five illustrated core tasks`);
   assert.ok(await dialog.evaluate(node => node.open), `${label}: main structure stays open behind detail`);
   await checkDialogBounds(detail, '.administration-office-body', `${label}/detail`, width);
   await page.keyboard.press('Escape');

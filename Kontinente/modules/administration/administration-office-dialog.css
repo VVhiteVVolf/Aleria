@@ -1,22 +1,27 @@
-.administration-office-dialog { box-sizing: border-box; width: min(960px, calc(100vw - 2rem)); max-width: none; max-height: calc(100dvh - 3rem); padding: 0; border: 1px solid #bba279; border-radius: 10px; background: #fffbf3; color: #463a2b; box-shadow: 0 22px 90px #211a1288; overflow: hidden; }
+.administration-office-dialog { box-sizing: border-box; width: min(1100px, calc(100vw - 2rem)); max-width: none; max-height: calc(100dvh - 3rem); padding: 0; border: 1px solid #bba279; border-radius: 10px; background: #fffbf3; color: #463a2b; box-shadow: 0 22px 90px #211a1288; overflow: hidden; }
 .administration-office-dialog *, .administration-office-dialog *::before, .administration-office-dialog *::after { box-sizing: border-box; }
 .administration-office-dialog::backdrop { background: #28201488; backdrop-filter: blur(4px); }
 .administration-office-shell { display: flex; flex-direction: column; max-height: calc(100dvh - 3rem - 2px); }
 .administration-office-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.2rem; border-bottom: 1px solid #d6c5a7; background: #f3ead9; }
 .administration-office-header h2 { margin: 0; font: 600 1.35rem/1.25 Georgia, serif; }
+.administration-office-dialog .administration-office-header h2:focus-visible { outline: none; }
 .administration-office-header button { flex: 0 0 36px; }
-.administration-office-body { display: grid; grid-template-columns: 216px minmax(0, 1fr); gap: 1.5rem; padding: 1.3rem; overflow: auto; min-height: 0; overscroll-behavior: contain; font: .85rem/1.65 Verdana, Arial, sans-serif; scrollbar-width: thin; scrollbar-color: #b6a17c #f7f0e2; }
-.administration-office-person { position: relative; min-width: 0; }
-.administration-office-person > .administration-portrait-frame { width: 100%; }
-.administration-office-person > .administration-pin { position: absolute; right: -.4rem; top: -.4rem; }
-.administration-office-person h3 { margin: .7rem 0; font: 600 1.4rem/1.25 Georgia, serif; }
+.administration-office-body { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 1.65rem; padding: 1.3rem; overflow: auto; min-height: 0; overscroll-behavior: contain; font: .85rem/1.65 Verdana, Arial, sans-serif; scrollbar-width: thin; scrollbar-color: #b6a17c #f7f0e2; }
+.administration-office-person { min-width: 0; }
+.administration-office-identity { position: relative; width: 216px; max-width: 100%; margin-inline: auto; }
+.administration-office-identity > .administration-portrait-frame { width: 100%; }
+.administration-office-identity > .administration-pin { position: absolute; right: -.4rem; top: -.4rem; }
+.administration-office-person h3 { margin: .7rem 0 1rem; font: 600 1.4rem/1.25 Georgia, serif; }
 .administration-predecessor { display: flex; gap: .6rem; align-items: center; margin-top: 1rem; padding-top: .7rem; border-top: 1px solid #ded2bd; color: #8b8275; font-size: .73rem; }
 .administration-predecessor img { flex: 0 0 40px; width: 40px; height: 60px; object-fit: contain; filter: grayscale(1); opacity: .48; }
-.administration-office-content { min-width: 0; overflow-wrap: anywhere; }
+.administration-office-pane { position: sticky; top: 0; min-width: 0; min-height: 0; max-height: calc(100dvh - 10rem); }
+/* The left column determines the row height; long prose cannot enlarge it. */
+.administration-office-content { position: absolute; inset: 0; min-width: 0; padding: .15rem 1rem .25rem .1rem; overflow: auto; overflow-wrap: anywhere; overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; scrollbar-color: #b6a17c #f7f0e2; }
+.administration-office-content > h3:first-of-type { margin-top: .4rem; font-size: 1.2rem; }
 .administration-office-content h3 { margin: 1.05rem 0 .35rem; font: 600 1.05rem/1.3 Georgia, serif; color: #6d5538; }
 .administration-office-content p { margin: .3rem 0 .8rem; }
-.administration-office-facts { margin: 0 0 1rem; padding: .4rem .8rem; border: 1px solid #dfd1b8; border-radius: 4px; background: #f5eddd; }
-.administration-office-facts > div { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: .7rem; padding: .35rem 0; border-bottom: 1px solid #e1d6c1; }
+.administration-office-facts { margin: 0; padding: .4rem .7rem; border: 1px solid #dfd1b8; border-radius: 4px; background: #f5eddd; }
+.administration-office-facts > div { display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: .5rem; padding: .4rem 0; border-bottom: 1px solid #e1d6c1; overflow-wrap: anywhere; }
 .administration-office-facts > div:last-child { border: 0; }
 .administration-office-facts dt { color: #8a785e; font-size: .7rem; }
 .administration-office-facts dd { margin: 0; font-size: .77rem; }
@@ -28,6 +33,11 @@
 .administration-office-flag { float: left; width: 94px; height: 84px; margin: 0 .8rem .4rem 0; object-fit: contain; }
 .administration-office-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
 .administration-module-link { display: inline-block; color: #7b4d31; font-size: .78rem; text-underline-offset: 3px; }
+.administration-office-duties { margin-top: 1.3rem; padding-top: .2rem; border-top: 1px solid #ded2bd; }
+.administration-office-duties ul { display: grid; gap: .6rem; list-style: none; padding: 0; margin: .8rem 0 .3rem; }
+.administration-office-duties li { display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; gap: .8rem; padding: .6rem .8rem; border: 1px solid #e4d8c4; border-radius: 5px; background: #f6efe2; }
+.administration-office-duties img { display: block; width: 40px; height: 40px; object-fit: contain; }
+.administration-office-dialog .administration-dialog-close { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1px solid #cdb897; border-radius: 50%; color: #6d5035; background: #fffcf5; font: 1.4rem/1 Georgia, serif; cursor: pointer; }
 .administration-office-dialog :is(button, a, [tabindex]):focus-visible { outline: 2px solid #804737; outline-offset: 3px; }
 @media (max-width: 650px) {
   .administration-office-dialog { width: calc(100vw - 1rem); max-height: calc(100dvh - 1rem); }
@@ -35,11 +45,9 @@
   .administration-office-header { padding: .8rem; }
   .administration-office-header h2 { font-size: 1.15rem; }
   .administration-office-body { grid-template-columns: minmax(0, 1fr); gap: .8rem; padding: .8rem; }
-  .administration-office-person { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: .7rem; align-items: start; }
-  .administration-office-person > .administration-portrait-frame { grid-row: 1 / 3; }
-  .administration-office-person > .administration-pin { left: 91px; right: auto; top: -.25rem; width: 32px; height: 32px; }
-  .administration-office-person > .administration-pin svg { width: 24px; height: 24px; }
-  .administration-office-person h3 { font-size: 1.15rem; padding-left: .4rem; }
-  .administration-predecessor { margin: 0; padding-left: .4rem; }
-  .administration-office-facts > div { grid-template-columns: 90px minmax(0, 1fr); gap: .5rem; }
+  .administration-office-identity { width: 180px; }
+  .administration-office-person h3 { font-size: 1.25rem; }
+  .administration-predecessor { margin-top: .7rem; }
+  .administration-office-pane { position: relative; height: min(65dvh, 600px); max-height: none; }
+  .administration-office-facts > div { grid-template-columns: 100px minmax(0, 1fr); gap: .5rem; }
 }

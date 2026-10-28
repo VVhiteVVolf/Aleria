@@ -8,8 +8,8 @@
   const areaByName = new Map(content.areas.map((area) => [normalize(area.name), area]));
   const sourceCache = new Map();
   const moduleRoot = new URL('./', document.currentScript.src);
-  const rendererUrl = new URL('./administration-renderer.mjs?v=20261028', moduleRoot);
-  const structuredUrl = new URL('./administration-structured.mjs?v=20261028', moduleRoot);
+  const rendererUrl = new URL('./administration-renderer.mjs?v=20261028-office-body', moduleRoot);
+  const structuredUrl = new URL('./administration-structured.mjs?v=20261028-office-body', moduleRoot);
   let loadRevision = 0;
   let dialog;
   let dialogKicker;
@@ -236,7 +236,7 @@
 
   function init() {
     dialog = createDialog();
-    officeDialogReady = import(new URL('./administration-office-dialog.mjs?v=20261028', moduleRoot).href)
+    officeDialogReady = import(new URL('./administration-office-dialog.mjs?v=20261028-office-body-v2', moduleRoot).href)
       .then(({ mountOfficeDialog }) => mountOfficeDialog(dialog));
     enhanceRenderedCards();
     document.addEventListener("aleria:administration-rendered", enhanceRenderedCards);

@@ -17,7 +17,7 @@ export async function renderStructuredAdministration(scopeId, areaId) {
   const [{ default: source }, { default: vassals, territorialContacts }] = await Promise.all([
     loaders[areaId](), import('./data/celtigerns-vassals.generated.mjs?v=20261028'),
   ]);
-  const area = withVassals(source, vassals);
+  const area = { ...withVassals(source, vassals), jurisdiction: 'Celtigerns Wacht' };
   const view = element('div', 'administration-structured');
   view.dataset.areaId = area.id;
   const intro = element('div', 'administration-area-intro');

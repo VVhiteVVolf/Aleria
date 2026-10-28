@@ -71,7 +71,7 @@ function renderRoleCard(role, group, area) {
   copy.append(element('strong', 'administration-role-name', role.name || 'Noch nicht benannt'));
   if (role.jurisdiction) copy.append(element('span', 'administration-role-jurisdiction', role.jurisdiction));
   copy.append(element('span', 'administration-role-hint', 'Amt & Aufgaben ↗'));
-  button.append(frame, pin(area.id, tier), copy);
+  button.append(frame, pin(role.areaId || area.id, tier), copy);
   card.append(button);
   if (role.crew) {
     const crew = element(role.crew.href ? 'a' : 'button', 'administration-crew-link');

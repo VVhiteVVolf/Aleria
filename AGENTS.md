@@ -2,6 +2,11 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
+Ergänzende Nutzerfreigabe vom 28. Oktober 2026: **„Pushe alles auf master und
+deploy“**. Sie schließt den fertiggestellten lokalen Stand der ausführlicheren
+Verwaltungsdetails und der gemeinsamen Hofämteransicht einschließlich sichtbarer
+unbesetzter Ämter bei adeligen Häusern und Clans ein.
+
 Neueste Nutzeranweisung vom 28. Oktober 2026: **„Ja, push und deploy alle lokalen
 neuheiten.“**, nach einer Unterbrechung zur Durchsicht ausdrücklich mit
 **„Pushe und deploy.“** wieder aufgenommen. Damit ist der gesamte vorhandene

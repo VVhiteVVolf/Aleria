@@ -1,8 +1,20 @@
+@import url('../../../Kontinente/modules/administration/administration-cards.css?v=20261028-office-body-v2');
+@import url('../../../Kontinente/modules/administration/administration-office-dialog.css?v=20261028-office-body-v2');
+
 .house-court {
   --court-line: #b69b62;
   --court-ink: #742a2c;
   container-type: inline-size;
 }
+.house-court .is-bronze { --metal: #bd8b65; --metal-light: #e9c6a0; --metal-edge: #956440; --metal-dark: #6a442b; }
+.house-court-offices .administration-role-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.house-court-offices .administration-role-open { grid-template-columns: 1fr; justify-items: center; align-content: start; text-align: center; }
+.house-court-offices .administration-portrait-frame { width: 140px; max-width: 100%; }
+.house-court-offices .administration-role-copy { align-items: center; }
+.house-court-offices .administration-role-title { min-height: 3em; }
+.house-court-offices .administration-role-open > .administration-pin { left: auto; right: calc(50% - 82px); }
+.house-court-offices .administration-role-jurisdiction { display: none; }
+.house-court-offices .administration-role-open:focus-visible { outline: 3px solid #804737; outline-offset: -4px; }
 .house-court-group { margin-block: 1.5rem; }
 .house-court-heading {
   padding: .65rem 1rem;
@@ -48,12 +60,17 @@
 .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @container (max-width: 800px) {
   .house-court-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .house-court-offices .administration-role-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @container (max-width: 520px) {
+  .house-court-offices .administration-role-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .house-court-offices .administration-portrait-frame { width: 112px; }
+  .house-court-offices .administration-role-open > .administration-pin { right: calc(50% - 64px); }
   .house-court-grid,
   .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
 }
 @container (max-width: 310px) {
+  .house-court-offices .administration-role-grid { grid-template-columns: 1fr; }
   .house-court-grid,
   .house-court-group[data-court-group="cadets"] .house-court-grid { grid-template-columns: 1fr; }
 }
