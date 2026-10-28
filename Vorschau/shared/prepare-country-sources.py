@@ -31,7 +31,7 @@ def main():
                 output.parent.mkdir(parents=True, exist_ok=True)
                 web = image.convert('RGBA' if image.mode == 'RGBA' else 'RGB')
                 web.thumbnail(tuple(preview['size']), Image.Resampling.LANCZOS)
-                web.save(output, 'WEBP', quality=94, method=6, exact=True)
+                web.save(output, 'WEBP', quality=preview.get('quality', 94), method=6, exact=True)
         entries.append(dict(sourceFile=source.name, sha256=digest, dimensions=dimensions,
                             original=str(target.relative_to(workspace)).replace('\\', '/'),
                             publishedOriginal=not item.get('localArchive', False)))

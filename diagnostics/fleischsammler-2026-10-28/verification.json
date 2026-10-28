@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-28",
+  "status": "local-complete-awaiting-publication-approval",
+  "noticeId": "gwynthor-fleischsammler",
+  "pages": 4,
+  "posterId": "gwynthor-poster-moerder",
+  "unitTests": { "passed": 87, "failed": 0 },
+  "structureValidation": { "errors": 0, "existingDuplicateBackgroundWarning": true },
+  "generatedPackageCheck": "passed",
+  "previousFourteenSheetsUnchanged": true,
+  "previousAuthoredCorrectionsUnchanged": true,
+  "browser": {
+    "desktop": "Opened at existing Mörder poster; all four pages, author identities, illustrations and reward dialog inspected.",
+    "narrow": "All four pages checked at 390px; no horizontal overflow. Narrow warning heading corrected and visually verified.",
+    "rewardDialog": "3 gold, 1 silver, with their separate conditions.",
+    "legacyRead": "Existing legacy Firebase read unavailable; no Firebase or publishing writes performed.",
+    "localPreview": "http://127.0.0.1:8882/Anzeigetafeln/tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel"
+  },
+  "art": "Built-in image_gen; original alpha preserved; full prompts in Anzeigetafeln/assets/images/quests/fleischsammler/generation.json"
+}

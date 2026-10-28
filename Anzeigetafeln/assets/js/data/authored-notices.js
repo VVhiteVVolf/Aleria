@@ -11,7 +11,8 @@
       const source = await response.json();
       if (!Array.isArray(source.zettel)) throw new Error('Aushangliste fehlt.');
       return { zettel: source.zettel.filter(notice => typeof notice?.id === 'string' && notice.id),
-        updates: Array.isArray(source.updates) ? source.updates : [] };
+        updates: Array.isArray(source.updates) ? source.updates : [],
+        boardBindings: Array.isArray(source.boardBindings) ? source.boardBindings : [] };
     } catch (error) {
       console.warn('[authored-notices] Zusätzliche Aushänge konnten nicht geladen werden:', error);
       window.setTimeout(() => window.TafelRuntime?.toast?.('Zusätzliche Aushänge konnten nicht geladen werden. Bitte die Tafel erneut öffnen.'), 0);
@@ -59,8 +60,26 @@
       }
       appliedUpdates.add(update.id);
     }
-    return { ...state, zettel, appliedAuthoredNoticeIds: [...applied],
+    const boardLayout = bindAddedNotices(state?.boardLayout, source.boardBindings, additions);
+    return { ...state, zettel, ...(boardLayout ? { boardLayout } : {}), appliedAuthoredNoticeIds: [...applied],
       ...(appliedUpdates.size ? { appliedAuthoredUpdateIds: [...appliedUpdates] } : {}) };
+  }
+
+  // A new authored notice may claim an existing decorative paper once. Saved
+  // placements, other content, deliberate unlinking and deletions keep precedence.
+  function bindAddedNotices(layout, bindings, additions) {
+    if (!layout?.posters || !Array.isArray(bindings) || !additions.length) return layout;
+    const addedIds = new Set(additions.map(notice => notice.id));
+    let next = layout;
+    for (const binding of bindings) {
+      if (!binding || !addedIds.has(binding.noticeId) || next.posters.some(poster => poster.noticeId === binding.noticeId)) continue;
+      const index = next.posters.findIndex(poster => poster.id === binding.posterId && poster.assetId === binding.assetId && !poster.noticeId);
+      if (index < 0) continue;
+      if (next === layout) next = { ...layout, posters: [...layout.posters] };
+      const poster = next.posters[index];
+      next.posters[index] = { ...poster, noticeId: binding.noticeId, pin: { ...poster.pin, enabled: true } };
+    }
+    return next;
   }
 
   window.TafelAuthoredNotices = Object.freeze({ load, merge });

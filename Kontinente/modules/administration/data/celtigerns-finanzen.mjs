@@ -1,0 +1,27 @@
+import { office as o, group as g, portrait as p } from '../administration-model.mjs';
+
+export default {
+  id: 'finanzen', title: 'Finanzen',
+  intro: 'Die Kämmerei hält Einnahmen, Vorräte und Ausgaben der Grafschaft zusammen. Fünf gleichrangige Kammerämter trennen Bewilligung, Auszahlung und Prüfung; die Kassen der Vasallen legen der Grafschaft Rechenschaft ab.',
+  groups: [
+    g('leitung', 'Kämmerei der Grafschaft', 'leadership', [o('kaemmerer', 'Kämmerer des Grafen', 'Odyar Draig', p('draig', 'odyar-draig'), 'Verantwortet Haushalt, Schatz und Abgabenordnung. Bewilligt Ausgaben innerhalb gräflicher Vollmacht und fordert die Jahresrechnungen der Vasallen an.', { reportsTo: 'Graf von Celtigerns Wacht', authority: 'Haushalts- und Rechnungsaufsicht; neue Abgaben und außergewöhnliche Verpflichtungen bedürfen der gräflichen Entscheidung.' })]),
+    g('adjutantur', 'Adjutantur', 'adjutant', [o('adjutant', 'Adjutant des Kämmerers', 'Tudwal Draig', p('draig', 'tudwal-draig'), 'Führt die Tagesgeschäfte, Termine, Laufstellen und Amtssiegel; leitet Aufträge an die zuständigen Kammerämter.', { reportsTo: 'Kämmerer des Grafen' })]),
+    g('kern', 'Die fünf Kammerämter', 'core', [
+      o('kasse', 'Kammerherrin der Kasse', 'Wynonna Draig', p('draig', 'wynonna-fiachrach'), 'Verwahrt den Schatz, veranlasst bewilligte Zahlungen und führt Quittungs- und Lohnlisten.', { reportsTo: 'Kämmerer des Grafen', connections: [{ area: 'militaer', label: 'Sold und Versorgung', description: 'Zahlt bestätigte Soldlisten aus; militärische Einsatzbefehle bleiben beim Marschall.' }] }),
+      o('abgaben', 'Kammerherrin der Abgaben', 'Beibhinn Draig', p('draig', 'beibhinn-eirce'), 'Beaufsichtigt Pacht, Zölle, Zehnt und Rückstände. Erfasst die Abgaben der Vasallen und prüft geltende Befreiungen.', { reportsTo: 'Kämmerer des Grafen', connections: [{ area: 'gerichtsbarkeit', label: 'Strittige Abgaben', description: 'Gibt Rechtsstreit und angefochtene Pfändungen an die Justiz.' }] }),
+      o('vorraete', 'Kammeramt der Vorräte', '', '', 'Ordnet Speicher, Korn, Salz, Rationen und Ausgabe; gleicht Lieferpflichten mit tatsächlichen Beständen ab.', { reportsTo: 'Kämmerer des Grafen', connections: [{ area: 'militaer', label: 'Heereslogistik', description: 'Stimmt Vorräte und Transporte mit dem Kriegswart der Logistik ab.' }] }),
+      o('werke', 'Kammeramt der Werke', '', '', 'Prüft Bauausgaben, Reparaturen, Lieferverträge, Material und Werklohn; hält Kostenanschlag und Abnahme getrennt.', { reportsTo: 'Kämmerer des Grafen', connections: [{ area: 'unterhaltung', label: 'Festhaushalt', description: 'Prüft Aufbauten, Ausstattung und Lieferkosten größerer Veranstaltungen.' }] }),
+      o('rechnung', 'Kammerherr der Rechnung', 'Avan Balchder', p('rhyddid', 'avan-balchder'), 'Prüft Bücher, Register und Jahresrechnungen. Kontrolliert Auszahlungen unabhängig von der Kasse und dokumentiert Beanstandungen.', { reportsTo: 'Kämmerer des Grafen', connections: [{ area: 'spionage', label: 'Unterschlagung', description: 'Übergibt konkrete Verdachtsbelege zur Ermittlung; entscheidet nicht selbst über Schuld.' }] }),
+    ], 'Alle fünf Ämter berichten unmittelbar an Odyar. Keines ist einem anderen Kammeramt unterstellt.'),
+    g('sonder', 'Sonderaufträge der Kämmerei', 'special', [o('kane', 'Kassenritter · Beauftragter für gesicherte Zahlungen', 'Kane Draig', p('draig', 'kane-draig'), 'Begleitet wichtige Auszahlungen, versiegelte Geldsendungen und wertvolle Lieferungen. Bestätigt Übergaben und meldet Unregelmäßigkeiten unmittelbar an Odyar.', { reportsTo: 'Kämmerer des Grafen', authority: 'Auftragsgebundener Schutz und Übergabekontrolle; keine eigene Steuer-, Prüfungs- oder Haushaltsgewalt.', connections: [{ area: 'militaer', label: 'Geleit der Wacht', description: 'Fordert abgestimmten Begleitschutz an; führt keine unabhängige Truppe.' }, { area: 'gerichtsbarkeit', label: 'Übergabebelege', description: 'Sichert Quittungen und meldet beschlagnahmte Gelder ordnungsgemäß.' }] })]),
+    g('aemter', 'Rentämter und örtliche Verwaltung', 'service', [
+      o('rentmeister', 'Rentmeister des Lehens', '', '', 'Fasst Burg-, Stadt- und Amtsrechnungen zusammen; legt der Kämmerei den örtlichen Haushalt vor.', { reportsTo: 'Kämmerer des Grafen' }),
+      o('zoll', 'Tor-, Brücken- und Hafenzollmeister', '', '', 'Erheben genehmigte Zölle, führen Ladungs- und Quittungslisten und stimmen Kontrollen mit Hafen und Wacht ab.', { reportsTo: 'Kammeramt der Abgaben' }),
+      o('markt', 'Marktkämmerer und Waagmeister', '', '', 'Verwalten Marktgelder, Eichung, Standplätze und städtische Register.', { reportsTo: 'Kammeramt der Abgaben' }),
+      o('magazin', 'Magazinmeister und Hofmeier', '', '', 'Verwalten Speicher, Höfe, Ernteschätzungen und Lieferpflichten.', { reportsTo: 'Kammeramt der Vorräte' }),
+      o('pruefer', 'Kassenreiter', '', '', 'Prüfen unangekündigt Kassen, Siegel und Bestände; fertigen nachprüfbare Berichte an.', { reportsTo: 'Kammeramt der Rechnung' }),
+    ]),
+    g('dienste', 'Schreibstuben und Dienste', 'service', [o('dienste', 'Zöllner, Schätzer, Schreiber und Boten', '', '', 'Erheben und quittieren Abgaben, führen Bücher und überbringen gesiegelte Anweisungen. Eintreiber und Pfänder handeln nur auf gültigen Auftrag; Keller- und Vorratswärter dokumentieren jede Ausgabe.', { reportsTo: 'Zuständiges Kammeramt oder Rentamt' })]),
+  ],
+  sources: [{ label: 'Bisherige Kämmereiordnung', href: '/Kontinente/modules/administration/content/finanzen.html' }],
+};

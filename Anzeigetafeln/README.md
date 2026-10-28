@@ -149,3 +149,14 @@ bedingte Kupferzugabe sowie Gruppieren, Trennen, Umheften und Neuladen auf Deskt
 Tablet und Handy. Die Bilder wurden mit dem integrierten Bildgenerator erzeugt;
 Prompts und Referenzen stehen in `assets/images/missing-sketches/generation.json`
 und `assets/images/quests/torvik-seit-lyristag-vermisst/reward-generation.json`.
+
+Der **Fleischsammler** ergänzt Gwynthors Paket um einen zusammengehörigen Aushang
+mit vier Blättern am vorhandenen **Mörder!**-Plakat: Ferydnands Warnung,
+Neithons Belohnungsverfügung, Meredydds Fahndungsaufruf und ein knappes Täterblatt.
+`tools/quests/fleischsammler-wanted.mjs` besitzt ausschließlich die öffentlichen
+Angaben. Identität und Motiv bleiben unbekannt; Kapuze und Hackebeil der abstrakten
+Skizze sind ausdrücklich kein gesichertes Tätermerkmal. Betroffen ist der östliche
+Bannkreis außerhalb der Stadt. Die drei Originalporträts stammen aus dem
+Stammbaumregister. Generierte Skizze, Verwaltungssiegel und Unterschriften sind
+mit vollständigen Prompts in `assets/images/quests/fleischsammler/generation.json`
+dokumentiert.

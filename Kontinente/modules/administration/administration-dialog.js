@@ -7,7 +7,9 @@
   const areaById = new Map(content.areas.map((area) => [area.id, area]));
   const areaByName = new Map(content.areas.map((area) => [normalize(area.name), area]));
   const sourceCache = new Map();
-  const rendererUrl = new URL('./administration-renderer.mjs?v=administration-dialog-20260911b', document.currentScript.src);
+  const moduleRoot = new URL('./', document.currentScript.src);
+  const rendererUrl = new URL('./administration-renderer.mjs?v=20261028', moduleRoot);
+  const structuredUrl = new URL('./administration-structured.mjs?v=20261028', moduleRoot);
   let loadRevision = 0;
   let dialog;
   let dialogKicker;
@@ -40,8 +42,10 @@
             <span class="administration-dialog-kicker">Verwaltungsstruktur</span>
             <h2 id="administration-dialog-title" tabindex="-1"></h2>
           </div>
+          <button class="administration-dialog-maximize" type="button" data-action="maximize-administration" aria-label="Fenster maximieren" aria-pressed="false">⛶</button>
           <button class="administration-dialog-close" type="button" data-action="close-administration" aria-label="Fenster schließen">×</button>
         </header>
+        <nav class="administration-area-tabs" aria-label="Verwaltungsbereich auswählen"></nav>
         <div class="administration-dialog-body" data-role="administration-dialog-body"></div>
       </div>`;
     document.body.append(element);
@@ -49,6 +53,15 @@
     dialogTitle = element.querySelector("#administration-dialog-title");
     dialogIcon = element.querySelector('.administration-dialog-icon');
     dialogBody = element.querySelector('[data-role="administration-dialog-body"]');
+    content.areas.forEach(area => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.dataset.action = 'navigate-administration';
+      button.dataset.administrationKey = area.id;
+      button.textContent = area.name;
+      element.querySelector('.administration-area-tabs').append(button);
+    });
+    element.addEventListener('administration:navigate', event => openDialog(event.detail.areaId, null, activeScopeId));
     element.addEventListener("click", (event) => {
       if (event.target === element) closeDialog();
     });
@@ -69,6 +82,11 @@
     if (trigger) lastTrigger = trigger;
     activeAreaId = area.id;
     activeScopeId = normalize(requestedScopeId || trigger?.dataset.administrationScope || currentScopeId());
+    dialog.querySelectorAll('.administration-area-tabs button').forEach(button => {
+      const active = button.dataset.administrationKey === areaId;
+      if (active) button.setAttribute('aria-current', 'page');
+      else button.removeAttribute('aria-current');
+    });
     const revision = ++loadRevision;
     const scopeId = activeScopeId;
     dialogKicker.textContent = `${currentDomainName()} · Verwaltungsstruktur`;
@@ -95,12 +113,15 @@
   }
 
   async function loadArea(area, scopeId) {
+    const { renderStructuredAdministration } = await import(structuredUrl.href);
+    const structured = await renderStructuredAdministration(scopeId, area.id);
+    if (structured) return structured;
     const { renderLegacyContent, renderEmptyArea } = await import(rendererUrl.href);
     const source = content.sourceFor?.(scopeId, area.id) || "";
     if (!source) return renderEmptyArea();
     if (!sourceCache.has(source)) {
       const requestUrl = new URL(source, location.origin);
-      requestUrl.searchParams.set('v', 'administration-dialog-20260911b');
+      requestUrl.searchParams.set('v', '20261028');
       sourceCache.set(source, fetch(requestUrl).then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}: ${source}`);
         return response.text();
@@ -109,7 +130,7 @@
         throw error;
       }));
     }
-    return renderLegacyContent(await sourceCache.get(source));
+    return renderLegacyContent(await sourceCache.get(source), area);
   }
 
   function createAreaNavigation(area, scopeId) {
@@ -213,6 +234,8 @@
 
   function init() {
     dialog = createDialog();
+    import(new URL('./administration-office-dialog.mjs?v=20261028', moduleRoot).href)
+      .then(({ mountOfficeDialog }) => mountOfficeDialog(dialog));
     enhanceRenderedCards();
     document.addEventListener("aleria:administration-rendered", enhanceRenderedCards);
     document.addEventListener("click", (event) => {
@@ -223,6 +246,12 @@
         openDialog(navigation.dataset.administrationKey, null, navigation.dataset.administrationScope || activeScopeId);
       }
       if (event.target.closest('[data-action="close-administration"]')) closeDialog();
+      const maximize = event.target.closest('[data-action="maximize-administration"]');
+      if (maximize) {
+        const maximized = dialog.classList.toggle('is-maximized');
+        maximize.setAttribute('aria-pressed', String(maximized));
+        maximize.setAttribute('aria-label', maximized ? 'Fenster verkleinern' : 'Fenster maximieren');
+      }
     });
 
     const hasRepositoryContent = Boolean(document.querySelector('script[src*="kontinente-content.js"]'));

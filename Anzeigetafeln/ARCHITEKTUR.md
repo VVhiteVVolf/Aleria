@@ -110,6 +110,16 @@ Der Vermisst-Nagel sitzt bei
 Vermisst-Zettel. Der alte `data.json`-Stand bleibt erhalten; die Ergänzung
 schreibt weder nach Firebase noch selbständig in den Online-Publisher.
 
+Das optionale `boardBindings` im Zusatzpaket ordnet einen neu hinzugefügten
+Aushang ausdrücklich einem vorhandenen dekorativen Plakat zu. Der Laderand
+ergänzt die Verknüpfung nur bei der erstmaligen Inhaltsübernahme und nur, wenn
+Plakat-ID und Motiv passen und dort noch kein anderer Inhalt hängt. Eine eigene
+Zuordnung desselben Aushangs, entfernte Plakate, andere Motive sowie spätere
+Loslösungen oder Löschungen bleiben erhalten. Position, Drehung, Ebenen und
+übrige Nageldaten werden nicht verändert. Ohne gespeicherte Anordnung übernimmt
+wie bisher die Tafelvorlage die Zuordnung. Gwynthors Fleischsammler verwendet
+dies für den vorhandenen Mörder-Zettel; es entstehen keine zusätzlichen Plakate.
+
 ## Vorlagen und Bilder
 
 ### Handschriften und Sprachschriften

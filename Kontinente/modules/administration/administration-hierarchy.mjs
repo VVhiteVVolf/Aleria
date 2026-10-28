@@ -1,8 +1,8 @@
-import { renderCouncilGroups } from '../territory-directory/council-directory.mjs?v=panels-20260911a';
+import { renderRoleGroup } from './administration-cards.mjs';
 
 // Adapt the legacy portrait/title/name rows to the shared council cards.
 // Unknown table layouts remain tables, so new source formats cannot lose content.
-export function renderAdministrationHierarchy(table, textFor, isPending) {
+export function renderAdministrationHierarchy(table, textFor, isPending, area) {
   if (table.querySelector('table')) return null;
   const rows = [...table.rows];
   const groups = [];
@@ -56,15 +56,22 @@ export function renderAdministrationHierarchy(table, textFor, isPending) {
   if (!groups.length) return null;
   const view = document.createElement('div');
   view.className = 'administration-hierarchy';
-  for (const group of groups) {
-    const cards = renderCouncilGroups([group]);
+  for (const [index, group] of groups.entries()) {
+    const kind = index === 0 ? 'leadership' : /adjutant/i.test(group.title) ? 'adjutant' : 'service';
+    const roles = group.members.map((member, position) => ({
+      id: `legacy-${index}-${position}`, title: member.office || group.title,
+      name: member.pending ? '' : member.name, portrait: member.image.getAttribute('src'),
+      description: `Dieses Amt gehört zu ${group.title}. Aufgaben und Zuständigkeiten sind in der überlieferten Ordnung dieses Bereichs aufgeführt.`,
+      links: member.href ? [{ label: 'Personenakte öffnen', href: member.href }] : [],
+    }));
+    const cards = renderRoleGroup({ id: `legacy-${index}`, title: group.title, kind, roles }, area);
     if (group.members.every(member => member.pending && member.unspecifiedOffice) && group.members.length > 1) {
       const details = document.createElement('details');
       details.className = 'administration-dialog-details administration-pending-offices';
       const summary = document.createElement('summary');
       summary.textContent = `${group.title} · ${group.members.length} Einträge noch nicht benannt`;
       // The accordion already labels this group; avoid a repeated title.
-      cards.querySelector('.herrschaft-person-group > h3')?.remove();
+      cards.querySelector('.administration-group-heading')?.remove();
       details.append(summary, cards);
       view.append(details);
     } else view.append(cards);

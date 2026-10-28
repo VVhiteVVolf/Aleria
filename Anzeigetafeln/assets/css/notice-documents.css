@@ -139,6 +139,8 @@
   .quest-docket { border-right: 0; border-bottom: 1px solid #a98543; }
 }
 @container (max-width: 380px) {
+  .notice-document--warnung .notice-heading { display: flex; flex-direction: column; text-align: center; }
+  .notice-document--warnung .notice-edition { width: 100%; }
   .notice-subject { grid-template-columns: 1fr; }
   .notice-subject-portrait { width: min(180px, 70%); margin-inline: auto; }
   .notice-signature { width: 70px; }

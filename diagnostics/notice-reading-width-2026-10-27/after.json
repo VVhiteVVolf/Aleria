@@ -1,0 +1,630 @@
+[
+  {
+    "columns": null,
+    "copies": [],
+    "id": "quest-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "quest"
+  },
+  {
+    "columns": null,
+    "copies": [],
+    "id": "quest-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "quest"
+  },
+  {
+    "columns": null,
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 1074,
+        "width": 801.328125
+      }
+    ],
+    "id": "steckbrief-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "steckbrief"
+  },
+  {
+    "columns": null,
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 1074,
+        "width": 801.328125
+      }
+    ],
+    "id": "steckbrief-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "steckbrief"
+  },
+  {
+    "columns": null,
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 463.40625,
+        "width": 463.40625
+      }
+    ],
+    "id": "zeitung-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "zeitung"
+  },
+  {
+    "columns": null,
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 463.40625,
+        "width": 463.40625
+      }
+    ],
+    "id": "zeitung-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "zeitung"
+  },
+  {
+    "columns": null,
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 1074,
+        "width": 801.328125
+      }
+    ],
+    "id": "vermisst-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "vermisst"
+  },
+  {
+    "columns": null,
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 1074,
+        "width": 801.328125
+      }
+    ],
+    "id": "vermisst-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "vermisst"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "ankuendigung-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "ankuendigung"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "ankuendigung-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "ankuendigung"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "notiz-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "notiz"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "notiz-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "notiz"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "handel-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "handel"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "handel-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "handel"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "erlass-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "erlass"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "erlass-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "erlass"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "einladung-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "einladung"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "868.116px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "einladung-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "einladung"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "warnung-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "warnung"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "warnung-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "warnung"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "reise-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "reise"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "reise-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "reise"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "gilde-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "gilde"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "gilde-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "gilde"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "fund-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "fund"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "fund-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "fund"
+  },
+  {
+    "columns": "960.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 960.8125,
+        "width": 960.8125
+      }
+    ],
+    "id": "hilfsgesuch-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "hilfsgesuch"
+  },
+  {
+    "columns": "327.875px 608.938px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 608.9375,
+        "width": 608.9375
+      }
+    ],
+    "id": "hilfsgesuch-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "hilfsgesuch"
+  },
+  {
+    "columns": "950.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 950.8125,
+        "width": 950.8125
+      }
+    ],
+    "id": "turnier-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "turnier"
+  },
+  {
+    "columns": "324.375px 602.438px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 602.4375,
+        "width": 602.4375
+      }
+    ],
+    "id": "turnier-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "turnier"
+  },
+  {
+    "columns": "958.812px",
+    "copies": [
+      {
+        "maxWidth": "none",
+        "parentWidth": 958.8125,
+        "width": 958.8125
+      }
+    ],
+    "id": "auktion-text",
+    "image": false,
+    "regions": [
+      {
+        "maxHeight": "720px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": true,
+    "type": "auktion"
+  },
+  {
+    "columns": "327.172px 607.641px",
+    "copies": [
+      {
+        "maxWidth": "801.338px",
+        "parentWidth": 607.640625,
+        "width": 607.640625
+      }
+    ],
+    "id": "auktion-image",
+    "image": true,
+    "regions": [
+      {
+        "maxHeight": "220px",
+        "overflow": "auto"
+      }
+    ],
+    "singleColumn": false,
+    "type": "auktion"
+  }
+]

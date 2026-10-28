@@ -9,7 +9,9 @@ export function mountCountryWorkbench(config){
  root.innerHTML=renderCountryPage(config);
  const renderer=createCountryRenderer(config);
  root.querySelector('[data-role="counties"]').innerHTML=renderer.renderCounties();
- root.querySelector('[data-role="occupation"]').innerHTML=renderOccupation(context.realm==='triarchie'?null:context.realm);
+ const occupation=root.querySelector('[data-role="occupation"]');
+ occupation.innerHTML=renderOccupation(context.realm==='triarchie'?null:context.realm);
+ occupation.hidden=!occupation.innerHTML;
  root.querySelector('[data-role="warriors"]').innerHTML=warriors.map(w=>`<button class="country-warrior-card" data-action="show-house" data-house="${escapeHtml(w.id)}"><img src="${escapeHtml(w.image)}" width="240" height="360" loading="lazy" alt="${escapeHtml(w.name)} · ${escapeHtml(w.className)}"><strong>${escapeHtml(w.name)}</strong><small>${escapeHtml(w.className)} · Entwurf</small></button>`).join('');
  let timer;
  function notice(text){const b=root.querySelector('[data-role="status"]');b.textContent=text;b.hidden=false;clearTimeout(timer);timer=setTimeout(()=>b.hidden=true,6500);}

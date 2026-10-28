@@ -1,0 +1,9 @@
+.deitheach-workbench{--accent:#405c43;--paper:#f1eee2;--muted:#686b61;background:#bdc4b7}
+.deitheach-workbench .hero{background:radial-gradient(ellipse at 85% 40%,#b9c7ad99,transparent 65%)}
+.deitheach-workbench .county-card:last-child{grid-column:auto}
+.deitheach-workbench .seat-card>header .shield-link{width:auto;flex:0 0 112px}
+.deitheach-workbench .seat-card>header .shield-link img{width:105px;height:130px}
+.deitheach-workbench .seat-card>header .shield-link span{display:none}
+.deitheach-workbench .city-name{font-size:clamp(10px,1.1vw,16px);background:#f6f1d9ef;color:#253425;box-shadow:0 1px 4px #1115}
+.deitheach-workbench .draft-note{border-left:3px solid #78674a;padding-left:20px}
+@media(max-width:650px){.deitheach-workbench .seat-card>header .shield-link{flex-basis:80px}.deitheach-workbench .seat-card>header .shield-link img{width:76px;height:105px}}

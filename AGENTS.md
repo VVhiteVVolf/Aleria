@@ -2,13 +2,14 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
-Neueste Nutzeranweisung vom 27. Oktober 2026: **„Versuche alle änderungen nochmal
-zu deployen. Alles“**. Damit ist der gesamte vorhandene lokale Änderungsstand
-für Commit, Push und Produktivveröffentlichung freigegeben, einschließlich
-Uathneachs Hausbios, Hausseiten und Kriegergalerie, der Iathneach- und
-Triarchie-Vorbereitungsseiten, Aldingens besetzter Gebiete, des Ideenwerks und
-des bereits gepushten Gwynthor-Plakattafelstands. Diese Freigabe erweitert die
-vorherige Aldingen-Freigabe auf diesen Gesamtstand. Künftige neue Arbeiten
+Neueste Nutzeranweisung vom 28. Oktober 2026: **„Ja, push und deploy alle lokalen
+neuheiten.“**, nach einer Unterbrechung zur Durchsicht ausdrücklich mit
+**„Pushe und deploy.“** wieder aufgenommen. Damit ist der gesamte vorhandene
+lokale Änderungsstand für Commit, Push und Produktivveröffentlichung freigegeben,
+einschließlich Gwynthors vierseitigem Fleischsammler-Aushang, der Deitheach-
+Vorbereitungsseite, der gemeinsamen Länderwerkstatt und der lokalen
+Verwaltungsbausteine. Die vorherige Freigabe des Gesamtstands vom 27. Oktober
+bleibt eingeschlossen. Künftige neue Arbeiten
 benötigen ihre jeweils geltende Veröffentlichungsfreigabe. Entwurfszuordnungen
 bleiben außerhalb kanonischer Register und Firebase-Daten.
 

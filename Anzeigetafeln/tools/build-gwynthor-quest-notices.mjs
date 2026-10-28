@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { buildHerluinMissingNotices } from './quests/herluin-missing.mjs';
 import { buildHouseholdQuestNotices } from './build-household-quests.mjs';
 import { buildZitteraaleWantedNotices } from './quests/zitteraale-wanted.mjs';
+import { buildFleischsammlerNotices, FLEISCHSAMMLER_BOARD_BINDING } from './quests/fleischsammler-wanted.mjs';
 import { buildNoticeSignoffUpdates } from './issuers/notice-signoffs.mjs';
 
 export async function buildGwynthorQuestPack() {
@@ -14,7 +15,7 @@ export async function buildGwynthorQuestPack() {
       { field: 'noticeGroupId', missing: true, to: current.noticeGroupId },
     ] };
   });
-  const notices = [...herluin, ...buildHouseholdQuestNotices(), ...buildZitteraaleWantedNotices()];
+  const notices = [...herluin, ...buildHouseholdQuestNotices(), ...buildZitteraaleWantedNotices(), ...await buildFleischsammlerNotices()];
   const voiceBaseline = JSON.parse(await readFile(new URL('./data/gwynthor-notice-voice-v1.json', import.meta.url), 'utf8'));
   for (const old of voiceBaseline.notices) {
     const current = notices.find(notice => notice.id === old.id);
@@ -41,7 +42,7 @@ export async function buildGwynthorQuestPack() {
     updates.push({ id: `${old.id}:20261021-egon-issuer-media`, noticeId: old.id, fields });
   }
   updates.push(...buildNoticeSignoffUpdates(notices.map(notice => notice.id)));
-  return { schemaVersion: 2, zettel: notices, updates };
+  return { schemaVersion: 2, zettel: notices, updates, boardBindings: [FLEISCHSAMMLER_BOARD_BINDING] };
 }
 
 export async function writeGwynthorQuestPack({ check = false } = {}) {
@@ -51,7 +52,7 @@ export async function writeGwynthorQuestPack({ check = false } = {}) {
     if (await readFile(target, 'utf8') !== content) throw new Error('Gwynthors Quest-Aushänge müssen neu erzeugt werden.');
   } else {
     await writeFile(target, content);
-    console.log('Gwynthor: vier Aushänge mit insgesamt vierzehn Blättern · Celynfor bleibt offen.');
+    console.log('Gwynthor: fünf Aushänge mit insgesamt achtzehn Blättern · Celynfor bleibt offen.');
   }
 }
 

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-28",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "sinnbild-v1.png",
+      "prompt": "Use case: illustration-story.\nAsset type: abstract, deliberately non-identifying symbolic sketch for a medieval fantasy public warning notice, portrait 2:3.\nPrimary request: a single anonymous hooded upper-body silhouette holding a plain meat cleaver. The face under the hood is entirely opaque shadow: absolutely no eyes, nose, mouth, beard, skin, age, or identifiable facial features. A rough, sparse charcoal and brown-black ink sketch with loose hatching and worn hand-drawn lines. Generalized shoulders and simple unadorned cloak, no realistic anatomy detail. Cleaver held quietly at chest level, blade plain, no blood. Cropped at waist, entire hood and cleaver visible, centered with generous empty margins. This is a symbolic image rather than an eyewitness likeness. No background scenery, no writing, no lettering, no frame, no emblem, no gore, no victims, no corpse, no other props. Genuine transparent PNG background; only charcoal/ink strokes and their shaded silhouette are opaque. Thin broken ink edges suitable for placing on existing warm parchment; do not draw paper, cast shadow, glow, halo, or checkerboard. Restrained medieval wanted-notice sketch aesthetic, not a polished character portrait.",
+      "usage": "Symbolic illustration only; no eyewitness likeness, appearance, or murder weapon is established."
+    },
+    {
+      "file": "../../issuers/gwynthor-verwaltung/wachssiegel-v1.png",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: ONE official dark red sealing-wax impression for the civic administration of Gwynthor. Reference 1 defines the item's exact DESIGN, materials, colors and any authentic house emblem. Reference 2 defines the ITEM ART STYLE only: hand-painted illustrated fantasy inventory art, painterly textured wax, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Not photorealistic, not CGI or a glossy 3D render. Preserve the item's design and heraldry from reference 1; never copy the symbols or house colors of the style reference. Show the entire isolated object, centered and large within the square, with about 10% clear margin on all sides. TRUE transparent PNG alpha background. No person, hands, mannequin, scenery, floor, stand, frame, text, watermark or painted checkerboard. Do not add unrelated objects.\nSubject: a single round medieval dark oxblood-red wax seal, gently uneven outer edge, viewed straight on. In the central depressed face, embossed in the SAME RED WAX, the simplified authentic city motif from reference 1: a small winged dragon above a three-towered fortified city gate. A single plain round incised rim. Readable at 58 pixels. Reference 1 is DESIGN ONLY, use its dragon-above-castle arrangement, do not depict its wooden shield or color fields. Reference 2 is WAX STYLE ONLY, do not copy its goats or knot. No metallic rim, gold paint, ribbons, string, parchment, document or letters. The circular seal takes 80-85% of width; transparent margin on every side, no cast shadow, halo, glow or backdrop. This is a civic seal icon, not a new house coat of arms.",
+      "references": [
+        "IconOrdner/Länder und Häuser Icons/Haus Draig/Gwynthor.png",
+        "Anzeigetafeln/assets/images/issuers/egon-gafyr/wachssiegel-v1.png"
+      ]
+    },
+    {
+      "file": "../../issuers/gwynthor-verwaltung/ferydnand-gafyr-unterschrift-v1.png",
+      "prompt": "Create ONE fictional medieval handwritten signature asset, genuine transparent PNG. Exact readable words on ONE horizontal line: \"Ferydnand Gafyr\". Dark nearly black warm-brown quill ink only, firm, angular, decisive military noble handwriting, a short straight underline and restrained flourishes. It must read as an individual handwritten signature, not printed type or decorative display lettering. All letters complete, name spelled exactly. Center the horizontal signature on a square 1:1 canvas at 85% canvas width, leaving comfortable margin and no clipped strokes. No paper, parchment, hands, pen, seal, backdrop, frame, shadow, additional words, captions or watermark. Everything outside the ink completely transparent."
+    },
+    {
+      "file": "../../issuers/gwynthor-verwaltung/neithon-draig-unterschrift-v1.png",
+      "prompt": "Create ONE fictional medieval handwritten signature asset, genuine transparent PNG. Exact readable words on ONE horizontal line: \"Neithon Draig\". Dark nearly black warm-brown quill ink only, precise, elegant, measured legal clerk cursive with regular spacing, clear capitals, a restrained thin finishing stroke. It must read as an individual handwritten signature, not printed type or decorative display lettering. All letters complete, name spelled exactly. Center the horizontal signature on a square 1:1 canvas at 85% canvas width, leaving comfortable margin and no clipped strokes. No paper, parchment, hands, pen, seal, backdrop, frame, shadow, additional words, captions or watermark. Everything outside the ink completely transparent."
+    },
+    {
+      "file": "../../issuers/gwynthor-verwaltung/meredydd-gwyllach-unterschrift-v1.png",
+      "prompt": "Create ONE fictional medieval handwritten signature asset, genuine transparent PNG. Exact readable words on ONE horizontal line: \"Meredydd Gwyllach\". Dark nearly black warm-brown quill ink only, small, controlled, analytical quill cursive, neat economical strokes, slight right slant, no ornamental flourishes. It must read as an individual handwritten signature, not printed type or decorative display lettering. All letters complete, name spelled exactly. Center the horizontal signature on a square 1:1 canvas at 85% canvas width, leaving comfortable margin and no clipped strokes. No paper, parchment, hands, pen, seal, backdrop, frame, shadow, additional words, captions or watermark. Everything outside the ink completely transparent."
+    }
+  ],
+  "alpha": "Original PNGs copied without pixel or alpha changes."
+}

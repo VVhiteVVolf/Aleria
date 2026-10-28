@@ -14,8 +14,8 @@ const stacks = window.TafelNoticeStacks;
 test('Gwynthor includes all 53 physical sheets and actual local artwork without creating decorative quests', () => {
   const layout = normalizeLayout(preset.layout, catalog);
   assert.equal(layout.posters.length, 53);
-  assert.equal(layout.posters.filter(poster => poster.noticeId).length, 3);
-  assert.equal(layout.posters.filter(poster => poster.pin.enabled).length, 3);
+  assert.equal(layout.posters.filter(poster => poster.noticeId).length, 4);
+  assert.equal(layout.posters.filter(poster => poster.pin.enabled).length, 4);
   for (const asset of catalog) {
     assert.ok(existsSync(new URL(`../${asset.src}`, import.meta.url)), asset.src);
     assert.ok(asset.aspect > 0 && asset.bounds.w <= asset.width && asset.bounds.h <= asset.height, asset.id);

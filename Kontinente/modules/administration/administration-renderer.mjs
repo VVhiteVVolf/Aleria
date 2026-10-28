@@ -1,4 +1,4 @@
-import { renderAdministrationHierarchy } from './administration-hierarchy.mjs?v=administration-dialog-20260911b';
+import { renderAdministrationHierarchy } from './administration-hierarchy.mjs?v=20261028';
 
 export function renderEmptyArea() {
   const result = document.createDocumentFragment();
@@ -9,7 +9,7 @@ export function renderEmptyArea() {
   return result;
 }
 
-export function renderLegacyContent(source) {
+export function renderLegacyContent(source, area = { id: 'militaer', title: 'Verwaltung' }) {
   const parsed = new DOMParser().parseFromString(source, 'text/html');
   const legacyRoot = parsed.querySelector('.user_css') || parsed.body;
   const outerTable = [...legacyRoot.children].find(element => element.tagName === 'TABLE');
@@ -17,7 +17,7 @@ export function renderLegacyContent(source) {
   if (!outerTable?.tBodies?.[0]) {
     const section = document.createElement('section');
     section.className = 'administration-dialog-section';
-    section.append(sanitize(legacyRoot.cloneNode(true)));
+    section.append(sanitize(legacyRoot.cloneNode(true), area));
     result.append(section);
     return result;
   }
@@ -28,7 +28,7 @@ export function renderLegacyContent(source) {
     for (const cell of [...row.cells].filter(entry => entry.colSpan >= 3)) {
       const clone = cell.cloneNode(true);
       removeLegacyNavigation(clone);
-      sanitize(clone);
+      sanitize(clone, area);
       const section = document.createElement('section');
       section.className = 'administration-dialog-section';
       section.append(...clone.childNodes);
@@ -72,7 +72,7 @@ function removeLegacyNavigation(root) {
   }
 }
 
-function sanitize(root) {
+function sanitize(root, area) {
   root.querySelectorAll('script, style, link, iframe, object, embed, form, input, button, textarea, select').forEach(node => node.remove());
   for (const element of root.querySelectorAll('*')) {
     const legacyStyle = element.getAttribute('style') || '';
@@ -107,11 +107,11 @@ function sanitize(root) {
       paragraph.replaceWith(heading);
     } else if (isPending(text) && !paragraph.querySelector('img')) paragraph.textContent = 'Folgt …';
   }
-  for (const table of [...root.querySelectorAll('table')].reverse()) enhanceTable(table);
+  for (const table of [...root.querySelectorAll('table')].reverse()) enhanceTable(table, area);
   return root;
 }
 
-function enhanceTable(table) {
+function enhanceTable(table, area) {
   // Some magic documents wrap only the hierarchy title in a nested table.
   if (table.parentElement?.tagName === 'TD' && table.rows.length === 1 && table.rows[0].cells.length === 1 && !table.querySelector('img, table')) {
     table.replaceWith(...table.rows[0].cells[0].childNodes);
@@ -120,7 +120,7 @@ function enhanceTable(table) {
   const hasPortraits = Boolean(table.querySelector('.administration-dialog-portrait'));
   const hasImages = Boolean(table.querySelector('img'));
   if (hasPortraits || (hasImages && table.rows.length >= 4)) {
-    const hierarchy = renderAdministrationHierarchy(table, textFor, isPending);
+    const hierarchy = renderAdministrationHierarchy(table, textFor, isPending, area);
     if (hierarchy) {
       table.replaceWith(hierarchy);
       return;

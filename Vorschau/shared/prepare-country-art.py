@@ -18,6 +18,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('country')
     parser.add_argument('--audit', action='store_true')
+    parser.add_argument('--qa-dir', type=Path, help='Optional workspace-relative directory for review sheets')
     args = parser.parse_args()
     workspace = Path(__file__).resolve().parents[2]
     root = workspace / 'Vorschau' / args.country
@@ -85,7 +86,7 @@ def main():
             raise ValueError('Manifest differs')
     else:
         out.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    qa=workspace/'diagnostics/iathneach-triarchie-2026-10-27'/args.country
+    qa=workspace/args.qa_dir if args.qa_dir else workspace/'diagnostics/iathneach-triarchie-2026-10-27'/args.country
     qa.mkdir(parents=True,exist_ok=True)
     sheet=Image.new('RGB',(1200,((len(entries)+4)//5)*265),'#e9e3d7')
     draw=ImageDraw.Draw(sheet)

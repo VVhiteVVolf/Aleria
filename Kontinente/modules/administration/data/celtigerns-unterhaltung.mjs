@@ -1,0 +1,28 @@
+import { office as o, group as g, portrait as p } from '../administration-model.mjs';
+
+export default {
+  id: 'unterhaltung', title: 'Unterhaltung',
+  intro: 'Hofkultur macht Rang, Erinnerung und gemeinsames Leben sichtbar. Unter der Barde der Grafschaft stehen fünf gleichrangige Kernämter. Die Barden der Vasallen stimmen große Feste, Ehrungen und Auftritte mit dem gräflichen Hof ab.',
+  groups: [
+    g('leitung', 'Hofkultur der Grafschaft', 'leadership', [o('barde', 'Barde des Grafen', 'Rihanna Draig', p('draig', 'rihanna-ceirwynn'), 'Verantwortet Hofunterhaltung, Feste, Turniere und die öffentliche Erinnerung des Hofes. Setzt Programm und Rahmen im Auftrag des Grafen.', { reportsTo: 'Graf von Celtigerns Wacht' })]),
+    g('adjutantur', 'Adjutantur', 'adjutant', [o('adjutant', 'Adjutantin der Barde', 'Isobel Draig', p('draig', 'isobel-1719-draig'), 'Führt Gästelisten, Proben, Einladungen und Laufstellen. Stimmt Küche, Hofdienste, Wache und Herold auf den Ablauf ab.', { reportsTo: 'Barde des Grafen' })]),
+    g('kern', 'Die fünf Ordner der Hofkultur', 'core', [
+      o('zeremonien', 'Ordner der Zeremonien', '', '', 'Plant Audienzen, Ehrungen, Sitzordnung und den Ablauf öffentlicher Auftritte.', { reportsTo: 'Barde des Grafen', connections: [{ area: 'diplomatie', label: 'Rang und Empfang', description: 'Der Herold bestätigt Rangfragen bei auswärtigen Gästen.' }] }),
+      o('feste', 'Ordner der Feste', '', '', 'Organisiert Feiern, Bankette, Spiele, Unterbringung und Ausstattung. Hält Zeitplan und Versorgung zusammen.', { reportsTo: 'Barde des Grafen', connections: [{ area: 'finanzen', label: 'Kosten und Vorräte', description: 'Die Kämmerei bewilligt Mittel und dokumentiert Ausgaben.' }, { area: 'klerus', label: 'Festtage und Riten', description: 'Geistliche Teile eines Festes werden mit dem Klerus abgestimmt.' }] }),
+      o('turniere', 'Ordner der Turniere', '', '', 'Führt Meldungen, Paarungen, Regeln und Preise. Lässt Ausrüstung prüfen und Streitfälle an die zuständige Instanz geben.', { reportsTo: 'Barde des Grafen', connections: [{ area: 'militaer', label: 'Turniersicherheit', description: 'Wacht und Waffenprüfer stimmen Sicherung und Ausrüstungskontrolle ab.' }, { area: 'gerichtsbarkeit', label: 'Turnierstreit', description: 'Schwere Verstöße und Rechtsstreit bleiben Aufgabe der Justiz.' }] }),
+      o('heraldik', 'Ordner der Heraldik', '', '', 'Ordnet Banner, Farben und Zeichen bei Turnieren und Ehrungen. Prüft die Übereinstimmung mit den anerkannten Wappen.', { reportsTo: 'Barde des Grafen', connections: [{ area: 'diplomatie', label: 'Anerkannte Zeichen', description: 'Die Zeichenmeisterin des Herolds bestätigt strittige Identitäten.' }] }),
+      o('spielleute', 'Ordner der Spielleute', '', '', 'Leitet Musik, Gesang, Tanz und Erzählkunst. Koordiniert Spielleute der Orte, Proben und Auftrittsfolgen.', { reportsTo: 'Barde des Grafen', connections: [{ area: 'magie', label: 'Magische Darbietungen', description: 'Magische Beiträge benötigen eine Abstimmung mit dem Ratsmagier.' }] }),
+    ], 'Zeremonien, Feste, Turniere, Heraldik und Spielleute sind fünf eigenständige Kernämter mit unmittelbarem Bericht an Rihanna.'),
+    g('sonder', 'Sonderrollen der Hoföffentlichkeit', 'special', [
+      o('godwyn', 'Schreier des Offenen Gerichts', 'Godwyn Sgrechiwr', p('sgrechiwr', 'godwyn-sgrechiwr'), 'Verkündet freigegebene Ladungen, Termine und Entscheidungen des Offenen Gerichts. Übernimmt öffentliche Ausrufe und feierliche Ansagen nach abgestimmtem Wortlaut.', { reportsTo: 'Barde des Grafen; bei Gerichtsausrufen die Gerichtskanzlei', authority: 'Öffentliche Stimme, keine richterliche oder heraldische Entscheidungsgewalt.', connections: [{ area: 'gerichtsbarkeit', label: 'Offenes Gericht', description: 'Die Gerichtskanzlei verantwortet Inhalt und Freigabe gerichtlicher Bekanntmachungen.' }, { area: 'diplomatie', label: 'Anreden und Titel', description: 'Amtliche Rangbezeichnungen werden mit dem Herold abgestimmt.' }] }),
+      o('tegan', 'Zweite Schreierin · Hofausrufe', 'Tegan Draig', p('draig', 'tegan-draig'), 'Unterstützt Godwyn bei vorbereiteten Hofausrufen, Festankündigungen und Ansagen. Übt die öffentliche Rede im Umfeld Rihannas und Isobels.', { reportsTo: 'Isobel Draig; fachlich Godwyn Sgrechiwr', authority: 'Angeleitete Sonderrolle ohne eigene amtliche Verkündungs- oder Siegelvollmacht.' }),
+      o('erzaehlmeister', 'Erzählmeister der Halle', '', '', 'Sammelt Taten, Lieder und Ruhmlisten. Bereitet Lesungen und Chroniken vor und unterscheidet erzählte Überlieferung von amtlichen Belegen.', { reportsTo: 'Ordner der Spielleute' }),
+      o('ansager', 'Turnierrufer und Preiswart', '', '', 'Rufen Paarungen und Ergebnisse aus und verwahren ausgelobte Preise bis zur bestätigten Übergabe.', { reportsTo: 'Ordner der Turniere' }),
+    ]),
+    g('dienste', 'Spielleute und Hofdienste', 'service', [
+      o('spielmann', 'Örtliche Spielleute', '', '', 'Musikanten, Sänger, Trommler, Tänzer und Chöre gestalten Auftritte an Burg, Ort und Gut.', { reportsTo: 'Örtliche Barden und Ordner der Spielleute' }),
+      o('saal', 'Saal- und Tischmeister', '', '', 'Organisieren Einlass, Wege, Tafelfolge und Service. Saalknechte, Bannerwarte, Fackelträger und Boten unterstützen den Ablauf.', { reportsTo: 'Ordner der Zeremonien bzw. Feste', connections: [{ area: 'spionage', label: 'Auffälligkeiten bei Festen', description: 'Melden konkrete Sicherheitsauffälligkeiten an die zuständigen Dienste.' }] }),
+    ]),
+  ],
+  sources: [{ label: 'Bisherige Hofordnung', href: '/Kontinente/modules/administration/content/unterhaltung.html' }],
+};

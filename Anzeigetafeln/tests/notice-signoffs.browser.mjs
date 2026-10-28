@@ -15,7 +15,7 @@ const seal = () => page.locator('#scroll-content .quest-seal img, #scroll-conten
 const open = id => page.evaluate(id => window.openZettelScroll(id), id);
 const shot = async name => { if (shots) await page.screenshot({ path: `${shots}/${name}.png`, animations: 'disabled' }); };
 const boards = [
-  ['cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel', 14],
+  ['cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel', 18],
   ['cenyr-celtigerns-wacht-llamrais-ankunft-wyrm-llysfaen-anzeigetafel', 11],
 ];
 try {
