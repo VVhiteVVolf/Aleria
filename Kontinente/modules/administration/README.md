@@ -1,29 +1,45 @@
 # Verwaltungsansichten
 
-Diese Komponente gehört allen bestehenden und künftigen Herrschaftsseiten. Gestaltungs- und Zuordnungsregeln stehen in [HERRSCHAFTSSEITEN-VORGEHEN.md](../../HERRSCHAFTSSEITEN-VORGEHEN.md).
+Gemeinsame Ansicht für bestehende und künftige Herrschaften. Gestaltung und Zuständigkeiten: [Herrschaftsseiten-Vorgehen](../../HERRSCHAFTSSEITEN-VORGEHEN.md).
 
-- `administration-content.js`: zentrale Bereiche, lokale Organisationsicons und ausdrückliche Zuordnung zu den Dokumenten einer Herrschaft. Kein Rückfall auf fremde Verwaltungsinhalte.
-- `administration-dialog.js`: Kachel-Aktionen, Dialog, Fokus, Navigation und Laden. Ein verspätetes Ladeergebnis darf keinen neu geöffneten Bereich überschreiben. Fehlerhafte Anfragen sind erneut ladbar.
-- `administration-renderer.mjs`: Darstellung der Quelldokumente, Bereinigung alter Formatierungen, kompakte Angaben und Textabschnitte. Bestehende Aufgaben-Tabellen bleiben erhalten.
-- `administration-hierarchy.mjs`: Adapter für Titel-/Portrait-/Namenszeilen zum gemeinsamen `territory-directory/council-directory.mjs`. Berücksichtigt leere Abstandsspalten, zusätzliche Ortszeilen und verschachtelte Titel. Nicht erkannte Formen bleiben vollständig als Tabelle sichtbar.
-- `administration.css`: ausschließlich die einzeilige Bereichsauswahl; importiert `administration-dialog.css` für das Fenster.
+- `administration-content.js` besitzt die acht Bereiche, lokalen Organisationsicons und territoriale Zuordnung der Altquellen. Unbekannte Herrschaften erhalten keine fremden Inhalte.
+- `administration-dialog.js` besitzt Hauptfenster, Maximierung, Bereichsnavigation, Ladezustand und Fokusrückkehr. Späte Ladeergebnisse überschreiben keinen anderen Bereich. Die Bereichsnavigation verändert nicht den ursprünglichen Auslöser auf der Seite.
+- `administration-structured.mjs` lädt die getrennten redaktionellen Bereichsmodule für Celtigerns Wacht und setzt die Ansicht zusammen.
+- `administration-model.mjs` enthält das kleine Amtsmodell und die Einordnung der Vasallenämter. Die Ergänzung verändert ihre Datenquellen nicht.
+- `administration-cards.mjs` rendert Amtskarten, 2:3-Portraits, Rangabzeichen und Mannschaftslinks. Ein lokales WeakMap ordnet den Buttons ihre Amtsdaten zu; es gibt keinen globalen Personenstate.
+- `administration-office-dialog.mjs` besitzt das Amtsfenster mit Portrait, Vorgänger, Fakten, Aufgaben und Schnittstellen. Ein unbekannter Vorgänger erscheint nur als ausgegraute Silhouette mit „Vorgänger“.
+- `administration-renderer.mjs` und `administration-hierarchy.mjs` erhalten die älteren HTML-Quellen anderer Herrschaften einschließlich Aufgaben-Tabellen. Erkannte Hierarchien verwenden dieselben Amtskarten; unbekannte Tabellenformen bleiben erhalten.
+- `administration.css` besitzt ausschließlich die einzeilige äußere Kachelauswahl. Hauptfenster, Amtskarten und Amtsdetails besitzen eigene CSS-Dateien. Keine Überschreibungen in `herrschaft.css`.
 
-Die HTML-Dateien unter `content/` bleiben die redaktionellen Quellen. Keine Namen oder Zuständigkeiten aus Bilddateinamen ableiten. Die kleine Hausbio und Personenverlinkungen bleiben von diesem Darstellungsadapter unabhängig.
+## Redaktionelle Daten und Dienstwege
 
-## Noch nicht lokal zugeordnete Portraitquellen
+`data/celtigerns-{bereich}.mjs` sind die aktuellen Verwaltungsinhalte der Grafschaft. Die bisherigen HTML-Dateien bleiben als verlinkte historische Grundlagen erhalten. Neue Aufträge und Amtsbesetzungen verändern weder Familienakten noch Firebase-Daten automatisch.
 
-Die folgenden Quellen ließen sich nicht eindeutig einer lebenden Person der vorhandenen Stammbäume zuordnen. Ihre Original-URLs bleiben bestehen. Bei einem Ladefehler zeigt die Ratskarte eine lokale Silhouette:
+Jeder Bereich enthält Gruppen mit ausdrücklichem `kind` und Amtskarten mit `id`, `title`, `name`, `portrait`, `description` und gegebenenfalls `reportsTo`, `authority`, `connections`, `links`, `predecessor` oder `crew`. Bildpfade begründen keine Personenzuordnung. Vorhandene Quellen und bereits festgelegte Personen haben Vorrang.
 
-- Nicht benannter Küstenkommandant: `dd04a4d24a9a2758282d8a89698f033585d264f1.pnj`
-- Gwenydd Anghof: `yEiU1My.png`
-- Jinell: `YdNY8rx.png`
-- Ceridwen Lhuyd: `yTbQ4Mq.png`
-- Gwydion Seon: `QrGSnzO.png`
+Reihenfolge: Leitung → Adjutantur → Ämter der Vasallen → fünf gleichrangige Kernämter → Sonderrollen und nachgeordnete Dienste. Militärische Kommandanten besitzen ihre eigene operative Kette. Marschälle tragen Gold, Adjutanten und Kriegswarte Silber, darunter Bronze. Andere Bereiche verwenden entsprechende Rangrahmen und eigene Symbole.
 
-Die zusätzlich gefundenen Portraits, der Lebensdatenabgleich und die Nutzerkorrekturen an der Marschallhierarchie und den Ritterfürsten sind in [PERSONAL-KORREKTUREN.md](PERSONAL-KORREKTUREN.md) dokumentiert.
+Kirchliche Ausnahme: neun gleichrangige hohe Prälaten nach dem Patriarchen, danach örtliche Vikare. Die persönliche Kanzlei bildet keinen geistlichen Zwischenrang. Priesterordnung und sechs Kasten folgen den Religionsquellen; die Kasten sind keine Rangfolge. Magie erhält Myrddins bestehende persönliche Ordnung, Rhiannons Nachfolge und den untereinander gleichrangigen Dienststab.
+
+## Vasallen aus ihren eigenen Quellen
+
+`node Kontinente/scripts/build-administration-vassals.mjs` erzeugt `data/celtigerns-vassals.generated.mjs` aus den Ratsdaten der sechs untergeordneten Herrschaften. Die Grafschaft pflegt keine zweite Liste dieser Amtsinhaber. Gültige HTTPS-Originale bleiben erhalten; exakt belegte lokale Kopien werden bevorzugt. Bei Bildfehlern greifen lokale Silhouetten.
+
+`territorialContacts` enthält gesondert Lyonnel Garrael als Lehenswart Aberllans. Für Camruisge wird kein unbelegter achtgliedriger Rat angelegt. Oilean gehört zu Leitheach und wird nicht der Grafschaft zugeordnet.
+
+Nach Änderungen an den territorialen Räten den Generator erneut ausführen. Der Release-Build prüft die Aktualität mit `--check`.
+
+## Mannschaften und Originalbilder
+
+Eine vorbereitete `crew` ohne `href` öffnet über die SVG-Flagge den Mannschaftsabschnitt des Amtsfensters. Es werden keine leeren Almanach-Module oder erfundenen Schiffe angelegt. Mit echtem `href` führt die Flagge direkt zum bestehenden Modul. Idwal verwendet das unveränderte Mannschaftswappen aus seinem Almanach-Modul; Herkunft unter `assets/tiefenwyrm-mannschaft.source.json`.
+
+Noch nicht eindeutig lokal zugeordnete Altportraits (etwa Ceridwen Lhuyd, Gwenydd Anghof, Torri, Jinell und der unbenannte Küstenkommandant) behalten ihre Originalquelle mit Silhouetten-Fallback. Keine gleichnamigen Personen anderer Häuser einsetzen. Frühere Abgleiche stehen in [Personal-Korrekturen](PERSONAL-KORREKTUREN.md).
 
 ## Prüfung
 
-`node Kontinente/tests/administration-scope.test.mjs` prüft die getrennten Quellen und bereits festgelegte Amtsträger.
+- `node Kontinente/scripts/build-administration-vassals.mjs --check`
+- `node Kontinente/tests/administration-data.test.mjs`
+- `node Kontinente/tests/administration-scope.test.mjs`
+- `node Kontinente/tests/administration-dialog.browser.mjs`
 
-`node Kontinente/tests/administration-dialog.browser.mjs` prüft die 16 Ansichten gegen einen lokalen Server auf Port 5500. Playwright kann über `PLAYWRIGHT_MODULE` und `PLAYWRIGHT_EXECUTABLE` bereitgestellt werden. `ADMINISTRATION_TEST_ORIGIN` überschreibt die lokale Adresse, `ADMINISTRATION_SCREENSHOTS` aktiviert optionale Screenshots. Externe Bildanfragen werden in der Prüfung gesperrt, um die lokalen Bilder und Silhouetten zu überprüfen.
+Der Browser-Test prüft beide Quellenwege, alle 16 Ansichten auf drei Breiten, Amtsdetails, Bild-Fallbacks, Fokus, Maximierung, Mannschaftslinks und Erhalt unbekannter Tabellen. Er nutzt einen lokalen Server auf Port 5500; `ADMINISTRATION_TEST_ORIGIN`, `PLAYWRIGHT_MODULE`, `PLAYWRIGHT_EXECUTABLE` und optional `ADMINISTRATION_SCREENSHOTS` überschreiben die Umgebung.

@@ -33,9 +33,13 @@ test('Jede Kartenregion ist abgedeckt; vier Eigenherrschaften teilen jeweils gen
  for(const s of settlements){assert.ok(counties.find(c=>c.id===s.county).seats.includes(s.id));assert.ok(territoryArt.some(a=>a.id===s.art));for(const v of [...s.point,...s.pin])assert.ok(v>=0&&v<=100);}
  assert.equal(context.continent,'Aldervan');assert.equal(renderOccupation('deitheach'),'');
 });
-test('Alle zehn gelieferten Originale sind unverändert gesichert',async()=>{
+test('Öffentliche Originale sind unverändert; private Kartenarchive bleiben als Quellen belegt',async()=>{
  const entries=await json(new URL('assets.source.json',root));assert.equal(entries.length,10);
- for(const entry of entries){const bytes=await readFile(new URL(entry.original,workspace));assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256,entry.sourceFile);}
+ const publicEntries=entries.filter(entry=>entry.publishedOriginal);
+ const privateEntries=entries.filter(entry=>!entry.publishedOriginal);
+ assert.equal(publicEntries.length,8);assert.equal(privateEntries.length,2);
+ for(const entry of publicEntries){const bytes=await readFile(new URL(entry.original,workspace));assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256,entry.sourceFile);}
+ for(const entry of privateEntries){assert.match(entry.original,/^diagnostics\/deitheach\/source-originals\//);assert.match(entry.sha256,/^[a-f0-9]{64}$/);}
 });
 test('Jeder Clan besitzt eine lokale Ganzkörperfigur mit gültiger Klasse; alle 14 Heraldikbilder sind verknüpft',async()=>{
  assert.deepEqual(new Set(warriors.map(w=>w.id)),new Set(houses.map(h=>h.id)));assert.equal(warriors.length,12);

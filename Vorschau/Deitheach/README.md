@@ -32,13 +32,19 @@ python -B Vorschau/Deitheach/prepare-warriors.py build
 python -B Vorschau/Deitheach/prepare-warriors.py audit --expected-count 12
 python -B Vorschau/Deitheach/prepare-warriors.py contact
 node Vorschau/Deitheach/collect-receipts.mjs
+node Vorschau/Deitheach/audit-source-originals.mjs
 node diagnostics/deitheach/audit-names.mjs
 node --test --experimental-test-isolation=none Vorschau/tests/deitheach.test.mjs
 ```
 
 Produktionsbilder ändern nur den genehmigten Alphakanal; Generatororiginale und
 RGB bleiben erhalten. Die Webvorschauen sind getrennte Dateien. Der bestehende
-Netlify-Workflow wird bei einer späteren Veröffentlichungsfreigabe verwendet.
+Netlify-Workflow wird für die freigegebene Veröffentlichung verwendet.
+
+Der lokale Originalaudit prüft alle zehn Quelldateien einschließlich der beiden
+privaten Karten. Die portablen Websiteprüfungen prüfen die acht öffentlichen
+Originale und die archivierten Herkunftsangaben; sie benötigen keinen privaten
+Diagnoseordner auf dem Buildserver.
 
 Die Korrektur des Kreuzschnabels ist in `generation-receipts.json` als
 `beak-v2` dokumentiert. Die verworfene Eingabefassung bleibt im Generatorarchiv.
