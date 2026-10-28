@@ -1,5 +1,18 @@
-// Generated from the six territorial council sources. Do not edit by hand.
+// Generated from territorial council sources. Do not edit by hand.
 // Rebuild: node Kontinente/scripts/build-administration-vassals.mjs
+export const territorialContacts = [
+  {
+    "id": "aberllan",
+    "name": "Lyonnel Garrael",
+    "title": "Lehenswart Aberllans",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-garrael/lyonnel-garrael.jpg",
+    "jurisdiction": "Aberllan · nördliches Camruisge",
+    "href": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/Insel Camruisge.html",
+    "source": "/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Insel Camruisge/insel.data.js",
+    "description": "Der Lehenswart vertritt Aberllan im nördlichen Camruisge unter der administrativen Gewalt der Grafschaft Celtigerns Wacht. Für die örtlichen Fachämter sind noch keine einzelnen Zuständigkeiten oder Amtsinhaber belegt. Der südliche Inselteil Oilean untersteht Leitheach beziehungsweise Tír na Sleagh und gehört nicht zu dieser Grafschaftsverbindung."
+  }
+];
+
 export default [
   {
     "id": "gwendolyns-ufer",
@@ -16,7 +29,7 @@ export default [
       "klerus": {
         "title": "Vikar des Barons",
         "name": "Gwenydd Anghof",
-        "portrait": ""
+        "portrait": "https://i.imgur.com/yEiU1My.png"
       },
       "gerichtsbarkeit": {
         "title": "Justiziar des Barons",
@@ -26,7 +39,7 @@ export default [
       "finanzen": {
         "title": "Kämmerer des Barons",
         "name": "Olwen Gwyvern",
-        "portrait": ""
+        "portrait": "/Stammbäume/assets/images/portraits/haus-wyrm/olwen-wyrm.jpg"
       },
       "spionage": {
         "title": "Schatten des Barons",
@@ -36,17 +49,17 @@ export default [
       "diplomatie": {
         "title": "Herold des Barons",
         "name": "Jeannae Gwyvern",
-        "portrait": ""
+        "portrait": "/Stammbäume/assets/images/portraits/haus-gwyvern/jeannae-aderyn.jpg"
       },
       "magie": {
         "title": "Ratsmagier des Barons",
         "name": "Ceridwen Lhuyd",
-        "portrait": ""
+        "portrait": "https://i.imgur.com/yTbQ4Mq.png"
       },
       "unterhaltung": {
         "title": "Barde des Barons",
         "name": "Jinell Harddwch",
-        "portrait": ""
+        "portrait": "https://i.imgur.com/YdNY8rx.png"
       }
     }
   },
@@ -178,7 +191,7 @@ export default [
       "spionage": {
         "title": "Schatten des Ritterfürsten",
         "name": "Arawn",
-        "portrait": ""
+        "portrait": "https://i.imgur.com/7yB9PR6.png"
       },
       "diplomatie": {
         "title": "Herold des Ritterfürsten",
@@ -212,7 +225,7 @@ export default [
       "klerus": {
         "title": "Vikar des Ritterfürsten",
         "name": "Torri",
-        "portrait": ""
+        "portrait": "https://i.imgur.com/Vn4wYAD.png"
       },
       "gerichtsbarkeit": {
         "title": "Justiziar des Ritterfürsten",
@@ -227,7 +240,7 @@ export default [
       "spionage": {
         "title": "Schatten des Ritterfürsten",
         "name": "Tegyr",
-        "portrait": ""
+        "portrait": "https://i.imgur.com/MsmQR0F.png"
       },
       "diplomatie": {
         "title": "Herold des Ritterfürsten",

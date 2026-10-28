@@ -23,7 +23,7 @@ export function withVassals(area, vassals) {
       `Führt den Bereich in ${vassal.name}. Eigene örtliche Zuständigkeiten bleiben bestehen; in grafschaftsweiten Angelegenheiten bestehen Berichtspflicht und fachliche Verantwortung gegenüber der obersten Grafschaftsinstanz.`, {
         jurisdiction: vassal.name,
         reportsTo: area.groups.find(entry => entry.kind === 'leadership')?.roles[0]?.title,
-        authority: 'Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die fünf Kernämter der Grafschaft.',
+        authority: 'Örtliche Amtsgewalt; keine eigenständige Weisungsgewalt über die Fachämter der Grafschaft.',
         links: [{ label: `${vassal.name} · eigene Verwaltung`, href: vassal.href }],
       });
   });
