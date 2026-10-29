@@ -168,6 +168,7 @@ export const SITE_BUILD_TASKS = [
     // These feature boundaries are checked against actual Node imports by the
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
+      'Kontinente/modules/goldmund/goldmund-context.mjs',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
       'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs,
       ...['character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
@@ -308,6 +309,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
+      'Kontinente/modules/goldmund/goldmund-context.mjs',
       'Stammbäume/vendor/', 'Stammbäume/tests/', 'Stammbäume/tools/',
       'Stammbäume/Stammbaum.html', 'Stammbäume/index.html',
       'Stammbäume/package.json', 'Stammbäume/package-lock.json', 'Familien Häuser und Clans/',

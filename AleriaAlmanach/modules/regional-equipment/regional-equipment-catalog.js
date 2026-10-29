@@ -9,11 +9,15 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "",
     "regionId": "",
     "children": [
+      "aldingen",
+      "goldmund",
+      "weisenfluh",
+      "moinneach",
+      "iathneach",
+      "deitheach",
       "cenyr",
       "faelaorn",
       "aldrimar",
-      "goldmund",
-      "weisenfluh",
       "venalys",
       "morgorn",
       "aeldrunmar",
@@ -29,6 +33,126 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "brevanor"
     ],
     "houseIds": [
+      "haus-brechten",
+      "haus-truchsen",
+      "haus-schenk",
+      "haus-graven",
+      "haus-rebhart",
+      "haus-ankerhold",
+      "haus-ehrenfeld",
+      "haus-hohenmund",
+      "haus-welf",
+      "haus-ronnach",
+      "haus-halbrecht",
+      "haus-haldren",
+      "haus-klingen",
+      "haus-lachmund",
+      "haus-adharcan",
+      "haus-riedenfeld",
+      "haus-rothman",
+      "haus-velten-aldingen",
+      "haus-dublann",
+      "haus-ritten",
+      "haus-wolfram",
+      "haus-sgiathan",
+      "haus-rosswarth",
+      "haus-hammerstein",
+      "haus-segelbrecht",
+      "haus-riemann",
+      "haus-steinmetz",
+      "haus-hufschlag",
+      "haus-stahlwart",
+      "haus-reiff",
+      "haus-sattler",
+      "haus-broek",
+      "haus-velten-goldmund",
+      "haus-goldveld",
+      "haus-roden",
+      "haus-marholt",
+      "haus-belmont",
+      "haus-sorel",
+      "haus-von-hochreuth",
+      "haus-lanette",
+      "haus-ruan",
+      "haus-arenberg",
+      "haus-belcourt",
+      "haus-arden",
+      "haus-roosenvelt",
+      "haus-berden",
+      "haus-wolter",
+      "haus-brenn",
+      "haus-severin",
+      "haus-callan",
+      "haus-lanvier",
+      "haus-fenn",
+      "haus-catrannoch",
+      "haus-cnagallan",
+      "haus-blumenthal",
+      "haus-rosenblueth",
+      "haus-rosenstolz",
+      "haus-iorcallan",
+      "haus-honigblut",
+      "haus-damhcallan",
+      "haus-taghradan",
+      "haus-goldkranz",
+      "haus-borgenicht",
+      "haus-goldberg",
+      "haus-immergluck",
+      "haus-kaltwasser",
+      "haus-weinlaub",
+      "haus-sgaireag",
+      "haus-torcradan",
+      "haus-weizmann",
+      "haus-weissberg",
+      "haus-weissmann",
+      "haus-otterberg",
+      "haus-thalmann",
+      "haus-sonnenfels",
+      "haus-edelweiss",
+      "haus-freudenthal",
+      "haus-rosenblatt",
+      "haus-silberthal",
+      "haus-bruggemann",
+      "haus-feuerstein",
+      "haus-sonnenfeld",
+      "haus-sommerfeld",
+      "haus-wolfenstein",
+      "haus-ritter-der-kornahre",
+      "haus-barrex",
+      "haus-cethrenn",
+      "haus-kerlaouen",
+      "haus-damona",
+      "haus-caddach",
+      "haus-nic-adruinna",
+      "haus-avernax",
+      "haus-ua-brigantex",
+      "haus-keravel",
+      "haus-nemetex",
+      "haus-rowak",
+      "haus-cetchathach",
+      "haus-deaghaide",
+      "haus-farraigeach",
+      "haus-salaig",
+      "haus-muiredaigh",
+      "haus-cannog",
+      "haus-rieach",
+      "haus-tairise",
+      "haus-treathai",
+      "haus-an-taghan",
+      "haus-ua-guilbneach",
+      "haus-ruin-coilleach",
+      "haus-mac-ard-roth",
+      "haus-nic-drisach",
+      "haus-tir-eatharn",
+      "haus-mac-snaith",
+      "haus-neill",
+      "haus-torcmhar",
+      "haus-caolan",
+      "haus-ruin-seilgeir",
+      "haus-ardmhair",
+      "haus-duach",
+      "haus-droch-trodach",
+      "haus-dal-tuairne",
       "haus-madryn",
       "haus-merek",
       "haus-rhenna",
@@ -440,9 +564,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-kaldhrafn",
       "haus-mac-morfhia",
       "haus-mac-corcaigh",
-      "haus-von-hochreuth",
-      "haus-weinlaub",
-      "haus-sonnenfels",
       "haus-falveri",
       "haus-karreg",
       "haus-frye",
@@ -593,6 +714,2082 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bielle",
       "haus-desele",
       "haus-lothaire"
+    ]
+  },
+  {
+    "id": "aldingen",
+    "parentId": "",
+    "name": "Aldingen",
+    "path": [
+      "Aldingen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/aldingen.webp",
+    "countryId": "aldingen",
+    "regionId": "",
+    "children": [
+      "aldingen/grafschaft-zollern",
+      "aldingen/grafschaft-grimberg",
+      "aldingen/herzogliche-domane",
+      "aldingen/grafschaft-borgeln",
+      "aldingen/grafschaft-barenstadt",
+      "aldingen/ehemals-grafschaft-wernmark",
+      "aldingen/ehemals-grafschaft-hohenreede"
+    ],
+    "houseIds": [
+      "haus-brechten",
+      "haus-truchsen",
+      "haus-schenk",
+      "haus-graven",
+      "haus-rebhart",
+      "haus-ankerhold",
+      "haus-ehrenfeld",
+      "haus-hohenmund",
+      "haus-welf",
+      "haus-ronnach",
+      "haus-halbrecht",
+      "haus-haldren",
+      "haus-klingen",
+      "haus-lachmund",
+      "haus-adharcan",
+      "haus-riedenfeld",
+      "haus-rothman",
+      "haus-velten-aldingen",
+      "haus-dublann",
+      "haus-ritten",
+      "haus-wolfram",
+      "haus-sgiathan",
+      "haus-rosswarth",
+      "haus-hammerstein",
+      "haus-segelbrecht",
+      "haus-riemann",
+      "haus-steinmetz",
+      "haus-hufschlag",
+      "haus-stahlwart",
+      "haus-reiff",
+      "haus-sattler"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-zollern",
+    "parentId": "aldingen",
+    "name": "Grafschaft Zollern",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/county-zollern.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-zollern",
+    "children": [
+      "aldingen/grafschaft-zollern/zollern",
+      "aldingen/grafschaft-zollern/bruchen",
+      "aldingen/grafschaft-zollern/dreiken"
+    ],
+    "houseIds": [
+      "haus-brechten",
+      "haus-truchsen",
+      "haus-schenk",
+      "haus-graven",
+      "haus-rebhart",
+      "haus-ankerhold"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-zollern/zollern",
+    "parentId": "aldingen/grafschaft-zollern",
+    "name": "Zollern",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Zollern"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/brechten.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-zollern",
+    "children": [],
+    "houseIds": [
+      "haus-brechten",
+      "haus-truchsen",
+      "haus-schenk"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-zollern/bruchen",
+    "parentId": "aldingen/grafschaft-zollern",
+    "name": "Bruchen",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Bruchen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/graven.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-zollern",
+    "children": [],
+    "houseIds": [
+      "haus-graven",
+      "haus-rebhart"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-zollern/dreiken",
+    "parentId": "aldingen/grafschaft-zollern",
+    "name": "Dreiken",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Dreiken"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/dreiken.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-zollern",
+    "children": [],
+    "houseIds": [
+      "haus-ankerhold"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-grimberg",
+    "parentId": "aldingen",
+    "name": "Grafschaft Grimberg",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/county-grimberg.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-grimberg",
+    "children": [
+      "aldingen/grafschaft-grimberg/grimberg",
+      "aldingen/grafschaft-grimberg/sassel"
+    ],
+    "houseIds": [
+      "haus-ehrenfeld",
+      "haus-hohenmund",
+      "haus-welf",
+      "haus-ronnach"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-grimberg/grimberg",
+    "parentId": "aldingen/grafschaft-grimberg",
+    "name": "Grimberg",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg",
+      "Grimberg"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/ehrenfeld.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-grimberg",
+    "children": [],
+    "houseIds": [
+      "haus-ehrenfeld",
+      "haus-hohenmund",
+      "haus-welf"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-grimberg/sassel",
+    "parentId": "aldingen/grafschaft-grimberg",
+    "name": "Sassel",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg",
+      "Sassel"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/sassel.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-grimberg",
+    "children": [],
+    "houseIds": [
+      "haus-ronnach"
+    ]
+  },
+  {
+    "id": "aldingen/herzogliche-domane",
+    "parentId": "aldingen",
+    "name": "Herzogliche Domäne",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/klingenhagen.webp",
+    "countryId": "aldingen",
+    "regionId": "herzogliche-domane",
+    "children": [
+      "aldingen/herzogliche-domane/klingenhagen",
+      "aldingen/herzogliche-domane/aldershafen"
+    ],
+    "houseIds": [
+      "haus-halbrecht",
+      "haus-haldren",
+      "haus-klingen",
+      "haus-lachmund",
+      "haus-adharcan"
+    ]
+  },
+  {
+    "id": "aldingen/herzogliche-domane/klingenhagen",
+    "parentId": "aldingen/herzogliche-domane",
+    "name": "Klingenhagen",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Klingenhagen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/halbrecht.webp",
+    "countryId": "aldingen",
+    "regionId": "herzogliche-domane",
+    "children": [],
+    "houseIds": [
+      "haus-halbrecht",
+      "haus-haldren",
+      "haus-klingen",
+      "haus-lachmund"
+    ]
+  },
+  {
+    "id": "aldingen/herzogliche-domane/aldershafen",
+    "parentId": "aldingen/herzogliche-domane",
+    "name": "Aldershafen",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Aldershafen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/aldershafen.webp",
+    "countryId": "aldingen",
+    "regionId": "herzogliche-domane",
+    "children": [],
+    "houseIds": [
+      "haus-adharcan"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-borgeln",
+    "parentId": "aldingen",
+    "name": "Grafschaft Borgeln",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/county-borgeln.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-borgeln",
+    "children": [
+      "aldingen/grafschaft-borgeln/borgeln",
+      "aldingen/grafschaft-borgeln/hasselt"
+    ],
+    "houseIds": [
+      "haus-riedenfeld",
+      "haus-rothman",
+      "haus-velten-aldingen",
+      "haus-dublann"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-borgeln/borgeln",
+    "parentId": "aldingen/grafschaft-borgeln",
+    "name": "Borgeln",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln",
+      "Borgeln"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/riedenfeld.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-borgeln",
+    "children": [],
+    "houseIds": [
+      "haus-riedenfeld",
+      "haus-rothman"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-borgeln/hasselt",
+    "parentId": "aldingen/grafschaft-borgeln",
+    "name": "Hasselt",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln",
+      "Hasselt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/hasselt.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-borgeln",
+    "children": [],
+    "houseIds": [
+      "haus-velten-aldingen",
+      "haus-dublann"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-barenstadt",
+    "parentId": "aldingen",
+    "name": "Grafschaft Barenstadt",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/county-barenstadt.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-barenstadt",
+    "children": [
+      "aldingen/grafschaft-barenstadt/barenstadt",
+      "aldingen/grafschaft-barenstadt/welden"
+    ],
+    "houseIds": [
+      "haus-ritten",
+      "haus-wolfram",
+      "haus-sgiathan",
+      "haus-rosswarth"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-barenstadt/barenstadt",
+    "parentId": "aldingen/grafschaft-barenstadt",
+    "name": "Barenstadt",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt",
+      "Barenstadt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/barenstadt.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-barenstadt",
+    "children": [],
+    "houseIds": [
+      "haus-ritten",
+      "haus-wolfram",
+      "haus-sgiathan"
+    ]
+  },
+  {
+    "id": "aldingen/grafschaft-barenstadt/welden",
+    "parentId": "aldingen/grafschaft-barenstadt",
+    "name": "Welden",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt",
+      "Welden"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aldingen/welden.webp",
+    "countryId": "aldingen",
+    "regionId": "grafschaft-barenstadt",
+    "children": [],
+    "houseIds": [
+      "haus-rosswarth"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-wernmark",
+    "parentId": "aldingen",
+    "name": "Ehemals Grafschaft Wernmark",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/county-wernmark.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-wernmark",
+    "children": [
+      "aldingen/ehemals-grafschaft-wernmark/wernheim",
+      "aldingen/ehemals-grafschaft-wernmark/erlensund",
+      "aldingen/ehemals-grafschaft-wernmark/segelwacht",
+      "aldingen/ehemals-grafschaft-wernmark/hammertal",
+      "aldingen/ehemals-grafschaft-wernmark/rottendorf"
+    ],
+    "houseIds": [
+      "haus-hammerstein",
+      "haus-segelbrecht",
+      "haus-riemann",
+      "haus-steinmetz",
+      "haus-hufschlag"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-wernmark/wernheim",
+    "parentId": "aldingen/ehemals-grafschaft-wernmark",
+    "name": "Wernheim",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Wernheim"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/wernheim.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-wernmark",
+    "children": [],
+    "houseIds": [
+      "haus-hammerstein"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-wernmark/erlensund",
+    "parentId": "aldingen/ehemals-grafschaft-wernmark",
+    "name": "Erlensund",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Erlensund"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/erlensund.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-wernmark",
+    "children": [],
+    "houseIds": [
+      "haus-segelbrecht"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-wernmark/segelwacht",
+    "parentId": "aldingen/ehemals-grafschaft-wernmark",
+    "name": "Segelwacht",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Segelwacht"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/segelwacht.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-wernmark",
+    "children": [],
+    "houseIds": [
+      "haus-riemann"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-wernmark/hammertal",
+    "parentId": "aldingen/ehemals-grafschaft-wernmark",
+    "name": "Hammertal",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Hammertal"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/hammertal.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-wernmark",
+    "children": [],
+    "houseIds": [
+      "haus-steinmetz"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-wernmark/rottendorf",
+    "parentId": "aldingen/ehemals-grafschaft-wernmark",
+    "name": "Rottendorf",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Rottendorf"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/rottendorf.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-wernmark",
+    "children": [],
+    "houseIds": [
+      "haus-hufschlag"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-hohenreede",
+    "parentId": "aldingen",
+    "name": "Ehemals Grafschaft Hohenreede",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/county-hohenreede.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-hohenreede",
+    "children": [
+      "aldingen/ehemals-grafschaft-hohenreede/dornheim",
+      "aldingen/ehemals-grafschaft-hohenreede/rothen",
+      "aldingen/ehemals-grafschaft-hohenreede/hohenreede"
+    ],
+    "houseIds": [
+      "haus-stahlwart",
+      "haus-reiff",
+      "haus-sattler"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-hohenreede/dornheim",
+    "parentId": "aldingen/ehemals-grafschaft-hohenreede",
+    "name": "Dornheim",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede",
+      "Dornheim"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/dornheim.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-hohenreede",
+    "children": [],
+    "houseIds": [
+      "haus-stahlwart"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-hohenreede/rothen",
+    "parentId": "aldingen/ehemals-grafschaft-hohenreede",
+    "name": "Rothen",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede",
+      "Rothen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/rothen.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-hohenreede",
+    "children": [],
+    "houseIds": [
+      "haus-reiff"
+    ]
+  },
+  {
+    "id": "aldingen/ehemals-grafschaft-hohenreede/hohenreede",
+    "parentId": "aldingen/ehemals-grafschaft-hohenreede",
+    "name": "Hohenreede",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede",
+      "Hohenreede"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/hohenreede.webp",
+    "countryId": "aldingen",
+    "regionId": "ehemals-grafschaft-hohenreede",
+    "children": [],
+    "houseIds": [
+      "haus-sattler"
+    ]
+  },
+  {
+    "id": "goldmund",
+    "parentId": "",
+    "name": "Goldmund",
+    "path": [
+      "Goldmund"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/goldmund.webp",
+    "countryId": "goldmund",
+    "regionId": "",
+    "children": [
+      "goldmund/herzogliche-grafschaft-kronenau",
+      "goldmund/grafschaft-aurelmark",
+      "goldmund/grafschaft-edelstrom"
+    ],
+    "houseIds": [
+      "haus-broek",
+      "haus-velten-goldmund",
+      "haus-goldveld",
+      "haus-roden",
+      "haus-marholt",
+      "haus-belmont",
+      "haus-sorel",
+      "haus-von-hochreuth",
+      "haus-lanette",
+      "haus-ruan",
+      "haus-arenberg",
+      "haus-belcourt",
+      "haus-arden",
+      "haus-roosenvelt",
+      "haus-berden",
+      "haus-wolter",
+      "haus-brenn",
+      "haus-severin",
+      "haus-callan",
+      "haus-lanvier",
+      "haus-fenn"
+    ]
+  },
+  {
+    "id": "goldmund/herzogliche-grafschaft-kronenau",
+    "parentId": "goldmund",
+    "name": "Herzogliche Grafschaft Kronenau",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/kronenau.webp",
+    "countryId": "goldmund",
+    "regionId": "herzogliche-grafschaft-kronenau",
+    "children": [
+      "goldmund/herzogliche-grafschaft-kronenau/brakenstein",
+      "goldmund/herzogliche-grafschaft-kronenau/thronholt"
+    ],
+    "houseIds": [
+      "haus-broek",
+      "haus-velten-goldmund",
+      "haus-goldveld",
+      "haus-roden",
+      "haus-marholt",
+      "haus-belmont",
+      "haus-sorel",
+      "haus-von-hochreuth"
+    ]
+  },
+  {
+    "id": "goldmund/herzogliche-grafschaft-kronenau/brakenstein",
+    "parentId": "goldmund/herzogliche-grafschaft-kronenau",
+    "name": "Brakenstein",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Brakenstein"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/brakenwacht.webp",
+    "countryId": "goldmund",
+    "regionId": "herzogliche-grafschaft-kronenau",
+    "children": [],
+    "houseIds": [
+      "haus-broek",
+      "haus-velten-goldmund"
+    ]
+  },
+  {
+    "id": "goldmund/herzogliche-grafschaft-kronenau/thronholt",
+    "parentId": "goldmund/herzogliche-grafschaft-kronenau",
+    "name": "Thronholt",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/thronmark.webp",
+    "countryId": "goldmund",
+    "regionId": "herzogliche-grafschaft-kronenau",
+    "children": [],
+    "houseIds": [
+      "haus-goldveld",
+      "haus-roden",
+      "haus-marholt",
+      "haus-belmont",
+      "haus-sorel",
+      "haus-von-hochreuth"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-aurelmark",
+    "parentId": "goldmund",
+    "name": "Grafschaft Aurelmark",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/aurelmark.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-aurelmark",
+    "children": [
+      "goldmund/grafschaft-aurelmark/haarlen",
+      "goldmund/grafschaft-aurelmark/bregen",
+      "goldmund/grafschaft-aurelmark/aldermoor"
+    ],
+    "houseIds": [
+      "haus-lanette",
+      "haus-ruan",
+      "haus-arenberg",
+      "haus-belcourt",
+      "haus-arden"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-aurelmark/haarlen",
+    "parentId": "goldmund/grafschaft-aurelmark",
+    "name": "Haarlen",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Haarlen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/haarlenried.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-aurelmark",
+    "children": [],
+    "houseIds": [
+      "haus-lanette",
+      "haus-ruan"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-aurelmark/bregen",
+    "parentId": "goldmund/grafschaft-aurelmark",
+    "name": "Bregen",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Bregen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/bregenau.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-aurelmark",
+    "children": [],
+    "houseIds": [
+      "haus-arenberg",
+      "haus-belcourt"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-aurelmark/aldermoor",
+    "parentId": "goldmund/grafschaft-aurelmark",
+    "name": "Aldermoor",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Aldermoor"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/alderweiden.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-aurelmark",
+    "children": [],
+    "houseIds": [
+      "haus-arden"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-edelstrom",
+    "parentId": "goldmund",
+    "name": "Grafschaft Edelstrom",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/edelstrom.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-edelstrom",
+    "children": [
+      "goldmund/grafschaft-edelstrom/niedenfels",
+      "goldmund/grafschaft-edelstrom/hartenfels",
+      "goldmund/grafschaft-edelstrom/bramsen"
+    ],
+    "houseIds": [
+      "haus-roosenvelt",
+      "haus-berden",
+      "haus-wolter",
+      "haus-brenn",
+      "haus-severin",
+      "haus-callan",
+      "haus-lanvier",
+      "haus-fenn"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-edelstrom/niedenfels",
+    "parentId": "goldmund/grafschaft-edelstrom",
+    "name": "Niedenfels",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Niedenfels"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/roosenvelt.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-edelstrom",
+    "children": [],
+    "houseIds": [
+      "haus-roosenvelt",
+      "haus-berden",
+      "haus-wolter",
+      "haus-brenn"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-edelstrom/hartenfels",
+    "parentId": "goldmund/grafschaft-edelstrom",
+    "name": "Hartenfels",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Hartenfels"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/hartenfels.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-edelstrom",
+    "children": [],
+    "houseIds": [
+      "haus-severin",
+      "haus-callan"
+    ]
+  },
+  {
+    "id": "goldmund/grafschaft-edelstrom/bramsen",
+    "parentId": "goldmund/grafschaft-edelstrom",
+    "name": "Bramsen",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Bramsen"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund/bramsenquell.webp",
+    "countryId": "goldmund",
+    "regionId": "grafschaft-edelstrom",
+    "children": [],
+    "houseIds": [
+      "haus-lanvier",
+      "haus-fenn"
+    ]
+  },
+  {
+    "id": "weisenfluh",
+    "parentId": "",
+    "name": "Weisenfluh",
+    "path": [
+      "Weisenfluh"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/weisenfluh.webp",
+    "countryId": "weisenfluh",
+    "regionId": "",
+    "children": [
+      "weisenfluh/freiherrentum-ewiggrun",
+      "weisenfluh/konigliche-provinz-ewigensee",
+      "weisenfluh/freiherrentum-weislauf",
+      "weisenfluh/freiherrentum-seeblick",
+      "weisenfluh/freiherrentum-weishort",
+      "weisenfluh/ahrensass"
+    ],
+    "houseIds": [
+      "haus-catrannoch",
+      "haus-cnagallan",
+      "haus-blumenthal",
+      "haus-rosenblueth",
+      "haus-rosenstolz",
+      "haus-iorcallan",
+      "haus-honigblut",
+      "haus-damhcallan",
+      "haus-taghradan",
+      "haus-goldkranz",
+      "haus-borgenicht",
+      "haus-goldberg",
+      "haus-immergluck",
+      "haus-kaltwasser",
+      "haus-weinlaub",
+      "haus-sgaireag",
+      "haus-torcradan",
+      "haus-weizmann",
+      "haus-weissberg",
+      "haus-weissmann",
+      "haus-otterberg",
+      "haus-thalmann",
+      "haus-sonnenfels",
+      "haus-edelweiss",
+      "haus-freudenthal",
+      "haus-rosenblatt",
+      "haus-silberthal",
+      "haus-bruggemann",
+      "haus-feuerstein",
+      "haus-sonnenfeld",
+      "haus-sommerfeld",
+      "haus-wolfenstein",
+      "haus-ritter-der-kornahre"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-ewiggrun",
+    "parentId": "weisenfluh",
+    "name": "Freiherrentum Ewiggrün",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/province-ewiggruen.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-ewiggrun",
+    "children": [
+      "weisenfluh/freiherrentum-ewiggrun/ewiggrun",
+      "weisenfluh/freiherrentum-ewiggrun/mahrenfeld"
+    ],
+    "houseIds": [
+      "haus-catrannoch",
+      "haus-cnagallan",
+      "haus-blumenthal",
+      "haus-rosenblueth",
+      "haus-rosenstolz",
+      "haus-iorcallan",
+      "haus-honigblut"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-ewiggrun/ewiggrun",
+    "parentId": "weisenfluh/freiherrentum-ewiggrun",
+    "name": "Ewiggrün",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Ewiggrün"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/catrannoch.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-ewiggrun",
+    "children": [],
+    "houseIds": [
+      "haus-catrannoch",
+      "haus-cnagallan",
+      "haus-blumenthal",
+      "haus-rosenblueth",
+      "haus-rosenstolz"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-ewiggrun/mahrenfeld",
+    "parentId": "weisenfluh/freiherrentum-ewiggrun",
+    "name": "Mährenfeld",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Mährenfeld"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/iorcallan.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-ewiggrun",
+    "children": [],
+    "houseIds": [
+      "haus-iorcallan",
+      "haus-honigblut"
+    ]
+  },
+  {
+    "id": "weisenfluh/konigliche-provinz-ewigensee",
+    "parentId": "weisenfluh",
+    "name": "Königliche Provinz Ewigensee",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/province-ewigensee.webp",
+    "countryId": "weisenfluh",
+    "regionId": "konigliche-provinz-ewigensee",
+    "children": [
+      "weisenfluh/konigliche-provinz-ewigensee/hohenklamm",
+      "weisenfluh/konigliche-provinz-ewigensee/ewigensee",
+      "weisenfluh/konigliche-provinz-ewigensee/burg-rebenwacht"
+    ],
+    "houseIds": [
+      "haus-damhcallan",
+      "haus-taghradan",
+      "haus-goldkranz",
+      "haus-borgenicht",
+      "haus-goldberg",
+      "haus-immergluck",
+      "haus-kaltwasser",
+      "haus-weinlaub"
+    ]
+  },
+  {
+    "id": "weisenfluh/konigliche-provinz-ewigensee/hohenklamm",
+    "parentId": "weisenfluh/konigliche-provinz-ewigensee",
+    "name": "Hohenklamm",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Hohenklamm"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/hohenklamm.webp",
+    "countryId": "weisenfluh",
+    "regionId": "konigliche-provinz-ewigensee",
+    "children": [],
+    "houseIds": [
+      "haus-damhcallan",
+      "haus-taghradan"
+    ]
+  },
+  {
+    "id": "weisenfluh/konigliche-provinz-ewigensee/ewigensee",
+    "parentId": "weisenfluh/konigliche-provinz-ewigensee",
+    "name": "Ewigensee",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Ewigensee"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/ewigensee.webp",
+    "countryId": "weisenfluh",
+    "regionId": "konigliche-provinz-ewigensee",
+    "children": [],
+    "houseIds": [
+      "haus-goldkranz",
+      "haus-borgenicht",
+      "haus-goldberg",
+      "haus-immergluck",
+      "haus-kaltwasser"
+    ]
+  },
+  {
+    "id": "weisenfluh/konigliche-provinz-ewigensee/burg-rebenwacht",
+    "parentId": "weisenfluh/konigliche-provinz-ewigensee",
+    "name": "Burg Rebenwacht",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Burg Rebenwacht"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+    "countryId": "weisenfluh",
+    "regionId": "konigliche-provinz-ewigensee",
+    "children": [],
+    "houseIds": [
+      "haus-weinlaub"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weislauf",
+    "parentId": "weisenfluh",
+    "name": "Freiherrentum Weislauf",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/province-weisslauf.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weislauf",
+    "children": [
+      "weisenfluh/freiherrentum-weislauf/weissklippe",
+      "weisenfluh/freiherrentum-weislauf/weislauf",
+      "weisenfluh/freiherrentum-weislauf/ottersburg",
+      "weisenfluh/freiherrentum-weislauf/weissthal",
+      "weisenfluh/freiherrentum-weislauf/burg-sonnenfels"
+    ],
+    "houseIds": [
+      "haus-sgaireag",
+      "haus-torcradan",
+      "haus-weizmann",
+      "haus-weissberg",
+      "haus-weissmann",
+      "haus-otterberg",
+      "haus-thalmann",
+      "haus-sonnenfels"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weislauf/weissklippe",
+    "parentId": "weisenfluh/freiherrentum-weislauf",
+    "name": "Weissklippe",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weissklippe"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/weissklippe.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weislauf",
+    "children": [],
+    "houseIds": [
+      "haus-sgaireag"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weislauf/weislauf",
+    "parentId": "weisenfluh/freiherrentum-weislauf",
+    "name": "Weislauf",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weislauf"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/torcradan.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weislauf",
+    "children": [],
+    "houseIds": [
+      "haus-torcradan",
+      "haus-weizmann",
+      "haus-weissberg",
+      "haus-weissmann"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weislauf/ottersburg",
+    "parentId": "weisenfluh/freiherrentum-weislauf",
+    "name": "Ottersburg",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Ottersburg"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/ottersburg.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weislauf",
+    "children": [],
+    "houseIds": [
+      "haus-otterberg"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weislauf/weissthal",
+    "parentId": "weisenfluh/freiherrentum-weislauf",
+    "name": "Weissthal",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weissthal"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/weissthal.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weislauf",
+    "children": [],
+    "houseIds": [
+      "haus-thalmann"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weislauf/burg-sonnenfels",
+    "parentId": "weisenfluh/freiherrentum-weislauf",
+    "name": "Burg Sonnenfels",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Burg Sonnenfels"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weislauf",
+    "children": [],
+    "houseIds": [
+      "haus-sonnenfels"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-seeblick",
+    "parentId": "weisenfluh",
+    "name": "Freiherrentum Seeblick",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/province-seeblick.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-seeblick",
+    "children": [
+      "weisenfluh/freiherrentum-seeblick/silbermundt",
+      "weisenfluh/freiherrentum-seeblick/seeblick"
+    ],
+    "houseIds": [
+      "haus-edelweiss",
+      "haus-freudenthal",
+      "haus-rosenblatt",
+      "haus-silberthal"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-seeblick/silbermundt",
+    "parentId": "weisenfluh/freiherrentum-seeblick",
+    "name": "Silbermundt",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick",
+      "Silbermundt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/silbermundt.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-seeblick",
+    "children": [],
+    "houseIds": [
+      "haus-edelweiss"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-seeblick/seeblick",
+    "parentId": "weisenfluh/freiherrentum-seeblick",
+    "name": "Seeblick",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick",
+      "Seeblick"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/freudenthal.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-seeblick",
+    "children": [],
+    "houseIds": [
+      "haus-freudenthal",
+      "haus-rosenblatt",
+      "haus-silberthal"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weishort",
+    "parentId": "weisenfluh",
+    "name": "Freiherrentum Weishort",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/province-weisshort.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weishort",
+    "children": [
+      "weisenfluh/freiherrentum-weishort/bruckenwacht",
+      "weisenfluh/freiherrentum-weishort/weishort",
+      "weisenfluh/freiherrentum-weishort/wolfrieden"
+    ],
+    "houseIds": [
+      "haus-bruggemann",
+      "haus-feuerstein",
+      "haus-sonnenfeld",
+      "haus-sommerfeld",
+      "haus-wolfenstein"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weishort/bruckenwacht",
+    "parentId": "weisenfluh/freiherrentum-weishort",
+    "name": "Brückenwacht",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Brückenwacht"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/brueckenwacht.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weishort",
+    "children": [],
+    "houseIds": [
+      "haus-bruggemann"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weishort/weishort",
+    "parentId": "weisenfluh/freiherrentum-weishort",
+    "name": "Weishort",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Weishort"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/feuerstein.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weishort",
+    "children": [],
+    "houseIds": [
+      "haus-feuerstein",
+      "haus-sonnenfeld",
+      "haus-sommerfeld"
+    ]
+  },
+  {
+    "id": "weisenfluh/freiherrentum-weishort/wolfrieden",
+    "parentId": "weisenfluh/freiherrentum-weishort",
+    "name": "Wolfrieden",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Wolfrieden"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/wolfrieden.webp",
+    "countryId": "weisenfluh",
+    "regionId": "freiherrentum-weishort",
+    "children": [],
+    "houseIds": [
+      "haus-wolfenstein"
+    ]
+  },
+  {
+    "id": "weisenfluh/ahrensass",
+    "parentId": "weisenfluh",
+    "name": "Ährensass",
+    "path": [
+      "Weisenfluh",
+      "Ährensass"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh/aehrensass.webp",
+    "countryId": "weisenfluh",
+    "regionId": "ahrensass",
+    "children": [],
+    "houseIds": [
+      "haus-ritter-der-kornahre"
+    ]
+  },
+  {
+    "id": "moinneach",
+    "parentId": "",
+    "name": "Moinneach",
+    "path": [
+      "Moinneach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/moinneach.png",
+    "countryId": "moinneach",
+    "regionId": "",
+    "children": [
+      "moinneach/gergonax",
+      "moinneach/druanax",
+      "moinneach/drunemax",
+      "moinneach/amabactoix",
+      "moinneach/vironax",
+      "moinneach/arvonax",
+      "moinneach/taranux",
+      "moinneach/senodex",
+      "moinneach/camulax",
+      "moinneach/tarvex"
+    ],
+    "houseIds": [
+      "haus-barrex",
+      "haus-cethrenn",
+      "haus-kerlaouen",
+      "haus-damona",
+      "haus-caddach",
+      "haus-nic-adruinna",
+      "haus-avernax",
+      "haus-ua-brigantex",
+      "haus-keravel",
+      "haus-nemetex",
+      "haus-rowak"
+    ]
+  },
+  {
+    "id": "moinneach/gergonax",
+    "parentId": "moinneach",
+    "name": "Gergonax",
+    "path": [
+      "Moinneach",
+      "Gergonax"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+    "countryId": "moinneach",
+    "regionId": "gergonax",
+    "children": [],
+    "houseIds": [
+      "haus-barrex",
+      "haus-cethrenn"
+    ]
+  },
+  {
+    "id": "moinneach/druanax",
+    "parentId": "moinneach",
+    "name": "Druanax",
+    "path": [
+      "Moinneach",
+      "Druanax"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/druanax.png",
+    "countryId": "moinneach",
+    "regionId": "druanax",
+    "children": [],
+    "houseIds": [
+      "haus-kerlaouen"
+    ]
+  },
+  {
+    "id": "moinneach/drunemax",
+    "parentId": "moinneach",
+    "name": "Drunemax",
+    "path": [
+      "Moinneach",
+      "Drunemax"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/drunemax.png",
+    "countryId": "moinneach",
+    "regionId": "drunemax",
+    "children": [],
+    "houseIds": [
+      "haus-damona"
+    ]
+  },
+  {
+    "id": "moinneach/amabactoix",
+    "parentId": "moinneach",
+    "name": "Amabactoix",
+    "path": [
+      "Moinneach",
+      "Amabactoix"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/amabactoix.png",
+    "countryId": "moinneach",
+    "regionId": "amabactoix",
+    "children": [],
+    "houseIds": [
+      "haus-caddach"
+    ]
+  },
+  {
+    "id": "moinneach/vironax",
+    "parentId": "moinneach",
+    "name": "Vironax",
+    "path": [
+      "Moinneach",
+      "Vironax"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/vironax.png",
+    "countryId": "moinneach",
+    "regionId": "vironax",
+    "children": [],
+    "houseIds": [
+      "haus-nic-adruinna"
+    ]
+  },
+  {
+    "id": "moinneach/arvonax",
+    "parentId": "moinneach",
+    "name": "Arvonax",
+    "path": [
+      "Moinneach",
+      "Arvonax"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/arvonax.png",
+    "countryId": "moinneach",
+    "regionId": "arvonax",
+    "children": [],
+    "houseIds": [
+      "haus-avernax"
+    ]
+  },
+  {
+    "id": "moinneach/taranux",
+    "parentId": "moinneach",
+    "name": "Taranux",
+    "path": [
+      "Moinneach",
+      "Taranux"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/taranux.png",
+    "countryId": "moinneach",
+    "regionId": "taranux",
+    "children": [],
+    "houseIds": [
+      "haus-ua-brigantex"
+    ]
+  },
+  {
+    "id": "moinneach/senodex",
+    "parentId": "moinneach",
+    "name": "Senodex",
+    "path": [
+      "Moinneach",
+      "Senodex"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/senodex.png",
+    "countryId": "moinneach",
+    "regionId": "senodex",
+    "children": [],
+    "houseIds": [
+      "haus-keravel"
+    ]
+  },
+  {
+    "id": "moinneach/camulax",
+    "parentId": "moinneach",
+    "name": "Camulax",
+    "path": [
+      "Moinneach",
+      "Camulax"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/camulax.png",
+    "countryId": "moinneach",
+    "regionId": "camulax",
+    "children": [],
+    "houseIds": [
+      "haus-nemetex"
+    ]
+  },
+  {
+    "id": "moinneach/tarvex",
+    "parentId": "moinneach",
+    "name": "Tarvex",
+    "path": [
+      "Moinneach",
+      "Tarvex"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/moinneach/tarvex.png",
+    "countryId": "moinneach",
+    "regionId": "tarvex",
+    "children": [],
+    "houseIds": [
+      "haus-rowak"
+    ]
+  },
+  {
+    "id": "iathneach",
+    "parentId": "",
+    "name": "Iathneach",
+    "path": [
+      "Iathneach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/iathneach.webp",
+    "countryId": "iathneach",
+    "regionId": "",
+    "children": [
+      "iathneach/tir-na-sgeire",
+      "iathneach/tir-na-coille",
+      "iathneach/tir-nan-allt",
+      "iathneach/tir-nam-beann",
+      "iathneach/ehemals-mor-tiarnatum-cuansioda"
+    ],
+    "houseIds": [
+      "haus-cetchathach",
+      "haus-deaghaide",
+      "haus-farraigeach",
+      "haus-salaig",
+      "haus-muiredaigh",
+      "haus-cannog",
+      "haus-rieach",
+      "haus-tairise",
+      "haus-treathai",
+      "haus-an-taghan",
+      "haus-ua-guilbneach",
+      "haus-ruin-coilleach"
+    ]
+  },
+  {
+    "id": "iathneach/tir-na-sgeire",
+    "parentId": "iathneach",
+    "name": "Tir na Sgeire",
+    "path": [
+      "Iathneach",
+      "Tir na Sgeire"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/county-sgeire.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-na-sgeire",
+    "children": [
+      "iathneach/tir-na-sgeire/botharin",
+      "iathneach/tir-na-sgeire/sgeir-tearmainn"
+    ],
+    "houseIds": [
+      "haus-cetchathach",
+      "haus-deaghaide",
+      "haus-farraigeach"
+    ]
+  },
+  {
+    "id": "iathneach/tir-na-sgeire/botharin",
+    "parentId": "iathneach/tir-na-sgeire",
+    "name": "Botharin",
+    "path": [
+      "Iathneach",
+      "Tir na Sgeire",
+      "Botharin"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/botharin.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-na-sgeire",
+    "children": [],
+    "houseIds": [
+      "haus-cetchathach",
+      "haus-deaghaide"
+    ]
+  },
+  {
+    "id": "iathneach/tir-na-sgeire/sgeir-tearmainn",
+    "parentId": "iathneach/tir-na-sgeire",
+    "name": "Sgeir Tearmainn",
+    "path": [
+      "Iathneach",
+      "Tir na Sgeire",
+      "Sgeir Tearmainn"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/sgeir-tearmainn.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-na-sgeire",
+    "children": [],
+    "houseIds": [
+      "haus-farraigeach"
+    ]
+  },
+  {
+    "id": "iathneach/tir-na-coille",
+    "parentId": "iathneach",
+    "name": "Tir na Coille",
+    "path": [
+      "Iathneach",
+      "Tir na Coille"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/county-coille.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-na-coille",
+    "children": [
+      "iathneach/tir-na-coille/fiontarach",
+      "iathneach/tir-na-coille/famhair"
+    ],
+    "houseIds": [
+      "haus-salaig",
+      "haus-muiredaigh"
+    ]
+  },
+  {
+    "id": "iathneach/tir-na-coille/fiontarach",
+    "parentId": "iathneach/tir-na-coille",
+    "name": "Fiontarach",
+    "path": [
+      "Iathneach",
+      "Tir na Coille",
+      "Fiontarach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/fiontarach.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-na-coille",
+    "children": [],
+    "houseIds": [
+      "haus-salaig"
+    ]
+  },
+  {
+    "id": "iathneach/tir-na-coille/famhair",
+    "parentId": "iathneach/tir-na-coille",
+    "name": "Famhair",
+    "path": [
+      "Iathneach",
+      "Tir na Coille",
+      "Famhair"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/famhair.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-na-coille",
+    "children": [],
+    "houseIds": [
+      "haus-muiredaigh"
+    ]
+  },
+  {
+    "id": "iathneach/tir-nan-allt",
+    "parentId": "iathneach",
+    "name": "Tir nan Allt",
+    "path": [
+      "Iathneach",
+      "Tir nan Allt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/county-allt.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-nan-allt",
+    "children": [
+      "iathneach/tir-nan-allt/tirnafaoi",
+      "iathneach/tir-nan-allt/sidheanna"
+    ],
+    "houseIds": [
+      "haus-cannog",
+      "haus-rieach"
+    ]
+  },
+  {
+    "id": "iathneach/tir-nan-allt/tirnafaoi",
+    "parentId": "iathneach/tir-nan-allt",
+    "name": "Tirnafaoi",
+    "path": [
+      "Iathneach",
+      "Tir nan Allt",
+      "Tirnafaoi"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/tirnafaoi.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-nan-allt",
+    "children": [],
+    "houseIds": [
+      "haus-cannog"
+    ]
+  },
+  {
+    "id": "iathneach/tir-nan-allt/sidheanna",
+    "parentId": "iathneach/tir-nan-allt",
+    "name": "Sidheanna",
+    "path": [
+      "Iathneach",
+      "Tir nan Allt",
+      "Sidheanna"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/sidheanna.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-nan-allt",
+    "children": [],
+    "houseIds": [
+      "haus-rieach"
+    ]
+  },
+  {
+    "id": "iathneach/tir-nam-beann",
+    "parentId": "iathneach",
+    "name": "Tir nam Beann",
+    "path": [
+      "Iathneach",
+      "Tir nam Beann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/county-beann.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-nam-beann",
+    "children": [
+      "iathneach/tir-nam-beann/mharaich",
+      "iathneach/tir-nam-beann/ailtean"
+    ],
+    "houseIds": [
+      "haus-tairise",
+      "haus-treathai"
+    ]
+  },
+  {
+    "id": "iathneach/tir-nam-beann/mharaich",
+    "parentId": "iathneach/tir-nam-beann",
+    "name": "Mharaich",
+    "path": [
+      "Iathneach",
+      "Tir nam Beann",
+      "Mharaich"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/mharaich.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-nam-beann",
+    "children": [],
+    "houseIds": [
+      "haus-tairise"
+    ]
+  },
+  {
+    "id": "iathneach/tir-nam-beann/ailtean",
+    "parentId": "iathneach/tir-nam-beann",
+    "name": "Ailtean",
+    "path": [
+      "Iathneach",
+      "Tir nam Beann",
+      "Ailtean"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/iathneach/ailtean.webp",
+    "countryId": "iathneach",
+    "regionId": "tir-nam-beann",
+    "children": [],
+    "houseIds": [
+      "haus-treathai"
+    ]
+  },
+  {
+    "id": "iathneach/ehemals-mor-tiarnatum-cuansioda",
+    "parentId": "iathneach",
+    "name": "Ehemals Mor Tiarnatum Cuansioda",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/county-cuansioda.webp",
+    "countryId": "iathneach",
+    "regionId": "ehemals-mor-tiarnatum-cuansioda",
+    "children": [
+      "iathneach/ehemals-mor-tiarnatum-cuansioda/dorchain",
+      "iathneach/ehemals-mor-tiarnatum-cuansioda/fiorail",
+      "iathneach/ehemals-mor-tiarnatum-cuansioda/doire-fionn"
+    ],
+    "houseIds": [
+      "haus-an-taghan",
+      "haus-ua-guilbneach",
+      "haus-ruin-coilleach"
+    ]
+  },
+  {
+    "id": "iathneach/ehemals-mor-tiarnatum-cuansioda/dorchain",
+    "parentId": "iathneach/ehemals-mor-tiarnatum-cuansioda",
+    "name": "Dorchain",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda",
+      "Dorchain"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/dorchain.webp",
+    "countryId": "iathneach",
+    "regionId": "ehemals-mor-tiarnatum-cuansioda",
+    "children": [],
+    "houseIds": [
+      "haus-an-taghan"
+    ]
+  },
+  {
+    "id": "iathneach/ehemals-mor-tiarnatum-cuansioda/fiorail",
+    "parentId": "iathneach/ehemals-mor-tiarnatum-cuansioda",
+    "name": "Fiorail",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda",
+      "Fiorail"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/fiorail.webp",
+    "countryId": "iathneach",
+    "regionId": "ehemals-mor-tiarnatum-cuansioda",
+    "children": [],
+    "houseIds": [
+      "haus-ua-guilbneach"
+    ]
+  },
+  {
+    "id": "iathneach/ehemals-mor-tiarnatum-cuansioda/doire-fionn",
+    "parentId": "iathneach/ehemals-mor-tiarnatum-cuansioda",
+    "name": "Doire Fionn",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda",
+      "Doire Fionn"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/triarchie/doire-fionn.webp",
+    "countryId": "iathneach",
+    "regionId": "ehemals-mor-tiarnatum-cuansioda",
+    "children": [],
+    "houseIds": [
+      "haus-ruin-coilleach"
+    ]
+  },
+  {
+    "id": "deitheach",
+    "parentId": "",
+    "name": "Deitheach",
+    "path": [
+      "Deitheach"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/deitheach.webp",
+    "countryId": "deitheach",
+    "regionId": "",
+    "children": [
+      "deitheach/iorras-ruscadal",
+      "deitheach/sliabh-dorrain",
+      "deitheach/coill-fhasgair",
+      "deitheach/magh-eirceann"
+    ],
+    "houseIds": [
+      "haus-mac-ard-roth",
+      "haus-nic-drisach",
+      "haus-tir-eatharn",
+      "haus-mac-snaith",
+      "haus-neill",
+      "haus-torcmhar",
+      "haus-caolan",
+      "haus-ruin-seilgeir",
+      "haus-ardmhair",
+      "haus-duach",
+      "haus-droch-trodach",
+      "haus-dal-tuairne"
+    ]
+  },
+  {
+    "id": "deitheach/iorras-ruscadal",
+    "parentId": "deitheach",
+    "name": "Iorras Ruscadal",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/ailseag.webp",
+    "countryId": "deitheach",
+    "regionId": "iorras-ruscadal",
+    "children": [
+      "deitheach/iorras-ruscadal/lann-ailseag",
+      "deitheach/iorras-ruscadal/caol-muirdean"
+    ],
+    "houseIds": [
+      "haus-mac-ard-roth",
+      "haus-nic-drisach",
+      "haus-tir-eatharn",
+      "haus-mac-snaith"
+    ]
+  },
+  {
+    "id": "deitheach/iorras-ruscadal/lann-ailseag",
+    "parentId": "deitheach/iorras-ruscadal",
+    "name": "Lann Ailseag",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal",
+      "Lann Ailseag"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/ailseag.webp",
+    "countryId": "deitheach",
+    "regionId": "iorras-ruscadal",
+    "children": [],
+    "houseIds": [
+      "haus-mac-ard-roth",
+      "haus-nic-drisach",
+      "haus-tir-eatharn"
+    ]
+  },
+  {
+    "id": "deitheach/iorras-ruscadal/caol-muirdean",
+    "parentId": "deitheach/iorras-ruscadal",
+    "name": "Caol Muirdean",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal",
+      "Caol Muirdean"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/muirdean.webp",
+    "countryId": "deitheach",
+    "regionId": "iorras-ruscadal",
+    "children": [],
+    "houseIds": [
+      "haus-mac-snaith"
+    ]
+  },
+  {
+    "id": "deitheach/sliabh-dorrain",
+    "parentId": "deitheach",
+    "name": "Sliabh Dorrain",
+    "path": [
+      "Deitheach",
+      "Sliabh Dorrain"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/beartain.webp",
+    "countryId": "deitheach",
+    "regionId": "sliabh-dorrain",
+    "children": [
+      "deitheach/sliabh-dorrain/dun-beartain",
+      "deitheach/sliabh-dorrain/tobar-loscarn"
+    ],
+    "houseIds": [
+      "haus-neill",
+      "haus-torcmhar"
+    ]
+  },
+  {
+    "id": "deitheach/sliabh-dorrain/dun-beartain",
+    "parentId": "deitheach/sliabh-dorrain",
+    "name": "Dun Beartain",
+    "path": [
+      "Deitheach",
+      "Sliabh Dorrain",
+      "Dun Beartain"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/beartain.webp",
+    "countryId": "deitheach",
+    "regionId": "sliabh-dorrain",
+    "children": [],
+    "houseIds": [
+      "haus-neill"
+    ]
+  },
+  {
+    "id": "deitheach/sliabh-dorrain/tobar-loscarn",
+    "parentId": "deitheach/sliabh-dorrain",
+    "name": "Tobar Loscarn",
+    "path": [
+      "Deitheach",
+      "Sliabh Dorrain",
+      "Tobar Loscarn"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/loscarn.webp",
+    "countryId": "deitheach",
+    "regionId": "sliabh-dorrain",
+    "children": [],
+    "houseIds": [
+      "haus-torcmhar"
+    ]
+  },
+  {
+    "id": "deitheach/coill-fhasgair",
+    "parentId": "deitheach",
+    "name": "Coill Fhasgair",
+    "path": [
+      "Deitheach",
+      "Coill Fhasgair"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/dreasail.webp",
+    "countryId": "deitheach",
+    "regionId": "coill-fhasgair",
+    "children": [
+      "deitheach/coill-fhasgair/srath-dreasail",
+      "deitheach/coill-fhasgair/creag-uamhar"
+    ],
+    "houseIds": [
+      "haus-caolan",
+      "haus-ruin-seilgeir",
+      "haus-ardmhair"
+    ]
+  },
+  {
+    "id": "deitheach/coill-fhasgair/srath-dreasail",
+    "parentId": "deitheach/coill-fhasgair",
+    "name": "Srath Dreasail",
+    "path": [
+      "Deitheach",
+      "Coill Fhasgair",
+      "Srath Dreasail"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/dreasail.webp",
+    "countryId": "deitheach",
+    "regionId": "coill-fhasgair",
+    "children": [],
+    "houseIds": [
+      "haus-caolan",
+      "haus-ruin-seilgeir"
+    ]
+  },
+  {
+    "id": "deitheach/coill-fhasgair/creag-uamhar",
+    "parentId": "deitheach/coill-fhasgair",
+    "name": "Creag Uamhar",
+    "path": [
+      "Deitheach",
+      "Coill Fhasgair",
+      "Creag Uamhar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/uamhar.webp",
+    "countryId": "deitheach",
+    "regionId": "coill-fhasgair",
+    "children": [],
+    "houseIds": [
+      "haus-ardmhair"
+    ]
+  },
+  {
+    "id": "deitheach/magh-eirceann",
+    "parentId": "deitheach",
+    "name": "Magh Eirceann",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/carthain.webp",
+    "countryId": "deitheach",
+    "regionId": "magh-eirceann",
+    "children": [
+      "deitheach/magh-eirceann/fiodh-carthain",
+      "deitheach/magh-eirceann/ard-sceolan",
+      "deitheach/magh-eirceann/maol-orsagail"
+    ],
+    "houseIds": [
+      "haus-duach",
+      "haus-droch-trodach",
+      "haus-dal-tuairne"
+    ]
+  },
+  {
+    "id": "deitheach/magh-eirceann/fiodh-carthain",
+    "parentId": "deitheach/magh-eirceann",
+    "name": "Fiodh Carthain",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann",
+      "Fiodh Carthain"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/carthain.webp",
+    "countryId": "deitheach",
+    "regionId": "magh-eirceann",
+    "children": [],
+    "houseIds": [
+      "haus-duach"
+    ]
+  },
+  {
+    "id": "deitheach/magh-eirceann/ard-sceolan",
+    "parentId": "deitheach/magh-eirceann",
+    "name": "Ard Sceolan",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann",
+      "Ard Sceolan"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/sceolan.webp",
+    "countryId": "deitheach",
+    "regionId": "magh-eirceann",
+    "children": [],
+    "houseIds": [
+      "haus-droch-trodach"
+    ]
+  },
+  {
+    "id": "deitheach/magh-eirceann/maol-orsagail",
+    "parentId": "deitheach/magh-eirceann",
+    "name": "Maol Orsagail",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann",
+      "Maol Orsagail"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/deitheach/treabhair.webp",
+    "countryId": "deitheach",
+    "regionId": "magh-eirceann",
+    "children": [],
+    "houseIds": [
+      "haus-dal-tuairne"
     ]
   },
   {
@@ -7369,109 +9566,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "goldmund",
-    "parentId": "",
-    "name": "Goldmund",
-    "path": [
-      "Goldmund"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/goldmund.png",
-    "countryId": "goldmund",
-    "regionId": "",
-    "children": [
-      "goldmund/unsortierte-hauser"
-    ],
-    "houseIds": [
-      "haus-von-hochreuth"
-    ]
-  },
-  {
-    "id": "goldmund/unsortierte-hauser",
-    "parentId": "goldmund",
-    "name": "Unsortierte Häuser",
-    "path": [
-      "Goldmund",
-      "Unsortierte Häuser"
-    ],
-    "image": "",
-    "countryId": "goldmund",
-    "regionId": "unsortierte-hauser",
-    "children": [],
-    "houseIds": [
-      "haus-von-hochreuth"
-    ]
-  },
-  {
-    "id": "weisenfluh",
-    "parentId": "",
-    "name": "Weisenfluh",
-    "path": [
-      "Weisenfluh"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/weisenfluh.png",
-    "countryId": "weisenfluh",
-    "regionId": "",
-    "children": [
-      "weisenfluh/region-ewigensee",
-      "weisenfluh/burg-sonnenfels"
-    ],
-    "houseIds": [
-      "haus-weinlaub",
-      "haus-sonnenfels"
-    ]
-  },
-  {
-    "id": "weisenfluh/region-ewigensee",
-    "parentId": "weisenfluh",
-    "name": "Region Ewigensee",
-    "path": [
-      "Weisenfluh",
-      "Region Ewigensee"
-    ],
-    "image": "",
-    "countryId": "weisenfluh",
-    "regionId": "region-ewigensee",
-    "children": [
-      "weisenfluh/region-ewigensee/ewigensee"
-    ],
-    "houseIds": [
-      "haus-weinlaub"
-    ]
-  },
-  {
-    "id": "weisenfluh/region-ewigensee/ewigensee",
-    "parentId": "weisenfluh/region-ewigensee",
-    "name": "Ewigensee",
-    "path": [
-      "Weisenfluh",
-      "Region Ewigensee",
-      "Ewigensee"
-    ],
-    "image": "",
-    "countryId": "weisenfluh",
-    "regionId": "region-ewigensee",
-    "children": [],
-    "houseIds": [
-      "haus-weinlaub"
-    ]
-  },
-  {
-    "id": "weisenfluh/burg-sonnenfels",
-    "parentId": "weisenfluh",
-    "name": "Burg Sonnenfels",
-    "path": [
-      "Weisenfluh",
-      "Burg Sonnenfels"
-    ],
-    "image": "",
-    "countryId": "weisenfluh",
-    "regionId": "burg-sonnenfels",
-    "children": [],
-    "houseIds": [
-      "haus-sonnenfels"
-    ]
-  },
-  {
     "id": "venalys",
     "parentId": "",
     "name": "Venalys",
@@ -12686,6 +14780,1281 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
 ];
 export const REGIONAL_EQUIPMENT_HOUSES = [
   {
+    "id": "haus-brechten",
+    "name": "Haus Brechten",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/brechten.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Zollern"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-brechten&mode=view"
+  },
+  {
+    "id": "haus-ehrenfeld",
+    "name": "Haus Ehrenfeld",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/ehrenfeld.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg",
+      "Grimberg"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ehrenfeld&mode=view"
+  },
+  {
+    "id": "haus-graven",
+    "name": "Haus Graven",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/graven.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Bruchen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-graven&mode=view"
+  },
+  {
+    "id": "haus-halbrecht",
+    "name": "Haus Halbrecht",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/halbrecht.webp",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Klingenhagen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-halbrecht&mode=view"
+  },
+  {
+    "id": "haus-haldren",
+    "name": "Haus Haldren",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/haldren.webp",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Klingenhagen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-haldren&mode=view"
+  },
+  {
+    "id": "haus-hohenmund",
+    "name": "Haus Hohenmund",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/hohenmund.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg",
+      "Grimberg"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-hohenmund&mode=view"
+  },
+  {
+    "id": "haus-klingen",
+    "name": "Haus Klingen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/klingen.webp",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Klingenhagen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-klingen&mode=view"
+  },
+  {
+    "id": "haus-lachmund",
+    "name": "Haus Lachmund",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/lachmund.webp",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Klingenhagen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lachmund&mode=view"
+  },
+  {
+    "id": "haus-riedenfeld",
+    "name": "Haus Riedenfeld",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/riedenfeld.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln",
+      "Borgeln"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-riedenfeld&mode=view"
+  },
+  {
+    "id": "haus-ritten",
+    "name": "Haus Ritten",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/ritten.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt",
+      "Barenstadt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ritten&mode=view"
+  },
+  {
+    "id": "haus-rothman",
+    "name": "Haus Rothman",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/rothmann.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln",
+      "Borgeln"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rothman&mode=view"
+  },
+  {
+    "id": "haus-truchsen",
+    "name": "Haus Truchsen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/truchsen.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Zollern"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-truchsen&mode=view"
+  },
+  {
+    "id": "haus-velten-aldingen",
+    "name": "Haus Velten",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/velten.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln",
+      "Hasselt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-velten-aldingen&mode=view"
+  },
+  {
+    "id": "haus-welf",
+    "name": "Haus Welf",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/welf.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg",
+      "Grimberg"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-welf&mode=view"
+  },
+  {
+    "id": "haus-wolfram",
+    "name": "Haus Wolfram",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/wolfram.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt",
+      "Barenstadt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wolfram&mode=view"
+  },
+  {
+    "id": "haus-rebhart",
+    "name": "Haus Rebhart",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/rebhart.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Bruchen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rebhart&mode=view"
+  },
+  {
+    "id": "haus-schenk",
+    "name": "Haus Schenk",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/schenk.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Zollern"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-schenk&mode=view"
+  },
+  {
+    "id": "haus-ankerhold",
+    "name": "Haus Ankerhold",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/ankerhold.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Zollern",
+      "Dreiken"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ankerhold&mode=view"
+  },
+  {
+    "id": "haus-rosswarth",
+    "name": "Haus Rosswarth",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/rosswarth.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt",
+      "Welden"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rosswarth&mode=view"
+  },
+  {
+    "id": "haus-adharcan",
+    "name": "Adharcan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/adharcan.webp",
+    "path": [
+      "Aldingen",
+      "Herzogliche Domäne",
+      "Aldershafen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-adharcan&mode=view"
+  },
+  {
+    "id": "haus-sgiathan",
+    "name": "Sgiathan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/sgiathan.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Barenstadt",
+      "Barenstadt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sgiathan&mode=view"
+  },
+  {
+    "id": "haus-ronnach",
+    "name": "Ronnach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/ronnach.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Grimberg",
+      "Sassel"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ronnach&mode=view"
+  },
+  {
+    "id": "haus-dublann",
+    "name": "Dublann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aldingen/dublann.webp",
+    "path": [
+      "Aldingen",
+      "Grafschaft Borgeln",
+      "Hasselt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dublann&mode=view"
+  },
+  {
+    "id": "haus-broek",
+    "name": "Haus Broek",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/broeck.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Brakenstein"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-broek&mode=view"
+  },
+  {
+    "id": "haus-goldveld",
+    "name": "Haus Goldveld",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/goldveld.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-goldveld&mode=view"
+  },
+  {
+    "id": "haus-lanette",
+    "name": "Haus Lanette",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/lanette.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Haarlen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lanette&mode=view"
+  },
+  {
+    "id": "haus-roden",
+    "name": "Haus Roden",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/roden.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-roden&mode=view"
+  },
+  {
+    "id": "haus-roosenvelt",
+    "name": "Haus Roosenvelt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/roosenvelt.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Niedenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-roosenvelt&mode=view"
+  },
+  {
+    "id": "haus-arenberg",
+    "name": "Haus Arenberg",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/aurelshain.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Bregen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-arenberg&mode=view"
+  },
+  {
+    "id": "haus-velten-goldmund",
+    "name": "Haus Velten",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/gueldenfels.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Brakenstein"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-velten-goldmund&mode=view"
+  },
+  {
+    "id": "haus-severin",
+    "name": "Haus Severin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/falkengold.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Hartenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-severin&mode=view"
+  },
+  {
+    "id": "haus-belcourt",
+    "name": "Haus Belcourt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/rebenkron.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Bregen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-belcourt&mode=view"
+  },
+  {
+    "id": "haus-lanvier",
+    "name": "Haus Lanvier",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/seidenwarth.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Bramsen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lanvier&mode=view"
+  },
+  {
+    "id": "haus-marholt",
+    "name": "Haus Marholt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/greifenau.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-marholt&mode=view"
+  },
+  {
+    "id": "haus-belmont",
+    "name": "Haus Belmont",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/eitelborn.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-belmont&mode=view"
+  },
+  {
+    "id": "haus-arden",
+    "name": "Haus Arden",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/herzau.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Aldermoor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-arden&mode=view"
+  },
+  {
+    "id": "haus-berden",
+    "name": "Haus Berden",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/silberhorst.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Niedenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-berden&mode=view"
+  },
+  {
+    "id": "haus-sorel",
+    "name": "Haus Sorel",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/samtborn.webp",
+    "path": [
+      "Goldmund",
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sorel&mode=view"
+  },
+  {
+    "id": "haus-wolter",
+    "name": "Haus Wolter",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/weisshorn.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Niedenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wolter&mode=view"
+  },
+  {
+    "id": "haus-ruan",
+    "name": "Ruan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/mac-ruan.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Aurelmark",
+      "Haarlen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ruan&mode=view"
+  },
+  {
+    "id": "haus-callan",
+    "name": "Callan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/mac-callan.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Hartenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-callan&mode=view"
+  },
+  {
+    "id": "haus-brenn",
+    "name": "Brenn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/an-brenn.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Niedenfels"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-brenn&mode=view"
+  },
+  {
+    "id": "haus-fenn",
+    "name": "Fenn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/goldmund/na-fenn.webp",
+    "path": [
+      "Goldmund",
+      "Grafschaft Edelstrom",
+      "Bramsen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-fenn&mode=view"
+  },
+  {
+    "id": "haus-catrannoch",
+    "name": "Catrannoch",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/catrannoch.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Ewiggrün"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-catrannoch&mode=view"
+  },
+  {
+    "id": "haus-cnagallan",
+    "name": "Cnagallan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/cnagallan.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Ewiggrün"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cnagallan&mode=view"
+  },
+  {
+    "id": "haus-damhcallan",
+    "name": "Damhcallan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/damhcallan.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Hohenklamm"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-damhcallan&mode=view"
+  },
+  {
+    "id": "haus-iorcallan",
+    "name": "Iorcallan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/iorcallan.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Mährenfeld"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-iorcallan&mode=view"
+  },
+  {
+    "id": "haus-sgaireag",
+    "name": "Sgàireag",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/sgaireag.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weissklippe"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sgaireag&mode=view"
+  },
+  {
+    "id": "haus-taghradan",
+    "name": "Taghradan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/taghradan.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Hohenklamm"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-taghradan&mode=view"
+  },
+  {
+    "id": "haus-torcradan",
+    "name": "Torcradan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/torcradan.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weislauf"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-torcradan&mode=view"
+  },
+  {
+    "id": "haus-blumenthal",
+    "name": "Haus Blumenthal",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/blumenthal.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Ewiggrün"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-blumenthal&mode=view"
+  },
+  {
+    "id": "haus-honigblut",
+    "name": "Haus Honigblüt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/honigfeld.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Mährenfeld"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-honigblut&mode=view"
+  },
+  {
+    "id": "haus-rosenblueth",
+    "name": "Haus Rosenblüth",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/rosenbluth.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Ewiggrün"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rosenblueth&mode=view"
+  },
+  {
+    "id": "haus-edelweiss",
+    "name": "Haus Edelweiss",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/edelweiss.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick",
+      "Silbermundt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-edelweiss&mode=view"
+  },
+  {
+    "id": "haus-rosenstolz",
+    "name": "Haus Rosenstolz",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/rosenstolz.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Ewiggrün",
+      "Ewiggrün"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rosenstolz&mode=view"
+  },
+  {
+    "id": "haus-freudenthal",
+    "name": "Haus Freudenthal",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/freudenthal.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick",
+      "Seeblick"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-freudenthal&mode=view"
+  },
+  {
+    "id": "haus-rosenblatt",
+    "name": "Haus Rosenblatt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/rosenblatt.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick",
+      "Seeblick"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rosenblatt&mode=view"
+  },
+  {
+    "id": "haus-silberthal",
+    "name": "Haus Silberthal",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/silberthal.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Seeblick",
+      "Seeblick"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-silberthal&mode=view"
+  },
+  {
+    "id": "haus-bruggemann",
+    "name": "Haus Brüggemann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/bruggemann.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Brückenwacht"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bruggemann&mode=view"
+  },
+  {
+    "id": "haus-feuerstein",
+    "name": "Haus Feuerstein",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/feuerstein.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Weishort"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-feuerstein&mode=view"
+  },
+  {
+    "id": "haus-sonnenfeld",
+    "name": "Haus Sonnenfeld",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/sonnenfeld.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Weishort"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sonnenfeld&mode=view"
+  },
+  {
+    "id": "haus-sommerfeld",
+    "name": "Haus Sommerfeld",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/sommerfeld.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Weishort"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sommerfeld&mode=view"
+  },
+  {
+    "id": "haus-wolfenstein",
+    "name": "Haus Wolfenstein",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/wolfenstein.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weishort",
+      "Wolfrieden"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wolfenstein&mode=view"
+  },
+  {
+    "id": "haus-weizmann",
+    "name": "Haus Weizmann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/weizmann.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weislauf"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-weizmann&mode=view"
+  },
+  {
+    "id": "haus-weissberg",
+    "name": "Haus Weißberg",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/weissberg.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weislauf"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-weissberg&mode=view"
+  },
+  {
+    "id": "haus-otterberg",
+    "name": "Haus Otterberg",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/otterberg.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Ottersburg"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-otterberg&mode=view"
+  },
+  {
+    "id": "haus-weissmann",
+    "name": "Haus Weißmann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/weissmann.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weislauf"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-weissmann&mode=view"
+  },
+  {
+    "id": "haus-thalmann",
+    "name": "Haus Thalmann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/thalmann.webp",
+    "path": [
+      "Weisenfluh",
+      "Freiherrentum Weislauf",
+      "Weissthal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-thalmann&mode=view"
+  },
+  {
+    "id": "haus-goldkranz",
+    "name": "Haus Goldkranz",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/goldkranz.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Ewigensee"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-goldkranz&mode=view"
+  },
+  {
+    "id": "haus-borgenicht",
+    "name": "Haus Borgenicht",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/borgenicht.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Ewigensee"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-borgenicht&mode=view"
+  },
+  {
+    "id": "haus-goldberg",
+    "name": "Haus Goldberg",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/goldberg.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Ewigensee"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-goldberg&mode=view"
+  },
+  {
+    "id": "haus-immergluck",
+    "name": "Haus Immerglück",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/immergluck.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Ewigensee"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-immergluck&mode=view"
+  },
+  {
+    "id": "haus-kaltwasser",
+    "name": "Haus Kaltwasser",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/kaltwasser.webp",
+    "path": [
+      "Weisenfluh",
+      "Königliche Provinz Ewigensee",
+      "Ewigensee"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-kaltwasser&mode=view"
+  },
+  {
+    "id": "haus-ritter-der-kornahre",
+    "name": "Die Ritter der Kornähre",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/weisenfluh/die-ritter-der-kornahre.webp",
+    "path": [
+      "Weisenfluh",
+      "Ährensass"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ritter-der-kornahre&mode=view"
+  },
+  {
+    "id": "haus-barrex",
+    "name": "An Barrex",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+    "path": [
+      "Moinneach",
+      "Gergonax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-barrex&mode=view"
+  },
+  {
+    "id": "haus-cethrenn",
+    "name": "Tir An Cethrenn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/cethrenn.png",
+    "path": [
+      "Moinneach",
+      "Gergonax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cethrenn&mode=view"
+  },
+  {
+    "id": "haus-kerlaouen",
+    "name": "Nic Kerlaouen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/kerlaouen.png",
+    "path": [
+      "Moinneach",
+      "Druanax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-kerlaouen&mode=view"
+  },
+  {
+    "id": "haus-damona",
+    "name": "Dál Damona",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/damona.png",
+    "path": [
+      "Moinneach",
+      "Drunemax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-damona&mode=view"
+  },
+  {
+    "id": "haus-caddach",
+    "name": "Ard Caddach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/caddach.png",
+    "path": [
+      "Moinneach",
+      "Amabactoix"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-caddach&mode=view"
+  },
+  {
+    "id": "haus-nic-adruinna",
+    "name": "Nic Adruinna",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/adruinna.png",
+    "path": [
+      "Moinneach",
+      "Vironax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-nic-adruinna&mode=view"
+  },
+  {
+    "id": "haus-avernax",
+    "name": "Ard Avernax",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/avernax.png",
+    "path": [
+      "Moinneach",
+      "Arvonax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-avernax&mode=view"
+  },
+  {
+    "id": "haus-ua-brigantex",
+    "name": "Ua Brigantex",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/brigantex.png",
+    "path": [
+      "Moinneach",
+      "Taranux"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ua-brigantex&mode=view"
+  },
+  {
+    "id": "haus-keravel",
+    "name": "Na Keravel",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/keravel.png",
+    "path": [
+      "Moinneach",
+      "Senodex"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-keravel&mode=view"
+  },
+  {
+    "id": "haus-nemetex",
+    "name": "Ord Nemetex",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/nemetex.png",
+    "path": [
+      "Moinneach",
+      "Camulax"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-nemetex&mode=view"
+  },
+  {
+    "id": "haus-rowak",
+    "name": "Mac Rowak",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/moinneach/rowak.png",
+    "path": [
+      "Moinneach",
+      "Tarvex"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rowak&mode=view"
+  },
+  {
+    "id": "haus-cetchathach",
+    "name": "Ui Nic Cétchathach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/cetchathach.webp",
+    "path": [
+      "Iathneach",
+      "Tir na Sgeire",
+      "Botharin"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cetchathach&mode=view"
+  },
+  {
+    "id": "haus-farraigeach",
+    "name": "Mac Farraigeach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+    "path": [
+      "Iathneach",
+      "Tir na Sgeire",
+      "Sgeir Tearmainn"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-farraigeach&mode=view"
+  },
+  {
+    "id": "haus-salaig",
+    "name": "An Salaig",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/salaig.webp",
+    "path": [
+      "Iathneach",
+      "Tir na Coille",
+      "Fiontarach"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-salaig&mode=view"
+  },
+  {
+    "id": "haus-cannog",
+    "name": "Dâl Cannog",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/cannog.webp",
+    "path": [
+      "Iathneach",
+      "Tir nan Allt",
+      "Tirnafaoi"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cannog&mode=view"
+  },
+  {
+    "id": "haus-tairise",
+    "name": "Nic Tairise",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/tairise.webp",
+    "path": [
+      "Iathneach",
+      "Tir nam Beann",
+      "Mharaich"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tairise&mode=view"
+  },
+  {
+    "id": "haus-muiredaigh",
+    "name": "Ruin Muiredaigh",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/muiredaigh.webp",
+    "path": [
+      "Iathneach",
+      "Tir na Coille",
+      "Famhair"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-muiredaigh&mode=view"
+  },
+  {
+    "id": "haus-rieach",
+    "name": "Tir An Rieach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/rieach.webp",
+    "path": [
+      "Iathneach",
+      "Tir nan Allt",
+      "Sidheanna"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rieach&mode=view"
+  },
+  {
+    "id": "haus-treathai",
+    "name": "Tir An Treathai",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/treathai.webp",
+    "path": [
+      "Iathneach",
+      "Tir nam Beann",
+      "Ailtean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-treathai&mode=view"
+  },
+  {
+    "id": "haus-deaghaide",
+    "name": "Ua Deaghaide",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/iathneach/deaghaide.webp",
+    "path": [
+      "Iathneach",
+      "Tir na Sgeire",
+      "Botharin"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-deaghaide&mode=view"
+  },
+  {
+    "id": "haus-mac-ard-roth",
+    "name": "Mac Ard Roth",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/ard-roth.webp",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal",
+      "Lann Ailseag"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-mac-ard-roth&mode=view"
+  },
+  {
+    "id": "haus-neill",
+    "name": "Mac Neill",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/neill.webp",
+    "path": [
+      "Deitheach",
+      "Sliabh Dorrain",
+      "Dun Beartain"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-neill&mode=view"
+  },
+  {
+    "id": "haus-caolan",
+    "name": "Nic Caolan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/caolan.webp",
+    "path": [
+      "Deitheach",
+      "Coill Fhasgair",
+      "Srath Dreasail"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-caolan&mode=view"
+  },
+  {
+    "id": "haus-duach",
+    "name": "Dál Dúach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/duach.webp",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann",
+      "Fiodh Carthain"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-duach&mode=view"
+  },
+  {
+    "id": "haus-ardmhair",
+    "name": "Tir an Ardmhair",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/ardmhair.webp",
+    "path": [
+      "Deitheach",
+      "Coill Fhasgair",
+      "Creag Uamhar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ardmhair&mode=view"
+  },
+  {
+    "id": "haus-droch-trodach",
+    "name": "Droch Trodach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/trodach.webp",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann",
+      "Ard Sceolan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-droch-trodach&mode=view"
+  },
+  {
+    "id": "haus-torcmhar",
+    "name": "Ua Torcmhar",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/torcmhar.webp",
+    "path": [
+      "Deitheach",
+      "Sliabh Dorrain",
+      "Tobar Loscarn"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-torcmhar&mode=view"
+  },
+  {
+    "id": "haus-mac-snaith",
+    "name": "Mac Snaith",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/snaith.webp",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal",
+      "Caol Muirdean"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-mac-snaith&mode=view"
+  },
+  {
+    "id": "haus-nic-drisach",
+    "name": "Nic Drisach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/drisach.webp",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal",
+      "Lann Ailseag"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-nic-drisach&mode=view"
+  },
+  {
+    "id": "haus-dal-tuairne",
+    "name": "Dál Tuairne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/tuairne.webp",
+    "path": [
+      "Deitheach",
+      "Magh Eirceann",
+      "Maol Orsagail"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dal-tuairne&mode=view"
+  },
+  {
+    "id": "haus-ruin-seilgeir",
+    "name": "Ruin Seilgeir",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/seilgair.webp",
+    "path": [
+      "Deitheach",
+      "Coill Fhasgair",
+      "Srath Dreasail"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ruin-seilgeir&mode=view"
+  },
+  {
+    "id": "haus-tir-eatharn",
+    "name": "Tir Eatharn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/deitheach/eatharn.webp",
+    "path": [
+      "Deitheach",
+      "Iorras Ruscadal",
+      "Lann Ailseag"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tir-eatharn&mode=view"
+  },
+  {
+    "id": "haus-an-taghan",
+    "name": "An Taghan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/taghan.webp",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda",
+      "Dorchain"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-an-taghan&mode=view"
+  },
+  {
+    "id": "haus-ua-guilbneach",
+    "name": "Ua Guilbneach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/guilbneach.webp",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda",
+      "Fiorail"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ua-guilbneach&mode=view"
+  },
+  {
+    "id": "haus-ruin-coilleach",
+    "name": "Ruin Coilleach",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/coilleach.webp",
+    "path": [
+      "Iathneach",
+      "Ehemals Mor Tiarnatum Cuansioda",
+      "Doire Fionn"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ruin-coilleach&mode=view"
+  },
+  {
+    "id": "haus-hammerstein",
+    "name": "Haus Hammerstein",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/hammerstein.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Wernheim"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-hammerstein&mode=view"
+  },
+  {
+    "id": "haus-segelbrecht",
+    "name": "Haus Segelbrecht",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/segelbrecht.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Erlensund"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-segelbrecht&mode=view"
+  },
+  {
+    "id": "haus-riemann",
+    "name": "Haus Riemann",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/riemann.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Segelwacht"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-riemann&mode=view"
+  },
+  {
+    "id": "haus-steinmetz",
+    "name": "Haus Steinmetz",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/steinmetz.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Hammertal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-steinmetz&mode=view"
+  },
+  {
+    "id": "haus-hufschlag",
+    "name": "Haus Hufschlag",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/hufschlag.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Wernmark",
+      "Rottendorf"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-hufschlag&mode=view"
+  },
+  {
+    "id": "haus-stahlwart",
+    "name": "Haus Stahlwart",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/stahlwart.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede",
+      "Dornheim"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-stahlwart&mode=view"
+  },
+  {
+    "id": "haus-reiff",
+    "name": "Haus Reiff",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/reiff.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede",
+      "Rothen"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-reiff&mode=view"
+  },
+  {
+    "id": "haus-sattler",
+    "name": "Haus Sattler",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/triarchie/sattler.webp",
+    "path": [
+      "Aldingen",
+      "Ehemals Grafschaft Hohenreede",
+      "Hohenreede"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sattler&mode=view"
+  },
+  {
     "id": "haus-arwydd",
     "name": "Haus Arwydd",
     "image": "/Stammb%C3%A4ume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/haus-arwydd.png",
@@ -12883,7 +16252,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Goldmund/haus-von-hochreuth.png",
     "path": [
       "Goldmund",
-      "Unsortierte Häuser"
+      "Herzogliche Grafschaft Kronenau",
+      "Thronholt"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-von-hochreuth&mode=view"
   },
@@ -12893,8 +16263,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
     "path": [
       "Weisenfluh",
-      "Region Ewigensee",
-      "Ewigensee"
+      "Königliche Provinz Ewigensee",
+      "Burg Rebenwacht"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-weinlaub&mode=view"
   },
@@ -12904,6 +16274,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
     "path": [
       "Weisenfluh",
+      "Freiherrentum Weislauf",
       "Burg Sonnenfels"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view"
