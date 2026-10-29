@@ -47,7 +47,7 @@
         runtime().drawTravelLayer();
       }
       mapWrap().style.cursor = 'grabbing';
-    } else if(!dragGroupId && runtime().travelMode() === 'pan'){
+    } else if(!dragGroupId && runtime().travelMode() === 'pan' && state().groups.some(group => group.route?.length)){
       const point = runtime().mapPointFromClient(event.clientX, event.clientY);
       mapWrap().style.cursor = window.KartoLsbCanvas.hitWaypoint(point.x, point.y) ? 'grab' : '';
     }
@@ -82,6 +82,7 @@
       runtime().openWaypointModal(dragGroupId, dragWaypointIndex);
     }
     resetDrag();
+    runtime().drawTravelLayer();
     mapWrap().style.cursor = 'grab';
   }
 

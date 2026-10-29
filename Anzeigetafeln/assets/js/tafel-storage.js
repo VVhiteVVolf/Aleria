@@ -14,6 +14,7 @@
   let knownDraft = null;
   let sourceIncomplete = false;
   let writeProblem = '';
+  let preloadedSources = null;
 
   function setStatus(state) {
     const dot = document.getElementById('sdot');
@@ -80,9 +81,7 @@
     }
   }
 
-  async function fetchLegacyFirebase() {
-    if (!legacyConfig?.docId) return null;
-    try {
+  async function readLegacyFirebase() {
       const [appModule, firestoreModule] = await Promise.all([
         import('https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js'),
         import('https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js'),
@@ -107,14 +106,34 @@
       if (!snapshot.exists()) return null;
       const value = snapshot.data()?.data;
       return typeof value === 'string' ? JSON.parse(value) : value || null;
+  }
+
+  async function fetchLegacyFirebase() {
+    if (!legacyConfig?.docId) return null;
+    let deadline;
+    try {
+      return await Promise.race([
+        readLegacyFirebase(),
+        new Promise((resolve, reject) => { deadline = setTimeout(() => reject(new Error('Firebase-Altimport antwortet nicht rechtzeitig.')), 6000); }),
+      ]);
     } catch (error) {
       console.warn('[tafel-storage] Alte Firebase-Fassung ist nicht lesbar:', error);
       sourceIncomplete = true;
       return null;
+    } finally {
+      clearTimeout(deadline);
     }
   }
 
+  function loadSources() {
+    return Promise.all([fetchPublished(), window.TafelAuthoredNotices.load(storageConfig.authoredNoticesPath)]);
+  }
+
   window._fb = {
+    preload() {
+      if (!preloadedSources) preloadedSources = loadSources();
+      return preloadedSources;
+    },
     async saveAll(state) {
       if (!loaded) return false;
       setStatus('sv');
@@ -128,9 +147,9 @@
     },
     sub(callback) {
       return (async () => {
-        const [published, authored] = await Promise.all([
-          fetchPublished(), window.TafelAuthoredNotices.load(storageConfig.authoredNoticesPath),
-        ]);
+        const loading = preloadedSources || loadSources();
+        preloadedSources = null;
+        const [published, authored] = await loading;
         const withAuthored = state => window.TafelAuthoredNotices.merge(state, authored);
         publishedRevision = Math.max(0, Number(published?.revision || 0));
         workingRevision = publishedRevision;

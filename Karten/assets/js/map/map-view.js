@@ -2,7 +2,14 @@
   const runtime = window.KartoRuntime;
 
   function onImgLoad(img){
-    runtime.setMapImageSize(img.naturalWidth, img.naturalHeight);
+    const width=Number(img.dataset.mapWidth)||img.naturalWidth;
+    const height=Number(img.dataset.mapHeight)||img.naturalHeight;
+    const source=img.dataset.mapSource||img.getAttribute('src');
+    const current=runtime.mapImageSize();
+    // Resolution upgrades must preserve the current viewport and marker DOM.
+    if(current.width===width && current.height===height && img.dataset.loadedMapSource===source) return;
+    img.dataset.loadedMapSource=source;
+    runtime.setMapImageSize(width, height);
     runtime.fitMapView();
     runtime.renderMapContent();
   }
@@ -34,6 +41,7 @@
     if(!button) return;
     button.classList.toggle('on', active);
     const img = document.querySelector(`.ml[data-overlay="${layer}"]`);
+    if(img) window.KartoMapRasterImages?.activate(img,active);
     if(img) img.style.opacity = active ? '1' : '0';
     if(layer === 'pins') updatePinLayerVisibility();
   }

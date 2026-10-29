@@ -8,7 +8,7 @@ const plain = value => JSON.parse(JSON.stringify(value));
 const key = 'aleria.tafeln.draft.test';
 const board = title => ({ schemaVersion: 2, zettel: [{ id: 'n', typ: 'quest', x: .2, y: .3, title, comments: [{ text: 'Spur bleibt' }] }] });
 
-function fixture({ draft = null, revision = 7, published = board('Online'), offline = false, legacy = false, post } = {}) {
+function fixture({ draft = null, revision = 7, published = board('Online'), offline = false, legacy = false, post, legacyRead } = {}) {
   const values = new Map();
   if (draft) values.set(key, JSON.stringify(draft));
   const requests = [];
@@ -32,12 +32,47 @@ function fixture({ draft = null, revision = 7, published = board('Online'), offl
   };
   vm.createContext(context);
   vm.runInContext(source('core/tafel-state.js'), context);
-  vm.runInContext(source('tafel-storage.js'), context);
+  let storage = source('tafel-storage.js');
+  if (legacyRead) {
+    context.legacyApp = { getApps: () => [], initializeApp: () => ({}) };
+    context.legacyFirestore = { getFirestore: () => ({}), doc: () => ({}), getDoc: legacyRead };
+    storage = storage.replace("import('https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js')", 'Promise.resolve(legacyApp)')
+      .replace("import('https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js')", 'Promise.resolve(legacyFirestore)');
+  }
+  vm.runInContext(storage, context);
   return { window, requests, values, timers, localStorage, draft: () => JSON.parse(values.get(key) || 'null'),
     async load() { await window._fb.sub(state => window.TafelState.apply(state)); },
     async authenticate() { await window.TafelPublish.authenticate('test-only'); },
   };
 }
+
+test('preloading overlaps artwork requests, is consumed once, and does not make later reloads stale', async () => {
+  const f = fixture();
+  await f.window._fb.preload();
+  assert.equal(f.requests.length, 1);
+  await f.load();
+  assert.equal(f.requests.length, 1);
+  await f.load();
+  assert.equal(f.requests.length, 2);
+});
+
+test('a stalled legacy read expires without permitting publication or applying a late result', async () => {
+  let resolveLegacy;
+  const f = fixture({ published: null, legacy: true, legacyRead: () => new Promise(resolve => { resolveLegacy = resolve; }) });
+  const loading = f.load();
+  for (let i = 0; i < 12; i++) await Promise.resolve();
+  assert.equal(typeof resolveLegacy, 'function');
+  assert.equal(f.timers.size, 1);
+  [...f.timers.values()][0]();
+  await loading; await f.authenticate();
+  await assert.rejects(f.window.TafelPublish.publish(f.window.TafelState.snapshot()), /Firebase-Stand/);
+  resolveLegacy({ exists: () => true, data: () => ({ data: JSON.stringify(board('Late remote state')) }) });
+  for (let i = 0; i < 12; i++) await Promise.resolve();
+  assert.equal(f.window.TafelState.get().zettel.length, 0);
+  await f.window.TafelState.saveNow();
+  assert.equal(f.draft().sourceIncomplete, true);
+  assert.equal(f.requests.some(request => request.method === 'POST'), false);
+});
 
 test('an old local base is preserved through reload, saves and conflict; newer online text cannot be overwritten', async () => {
   let expected;

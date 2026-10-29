@@ -5,7 +5,7 @@
       "id": "angebot-haendler",
       "name": "Angebot des Händlers",
       "category": "Handel & Arbeit",
-      "src": "../IconOrdner/Steckis/Angebot des Händlers.png",
+      "src": "assets/images/board-posters/display/angebot-haendler.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -14,13 +14,25 @@
         "w": 358,
         "h": 551
       },
-      "aspect": 0.649728
+      "aspect": 0.649728,
+      "originalSrc": "../IconOrdner/Steckis/Angebot des Händlers.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/angebot-haendler.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "ankuendigung-quer",
       "name": "Ankündigung – großes Querformat",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_31_05-removebg-preview.png",
+      "src": "assets/images/board-posters/display/ankuendigung-quer.webp",
       "width": 612,
       "height": 408,
       "bounds": {
@@ -29,13 +41,25 @@
         "w": 602,
         "h": 378
       },
-      "aspect": 1.592593
+      "aspect": 1.592593,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_31_05-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/ankuendigung-quer.webp",
+        "width": 200,
+        "height": 126,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 126
+        }
+      }
     },
     {
       "id": "ankuendigung-bier",
       "name": "Ankündigung – Krug und Bildfeld",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_05_01-removebg-preview.png",
+      "src": "assets/images/board-posters/display/ankuendigung-bier.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -44,13 +68,25 @@
         "w": 381,
         "h": 594
       },
-      "aspect": 0.641414
+      "aspect": 0.641414,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_05_01-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/ankuendigung-bier.webp",
+        "width": 128,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 128,
+          "h": 200
+        }
+      }
     },
     {
       "id": "ankuendigung-bild",
       "name": "Ankündigung mit Bildfeld",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/Ankünidgung.png",
+      "src": "assets/images/board-posters/display/ankuendigung-bild.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -59,13 +95,25 @@
         "w": 384,
         "h": 562
       },
-      "aspect": 0.683274
+      "aspect": 0.683274,
+      "originalSrc": "../IconOrdner/Steckis/Ankünidgung.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/ankuendigung-bild.webp",
+        "width": 137,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 137,
+          "h": 200
+        }
+      }
     },
     {
       "id": "ankuendigung",
       "name": "Ankündigung mit Siegel",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/Ankündigung.png",
+      "src": "assets/images/board-posters/display/ankuendigung.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -74,13 +122,25 @@
         "w": 367,
         "h": 557
       },
-      "aspect": 0.658887
+      "aspect": 0.658887,
+      "originalSrc": "../IconOrdner/Steckis/Ankündigung.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/ankuendigung.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     },
     {
       "id": "arbeit",
       "name": "Arbeit!",
       "category": "Handel & Arbeit",
-      "src": "../Anzeigetafeln/assets/images/board-posters/arbeit-v1.png",
+      "src": "assets/images/board-posters/display/arbeit.webp",
       "width": 994,
       "height": 1582,
       "bounds": {
@@ -95,6 +155,18 @@
         "zero": 360820,
         "opaque": 256,
         "total": 1572508
+      },
+      "originalSrc": "../Anzeigetafeln/assets/images/board-posters/arbeit-v1.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/arbeit.webp",
+        "width": 126,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 126,
+          "h": 200
+        }
       }
     },
     {
@@ -110,7 +182,18 @@
         "w": 399,
         "h": 597
       },
-      "aspect": 0.668342
+      "aspect": 0.668342,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/arena.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
     },
     {
       "id": "baecker-gesucht",
@@ -125,13 +208,24 @@
         "w": 386,
         "h": 576
       },
-      "aspect": 0.670139
+      "aspect": 0.670139,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/baecker-gesucht.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
     },
     {
       "id": "beerdigung",
       "name": "Beerdigung",
       "category": "Ankündigungen",
-      "src": "../Anzeigetafeln/assets/images/board-posters/beerdigung-v1.png",
+      "src": "assets/images/board-posters/display/beerdigung.webp",
       "width": 1003,
       "height": 1568,
       "bounds": {
@@ -146,13 +240,25 @@
         "zero": 343947,
         "opaque": 1086,
         "total": 1572704
+      },
+      "originalSrc": "../Anzeigetafeln/assets/images/board-posters/beerdigung-v1.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/beerdigung.webp",
+        "width": 135,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 135,
+          "h": 200
+        }
       }
     },
     {
       "id": "vampir",
       "name": "Blutsauger!",
       "category": "Warnungen & Kreaturen",
-      "src": "../IconOrdner/Steckis/Vampir.png",
+      "src": "assets/images/board-posters/display/vampir.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -161,13 +267,25 @@
         "w": 396,
         "h": 603
       },
-      "aspect": 0.656716
+      "aspect": 0.656716,
+      "originalSrc": "../IconOrdner/Steckis/Vampir.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/vampir.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "blutbund",
       "name": "Der Blutbund",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Blutbund.png",
+      "src": "assets/images/board-posters/display/blutbund.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -176,7 +294,19 @@
         "w": 404,
         "h": 609
       },
-      "aspect": 0.663383
+      "aspect": 0.663383,
+      "originalSrc": "../IconOrdner/Steckis/Blutbund.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/blutbund.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "barden-gesucht",
@@ -191,13 +321,24 @@
         "w": 393,
         "h": 612
       },
-      "aspect": 0.642157
+      "aspect": 0.642157,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/barden-gesucht.webp",
+        "width": 128,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 128,
+          "h": 200
+        }
+      }
     },
     {
       "id": "abtruennige",
       "name": "Die Abtrünnigen",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Abtrünnige.png",
+      "src": "assets/images/board-posters/display/abtruennige.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -206,7 +347,19 @@
         "w": 346,
         "h": 485
       },
-      "aspect": 0.713402
+      "aspect": 0.713402,
+      "originalSrc": "../IconOrdner/Steckis/Abtrünnige.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/abtruennige.webp",
+        "width": 143,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 143,
+          "h": 200
+        }
+      }
     },
     {
       "id": "fianna",
@@ -221,7 +374,18 @@
         "w": 378,
         "h": 585
       },
-      "aspect": 0.646154
+      "aspect": 0.646154,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/fianna.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "fianna-rolle",
@@ -236,13 +400,24 @@
         "w": 397,
         "h": 575
       },
-      "aspect": 0.690435
+      "aspect": 0.690435,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/fianna-rolle.webp",
+        "width": 138,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 138,
+          "h": 200
+        }
+      }
     },
     {
       "id": "klingende-muenze",
       "name": "Die Klingende Münze",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Klingende Münze.png",
+      "src": "assets/images/board-posters/display/klingende-muenze.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -251,7 +426,19 @@
         "w": 380,
         "h": 581
       },
-      "aspect": 0.654045
+      "aspect": 0.654045,
+      "originalSrc": "../IconOrdner/Steckis/Klingende Münze.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/klingende-muenze.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "richter",
@@ -266,13 +453,24 @@
         "w": 397,
         "h": 601
       },
-      "aspect": 0.660566
+      "aspect": 0.660566,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/richter.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     },
     {
       "id": "wache-rekruten",
       "name": "Die Wache sucht Rekruten",
       "category": "Handel & Arbeit",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_16._Juni_2025__11_56_32-removebg-preview.png",
+      "src": "assets/images/board-posters/display/wache-rekruten.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -281,13 +479,25 @@
         "w": 389,
         "h": 593
       },
-      "aspect": 0.655987
+      "aspect": 0.655987,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_16._Juni_2025__11_56_32-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/wache-rekruten.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "diebe",
       "name": "Diebe",
       "category": "Gesuche & Steckbriefe",
-      "src": "../IconOrdner/Steckis/Diebe.png",
+      "src": "assets/images/board-posters/display/diebe.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -296,13 +506,25 @@
         "w": 373,
         "h": 576
       },
-      "aspect": 0.647569
+      "aspect": 0.647569,
+      "originalSrc": "../IconOrdner/Steckis/Diebe.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/diebe.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "erlass",
       "name": "Erlass",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/Gesetz.png",
+      "src": "assets/images/board-posters/display/erlass.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -311,13 +533,25 @@
         "w": 376,
         "h": 585
       },
-      "aspect": 0.642735
+      "aspect": 0.642735,
+      "originalSrc": "../IconOrdner/Steckis/Gesetz.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/erlass.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "geist",
       "name": "Erscheinung!",
       "category": "Warnungen & Kreaturen",
-      "src": "../IconOrdner/Steckis/Geist.png",
+      "src": "assets/images/board-posters/display/geist.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -326,13 +560,25 @@
         "w": 394,
         "h": 601
       },
-      "aspect": 0.655574
+      "aspect": 0.655574,
+      "originalSrc": "../IconOrdner/Steckis/Geist.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/geist.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "feiertag",
       "name": "Feiertag",
       "category": "Veranstaltungen",
-      "src": "../IconOrdner/Steckis/Feiertag.png",
+      "src": "assets/images/board-posters/display/feiertag.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -341,7 +587,19 @@
         "w": 377,
         "h": 586
       },
-      "aspect": 0.643345
+      "aspect": 0.643345,
+      "originalSrc": "../IconOrdner/Steckis/Feiertag.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/feiertag.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "formling",
@@ -356,7 +614,18 @@
         "w": 394,
         "h": 600
       },
-      "aspect": 0.656667
+      "aspect": 0.656667,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/formling.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "gesucht-leer",
@@ -371,13 +640,24 @@
         "w": 379,
         "h": 578
       },
-      "aspect": 0.655709
+      "aspect": 0.655709,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/gesucht-leer.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "gesucht-kapuzenmann",
       "name": "Gesucht – Kapuzenmann",
       "category": "Gesuche & Steckbriefe",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__03_23_18-removebg-preview.png",
+      "src": "assets/images/board-posters/display/gesucht-kapuzenmann.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -386,13 +666,25 @@
         "w": 384,
         "h": 574
       },
-      "aspect": 0.66899
+      "aspect": 0.66899,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__03_23_18-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/gesucht-kapuzenmann.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
     },
     {
       "id": "federkiel",
       "name": "Gilde Federkiel",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Federkiel.png",
+      "src": "assets/images/board-posters/display/federkiel.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -401,7 +693,19 @@
         "w": 394,
         "h": 608
       },
-      "aspect": 0.648026
+      "aspect": 0.648026,
+      "originalSrc": "../IconOrdner/Steckis/Federkiel.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/federkiel.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "goldglanz",
@@ -416,7 +720,18 @@
         "w": 385,
         "h": 560
       },
-      "aspect": 0.6875
+      "aspect": 0.6875,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/goldglanz.webp",
+        "width": 137,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 137,
+          "h": 200
+        }
+      }
     },
     {
       "id": "grabmal",
@@ -431,7 +746,18 @@
         "w": 381,
         "h": 589
       },
-      "aspect": 0.646859
+      "aspect": 0.646859,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/grabmal.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "grimmlinge",
@@ -446,13 +772,24 @@
         "w": 381,
         "h": 593
       },
-      "aspect": 0.642496
+      "aspect": 0.642496,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/grimmlinge.webp",
+        "width": 128,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 128,
+          "h": 200
+        }
+      }
     },
     {
       "id": "hexe",
       "name": "Hexe?",
       "category": "Warnungen & Kreaturen",
-      "src": "../IconOrdner/Steckis/Hexe.png",
+      "src": "assets/images/board-posters/display/hexe.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -461,13 +798,25 @@
         "w": 388,
         "h": 569
       },
-      "aspect": 0.681898
+      "aspect": 0.681898,
+      "originalSrc": "../IconOrdner/Steckis/Hexe.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/hexe.webp",
+        "width": 136,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 136,
+          "h": 200
+        }
+      }
     },
     {
       "id": "hilfe",
       "name": "Hilfe!",
       "category": "Gesuche & Steckbriefe",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_07_52-removebg-preview.png",
+      "src": "assets/images/board-posters/display/hilfe.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -476,13 +825,25 @@
         "w": 393,
         "h": 590
       },
-      "aspect": 0.666102
+      "aspect": 0.666102,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_07_52-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/hilfe.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "hochzeit",
       "name": "Hochzeit - Tudwal Draig & Revelyn Penderyn",
       "category": "Ankündigungen",
-      "src": "../Anzeigetafeln/assets/images/board-posters/hochzeit-v1.png",
+      "src": "assets/images/board-posters/display/hochzeit.webp",
       "width": 1583,
       "height": 994,
       "bounds": {
@@ -497,6 +858,18 @@
         "zero": 292183,
         "opaque": 696,
         "total": 1573502
+      },
+      "originalSrc": "../Anzeigetafeln/assets/images/board-posters/hochzeit-v1.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/hochzeit.webp",
+        "width": 200,
+        "height": 117,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 117
+        }
       }
     },
     {
@@ -512,7 +885,18 @@
         "w": 926,
         "h": 1414
       },
-      "aspect": 0.65488
+      "aspect": 0.65488,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/hornlinge.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "melwyn",
@@ -527,13 +911,24 @@
         "w": 394,
         "h": 601
       },
-      "aspect": 0.655574
+      "aspect": 0.655574,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/melwyn.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "jagdklingen",
       "name": "Jagdklingen",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Jagdklingen.png",
+      "src": "assets/images/board-posters/display/jagdklingen.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -542,7 +937,19 @@
         "w": 394,
         "h": 593
       },
-      "aspect": 0.664418
+      "aspect": 0.664418,
+      "originalSrc": "../IconOrdner/Steckis/Jagdklingen.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/jagdklingen.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "kampf",
@@ -557,7 +964,18 @@
         "w": 386,
         "h": 594
       },
-      "aspect": 0.649832
+      "aspect": 0.649832,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/kampf.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "blank-lang",
@@ -572,13 +990,24 @@
         "w": 771,
         "h": 282
       },
-      "aspect": 2.734043
+      "aspect": 2.734043,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/blank-lang.webp",
+        "width": 200,
+        "height": 73,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 73
+        }
+      }
     },
     {
       "id": "blank-verbrannt",
       "name": "Leeres zerrissenes Plakat",
       "category": "Leere Plakate",
-      "src": "../Anzeigetafeln/assets/images/board-posters/blank-verbrannt-v1.png",
+      "src": "assets/images/board-posters/display/blank-verbrannt.webp",
       "width": 1064,
       "height": 1479,
       "bounds": {
@@ -593,6 +1022,18 @@
         "zero": 581276,
         "opaque": 1443,
         "total": 1573656
+      },
+      "originalSrc": "../Anzeigetafeln/assets/images/board-posters/blank-verbrannt-v1.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/blank-verbrannt.webp",
+        "width": 135,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 135,
+          "h": 200
+        }
       }
     },
     {
@@ -608,13 +1049,24 @@
         "w": 390,
         "h": 590
       },
-      "aspect": 0.661017
+      "aspect": 0.661017,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/magiergilde.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     },
     {
       "id": "fortuna",
       "name": "Markt der Fortuna",
       "category": "Handel & Arbeit",
-      "src": "../IconOrdner/Steckis/Markt der Fortuna.png",
+      "src": "assets/images/board-posters/display/fortuna.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -623,13 +1075,25 @@
         "w": 391,
         "h": 557
       },
-      "aspect": 0.701975
+      "aspect": 0.701975,
+      "originalSrc": "../IconOrdner/Steckis/Markt der Fortuna.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/fortuna.webp",
+        "width": 140,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 140,
+          "h": 200
+        }
+      }
     },
     {
       "id": "moerder",
       "name": "Mörder!",
       "category": "Gesuche & Steckbriefe",
-      "src": "../IconOrdner/Steckis/Mörder.png",
+      "src": "assets/images/board-posters/display/moerder.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -638,13 +1102,25 @@
         "w": 362,
         "h": 562
       },
-      "aspect": 0.644128
+      "aspect": 0.644128,
+      "originalSrc": "../IconOrdner/Steckis/Mörder.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/moerder.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "moewensang",
       "name": "Möwensang",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Möwensang.png",
+      "src": "assets/images/board-posters/display/moewensang.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -653,13 +1129,25 @@
         "w": 400,
         "h": 602
       },
-      "aspect": 0.664452
+      "aspect": 0.664452,
+      "originalSrc": "../IconOrdner/Steckis/Möwensang.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/moewensang.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "lilienorden",
       "name": "Orden der Lilie",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Lilien Orden.png",
+      "src": "assets/images/board-posters/display/lilienorden.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -668,13 +1156,25 @@
         "w": 391,
         "h": 599
       },
-      "aspect": 0.652755
+      "aspect": 0.652755,
+      "originalSrc": "../IconOrdner/Steckis/Lilien Orden.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/lilienorden.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "pamphlet",
       "name": "Pamphlet",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/Pamphlet.png",
+      "src": "assets/images/board-posters/display/pamphlet.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -683,13 +1183,25 @@
         "w": 381,
         "h": 599
       },
-      "aspect": 0.63606
+      "aspect": 0.63606,
+      "originalSrc": "../IconOrdner/Steckis/Pamphlet.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/pamphlet.webp",
+        "width": 127,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 127,
+          "h": 200
+        }
+      }
     },
     {
       "id": "penderyn",
       "name": "Penderyn Destillerie",
       "category": "Handel & Arbeit",
-      "src": "../IconOrdner/Steckis/Penderyn.png",
+      "src": "assets/images/board-posters/display/penderyn.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -698,13 +1210,25 @@
         "w": 395,
         "h": 601
       },
-      "aspect": 0.657238
+      "aspect": 0.657238,
+      "originalSrc": "../IconOrdner/Steckis/Penderyn.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/penderyn.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "pferdediebe",
       "name": "Pferdediebe",
       "category": "Gesuche & Steckbriefe",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_14._Juni_2025__21_58_11-removebg-preview.png",
+      "src": "assets/images/board-posters/display/pferdediebe.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -713,7 +1237,19 @@
         "w": 348,
         "h": 565
       },
-      "aspect": 0.615929
+      "aspect": 0.615929,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_14._Juni_2025__21_58_11-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/pferdediebe.webp",
+        "width": 123,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 123,
+          "h": 200
+        }
+      }
     },
     {
       "id": "pickende-spechte",
@@ -728,13 +1264,24 @@
         "w": 399,
         "h": 595
       },
-      "aspect": 0.670588
+      "aspect": 0.670588,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/pickende-spechte.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
     },
     {
       "id": "rhosmere",
       "name": "Rhosmeres Rösser",
       "category": "Handel & Arbeit",
-      "src": "../IconOrdner/Steckis/Rhosmere-removebg-preview.png",
+      "src": "assets/images/board-posters/display/rhosmere.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -743,13 +1290,25 @@
         "w": 393,
         "h": 600
       },
-      "aspect": 0.655
+      "aspect": 0.655,
+      "originalSrc": "../IconOrdner/Steckis/Rhosmere-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/rhosmere.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "ruinenpforte",
       "name": "Ruinenpforte",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Ruinenpforte.png",
+      "src": "assets/images/board-posters/display/ruinenpforte.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -758,13 +1317,25 @@
         "w": 389,
         "h": 588
       },
-      "aspect": 0.661565
+      "aspect": 0.661565,
+      "originalSrc": "../IconOrdner/Steckis/Ruinenpforte.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/ruinenpforte.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     },
     {
       "id": "schiffsbauer",
       "name": "Schiffsbauer-Gilde",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Schiffsbauer.png",
+      "src": "assets/images/board-posters/display/schiffsbauer.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -773,13 +1344,25 @@
         "w": 394,
         "h": 603
       },
-      "aspect": 0.6534
+      "aspect": 0.6534,
+      "originalSrc": "../IconOrdner/Steckis/Schiffsbauer.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/schiffsbauer.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "schiffswrack",
       "name": "Schiffswrack!",
       "category": "Warnungen & Kreaturen",
-      "src": "../IconOrdner/Steckis/Schiffswrack.png",
+      "src": "assets/images/board-posters/display/schiffswrack.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -788,7 +1371,19 @@
         "w": 397,
         "h": 601
       },
-      "aspect": 0.660566
+      "aspect": 0.660566,
+      "originalSrc": "../IconOrdner/Steckis/Schiffswrack.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/schiffswrack.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     },
     {
       "id": "zeitung",
@@ -803,7 +1398,18 @@
         "w": 582,
         "h": 378
       },
-      "aspect": 1.539683
+      "aspect": 1.539683,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/zeitung.webp",
+        "width": 200,
+        "height": 130,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 130
+        }
+      }
     },
     {
       "id": "schwarzdorn",
@@ -818,7 +1424,18 @@
         "w": 374,
         "h": 563
       },
-      "aspect": 0.664298
+      "aspect": 0.664298,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/schwarzdorn.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "sirenen",
@@ -833,13 +1450,24 @@
         "w": 382,
         "h": 575
       },
-      "aspect": 0.664348
+      "aspect": 0.664348,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/sirenen.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "soeldner",
       "name": "Söldner gesucht",
       "category": "Handel & Arbeit",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_13_51-removebg-preview.png",
+      "src": "assets/images/board-posters/display/soeldner.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -848,7 +1476,19 @@
         "w": 389,
         "h": 608
       },
-      "aspect": 0.639803
+      "aspect": 0.639803,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_13_51-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/soeldner.webp",
+        "width": 128,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 128,
+          "h": 200
+        }
+      }
     },
     {
       "id": "teyrngarch",
@@ -863,7 +1503,18 @@
         "w": 376,
         "h": 513
       },
-      "aspect": 0.732943
+      "aspect": 0.732943,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/teyrngarch.webp",
+        "width": 147,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 147,
+          "h": 200
+        }
+      }
     },
     {
       "id": "troll",
@@ -878,7 +1529,18 @@
         "w": 379,
         "h": 582
       },
-      "aspect": 0.651203
+      "aspect": 0.651203,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/troll.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "untote",
@@ -893,13 +1555,24 @@
         "w": 383,
         "h": 587
       },
-      "aspect": 0.65247
+      "aspect": 0.65247,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/untote.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "kirche",
       "name": "Verlautbarung – Kirche",
       "category": "Ankündigungen",
-      "src": "../IconOrdner/Steckis/Kirche.png",
+      "src": "assets/images/board-posters/display/kirche.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -908,7 +1581,19 @@
         "w": 405,
         "h": 595
       },
-      "aspect": 0.680672
+      "aspect": 0.680672,
+      "originalSrc": "../IconOrdner/Steckis/Kirche.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/kirche.webp",
+        "width": 136,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 136,
+          "h": 200
+        }
+      }
     },
     {
       "id": "mabli",
@@ -923,13 +1608,24 @@
         "w": 386,
         "h": 572
       },
-      "aspect": 0.674825
+      "aspect": 0.674825,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/mabli.webp",
+        "width": 135,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 135,
+          "h": 200
+        }
+      }
     },
     {
       "id": "vermisst",
       "name": "Vermisst!",
       "category": "Gesuche & Steckbriefe",
-      "src": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_12_05-removebg-preview.png",
+      "src": "assets/images/board-posters/display/vermisst.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -938,7 +1634,19 @@
         "w": 384,
         "h": 590
       },
-      "aspect": 0.650847
+      "aspect": 0.650847,
+      "originalSrc": "../IconOrdner/Steckis/ChatGPT_Image_5._Juni_2025__01_12_05-removebg-preview.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/vermisst.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "versunkene",
@@ -953,7 +1661,18 @@
         "w": 918,
         "h": 1418
       },
-      "aspect": 0.647391
+      "aspect": 0.647391,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/versunkene.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "vorsicht",
@@ -968,7 +1687,18 @@
         "w": 385,
         "h": 595
       },
-      "aspect": 0.647059
+      "aspect": 0.647059,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/vorsicht.webp",
+        "width": 129,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 129,
+          "h": 200
+        }
+      }
     },
     {
       "id": "warnung",
@@ -983,13 +1713,24 @@
         "w": 385,
         "h": 589
       },
-      "aspect": 0.65365
+      "aspect": 0.65365,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/warnung.webp",
+        "width": 131,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 131,
+          "h": 200
+        }
+      }
     },
     {
       "id": "windreiter",
       "name": "Windreiter",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Windreiter.png",
+      "src": "assets/images/board-posters/display/windreiter.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -998,13 +1739,25 @@
         "w": 390,
         "h": 593
       },
-      "aspect": 0.657673
+      "aspect": 0.657673,
+      "originalSrc": "../IconOrdner/Steckis/Windreiter.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/windreiter.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     },
     {
       "id": "wolken-daemmerung",
       "name": "Wolken der Dämmerung",
       "category": "Gilden & Orden",
-      "src": "../IconOrdner/Steckis/Wolken der Dämmerung.png",
+      "src": "assets/images/board-posters/display/wolken-daemmerung.webp",
       "width": 408,
       "height": 612,
       "bounds": {
@@ -1013,7 +1766,19 @@
         "w": 398,
         "h": 599
       },
-      "aspect": 0.664441
+      "aspect": 0.664441,
+      "originalSrc": "../IconOrdner/Steckis/Wolken der Dämmerung.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/wolken-daemmerung.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "hochzeit-allgemein",
@@ -1029,7 +1794,18 @@
         "w": 1477,
         "h": 853
       },
-      "aspect": 1.731535756154748
+      "aspect": 1.731535756154748,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/hochzeit-allgemein.webp",
+        "width": 200,
+        "height": 116,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 116
+        }
+      }
     },
     {
       "id": "unterkunft",
@@ -1045,7 +1821,18 @@
         "w": 929,
         "h": 1370
       },
-      "aspect": 0.6781021897810219
+      "aspect": 0.6781021897810219,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/unterkunft.webp",
+        "width": 136,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 136,
+          "h": 200
+        }
+      }
     },
     {
       "id": "vermietung",
@@ -1061,7 +1848,18 @@
         "w": 932,
         "h": 1397
       },
-      "aspect": 0.6671438797423049
+      "aspect": 0.6671438797423049,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/vermietung.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "geleit",
@@ -1077,7 +1875,18 @@
         "w": 937,
         "h": 1386
       },
-      "aspect": 0.676046176046176
+      "aspect": 0.676046176046176,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/geleit.webp",
+        "width": 135,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 135,
+          "h": 200
+        }
+      }
     },
     {
       "id": "lieferung",
@@ -1093,7 +1902,18 @@
         "w": 925,
         "h": 1363
       },
-      "aspect": 0.6786500366837858
+      "aspect": 0.6786500366837858,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/lieferung.webp",
+        "width": 136,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 136,
+          "h": 200
+        }
+      }
     },
     {
       "id": "verloren",
@@ -1109,7 +1929,18 @@
         "w": 875,
         "h": 1372
       },
-      "aspect": 0.6377551020408163
+      "aspect": 0.6377551020408163,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/verloren.webp",
+        "width": 128,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 128,
+          "h": 200
+        }
+      }
     },
     {
       "id": "gefunden",
@@ -1125,7 +1956,18 @@
         "w": 897,
         "h": 1341
       },
-      "aspect": 0.668903803131991
+      "aspect": 0.668903803131991,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/gefunden.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
     },
     {
       "id": "heilung",
@@ -1141,7 +1983,18 @@
         "w": 900,
         "h": 1350
       },
-      "aspect": 0.6666666666666666
+      "aspect": 0.6666666666666666,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/heilung.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "lehrlinge",
@@ -1157,7 +2010,18 @@
         "w": 916,
         "h": 1378
       },
-      "aspect": 0.6647314949201741
+      "aspect": 0.6647314949201741,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/lehrlinge.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "versammlung",
@@ -1173,7 +2037,18 @@
         "w": 888,
         "h": 1338
       },
-      "aspect": 0.6636771300448431
+      "aspect": 0.6636771300448431,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/versammlung.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "morddyn-regionalkarte",
@@ -1300,7 +2175,18 @@
           2,
           40
         ]
-      ]
+      ],
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/morddyn-regionalkarte.webp",
+        "width": 200,
+        "height": 143,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 143
+        }
+      }
     },
     {
       "id": "morddyn-leer",
@@ -1379,7 +2265,18 @@
           2,
           20
         ]
-      ]
+      ],
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/morddyn-leer.webp",
+        "width": 160,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 200
+        }
+      }
     },
     {
       "id": "morddyn-vorsicht",
@@ -1396,7 +2293,18 @@
         "w": 917,
         "h": 1378
       },
-      "aspect": 0.6654571843251088
+      "aspect": 0.6654571843251088,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/morddyn-vorsicht.webp",
+        "width": 133,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 133,
+          "h": 200
+        }
+      }
     },
     {
       "id": "morddyn-gefahr",
@@ -1413,7 +2321,18 @@
         "w": 938,
         "h": 1404
       },
-      "aspect": 0.6680911680911681
+      "aspect": 0.6680911680911681,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/morddyn-gefahr.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
     },
     {
       "id": "morddyn-arbeit",
@@ -1430,7 +2349,18 @@
         "w": 937,
         "h": 1365
       },
-      "aspect": 0.6864468864468865
+      "aspect": 0.6864468864468865,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/morddyn-arbeit.webp",
+        "width": 137,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 137,
+          "h": 200
+        }
+      }
     },
     {
       "id": "morddyn-wettbewerb",
@@ -1447,7 +2377,18 @@
         "w": 915,
         "h": 1283
       },
-      "aspect": 0.7131722525331254
+      "aspect": 0.7131722525331254,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/morddyn-wettbewerb.webp",
+        "width": 143,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 143,
+          "h": 200
+        }
+      }
     },
     {
       "id": "llysfaen-hilfe-links",
@@ -1464,7 +2405,18 @@
         "w": 927,
         "h": 1421
       },
-      "aspect": 0.6523574947220268
+      "aspect": 0.6523574947220268,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/llysfaen-hilfe-links.webp",
+        "width": 130,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 130,
+          "h": 200
+        }
+      }
     },
     {
       "id": "llysfaen-vorsicht-schafe",
@@ -1481,7 +2433,18 @@
         "w": 924,
         "h": 1370
       },
-      "aspect": 0.6744525547445256
+      "aspect": 0.6744525547445256,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/llysfaen-vorsicht-schafe.webp",
+        "width": 135,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 135,
+          "h": 200
+        }
+      }
     },
     {
       "id": "llysfaen-vorsicht-aal",
@@ -1498,7 +2461,18 @@
         "w": 932,
         "h": 1370
       },
-      "aspect": 0.6802919708029197
+      "aspect": 0.6802919708029197,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/llysfaen-vorsicht-aal.webp",
+        "width": 136,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 136,
+          "h": 200
+        }
+      }
     },
     {
       "id": "llysfaen-arbeit",
@@ -1515,7 +2489,18 @@
         "w": 740,
         "h": 1100
       },
-      "aspect": 0.6727272727272727
+      "aspect": 0.6727272727272727,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/llysfaen-arbeit.webp",
+        "width": 135,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 135,
+          "h": 200
+        }
+      }
     },
     {
       "id": "llysfaen-ankuendigung-portrait",
@@ -1532,7 +2517,18 @@
         "w": 895,
         "h": 1360
       },
-      "aspect": 0.6580882352941176
+      "aspect": 0.6580882352941176,
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/llysfaen-ankuendigung-portrait.webp",
+        "width": 132,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 132,
+          "h": 200
+        }
+      }
     }
   ]
 }

@@ -1,5 +1,5 @@
-import { NAILS } from './board-composition-model.mjs?v=20261027-all-boards-v3';
-import { previewMarkup, paperMarkup } from './board-composition-view.mjs?v=20261027-all-boards-v3';
+import { NAILS } from './board-composition-model.mjs?v=20261029-performance-v1';
+import { previewMarkup, paperMarkup } from './board-composition-view.mjs?v=20261029-performance-v1';
 
 // Temporary wizard state never enters the board until placement is confirmed.
 export function createPosterWizard({ assets, esc, place, groups, isEditing }) {
@@ -24,7 +24,7 @@ export function createPosterWizard({ assets, esc, place, groups, isEditing }) {
       && `${asset.name} ${asset.category}`.toLocaleLowerCase('de').includes(needle));
     dialog.querySelector('[data-role="poster-catalog"]').innerHTML = filtered.length ? filtered.map(asset => `
       <button type="button" class="board-art-choice${draft.assetId === asset.id ? ' is-chosen' : ''}" data-create-action="asset" data-asset-id="${esc(asset.id)}" aria-pressed="${draft.assetId === asset.id}">
-        <span class="board-art-thumbnail"><span style="--asset-aspect:${asset.aspect};aspect-ratio:${asset.aspect}">${paperMarkup(asset, esc)}</span></span><strong>${esc(asset.name)}</strong><small>${esc(asset.category)}</small>
+        <span class="board-art-thumbnail"><span style="--asset-aspect:${asset.aspect};aspect-ratio:${asset.aspect}">${paperMarkup(asset, esc, { thumbnail: true })}</span></span><strong>${esc(asset.name)}</strong><small>${esc(asset.category)}</small>
       </button>`).join('') : '<p>Kein passendes Plakat gefunden.</p>';
   }
 

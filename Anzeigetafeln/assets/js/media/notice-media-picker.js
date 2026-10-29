@@ -5,6 +5,9 @@
   const pageSize = 60;
   let dialog, onSelect, opener, activeTab = 'icons', visibleCount = pageSize;
   let characters = null, characterLoad = null, characterWarning = '';
+  let iconLoad = null, iconsReady = false, iconWarning = '';
+  const catalogLoads = new Map();
+  let cachedIcons = null;
   let shown = [], session = 0;
 
   function field(source, key, label, personIndex) {
@@ -45,10 +48,13 @@
   }
 
   function iconItems() {
+    if (cachedIcons) return cachedIcons;
     const icons = typeof ALERIA_ICON_DIRECTORY === 'undefined' ? [] : ALERIA_ICON_DIRECTORY;
-    return [...icons.map(item => ({ kind: 'icon', name: item.name.replace(/_/g, ' '), src: item.path, group: item.folder || 'IconOrdner' })),
+    const items = [...icons.map(item => ({ kind: 'icon', name: item.name.replace(/_/g, ' '), src: item.path, group: item.folder || 'IconOrdner' })),
       ...(window.KARTO_MEDIA_ASSETS || []).map(item => ({ kind: 'icon', name: item.name, src: item.url, group: item.source + ' / ' + item.group }))]
       .sort((a, b) => a.name.localeCompare(b.name, 'de'));
+    if (iconsReady) cachedIcons = items;
+    return items;
   }
 
   function items() { return activeTab === 'characters' ? characters || [] : iconItems(); }
@@ -64,7 +70,8 @@
       <span><strong>${esc(item.name)}</strong><small>${esc(item.group)}${activeTab === 'characters' && !item.src ? ' · ohne Porträt' : ''}</small></span></button>`).join('');
     dialog.querySelector('.notice-media-status').textContent = activeTab === 'characters' && !characters
       ? 'Stammbäume werden geladen …'
-      : `${matches.length ? `${shown.length} von ${matches.length}` : 'Keine passenden'} ${activeTab === 'characters' ? 'Charaktere' : 'Bilder'} · alphabetisch sortiert${activeTab === 'characters' ? characterWarning : ''}`;
+      : activeTab === 'icons' && !iconsReady && !iconWarning ? 'Iconverzeichnis wird geladen …'
+      : `${matches.length ? `${shown.length} von ${matches.length}` : 'Keine passenden'} ${activeTab === 'characters' ? 'Charaktere' : 'Bilder'} · alphabetisch sortiert${activeTab === 'characters' ? characterWarning : iconWarning}`;
     dialog.querySelector('.notice-media-more').hidden = shown.length >= matches.length;
   }
 
@@ -87,6 +94,30 @@
     if (dialog.open && activeTab === 'characters') { renderGroups(); renderResults(); }
   }
 
+  function loadCatalogScript(source) {
+    if (catalogLoads.has(source)) return catalogLoads.get(source);
+    const pending = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = source; script.async = true;
+      script.addEventListener('load', resolve, { once: true });
+      script.addEventListener('error', () => { script.remove(); catalogLoads.delete(source); reject(new Error('Bildkatalog nicht verfügbar')); }, { once: true });
+      document.head.append(script);
+    });
+    catalogLoads.set(source, pending);
+    return pending;
+  }
+
+  async function loadIcons() {
+    if (!iconLoad) iconLoad = Promise.all([
+      loadCatalogScript('../AleriaAlmanach/modules/icon-directory/icon-directory-data.js'),
+      loadCatalogScript('../Karten/assets/js/media/media-assets.registry.js'),
+    ]).then(() => { iconsReady = true; iconWarning = ''; }).catch(() => {
+      iconLoad = null; iconWarning = ' · Bildkatalog konnte nicht vollständig geladen werden. Bitte die Auswahl erneut öffnen.';
+    });
+    await iconLoad;
+    if (dialog.open && activeTab === 'icons') { renderGroups(); renderResults(); }
+  }
+
   function tab(name) {
     activeTab = name;
     visibleCount = pageSize;
@@ -97,6 +128,7 @@
     dialog.querySelector('.notice-media-custom').hidden = name !== 'custom';
     if (name !== 'custom') { renderGroups(); renderResults(); }
     if (name === 'characters' && (!characters || !characterLoad)) loadCharacters();
+    if (name === 'icons' && !iconsReady) loadIcons();
   }
 
   function close() {

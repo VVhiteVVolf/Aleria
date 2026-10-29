@@ -1,0 +1,59 @@
+{
+  "purpose": "Display-only resolution levels. All originals and logical map coordinates retained; highest zoom uses the original source.",
+  "sources": [
+    {
+      "layer": "normal",
+      "source": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg",
+      "width": 2048,
+      "height": 1575,
+      "bytes": 1406246,
+      "sourceBytes": 28071694,
+      "quality": 90
+    },
+    {
+      "layer": "normal",
+      "source": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg",
+      "width": 4096,
+      "height": 3150,
+      "bytes": 5047900,
+      "sourceBytes": 28071694,
+      "quality": 90
+    },
+    {
+      "layer": "regions",
+      "source": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisZonen.webp",
+      "width": 2048,
+      "height": 1575,
+      "bytes": 1314328,
+      "sourceBytes": 56822632,
+      "quality": 90
+    },
+    {
+      "layer": "regions",
+      "source": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisZonen.webp",
+      "width": 4096,
+      "height": 3150,
+      "bytes": 5023540,
+      "sourceBytes": 56822632,
+      "quality": 90
+    },
+    {
+      "layer": "pins",
+      "source": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.webp",
+      "width": 2048,
+      "height": 1575,
+      "bytes": 1338252,
+      "sourceBytes": 58988096,
+      "quality": 90
+    },
+    {
+      "layer": "pins",
+      "source": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.webp",
+      "width": 4096,
+      "height": 3150,
+      "bytes": 5040488,
+      "sourceBytes": 58988096,
+      "quality": 90
+    }
+  ]
+}

@@ -80,7 +80,7 @@
         element.style.setProperty('--pin-marker-anchor-y', `${anchorY * 100}%`);
         element.style.setProperty('--pin-marker-offset-y', `${-anchorY * 100}%`);
         labelOffset += Math.round(size * (1 - anchorY));
-        markerHtml = `<img class="pin-marker-img" src="${runtime.esc(iconUrl)}" alt="" draggable="false" width="${size}" height="${size}"/>`;
+        markerHtml = `<img class="pin-marker-img" src="${runtime.esc(iconUrl)}" alt="" draggable="false" loading="lazy" decoding="async" width="${size}" height="${size}"/>`;
       } else {
         markerHtml = `<div class="pin-dot" style="width:${options.dotSize}px;height:${options.dotSize}px;background:${color};border-color:#fff;"></div>`;
       }

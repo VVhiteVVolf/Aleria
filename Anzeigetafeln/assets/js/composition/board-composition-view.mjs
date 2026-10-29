@@ -1,10 +1,11 @@
-import { dimensions, NAILS } from './board-composition-model.mjs?v=20261027-all-boards-v3';
+import { dimensions, NAILS } from './board-composition-model.mjs?v=20261029-performance-v1';
 
-export function paperMarkup(asset, esc) {
-  const { x, y, w, h } = asset.bounds;
+export function paperMarkup(asset, esc, { thumbnail = false } = {}) {
+  const display = thumbnail && asset.thumbnail ? asset.thumbnail : asset;
+  const { x, y, w, h } = display.bounds;
   const clip = asset.clipPolygon?.map(point => `${point[0]}% ${point[1]}%`).join(',');
   const mask = clip ? ` style="clip-path:polygon(${esc(clip)})"` : '';
-  return `<span class="board-paper"><span class="board-paper-crop"${mask}><img src="${esc(asset.src)}" alt="" draggable="false" style="width:${asset.width / w * 100}%;height:${asset.height / h * 100}%;left:${-x / w * 100}%;top:${-y / h * 100}%"></span></span>`;
+  return `<span class="board-paper"><span class="board-paper-crop"${mask}><img src="${esc(display.src)}" alt="" draggable="false" decoding="async"${thumbnail ? ' loading="lazy"' : ''} style="width:${display.width / w * 100}%;height:${display.height / h * 100}%;left:${-x / w * 100}%;top:${-y / h * 100}%"></span></span>`;
 }
 
 export function nailMarkup(pin, esc, label = '', interactive = false) {
@@ -19,11 +20,12 @@ export function previewMarkup(poster, asset, esc, editable = false) {
 
 export function positionElement(element, poster, asset, board) {
   const size = dimensions(poster, asset, board);
-  Object.assign(element.style, {
+  const styles = {
     left: `${poster.x * board.w}px`, top: `${poster.y * board.h}px`,
     width: `${size.w}px`, height: `${size.h}px`,
     transform: `translate(-50%,-50%) rotate(${poster.rotation}deg)`, zIndex: String(poster.layer + 10001),
-  });
+  };
+  for (const [key, value] of Object.entries(styles)) if (element.style[key] !== value) element.style[key] = value;
 }
 
 export function createPosterElement(poster, asset, board, { esc, selected, editing, group }) {

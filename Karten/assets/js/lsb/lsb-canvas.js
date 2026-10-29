@@ -245,13 +245,21 @@
     context.restore();
   }
 
-  function draw(){
+  let pendingFrame = null;
+  function drawNow(){
+    pendingFrame = null;
     if(!isMapReady()) return;
     context.clearRect(0, 0, canvas.width, canvas.height);
     drawCalibration();
     drawMeasure();
     runtime().travelGroups().forEach(drawGroup);
     drawLiveRoutePreview();
+    // Only the actively held waypoint has an animated pulse.
+    if(runtime().travelDragState().ready) draw();
+  }
+
+  function draw(){
+    if(pendingFrame === null) pendingFrame = requestAnimationFrame(drawNow);
   }
 
   function hitWaypoint(mx, my){
@@ -276,14 +284,13 @@
       if(canvas.width !== size.width || canvas.height !== size.height){
         canvas.width = size.width;
         canvas.height = size.height;
+        draw();
       }
     };
     resize();
     new ResizeObserver(resize).observe(document.getElementById('map-wrap'));
-    (function loop(){
-      requestAnimationFrame(loop);
-      draw();
-    })();
+    window.addEventListener('aleria:karto:view-changed', draw);
+    draw();
   }
 
   window.KartoLsbCanvas = {

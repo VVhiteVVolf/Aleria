@@ -91,7 +91,8 @@ let S = {
 let editMode=false, addingPin=false;
 let imgW=0, imgH=0;
 let vx=0, vy=0, vz=1;
-// mapReady no longer needed - permanent RAF loop handles canvas sync
+// View painting is coalesced; coordinates remain synchronous for editor input.
+let mapTransformFrame = null;
 let scrollPinId=null;
 let saveTimer=null, ignRemote=false;
 
@@ -200,6 +201,8 @@ function applyMapImages(){
 
 function setMapImageSource(img,source){
   if(!img)return;
+  if(window.KartoMapRasterImages){ window.KartoMapRasterImages.setSource(img,source); return; }
+  if(img.getAttribute('src') === source) return;
   delete img.dataset.registryFallback;
   img.src=source;
 }
@@ -209,9 +212,12 @@ function recoverConfiguredMapImage(layer,img){
   const fallback=sources?.configured(layer);
   const recovery=sources?.recoveryUrl(fallback);
   if(!img||!fallback||!recovery||img.dataset.registryFallback===recovery) return false;
-  img.dataset.registryFallback=recovery;
   S.mapImages={...cleanMapImages(S.mapImages||{}),[layer]:KARTO_CONFIG.images?.[layer]||fallback};
-  img.src=recovery;
+  // Replace the pending source record too, so a later zoom cannot resurrect
+  // the broken custom URL after successful registry recovery.
+  if(window.KartoMapRasterImages) window.KartoMapRasterImages.setSource(img,recovery);
+  else img.src=recovery;
+  img.dataset.registryFallback=recovery;
   return true;
 }
 // Beyond the 3 built-in overlay <img>s (#lr/#lm), custom layers get their
@@ -240,7 +246,7 @@ function applyExtraLayerImages(){
       img.style.opacity='0';
       stageEl.insertBefore(img, pinLayerEl);
     }
-    img.src=layer.url||EMPTY_LAYER_IMAGE;
+    setMapImageSource(img,layer.url||EMPTY_LAYER_IMAGE);
   });
 }
 function renderLayerButtons(){
@@ -384,8 +390,12 @@ window.KartoRuntime = {
     vx=x;vy=y;vz=z;this.applyMapTransform();
   },
   applyMapTransform(){
-    stage.style.transform=`translate(${vx}px,${vy}px) scale(${vz})`;
-    window.dispatchEvent(new CustomEvent('aleria:karto:view-changed'));
+    if(mapTransformFrame !== null) return;
+    mapTransformFrame=requestAnimationFrame(() => {
+      mapTransformFrame=null;
+      stage.style.transform=`translate(${vx}px,${vy}px) scale(${vz})`;
+      window.dispatchEvent(new CustomEvent('aleria:karto:view-changed'));
+    });
   },
   translateMap(dx, dy){
     vx+=dx;vy+=dy;this.applyMapTransform();
@@ -449,12 +459,15 @@ window.KartoRuntime = {
   },
   setTravelMode(mode){
     lsbMode=mode;
+    window.KartoLsbCanvas.draw();
   },
   setRouteDrawing(value){
     lsbRouteDrawing=value;
+    window.KartoLsbCanvas.draw();
   },
   setLiveTravelMouse(point){
     lsbLiveMouse=point;
+    window.KartoLsbCanvas.draw();
   },
   drawTravelLayer(){
     window.KartoLsbCanvas.draw();
@@ -1156,20 +1169,20 @@ function toggleLsb(){
   document.getElementById('lsb-toggle').textContent=open?'◀':'⚖';
 }
 function closeLMo(id){document.getElementById(id).classList.remove('open');}
-function lsbSave(){S.lsb=lsbS;saveD();}
+function lsbSave(){S.lsb=lsbS;saveD();window.KartoLsbCanvas.draw();}
 function lsbLoad(remote){
   if(remote&&remote.lsb){lsbS=remote.lsb;lsbS.groups=lsbS.groups||[];lsbIconSize=lsbS.iconSize||22;lsbS.customIcons=lsbS.customIcons||[];}
   const sl=document.getElementById('lsb-icon-size');
   if(sl){sl.value=lsbIconSize;document.getElementById('lsb-icon-size-val').textContent=lsbIconSize;}
   lsbPreloadIcons();window.KartoLsbTools.updateCalibrationUi();lsbRenderGroups();lsbUpdResult();
-  // No explicit draw call needed — KartoLsbCanvas owns the permanent canvas loop.
+  window.KartoLsbCanvas.draw();
 }
 function lsbFmtH(h){return window.KartoLsbCalculations.formatHours(h);}
-function lsbSetIconSize(v){lsbIconSize=+v;lsbS.iconSize=+v;document.getElementById('lsb-icon-size-val').textContent=v;lsbSave();}
+function lsbSetIconSize(v){lsbIconSize=+v;lsbS.iconSize=+v;document.getElementById('lsb-icon-size-val').textContent=v;lsbSave();window.KartoLsbCanvas.draw();}
 function lsbColorWithOpacity(hex,pct){return window.KartoLsbCalculations.colorWithOpacity(hex,pct);}
 
-// lsbStartRaf() is a no-op now - permanent RAF loop above handles everything
-function lsbStartRaf(){}
+// Legacy callers now invalidate once instead of starting a perpetual loop.
+function lsbStartRaf(){window.KartoLsbCanvas.draw();}
 
 // Route calculation
 function lsbCalcRoute(g){return window.KartoLsbCalculations.calcRoute(g,lsbS.calScale);}

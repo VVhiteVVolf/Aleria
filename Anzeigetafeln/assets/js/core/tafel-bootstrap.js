@@ -2,12 +2,13 @@ import { initializeNoticeRewards } from '../rewards/notice-rewards.js?v=20261021
 import { initializeNoticeTypography } from '../typography/notice-typography.js?v=20261021-notice-links-v1';
 import { initializeNoticeSeals } from '../seals/notice-seals.js?v=20261021-default-seals-v1';
 import { initializeNoticeModuleLinks } from '../links/notice-module-links.js?v=20261021-notice-links-v1';
-import { initializeBoardComposition } from '../composition/board-composition.js?v=20261027-all-boards-v3';
+import { initializeBoardComposition } from '../composition/board-composition.js?v=20261029-performance-v1';
 
 initializeNoticeRewards();
 initializeNoticeTypography();
 initializeNoticeSeals();
 initializeNoticeModuleLinks();
+window._fb?.preload().catch(() => {});
 await initializeBoardComposition();
 (function(){
   if(document.readyState === 'loading'){

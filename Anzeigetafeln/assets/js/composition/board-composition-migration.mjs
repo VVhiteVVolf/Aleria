@@ -1,5 +1,5 @@
-import { normalizeLayout, normalizePoster, pinPosition } from './board-composition-model.mjs?v=20261027-all-boards-v3';
-import { DEFAULT_BOARD_SIZE } from './board-composition-config.mjs?v=20261027-all-boards-v3';
+import { normalizeLayout, normalizePoster, pinPosition } from './board-composition-model.mjs?v=20261029-performance-v1';
+import { DEFAULT_BOARD_SIZE } from './board-composition-config.mjs?v=20261029-performance-v1';
 
 const TYPE_ART = Object.freeze({
   quest: 'hilfe', steckbrief: 'gesucht-leer', zeitung: 'zeitung', vermisst: 'vermisst',

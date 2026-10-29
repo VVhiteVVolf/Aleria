@@ -65,6 +65,22 @@ export function groupForPoster(poster, notices, stacks, includeSecret = false) {
   return stacks.groups(notices, { includeSecret }).find(group => group.notices.some(notice => ids.has(notice.id))) || null;
 }
 
+// Rebuild per render: notices and stack membership can be edited in place.
+export function indexPosterGroups(notices, stacks) {
+  const all = stacks.groups(notices, { includeSecret: true });
+  const visible = stacks.groups(notices, { includeSecret: false });
+  const publicById = new Map(visible.flatMap(group => group.notices.map(notice => [notice.id, group])));
+  const allById = new Map(), visibleById = new Map();
+  for (const group of all) {
+    const publicGroup = group.notices.map(notice => publicById.get(notice.id)).find(Boolean);
+    for (const notice of group.notices) {
+      allById.set(notice.id, group);
+      if (publicGroup) visibleById.set(notice.id, publicGroup);
+    }
+  }
+  return { allById, visibleById };
+}
+
 export function moveLayer(layout, posterId, direction, extreme = false) {
   const ordered = [...layout.posters].sort((a, b) => a.layer - b.layer);
   const index = ordered.findIndex(poster => poster.id === posterId);

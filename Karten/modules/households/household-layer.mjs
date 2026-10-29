@@ -19,7 +19,8 @@ export function createHouseholdLayer(map, runtime) {
   popup.setAttribute('role', 'dialog'); popup.setAttribute('aria-label', 'Familien am Ort');
   layer.append(lines, groups, popup); map.append(layer);
   let content = [], placed = [], activeId = null, pinned = false, timer, lastTrigger, restoringFocus = false, activeFingerprint;
-  const fingerprint = group => JSON.stringify([group.pin.title, group.families.map(family => [family.id, family.name, family.role]), group.region]);
+  const rendered = new Map();
+  const fingerprint = group => JSON.stringify([group.pin.title, group.families.map(family => [family.id, family.name, family.role, family.crest, family.href]), group.region]);
 
   function usableViewport() {
     const viewport = runtime.mapViewportSize();
@@ -79,19 +80,30 @@ export function createHouseholdLayer(map, runtime) {
   function render(next) {
     content = next;
     placed = layoutHouseholds(content, { image: runtime.mapImageSize(), transform: runtime.mapTransform(), viewport: usableViewport() });
-    groups.replaceChildren(); lines.replaceChildren();
-    for (const group of placed) {
-      const line = document.createElementNS(lines.namespaceURI, 'line');
+    const visibleIds = new Set(placed.map(group => group.pin.id));
+    for (const [id, nodes] of rendered) {
+      if (visibleIds.has(id)) continue;
+      nodes.line.remove(); nodes.anchor.remove(); nodes.pill.remove(); rendered.delete(id);
+    }
+    for (const [index, group] of placed.entries()) {
+      let nodes = rendered.get(group.pin.id);
+      const stamp = fingerprint(group);
+      if (!nodes || nodes.stamp !== stamp) {
+        if (nodes) { nodes.line.remove(); nodes.anchor.remove(); nodes.pill.remove(); }
+        const line = document.createElementNS(lines.namespaceURI, 'line');
+        const anchor = button(group, 'household-anchor'), pill = button(group, 'household-pill');
+        for (const family of group.families.slice(0, 5)) pill.append(familyCrest(family));
+        if (group.families.length > 5) pill.append(element('span', 'household-more', '+' + (group.families.length - 5)));
+        if (group.region) pill.append(element('span', 'household-region-count', 'Region +' + group.region.count));
+        nodes = { line, anchor, pill, stamp }; rendered.set(group.pin.id, nodes);
+      }
+      const { line, anchor, pill } = nodes;
       for (const [key, value] of Object.entries({ x1: group.anchor.x, y1: group.anchor.y, x2: group.x + group.width / 2, y2: group.y + group.height / 2 })) line.setAttribute(key, value);
-      lines.append(line);
-      const anchor = button(group, 'household-anchor');
       anchor.style.left = group.anchor.x + 'px'; anchor.style.top = group.anchor.y + 'px';
-      const pill = button(group, 'household-pill');
       pill.style.left = group.x + 'px'; pill.style.top = group.y + 'px'; pill.style.width = group.width + 'px';
-      for (const family of group.families.slice(0, 5)) pill.append(familyCrest(family));
-      if (group.families.length > 5) pill.append(element('span', 'household-more', '+' + (group.families.length - 5)));
-      if (group.region) pill.append(element('span', 'household-region-count', 'Region +' + group.region.count));
-      groups.append(anchor, pill);
+      if (lines.children[index] !== line) lines.insertBefore(line, lines.children[index] || null);
+      if (groups.children[index * 2] !== anchor) groups.insertBefore(anchor, groups.children[index * 2] || null);
+      if (groups.children[index * 2 + 1] !== pill) groups.insertBefore(pill, groups.children[index * 2 + 1] || null);
     }
     if (activeId) {
       const active = placed.find(group => group.pin.id === activeId);

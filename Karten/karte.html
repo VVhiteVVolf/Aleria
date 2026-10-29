@@ -59,7 +59,7 @@
 
   window.KARTO_BOOT_STATUS = 'active';
   if (selectedMap.config) {
-    document.write(`<script src="${selectedMap.config}"><\/script>`);
+    document.write(`<script src="${selectedMap.config}?v=20261029-performance-v1"><\/script>`);
   } else {
     window.KARTO_CONFIG = {
       mapId: selectedMap.id,
@@ -871,9 +871,9 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 
 <script src="assets/js/lsb/lsb-config.js"></script>
 <script src="assets/js/lsb/lsb-calculations.js"></script>
-<script src="assets/js/lsb/lsb-tools.js"></script>
-<script src="assets/js/lsb/lsb-canvas.js"></script>
-<script src="assets/js/lsb/lsb-interaction.js"></script>
+<script src="assets/js/lsb/lsb-tools.js?v=20261029-performance-v1"></script>
+<script src="assets/js/lsb/lsb-canvas.js?v=20261029-performance-v1"></script>
+<script src="assets/js/lsb/lsb-interaction.js?v=20261029-performance-v1"></script>
 <script src="assets/js/data/default-marker-catalog.js"></script>
 <script src="assets/js/pins/category-catalog.js?v=sonnenkueste-20261019"></script>
 <script src="assets/js/pins/pin-template-catalog.js?v=20261001-template-pins"></script>
@@ -883,7 +883,8 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/pins/pin-card-renderer.js?v=weidebucht-20261019"></script>
 <script src="assets/js/map/map-display-settings.js?v=20261018a"></script>
 <script src="assets/js/pins/pin-presentation.js?v=20261022-symbols"></script>
-<script src="assets/js/karto-app.js?v=20261022-symbols"></script>
+<script src="assets/js/map/map-raster-images.js?v=20261029-performance-v1"></script>
+<script src="assets/js/karto-app.js?v=20261029-performance-v1"></script>
 <script src="assets/js/media/media-library.js?v=20260901b"></script>
 <script src="assets/js/lsb/lsb-groups.js"></script>
 <script src="assets/js/lsb/lsb-modals.js"></script>
@@ -892,13 +893,13 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 <script src="assets/js/map/map-panzoom.js"></script>
 <script src="assets/js/map/map-panning.js"></script>
 <script src="assets/js/map/map-interaction.js"></script>
-<script src="assets/js/map/map-view.js?v=20261022-symbols"></script>
+<script src="assets/js/map/map-view.js?v=20261029-performance-v1"></script>
 <script src="assets/js/pins/marker-catalog.js"></script>
 <script src="assets/js/pins/categories.js"></script>
 <script src="assets/js/pins/pin-templates.js?v=20261001-template-pins"></script>
 <script src="assets/js/pins/stamp-overwrite.js?v=20261001-placeholders"></script>
 <script src="assets/js/pins/pin-lettering.js?v=20260920a"></script>
-<script src="assets/js/pins/pin-renderer.js?v=20261023-households"></script>
+<script src="assets/js/pins/pin-renderer.js?v=20261029-performance-v1"></script>
 <script src="assets/js/pins/pin-visibility.js?v=20261001-map-search-view"></script>
 <script src="assets/js/pins/pin-detail-view.js?v=20260911b"></script>
 <script src="assets/js/pins/pin-editor-draft.js?v=20260901a"></script>
@@ -938,8 +939,8 @@ if (window.KARTO_BOOT_STATUS === 'active') {
 })();
 </script>
 <script src="assets/js/core/karto-bootstrap.js"></script>
-<script type="module" src="modules/regions/region-editor.mjs?v=20261024c"></script>
-<script type="module" src="modules/households/household-overlay.mjs?v=20261023"></script>
+<script type="module" src="modules/regions/region-editor.mjs?v=20261029-performance-v1"></script>
+<script type="module" src="modules/households/household-overlay.mjs?v=20261029-performance-v1"></script>
 <script type="module" src="modules/territory-navigation/map-territory-navigation.mjs?v=20261024a"></script>
 </body>
 </html>

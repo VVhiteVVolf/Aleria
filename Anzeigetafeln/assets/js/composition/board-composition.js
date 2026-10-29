@@ -1,9 +1,9 @@
-import { normalizeLayout, normalizePoster, groupForPoster, pinPosition, moveLayer, unlinkDeletedNotice } from './board-composition-model.mjs?v=20261027-all-boards-v3';
-import { createPosterElement, positionElement } from './board-composition-view.mjs?v=20261027-all-boards-v3';
-import { createPosterWizard } from './board-composition-creator.mjs?v=20261027-all-boards-v3';
-import { createPosterInspector } from './board-composition-inspector.mjs?v=20261027-all-boards-v3';
-import { compositionConfig } from './board-composition-config.mjs?v=20261027-all-boards-v3';
-import { prepareBoardState } from './board-composition-migration.mjs?v=20261027-all-boards-v3';
+import { normalizeLayout, normalizePoster, groupForPoster, indexPosterGroups, pinPosition, moveLayer, unlinkDeletedNotice } from './board-composition-model.mjs?v=20261029-performance-v1';
+import { createPosterElement, positionElement } from './board-composition-view.mjs?v=20261029-performance-v1';
+import { createPosterWizard } from './board-composition-creator.mjs?v=20261029-performance-v1';
+import { createPosterInspector } from './board-composition-inspector.mjs?v=20261029-performance-v1';
+import { compositionConfig } from './board-composition-config.mjs?v=20261029-performance-v1';
+import { prepareBoardState } from './board-composition-migration.mjs?v=20261029-performance-v1';
 
 export async function initializeBoardComposition() {
   const config = compositionConfig(window.TAFEL_CONFIG);
@@ -13,7 +13,7 @@ export async function initializeBoardComposition() {
   const stacks = () => window.TafelNoticeStacks;
   let assets, preset;
   try {
-    const responses = await Promise.all([fetch('assets/data/board-art-catalog.json?v=20261027-all-boards-v3'),
+    const responses = await Promise.all([fetch('assets/data/board-art-catalog.json?v=20261029-performance-v1'),
       ...(config.presetPath ? [fetch(config.presetPath, { cache: 'no-store' })] : [])]);
     if (responses.some(response => !response.ok)) throw new Error('Plakatbibliothek oder Tafelanordnung fehlt.');
     const sources = await Promise.all(responses.map(response => response.json()));
@@ -33,6 +33,7 @@ export async function initializeBoardComposition() {
   const allGroups = () => stacks().groups(state().zettel, { includeSecret: true });
   let selectedId = null;
   let drag = null;
+  let dragFrame = null;
   let pending = null;
   let ghost = null;
   let inspector = null;
@@ -56,20 +57,33 @@ export async function initializeBoardComposition() {
     // preview never enters the persisted state.
     const visibleLayout = layout() || initialLayout;
     const board = window.TafelBoard.imageSize();
+    const index = indexPosterGroups(state().zettel, stacks());
+    const isEditing = editing();
     for (const poster of [...visibleLayout.posters].sort((a, b) => a.layer - b.layer)) {
       const asset = assetMap.get(poster.assetId);
       if (!asset) continue;
-      const visibleGroup = group(poster);
+      const visibleGroup = (isEditing ? index.allById : index.visibleById).get(poster.noticeId);
       // Do not reveal even the existence of a secret-only publication.
-      if (!editing() && poster.noticeId && group(poster, true) && !visibleGroup) continue;
+      if (!isEditing && poster.noticeId && index.allById.has(poster.noticeId) && !visibleGroup) continue;
       root.append(createPosterElement(poster, asset, board, {
-        esc: rt().esc, selected: editing() && poster.id === selectedId, editing: editing(), group: visibleGroup,
+        esc: rt().esc, selected: isEditing && poster.id === selectedId, editing: isEditing, group: visibleGroup,
       }));
     }
   }
 
   function coveredNoticeIds() {
-    return new Set((layout()?.posters || []).flatMap(poster => group(poster, true)?.notices.map(notice => notice.id) || []));
+    const index = indexPosterGroups(state().zettel, stacks());
+    return new Set((layout()?.posters || []).flatMap(poster => index.allById.get(poster.noticeId)?.notices.map(notice => notice.id) || []));
+  }
+
+  function movePin(point, posterId) {
+    const poster = selected();
+    if (!poster || poster.id !== posterId || !editing()) return;
+    poster.pin.x = point.x; poster.pin.y = point.y;
+    const pin = elementFor(poster.id)?.querySelector('.board-poster-pin');
+    if (pin) { pin.style.left = `${point.x * 100}%`; pin.style.top = `${point.y * 100}%`; }
+    syncPosition(poster);
+    window.TafelState.save();
   }
 
   function syncPosition(poster) {
@@ -195,7 +209,7 @@ export async function initializeBoardComposition() {
   }
 
   function bind() {
-    inspector = createPosterInspector({ esc: rt().esc, assets, getSelected: selected, getAsset: id => assetMap.get(id), groups: allGroups, change, action });
+    inspector = createPosterInspector({ esc: rt().esc, assets, getSelected: selected, getAsset: id => assetMap.get(id), groups: allGroups, change, movePin, action });
     wizard = createPosterWizard({ assets, esc: rt().esc, place, groups: allGroups, isEditing: editing });
     const viewport = window.TafelBoard.viewport();
     viewport.addEventListener('pointerdown', event => {
@@ -212,14 +226,25 @@ export async function initializeBoardComposition() {
       if (!drag || event.pointerId !== drag.pointerId) return;
       if (!drag.moved && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) < 5) return;
       drag.moved = true;
-      const point = window.TafelBoard.pointFromClient(event.clientX, event.clientY);
+      drag.client = { x: event.clientX, y: event.clientY };
+      if (dragFrame === null) dragFrame = requestAnimationFrame(paintDrag);
+    });
+    function paintDrag() {
+      dragFrame = null;
+      if (!drag?.client) return;
+      const point = window.TafelBoard.pointFromClient(drag.client.x, drag.client.y);
       const size = window.TafelBoard.imageSize();
       drag.poster.x = Math.max(0, Math.min(1, drag.x + (point.x - drag.point.x) / size.w));
       drag.poster.y = Math.max(0, Math.min(1, drag.y + (point.y - drag.point.y) / size.h));
       positionElement(drag.element, drag.poster, assetMap.get(drag.poster.assetId), size);
-    });
+    }
     function endDrag(event) {
       if (!drag || event.pointerId !== drag.pointerId) return;
+      if (dragFrame !== null) { cancelAnimationFrame(dragFrame); dragFrame = null; }
+      if (event.type === 'pointerup' && drag.moved) {
+        drag.client = { x: event.clientX, y: event.clientY };
+        paintDrag();
+      }
       const current = drag; drag = null;
       if (event.type !== 'pointerup') { current.poster.x = current.x; current.poster.y = current.y; }
       if (current.moved && event.type === 'pointerup') changed({ refreshInspector: true });

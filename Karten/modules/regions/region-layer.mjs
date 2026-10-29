@@ -11,8 +11,11 @@ export function createRegionLayer(stage, runtime) {
   const svg = svgElement('svg', { class: 'region-vector-layer', 'aria-label': 'Bearbeitbare Gebietsgrenzen' });
   stage.append(svg);
   let labels = [], handles = [], outlines = [];
+  let renderedScale;
   function rescale() {
     const scale = runtime.mapTransform().z || 1;
+    if(scale === renderedScale) return;
+    renderedScale = scale;
     labels.forEach(label => label.setAttribute('font-size', 13 / scale));
     outlines.forEach(({node,width}) => node.setAttribute('stroke-width', width / scale));
     handles.forEach(handle => { handle.setAttribute('r', 5 / scale); handle.style.strokeWidth = String(2 / scale); });
@@ -26,6 +29,7 @@ export function createRegionLayer(stage, runtime) {
       svg.setAttribute('viewBox', `0 0 ${width || 1} ${height || 1}`);
       svg.setAttribute('width', width || 1); svg.setAttribute('height', height || 1);
       svg.replaceChildren(); labels = []; handles = []; outlines = [];
+      renderedScale = undefined;
       const draft = session?.draft();
       for (const region of [...regions.filter(item => item.id !== draft?.id), ...(draft ? [draft] : [])]) {
         const selected = region === draft;

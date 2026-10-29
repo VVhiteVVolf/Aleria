@@ -12,6 +12,8 @@
   let placementHandler = null;
   let placementOptions = {};
   let panPointerId = null;
+  let transformFrame = null;
+  let paintedZoom = null;
 
   const viewport = () => document.getElementById('board-viewport');
   const stage = () => document.getElementById('board-stage');
@@ -37,8 +39,16 @@
   }
 
   function applyTransform() {
+    if (transformFrame !== null) return;
+    transformFrame = requestAnimationFrame(paintTransform);
+  }
+
+  function paintTransform() {
+    transformFrame = null;
     const element = stage();
     if (element) element.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoom})`;
+    if (paintedZoom === zoom) return;
+    paintedZoom = zoom;
     element?.style.setProperty('--board-view-scale', String(zoom));
     const readout = document.getElementById('board-zoom');
     if (readout) readout.textContent = `${Math.round(zoom * 100)} %`;

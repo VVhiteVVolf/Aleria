@@ -88,6 +88,7 @@
 
   function addCalibrationPoint(point){
     calibrationPoints.push({x:point.x, y:point.y});
+    runtime().drawTravelLayer();
     updateCalibrationUi();
     if(calibrationPoints.length === 2) finishCalibration();
   }
@@ -120,6 +121,7 @@
 
   function addMeasurePoint(point){
     measurePoints.push({x:point.x, y:point.y});
+    runtime().drawTravelLayer();
     updateMeasureResult();
   }
 
@@ -133,6 +135,7 @@
 
   function cancelTransientTools(){
     calibrationPoints = [];
+    runtime().drawTravelLayer();
     document.getElementById('lmb-mea')?.classList.remove('on');
   }
 

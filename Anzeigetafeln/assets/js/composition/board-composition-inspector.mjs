@@ -1,13 +1,14 @@
-import { NAILS } from './board-composition-model.mjs?v=20261027-all-boards-v3';
-import { previewMarkup } from './board-composition-view.mjs?v=20261027-all-boards-v3';
+import { NAILS } from './board-composition-model.mjs?v=20261029-performance-v1';
+import { previewMarkup } from './board-composition-view.mjs?v=20261029-performance-v1';
 
-export function createPosterInspector({ esc, assets, getSelected, getAsset, groups, change, action }) {
+export function createPosterInspector({ esc, assets, getSelected, getAsset, groups, change, movePin, action }) {
   const root = document.createElement('aside');
   root.className = 'board-art-inspector';
   root.hidden = true;
   root.setAttribute('aria-label', 'Plakat ausrichten');
   document.querySelector('.tafel-workspace').append(root);
   let dragging = null;
+  let pendingPoint = null, dragFrame = null;
   const option = (value, text, current) => `<option value="${esc(value)}"${value === current ? ' selected' : ''}>${esc(text)}</option>`;
   const number = (label, field, value, min, max, step = 1) => `<label>${label}<input type="number" data-poster-field="${field}" value="${Math.round(value * 100) / 100}" min="${min}" max="${max}" step="${step}"></label>`;
   const button = (name, text, more = '') => `<button type="button" data-poster-action="${name}" ${more}>${text}</button>`;
@@ -65,24 +66,48 @@ export function createPosterInspector({ esc, assets, getSelected, getAsset, grou
     const preview = event.target.closest('[data-role="pin-preview"]');
     if (!preview || event.button !== 0) return;
     event.preventDefault();
-    dragging = preview;
+    const poster = getSelected();
+    if (!poster) return;
+    dragging = { preview, rect: preview.getBoundingClientRect(), pointerId: event.pointerId,
+      posterId: poster.id, start: { x: poster.pin.x, y: poster.pin.y } };
     preview.setPointerCapture(event.pointerId);
     move(event);
   });
   function move(event) {
-    if (!dragging) return;
-    const rect = dragging.getBoundingClientRect();
-    change('pinX', Math.max(0, Math.min(100, (event.clientX - rect.left) / rect.width * 100)));
-    change('pinY', Math.max(0, Math.min(100, (event.clientY - rect.top) / rect.height * 100)));
+    if (!dragging || event.pointerId !== dragging.pointerId) return;
+    const rect = dragging.rect;
+    pendingPoint = { x: Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)),
+      y: Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height)) };
+    if (dragFrame === null) dragFrame = requestAnimationFrame(paint);
+  }
+  function paint() {
+    dragFrame = null;
+    if (!dragging || !pendingPoint || getSelected()?.id !== dragging.posterId) return;
+    movePin(pendingPoint, dragging.posterId);
+    pendingPoint = null;
     // Keep the capture element alive while dragging.
     const poster = getSelected();
-    const pin = dragging.querySelector('.board-poster-pin');
+    const pin = dragging.preview.querySelector('.board-poster-pin');
     pin.style.left = `${poster.pin.x * 100}%`;
     pin.style.top = `${poster.pin.y * 100}%`;
     root.querySelector('[data-poster-field="pinX"]').value = Math.round(poster.pin.x * 1000) / 10;
     root.querySelector('[data-poster-field="pinY"]').value = Math.round(poster.pin.y * 1000) / 10;
   }
   root.addEventListener('pointermove', move);
-  for (const name of ['pointerup', 'pointercancel', 'lostpointercapture']) root.addEventListener(name, () => { dragging = null; });
+  function finish(event) {
+    if (!dragging || event.pointerId !== dragging.pointerId) return;
+    if (dragFrame !== null) cancelAnimationFrame(dragFrame);
+    if (event.type !== 'pointerup') pendingPoint = dragging.start;
+    else if (Number.isFinite(event.clientX) && Number.isFinite(event.clientY)) {
+      const rect = dragging.rect;
+      pendingPoint = { x: Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)),
+        y: Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height)) };
+    }
+    paint();
+    const { preview, pointerId } = dragging;
+    dragging = null; pendingPoint = null;
+    if (preview.hasPointerCapture(pointerId)) preview.releasePointerCapture(pointerId);
+  }
+  for (const name of ['pointerup', 'pointercancel', 'lostpointercapture']) root.addEventListener(name, finish);
   return { render, close: () => { root.hidden = true; }, contains: element => root.contains(element) };
 }

@@ -1,6 +1,6 @@
 import { createCatalogLoader } from './household-catalog.mjs';
 import { householdGroups } from './household-model.mjs';
-import { createHouseholdLayer } from './household-layer.mjs';
+import { createHouseholdLayer } from './household-layer.mjs?v=20261029-performance-v1';
 import { mountHouseholdField } from './household-editor.mjs';
 import { attachHouseholdRegions } from './household-regions.mjs';
 
