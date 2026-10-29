@@ -33,7 +33,7 @@ test('Gareths vorhandenes veröffentlichtes Portrait wird unverändert statt ein
   assert.equal(createHash('sha256').update(bytes).digest('hex'), evidence.bindingPortrait.sha256);
 });
 
-test('Die freigegebene Portraitergänzung ist die einzige Änderung am geschützten historischen Familienbestand', async () => {
+test('Der historische Familienbestand bleibt jenseits der geprüften Titel-, Lehns- und Portraitfreigaben identisch', async () => {
   const review = JSON.parse(await readFile(new URL('./support/albic-family-review-20261024.json', import.meta.url), 'utf8'));
   const capturedIds = new Set(JSON.parse(await readFile(new URL('./support/family-baseline-20261023.json', import.meta.url), 'utf8')));
   const captured = protectedAlbicFamilies(FAMILY_REGISTRY.filter(record => capturedIds.has(record.id)));

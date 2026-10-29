@@ -66,6 +66,19 @@ function mergeHouseProfiles(projectProfile = {}, publishedProfile = {}) {
   };
 }
 
+function reviewedPlacement(projectRecord, publishedRecord) {
+  const extensions = projectRecord?.family?.extensions || {};
+  const revisions = extensions.registryManagedHouseProfileFieldRevisions || {};
+  const publishedRevision = Math.max(0, Number(publishedRecord.sourceRevision || 0));
+  const source = projectRecord?.family?.document?.houseProfile || projectRecord?.houseProfile || {};
+  const profile = Object.fromEntries((extensions.registryManagedHouseProfileFields || [])
+    .filter(field => Number(revisions[field] || 0) > publishedRevision && Object.hasOwn(source, field))
+    .map(field => [field, source[field]]));
+  const ownsPath = extensions.registryManagedRecordFields?.includes('folderPath')
+    && Number(revisions.folderPath || 0) > publishedRevision;
+  return { profile, folderPath: ownsPath ? projectRecord.folderPath : null };
+}
+
 export function mergePublishedRegistryRecords(projectRecords = [], publishedRecords = []) {
   const canonicalProjectRecords = [...projectRecords];
   const records = new Map(canonicalProjectRecords.map(record => [record.id, record]));
@@ -79,14 +92,15 @@ export function mergePublishedRegistryRecords(projectRecords = [], publishedReco
     if (projectRecord?.id) records.delete(projectRecord.id);
     if (canonicalId !== publishedId) records.delete(publishedId);
 
+    const reviewed = reviewedPlacement(projectRecord, publishedRecord);
     const publishedFolderPath = nonEmptyList(publishedRecord.folderPath);
-    const folderPath = publishedFolderPath.length
+    const folderPath = reviewed.folderPath || (publishedFolderPath.length
       ? publishedFolderPath
-      : nonEmptyList(projectRecord?.folderPath);
+      : nonEmptyList(projectRecord?.folderPath));
     const projectProfile = projectRecord?.houseProfile
       || projectRecord?.family?.document?.houseProfile
       || {};
-    const houseProfile = mergeHouseProfiles(projectProfile, publishedRecord.houseProfile || {});
+    const houseProfile = { ...mergeHouseProfiles(projectProfile, publishedRecord.houseProfile || {}), ...reviewed.profile };
 
     records.set(canonicalId, {
       ...projectRecord,

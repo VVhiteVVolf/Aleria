@@ -1,0 +1,556 @@
+{
+  "schema": "aleria.country-preparation.heraldry",
+  "entries": [
+    {
+      "id": "earldom-beran",
+      "source": "assets/generated/earldom-beran.png",
+      "sourceSha256": "e66ade9ff03d8c0059827202d5666f675379c25df0d81d7c5371caa5b3e2e6f0",
+      "production": "assets/production/earldom-beran.png",
+      "productionSha256": "e3cf10374c312a690cda27da466e08f6e1dde7fa65c1fd1157384aa5cf8178b4",
+      "preview": "assets/territories/earldom-beran.webp",
+      "previewSha256": "266f2ee7600ac73237d87788a852f6fb1649b414e88a3fca746c075a85460fc2",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "earldom-earncynne",
+      "source": "assets/generated/earldom-earncynne.png",
+      "sourceSha256": "4031330a2b55d242204c4684b3401c7b437ec167bf42a73d541302b421004e7f",
+      "production": "assets/production/earldom-earncynne.png",
+      "productionSha256": "1f4f9ffdc4fb922a39fedf95c4d18895a0acc25cab78a1aaee930d4340bb8751",
+      "preview": "assets/territories/earldom-earncynne.webp",
+      "previewSha256": "3f845bc578a311889984f0e6cd97f697136912d1ddc2ca4b55e53036ebe1833a",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "earldom-estmere",
+      "source": "assets/generated/earldom-estmere.png",
+      "sourceSha256": "24b4b827a30e18fac653ac7cbbbe03b460e3a6d914e7302d974c8ccff4c06463",
+      "production": "assets/production/earldom-estmere.png",
+      "productionSha256": "5a793a4b5284c793ae4beec5acd76543ae64daa134d78045393e38d5a9b05e31",
+      "preview": "assets/territories/earldom-estmere.webp",
+      "previewSha256": "b9bed21c5b5460c461886b8f2b5e7c44a0c85492215f330ace6b2e117e4de1e3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "earldom-tharn",
+      "source": "assets/generated/earldom-tharn.png",
+      "sourceSha256": "579d54c26b851d567a1fa1df7165ab6275954a146886e1014712e0b7a2645f77",
+      "production": "assets/production/earldom-tharn.png",
+      "productionSha256": "021f342464bd95cea5b6a1af26a3bc324ebf77cc65021ddb6cfe287fe5f96872",
+      "preview": "assets/territories/earldom-tharn.webp",
+      "previewSha256": "bd49825af323a290c9f075d884e56eedb5597242eb0b4a1b0ee03bc9559f2a0e",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "earldom-kendryck",
+      "source": "assets/generated/earldom-kendryck.png",
+      "sourceSha256": "7f57cdb6a9a4677ef9e2401f871a2ac629d55f8204029c37f2be21ce52bef0f3",
+      "production": "assets/production/earldom-kendryck.png",
+      "productionSha256": "0ff3daebeadf61a8de7a7045670033a853733fb6139c6fcc07be39573fccb808",
+      "preview": "assets/territories/earldom-kendryck.webp",
+      "previewSha256": "3b4fc8870ae51bc717415c49d488f340a105c197bddd590941873f18897ff2a3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "earldom-fyr",
+      "source": "assets/generated/earldom-fyr.png",
+      "sourceSha256": "8a121b323c383ecb42d33c485936427c1535cdaf9a3040c04ed684003425c2f7",
+      "production": "assets/production/earldom-fyr.png",
+      "productionSha256": "1f7352e0035c140c40381d228b3bc076d207a290e16509dcbbaf592ddedd0daa",
+      "preview": "assets/territories/earldom-fyr.webp",
+      "previewSha256": "41956ddc5bfdd8d9384281cae9ecdb882974c866540f8021439250c40a207998",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "aeldros",
+      "source": "assets/generated/aeldros.png",
+      "sourceSha256": "26177e5c6a8c10f1deba383e6cfa401759634798a4f87322ae4622d4d297f387",
+      "production": "assets/production/aeldros.png",
+      "productionSha256": "c38fe4741807dc823ad31d02de82ab0f2eadd85a33bf83d4f6410cf3c9d28afe",
+      "preview": "assets/territories/aeldros.webp",
+      "previewSha256": "c28af336cf28427e1bada867ebc4557af2845a09e07d99f800eae8a6228997bc",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "mornhall",
+      "source": "assets/generated/mornhall.png",
+      "sourceSha256": "f3eae8d0ee455169ca1adf9d2f63c807e01dfc3897c79fb6f0e9427751f8b3e4",
+      "production": "assets/production/mornhall.png",
+      "productionSha256": "0917b67e56f3ff67bed1ae8c37be19ee11731f9151c615af2204f840bee04770",
+      "preview": "assets/territories/mornhall.webp",
+      "previewSha256": "2eb1d31454158185557f2c001ba23b1d36b19226d58f7b845446e05b04d9e79b",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "itharol",
+      "source": "assets/generated/itharol.png",
+      "sourceSha256": "2eef8e776676f79e02b95eff54cad25b5a0ed7d172d6769bfb4dc9644e612b61",
+      "production": "assets/production/itharol.png",
+      "productionSha256": "48d35ca63adb26e8bdff7faff329fcc55755bc967304d210f396ea61ea1f963f",
+      "preview": "assets/territories/itharol.webp",
+      "previewSha256": "6bf0fbe7f0a737ba4b72afc0b840c4c685fb711ed36a705a40de87701328c1e3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "virelith",
+      "source": "assets/generated/virelith.png",
+      "sourceSha256": "41644d73b08e11e2cef11535cc623634da311811aaae43e506aaf94767ffc595",
+      "production": "assets/production/virelith.png",
+      "productionSha256": "e431438820b00e9aa2380aa294df98f9839836f2744c74ce934d2c904e03429f",
+      "preview": "assets/territories/virelith.webp",
+      "previewSha256": "669a8d0b761a262d710a11ada509516e0d5be86d9fb50b4d244f22cae5ee7f33",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "glenfara",
+      "source": "assets/generated/glenfara.png",
+      "sourceSha256": "a0e65d67ce838928ce66f6141db2807bea637ec5c401819942f20dea31cecfe8",
+      "production": "assets/production/glenfara.png",
+      "productionSha256": "0689401fc226a8440315df9878c4e432ebfb65e8123d76738676aa595ab0b422",
+      "preview": "assets/territories/glenfara.webp",
+      "previewSha256": "12bf8e65bcad1d03d061c8d096be97cba64fe94a3071f63cdef4b096a78d4762",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "ghrenholt",
+      "source": "assets/generated/ghrenholt.png",
+      "sourceSha256": "572f53f10897d517c0ab8d9e5b2e111303f5475b1e43bfda79cffec02abcac07",
+      "production": "assets/production/ghrenholt.png",
+      "productionSha256": "cdd3273d0c1980b237e836122cd410d3e0ecd969630ad9a0c677fa1ec29780da",
+      "preview": "assets/territories/ghrenholt.webp",
+      "previewSha256": "1279ac382e96f8d3357225fd9a561e08e0ce48dc33070f2b4ad6b3b97b3bf19a",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "rivisra",
+      "source": "assets/generated/rivisra.png",
+      "sourceSha256": "01928cabe08eeaffb55f69e322e95eea315680b808a418abfcfc63a38d2607c3",
+      "production": "assets/production/rivisra.png",
+      "productionSha256": "9cd9ec33f0b7f686801fea4b0d84644d1cc1ce2c15330a73c0e130d035a2a8ff",
+      "preview": "assets/territories/rivisra.webp",
+      "previewSha256": "34547e92536d2677eb0a48739ebf4aeb3e9585e46483ae6c34a8cf6a49ec1ac4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "faelthar",
+      "source": "assets/generated/faelthar.png",
+      "sourceSha256": "80975fab19a50fb64db90b31f02564ffee77eb5413b0446d4e0323ef60a59467",
+      "production": "assets/production/faelthar.png",
+      "productionSha256": "6cda261e89a9bffd2db9b9c0108e1b8791066af9b096a0bff6cf4f156b546e3f",
+      "preview": "assets/territories/faelthar.webp",
+      "previewSha256": "954cf09ebeac55949ab0a9b90589c3ad05b5a964fc66eeebfb785fa5594d22e6",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "thalrune",
+      "source": "assets/generated/thalrune.png",
+      "sourceSha256": "c1d81d497cd51c12637824ae3eacea7e93dc6092914380984eb2c607dfe68acb",
+      "production": "assets/production/thalrune.png",
+      "productionSha256": "16ed9122c1776c94f67688259c61dc222ca3fb023a9a894c7fa9850a813329be",
+      "preview": "assets/territories/thalrune.webp",
+      "previewSha256": "3876bb31aaa65c77eba13954d86eee99fe282e7b985d35f55cec7adc5d1d20b3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "eldramar",
+      "source": "assets/generated/eldramar.png",
+      "sourceSha256": "e7eab0bc246765adbc4f477ec95103d5b474579f49ac868d37451d8ef7eb4e5a",
+      "production": "assets/production/eldramar.png",
+      "productionSha256": "f932cd761e335ea6faa24925c17134c4ce3dd7bd193551b341c391724c9ee8ba",
+      "preview": "assets/territories/eldramar.webp",
+      "previewSha256": "cc895cbecfc698d978d118bf098473b9c45c381ef2fd414d2e67376507d5520b",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "eadwick",
+      "source": "assets/generated/eadwick.png",
+      "sourceSha256": "1d03214a90636579ad628a1a60cc0c2a1554e5c76b0a814f3ea68b84d4ae3b45",
+      "production": "assets/production/eadwick.png",
+      "productionSha256": "c023aaa3941a92163c8c3f596259130c637db85f910a0e0bd6466856ea68ee5c",
+      "preview": "assets/territories/eadwick.webp",
+      "previewSha256": "ea1c7364b0365e6a166002d802e1befb73161062ef22c95229f8640d58ba2ffc",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "linthar",
+      "source": "assets/generated/linthar.png",
+      "sourceSha256": "58b103f20d77c3f5cb28250d0b3e14eaa998813ffc360d7f0a5b38f69667c69a",
+      "production": "assets/production/linthar.png",
+      "productionSha256": "75e11b8491a497b70b083cf0b189d83a2621d1c5a4fe45985a6ec3bca36dc7b7",
+      "preview": "assets/territories/linthar.webp",
+      "previewSha256": "19b7836dcd6edbba31184da613595df88b835fbde0539c82caeb3cafafe1d511",
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "padding": {
+        "left": 0,
+        "top": 256
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "luthirrith",
+      "source": "assets/generated/luthirrith.png",
+      "sourceSha256": "c81e23a4296c4e9a3127718f91dcbb38f8c92239bbfd246d60b9abdf94f6cffd",
+      "production": "assets/production/luthirrith.png",
+      "productionSha256": "109cb349aec085a6d6ad1ffa18dbd7b0818a8331d77021f5bd4387a8f2496d17",
+      "preview": "assets/territories/luthirrith.webp",
+      "previewSha256": "25082e6aabbafa032fa0e171d2fa9854e652db61f8951ac925b775fb5fc609f0",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "trentmorath",
+      "source": "assets/generated/trentmorath.png",
+      "sourceSha256": "eafdf086260f0eb925f459823ea5be65ed85bf6d3cf72254762dfdad90b378da",
+      "production": "assets/production/trentmorath.png",
+      "productionSha256": "6423f6b72a37064a30a40bf5871fcb0d4e7c65b3c04f63cc0b86ee43fbe43eec",
+      "preview": "assets/territories/trentmorath.webp",
+      "previewSha256": "c67a7777cf5621d2878e1f5e6b4787008ca9925f4d9323a96cebd9642a6f2fe4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "kaldhorn",
+      "source": "assets/generated/kaldhorn.png",
+      "sourceSha256": "76a33fec464c423de28baf162e6f0b07e6523ec94cd7542ac74cda06df809db8",
+      "production": "assets/production/kaldhorn.png",
+      "productionSha256": "6ba943e3de52c75834f4572dc84e7ffca0a11dce617c1fbbd522ec6fc1328ebd",
+      "preview": "assets/territories/kaldhorn.webp",
+      "previewSha256": "8c6ae36a0dd0f96b086fedf30af3ea234f012295dd59708243bde881a90a031f",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "dunrath",
+      "source": "assets/generated/dunrath.png",
+      "sourceSha256": "f06bfe100cc7a716f74b760eb63aacf4438e1f7cd1f7d4fcbea4d01df85b0152",
+      "production": "assets/production/dunrath.png",
+      "productionSha256": "c0bcd5c8905b3663d4e323ddc3130d0621168449ff9550a8c69b2a4a5d7b297c",
+      "preview": "assets/territories/dunrath.webp",
+      "previewSha256": "7ba6c0a0cb90d492d6922fb0dc3af872b2f350cde5d1094cd629e9a808fcf657",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "glendir",
+      "source": "assets/generated/glendir.png",
+      "sourceSha256": "4ec0948907e8c2e6c69996e72bb0b801ef32db1a32dc196df5a62e96b0c6bd1d",
+      "production": "assets/production/glendir.png",
+      "productionSha256": "fb2a53126bdcb1ff6ee2fe25b0c69a9334786af6382e502a93b2d9e9fc58a8fd",
+      "preview": "assets/territories/glendir.webp",
+      "previewSha256": "cb618b398e9db958c1b4506ce8be406e5e3b2b51477efca3d7316fb73cea24f6",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "aeldrunhal",
+      "source": "assets/generated/aeldrunhal.png",
+      "sourceSha256": "4da0aa3f03ddd2854f50b345c18dd51fd61ca216f155a7a484afc1c37a1b9f18",
+      "production": "assets/production/aeldrunhal.png",
+      "productionSha256": "ae6da59901bbe6b34fc9f404b6e5276175eb9d4f76a863c965de004017d19e0e",
+      "preview": "assets/territories/aeldrunhal.webp",
+      "previewSha256": "d2905f31c3c96592abfe34273ab9b10c1e2318edb99e90fc45e6e4f314736a58",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "virelath",
+      "source": "assets/generated/virelath.png",
+      "sourceSha256": "6d1b931a23d504963de9523f7b842b66cedfc7bb3e15a703a2007aea07c90fd2",
+      "production": "assets/production/virelath.png",
+      "productionSha256": "39c396621136c527decccf1b6f458bd24ad47b359ba9e91493e7e863dc11314f",
+      "preview": "assets/territories/virelath.webp",
+      "previewSha256": "98e9674e014b27b93cb8671ae607acce722045e11f61c24de61e631e8fce3dc0",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "hydrathar",
+      "source": "assets/generated/hydrathar.png",
+      "sourceSha256": "14761c03ece5550cb778dd44c12101bbe4e21ebd6449db0ba6fe0bf959e3cd8f",
+      "production": "assets/production/hydrathar.png",
+      "productionSha256": "cd2228587d2995fad722e750225bd04f9c2605270166b4024acface89d9775bc",
+      "preview": "assets/territories/hydrathar.webp",
+      "previewSha256": "83a3d0dd625af97893eadab02dfe0b7470d9ca8b99096e7043e6c3cc2d6229a3",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "veyrthar",
+      "source": "assets/generated/veyrthar.png",
+      "sourceSha256": "c5e3e38ddf77b60099d6982f9f511a64ea678cbb2855a43036e96aea40d4db43",
+      "production": "assets/production/veyrthar.png",
+      "productionSha256": "0ad45f82bbc0542e7fb3328756b28761ebe7a1699207cfaac34cfe289ba311b5",
+      "preview": "assets/territories/veyrthar.webp",
+      "previewSha256": "f63bd417679489a89048e2230ffe77da2d82f6a6cc73f6cceadc10fe491d9860",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "kaldun",
+      "source": "assets/generated/kaldun.png",
+      "sourceSha256": "d32ae41efc88c5eca869cb0892314c128f20e31fc9a54f1f54f7c1e0fc838e56",
+      "production": "assets/production/kaldun.png",
+      "productionSha256": "472381477cea273ab2f8a15fbf24615a547003f4f6e720f99540b7df47f569ea",
+      "preview": "assets/territories/kaldun.webp",
+      "previewSha256": "8928a23a2560e483d27723eff8ac757b428d84389ab94b81402c56c0421a9955",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "hingstgard",
+      "source": "assets/generated/hingstgard.png",
+      "sourceSha256": "b895d41925031edb2afc69b80ad0564ca57ee0cc5d21dffa7fb51d62045f0559",
+      "production": "assets/production/hingstgard.png",
+      "productionSha256": "9d7b66abc56a99e6568d6b48e28d15e027f1fd78880d5fd3134b597cf72da40a",
+      "preview": "assets/territories/hingstgard.webp",
+      "previewSha256": "c57ec97e19e731c1fb32c27f09816c715610a95e677d9048a10e5986a6ea451d",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "padding": {
+        "left": 0,
+        "top": 0
+      },
+      "circle": null,
+      "rgbUnchanged": true
+    }
+  ]
+}

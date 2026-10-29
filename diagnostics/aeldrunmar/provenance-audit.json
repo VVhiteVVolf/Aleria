@@ -1,0 +1,669 @@
+{
+  "tool": "built-in image_gen",
+  "generated": 64,
+  "corrections": 6,
+  "revisions": 7,
+  "originalsUnchanged": true,
+  "evidence": [
+    {
+      "id": "earldom-beran",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/earldom-beran.png",
+      "sha256": "e66ade9ff03d8c0059827202d5666f675379c25df0d81d7c5371caa5b3e2e6f0"
+    },
+    {
+      "id": "earldom-earncynne",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/earldom-earncynne.png",
+      "sha256": "4031330a2b55d242204c4684b3401c7b437ec167bf42a73d541302b421004e7f"
+    },
+    {
+      "id": "earldom-estmere",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/earldom-estmere.png",
+      "sha256": "24b4b827a30e18fac653ac7cbbbe03b460e3a6d914e7302d974c8ccff4c06463"
+    },
+    {
+      "id": "earldom-tharn",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/earldom-tharn.png",
+      "sha256": "579d54c26b851d567a1fa1df7165ab6275954a146886e1014712e0b7a2645f77"
+    },
+    {
+      "id": "earldom-kendryck",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/earldom-kendryck.png",
+      "sha256": "7f57cdb6a9a4677ef9e2401f871a2ac629d55f8204029c37f2be21ce52bef0f3"
+    },
+    {
+      "id": "earldom-fyr",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/earldom-fyr.png",
+      "sha256": "8a121b323c383ecb42d33c485936427c1535cdaf9a3040c04ed684003425c2f7"
+    },
+    {
+      "id": "aeldros",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/aeldros.png",
+      "sha256": "26177e5c6a8c10f1deba383e6cfa401759634798a4f87322ae4622d4d297f387"
+    },
+    {
+      "id": "mornhall",
+      "kind": "territory",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/variants/mornhall-v1.png",
+      "sha256": "e05f21b12c12963871006c212c9cd3bd24fcab5a98b3bb8a0d82e54152f7e220"
+    },
+    {
+      "id": "itharol",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/itharol.png",
+      "sha256": "2eef8e776676f79e02b95eff54cad25b5a0ed7d172d6769bfb4dc9644e612b61"
+    },
+    {
+      "id": "virelith",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/virelith.png",
+      "sha256": "41644d73b08e11e2cef11535cc623634da311811aaae43e506aaf94767ffc595"
+    },
+    {
+      "id": "glenfara",
+      "kind": "territory",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/variants/glenfara-v1.png",
+      "sha256": "9eb93ad73d259d01c161eaf2194c768f981b5b3b817104501ba7d6577966109d"
+    },
+    {
+      "id": "ghrenholt",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/ghrenholt.png",
+      "sha256": "572f53f10897d517c0ab8d9e5b2e111303f5475b1e43bfda79cffec02abcac07"
+    },
+    {
+      "id": "rivisra",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/rivisra.png",
+      "sha256": "01928cabe08eeaffb55f69e322e95eea315680b808a418abfcfc63a38d2607c3"
+    },
+    {
+      "id": "faelthar",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/faelthar.png",
+      "sha256": "80975fab19a50fb64db90b31f02564ffee77eb5413b0446d4e0323ef60a59467"
+    },
+    {
+      "id": "thalrune",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/thalrune.png",
+      "sha256": "c1d81d497cd51c12637824ae3eacea7e93dc6092914380984eb2c607dfe68acb"
+    },
+    {
+      "id": "eldramar",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/eldramar.png",
+      "sha256": "e7eab0bc246765adbc4f477ec95103d5b474579f49ac868d37451d8ef7eb4e5a"
+    },
+    {
+      "id": "eadwick",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/eadwick.png",
+      "sha256": "1d03214a90636579ad628a1a60cc0c2a1554e5c76b0a814f3ea68b84d4ae3b45"
+    },
+    {
+      "id": "linthar",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/linthar.png",
+      "sha256": "58b103f20d77c3f5cb28250d0b3e14eaa998813ffc360d7f0a5b38f69667c69a"
+    },
+    {
+      "id": "luthirrith",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/luthirrith.png",
+      "sha256": "c81e23a4296c4e9a3127718f91dcbb38f8c92239bbfd246d60b9abdf94f6cffd"
+    },
+    {
+      "id": "trentmorath",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/trentmorath.png",
+      "sha256": "eafdf086260f0eb925f459823ea5be65ed85bf6d3cf72254762dfdad90b378da"
+    },
+    {
+      "id": "kaldhorn",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/kaldhorn.png",
+      "sha256": "76a33fec464c423de28baf162e6f0b07e6523ec94cd7542ac74cda06df809db8"
+    },
+    {
+      "id": "dunrath",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/dunrath.png",
+      "sha256": "f06bfe100cc7a716f74b760eb63aacf4438e1f7cd1f7d4fcbea4d01df85b0152"
+    },
+    {
+      "id": "glendir",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/glendir.png",
+      "sha256": "4ec0948907e8c2e6c69996e72bb0b801ef32db1a32dc196df5a62e96b0c6bd1d"
+    },
+    {
+      "id": "aeldrunhal",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/aeldrunhal.png",
+      "sha256": "4da0aa3f03ddd2854f50b345c18dd51fd61ca216f155a7a484afc1c37a1b9f18"
+    },
+    {
+      "id": "virelath",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/virelath.png",
+      "sha256": "6d1b931a23d504963de9523f7b842b66cedfc7bb3e15a703a2007aea07c90fd2"
+    },
+    {
+      "id": "hydrathar",
+      "kind": "territory",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/variants/hydrathar-v1.png",
+      "sha256": "2cdfb529e82b70ab10a62c1fd577951a387b85e2fd4e1191261e56421fa9f346"
+    },
+    {
+      "id": "veyrthar",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/veyrthar.png",
+      "sha256": "c5e3e38ddf77b60099d6982f9f511a64ea678cbb2855a43036e96aea40d4db43"
+    },
+    {
+      "id": "kaldun",
+      "kind": "territory",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/variants/kaldun-v1.png",
+      "sha256": "e2b541831f7890ffd126eddb2d84a13cb3dad67cdf4a6a872dacf9a5d08dcc5c"
+    },
+    {
+      "id": "hingstgard",
+      "kind": "territory",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/generated/hingstgard.png",
+      "sha256": "b895d41925031edb2afc69b80ad0564ca57ee0cc5d21dffa7fb51d62045f0559"
+    },
+    {
+      "id": "kendryck",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/kendryck.png",
+      "sha256": "dfbf889561616a792ee912943a5f28adbd25861410ec6615f7748a4d7b2577d5"
+    },
+    {
+      "id": "boxton",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/boxton.png",
+      "sha256": "fe358691879deae91328e24a198f354048d7ec67b3bf861471f6cca444552af0"
+    },
+    {
+      "id": "halfax",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/halfax/generated.png",
+      "sha256": "5f707b9603618f8ed6caa603c9e32625b59eb545748d1ba5fe0f2953ba35684f"
+    },
+    {
+      "id": "lir",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/lir.png",
+      "sha256": "a207febfac72e3272d11329c73c875c82c299ef90daf65b51d9da96fdf080d14"
+    },
+    {
+      "id": "skelton",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/skelton.png",
+      "sha256": "9cac9448925c28b530878c6630dc48c1f583805fcf1dede303ee38dd676440fa"
+    },
+    {
+      "id": "trevelyan",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/trevelyan.png",
+      "sha256": "3a7efd4290654b53c306d392f9e7fbc02e19bde4317ed1bba403e4ed861aac11"
+    },
+    {
+      "id": "beran",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/beran/generated.png",
+      "sha256": "a1683a471a8d8fcda5b45e539febcea683e36772d810772056c2645d2b1723f6"
+    },
+    {
+      "id": "coelret",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/coelret.png",
+      "sha256": "580b01ad25006606695d5a12fc0f14583b33df802d4c4fb53ac23078f20266f9"
+    },
+    {
+      "id": "thynne",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/thynne.png",
+      "sha256": "8fdac3df1439b19ead875662ed23ca26743dd00bffeef81a318a4716b9d6209a"
+    },
+    {
+      "id": "earncynne",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/earncynne.png",
+      "sha256": "b6b108b70a508a7d6e0d13dd0b751afae6d1aee1981be40478db18834da0a768"
+    },
+    {
+      "id": "dunstan",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/dunstan.png",
+      "sha256": "c9da44971583e07cdb6a72ecaed45fc95021ef499bbdb55e283f01db1c6727f4"
+    },
+    {
+      "id": "granger",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/variants/granger-v1.png",
+      "sha256": "5efcf40a3a73f05e62b7218f3e13ff27957784c8546d7920adb12c6b88fda153"
+    },
+    {
+      "id": "estmere",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/estmere.png",
+      "sha256": "46da667782b8b3598047e75dcabf2e60e422fbfe17dabdd47f49fd8e7fda1eda"
+    },
+    {
+      "id": "irwynne",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/irwynne/generated.png",
+      "sha256": "9350d1e587929c25dde05b373ddef2e3b62546119bef79c683c3c07b2fadd4b0"
+    },
+    {
+      "id": "leofric",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/leofric.png",
+      "sha256": "943f639bba484586e584b6de7e9f468fa94ac47990d624774b5012274008b029"
+    },
+    {
+      "id": "frye",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/frye.png",
+      "sha256": "b82e5434c9737ed3d87c3e36cdbefa7ba06427bf3d70937e0d96518038f9e4da"
+    },
+    {
+      "id": "brymwulf",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/variants/brymwulf-v1.png",
+      "sha256": "4334d814c861235f848b59ed4d981eb7b63665e015e1d824840c1fb55d781c1d"
+    },
+    {
+      "id": "edwynne",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne/generated.png",
+      "sha256": "6c50015ffff67531e02c75642536d7d47a05e156017eb9d4cff37ca553ba58f7"
+    },
+    {
+      "id": "tharn",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/tharn.png",
+      "sha256": "bd954fdbb418085b60dbdee706e828506c9cddb625ec892689dc646281b3e7be"
+    },
+    {
+      "id": "dimholt",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/dimholt.png",
+      "sha256": "7eaac65aa4ceedffe29d4c690e71659e374eb1be92717ba2d087cf0277390676"
+    },
+    {
+      "id": "wend",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/wend.png",
+      "sha256": "a3c14dd5a0eceed41e0f54a8b911d8dddd91cd12a5a141c8f2b04beec2b33b52"
+    },
+    {
+      "id": "ashby",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/ashby.png",
+      "sha256": "0cb44279db3b502e46ef3dfde8130cd845d4f49698b137e101ad962f59d22934"
+    },
+    {
+      "id": "aubigny",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/aubigny/generated.png",
+      "sha256": "ecd0ab7f4f7265309ea4cb1a2e5ac6dd899b258a22acbb5b44cbac222feb7445"
+    },
+    {
+      "id": "cerdic",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/cerdic.png",
+      "sha256": "5f9cdd08a0e7e74ac35f730b513f67b49cebb290c7d7646b482c6dcfe52f73f3"
+    },
+    {
+      "id": "cutting",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/cutting.png",
+      "sha256": "3c34fea028d0dbfe63292268cfdabf55f42b30b8e589886b8fcf68659f39355b"
+    },
+    {
+      "id": "derwent",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/derwent.png",
+      "sha256": "41d6ae96389cbc3f1b81925ccc751d1b4d74e234d8bc6de6ea3aab73e8dad93a"
+    },
+    {
+      "id": "giffard",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/giffard.png",
+      "sha256": "fbf2ee9eac83615bcf9b49f022121154db90d29f725961e83bb452acce732027"
+    },
+    {
+      "id": "humber",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/humber.png",
+      "sha256": "ed071b7fc215d6714c30b72fdfebf30fea9c1687c06e8b2301b15ba79f119720"
+    },
+    {
+      "id": "oiscingas",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/oiscingas.png",
+      "sha256": "587e0530671ce583b60f0621cb17bbcc1708972fe3d5d044ef0c20bcab94fd26"
+    },
+    {
+      "id": "seolfor",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/seolfor.png",
+      "sha256": "5f11ae4dd083a3bb0e5fd30aac4fefb4256995b8ee99c8ea99cd66c1f0f68395"
+    },
+    {
+      "id": "swygert",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/swygert.png",
+      "sha256": "d77e0e75dbd4065378ba01bf5299f323124d01564d5953dbcb16ebd404460b49"
+    },
+    {
+      "id": "thwing",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/thwing.png",
+      "sha256": "cf3459ba99ebe729a35885606f2ce46219d1145b03c4a1a5fcad382bc1224c01"
+    },
+    {
+      "id": "trent",
+      "kind": "character",
+      "archive": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/trent/generated.png",
+      "sha256": "47ad154e9233b9d4f4ca0b60f0fdc4635248ad0ddad9576b25a849a1c39a30e9"
+    },
+    {
+      "id": "whiting",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/whiting.png",
+      "sha256": "b11b69350000772a4795b6908361a0a5e6bfc497f7db328dc9201f3cfb8f5588"
+    },
+    {
+      "id": "edgcumbe",
+      "kind": "character",
+      "archive": "E:/Aleria/Vorschau/Aeldrunmar/assets/warriors/generated/edgcumbe.png",
+      "sha256": "baec136b61133b6e1c002988d43ebf45c81d3fe51c5f416ace4d9f3fbfae4d21"
+    },
+    {
+      "id": "mornhall",
+      "kind": "correction",
+      "archive": "assets/generated/mornhall.png",
+      "sha256": "f3eae8d0ee455169ca1adf9d2f63c807e01dfc3897c79fb6f0e9427751f8b3e4"
+    },
+    {
+      "id": "glenfara",
+      "kind": "correction",
+      "archive": "assets/generated/glenfara.png",
+      "sha256": "a0e65d67ce838928ce66f6141db2807bea637ec5c401819942f20dea31cecfe8"
+    },
+    {
+      "id": "hydrathar",
+      "kind": "correction",
+      "archive": "assets/generated/hydrathar.png",
+      "sha256": "14761c03ece5550cb778dd44c12101bbe4e21ebd6449db0ba6fe0bf959e3cd8f"
+    },
+    {
+      "id": "kaldun",
+      "kind": "correction",
+      "archive": "assets/generated/kaldun.png",
+      "sha256": "d32ae41efc88c5eca869cb0892314c128f20e31fc9a54f1f54f7c1e0fc838e56"
+    },
+    {
+      "id": "brymwulf",
+      "kind": "correction",
+      "archive": "assets/warriors/generated/brymwulf.png",
+      "sha256": "c13881946ec4e1878adaa75a1535dea5caf147d11ea66472d4fa80d05d63d074"
+    },
+    {
+      "id": "granger",
+      "kind": "correction",
+      "archive": "assets/warriors/generated/granger.png",
+      "sha256": "4ac43fee0b6c27efb537b2d3508dc98236c3c304cfa8064658291a50a0efdf48"
+    },
+    {
+      "id": "halfax",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/halfax.png",
+      "sha256": "6a863857c10bbfe4933421e29b1ad143744396a50c3208d69326a313028d1e11"
+    },
+    {
+      "id": "beran",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/beran.png",
+      "sha256": "fc0c724bfa98b5025752e83b75d5d28807a2aa7eedef57cf3747657f2b294d9e"
+    },
+    {
+      "id": "irwynne",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/irwynne.png",
+      "sha256": "b9cbfb12fae92dc045b4f6c7c2cfb2c8629d4bd24b756192cd0827686e0cb95c"
+    },
+    {
+      "id": "aubigny",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/aubigny.png",
+      "sha256": "6cd929144830793075d05af0623b497658fb15fc2870a96d31b33c578a345b39"
+    },
+    {
+      "id": "trent",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/trent.png",
+      "sha256": "388a689617c5e4c6d42589035a5f1cc672c1492ca110e6bd44eaa2ba821d56d5"
+    },
+    {
+      "id": "edwynne",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/edwynne-v1.png",
+      "sha256": "e9403b8408bc5720969ffb69c8691bf013f3ed8c181c67145d707117cc944051"
+    },
+    {
+      "id": "edwynne",
+      "kind": "revision",
+      "revision": "2026-10-29-helmet-variation-framing",
+      "archive": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/edwynne.png",
+      "sha256": "cc98c8c95b05a5d120ae10b1db2154f1050a3d6d665781c158c97a270ffac264"
+    },
+    {
+      "kind": "design-study",
+      "archive": "diagnostics/aeldrunmar/armour-design-study.png",
+      "sha256": "56e939d6c4fc38a2136fd237356c9c638c32a9fbc108af106444b7868c144132"
+    }
+  ],
+  "references": [
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/aeldrunmar.png",
+      "sha256": "119917baea52e1aff0e78f64d8e01b53470deece5b4ca847d1800f74709d703c"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/kendryck.png",
+      "sha256": "f544aaaca8e613357b2c298c5bd2045ea3f87ba2a16b1782081dc999c33f17c0"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/armour-design-study.png",
+      "sha256": "56e939d6c4fc38a2136fd237356c9c638c32a9fbc108af106444b7868c144132"
+    },
+    {
+      "path": "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+    },
+    {
+      "path": "E:/Aleria/Bestiarium/assets/horse-profiles/brycing.webp",
+      "sha256": "f267eeb9571a93d9cbe626a8b44fe8dfca1482eed49314ff71f62eba454fe6fb"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/boxton.png",
+      "sha256": "9cf5f558ac0410e6de15f5feea6c75de1e0e148d8a985fd9cc7124307369dc6e"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/halfax.png",
+      "sha256": "cf91781a4ccc43855fcc722c87650e7d31ac651b0119d72a050288c23ee2621b"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/lir.png",
+      "sha256": "c4c418ea281038bdedc0ad21d619bb660b69c8f28c379556385031d1e3a9761d"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/skelton.png",
+      "sha256": "f317517f0e7f85d3d19d7e5b300757ded94987a99a14078790f7d8226a2fb9a6"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/trevelyan.png",
+      "sha256": "e55b9b27410e9833f589ea536ac2658ad53e5680c2b3b9ad355a8aab94407380"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/beran.png",
+      "sha256": "49711e325489f80c7414ef75ca94c9e3209aedc32228f5a41b1449eb06880b04"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/coelret.png",
+      "sha256": "fe3adf7bf86bd2a604700c38b922992e60fbe8dca50bd1bddf8e35e78f64c488"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/thynne.png",
+      "sha256": "0bd789ed4604dfbef69f60e7b90103e934aea5cdc22dae32310675da3c5814be"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/earncynne.png",
+      "sha256": "b45dc8db8a469847621de09ea8f42a8de86ec77d0df13a4b86e3124eee95f407"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/dunstan.png",
+      "sha256": "eaf3a564d5c75f6625066bd30aeb642f3c32b9111eebe205e2572948ed7350bb"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/granger.png",
+      "sha256": "fa2e4d46f48770b7283b6e535373cc6d6be40c74ef93c5454b3a1691c7a2161c"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/estmere.png",
+      "sha256": "7fee0d17d9445b4a70d6d3f045bad47843765bd69cdb683607547810f6b8b662"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/irwynne.png",
+      "sha256": "946b5562dad4de880f956d854d870a328d08c8da158ab7b648184f5024813ec4"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/leofric.png",
+      "sha256": "37f11deb4b3361beac8cab74cebd8d8664ab61b009d5df567ab768f704ab0b4f"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/frye.png",
+      "sha256": "b2c159d118bcecac565c5f7ff27add4f9e183cb352797ba198f0414f8081ce0c"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/brymwulf.png",
+      "sha256": "1225a71e566b7557ea6476aafc51071617ca1cf5feac534cc4b6fa4a55f21947"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/edwynne.png",
+      "sha256": "3b772819c68a15182de136d1f14602586ba6eb40ec53fd23d5b391b08a56f807"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/tharn.png",
+      "sha256": "2291f6929f2b9a5a13a39472573ea4b4c1e39059ab5bff478c94ebb1f4dec4a8"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/dimholt.png",
+      "sha256": "82dc0a766d4363a4360cfeee7fc65d0cb9025d5fabb14903328d50b08bf3c213"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/wend.png",
+      "sha256": "ba471dfa325a612b28970123e027e020c325cfb7824e2767251f977277cc23e1"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/ashby.png",
+      "sha256": "3040c2176a74a69c3a2643f195368319d25c44ad638c3c2f0b96c1c645b05a51"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/aubigny.png",
+      "sha256": "2aea8d0b68cc326e173e4e4abe71670d6e457a8dc92d8670eb15a59233766766"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/cerdic.png",
+      "sha256": "6349b44ddfe9d89f770f45127d8086d9aaa78fe99b344be859804c7ffd45d13e"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/cutting.png",
+      "sha256": "8afccdd37730be8d3900af91ccae3e1cef8b0e8091af5a5390d92a20860ed7d6"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/derwent.png",
+      "sha256": "d0dd9fefd4c91ca98b25ed29a576eaf4e552b4aa7ab467ddfcce9d309dc67e2b"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/giffard.png",
+      "sha256": "f4a6c1d52b12b6234a8ecc8f6222688dcf4a4720b51c6e128a88ee9969afabc0"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/humber.png",
+      "sha256": "4167879bb78d568f982ee53f8187bf53ec05a3aeda9221e50fc56063fcc2d786"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/oiscingas.png",
+      "sha256": "099430d9860e08ac3f6a1edddc2901f8e71b888974be0d88836121b318a6b4cc"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/seolfor.png",
+      "sha256": "bb0e71ca7419989d525653ae33f09f2883d24b6359af332e588d39619c6b7482"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/swygert.png",
+      "sha256": "c46f386c04f57602be2d429c34841b81c32444c0a091bba5fa80e139ba4a44c4"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/thwing.png",
+      "sha256": "134fd62699f67655f1c160182929a031ad88f8e2690773b0c38ca0259eff50ce"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/trent.png",
+      "sha256": "3a3027104ca708857ffb177295d62a97b0e2282d25b466fd6589c7cb7c29e41b"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/whiting.png",
+      "sha256": "05fd6d6ca3e1eb619e2d62c44f15be25ef81c128e775e41ec49be11041c045d1"
+    },
+    {
+      "path": "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/edgcumbe.png",
+      "sha256": "03d19a2a9a0139a039b7c8044aced73aaa8f6009da28fa00bee5ea5ba85d2f11"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/halfax/production.png",
+      "sha256": "11c80b458104b82569de88db27c38a45811404b114d1102e9c081f4cd72a9fb0"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/beran/production.png",
+      "sha256": "99250e18bd559814857df459b796126a07ce6152f42aeaa5de019e3150761112"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/irwynne/production.png",
+      "sha256": "a0e18d9252ad33c6ec3357286aa2e679e12cebccdb7d932d15f7d377fe730bff"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/aubigny/production.png",
+      "sha256": "c46c68c26fb9de82fe338b402573b0bc012db7378ae4018596233aa5e4b25a23"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/trent/production.png",
+      "sha256": "465dd6864a5a377fc95af2d92e5e293df62eadd3a5750a9a6bdf94a3f8056e05"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne/production.png",
+      "sha256": "c5ae0207e32eabb082334bb99d802e6181f5ae72caecc45d7d84b01b5812de24"
+    },
+    {
+      "path": "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne-framing/production.png",
+      "sha256": "a3bffcff3a7e3f13f2d238957c3be3534f73df0b7996dcf44da1c2632dba880f"
+    }
+  ]
+}

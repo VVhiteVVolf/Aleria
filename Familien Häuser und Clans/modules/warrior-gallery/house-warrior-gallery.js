@@ -22,7 +22,7 @@ export function renderHouseWarriorGallery(root, gallery) {
   for (const entry of gallery.entries) {
     const figure = document.createElement('figure');
     const link = document.createElement('a');
-    link.href = entry.image;
+    link.href = entry.fullsize || entry.image;
     link.setAttribute('aria-label', `${entry.name} – Bild öffnen`);
     const image = document.createElement('img');
     image.src = entry.image;
@@ -38,6 +38,14 @@ export function renderHouseWarriorGallery(root, gallery) {
       const description = document.createElement('p');
       description.textContent = entry.description;
       caption.append(description);
+    }
+    for (const reference of entry.links || []) {
+      const paragraph = document.createElement('p');
+      const referenceLink = document.createElement('a');
+      referenceLink.href = reference.href;
+      referenceLink.textContent = reference.label;
+      paragraph.append(referenceLink);
+      caption.append(paragraph);
     }
     figure.append(link, caption);
     grid.append(figure);

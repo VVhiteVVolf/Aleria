@@ -1,0 +1,1287 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Triarchie/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "4be3d7b4789dbe8b365de0d39b4da2fb7961a1134a8a08eadabe1e09da58fa15",
+  "state": {
+    "pins": [
+      {
+        "id": "iathneach-dorchain",
+        "title": "Dorchain",
+        "x": 0.306,
+        "y": 0.16500000000000004,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/taghan.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-an-taghan",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/dorchain.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-dorchain/index.html",
+        "region": "Triarchie",
+        "house": "An Taghan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dorchain"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "An Taghan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "An Taghan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Braigh Dorchain"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Westliches Berg- und Waldgebiet. Zugang zu Höhenwegen und möglichen Stollenplätzen; Bergbau ist hier ein Entwurfsthema. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-dorchain",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "dorchain",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            30.6,
+            16.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-an-taghan"
+        ]
+      },
+      {
+        "id": "iathneach-cuansioda",
+        "title": "Cuansioda",
+        "x": 0.6829999999999999,
+        "y": 0.20599999999999996,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/triarchie/cuansioda.webp",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/cuansioda.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-cuansioda/index.html",
+        "region": "Triarchie",
+        "house": "Führung offen",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cuansioda"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Führung offen"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Cuan Cuansioda"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Nordöstlicher Küsten- und Hafenraum des verlorenen Iathneacher Mor Tiarnatums. Herkunftssitz der Mac Farraigeach, die heute auf Sgeir Tearmainn sitzen. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-cuansioda",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "cuansioda",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            68.3,
+            20.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "iathneach-fiorail",
+        "title": "Fiorail",
+        "x": 0.158,
+        "y": 0.29599999999999993,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/guilbneach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-guilbneach",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/fiorail.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-fiorail/index.html",
+        "region": "Triarchie",
+        "house": "Ua Guilbneach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiorail"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua Guilbneach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua Guilbneach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Cladach Fiorail"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Westlicher Rand des besetzten Mor Tiarnatums; offene Ebenen und Gehölze zwischen Küstenzugang und inneren Hügeln. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-fiorail",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "fiorail",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            15.8,
+            29.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ua-guilbneach"
+        ]
+      },
+      {
+        "id": "iathneach-doire-fionn",
+        "title": "Doire Fionn",
+        "x": 0.442,
+        "y": 0.2879999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/coilleach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ruin-coilleach",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/doire-fionn.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-doire-fionn/index.html",
+        "region": "Triarchie",
+        "house": "Ruin Coilleach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Doire Fionn"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ruin Coilleach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ruin Coilleach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Coill Fhionn"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Albischer Name"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Südöstlicher bewaldeter Übergang zwischen den nördlichen Höhen und den aldingischen Ebenen. Neuer albischer Ortsname für den Kartenplatzhalter. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-doire-fionn",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "doire-fionn",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            44.2,
+            28.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ruin-coilleach"
+        ]
+      },
+      {
+        "id": "aldingen-wernheim",
+        "title": "Wernheim",
+        "x": 0.45699999999999996,
+        "y": 0.42299999999999993,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/hammerstein.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-hammerstein",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/wernheim.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-wernheim/index.html",
+        "region": "Triarchie",
+        "house": "Haus Hammerstein",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Wernheim"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Hammerstein"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Hammerstein"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Wernau"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Westliches Binnengebiet der grünen Grafschaft; Wald und offene Talräume erlauben Landverkehr und Handwerk. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-wernheim",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "wernheim",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            45.7,
+            42.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-hammerstein"
+        ]
+      },
+      {
+        "id": "aldingen-erlensund",
+        "title": "Erlensund",
+        "x": 0.7390000000000001,
+        "y": 0.30599999999999994,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/segelbrecht.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-segelbrecht",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/erlensund.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-erlensund/index.html",
+        "region": "Triarchie",
+        "house": "Haus Segelbrecht",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Erlensund"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Segelbrecht"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Segelbrecht"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Erlensunder Küstenmark"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Aldingen Name · Nordostküste"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Nordöstlicher Küstenvorsprung am Übergang zum verlorenen Iathneach. Vorschlag für den nördlichen aldingischen Küstenplatzhalter. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-erlensund",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "erlensund",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            73.9,
+            30.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-segelbrecht"
+        ]
+      },
+      {
+        "id": "aldingen-segelwacht",
+        "title": "Segelwacht",
+        "x": 0.84,
+        "y": 0.44499999999999995,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/riemann.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-riemann",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/segelwacht.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-segelwacht/index.html",
+        "region": "Triarchie",
+        "house": "Haus Riemann",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Segelwacht"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Riemann"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Riemann"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Segelwachter Reede"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Aldingen Name · Mittlere Ostküste"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Schmale östliche Küstenherrschaft, mit gut sichtbarer Hafenlage. Vorschlag für den mittleren Küstenplatzhalter. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-segelwacht",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "segelwacht",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            84,
+            44.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-riemann"
+        ]
+      },
+      {
+        "id": "aldingen-hammertal",
+        "title": "Hammertal",
+        "x": 0.24000000000000002,
+        "y": 0.588,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/steinmetz.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-steinmetz",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/hammertal.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-hammertal/index.html",
+        "region": "Triarchie",
+        "house": "Haus Steinmetz",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hammertal"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Steinmetz"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Steinmetz"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Hammertaler Waldmark"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Aldingen Name · Westliche Baronie"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Westliche, stark bewaldete Baronie unter einem südwestlichen Höhenzug. Vorschlag für den westlichen aldingischen Kartenplatzhalter. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-hammertal",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "hammertal",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            24,
+            58.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-steinmetz"
+        ]
+      },
+      {
+        "id": "aldingen-rottendorf",
+        "title": "Rottendorf",
+        "x": 0.68,
+        "y": 0.6699999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/hufschlag.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-hufschlag",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/rottendorf.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-rottendorf/index.html",
+        "region": "Triarchie",
+        "house": "Haus Hufschlag",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rottendorf"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Hufschlag"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Hufschlag"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Rottenfelder"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Gräflicher Hauptort am Südostrand der grünen Grafschaft, mit Wiesen- und Waldland im Hinterland. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-rottendorf",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "rottendorf",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            68,
+            67
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-hufschlag"
+        ]
+      },
+      {
+        "id": "aldingen-dornheim",
+        "title": "Dornheim",
+        "x": 0.175,
+        "y": 0.7190000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/stahlwart.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-stahlwart",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/dornheim.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-dornheim/index.html",
+        "region": "Triarchie",
+        "house": "Haus Stahlwart",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dornheim"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Stahlwart"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Stahlwart"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Dornheimer Höhen"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Westliche Randbaronie der blauen Grafschaft an unzugänglichen Höhen; Wald und Landwege prägen den Sitzraum. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-dornheim",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "dornheim",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            17.5,
+            71.9
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-stahlwart"
+        ]
+      },
+      {
+        "id": "aldingen-rothen",
+        "title": "Rothen",
+        "x": 0.33299999999999996,
+        "y": 0.8659999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/reiff.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-reiff",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/rothen.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-rothen/index.html",
+        "region": "Triarchie",
+        "house": "Haus Reiff",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rothen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Reiff"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Reiff"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Rothener Hain"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Südwestliches Binnengebiet zwischen Höhen und lichteren Wäldern, über Wege zum Osten verbunden. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-rothen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "rothen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            33.3,
+            86.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-reiff"
+        ]
+      },
+      {
+        "id": "aldingen-hohenreede",
+        "title": "Hohenreede",
+        "x": 0.785,
+        "y": 0.932,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/sattler.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sattler",
+        "banner": "/Stammbäume/assets/images/regions/triarchie/hohenreede.webp",
+        "bannerLink": "/Kontinente/Lothir/Triarchie/triarchie-sitz-hohenreede/index.html",
+        "region": "Triarchie",
+        "house": "Haus Sattler",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hohenreede"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sattler"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Sattler"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Besetzte Herrschaft Hohe Reede"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Blankenstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Unter Besatzung"
+          }
+        ],
+        "text": "Südöstlicher gräflicher Hafen am Ausläufer der Küste. Hohenreede ist der neue Namensvorschlag für das auf der Karte als Blankenstadt bezeichnete Zentrum. Besetztes Gebiet; keine freiwillige Gefolgschaft der einheimischen Familien unterstellt.",
+        "secret": false,
+        "dominionId": "triarchie-sitz-hohenreede",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "hohenreede",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            78.5,
+            93.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-sattler"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "triarchie-lothir",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "type": "Besatzungsgebiet",
+        "ruler": "",
+        "seat": "",
+        "parentId": ""
+      },
+      {
+        "id": "triarchie-region-cuansioda",
+        "name": "Mor Tiarnatum Cuansioda",
+        "type": "Besetzte Region",
+        "ruler": "",
+        "seat": "",
+        "parentId": "triarchie-lothir"
+      },
+      {
+        "id": "triarchie-region-wernmark",
+        "name": "Grafschaft Wernmark",
+        "type": "Besetzte Region",
+        "ruler": "",
+        "seat": "",
+        "parentId": "triarchie-lothir"
+      },
+      {
+        "id": "triarchie-region-hohenreede",
+        "name": "Grafschaft Hohenreede",
+        "type": "Besetzte Region",
+        "ruler": "",
+        "seat": "",
+        "parentId": "triarchie-lothir"
+      },
+      {
+        "id": "triarchie-sitz-dorchain",
+        "name": "Besetzte Herrschaft Braigh Dorchain",
+        "type": "Besetzte Herrschaft",
+        "ruler": "An Taghan",
+        "seat": "Dorchain",
+        "parentId": "triarchie-region-cuansioda"
+      },
+      {
+        "id": "triarchie-sitz-cuansioda",
+        "name": "Besetzte Herrschaft Cuan Cuansioda",
+        "type": "Besetzte Herrschaft",
+        "ruler": "",
+        "seat": "Cuansioda",
+        "parentId": "triarchie-region-cuansioda"
+      },
+      {
+        "id": "triarchie-sitz-fiorail",
+        "name": "Besetzte Herrschaft Cladach Fiorail",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Ua Guilbneach",
+        "seat": "Fiorail",
+        "parentId": "triarchie-region-cuansioda"
+      },
+      {
+        "id": "triarchie-sitz-doire-fionn",
+        "name": "Besetzte Herrschaft Coill Fhionn",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Ruin Coilleach",
+        "seat": "Doire Fionn",
+        "parentId": "triarchie-region-cuansioda"
+      },
+      {
+        "id": "triarchie-sitz-wernheim",
+        "name": "Besetzte Herrschaft Wernau",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Hammerstein",
+        "seat": "Wernheim",
+        "parentId": "triarchie-region-wernmark"
+      },
+      {
+        "id": "triarchie-sitz-erlensund",
+        "name": "Besetzte Herrschaft Erlensunder Küstenmark",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Segelbrecht",
+        "seat": "Erlensund",
+        "parentId": "triarchie-region-wernmark"
+      },
+      {
+        "id": "triarchie-sitz-segelwacht",
+        "name": "Besetzte Herrschaft Segelwachter Reede",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Riemann",
+        "seat": "Segelwacht",
+        "parentId": "triarchie-region-wernmark"
+      },
+      {
+        "id": "triarchie-sitz-hammertal",
+        "name": "Besetzte Herrschaft Hammertaler Waldmark",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Steinmetz",
+        "seat": "Hammertal",
+        "parentId": "triarchie-region-wernmark"
+      },
+      {
+        "id": "triarchie-sitz-rottendorf",
+        "name": "Besetzte Herrschaft Rottenfelder",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Hufschlag",
+        "seat": "Rottendorf",
+        "parentId": "triarchie-region-wernmark"
+      },
+      {
+        "id": "triarchie-sitz-dornheim",
+        "name": "Besetzte Herrschaft Dornheimer Höhen",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Stahlwart",
+        "seat": "Dornheim",
+        "parentId": "triarchie-region-hohenreede"
+      },
+      {
+        "id": "triarchie-sitz-rothen",
+        "name": "Besetzte Herrschaft Rothener Hain",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Reiff",
+        "seat": "Rothen",
+        "parentId": "triarchie-region-hohenreede"
+      },
+      {
+        "id": "triarchie-sitz-hohenreede",
+        "name": "Besetzte Herrschaft Hohe Reede",
+        "type": "Besetzte Herrschaft",
+        "ruler": "Haus Sattler",
+        "seat": "Hohenreede",
+        "parentId": "triarchie-region-hohenreede"
+      }
+    ],
+    "regionTitle": "Die Triarchie · Besetztes Lothir",
+    "regionIcon": "",
+    "mapImages": {
+      "normal": "/Karten/Triarchie/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

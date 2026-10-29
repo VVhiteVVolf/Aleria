@@ -1,0 +1,79 @@
+{
+  "schema": "aleria.aeldrunmar.image-corrections",
+  "entries": [
+    {
+      "id": "mornhall",
+      "prompt": "Use case: stylized-concept. Create ONE isolated medieval Aeldrunmar heraldic field banner on a square 1024x1024 RGBA canvas. A single tapered pennant attached at its LEFT vertical edge to ONE upright spear, with its cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE long sharp point on the RIGHT. No hanging banner, horizontal crossbar, rectangular hanging tapestry, shield, swallowtail or second flag. The spearhead is complete, modest and visible above the hoist; the short visible shaft may START halfway up the canvas, it does not need to reach the bottom. Entire spearhead and right cloth point visible with clear transparent margins. Gentle coherent horizontal wind folds, large readable flat painted central motif, matte medieval pigments, restrained hand-painted gouache grain, dark fine contours. Rohan/Gondor, Anglo-Saxon and early English heraldic vocabulary. Not a photograph, CGI, glossy 3D, flat vector logo or parchment illustration. TRUE transparent PNG exterior and open gaps; cloth and spear fully opaque; no floor, shadow, scenery, horse, person, haze, lettering, numerals, captions or watermark.\nReferences define only painted heraldic craft, NOT the main motif; do not copy their horse unless explicitly required below. This is a MODEST SINGLE-DISTRICT BANNER: simpler linen or wool, narrow plain stitched edge, plain iron spear socket, small discreet woven geometric hem detail, no gold fringe or royal crown. The cloth is noticeably slimmer and simpler than an earldom standard.\nTerritory: Thaintum · Mornhall. Geography: Westliches Bergland mit einem schmaleren Talraum und den bewaldeten Ausläufern der nördlichen Höhen.. EXACT MOTIF: Eine dunkle Tanne zwischen zwei hellen Felsflanken unter einem schmalen kupfernen Mondsichelbogen auf hellem Heideviolett. Palette: Heideviolett, Eisenbraun, Kreideweiß. Keep the same right-pointing single-pennant construction.\nCORRECTION PRIORITY: Preserve this banner motif and purple/brown palette. The previous image cut off its spear shaft at the lower edge. Draw a much SHORTER spear shaft ending naturally in a rounded metal butt at 88% of the image height, with at least 80 pixels of completely transparent empty space below it. Fit every part of the entire spear AND every cloth tip well inside a square 1:1 canvas, 8% clear margins. True transparent background, NO external halo. Reference 1 is the edit target; References 2 and 3 are craft only.",
+      "references": [
+        "diagnostics/aeldrunmar/variants/mornhall-v1.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/aeldrunmar.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/kendryck.png"
+      ],
+      "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-ed0eb3a5-d5d1-48a6-801a-4fc97fee2462.png",
+      "rawTarget": "assets/generated/mornhall.png",
+      "copyExit": 0
+    },
+    {
+      "id": "glenfara",
+      "prompt": "Use case: stylized-concept. Create ONE isolated medieval Aeldrunmar heraldic field banner on a square 1024x1024 RGBA canvas. A single tapered pennant attached at its LEFT vertical edge to ONE upright spear, with its cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE long sharp point on the RIGHT. No hanging banner, horizontal crossbar, rectangular hanging tapestry, shield, swallowtail or second flag. The spearhead is complete, modest and visible above the hoist; the short visible shaft may START halfway up the canvas, it does not need to reach the bottom. Entire spearhead and right cloth point visible with clear transparent margins. Gentle coherent horizontal wind folds, large readable flat painted central motif, matte medieval pigments, restrained hand-painted gouache grain, dark fine contours. Rohan/Gondor, Anglo-Saxon and early English heraldic vocabulary. Not a photograph, CGI, glossy 3D, flat vector logo or parchment illustration. TRUE transparent PNG exterior and open gaps; cloth and spear fully opaque; no floor, shadow, scenery, horse, person, haze, lettering, numerals, captions or watermark.\nReferences define only painted heraldic craft, NOT the main motif; do not copy their horse unless explicitly required below. This is a MODEST SINGLE-DISTRICT BANNER: simpler linen or wool, narrow plain stitched edge, plain iron spear socket, small discreet woven geometric hem detail, no gold fringe or royal crown. The cloth is noticeably slimmer and simpler than an earldom standard.\nTerritory: Eigenes Thaintum des Earls · Glenfara. Geography: Der Hauptort der Earncynne steht in einer offenen, landwirtschaftlich geprägten Hügellandschaft am nördlichen Rand des Landes.. EXACT MOTIF: Eine breite goldene Gerstengarbe über drei dunkelgrünen niedrigen Hügeln auf Elfenbein, mit einem schmalen olivfarbenen Rand. Palette: Elfenbein, Goldocker, Olivgrün. Keep the same right-pointing single-pennant construction.\nCORRECTION PRIORITY: Preserve this banner motif, colours, and right-pointing shape. Reference 1 is the edit target. The previous image cut off its spear shaft at the lower edge. Draw a much SHORTER spear shaft ending naturally in a rounded iron butt at 87% of the image height, with at least 100 pixels of completely transparent empty space below it. Fit every part of the entire spear AND every cloth tip well inside a square 1:1 canvas, 8% clear margins. True transparent background, NO external halo. Keep the full original emblem.",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/variants/glenfara-v1.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/aeldrunmar.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/kendryck.png"
+      ],
+      "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-3fb80c3a-7e26-4b30-aaeb-15e64e4f1d47.png",
+      "rawTarget": "assets/generated/glenfara.png",
+      "copyExit": 0
+    },
+    {
+      "id": "hydrathar",
+      "prompt": "Use case: stylized-concept. Create ONE isolated medieval Aeldrunmar heraldic field banner on a square 1024x1024 RGBA canvas. A single tapered pennant attached at its LEFT vertical edge to ONE upright spear, with its cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE long sharp point on the RIGHT. No hanging banner, horizontal crossbar, rectangular hanging tapestry, shield, swallowtail or second flag. The spearhead is complete, modest and visible above the hoist; the short visible shaft may START halfway up the canvas, it does not need to reach the bottom. Entire spearhead and right cloth point visible with clear transparent margins. Gentle coherent horizontal wind folds, large readable flat painted central motif, matte medieval pigments, restrained hand-painted gouache grain, dark fine contours. Rohan/Gondor, Anglo-Saxon and early English heraldic vocabulary. Not a photograph, CGI, glossy 3D, flat vector logo or parchment illustration. TRUE transparent PNG exterior and open gaps; cloth and spear fully opaque; no floor, shadow, scenery, horse, person, haze, lettering, numerals, captions or watermark.\nReferences define only painted heraldic craft, NOT the main motif; do not copy their horse unless explicitly required below. This is a MODEST SINGLE-DISTRICT BANNER: simpler linen or wool, narrow plain stitched edge, plain iron spear socket, small discreet woven geometric hem detail, no gold fringe or royal crown. The cloth is noticeably slimmer and simpler than an earldom standard.\nTerritory: Thaintum · Hydrathar. Geography: Südwestliches Thaintum mit größeren Waldflächen und offenen Säumen unter den westlichen Bergen.. EXACT MOTIF: Ein silberner Hirsch vor zwei dunklen Eibenblättern auf gedämpftem Blaugrün. Palette: Blaugrün, Silber, Eibengrün. Keep the same right-pointing single-pennant construction.\nCORRECTION PRIORITY: Preserve this banner motif, colours, and right-pointing shape. Reference 1 is the edit target. The previous image cut off its spear shaft at the lower edge. Draw a much SHORTER spear shaft ending naturally in a rounded iron butt at 87% of the image height, with at least 100 pixels of completely transparent empty space below it. Fit every part of the entire spear AND every cloth tip well inside a square 1:1 canvas, 8% clear margins. True transparent background, NO external halo. Keep the full original emblem.",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/variants/hydrathar-v1.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/aeldrunmar.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/kendryck.png"
+      ],
+      "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-4cb2171c-9120-4218-97ff-3a590ff653d2.png",
+      "rawTarget": "assets/generated/hydrathar.png",
+      "copyExit": 0
+    },
+    {
+      "id": "kaldun",
+      "prompt": "Use case: stylized-concept. Create ONE isolated medieval Aeldrunmar heraldic field banner on a square 1024x1024 RGBA canvas. A single tapered pennant attached at its LEFT vertical edge to ONE upright spear, with its cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE long sharp point on the RIGHT. No hanging banner, horizontal crossbar, rectangular hanging tapestry, shield, swallowtail or second flag. The spearhead is complete, modest and visible above the hoist; the short visible shaft may START halfway up the canvas, it does not need to reach the bottom. Entire spearhead and right cloth point visible with clear transparent margins. Gentle coherent horizontal wind folds, large readable flat painted central motif, matte medieval pigments, restrained hand-painted gouache grain, dark fine contours. Rohan/Gondor, Anglo-Saxon and early English heraldic vocabulary. Not a photograph, CGI, glossy 3D, flat vector logo or parchment illustration. TRUE transparent PNG exterior and open gaps; cloth and spear fully opaque; no floor, shadow, scenery, horse, person, haze, lettering, numerals, captions or watermark.\nReferences define only painted heraldic craft, NOT the main motif; do not copy their horse unless explicitly required below. This is a MODEST SINGLE-DISTRICT BANNER: simpler linen or wool, narrow plain stitched edge, plain iron spear socket, small discreet woven geometric hem detail, no gold fringe or royal crown. The cloth is noticeably slimmer and simpler than an earldom standard.\nTerritory: Herrschaft · Kaldun. Geography: Kleine östliche Küstenherrschaft südlich von Eldramar. Ihre türkisfarbene Fläche wird dem Earltum der Fyr zugerechnet.. EXACT MOTIF: Ein heller Fisch zwischen zwei dunkelgrünen Schilfbündeln über einer kupferfarbenen Küstenlinie auf Türkis. Palette: Türkis, Elfenbein, Kupfer. Keep the same right-pointing single-pennant construction.\nCORRECTION PRIORITY: Preserve this banner motif, colours, and right-pointing shape. Reference 1 is the edit target. The previous image cut off its spear shaft at the lower edge. Draw a much SHORTER spear shaft ending naturally in a rounded iron butt at 87% of the image height, with at least 100 pixels of completely transparent empty space below it. Fit every part of the entire spear AND every cloth tip well inside a square 1:1 canvas, 8% clear margins. True transparent background, NO external halo. Keep the full original emblem.",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/variants/kaldun-v1.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/aeldrunmar.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/kendryck.png"
+      ],
+      "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-916223c5-eeb9-4f3b-9c72-451d86802b95.png",
+      "rawTarget": "assets/generated/kaldun.png",
+      "copyExit": 0
+    },
+    {
+      "id": "brymwulf",
+      "kind": "character",
+      "prompt": "Use case: precise-object-edit. Reference 1 is the edit target. Preserve the house Brymwulf warrior's exact armour, face, colours, heraldry, stance and equipment. Reframe the ENTIRE figure AND weapon inside a 1024x1536 portrait 2:3 canvas, reducing the subject to about 85% of its current size. Leave at least 60 transparent pixels of empty margin on ALL FOUR SIDES. The upper spear tip was clipped: complete its sharp leaf point and keep both spear head and lower butt inside the image. Keep one coherent weapon, both feet and complete helmet. References 2 and 3 define heraldry and matte painting style only. TRUE transparent background and open gaps; no surrounding shadow, halo, haze, scene, floor or lettering. Do not change pose or add anything.",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/variants/brymwulf-v1.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/brymwulf.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-0085961d-e050-4361-9b4b-78fd399a955a.png",
+      "rawTarget": "assets/warriors/generated/brymwulf.png",
+      "copyExit": 0
+    },
+    {
+      "id": "granger",
+      "kind": "character",
+      "prompt": "Use case: precise-object-edit. Reference 1 is the edit target. Preserve the house Granger warrior's exact armour, face, colours, heraldry, stance and equipment. Reframe the ENTIRE figure AND weapon inside a 1024x1536 portrait 2:3 canvas, reducing the subject to about 85% of its current size. Leave at least 60 transparent pixels of empty margin on ALL FOUR SIDES. The cloak at the right was clipped: show its complete outer contour and sword tip inside the image. Keep one coherent weapon, both feet and complete helmet. References 2 and 3 define heraldry and matte painting style only. TRUE transparent background and open gaps; no surrounding shadow, halo, haze, scene, floor or lettering. Do not change pose or add anything.",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/variants/granger-v1.png",
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/originals/granger.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-2dbb473d-83fc-494f-afa3-3fdc77e0037d.png",
+      "rawTarget": "assets/warriors/generated/granger.png",
+      "copyExit": 0
+    }
+  ]
+}

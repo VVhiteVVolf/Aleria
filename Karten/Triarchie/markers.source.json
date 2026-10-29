@@ -1,0 +1,319 @@
+{
+  "imageSize": [
+    2540,
+    4096
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "iathneach-dorchain",
+      "title": "Dorchain",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-dorchain",
+      "x": 777.24,
+      "y": 3420.16,
+      "href": "/Orte/grossstadt.html?id=iathneach-dorchain",
+      "residentFamilyIds": [
+        "haus-an-taghan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "dorchain",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          30.6,
+          16.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-cuansioda",
+      "title": "Cuansioda",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-cuansioda",
+      "x": 1734.82,
+      "y": 3252.224,
+      "href": "/Orte/grossstadt.html?id=iathneach-cuansioda",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "cuansioda",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          68.3,
+          20.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-fiorail",
+      "title": "Fiorail",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-fiorail",
+      "x": 401.32,
+      "y": 2883.5840000000003,
+      "href": "/Orte/grossstadt.html?id=iathneach-fiorail",
+      "residentFamilyIds": [
+        "haus-ua-guilbneach"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "fiorail",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          15.8,
+          29.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-doire-fionn",
+      "title": "Doire Fionn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-doire-fionn",
+      "x": 1122.68,
+      "y": 2916.3520000000003,
+      "href": "/Orte/grossstadt.html?id=iathneach-doire-fionn",
+      "residentFamilyIds": [
+        "haus-ruin-coilleach"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "doire-fionn",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          44.2,
+          28.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-wernheim",
+      "title": "Wernheim",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-wernheim",
+      "x": 1160.78,
+      "y": 2363.3920000000003,
+      "href": "/Orte/grossstadt.html?id=aldingen-wernheim",
+      "residentFamilyIds": [
+        "haus-hammerstein"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "wernheim",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          45.7,
+          42.3
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-erlensund",
+      "title": "Erlensund",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-erlensund",
+      "x": 1877.0600000000002,
+      "y": 2842.6240000000003,
+      "href": "/Orte/grossstadt.html?id=aldingen-erlensund",
+      "residentFamilyIds": [
+        "haus-segelbrecht"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "erlensund",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          73.9,
+          30.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-segelwacht",
+      "title": "Segelwacht",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-segelwacht",
+      "x": 2133.6,
+      "y": 2273.28,
+      "href": "/Orte/grossstadt.html?id=aldingen-segelwacht",
+      "residentFamilyIds": [
+        "haus-riemann"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "segelwacht",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          84,
+          44.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-hammertal",
+      "title": "Hammertal",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-hammertal",
+      "x": 609.6,
+      "y": 1687.5520000000001,
+      "href": "/Orte/grossstadt.html?id=aldingen-hammertal",
+      "residentFamilyIds": [
+        "haus-steinmetz"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "hammertal",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          24,
+          58.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-rottendorf",
+      "title": "Rottendorf",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-rottendorf",
+      "x": 1727.2,
+      "y": 1351.68,
+      "href": "/Orte/grossstadt.html?id=aldingen-rottendorf",
+      "residentFamilyIds": [
+        "haus-hufschlag"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "rottendorf",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          68,
+          67
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-dornheim",
+      "title": "Dornheim",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-dornheim",
+      "x": 444.5,
+      "y": 1150.9759999999997,
+      "href": "/Orte/grossstadt.html?id=aldingen-dornheim",
+      "residentFamilyIds": [
+        "haus-stahlwart"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "dornheim",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          17.5,
+          71.9
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-rothen",
+      "title": "Rothen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-rothen",
+      "x": 845.8199999999999,
+      "y": 548.8640000000003,
+      "href": "/Orte/grossstadt.html?id=aldingen-rothen",
+      "residentFamilyIds": [
+        "haus-reiff"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "rothen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          33.3,
+          86.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-hohenreede",
+      "title": "Hohenreede",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "triarchie-sitz-hohenreede",
+      "x": 1993.9,
+      "y": 278.5279999999999,
+      "href": "/Orte/grossstadt.html?id=aldingen-hohenreede",
+      "residentFamilyIds": [
+        "haus-sattler"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "hohenreede",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          78.5,
+          93.2
+        ],
+        "provisional": false
+      }
+    }
+  ]
+}

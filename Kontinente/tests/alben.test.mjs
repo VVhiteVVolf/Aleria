@@ -75,10 +75,10 @@ test('the chair links to the canonical living person, without inventing other Fi
   assert.equal(link.searchParams.get('mode'), 'view');
 });
 
-test('the twelve entries preserve unknown facts, historical Ceitheach and partially occupied Faelaorn', () => {
+test('the twelve entries preserve unknown facts, historical Ceitheach and Deitheach, and partially occupied Faelaorn', () => {
   assert.equal(principalities.length, 12);
   assert.equal(new Set(principalities.map(p => p.id)).size, 12);
-  assert.deepEqual(principalities.filter(p => p.historical).map(p => p.id), ['ceitheach']);
+  assert.deepEqual(principalities.filter(p => p.historical).map(p => p.id), ['deitheach', 'ceitheach']);
   assert.match(principalities.find(p => p.id === 'faelaorn').summary, /etwa zur Hälfte besetzt/);
   for (const p of principalities) {
     assert.ok(entries.includes(`data-principality="${p.id}"`));

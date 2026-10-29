@@ -1,0 +1,77 @@
+/* These tokens and surfaces belong only to continent overview documents. */
+html:has(> body.continent-atlas) { scrollbar-gutter: stable; }
+.continent-atlas {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0, #3b4b42, transparent 70rem), #1d2824;
+  color: #2d3931;
+  font: 16px/1.65 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+}
+.continent-page {
+  --continent-paper: #f7f3e8;
+  --continent-ink: #2d3931;
+  --continent-muted: #746f60;
+  --continent-line: #bdb198;
+  --continent-line-soft: #d8cfbd;
+  --continent-red: #834a3b;
+  --continent-green: #365549;
+  position: relative;
+  width: min(calc(100% - 48px), 1280px);
+  margin: 24px auto;
+  color: var(--continent-ink);
+}
+.continent-page :where(*, *::before, *::after) { box-sizing: border-box; }
+.continent-page :where(a) { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.continent-page :where(a, button):focus-visible { outline: 2px solid var(--continent-red); outline-offset: 5px; }
+.continent-parchment {
+  position: relative;
+  padding: 0 clamp(24px, 4vw, 52px) 24px;
+  border: 1px solid #b9ab8d;
+  border-top: 5px solid #b59a66;
+  border-radius: 3px;
+  background: url('../../assets/images/atlas-grain.svg'), linear-gradient(100deg, #fffdf63d, transparent 65%), var(--continent-paper);
+  box-shadow: 0 20px 60px #08150f55;
+}
+.atlas-folio, .atlas-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  color: var(--continent-muted);
+  font: 11px/1.5 Verdana, Arial, sans-serif;
+  letter-spacing: .1em;
+}
+.atlas-folio { min-height: 62px; border-bottom: 1px solid var(--continent-line-soft); }
+.atlas-folio > a { color: var(--continent-green); font: 700 22px/1 Georgia, serif; letter-spacing: .16em; text-transform: uppercase; }
+.atlas-folio a span { margin-left: 12px; color: var(--continent-muted); font: 9px/1.5 Verdana, sans-serif; letter-spacing: .13em; }
+.atlas-folio a, .atlas-footer a { display: inline-flex; align-items: center; min-height: 36px; text-decoration: none; }
+.atlas-footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--continent-line); }
+.atlas-footer a:hover { color: var(--continent-red); text-decoration: underline; }
+.continent-page .orte-image-slot { display: grid; place-items: center; min-width: 0; margin: 0; }
+.continent-page .orte-image-slot a { display: grid; place-items: center; width: 100%; height: 100%; }
+.continent-page .orte-image-slot img {
+  display: block;
+  width: var(--orte-image-width, 100%);
+  height: auto;
+  max-width: 100%;
+  max-height: min(var(--orte-image-max-height, 260px), var(--atlas-image-height, 260px));
+  object-fit: contain;
+  filter: drop-shadow(0 4px 3px #302c2226);
+}
+@media (max-width: 760px) {
+  .continent-page { width: calc(100% - 24px); margin-block: 12px; }
+  .continent-parchment { padding-inline: 22px; }
+  .atlas-folio { min-height: 58px; font-size: 9px; gap: 8px; }
+  .atlas-folio a span { display: none; }
+}
+@media (max-width: 440px) {
+  .continent-parchment { padding-inline: 18px; }
+  .atlas-footer { align-items: flex-start; flex-direction: column; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { .continent-page * { scroll-behavior: auto; transition: none; } }
+@media print {
+  .continent-atlas { background: white; }
+  .continent-page { width: 100%; margin: 0; }
+  .continent-parchment { border: 0; padding: 0; box-shadow: none; background: white; }
+  .atlas-continent-nav, .atlas-chapter-index, .atlas-footer { display: none; }
+}

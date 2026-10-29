@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { appendLocalIllustrations } from './local-illustrations.mjs';
+import { acceptedReferenceFamily } from './accepted-realm-references.mjs';
 
 const FAMILY_ROOT = 'Familien Häuser und Clans';
 const cleanPath = value => decodeURI(value.split(/[?#]/)[0]).replaceAll('\\', '/');
@@ -64,7 +65,7 @@ export async function collectIllustrations(root, houseCatalog, selection) {
   }
   for (const file of inventories) visit(JSON.parse(readFileSync(new URL(file, root), 'utf8')), file);
   for (const file of referenceFiles) {
-    const houseId = houseCatalog.resolveHouse(file.split('/').at(-2));
+    const houseId = houseCatalog.resolveHouse(acceptedReferenceFamily(file) || file.split('/').at(-2));
     if (!houseId) throw new Error(`Referenz ohne Haus: ${file}`);
     add({ file, houseId, name: `${houseCatalog.houses.find(h => h.id === houseId).name} · Kriegerreferenz`, category: 'Archivierte Kriegerreferenz', ...provenance.get(file), source: provenance.get(file)?.source || file });
   }

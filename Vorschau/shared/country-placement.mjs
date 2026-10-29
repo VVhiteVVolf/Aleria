@@ -20,7 +20,12 @@ export function createCountryPlacement({root,onHouse,notice},{houses,settlements
   map.render();controls.render(createMapProposal(placements));
  }
  function choose(id){selected=houses.some(h=>h.id===id)?id:null;render();}
- function move(id,seat){if(state.move(id,seat)){selected=null;save();render();notice('Sitz im Entwurf aktualisiert.');}}
+ function move(id,seat){
+  let moved;
+  try{moved=state.move(id,seat);}
+  catch(error){notice(error.message||'Diese Sitzzuordnung ist nicht möglich.');return;}
+  if(moved){selected=null;save();render();notice('Sitz im Entwurf aktualisiert.');}
+ }
  const map=createClanMap({root:root.querySelector('[data-role="map-section"]'),dialog:root.querySelector('#map-dialog'),tooltip:root.querySelector('#clan-tooltip'),getVariant:()=>createMapProposal(state.current()),escape:e,onClan:onHouse,rankLabel,rootClanLabel:'Lehnszugehörigkeit offen',caption});
  const controls=createPlacementControls({root,getSelected:()=>selected,onMove:move,escape:e,canMove:state.canMove});
  houseSelect.innerHTML='<option value="">Ein Wappen auswählen …</option>'+houses.map(h=>`<option value="${e(h.id)}">${h.clan?'Clan':'Haus'} ${e(h.name)}</option>`).join('');

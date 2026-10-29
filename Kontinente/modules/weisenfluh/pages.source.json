@@ -1,0 +1,5282 @@
+{
+  "pages": [
+    {
+      "id": "koenigreich-weisenfluh",
+      "title": "Königreich Weisenfluh",
+      "shortTitle": "Königreich Weisenfluh",
+      "type": "Königreich",
+      "kicker": "Königreich · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Lothir.html",
+      "parentLabel": "Lothir",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        }
+      ],
+      "aliases": [
+        "weisenfluh"
+      ],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weisenfluh.webp",
+      "crestAlt": "Herrschaftszeichen · Königreich Weisenfluh",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Weisenfluh war einst das albische Fürstentum Bànneach, das weiße oder helle Land. Heute führt das Haus Goldkranz die Krone des Erlenkönigs. Fünf Provinzen verbinden die königliche Domäne und die Freiherrentümer mit den örtlichen Junkern und Ministerialen."
+        ],
+        "history": [
+          "Aus Bànneach wurde Weisenfluh: Über Jahrhunderte wirkten die Kaiserstadt, die heutige Blutstadt, sowie Aldingen und Goldmund auf das Land ein. Besonders die Eliten öffneten sich ihrem Einfluss. Sprache, höfisches Selbstverständnis und Sitten wandelten sich; die führende Aristokratie versteht sich heute als weisenfluhisch."
+        ],
+        "culture": [
+          "Krone und alte Clans: Der Erlenkönig entspricht seiner tatsächlichen Machtstellung nach eher einem Fürsten. Alte albische Clans bestehen weiterhin: Einige passten ihre Namen und Lebensweisen an, andere bewahrten ihre Herkunft und verloren in langen Konflikten Besitz und Bedeutung.",
+          "Hof und Rittertum: Weisenfluh ist für höfische Pracht bekannter als für sein Kriegertum. Feine Stoffe, elegante Harnische und individuelle Helme prägen seine Ritter. Ährensass ist ein gesondert verpachtetes geistliches Ordensgebiet."
+        ],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Königreich"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Goldkranz",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz"
+            },
+            {
+              "label": "Rang",
+              "value": "Erlenkönig"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-ewigensee"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-goldkranz",
+              "name": "Haus Goldkranz",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldkranz.webp",
+              "imageAlt": "Wappen Haus Goldkranz",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz",
+              "rank": "Erlenkönig",
+              "seat": "Ewigensee",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Erlenkönig"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-rosenblueth",
+              "name": "Haus Rosenblüth",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenbluth.webp",
+              "imageAlt": "Wappen Haus Rosenblüth",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblueth",
+              "rank": "Freiherr",
+              "seat": "Ewiggrün",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-sommerfeld",
+              "name": "Haus Sommerfeld",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sommerfeld.webp",
+              "imageAlt": "Wappen Haus Sommerfeld",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sommerfeld",
+              "rank": "Freiherr",
+              "seat": "Weishort",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-silberthal",
+              "name": "Haus Silberthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/silberthal.webp",
+              "imageAlt": "Wappen Haus Silberthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-silberthal",
+              "rank": "Freiherr",
+              "seat": "Seeblick",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-weissmann",
+              "name": "Haus Weißmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissmann.webp",
+              "imageAlt": "Wappen Haus Weißmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissmann",
+              "rank": "Freiherr",
+              "seat": "Weislauf",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-ritter-der-kornahre",
+              "name": "Die Ritter der Kornähre",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/die-ritter-der-kornahre.webp",
+              "imageAlt": "Wappen Die Ritter der Kornähre",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ritter-der-kornahre",
+              "rank": "Geistlicher Ritterorden",
+              "seat": "Ährensass",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "weisenfluh-region-ewigensee",
+        "weisenfluh-region-ewiggruen",
+        "weisenfluh-region-weisshort",
+        "weisenfluh-region-seeblick",
+        "weisenfluh-region-weisslauf",
+        "weisenfluh-sitz-aehrensass"
+      ]
+    },
+    {
+      "id": "weisenfluh-region-ewigensee",
+      "title": "Königliche Provinz Ewigensee",
+      "shortTitle": "Königliche Provinz Ewigensee",
+      "type": "Königliche Provinz",
+      "kicker": "Königliche Provinz · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "parentLabel": "Königreich Weisenfluh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/province-ewigensee.webp",
+      "crestAlt": "Herrschaftszeichen · Königliche Provinz Ewigensee",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Königliche Provinz Ewigensee gehört zu Weisenfluh. Haus Goldkranz führt hier den Rang Erlenkönig mit Sitz in Ewigensee."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Königliche Provinz"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Goldkranz",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz"
+            },
+            {
+              "label": "Rang",
+              "value": "Erlenkönig"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-ewigensee"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-goldkranz",
+              "name": "Haus Goldkranz",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldkranz.webp",
+              "imageAlt": "Wappen Haus Goldkranz",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz",
+              "rank": "Erlenkönig",
+              "seat": "Ewigensee",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Erlenkönig"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-damhcallan",
+              "name": "Damhcallan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/damhcallan.webp",
+              "imageAlt": "Wappen Damhcallan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damhcallan",
+              "rank": "Junker",
+              "seat": "Hohenklamm",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-weinlaub",
+              "name": "Haus Weinlaub",
+              "imageSrc": "/Stammbäume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+              "imageAlt": "Wappen Haus Weinlaub",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weinlaub",
+              "rank": "Ministerialer",
+              "seat": "Burg Rebenwacht",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "weisenfluh-sitz-ewigensee",
+        "weisenfluh-sitz-hohenklamm",
+        "weisenfluh-sitz-rebenwacht"
+      ]
+    },
+    {
+      "id": "weisenfluh-region-ewiggruen",
+      "title": "Freiherrentum Ewiggrün",
+      "shortTitle": "Freiherrentum Ewiggrün",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "parentLabel": "Königreich Weisenfluh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/province-ewiggruen.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Ewiggrün",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Ewiggrün gehört zu Weisenfluh. Haus Rosenblüth führt hier den Rang Freiherr mit Sitz in Ewiggrün.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Rosenblüth",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblueth"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewiggrün",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-ewiggruen"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-rosenblueth",
+              "name": "Haus Rosenblüth",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenbluth.webp",
+              "imageAlt": "Wappen Haus Rosenblüth",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblueth",
+              "rank": "Freiherr",
+              "seat": "Ewiggrün",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-honigblut",
+              "name": "Haus Honigblüt",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/honigfeld.webp",
+              "imageAlt": "Wappen Haus Honigblüt",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-honigblut",
+              "rank": "Junker",
+              "seat": "Mährenfeld",
+              "liege": "Haus Rosenblüth",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "weisenfluh-sitz-ewiggruen",
+        "weisenfluh-sitz-maehrenfeld"
+      ]
+    },
+    {
+      "id": "weisenfluh-region-weisshort",
+      "title": "Freiherrentum Weishort",
+      "shortTitle": "Freiherrentum Weishort",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "parentLabel": "Königreich Weisenfluh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-region-weisshort"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/province-weisshort.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Weishort",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Weishort gehört zu Weisenfluh. Haus Sommerfeld führt hier den Rang Freiherr mit Sitz in Weishort.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Sommerfeld",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sommerfeld"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weishort",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-weisshort"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-sommerfeld",
+              "name": "Haus Sommerfeld",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sommerfeld.webp",
+              "imageAlt": "Wappen Haus Sommerfeld",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sommerfeld",
+              "rank": "Freiherr",
+              "seat": "Weishort",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-wolfenstein",
+              "name": "Haus Wolfenstein",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/wolfenstein.webp",
+              "imageAlt": "Wappen Haus Wolfenstein",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wolfenstein",
+              "rank": "Junker",
+              "seat": "Wolfrieden",
+              "liege": "Haus Sommerfeld",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-bruggemann",
+              "name": "Haus Brüggemann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/bruggemann.webp",
+              "imageAlt": "Wappen Haus Brüggemann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bruggemann",
+              "rank": "Junker",
+              "seat": "Brückenwacht",
+              "liege": "Haus Sommerfeld",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "weisenfluh-sitz-weisshort",
+        "weisenfluh-sitz-wolfrieden",
+        "weisenfluh-sitz-brueckenwacht"
+      ]
+    },
+    {
+      "id": "weisenfluh-region-seeblick",
+      "title": "Freiherrentum Seeblick",
+      "shortTitle": "Freiherrentum Seeblick",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "parentLabel": "Königreich Weisenfluh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-region-seeblick"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/province-seeblick.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Seeblick",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Seeblick gehört zu Weisenfluh. Haus Silberthal führt hier den Rang Freiherr mit Sitz in Seeblick.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Silberthal",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-silberthal"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Seeblick",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-seeblick"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-silberthal",
+              "name": "Haus Silberthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/silberthal.webp",
+              "imageAlt": "Wappen Haus Silberthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-silberthal",
+              "rank": "Freiherr",
+              "seat": "Seeblick",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-edelweiss",
+              "name": "Haus Edelweiss",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/edelweiss.webp",
+              "imageAlt": "Wappen Haus Edelweiss",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-edelweiss",
+              "rank": "Junker",
+              "seat": "Silbermundt",
+              "liege": "Haus Silberthal",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "weisenfluh-sitz-seeblick",
+        "weisenfluh-sitz-silbermundt"
+      ]
+    },
+    {
+      "id": "weisenfluh-region-weisslauf",
+      "title": "Freiherrentum Weislauf",
+      "shortTitle": "Freiherrentum Weislauf",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "parentLabel": "Königreich Weisenfluh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/province-weisslauf.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Weislauf",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Weislauf gehört zu Weisenfluh. Haus Weißmann führt hier den Rang Freiherr mit Sitz in Weislauf.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Weißmann",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissmann"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weislauf",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-weisslauf"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-weissmann",
+              "name": "Haus Weißmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissmann.webp",
+              "imageAlt": "Wappen Haus Weißmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissmann",
+              "rank": "Freiherr",
+              "seat": "Weislauf",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-sgaireag",
+              "name": "Sgàireag",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sgaireag.webp",
+              "imageAlt": "Wappen Sgàireag",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sgaireag",
+              "rank": "Junker",
+              "seat": "Weissklippe",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-thalmann",
+              "name": "Haus Thalmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/thalmann.webp",
+              "imageAlt": "Wappen Haus Thalmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-thalmann",
+              "rank": "Junker",
+              "seat": "Weissthal",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-otterberg",
+              "name": "Haus Otterberg",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/otterberg.webp",
+              "imageAlt": "Wappen Haus Otterberg",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-otterberg",
+              "rank": "Junker",
+              "seat": "Ottersburg",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-sonnenfels",
+              "name": "Haus Sonnenfels",
+              "imageSrc": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+              "imageAlt": "Wappen Haus Sonnenfels",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfels",
+              "rank": "Ministerialer",
+              "seat": "Burg Sonnenfels",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "weisenfluh-sitz-weisslauf",
+        "weisenfluh-sitz-weissklippe",
+        "weisenfluh-sitz-weissthal",
+        "weisenfluh-sitz-ottersburg",
+        "weisenfluh-sitz-sonnenfels"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-ewigensee",
+      "title": "Königliche Domäne Ewigensee",
+      "shortTitle": "Königliche Domäne Ewigensee",
+      "type": "Königliche Domäne",
+      "kicker": "Königliche Domäne · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html",
+      "parentLabel": "Königliche Provinz Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Königliche Domäne",
+          "name": "Königliche Domäne Ewigensee",
+          "slug": "weisenfluh-sitz-ewigensee"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/ewigensee.webp",
+      "crestAlt": "Herrschaftszeichen · Königliche Domäne Ewigensee",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Königliche Domäne Ewigensee gehört zu Weisenfluh. Haus Goldkranz führt hier den Rang Erlenkönig mit Sitz in Ewigensee."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Königliche Domäne"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Goldkranz",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz"
+            },
+            {
+              "label": "Rang",
+              "value": "Erlenkönig"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-ewigensee"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Provinz Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-goldkranz",
+              "name": "Haus Goldkranz",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldkranz.webp",
+              "imageAlt": "Wappen Haus Goldkranz",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz",
+              "rank": "Erlenkönig",
+              "seat": "Ewigensee",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Erlenkönig"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-borgenicht",
+              "name": "Haus Borgenicht",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/borgenicht.webp",
+              "imageAlt": "Wappen Haus Borgenicht",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-borgenicht",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-goldberg",
+              "name": "Haus Goldberg",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldberg.webp",
+              "imageAlt": "Wappen Haus Goldberg",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldberg",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-immergluck",
+              "name": "Haus Immerglück",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/immergluck.webp",
+              "imageAlt": "Wappen Haus Immerglück",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-immergluck",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-kaltwasser",
+              "name": "Haus Kaltwasser",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/kaltwasser.webp",
+              "imageAlt": "Wappen Haus Kaltwasser",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kaltwasser",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-ewigensee",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-ewigensee"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-borgenicht",
+        "weisenfluh-hausbereich-goldberg",
+        "weisenfluh-hausbereich-immergluck",
+        "weisenfluh-hausbereich-kaltwasser"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-ewiggruen",
+      "title": "Freiherrentum Ewiggrün",
+      "shortTitle": "Freiherrentum Ewiggrün",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewiggruen/index.html",
+      "parentLabel": "Freiherrentum Ewiggrün",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-sitz-ewiggruen"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/ewiggruen.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Ewiggrün",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Ewiggrün gehört zu Weisenfluh. Haus Rosenblüth führt hier den Rang Freiherr mit Sitz in Ewiggrün.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Rosenblüth",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblueth"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewiggrün",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-ewiggruen"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Ewiggrün",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewiggruen/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-rosenblueth",
+              "name": "Haus Rosenblüth",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenbluth.webp",
+              "imageAlt": "Wappen Haus Rosenblüth",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblueth",
+              "rank": "Freiherr",
+              "seat": "Ewiggrün",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-catrannoch",
+              "name": "Catrannoch",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/catrannoch.webp",
+              "imageAlt": "Wappen Catrannoch",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-catrannoch",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-cnagallan",
+              "name": "Cnagallan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/cnagallan.webp",
+              "imageAlt": "Wappen Cnagallan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cnagallan",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-blumenthal",
+              "name": "Haus Blumenthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/blumenthal.webp",
+              "imageAlt": "Wappen Haus Blumenthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-blumenthal",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-rosenstolz",
+              "name": "Haus Rosenstolz",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenstolz.webp",
+              "imageAlt": "Wappen Haus Rosenstolz",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenstolz",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-ewiggruen",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-ewiggruen"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-catrannoch",
+        "weisenfluh-hausbereich-cnagallan",
+        "weisenfluh-hausbereich-blumenthal",
+        "weisenfluh-hausbereich-rosenstolz"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-weisshort",
+      "title": "Freiherrentum Weishort",
+      "shortTitle": "Freiherrentum Weishort",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html",
+      "parentLabel": "Freiherrentum Weishort",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-region-weisshort"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-sitz-weisshort"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/weisshort.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Weishort",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Weishort gehört zu Weisenfluh. Haus Sommerfeld führt hier den Rang Freiherr mit Sitz in Weishort.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Sommerfeld",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sommerfeld"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weishort",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-weisshort"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weishort",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-sommerfeld",
+              "name": "Haus Sommerfeld",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sommerfeld.webp",
+              "imageAlt": "Wappen Haus Sommerfeld",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sommerfeld",
+              "rank": "Freiherr",
+              "seat": "Weishort",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-feuerstein",
+              "name": "Haus Feuerstein",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/feuerstein.webp",
+              "imageAlt": "Wappen Haus Feuerstein",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-feuerstein",
+              "rank": "Junker",
+              "seat": "Weishort",
+              "liege": "Haus Sommerfeld",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-sonnenfeld",
+              "name": "Haus Sonnenfeld",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sonnenfeld.webp",
+              "imageAlt": "Wappen Haus Sonnenfeld",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfeld",
+              "rank": "Junker",
+              "seat": "Weishort",
+              "liege": "Haus Sommerfeld",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-weisshort",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-weisshort"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-feuerstein",
+        "weisenfluh-hausbereich-sonnenfeld"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-seeblick",
+      "title": "Freiherrentum Seeblick",
+      "shortTitle": "Freiherrentum Seeblick",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-seeblick/index.html",
+      "parentLabel": "Freiherrentum Seeblick",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-region-seeblick"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-sitz-seeblick"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/seeblick.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Seeblick",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Seeblick gehört zu Weisenfluh. Haus Silberthal führt hier den Rang Freiherr mit Sitz in Seeblick.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Silberthal",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-silberthal"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Seeblick",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-seeblick"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Seeblick",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-seeblick/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-silberthal",
+              "name": "Haus Silberthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/silberthal.webp",
+              "imageAlt": "Wappen Haus Silberthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-silberthal",
+              "rank": "Freiherr",
+              "seat": "Seeblick",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-freudenthal",
+              "name": "Haus Freudenthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/freudenthal.webp",
+              "imageAlt": "Wappen Haus Freudenthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-freudenthal",
+              "rank": "Junker",
+              "seat": "Seeblick",
+              "liege": "Haus Silberthal",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-rosenblatt",
+              "name": "Haus Rosenblatt",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenblatt.webp",
+              "imageAlt": "Wappen Haus Rosenblatt",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblatt",
+              "rank": "Junker",
+              "seat": "Seeblick",
+              "liege": "Haus Silberthal",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-seeblick",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-seeblick"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-freudenthal",
+        "weisenfluh-hausbereich-rosenblatt"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-weisslauf",
+      "title": "Freiherrentum Weislauf",
+      "shortTitle": "Freiherrentum Weislauf",
+      "type": "Freiherrentum",
+      "kicker": "Freiherrentum · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-sitz-weisslauf"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/weisslauf.webp",
+      "crestAlt": "Herrschaftszeichen · Freiherrentum Weislauf",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Freiherrentum Weislauf gehört zu Weisenfluh. Haus Weißmann führt hier den Rang Freiherr mit Sitz in Weislauf.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Freiherrentum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Weißmann",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissmann"
+            },
+            {
+              "label": "Rang",
+              "value": "Freiherr"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weislauf",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-weisslauf"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-weissmann",
+              "name": "Haus Weißmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissmann.webp",
+              "imageAlt": "Wappen Haus Weißmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissmann",
+              "rank": "Freiherr",
+              "seat": "Weislauf",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Freiherr"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-torcradan",
+              "name": "Torcradan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/torcradan.webp",
+              "imageAlt": "Wappen Torcradan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-torcradan",
+              "rank": "Junker",
+              "seat": "Weislauf",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-weizmann",
+              "name": "Haus Weizmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weizmann.webp",
+              "imageAlt": "Wappen Haus Weizmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weizmann",
+              "rank": "Junker",
+              "seat": "Weislauf",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-weissberg",
+              "name": "Haus Weißberg",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissberg.webp",
+              "imageAlt": "Wappen Haus Weißberg",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissberg",
+              "rank": "Junker",
+              "seat": "Weislauf",
+              "liege": "Haus Weißmann",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-weisslauf",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-weisslauf"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-torcradan",
+        "weisenfluh-hausbereich-weizmann",
+        "weisenfluh-hausbereich-weissberg"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-wolfrieden",
+      "title": "Junkerherrschaft Wolfrieden",
+      "shortTitle": "Junkerherrschaft Wolfrieden",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html",
+      "parentLabel": "Freiherrentum Weishort",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-region-weisshort"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Wolfrieden",
+          "slug": "weisenfluh-sitz-wolfrieden"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/wolfrieden.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Wolfrieden",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Wolfrieden gehört zu Weisenfluh. Haus Wolfenstein führt hier den Rang Junker mit Sitz in Wolfrieden.",
+          "Unmittelbarer Lehnsherr ist Haus Sommerfeld."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Wolfenstein",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wolfenstein"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Wolfrieden",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-wolfrieden"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weishort",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-wolfenstein",
+              "name": "Haus Wolfenstein",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/wolfenstein.webp",
+              "imageAlt": "Wappen Haus Wolfenstein",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wolfenstein",
+              "rank": "Junker",
+              "seat": "Wolfrieden",
+              "liege": "Haus Sommerfeld",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-wolfrieden",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-wolfrieden"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-brueckenwacht",
+      "title": "Junkerherrschaft Brückenwacht",
+      "shortTitle": "Junkerherrschaft Brückenwacht",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html",
+      "parentLabel": "Freiherrentum Weishort",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-region-weisshort"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Brückenwacht",
+          "slug": "weisenfluh-sitz-brueckenwacht"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/brueckenwacht.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Brückenwacht",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Brückenwacht gehört zu Weisenfluh. Haus Brüggemann führt hier den Rang Junker mit Sitz in Brückenwacht.",
+          "Unmittelbarer Lehnsherr ist Haus Sommerfeld."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Brüggemann",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bruggemann"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Brückenwacht",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-brueckenwacht"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weishort",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-bruggemann",
+              "name": "Haus Brüggemann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/bruggemann.webp",
+              "imageAlt": "Wappen Haus Brüggemann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bruggemann",
+              "rank": "Junker",
+              "seat": "Brückenwacht",
+              "liege": "Haus Sommerfeld",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-brueckenwacht",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-brueckenwacht"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-silbermundt",
+      "title": "Junkerherrschaft Silbermundt",
+      "shortTitle": "Junkerherrschaft Silbermundt",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-seeblick/index.html",
+      "parentLabel": "Freiherrentum Seeblick",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-region-seeblick"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Silbermundt",
+          "slug": "weisenfluh-sitz-silbermundt"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/silbermundt.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Silbermundt",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Silbermundt gehört zu Weisenfluh. Haus Edelweiss führt hier den Rang Junker mit Sitz in Silbermundt.",
+          "Unmittelbarer Lehnsherr ist Haus Silberthal."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Edelweiss",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-edelweiss"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Silbermundt",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-silbermundt"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Seeblick",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-seeblick/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-edelweiss",
+              "name": "Haus Edelweiss",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/edelweiss.webp",
+              "imageAlt": "Wappen Haus Edelweiss",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-edelweiss",
+              "rank": "Junker",
+              "seat": "Silbermundt",
+              "liege": "Haus Silberthal",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-silbermundt",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-silbermundt"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-weissklippe",
+      "title": "Junkerherrschaft Weissklippe",
+      "shortTitle": "Junkerherrschaft Weissklippe",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Weissklippe",
+          "slug": "weisenfluh-sitz-weissklippe"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/weissklippe.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Weissklippe",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Weissklippe gehört zu Weisenfluh. Sgàireag führt hier den Rang Junker mit Sitz in Weissklippe.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Sgàireag",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sgaireag"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weissklippe",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-weissklippe"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-sgaireag",
+              "name": "Sgàireag",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sgaireag.webp",
+              "imageAlt": "Wappen Sgàireag",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sgaireag",
+              "rank": "Junker",
+              "seat": "Weissklippe",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-weissklippe",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-weissklippe"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-weissthal",
+      "title": "Junkerherrschaft Weissthal",
+      "shortTitle": "Junkerherrschaft Weissthal",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Weissthal",
+          "slug": "weisenfluh-sitz-weissthal"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/weissthal.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Weissthal",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Weissthal gehört zu Weisenfluh. Haus Thalmann führt hier den Rang Junker mit Sitz in Weissthal.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Thalmann",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-thalmann"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weissthal",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-weissthal"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-thalmann",
+              "name": "Haus Thalmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/thalmann.webp",
+              "imageAlt": "Wappen Haus Thalmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-thalmann",
+              "rank": "Junker",
+              "seat": "Weissthal",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-weissthal",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-weissthal"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-ottersburg",
+      "title": "Junkerherrschaft Ottersburg",
+      "shortTitle": "Junkerherrschaft Ottersburg",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Ottersburg",
+          "slug": "weisenfluh-sitz-ottersburg"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/ottersburg.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Ottersburg",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Ottersburg gehört zu Weisenfluh. Haus Otterberg führt hier den Rang Junker mit Sitz in Ottersburg.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Otterberg",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-otterberg"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ottersburg",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-ottersburg"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-otterberg",
+              "name": "Haus Otterberg",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/otterberg.webp",
+              "imageAlt": "Wappen Haus Otterberg",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-otterberg",
+              "rank": "Junker",
+              "seat": "Ottersburg",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-ottersburg",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-ottersburg"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-hohenklamm",
+      "title": "Junkerherrschaft Hohenklamm",
+      "shortTitle": "Junkerherrschaft Hohenklamm",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html",
+      "parentLabel": "Königliche Provinz Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Hohenklamm",
+          "slug": "weisenfluh-sitz-hohenklamm"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/hohenklamm.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Hohenklamm",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Hohenklamm gehört zu Weisenfluh. Damhcallan führt hier den Rang Junker mit Sitz in Hohenklamm.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Damhcallan",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damhcallan"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Hohenklamm",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-hohenklamm"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Provinz Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-damhcallan",
+              "name": "Damhcallan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/damhcallan.webp",
+              "imageAlt": "Wappen Damhcallan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damhcallan",
+              "rank": "Junker",
+              "seat": "Hohenklamm",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-taghradan",
+              "name": "Taghradan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/taghradan.webp",
+              "imageAlt": "Wappen Taghradan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-taghradan",
+              "rank": "Ministerialer",
+              "seat": "Hohenklamm",
+              "liege": "Damhcallan",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-hohenklamm",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-hohenklamm"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-taghradan"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-maehrenfeld",
+      "title": "Junkerherrschaft Mährenfeld",
+      "shortTitle": "Junkerherrschaft Mährenfeld",
+      "type": "Junkerherrschaft",
+      "kicker": "Junkerherrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewiggruen/index.html",
+      "parentLabel": "Freiherrentum Ewiggrün",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Mährenfeld",
+          "slug": "weisenfluh-sitz-maehrenfeld"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/maehrenfeld.webp",
+      "crestAlt": "Herrschaftszeichen · Junkerherrschaft Mährenfeld",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Junkerherrschaft Mährenfeld gehört zu Weisenfluh. Haus Honigblüt führt hier den Rang Junker mit Sitz in Mährenfeld.",
+          "Unmittelbarer Lehnsherr ist Haus Rosenblüth."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Junkerherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Honigblüt",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-honigblut"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Mährenfeld",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-maehrenfeld"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Ewiggrün",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewiggruen/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-honigblut",
+              "name": "Haus Honigblüt",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/honigfeld.webp",
+              "imageAlt": "Wappen Haus Honigblüt",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-honigblut",
+              "rank": "Junker",
+              "seat": "Mährenfeld",
+              "liege": "Haus Rosenblüth",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-iorcallan",
+              "name": "Iorcallan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/iorcallan.webp",
+              "imageAlt": "Wappen Iorcallan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-iorcallan",
+              "rank": "Ministerialer",
+              "seat": "Mährenfeld",
+              "liege": "Haus Honigblüt",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-maehrenfeld",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-maehrenfeld"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "weisenfluh-hausbereich-iorcallan"
+      ]
+    },
+    {
+      "id": "weisenfluh-sitz-aehrensass",
+      "title": "Ordensgebiet Ährensass",
+      "shortTitle": "Ordensgebiet Ährensass",
+      "type": "Ordensgebiet",
+      "kicker": "Ordensgebiet · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "parentLabel": "Königreich Weisenfluh",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Ordensgebiet",
+          "name": "Ordensgebiet Ährensass",
+          "slug": "weisenfluh-sitz-aehrensass"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/weisenfluh/aehrensass.webp",
+      "crestAlt": "Herrschaftszeichen · Ordensgebiet Ährensass",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Ordensgebiet Ährensass gehört zu Weisenfluh. Die Ritter der Kornähre führt hier den Rang Geistlicher Ritterorden mit Sitz in Ährensass."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ordensgebiet"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Die Ritter der Kornähre",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ritter-der-kornahre"
+            },
+            {
+              "label": "Rang",
+              "value": "Geistlicher Ritterorden"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ährensass",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-aehrensass"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-ritter-der-kornahre",
+              "name": "Die Ritter der Kornähre",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/die-ritter-der-kornahre.webp",
+              "imageAlt": "Wappen Die Ritter der Kornähre",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ritter-der-kornahre",
+              "rank": "Geistlicher Ritterorden",
+              "seat": "Ährensass",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Geistlicher Ritterorden"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-aehrensass",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-aehrensass"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-rebenwacht",
+      "title": "Ministerialensitz Burg Rebenwacht",
+      "shortTitle": "Ministerialensitz Burg Rebenwacht",
+      "type": "Ministerialensitz",
+      "kicker": "Ministerialensitz · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html",
+      "parentLabel": "Königliche Provinz Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Ministerialensitz",
+          "name": "Ministerialensitz Burg Rebenwacht",
+          "slug": "weisenfluh-sitz-rebenwacht"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+      "crestAlt": "Herrschaftszeichen · Ministerialensitz Burg Rebenwacht",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Ministerialensitz Burg Rebenwacht gehört zu Weisenfluh. Haus Weinlaub führt hier den Rang Ministerialer mit Sitz in Burg Rebenwacht.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz.",
+          "Das Ministerialenhaus versieht den Dienst innerhalb der übergeordneten Herrschaft. Eine eigenständige Landeshoheit ist damit nicht verbunden."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Burg Rebenwacht liegt nahe Ewigensee. Die Kartenposition ist vorläufig.",
+          "Die Kartenposition dieses Sitzes ist vorläufig und wird mit der nächsten Detailkarte präzisiert."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ministerialensitz"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Weinlaub",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weinlaub"
+            },
+            {
+              "label": "Rang",
+              "value": "Ministerialer"
+            },
+            {
+              "label": "Sitz",
+              "value": "Burg Rebenwacht",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-rebenwacht"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Provinz Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-weinlaub",
+              "name": "Haus Weinlaub",
+              "imageSrc": "/Stammbäume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+              "imageAlt": "Wappen Haus Weinlaub",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weinlaub",
+              "rank": "Ministerialer",
+              "seat": "Burg Rebenwacht",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Ministerialer"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-rebenwacht",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-rebenwacht"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-sitz-sonnenfels",
+      "title": "Ministerialensitz Burg Sonnenfels",
+      "shortTitle": "Ministerialensitz Burg Sonnenfels",
+      "type": "Ministerialensitz",
+      "kicker": "Ministerialensitz · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Ministerialensitz",
+          "name": "Ministerialensitz Burg Sonnenfels",
+          "slug": "weisenfluh-sitz-sonnenfels"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+      "crestAlt": "Herrschaftszeichen · Ministerialensitz Burg Sonnenfels",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Ministerialensitz Burg Sonnenfels gehört zu Weisenfluh. Haus Sonnenfels führt hier den Rang Ministerialer mit Sitz in Burg Sonnenfels.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann.",
+          "Das Ministerialenhaus versieht den Dienst innerhalb der übergeordneten Herrschaft. Eine eigenständige Landeshoheit ist damit nicht verbunden."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Burg Sonnenfels liegt im südlichen Weislauf. Das Ministerialenhaus Sonnenfels untersteht dem Haus Weißmann; die genaue Kartenposition ist vorläufig.",
+          "Die Kartenposition dieses Sitzes ist vorläufig und wird mit der nächsten Detailkarte präzisiert."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ministerialensitz"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Sonnenfels",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfels"
+            },
+            {
+              "label": "Rang",
+              "value": "Ministerialer"
+            },
+            {
+              "label": "Sitz",
+              "value": "Burg Sonnenfels",
+              "href": "/Orte/grossstadt.html?id=weisenfluh-sonnenfels"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-sonnenfels",
+              "name": "Haus Sonnenfels",
+              "imageSrc": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+              "imageAlt": "Wappen Haus Sonnenfels",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfels",
+              "rank": "Ministerialer",
+              "seat": "Burg Sonnenfels",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Ministerialer"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "weisenfluh-sitz-sonnenfels",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "weisenfluh-sonnenfels"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-catrannoch",
+      "title": "Herrschaft Catrannoch in Ewiggrün",
+      "shortTitle": "Herrschaft Catrannoch in Ewiggrün",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html",
+      "parentLabel": "Freiherrentum Ewiggrün",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-sitz-ewiggruen"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Catrannoch in Ewiggrün",
+          "slug": "weisenfluh-hausbereich-catrannoch"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/catrannoch.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Catrannoch in Ewiggrün",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Catrannoch in Ewiggrün gehört zu Weisenfluh. Catrannoch führt hier den Rang Junker mit Sitz in Ewiggrün.",
+          "Unmittelbarer Lehnsherr ist Haus Rosenblüth.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Catrannoch",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-catrannoch"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewiggrün"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Ewiggrün",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-catrannoch",
+              "name": "Catrannoch",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/catrannoch.webp",
+              "imageAlt": "Wappen Catrannoch",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-catrannoch",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-cnagallan",
+      "title": "Herrschaft Cnagallan in Ewiggrün",
+      "shortTitle": "Herrschaft Cnagallan in Ewiggrün",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html",
+      "parentLabel": "Freiherrentum Ewiggrün",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-sitz-ewiggruen"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Cnagallan in Ewiggrün",
+          "slug": "weisenfluh-hausbereich-cnagallan"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/cnagallan.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Cnagallan in Ewiggrün",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Cnagallan in Ewiggrün gehört zu Weisenfluh. Cnagallan führt hier den Rang Junker mit Sitz in Ewiggrün.",
+          "Unmittelbarer Lehnsherr ist Haus Rosenblüth.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Cnagallan",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cnagallan"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewiggrün"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Ewiggrün",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-cnagallan",
+              "name": "Cnagallan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/cnagallan.webp",
+              "imageAlt": "Wappen Cnagallan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cnagallan",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-iorcallan",
+      "title": "Hausdienst Iorcallan in Mährenfeld",
+      "shortTitle": "Hausdienst Iorcallan in Mährenfeld",
+      "type": "Ministerialenhaus",
+      "kicker": "Ministerialenhaus · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-maehrenfeld/index.html",
+      "parentLabel": "Junkerherrschaft Mährenfeld",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Mährenfeld",
+          "slug": "weisenfluh-sitz-maehrenfeld"
+        },
+        {
+          "type": "Ministerialenhaus",
+          "name": "Hausdienst Iorcallan in Mährenfeld",
+          "slug": "weisenfluh-hausbereich-iorcallan"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/iorcallan.webp",
+      "crestAlt": "Herrschaftszeichen · Hausdienst Iorcallan in Mährenfeld",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Hausdienst Iorcallan in Mährenfeld gehört zu Weisenfluh. Iorcallan führt hier den Rang Ministerialer mit Sitz in Mährenfeld.",
+          "Unmittelbarer Lehnsherr ist Haus Honigblüt.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen.",
+          "Das Ministerialenhaus versieht den Dienst innerhalb der übergeordneten Herrschaft. Eine eigenständige Landeshoheit ist damit nicht verbunden."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ministerialenhaus"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Iorcallan",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-iorcallan"
+            },
+            {
+              "label": "Rang",
+              "value": "Ministerialer"
+            },
+            {
+              "label": "Sitz",
+              "value": "Mährenfeld"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Junkerherrschaft Mährenfeld",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-maehrenfeld/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-iorcallan",
+              "name": "Iorcallan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/iorcallan.webp",
+              "imageAlt": "Wappen Iorcallan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-iorcallan",
+              "rank": "Ministerialer",
+              "seat": "Mährenfeld",
+              "liege": "Haus Honigblüt",
+              "featured": true,
+              "featuredLabel": "Ministerialer"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-taghradan",
+      "title": "Hausdienst Taghradan in Hohenklamm",
+      "shortTitle": "Hausdienst Taghradan in Hohenklamm",
+      "type": "Ministerialenhaus",
+      "kicker": "Ministerialenhaus · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-hohenklamm/index.html",
+      "parentLabel": "Junkerherrschaft Hohenklamm",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Junkerherrschaft",
+          "name": "Junkerherrschaft Hohenklamm",
+          "slug": "weisenfluh-sitz-hohenklamm"
+        },
+        {
+          "type": "Ministerialenhaus",
+          "name": "Hausdienst Taghradan in Hohenklamm",
+          "slug": "weisenfluh-hausbereich-taghradan"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/taghradan.webp",
+      "crestAlt": "Herrschaftszeichen · Hausdienst Taghradan in Hohenklamm",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Hausdienst Taghradan in Hohenklamm gehört zu Weisenfluh. Taghradan führt hier den Rang Ministerialer mit Sitz in Hohenklamm.",
+          "Unmittelbarer Lehnsherr ist Damhcallan.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen.",
+          "Das Ministerialenhaus versieht den Dienst innerhalb der übergeordneten Herrschaft. Eine eigenständige Landeshoheit ist damit nicht verbunden."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ministerialenhaus"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Taghradan",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-taghradan"
+            },
+            {
+              "label": "Rang",
+              "value": "Ministerialer"
+            },
+            {
+              "label": "Sitz",
+              "value": "Hohenklamm"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Junkerherrschaft Hohenklamm",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-hohenklamm/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-taghradan",
+              "name": "Taghradan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/taghradan.webp",
+              "imageAlt": "Wappen Taghradan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-taghradan",
+              "rank": "Ministerialer",
+              "seat": "Hohenklamm",
+              "liege": "Damhcallan",
+              "featured": true,
+              "featuredLabel": "Ministerialer"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-torcradan",
+      "title": "Herrschaft Torcradan in Weislauf",
+      "shortTitle": "Herrschaft Torcradan in Weislauf",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-sitz-weisslauf"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Torcradan in Weislauf",
+          "slug": "weisenfluh-hausbereich-torcradan"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/torcradan.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Torcradan in Weislauf",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Torcradan in Weislauf gehört zu Weisenfluh. Torcradan führt hier den Rang Junker mit Sitz in Weislauf.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Torcradan",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-torcradan"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weislauf"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-torcradan",
+              "name": "Torcradan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/torcradan.webp",
+              "imageAlt": "Wappen Torcradan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-torcradan",
+              "rank": "Junker",
+              "seat": "Weislauf",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-blumenthal",
+      "title": "Herrschaft Haus Blumenthal in Ewiggrün",
+      "shortTitle": "Herrschaft Haus Blumenthal in Ewiggrün",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html",
+      "parentLabel": "Freiherrentum Ewiggrün",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-sitz-ewiggruen"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Blumenthal in Ewiggrün",
+          "slug": "weisenfluh-hausbereich-blumenthal"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/blumenthal.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Blumenthal in Ewiggrün",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Blumenthal in Ewiggrün gehört zu Weisenfluh. Haus Blumenthal führt hier den Rang Junker mit Sitz in Ewiggrün.",
+          "Unmittelbarer Lehnsherr ist Haus Rosenblüth.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Blumenthal",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-blumenthal"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewiggrün"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Ewiggrün",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-blumenthal",
+              "name": "Haus Blumenthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/blumenthal.webp",
+              "imageAlt": "Wappen Haus Blumenthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-blumenthal",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-rosenstolz",
+      "title": "Herrschaft Haus Rosenstolz in Ewiggrün",
+      "shortTitle": "Herrschaft Haus Rosenstolz in Ewiggrün",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html",
+      "parentLabel": "Freiherrentum Ewiggrün",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-region-ewiggruen"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Ewiggrün",
+          "slug": "weisenfluh-sitz-ewiggruen"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Rosenstolz in Ewiggrün",
+          "slug": "weisenfluh-hausbereich-rosenstolz"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenstolz.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Rosenstolz in Ewiggrün",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Rosenstolz in Ewiggrün gehört zu Weisenfluh. Haus Rosenstolz führt hier den Rang Junker mit Sitz in Ewiggrün.",
+          "Unmittelbarer Lehnsherr ist Haus Rosenblüth.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Rosenstolz",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenstolz"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewiggrün"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Ewiggrün",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-rosenstolz",
+              "name": "Haus Rosenstolz",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenstolz.webp",
+              "imageAlt": "Wappen Haus Rosenstolz",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenstolz",
+              "rank": "Junker",
+              "seat": "Ewiggrün",
+              "liege": "Haus Rosenblüth",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-freudenthal",
+      "title": "Herrschaft Haus Freudenthal in Seeblick",
+      "shortTitle": "Herrschaft Haus Freudenthal in Seeblick",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-seeblick/index.html",
+      "parentLabel": "Freiherrentum Seeblick",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-region-seeblick"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-sitz-seeblick"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Freudenthal in Seeblick",
+          "slug": "weisenfluh-hausbereich-freudenthal"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/freudenthal.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Freudenthal in Seeblick",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Freudenthal in Seeblick gehört zu Weisenfluh. Haus Freudenthal führt hier den Rang Junker mit Sitz in Seeblick.",
+          "Unmittelbarer Lehnsherr ist Haus Silberthal.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Freudenthal",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-freudenthal"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Seeblick"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Seeblick",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-seeblick/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-freudenthal",
+              "name": "Haus Freudenthal",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/freudenthal.webp",
+              "imageAlt": "Wappen Haus Freudenthal",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-freudenthal",
+              "rank": "Junker",
+              "seat": "Seeblick",
+              "liege": "Haus Silberthal",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-rosenblatt",
+      "title": "Herrschaft Haus Rosenblatt in Seeblick",
+      "shortTitle": "Herrschaft Haus Rosenblatt in Seeblick",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-seeblick/index.html",
+      "parentLabel": "Freiherrentum Seeblick",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-region-seeblick"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Seeblick",
+          "slug": "weisenfluh-sitz-seeblick"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Rosenblatt in Seeblick",
+          "slug": "weisenfluh-hausbereich-rosenblatt"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenblatt.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Rosenblatt in Seeblick",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Rosenblatt in Seeblick gehört zu Weisenfluh. Haus Rosenblatt führt hier den Rang Junker mit Sitz in Seeblick.",
+          "Unmittelbarer Lehnsherr ist Haus Silberthal.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Rosenblatt",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblatt"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Seeblick"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Seeblick",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-seeblick/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-rosenblatt",
+              "name": "Haus Rosenblatt",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenblatt.webp",
+              "imageAlt": "Wappen Haus Rosenblatt",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblatt",
+              "rank": "Junker",
+              "seat": "Seeblick",
+              "liege": "Haus Silberthal",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-feuerstein",
+      "title": "Herrschaft Haus Feuerstein in Weishort",
+      "shortTitle": "Herrschaft Haus Feuerstein in Weishort",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisshort/index.html",
+      "parentLabel": "Freiherrentum Weishort",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-region-weisshort"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-sitz-weisshort"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Feuerstein in Weishort",
+          "slug": "weisenfluh-hausbereich-feuerstein"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/feuerstein.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Feuerstein in Weishort",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Feuerstein in Weishort gehört zu Weisenfluh. Haus Feuerstein führt hier den Rang Junker mit Sitz in Weishort.",
+          "Unmittelbarer Lehnsherr ist Haus Sommerfeld.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Feuerstein",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-feuerstein"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weishort"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weishort",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisshort/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-feuerstein",
+              "name": "Haus Feuerstein",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/feuerstein.webp",
+              "imageAlt": "Wappen Haus Feuerstein",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-feuerstein",
+              "rank": "Junker",
+              "seat": "Weishort",
+              "liege": "Haus Sommerfeld",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-sonnenfeld",
+      "title": "Herrschaft Haus Sonnenfeld in Weishort",
+      "shortTitle": "Herrschaft Haus Sonnenfeld in Weishort",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisshort/index.html",
+      "parentLabel": "Freiherrentum Weishort",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-region-weisshort"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weishort",
+          "slug": "weisenfluh-sitz-weisshort"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Sonnenfeld in Weishort",
+          "slug": "weisenfluh-hausbereich-sonnenfeld"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sonnenfeld.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Sonnenfeld in Weishort",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Sonnenfeld in Weishort gehört zu Weisenfluh. Haus Sonnenfeld führt hier den Rang Junker mit Sitz in Weishort.",
+          "Unmittelbarer Lehnsherr ist Haus Sommerfeld.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Sonnenfeld",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfeld"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weishort"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weishort",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisshort/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-sonnenfeld",
+              "name": "Haus Sonnenfeld",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sonnenfeld.webp",
+              "imageAlt": "Wappen Haus Sonnenfeld",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfeld",
+              "rank": "Junker",
+              "seat": "Weishort",
+              "liege": "Haus Sommerfeld",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-weizmann",
+      "title": "Herrschaft Haus Weizmann in Weislauf",
+      "shortTitle": "Herrschaft Haus Weizmann in Weislauf",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-sitz-weisslauf"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Weizmann in Weislauf",
+          "slug": "weisenfluh-hausbereich-weizmann"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weizmann.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Weizmann in Weislauf",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Weizmann in Weislauf gehört zu Weisenfluh. Haus Weizmann führt hier den Rang Junker mit Sitz in Weislauf.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Weizmann",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weizmann"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weislauf"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-weizmann",
+              "name": "Haus Weizmann",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weizmann.webp",
+              "imageAlt": "Wappen Haus Weizmann",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weizmann",
+              "rank": "Junker",
+              "seat": "Weislauf",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-weissberg",
+      "title": "Herrschaft Haus Weißberg in Weislauf",
+      "shortTitle": "Herrschaft Haus Weißberg in Weislauf",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html",
+      "parentLabel": "Freiherrentum Weislauf",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-region-weisslauf"
+        },
+        {
+          "type": "Freiherrentum",
+          "name": "Freiherrentum Weislauf",
+          "slug": "weisenfluh-sitz-weisslauf"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Weißberg in Weislauf",
+          "slug": "weisenfluh-hausbereich-weissberg"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissberg.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Weißberg in Weislauf",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Weißberg in Weislauf gehört zu Weisenfluh. Haus Weißberg führt hier den Rang Junker mit Sitz in Weislauf.",
+          "Unmittelbarer Lehnsherr ist Haus Weißmann.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Weißberg",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissberg"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Weislauf"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Freiherrentum Weislauf",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-weissberg",
+              "name": "Haus Weißberg",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissberg.webp",
+              "imageAlt": "Wappen Haus Weißberg",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissberg",
+              "rank": "Junker",
+              "seat": "Weislauf",
+              "liege": "Haus Weißmann",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-borgenicht",
+      "title": "Herrschaft Haus Borgenicht in Ewigensee",
+      "shortTitle": "Herrschaft Haus Borgenicht in Ewigensee",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html",
+      "parentLabel": "Königliche Domäne Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Königliche Domäne",
+          "name": "Königliche Domäne Ewigensee",
+          "slug": "weisenfluh-sitz-ewigensee"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Borgenicht in Ewigensee",
+          "slug": "weisenfluh-hausbereich-borgenicht"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/borgenicht.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Borgenicht in Ewigensee",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Borgenicht in Ewigensee gehört zu Weisenfluh. Haus Borgenicht führt hier den Rang Junker mit Sitz in Ewigensee.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Borgenicht",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-borgenicht"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Domäne Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-borgenicht",
+              "name": "Haus Borgenicht",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/borgenicht.webp",
+              "imageAlt": "Wappen Haus Borgenicht",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-borgenicht",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-goldberg",
+      "title": "Herrschaft Haus Goldberg in Ewigensee",
+      "shortTitle": "Herrschaft Haus Goldberg in Ewigensee",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html",
+      "parentLabel": "Königliche Domäne Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Königliche Domäne",
+          "name": "Königliche Domäne Ewigensee",
+          "slug": "weisenfluh-sitz-ewigensee"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Goldberg in Ewigensee",
+          "slug": "weisenfluh-hausbereich-goldberg"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldberg.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Goldberg in Ewigensee",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Goldberg in Ewigensee gehört zu Weisenfluh. Haus Goldberg führt hier den Rang Junker mit Sitz in Ewigensee.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Goldberg",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldberg"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Domäne Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-goldberg",
+              "name": "Haus Goldberg",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldberg.webp",
+              "imageAlt": "Wappen Haus Goldberg",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldberg",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-immergluck",
+      "title": "Herrschaft Haus Immerglück in Ewigensee",
+      "shortTitle": "Herrschaft Haus Immerglück in Ewigensee",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html",
+      "parentLabel": "Königliche Domäne Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Königliche Domäne",
+          "name": "Königliche Domäne Ewigensee",
+          "slug": "weisenfluh-sitz-ewigensee"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Immerglück in Ewigensee",
+          "slug": "weisenfluh-hausbereich-immergluck"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/immergluck.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Immerglück in Ewigensee",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Immerglück in Ewigensee gehört zu Weisenfluh. Haus Immerglück führt hier den Rang Junker mit Sitz in Ewigensee.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Immerglück",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-immergluck"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Domäne Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-immergluck",
+              "name": "Haus Immerglück",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/immergluck.webp",
+              "imageAlt": "Wappen Haus Immerglück",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-immergluck",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "weisenfluh-hausbereich-kaltwasser",
+      "title": "Herrschaft Haus Kaltwasser in Ewigensee",
+      "shortTitle": "Herrschaft Haus Kaltwasser in Ewigensee",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Weisenfluh",
+      "parentHref": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html",
+      "parentLabel": "Königliche Domäne Ewigensee",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Weisenfluh",
+          "slug": "koenigreich-weisenfluh"
+        },
+        {
+          "type": "Königliche Provinz",
+          "name": "Königliche Provinz Ewigensee",
+          "slug": "weisenfluh-region-ewigensee"
+        },
+        {
+          "type": "Königliche Domäne",
+          "name": "Königliche Domäne Ewigensee",
+          "slug": "weisenfluh-sitz-ewigensee"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Haus Kaltwasser in Ewigensee",
+          "slug": "weisenfluh-hausbereich-kaltwasser"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/kaltwasser.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Haus Kaltwasser in Ewigensee",
+      "map": {
+        "title": "Karte · Weisenfluh",
+        "imageSrc": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Weisenfluh; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=weisenfluh"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Haus Kaltwasser in Ewigensee gehört zu Weisenfluh. Haus Kaltwasser führt hier den Rang Junker mit Sitz in Ewigensee.",
+          "Unmittelbarer Lehnsherr ist Haus Goldkranz.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Weisenfluh",
+              "href": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Kaltwasser",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kaltwasser"
+            },
+            {
+              "label": "Rang",
+              "value": "Junker"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ewigensee"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Königliche Domäne Ewigensee",
+              "href": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-kaltwasser",
+              "name": "Haus Kaltwasser",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/kaltwasser.webp",
+              "imageAlt": "Wappen Haus Kaltwasser",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kaltwasser",
+              "rank": "Junker",
+              "seat": "Ewigensee",
+              "liege": "Haus Goldkranz",
+              "featured": true,
+              "featuredLabel": "Junker"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    }
+  ]
+}

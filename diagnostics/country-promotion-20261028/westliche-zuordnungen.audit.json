@@ -1,0 +1,3535 @@
+{
+  "schema": "aleria.country-promotion.source-audit",
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "scope": [
+    "aldingen",
+    "goldmund",
+    "weisenfluh"
+  ],
+  "kind": "bounded research; no production or Firebase changes",
+  "sourcePriority": [
+    "latest explicit user correction",
+    "exported seat placements",
+    "existing canonical identities and counterpart people",
+    "supplied map and folder source",
+    "previous preview labels"
+  ],
+  "mapsActuallyViewed": [
+    "Vorschau/Aldingen/assets/map.webp",
+    "Vorschau/Goldmund/assets/map.webp",
+    "Vorschau/Weisenfluh/assets/map.webp"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "8e36f441346fca119670d0acdb5218ed16137c776662311275cc562bdd3fbe73"
+    },
+    {
+      "path": "Kontinente/AGENTS.md",
+      "sha256": "6cc9d1628e4fda0b060f456e32f9b06a0b6b4d0449efcfc12734012b2ae43e9f"
+    },
+    {
+      "path": "Kontinente/HERRSCHAFTSSEITEN-VORGEHEN.md",
+      "sha256": "0ce622601c9c9144202041ac5e98b231269b3ef32c7aec112d3dd70286e6716a"
+    },
+    {
+      "path": "Stammbäume/DATENPFLEGE.md",
+      "sha256": "7673c61babcaa864250dc6d6c3b528db45ff5f0c62b7c5c128ece8bf22c0e790"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/families.registry.js",
+      "sha256": "520a271b0d33cb79a8a90f768deadbbc90362ccc1607abb3133d032a49af22fd"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-hochreuth-family.js",
+      "sha256": "5bca77a7cfd09b9cc993de99fb91f7965654dbeab049c5db1ebfe189ab8691c9"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/goldmund-house-profiles.js",
+      "sha256": "dde0d0808de417ba98909a9af6f80b58303693d1642adc9472540b70528ad5bc"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-sonnenfels-family.js",
+      "sha256": "3666dda8f3253a167413425d95c5ba5700cd2398a5e9f11199df3993019ec8da"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-weinlaub-family.js",
+      "sha256": "52749a4194598c5a78f120b191439502a4fe5ec5e0bee86b475497a7c12004ef"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/weisenfluh-house-profiles.js",
+      "sha256": "61bab080545554475794b319db52b127c41bcc4bda614803eaf34f584ca0e924"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-helgr-family.js",
+      "sha256": "ae7dc0062f0529a3d6cf7dbe1bde49dac54ce00769376ead76e92e284dec8afb"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-aderyn-family.js",
+      "sha256": "6beb2a5a73b18069b68eb87902b9096db0e57c2a98dd073e6f8e96aee849d72a"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-marwolaeth-family.js",
+      "sha256": "a39b6614edac84bd82c9f7d9744da3ab6c3bae41c298c8f44123b1df00bd1d11"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-morfil-family.js",
+      "sha256": "32148eab8eb96b576298dc5840fb9684f506735c1c7cf59f6ec9843d35cb9272"
+    },
+    {
+      "path": "Vorschau/Aldingen/house-data.mjs",
+      "sha256": "fb38eb43daf8ab1d454c5e9c34f6a096e26348b00fbdd0e02c7b1555f78ba116"
+    },
+    {
+      "path": "Vorschau/Aldingen/territory-data.mjs",
+      "sha256": "beffe1626480c2ebcb1951958d2644867af5e14ae8504f480ea0f7e9b8f5763e"
+    },
+    {
+      "path": "Vorschau/Aldingen/assets/map.webp",
+      "sha256": "ccb8040edf003f415f211e83c48926a32aaf440b19d4ed854dbdc930ad439268"
+    },
+    {
+      "path": "Vorschau/Goldmund/source-houses.mjs",
+      "sha256": "2a1ec373afb9f54d4ac56e0c12a1ec112c4f0b8eddc2e562759c37dbe8359fa2"
+    },
+    {
+      "path": "Vorschau/Goldmund/realm-data.mjs",
+      "sha256": "9a38050f01d7cc846901af633f116b987c258a4612d81c53d0e918f8aa7dd171"
+    },
+    {
+      "path": "Vorschau/Goldmund/albic-clans.mjs",
+      "sha256": "ac123d55750134ba55613ed39ed4968f7b183e945ea3e40a5a4e25165648b98b"
+    },
+    {
+      "path": "Vorschau/Goldmund/assets/map.webp",
+      "sha256": "076fd7ba5ea7c427315cbe31ae3705dcd8f73d06b94beb22e53a3fdeee142919"
+    },
+    {
+      "path": "Vorschau/Weisenfluh/source-houses.mjs",
+      "sha256": "089fccb0df82ac16a3c90ddf54f72b93ae0bba228abb6135c84d1b7d05d2a66e"
+    },
+    {
+      "path": "Vorschau/Weisenfluh/realm-data.mjs",
+      "sha256": "a8213708c564d6f2c2eb71e36aaa94efe31fff1c28dfe53a6823c93d6b72957c"
+    },
+    {
+      "path": "Vorschau/Weisenfluh/assets/map.webp",
+      "sha256": "a6692adf57d7fca54a0587f24e4fc67a36a037d8657d5f7e1c2b588075c3cdbf"
+    }
+  ],
+  "registry": {
+    "familyCount": 564,
+    "publishedTopLevelFilesChecked": 76,
+    "privateSourcesRead": false
+  },
+  "realms": [
+    {
+      "id": "aldingen",
+      "name": "Großherzogtum Aldingen",
+      "export": {
+        "path": "C:/Users/fhg_r/Downloads/aldingen-entwurf.json",
+        "sha256": "359571a62c284f7f841580bb5757ccc433aaff1ab56ea76c283a0a51d7ddfdb0",
+        "schemaVersion": 1,
+        "placementCount": 23,
+        "houseCount": 23,
+        "complete": true,
+        "unknownIds": [],
+        "design": null
+      },
+      "administrativeGroups": [
+        {
+          "id": "barenstadt",
+          "name": "Grafschaft Barenstadt",
+          "colour": "#556aa8",
+          "capital": "barenstadt",
+          "seats": [
+            "barenstadt",
+            "welden"
+          ],
+          "motif": "Ein aufgerichteter silberner Bär hält einen schwarzen Schlüssel über zwei hellen Bergspitzen auf blauem Feld.",
+          "palette": [
+            "Kornblumenblau",
+            "Silber",
+            "Schwarz"
+          ],
+          "ornament": "schmaler Silberrand und kleine dunkle Nieten",
+          "shield": "county-barenstadt"
+        },
+        {
+          "id": "borgeln",
+          "name": "Grafschaft Borgeln",
+          "colour": "#a563a1",
+          "capital": "borgeln",
+          "seats": [
+            "borgeln",
+            "hasselt"
+          ],
+          "motif": "Drei silberne Bergkristalle über einem violetten Berggrat, begleitet von zwei hellen Rebenzweigen.",
+          "palette": [
+            "Dunkles Violett",
+            "Silber",
+            "Elfenbein"
+          ],
+          "ornament": "geschwärzter Silberrand mit kleinen violetten Blattspangen",
+          "shield": "county-borgeln"
+        },
+        {
+          "id": "grimberg",
+          "name": "Grafschaft Grimberg",
+          "colour": "#6c9c45",
+          "capital": "grimberg",
+          "seats": [
+            "grimberg",
+            "sassel"
+          ],
+          "motif": "Ein silberner dreispitziger Berg über zwei goldockerfarbenen Ähren und einem schmalen hellen Flussband auf Grün.",
+          "palette": [
+            "Waldgrün",
+            "Silber",
+            "Goldocker"
+          ],
+          "ornament": "Bronzerand mit flachen silbernen Eckspangen",
+          "shield": "county-grimberg"
+        },
+        {
+          "id": "zollern",
+          "name": "Grafschaft Zollern",
+          "colour": "#b6ac4b",
+          "capital": "zollern",
+          "seats": [
+            "zollern",
+            "bruchen",
+            "dreiken"
+          ],
+          "motif": "Ein schwarzes geöffnetes Tor über einem hellen Weg, flankiert von zwei goldockerfarbenen Ähren auf elfenbein-oliv geteiltem Feld.",
+          "palette": [
+            "Olivocker",
+            "Elfenbein",
+            "Schwarz"
+          ],
+          "ornament": "dunkler Eisenrand mit schmaler silberner Einlage",
+          "shield": "county-zollern"
+        },
+        {
+          "id": "ducal",
+          "name": "Herzogliche Domäne",
+          "colour": "#4bada1",
+          "capital": "klingenhagen",
+          "seats": [
+            "klingenhagen",
+            "aldershafen"
+          ],
+          "ducal": true,
+          "shield": "klingenhagen",
+          "motif": "Eine goldene Lilie über zwei gekreuzten silbernen Schwertern auf dunkelblau-elfenbeinfarbenem Feld.",
+          "palette": [
+            "Mitternachtsblau",
+            "Elfenbein",
+            "Goldocker und Silber"
+          ],
+          "ornament": "Silberrand mit schmalem vergoldetem Innenstreifen"
+        }
+      ],
+      "regions": null,
+      "houses": [
+        {
+          "previewId": "brechten",
+          "sourceName": "Brechten",
+          "displayName": "Brechten",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "zollern",
+          "seatName": "Zollern",
+          "sourceSeatName": "Zollern",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "zollern",
+          "rulerAtSeat": "truchsen",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "truchsen",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/brechten.webp",
+          "fullsize": "assets/production/brechten.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "ehrenfeld",
+          "sourceName": "Ehrenfeld",
+          "displayName": "Ehrenfeld",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "grimberg",
+          "seatName": "Grimberg",
+          "sourceSeatName": "Grimberg",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "grimberg",
+          "rulerAtSeat": "hohenmund",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "hohenmund",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/ehrenfeld.webp",
+          "fullsize": "assets/production/ehrenfeld.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "graven",
+          "sourceName": "Graven",
+          "displayName": "Graven",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "bruchen",
+          "seatName": "Bruchen",
+          "sourceSeatName": "Bruchen",
+          "sourceSeatKind": "Baronie",
+          "sourceAdministrativeGroup": "zollern",
+          "rulerAtSeat": "rebhart",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rebhart",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/graven.webp",
+          "fullsize": "assets/production/graven.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "halbrecht",
+          "sourceName": "Halbrecht",
+          "displayName": "Halbrecht",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": "house-halbrecht",
+          "canonicalIdentityStatus": "reuse existing counterpart house identity; own family not registered",
+          "seatId": "klingenhagen",
+          "seatName": "Klingenhagen",
+          "sourceSeatName": "Klingenhagen",
+          "sourceSeatKind": "Herzogliche Grafschaft und Baronie",
+          "sourceAdministrativeGroup": "ducal",
+          "rulerAtSeat": "klingen",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/halbrecht.webp",
+          "fullsize": "assets/production/halbrecht.png",
+          "counterpartMatches": [
+            {
+              "familyId": "haus-helgr",
+              "familyTitle": "Clan Helgr",
+              "houseId": "house-halbrecht",
+              "houseName": "Haus Halbrecht",
+              "ownFamily": false,
+              "persons": [
+                {
+                  "id": "ludmilla-halbrecht",
+                  "worldPersonId": "person--haus-halbrecht--ludmilla-halbrecht",
+                  "name": "Ludmilla Halbrecht"
+                }
+              ],
+              "publishedCounterparts": []
+            }
+          ]
+        },
+        {
+          "previewId": "haldren",
+          "sourceName": "Haldren",
+          "displayName": "Haldren",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "klingenhagen",
+          "seatName": "Klingenhagen",
+          "sourceSeatName": "Klingenhagen",
+          "sourceSeatKind": "Herzogliche Grafschaft und Baronie",
+          "sourceAdministrativeGroup": "ducal",
+          "rulerAtSeat": "klingen",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/haldren.webp",
+          "fullsize": "assets/production/haldren.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "hohenmund",
+          "sourceName": "Hohenmund",
+          "displayName": "Hohenmund",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "grimberg",
+          "seatName": "Grimberg",
+          "sourceSeatName": "Grimberg",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "grimberg",
+          "rulerAtSeat": "hohenmund",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "count",
+            "basis": "latest user instruction",
+            "label": "Graf"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": "grimberg",
+          "placementChanged": false,
+          "crest": "assets/crests/hohenmund.webp",
+          "fullsize": "assets/production/hohenmund.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "klingen",
+          "sourceName": "Klingen",
+          "displayName": "Klingen",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "klingenhagen",
+          "seatName": "Klingenhagen",
+          "sourceSeatName": "Klingenhagen",
+          "sourceSeatKind": "Herzogliche Grafschaft und Baronie",
+          "sourceAdministrativeGroup": "ducal",
+          "rulerAtSeat": "klingen",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "duke",
+            "basis": "latest user instruction",
+            "label": "Herzog"
+          },
+          "liege": {
+            "previewId": null,
+            "basis": "sovereign house",
+            "confidence": "high"
+          },
+          "sourcePlacement": "klingenhagen",
+          "placementChanged": false,
+          "crest": "assets/crests/klingen.webp",
+          "fullsize": "assets/production/klingen.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "lachmund",
+          "sourceName": "Lachmund",
+          "displayName": "Lachmund",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "klingenhagen",
+          "seatName": "Klingenhagen",
+          "sourceSeatName": "Klingenhagen",
+          "sourceSeatKind": "Herzogliche Grafschaft und Baronie",
+          "sourceAdministrativeGroup": "ducal",
+          "rulerAtSeat": "klingen",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/lachmund.webp",
+          "fullsize": "assets/production/lachmund.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "riedenfeld",
+          "sourceName": "Riedenfeld",
+          "displayName": "Riedenfeld",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "borgeln",
+          "seatName": "Borgeln",
+          "sourceSeatName": "Borgeln",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "borgeln",
+          "rulerAtSeat": "rothmann",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rothmann",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/riedenfeld.webp",
+          "fullsize": "assets/production/riedenfeld.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "ritten",
+          "sourceName": "Ritten",
+          "displayName": "Ritten",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "barenstadt",
+          "seatName": "Barenstadt",
+          "sourceSeatName": "Barenstadt",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "barenstadt",
+          "rulerAtSeat": "ritten",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "count",
+            "basis": "latest user instruction",
+            "label": "Graf"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": "barenstadt",
+          "placementChanged": false,
+          "crest": "assets/crests/ritten.webp",
+          "fullsize": "assets/production/ritten.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rothmann",
+          "sourceName": "Rothmann",
+          "displayName": "Rothman",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "borgeln",
+          "seatName": "Borgeln",
+          "sourceSeatName": "Borgeln",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "borgeln",
+          "rulerAtSeat": "rothmann",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "count",
+            "basis": "latest user instruction",
+            "label": "Graf"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/rothmann.webp",
+          "fullsize": "assets/production/rothmann.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "truchsen",
+          "sourceName": "Truchsen",
+          "displayName": "Truchsen",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "zollern",
+          "seatName": "Zollern",
+          "sourceSeatName": "Zollern",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "zollern",
+          "rulerAtSeat": "truchsen",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "count",
+            "basis": "latest user instruction",
+            "label": "Graf"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": "zollern",
+          "placementChanged": false,
+          "crest": "assets/crests/truchsen.webp",
+          "fullsize": "assets/production/truchsen.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "velten",
+          "sourceName": "Velten",
+          "displayName": "Velten",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "hasselt",
+          "seatName": "Hasselt",
+          "sourceSeatName": "Hasselt",
+          "sourceSeatKind": "Baronie",
+          "sourceAdministrativeGroup": "borgeln",
+          "rulerAtSeat": "velten",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "count",
+            "basis": "latest user instruction",
+            "label": "Graf"
+          },
+          "liege": {
+            "previewId": "rothmann",
+            "basis": "source-map county hierarchy",
+            "confidence": "medium",
+            "note": "User explicitly grants Graf rank although Hasselt remains inside Grafschaft Borgeln on the map; equal-rank subordination is an inference, not an express user statement."
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/velten.webp",
+          "fullsize": "assets/production/velten.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "welf",
+          "sourceName": "Welf",
+          "displayName": "Welf",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "grimberg",
+          "seatName": "Grimberg",
+          "sourceSeatName": "Grimberg",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "grimberg",
+          "rulerAtSeat": "hohenmund",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "hohenmund",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/welf.webp",
+          "fullsize": "assets/production/welf.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "wolfram",
+          "sourceName": "Wolfram",
+          "displayName": "Wolfram",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "barenstadt",
+          "seatName": "Barenstadt",
+          "sourceSeatName": "Barenstadt",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "barenstadt",
+          "rulerAtSeat": "ritten",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "ritten",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/wolfram.webp",
+          "fullsize": "assets/production/wolfram.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rebhart",
+          "sourceName": "Rebhart",
+          "displayName": "Rebhart",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "bruchen",
+          "seatName": "Bruchen",
+          "sourceSeatName": "Bruchen",
+          "sourceSeatKind": "Baronie",
+          "sourceAdministrativeGroup": "zollern",
+          "rulerAtSeat": "rebhart",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "latest user instruction",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": "truchsen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/rebhart.webp",
+          "fullsize": "assets/production/rebhart.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "schenk",
+          "sourceName": "Schenk",
+          "displayName": "Schenk",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "zollern",
+          "seatName": "Zollern",
+          "sourceSeatName": "Zollern",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "zollern",
+          "rulerAtSeat": "truchsen",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "truchsen",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/schenk.webp",
+          "fullsize": "assets/production/schenk.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "ankerhold",
+          "sourceName": "Ankerhold",
+          "displayName": "Ankerhold",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "dreiken",
+          "seatName": "Dreiken",
+          "sourceSeatName": "Dreiken",
+          "sourceSeatKind": "Herrschaft",
+          "sourceAdministrativeGroup": "zollern",
+          "rulerAtSeat": "ankerhold",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "truchsen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/ankerhold.webp",
+          "fullsize": "assets/production/ankerhold.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rosswarth",
+          "sourceName": "Rosswarth",
+          "displayName": "Rosswarth",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "welden",
+          "seatName": "Welden",
+          "sourceSeatName": "Welden",
+          "sourceSeatKind": "Herrschaft",
+          "sourceAdministrativeGroup": "barenstadt",
+          "rulerAtSeat": "rosswarth",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "ritten",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/rosswarth.webp",
+          "fullsize": "assets/production/rosswarth.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "adharcan",
+          "sourceName": "Adharcan",
+          "displayName": "Adharcan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "aldershafen",
+          "seatName": "Aldershafen",
+          "sourceSeatName": "Aldershafen",
+          "sourceSeatKind": "Herrschaft",
+          "sourceAdministrativeGroup": "ducal",
+          "rulerAtSeat": "adharcan",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "klingen",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/adharcan.webp",
+          "fullsize": "assets/production/adharcan.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "sgiathan",
+          "sourceName": "Sgiathan",
+          "displayName": "Sgiathan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "unofficial by express user instruction",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "barenstadt",
+          "seatName": "Barenstadt",
+          "sourceSeatName": "Barenstadt",
+          "sourceSeatKind": "Gräfliche Baronie",
+          "sourceAdministrativeGroup": "barenstadt",
+          "rulerAtSeat": "ritten",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "ritten",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/sgiathan.webp",
+          "fullsize": "assets/production/sgiathan.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "ronnach",
+          "sourceName": "Ronnach",
+          "displayName": "Ronnach",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "sassel",
+          "seatName": "Sassel",
+          "sourceSeatName": "Sassel",
+          "sourceSeatKind": "Herrschaft",
+          "sourceAdministrativeGroup": "grimberg",
+          "rulerAtSeat": "ronnach",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "hohenmund",
+            "basis": "source-map county hierarchy",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/ronnach.webp",
+          "fullsize": "assets/production/ronnach.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "dublann",
+          "sourceName": "Dublann",
+          "displayName": "Dublann",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "hasselt",
+          "seatName": "Hasselt",
+          "sourceSeatName": "Hasselt",
+          "sourceSeatKind": "Baronie",
+          "sourceAdministrativeGroup": "borgeln",
+          "rulerAtSeat": "velten",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "velten",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "assets/crests/dublann.webp",
+          "fullsize": "assets/production/dublann.png",
+          "counterpartMatches": []
+        }
+      ]
+    },
+    {
+      "id": "goldmund",
+      "name": "Herzogtum Goldmund",
+      "export": {
+        "path": "C:/Users/fhg_r/Downloads/goldmund-entwurf.json",
+        "sha256": "78085e0691d563ba5c8ad5f78bfd120db3d1a6501b744fd14f1798cfe2ce654d",
+        "schemaVersion": 1,
+        "placementCount": 20,
+        "houseCount": 20,
+        "complete": true,
+        "unknownIds": [],
+        "design": {
+          "collectiveName": "Die Goldenen Grafschaften",
+          "countyNames": {
+            "kronenau": "Kronenau",
+            "aurelmark": "Aurelmark",
+            "edelstrom": "Edelstrom"
+          },
+          "regionNames": {
+            "thronmark": "Thronmark",
+            "brakenwacht": "Brakenwacht",
+            "bregenau": "Bregenau",
+            "haarlenried": "Haarlenried",
+            "alderweiden": "Alderweiden",
+            "bramsenquell": "Bramsenquell",
+            "niedenmark": "Niedenmark",
+            "hartenfels": "Hartenfels"
+          },
+          "realmCrest": "sonnenkrone"
+        }
+      },
+      "administrativeGroups": [
+        {
+          "id": "kronenau",
+          "name": "Kronenau",
+          "kind": "Fürstliche Grafschaft",
+          "colour": "#b49a3e",
+          "description": "Der westliche, goldgelb markierte Teil der Karte mit Thronholt und Brakenstein. Kronenau stellt die Nähe zur fürstlichen Residenz in den Mittelpunkt."
+        },
+        {
+          "id": "aurelmark",
+          "name": "Aurelmark",
+          "kind": "Grafschaft",
+          "colour": "#6e8c45",
+          "description": "Der nordöstliche, grün markierte Teil mit Bregen, Haarlen und Aldermoor. Aurelmark greift den goldmundischen Klang und das Motiv der Aurelianerpferde auf."
+        },
+        {
+          "id": "edelstrom",
+          "name": "Edelstrom",
+          "kind": "Grafschaft",
+          "colour": "#4b8b88",
+          "description": "Der südöstliche, türkis markierte Teil mit Bramsen, Niedenfels und Hartenstein. Edelstrom verbindet die sichtbaren Wasserläufe mit der vornehmen Bildsprache des Landes."
+        }
+      ],
+      "regions": [
+        {
+          "id": "thronmark",
+          "name": "Thronmark",
+          "county": "kronenau",
+          "seat": "thronholt",
+          "kind": "Fürstliche Baronie",
+          "idea": "Die fürstliche Residenz bildet den Bezugspunkt des Namens."
+        },
+        {
+          "id": "brakenwacht",
+          "name": "Brakenwacht",
+          "county": "kronenau",
+          "seat": "brakenstein",
+          "kind": "Baronie",
+          "idea": "Ein Name mit dem Klang eines befestigten, standhaften Herrschaftsgebiets."
+        },
+        {
+          "id": "bregenau",
+          "name": "Bregenau",
+          "county": "aurelmark",
+          "seat": "bregen",
+          "kind": "Baronie",
+          "idea": "An den vorhandenen Ortsnamen angelehnt; ein weicher Landschaftsname."
+        },
+        {
+          "id": "haarlenried",
+          "name": "Haarlenried",
+          "county": "aurelmark",
+          "seat": "haarlen",
+          "kind": "Baronie",
+          "idea": "Ein regionaler Name mit Bezug zum bereits benannten Haarlen."
+        },
+        {
+          "id": "alderweiden",
+          "name": "Alderweiden",
+          "county": "aurelmark",
+          "seat": "aldermoor",
+          "kind": "Ritterfürstentum",
+          "idea": "Eine vorläufige Landschaftsbezeichnung rund um Aldermoor."
+        },
+        {
+          "id": "bramsenquell",
+          "name": "Bramsenquell",
+          "county": "edelstrom",
+          "seat": "bramsen",
+          "kind": "Baronie",
+          "idea": "Die Wasserlandschaft der Karte prägt diesen Namensvorschlag."
+        },
+        {
+          "id": "niedenmark",
+          "name": "Niedenmark",
+          "county": "edelstrom",
+          "seat": "niedenfels",
+          "kind": "Baronie",
+          "idea": "Ein knapper Herrschaftsname, abgeleitet von Niedenfels."
+        },
+        {
+          "id": "hartenfels",
+          "name": "Hartenfels",
+          "county": "edelstrom",
+          "seat": "hartenstein",
+          "kind": "Ritterfürstentum",
+          "idea": "Ein ritterlicher Name mit Bezug auf den felsigen Sitz Hartenstein."
+        }
+      ],
+      "houses": [
+        {
+          "previewId": "broeck",
+          "sourceName": "Broeck",
+          "displayName": "Broek",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "brakenstein",
+          "seatName": "Brakenstein",
+          "sourceSeatName": "Brakenstein",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "broeck",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "map/location inference as authorized",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": "goldveld",
+            "basis": "ducal county on source map after user correction",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/broeck.webp",
+          "fullsize": "assets/originals/houses/broeck.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "goldveld",
+          "sourceName": "Goldveld",
+          "displayName": "Goldveld",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "thronholt",
+          "seatName": "Thronholt",
+          "sourceSeatName": "Thronholt",
+          "sourceSeatKind": "Fürstliche Residenz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "goldveld",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "duke",
+            "basis": "latest user instruction",
+            "label": "Herzog"
+          },
+          "liege": {
+            "previewId": null,
+            "basis": "sovereign house",
+            "confidence": "high"
+          },
+          "sourcePlacement": "thronholt",
+          "placementChanged": false,
+          "crest": "crests/goldveld.webp",
+          "fullsize": "assets/production/goldveld.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "lanette",
+          "sourceName": "Lanette",
+          "displayName": "Lanette",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "haarlen",
+          "seatName": "Haarlen",
+          "sourceSeatName": "Haarlen",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "aurelmark",
+          "rulerAtSeat": "lanette",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "map/location inference as authorized",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": null,
+            "realmOverlord": "goldveld",
+            "basis": "county exists but no gräflicher Hauptsitz or Grafenhaus is named on supplied map",
+            "confidence": "open"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/lanette.webp",
+          "fullsize": "assets/production/lanette.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "roden",
+          "sourceName": "Roden",
+          "displayName": "Roden",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": "house-roden",
+          "canonicalIdentityStatus": "reuse existing counterpart house identity; own family not registered",
+          "seatId": "thronholt",
+          "seatName": "Thronholt",
+          "sourceSeatName": "Thronholt",
+          "sourceSeatKind": "Fürstliche Residenz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "goldveld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldveld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "thronholt",
+          "placementChanged": false,
+          "crest": "crests/roden.webp",
+          "fullsize": "assets/production/roden.png",
+          "counterpartMatches": [
+            {
+              "familyId": "haus-von-hochreuth",
+              "familyTitle": "Haus von Hochreuth",
+              "houseId": "house-roden",
+              "houseName": "Haus Roden",
+              "ownFamily": false,
+              "persons": [
+                {
+                  "id": "charlotte-roden-spouse",
+                  "worldPersonId": "person--haus-roden--charlotte-roden-spouse",
+                  "name": "Charlotte Roden"
+                }
+              ],
+              "publishedCounterparts": []
+            }
+          ]
+        },
+        {
+          "previewId": "roosenvelt",
+          "sourceName": "Roosenvelt",
+          "displayName": "Roosenvelt",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "niedenfels",
+          "seatName": "Niedenfels",
+          "sourceSeatName": "Niedenfels",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "silberhorst",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "silberhorst",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/roosenvelt.webp",
+          "fullsize": "assets/originals/houses/roosenvelt.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "aurelshain",
+          "sourceName": "Arenberg",
+          "displayName": "Arenberg",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "bregen",
+          "seatName": "Bregen",
+          "sourceSeatName": "Bregen",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "aurelmark",
+          "rulerAtSeat": "aurelshain",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "map/location inference as authorized",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": null,
+            "realmOverlord": "goldveld",
+            "basis": "county exists but no gräflicher Hauptsitz or Grafenhaus is named on supplied map",
+            "confidence": "open"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/aurelshain.webp",
+          "fullsize": "assets/production/aurelshain.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "gueldenfels",
+          "sourceName": "Velten",
+          "displayName": "Velten",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "brakenstein",
+          "seatName": "Brakenstein",
+          "sourceSeatName": "Brakenstein",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "broeck",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "broeck",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/gueldenfels.webp",
+          "fullsize": "assets/production/gueldenfels.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "falkengold",
+          "sourceName": "Severin",
+          "displayName": "Severin",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "hartenstein",
+          "seatName": "Hartenfels",
+          "sourceSeatName": "Hartenstein",
+          "sourceSeatKind": "Ritterfürstensitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "falkengold",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": null,
+            "realmOverlord": "goldveld",
+            "basis": "county exists but no gräflicher Hauptsitz or Grafenhaus is named on supplied map",
+            "confidence": "open"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/falkengold.webp",
+          "fullsize": "assets/production/falkengold.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rebenkron",
+          "sourceName": "Belcourt",
+          "displayName": "Belcourt",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "bregen",
+          "seatName": "Bregen",
+          "sourceSeatName": "Bregen",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "aurelmark",
+          "rulerAtSeat": "aurelshain",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "aurelshain",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/rebenkron.webp",
+          "fullsize": "assets/production/rebenkron.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "seidenwarth",
+          "sourceName": "Lanvier",
+          "displayName": "Lanvier",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "bramsen",
+          "seatName": "Bramsen",
+          "sourceSeatName": "Bramsen",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "seidenwarth",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "map/location inference as authorized",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": null,
+            "realmOverlord": "goldveld",
+            "basis": "county exists but no gräflicher Hauptsitz or Grafenhaus is named on supplied map",
+            "confidence": "open"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/seidenwarth.webp",
+          "fullsize": "assets/production/seidenwarth.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "greifenau",
+          "sourceName": "Marholt",
+          "displayName": "Marholt",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "thronholt",
+          "seatName": "Thronholt",
+          "sourceSeatName": "Thronholt",
+          "sourceSeatKind": "Fürstliche Residenz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "goldveld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldveld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/greifenau.webp",
+          "fullsize": "assets/production/greifenau.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "eitelborn",
+          "sourceName": "Belmont",
+          "displayName": "Belmont",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "thronholt",
+          "seatName": "Thronholt",
+          "sourceSeatName": "Thronholt",
+          "sourceSeatKind": "Fürstliche Residenz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "goldveld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldveld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/eitelborn.webp",
+          "fullsize": "assets/production/eitelborn.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "herzau",
+          "sourceName": "Arden",
+          "displayName": "Arden",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "aldermoor",
+          "seatName": "Aldermoor",
+          "sourceSeatName": "Aldermoor",
+          "sourceSeatKind": "Ritterfürstensitz",
+          "sourceAdministrativeGroup": "aurelmark",
+          "rulerAtSeat": "herzau",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": null,
+            "realmOverlord": "goldveld",
+            "basis": "Aurelmark county ruler not named; immediate lord not proven",
+            "confidence": "open"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/herzau.webp",
+          "fullsize": "assets/production/herzau.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "silberhorst",
+          "sourceName": "Berden",
+          "displayName": "Berden",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "niedenfels",
+          "seatName": "Niedenfels",
+          "sourceSeatName": "Niedenfels",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "silberhorst",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "map/location inference as authorized",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": null,
+            "realmOverlord": "goldveld",
+            "basis": "county exists but no gräflicher Hauptsitz or Grafenhaus is named on supplied map",
+            "confidence": "open"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/silberhorst.webp",
+          "fullsize": "assets/production/silberhorst.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "samtborn",
+          "sourceName": "Sorel",
+          "displayName": "Sorel",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "thronholt",
+          "seatName": "Thronholt",
+          "sourceSeatName": "Thronholt",
+          "sourceSeatKind": "Fürstliche Residenz",
+          "sourceAdministrativeGroup": "kronenau",
+          "rulerAtSeat": "goldveld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldveld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/samtborn.webp",
+          "fullsize": "assets/production/samtborn.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "weisshorn",
+          "sourceName": "Wolter",
+          "displayName": "Wolter",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "niedenfels",
+          "seatName": "Niedenfels",
+          "sourceSeatName": "Niedenfels",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "silberhorst",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "silberhorst",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/weisshorn.webp",
+          "fullsize": "assets/production/weisshorn.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "mac-ruan",
+          "sourceName": "Ruan",
+          "displayName": "Ruan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "haarlen",
+          "seatName": "Haarlen",
+          "sourceSeatName": "Haarlen",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "aurelmark",
+          "rulerAtSeat": "lanette",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "lanette",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/mac-ruan.webp",
+          "fullsize": "assets/production/mac-ruan.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "mac-callan",
+          "sourceName": "Callan",
+          "displayName": "Callan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "hartenstein",
+          "seatName": "Hartenfels",
+          "sourceSeatName": "Hartenstein",
+          "sourceSeatKind": "Ritterfürstensitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "falkengold",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "falkengold",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/mac-callan.webp",
+          "fullsize": "assets/production/mac-callan.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "an-brenn",
+          "sourceName": "Brenn",
+          "displayName": "Brenn",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "niedenfels",
+          "seatName": "Niedenfels",
+          "sourceSeatName": "Niedenfels",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "silberhorst",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "silberhorst",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/an-brenn.webp",
+          "fullsize": "assets/production/an-brenn.png",
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "na-fenn",
+          "sourceName": "Fenn",
+          "displayName": "Fenn",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "bramsen",
+          "seatName": "Bramsen",
+          "sourceSeatName": "Bramsen",
+          "sourceSeatKind": "Baroniesitz",
+          "sourceAdministrativeGroup": "edelstrom",
+          "rulerAtSeat": "seidenwarth",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "seidenwarth",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "crests/na-fenn.webp",
+          "fullsize": "assets/production/na-fenn.png",
+          "counterpartMatches": []
+        }
+      ]
+    },
+    {
+      "id": "weisenfluh",
+      "name": "Königreich Weisenfluh",
+      "export": {
+        "path": "C:/Users/fhg_r/Downloads/weisenfluh-entwurf.json",
+        "sha256": "82e055d9286d98244b4de28dd4857cb51f04581e8ba7b58cc8d4c86085adcaf3",
+        "schemaVersion": 1,
+        "placementCount": 31,
+        "houseCount": 31,
+        "complete": true,
+        "unknownIds": [],
+        "design": null
+      },
+      "administrativeGroups": [
+        {
+          "id": "ewigensee",
+          "name": "Ewigensee",
+          "ruler": "goldkranz",
+          "colour": "#ad8864",
+          "royal": true,
+          "description": "Die königliche Provinz ist die eigene Domäne des Erlenkönigs."
+        },
+        {
+          "id": "ewiggruen",
+          "name": "Ewiggrün",
+          "ruler": "rosenstolz",
+          "colour": "#759047",
+          "description": "Das Freiherrentum der Rosenstolz; Mährenfeld gehört zu seinen Landmannssitzen."
+        },
+        {
+          "id": "weisshort",
+          "name": "Weisshort",
+          "ruler": "sommerfeld",
+          "colour": "#7faba2",
+          "description": "Das Freiherrentum der Sommerfeld mit Brückenwacht und Wolfrieden."
+        },
+        {
+          "id": "seeblick",
+          "name": "Seeblick",
+          "ruler": "silberthal",
+          "colour": "#b4aa79",
+          "description": "Das Freiherrentum der Silberthal; das Haus von Silbermundt bleibt offen."
+        },
+        {
+          "id": "weisslauf",
+          "name": "Weisslauf",
+          "ruler": "weissmann",
+          "colour": "#628e85",
+          "description": "Das Freiherrentum der Weissmann mit drei benannten Landmannssitzen."
+        }
+      ],
+      "regions": null,
+      "houses": [
+        {
+          "previewId": "catrannoch",
+          "sourceName": "Catrannoch",
+          "displayName": "Catrannoch",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewiggruen",
+          "seatName": "Ewiggrün",
+          "sourceSeatName": "Ewiggrün",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "rosenbluth",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rosenbluth",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "catrannoch.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "cnagallan",
+          "sourceName": "Cnagallan",
+          "displayName": "Cnagallan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewiggruen",
+          "seatName": "Ewiggrün",
+          "sourceSeatName": "Ewiggrün",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "rosenbluth",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rosenbluth",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "cnagallan.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "damhcallan",
+          "sourceName": "Damhcallan",
+          "displayName": "Damhcallan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "hohenklamm",
+          "seatName": "Hohenklamm",
+          "sourceSeatName": "Hohenklamm",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "damhcallan",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "damhcallan.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "iorcallan",
+          "sourceName": "Iorcallan",
+          "displayName": "Iorcallan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "maehrenfeld",
+          "seatName": "Mährenfeld",
+          "sourceSeatName": "Mährenfeld",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "honigfeld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "ministerialer",
+            "basis": "latest user instruction",
+            "label": "Ministerialer"
+          },
+          "liege": {
+            "previewId": "honigfeld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "iorcallan.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "sgaireag",
+          "sourceName": "Sgàireag",
+          "displayName": "Sgàireag",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weissklippe",
+          "seatName": "Weissklippe",
+          "sourceSeatName": "Weissklippe",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "sgaireag",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "weissmann",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "sgaireag.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "taghradan",
+          "sourceName": "Taghradan",
+          "displayName": "Taghradan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "hohenklamm",
+          "seatName": "Hohenklamm",
+          "sourceSeatName": "Hohenklamm",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "damhcallan",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "ministerialer",
+            "basis": "latest user instruction",
+            "label": "Ministerialer"
+          },
+          "liege": {
+            "previewId": "damhcallan",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "taghradan.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "torcradan",
+          "sourceName": "Torcradan",
+          "displayName": "Torcradan",
+          "clan": true,
+          "culturalTitle": "Laird",
+          "culturalTitleStatus": "cultural/source title; formal rank follows new hierarchy",
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weisslauf",
+          "seatName": "Weislauf",
+          "sourceSeatName": "Weisslauf",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "weissmann",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "weissmann",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": null,
+          "placementChanged": true,
+          "crest": "torcradan.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "blumenthal",
+          "sourceName": "Blumenthal",
+          "displayName": "Blumenthal",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewiggruen",
+          "seatName": "Ewiggrün",
+          "sourceSeatName": "Ewiggrün",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "rosenbluth",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rosenbluth",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewiggruen",
+          "placementChanged": false,
+          "crest": "blumenthal.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "honigfeld",
+          "sourceName": "Honigfeld",
+          "displayName": "Honigblüt",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "maehrenfeld",
+          "seatName": "Mährenfeld",
+          "sourceSeatName": "Mährenfeld",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "honigfeld",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rosenbluth",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewiggruen",
+          "placementChanged": true,
+          "crest": "honigfeld.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rosenbluth",
+          "sourceName": "Rosenblüth",
+          "displayName": "Rosenblüth",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": "house-rosenblueth",
+          "canonicalIdentityStatus": "reuse existing counterpart house identity; own family not registered",
+          "seatId": "ewiggruen",
+          "seatName": "Ewiggrün",
+          "sourceSeatName": "Ewiggrün",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "rosenbluth",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "latest user instruction",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewiggruen",
+          "placementChanged": false,
+          "crest": "rosenbluth.webp",
+          "fullsize": null,
+          "counterpartMatches": [
+            {
+              "familyId": "haus-morfil",
+              "familyTitle": "Haus Morfil O'Talsarn",
+              "houseId": "house-rosenblueth",
+              "houseName": "Haus Rosenblüth",
+              "ownFamily": false,
+              "persons": [
+                {
+                  "id": "deliah-rosenblueth",
+                  "worldPersonId": "person--haus-rosenblueth--deliah-rosenblueth",
+                  "name": "Deliah Rosenblüth"
+                }
+              ],
+              "publishedCounterparts": []
+            }
+          ]
+        },
+        {
+          "previewId": "edelweiss",
+          "sourceName": "Edelweiss",
+          "displayName": "Edelweiss",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "silbermundt",
+          "seatName": "Silbermundt",
+          "sourceSeatName": "Silbermundt",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "seeblick",
+          "rulerAtSeat": "edelweiss",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "silberthal",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "maehrenfeld",
+          "placementChanged": true,
+          "crest": "edelweiss.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rosenstolz",
+          "sourceName": "Rosenstolz",
+          "displayName": "Rosenstolz",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": "house-rosenstolz",
+          "canonicalIdentityStatus": "reuse existing counterpart house identity; own family not registered",
+          "seatId": "ewiggruen",
+          "seatName": "Ewiggrün",
+          "sourceSeatName": "Ewiggrün",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "ewiggruen",
+          "rulerAtSeat": "rosenbluth",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "rosenbluth",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewiggruen",
+          "placementChanged": false,
+          "crest": "rosenstolz.webp",
+          "fullsize": null,
+          "counterpartMatches": [
+            {
+              "familyId": "haus-aderyn",
+              "familyTitle": "Haus Aderyn O'Penbryn",
+              "houseId": "house-rosenstolz",
+              "houseName": "Haus Rosenstolz",
+              "ownFamily": false,
+              "persons": [
+                {
+                  "id": "nurit-rosenstolz",
+                  "worldPersonId": "person--haus-rosenstolz--nurit-rosenstolz",
+                  "name": "Nurit Rosenstolz"
+                }
+              ],
+              "publishedCounterparts": []
+            }
+          ]
+        },
+        {
+          "previewId": "freudenthal",
+          "sourceName": "Freudenthal",
+          "displayName": "Freudenthal",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "seeblick",
+          "seatName": "Seeblick",
+          "sourceSeatName": "Seeblick",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "seeblick",
+          "rulerAtSeat": "silberthal",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "silberthal",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "seeblick",
+          "placementChanged": false,
+          "crest": "freudenthal.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "rosenblatt",
+          "sourceName": "Rosenblatt",
+          "displayName": "Rosenblatt",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "seeblick",
+          "seatName": "Seeblick",
+          "sourceSeatName": "Seeblick",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "seeblick",
+          "rulerAtSeat": "silberthal",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "silberthal",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "seeblick",
+          "placementChanged": false,
+          "crest": "rosenblatt.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "silberthal",
+          "sourceName": "Silberthal",
+          "displayName": "Silberthal",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "seeblick",
+          "seatName": "Seeblick",
+          "sourceSeatName": "Seeblick",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "seeblick",
+          "rulerAtSeat": "silberthal",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "latest user instruction",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "seeblick",
+          "placementChanged": false,
+          "crest": "silberthal.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "bruggemann",
+          "sourceName": "Brüggemann",
+          "displayName": "Brüggemann",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "brueckenwacht",
+          "seatName": "Brückenwacht",
+          "sourceSeatName": "Brückenwacht",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "weisshort",
+          "rulerAtSeat": "bruggemann",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "sommerfeld",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "brueckenwacht",
+          "placementChanged": false,
+          "crest": "bruggemann.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "feuerstein",
+          "sourceName": "Feuerstein",
+          "displayName": "Feuerstein",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weisshort",
+          "seatName": "Weishort",
+          "sourceSeatName": "Weisshort",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisshort",
+          "rulerAtSeat": "sommerfeld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "sommerfeld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weisshort",
+          "placementChanged": false,
+          "crest": "feuerstein.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "sonnenfeld",
+          "sourceName": "Sonnenfeld",
+          "displayName": "Sonnenfeld",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weisshort",
+          "seatName": "Weishort",
+          "sourceSeatName": "Weisshort",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisshort",
+          "rulerAtSeat": "sommerfeld",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "latest user instruction",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "sommerfeld",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weisshort",
+          "placementChanged": false,
+          "crest": "sonnenfeld.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "sommerfeld",
+          "sourceName": "Sommerfeld",
+          "displayName": "Sommerfeld",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weisshort",
+          "seatName": "Weishort",
+          "sourceSeatName": "Weisshort",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisshort",
+          "rulerAtSeat": "sommerfeld",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "latest user instruction",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weisshort",
+          "placementChanged": false,
+          "crest": "sommerfeld.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "wolfenstein",
+          "sourceName": "Wolfenstein",
+          "displayName": "Wolfenstein",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "wolfrieden",
+          "seatName": "Wolfrieden",
+          "sourceSeatName": "Wolfrieden",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "weisshort",
+          "rulerAtSeat": "wolfenstein",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "sommerfeld",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "wolfrieden",
+          "placementChanged": false,
+          "crest": "wolfenstein.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "weizmann",
+          "sourceName": "Weizmann",
+          "displayName": "Weizmann",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weisslauf",
+          "seatName": "Weislauf",
+          "sourceSeatName": "Weisslauf",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "weissmann",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "weissmann",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weisslauf",
+          "placementChanged": false,
+          "crest": "weizmann.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "weissberg",
+          "sourceName": "Weißberg",
+          "displayName": "Weißberg",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weisslauf",
+          "seatName": "Weislauf",
+          "sourceSeatName": "Weisslauf",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "weissmann",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "weissmann",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weisslauf",
+          "placementChanged": false,
+          "crest": "weissberg.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "otterberg",
+          "sourceName": "Otterberg",
+          "displayName": "Otterberg",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ottersburg",
+          "seatName": "Ottersburg",
+          "sourceSeatName": "Ottersburg",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "otterberg",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "weissmann",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ottersburg",
+          "placementChanged": false,
+          "crest": "otterberg.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "weissmann",
+          "sourceName": "Weissmann",
+          "displayName": "Weißmann",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": "house-weissmann",
+          "canonicalIdentityStatus": "reuse existing counterpart house identity; own family not registered",
+          "seatId": "weisslauf",
+          "seatName": "Weislauf",
+          "sourceSeatName": "Weisslauf",
+          "sourceSeatKind": "Freiherrensitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "weissmann",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "freiherr",
+            "basis": "latest user instruction",
+            "label": "Freiherr"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weisslauf",
+          "placementChanged": false,
+          "crest": "weissmann.webp",
+          "fullsize": null,
+          "counterpartMatches": [
+            {
+              "familyId": "haus-helgr",
+              "familyTitle": "Clan Helgr",
+              "houseId": "house-weissmann",
+              "houseName": "Haus Weissmann",
+              "ownFamily": false,
+              "persons": [
+                {
+                  "id": "gideon-weissmann",
+                  "worldPersonId": "person--haus-weissmann--gideon-weissmann",
+                  "name": "Gideon Weissmann"
+                }
+              ],
+              "publishedCounterparts": []
+            },
+            {
+              "familyId": "haus-marwolaeth",
+              "familyTitle": "Haus Marwolaeth O'Mathragon",
+              "houseId": "house-weissmann",
+              "houseName": "Haus Weissmann",
+              "ownFamily": false,
+              "persons": [
+                {
+                  "id": "josephine-weissmann",
+                  "worldPersonId": "person--haus-weissmann--josephine-weissmann",
+                  "name": "Josephine Weissmann"
+                }
+              ],
+              "publishedCounterparts": []
+            }
+          ]
+        },
+        {
+          "previewId": "thalmann",
+          "sourceName": "Thalmann",
+          "displayName": "Thalmann",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "weissthal",
+          "seatName": "Weissthal",
+          "sourceSeatName": "Weissthal",
+          "sourceSeatKind": "Landmannssitz",
+          "sourceAdministrativeGroup": "weisslauf",
+          "rulerAtSeat": "thalmann",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "junker",
+            "basis": "map/location inference as authorized",
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "weissmann",
+            "basis": "source province/folder hierarchy, with user-corrected Ewiggrün ruler",
+            "confidence": "high"
+          },
+          "sourcePlacement": "weissthal",
+          "placementChanged": false,
+          "crest": "thalmann.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "goldkranz",
+          "sourceName": "Goldkranz",
+          "displayName": "Goldkranz",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewigensee",
+          "seatName": "Ewigensee",
+          "sourceSeatName": "Ewigensee",
+          "sourceSeatKind": "Königliche Provinz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "goldkranz",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "king",
+            "basis": "latest user instruction",
+            "label": "Erlenkönig"
+          },
+          "liege": {
+            "previewId": null,
+            "basis": "sovereign house",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewigensee",
+          "placementChanged": false,
+          "crest": "goldkranz.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "borgenicht",
+          "sourceName": "Borgenicht",
+          "displayName": "Borgenicht",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewigensee",
+          "seatName": "Ewigensee",
+          "sourceSeatName": "Ewigensee",
+          "sourceSeatKind": "Königliche Provinz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "goldkranz",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewigensee",
+          "placementChanged": false,
+          "crest": "borgenicht.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "goldberg",
+          "sourceName": "Goldberg",
+          "displayName": "Goldberg",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewigensee",
+          "seatName": "Ewigensee",
+          "sourceSeatName": "Ewigensee",
+          "sourceSeatKind": "Königliche Provinz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "goldkranz",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewigensee",
+          "placementChanged": false,
+          "crest": "goldberg.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "immergluck",
+          "sourceName": "Immerglück",
+          "displayName": "Immerglück",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewigensee",
+          "seatName": "Ewigensee",
+          "sourceSeatName": "Ewigensee",
+          "sourceSeatKind": "Königliche Provinz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "goldkranz",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewigensee",
+          "placementChanged": false,
+          "crest": "immergluck.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "kaltwasser",
+          "sourceName": "Kaltwasser",
+          "displayName": "Kaltwasser",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "ewigensee",
+          "seatName": "Ewigensee",
+          "sourceSeatName": "Ewigensee",
+          "sourceSeatKind": "Königliche Provinz",
+          "sourceAdministrativeGroup": "ewigensee",
+          "rulerAtSeat": "goldkranz",
+          "isSeatRuler": false,
+          "rank": {
+            "id": "junker",
+            "basis": "inference from corresponding main-seat pattern; user explicitly named ruler only",
+            "needsConfirmation": true,
+            "label": "Junker"
+          },
+          "liege": {
+            "previewId": "goldkranz",
+            "basis": "co-located local ruler specified by user",
+            "confidence": "high"
+          },
+          "sourcePlacement": "ewigensee",
+          "placementChanged": false,
+          "crest": "kaltwasser.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        },
+        {
+          "previewId": "die-ritter-der-kornahre",
+          "sourceName": "Die Ritter der Kornähre",
+          "displayName": "Die Ritter der Kornähre",
+          "clan": false,
+          "canonicalFamilyId": null,
+          "canonicalHouseId": null,
+          "canonicalIdentityStatus": "new house; no matching canonical registry identity",
+          "seatId": "aehrensass",
+          "seatName": "Ährensass",
+          "sourceSeatName": "Ährensass",
+          "sourceSeatKind": "Verpachtetes Ordensgebiet",
+          "sourceAdministrativeGroup": null,
+          "rulerAtSeat": "die-ritter-der-kornahre",
+          "isSeatRuler": true,
+          "rank": {
+            "id": "order",
+            "basis": "latest user instruction",
+            "label": "Geistlicher Ritterorden"
+          },
+          "liege": {
+            "previewId": null,
+            "basis": "leased order territory; lessor not explicitly named",
+            "confidence": "open"
+          },
+          "sourcePlacement": "aehrensass",
+          "placementChanged": false,
+          "crest": "die-ritter-der-kornahre.webp",
+          "fullsize": null,
+          "counterpartMatches": []
+        }
+      ]
+    }
+  ],
+  "specialFamilies": [
+    {
+      "familyId": "haus-von-hochreuth",
+      "title": "Haus von Hochreuth",
+      "houseId": "house-von-hochreuth",
+      "existingProfile": {
+        "rankId": "knight",
+        "seat": "",
+        "barony": "",
+        "county": "Unsortierte Häuser",
+        "kingdom": "Goldmund",
+        "secondarySeats": [
+          "Burg Hochreuth (1736 an Ottos Linie gefallen)"
+        ],
+        "liegeHouseId": "haus-roden",
+        "liegeHouseName": "Haus Roden",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/goldmund.png"
+        }
+      },
+      "existingSourceRevision": 4,
+      "persons": [
+        {
+          "id": "friedrich-von-hochreuth-senior",
+          "worldPersonId": "person--haus-von-hochreuth--friedrich-von-hochreuth-senior",
+          "houseId": "house-von-hochreuth",
+          "name": "Friedrich von Hochreuth"
+        },
+        {
+          "id": "katharina-hochreuth-spouse",
+          "worldPersonId": "person--family-tree--katharina-hochreuth-spouse",
+          "houseId": "",
+          "name": "Katharina"
+        },
+        {
+          "id": "albrecht-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--albrecht-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Albrecht von Hochreuth"
+        },
+        {
+          "id": "anna-hochreuth-spouse",
+          "worldPersonId": "person--family-tree--anna-hochreuth-spouse",
+          "houseId": "",
+          "name": "Anna"
+        },
+        {
+          "id": "eberhard-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--eberhard-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Eberhard von Hochreuth"
+        },
+        {
+          "id": "friedrich-von-hochreuth-junior",
+          "worldPersonId": "person--haus-von-hochreuth--friedrich-von-hochreuth-junior",
+          "houseId": "house-von-hochreuth",
+          "name": "Friedrich von Hochreuth"
+        },
+        {
+          "id": "ottilie-friedrich-fiancee",
+          "worldPersonId": "person--family-tree--ottilie-friedrich-fiancee",
+          "houseId": "",
+          "name": "Ottilie"
+        },
+        {
+          "id": "heinrich-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--heinrich-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Heinrich von Hochreuth"
+        },
+        {
+          "id": "luise-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--luise-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Luise von Hochreuth"
+        },
+        {
+          "id": "konrad-unknown-spouse",
+          "worldPersonId": "person--family-tree--konrad-unknown-spouse",
+          "houseId": "",
+          "name": "Konrad"
+        },
+        {
+          "id": "wilhelm-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--wilhelm-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Wilhelm von Hochreuth"
+        },
+        {
+          "id": "elisabeth-hochreuth-spouse",
+          "worldPersonId": "person--family-tree--elisabeth-hochreuth-spouse",
+          "houseId": "",
+          "name": "Elisabeth"
+        },
+        {
+          "id": "friederike-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--friederike-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Friederike von Hochreuth"
+        },
+        {
+          "id": "august-unknown-spouse",
+          "worldPersonId": "person--family-tree--august-unknown-spouse",
+          "houseId": "",
+          "name": "August"
+        },
+        {
+          "id": "ruprecht-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--ruprecht-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Ruprecht von Hochreuth"
+        },
+        {
+          "id": "margarethe-hochreuth-spouse",
+          "worldPersonId": "person--family-tree--margarethe-hochreuth-spouse",
+          "houseId": "",
+          "name": "Margarethe"
+        },
+        {
+          "id": "rupert-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--rupert-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Rupert von Hochreuth"
+        },
+        {
+          "id": "kasper-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--kasper-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Kasper von Hochreuth"
+        },
+        {
+          "id": "leopold-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--leopold-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Leopold von Hochreuth"
+        },
+        {
+          "id": "charlotte-roden-spouse",
+          "worldPersonId": "person--haus-roden--charlotte-roden-spouse",
+          "houseId": "house-roden",
+          "name": "Charlotte Roden"
+        },
+        {
+          "id": "otto-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--otto-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Otto von Hochreuth"
+        },
+        {
+          "id": "wilhelmine-hochreuth-spouse",
+          "worldPersonId": "person--family-tree--wilhelmine-hochreuth-spouse",
+          "houseId": "",
+          "name": "Wilhelmine"
+        },
+        {
+          "id": "friedrich-wilhelm-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--friedrich-wilhelm-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Friedrich Wilhelm von Hochreuth"
+        },
+        {
+          "id": "ernst-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--ernst-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Ernst von Hochreuth"
+        },
+        {
+          "id": "henriette-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--henriette-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Henriette von Hochreuth"
+        },
+        {
+          "id": "dorothea-von-hochreuth",
+          "worldPersonId": "person--haus-von-hochreuth--dorothea-von-hochreuth",
+          "houseId": "house-von-hochreuth",
+          "name": "Dorothea von Hochreuth"
+        },
+        {
+          "id": "georg-unknown-spouse",
+          "worldPersonId": "person--family-tree--georg-unknown-spouse",
+          "houseId": "",
+          "name": "Georg"
+        }
+      ],
+      "partnershipIds": [
+        "marriage-friedrich-katharina-hochreuth",
+        "marriage-albrecht-anna-hochreuth",
+        "engagement-friedrich-ottilie-hochreuth",
+        "marriage-luise-konrad-hochreuth",
+        "marriage-wilhelm-elisabeth-hochreuth",
+        "marriage-friederike-august-hochreuth",
+        "marriage-ruprecht-margarethe-hochreuth",
+        "marriage-leopold-charlotte-hochreuth",
+        "marriage-otto-wilhelmine-hochreuth",
+        "marriage-dorothea-georg-hochreuth"
+      ],
+      "parentageIds": [
+        "hochreuth-v2-parentage-albrecht-von-hochreuth",
+        "hochreuth-v2-parentage-wilhelm-von-hochreuth",
+        "hochreuth-v2-parentage-leopold-von-hochreuth",
+        "hochreuth-v2-parentage-dorothea-von-hochreuth",
+        "hochreuth-v2-parentage-eberhard-von-hochreuth",
+        "hochreuth-v2-parentage-friedrich-von-hochreuth-junior",
+        "hochreuth-v2-parentage-heinrich-von-hochreuth",
+        "hochreuth-v2-parentage-luise-von-hochreuth",
+        "hochreuth-v2-parentage-ruprecht-von-hochreuth",
+        "hochreuth-v2-parentage-friederike-von-hochreuth",
+        "hochreuth-v2-parentage-rupert-von-hochreuth",
+        "hochreuth-v2-parentage-kasper-von-hochreuth",
+        "hochreuth-v2-parentage-otto-von-hochreuth",
+        "hochreuth-v2-parentage-friedrich-wilhelm-von-hochreuth",
+        "hochreuth-v2-parentage-ernst-von-hochreuth",
+        "hochreuth-v2-parentage-henriette-von-hochreuth"
+      ],
+      "promotion": {
+        "rank": "Ministerialer",
+        "seat": "Burg Hochreuth",
+        "seatId": null,
+        "liegeHouseId": "house-roden",
+        "liegeFamilyId": "haus-roden",
+        "basis": "Existing Goldmund family belongs to Roden; exact castle not on supplied map. Preserve 1736 succession and all identities."
+      }
+    },
+    {
+      "familyId": "haus-weinlaub",
+      "title": "Haus Weinlaub",
+      "houseId": "house-weinlaub",
+      "existingProfile": {
+        "rankId": "knight",
+        "seat": "",
+        "barony": "Ewigensee",
+        "county": "Region Ewigensee",
+        "kingdom": "Weisenfluh",
+        "secondarySeats": [
+          "Burg Rebenwacht nahe Ewigensee"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/weisenfluh.png"
+        }
+      },
+      "existingSourceRevision": 1,
+      "persons": [
+        {
+          "id": "unknown-founder-weinlaub",
+          "worldPersonId": "person--haus-weinlaub--unknown-founder-weinlaub",
+          "houseId": "house-weinlaub",
+          "name": "???"
+        },
+        {
+          "id": "unknown-founder-wife-weinlaub",
+          "worldPersonId": "person--family-tree--unknown-founder-wife-weinlaub",
+          "houseId": "",
+          "name": "???"
+        },
+        {
+          "id": "salomon-weinlaub",
+          "worldPersonId": "person--haus-weinlaub--salomon-weinlaub",
+          "houseId": "house-weinlaub",
+          "name": "Salomon Weinlaub"
+        },
+        {
+          "id": "rebekka-weinlaub-spouse",
+          "worldPersonId": "person--family-tree--rebekka-weinlaub-spouse",
+          "houseId": "",
+          "name": "Rebekka"
+        },
+        {
+          "id": "josiah-weinlaub",
+          "worldPersonId": "person--haus-weinlaub--josiah-weinlaub",
+          "houseId": "house-weinlaub",
+          "name": "Josiah Weinlaub"
+        },
+        {
+          "id": "rahel-weinlaub-spouse",
+          "worldPersonId": "person--family-tree--rahel-weinlaub-spouse",
+          "houseId": "",
+          "name": "Rahel"
+        },
+        {
+          "id": "gideon-weinlaub",
+          "worldPersonId": "person--haus-weinlaub--gideon-weinlaub",
+          "houseId": "house-weinlaub",
+          "name": "Gideon Weinlaub"
+        },
+        {
+          "id": "miryam-weinlaub",
+          "worldPersonId": "person--family-tree--miryam-weinlaub",
+          "houseId": "",
+          "name": "Miryam Weinlaub"
+        },
+        {
+          "id": "elias-weinlaub",
+          "worldPersonId": "person--haus-weinlaub--elias-weinlaub",
+          "houseId": "house-weinlaub",
+          "name": "Elias Weinlaub"
+        }
+      ],
+      "partnershipIds": [
+        "marriage-unknown-founders-weinlaub",
+        "marriage-salomon-rebekka-weinlaub",
+        "marriage-josiah-rahel-weinlaub",
+        "marriage-josiah-miryam-weinlaub"
+      ],
+      "parentageIds": [
+        "weinlaub-parentage-salomon-weinlaub",
+        "weinlaub-parentage-josiah-weinlaub",
+        "weinlaub-parentage-gideon-weinlaub",
+        "weinlaub-parentage-elias-weinlaub"
+      ],
+      "promotion": {
+        "rank": "Ministerialer",
+        "seat": "Burg Rebenwacht nahe Ewigensee",
+        "seatId": "ewigensee",
+        "liegePreviewId": "goldkranz",
+        "basis": "Existing profile explicitly locates Rebenwacht near Ewigensee; current user specifies Ministerialer"
+      }
+    },
+    {
+      "familyId": "haus-sonnenfels",
+      "title": "Haus Sonnenfels",
+      "houseId": "house-sonnenfels",
+      "existingProfile": {
+        "rankId": "knight",
+        "seat": "Burg Sonnenfels",
+        "barony": "",
+        "county": "",
+        "kingdom": "Weisenfluh",
+        "secondarySeats": [
+          "Gwynthor · Die Lachende Nixe"
+        ],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "existingSourceRevision": 1,
+      "persons": [
+        {
+          "id": "haus-sonnenfels-gruender",
+          "worldPersonId": null,
+          "houseId": "house-sonnenfels",
+          "name": "Unbekannter Gründer"
+        },
+        {
+          "id": "haus-sonnenfels-gruenderin",
+          "worldPersonId": null,
+          "houseId": "house-sonnenfels",
+          "name": "Unbekannte Gründerin"
+        },
+        {
+          "id": "dagorath-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--dagorath-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Dagorath Sonnenfels"
+        },
+        {
+          "id": "mechthild-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--mechthild-sonnenfels",
+          "houseId": "",
+          "name": "Mechthild"
+        },
+        {
+          "id": "gerold-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--gerold-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Gerold Sonnenfels"
+        },
+        {
+          "id": "adelgund-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--adelgund-sonnenfels",
+          "houseId": "",
+          "name": "Adelgund"
+        },
+        {
+          "id": "albrecht-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--albrecht-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Albrecht Sonnenfels"
+        },
+        {
+          "id": "johanna-falkenhayn",
+          "worldPersonId": "person--haus-falkenhayn--johanna-falkenhayn",
+          "houseId": "house-falkenhayn",
+          "name": "Johanna Falkenhayn"
+        },
+        {
+          "id": "erhard-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--erhard-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Erhard Sonnenfels"
+        },
+        {
+          "id": "hedwig-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--hedwig-sonnenfels",
+          "houseId": "",
+          "name": "Hedwig"
+        },
+        {
+          "id": "adelheid-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--adelheid-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Adelheid Sonnenfels"
+        },
+        {
+          "id": "oswald-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--oswald-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Oswald Sonnenfels"
+        },
+        {
+          "id": "konrad-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--konrad-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Konrad Sonnenfels"
+        },
+        {
+          "id": "brunhild-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--brunhild-sonnenfels",
+          "houseId": "",
+          "name": "Brunhild"
+        },
+        {
+          "id": "hartwig-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--hartwig-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Hartwig Sonnenfels"
+        },
+        {
+          "id": "dietmar-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--dietmar-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Dietmar Sonnenfels"
+        },
+        {
+          "id": "ottilie-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--ottilie-sonnenfels",
+          "houseId": "",
+          "name": "Ottilie"
+        },
+        {
+          "id": "raban-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--raban-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Raban Sonnenfels"
+        },
+        {
+          "id": "irmelin-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--irmelin-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Irmelin Sonnenfels"
+        },
+        {
+          "id": "simon-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--simon-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Simon Sonnenfels"
+        },
+        {
+          "id": "david-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--david-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "David Sonnenfels"
+        },
+        {
+          "id": "rosalinde-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--rosalinde-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Rosalinde Sonnenfels"
+        },
+        {
+          "id": "kaspar-sonnenfels",
+          "worldPersonId": "person--haus-sonnenfels--kaspar-sonnenfels",
+          "houseId": "house-sonnenfels",
+          "name": "Kaspar Sonnenfels"
+        },
+        {
+          "id": "unbekannter-gemahl-adelheid-sonnenfels",
+          "worldPersonId": "person--haus-unbekannt-adelheid-sonnenfels--unbekannter-gemahl-adelheid-sonnenfels",
+          "houseId": "house-unbekannt-adelheid-sonnenfels",
+          "name": "Unbekannter Gemahl"
+        },
+        {
+          "id": "unbekannte-mutter-kaspar-sonnenfels",
+          "worldPersonId": "person--family-tree--unbekannte-mutter-kaspar-sonnenfels",
+          "houseId": "",
+          "name": "Unbekannte Mutter"
+        }
+      ],
+      "partnershipIds": [
+        "marriage-haus-sonnenfels-founders",
+        "marriage-dagorath-mechthild-sonnenfels",
+        "marriage-gerold-adelgund-sonnenfels",
+        "marriage-albrecht-johanna-sonnenfels",
+        "marriage-erhard-hedwig-sonnenfels",
+        "marriage-konrad-brunhild-sonnenfels",
+        "marriage-dietmar-ottilie-sonnenfels",
+        "marriage-adelheid-unknown-sonnenfels",
+        "affair-albrecht-unknown-sonnenfels"
+      ],
+      "parentageIds": [
+        "parentage-dagorath-sonnenfels",
+        "parentage-gerold-sonnenfels",
+        "parentage-albrecht-sonnenfels",
+        "parentage-erhard-sonnenfels",
+        "parentage-adelheid-sonnenfels",
+        "parentage-oswald-sonnenfels",
+        "parentage-konrad-sonnenfels",
+        "parentage-hartwig-sonnenfels",
+        "parentage-dietmar-sonnenfels",
+        "parentage-raban-sonnenfels",
+        "parentage-irmelin-sonnenfels",
+        "parentage-simon-sonnenfels",
+        "parentage-david-sonnenfels",
+        "parentage-rosalinde-sonnenfels",
+        "parentage-kaspar-sonnenfels"
+      ],
+      "promotion": {
+        "rank": "Ministerialer",
+        "seat": "Burg Sonnenfels",
+        "seatId": null,
+        "liegePreviewId": null,
+        "basis": "Existing family and public biography establish southern Weisenfluh only; no source establishes province or liege"
+      }
+    }
+  ],
+  "namingDecisions": [
+    {
+      "realm": "aldingen",
+      "previewId": "rothmann",
+      "sourceName": "Rothmann",
+      "displayName": "Rothman",
+      "basis": "latest user spelling; preserve source key"
+    },
+    {
+      "realm": "goldmund",
+      "previewId": "broeck",
+      "sourceName": "Broeck",
+      "displayName": "Broek",
+      "basis": "latest user spelling; earlier source/README explicitly used Broeck"
+    },
+    {
+      "realm": "weisenfluh",
+      "previewId": "honigfeld",
+      "sourceName": "Honigfeld",
+      "displayName": "Honigblüt",
+      "basis": "latest user spelling; every previous source and original file uses Honigfeld"
+    },
+    {
+      "realm": "weisenfluh",
+      "previewId": "weissmann",
+      "sourceName": "Weissmann",
+      "displayName": "Weißmann",
+      "basis": "latest user spelling; preserve house-weissmann counterpart identity"
+    },
+    {
+      "realm": "goldmund",
+      "seatId": "hartenstein",
+      "regionId": "hartenfels",
+      "sourceName": "Hartenstein",
+      "displayName": "Hartenfels",
+      "basis": "latest repeated user naming, as clarified by parent; preserve hartenstein seat key and Hartenstein map alias"
+    },
+    {
+      "realm": "weisenfluh",
+      "seatId": "weisshort",
+      "sourceName": "Weisshort / Weißhort",
+      "displayName": "Weishort",
+      "basis": "latest user spelling; preserve stable key"
+    },
+    {
+      "realm": "weisenfluh",
+      "seatId": "weisslauf",
+      "sourceName": "Weisslauf / Weißlauf",
+      "displayName": "Weislauf",
+      "basis": "latest user spelling; preserve stable key"
+    }
+  ],
+  "collisions": [
+    {
+      "name": "Velten",
+      "items": [
+        {
+          "realm": "aldingen",
+          "previewId": "velten",
+          "motif": "purpurfarbenes Segelschiff",
+          "rank": "Graf",
+          "seatId": "hasselt"
+        },
+        {
+          "realm": "goldmund",
+          "previewId": "gueldenfels",
+          "motif": "goldener Steinbock",
+          "rank": "Junker",
+          "seatId": "brakenstein"
+        }
+      ],
+      "canonicalRegistryMatches": [],
+      "decision": "distinct supplied houses; never merge by surname. Use distinct realm-qualified canonical IDs if allocating new identities."
+    },
+    {
+      "name": "Rosenblüth",
+      "previewId": "rosenbluth",
+      "canonicalHouseId": "house-rosenblueth",
+      "decision": "reuse canonical ue spelling in identity; retain preview source ID for assets/export"
+    },
+    {
+      "name": "Halbrecht",
+      "canonicalHouseId": "house-halbrecht",
+      "counterpartFamily": "haus-helgr",
+      "personId": "ludmilla-halbrecht"
+    },
+    {
+      "name": "Weißmann",
+      "canonicalHouseId": "house-weissmann",
+      "counterpartFamilies": [
+        "haus-helgr",
+        "haus-marwolaeth"
+      ],
+      "personIds": [
+        "gideon-weissmann",
+        "josephine-weissmann"
+      ]
+    },
+    {
+      "name": "Rosenstolz",
+      "canonicalHouseId": "house-rosenstolz",
+      "counterpartFamily": "haus-aderyn",
+      "personId": "nurit-rosenstolz"
+    },
+    {
+      "name": "Roden",
+      "canonicalHouseId": "house-roden",
+      "counterpartFamily": "haus-von-hochreuth",
+      "personId": "charlotte-roden-spouse"
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "sonnenfels-location",
+      "severity": "unresolved exact geography",
+      "detail": "Burg Sonnenfels is not a named point on this supplied map. Only southern Weisenfluh and its existing family are proven. Preserve castle seat and leave specific province/liege open; no invented relocation."
+    },
+    {
+      "id": "goldmund-county-lieges",
+      "severity": "unresolved immediate lord",
+      "detail": "Aurelmark and Edelstrom are labelled Grafschaft, but no source labels one of their seats gräflich and user names no Graf. Main Baronien imply Freiherren, Hartenfels/Aldermoor imply Junker; immediate Grafenhaus remains unknown. Do not silently promote Arenberg/Lanvier/Berden to Graf or assert direct sovereign vassalage."
+    },
+    {
+      "id": "hasselt-count",
+      "severity": "explicit rank with inferred hierarchy",
+      "detail": "User makes Velten Graf at Hasselt. Map shows Hasselt as Baronie within Borgeln; provisional liege Rothman comes from map hierarchy only and should remain separately qualified."
+    },
+    {
+      "id": "weisenfluh-remaining-main-seat-ranks",
+      "severity": "inference",
+      "detail": "Non-ruling residents of Ewiggrün, Weislauf and Ewigensee are marked Junker by analogous specified main-seat pattern. The task text expressly stated others Junker at Weishort/Seeblick only; these remaining ranks are not individually express statements."
+    },
+    {
+      "id": "aehrensass-lord",
+      "severity": "unresolved lessor",
+      "detail": "Order territory is explicitly leased; source does not name lessor. Preserve order identity and leave liege open."
+    },
+    {
+      "id": "historical-titles",
+      "severity": "scope boundary",
+      "detail": "Current country-specific rank terms change to Freiherr/Junker/Ministerialer. Historical 1736 accounts and foreign Cenyr ranks must not be globally search-replaced."
+    }
+  ]
+}

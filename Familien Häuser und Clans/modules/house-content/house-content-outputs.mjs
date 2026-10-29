@@ -91,6 +91,7 @@ export function createHouseBiography(content) {
       documentsTitle: 'Mehr über das Haus',
       documents: [
         { icon: biographyImage(content.images.crest), title: `${content.name} · vollständige Hausseite`, text: content.prepared ? 'Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.' : content.type === 'Bürgerliches Haus' ? 'Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.' : 'Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.', link: pageLink(content) },
+        ...(content.relatedRecords || []).map(record => ({ ...record, icon: biographyImage(record.icon) })),
       ],
       footer: '',
     },

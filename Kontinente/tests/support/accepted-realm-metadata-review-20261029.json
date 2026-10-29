@@ -1,0 +1,18 @@
+{
+  "acceptedOn": "2026-10-28",
+  "reason": "Explicit western rank renaming and accepted ministerial allegiance; genealogies and person identities are unchanged.",
+  "families": {
+    "haus-sonnenfels": {
+      "before": { "rankId": "knight", "liegeHouseId": "", "liegeHouseName": "" },
+      "after": { "rankId": "ministerial", "liegeHouseId": "house-weissmann", "liegeHouseName": "Haus Weißmann" }
+    },
+    "haus-weinlaub": {
+      "before": { "rankId": "knight", "liegeHouseId": "", "liegeHouseName": "" },
+      "after": { "rankId": "ministerial", "liegeHouseId": "house-goldkranz", "liegeHouseName": "Haus Goldkranz" }
+    },
+    "haus-von-hochreuth": {
+      "before": { "rankId": "knight", "liegeHouseId": "haus-roden", "liegeHouseName": "Haus Roden" },
+      "after": { "rankId": "ministerial", "liegeHouseId": "house-roden", "liegeHouseName": "Haus Roden" }
+    }
+  }
+}

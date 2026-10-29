@@ -2,6 +2,16 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
+Nutzerfreigabe vom 29. Oktober 2026: **„Dann los“**, als ausdrückliche Antwort
+auf die Übersicht des nächsten gemeinsamen Pushs und Deploys. Freigegeben ist
+der dort beschriebene vorhandene lokale Gesamtstand: die Übernahme der sieben
+Länder, Kontinentatlas und Registerkorrekturen, Blutstadt- und Aeldrunmar-
+Vorbereitungsseiten einschließlich der sechs letzten Bildüberarbeitungen sowie
+ihre gemeinsamen Funktionen, Quellen und Prüfbelege. Quellenarchive werden
+gemäß Releasepolicy im Repository erhalten und nicht statisch ausgeliefert.
+Private Dossiers und lokale Browserentwürfe bleiben ausgeschlossen. Spätere
+neue Arbeiten benötigen ihre jeweils geltende Veröffentlichungsfreigabe.
+
 Ergänzende Nutzerfreigabe vom 28. Oktober 2026: **„Pushe alles auf master und
 deploy“**. Sie schließt den fertiggestellten lokalen Stand der ausführlicheren
 Verwaltungsdetails und der gemeinsamen Hofämteransicht einschließlich sichtbarer

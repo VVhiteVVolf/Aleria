@@ -1,0 +1,1023 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "id": "triarchie",
+  "name": "Triarchie",
+  "title": "Die Triarchie · Besetztes Lothir",
+  "type": "Besatzungsgebiet",
+  "continent": "Lothir",
+  "capital": "",
+  "ruler": "",
+  "rootId": "triarchie-lothir",
+  "occupied": true,
+  "map": "/Karten/Triarchie/Kartenbilder/normal.webp",
+  "crest": "",
+  "context": {
+    "title": "Die Triarchie · Besetztes Lothir",
+    "short": "Besetztes Lothir",
+    "realm": "triarchie",
+    "imageSize": [
+      5080,
+      8192
+    ],
+    "introduction": "Ein Bund dreier mächtiger Individuen hält Teile Iathneachs und einen wesentlichen Teil Aldingens besetzt. Diese Werkstatt betrachtet die eroberten Länder und ihre unterdrückten Familien – den lothirischen Teil einer größeren Herrschaft.",
+    "note": "Der Entwurf umfasst ausschließlich Lothir. Die Besitzungen auf Aldervan werden hier nicht ausgearbeitet. Orts-, Regions- und Familiennamen sowie die neuen Sitze sind Vorschläge. Die Originalkarte bleibt beschriftet wie geliefert; neue Namen stehen daneben in den Gebietskarten.",
+    "history": [
+      {
+        "title": "Drei Herrscher ohne Namen",
+        "text": "Die korrumpierte Druidin, der totgeglaubte Heermeister und der dunkle Zauberer bilden die Triarchie. Ihre eigentlichen Namen bleiben vorerst unbekannt. Terror, Unterdrückung und infernale Unterstützung tragen ihre Herrschaft."
+      },
+      {
+        "title": "Die Gelegenheit vor zwanzig Jahren",
+        "text": "Die drei nutzten den Krieg Ceitheachs, die Invasion Vennyrs sowie das Auftreten der Piratenbanden, Schwarzblut-Marodeure und Blutsegen-Marodeure. In diesem Umfeld eigneten sie sich Brevanor, Talyndor und das albische Fürstentum Deitheach sowie Teile Lothirs an."
+      },
+      {
+        "title": "Die lothirischen Verluste",
+        "text": "Ein Teil Iathneachs und ein wesentlicher Teil Aldingens gerieten unter ihre Kontrolle. Die Karte unterscheidet ein ehemals iathneachisches Mor Tiarnatum und zwei ehemals aldingische Grafschaften. Die roten Teilgrenzen bleiben vollständig erhalten."
+      },
+      {
+        "title": "Menschen und Clans unter Besatzung",
+        "text": "Die einheimischen Familien bewahren ihre Herkunft. Unter der Herrschaft der Triarchie zu leben ist kein Beleg freiwilliger Gefolgschaft. Die Mac Farraigeach stammen aus Cuansioda; sie sitzen gegenwärtig im freien Iathneach auf Sgeir Tearmainn."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Aldervan bleibt außerhalb dieses Entwurfs",
+        "text": "Der größere Herrschaftsraum setzt sich auf Aldervan fort. Seine Länder erhalten hier keine erfundenen Teilregionen, Familien oder Kartenflächen."
+      },
+      {
+        "title": "Alte Zeichen, neue Unterdrückung",
+        "text": "Albische Banner und aldingische Gebietsschilde bleiben kulturell unterscheidbar. Einheimische Krieger erhalten keine pauschale Dämonenrüstung: ihre Ausrüstung folgt Herkunft, Klasse und Geographie."
+      }
+    ],
+    "resetMessage": "Die elf ausdrücklich als Vorschläge markierten Ausgangssitze werden wiederhergestellt. Cuansioda bleibt ohne neu zugeteilten Clan."
+  },
+  "design": {},
+  "regions": [
+    {
+      "id": "cuansioda",
+      "name": "Mor Tiarnatum Cuansioda",
+      "title": "Besetztes Iathneach",
+      "originRealm": "iathneach",
+      "colour": "#a79b35",
+      "seats": [
+        "dorchain",
+        "cuansioda",
+        "fiorail",
+        "doire-fionn"
+      ],
+      "motif": "Ein heller Küstenberg über einer kupfernen Segelbarke und drei dunklen Tannensilhouetten.",
+      "palette": [
+        "Moosgrün",
+        "Elfenbein",
+        "Kupfer"
+      ],
+      "formerHouseId": "farraigeach",
+      "art": "county-cuansioda",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "wernmark",
+      "name": "Grafschaft Wernmark",
+      "title": "Besetztes Aldingen · Namensentwurf",
+      "originRealm": "aldingen",
+      "colour": "#568549",
+      "seats": [
+        "wernheim",
+        "erlensund",
+        "segelwacht",
+        "hammertal",
+        "rottendorf"
+      ],
+      "motif": "Ein silbernes Stadttor über zwei grünen Eichenblättern und einem schwarzen Hufeisen.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Schwarz"
+      ],
+      "art": "county-wernmark",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "hohenreede",
+      "name": "Grafschaft Hohenreede",
+      "title": "Besetztes Aldingen · Namensentwurf",
+      "originRealm": "aldingen",
+      "colour": "#4c68a6",
+      "seats": [
+        "dornheim",
+        "rothen",
+        "hohenreede"
+      ],
+      "motif": "Ein silberner Leuchtturm zwischen zwei schwarzen Pferdeköpfen über drei weißen Wellen.",
+      "palette": [
+        "Marineblau",
+        "Silberweiß",
+        "Schwarz"
+      ],
+      "art": "county-hohenreede",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "dorchain",
+      "name": "Dorchain",
+      "regionName": "Braigh Dorchain",
+      "county": "cuansioda",
+      "kind": "Dún Tiarnatum",
+      "point": [
+        30.6,
+        16.5
+      ],
+      "pin": [
+        31,
+        12
+      ],
+      "geography": "Westliches Berg- und Waldgebiet. Zugang zu Höhenwegen und möglichen Stollenplätzen; Bergbau ist hier ein Entwurfsthema.",
+      "motif": "Ein heller Berggrat über gekreuztem dunklem Schlägel und Eisen auf moosgrünem Tuch.",
+      "palette": [
+        "Moosgrün",
+        "Kalkweiß",
+        "Eisengrau"
+      ],
+      "art": "dorchain",
+      "originRealm": "iathneach",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "cuansioda",
+      "name": "Cuansioda",
+      "regionName": "Cuan Cuansioda",
+      "county": "cuansioda",
+      "kind": "Ehemaliger Mor-Tiarna-Sitz",
+      "point": [
+        68.3,
+        20.6
+      ],
+      "pin": [
+        68,
+        15.5
+      ],
+      "formerHouseId": "farraigeach",
+      "geography": "Nordöstlicher Küsten- und Hafenraum des verlorenen Iathneacher Mor Tiarnatums. Herkunftssitz der Mac Farraigeach, die heute auf Sgeir Tearmainn sitzen.",
+      "motif": "Eine helle dreimastige Segelbarke über zwei kupfernen Wellenbändern auf graugrünem Tuch.",
+      "palette": [
+        "Graugrün",
+        "Wollweiß",
+        "Kupferocker"
+      ],
+      "art": "cuansioda",
+      "originRealm": "iathneach",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "fiorail",
+      "name": "Fiorail",
+      "regionName": "Cladach Fiorail",
+      "county": "cuansioda",
+      "kind": "Lairdtum",
+      "point": [
+        15.8,
+        29.6
+      ],
+      "pin": [
+        16,
+        25
+      ],
+      "geography": "Westlicher Rand des besetzten Mor Tiarnatums; offene Ebenen und Gehölze zwischen Küstenzugang und inneren Hügeln.",
+      "motif": "Zwei helle Schilfblätter über einem blauen Wasserstrich und einem dunklen Küstenstein.",
+      "palette": [
+        "Sandocker",
+        "Schilfgrün",
+        "Schieferblau"
+      ],
+      "art": "fiorail",
+      "originRealm": "iathneach",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "doire-fionn",
+      "name": "Doire Fionn",
+      "mapName": "Albischer Name",
+      "regionName": "Coill Fhionn",
+      "county": "cuansioda",
+      "kind": "Lairdtum",
+      "point": [
+        44.2,
+        28.8
+      ],
+      "pin": [
+        44,
+        24
+      ],
+      "geography": "Südöstlicher bewaldeter Übergang zwischen den nördlichen Höhen und den aldingischen Ebenen. Neuer albischer Ortsname für den Kartenplatzhalter.",
+      "motif": "Ein heller Haselzweig mit drei Nüssen über einer kleinen dunklen Waldpforte.",
+      "palette": [
+        "Haselgrün",
+        "Elfenbein",
+        "Braun"
+      ],
+      "art": "doire-fionn",
+      "originRealm": "iathneach",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "wernheim",
+      "name": "Wernheim",
+      "regionName": "Wernau",
+      "county": "wernmark",
+      "kind": "Baronie",
+      "point": [
+        45.7,
+        42.3
+      ],
+      "pin": [
+        44,
+        37
+      ],
+      "geography": "Westliches Binnengebiet der grünen Grafschaft; Wald und offene Talräume erlauben Landverkehr und Handwerk.",
+      "motif": "Ein silberner Wachturm über einer schwarzen Mauer und einem hellen Wasserband.",
+      "palette": [
+        "Dunkles Grün",
+        "Silber",
+        "Schwarz"
+      ],
+      "art": "wernheim",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "erlensund",
+      "name": "Erlensund",
+      "mapName": "Aldingen Name · Nordostküste",
+      "regionName": "Erlensunder Küstenmark",
+      "county": "wernmark",
+      "kind": "Baronie",
+      "point": [
+        73.9,
+        30.6
+      ],
+      "pin": [
+        74,
+        26
+      ],
+      "geography": "Nordöstlicher Küstenvorsprung am Übergang zum verlorenen Iathneach. Vorschlag für den nördlichen aldingischen Küstenplatzhalter.",
+      "motif": "Ein schwarzer Schiffsbug unter zwei silbernen Erlenblättern über einem blauen Wasserband.",
+      "palette": [
+        "Seegrün",
+        "Silber",
+        "Schwarz"
+      ],
+      "art": "erlensund",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "segelwacht",
+      "name": "Segelwacht",
+      "mapName": "Aldingen Name · Mittlere Ostküste",
+      "regionName": "Segelwachter Reede",
+      "county": "wernmark",
+      "kind": "Herrschaft",
+      "point": [
+        84,
+        44.5
+      ],
+      "pin": [
+        84,
+        40
+      ],
+      "geography": "Schmale östliche Küstenherrschaft, mit gut sichtbarer Hafenlage. Vorschlag für den mittleren Küstenplatzhalter.",
+      "motif": "Ein silbernes Dreiecksegel über einem kupfernen Anker auf schwarzem und blaugrünem Feld.",
+      "palette": [
+        "Blaugrün",
+        "Silber",
+        "Kupfer"
+      ],
+      "art": "segelwacht",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "hammertal",
+      "name": "Hammertal",
+      "mapName": "Aldingen Name · Westliche Baronie",
+      "regionName": "Hammertaler Waldmark",
+      "county": "wernmark",
+      "kind": "Baronie",
+      "point": [
+        24,
+        58.8
+      ],
+      "pin": [
+        24,
+        54
+      ],
+      "geography": "Westliche, stark bewaldete Baronie unter einem südwestlichen Höhenzug. Vorschlag für den westlichen aldingischen Kartenplatzhalter.",
+      "motif": "Ein silberner Bergadler mit gefalteten Flügeln zwischen zwei dunkelgrünen Tannenzweigen auf Rostrot.",
+      "palette": [
+        "Rostrot",
+        "Silber",
+        "Tannengrün"
+      ],
+      "art": "hammertal",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "rottendorf",
+      "name": "Rottendorf",
+      "regionName": "Rottenfelder",
+      "county": "wernmark",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        68,
+        67
+      ],
+      "pin": [
+        68,
+        62
+      ],
+      "geography": "Gräflicher Hauptort am Südostrand der grünen Grafschaft, mit Wiesen- und Waldland im Hinterland.",
+      "motif": "Ein schwarzes Hufeisen über zwei silbernen Ähren auf rot und elfenbein geteiltem Feld.",
+      "palette": [
+        "Weinrot",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "art": "rottendorf",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "dornheim",
+      "name": "Dornheim",
+      "regionName": "Dornheimer Höhen",
+      "county": "hohenreede",
+      "kind": "Baronie",
+      "point": [
+        17.5,
+        71.9
+      ],
+      "pin": [
+        18,
+        67
+      ],
+      "geography": "Westliche Randbaronie der blauen Grafschaft an unzugänglichen Höhen; Wald und Landwege prägen den Sitzraum.",
+      "motif": "Ein silberner Dornenzweig über einem schwarzen Wehrturm auf Stahlblau.",
+      "palette": [
+        "Stahlblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "art": "dornheim",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "rothen",
+      "name": "Rothen",
+      "regionName": "Rothener Hain",
+      "county": "hohenreede",
+      "kind": "Baronie",
+      "point": [
+        33.3,
+        86.6
+      ],
+      "pin": [
+        33,
+        82
+      ],
+      "geography": "Südwestliches Binnengebiet zwischen Höhen und lichteren Wäldern, über Wege zum Osten verbunden.",
+      "motif": "Drei rote Eicheln an einem silbernen Zweig auf elfenbeinblauem Feld.",
+      "palette": [
+        "Elfenbein",
+        "Blau",
+        "Ziegelrot"
+      ],
+      "art": "rothen",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    },
+    {
+      "id": "hohenreede",
+      "name": "Hohenreede",
+      "mapName": "Blankenstadt",
+      "regionName": "Hohe Reede",
+      "county": "hohenreede",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        78.5,
+        93.2
+      ],
+      "pin": [
+        78,
+        88
+      ],
+      "geography": "Südöstlicher gräflicher Hafen am Ausläufer der Küste. Hohenreede ist der neue Namensvorschlag für das auf der Karte als Blankenstadt bezeichnete Zentrum.",
+      "motif": "Ein silberner Hafenturm über zwei gekreuzten schwarzen Rudern mit breiten Blättern und drei Wellen auf Marineblau.",
+      "palette": [
+        "Marineblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "art": "hohenreede",
+      "originRealm": "aldingen",
+      "occupier": "triarchie",
+      "continent": "lothir"
+    }
+  ],
+  "houses": [
+    {
+      "id": "taghan",
+      "sourceId": "taghan",
+      "name": "An Taghan",
+      "houseId": "house-an-taghan",
+      "familyId": "haus-an-taghan",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "dorchain",
+      "regionId": "cuansioda",
+      "rankId": "dun-tiarna",
+      "rank": "Dún Tiarna",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein heller Baummarder mit dunklem Schwanz als einziges Hauptmotiv.",
+      "palette": [
+        "Schiefergrün",
+        "Knochenweiß",
+        "Kupfer"
+      ],
+      "ornament": "Nur zwei eingeritzte Winkel oben, unten ein breiter glatter Holzabschnitt",
+      "frame": "Dunklem Holz mit drei ungleichen Eisenklammern",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/taghan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/taghan.png",
+      "warrior": {
+        "id": "taghan",
+        "name": "An Taghan",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Kurze Einhandaxt, Rundschild mit Marder, Kettenhemd, lederner Schulterschutz und graugrüner Tartan.",
+        "reason": "Der Baummarder steht als einziges Hauptmotiv für das Berg- und Waldland Dorchains. Ein standfester Cateran passt zur Sicherung enger Höhenwege.",
+        "palette": [
+          "Schiefergrün",
+          "Knochenweiß",
+          "Kupfer"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/taghan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/taghan/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/taghan/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "guilbneach",
+      "sourceId": "guilbneach",
+      "name": "Ua Guilbneach",
+      "houseId": "house-ua-guilbneach",
+      "familyId": "haus-ua-guilbneach",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "fiorail",
+      "regionId": "cuansioda",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein heller Brachvogel mit deutlich abwärts gebogenem langem Schnabel und zwei dunklen Beinen über einem Wasserstrich.",
+      "palette": [
+        "Sandocker",
+        "Schieferblau",
+        "Wollweiß"
+      ],
+      "ornament": "Ein schmales blaues Wellenband nur im unteren Drittel, keine Runen",
+      "frame": "Hellem Holz mit einer einzigen sichtbaren Hanfnaht",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/guilbneach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/guilbneach.png",
+      "warrior": {
+        "id": "guilbneach",
+        "name": "Ua Guilbneach",
+        "classId": "currach",
+        "className": "Currach",
+        "equipment": "Kurzes Schwert, leichte Lederpanzerung mit Kettenkragen, aufgerolltes Sturmseil und sandblauer Plaid.",
+        "reason": "Der Brachvogel und die sandblauen Farben nehmen die Rand- und Küstenlage Fiorails auf. Der Currach bleibt mit leichter Ausrüstung beweglich.",
+        "palette": [
+          "Sandocker",
+          "Schieferblau",
+          "Wollweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/guilbneach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/guilbneach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/currach/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/guilbneach/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "coilleach",
+      "sourceId": "coilleach",
+      "name": "Ruin Coilleach",
+      "houseId": "house-ruin-coilleach",
+      "familyId": "haus-ruin-coilleach",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "doire-fionn",
+      "regionId": "cuansioda",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein helles Haselhuhn mit kleinem Schopf, gedrungenem Körper, gesprenkeltem Flügel und dunklem Kehlfleck steht unter einem Haselzweig.",
+      "palette": [
+        "Weinrot",
+        "Haselocker",
+        "Kalkweiß"
+      ],
+      "ornament": "Nur vier einfache helle Kerben, keine umlaufenden Knoten oder Goldzier",
+      "frame": "Breitem grobem Haselholz ohne Metallbeschläge",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/coilleach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/coilleach.png",
+      "warrior": {
+        "id": "coilleach",
+        "name": "Ruin Coilleach",
+        "classId": "serf",
+        "className": "Serf",
+        "equipment": "Langbogen, Rückenköcher, Jagdmesser, schlichte Lederweste und weinrot-brauner Kilt.",
+        "reason": "Das Haselhuhn passt zum bewaldeten Übergangsraum Doire Fionns und ergänzt die vorhandenen albischen Tiermotive. Der leichte Serf verwendet Wald- und Wollfarben; es wird keine neue kanonische Clanvergangenheit erfunden.",
+        "palette": [
+          "Weinrot",
+          "Haselocker",
+          "Kalkweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/coilleach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/coilleach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/serf/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/coilleach/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "hammerstein",
+      "sourceId": "hammerstein",
+      "name": "Hammerstein",
+      "houseId": "house-hammerstein",
+      "familyId": "haus-hammerstein",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "wernheim",
+      "regionId": "wernmark",
+      "rankId": "freiherr",
+      "rank": "Freiherr",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein stolzer silberner Eber mit schwarzen Hauern auf dunkelgrünem Holz.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "Vier kleine kantige Nieten und zwei kurze Eichenblätter",
+      "frame": "Geschwärztem Eisen mit schmaler silberner Innenkante",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/hammerstein.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/hammerstein.png",
+      "warrior": {
+        "id": "hammerstein",
+        "name": "Hammerstein",
+        "classId": "aldmer",
+        "className": "Aldmer",
+        "equipment": "Hellebarde, funktionaler deutscher Harnisch mit Kettenlücken, grüner Waffenrock und offene Schallerform.",
+        "reason": "Der silberne Eber und die dunklen Waldfarben Wernheims ergeben einen standfesten Aldmer.",
+        "palette": [
+          "Waldgrün",
+          "Silber",
+          "Schwarz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/hammerstein/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/hammerstein/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-aldmar"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/hammerstein/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "segelbrecht",
+      "sourceId": "segelbrecht",
+      "name": "Segelbrecht",
+      "houseId": "house-segelbrecht",
+      "familyId": "haus-segelbrecht",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "erlensund",
+      "regionId": "wernmark",
+      "rankId": "freiherr",
+      "rank": "Freiherr",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein schwarzer hochgezogener Schiffsbug mit silbernem Segel und einem grünen Erlenblatt.",
+      "palette": [
+        "Schilfgrün",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "Zwei kleine Erlenblätter im oberen Ring, keine Krone",
+      "frame": "Dunklem Silber mit schmaler Tauwerkgravur",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/segelbrecht.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/segelbrecht.png",
+      "warrior": {
+        "id": "segelbrecht",
+        "name": "Segelbrecht",
+        "classId": "havner",
+        "className": "Havner",
+        "equipment": "Kampfsäbel, Rückenköcher, leichte Brustplatte über Leder, offene Sturmhaube; Seevogel auf geschütztem Unterarm.",
+        "reason": "Der Havner verbindet die nördliche Reede Erlensunds mit aldingischer Seefahrt. Der Vogel steht auf einem tatsächlich geschützten Unterarm.",
+        "palette": [
+          "Schilfgrün",
+          "Silber",
+          "Schwarz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/segelbrecht/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/segelbrecht/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-havner"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/segelbrecht/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "riemann",
+      "sourceId": "riemann",
+      "name": "Riemann",
+      "houseId": "house-riemann",
+      "familyId": "haus-riemann",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "segelwacht",
+      "regionId": "wernmark",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein silberner Seeadler mit gespreizten Flügeln und kupfernem Schnabel auf Blaugrün.",
+      "palette": [
+        "Petrol",
+        "Silber",
+        "Kupfer"
+      ],
+      "ornament": "Ein schmaler Wellenfries und zwei einfache Tauwicklungen",
+      "frame": "Kupferbronze mit wenigen dunklen Nieten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/riemann.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/riemann.png",
+      "warrior": {
+        "id": "riemann",
+        "name": "Riemann",
+        "classId": "havner",
+        "className": "Havner",
+        "equipment": "Kurzer Kampfsäbel, Rückenköcher, Kettenkragen, Lederkürass und schlichter wetterfester Mantel.",
+        "reason": "Der silberne Seeadler passt zum kleinen Küstensitz Segelwacht. Dieser Havner verzichtet bewusst auf einen Tierbegleiter und unterscheidet sich dadurch vom Erlensunder Entwurf.",
+        "palette": [
+          "Petrol",
+          "Silber",
+          "Kupfer"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/riemann/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/riemann/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-havner"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/riemann/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "steinmetz",
+      "sourceId": "steinmetz",
+      "name": "Steinmetz",
+      "houseId": "house-steinmetz",
+      "familyId": "haus-steinmetz",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "hammertal",
+      "regionId": "wernmark",
+      "rankId": "freiherr",
+      "rank": "Freiherr",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein aufgerichteter silberner Luchs mit schwarzen Ohrpinseln und wenigen dunklen Fellflecken zwischen grünen Eichenblättern auf Rostrot.",
+      "palette": [
+        "Rostrot",
+        "Silber",
+        "Tannengrün"
+      ],
+      "ornament": "Sparsame spätgotische Blattansätze, kein Zunftschriftband",
+      "frame": "Dunklem Eisen mit vier flachen quadratischen Spangen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/steinmetz.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/steinmetz.png",
+      "warrior": {
+        "id": "steinmetz",
+        "name": "Steinmetz",
+        "classId": "flamberger",
+        "className": "Flamberger",
+        "equipment": "Zweihändiger Flamberg, gepolstertes Wams, einzelne Schulter- und Armplatten, eisenbeschlagener Morion.",
+        "reason": "Der silberne Luchs bestimmt den Entwurf eines Flambergers mit übersichtlicher Ausrüstung und eindeutig geführtem Zweihandschwert.",
+        "palette": [
+          "Rostrot",
+          "Silber",
+          "Tannengrün"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/steinmetz/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/steinmetz/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-flamberger"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/steinmetz/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "hufschlag",
+      "sourceId": "hufschlag",
+      "name": "Hufschlag",
+      "houseId": "house-hufschlag",
+      "familyId": "haus-hufschlag",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "rottendorf",
+      "regionId": "wernmark",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein schwarzer steigender Hengst über einem silbernen Hufeisen auf weinrot-elfenbein geteiltem Feld.",
+      "palette": [
+        "Weinrot",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "Schlichte Hufeisenrosetten und ein schmaler dunkler Innenring",
+      "frame": "Dunklem Silber mit kleinen Bronzehufnägeln",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/hufschlag.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/hufschlag.png",
+      "warrior": {
+        "id": "hufschlag",
+        "name": "Hufschlag",
+        "classId": "husar",
+        "className": "Husar",
+        "equipment": "Reitersäbel, funktionaler Kürass, offener Zischäggenhelm und ein schmales Federflügelpaar am Rücken; zu Fuß.",
+        "reason": "Pferd und Hufeisen greifen die Reitkultur Aldingens auf. Der Husar wird hier zu Fuß dargestellt; die Flügel sitzen als Ausrüstung auf dem Rücken.",
+        "palette": [
+          "Weinrot",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/hufschlag/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/hufschlag/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-husar"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/hufschlag/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "stahlwart",
+      "sourceId": "stahlwart",
+      "name": "Stahlwart",
+      "houseId": "house-stahlwart",
+      "familyId": "haus-stahlwart",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "dornheim",
+      "regionId": "hohenreede",
+      "rankId": "freiherr",
+      "rank": "Freiherr",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein silberner geschlossener Ritterhelm über einer schwarzen Torpforte auf Stahlblau.",
+      "palette": [
+        "Stahlblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "Vier kleine gotische Bogenfelder und ein schlichter heller Innenrand",
+      "frame": "Schwarz gefasstem Eisen mit silbernen Nieten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/stahlwart.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/stahlwart.png",
+      "warrior": {
+        "id": "stahlwart",
+        "name": "Stahlwart",
+        "classId": "aldmer",
+        "className": "Aldmer",
+        "equipment": "Langer Stoßspieß, geschlossener deutscher Harnisch mit Beinzeug, funktionaler Armethelm und kurzer blauer Waffenrock.",
+        "reason": "Der geschlossene Helm und das Torzeichen passen zu einer wehrhaften Randbaronie. Der Aldmer erhält einen anderen Helm und eine andere Stangenwaffe als Hammerstein.",
+        "palette": [
+          "Stahlblau",
+          "Silber",
+          "Schwarz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/stahlwart/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/stahlwart/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-aldmar"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/stahlwart/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "reiff",
+      "sourceId": "reiff",
+      "name": "Reiff",
+      "houseId": "house-reiff",
+      "familyId": "haus-reiff",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "rothen",
+      "regionId": "hohenreede",
+      "rankId": "freiherr",
+      "rank": "Freiherr",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein aufgerichteter ziegelroter Steinbock mit langen rückwärts geschwungenen Hörnern auf elfenbein-blau geteiltem Holz.",
+      "palette": [
+        "Elfenbein",
+        "Staubblau",
+        "Ziegelrot"
+      ],
+      "ornament": "Vier flache eiserne Bindespangen und eine kleine rote Blattrosette",
+      "frame": "Hellem Holz mit dünnem Eisenreif",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/reiff.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/reiff.png",
+      "warrior": {
+        "id": "reiff",
+        "name": "Reiff",
+        "classId": "husar",
+        "className": "Husar",
+        "equipment": "Reitersäbel, leichter gerippter Kürass, offener Eisenhelm mit breiter Wangenklappe und ein einzelner kompakter Rückenflügel; zu Fuß.",
+        "reason": "Der rote Steinbock verbindet die Höhenzüge bei Rothen mit aldingischem Rittertum. Der einzelne Rückenflügel unterscheidet den Entwurf vom Rottendorfer Husaren.",
+        "palette": [
+          "Elfenbein",
+          "Staubblau",
+          "Ziegelrot"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/reiff/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/reiff/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-husar"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/reiff/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "sattler",
+      "sourceId": "sattler",
+      "name": "Sattler",
+      "houseId": "house-sattler",
+      "familyId": "haus-sattler",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "hohenreede",
+      "regionId": "hohenreede",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein stolzer schwarzer Greif mit silbernem Schnabel und silbernen Krallen über einem blauen Wellenbalken auf Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Marineblau",
+        "Schwarz"
+      ],
+      "ornament": "Kleine geflochtene Ledermuster und vier einfache silberne Rundnieten",
+      "frame": "Bronze mit schmalem schwarzem Lederinnenring",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/sattler.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/sattler.png",
+      "warrior": {
+        "id": "sattler",
+        "name": "Sattler",
+        "classId": "havner",
+        "className": "Havner",
+        "equipment": "Kampfsäbel, Rückenköcher, Leder- und Kettenzeug, offener gerundeter Eisenhelm; kleiner Vogel auf gepolsterter Schulter.",
+        "reason": "Der schwarze Greif steht für den wehrhaften Anspruch einer aldingischen Hafenfamilie. Der maritime Havner steht für Hohenreedes Lage; er legt keine kanonische Ausbildung des ganzen Hauses fest.",
+        "palette": [
+          "Elfenbein",
+          "Marineblau",
+          "Schwarz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/triarchie/sattler/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/triarchie/sattler/krieger.png",
+        "classHref": "../../Klassenordner/Klassenseite.html#klasse-goldmund-havner"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/triarchie/sattler/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    }
+  ],
+  "territoryArt": {
+    "county-cuansioda": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/county-cuansioda.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/county-cuansioda.png",
+      "originRealm": "iathneach",
+      "shape": "banner"
+    },
+    "county-wernmark": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/county-wernmark.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/county-wernmark.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "county-hohenreede": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/county-hohenreede.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/county-hohenreede.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "dorchain": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/dorchain.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/dorchain.png",
+      "originRealm": "iathneach",
+      "shape": "banner"
+    },
+    "cuansioda": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/cuansioda.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/cuansioda.png",
+      "originRealm": "iathneach",
+      "shape": "banner"
+    },
+    "fiorail": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/fiorail.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/fiorail.png",
+      "originRealm": "iathneach",
+      "shape": "banner"
+    },
+    "doire-fionn": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/doire-fionn.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/doire-fionn.png",
+      "originRealm": "iathneach",
+      "shape": "banner"
+    },
+    "wernheim": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/wernheim.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/wernheim.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "erlensund": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/erlensund.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/erlensund.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "segelwacht": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/segelwacht.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/segelwacht.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "hammertal": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/hammertal.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/hammertal.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "rottendorf": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/rottendorf.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/rottendorf.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "dornheim": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/dornheim.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/dornheim.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "rothen": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/rothen.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/rothen.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    },
+    "hohenreede": {
+      "image": "/Stammbäume/assets/images/regions/triarchie/hohenreede.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/triarchie/hohenreede.png",
+      "originRealm": "aldingen",
+      "shape": "kite"
+    }
+  }
+}

@@ -1,0 +1,1336 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Aldingen/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "9e7dc1057135711065380221b552b53eb01a81e0f917227d51a91be76562b44d",
+  "state": {
+    "pins": [
+      {
+        "id": "aldingen-barenstadt",
+        "title": "Barenstadt",
+        "x": 0.713,
+        "y": 0.17200000000000004,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ritten.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ritten",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/barenstadt.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-barenstadt/index.html",
+        "region": "Aldingen",
+        "house": "Haus Ritten",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Barenstadt"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ritten"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Ritten, Sgiathan, Haus Wolfram"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Gräfliche Herrschaft Barenstadt"
+          }
+        ],
+        "text": "Die nördliche gräfliche Baronie liegt zwischen westlichen Höhenzügen und bewaldeten Ebenen.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-barenstadt",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "barenstadt",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            71.3,
+            17.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ritten",
+          "haus-sgiathan",
+          "haus-wolfram"
+        ]
+      },
+      {
+        "id": "aldingen-welden",
+        "title": "Welden",
+        "x": 0.8759999999999999,
+        "y": 0.29599999999999993,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rosswarth.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosswarth",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/welden.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-welden/index.html",
+        "region": "Aldingen",
+        "house": "Haus Rosswarth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Welden"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Rosswarth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Rosswarth"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Welden"
+          }
+        ],
+        "text": "Welden bewacht die nordöstliche Küste; die eingezeichnete Burg steht nahe dem Meer.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-welden",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "welden",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            87.6,
+            29.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-rosswarth"
+        ]
+      },
+      {
+        "id": "aldingen-borgeln",
+        "title": "Borgeln",
+        "x": 0.7490000000000001,
+        "y": 0.41100000000000003,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rothmann.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rothman",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/borgeln.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-borgeln/index.html",
+        "region": "Aldingen",
+        "house": "Haus Rothman",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Borgeln"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Rothman"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Rothman, Haus Riedenfeld"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Gräfliche Herrschaft Borgeln"
+          }
+        ],
+        "text": "Borgeln liegt in einem von Höhen und Gebirge eingerahmten Tal westlich der östlichen Küste.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-borgeln",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "borgeln",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            74.9,
+            41.1
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-rothman",
+          "haus-riedenfeld"
+        ]
+      },
+      {
+        "id": "aldingen-hasselt",
+        "title": "Hasselt",
+        "x": 0.946,
+        "y": 0.536,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/velten.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-velten-aldingen",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/hasselt.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-hasselt/index.html",
+        "region": "Aldingen",
+        "house": "Haus Velten",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hasselt"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Velten"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Velten, Dublann"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Gräfliche Herrschaft Hasselt"
+          }
+        ],
+        "text": "Die östliche Baronie Hasselt reicht bis an die Küste; Hügel und offenes Land liegen hinter der Hafenstadt.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-hasselt",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "hasselt",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            94.6,
+            53.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-velten-aldingen",
+          "haus-dublann"
+        ]
+      },
+      {
+        "id": "aldingen-grimberg",
+        "title": "Grimberg",
+        "x": 0.506,
+        "y": 0.5210000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/hohenmund.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-hohenmund",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/grimberg.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-grimberg/index.html",
+        "region": "Aldingen",
+        "house": "Haus Hohenmund",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Grimberg"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Hohenmund"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Hohenmund, Haus Ehrenfeld, Haus Welf"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Gräfliche Herrschaft Grimberg"
+          }
+        ],
+        "text": "Grimberg liegt am Rand nördlicher Höhenzüge über einem Wasserlauf und dem grünen Talraum.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-grimberg",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "grimberg",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            50.6,
+            52.1
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-hohenmund",
+          "haus-ehrenfeld",
+          "haus-welf"
+        ]
+      },
+      {
+        "id": "aldingen-sassel",
+        "title": "Sassel",
+        "x": 0.449,
+        "y": 0.821,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ronnach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ronnach",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/sassel.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-sassel/index.html",
+        "region": "Aldingen",
+        "house": "Ronnach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sassel"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ronnach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ronnach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Sassel"
+          }
+        ],
+        "text": "Sassel liegt im südlichen grünen Land nahe Flussarmen, Wäldern und der Küste.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-sassel",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "sassel",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            44.9,
+            82.1
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ronnach"
+        ]
+      },
+      {
+        "id": "aldingen-zollern",
+        "title": "Zollern",
+        "x": 0.158,
+        "y": 0.692,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/truchsen.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-truchsen",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/zollern.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-zollern/index.html",
+        "region": "Aldingen",
+        "house": "Haus Truchsen",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Zollern"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Truchsen"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Truchsen, Haus Brechten, Haus Schenk"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Gräfliche Herrschaft Zollern"
+          }
+        ],
+        "text": "Zollern liegt im Westen hinter einer Meeresbucht; die sichtbare Brücke führt in den bewaldeten Talraum.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-zollern",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "zollern",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            15.8,
+            69.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-truchsen",
+          "haus-brechten",
+          "haus-schenk"
+        ]
+      },
+      {
+        "id": "aldingen-bruchen",
+        "title": "Bruchen",
+        "x": 0.12560000000000002,
+        "y": 0.846,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rebhart.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rebhart",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/bruchen.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-bruchen/index.html",
+        "region": "Aldingen",
+        "house": "Haus Rebhart",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bruchen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Rebhart"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Rebhart, Haus Graven"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Bruchen"
+          }
+        ],
+        "text": "Bruchen liegt an der südwestlichen Küste unterhalb bewaldeter Hügel.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-bruchen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "bruchen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            12.56,
+            84.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-rebhart",
+          "haus-graven"
+        ]
+      },
+      {
+        "id": "aldingen-dreiken",
+        "title": "Dreiken",
+        "x": 0.35200000000000004,
+        "y": 0.818,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ankerhold.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ankerhold",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/dreiken.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-dreiken/index.html",
+        "region": "Aldingen",
+        "house": "Haus Ankerhold",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dreiken"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ankerhold"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Ankerhold"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Dreiken"
+          }
+        ],
+        "text": "Die südliche Herrschaft Dreiken reicht vom bewaldeten Binnenland an eine kleine Küstenbucht.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-dreiken",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "dreiken",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            35.2,
+            81.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ankerhold"
+        ]
+      },
+      {
+        "id": "aldingen-aldershafen",
+        "title": "Aldershafen",
+        "x": 0.544,
+        "y": 0.893,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/adharcan.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-adharcan",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/aldershafen.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-aldershafen/index.html",
+        "region": "Aldingen",
+        "house": "Adharcan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aldershafen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Adharcan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Adharcan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Aldershafen"
+          }
+        ],
+        "text": "Aldershafen liegt in dem schmalen türkis gekennzeichneten Küstengebiet westlich der herzoglichen Kernlande.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-aldershafen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "aldershafen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            54.4,
+            89.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-adharcan"
+        ]
+      },
+      {
+        "id": "aldingen-klingenhagen",
+        "title": "Klingenhagen",
+        "x": 0.835,
+        "y": 0.8909999999999999,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/klingen.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-klingen",
+        "banner": "/Stammbäume/assets/images/regions/aldingen/klingenhagen.webp",
+        "bannerLink": "/Kontinente/Lothir/Aldingen/aldingen-sitz-klingenhagen/index.html",
+        "region": "Aldingen",
+        "house": "Haus Klingen",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Klingenhagen"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Klingen"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Klingen, Haus Halbrecht, Haus Haldren, Haus Lachmund"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herzogliche Domäne Klingenhagen"
+          }
+        ],
+        "text": "Die herzogliche Kernregion nimmt die südöstlichen Ebenen zwischen Höhenzügen und Küste ein. Klingenhagen ist der benannte Hauptsitz.",
+        "secret": false,
+        "dominionId": "aldingen-sitz-klingenhagen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "klingenhagen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            83.5,
+            89.1
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-klingen",
+          "haus-halbrecht",
+          "haus-haldren",
+          "haus-lachmund"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "grossherzogtum-aldingen",
+        "name": "Großherzogtum Aldingen",
+        "type": "Großherzogtum",
+        "ruler": "Haus Klingen",
+        "seat": "Klingenhagen",
+        "parentId": ""
+      },
+      {
+        "id": "aldingen-region-barenstadt",
+        "name": "Grafschaft Barenstadt",
+        "type": "Grafschaft",
+        "ruler": "Haus Ritten",
+        "seat": "Barenstadt",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-region-borgeln",
+        "name": "Grafschaft Borgeln",
+        "type": "Grafschaft",
+        "ruler": "Haus Rothman",
+        "seat": "Borgeln",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-region-grimberg",
+        "name": "Grafschaft Grimberg",
+        "type": "Grafschaft",
+        "ruler": "Haus Hohenmund",
+        "seat": "Grimberg",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-region-zollern",
+        "name": "Grafschaft Zollern",
+        "type": "Grafschaft",
+        "ruler": "Haus Truchsen",
+        "seat": "Zollern",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-region-ducal",
+        "name": "Herzogliche Domäne",
+        "type": "Grafschaft",
+        "ruler": "Haus Klingen",
+        "seat": "Klingenhagen",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-sitz-barenstadt",
+        "name": "Gräfliche Herrschaft Barenstadt",
+        "type": "Gräfliche Herrschaft",
+        "ruler": "Haus Ritten",
+        "seat": "Barenstadt",
+        "parentId": "aldingen-region-barenstadt"
+      },
+      {
+        "id": "aldingen-sitz-welden",
+        "name": "Junkerherrschaft Welden",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Rosswarth",
+        "seat": "Welden",
+        "parentId": "aldingen-region-barenstadt"
+      },
+      {
+        "id": "aldingen-sitz-borgeln",
+        "name": "Gräfliche Herrschaft Borgeln",
+        "type": "Gräfliche Herrschaft",
+        "ruler": "Haus Rothman",
+        "seat": "Borgeln",
+        "parentId": "aldingen-region-borgeln"
+      },
+      {
+        "id": "aldingen-sitz-hasselt",
+        "name": "Gräfliche Herrschaft Hasselt",
+        "type": "Gräfliche Herrschaft",
+        "ruler": "Haus Velten",
+        "seat": "Hasselt",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-sitz-grimberg",
+        "name": "Gräfliche Herrschaft Grimberg",
+        "type": "Gräfliche Herrschaft",
+        "ruler": "Haus Hohenmund",
+        "seat": "Grimberg",
+        "parentId": "aldingen-region-grimberg"
+      },
+      {
+        "id": "aldingen-sitz-sassel",
+        "name": "Junkerherrschaft Sassel",
+        "type": "Junkerherrschaft",
+        "ruler": "Ronnach",
+        "seat": "Sassel",
+        "parentId": "aldingen-region-grimberg"
+      },
+      {
+        "id": "aldingen-sitz-zollern",
+        "name": "Gräfliche Herrschaft Zollern",
+        "type": "Gräfliche Herrschaft",
+        "ruler": "Haus Truchsen",
+        "seat": "Zollern",
+        "parentId": "aldingen-region-zollern"
+      },
+      {
+        "id": "aldingen-sitz-bruchen",
+        "name": "Freiherrentum Bruchen",
+        "type": "Freiherrentum",
+        "ruler": "Haus Rebhart",
+        "seat": "Bruchen",
+        "parentId": "aldingen-region-zollern"
+      },
+      {
+        "id": "aldingen-sitz-dreiken",
+        "name": "Junkerherrschaft Dreiken",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Ankerhold",
+        "seat": "Dreiken",
+        "parentId": "aldingen-region-zollern"
+      },
+      {
+        "id": "aldingen-sitz-aldershafen",
+        "name": "Junkerherrschaft Aldershafen",
+        "type": "Junkerherrschaft",
+        "ruler": "Adharcan",
+        "seat": "Aldershafen",
+        "parentId": "aldingen-region-ducal"
+      },
+      {
+        "id": "aldingen-sitz-klingenhagen",
+        "name": "Herzogliche Domäne Klingenhagen",
+        "type": "Herzogliche Domäne",
+        "ruler": "Haus Klingen",
+        "seat": "Klingenhagen",
+        "parentId": "aldingen-region-ducal"
+      },
+      {
+        "id": "aldingen-hausbereich-brechten",
+        "name": "Herrschaft Haus Brechten in Zollern",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Brechten",
+        "seat": "Zollern",
+        "parentId": "aldingen-sitz-zollern"
+      },
+      {
+        "id": "aldingen-hausbereich-ehrenfeld",
+        "name": "Herrschaft Haus Ehrenfeld in Grimberg",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Ehrenfeld",
+        "seat": "Grimberg",
+        "parentId": "aldingen-sitz-grimberg"
+      },
+      {
+        "id": "aldingen-hausbereich-graven",
+        "name": "Herrschaft Haus Graven in Bruchen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Graven",
+        "seat": "Bruchen",
+        "parentId": "aldingen-sitz-bruchen"
+      },
+      {
+        "id": "aldingen-hausbereich-halbrecht",
+        "name": "Herrschaft Haus Halbrecht in Klingenhagen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Halbrecht",
+        "seat": "Klingenhagen",
+        "parentId": "aldingen-sitz-klingenhagen"
+      },
+      {
+        "id": "aldingen-hausbereich-haldren",
+        "name": "Herrschaft Haus Haldren in Klingenhagen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Haldren",
+        "seat": "Klingenhagen",
+        "parentId": "aldingen-sitz-klingenhagen"
+      },
+      {
+        "id": "aldingen-hausbereich-lachmund",
+        "name": "Herrschaft Haus Lachmund in Klingenhagen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Lachmund",
+        "seat": "Klingenhagen",
+        "parentId": "aldingen-sitz-klingenhagen"
+      },
+      {
+        "id": "aldingen-hausbereich-riedenfeld",
+        "name": "Herrschaft Haus Riedenfeld in Borgeln",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Riedenfeld",
+        "seat": "Borgeln",
+        "parentId": "aldingen-sitz-borgeln"
+      },
+      {
+        "id": "aldingen-hausbereich-welf",
+        "name": "Herrschaft Haus Welf in Grimberg",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Welf",
+        "seat": "Grimberg",
+        "parentId": "aldingen-sitz-grimberg"
+      },
+      {
+        "id": "aldingen-hausbereich-wolfram",
+        "name": "Herrschaft Haus Wolfram in Barenstadt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Wolfram",
+        "seat": "Barenstadt",
+        "parentId": "aldingen-sitz-barenstadt"
+      },
+      {
+        "id": "aldingen-hausbereich-schenk",
+        "name": "Herrschaft Haus Schenk in Zollern",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Schenk",
+        "seat": "Zollern",
+        "parentId": "aldingen-sitz-zollern"
+      },
+      {
+        "id": "aldingen-hausbereich-sgiathan",
+        "name": "Herrschaft Sgiathan in Barenstadt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Sgiathan",
+        "seat": "Barenstadt",
+        "parentId": "aldingen-sitz-barenstadt"
+      },
+      {
+        "id": "aldingen-hausbereich-dublann",
+        "name": "Herrschaft Dublann in Hasselt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Dublann",
+        "seat": "Hasselt",
+        "parentId": "aldingen-sitz-hasselt"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-region-wernmark",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Hufschlag",
+        "seat": "",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-region-hohenreede",
+        "name": "Ehemalige Grafschaft Hohenreede",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Sattler",
+        "seat": "",
+        "parentId": "grossherzogtum-aldingen"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-wernheim",
+        "name": "Ehemalige Herrschaft Wernau",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Hammerstein",
+        "seat": "Wernheim",
+        "parentId": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-erlensund",
+        "name": "Ehemalige Herrschaft Erlensunder Küstenmark",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Segelbrecht",
+        "seat": "Erlensund",
+        "parentId": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-segelwacht",
+        "name": "Ehemalige Herrschaft Segelwachter Reede",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Riemann",
+        "seat": "Segelwacht",
+        "parentId": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-hammertal",
+        "name": "Ehemalige Herrschaft Hammertaler Waldmark",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Steinmetz",
+        "seat": "Hammertal",
+        "parentId": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-rottendorf",
+        "name": "Ehemalige Herrschaft Rottenfelder",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Hufschlag",
+        "seat": "Rottendorf",
+        "parentId": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-dornheim",
+        "name": "Ehemalige Herrschaft Dornheimer Höhen",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Stahlwart",
+        "seat": "Dornheim",
+        "parentId": "aldingen-ehemalig-triarchie-region-hohenreede"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-rothen",
+        "name": "Ehemalige Herrschaft Rothener Hain",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Reiff",
+        "seat": "Rothen",
+        "parentId": "aldingen-ehemalig-triarchie-region-hohenreede"
+      },
+      {
+        "id": "aldingen-ehemalig-triarchie-sitz-hohenreede",
+        "name": "Ehemalige Herrschaft Hohe Reede",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Haus Sattler",
+        "seat": "Hohenreede",
+        "parentId": "aldingen-ehemalig-triarchie-region-hohenreede"
+      }
+    ],
+    "regionTitle": "Großherzogtum Aldingen",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/aldingen.webp",
+    "mapImages": {
+      "normal": "/Karten/Aldingen/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

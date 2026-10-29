@@ -8,7 +8,7 @@ export const GOLDMUND_HOUSE_PROFILES = Object.freeze({
   hochreuth: createHouseProfileFromFolderPath(
     ['Goldmund', 'Unsortierte Häuser'],
     {
-      rankId: 'knight',
+      rankId: 'ministerial',
       secondarySeats: ['Burg Hochreuth (1736 an Ottos Linie gefallen)'],
       liegeHouseId: 'haus-roden',
       liegeHouseName: 'Haus Roden',

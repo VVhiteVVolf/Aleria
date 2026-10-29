@@ -1,4 +1,6136 @@
 window.KONTINENTE_REGISTRY = [
+  // BEGIN ACCEPTED_CONTINENTS_GENERATED
+  {"id":"kontinent-lothir","slug":"lothir","aliases":["lothir"],"name":"Kontinent Lothir","type":"Kontinent","page":"Lothir/Lothir.html","data":"Lothir/kontinent.data.js","hierarchy":[{"type":"Sammlung","name":"Kontinente","slug":"kontinente"},{"type":"Kontinent","name":"Lothir","slug":"lothir"}]},
+  {"id":"kontinent-aldervan","slug":"aldervan","aliases":["aldervan"],"name":"Kontinent Aldervan","type":"Kontinent","page":"Aldervan/Aldervan.html","data":"Aldervan/kontinent.data.js","hierarchy":[{"type":"Sammlung","name":"Kontinente","slug":"kontinente"},{"type":"Kontinent","name":"Aldervan","slug":"aldervan"}]},
+  // END ACCEPTED_CONTINENTS_GENERATED
+  // BEGIN TRIARCHIE_GENERATED
+  {
+    "id": "triarchie-lothir",
+    "slug": "triarchie-lothir",
+    "aliases": [
+      "triarchie"
+    ],
+    "name": "Die Triarchie · Besetztes Lothir",
+    "type": "Besatzungsgebiet",
+    "page": "Lothir/Triarchie/triarchie-lothir/index.html",
+    "data": "Lothir/Triarchie/triarchie-lothir/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-region-cuansioda",
+    "slug": "triarchie-region-cuansioda",
+    "aliases": [],
+    "name": "Mor Tiarnatum Cuansioda",
+    "type": "Besetzte Region",
+    "page": "Lothir/Triarchie/triarchie-region-cuansioda/index.html",
+    "data": "Lothir/Triarchie/triarchie-region-cuansioda/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Mor Tiarnatum Cuansioda",
+        "slug": "triarchie-region-cuansioda"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-region-wernmark",
+    "slug": "triarchie-region-wernmark",
+    "aliases": [],
+    "name": "Grafschaft Wernmark",
+    "type": "Besetzte Region",
+    "page": "Lothir/Triarchie/triarchie-region-wernmark/index.html",
+    "data": "Lothir/Triarchie/triarchie-region-wernmark/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Wernmark",
+        "slug": "triarchie-region-wernmark"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-region-hohenreede",
+    "slug": "triarchie-region-hohenreede",
+    "aliases": [],
+    "name": "Grafschaft Hohenreede",
+    "type": "Besetzte Region",
+    "page": "Lothir/Triarchie/triarchie-region-hohenreede/index.html",
+    "data": "Lothir/Triarchie/triarchie-region-hohenreede/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Hohenreede",
+        "slug": "triarchie-region-hohenreede"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-dorchain",
+    "slug": "triarchie-sitz-dorchain",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Braigh Dorchain",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-dorchain/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-dorchain/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Mor Tiarnatum Cuansioda",
+        "slug": "triarchie-region-cuansioda"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Braigh Dorchain",
+        "slug": "triarchie-sitz-dorchain"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-cuansioda",
+    "slug": "triarchie-sitz-cuansioda",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Cuan Cuansioda",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-cuansioda/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-cuansioda/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Mor Tiarnatum Cuansioda",
+        "slug": "triarchie-region-cuansioda"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Cuan Cuansioda",
+        "slug": "triarchie-sitz-cuansioda"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-fiorail",
+    "slug": "triarchie-sitz-fiorail",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Cladach Fiorail",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-fiorail/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-fiorail/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Mor Tiarnatum Cuansioda",
+        "slug": "triarchie-region-cuansioda"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Cladach Fiorail",
+        "slug": "triarchie-sitz-fiorail"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-doire-fionn",
+    "slug": "triarchie-sitz-doire-fionn",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Coill Fhionn",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-doire-fionn/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-doire-fionn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Mor Tiarnatum Cuansioda",
+        "slug": "triarchie-region-cuansioda"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Coill Fhionn",
+        "slug": "triarchie-sitz-doire-fionn"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-wernheim",
+    "slug": "triarchie-sitz-wernheim",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Wernau",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-wernheim/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-wernheim/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Wernmark",
+        "slug": "triarchie-region-wernmark"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Wernau",
+        "slug": "triarchie-sitz-wernheim"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-erlensund",
+    "slug": "triarchie-sitz-erlensund",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Erlensunder Küstenmark",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-erlensund/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-erlensund/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Wernmark",
+        "slug": "triarchie-region-wernmark"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Erlensunder Küstenmark",
+        "slug": "triarchie-sitz-erlensund"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-segelwacht",
+    "slug": "triarchie-sitz-segelwacht",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Segelwachter Reede",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-segelwacht/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-segelwacht/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Wernmark",
+        "slug": "triarchie-region-wernmark"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Segelwachter Reede",
+        "slug": "triarchie-sitz-segelwacht"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-hammertal",
+    "slug": "triarchie-sitz-hammertal",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Hammertaler Waldmark",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-hammertal/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-hammertal/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Wernmark",
+        "slug": "triarchie-region-wernmark"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Hammertaler Waldmark",
+        "slug": "triarchie-sitz-hammertal"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-rottendorf",
+    "slug": "triarchie-sitz-rottendorf",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Rottenfelder",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-rottendorf/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-rottendorf/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Wernmark",
+        "slug": "triarchie-region-wernmark"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Rottenfelder",
+        "slug": "triarchie-sitz-rottendorf"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-dornheim",
+    "slug": "triarchie-sitz-dornheim",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Dornheimer Höhen",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-dornheim/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-dornheim/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Hohenreede",
+        "slug": "triarchie-region-hohenreede"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Dornheimer Höhen",
+        "slug": "triarchie-sitz-dornheim"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-rothen",
+    "slug": "triarchie-sitz-rothen",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Rothener Hain",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-rothen/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-rothen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Hohenreede",
+        "slug": "triarchie-region-hohenreede"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Rothener Hain",
+        "slug": "triarchie-sitz-rothen"
+      }
+    ]
+  },
+  {
+    "id": "triarchie-sitz-hohenreede",
+    "slug": "triarchie-sitz-hohenreede",
+    "aliases": [],
+    "name": "Besetzte Herrschaft Hohe Reede",
+    "type": "Besetzte Herrschaft",
+    "page": "Lothir/Triarchie/triarchie-sitz-hohenreede/index.html",
+    "data": "Lothir/Triarchie/triarchie-sitz-hohenreede/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Besatzungsgebiet",
+        "name": "Die Triarchie · Besetztes Lothir",
+        "slug": "triarchie-lothir"
+      },
+      {
+        "type": "Besetzte Region",
+        "name": "Grafschaft Hohenreede",
+        "slug": "triarchie-region-hohenreede"
+      },
+      {
+        "type": "Besetzte Herrschaft",
+        "name": "Besetzte Herrschaft Hohe Reede",
+        "slug": "triarchie-sitz-hohenreede"
+      }
+    ]
+  },
+  // END TRIARCHIE_GENERATED
+  // BEGIN DEITHEACH_GENERATED
+  {
+    "id": "fuerstentum-deitheach",
+    "slug": "fuerstentum-deitheach",
+    "aliases": [
+      "deitheach"
+    ],
+    "name": "Fürstentum Deitheach",
+    "type": "Fürstentum",
+    "page": "Aldervan/Deitheach/fuerstentum-deitheach/index.html",
+    "data": "Aldervan/Deitheach/fuerstentum-deitheach/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-region-caorthainn",
+    "slug": "deitheach-region-caorthainn",
+    "aliases": [],
+    "name": "Iorras Ruscadal",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-region-caorthainn/index.html",
+    "data": "Aldervan/Deitheach/deitheach-region-caorthainn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Iorras Ruscadal",
+        "slug": "deitheach-region-caorthainn"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-region-dorrain",
+    "slug": "deitheach-region-dorrain",
+    "aliases": [],
+    "name": "Sliabh Dorrain",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-region-dorrain/index.html",
+    "data": "Aldervan/Deitheach/deitheach-region-dorrain/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Sliabh Dorrain",
+        "slug": "deitheach-region-dorrain"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-region-fhasgair",
+    "slug": "deitheach-region-fhasgair",
+    "aliases": [],
+    "name": "Coill Fhasgair",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-region-fhasgair/index.html",
+    "data": "Aldervan/Deitheach/deitheach-region-fhasgair/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Coill Fhasgair",
+        "slug": "deitheach-region-fhasgair"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-region-eirceann",
+    "slug": "deitheach-region-eirceann",
+    "aliases": [],
+    "name": "Magh Eirceann",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-region-eirceann/index.html",
+    "data": "Aldervan/Deitheach/deitheach-region-eirceann/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Magh Eirceann",
+        "slug": "deitheach-region-eirceann"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-ailseag",
+    "slug": "deitheach-sitz-ailseag",
+    "aliases": [],
+    "name": "Fürstliche Domäne Lann Ailseag",
+    "type": "Fürstliche Domäne",
+    "page": "Aldervan/Deitheach/deitheach-sitz-ailseag/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-ailseag/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Iorras Ruscadal",
+        "slug": "deitheach-region-caorthainn"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Lann Ailseag",
+        "slug": "deitheach-sitz-ailseag"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-muirdean",
+    "slug": "deitheach-sitz-muirdean",
+    "aliases": [],
+    "name": "Lairdherrschaft Cladach Muirdean",
+    "type": "Lairdherrschaft",
+    "page": "Aldervan/Deitheach/deitheach-sitz-muirdean/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-muirdean/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Iorras Ruscadal",
+        "slug": "deitheach-region-caorthainn"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Cladach Muirdean",
+        "slug": "deitheach-sitz-muirdean"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-beartain",
+    "slug": "deitheach-sitz-beartain",
+    "aliases": [],
+    "name": "Mor Tiarnatum Braigh Beartain",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-sitz-beartain/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-beartain/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Sliabh Dorrain",
+        "slug": "deitheach-region-dorrain"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Mor Tiarnatum Braigh Beartain",
+        "slug": "deitheach-sitz-beartain"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-loscarn",
+    "slug": "deitheach-sitz-loscarn",
+    "aliases": [],
+    "name": "Lairdherrschaft Rinn Loscarn",
+    "type": "Lairdherrschaft",
+    "page": "Aldervan/Deitheach/deitheach-sitz-loscarn/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-loscarn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Sliabh Dorrain",
+        "slug": "deitheach-region-dorrain"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Rinn Loscarn",
+        "slug": "deitheach-sitz-loscarn"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-dreasail",
+    "slug": "deitheach-sitz-dreasail",
+    "aliases": [],
+    "name": "Mor Tiarnatum Srath Dreasail",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-sitz-dreasail/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-dreasail/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Coill Fhasgair",
+        "slug": "deitheach-region-fhasgair"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Mor Tiarnatum Srath Dreasail",
+        "slug": "deitheach-sitz-dreasail"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-uamhar",
+    "slug": "deitheach-sitz-uamhar",
+    "aliases": [],
+    "name": "Lairdherrschaft Coire Uamhar",
+    "type": "Lairdherrschaft",
+    "page": "Aldervan/Deitheach/deitheach-sitz-uamhar/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-uamhar/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Coill Fhasgair",
+        "slug": "deitheach-region-fhasgair"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Coire Uamhar",
+        "slug": "deitheach-sitz-uamhar"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-carthain",
+    "slug": "deitheach-sitz-carthain",
+    "aliases": [],
+    "name": "Mor Tiarnatum Gleann Carthain",
+    "type": "Mor Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-sitz-carthain/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-carthain/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Magh Eirceann",
+        "slug": "deitheach-region-eirceann"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Mor Tiarnatum Gleann Carthain",
+        "slug": "deitheach-sitz-carthain"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-sceolan",
+    "slug": "deitheach-sitz-sceolan",
+    "aliases": [],
+    "name": "Lairdherrschaft Bealach Sceolan",
+    "type": "Lairdherrschaft",
+    "page": "Aldervan/Deitheach/deitheach-sitz-sceolan/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-sceolan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Magh Eirceann",
+        "slug": "deitheach-region-eirceann"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Bealach Sceolan",
+        "slug": "deitheach-sitz-sceolan"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-sitz-treabhair",
+    "slug": "deitheach-sitz-treabhair",
+    "aliases": [],
+    "name": "Dún Tiarnatum Achadh Orsagail",
+    "type": "Dún Tiarnatum",
+    "page": "Aldervan/Deitheach/deitheach-sitz-treabhair/index.html",
+    "data": "Aldervan/Deitheach/deitheach-sitz-treabhair/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Magh Eirceann",
+        "slug": "deitheach-region-eirceann"
+      },
+      {
+        "type": "Dún Tiarnatum",
+        "name": "Dún Tiarnatum Achadh Orsagail",
+        "slug": "deitheach-sitz-treabhair"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-hausbereich-drisach",
+    "slug": "deitheach-hausbereich-drisach",
+    "aliases": [],
+    "name": "Herrschaft Nic Drisach in Lann Ailseag",
+    "type": "Örtliche Herrschaft",
+    "page": "Aldervan/Deitheach/deitheach-hausbereich-drisach/index.html",
+    "data": "Aldervan/Deitheach/deitheach-hausbereich-drisach/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Iorras Ruscadal",
+        "slug": "deitheach-region-caorthainn"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Lann Ailseag",
+        "slug": "deitheach-sitz-ailseag"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Nic Drisach in Lann Ailseag",
+        "slug": "deitheach-hausbereich-drisach"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-hausbereich-seilgair",
+    "slug": "deitheach-hausbereich-seilgair",
+    "aliases": [],
+    "name": "Herrschaft Ruin Seilgeir in Srath Dreasail",
+    "type": "Örtliche Herrschaft",
+    "page": "Aldervan/Deitheach/deitheach-hausbereich-seilgair/index.html",
+    "data": "Aldervan/Deitheach/deitheach-hausbereich-seilgair/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Coill Fhasgair",
+        "slug": "deitheach-region-fhasgair"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Mor Tiarnatum Srath Dreasail",
+        "slug": "deitheach-sitz-dreasail"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Ruin Seilgeir in Srath Dreasail",
+        "slug": "deitheach-hausbereich-seilgair"
+      }
+    ]
+  },
+  {
+    "id": "deitheach-hausbereich-eatharn",
+    "slug": "deitheach-hausbereich-eatharn",
+    "aliases": [],
+    "name": "Herrschaft Tir Eatharn in Lann Ailseag",
+    "type": "Örtliche Herrschaft",
+    "page": "Aldervan/Deitheach/deitheach-hausbereich-eatharn/index.html",
+    "data": "Aldervan/Deitheach/deitheach-hausbereich-eatharn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Deitheach",
+        "slug": "fuerstentum-deitheach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Iorras Ruscadal",
+        "slug": "deitheach-region-caorthainn"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Lann Ailseag",
+        "slug": "deitheach-sitz-ailseag"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Tir Eatharn in Lann Ailseag",
+        "slug": "deitheach-hausbereich-eatharn"
+      }
+    ]
+  },
+  // END DEITHEACH_GENERATED
+  // BEGIN IATHNEACH_GENERATED
+  {
+    "id": "fuerstentum-iathneach",
+    "slug": "fuerstentum-iathneach",
+    "aliases": [
+      "iathneach"
+    ],
+    "name": "Fürstentum Iathneach",
+    "type": "Fürstentum",
+    "page": "Lothir/Iathneach/fuerstentum-iathneach/index.html",
+    "data": "Lothir/Iathneach/fuerstentum-iathneach/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-region-sgeire",
+    "slug": "iathneach-region-sgeire",
+    "aliases": [],
+    "name": "Tir na Sgeire",
+    "type": "Mor Tiarnatum",
+    "page": "Lothir/Iathneach/iathneach-region-sgeire/index.html",
+    "data": "Lothir/Iathneach/iathneach-region-sgeire/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Sgeire",
+        "slug": "iathneach-region-sgeire"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-region-beann",
+    "slug": "iathneach-region-beann",
+    "aliases": [],
+    "name": "Tir nam Beann",
+    "type": "Mor Tiarnatum",
+    "page": "Lothir/Iathneach/iathneach-region-beann/index.html",
+    "data": "Lothir/Iathneach/iathneach-region-beann/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir nam Beann",
+        "slug": "iathneach-region-beann"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-region-allt",
+    "slug": "iathneach-region-allt",
+    "aliases": [],
+    "name": "Tir nan Allt",
+    "type": "Mor Tiarnatum",
+    "page": "Lothir/Iathneach/iathneach-region-allt/index.html",
+    "data": "Lothir/Iathneach/iathneach-region-allt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir nan Allt",
+        "slug": "iathneach-region-allt"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-region-coille",
+    "slug": "iathneach-region-coille",
+    "aliases": [],
+    "name": "Tir na Coille",
+    "type": "Mor Tiarnatum",
+    "page": "Lothir/Iathneach/iathneach-region-coille/index.html",
+    "data": "Lothir/Iathneach/iathneach-region-coille/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Coille",
+        "slug": "iathneach-region-coille"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-botharin",
+    "slug": "iathneach-sitz-botharin",
+    "aliases": [],
+    "name": "Fürstliche Domäne Machair Botharin",
+    "type": "Fürstliche Domäne",
+    "page": "Lothir/Iathneach/iathneach-sitz-botharin/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-botharin/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Sgeire",
+        "slug": "iathneach-region-sgeire"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Machair Botharin",
+        "slug": "iathneach-sitz-botharin"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-sgeir-tearmainn",
+    "slug": "iathneach-sitz-sgeir-tearmainn",
+    "aliases": [],
+    "name": "Lairdherrschaft Sgeirean Tearmainn",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-sgeir-tearmainn/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-sgeir-tearmainn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Sgeire",
+        "slug": "iathneach-region-sgeire"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Sgeirean Tearmainn",
+        "slug": "iathneach-sitz-sgeir-tearmainn"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-ailtean",
+    "slug": "iathneach-sitz-ailtean",
+    "aliases": [],
+    "name": "Lairdherrschaft Braigh Ailtean",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-ailtean/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-ailtean/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir nam Beann",
+        "slug": "iathneach-region-beann"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Braigh Ailtean",
+        "slug": "iathneach-sitz-ailtean"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-mharaich",
+    "slug": "iathneach-sitz-mharaich",
+    "aliases": [],
+    "name": "Lairdherrschaft Gleann Mharaich",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-mharaich/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-mharaich/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir nam Beann",
+        "slug": "iathneach-region-beann"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Gleann Mharaich",
+        "slug": "iathneach-sitz-mharaich"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-tirnafaoi",
+    "slug": "iathneach-sitz-tirnafaoi",
+    "aliases": [],
+    "name": "Lairdherrschaft Comar Tirnafaoi",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-tirnafaoi/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-tirnafaoi/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir nan Allt",
+        "slug": "iathneach-region-allt"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Comar Tirnafaoi",
+        "slug": "iathneach-sitz-tirnafaoi"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-sidheanna",
+    "slug": "iathneach-sitz-sidheanna",
+    "aliases": [],
+    "name": "Lairdherrschaft Creagan Sidheanna",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-sidheanna/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-sidheanna/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir nan Allt",
+        "slug": "iathneach-region-allt"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Creagan Sidheanna",
+        "slug": "iathneach-sitz-sidheanna"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-fiontarach",
+    "slug": "iathneach-sitz-fiontarach",
+    "aliases": [],
+    "name": "Lairdherrschaft Coire Fiontarach",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-fiontarach/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-fiontarach/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Coille",
+        "slug": "iathneach-region-coille"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Coire Fiontarach",
+        "slug": "iathneach-sitz-fiontarach"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-sitz-famhair",
+    "slug": "iathneach-sitz-famhair",
+    "aliases": [],
+    "name": "Lairdherrschaft Srath Famhair",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Iathneach/iathneach-sitz-famhair/index.html",
+    "data": "Lothir/Iathneach/iathneach-sitz-famhair/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Coille",
+        "slug": "iathneach-region-coille"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Srath Famhair",
+        "slug": "iathneach-sitz-famhair"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-hausbereich-deaghaide",
+    "slug": "iathneach-hausbereich-deaghaide",
+    "aliases": [],
+    "name": "Herrschaft Ua Deaghaide in Botharin",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Iathneach/iathneach-hausbereich-deaghaide/index.html",
+    "data": "Lothir/Iathneach/iathneach-hausbereich-deaghaide/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Mor Tiarnatum",
+        "name": "Tir na Sgeire",
+        "slug": "iathneach-region-sgeire"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Machair Botharin",
+        "slug": "iathneach-sitz-botharin"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Ua Deaghaide in Botharin",
+        "slug": "iathneach-hausbereich-deaghaide"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-ehemalig-triarchie-region-cuansioda",
+    "slug": "iathneach-ehemalig-triarchie-region-cuansioda",
+    "aliases": [],
+    "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html",
+    "data": "Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+        "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-ehemalig-triarchie-sitz-dorchain",
+    "slug": "iathneach-ehemalig-triarchie-sitz-dorchain",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Braigh Dorchain",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-dorchain/index.html",
+    "data": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-dorchain/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+        "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Braigh Dorchain",
+        "slug": "iathneach-ehemalig-triarchie-sitz-dorchain"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-ehemalig-triarchie-sitz-cuansioda",
+    "slug": "iathneach-ehemalig-triarchie-sitz-cuansioda",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Cuan Cuansioda",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-cuansioda/index.html",
+    "data": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-cuansioda/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+        "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Cuan Cuansioda",
+        "slug": "iathneach-ehemalig-triarchie-sitz-cuansioda"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-ehemalig-triarchie-sitz-fiorail",
+    "slug": "iathneach-ehemalig-triarchie-sitz-fiorail",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Cladach Fiorail",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-fiorail/index.html",
+    "data": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-fiorail/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+        "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Cladach Fiorail",
+        "slug": "iathneach-ehemalig-triarchie-sitz-fiorail"
+      }
+    ]
+  },
+  {
+    "id": "iathneach-ehemalig-triarchie-sitz-doire-fionn",
+    "slug": "iathneach-ehemalig-triarchie-sitz-doire-fionn",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Coill Fhionn",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-doire-fionn/index.html",
+    "data": "Lothir/Iathneach/ehemalige-gebiete/triarchie-sitz-doire-fionn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Iathneach",
+        "slug": "fuerstentum-iathneach"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+        "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Coill Fhionn",
+        "slug": "iathneach-ehemalig-triarchie-sitz-doire-fionn"
+      }
+    ]
+  },
+  // END IATHNEACH_GENERATED
+  // BEGIN MOINNEACH_GENERATED
+  {
+    "id": "fuerstentum-moinneach",
+    "slug": "fuerstentum-moinneach",
+    "aliases": [
+      "moinneach",
+      "fuerstentum-moinneachs",
+      "moinneachs"
+    ],
+    "name": "Fürstentum Moinneach",
+    "type": "Fürstentum",
+    "page": "Lothir/Moinneach/fuerstentum-moinneach/index.html",
+    "data": "Lothir/Moinneach/fuerstentum-moinneach/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-tarvex",
+    "slug": "moinneach-sitz-tarvex",
+    "aliases": [],
+    "name": "Lairdherrschaft Tarvex",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-tarvex/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-tarvex/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Tarvex",
+        "slug": "moinneach-sitz-tarvex"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-druanax",
+    "slug": "moinneach-sitz-druanax",
+    "aliases": [],
+    "name": "Lairdherrschaft Druanax",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-druanax/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-druanax/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Druanax",
+        "slug": "moinneach-sitz-druanax"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-drunemax",
+    "slug": "moinneach-sitz-drunemax",
+    "aliases": [],
+    "name": "Lairdherrschaft Drunemax",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-drunemax/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-drunemax/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Drunemax",
+        "slug": "moinneach-sitz-drunemax"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-amabactoix",
+    "slug": "moinneach-sitz-amabactoix",
+    "aliases": [],
+    "name": "Lairdherrschaft Amabactoix",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-amabactoix/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-amabactoix/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Amabactoix",
+        "slug": "moinneach-sitz-amabactoix"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-vironax",
+    "slug": "moinneach-sitz-vironax",
+    "aliases": [],
+    "name": "Lairdherrschaft Vironax",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-vironax/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-vironax/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Vironax",
+        "slug": "moinneach-sitz-vironax"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-arvonax",
+    "slug": "moinneach-sitz-arvonax",
+    "aliases": [],
+    "name": "Lairdherrschaft Arvonax",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-arvonax/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-arvonax/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Arvonax",
+        "slug": "moinneach-sitz-arvonax"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-taranux",
+    "slug": "moinneach-sitz-taranux",
+    "aliases": [],
+    "name": "Lairdherrschaft Taranux",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-taranux/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-taranux/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Taranux",
+        "slug": "moinneach-sitz-taranux"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-senodex",
+    "slug": "moinneach-sitz-senodex",
+    "aliases": [],
+    "name": "Lairdherrschaft Senodex",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-senodex/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-senodex/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Senodex",
+        "slug": "moinneach-sitz-senodex"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-camulax",
+    "slug": "moinneach-sitz-camulax",
+    "aliases": [],
+    "name": "Lairdherrschaft Camulax",
+    "type": "Lairdherrschaft",
+    "page": "Lothir/Moinneach/moinneach-sitz-camulax/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-camulax/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Lairdherrschaft",
+        "name": "Lairdherrschaft Camulax",
+        "slug": "moinneach-sitz-camulax"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-sitz-gergonax",
+    "slug": "moinneach-sitz-gergonax",
+    "aliases": [],
+    "name": "Fürstliche Domäne Gergonax",
+    "type": "Fürstliche Domäne",
+    "page": "Lothir/Moinneach/moinneach-sitz-gergonax/index.html",
+    "data": "Lothir/Moinneach/moinneach-sitz-gergonax/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Gergonax",
+        "slug": "moinneach-sitz-gergonax"
+      }
+    ]
+  },
+  {
+    "id": "moinneach-hausbereich-barrex",
+    "slug": "moinneach-hausbereich-barrex",
+    "aliases": [],
+    "name": "Herrschaft An Barrex in Gergonax",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Moinneach/moinneach-hausbereich-barrex/index.html",
+    "data": "Lothir/Moinneach/moinneach-hausbereich-barrex/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Fürstentum",
+        "name": "Fürstentum Moinneach",
+        "slug": "fuerstentum-moinneach"
+      },
+      {
+        "type": "Fürstliche Domäne",
+        "name": "Fürstliche Domäne Gergonax",
+        "slug": "moinneach-sitz-gergonax"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft An Barrex in Gergonax",
+        "slug": "moinneach-hausbereich-barrex"
+      }
+    ]
+  },
+  // END MOINNEACH_GENERATED
+  // BEGIN WEISENFLUH_GENERATED
+  {
+    "id": "koenigreich-weisenfluh",
+    "slug": "koenigreich-weisenfluh",
+    "aliases": [
+      "weisenfluh"
+    ],
+    "name": "Königreich Weisenfluh",
+    "type": "Königreich",
+    "page": "Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+    "data": "Lothir/Weisenfluh/koenigreich-weisenfluh/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-region-ewigensee",
+    "slug": "weisenfluh-region-ewigensee",
+    "aliases": [],
+    "name": "Königliche Provinz Ewigensee",
+    "type": "Königliche Provinz",
+    "page": "Lothir/Weisenfluh/weisenfluh-region-ewigensee/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-region-ewigensee/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-region-ewiggruen",
+    "slug": "weisenfluh-region-ewiggruen",
+    "aliases": [],
+    "name": "Freiherrentum Ewiggrün",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-region-ewiggruen/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-region-ewiggruen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-region-weisshort",
+    "slug": "weisenfluh-region-weisshort",
+    "aliases": [],
+    "name": "Freiherrentum Weishort",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-region-weisshort/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-region-weisshort/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-region-weisshort"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-region-seeblick",
+    "slug": "weisenfluh-region-seeblick",
+    "aliases": [],
+    "name": "Freiherrentum Seeblick",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-region-seeblick/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-region-seeblick/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-region-seeblick"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-region-weisslauf",
+    "slug": "weisenfluh-region-weisslauf",
+    "aliases": [],
+    "name": "Freiherrentum Weislauf",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-region-weisslauf/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-region-weisslauf/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-ewigensee",
+    "slug": "weisenfluh-sitz-ewigensee",
+    "aliases": [],
+    "name": "Königliche Domäne Ewigensee",
+    "type": "Königliche Domäne",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Ewigensee",
+        "slug": "weisenfluh-sitz-ewigensee"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-ewiggruen",
+    "slug": "weisenfluh-sitz-ewiggruen",
+    "aliases": [],
+    "name": "Freiherrentum Ewiggrün",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-sitz-ewiggruen"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-weisshort",
+    "slug": "weisenfluh-sitz-weisshort",
+    "aliases": [],
+    "name": "Freiherrentum Weishort",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-weisshort/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-weisshort/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-region-weisshort"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-sitz-weisshort"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-seeblick",
+    "slug": "weisenfluh-sitz-seeblick",
+    "aliases": [],
+    "name": "Freiherrentum Seeblick",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-seeblick/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-seeblick/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-region-seeblick"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-sitz-seeblick"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-weisslauf",
+    "slug": "weisenfluh-sitz-weisslauf",
+    "aliases": [],
+    "name": "Freiherrentum Weislauf",
+    "type": "Freiherrentum",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-sitz-weisslauf"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-wolfrieden",
+    "slug": "weisenfluh-sitz-wolfrieden",
+    "aliases": [],
+    "name": "Junkerherrschaft Wolfrieden",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-wolfrieden/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-wolfrieden/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-region-weisshort"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Wolfrieden",
+        "slug": "weisenfluh-sitz-wolfrieden"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-brueckenwacht",
+    "slug": "weisenfluh-sitz-brueckenwacht",
+    "aliases": [],
+    "name": "Junkerherrschaft Brückenwacht",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-brueckenwacht/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-brueckenwacht/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-region-weisshort"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Brückenwacht",
+        "slug": "weisenfluh-sitz-brueckenwacht"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-silbermundt",
+    "slug": "weisenfluh-sitz-silbermundt",
+    "aliases": [],
+    "name": "Junkerherrschaft Silbermundt",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-silbermundt/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-silbermundt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-region-seeblick"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Silbermundt",
+        "slug": "weisenfluh-sitz-silbermundt"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-weissklippe",
+    "slug": "weisenfluh-sitz-weissklippe",
+    "aliases": [],
+    "name": "Junkerherrschaft Weissklippe",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-weissklippe/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-weissklippe/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Weissklippe",
+        "slug": "weisenfluh-sitz-weissklippe"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-weissthal",
+    "slug": "weisenfluh-sitz-weissthal",
+    "aliases": [],
+    "name": "Junkerherrschaft Weissthal",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-weissthal/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-weissthal/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Weissthal",
+        "slug": "weisenfluh-sitz-weissthal"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-ottersburg",
+    "slug": "weisenfluh-sitz-ottersburg",
+    "aliases": [],
+    "name": "Junkerherrschaft Ottersburg",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-ottersburg/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-ottersburg/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Ottersburg",
+        "slug": "weisenfluh-sitz-ottersburg"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-hohenklamm",
+    "slug": "weisenfluh-sitz-hohenklamm",
+    "aliases": [],
+    "name": "Junkerherrschaft Hohenklamm",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-hohenklamm/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-hohenklamm/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Hohenklamm",
+        "slug": "weisenfluh-sitz-hohenklamm"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-maehrenfeld",
+    "slug": "weisenfluh-sitz-maehrenfeld",
+    "aliases": [],
+    "name": "Junkerherrschaft Mährenfeld",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-maehrenfeld/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-maehrenfeld/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Mährenfeld",
+        "slug": "weisenfluh-sitz-maehrenfeld"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-aehrensass",
+    "slug": "weisenfluh-sitz-aehrensass",
+    "aliases": [],
+    "name": "Ordensgebiet Ährensass",
+    "type": "Ordensgebiet",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-aehrensass/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-aehrensass/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Ordensgebiet",
+        "name": "Ordensgebiet Ährensass",
+        "slug": "weisenfluh-sitz-aehrensass"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-rebenwacht",
+    "slug": "weisenfluh-sitz-rebenwacht",
+    "aliases": [],
+    "name": "Ministerialensitz Burg Rebenwacht",
+    "type": "Ministerialensitz",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-rebenwacht/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-rebenwacht/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Ministerialensitz",
+        "name": "Ministerialensitz Burg Rebenwacht",
+        "slug": "weisenfluh-sitz-rebenwacht"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-sitz-sonnenfels",
+    "slug": "weisenfluh-sitz-sonnenfels",
+    "aliases": [],
+    "name": "Ministerialensitz Burg Sonnenfels",
+    "type": "Ministerialensitz",
+    "page": "Lothir/Weisenfluh/weisenfluh-sitz-sonnenfels/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-sitz-sonnenfels/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Ministerialensitz",
+        "name": "Ministerialensitz Burg Sonnenfels",
+        "slug": "weisenfluh-sitz-sonnenfels"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-catrannoch",
+    "slug": "weisenfluh-hausbereich-catrannoch",
+    "aliases": [],
+    "name": "Herrschaft Catrannoch in Ewiggrün",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-catrannoch/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-catrannoch/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Catrannoch in Ewiggrün",
+        "slug": "weisenfluh-hausbereich-catrannoch"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-cnagallan",
+    "slug": "weisenfluh-hausbereich-cnagallan",
+    "aliases": [],
+    "name": "Herrschaft Cnagallan in Ewiggrün",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-cnagallan/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-cnagallan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Cnagallan in Ewiggrün",
+        "slug": "weisenfluh-hausbereich-cnagallan"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-iorcallan",
+    "slug": "weisenfluh-hausbereich-iorcallan",
+    "aliases": [],
+    "name": "Hausdienst Iorcallan in Mährenfeld",
+    "type": "Ministerialenhaus",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-iorcallan/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-iorcallan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Mährenfeld",
+        "slug": "weisenfluh-sitz-maehrenfeld"
+      },
+      {
+        "type": "Ministerialenhaus",
+        "name": "Hausdienst Iorcallan in Mährenfeld",
+        "slug": "weisenfluh-hausbereich-iorcallan"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-taghradan",
+    "slug": "weisenfluh-hausbereich-taghradan",
+    "aliases": [],
+    "name": "Hausdienst Taghradan in Hohenklamm",
+    "type": "Ministerialenhaus",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-taghradan/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-taghradan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Hohenklamm",
+        "slug": "weisenfluh-sitz-hohenklamm"
+      },
+      {
+        "type": "Ministerialenhaus",
+        "name": "Hausdienst Taghradan in Hohenklamm",
+        "slug": "weisenfluh-hausbereich-taghradan"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-torcradan",
+    "slug": "weisenfluh-hausbereich-torcradan",
+    "aliases": [],
+    "name": "Herrschaft Torcradan in Weislauf",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-torcradan/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-torcradan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-sitz-weisslauf"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Torcradan in Weislauf",
+        "slug": "weisenfluh-hausbereich-torcradan"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-blumenthal",
+    "slug": "weisenfluh-hausbereich-blumenthal",
+    "aliases": [],
+    "name": "Herrschaft Haus Blumenthal in Ewiggrün",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-blumenthal/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-blumenthal/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Blumenthal in Ewiggrün",
+        "slug": "weisenfluh-hausbereich-blumenthal"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-rosenstolz",
+    "slug": "weisenfluh-hausbereich-rosenstolz",
+    "aliases": [],
+    "name": "Herrschaft Haus Rosenstolz in Ewiggrün",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-rosenstolz/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-rosenstolz/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Ewiggrün",
+        "slug": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Rosenstolz in Ewiggrün",
+        "slug": "weisenfluh-hausbereich-rosenstolz"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-freudenthal",
+    "slug": "weisenfluh-hausbereich-freudenthal",
+    "aliases": [],
+    "name": "Herrschaft Haus Freudenthal in Seeblick",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-freudenthal/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-freudenthal/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-region-seeblick"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-sitz-seeblick"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Freudenthal in Seeblick",
+        "slug": "weisenfluh-hausbereich-freudenthal"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-rosenblatt",
+    "slug": "weisenfluh-hausbereich-rosenblatt",
+    "aliases": [],
+    "name": "Herrschaft Haus Rosenblatt in Seeblick",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-rosenblatt/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-rosenblatt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-region-seeblick"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Seeblick",
+        "slug": "weisenfluh-sitz-seeblick"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Rosenblatt in Seeblick",
+        "slug": "weisenfluh-hausbereich-rosenblatt"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-feuerstein",
+    "slug": "weisenfluh-hausbereich-feuerstein",
+    "aliases": [],
+    "name": "Herrschaft Haus Feuerstein in Weishort",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-feuerstein/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-feuerstein/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-region-weisshort"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-sitz-weisshort"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Feuerstein in Weishort",
+        "slug": "weisenfluh-hausbereich-feuerstein"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-sonnenfeld",
+    "slug": "weisenfluh-hausbereich-sonnenfeld",
+    "aliases": [],
+    "name": "Herrschaft Haus Sonnenfeld in Weishort",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-sonnenfeld/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-sonnenfeld/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-region-weisshort"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weishort",
+        "slug": "weisenfluh-sitz-weisshort"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Sonnenfeld in Weishort",
+        "slug": "weisenfluh-hausbereich-sonnenfeld"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-weizmann",
+    "slug": "weisenfluh-hausbereich-weizmann",
+    "aliases": [],
+    "name": "Herrschaft Haus Weizmann in Weislauf",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-weizmann/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-weizmann/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-sitz-weisslauf"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Weizmann in Weislauf",
+        "slug": "weisenfluh-hausbereich-weizmann"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-weissberg",
+    "slug": "weisenfluh-hausbereich-weissberg",
+    "aliases": [],
+    "name": "Herrschaft Haus Weißberg in Weislauf",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-weissberg/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-weissberg/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-region-weisslauf"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Weislauf",
+        "slug": "weisenfluh-sitz-weisslauf"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Weißberg in Weislauf",
+        "slug": "weisenfluh-hausbereich-weissberg"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-borgenicht",
+    "slug": "weisenfluh-hausbereich-borgenicht",
+    "aliases": [],
+    "name": "Herrschaft Haus Borgenicht in Ewigensee",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-borgenicht/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-borgenicht/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Ewigensee",
+        "slug": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Borgenicht in Ewigensee",
+        "slug": "weisenfluh-hausbereich-borgenicht"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-goldberg",
+    "slug": "weisenfluh-hausbereich-goldberg",
+    "aliases": [],
+    "name": "Herrschaft Haus Goldberg in Ewigensee",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-goldberg/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-goldberg/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Ewigensee",
+        "slug": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Goldberg in Ewigensee",
+        "slug": "weisenfluh-hausbereich-goldberg"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-immergluck",
+    "slug": "weisenfluh-hausbereich-immergluck",
+    "aliases": [],
+    "name": "Herrschaft Haus Immerglück in Ewigensee",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-immergluck/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-immergluck/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Ewigensee",
+        "slug": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Immerglück in Ewigensee",
+        "slug": "weisenfluh-hausbereich-immergluck"
+      }
+    ]
+  },
+  {
+    "id": "weisenfluh-hausbereich-kaltwasser",
+    "slug": "weisenfluh-hausbereich-kaltwasser",
+    "aliases": [],
+    "name": "Herrschaft Haus Kaltwasser in Ewigensee",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Weisenfluh/weisenfluh-hausbereich-kaltwasser/index.html",
+    "data": "Lothir/Weisenfluh/weisenfluh-hausbereich-kaltwasser/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Weisenfluh",
+        "slug": "koenigreich-weisenfluh"
+      },
+      {
+        "type": "Königliche Provinz",
+        "name": "Königliche Provinz Ewigensee",
+        "slug": "weisenfluh-region-ewigensee"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Ewigensee",
+        "slug": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Kaltwasser in Ewigensee",
+        "slug": "weisenfluh-hausbereich-kaltwasser"
+      }
+    ]
+  },
+  // END WEISENFLUH_GENERATED
+  // BEGIN GOLDMUND_GENERATED
+  {
+    "id": "herzogtum-goldmund",
+    "slug": "herzogtum-goldmund",
+    "aliases": [
+      "goldmund",
+      "fuerstentum-goldmund"
+    ],
+    "name": "Herzogtum Goldmund",
+    "type": "Herzogtum",
+    "page": "Lothir/Goldmund/herzogtum-goldmund/index.html",
+    "data": "Lothir/Goldmund/herzogtum-goldmund/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-region-kronenau",
+    "slug": "goldmund-region-kronenau",
+    "aliases": [],
+    "name": "Herzogliche Grafschaft Kronenau",
+    "type": "Grafschaft",
+    "page": "Lothir/Goldmund/goldmund-region-kronenau/index.html",
+    "data": "Lothir/Goldmund/goldmund-region-kronenau/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-region-aurelmark",
+    "slug": "goldmund-region-aurelmark",
+    "aliases": [],
+    "name": "Grafschaft Aurelmark",
+    "type": "Grafschaft",
+    "page": "Lothir/Goldmund/goldmund-region-aurelmark/index.html",
+    "data": "Lothir/Goldmund/goldmund-region-aurelmark/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Aurelmark",
+        "slug": "goldmund-region-aurelmark"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-region-edelstrom",
+    "slug": "goldmund-region-edelstrom",
+    "aliases": [],
+    "name": "Grafschaft Edelstrom",
+    "type": "Grafschaft",
+    "page": "Lothir/Goldmund/goldmund-region-edelstrom/index.html",
+    "data": "Lothir/Goldmund/goldmund-region-edelstrom/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-thronholt",
+    "slug": "goldmund-sitz-thronholt",
+    "aliases": [],
+    "name": "Herzogliche Domäne Thronmark",
+    "type": "Herzogliche Domäne",
+    "page": "Lothir/Goldmund/goldmund-sitz-thronholt/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-thronholt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Thronmark",
+        "slug": "goldmund-sitz-thronholt"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-brakenstein",
+    "slug": "goldmund-sitz-brakenstein",
+    "aliases": [],
+    "name": "Freiherrentum Brakenwacht",
+    "type": "Freiherrentum",
+    "page": "Lothir/Goldmund/goldmund-sitz-brakenstein/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-brakenstein/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Brakenwacht",
+        "slug": "goldmund-sitz-brakenstein"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-bregen",
+    "slug": "goldmund-sitz-bregen",
+    "aliases": [],
+    "name": "Freiherrentum Bregenau",
+    "type": "Freiherrentum",
+    "page": "Lothir/Goldmund/goldmund-sitz-bregen/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-bregen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Aurelmark",
+        "slug": "goldmund-region-aurelmark"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Bregenau",
+        "slug": "goldmund-sitz-bregen"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-haarlen",
+    "slug": "goldmund-sitz-haarlen",
+    "aliases": [],
+    "name": "Freiherrentum Haarlenried",
+    "type": "Freiherrentum",
+    "page": "Lothir/Goldmund/goldmund-sitz-haarlen/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-haarlen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Aurelmark",
+        "slug": "goldmund-region-aurelmark"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Haarlenried",
+        "slug": "goldmund-sitz-haarlen"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-aldermoor",
+    "slug": "goldmund-sitz-aldermoor",
+    "aliases": [],
+    "name": "Junkerherrschaft Alderweiden",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Goldmund/goldmund-sitz-aldermoor/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-aldermoor/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Aurelmark",
+        "slug": "goldmund-region-aurelmark"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Alderweiden",
+        "slug": "goldmund-sitz-aldermoor"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-bramsen",
+    "slug": "goldmund-sitz-bramsen",
+    "aliases": [],
+    "name": "Freiherrentum Bramsenquell",
+    "type": "Freiherrentum",
+    "page": "Lothir/Goldmund/goldmund-sitz-bramsen/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-bramsen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Bramsenquell",
+        "slug": "goldmund-sitz-bramsen"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-niedenfels",
+    "slug": "goldmund-sitz-niedenfels",
+    "aliases": [],
+    "name": "Freiherrentum Niedenmark",
+    "type": "Freiherrentum",
+    "page": "Lothir/Goldmund/goldmund-sitz-niedenfels/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-niedenfels/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Niedenmark",
+        "slug": "goldmund-sitz-niedenfels"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-sitz-hartenstein",
+    "slug": "goldmund-sitz-hartenstein",
+    "aliases": [],
+    "name": "Junkerherrschaft Hartenfels",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Goldmund/goldmund-sitz-hartenstein/index.html",
+    "data": "Lothir/Goldmund/goldmund-sitz-hartenstein/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Hartenfels",
+        "slug": "goldmund-sitz-hartenstein"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-roden",
+    "slug": "goldmund-hausbereich-roden",
+    "aliases": [],
+    "name": "Herrschaft Haus Roden in Thronholt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-roden/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-roden/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Thronmark",
+        "slug": "goldmund-sitz-thronholt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Roden in Thronholt",
+        "slug": "goldmund-hausbereich-roden"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-roosenvelt",
+    "slug": "goldmund-hausbereich-roosenvelt",
+    "aliases": [],
+    "name": "Herrschaft Haus Roosenvelt in Niedenfels",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-roosenvelt/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-roosenvelt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Niedenmark",
+        "slug": "goldmund-sitz-niedenfels"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Roosenvelt in Niedenfels",
+        "slug": "goldmund-hausbereich-roosenvelt"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-gueldenfels",
+    "slug": "goldmund-hausbereich-gueldenfels",
+    "aliases": [],
+    "name": "Herrschaft Haus Velten in Brakenstein",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-gueldenfels/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-gueldenfels/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Brakenwacht",
+        "slug": "goldmund-sitz-brakenstein"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Velten in Brakenstein",
+        "slug": "goldmund-hausbereich-gueldenfels"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-rebenkron",
+    "slug": "goldmund-hausbereich-rebenkron",
+    "aliases": [],
+    "name": "Herrschaft Haus Belcourt in Bregen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-rebenkron/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-rebenkron/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Aurelmark",
+        "slug": "goldmund-region-aurelmark"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Bregenau",
+        "slug": "goldmund-sitz-bregen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Belcourt in Bregen",
+        "slug": "goldmund-hausbereich-rebenkron"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-greifenau",
+    "slug": "goldmund-hausbereich-greifenau",
+    "aliases": [],
+    "name": "Herrschaft Haus Marholt in Thronholt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-greifenau/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-greifenau/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Thronmark",
+        "slug": "goldmund-sitz-thronholt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Marholt in Thronholt",
+        "slug": "goldmund-hausbereich-greifenau"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-eitelborn",
+    "slug": "goldmund-hausbereich-eitelborn",
+    "aliases": [],
+    "name": "Herrschaft Haus Belmont in Thronholt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-eitelborn/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-eitelborn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Thronmark",
+        "slug": "goldmund-sitz-thronholt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Belmont in Thronholt",
+        "slug": "goldmund-hausbereich-eitelborn"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-samtborn",
+    "slug": "goldmund-hausbereich-samtborn",
+    "aliases": [],
+    "name": "Herrschaft Haus Sorel in Thronholt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-samtborn/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-samtborn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "slug": "goldmund-region-kronenau"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Thronmark",
+        "slug": "goldmund-sitz-thronholt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Sorel in Thronholt",
+        "slug": "goldmund-hausbereich-samtborn"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-weisshorn",
+    "slug": "goldmund-hausbereich-weisshorn",
+    "aliases": [],
+    "name": "Herrschaft Haus Wolter in Niedenfels",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-weisshorn/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-weisshorn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Niedenmark",
+        "slug": "goldmund-sitz-niedenfels"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Wolter in Niedenfels",
+        "slug": "goldmund-hausbereich-weisshorn"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-mac-ruan",
+    "slug": "goldmund-hausbereich-mac-ruan",
+    "aliases": [],
+    "name": "Herrschaft Ruan in Haarlen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-mac-ruan/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-mac-ruan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Aurelmark",
+        "slug": "goldmund-region-aurelmark"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Haarlenried",
+        "slug": "goldmund-sitz-haarlen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Ruan in Haarlen",
+        "slug": "goldmund-hausbereich-mac-ruan"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-mac-callan",
+    "slug": "goldmund-hausbereich-mac-callan",
+    "aliases": [],
+    "name": "Herrschaft Callan in Hartenfels",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-mac-callan/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-mac-callan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Hartenfels",
+        "slug": "goldmund-sitz-hartenstein"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Callan in Hartenfels",
+        "slug": "goldmund-hausbereich-mac-callan"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-an-brenn",
+    "slug": "goldmund-hausbereich-an-brenn",
+    "aliases": [],
+    "name": "Herrschaft Brenn in Niedenfels",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-an-brenn/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-an-brenn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Niedenmark",
+        "slug": "goldmund-sitz-niedenfels"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Brenn in Niedenfels",
+        "slug": "goldmund-hausbereich-an-brenn"
+      }
+    ]
+  },
+  {
+    "id": "goldmund-hausbereich-na-fenn",
+    "slug": "goldmund-hausbereich-na-fenn",
+    "aliases": [],
+    "name": "Herrschaft Fenn in Bramsen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Goldmund/goldmund-hausbereich-na-fenn/index.html",
+    "data": "Lothir/Goldmund/goldmund-hausbereich-na-fenn/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Herzogtum",
+        "name": "Herzogtum Goldmund",
+        "slug": "herzogtum-goldmund"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Edelstrom",
+        "slug": "goldmund-region-edelstrom"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Bramsenquell",
+        "slug": "goldmund-sitz-bramsen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Fenn in Bramsen",
+        "slug": "goldmund-hausbereich-na-fenn"
+      }
+    ]
+  },
+  // END GOLDMUND_GENERATED
+  // BEGIN ALDINGEN_GENERATED
+  {
+    "id": "grossherzogtum-aldingen",
+    "slug": "grossherzogtum-aldingen",
+    "aliases": [
+      "aldingen"
+    ],
+    "name": "Großherzogtum Aldingen",
+    "type": "Großherzogtum",
+    "page": "Lothir/Aldingen/grossherzogtum-aldingen/index.html",
+    "data": "Lothir/Aldingen/grossherzogtum-aldingen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-region-barenstadt",
+    "slug": "aldingen-region-barenstadt",
+    "aliases": [],
+    "name": "Grafschaft Barenstadt",
+    "type": "Grafschaft",
+    "page": "Lothir/Aldingen/aldingen-region-barenstadt/index.html",
+    "data": "Lothir/Aldingen/aldingen-region-barenstadt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Barenstadt",
+        "slug": "aldingen-region-barenstadt"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-region-borgeln",
+    "slug": "aldingen-region-borgeln",
+    "aliases": [],
+    "name": "Grafschaft Borgeln",
+    "type": "Grafschaft",
+    "page": "Lothir/Aldingen/aldingen-region-borgeln/index.html",
+    "data": "Lothir/Aldingen/aldingen-region-borgeln/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Borgeln",
+        "slug": "aldingen-region-borgeln"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-region-grimberg",
+    "slug": "aldingen-region-grimberg",
+    "aliases": [],
+    "name": "Grafschaft Grimberg",
+    "type": "Grafschaft",
+    "page": "Lothir/Aldingen/aldingen-region-grimberg/index.html",
+    "data": "Lothir/Aldingen/aldingen-region-grimberg/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Grimberg",
+        "slug": "aldingen-region-grimberg"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-region-zollern",
+    "slug": "aldingen-region-zollern",
+    "aliases": [],
+    "name": "Grafschaft Zollern",
+    "type": "Grafschaft",
+    "page": "Lothir/Aldingen/aldingen-region-zollern/index.html",
+    "data": "Lothir/Aldingen/aldingen-region-zollern/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-region-ducal",
+    "slug": "aldingen-region-ducal",
+    "aliases": [],
+    "name": "Herzogliche Domäne",
+    "type": "Grafschaft",
+    "page": "Lothir/Aldingen/aldingen-region-ducal/index.html",
+    "data": "Lothir/Aldingen/aldingen-region-ducal/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Domäne",
+        "slug": "aldingen-region-ducal"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-barenstadt",
+    "slug": "aldingen-sitz-barenstadt",
+    "aliases": [],
+    "name": "Gräfliche Herrschaft Barenstadt",
+    "type": "Gräfliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-barenstadt/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-barenstadt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Barenstadt",
+        "slug": "aldingen-region-barenstadt"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Barenstadt",
+        "slug": "aldingen-sitz-barenstadt"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-welden",
+    "slug": "aldingen-sitz-welden",
+    "aliases": [],
+    "name": "Junkerherrschaft Welden",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-welden/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-welden/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Barenstadt",
+        "slug": "aldingen-region-barenstadt"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Welden",
+        "slug": "aldingen-sitz-welden"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-borgeln",
+    "slug": "aldingen-sitz-borgeln",
+    "aliases": [],
+    "name": "Gräfliche Herrschaft Borgeln",
+    "type": "Gräfliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-borgeln/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-borgeln/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Borgeln",
+        "slug": "aldingen-region-borgeln"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Borgeln",
+        "slug": "aldingen-sitz-borgeln"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-hasselt",
+    "slug": "aldingen-sitz-hasselt",
+    "aliases": [],
+    "name": "Gräfliche Herrschaft Hasselt",
+    "type": "Gräfliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-hasselt/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-hasselt/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Hasselt",
+        "slug": "aldingen-sitz-hasselt"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-grimberg",
+    "slug": "aldingen-sitz-grimberg",
+    "aliases": [],
+    "name": "Gräfliche Herrschaft Grimberg",
+    "type": "Gräfliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-grimberg/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-grimberg/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Grimberg",
+        "slug": "aldingen-region-grimberg"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Grimberg",
+        "slug": "aldingen-sitz-grimberg"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-sassel",
+    "slug": "aldingen-sitz-sassel",
+    "aliases": [],
+    "name": "Junkerherrschaft Sassel",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-sassel/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-sassel/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Grimberg",
+        "slug": "aldingen-region-grimberg"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Sassel",
+        "slug": "aldingen-sitz-sassel"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-zollern",
+    "slug": "aldingen-sitz-zollern",
+    "aliases": [],
+    "name": "Gräfliche Herrschaft Zollern",
+    "type": "Gräfliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-zollern/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-zollern/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Zollern",
+        "slug": "aldingen-sitz-zollern"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-bruchen",
+    "slug": "aldingen-sitz-bruchen",
+    "aliases": [],
+    "name": "Freiherrentum Bruchen",
+    "type": "Freiherrentum",
+    "page": "Lothir/Aldingen/aldingen-sitz-bruchen/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-bruchen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Bruchen",
+        "slug": "aldingen-sitz-bruchen"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-dreiken",
+    "slug": "aldingen-sitz-dreiken",
+    "aliases": [],
+    "name": "Junkerherrschaft Dreiken",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-dreiken/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-dreiken/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Dreiken",
+        "slug": "aldingen-sitz-dreiken"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-aldershafen",
+    "slug": "aldingen-sitz-aldershafen",
+    "aliases": [],
+    "name": "Junkerherrschaft Aldershafen",
+    "type": "Junkerherrschaft",
+    "page": "Lothir/Aldingen/aldingen-sitz-aldershafen/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-aldershafen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Domäne",
+        "slug": "aldingen-region-ducal"
+      },
+      {
+        "type": "Junkerherrschaft",
+        "name": "Junkerherrschaft Aldershafen",
+        "slug": "aldingen-sitz-aldershafen"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-sitz-klingenhagen",
+    "slug": "aldingen-sitz-klingenhagen",
+    "aliases": [],
+    "name": "Herzogliche Domäne Klingenhagen",
+    "type": "Herzogliche Domäne",
+    "page": "Lothir/Aldingen/aldingen-sitz-klingenhagen/index.html",
+    "data": "Lothir/Aldingen/aldingen-sitz-klingenhagen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Domäne",
+        "slug": "aldingen-region-ducal"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Klingenhagen",
+        "slug": "aldingen-sitz-klingenhagen"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-brechten",
+    "slug": "aldingen-hausbereich-brechten",
+    "aliases": [],
+    "name": "Herrschaft Haus Brechten in Zollern",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-brechten/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-brechten/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Zollern",
+        "slug": "aldingen-sitz-zollern"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Brechten in Zollern",
+        "slug": "aldingen-hausbereich-brechten"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-ehrenfeld",
+    "slug": "aldingen-hausbereich-ehrenfeld",
+    "aliases": [],
+    "name": "Herrschaft Haus Ehrenfeld in Grimberg",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-ehrenfeld/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-ehrenfeld/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Grimberg",
+        "slug": "aldingen-region-grimberg"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Grimberg",
+        "slug": "aldingen-sitz-grimberg"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Ehrenfeld in Grimberg",
+        "slug": "aldingen-hausbereich-ehrenfeld"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-graven",
+    "slug": "aldingen-hausbereich-graven",
+    "aliases": [],
+    "name": "Herrschaft Haus Graven in Bruchen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-graven/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-graven/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      },
+      {
+        "type": "Freiherrentum",
+        "name": "Freiherrentum Bruchen",
+        "slug": "aldingen-sitz-bruchen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Graven in Bruchen",
+        "slug": "aldingen-hausbereich-graven"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-halbrecht",
+    "slug": "aldingen-hausbereich-halbrecht",
+    "aliases": [],
+    "name": "Herrschaft Haus Halbrecht in Klingenhagen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-halbrecht/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-halbrecht/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Domäne",
+        "slug": "aldingen-region-ducal"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Klingenhagen",
+        "slug": "aldingen-sitz-klingenhagen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Halbrecht in Klingenhagen",
+        "slug": "aldingen-hausbereich-halbrecht"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-haldren",
+    "slug": "aldingen-hausbereich-haldren",
+    "aliases": [],
+    "name": "Herrschaft Haus Haldren in Klingenhagen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-haldren/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-haldren/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Domäne",
+        "slug": "aldingen-region-ducal"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Klingenhagen",
+        "slug": "aldingen-sitz-klingenhagen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Haldren in Klingenhagen",
+        "slug": "aldingen-hausbereich-haldren"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-lachmund",
+    "slug": "aldingen-hausbereich-lachmund",
+    "aliases": [],
+    "name": "Herrschaft Haus Lachmund in Klingenhagen",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-lachmund/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-lachmund/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Herzogliche Domäne",
+        "slug": "aldingen-region-ducal"
+      },
+      {
+        "type": "Herzogliche Domäne",
+        "name": "Herzogliche Domäne Klingenhagen",
+        "slug": "aldingen-sitz-klingenhagen"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Lachmund in Klingenhagen",
+        "slug": "aldingen-hausbereich-lachmund"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-riedenfeld",
+    "slug": "aldingen-hausbereich-riedenfeld",
+    "aliases": [],
+    "name": "Herrschaft Haus Riedenfeld in Borgeln",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-riedenfeld/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-riedenfeld/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Borgeln",
+        "slug": "aldingen-region-borgeln"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Borgeln",
+        "slug": "aldingen-sitz-borgeln"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Riedenfeld in Borgeln",
+        "slug": "aldingen-hausbereich-riedenfeld"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-welf",
+    "slug": "aldingen-hausbereich-welf",
+    "aliases": [],
+    "name": "Herrschaft Haus Welf in Grimberg",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-welf/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-welf/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Grimberg",
+        "slug": "aldingen-region-grimberg"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Grimberg",
+        "slug": "aldingen-sitz-grimberg"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Welf in Grimberg",
+        "slug": "aldingen-hausbereich-welf"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-wolfram",
+    "slug": "aldingen-hausbereich-wolfram",
+    "aliases": [],
+    "name": "Herrschaft Haus Wolfram in Barenstadt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-wolfram/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-wolfram/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Barenstadt",
+        "slug": "aldingen-region-barenstadt"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Barenstadt",
+        "slug": "aldingen-sitz-barenstadt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Wolfram in Barenstadt",
+        "slug": "aldingen-hausbereich-wolfram"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-schenk",
+    "slug": "aldingen-hausbereich-schenk",
+    "aliases": [],
+    "name": "Herrschaft Haus Schenk in Zollern",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-schenk/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-schenk/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Zollern",
+        "slug": "aldingen-region-zollern"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Zollern",
+        "slug": "aldingen-sitz-zollern"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Haus Schenk in Zollern",
+        "slug": "aldingen-hausbereich-schenk"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-sgiathan",
+    "slug": "aldingen-hausbereich-sgiathan",
+    "aliases": [],
+    "name": "Herrschaft Sgiathan in Barenstadt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-sgiathan/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-sgiathan/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Grafschaft",
+        "name": "Grafschaft Barenstadt",
+        "slug": "aldingen-region-barenstadt"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Barenstadt",
+        "slug": "aldingen-sitz-barenstadt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Sgiathan in Barenstadt",
+        "slug": "aldingen-hausbereich-sgiathan"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-hausbereich-dublann",
+    "slug": "aldingen-hausbereich-dublann",
+    "aliases": [],
+    "name": "Herrschaft Dublann in Hasselt",
+    "type": "Örtliche Herrschaft",
+    "page": "Lothir/Aldingen/aldingen-hausbereich-dublann/index.html",
+    "data": "Lothir/Aldingen/aldingen-hausbereich-dublann/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Gräfliche Herrschaft",
+        "name": "Gräfliche Herrschaft Hasselt",
+        "slug": "aldingen-sitz-hasselt"
+      },
+      {
+        "type": "Örtliche Herrschaft",
+        "name": "Herrschaft Dublann in Hasselt",
+        "slug": "aldingen-hausbereich-dublann"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-region-wernmark",
+    "slug": "aldingen-ehemalig-triarchie-region-wernmark",
+    "aliases": [],
+    "name": "Ehemalige Grafschaft Wernmark",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-region-wernmark/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-region-wernmark/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "slug": "aldingen-ehemalig-triarchie-region-wernmark"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-region-hohenreede",
+    "slug": "aldingen-ehemalig-triarchie-region-hohenreede",
+    "aliases": [],
+    "name": "Ehemalige Grafschaft Hohenreede",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-region-hohenreede/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-region-hohenreede/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Hohenreede",
+        "slug": "aldingen-ehemalig-triarchie-region-hohenreede"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-wernheim",
+    "slug": "aldingen-ehemalig-triarchie-sitz-wernheim",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Wernau",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-wernheim/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-wernheim/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "slug": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Wernau",
+        "slug": "aldingen-ehemalig-triarchie-sitz-wernheim"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-erlensund",
+    "slug": "aldingen-ehemalig-triarchie-sitz-erlensund",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Erlensunder Küstenmark",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-erlensund/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-erlensund/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "slug": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Erlensunder Küstenmark",
+        "slug": "aldingen-ehemalig-triarchie-sitz-erlensund"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-segelwacht",
+    "slug": "aldingen-ehemalig-triarchie-sitz-segelwacht",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Segelwachter Reede",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-segelwacht/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-segelwacht/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "slug": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Segelwachter Reede",
+        "slug": "aldingen-ehemalig-triarchie-sitz-segelwacht"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-hammertal",
+    "slug": "aldingen-ehemalig-triarchie-sitz-hammertal",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Hammertaler Waldmark",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-hammertal/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-hammertal/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "slug": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Hammertaler Waldmark",
+        "slug": "aldingen-ehemalig-triarchie-sitz-hammertal"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-rottendorf",
+    "slug": "aldingen-ehemalig-triarchie-sitz-rottendorf",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Rottenfelder",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-rottendorf/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-rottendorf/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Wernmark",
+        "slug": "aldingen-ehemalig-triarchie-region-wernmark"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Rottenfelder",
+        "slug": "aldingen-ehemalig-triarchie-sitz-rottendorf"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-dornheim",
+    "slug": "aldingen-ehemalig-triarchie-sitz-dornheim",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Dornheimer Höhen",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-dornheim/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-dornheim/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Hohenreede",
+        "slug": "aldingen-ehemalig-triarchie-region-hohenreede"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Dornheimer Höhen",
+        "slug": "aldingen-ehemalig-triarchie-sitz-dornheim"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-rothen",
+    "slug": "aldingen-ehemalig-triarchie-sitz-rothen",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Rothener Hain",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-rothen/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-rothen/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Hohenreede",
+        "slug": "aldingen-ehemalig-triarchie-region-hohenreede"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Rothener Hain",
+        "slug": "aldingen-ehemalig-triarchie-sitz-rothen"
+      }
+    ]
+  },
+  {
+    "id": "aldingen-ehemalig-triarchie-sitz-hohenreede",
+    "slug": "aldingen-ehemalig-triarchie-sitz-hohenreede",
+    "aliases": [],
+    "name": "Ehemalige Herrschaft Hohe Reede",
+    "type": "Ehemaliges Herrschaftsgebiet",
+    "page": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-hohenreede/index.html",
+    "data": "Lothir/Aldingen/ehemalige-gebiete/triarchie-sitz-hohenreede/herrschaft.data.mjs?v=accepted-realms-20261029a",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Lothir",
+        "slug": "lothir"
+      },
+      {
+        "type": "Großherzogtum",
+        "name": "Großherzogtum Aldingen",
+        "slug": "grossherzogtum-aldingen"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Grafschaft Hohenreede",
+        "slug": "aldingen-ehemalig-triarchie-region-hohenreede"
+      },
+      {
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "name": "Ehemalige Herrschaft Hohe Reede",
+        "slug": "aldingen-ehemalig-triarchie-sitz-hohenreede"
+      }
+    ]
+  },
+  // END ALDINGEN_GENERATED
   // BEGIN UATHNEACH_GENERATED
   {
     "id": "fuerstentum-uathneach",

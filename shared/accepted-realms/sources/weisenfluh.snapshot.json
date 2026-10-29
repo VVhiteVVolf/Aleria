@@ -1,0 +1,1060 @@
+{
+  "schemaVersion": 1,
+  "realm": "weisenfluh",
+  "capturedAt": "2026-10-28",
+  "previewDirectory": "Weisenfluh",
+  "houses": [
+    {
+      "id": "catrannoch",
+      "name": "Catrannoch",
+      "crest": "catrannoch.webp",
+      "original": "assets/originals/catrannoch.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Catrannoch.png"
+    },
+    {
+      "id": "cnagallan",
+      "name": "Cnagallan",
+      "crest": "cnagallan.webp",
+      "original": "assets/originals/cnagallan.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Cnagallan.png"
+    },
+    {
+      "id": "damhcallan",
+      "name": "Damhcallan",
+      "crest": "damhcallan.webp",
+      "original": "assets/originals/damhcallan.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Damhcallan.png"
+    },
+    {
+      "id": "iorcallan",
+      "name": "Iorcallan",
+      "crest": "iorcallan.webp",
+      "original": "assets/originals/iorcallan.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Iorcallan.png"
+    },
+    {
+      "id": "sgaireag",
+      "name": "Sgàireag",
+      "crest": "sgaireag.webp",
+      "original": "assets/originals/sgaireag.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Sgàireag.png"
+    },
+    {
+      "id": "taghradan",
+      "name": "Taghradan",
+      "crest": "taghradan.webp",
+      "original": "assets/originals/taghradan.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Taghradan.png"
+    },
+    {
+      "id": "torcradan",
+      "name": "Torcradan",
+      "crest": "torcradan.webp",
+      "original": "assets/originals/torcradan.png",
+      "province": null,
+      "sourceSeat": null,
+      "rank": "laird",
+      "source": "Albische Lairds/Torcradan.png"
+    },
+    {
+      "id": "blumenthal",
+      "name": "Blumenthal",
+      "crest": "blumenthal.webp",
+      "original": "assets/originals/blumenthal.png",
+      "province": "ewiggruen",
+      "sourceSeat": "ewiggruen",
+      "rank": "landmann",
+      "source": "Freiherrentum - Ewiggrün/Landmann Ewiggrüns/Blumenthal.png"
+    },
+    {
+      "id": "honigfeld",
+      "name": "Honigfeld",
+      "crest": "honigfeld.webp",
+      "original": "assets/originals/honigfeld.png",
+      "province": "ewiggruen",
+      "sourceSeat": "ewiggruen",
+      "rank": "landmann",
+      "source": "Freiherrentum - Ewiggrün/Landmann Ewiggrüns/Honigfeld.png"
+    },
+    {
+      "id": "rosenbluth",
+      "name": "Rosenblüth",
+      "crest": "rosenbluth.webp",
+      "original": "assets/originals/rosenbluth.png",
+      "province": "ewiggruen",
+      "sourceSeat": "ewiggruen",
+      "rank": "landmann",
+      "source": "Freiherrentum - Ewiggrün/Landmann Ewiggrüns/Rosenblüth.png"
+    },
+    {
+      "id": "edelweiss",
+      "name": "Edelweiss",
+      "crest": "edelweiss.webp",
+      "original": "assets/originals/edelweiss.png",
+      "province": "ewiggruen",
+      "sourceSeat": "maehrenfeld",
+      "rank": "landmann",
+      "source": "Freiherrentum - Ewiggrün/Mährenfeld/Edelweiss.png"
+    },
+    {
+      "id": "rosenstolz",
+      "name": "Rosenstolz",
+      "crest": "rosenstolz.webp",
+      "original": "assets/originals/rosenstolz.png",
+      "province": "ewiggruen",
+      "sourceSeat": "ewiggruen",
+      "rank": "baron",
+      "source": "Freiherrentum - Ewiggrün/Rosenstolz.png"
+    },
+    {
+      "id": "freudenthal",
+      "name": "Freudenthal",
+      "crest": "freudenthal.webp",
+      "original": "assets/originals/freudenthal.png",
+      "province": "seeblick",
+      "sourceSeat": "seeblick",
+      "rank": "landmann",
+      "source": "Freiherrentum - Seeblick/Landmann Seeblicks/Freudenthal.png"
+    },
+    {
+      "id": "rosenblatt",
+      "name": "Rosenblatt",
+      "crest": "rosenblatt.webp",
+      "original": "assets/originals/rosenblatt.png",
+      "province": "seeblick",
+      "sourceSeat": "seeblick",
+      "rank": "landmann",
+      "source": "Freiherrentum - Seeblick/Landmann Seeblicks/Rosenblatt.png"
+    },
+    {
+      "id": "silberthal",
+      "name": "Silberthal",
+      "crest": "silberthal.webp",
+      "original": "assets/originals/silberthal.png",
+      "province": "seeblick",
+      "sourceSeat": "seeblick",
+      "rank": "baron",
+      "source": "Freiherrentum - Seeblick/Silberthal.png"
+    },
+    {
+      "id": "bruggemann",
+      "name": "Brüggemann",
+      "crest": "bruggemann.webp",
+      "original": "assets/originals/bruggemann.png",
+      "province": "weisshort",
+      "sourceSeat": "brueckenwacht",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißhort/Brückenwacht/Brüggemann.png"
+    },
+    {
+      "id": "feuerstein",
+      "name": "Feuerstein",
+      "crest": "feuerstein.webp",
+      "original": "assets/originals/feuerstein.png",
+      "province": "weisshort",
+      "sourceSeat": "weisshort",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißhort/Landmann Weißhorts/Feuerstein.png"
+    },
+    {
+      "id": "sonnenfeld",
+      "name": "Sonnenfeld",
+      "crest": "sonnenfeld.webp",
+      "original": "assets/originals/sonnenfeld.png",
+      "province": "weisshort",
+      "sourceSeat": "weisshort",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißhort/Landmann Weißhorts/Sonnenfeld.png"
+    },
+    {
+      "id": "sommerfeld",
+      "name": "Sommerfeld",
+      "crest": "sommerfeld.webp",
+      "original": "assets/originals/sommerfeld.png",
+      "province": "weisshort",
+      "sourceSeat": "weisshort",
+      "rank": "baron",
+      "source": "Freiherrentum - Weißhort/Sommerfeld.png"
+    },
+    {
+      "id": "wolfenstein",
+      "name": "Wolfenstein",
+      "crest": "wolfenstein.webp",
+      "original": "assets/originals/wolfenstein.png",
+      "province": "weisshort",
+      "sourceSeat": "wolfrieden",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißhort/Wolfenried/Wolfenstein.png"
+    },
+    {
+      "id": "weizmann",
+      "name": "Weizmann",
+      "crest": "weizmann.webp",
+      "original": "assets/originals/weizmann.png",
+      "province": "weisslauf",
+      "sourceSeat": "weisslauf",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißlauf/Landmann Weißlaufs/Weizmann.png"
+    },
+    {
+      "id": "weissberg",
+      "name": "Weißberg",
+      "crest": "weissberg.webp",
+      "original": "assets/originals/weissberg.png",
+      "province": "weisslauf",
+      "sourceSeat": "weisslauf",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißlauf/Landmann Weißlaufs/Weißberg.png"
+    },
+    {
+      "id": "otterberg",
+      "name": "Otterberg",
+      "crest": "otterberg.webp",
+      "original": "assets/originals/otterberg.png",
+      "province": "weisslauf",
+      "sourceSeat": "ottersburg",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißlauf/Ottersburg/Otterberg.png"
+    },
+    {
+      "id": "weissmann",
+      "name": "Weissmann",
+      "crest": "weissmann.webp",
+      "original": "assets/originals/weissmann.png",
+      "province": "weisslauf",
+      "sourceSeat": "weisslauf",
+      "rank": "baron",
+      "source": "Freiherrentum - Weißlauf/Weissmann.png"
+    },
+    {
+      "id": "thalmann",
+      "name": "Thalmann",
+      "crest": "thalmann.webp",
+      "original": "assets/originals/thalmann.png",
+      "province": "weisslauf",
+      "sourceSeat": "weissthal",
+      "rank": "landmann",
+      "source": "Freiherrentum - Weißlauf/Weißthal/Thalmann.png"
+    },
+    {
+      "id": "goldkranz",
+      "name": "Goldkranz",
+      "crest": "goldkranz.webp",
+      "original": "assets/originals/goldkranz.png",
+      "province": "ewigensee",
+      "sourceSeat": "ewigensee",
+      "rank": "king",
+      "source": "Königliches Freiherrentum - Ewigen See/Goldkranz.png"
+    },
+    {
+      "id": "borgenicht",
+      "name": "Borgenicht",
+      "crest": "borgenicht.webp",
+      "original": "assets/originals/borgenicht.png",
+      "province": "ewigensee",
+      "sourceSeat": "ewigensee",
+      "rank": "landmann",
+      "source": "Königliches Freiherrentum - Ewigen See/Landmann Ewigensees/Borgenicht.png"
+    },
+    {
+      "id": "goldberg",
+      "name": "Goldberg",
+      "crest": "goldberg.webp",
+      "original": "assets/originals/goldberg.png",
+      "province": "ewigensee",
+      "sourceSeat": "ewigensee",
+      "rank": "landmann",
+      "source": "Königliches Freiherrentum - Ewigen See/Landmann Ewigensees/Goldberg.png"
+    },
+    {
+      "id": "immergluck",
+      "name": "Immerglück",
+      "crest": "immergluck.webp",
+      "original": "assets/originals/immergluck.png",
+      "province": "ewigensee",
+      "sourceSeat": "ewigensee",
+      "rank": "landmann",
+      "source": "Königliches Freiherrentum - Ewigen See/Landmann Ewigensees/Immerglück.png"
+    },
+    {
+      "id": "kaltwasser",
+      "name": "Kaltwasser",
+      "crest": "kaltwasser.webp",
+      "original": "assets/originals/kaltwasser.png",
+      "province": "ewigensee",
+      "sourceSeat": "ewigensee",
+      "rank": "landmann",
+      "source": "Königliches Freiherrentum - Ewigen See/Landmann Ewigensees/Kaltwasser.png"
+    },
+    {
+      "id": "die-ritter-der-kornahre",
+      "name": "Die Ritter der Kornähre",
+      "crest": "die-ritter-der-kornahre.webp",
+      "original": "assets/originals/die-ritter-der-kornahre.png",
+      "province": null,
+      "sourceSeat": "aehrensass",
+      "rank": "order",
+      "source": "Ährensass/Die Ritter der Kornähre.png"
+    }
+  ],
+  "provinces": [
+    {
+      "id": "ewigensee",
+      "name": "Ewigensee",
+      "ruler": "goldkranz",
+      "colour": "#ad8864",
+      "royal": true,
+      "description": "Die königliche Provinz ist die eigene Domäne des Erlenkönigs."
+    },
+    {
+      "id": "ewiggruen",
+      "name": "Ewiggrün",
+      "ruler": "rosenstolz",
+      "colour": "#759047",
+      "description": "Das Freiherrentum der Rosenstolz; Mährenfeld gehört zu seinen Landmannssitzen."
+    },
+    {
+      "id": "weisshort",
+      "name": "Weisshort",
+      "ruler": "sommerfeld",
+      "colour": "#7faba2",
+      "description": "Das Freiherrentum der Sommerfeld mit Brückenwacht und Wolfrieden."
+    },
+    {
+      "id": "seeblick",
+      "name": "Seeblick",
+      "ruler": "silberthal",
+      "colour": "#b4aa79",
+      "description": "Das Freiherrentum der Silberthal; das Haus von Silbermundt bleibt offen."
+    },
+    {
+      "id": "weisslauf",
+      "name": "Weisslauf",
+      "ruler": "weissmann",
+      "colour": "#628e85",
+      "description": "Das Freiherrentum der Weissmann mit drei benannten Landmannssitzen."
+    }
+  ],
+  "rankLabels": {
+    "king": "Erlenkönig",
+    "baron": "Freiherr",
+    "landmann": "Landmann",
+    "order": "Geistlicher Ritterorden",
+    "laird": "Albischer Laird"
+  },
+  "settlements": [
+    {
+      "id": "ewigensee",
+      "name": "Ewigensee",
+      "province": "ewigensee",
+      "kind": "Königliche Provinz",
+      "point": [
+        88.6,
+        35.8
+      ],
+      "pin": [
+        91,
+        23
+      ]
+    },
+    {
+      "id": "ewiggruen",
+      "name": "Ewiggrün",
+      "province": "ewiggruen",
+      "kind": "Freiherrensitz",
+      "point": [
+        58.2,
+        31.8
+      ],
+      "pin": [
+        62,
+        22
+      ]
+    },
+    {
+      "id": "weisshort",
+      "name": "Weisshort",
+      "province": "weisshort",
+      "kind": "Freiherrensitz",
+      "point": [
+        29,
+        9.5
+      ],
+      "pin": [
+        27,
+        20
+      ]
+    },
+    {
+      "id": "seeblick",
+      "name": "Seeblick",
+      "province": "seeblick",
+      "kind": "Freiherrensitz",
+      "point": [
+        26,
+        75.5
+      ],
+      "pin": [
+        24,
+        67
+      ]
+    },
+    {
+      "id": "weisslauf",
+      "name": "Weisslauf",
+      "province": "weisslauf",
+      "kind": "Freiherrensitz",
+      "point": [
+        63.2,
+        88.4
+      ],
+      "pin": [
+        58.5,
+        79
+      ]
+    },
+    {
+      "id": "wolfrieden",
+      "name": "Wolfrieden",
+      "sourceName": "Wolfenried",
+      "province": "weisshort",
+      "kind": "Landmannssitz",
+      "point": [
+        13.1,
+        31
+      ],
+      "pin": [
+        18.4,
+        40
+      ]
+    },
+    {
+      "id": "brueckenwacht",
+      "name": "Brückenwacht",
+      "province": "weisshort",
+      "kind": "Landmannssitz",
+      "point": [
+        47.5,
+        9.2
+      ],
+      "pin": [
+        41,
+        19
+      ]
+    },
+    {
+      "id": "silbermundt",
+      "name": "Silbermundt",
+      "province": "seeblick",
+      "kind": "Landmannssitz",
+      "point": [
+        10.1,
+        60.6
+      ],
+      "pin": [
+        9,
+        52
+      ]
+    },
+    {
+      "id": "weissklippe",
+      "name": "Weissklippe",
+      "province": "weisslauf",
+      "kind": "Landmannssitz",
+      "point": [
+        41.7,
+        85.7
+      ],
+      "pin": [
+        44,
+        76
+      ]
+    },
+    {
+      "id": "weissthal",
+      "name": "Weissthal",
+      "province": "weisslauf",
+      "kind": "Landmannssitz",
+      "point": [
+        72.6,
+        67
+      ],
+      "pin": [
+        69,
+        57
+      ]
+    },
+    {
+      "id": "ottersburg",
+      "name": "Ottersburg",
+      "province": "weisslauf",
+      "kind": "Landmannssitz",
+      "point": [
+        80.7,
+        85.7
+      ],
+      "pin": [
+        80.5,
+        76
+      ]
+    },
+    {
+      "id": "hohenklamm",
+      "name": "Hohenklamm",
+      "province": "ewigensee",
+      "kind": "Landmannssitz",
+      "point": [
+        88.7,
+        55.1
+      ],
+      "pin": [
+        92,
+        47
+      ]
+    },
+    {
+      "id": "maehrenfeld",
+      "name": "Mährenfeld",
+      "province": "ewiggruen",
+      "kind": "Landmannssitz",
+      "point": [
+        54.4,
+        54
+      ],
+      "pin": [
+        58.5,
+        46
+      ]
+    },
+    {
+      "id": "aehrensass",
+      "name": "Ährensass",
+      "province": null,
+      "kind": "Verpachtetes Ordensgebiet",
+      "point": [
+        39.9,
+        49.8
+      ],
+      "pin": [
+        36.2,
+        42.5
+      ]
+    }
+  ],
+  "warriors": [
+    {
+      "id": "goldkranz",
+      "name": "Goldkranz",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Rot · Elfenbein · Gold",
+      "motif": "Rot-elfenbeinfarbener Schild und goldener Lorbeerkranz.",
+      "reason": "Der königliche Lorbeer und die klaren Schildfarben passen zu einem besonders feinen Landsprotektor.",
+      "equipment": "Schwert, Schild, goldene Lorbeerkrone und runder geschlossener Helm.",
+      "helmet": "ROUNDED CLOSED royal helmet with smooth domed skull, short curved visor, narrow eye slit and small breathing holes. Ivory steel with red chevron. A broad gold laurel circlet completely encircles the brow, with upright laurel-leaf clusters forming a prominent CROWN. Cream ostrich plume, no flat cylindrical lid.",
+      "image": "assets/warriors/previews/goldkranz.webp",
+      "fullsize": "assets/warriors/production/goldkranz.png"
+    },
+    {
+      "id": "catrannoch",
+      "name": "Catrannoch",
+      "className": "Landsjäger",
+      "classId": "landsjager",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Dunkelrot · Grau · Naturweiß",
+      "motif": "Helle getigerte Wildkatze auf dunkelrotem Feld.",
+      "reason": "Die Wildkatze legt einen beweglichen, aufmerksam wirkenden Landsjäger nahe.",
+      "equipment": "Armbrust, Kurzschwert, leichter Harnisch und rotgrauer Tartan.",
+      "helmet": "OPEN broad-brim KETTLE HAT: shallow rounded steel bowl and clear wide circular brim; visible human face, no visor. Thin red cloth band, no tall plume.",
+      "image": "assets/warriors/previews/catrannoch.webp",
+      "fullsize": "assets/warriors/production/catrannoch.png"
+    },
+    {
+      "id": "cnagallan",
+      "name": "Cnagallan",
+      "className": "Harlekin",
+      "classId": "harlekin",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Tannengrün · Birkenweiß · Rostrot",
+      "motif": "Specht an einem hellen Birkenstamm auf Grün.",
+      "reason": "Der Specht und die lebendige Waldpalette geben einem höfischen Clanbarden eine eigene Bildsprache.",
+      "equipment": "Seitschwert, kleine Laute, grüner Plaid und leichter Brustschutz.",
+      "helmet": "NO helmet. A neat forest-green soft cap with two short unequal jester lappets, one small rust feather and tiny dull silver bell; visible adult face.",
+      "image": "assets/warriors/previews/cnagallan.webp",
+      "fullsize": "assets/warriors/production/cnagallan.png"
+    },
+    {
+      "id": "damhcallan",
+      "name": "Damhcallan",
+      "className": "Kürisser",
+      "classId": "kurassier",
+      "mounted": false,
+      "withHorse": true,
+      "horse": "goldmaehne",
+      "palette": "Nachtblau · Silber · Gedämpftes Gold",
+      "motif": "Ruhender weißer Hirsch auf dunkelblauem Feld.",
+      "reason": "Der Hirsch und die feierliche Palette passen zu einem leichten Reiterritter mit Goldmähne.",
+      "equipment": "Speer, leichter Kürass, blauer Tartan und Goldmähne.",
+      "helmet": "OPEN SPANGENHELM: four visible steel bands over rounded conical panels, narrow straight nasal guard, mail at neck, no visor. Two tiny engraved antler branches on brow only.",
+      "image": "assets/warriors/previews/damhcallan.webp",
+      "fullsize": "assets/warriors/production/damhcallan.png"
+    },
+    {
+      "id": "iorcallan",
+      "name": "Iorcallan",
+      "className": "Landsjäger",
+      "classId": "landsjager",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Waldgrün · Ocker · Bronze",
+      "motif": "Goldenes Eichhörnchen mit Eichenlaub auf Grün.",
+      "reason": "Eichhörnchen und Eichenlaub werden als beweglicher Waldläuferritter aufgegriffen.",
+      "equipment": "Bogen, Kurzschwert, grüngelber Plaid und offener Schaller.",
+      "helmet": "OPEN SALLET with a long swept-back neck tail and simple raised brow rim; no faceplate or visor, face clearly visible. Small oak-leaf brass pin at side, no plume.",
+      "image": "assets/warriors/previews/iorcallan.webp",
+      "fullsize": "assets/warriors/production/iorcallan.png"
+    },
+    {
+      "id": "sgaireag",
+      "name": "Sgàireag",
+      "className": "Mariner",
+      "classId": "landsmariner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Schieferblau · Silber · Weiß",
+      "motif": "Weiße Möwe über einer türkisfarbenen Welle.",
+      "reason": "Möwe und Wasserfarben passen besonders gut zu einem albischen Mariner.",
+      "equipment": "Säbel, Rückenköcher, kurzer Bogen und blauweißer Plaid.",
+      "helmet": "NO helmet and NO hat: short wind-tousled silver-brown hair, mature human face, neatly trimmed beard.",
+      "image": "assets/warriors/previews/sgaireag.webp",
+      "fullsize": "assets/warriors/production/sgaireag.png"
+    },
+    {
+      "id": "taghradan",
+      "name": "Taghradan",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Weinrot · Schwarz · Elfenbein",
+      "motif": "Heller Dachs auf Rot mit schwarzweißem Kopf.",
+      "reason": "Der Dachs lässt sich in einen standfesten Clanritter mit zurückhaltendem Zierrat übersetzen.",
+      "equipment": "Schwert, Rundschild, Platten über Kettenzeug und weinroter Tartan.",
+      "helmet": "A banded SPANGENHELM with steel cheek plates and a straight narrow nose guard over a mail coif; lower face visible. Broad cream and black stripe painted across skull, no plume.",
+      "image": "assets/warriors/previews/taghradan.webp",
+      "fullsize": "assets/warriors/production/taghradan.png"
+    },
+    {
+      "id": "torcradan",
+      "name": "Torcradan",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Ocker · Schwarz · Eisen",
+      "motif": "Schwarzer Eber auf ockerfarbenem Bretterfeld.",
+      "reason": "Der Eber trägt einen kräftigen, schlicht geschmückten Landsprotektorentwurf.",
+      "equipment": "Breitschwert, kleiner Schild, eiserner Harnisch und dunkler Tartan.",
+      "helmet": "Closed HOUNDSKULL BASCINET: high pointed egg-shaped skull and very pronounced elongated conical SNOUT VISOR with small side breathing holes. No armet forehead plates and no plume.",
+      "image": "assets/warriors/previews/torcradan.webp",
+      "fullsize": "assets/warriors/production/torcradan.png"
+    },
+    {
+      "id": "blumenthal",
+      "name": "Blumenthal",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Rot · Weiß · Staubblau · Silber",
+      "motif": "Rosen und Ähren in roten, weißen und blauen Schildfeldern.",
+      "reason": "Die aufwendige geteilte Heraldik passt zu einem fein gearbeiteten Landsprotektorharnisch.",
+      "equipment": "Langschwert, Wappenschild und geriffelter Silberharnisch.",
+      "helmet": "CLOSED SILVER ARMET with a naturally rounded domed skull, two hinged cheek pieces meeting cleanly at the chin, a short smooth one-piece visor, narrow horizontal eye slit and small regular circular breathing holes. Restrained fluting on crown only. Red-white plume and floral side rosette. No accordion or shutter-like face slats.",
+      "image": "assets/warriors/previews/blumenthal.webp",
+      "fullsize": "assets/warriors/production/blumenthal.png"
+    },
+    {
+      "id": "honigfeld",
+      "name": "Honigfeld",
+      "className": "Harlekin",
+      "classId": "harlekin",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Honiggelb · Schwarz · Himmelblau",
+      "motif": "Schwarzgoldene Biene mit hellen Flügeln.",
+      "reason": "Die Biene und die lebendige Farbteilung geben einem gewandten Harlekin ein markantes Gewand.",
+      "equipment": "Rapier, Mandoline, leichter Hals- und Armschutz.",
+      "helmet": "NO helmet. A low black-and-honey court jester hood with two SHORT curved lappets and tiny silver bells; human face visible, no full mask.",
+      "image": "assets/warriors/previews/honigfeld.webp",
+      "fullsize": "assets/warriors/production/honigfeld.png"
+    },
+    {
+      "id": "rosenbluth",
+      "name": "Rosenblüth",
+      "className": "Harlekin",
+      "classId": "harlekin",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Rot · Elfenbein · Schwarz · Silber",
+      "motif": "Schwarzer Baum mit sieben roten Blüten auf weißrotem Feld.",
+      "reason": "Die floralen Kontraste passen zu einer höfischen Fechterin mit leichter Rüstung.",
+      "equipment": "Rapier, Parierdolch, kleine Laute und besticktes Wams.",
+      "helmet": "NO helmet. A small asymmetric red velvet cap with a narrow ivory split tip and one black feather; visible composed woman face.",
+      "image": "assets/warriors/previews/rosenbluth.webp",
+      "fullsize": "assets/warriors/production/rosenbluth.png"
+    },
+    {
+      "id": "edelweiss",
+      "name": "Edelweiss",
+      "className": "Kürisser",
+      "classId": "kurassier",
+      "mounted": false,
+      "withHorse": true,
+      "horse": "erlenglanz",
+      "palette": "Schwarz · Elfenbein · Silber · Gold",
+      "motif": "Weißes Einhorn auf Schwarz mit goldener Rahmung.",
+      "reason": "Das helle Einhorn und die elegante Palette legen einen leichten Reiterritter mit Erlenglanz nahe.",
+      "equipment": "Speer, Silberkürass, schwarzer Samt und Erlenglanz.",
+      "helmet": "CLOSED silver close helmet with gently pointed oval skull, compact one-piece visor, enclosed chin/bevor, narrow eye slit and neat ventilation holes. Small attached ivory unicorn-head crest with ONE golden horn, gold edging. Face fully covered.",
+      "image": "assets/warriors/previews/edelweiss.webp",
+      "fullsize": "assets/warriors/production/edelweiss.png"
+    },
+    {
+      "id": "rosenstolz",
+      "name": "Rosenstolz",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Altrosa · Elfenbein · Silber · Roségold",
+      "motif": "Rosa Rose auf Elfenbein in einem warmen Goldrahmen.",
+      "reason": "Die einzelne Rose wird als feiner, höfischer Landsprotektorentwurf aufgegriffen.",
+      "equipment": "Schwert, Rosenschild, heller Harnisch und rosa Mantel.",
+      "helmet": "A smooth cylindrical FLAT-TOP GREAT HELM with flat lid, straight walls, thin horizontal eye slit and small round breathing holes; silver-white metal with raised rose medallion and low sculpted rose wreath, no plume and NO armet silhouette.",
+      "image": "assets/warriors/previews/rosenstolz.webp",
+      "fullsize": "assets/warriors/production/rosenstolz.png"
+    },
+    {
+      "id": "freudenthal",
+      "name": "Freudenthal",
+      "className": "Kürisser",
+      "classId": "kurassier",
+      "mounted": true,
+      "withHorse": false,
+      "horse": "goldmaehne",
+      "palette": "Schwarz · Bronze · Gold",
+      "motif": "Goldenes Schaf mit hellem Gesicht auf schwarzem Feld.",
+      "reason": "Das goldene Schafsmotiv passt zu einem leichter gerüsteten Reiterritter mit Goldmähne.",
+      "equipment": "Speer, Bronzekürass, kleiner Schild und Goldmähne.",
+      "helmet": "OPEN lobster-tail riding helmet with a round steel skull, adjustable straight nasal bar, hanging cheek plates and segmented neck guard. Small fleece-scroll engraving at brow only, no giant horns.",
+      "image": "assets/warriors/previews/freudenthal.webp",
+      "fullsize": "assets/warriors/production/freudenthal.png"
+    },
+    {
+      "id": "rosenblatt",
+      "name": "Rosenblatt",
+      "className": "Harlekin",
+      "classId": "harlekin",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Elfenbein · Rot · Schwarz · Bronze",
+      "motif": "Rote Rose mit dunklen Blättern auf Elfenbein.",
+      "reason": "Die kontrastreichen Rosenfarben passen zu einem eleganten Fechter und Hofbarden.",
+      "equipment": "Seitschwert, kleine Laute, Parierdolch und leichter Armschutz.",
+      "helmet": "NO helmet. A broad low ivory-and-red feathered BERET, two small black fabric points at the back, face visible, no tall jester horns.",
+      "image": "assets/warriors/previews/rosenblatt.webp",
+      "fullsize": "assets/warriors/production/rosenblatt.png"
+    },
+    {
+      "id": "silberthal",
+      "name": "Silberthal",
+      "className": "Mariner",
+      "classId": "landsmariner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Seegrün · Silber · Anthrazit",
+      "motif": "Heller Baum zwischen weißen Türmen auf Seegrün.",
+      "reason": "Die seegrüne Palette des Freiherrenhauses wird als vornehmer Marinerentwurf aufgegriffen.",
+      "equipment": "Säbel, Rückenköcher, kurzer Bogen und silberner Halbharnisch.",
+      "helmet": "OPEN silver burgonet with tall smooth single comb, short brow peak and cheek plates folded outward; human face visible, no plume or visor.",
+      "image": "assets/warriors/previews/silberthal.webp",
+      "fullsize": "assets/warriors/production/silberthal.png"
+    },
+    {
+      "id": "bruggemann",
+      "name": "Brüggemann",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Nachtblau · Silber · Sonnengelb",
+      "motif": "Dunkler Turm vor goldener Sonne über weißen Wellen.",
+      "reason": "Turm und Sonne werden in einen standfesten, repräsentativen Ritterharnisch übersetzt.",
+      "equipment": "Schwert, Rundschild und silberner Schaller mit Bevor.",
+      "helmet": "BURGUNDIAN SALLET: smooth swept-back tail, low visor with one continuous eye slit; a SEPARATE tall steel bevor covers chin. Not a hinged pointed armet faceplate. Small navy feather tuft at side.",
+      "image": "assets/warriors/previews/bruggemann.webp",
+      "fullsize": "assets/warriors/production/bruggemann.png"
+    },
+    {
+      "id": "feuerstein",
+      "name": "Feuerstein",
+      "className": "Kürisser",
+      "classId": "kurassier",
+      "mounted": false,
+      "withHorse": true,
+      "horse": "goldmaehne",
+      "palette": "Schwarz · Silberweiß · Gold",
+      "motif": "Dunkles aufgerichtetes Pferd im weißgoldenen Schild.",
+      "reason": "Das Pferdemotiv passt unmittelbar zu einem leichten Kürisser.",
+      "equipment": "Speer, dunkler Kürass, heller Reitrock und Goldmähne.",
+      "helmet": "OPEN broad-brim black steel KETTLE HAT with oval shallow crown and wide downturned brim; no nose guard, no visor. Slim gold band and one short black feather.",
+      "image": "assets/warriors/previews/feuerstein.webp",
+      "fullsize": "assets/warriors/production/feuerstein.png"
+    },
+    {
+      "id": "sonnenfeld",
+      "name": "Sonnenfeld",
+      "className": "Landsjäger",
+      "classId": "landsjager",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Wiesengrün · Elfenbein · Bronze · Gelb",
+      "motif": "Vier goldene Blüten in grünweißem Schild.",
+      "reason": "Die florale Palette ergibt einen hellen, gepflegten Landsjägerentwurf.",
+      "equipment": "Armbrust, Kurzschwert, leichte Brigantine und offener Eisenhut.",
+      "helmet": "OPEN low-brim KETTLE HAT with a shallow gently conical crown, narrow brim and small bronze sunflower ROSETTE on side; face visible, no visor, no plume.",
+      "image": "assets/warriors/previews/sonnenfeld.webp",
+      "fullsize": "assets/warriors/production/sonnenfeld.png"
+    },
+    {
+      "id": "sommerfeld",
+      "name": "Sommerfeld",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Kupfer · Schwarz · Abendrot",
+      "motif": "Dunkle Sonne über einem orangefarbenen Horizont.",
+      "reason": "Sonnenuntergang und warme Metallfarben geben dem Freiherrenhaus einen eigenen Harnisch.",
+      "equipment": "Schwert, Sonnenschild und kupferfarbener Harnisch.",
+      "helmet": "GREENWICH-style rounded CLOSE HELMET with a high comb and a blunt rounded visor pierced by long vertical diagonal slots. NO pointed snout, NO armet forehead plates. Short rust-red plume at rear.",
+      "image": "assets/warriors/previews/sommerfeld.webp",
+      "fullsize": "assets/warriors/production/sommerfeld.png"
+    },
+    {
+      "id": "wolfenstein",
+      "name": "Wolfenstein",
+      "className": "Landsjäger",
+      "classId": "landsjager",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Dunkelrot · Weiß · Stahl · Gold",
+      "motif": "Weißer Wolfskopf auf Rot in goldener Rahmung.",
+      "reason": "Der Wolf legt einen wachsam wirkenden Waldläuferritter nahe.",
+      "equipment": "Bogen, Kurzschwert, leichte Brustplatte und offener Helm.",
+      "helmet": "OPEN pointed HUNTER BURGONET with straight brow peak, two short cheek guards and no visor; slim red cord, no feather plume, visible face.",
+      "image": "assets/warriors/previews/wolfenstein.webp",
+      "fullsize": "assets/warriors/production/wolfenstein.png"
+    },
+    {
+      "id": "weizmann",
+      "name": "Weizmann",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Purpur · Gold · Silber",
+      "motif": "Goldene Ähren auf tiefem Purpur.",
+      "reason": "Die aufrechte Ähre wird als würdevoller Schmuck eines fein gerüsteten Landsprotektors verwendet.",
+      "equipment": "Langschwert, purpurner Schild und heller Plattenharnisch.",
+      "helmet": "A ROUND ARMet with two distinctly rounded cheek pieces meeting at chin, rounded muzzle visor, tiny horizontal eye slit; smooth spherical profile, no pointed beak. Short upright purple-and-wheat-coloured feather fan.",
+      "image": "assets/warriors/previews/weizmann.webp",
+      "fullsize": "assets/warriors/production/weizmann.png"
+    },
+    {
+      "id": "weissberg",
+      "name": "Weißberg",
+      "className": "Kürisser",
+      "classId": "kurassier",
+      "mounted": false,
+      "withHorse": true,
+      "horse": "erlenglanz",
+      "palette": "Staubblau · Goldocker · Silber",
+      "motif": "Golden gebundene Ähren im blaugoldenen Schild.",
+      "reason": "Die helle Getreideheraldik passt zu einem leichten Reiterritter mit feinem Paradeross.",
+      "equipment": "Speer, Silberkürass, blauer Reitrock und Erlenglanz.",
+      "helmet": "OPEN MORION-like steel riding helmet with high central comb and upturned front/back brim, sides open and face fully visible. Small wheat-sheaf pin, no visor or plume.",
+      "image": "assets/warriors/previews/weissberg.webp",
+      "fullsize": "assets/warriors/production/weissberg.png"
+    },
+    {
+      "id": "otterberg",
+      "name": "Otterberg",
+      "className": "Mariner",
+      "classId": "landsmariner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Schwarz · Weiß · Flussblau · Messing",
+      "motif": "Heller Otter mit Fisch über blauen Wellen.",
+      "reason": "Otter und Wellen legen einen beweglichen Mariner an Flüssen und Seen nahe.",
+      "equipment": "Säbel, Rückenköcher, kurzer Bogen und heller Brustschutz.",
+      "helmet": "NO helmet and NO hat. Dark curly hair tied loosely back, mature clean-shaven human face.",
+      "image": "assets/warriors/previews/otterberg.webp",
+      "fullsize": "assets/warriors/production/otterberg.png"
+    },
+    {
+      "id": "weissmann",
+      "name": "Weissmann",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Elfenbein · Silber · Marineblau · Gold",
+      "motif": "Helle Burg auf weißer Meeresklippe.",
+      "reason": "Burg und Klippe tragen einen hellen, elegant geschlossenen Ritterharnisch.",
+      "equipment": "Schwert, Burgschild und elfenbeinfarbener Mantel.",
+      "helmet": "Closed early BASCINET with a smooth tall egg-shaped skull and a short ROUNDED pig-face visor, two broad side ventilation slots; no pointed armet ridge and no snout. High navy-blue feather spray mounted at back.",
+      "image": "assets/warriors/previews/weissmann.webp",
+      "fullsize": "assets/warriors/production/weissmann.png"
+    },
+    {
+      "id": "thalmann",
+      "name": "Thalmann",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Blau · Silber · Gold",
+      "motif": "Geflügelte gepanzerte Gestalt auf blauem Feld.",
+      "reason": "Das geflügelte Wappenmotiv erscheint als feiner Helmschmuck und gravierte Rüstungszier.",
+      "equipment": "Schwert, Schild und blauer Mantel über silbernem Harnisch.",
+      "helmet": "OPEN CORINTHIAN-INSPIRED visorless steel helmet, narrow T-shaped front opening and sculpted cheek pieces; rounded skull with a short blue horsehair ridge crest, human eyes visible. Two small silver feather reliefs at temples, no gigantic wings.",
+      "image": "assets/warriors/previews/thalmann.webp",
+      "fullsize": "assets/warriors/production/thalmann.png"
+    },
+    {
+      "id": "borgenicht",
+      "name": "Borgenicht",
+      "className": "Harlekin",
+      "classId": "harlekin",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Elfenbein · Rot · Schwarz · Messing",
+      "motif": "Dunkler Geldbeutel mit goldenem Zeichen auf weißrotem Feld.",
+      "reason": "Der Geldbeutel wird als kostbares Zubehör eines gewandten höfischen Harlekins aufgegriffen.",
+      "equipment": "Rapier, kleine Laute, feiner Mantel und leichter Brustschutz.",
+      "helmet": "NO helmet. A soft ivory half-cap with one long red folded jester lappet and one short black tip, both with tiny brass bells; composed adult face visible.",
+      "image": "assets/warriors/previews/borgenicht.webp",
+      "fullsize": "assets/warriors/production/borgenicht.png"
+    },
+    {
+      "id": "goldberg",
+      "name": "Goldberg",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Goldocker · Rostrot · Schwarz · Elfenbein",
+      "motif": "Geteilter Berg in hellen, goldenen und roten Farbfeldern.",
+      "reason": "Die geteilten Bergfarben lassen sich als klare Flächen in einen Landsprotektorharnisch übersetzen.",
+      "equipment": "Breitschwert, kleiner Bergschild und fein gearbeiteter Harnisch.",
+      "helmet": "Closed HOUNDSKULL BASCINET with sharply pointed conical snout visor and high conical skull, visible side hinge and two neat rows of tiny breath holes. Low red-gold cloth torse, no plume.",
+      "image": "assets/warriors/previews/goldberg.webp",
+      "fullsize": "assets/warriors/production/goldberg.png"
+    },
+    {
+      "id": "immergluck",
+      "name": "Immerglück",
+      "className": "Harlekin",
+      "classId": "harlekin",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Petrolblau · Grün · Gold",
+      "motif": "Golden gefasstes vierblättriges Kleeblatt auf Petrolblau.",
+      "reason": "Das Kleeblatt und die spielerische Pracht passen zu einem höfischen Harlekin.",
+      "equipment": "Rapier, kleine Fidel, leichte Armschienen und reiches Wams.",
+      "helmet": "NO helmet. A low teal velvet cap with two long soft LEAF-SHAPED jester tails folded backward, a single gold bell and short dark-green feather, face visible.",
+      "image": "assets/warriors/previews/immergluck.webp",
+      "fullsize": "assets/warriors/production/immergluck.png"
+    },
+    {
+      "id": "kaltwasser",
+      "name": "Kaltwasser",
+      "className": "Mariner",
+      "classId": "landsmariner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Schieferblau · Weiß · Silber · Anthrazit",
+      "motif": "Heller Turm unter weißem Mond über Wellen.",
+      "reason": "Turm, Mond und Wasserfarben geben einem Mariner eine zurückhaltende, kühle Erscheinung.",
+      "equipment": "Säbel, Rückenköcher, kurzer Bogen und silberner Halbharnisch.",
+      "helmet": "OPEN wide-brim silver steel SEA KETTLE HAT, rounded dome with gently turned-up rear brim, no visor or nasal. Small pale moon clasp and dark-blue fabric band, face visible.",
+      "image": "assets/warriors/previews/kaltwasser.webp",
+      "fullsize": "assets/warriors/production/kaltwasser.png"
+    },
+    {
+      "id": "die-ritter-der-kornahre",
+      "name": "Die Ritter der Kornähre",
+      "className": "Landsprotektor",
+      "classId": "landsprotektor",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "palette": "Schwarz · Getreidegold · Eisen",
+      "motif": "Drei goldene Kornähren auf dunklem Ordensschild.",
+      "reason": "Die Kornähre wird als klare Ordensheraldik auf einem gepflegten Ritterharnisch verwendet.",
+      "equipment": "Schwert, schwarzer Ordensschild und dunkler Waffenrock über Stahl.",
+      "helmet": "An austere cylindrical IRON GREAT HELM with a slightly domed closed lid, tiny straight eye slit and cross-shaped grouping of small round breathing holes; plain unpainted steel, absolutely NO plume or horns.",
+      "image": "assets/warriors/previews/die-ritter-der-kornahre.webp",
+      "fullsize": "assets/warriors/production/die-ritter-der-kornahre.png"
+    }
+  ]
+}

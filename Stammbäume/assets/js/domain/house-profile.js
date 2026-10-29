@@ -14,13 +14,17 @@ const RANK_DEFINITIONS = Object.freeze({
   jarl: Object.freeze({ id: 'jarl', label: 'Jarlsclan', order: 30 }),
   'mor-tiarna': Object.freeze({ id: 'mor-tiarna', label: 'Mor Tiarna (Graf)', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
+  freiherr: Object.freeze({ id: 'freiherr', label: 'Freiherrengeschlecht', order: 40 }),
   thane: Object.freeze({ id: 'thane', label: 'Thanenclan', order: 40 }),
   'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
   'knight-prince': Object.freeze({ id: 'knight-prince', label: 'Ritterfürstengeschlecht', order: 50 }),
+  junker: Object.freeze({ id: 'junker', label: 'Junkerhaus', order: 50 }),
   laird: Object.freeze({ id: 'laird', label: 'Laird (Ritterfürst)', order: 50 }),
   hesire: Object.freeze({ id: 'hesire', label: 'Hesire-Clan', order: 50 }),
   huskarl: Object.freeze({ id: 'huskarl', label: 'Huskarlclan', order: 60 }),
   knight: Object.freeze({ id: 'knight', label: 'Niederes Rittergeschlecht', order: 60 }),
+  ministerial: Object.freeze({ id: 'ministerial', label: 'Ministerialenhaus', order: 60 }),
+  'knightly-order': Object.freeze({ id: 'knightly-order', label: 'Geistlicher Ritterorden', order: 50 }),
   'sept-lord': Object.freeze({ id: 'sept-lord', label: 'Septherr (Ritterherrenrang)', order: 60 }),
   magnarian: Object.freeze({ id: 'magnarian', label: 'Magnarierhaus', order: 60 }),
   'knight-simple': Object.freeze({ id: 'knight-simple', label: 'Einfache Ritterfamilie', order: 70 }),
@@ -38,14 +42,17 @@ const RANK_ICONS = Object.freeze({
   jarl: 'assets/images/ranks/graf.png',
   'mor-tiarna': 'assets/images/ranks/graf.png',
   barony: 'assets/images/ranks/baron.png',
+  freiherr: 'assets/images/ranks/baron.png',
   thane: 'assets/images/ranks/baron.png',
   // Kein eigenes Albisch-Icon vorhanden; teilt sich das Baron-Icon der gleichen Rangstufe.
   'dun-tiarna': 'assets/images/ranks/baron.png',
   'knight-prince': 'assets/images/ranks/ritterfuerst.png',
+  junker: 'assets/images/ranks/ritterfuerst.png',
   laird: 'assets/images/ranks/ritterfuerst.png',
   hesire: 'assets/images/ranks/ritterfuerst.png',
   huskarl: 'assets/images/ranks/ritterherr.png',
   knight: 'assets/images/ranks/ritterherr.png',
+  ministerial: 'assets/images/ranks/ritterherr.png',
   'sept-lord': 'assets/images/ranks/ritterherr.png',
   'knight-simple': 'assets/images/ranks/ritter.png',
   // Platzhalter, bis ein eigenes Bürgerlich-Icon vorliegt.
@@ -130,7 +137,8 @@ export function normalizeHouseProfile(profile = {}) {
     liegeHouseId: cleanText(source.liegeHouseId),
     liegeHouseName: cleanText(source.liegeHouseName),
     ...(liegeHouses.length ? { liegeHouses } : {}),
-    ...(folderPath.length > 4 ? { folderPath } : {}),
+    // An explicit register path owns its hierarchy even with fewer than four levels.
+    ...(folderPath.length ? { folderPath } : {}),
     ...(folderIcons.some(Boolean) ? { folderIcons } : {}),
     regionEmblems: normalizeRegionEmblems(source.regionEmblems)
   };
@@ -145,7 +153,7 @@ export function createHouseProfileFromFolderPath(folderPath = [], overrides = {}
   const nextSeat = path.length > 3 ? path[path.length - 1] : current.seat;
   return normalizeHouseProfile({
     ...current,
-    ...(path.length > 4 ? { folderPath: path } : {}),
+    ...(path.length && (path.length > 4 || current.folderPath?.length) ? { folderPath: path } : {}),
     kingdom: nextKingdom,
     county: nextCounty,
     barony: nextBarony,

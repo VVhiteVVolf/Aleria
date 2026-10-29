@@ -1,0 +1,218 @@
+{
+  "imageSize": [
+    3523,
+    4096
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "iathneach-botharin",
+      "title": "Botharin",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-botharin",
+      "x": 1285.895,
+      "y": 2457.6,
+      "href": "/Orte/grossstadt.html?id=iathneach-botharin",
+      "residentFamilyIds": [
+        "haus-cetchathach",
+        "haus-deaghaide"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "botharin",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          36.5,
+          40
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-sgeir-tearmainn",
+      "title": "Sgeir Tearmainn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-sgeir-tearmainn",
+      "x": 616.525,
+      "y": 2826.24,
+      "href": "/Orte/grossstadt.html?id=iathneach-sgeir-tearmainn",
+      "residentFamilyIds": [
+        "haus-farraigeach"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "sgeir-tearmainn",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          17.5,
+          31
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-ailtean",
+      "title": "Ailtean",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-ailtean",
+      "x": 2060.955,
+      "y": 3137.5359999999996,
+      "href": "/Orte/grossstadt.html?id=iathneach-ailtean",
+      "residentFamilyIds": [
+        "haus-treathai"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "ailtean",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          58.5,
+          23.4
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-mharaich",
+      "title": "Mharaich",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-mharaich",
+      "x": 3072.056,
+      "y": 3063.808,
+      "href": "/Orte/grossstadt.html?id=iathneach-mharaich",
+      "residentFamilyIds": [
+        "haus-tairise"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "mharaich",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          87.2,
+          25.2
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-tirnafaoi",
+      "title": "Tirnafaoi",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-tirnafaoi",
+      "x": 2254.7200000000003,
+      "y": 1966.08,
+      "href": "/Orte/grossstadt.html?id=iathneach-tirnafaoi",
+      "residentFamilyIds": [
+        "haus-cannog"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "tirnafaoi",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          64,
+          52
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-sidheanna",
+      "title": "Sidheanna",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-sidheanna",
+      "x": 3065.0099999999998,
+      "y": 1925.12,
+      "href": "/Orte/grossstadt.html?id=iathneach-sidheanna",
+      "residentFamilyIds": [
+        "haus-rieach"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "sidheanna",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          87,
+          53
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-fiontarach",
+      "title": "Fiontarach",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-fiontarach",
+      "x": 1937.65,
+      "y": 1105.92,
+      "href": "/Orte/grossstadt.html?id=iathneach-fiontarach",
+      "residentFamilyIds": [
+        "haus-salaig"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "fiontarach",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          55,
+          73
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "iathneach-famhair",
+      "title": "Famhair",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "iathneach-sitz-famhair",
+      "x": 3311.62,
+      "y": 901.12,
+      "href": "/Orte/grossstadt.html?id=iathneach-famhair",
+      "residentFamilyIds": [
+        "haus-muiredaigh"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "famhair",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          94,
+          78
+        ],
+        "provisional": false
+      }
+    }
+  ]
+}

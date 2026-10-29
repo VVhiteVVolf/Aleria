@@ -1,0 +1,1026 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Moinneach/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "5eeebfb7add0e4609122787680fa9f48763cf3b2fd6699ead3193543c4d164cc",
+  "state": {
+    "pins": [
+      {
+        "id": "moinneach-tarvex",
+        "title": "Tarvex",
+        "x": 0.068,
+        "y": 0.837,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/rowak.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rowak",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/tarvex.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-tarvex/index.html",
+        "region": "Moinneach",
+        "house": "Mac Rowak",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tarvex"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Rowak"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Rowak"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Tarvex"
+          }
+        ],
+        "text": "Tarvex liegt im südwestlichen Sumpfland. Wasserarme zerschneiden die mangrovenreichen Niederungen; feste Plätze und passierbare Übergänge sind zwischen den versumpften Wäldern selten.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-tarvex",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "tarvex",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            6.8,
+            83.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-rowak"
+        ]
+      },
+      {
+        "id": "moinneach-druanax",
+        "title": "Druanax",
+        "x": 0.067,
+        "y": 0.48,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/kerlaouen.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kerlaouen",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/druanax.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-druanax/index.html",
+        "region": "Moinneach",
+        "house": "Nic Kerlaouen",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Druanax"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Nic Kerlaouen"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Nic Kerlaouen"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Druanax"
+          }
+        ],
+        "text": "Druanax liegt im westlichen Bruchwald. Zwischen Wasserarmen und kleinen Erhebungen stehen nasse Wurzelgeflechte und pilzreiches Totholz. Nach Osten öffnet sich der Raum zu Gergonax’ Flussniederungen.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-druanax",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "druanax",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            6.7,
+            48
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-kerlaouen"
+        ]
+      },
+      {
+        "id": "moinneach-drunemax",
+        "title": "Drunemax",
+        "x": 0.42700000000000005,
+        "y": 0.733,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/damona.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damona",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/drunemax.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-drunemax/index.html",
+        "region": "Moinneach",
+        "house": "Dál Damona",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Drunemax"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál Damona"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Dál Damona"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Drunemax"
+          }
+        ],
+        "text": "Drunemax liegt an einem südlichen Wasserlauf unterhalb felsiger Höhen. Die höheren Flächen unterbrechen das Sumpfland, während sich an ihrem Fuß schlammige Rinnen und vernässte Wälder sammeln.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-drunemax",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "drunemax",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            42.7,
+            73.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-damona"
+        ]
+      },
+      {
+        "id": "moinneach-amabactoix",
+        "title": "Amabactoix",
+        "x": 0.484,
+        "y": 0.267,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/caddach.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caddach",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/amabactoix.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-amabactoix/index.html",
+        "region": "Moinneach",
+        "house": "Ard Caddach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Amabactoix"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ard Caddach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ard Caddach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Amabactoix"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Ambactiox"
+          }
+        ],
+        "text": "Amabactoix liegt westlich des östlichen Gebirgszugs. Mangrovenreiche Wasserläufe und überflutete Wurzelräume verbinden das nördliche Sumpfland mit den mittleren Niederungen.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-amabactoix",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "amabactoix",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            48.4,
+            26.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-caddach"
+        ]
+      },
+      {
+        "id": "moinneach-vironax",
+        "title": "Vironax",
+        "x": 0.41,
+        "y": 0.09900000000000009,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/adruinna.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nic-adruinna",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/vironax.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-vironax/index.html",
+        "region": "Moinneach",
+        "house": "Nic Adruinna",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Vironax"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Nic Adruinna"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Nic Adruinna"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Vironax"
+          }
+        ],
+        "text": "Vironax liegt an einem nördlichen Wasserlauf. Bewaldete Erhebungen ragen aus der nassen Landschaft; dazwischen ziehen sich Mangroven, schwer passierbare Ufer und Sumpfrinnen nach Süden.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-vironax",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "vironax",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            41,
+            9.9
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-nic-adruinna"
+        ]
+      },
+      {
+        "id": "moinneach-arvonax",
+        "title": "Arvonax",
+        "x": 0.627,
+        "y": 0.609,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/avernax.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-avernax",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/arvonax.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-arvonax/index.html",
+        "region": "Moinneach",
+        "house": "Ard Avernax",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Arvonax"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ard Avernax"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ard Avernax"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Arvonax"
+          }
+        ],
+        "text": "Arvonax liegt im südöstlichen Tal zwischen felsigen Höhen. Der eingezeichnete Weg durchquert einen engen Übergangsraum, in dessen Senken Wasser steht und versumpfte Waldstücke die Bewegung erschweren.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-arvonax",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "arvonax",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            62.7,
+            60.9
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-avernax"
+        ]
+      },
+      {
+        "id": "moinneach-taranux",
+        "title": "Taranux",
+        "x": 0.884,
+        "y": 0.573,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/brigantex.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-brigantex",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/taranux.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-taranux/index.html",
+        "region": "Moinneach",
+        "house": "Ua Brigantex",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Taranux"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua Brigantex"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua Brigantex"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Taranux"
+          }
+        ],
+        "text": "Taranux liegt zwischen Wasserlauf und östlichen Bergkämmen. Die bewachsenen Talflächen gehören zum Sumpfland; die umliegenden Höhen bieten nur schmale Übergänge zwischen nassen Senken und Wald.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-taranux",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "taranux",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            88.4,
+            57.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ua-brigantex"
+        ]
+      },
+      {
+        "id": "moinneach-senodex",
+        "title": "Senodex",
+        "x": 0.841,
+        "y": 0.32799999999999996,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/keravel.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-keravel",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/senodex.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-senodex/index.html",
+        "region": "Moinneach",
+        "house": "Na Keravel",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Senodex"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Na Keravel"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Na Keravel"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Senodex"
+          }
+        ],
+        "text": "Senodex liegt im östlichen Talgebiet über einer sichtbaren Wasserstufe. Unterhalb der Siedlung zieht der Wasserlauf durch sumpfige Mulden; überflutete Ufer und dichter Bewuchs fassen die Verbindung nach Süden ein.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-senodex",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "senodex",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            84.1,
+            32.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-keravel"
+        ]
+      },
+      {
+        "id": "moinneach-camulax",
+        "title": "Camulax",
+        "x": 0.708,
+        "y": 0.21700000000000008,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/nemetex.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nemetex",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/camulax.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-camulax/index.html",
+        "region": "Moinneach",
+        "house": "Ord Nemetex",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Camulax"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ord Nemetex"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ord Nemetex"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Camulax"
+          }
+        ],
+        "text": "Camulax liegt im nordöstlichen Tal zwischen bewaldeten und felsigen Höhen. Auch hier bleibt Moinneach ein unwirtliches Sumpfland: Wasserläufe, nasse Mulden und schmale feste Flächen bestimmen den Lebensraum.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-camulax",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "camulax",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            70.8,
+            21.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-nemetex"
+        ]
+      },
+      {
+        "id": "moinneach-gergonax",
+        "title": "Gergonax",
+        "x": 0.307,
+        "y": 0.484,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/cethrenn.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cethrenn",
+        "banner": "/Stammbäume/assets/images/regions/moinneach/gergonax.png",
+        "bannerLink": "/Kontinente/Lothir/Moinneach/moinneach-sitz-gergonax/index.html",
+        "region": "Moinneach",
+        "house": "Tir An Cethrenn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Gergonax"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir An Cethrenn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir An Cethrenn, An Barrex"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Fürstliche Domäne Gergonax"
+          }
+        ],
+        "text": "Gergonax’ Burganlage liegt im mittleren Geflecht mehrerer Wasserläufe. Mangrovenwurzeln und überschwemmte Niederungen erschweren den Zugang; bewaldete Erhebungen gliedern den Übergang zu den Nachbargebieten.",
+        "secret": false,
+        "dominionId": "moinneach-sitz-gergonax",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "gergonax",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            30.7,
+            48.4
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-cethrenn",
+          "haus-barrex"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "fuerstentum-moinneach",
+        "name": "Fürstentum Moinneach",
+        "type": "Fürstentum",
+        "ruler": "Tir An Cethrenn",
+        "seat": "Gergonax",
+        "parentId": ""
+      },
+      {
+        "id": "moinneach-sitz-tarvex",
+        "name": "Lairdherrschaft Tarvex",
+        "type": "Lairdherrschaft",
+        "ruler": "Mac Rowak",
+        "seat": "Tarvex",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-druanax",
+        "name": "Lairdherrschaft Druanax",
+        "type": "Lairdherrschaft",
+        "ruler": "Nic Kerlaouen",
+        "seat": "Druanax",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-drunemax",
+        "name": "Lairdherrschaft Drunemax",
+        "type": "Lairdherrschaft",
+        "ruler": "Dál Damona",
+        "seat": "Drunemax",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-amabactoix",
+        "name": "Lairdherrschaft Amabactoix",
+        "type": "Lairdherrschaft",
+        "ruler": "Ard Caddach",
+        "seat": "Amabactoix",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-vironax",
+        "name": "Lairdherrschaft Vironax",
+        "type": "Lairdherrschaft",
+        "ruler": "Nic Adruinna",
+        "seat": "Vironax",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-arvonax",
+        "name": "Lairdherrschaft Arvonax",
+        "type": "Lairdherrschaft",
+        "ruler": "Ard Avernax",
+        "seat": "Arvonax",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-taranux",
+        "name": "Lairdherrschaft Taranux",
+        "type": "Lairdherrschaft",
+        "ruler": "Ua Brigantex",
+        "seat": "Taranux",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-senodex",
+        "name": "Lairdherrschaft Senodex",
+        "type": "Lairdherrschaft",
+        "ruler": "Na Keravel",
+        "seat": "Senodex",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-camulax",
+        "name": "Lairdherrschaft Camulax",
+        "type": "Lairdherrschaft",
+        "ruler": "Ord Nemetex",
+        "seat": "Camulax",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-sitz-gergonax",
+        "name": "Fürstliche Domäne Gergonax",
+        "type": "Fürstliche Domäne",
+        "ruler": "Tir An Cethrenn",
+        "seat": "Gergonax",
+        "parentId": "fuerstentum-moinneach"
+      },
+      {
+        "id": "moinneach-hausbereich-barrex",
+        "name": "Herrschaft An Barrex in Gergonax",
+        "type": "Örtliche Herrschaft",
+        "ruler": "An Barrex",
+        "seat": "Gergonax",
+        "parentId": "moinneach-sitz-gergonax"
+      }
+    ],
+    "regionTitle": "Fürstentum Moinneach",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/moinneach.png",
+    "mapImages": {
+      "normal": "/Karten/Moinneach/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

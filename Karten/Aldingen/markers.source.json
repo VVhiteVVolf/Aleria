@@ -1,0 +1,307 @@
+{
+  "imageSize": [
+    4096,
+    2991
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "aldingen-barenstadt",
+      "title": "Barenstadt",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-barenstadt",
+      "x": 2920.448,
+      "y": 2476.548,
+      "href": "/Orte/grossstadt.html?id=aldingen-barenstadt",
+      "residentFamilyIds": [
+        "haus-ritten",
+        "haus-sgiathan",
+        "haus-wolfram"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "barenstadt",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          71.3,
+          17.2
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-welden",
+      "title": "Welden",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-welden",
+      "x": 3588.0959999999995,
+      "y": 2105.664,
+      "href": "/Orte/grossstadt.html?id=aldingen-welden",
+      "residentFamilyIds": [
+        "haus-rosswarth"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "welden",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          87.6,
+          29.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-borgeln",
+      "title": "Borgeln",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-borgeln",
+      "x": 3067.9040000000005,
+      "y": 1761.6989999999998,
+      "href": "/Orte/grossstadt.html?id=aldingen-borgeln",
+      "residentFamilyIds": [
+        "haus-rothman",
+        "haus-riedenfeld"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "borgeln",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          74.9,
+          41.1
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-hasselt",
+      "title": "Hasselt",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-hasselt",
+      "x": 3874.816,
+      "y": 1387.8239999999998,
+      "href": "/Orte/grossstadt.html?id=aldingen-hasselt",
+      "residentFamilyIds": [
+        "haus-velten-aldingen",
+        "haus-dublann"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "hasselt",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          94.6,
+          53.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-grimberg",
+      "title": "Grimberg",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-grimberg",
+      "x": 2072.576,
+      "y": 1432.6889999999999,
+      "href": "/Orte/grossstadt.html?id=aldingen-grimberg",
+      "residentFamilyIds": [
+        "haus-hohenmund",
+        "haus-ehrenfeld",
+        "haus-welf"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "grimberg",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          50.6,
+          52.1
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-sassel",
+      "title": "Sassel",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-sassel",
+      "x": 1839.104,
+      "y": 535.3890000000001,
+      "href": "/Orte/grossstadt.html?id=aldingen-sassel",
+      "residentFamilyIds": [
+        "haus-ronnach"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "sassel",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          44.9,
+          82.1
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-zollern",
+      "title": "Zollern",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-zollern",
+      "x": 647.168,
+      "y": 921.228,
+      "href": "/Orte/grossstadt.html?id=aldingen-zollern",
+      "residentFamilyIds": [
+        "haus-truchsen",
+        "haus-brechten",
+        "haus-schenk"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "zollern",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          15.8,
+          69.2
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-bruchen",
+      "title": "Bruchen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-bruchen",
+      "x": 514.4576000000001,
+      "y": 460.61400000000015,
+      "href": "/Orte/grossstadt.html?id=aldingen-bruchen",
+      "residentFamilyIds": [
+        "haus-rebhart",
+        "haus-graven"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "bruchen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          12.56,
+          84.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-dreiken",
+      "title": "Dreiken",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-dreiken",
+      "x": 1441.7920000000001,
+      "y": 544.3620000000001,
+      "href": "/Orte/grossstadt.html?id=aldingen-dreiken",
+      "residentFamilyIds": [
+        "haus-ankerhold"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "dreiken",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          35.2,
+          81.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-aldershafen",
+      "title": "Aldershafen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-aldershafen",
+      "x": 2228.224,
+      "y": 320.0370000000001,
+      "href": "/Orte/grossstadt.html?id=aldingen-aldershafen",
+      "residentFamilyIds": [
+        "haus-adharcan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "aldershafen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          54.4,
+          89.3
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aldingen-klingenhagen",
+      "title": "Klingenhagen",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aldingen-sitz-klingenhagen",
+      "x": 3420.16,
+      "y": 326.0190000000002,
+      "href": "/Orte/grossstadt.html?id=aldingen-klingenhagen",
+      "residentFamilyIds": [
+        "haus-klingen",
+        "haus-halbrecht",
+        "haus-haldren",
+        "haus-lachmund"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "klingenhagen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          83.5,
+          89.1
+        ],
+        "provisional": false
+      }
+    }
+  ]
+}

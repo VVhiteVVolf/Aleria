@@ -1,0 +1,1051 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Deitheach/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "e0f46c2ac0cce6e704ea8ddffbbcc319fdd503ec8c480c72f7464e9bf9c51279",
+  "state": {
+    "pins": [
+      {
+        "id": "deitheach-ailseag",
+        "title": "Lann Ailseag",
+        "x": 0.10800000000000001,
+        "y": 0.28500000000000003,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/ard-roth.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-mac-ard-roth",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/ailseag.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-ailseag/index.html",
+        "region": "Deitheach",
+        "house": "Mac Ard Roth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Lann Ailseag"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Ard Roth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Ard Roth, Nic Drisach, Tir Eatharn"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Fürstliche Domäne Lann Ailseag"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Rath Ailseag"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die Hauptstadt lag an der bewaldeten Westküste unter dem Gebirge. Hier hatten die Mac Ard Roth ihren fürstlichen Sitz. Mor Tiarnatum und eigene Domäne führten dasselbe Banner. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-ailseag",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "ailseag",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            10.8,
+            28.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-muirdean",
+        "title": "Caol Muirdean",
+        "x": 0.055,
+        "y": 0.605,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/snaith.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-mac-snaith",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/muirdean.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-muirdean/index.html",
+        "region": "Deitheach",
+        "house": "Mac Snaith",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caol Muirdean"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Snaith"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Snaith"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Cladach Muirdean"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Burg"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die kleine Burg sicherte den südlichen Küstenabschnitt der fürstlichen Großregion. Seezugang und Wald lagen unmittelbar beieinander; die Besetzung des Sitzes blieb im ersten Entwurf offen. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-muirdean",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "muirdean",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            5.5,
+            60.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-beartain",
+        "title": "Dun Beartain",
+        "x": 0.317,
+        "y": 0.4,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/neill.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-neill",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/beartain.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-beartain/index.html",
+        "region": "Deitheach",
+        "house": "Mac Neill",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dun Beartain"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Neill"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Neill"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Mor Tiarnatum Braigh Beartain"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Große Stadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die große Stadt lag im bewaldeten westlichen Bergland. Höhenwege verbanden sie mit der Küste und den benachbarten Tälern. Ihr Gebiet war die Eigenherrschaft des Mor Tiarnatum. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-beartain",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "beartain",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            31.7,
+            40
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-loscarn",
+        "title": "Tobar Loscarn",
+        "x": 0.205,
+        "y": 0.6799999999999999,
+        "cat": "accepted-realm-burg",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/torcmhar.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-torcmhar",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/loscarn.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-loscarn/index.html",
+        "region": "Deitheach",
+        "house": "Ua Torcmhar",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tobar Loscarn"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ua Torcmhar"
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Rinn Loscarn"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Burg"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ua Torcmhar"
+          }
+        ],
+        "text": "Die südliche Burg lag unweit der Küste am Rand des Wald- und Berglandes. Ihre Lage erlaubte einen maritimen Figurenentwurf, ohne daraus eine belegte Flotte abzuleiten. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-loscarn",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "loscarn",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            20.5,
+            68
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-dreasail",
+        "title": "Srath Dreasail",
+        "x": 0.47200000000000003,
+        "y": 0.4,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/caolan.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caolan",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/dreasail.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-dreasail/index.html",
+        "region": "Deitheach",
+        "house": "Nic Caolan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Srath Dreasail"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Nic Caolan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Nic Caolan, Ruin Seilgeir"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Mor Tiarnatum Srath Dreasail"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Inver Dreasail"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die große Stadt lag unter einem markanten Gebirgskamm. Nach Süden öffnete sich ihr bewaldeter Herrschaftsraum zu den Wasserläufen und Übergängen der Karte. Sie bildete die eigene Dun-Herrschaft des Mor Tiarna. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-dreasail",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "dreasail",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            47.2,
+            40
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-uamhar",
+        "title": "Creag Uamhar",
+        "x": 0.39399999999999996,
+        "y": 0.63,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/ardmhair.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ardmhair",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/uamhar.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-uamhar/index.html",
+        "region": "Deitheach",
+        "house": "Tir an Ardmhair",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Creag Uamhar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir an Ardmhair"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir an Ardmhair"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Coire Uamhar"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Burg"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die Burg lag in einem schmalen südwestlichen Ausläufer des blauen Herrschaftsraums, zwischen bewaldeten Hängen und einem engen Zugang nach Süden. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-uamhar",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "uamhar",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            39.4,
+            63
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-carthain",
+        "title": "Fiodh Carthain",
+        "x": 0.68,
+        "y": 0.485,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/duach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-duach",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/carthain.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-carthain/index.html",
+        "region": "Deitheach",
+        "house": "Dál Dúach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiodh Carthain"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál Dúach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Dál Dúach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Mor Tiarnatum Gleann Carthain"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die Stadt lag am südlichen Rand des ockerfarbenen Großgebiets, zwischen den nördlichen Höhen, Waldstreifen und Wasserübergängen. Ihr Dun Tiarnatum war zugleich die eigene Herrschaft des Mor Tiarna. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-carthain",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "carthain",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            68,
+            48.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-sceolan",
+        "title": "Ard Sceolan",
+        "x": 0.644,
+        "y": 0.08600000000000008,
+        "cat": "accepted-realm-burg",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/trodach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-droch-trodach",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/sceolan.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-sceolan/index.html",
+        "region": "Deitheach",
+        "house": "Droch Trodach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ard Sceolan"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Droch Trodach"
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Bealach Sceolan"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Burg"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Droch Trodach"
+          }
+        ],
+        "text": "Die nördliche Burg stand im bergigen oberen Abschnitt des ockerfarbenen Raums. Sie lag an einem engen Wasser- und Höhenzugang; ihre Ausrüstung wurde entsprechend bergtauglich entworfen. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-sceolan",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "sceolan",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            64.4,
+            8.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "deitheach-treabhair",
+        "title": "Maol Orsagail",
+        "x": 0.836,
+        "y": 0.356,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/tuairne.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dal-tuairne",
+        "banner": "/Stammbäume/assets/images/regions/deitheach/treabhair.webp",
+        "bannerLink": "/Kontinente/Aldervan/Deitheach/deitheach-sitz-treabhair/index.html",
+        "region": "Deitheach",
+        "house": "Dál Tuairne",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maol Orsagail"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dál Tuairne"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Dál Tuairne"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Dún Tiarnatum Achadh Orsagail"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Große Stadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Die östliche große Stadt lag in einem breiten, offeneren Tal zwischen Wasserläufen. Sie gehörte zum östlichen Dun Tiarnatum; ihr Clan blieb im ersten Entwurf frei. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "deitheach-sitz-treabhair",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "treabhair",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            83.6,
+            35.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "accepted-realm-burg",
+        "label": "Burg",
+        "color": "#79617e",
+        "marker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "placeholderCategoryId": "mmfls5afqqpr"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "fuerstentum-deitheach",
+        "name": "Fürstentum Deitheach",
+        "type": "Fürstentum",
+        "ruler": "Mac Ard Roth",
+        "seat": "Lann Ailseag",
+        "parentId": ""
+      },
+      {
+        "id": "deitheach-region-caorthainn",
+        "name": "Iorras Ruscadal",
+        "type": "Mor Tiarnatum",
+        "ruler": "Mac Ard Roth",
+        "seat": "Lann Ailseag",
+        "parentId": "fuerstentum-deitheach"
+      },
+      {
+        "id": "deitheach-region-dorrain",
+        "name": "Sliabh Dorrain",
+        "type": "Mor Tiarnatum",
+        "ruler": "Mac Neill",
+        "seat": "Dun Beartain",
+        "parentId": "fuerstentum-deitheach"
+      },
+      {
+        "id": "deitheach-region-fhasgair",
+        "name": "Coill Fhasgair",
+        "type": "Mor Tiarnatum",
+        "ruler": "Nic Caolan",
+        "seat": "Srath Dreasail",
+        "parentId": "fuerstentum-deitheach"
+      },
+      {
+        "id": "deitheach-region-eirceann",
+        "name": "Magh Eirceann",
+        "type": "Mor Tiarnatum",
+        "ruler": "Dál Dúach",
+        "seat": "Fiodh Carthain",
+        "parentId": "fuerstentum-deitheach"
+      },
+      {
+        "id": "deitheach-sitz-ailseag",
+        "name": "Fürstliche Domäne Lann Ailseag",
+        "type": "Fürstliche Domäne",
+        "ruler": "Mac Ard Roth",
+        "seat": "Lann Ailseag",
+        "parentId": "deitheach-region-caorthainn"
+      },
+      {
+        "id": "deitheach-sitz-muirdean",
+        "name": "Lairdherrschaft Cladach Muirdean",
+        "type": "Lairdherrschaft",
+        "ruler": "Mac Snaith",
+        "seat": "Caol Muirdean",
+        "parentId": "deitheach-region-caorthainn"
+      },
+      {
+        "id": "deitheach-sitz-beartain",
+        "name": "Mor Tiarnatum Braigh Beartain",
+        "type": "Mor Tiarnatum",
+        "ruler": "Mac Neill",
+        "seat": "Dun Beartain",
+        "parentId": "deitheach-region-dorrain"
+      },
+      {
+        "id": "deitheach-sitz-loscarn",
+        "name": "Lairdherrschaft Rinn Loscarn",
+        "type": "Lairdherrschaft",
+        "ruler": "Ua Torcmhar",
+        "seat": "Tobar Loscarn",
+        "parentId": "deitheach-region-dorrain"
+      },
+      {
+        "id": "deitheach-sitz-dreasail",
+        "name": "Mor Tiarnatum Srath Dreasail",
+        "type": "Mor Tiarnatum",
+        "ruler": "Nic Caolan",
+        "seat": "Srath Dreasail",
+        "parentId": "deitheach-region-fhasgair"
+      },
+      {
+        "id": "deitheach-sitz-uamhar",
+        "name": "Lairdherrschaft Coire Uamhar",
+        "type": "Lairdherrschaft",
+        "ruler": "Tir an Ardmhair",
+        "seat": "Creag Uamhar",
+        "parentId": "deitheach-region-fhasgair"
+      },
+      {
+        "id": "deitheach-sitz-carthain",
+        "name": "Mor Tiarnatum Gleann Carthain",
+        "type": "Mor Tiarnatum",
+        "ruler": "Dál Dúach",
+        "seat": "Fiodh Carthain",
+        "parentId": "deitheach-region-eirceann"
+      },
+      {
+        "id": "deitheach-sitz-sceolan",
+        "name": "Lairdherrschaft Bealach Sceolan",
+        "type": "Lairdherrschaft",
+        "ruler": "Droch Trodach",
+        "seat": "Ard Sceolan",
+        "parentId": "deitheach-region-eirceann"
+      },
+      {
+        "id": "deitheach-sitz-treabhair",
+        "name": "Dún Tiarnatum Achadh Orsagail",
+        "type": "Dún Tiarnatum",
+        "ruler": "Dál Tuairne",
+        "seat": "Maol Orsagail",
+        "parentId": "deitheach-region-eirceann"
+      },
+      {
+        "id": "deitheach-hausbereich-drisach",
+        "name": "Herrschaft Nic Drisach in Lann Ailseag",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Nic Drisach",
+        "seat": "Lann Ailseag",
+        "parentId": "deitheach-sitz-ailseag"
+      },
+      {
+        "id": "deitheach-hausbereich-seilgair",
+        "name": "Herrschaft Ruin Seilgeir in Srath Dreasail",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Ruin Seilgeir",
+        "seat": "Srath Dreasail",
+        "parentId": "deitheach-sitz-dreasail"
+      },
+      {
+        "id": "deitheach-hausbereich-eatharn",
+        "name": "Herrschaft Tir Eatharn in Lann Ailseag",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Tir Eatharn",
+        "seat": "Lann Ailseag",
+        "parentId": "deitheach-sitz-ailseag"
+      }
+    ],
+    "regionTitle": "Fürstentum Deitheach",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/deitheach.webp",
+    "mapImages": {
+      "normal": "/Karten/Deitheach/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

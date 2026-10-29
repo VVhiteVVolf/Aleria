@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "settlements": [
+    {
+      "id": "rebenwacht",
+      "name": "Burg Rebenwacht",
+      "province": "ewigensee",
+      "kind": "Burg",
+      "point": [
+        83,
+        39
+      ],
+      "provisionalCoordinates": true,
+      "geography": "Burg Rebenwacht liegt nahe Ewigensee. Die Kartenposition ist vorläufig."
+    },
+    {
+      "id": "sonnenfels",
+      "name": "Burg Sonnenfels",
+      "province": "weisslauf",
+      "kind": "Burg",
+      "point": [
+        67.5,
+        81.5
+      ],
+      "provisionalCoordinates": true,
+      "geography": "Burg Sonnenfels liegt im südlichen Weislauf. Das Ministerialenhaus Sonnenfels untersteht dem Haus Weißmann; die genaue Kartenposition ist vorläufig."
+    }
+  ],
+  "houses": [
+    {
+      "id": "weinlaub",
+      "sourceId": "weinlaub",
+      "name": "Weinlaub",
+      "houseId": "house-weinlaub",
+      "familyId": "haus-weinlaub",
+      "clan": false,
+      "originRealm": "weisenfluh",
+      "seatId": "rebenwacht",
+      "regionId": "ewigensee",
+      "rankId": "ministerial",
+      "rank": "Ministerialer",
+      "liegeId": "goldkranz",
+      "isSeatRuler": true,
+      "crest": "/Stammbäume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+      "warrior": {
+        "className": "Hausritter",
+        "equipment": "Hausritter in den Farben des überlieferten Wappens.",
+        "image": "/Stammbäume/assets/images/references/haus-weinlaub/krieger.png",
+        "fullsize": "/Stammbäume/assets/images/references/haus-weinlaub/krieger.png"
+      },
+      "motif": "",
+      "palette": [],
+      "knownDescription": "Niederes Ritterhaus von Burg Rebenwacht am Ewigensee. Nach Rahels frühem Tod heiratete Josiah Miryam. Unter ihrem Einfluss entzog er seinem erstgeborenen Sohn Gideon das Erbrecht, verwies ihn des Hauses und bestimmte den jüngeren Halbbruder Elias zum bevorzugten Erben.",
+      "knownHeads": [
+        {
+          "id": "salomon-weinlaub",
+          "familyId": "haus-weinlaub",
+          "name": "Salomon Weinlaub",
+          "role": "Ritterherr von Rebenwacht bis 1710",
+          "image": "",
+          "status": "dead"
+        },
+        {
+          "id": "josiah-weinlaub",
+          "familyId": "haus-weinlaub",
+          "name": "Josiah Weinlaub",
+          "role": "Ritterherr von Rebenwacht · Oberhaupt des Hauses",
+          "image": "/Stammbäume/assets/images/portraits/haus-weinlaub/josiah-elias-placeholder.png",
+          "status": "alive"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe: bestehendes Haus als Ministerialenhaus einordnen; genealogische Datensätze erhalten.",
+      "firstHeir": "Elias Weinlaub",
+      "knownHeirs": [
+        {
+          "id": "elias-weinlaub",
+          "familyId": "haus-weinlaub",
+          "name": "Elias Weinlaub",
+          "role": "Bevorzugter Erbe",
+          "detail": "Josiahs Sohn aus zweiter Ehe; Gideon wurde 1728 enterbt.",
+          "image": "../Stammbäume/assets/images/portraits/haus-weinlaub/josiah-elias-placeholder.png"
+        }
+      ],
+      "knownHistory": "Gideon Weinlaub wurde 1711 als Erstgeborener Josiahs und Rahels geboren. Nach Rahels Tod im Jahr 1714 heiratete Josiah 1716 Miryam. Sie säte Zweifel an Gideons Eignung; 1728 entzog Josiah seinem Erstgeborenen das Erbrecht und verwies ihn des Hauses. Elias, der Sohn aus zweiter Ehe, wird seither bevorzugt. Gideon lebt als fahrender Ritter."
+    },
+    {
+      "id": "sonnenfels",
+      "sourceId": "sonnenfels",
+      "name": "Sonnenfels",
+      "houseId": "house-sonnenfels",
+      "familyId": "haus-sonnenfels",
+      "clan": false,
+      "originRealm": "weisenfluh",
+      "seatId": "sonnenfels",
+      "regionId": "weisslauf",
+      "rankId": "ministerial",
+      "rank": "Ministerialer",
+      "liegeId": "weissmann",
+      "isSeatRuler": true,
+      "crest": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+      "warrior": {
+        "className": "Hausritter",
+        "equipment": "Hausritter in den Farben des überlieferten Wappens.",
+        "image": "/Stammbäume/assets/images/references/haus-sonnenfels/krieger.png",
+        "fullsize": "/Stammbäume/assets/images/references/haus-sonnenfels/krieger.png"
+      },
+      "motif": "",
+      "palette": [],
+      "knownDescription": "Weisenfluher Landherren mit Stammsitz Burg Sonnenfels. Dietmar führt das Haus in der Heimat; sein Onkel Albrecht begründete nach einem Erbstreit mit der Lachenden Nixe einen wohlhabenden Gwynthorer Haushalt.",
+      "knownHeads": [
+        {
+          "id": "dietmar-sonnenfels",
+          "familyId": "haus-sonnenfels",
+          "name": "Dietmar Sonnenfels",
+          "role": "Amtierendes Hausoberhaupt · Burg Sonnenfels",
+          "image": "../AleriaAlmanach/assets/lachende-nixe/portraits/dietmar.png",
+          "status": "alive"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe: bestehendes Haus als Ministerialenhaus einordnen; genealogische Datensätze erhalten."
+    }
+  ]
+}

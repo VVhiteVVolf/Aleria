@@ -1,0 +1,1158 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "id": "moinneach",
+  "name": "Moinneach",
+  "title": "Fürstentum Moinneach",
+  "type": "Fürstentum",
+  "continent": "Lothir",
+  "capital": "gergonax",
+  "ruler": "cethrenn",
+  "rootId": "fuerstentum-moinneach",
+  "aliases": [
+    "fuerstentum-moinneachs",
+    "moinneachs"
+  ],
+  "selectedVariant": "original",
+  "map": "/Karten/Moinneach/Kartenbilder/normal.webp",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/moinneach.png",
+  "context": {
+    "introduction": "",
+    "history": [],
+    "themes": []
+  },
+  "design": {},
+  "regions": [
+    {
+      "id": "tarvex",
+      "label": "Tarvex",
+      "colour": "#6c9f45",
+      "seats": [
+        "tarvex"
+      ],
+      "design": {
+        "banner": "assets/portach-banner-tribal.png",
+        "motif": "Eine schwarze Sumpffeste über Schilf und dunklem Wasser. Die Feste greift Cethrenns Wappen auf; die schlichte Form steht zugleich für das mühselige Behaupten bewohnbarer Plätze.",
+        "colours": "Torfbraun, stumpfer Ocker und Kohlschwarz",
+        "rationale": "Cethrenns schwarze Feste passt unmittelbar zu Tarvex. Schilf und dunkles Wasser verankern das Zeichen im südwestlichen Sumpfland.",
+        "kind": "banner-only",
+        "name": "Tarvex",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Tarvex liegt im südwestlichen Sumpfland. Wasserarme zerschneiden die mangrovenreichen Niederungen; feste Plätze und passierbare Übergänge sind zwischen den versumpften Wäldern selten."
+      }
+    },
+    {
+      "id": "druanax",
+      "label": "Druanax",
+      "colour": "#67898c",
+      "seats": [
+        "druanax"
+      ],
+      "design": {
+        "banner": "assets/mbeacan-banner-tribal.png",
+        "motif": "Drei grobe Pilzkappen über einem gebrochenen Wurzelstrich. Knochenhelle und rostrote Pigmente wirken wie ein altes Warnzeichen auf dunklem Tuch.",
+        "colours": "Moorbraun, Knochenweiß und stumpfes Rostrot",
+        "rationale": "Das Pilzzeichen gehört zu Druanax’ feuchtem Bruchwald: Totholz, verrottende Wurzeln und dichtes Unterholz bestimmen den Landschaftsentwurf.",
+        "kind": "banner-only",
+        "name": "Druanax",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Druanax liegt im westlichen Bruchwald. Zwischen Wasserarmen und kleinen Erhebungen stehen nasse Wurzelgeflechte und pilzreiches Totholz. Nach Osten öffnet sich der Raum zu Gergonax’ Flussniederungen."
+      }
+    },
+    {
+      "id": "drunemax",
+      "label": "Drunemax",
+      "colour": "#b8ad42",
+      "seats": [
+        "drunemax"
+      ],
+      "design": {
+        "banner": "assets/ndragan-banner-tribal.png",
+        "motif": "Ein kantiger schwarzer Drachenkopf über drei Schuppenwinkeln und einer dunklen Wasserlinie. Das Zeichen greift Damonas reptilischen Krieger auf.",
+        "colours": "Toter Ocker, Torfbraun und Kohlschwarz",
+        "rationale": "Damonas Drachenkrieger liefert das zentrale Motiv. Die drei Winkel erinnern zugleich an Schuppen und an die felsigen Höhen über Drunemax’ nassen Niederungen.",
+        "kind": "banner-only",
+        "name": "Drunemax",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Drunemax liegt an einem südlichen Wasserlauf unterhalb felsiger Höhen. Die höheren Flächen unterbrechen das Sumpfland, während sich an ihrem Fuß schlammige Rinnen und vernässte Wälder sammeln."
+      }
+    },
+    {
+      "id": "amabactoix",
+      "label": "Amabactoix",
+      "colour": "#538b91",
+      "seats": [
+        "amabactoix"
+      ],
+      "design": {
+        "banner": "assets/slea-banner-tribal.png",
+        "motif": "Ein aufrechter knochenheller Speer vor einer schlichten dunklen Rundschildscheibe; zwei abgewinkelte Wurzelstriche darunter.",
+        "colours": "Verblichenes Eisenrot, Knochenweiß und Rußschwarz",
+        "rationale": "Speer und einfacher Rundschild passen zur Wehrhaftigkeit des gerüsteten Froschkriegers im Wappen der Caddach. Die Wurzelstriche binden das Zeichen an die nassen Übergänge vor dem Gebirgsrand.",
+        "kind": "banner-only",
+        "name": "Amabactoix",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Amabactoix liegt westlich des östlichen Gebirgszugs. Mangrovenreiche Wasserläufe und überflutete Wurzelräume verbinden das nördliche Sumpfland mit den mittleren Niederungen."
+      }
+    },
+    {
+      "id": "vironax",
+      "label": "Vironax",
+      "colour": "#4d9e76",
+      "seats": [
+        "vironax"
+      ],
+      "design": {
+        "banner": "assets/freamhacha-banner-tribal.png",
+        "motif": "Eine helle Mangrove mit großen Stelzwurzeln über schwarzem Wasser. Wenige grobe Pinselzüge halten das Zeichen auch auf zerriebenem Tuch erkennbar.",
+        "colours": "Dunkles Moosgrün, Knochenweiß und Schwarzwasser",
+        "rationale": "Die Mangrove betont Vironax’ nördliche Wasserläufe und schwer passierbare Wurzelräume. Das gemeinsame Baumzeichen Moinneachs gibt dem Stadtgebiet ein Landschaftsbanner.",
+        "kind": "banner-only",
+        "name": "Vironax",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Vironax liegt an einem nördlichen Wasserlauf. Bewaldete Erhebungen ragen aus der nassen Landschaft; dazwischen ziehen sich Mangroven, schwer passierbare Ufer und Sumpfrinnen nach Süden."
+      }
+    },
+    {
+      "id": "arvonax",
+      "label": "Arvonax",
+      "colour": "#aa7948",
+      "seats": [
+        "arvonax"
+      ],
+      "design": {
+        "banner": "assets/nialtog-banner-tribal.png",
+        "motif": "Eine große schwarze Fledermaus über einem schmalen knochenhellen Steig zwischen zwei dunklen Sumpfflächen. Strenge, kantige Silhouetten.",
+        "colours": "Verwaschenes Grauviolett, Knochenweiß und Kohlschwarz",
+        "rationale": "Die Fledermaus nimmt Avernax’ Wappen auf. Der schmale Steig und die dunklen Wasserflächen darunter passen zu Arvonax’ engem Übergang zwischen Höhen und Sumpfsenken.",
+        "kind": "banner-only",
+        "name": "Arvonax",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Arvonax liegt im südöstlichen Tal zwischen felsigen Höhen. Der eingezeichnete Weg durchquert einen engen Übergangsraum, in dessen Senken Wasser steht und versumpfte Waldstücke die Bewegung erschweren."
+      }
+    },
+    {
+      "id": "taranux",
+      "label": "Taranux",
+      "colour": "#82a845",
+      "seats": [
+        "taranux"
+      ],
+      "design": {
+        "banner": "assets/marcach-banner-tribal.png",
+        "motif": "Ein schwarzer Speerreiter auf einem vierbeinigen Drúchtán mit Stirnhorn, darunter ein heller Steig zwischen dunklen Sumpfstrichen.",
+        "colours": "Stumpfes Ocker, dunkles Oliv und Kohlschwarz",
+        "rationale": "Das Reitermotiv kommt aus dem Wappen der Brigantex. Ein schmaler Steig greift die begrenzten Übergänge zwischen Taranux’ nassen Talflächen und den umliegenden Höhen auf.",
+        "kind": "banner-only",
+        "name": "Taranux",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Taranux liegt zwischen Wasserlauf und östlichen Bergkämmen. Die bewachsenen Talflächen gehören zum Sumpfland; die umliegenden Höhen bieten nur schmale Übergänge zwischen nassen Senken und Wald."
+      }
+    },
+    {
+      "id": "senodex",
+      "label": "Senodex",
+      "colour": "#509d8f",
+      "seats": [
+        "senodex"
+      ],
+      "design": {
+        "banner": "assets/mblathanna-banner-tribal.png",
+        "motif": "Eine einzelne grobe Sumpfblüte mit breiten Blättern über schwarzem Wasser; eine kleine Libelle darüber als sparsames Strichzeichen.",
+        "colours": "Dunkles Petrol, schmutziges Knochenweiß und mattes Ocker",
+        "rationale": "Keravels große Blüte bleibt das Hauptzeichen. Dunkle Wasserlinien und stumpfe Farben ordnen sie den sumpfigen Mulden unterhalb von Senodex zu.",
+        "kind": "banner-only",
+        "name": "Senodex",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Senodex liegt im östlichen Talgebiet über einer sichtbaren Wasserstufe. Unterhalb der Siedlung zieht der Wasserlauf durch sumpfige Mulden; überflutete Ufer und dichter Bewuchs fassen die Verbindung nach Süden ein."
+      }
+    },
+    {
+      "id": "camulax",
+      "label": "Camulax",
+      "colour": "#8065a2",
+      "seats": [
+        "camulax"
+      ],
+      "design": {
+        "banner": "assets/sciathan-banner-tribal.png",
+        "motif": "Eine große helle Libelle über einer kleinen Sumpfblüte und zwei dunklen Wasserlinien. Die vier Flügel sind zu wenigen kräftigen Flächen vereinfacht.",
+        "colours": "Verwaschenes Pflaumengrau, Knochenweiß und Oliv",
+        "rationale": "Die große Libelle folgt unmittelbar dem Wappen der Nemetex. Wasserlinien und die kleine Sumpfblüte verbinden sie mit den nassen Talräumen um Camulax.",
+        "kind": "banner-only",
+        "name": "Camulax",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Camulax liegt im nordöstlichen Tal zwischen bewaldeten und felsigen Höhen. Auch hier bleibt Moinneach ein unwirtliches Sumpfland: Wasserläufe, nasse Mulden und schmale feste Flächen bestimmen den Lebensraum."
+      }
+    },
+    {
+      "id": "gergonax",
+      "label": "Gergonax",
+      "colour": "#a276a5",
+      "seats": [
+        "gergonax"
+      ],
+      "design": {
+        "banner": "assets/draoibe-banner-tribal.png",
+        "motif": "Ein einzelner dunkler Wachtturm auf drei groben Pfählen, darunter eine breite Schlicklinie und wenige Schilfstriche. Eine gedrungene, abgenutzte Silhouette.",
+        "colours": "Grauer Lehm, Torfbraun und verblichenes Ocker",
+        "rationale": "Der auf Pfählen stehende Wachturm deutet befestigten Halt im Wasser an. Das passt zur Burganlage von Gergonax inmitten mehrerer schwer zugänglicher Wasserläufe.",
+        "kind": "banner-only",
+        "name": "Gergonax",
+        "byname": "Stadtgebiet",
+        "meaning": null,
+        "source": null,
+        "landscape": "Gergonax’ Burganlage liegt im mittleren Geflecht mehrerer Wasserläufe. Mangrovenwurzeln und überschwemmte Niederungen erschweren den Zugang; bewaldete Erhebungen gliedern den Übergang zu den Nachbargebieten."
+      }
+    }
+  ],
+  "settlements": [
+    {
+      "id": "tarvex",
+      "name": "Tarvex",
+      "point": [
+        6.8,
+        83.7
+      ],
+      "pin": [
+        15,
+        79.4
+      ],
+      "colour": "#6c9f45",
+      "geography": "Tarvex liegt im südwestlichen Sumpfland. Wasserarme zerschneiden die mangrovenreichen Niederungen; feste Plätze und passierbare Übergänge sind zwischen den versumpften Wäldern selten."
+    },
+    {
+      "id": "druanax",
+      "name": "Druanax",
+      "point": [
+        6.7,
+        48
+      ],
+      "pin": [
+        14.7,
+        44.5
+      ],
+      "colour": "#67898c",
+      "geography": "Druanax liegt im westlichen Bruchwald. Zwischen Wasserarmen und kleinen Erhebungen stehen nasse Wurzelgeflechte und pilzreiches Totholz. Nach Osten öffnet sich der Raum zu Gergonax’ Flussniederungen."
+    },
+    {
+      "id": "drunemax",
+      "name": "Drunemax",
+      "point": [
+        42.7,
+        73.3
+      ],
+      "pin": [
+        38.5,
+        70
+      ],
+      "colour": "#b8ad42",
+      "geography": "Drunemax liegt an einem südlichen Wasserlauf unterhalb felsiger Höhen. Die höheren Flächen unterbrechen das Sumpfland, während sich an ihrem Fuß schlammige Rinnen und vernässte Wälder sammeln."
+    },
+    {
+      "id": "amabactoix",
+      "name": "Amabactoix",
+      "mapLabel": "Ambactiox",
+      "point": [
+        48.4,
+        26.7
+      ],
+      "pin": [
+        42.9,
+        23.5
+      ],
+      "colour": "#538b91",
+      "geography": "Amabactoix liegt westlich des östlichen Gebirgszugs. Mangrovenreiche Wasserläufe und überflutete Wurzelräume verbinden das nördliche Sumpfland mit den mittleren Niederungen."
+    },
+    {
+      "id": "vironax",
+      "name": "Vironax",
+      "point": [
+        41,
+        9.9
+      ],
+      "pin": [
+        47.3,
+        10.3
+      ],
+      "colour": "#4d9e76",
+      "geography": "Vironax liegt an einem nördlichen Wasserlauf. Bewaldete Erhebungen ragen aus der nassen Landschaft; dazwischen ziehen sich Mangroven, schwer passierbare Ufer und Sumpfrinnen nach Süden."
+    },
+    {
+      "id": "arvonax",
+      "name": "Arvonax",
+      "point": [
+        62.7,
+        60.9
+      ],
+      "pin": [
+        58.4,
+        56.3
+      ],
+      "colour": "#aa7948",
+      "geography": "Arvonax liegt im südöstlichen Tal zwischen felsigen Höhen. Der eingezeichnete Weg durchquert einen engen Übergangsraum, in dessen Senken Wasser steht und versumpfte Waldstücke die Bewegung erschweren."
+    },
+    {
+      "id": "taranux",
+      "name": "Taranux",
+      "point": [
+        88.4,
+        57.3
+      ],
+      "pin": [
+        81.9,
+        55.1
+      ],
+      "colour": "#82a845",
+      "geography": "Taranux liegt zwischen Wasserlauf und östlichen Bergkämmen. Die bewachsenen Talflächen gehören zum Sumpfland; die umliegenden Höhen bieten nur schmale Übergänge zwischen nassen Senken und Wald."
+    },
+    {
+      "id": "senodex",
+      "name": "Senodex",
+      "point": [
+        84.1,
+        32.8
+      ],
+      "pin": [
+        89.5,
+        29.7
+      ],
+      "colour": "#509d8f",
+      "geography": "Senodex liegt im östlichen Talgebiet über einer sichtbaren Wasserstufe. Unterhalb der Siedlung zieht der Wasserlauf durch sumpfige Mulden; überflutete Ufer und dichter Bewuchs fassen die Verbindung nach Süden ein."
+    },
+    {
+      "id": "camulax",
+      "name": "Camulax",
+      "point": [
+        70.8,
+        21.7
+      ],
+      "pin": [
+        76.1,
+        18.1
+      ],
+      "colour": "#8065a2",
+      "geography": "Camulax liegt im nordöstlichen Tal zwischen bewaldeten und felsigen Höhen. Auch hier bleibt Moinneach ein unwirtliches Sumpfland: Wasserläufe, nasse Mulden und schmale feste Flächen bestimmen den Lebensraum."
+    },
+    {
+      "id": "gergonax",
+      "name": "Gergonax",
+      "point": [
+        30.7,
+        48.4
+      ],
+      "pin": [
+        36.4,
+        43.2
+      ],
+      "colour": "#a276a5",
+      "geography": "Gergonax’ Burganlage liegt im mittleren Geflecht mehrerer Wasserläufe. Mangrovenwurzeln und überschwemmte Niederungen erschweren den Zugang; bewaldete Erhebungen gliedern den Übergang zu den Nachbargebieten."
+    }
+  ],
+  "houses": [
+    {
+      "id": "barrex",
+      "sourceId": "barrex",
+      "name": "An Barrex",
+      "houseId": "house-barrex",
+      "familyId": "haus-barrex",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "gergonax",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": false,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+      "warrior": {
+        "id": "barrex",
+        "name": "Barrex",
+        "className": "Rathaire",
+        "classId": "rathaire",
+        "mounted": false,
+        "creature": null,
+        "palette": "Dunkles Petrol · Knochenweiß · Eisen",
+        "motif": "Schildkrötenpanzer und Axt; robuste ovale Formen.",
+        "reason": "Axt und Panzerform passen zu einem standfesten, gut ausgerüsteten Clankrieger.",
+        "equipment": "Eisenaxt, langer ovaler Holzschild, verstärktes Leder und offener Helm.",
+        "helmet": "Low rounded OPEN iron Celtic helmet with short cheek guards and a simple bone-white cloth binding, NO visor, horns, crown or knightly plume.",
+        "resourceBasis": "Tarvex: südwestliche Wasserarme und Übergänge ermöglichen örtlichen Tausch; einzelne Eisenwaffen sind plausibel, die Rüstung bleibt überwiegend aus Leder und Holz.",
+        "materials": "Hirschleder, grobes Leinen, begrenztes Eisen, Holz und rohe Haut.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/barrex/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/barrex/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/barrex/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-erskine",
+          "familyTitle": "Clan An Erskine",
+          "houseId": "house-barrex",
+          "houseName": "Clan Barrex",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-erskine&mode=view"
+        },
+        {
+          "familyId": "haus-grannd",
+          "familyTitle": "Clan Na Grannd",
+          "houseId": "house-barrex",
+          "houseName": "Clan Barrex",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-grannd&mode=view"
+        },
+        {
+          "familyId": "haus-muirgheal",
+          "familyTitle": "Clan Tir An Muirgheal",
+          "houseId": "house-barrex",
+          "houseName": "Clan Barrex",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-muirgheal&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "cethrenn",
+      "sourceId": "cethrenn",
+      "name": "Tir An Cethrenn",
+      "houseId": "house-cethrenn",
+      "familyId": "haus-cethrenn",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "gergonax",
+      "regionId": "",
+      "rankId": "ard-tiarna",
+      "rank": "Ard Tiarna",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/cethrenn.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/cethrenn.png",
+      "warrior": {
+        "id": "cethrenn",
+        "name": "Cethrenn",
+        "className": "Rathaire",
+        "classId": "rathaire",
+        "mounted": false,
+        "creature": null,
+        "palette": "Waldgrün · Ocker · Schwarz",
+        "motif": "Dunkle Feste über grünen Wurzeln; klare senkrechte Schutzflächen.",
+        "reason": "Die Feste wird als fest gefügter, nicht feudaler Schutzpanzer aufgegriffen.",
+        "equipment": "Kurzer Speer, hoher ovaler Schild, Leder-Knochenpanzer und einfacher Metallhelm.",
+        "helmet": "OPEN tall gently conical bronze/iron cap with two small cheek flaps and a low leather neck guard; a simple black horsehair tassel at rear, no antlers, visor or crown.",
+        "resourceBasis": "Tarvex: derselbe örtliche Tauschraum wie Barrex; der Schutzentwurf setzt auf handwerklich gefertigtes Leder, Knochen und Holz statt auf Metallharnisch.",
+        "materials": "Rindsleder, kleine gebundene Knochenplatten, Wolle, Holz, einzelne Eisenbeschläge.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/cethrenn/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/cethrenn/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/cethrenn/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-ui-rochraide",
+          "familyTitle": "Clan Ui’Rochraide",
+          "houseId": "house-cethrenn",
+          "houseName": "Haus Cethrenn",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ui-rochraide&mode=view"
+        },
+        {
+          "familyId": "haus-chulainn",
+          "familyTitle": "Clan Ard’Chulainn",
+          "houseId": "house-cethrenn",
+          "houseName": "Haus Cethrenn",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view"
+        },
+        {
+          "familyId": "haus-morna",
+          "familyTitle": "Clan Ui’Morna",
+          "houseId": "house-cethrenn",
+          "houseName": "Haus Cethrenn",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-morna&mode=view"
+        },
+        {
+          "familyId": "haus-ronain",
+          "familyTitle": "Clan Mac Ard’Ronain",
+          "houseId": "house-cethrenn",
+          "houseName": "Haus Cethrenn",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ronain&mode=view"
+        },
+        {
+          "familyId": "haus-urquhart",
+          "familyTitle": "Clan Ui Urquhart",
+          "houseId": "house-cethrenn",
+          "houseName": "Haus Cethrenn",
+          "emblem": null,
+          "personReferenceCount": 3,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-urquhart&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "kerlaouen",
+      "sourceId": "kerlaouen",
+      "name": "Nic Kerlaouen",
+      "houseId": "house-kerlaouen",
+      "familyId": "haus-kerlaouen",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "druanax",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/kerlaouen.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/kerlaouen.png",
+      "warrior": {
+        "id": "kerlaouen",
+        "name": "Kerlaouen",
+        "className": "Cernach",
+        "classId": "cernach",
+        "mounted": false,
+        "creature": null,
+        "palette": "Gedämpftes Violett · Naturweiß · Torfbraun",
+        "motif": "Helle Gewandlinien und eine Stabträgerin auf violettem Feld.",
+        "reason": "Das Stabmotiv und der pilzreiche Bruchwald passen zu einer wehrhaften Kräuterkundigen und Alchemistin.",
+        "equipment": "Holzstab, Gürtelmesser, kleine Phiolen, Fellschulter und flexible Leder-Knochenauflagen.",
+        "helmet": "NO metal helmet. A loose muted purple wool hood pushed back to show the whole human face, woven ivory brow cord with one small bone bead. No wizard cone or antler crown.",
+        "resourceBasis": "Druanax: abgelegener westlicher Bruchwald mit Pilzen und Totholz; der Entwurf nutzt vor allem örtliche Naturmaterialien und wenige ertauschte Metallteile.",
+        "materials": "Ziegenleder, Wolle, Birkenholz, geschnitzter Knochen und ein einzelnes Eisenmesser.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/kerlaouen/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/kerlaouen/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/kerlaouen/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-durthacht",
+          "familyTitle": "Clan Mac’Durthacht",
+          "houseId": "house-kerlaouen",
+          "houseName": "Clan Kerlaouen",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view"
+        },
+        {
+          "familyId": "haus-banlaoch",
+          "familyTitle": "Clan Nic Banlaoch",
+          "houseId": "house-kerlaouen",
+          "houseName": "Clan Kerlaouen",
+          "emblem": null,
+          "personReferenceCount": 3,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view"
+        },
+        {
+          "familyId": "haus-agnew",
+          "familyTitle": "Clan Ó Nic Agnew",
+          "houseId": "house-kerlaouen",
+          "houseName": "Clan Kerlaouen",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-agnew&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "damona",
+      "sourceId": "damona",
+      "name": "Dál Damona",
+      "houseId": "house-damona",
+      "familyId": "haus-damona",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "drunemax",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/damona.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/damona.png",
+      "warrior": {
+        "id": "damona",
+        "name": "Damona",
+        "className": "Mordán",
+        "classId": "mordan",
+        "mounted": false,
+        "creature": null,
+        "palette": "Rauchschwarz · Gelbocker · Knochen",
+        "motif": "Reptilischer Krieger und kantige gelbe Flächen.",
+        "reason": "Das reptilische Motiv eignet sich für einen Bestientöter mit funktionsfähiger Leder- und Knochenrüstung.",
+        "equipment": "Breiter Jagdspeer, zäher Lederpanzer mit Knochenauflagen, Messer und Beinschienen aus Leder.",
+        "helmet": "A fitted dark hide skullcap with a small reptile JAW-BONE brow reinforcement and two short natural horn ridges; eyes and lower human face visible. No dragon head mask, wings or medieval visor.",
+        "resourceBasis": "Drunemax: Wasserlauf am Fuß felsiger Höhen; örtliche Häute und Knochen stehen im Vordergrund, einzelne kräftige Eisenwaffen können über Talwege eingetauscht werden.",
+        "materials": "Druchtanleder, gebundene Knochenplatten, grobe Wolle und eine eiserne Speerspitze.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/damona/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/damona/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/damona/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-drummond",
+          "familyTitle": "Clan Breac Drummond",
+          "houseId": "house-damona",
+          "houseName": "Clan Damona",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-drummond&mode=view"
+        },
+        {
+          "familyId": "haus-dubglais",
+          "familyTitle": "Clan Mac Dubglais",
+          "houseId": "house-damona",
+          "houseName": "Clan Damona",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-dubglais&mode=view"
+        },
+        {
+          "familyId": "haus-airdmhor",
+          "familyTitle": "Clan Dál Airdmhor",
+          "houseId": "house-damona",
+          "houseName": "Clan Damona",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-airdmhor&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "caddach",
+      "sourceId": "caddach",
+      "name": "Ard Caddach",
+      "houseId": "house-caddach",
+      "familyId": "haus-caddach",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "amabactoix",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/caddach.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/caddach.png",
+      "warrior": {
+        "id": "caddach",
+        "name": "Caddach",
+        "className": "Rathaire",
+        "classId": "rathaire",
+        "mounted": false,
+        "creature": null,
+        "palette": "Dunkelrot · Kohlschwarz · Kreideweiß",
+        "motif": "Frosch, Rundschild und helle Querbänder.",
+        "reason": "Das Schildmotiv wird in einen beweglichen Speerträger mit rundem Holzschild übersetzt.",
+        "equipment": "Kurzer Speer, roter Rundschild, Lederweste, Gürtelbeil und schlichter Kappenhelm.",
+        "helmet": "Low rounded IRON BROW CAP with soft leather ear flaps, two shallow raised rounded brow ridges subtly recalling a frog, no protruding eyes or frog-face costume. Open visible adult face, no visor or plume.",
+        "resourceBasis": "Amabactoix: nördliche Wasserverbindungen und Wurzelräume begünstigen Austausch innerhalb des Sumpflandes; Leder schützt die beweglichen Kämpfer, Metall bleibt auf Waffen und kleine Beschläge begrenzt.",
+        "materials": "Geöltes Leder, Druchtanhaut, Wolle, Holz und eiserne Axt- und Speerspitzen.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/caddach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/caddach/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/caddach/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-dal-leite",
+          "familyTitle": "Clan Dal’Leite",
+          "houseId": "house-caddach",
+          "houseName": "Haus Caddach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-dal-leite&mode=view"
+        },
+        {
+          "familyId": "haus-aonghusa",
+          "familyTitle": "Clan Dál’Aonghusa",
+          "houseId": "house-caddach",
+          "houseName": "Haus Caddach",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-aonghusa&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "adruinna",
+      "sourceId": "adruinna",
+      "name": "Nic Adruinna",
+      "houseId": "house-nic-adruinna",
+      "familyId": "haus-nic-adruinna",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "vironax",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/adruinna.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/adruinna.png",
+      "warrior": {
+        "id": "adruinna",
+        "name": "Adruinna",
+        "className": "Coillan",
+        "classId": "coillan",
+        "mounted": false,
+        "creature": null,
+        "palette": "Rostrot · Stumpfes Ocker · Dunkelbraun",
+        "motif": "Schwert- und Schildträgerin mit fließendem rotem Gewand.",
+        "reason": "Die wehrhafte Gestalt und die Waldlage passen zu einer aufmerksamen Grenzerin.",
+        "equipment": "Kurzer Bogen, Kurzschwert, kleiner Rückenschild und bewegliche Lederkleidung.",
+        "helmet": "NO helmet. Copper-brown hair in a practical long braid, narrow ochre woven headband, one discreet pale face-paint stripe; no tiara or animal ears.",
+        "resourceBasis": "Vironax: nördlicher Wasserlauf und bewaldete Erhebungen; Jagdmaterialien sind naheliegend, ertauschtes Eisen wird sparsam und zweckmäßig eingesetzt.",
+        "materials": "Hirschleder, wenig Fuchs- oder Ziegenfell, Wolle, Holz, Horn und ein kurzes Eisenschwert.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/adruinna/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/adruinna/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/adruinna/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "avernax",
+      "sourceId": "avernax",
+      "name": "Ard Avernax",
+      "houseId": "house-avernax",
+      "familyId": "haus-avernax",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "arvonax",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/avernax.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/avernax.png",
+      "warrior": {
+        "id": "avernax",
+        "name": "Avernax",
+        "className": "Rathaire",
+        "classId": "rathaire",
+        "mounted": false,
+        "creature": null,
+        "palette": "Kohlschwarz · Knochenweiß · Rauchgrau",
+        "motif": "Fledermaus; kantige dunkle Silhouette und helle Kanten.",
+        "reason": "Die Fledermaus erscheint dezent in der Helmform und in der schwarzweißen Materialwahl.",
+        "equipment": "Kurze Eisenaxt, schwarzer Rundschild, Leder-Knochenpanzer und flacher Lederhelm.",
+        "helmet": "A SHALLOW ROUND DARK LEATHER HELMET with a pale bone brow plate and TWO short upward bone side points suggesting BAT EARS, subtle and plausible hand-made construction. Open cheeks, visible human lower face and eyes. Not a Batman mask, no modern cowl, eye lenses, bat logo or superhero armour.",
+        "resourceBasis": "Nutzervorgabe: abgeschottetes Binnenland mit wenig Außenhandel. Der Kriegerentwurf verwendet vorwiegend örtliches Leder und Knochen sowie eine sparsam erhaltene eiserne Waffe; die bisherige Sitzzuordnung bleibt zunächst erhalten.",
+        "materials": "Dunkles Wildleder, helles Fell, Knochen, Holz und eine einzelne wiederverwendete Eisenklinge.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/avernax/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/avernax/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/avernax/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-elid",
+          "familyTitle": "Clan Ó Mall Elid",
+          "houseId": "house-avernax",
+          "houseName": "Clan Avernax",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-elid&mode=view"
+        },
+        {
+          "familyId": "haus-oglivy",
+          "familyTitle": "Clan Fir An Oglivy",
+          "houseId": "house-avernax",
+          "houseName": "Clan Avernax",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-oglivy&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "brigantex",
+      "sourceId": "brigantex",
+      "name": "Ua Brigantex",
+      "houseId": "house-ua-brigantex",
+      "familyId": "haus-ua-brigantex",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "taranux",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/brigantex.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/brigantex.png",
+      "warrior": {
+        "id": "brigantex",
+        "name": "Brigantex",
+        "className": "Drúan",
+        "classId": "druan",
+        "mounted": true,
+        "creature": "druchtan",
+        "palette": "Dunkelgrün · Gelbocker · Schwarz",
+        "motif": "Speerreiter auf einem vierbeinigen Drúchtán.",
+        "reason": "Der korrigierte Reiter im Wappen wird als Drúan auf einem männlichen Drúchtán ausgearbeitet.",
+        "equipment": "Speer, schlichter Sattel aus Haut und Filz, Schuppenlederpanzer und kleiner Rückenschild.",
+        "helmet": "OPEN low Celtic bronze cap with two small cheek guards, narrow green wool binding and ONE short bone ridge at crown; no knightly visor, crown, giant antlers or ostentatious plume.",
+        "resourceBasis": "Taranux: nasse Talflächen zwischen Wasserlauf und östlichen Höhen; Druchtanzucht und wetterfeste Häute prägen den Entwurf, Metallteile bleiben auf einzelne Waffen und Schnallen beschränkt.",
+        "materials": "Druchtanleder, Wolle, Horn, wenig Fell, Holz und einzelne Eisen- oder Bronzeteile.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/brigantex/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/brigantex/krieger.png",
+        "creatureHref": "../../Bestiarium/tiere/reptilien/druchtan/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/brigantex/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "keravel",
+      "sourceId": "keravel",
+      "name": "Na Keravel",
+      "houseId": "house-keravel",
+      "familyId": "haus-keravel",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "senodex",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/keravel.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/keravel.png",
+      "warrior": {
+        "id": "keravel",
+        "name": "Keravel",
+        "className": "Coillan",
+        "classId": "coillan",
+        "mounted": false,
+        "creature": null,
+        "palette": "Graublau · Stumpfes Gelb · Naturweiß",
+        "motif": "Große Sumpfblüte mit feinen dunklen Blattformen.",
+        "reason": "Blüten- und Blattlinien erscheinen als zurückhaltende Pflanzenzier einer beweglichen Sumpfjägerin.",
+        "equipment": "Kurzer Bogen, Gürtelmesser, kleine Knochenauflagen und wasserfeste Lederjacke.",
+        "helmet": "NO metal helmet. A close-fitting plain grey-blue cloth headwrap tied behind the neck with one bone pin; human face fully visible, no flowers worn as a crown.",
+        "resourceBasis": "Senodex: ein Tal am Wasserlauf mit Verbindungen nach Süden; geölte Häute und etwas eingetauschtes Metall passen besser als ein schwerer Harnisch.",
+        "materials": "Druchtanleder, Leinen, Holz, Knochen und kleine eiserne Klingen.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/keravel/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/keravel/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/keravel/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-grannd",
+          "familyTitle": "Clan Na Grannd",
+          "houseId": "house-keravel",
+          "houseName": "Clan Keravel",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-grannd&mode=view"
+        },
+        {
+          "familyId": "haus-elid",
+          "familyTitle": "Clan Ó Mall Elid",
+          "houseId": "house-keravel",
+          "houseName": "Clan Keravel",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-elid&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "nemetex",
+      "sourceId": "nemetex",
+      "name": "Ord Nemetex",
+      "houseId": "house-nemetex",
+      "familyId": "haus-nemetex",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "camulax",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/nemetex.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/nemetex.png",
+      "warrior": {
+        "id": "nemetex",
+        "name": "Nemetex",
+        "className": "Coillan",
+        "classId": "coillan",
+        "mounted": false,
+        "creature": null,
+        "palette": "Dunkles Blaugrün · Knochenweiß · Torfbraun",
+        "motif": "Helle Libelle auf dunklem Feld mit verschlungenen Linien.",
+        "reason": "Die Libelle wird als leichte, gegliederte Formensprache für einen Grenzer aufgegriffen.",
+        "equipment": "Wurfspeer, zwei Ersatzspeere, länglicher Reet-Lederschild und leichte Knochenrüstung.",
+        "helmet": "Soft peat-brown close hood with a plain narrow bone brow band, no metal helmet, no insect antennae, horns or face mask. Two small pale stitched leaf shapes at temples only.",
+        "resourceBasis": "Camulax: nordöstlicher Talraum zwischen felsigen Höhen; schmale feste Flächen und nasse Mulden begünstigen leichte Ausrüstung, mit begrenztem Austausch über benachbarte Wasserläufe.",
+        "materials": "Reet, Wildleder, Holz, einzelne Knochenplatten und wenige Metallspitzen.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/nemetex/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/nemetex/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/nemetex/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-elid",
+          "familyTitle": "Clan Ó Mall Elid",
+          "houseId": "house-nemetex",
+          "houseName": "Clan Nemetex",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-elid&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "rowak",
+      "sourceId": "rowak",
+      "name": "Mac Rowak",
+      "houseId": "house-rowak",
+      "familyId": "haus-rowak",
+      "clan": true,
+      "originRealm": "moinneach",
+      "seatId": "tarvex",
+      "regionId": "",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cethrenn",
+      "isSeatRuler": true,
+      "motif": "",
+      "palette": [],
+      "ornament": "",
+      "frame": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/rowak.png",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/rowak.png",
+      "warrior": {
+        "id": "rowak",
+        "name": "Rowak",
+        "className": "Rathaire",
+        "classId": "rathaire",
+        "mounted": false,
+        "creature": null,
+        "palette": "Torfgrau · Elfenbein · Braun · Stumpfe Bronze",
+        "motif": "Dunkler Speer- und Schildträger mit langem Tierkopf.",
+        "reason": "Das bewaffnete Wappentier wird in einen gut ausgerüsteten menschlichen Schildträger übersetzt.",
+        "equipment": "Eisenspeer, runder Holzschild, verstärkte Lederweste, offener Helm und begrenztes Kettengeflecht.",
+        "helmet": "OPEN simple bronze Gallic helmet with rounded bowl and two hinged short cheek guards, tiny rear leather neck flap. A plain dark bristle ridge, no crown, antlers, closed faceplate or medieval bevor.",
+        "resourceBasis": "Gergonax: die mittlere Burganlage liegt im Geflecht mehrerer Wasserläufe; örtlicher Austausch erlaubt etwas mehr gepflegte Metallausrüstung, ohne einen feudalen Plattenritter daraus zu machen.",
+        "materials": "Rindsleder, kleine Kettengeflechtstücke, Holz, Wolle, wenig Fell und einzelne Eisenwaffen.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/moinneach/rowak/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/moinneach/rowak/krieger.png",
+        "creatureHref": null
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/moinneach/rowak/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-ui-rochraide",
+          "familyTitle": "Clan Ui’Rochraide",
+          "houseId": "house-rowak",
+          "houseName": "Haus Rowak",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ui-rochraide&mode=view"
+        },
+        {
+          "familyId": "haus-casur",
+          "familyTitle": "Clan Ua’Casur",
+          "houseId": "house-rowak",
+          "houseName": "Haus Rowak",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-casur&mode=view"
+        },
+        {
+          "familyId": "haus-nessa",
+          "familyTitle": "Clan Ard’Nessa",
+          "houseId": "house-rowak",
+          "houseName": "Haus Rowak",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nessa&mode=view"
+        },
+        {
+          "familyId": "haus-diuid",
+          "familyTitle": "Clan Mac Ard Diuid",
+          "houseId": "house-rowak",
+          "houseName": "Haus Rowak",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-diuid&mode=view"
+        },
+        {
+          "familyId": "haus-wemyss",
+          "familyTitle": "Clan Tir An Wemyss",
+          "houseId": "house-rowak",
+          "houseName": "Haus Rowak",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    }
+  ],
+  "territoryArt": {
+    "tarvex": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/tarvex.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/tarvex.png",
+      "shape": "banner"
+    },
+    "druanax": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/druanax.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/druanax.png",
+      "shape": "banner"
+    },
+    "drunemax": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/drunemax.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/drunemax.png",
+      "shape": "banner"
+    },
+    "amabactoix": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/amabactoix.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/amabactoix.png",
+      "shape": "banner"
+    },
+    "vironax": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/vironax.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/vironax.png",
+      "shape": "banner"
+    },
+    "arvonax": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/arvonax.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/arvonax.png",
+      "shape": "banner"
+    },
+    "taranux": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/taranux.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/taranux.png",
+      "shape": "banner"
+    },
+    "senodex": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/senodex.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/senodex.png",
+      "shape": "banner"
+    },
+    "camulax": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/camulax.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/camulax.png",
+      "shape": "banner"
+    },
+    "gergonax": {
+      "image": "/Stammbäume/assets/images/regions/moinneach/gergonax.png",
+      "fullsize": "/Stammbäume/assets/images/regions/moinneach/gergonax.png",
+      "shape": "banner"
+    }
+  },
+  "notes": [
+    "Variante 1/original verbindlich. Cethrenn und Barrex sitzen jetzt in Gergonax, Rowak in Tarvex. Die neun übrigen örtlichen Herrschaftsführer werden als Lairds geführt."
+  ]
+}

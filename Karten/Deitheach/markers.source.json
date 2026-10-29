@@ -1,0 +1,225 @@
+{
+  "imageSize": [
+    4096,
+    1575
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "deitheach-ailseag",
+      "title": "Lann Ailseag",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-ailseag",
+      "x": 442.36800000000005,
+      "y": 1126.125,
+      "href": "/Orte/grossstadt.html?id=deitheach-ailseag",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "ailseag",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          10.8,
+          28.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-muirdean",
+      "title": "Caol Muirdean",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-muirdean",
+      "x": 225.28,
+      "y": 622.125,
+      "href": "/Orte/grossstadt.html?id=deitheach-muirdean",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "muirdean",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          5.5,
+          60.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-beartain",
+      "title": "Dun Beartain",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-beartain",
+      "x": 1298.432,
+      "y": 945,
+      "href": "/Orte/grossstadt.html?id=deitheach-beartain",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "beartain",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          31.7,
+          40
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-loscarn",
+      "title": "Tobar Loscarn",
+      "category": "Burg",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "deitheach-sitz-loscarn",
+      "x": 839.68,
+      "y": 504,
+      "href": "/Orte/grossstadt.html?id=deitheach-loscarn",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "loscarn",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          20.5,
+          68
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-dreasail",
+      "title": "Srath Dreasail",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-dreasail",
+      "x": 1933.3120000000001,
+      "y": 945,
+      "href": "/Orte/grossstadt.html?id=deitheach-dreasail",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "dreasail",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          47.2,
+          40
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-uamhar",
+      "title": "Creag Uamhar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-uamhar",
+      "x": 1613.8239999999998,
+      "y": 582.75,
+      "href": "/Orte/grossstadt.html?id=deitheach-uamhar",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "uamhar",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          39.4,
+          63
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-carthain",
+      "title": "Fiodh Carthain",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-carthain",
+      "x": 2785.28,
+      "y": 811.125,
+      "href": "/Orte/grossstadt.html?id=deitheach-carthain",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "carthain",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          68,
+          48.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-sceolan",
+      "title": "Ard Sceolan",
+      "category": "Burg",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "deitheach-sitz-sceolan",
+      "x": 2637.824,
+      "y": 1439.55,
+      "href": "/Orte/grossstadt.html?id=deitheach-sceolan",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "sceolan",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          64.4,
+          8.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "deitheach-treabhair",
+      "title": "Maol Orsagail",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "deitheach-sitz-treabhair",
+      "x": 3424.256,
+      "y": 1014.3000000000001,
+      "href": "/Orte/grossstadt.html?id=deitheach-treabhair",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "treabhair",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          83.6,
+          35.6
+        ],
+        "provisional": false
+      }
+    }
+  ]
+}

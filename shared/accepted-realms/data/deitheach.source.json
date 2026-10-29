@@ -1,0 +1,1327 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "id": "deitheach",
+  "name": "Deitheach",
+  "title": "Fürstentum Deitheach",
+  "type": "Fürstentum",
+  "continent": "Aldervan",
+  "capital": "ailseag",
+  "ruler": "ard-roth",
+  "rootId": "fuerstentum-deitheach",
+  "historical": true,
+  "occupier": "triarchie",
+  "map": "/Karten/Deitheach/Kartenbilder/normal.webp",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/deitheach.webp",
+  "context": {
+    "title": "Das gefallene Fürstentum Deitheach",
+    "short": "Deitheach",
+    "realm": "deitheach",
+    "continent": "Aldervan",
+    "emblem": "assets/crests/deitheach.webp",
+    "emblemFull": "assets/originals/deitheach.png",
+    "imageSize": [
+      8192,
+      3150
+    ],
+    "historyLabel": "Das Land vor der Eroberung",
+    "historyHeading": "Deitheach, wie es gewesen war.",
+    "introduction": "Zwischen bewaldeten Gebirgszügen, Tälern und der westlichen Küste hatte Deitheach als albisches Fürstentum bestanden. Die Mac Ard Roth waren sein Fürstenclan gewesen. Vor zwanzig Jahren war das Land unter das Joch der Triarchie geraten.",
+    "note": "Diese Seite blickt auf das Fürstentum vor seiner Eroberung zurück. Namen und die Verteilung der sieben gelieferten Clans sind historische Besprechungsentwürfe. Fünf zusätzliche Clans bleiben frei. Ob einzelne Clans heute Widerstand leisten, sich fügen, vertrieben wurden oder anders zur Triarchie stehen, bleibt ausdrücklich unentschieden.",
+    "history": [
+      {
+        "title": "Unter den Mac Ard Roth",
+        "text": "Deitheach war ein albisches Fürstentum gewesen. Die Mac Ard Roth hatten als Fürstenclan über ihm gestanden. Ihr goldener Löwe auf Grün hatte sich auch im verwandten Landeszeichen wiedergefunden. Die Hauptstadt hatte zwischen der Westküste und den bewaldeten Ausläufern des Gebirges gelegen."
+      },
+      {
+        "title": "Vier große Herrschaftsräume",
+        "text": "Vier Mor Tiarnatümer hatten das Land gegliedert. Hauptstadt, große Städte, Stadt und Burgen hatten ihre Herrschaftsmittelpunkte gebildet; zwischen ihnen hatten Wald, Berge und Wasserläufe gelegen. Für die eigene Dun-Herrschaft eines Mor Tiarna hatte hier das gemeinsame Zeichen seines Mor Tiarnatum gegolten."
+      },
+      {
+        "title": "Die Eroberung vor zwanzig Jahren",
+        "text": "Die Triarchie hatte die Kriege und Unruhen jener Zeit ausgenutzt und Deitheach in ihren Machtbereich gezwungen. Ihre Herrschaft hatte auf Terror, Unterdrückung und infernaler Unterstützung beruht. Damit war die frühere Eigenständigkeit des Fürstentums gebrochen worden."
+      },
+      {
+        "title": "Das offene Schicksal der Clans",
+        "text": "Die Eroberung hatte die alte Ordnung gebrochen, doch sie hatte nicht für jeden Clan dasselbe Schicksal bedeutet. Wer sich widersetzt hatte, wer vertrieben worden war oder sich gefügt hatte, war hier bewusst offengeblieben. Diese Fragen sollten erst bei der Ausarbeitung der Triarchie auf Aldervan entschieden werden."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Nadelwald, Berge und Küste",
+        "text": "Dichte Wälder, Gebirgskämme und Wasserwege hatten die Landschaft geprägt. Wollstoffe, Plaids und Tartan hatten die Clanzugehörigkeit sichtbar gemacht; Kette und verstärktes Leder hatten beweglichen Schutz geboten. Speerträger, Schildkämpfer, Waldläufer und Küstenkrieger hatten jeweils eine eigene Ausrüstung getragen."
+      },
+      {
+        "title": "Die Erinnerung an das frühere Land",
+        "text": "Die hier versammelten Zeichen und Figuren hatten Deitheach vor seiner Unterwerfung gezeigt. Sie erinnerten an seine eigene albische Kultur und die frühere Herrschaftsordnung. Ihre Träger waren damit weder zu Anhängern der Triarchie noch zu ihren Gegnern erklärt worden."
+      }
+    ],
+    "resetMessage": "Die sieben gelieferten Clans kehren zu ihren historischen Ausgangsvorschlägen zurück; die fünf neuen Clans bleiben ohne Sitz.",
+    "classCulture": "alben",
+    "relatedPages": [
+      {
+        "href": "../Iathneach/",
+        "label": "Iathneach"
+      },
+      {
+        "href": "../Triarchie/",
+        "label": "Triarchie · bisher besetztes Lothir"
+      }
+    ]
+  },
+  "design": {},
+  "regions": [
+    {
+      "id": "caorthainn",
+      "name": "Iorras Ruscadal",
+      "title": "Ehemaliges fürstliches Mor Tiarnatum",
+      "colour": "#4a7942",
+      "seats": [
+        "ailseag",
+        "muirdean"
+      ],
+      "art": "ailseag",
+      "motif": "Ein aufgerichteter ockerfarbener Löwe zwischen zwei hellen Ebereschenzweigen auf tiefgrünem Wolltuch; ein schmaler heller Küstensaum.",
+      "palette": [
+        "Waldgrün",
+        "Altocker",
+        "Wollweiß"
+      ]
+    },
+    {
+      "id": "dorrain",
+      "name": "Sliabh Dorrain",
+      "title": "Ehemaliges Mor Tiarnatum",
+      "colour": "#80568e",
+      "seats": [
+        "beartain",
+        "loscarn"
+      ],
+      "art": "beartain",
+      "motif": "Ein heller bewaldeter Bergsattel über zwei gekreuzten dunkelgrünen Kiefernzweigen auf heideviolettem Tuch.",
+      "palette": [
+        "Heideviolett",
+        "Wollweiß",
+        "Tannengrün"
+      ]
+    },
+    {
+      "id": "fhasgair",
+      "name": "Coill Fhasgair",
+      "title": "Ehemaliges Mor Tiarnatum",
+      "colour": "#3f788b",
+      "seats": [
+        "dreasail",
+        "uamhar"
+      ],
+      "art": "dreasail",
+      "motif": "Drei silberhelle Tannen über einem schwarzen Felsen und einem schmalen geschwungenen Wasserband auf schieferblauem Tuch.",
+      "palette": [
+        "Schieferblau",
+        "Silbergrau",
+        "Waldschwarz"
+      ]
+    },
+    {
+      "id": "eirceann",
+      "name": "Magh Eirceann",
+      "title": "Ehemaliges Mor Tiarnatum",
+      "colour": "#a9843d",
+      "seats": [
+        "carthain",
+        "sceolan",
+        "treabhair"
+      ],
+      "art": "carthain",
+      "motif": "Ein schwarzer Hirschkopf mit breitem Geweih über einer hellen Weggabel auf gelbockerfarbenem Tuch; schmaler dunkler Zickzacksaum.",
+      "palette": [
+        "Gelbocker",
+        "Kohlschwarz",
+        "Flachsweiß"
+      ]
+    }
+  ],
+  "settlements": [
+    {
+      "id": "ailseag",
+      "name": "Lann Ailseag",
+      "regionName": "Lann Ailseag",
+      "county": "caorthainn",
+      "kind": "Ehemalige Hauptstadt · fürstliche Eigenherrschaft",
+      "point": [
+        10.8,
+        28.5
+      ],
+      "pin": [
+        13,
+        19
+      ],
+      "label": [
+        11,
+        39
+      ],
+      "mapName": "Rath Ailseag",
+      "art": "ailseag",
+      "geography": "Die Hauptstadt lag an der bewaldeten Westküste unter dem Gebirge. Hier hatten die Mac Ard Roth ihren fürstlichen Sitz. Mor Tiarnatum und eigene Domäne führten dasselbe Banner."
+    },
+    {
+      "id": "muirdean",
+      "name": "Caol Muirdean",
+      "regionName": "Cladach Muirdean",
+      "county": "caorthainn",
+      "kind": "Ehemaliges Lairdtum · Küstenburg",
+      "point": [
+        5.5,
+        60.5
+      ],
+      "pin": [
+        10,
+        56
+      ],
+      "label": [
+        9,
+        72
+      ],
+      "mapName": "Burg",
+      "art": "muirdean",
+      "geography": "Die kleine Burg sicherte den südlichen Küstenabschnitt der fürstlichen Großregion. Seezugang und Wald lagen unmittelbar beieinander; die Besetzung des Sitzes blieb im ersten Entwurf offen.",
+      "motif": "Eine schmale weiße Meerespforte zwischen zwei dunklen Felsen über drei moosgrünen Wellen auf graublauem Leinentuch.",
+      "palette": [
+        "Graublau",
+        "Moosgrün",
+        "Kalkweiß"
+      ]
+    },
+    {
+      "id": "beartain",
+      "name": "Dun Beartain",
+      "regionName": "Braigh Beartain",
+      "county": "dorrain",
+      "kind": "Ehemaliger Hauptsitz · eigene Dun-Herrschaft",
+      "point": [
+        31.7,
+        40
+      ],
+      "pin": [
+        28,
+        30
+      ],
+      "label": [
+        32,
+        51
+      ],
+      "mapName": "Große Stadt",
+      "art": "beartain",
+      "geography": "Die große Stadt lag im bewaldeten westlichen Bergland. Höhenwege verbanden sie mit der Küste und den benachbarten Tälern. Ihr Gebiet war die Eigenherrschaft des Mor Tiarnatum."
+    },
+    {
+      "id": "loscarn",
+      "name": "Tobar Loscarn",
+      "regionName": "Rinn Loscarn",
+      "county": "dorrain",
+      "kind": "Ehemaliges Lairdtum · südliche Burg",
+      "point": [
+        20.5,
+        68
+      ],
+      "pin": [
+        24,
+        62
+      ],
+      "label": [
+        21,
+        78
+      ],
+      "mapName": "Burg",
+      "art": "loscarn",
+      "geography": "Die südliche Burg lag unweit der Küste am Rand des Wald- und Berglandes. Ihre Lage erlaubte einen maritimen Figurenentwurf, ohne daraus eine belegte Flotte abzuleiten.",
+      "motif": "Ein heller Quellring über einem einzelnen kupferbraunen Felsvorsprung auf tiefem Heideviolett, darunter ein schmales weißes Wellenband.",
+      "palette": [
+        "Heideviolett",
+        "Kupferbraun",
+        "Wollweiß"
+      ]
+    },
+    {
+      "id": "dreasail",
+      "name": "Srath Dreasail",
+      "regionName": "Srath Dreasail",
+      "county": "fhasgair",
+      "kind": "Ehemaliger Hauptsitz · eigene Dun-Herrschaft",
+      "point": [
+        47.2,
+        40
+      ],
+      "pin": [
+        49,
+        30
+      ],
+      "label": [
+        47,
+        51
+      ],
+      "mapName": "Inver Dreasail",
+      "art": "dreasail",
+      "geography": "Die große Stadt lag unter einem markanten Gebirgskamm. Nach Süden öffnete sich ihr bewaldeter Herrschaftsraum zu den Wasserläufen und Übergängen der Karte. Sie bildete die eigene Dun-Herrschaft des Mor Tiarna."
+    },
+    {
+      "id": "uamhar",
+      "name": "Creag Uamhar",
+      "regionName": "Coire Uamhar",
+      "county": "fhasgair",
+      "kind": "Ehemaliges Lairdtum · Bergburg",
+      "point": [
+        39.4,
+        63
+      ],
+      "pin": [
+        43,
+        59
+      ],
+      "label": [
+        39,
+        74
+      ],
+      "mapName": "Burg",
+      "art": "uamhar",
+      "geography": "Die Burg lag in einem schmalen südwestlichen Ausläufer des blauen Herrschaftsraums, zwischen bewaldeten Hängen und einem engen Zugang nach Süden.",
+      "motif": "Ein breiter weißer Bergkessel mit schwarzer Felspforte und einer einzelnen rostbraunen Tanne auf dunkelblauem Tuch.",
+      "palette": [
+        "Dunkelblau",
+        "Kreideweiß",
+        "Rostbraun"
+      ]
+    },
+    {
+      "id": "carthain",
+      "name": "Fiodh Carthain",
+      "regionName": "Gleann Carthain",
+      "county": "eirceann",
+      "kind": "Ehemaliger Hauptsitz · eigene Dun-Herrschaft",
+      "point": [
+        68,
+        48.5
+      ],
+      "pin": [
+        64,
+        43
+      ],
+      "label": [
+        68,
+        59
+      ],
+      "mapName": "Stadt",
+      "art": "carthain",
+      "geography": "Die Stadt lag am südlichen Rand des ockerfarbenen Großgebiets, zwischen den nördlichen Höhen, Waldstreifen und Wasserübergängen. Ihr Dun Tiarnatum war zugleich die eigene Herrschaft des Mor Tiarna."
+    },
+    {
+      "id": "sceolan",
+      "name": "Ard Sceolan",
+      "regionName": "Bealach Sceolan",
+      "county": "eirceann",
+      "kind": "Ehemaliges Lairdtum · nördliche Burg",
+      "point": [
+        64.4,
+        8.6
+      ],
+      "pin": [
+        60,
+        5
+      ],
+      "label": [
+        67,
+        19
+      ],
+      "mapName": "Burg",
+      "art": "sceolan",
+      "geography": "Die nördliche Burg stand im bergigen oberen Abschnitt des ockerfarbenen Raums. Sie lag an einem engen Wasser- und Höhenzugang; ihre Ausrüstung wurde entsprechend bergtauglich entworfen.",
+      "motif": "Ein dunkelbrauner stehender Speer vor zwei hellen Bergflanken auf stumpfem Senfgelb, darüber drei kleine weiße Wegsteine.",
+      "palette": [
+        "Senfgelb",
+        "Eisenbraun",
+        "Wollweiß"
+      ]
+    },
+    {
+      "id": "treabhair",
+      "name": "Maol Orsagail",
+      "regionName": "Achadh Orsagail",
+      "county": "eirceann",
+      "kind": "Ehemaliges Dun Tiarnatum · östliche Stadt",
+      "point": [
+        83.6,
+        35.6
+      ],
+      "pin": [
+        87,
+        29
+      ],
+      "label": [
+        84,
+        46
+      ],
+      "mapName": "Große Stadt",
+      "art": "treabhair",
+      "geography": "Die östliche große Stadt lag in einem breiten, offeneren Tal zwischen Wasserläufen. Sie gehörte zum östlichen Dun Tiarnatum; ihr Clan blieb im ersten Entwurf frei.",
+      "motif": "Drei dunkelgrüne, gelb blühende Feldkräuter unter einer kupferfarbenen Sonne und über zwei dunklen Wasserlinien auf ocker-elfenbein geteiltem Tuch.",
+      "palette": [
+        "Strohocker",
+        "Elfenbein",
+        "Kupfer"
+      ]
+    }
+  ],
+  "houses": [
+    {
+      "id": "ard-roth",
+      "sourceId": "ard-roth",
+      "name": "Mac Ard Roth",
+      "houseId": "house-mac-ard-roth",
+      "familyId": "haus-mac-ard-roth",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "ailseag",
+      "regionId": "caorthainn",
+      "rankId": "ard-tiarna",
+      "rank": "Ard Tiarna",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein goldener aufgerichteter Löwe auf dunkelgrünen Brettern, umgeben von hellen keltischen Knoten.",
+      "palette": [
+        "Tiefgrün",
+        "Altgold",
+        "Wollweiß"
+      ],
+      "ornament": "",
+      "frame": "Dunkles Holz mit hellem Knotenband",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/ard-roth.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/ard-roth.png",
+      "warrior": {
+        "id": "ard-roth",
+        "name": "Mac Ard Roth",
+        "classId": "airig",
+        "className": "Airig",
+        "equipment": "Langer Stoßspeer, Scheidenschwert, hochwertiges Kettenzeug mit kleinen Bronzeplatten; tiefgrüner Plaid mit ockerfarbenen Karos.",
+        "reason": "Der Airig verband fürstlichen Rang und das Ideal des Tiarnatum. Die Löwenfarben bestimmten Stoff und kleine Beschläge, nicht eine überladene Tiergestalt.",
+        "palette": [
+          "Tiefgrün",
+          "Altgold",
+          "Wollweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/ard-roth/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/ard-roth/krieger.png",
+        "classHref": "../../Klassenordner/Alben/airig/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/ard-roth/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "neill",
+      "sourceId": "neill",
+      "name": "Mac Neill",
+      "houseId": "house-neill",
+      "familyId": "haus-neill",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "beartain",
+      "regionId": "dorrain",
+      "rankId": "mor-tiarna",
+      "rank": "Mor Tiarna",
+      "liegeId": "ard-roth",
+      "isSeatRuler": true,
+      "motif": "Ein grüner Eberkopf mit hellen Hauern auf dunkelgrünem Holz; heller geknoteter Rand.",
+      "palette": [
+        "Tannengrün",
+        "Blattgrün",
+        "Knochenweiß"
+      ],
+      "ornament": "",
+      "frame": "Helles Holz mit schmalem grünem Rand",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/neill.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/neill.png",
+      "warrior": {
+        "id": "neill",
+        "name": "Mac Neill",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Einhandschwert, runder Eberschild, Kettenhemd mit verstärkten Lederstücken und grün-elfenbeinfarbener Kilt.",
+        "reason": "Der Eberkopf wurde als Schildbemalung eines standfesten Cateran aufgenommen. Dun Beartain war eine vorläufige Zuordnung im bewaldeten Bergland.",
+        "palette": [
+          "Tannengrün",
+          "Blattgrün",
+          "Knochenweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/neill/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/neill/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/neill/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-riangabra",
+          "familyTitle": "Clan Na’Riangabra",
+          "houseId": "house-neill",
+          "houseName": "Clan Neill",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-riangabra&mode=view"
+        },
+        {
+          "familyId": "haus-cleirigh",
+          "familyTitle": "Clan Faill’ Cléirigh",
+          "houseId": "house-neill",
+          "houseName": "Clan Neill",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cleirigh&mode=view"
+        },
+        {
+          "familyId": "haus-lockart",
+          "familyTitle": "Clan Ó Lockart",
+          "houseId": "house-neill",
+          "houseName": "Clan Neill",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-lockart&mode=view"
+        },
+        {
+          "familyId": "haus-ness",
+          "familyTitle": "Clan An Ness",
+          "houseId": "house-neill",
+          "houseName": "Clan Neill",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ness&mode=view"
+        },
+        {
+          "familyId": "haus-buadhtreun",
+          "familyTitle": "Clan Ard Buadhtreun",
+          "houseId": "house-neill",
+          "houseName": "Clan Neill",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-buadhtreun&mode=view"
+        },
+        {
+          "familyId": "haus-wemyss",
+          "familyTitle": "Clan Tir An Wemyss",
+          "houseId": "house-neill",
+          "houseName": "Clan Neill",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "caolan",
+      "sourceId": "caolan",
+      "name": "Nic Caolan",
+      "houseId": "house-caolan",
+      "familyId": "haus-caolan",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "dreasail",
+      "regionId": "fhasgair",
+      "rankId": "mor-tiarna",
+      "rank": "Mor Tiarna",
+      "liegeId": "ard-roth",
+      "isSeatRuler": true,
+      "motif": "Ein grauer Wolfskopf auf graublauem Holz mit ockerfarbenem Knotensaum.",
+      "palette": [
+        "Schieferblau",
+        "Wolfsgrau",
+        "Ocker"
+      ],
+      "ornament": "",
+      "frame": "Graublau gefasstes Holz mit hellem Innenring",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/caolan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/caolan.png",
+      "warrior": {
+        "id": "caolan",
+        "name": "Nic Caolan",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Kurze Einhandaxt, längliches ovales Wolfsschild, bewegliches Kettenzeug und graublauer Schultertartan.",
+        "reason": "Der Wolf und das kühle Blau-Grau bestimmten einen anderen Cateran-Schnitt mit ovalem Schild. Der Entwurf griff die Lage unter dem Gebirge auf.",
+        "palette": [
+          "Schieferblau",
+          "Wolfsgrau",
+          "Ocker"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/caolan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/caolan/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/caolan/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-nic-holloran",
+          "familyTitle": "Clan Nic Holloran",
+          "houseId": "house-caolan",
+          "houseName": "Haus Caolan",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-holloran&mode=view"
+        },
+        {
+          "familyId": "haus-eachtrai",
+          "familyTitle": "Clan Mac’Eachtrai",
+          "houseId": "house-caolan",
+          "houseName": "Haus Caolan",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-eachtrai&mode=view"
+        },
+        {
+          "familyId": "haus-suiste",
+          "familyTitle": "Clan Ua’Suiste",
+          "houseId": "house-caolan",
+          "houseName": "Haus Caolan",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-suiste&mode=view"
+        },
+        {
+          "familyId": "haus-banlaoch",
+          "familyTitle": "Clan Nic Banlaoch",
+          "houseId": "house-caolan",
+          "houseName": "Haus Caolan",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view"
+        },
+        {
+          "familyId": "haus-agnew",
+          "familyTitle": "Clan Ó Nic Agnew",
+          "houseId": "house-caolan",
+          "houseName": "Haus Caolan",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-agnew&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "duach",
+      "sourceId": "duach",
+      "name": "Dál Dúach",
+      "houseId": "house-duach",
+      "familyId": "haus-duach",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "carthain",
+      "regionId": "eirceann",
+      "rankId": "mor-tiarna",
+      "rank": "Mor Tiarna",
+      "liegeId": "ard-roth",
+      "isSeatRuler": true,
+      "motif": "Ein schwarzer Hirschkopf mit breitem Geweih auf Ocker, umgeben von dunklen keltischen Bändern.",
+      "palette": [
+        "Gelbocker",
+        "Kohlschwarz",
+        "Flachsweiß"
+      ],
+      "ornament": "",
+      "frame": "Dunkler Holzring mit ockerfarbenen Knoten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/duach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/duach.png",
+      "warrior": {
+        "id": "duach",
+        "name": "Dál Dúach",
+        "classId": "serf",
+        "className": "Serf",
+        "equipment": "Langbogen in Ruhehaltung, Rückenköcher, kurzes Scheidenschwert, Lederweste und schwarz-ockerfarbener Plaid.",
+        "reason": "Der Hirsch und die Waldsäume legten einen Serf nahe. Die dunkle und ockerfarbene Kleidung blieb für Wald und Tal praktisch.",
+        "palette": [
+          "Gelbocker",
+          "Kohlschwarz",
+          "Flachsweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/duach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/duach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/serf/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/duach/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-haeghra",
+          "familyTitle": "Clan An’Haeghra",
+          "houseId": "house-duach",
+          "houseName": "Clan Duach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-haeghra&mode=view"
+        },
+        {
+          "familyId": "haus-eoghainn",
+          "familyTitle": "Clan Tir An Ó Eoghainn",
+          "houseId": "house-duach",
+          "houseName": "Clan Duach",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-eoghainn&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "ardmhair",
+      "sourceId": "ardmhair",
+      "name": "Tir an Ardmhair",
+      "houseId": "house-ardmhair",
+      "familyId": "haus-ardmhair",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "uamhar",
+      "regionId": "fhasgair",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "caolan",
+      "isSeatRuler": true,
+      "motif": "Ein schwarzer Bär auf violettem Holz mit hellen Ranken und schmalem kupferbraunem Rand.",
+      "palette": [
+        "Heideviolett",
+        "Schwarzbraun",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Schmaler kupferbrauner Holzring",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/ardmhair.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/ardmhair.png",
+      "warrior": {
+        "id": "ardmhair",
+        "name": "Tir an Ardmhair",
+        "classId": "riada",
+        "className": "Riada",
+        "equipment": "Zweihändige lange Streitaxt, verstärkte Lederweste, einzelne eiserne Armschienen und violettbrauner Kilt.",
+        "reason": "Der Riada nahm die Bärenkraft mit einer klar geführten Axt und beweglicher Ausrüstung auf. Sein Bergsitz wurde nur als Ausgangsentwurf zugeteilt.",
+        "palette": [
+          "Heideviolett",
+          "Schwarzbraun",
+          "Elfenbein"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/ardmhair/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/ardmhair/krieger.png",
+        "classHref": "../../Klassenordner/Alben/riada/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/ardmhair/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-mac-tuirseach",
+          "familyTitle": "Clan Mac Tuirseach",
+          "houseId": "house-ardmhair",
+          "houseName": "Haus Ardmhair",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-mac-tuirseach&mode=view"
+        },
+        {
+          "familyId": "haus-nessa",
+          "familyTitle": "Clan Ard’Nessa",
+          "houseId": "house-ardmhair",
+          "houseName": "Haus Ardmhair",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nessa&mode=view"
+        },
+        {
+          "familyId": "haus-diuid",
+          "familyTitle": "Clan Mac Ard Diuid",
+          "houseId": "house-ardmhair",
+          "houseName": "Haus Ardmhair",
+          "emblem": null,
+          "personReferenceCount": 3,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-diuid&mode=view"
+        },
+        {
+          "familyId": "haus-lockart",
+          "familyTitle": "Clan Ó Lockart",
+          "houseId": "house-ardmhair",
+          "houseName": "Haus Ardmhair",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-lockart&mode=view"
+        },
+        {
+          "familyId": "haus-airdmhor",
+          "familyTitle": "Clan Dál Airdmhor",
+          "houseId": "house-ardmhair",
+          "houseName": "Haus Ardmhair",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-airdmhor&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "trodach",
+      "sourceId": "trodach",
+      "name": "Droch Trodach",
+      "houseId": "house-droch-trodach",
+      "familyId": "haus-droch-trodach",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "sceolan",
+      "regionId": "eirceann",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "duach",
+      "isSeatRuler": true,
+      "motif": "Ein roter gerüsteter Löwenkrieger mit dreizinkiger Stangenwaffe auf Elfenbein, schwarzrote Ornamentringe.",
+      "palette": [
+        "Ziegelrot",
+        "Elfenbein",
+        "Anthrazit"
+      ],
+      "ornament": "",
+      "frame": "Helles Holz mit rot-schwarzen Knotenringen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/trodach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/trodach.png",
+      "warrior": {
+        "id": "trodach",
+        "name": "Droch Trodach",
+        "classId": "airig",
+        "className": "Airig",
+        "equipment": "Gerader Stoßspeer, kurzes Scheidenschwert, Kettenhemd mit roten Lederlamellen und rotweißem Plaid.",
+        "reason": "Die Stangenwaffe des Wappens wurde in die funktionale Speerführung eines Airig übertragen. Der Dreizack blieb ein Zeichen, keine unbegründete Seekriegerrolle.",
+        "palette": [
+          "Ziegelrot",
+          "Elfenbein",
+          "Anthrazit"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/trodach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/trodach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/airig/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/trodach/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-ua-gaelach",
+          "familyTitle": "Clan Ua’Gaelach",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ua-gaelach&mode=view"
+        },
+        {
+          "familyId": "haus-dal-cruthin",
+          "familyTitle": "Clan Dál’Cruthin",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-dal-cruthin&mode=view"
+        },
+        {
+          "familyId": "haus-frisealach",
+          "familyTitle": "Ard Frisealach",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-frisealach&mode=view"
+        },
+        {
+          "familyId": "haus-ard-trodach",
+          "familyTitle": "Ard Trodach",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 31,
+          "primaryFamily": true,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ard-trodach&mode=view"
+        },
+        {
+          "familyId": "haus-nic-caoimhe",
+          "familyTitle": "Nic Caoimhe",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view"
+        },
+        {
+          "familyId": "haus-iomrach",
+          "familyTitle": "An’Iomrach",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-iomrach&mode=view"
+        },
+        {
+          "familyId": "haus-somhairle",
+          "familyTitle": "Sidhe Somhairle",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-somhairle&mode=view"
+        },
+        {
+          "familyId": "haus-choinnich",
+          "familyTitle": "Ua’Choinnich",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-choinnich&mode=view"
+        },
+        {
+          "familyId": "haus-laidir",
+          "familyTitle": "Ruin’Laidir",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-laidir&mode=view"
+        },
+        {
+          "familyId": "haus-amrhan",
+          "familyTitle": "Ua’Amhran",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-amrhan&mode=view"
+        },
+        {
+          "familyId": "haus-eachtrai",
+          "familyTitle": "Clan Mac’Eachtrai",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-eachtrai&mode=view"
+        },
+        {
+          "familyId": "haus-durthacht",
+          "familyTitle": "Clan Mac’Durthacht",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view"
+        },
+        {
+          "familyId": "haus-treada",
+          "familyTitle": "Clan Ua’Tréada",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-treada&mode=view"
+        },
+        {
+          "familyId": "haus-feannag",
+          "familyTitle": "Clan An’Feannag",
+          "houseId": "house-trodach",
+          "houseName": "Ard Trodach",
+          "emblem": "assets/images/houses/Leitheach/clan-ard-trodach.png",
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-feannag&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "torcmhar",
+      "sourceId": "torcmhar",
+      "name": "Ua Torcmhar",
+      "houseId": "house-torcmhar",
+      "familyId": "haus-torcmhar",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "loscarn",
+      "regionId": "dorrain",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "neill",
+      "isSeatRuler": true,
+      "motif": "Ein zusammengerollter heller Eber auf schwarzem Rundfeld und braunen Brettern mit weißen Spiralen.",
+      "palette": [
+        "Rindenbraun",
+        "Wollweiß",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Schlichter brauner Holzrand",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/torcmhar.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/torcmhar.png",
+      "warrior": {
+        "id": "torcmhar",
+        "name": "Ua Torcmhar",
+        "classId": "currach",
+        "className": "Currach",
+        "equipment": "Kurzes gerades Schwert, leichte Lederpanzerung mit Kettenkragen, gesichertes Sturmseil und braunweißer Plaid.",
+        "reason": "Der Currach war ein Entwurf für die küstennahe Burg Tobar Loscarn. Das eingerollte Tier blieb ein zurückhaltendes Abzeichen.",
+        "palette": [
+          "Rindenbraun",
+          "Wollweiß",
+          "Schwarz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/torcmhar/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/torcmhar/krieger.png",
+        "classHref": "../../Klassenordner/Alben/currach/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/torcmhar/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-cein",
+          "familyTitle": "Clan Mac’Céin",
+          "houseId": "house-torcmhar",
+          "houseName": "Clan Torcmhar",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cein&mode=view"
+        },
+        {
+          "familyId": "haus-ceallaigh",
+          "familyTitle": "Clan Tir An’Ceallaigh",
+          "houseId": "house-torcmhar",
+          "houseName": "Clan Torcmhar",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ceallaigh&mode=view"
+        },
+        {
+          "familyId": "haus-fintain",
+          "familyTitle": "Clan Mac’Fintain",
+          "houseId": "house-torcmhar",
+          "houseName": "Clan Torcmhar",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-fintain&mode=view"
+        },
+        {
+          "familyId": "haus-cleirigh",
+          "familyTitle": "Clan Faill’ Cléirigh",
+          "houseId": "house-torcmhar",
+          "houseName": "Clan Torcmhar",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cleirigh&mode=view"
+        },
+        {
+          "familyId": "haus-durachd",
+          "familyTitle": "Clan Tir An Durachd",
+          "houseId": "house-torcmhar",
+          "houseName": "Clan Torcmhar",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-durachd&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "snaith",
+      "sourceId": "snaith",
+      "name": "Mac Snaith",
+      "houseId": "house-mac-snaith",
+      "familyId": "haus-mac-snaith",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "muirdean",
+      "regionId": "caorthainn",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "ard-roth",
+      "isSeatRuler": true,
+      "motif": "Ein rostfarbener Fichtenkreuzschnabel mit deutlich gekreuzten Schnabelspitzen auf einem kurzen Nadelzweig.",
+      "palette": [
+        "Nebelblau",
+        "Rostorange",
+        "Wollweiß"
+      ],
+      "ornament": "Nur ein kurzer heller Zickzackbogen am oberen Rand",
+      "frame": "Graues Holz mit zwei schmalen Eisenklammern",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/snaith.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/snaith.png",
+      "warrior": {
+        "id": "snaith",
+        "name": "Mac Snaith",
+        "classId": "airig",
+        "className": "Airig",
+        "equipment": "Stoßspeer, kleines Rundschild am Rücken, kurze Kette, nebelblauer und rostfarbener Plaid.",
+        "reason": "Der Kreuzschnabel griff den Nadelwald auf. Ein beweglicher Airig ergänzte die vorhandenen Speerfiguren mit anderer Helm- und Schildführung.",
+        "palette": [
+          "Nebelblau",
+          "Rostorange",
+          "Wollweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/snaith/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/snaith/krieger.png",
+        "classHref": "../../Klassenordner/Alben/airig/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/snaith/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "drisach",
+      "sourceId": "drisach",
+      "name": "Nic Drisach",
+      "houseId": "house-nic-drisach",
+      "familyId": "haus-nic-drisach",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "ailseag",
+      "regionId": "caorthainn",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "ard-roth",
+      "isSeatRuler": false,
+      "motif": "Ein einzelner dunkelgrüner Eibenzweig mit drei stumpfroten Beeren auf hellem Holz.",
+      "palette": [
+        "Flachsweiß",
+        "Dunkelgrün",
+        "Weinrot"
+      ],
+      "ornament": "Keine Runen; nur zwei kleine eingekerbte Blattwinkel unten",
+      "frame": "Dunkles Holz, an einer Stelle mit grober heller Hanfnaht gebunden",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/drisach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/drisach.png",
+      "warrior": {
+        "id": "drisach",
+        "name": "Nic Drisach",
+        "classId": "serf",
+        "className": "Serf",
+        "equipment": "Eibenbogen, Rückenköcher, Jagdmesser, grüne Lederweste und weißgrün-roter Tartan.",
+        "reason": "Der Eibenzweig wurde zu einem schlichten Waldläuferentwurf mit Bogen und Wollstoffen. Weder Druidenamt noch Vergiftung wurden daraus abgeleitet.",
+        "palette": [
+          "Flachsweiß",
+          "Dunkelgrün",
+          "Weinrot"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/drisach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/drisach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/serf/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/drisach/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "tuairne",
+      "sourceId": "tuairne",
+      "name": "Dál Tuairne",
+      "houseId": "house-dal-tuairne",
+      "familyId": "haus-dal-tuairne",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "treabhair",
+      "regionId": "eirceann",
+      "rankId": "dun-tiarna",
+      "rank": "Dún Tiarna",
+      "liegeId": "duach",
+      "isSeatRuler": true,
+      "motif": "Ein schwarzer Auerhahn mit breit gefächertem Schwanz, hellem Flügelfleck und kleinem rotem Augenfleck.",
+      "palette": [
+        "Petrol",
+        "Kohlschwarz",
+        "Rostrot"
+      ],
+      "ornament": "Kurze fächerförmige Kerben nur an den Seiten",
+      "frame": "Breites dunkles Holz mit drei ungleichen Bronzeplättchen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/tuairne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/tuairne.png",
+      "warrior": {
+        "id": "tuairne",
+        "name": "Dál Tuairne",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Kurzes Schwert, runder Auerhahnschild, kurze Kette mit Lederschultern und petrol-roter Kilt.",
+        "reason": "Der Auerhahn ergänzte die Waldtiere und gab dem Cateran ein sparsam verwendetes Federdetail statt einer tierförmigen Rüstung.",
+        "palette": [
+          "Petrol",
+          "Kohlschwarz",
+          "Rostrot"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/tuairne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/tuairne/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/tuairne/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "seilgair",
+      "sourceId": "seilgair",
+      "name": "Ruin Seilgeir",
+      "houseId": "house-ruin-seilgeir",
+      "familyId": "haus-ruin-seilgeir",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "dreasail",
+      "regionId": "fhasgair",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "caolan",
+      "isSeatRuler": false,
+      "motif": "Drei helle albische Wurfspeere nebeneinander, ihre Blattspitzen nach oben, über einem einzelnen bronzenen Schildbuckel.",
+      "palette": [
+        "Schiefergrün",
+        "Kreideweiß",
+        "Bronze"
+      ],
+      "ornament": "Drei helle senkrechte Kerben im unteren Rand, kein umlaufendes Band",
+      "frame": "Ungefasstes dunkles Eichenholz, ohne Metallring",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/seilgair.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/seilgair.png",
+      "warrior": {
+        "id": "seilgair",
+        "name": "Ruin Seilgair",
+        "classId": "serf",
+        "className": "Serf",
+        "equipment": "Ein Wurfspeer in der Hand, zwei im Rückenhalter, kurze Seitenklinge, verstärktes Leder und graugrüner Plaid.",
+        "reason": "Drei Wurfspeere verwiesen unmittelbar auf albisches Kriegertum. Die Serf-Ausbildung umfasste auch diese bewegliche Form des Fernkampfs.",
+        "palette": [
+          "Schiefergrün",
+          "Kreideweiß",
+          "Bronze"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/seilgair/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/seilgair/krieger.png",
+        "classHref": "../../Klassenordner/Alben/serf/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/seilgair/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "eatharn",
+      "sourceId": "eatharn",
+      "name": "Tir Eatharn",
+      "houseId": "house-tir-eatharn",
+      "familyId": "haus-tir-eatharn",
+      "clan": true,
+      "originRealm": "deitheach",
+      "seatId": "ailseag",
+      "regionId": "caorthainn",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "ard-roth",
+      "isSeatRuler": false,
+      "motif": "Ein heller aufrechter Tannenzapfen zwischen zwei kupferbraunen Nadelzweigen.",
+      "palette": [
+        "Nachtblau",
+        "Knochenweiß",
+        "Kupferbraun"
+      ],
+      "ornament": "Eine einzelne kleine Spirale oben; sonst glatter Rand",
+      "frame": "Naturbelassenes helles Holz mit einem dunklen senkrechten Riss als gemaltem Materialmerkmal",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/eatharn.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/deitheach/eatharn.png",
+      "warrior": {
+        "id": "eatharn",
+        "name": "Tir Eatharn",
+        "classId": "riada",
+        "className": "Riada",
+        "equipment": "Lange einhändige Axt, Lederrundschild, gefütterte Lederjacke und dunkelblau-kupferfarbener Kilt.",
+        "reason": "Der Zapfen brachte ein schlichtes Waldmotiv ein. Der Riada blieb beweglicher und leichter ausgerüstet als die Cateran; sein späterer Sitz blieb offen.",
+        "palette": [
+          "Nachtblau",
+          "Knochenweiß",
+          "Kupferbraun"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/deitheach/eatharn/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/deitheach/eatharn/krieger.png",
+        "classHref": "../../Klassenordner/Alben/riada/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/deitheach/eatharn/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    }
+  ],
+  "territoryArt": {
+    "ailseag": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/ailseag.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/ailseag.png",
+      "shape": "banner"
+    },
+    "muirdean": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/muirdean.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/muirdean.png",
+      "shape": "banner"
+    },
+    "beartain": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/beartain.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/beartain.png",
+      "shape": "banner"
+    },
+    "loscarn": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/loscarn.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/loscarn.png",
+      "shape": "banner"
+    },
+    "dreasail": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/dreasail.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/dreasail.png",
+      "shape": "banner"
+    },
+    "uamhar": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/uamhar.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/uamhar.png",
+      "shape": "banner"
+    },
+    "carthain": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/carthain.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/carthain.png",
+      "shape": "banner"
+    },
+    "sceolan": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/sceolan.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/sceolan.png",
+      "shape": "banner"
+    },
+    "treabhair": {
+      "image": "/Stammbäume/assets/images/regions/deitheach/treabhair.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/deitheach/treabhair.png",
+      "shape": "banner"
+    }
+  }
+}

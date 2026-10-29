@@ -16,9 +16,10 @@ export function createClanMap({root,dialog,tooltip,getVariant,escape,onClan,
   const groups=variant.settlements.filter(place=>variant.clans.some(c=>c.seat===place.id));
   const lines=groups.map(p=>`<line x1="${p.point[0]}" y1="${p.point[1]}" x2="${p.pin[0]}" y2="${p.pin[1]}"/>`).join('');
   const pins=groups.map(place=>`<div class="crest-group" style="left:${place.pin[0]}%;top:${place.pin[1]}%" data-city="${place.id}">${variant.clans.filter(c=>c.seat===place.id).map(clan=>`<button class="clan-pin" data-action="show-clan" data-clan="${clan.id}" aria-label="${escape(clan.name)} · ${escape(place.name)} · ${escape(rankLabel(clan))}"><img src="${assetUrl('assets/'+clan.crest)}" width="40" height="40" alt="Wappen ${escape(clan.name)}"></button>`).join('')}</div>`).join('');
-  const names=variant.settlements.map(place=>{const position=place.label??[place.point[0],place.point[1]+3.6];return `<span class="city-name" style="left:${position[0]}%;top:${position[1]}%">${escape(place.name)}</span>`;}).join('');
+  const labelledPlaces=hasBakedNames(variant)?variant.settlements.filter(place=>place.overlayLabel):variant.settlements;
+  const names=labelledPlaces.map(place=>{const position=place.label??[place.point[0],place.point[1]+3.6];return `<span class="city-name" style="left:${position[0]}%;top:${position[1]}%">${escape(place.name)}</span>`;}).join('');
   const [width,height]=variant.imageSize??imageSize;
-  return `<img src="${assetUrl(variant.map)}" alt="${escape(variant.file)} – Karte der Variante ${variant.number}" width="${width}" height="${height}"><div class="crest-layer" ${showCrests?'':'hidden'}><svg class="crest-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>${pins}</div><div class="city-names" ${showNames&&!hasBakedNames(variant)?'':'hidden'}>${names}</div>`;
+  return `<img src="${assetUrl(variant.map)}" alt="${escape(variant.file)} – Karte der Variante ${variant.number}" width="${width}" height="${height}"><div class="crest-layer" ${showCrests?'':'hidden'}><svg class="crest-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>${pins}</div><div class="city-names" ${showNames?'':'hidden'}>${names}</div>`;
  }
  function render(){
   hideTooltip();

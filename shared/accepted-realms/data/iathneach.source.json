@@ -1,0 +1,1409 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "id": "iathneach",
+  "name": "Iathneach",
+  "title": "Fürstentum Iathneach",
+  "type": "Fürstentum",
+  "continent": "Lothir",
+  "capital": "botharin",
+  "ruler": "cetchathach",
+  "rootId": "fuerstentum-iathneach",
+  "map": "/Karten/Iathneach/Kartenbilder/normal.webp",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/iathneach.webp",
+  "context": {
+    "title": "Fürstentum Iathneach",
+    "short": "Iathneach",
+    "realm": "iathneach",
+    "emblem": "assets/crests/iathneach.webp",
+    "emblemFull": "assets/originals/iathneach.png",
+    "imageSize": [
+      3523,
+      4096
+    ],
+    "introduction": "Zwischen gebirgigen Waldtälern, Flusswegen und der westlichen Inselküste bewahrt Iathneach seine albische Kultur. Das Fürstentum hat Land verloren – seine Familien und die Erinnerung an diese Gebiete bestehen weiter.",
+    "note": "Ui Nic Cétchathach beginnt in Botharin, Mac Farraigeach auf Sgeir Tearmainn. Alle anderen Clans bleiben ohne Sitz. Die vier farbigen Räume und ihre Namen sind Besprechungsvorschläge; innerhalb der Farbflächen sind keine exakten Teilgrenzen überliefert.",
+    "history": [
+      {
+        "title": "Ein albisches Fürstentum",
+        "text": "Iathneach blieb albisch, während der südliche Nachbar Aldingen sich unter östlichen Einflüssen wandelte. Plaids, Tartan, Clanzugehörigkeit und das Tiarnatum prägen die Entwürfe."
+      },
+      {
+        "title": "Landverluste nach Süden",
+        "text": "Vor dem Alerischen Kaiserreich, nach dem Beginn der Königslosigkeit der Alben, expandierte Aldingen nach Norden und eignete sich große Teile Iathneachs an. Diese frühere Expansion ist von der jüngeren Eroberung durch die Triarchie zu unterscheiden."
+      },
+      {
+        "title": "Cuansioda und die Mac Farraigeach",
+        "text": "Vor etwa zwanzig Jahren fiel ein weiteres Mor Tiarnatum an die Triarchie. Die Mac Farraigeach, ehemalige Mor Tiarna dieses Gebietes aus Cuansioda, sitzen heute auf Sgeir Tearmainn. Cuansioda wird als verlorener Herkunftssitz geführt."
+      },
+      {
+        "title": "Die offene Hausordnung",
+        "text": "Ui Nic Cétchathach ist die Fürstenfamilie und Herrin von Botharin. Für die sieben übrigen gelieferten Clans sind Sitze und Lehnsherren im Entwurf offen. Waffenklassen in den Hausfenstern sind Vorschläge zur Darstellung, keine Festlegung einer Ausbildung."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Berge, Wald und Wasser",
+        "text": "Kettenzeug, Leder, praktische Helme und Wollstoffe folgen dem jeweiligen Motiv. Gebirgszüge, Flusstäler und die Inselküste liefern die Grundlage für die Regionalbanner."
+      },
+      {
+        "title": "Besetztes Erbe",
+        "text": "Die verlorenen Gebiete erscheinen ausgegraut unter ihrem ursprünglichen Land. Die Besatzung macht weder Orte noch Familien zu freiwilligen Anhängern der Triarchie."
+      }
+    ],
+    "resetMessage": "Die zwei vorgegebenen Sitze sind wiederhergestellt; die übrigen sieben Clans sind frei.",
+    "classCulture": "alben"
+  },
+  "design": {},
+  "regions": [
+    {
+      "id": "sgeire",
+      "name": "Tir na Sgeire",
+      "title": "Fürstliche Domäne",
+      "colour": "#54784a",
+      "seats": [
+        "botharin",
+        "sgeir-tearmainn"
+      ],
+      "motif": "Eine weiße Ziege über einem schwarzen Küstenfelsen, drei kleine Inselzeichen und ein blauer Wellenfuß.",
+      "palette": [
+        "Moosgrün",
+        "Wollweiß",
+        "Schieferblau"
+      ],
+      "art": "county-sgeire"
+    },
+    {
+      "id": "beann",
+      "name": "Tir nam Beann",
+      "title": "Mor Tiarnatum · Namensentwurf",
+      "colour": "#a37b37",
+      "seats": [
+        "ailtean",
+        "mharaich"
+      ],
+      "motif": "Drei helle Bergspitzen über einem kupferfarbenen Haselzweig auf Ocker und Dunkelgrün.",
+      "palette": [
+        "Ocker",
+        "Elfenbein",
+        "Dunkelgrün"
+      ],
+      "art": "county-beann"
+    },
+    {
+      "id": "allt",
+      "name": "Tir nan Allt",
+      "title": "Mor Tiarnatum · Namensentwurf",
+      "colour": "#377b7e",
+      "seats": [
+        "tirnafaoi",
+        "sidheanna"
+      ],
+      "motif": "Drei helle zusammenfließende Bäche unter einer silbernen Steinbrücke auf Petrol.",
+      "palette": [
+        "Petrol",
+        "Kalkweiß",
+        "Schwarzbraun"
+      ],
+      "art": "county-allt"
+    },
+    {
+      "id": "coille",
+      "name": "Tir na Coille",
+      "title": "Mor Tiarnatum · Namensentwurf",
+      "colour": "#454c7b",
+      "seats": [
+        "fiontarach",
+        "famhair"
+      ],
+      "motif": "Eine helle Eiche zwischen einem Berggrat und einem Wasserband auf dunkelblauem Tuch.",
+      "palette": [
+        "Nachtblau",
+        "Silberweiß",
+        "Kupfer"
+      ],
+      "art": "county-coille"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "botharin",
+      "name": "Botharin",
+      "regionName": "Machair Botharin",
+      "county": "sgeire",
+      "kind": "Fürstlicher Sitz",
+      "point": [
+        36.5,
+        40
+      ],
+      "pin": [
+        36,
+        33
+      ],
+      "geography": "Küstenstadt am westlichen Zugang des fruchtbaren Fluss- und Wegenetzes.",
+      "motif": "Eine weiße Ziege über einem grünen Küstentor und einem schmalen Wellenband.",
+      "palette": [
+        "Grün",
+        "Wollweiß",
+        "Ocker"
+      ],
+      "art": "botharin"
+    },
+    {
+      "id": "sgeir-tearmainn",
+      "name": "Sgeir Tearmainn",
+      "regionName": "Sgeirean Tearmainn",
+      "county": "sgeire",
+      "kind": "Insularer Sitz",
+      "point": [
+        17.5,
+        31
+      ],
+      "pin": [
+        18,
+        24
+      ],
+      "geography": "Befestigter Hauptfelsen des westlichen Archipels. Gegenwärtiger Sitz der aus Cuansioda verdrängten Mac Farraigeach.",
+      "motif": "Ein einzelner dunkler Inselberg mit hellem Wehrturm über drei weißen Wellen.",
+      "palette": [
+        "Dunkles Grün",
+        "Steingrau",
+        "Wollweiß"
+      ],
+      "art": "sgeir-tearmainn"
+    },
+    {
+      "id": "ailtean",
+      "name": "Ailtean",
+      "regionName": "Braigh Ailtean",
+      "county": "beann",
+      "kind": "Nördlicher Sitzraum",
+      "point": [
+        58.5,
+        23.4
+      ],
+      "pin": [
+        58,
+        17
+      ],
+      "geography": "Gebirgsvorland am südlichen Ausgang der nördlichen Bergkette; Zugang zu Wald und Höhenwegen.",
+      "motif": "Ein heller Bergsattel mit einem dunkelgrünen Tannenzweig und kupferner Weglinie.",
+      "palette": [
+        "Bergocker",
+        "Tannengrün",
+        "Elfenbein"
+      ],
+      "art": "ailtean"
+    },
+    {
+      "id": "mharaich",
+      "name": "Mharaich",
+      "regionName": "Gleann Mharaich",
+      "county": "beann",
+      "kind": "Östlicher Sitzraum",
+      "point": [
+        87.2,
+        25.2
+      ],
+      "pin": [
+        86,
+        19
+      ],
+      "geography": "Befestigter Talort unter den östlichen Bergen, über Fluss und Brücken mit den südlichen Ebenen verbunden.",
+      "motif": "Eine helle steinerne Bogenbrücke zwischen zwei schwarzen Bergzacken auf Ocker.",
+      "palette": [
+        "Ocker",
+        "Kalkweiß",
+        "Anthrazit"
+      ],
+      "art": "mharaich"
+    },
+    {
+      "id": "tirnafaoi",
+      "name": "Tirnafaoi",
+      "regionName": "Comar Tirnafaoi",
+      "county": "allt",
+      "kind": "Flusssitzraum",
+      "point": [
+        64,
+        52
+      ],
+      "pin": [
+        62,
+        46
+      ],
+      "geography": "Stadt im Zusammenfluss mehrerer Wasserläufe, umgeben von Wegen, Wiesen und Wald.",
+      "motif": "Drei helle Wasserbänder, die unter einem einzelnen kupfernen Brückenbogen zusammenlaufen.",
+      "palette": [
+        "Blaugrün",
+        "Kalkweiß",
+        "Kupfer"
+      ],
+      "art": "tirnafaoi"
+    },
+    {
+      "id": "sidheanna",
+      "name": "Sidheanna",
+      "regionName": "Creagan Sidheanna",
+      "county": "allt",
+      "kind": "Bergsitzraum",
+      "point": [
+        87,
+        53
+      ],
+      "pin": [
+        86,
+        46
+      ],
+      "geography": "Ort am Fuß eines markanten östlichen Bergstocks, über den Fluss an Tirnafaoi angebunden.",
+      "motif": "Ein weißer einzelner Felsturm über drei dunklen Kiefernsilhouetten auf Türkis.",
+      "palette": [
+        "Türkis",
+        "Kalkweiß",
+        "Waldschwarz"
+      ],
+      "art": "sidheanna"
+    },
+    {
+      "id": "fiontarach",
+      "name": "Fiontarach",
+      "regionName": "Coire Fiontarach",
+      "county": "coille",
+      "kind": "Südwestlicher Sitzraum",
+      "point": [
+        55,
+        73
+      ],
+      "pin": [
+        55,
+        67
+      ],
+      "geography": "Bergnahe Stadt unter den westlichen Hängen; ein Weg führt in das bewaldete südliche Tal.",
+      "motif": "Ein heller Bergkessel mit einer kupferfarbenen Eichel über einem schmalen Bach.",
+      "palette": [
+        "Indigoblau",
+        "Elfenbein",
+        "Kupfer"
+      ],
+      "art": "fiontarach"
+    },
+    {
+      "id": "famhair",
+      "name": "Famhair",
+      "regionName": "Srath Famhair",
+      "county": "coille",
+      "kind": "Südöstlicher Sitzraum",
+      "point": [
+        94,
+        78
+      ],
+      "pin": [
+        91,
+        71
+      ],
+      "geography": "Südöstliche Talstadt am großen Fluss; Wälder und offene Flächen liegen zwischen den Wasserläufen.",
+      "motif": "Ein heller breiter Flussbogen unter zwei grünen Eichenblättern auf dunklem Blau.",
+      "palette": [
+        "Nachtblau",
+        "Wollweiß",
+        "Grün"
+      ],
+      "art": "famhair"
+    }
+  ],
+  "houses": [
+    {
+      "id": "cetchathach",
+      "sourceId": "cetchathach",
+      "name": "Ui Nic Cétchathach",
+      "houseId": "house-cetchathach",
+      "familyId": "haus-cetchathach",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "botharin",
+      "regionId": "sgeire",
+      "rankId": "ard-tiarna",
+      "rank": "Ard Tiarna",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein weißer gekrönter Ziegenbock zwischen goldenen Zweigen auf Schwarz und Elfenbein.",
+      "palette": [
+        "Schwarz",
+        "Elfenbein",
+        "Gedämpftes Gold"
+      ],
+      "ornament": "",
+      "frame": "Gold und Elfenbein",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cetchathach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cetchathach.png",
+      "warrior": {
+        "id": "cetchathach",
+        "name": "Ui Nic Cétchathach",
+        "classId": "airig",
+        "className": "Airig",
+        "equipment": "Langer Stoßspeer, Scheidenschwert, Kettenhemd mit einzelnen Brustplatten und schwarz-elfenbeinfarbener Plaid.",
+        "reason": "Der Airig verbindet fürstlichen Stand mit der albischen Speertradition; die Krone bleibt dem Wappen vorbehalten.",
+        "palette": [
+          "Schwarz",
+          "Elfenbein",
+          "Gedämpftes Gold"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/cetchathach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/cetchathach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/airig/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/cetchathach/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-ua-nic-ceinselaig",
+          "familyTitle": "Clan Ua Nic Ceinselaig",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ua-nic-ceinselaig&mode=view"
+        },
+        {
+          "familyId": "haus-mac-ard-cumhaill",
+          "familyTitle": "Clan Mac Ard Cumhaill",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-mac-ard-cumhaill&mode=view"
+        },
+        {
+          "familyId": "haus-nic-caoimhe",
+          "familyTitle": "Nic Caoimhe",
+          "houseId": "house-cetchathach",
+          "houseName": "Clan Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view"
+        },
+        {
+          "familyId": "haus-chulainn",
+          "familyTitle": "Clan Ard’Chulainn",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-chulainn&mode=view"
+        },
+        {
+          "familyId": "haus-nuadat",
+          "familyTitle": "Clan Nic’Nuadat",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nuadat&mode=view"
+        },
+        {
+          "familyId": "haus-morna",
+          "familyTitle": "Clan Ui’Morna",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-morna&mode=view"
+        },
+        {
+          "familyId": "haus-ui-faill-duibhne",
+          "familyTitle": "Clan Ui Faill Duibhne",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ui-faill-duibhne&mode=view"
+        },
+        {
+          "familyId": "haus-ronain",
+          "familyTitle": "Clan Mac Ard’Ronain",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 3,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ronain&mode=view"
+        },
+        {
+          "familyId": "haus-gairner",
+          "familyTitle": "Clan Dal’Gáirnér",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-gairner&mode=view"
+        },
+        {
+          "familyId": "haus-magach",
+          "familyTitle": "Clan Sidhe’Magach",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-magach&mode=view"
+        },
+        {
+          "familyId": "haus-urquhart",
+          "familyTitle": "Clan Ui Urquhart",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-urquhart&mode=view"
+        },
+        {
+          "familyId": "haus-luthsach",
+          "familyTitle": "Clan Ó / Dál Luthsach",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-luthsach&mode=view"
+        },
+        {
+          "familyId": "haus-wylan",
+          "familyTitle": "Haus Wylan O'Cerrigarth",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-wylan&mode=view"
+        },
+        {
+          "familyId": "haus-pendrag",
+          "familyTitle": "Haus Pendrag",
+          "houseId": "house-cetchathach",
+          "houseName": "Haus Cétchathach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-pendrag&mode=view"
+        }
+      ],
+      "rankBasis": "Nutzervorgabe und bestätigte örtliche Rangordnung"
+    },
+    {
+      "id": "farraigeach",
+      "sourceId": "farraigeach",
+      "name": "Mac Farraigeach",
+      "houseId": "house-farraigeach",
+      "familyId": "haus-farraigeach",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "sgeir-tearmainn",
+      "regionId": "sgeire",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "formerSeat": "Cuansioda",
+      "formerRank": "Mor Tiarna",
+      "motif": "Ein dunkles Segelschiff mit ockerfarbenen Segeln über hellen Wellen auf schwarzem Holz.",
+      "palette": [
+        "Schwarzgrün",
+        "Segelocker",
+        "Kupferbraun"
+      ],
+      "ornament": "",
+      "frame": "Dunkles Holz mit kupfernen Spangen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.png",
+      "warrior": {
+        "id": "farraigeach",
+        "name": "Mac Farraigeach",
+        "classId": "currach",
+        "className": "Currach",
+        "equipment": "Enteraxt, kurzes Scheidenschwert, aufgerolltes Sturmseil mit Haken, bewegliches Leder- und Kettenzeug; kupfergrüner Plaid.",
+        "reason": "Der Currach passt zum insularen Sitz und zum verlorenen Küstenzentrum Cuansioda. Die Figur ist kein Beleg einer freiwilligen Bindung an die Triarchie.",
+        "palette": [
+          "Schwarzgrün",
+          "Segelocker",
+          "Kupferbraun"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/farraigeach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/farraigeach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/currach/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/farraigeach/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-an-morchoe",
+          "familyTitle": "An’Morchoe",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-an-morchoe&mode=view"
+        },
+        {
+          "familyId": "haus-anbhair",
+          "familyTitle": "Clan Ua’Anbhair",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-anbhair&mode=view"
+        },
+        {
+          "familyId": "haus-rioga",
+          "familyTitle": "Clan An’Rioga",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-rioga&mode=view"
+        },
+        {
+          "familyId": "haus-ness",
+          "familyTitle": "Clan An Ness",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ness&mode=view"
+        },
+        {
+          "familyId": "haus-culloch",
+          "familyTitle": "Clan Mac Culloch",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-culloch&mode=view"
+        },
+        {
+          "familyId": "haus-erskine",
+          "familyTitle": "Clan An Erskine",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-erskine&mode=view"
+        },
+        {
+          "familyId": "haus-grannd",
+          "familyTitle": "Clan Na Grannd",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-grannd&mode=view"
+        },
+        {
+          "familyId": "haus-muirgheal",
+          "familyTitle": "Clan Tir An Muirgheal",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-muirgheal&mode=view"
+        },
+        {
+          "familyId": "haus-boyd",
+          "familyTitle": "Clan Na Boyd",
+          "houseId": "house-farraigeach",
+          "houseName": "Haus Farraigeach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-boyd&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "salaig",
+      "sourceId": "salaig",
+      "name": "An Salaig",
+      "houseId": "house-salaig",
+      "familyId": "haus-salaig",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "fiontarach",
+      "regionId": "coille",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein schwarzer Widderkopf mit goldockerfarbener Spirale auf Ocker, umgeben von einem dunkelgrünen Ring.",
+      "palette": [
+        "Waldgrün",
+        "Schwarz",
+        "Goldocker"
+      ],
+      "ornament": "",
+      "frame": "Dunkles Holz",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/salaig.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/salaig.png",
+      "warrior": {
+        "id": "salaig",
+        "name": "An Salaig",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Einhandschwert, runder Widderschild, dichtes Kettenzeug, dunkelgrün-ockerfarbener Kilt.",
+        "reason": "Der Widder wird zum zurückhaltenden Helm- und Schildmotiv eines standfesten Cateran. Ein Sitz ist noch offen.",
+        "palette": [
+          "Waldgrün",
+          "Schwarz",
+          "Goldocker"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/salaig/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/salaig/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/salaig/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-riangabra",
+          "familyTitle": "Clan Na’Riangabra",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-riangabra&mode=view"
+        },
+        {
+          "familyId": "haus-treada",
+          "familyTitle": "Clan Ua’Tréada",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-treada&mode=view"
+        },
+        {
+          "familyId": "haus-cleirigh",
+          "familyTitle": "Clan Faill’ Cléirigh",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cleirigh&mode=view"
+        },
+        {
+          "familyId": "haus-haig",
+          "familyTitle": "Clan Ó / Dál Haig",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-haig&mode=view"
+        },
+        {
+          "familyId": "haus-eoghainn",
+          "familyTitle": "Clan Tir An Ó Eoghainn",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-eoghainn&mode=view"
+        },
+        {
+          "familyId": "haus-wemyss",
+          "familyTitle": "Clan Tir An Wemyss",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
+        },
+        {
+          "familyId": "haus-caerdyn",
+          "familyTitle": "Haus Caerdyn",
+          "houseId": "house-salaig",
+          "houseName": "Haus salaig",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-caerdyn&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "cannog",
+      "sourceId": "cannog",
+      "name": "Dâl Cannog",
+      "houseId": "house-cannog",
+      "familyId": "haus-cannog",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "tirnafaoi",
+      "regionId": "allt",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein heller spiralförmiger Lebensbaum vor dunkelgrünen Wasserwirbeln; helle Randschrift.",
+      "palette": [
+        "Dunkles Petrol",
+        "Kalkweiß",
+        "Helles Holz"
+      ],
+      "ornament": "",
+      "frame": "Helles Holz mit blaugrünen Kerbzeichen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cannog.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cannog.png",
+      "warrior": {
+        "id": "cannog",
+        "name": "Dâl Cannog",
+        "classId": "airig",
+        "className": "Airig",
+        "equipment": "Gerader Speer, kleines Rundschild am Rücken, Lederpanzer über Kette und petrol-elfenbeinfarbener Tartan.",
+        "reason": "Lebensbaum und Wasserfarben ergeben einen beweglichen Speerträger, ohne einen noch unbekannten Sitz oder eine druidische Berufung festzulegen.",
+        "palette": [
+          "Dunkles Petrol",
+          "Kalkweiß",
+          "Helles Holz"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/cannog/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/cannog/krieger.png",
+        "classHref": "../../Klassenordner/Alben/airig/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/cannog/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-cerneige",
+          "familyTitle": "Clan Tair Carnegie",
+          "houseId": "house-cannog",
+          "houseName": "Clan Cannog",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cerneige&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "tairise",
+      "sourceId": "tairise",
+      "name": "Nic Tairise",
+      "houseId": "house-tairise",
+      "familyId": "haus-tairise",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "mharaich",
+      "regionId": "beann",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Eine bogentragende Frau zwischen dunklen Tannen, orangefarbener Saum und Blattwerk.",
+      "palette": [
+        "Tannengrün",
+        "Rostorange",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Rostockerfarbenes Holz",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/tairise.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/tairise.png",
+      "warrior": {
+        "id": "tairise",
+        "name": "Nic Tairise",
+        "classId": "serf",
+        "className": "Serf",
+        "equipment": "Ungespannter Langbogen in Ruhehaltung, Rückenköcher, kurzes Scheidenschwert, Lederweste und grün-orangefarbener Plaid.",
+        "reason": "Die Bogenschützin und Tannen des gelieferten Wappens legen einen Serf nahe. Grün und Rostorange bleiben in Kleidung und leichter Ausrüstung erkennbar.",
+        "palette": [
+          "Tannengrün",
+          "Rostorange",
+          "Elfenbein"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/tairise/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/tairise/krieger.png",
+        "classHref": "../../Klassenordner/Alben/serf/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/tairise/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-nic-blar",
+          "familyTitle": "Clan Nic Blar",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 0,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-blar&mode=view"
+        },
+        {
+          "familyId": "haus-dal-leite",
+          "familyTitle": "Clan Dal’Leite",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-dal-leite&mode=view"
+        },
+        {
+          "familyId": "haus-ua-nic-ceinselaig",
+          "familyTitle": "Clan Ua Nic Ceinselaig",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ua-nic-ceinselaig&mode=view"
+        },
+        {
+          "familyId": "haus-nic-caoimhe",
+          "familyTitle": "Nic Caoimhe",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view"
+        },
+        {
+          "familyId": "haus-nic-blar-leitheach",
+          "familyTitle": "Nic’Blar · Leitheach",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-blar-leitheach&mode=view"
+        },
+        {
+          "familyId": "haus-morath",
+          "familyTitle": "Clan Ruin’Morath",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-morath&mode=view"
+        },
+        {
+          "familyId": "haus-durthacht",
+          "familyTitle": "Clan Mac’Durthacht",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-durthacht&mode=view"
+        },
+        {
+          "familyId": "haus-banlaoch",
+          "familyTitle": "Clan Nic Banlaoch",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view"
+        },
+        {
+          "familyId": "haus-agnew",
+          "familyTitle": "Clan Ó Nic Agnew",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-agnew&mode=view"
+        },
+        {
+          "familyId": "haus-aderyn",
+          "familyTitle": "Haus Aderyn O'Penbryn",
+          "houseId": "house-tairise",
+          "houseName": "Haus Tairise",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-aderyn&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "muiredaigh",
+      "sourceId": "muiredaigh",
+      "name": "Ruin Muiredaigh",
+      "houseId": "house-muiredaigh",
+      "familyId": "haus-muiredaigh",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "famhair",
+      "regionId": "coille",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Eine goldene Harfe und ein einzelner Stern auf schwarzem Grund.",
+      "palette": [
+        "Schwarz",
+        "Altgold",
+        "Silberweiß"
+      ],
+      "ornament": "",
+      "frame": "Schwarz gefasstes Holz mit hellen Nieten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/muiredaigh.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/muiredaigh.png",
+      "warrior": {
+        "id": "muiredaigh",
+        "name": "Ruin Muiredaigh",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Kurzes Schwert, längliches Holzschild mit gemalter Harfe, Kettenhemd und schwarz-ockerfarbenes Schultertuch.",
+        "reason": "Das Harfenmotiv kann auch auf dem Schild eines Cateran getragen werden. Es macht den gesamten Clan nicht automatisch zu Barden.",
+        "palette": [
+          "Schwarz",
+          "Altgold",
+          "Silberweiß"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/muiredaigh/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/muiredaigh/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/muiredaigh/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-amrhan",
+          "familyTitle": "Ua’Amhran",
+          "houseId": "house-muiredaigh",
+          "houseName": "Haus Muiredaigh",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-amrhan&mode=view"
+        },
+        {
+          "familyId": "haus-morath",
+          "familyTitle": "Clan Ruin’Morath",
+          "houseId": "house-muiredaigh",
+          "houseName": "Haus Muiredaigh",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-morath&mode=view"
+        },
+        {
+          "familyId": "haus-bhaird",
+          "familyTitle": "Clan Ó / Dál Bhaird",
+          "houseId": "house-muiredaigh",
+          "houseName": "Haus Muiredaigh",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-bhaird&mode=view"
+        },
+        {
+          "familyId": "haus-luthsach",
+          "familyTitle": "Clan Ó / Dál Luthsach",
+          "houseId": "house-muiredaigh",
+          "houseName": "Haus Muiredaigh",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-luthsach&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "rieach",
+      "sourceId": "rieach",
+      "name": "Tir An Rieach",
+      "houseId": "house-rieach",
+      "familyId": "haus-rieach",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "sidheanna",
+      "regionId": "allt",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein heller Pferdekopf auf dunkelrotem und ziegelrotem Holz.",
+      "palette": [
+        "Ziegelrot",
+        "Elfenbein",
+        "Dunkles Braun"
+      ],
+      "ornament": "",
+      "frame": "Schmaler dunkler Holzring",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/rieach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/rieach.png",
+      "warrior": {
+        "id": "rieach",
+        "name": "Tir An Rieach",
+        "classId": "airig",
+        "className": "Airig",
+        "equipment": "Kurzer Stoßspeer, Schwert am Gürtel, Kettenzeug mit Lederschuppen und rotem Tartan.",
+        "reason": "Rote Wollstoffe und der helle Pferdekopf bestimmen den Entwurf. Eine Reitausbildung wird aus dem Wappen allein nicht als Tatsache abgeleitet.",
+        "palette": [
+          "Ziegelrot",
+          "Elfenbein",
+          "Dunkles Braun"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/rieach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/rieach/krieger.png",
+        "classHref": "../../Klassenordner/Alben/airig/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/rieach/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-muileach",
+          "familyTitle": "Clan Ua’Muileach",
+          "houseId": "house-rieach",
+          "houseName": "Clan Rieach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-muileach&mode=view"
+        },
+        {
+          "familyId": "haus-stwatchn",
+          "familyTitle": "Clan Ru Stwatchn",
+          "houseId": "house-rieach",
+          "houseName": "Clan Rieach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-stwatchn&mode=view"
+        },
+        {
+          "familyId": "haus-drummond",
+          "familyTitle": "Clan Breac Drummond",
+          "houseId": "house-rieach",
+          "houseName": "Clan Rieach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-drummond&mode=view"
+        },
+        {
+          "familyId": "haus-cerneige",
+          "familyTitle": "Clan Tair Carnegie",
+          "houseId": "house-rieach",
+          "houseName": "Clan Rieach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cerneige&mode=view"
+        },
+        {
+          "familyId": "haus-airdmhor",
+          "familyTitle": "Clan Dál Airdmhor",
+          "houseId": "house-rieach",
+          "houseName": "Clan Rieach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-airdmhor&mode=view"
+        },
+        {
+          "familyId": "haus-wemyss",
+          "familyTitle": "Clan Tir An Wemyss",
+          "houseId": "house-rieach",
+          "houseName": "Clan Rieach",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-wemyss&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "treathai",
+      "sourceId": "treathai",
+      "name": "Tir An Treathai",
+      "houseId": "house-treathai",
+      "familyId": "haus-treathai",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "ailtean",
+      "regionId": "beann",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Ein Hirte mit Stab neben einem hellen Schaf auf grünem Holz.",
+      "palette": [
+        "Waldgrün",
+        "Wollweiß",
+        "Bronze"
+      ],
+      "ornament": "",
+      "frame": "Bronzegefasstes Holz mit schmalen Blattbändern",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/treathai.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/treathai.png",
+      "warrior": {
+        "id": "treathai",
+        "name": "Tir An Treathai",
+        "classId": "cateran",
+        "className": "Cateran",
+        "equipment": "Einhandaxt, schlichter runder Schafsschild, Kettenweste, Wollkilt und kurzer Wollmantel.",
+        "reason": "Der Hirtenclan erhält einen schlichten Cateran mit Wollmantel und praktischem Schild; die ländliche Bildsprache bleibt erkennbar.",
+        "palette": [
+          "Waldgrün",
+          "Wollweiß",
+          "Bronze"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/treathai/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/treathai/krieger.png",
+        "classHref": "../../Klassenordner/Alben/cateran/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/treathai/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-cein",
+          "familyTitle": "Clan Mac’Céin",
+          "houseId": "house-treathai",
+          "houseName": "Clan Treathai",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-cein&mode=view"
+        },
+        {
+          "familyId": "haus-aonghusa",
+          "familyTitle": "Clan Dál’Aonghusa",
+          "houseId": "house-treathai",
+          "houseName": "Clan Treathai",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-aonghusa&mode=view"
+        },
+        {
+          "familyId": "haus-lachlann",
+          "familyTitle": "Clan Breac Lachlann",
+          "houseId": "house-treathai",
+          "houseName": "Clan Treathai",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-lachlann&mode=view"
+        },
+        {
+          "familyId": "haus-durachd",
+          "familyTitle": "Clan Tir An Durachd",
+          "houseId": "house-treathai",
+          "houseName": "Clan Treathai",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-durachd&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    },
+    {
+      "id": "deaghaide",
+      "sourceId": "deaghaide",
+      "name": "Ua Deaghaide",
+      "houseId": "house-deaghaide",
+      "familyId": "haus-deaghaide",
+      "clan": true,
+      "originRealm": "iathneach",
+      "seatId": "botharin",
+      "regionId": "sgeire",
+      "rankId": "laird",
+      "rank": "Laird",
+      "liegeId": "cetchathach",
+      "isSeatRuler": false,
+      "cadetOf": "cetchathach",
+      "motif": "Ein weißer langgehörnter Ziegenbock auf Blau zwischen goldenen Knotenbändern.",
+      "palette": [
+        "Dunkelblau",
+        "Wollweiß",
+        "Ocker"
+      ],
+      "ornament": "",
+      "frame": "Ockerfarbener Holzring mit blauen Knoten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/deaghaide.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/deaghaide.png",
+      "warrior": {
+        "id": "deaghaide",
+        "name": "Ua Deaghaide",
+        "classId": "serf",
+        "className": "Serf",
+        "equipment": "Kurzer Recurvebogen, Köcher, Jagdmesser, blaue Lederweste über leichter Kette und weißblauer Plaid.",
+        "reason": "Blau und Weiß unterscheiden diesen leichten Serf deutlich von den schweren Bock- und Widderschildträgern. Der spätere Sitz bleibt frei.",
+        "palette": [
+          "Dunkelblau",
+          "Wollweiß",
+          "Ocker"
+        ],
+        "image": "/Stammbäume/assets/images/references/accepted-realms/iathneach/deaghaide/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/iathneach/deaghaide/krieger.png",
+        "classHref": "../../Klassenordner/Alben/serf/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/iathneach/deaghaide/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-nic-blar",
+          "familyTitle": "Clan Nic Blar",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-blar&mode=view"
+        },
+        {
+          "familyId": "haus-ua-nic-ceinselaig",
+          "familyTitle": "Clan Ua Nic Ceinselaig",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-ua-nic-ceinselaig&mode=view"
+        },
+        {
+          "familyId": "haus-nic-caoimhe",
+          "familyTitle": "Nic Caoimhe",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-caoimhe&mode=view"
+        },
+        {
+          "familyId": "haus-nic-blar-leitheach",
+          "familyTitle": "Nic’Blar · Leitheach",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 0,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-nic-blar-leitheach&mode=view"
+        },
+        {
+          "familyId": "haus-eala",
+          "familyTitle": "Clan Ua’Eala",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 1,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-eala&mode=view"
+        },
+        {
+          "familyId": "haus-banlaoch",
+          "familyTitle": "Clan Nic Banlaoch",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-banlaoch&mode=view"
+        },
+        {
+          "familyId": "haus-agnew",
+          "familyTitle": "Clan Ó Nic Agnew",
+          "houseId": "house-deaghaide",
+          "houseName": "Haus Deaghaide",
+          "emblem": null,
+          "personReferenceCount": 2,
+          "primaryFamily": false,
+          "familyHref": "Stammbäume/Stammbaum.html?family=haus-agnew&mode=view"
+        }
+      ],
+      "rankBasis": "Örtliche Herrschaft; übergeordnete Mor-Führung ist noch nicht benannt."
+    }
+  ],
+  "territoryArt": {
+    "county-sgeire": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/county-sgeire.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/county-sgeire.png",
+      "shape": "banner"
+    },
+    "county-beann": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/county-beann.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/county-beann.png",
+      "shape": "banner"
+    },
+    "county-allt": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/county-allt.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/county-allt.png",
+      "shape": "banner"
+    },
+    "county-coille": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/county-coille.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/county-coille.png",
+      "shape": "banner"
+    },
+    "botharin": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/botharin.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/botharin.png",
+      "shape": "banner"
+    },
+    "sgeir-tearmainn": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/sgeir-tearmainn.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/sgeir-tearmainn.png",
+      "shape": "banner"
+    },
+    "ailtean": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/ailtean.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/ailtean.png",
+      "shape": "banner"
+    },
+    "mharaich": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/mharaich.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/mharaich.png",
+      "shape": "banner"
+    },
+    "tirnafaoi": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/tirnafaoi.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/tirnafaoi.png",
+      "shape": "banner"
+    },
+    "sidheanna": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/sidheanna.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/sidheanna.png",
+      "shape": "banner"
+    },
+    "fiontarach": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/fiontarach.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/fiontarach.png",
+      "shape": "banner"
+    },
+    "famhair": {
+      "image": "/Stammbäume/assets/images/regions/iathneach/famhair.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/iathneach/famhair.png",
+      "shape": "banner"
+    }
+  },
+  "notes": [
+    "Die Hauptsitze der drei nichtfürstlichen Mor Tiarnatümer sind in Karte und Quellen nicht eindeutig benannt. Örtliche Sitze werden vorbereitet; kein Mor-Herrscher wird erfunden."
+  ]
+}

@@ -19,13 +19,23 @@ window.HAEUSER_DATA = {
     },
     {
       "type": "Kontinent",
-      "name": "Estryll",
-      "slug": "estryll"
+      "name": "Lothir",
+      "slug": "lothir"
     },
     {
-      "type": "Königreich",
+      "type": "Herzogtum",
       "name": "Goldmund",
       "slug": "goldmund"
+    },
+    {
+      "type": "Grafschaft",
+      "name": "Herzogliche Grafschaft Kronenau",
+      "slug": "goldmund-region-kronenau"
+    },
+    {
+      "type": "Sitzverband",
+      "name": "Thronholt",
+      "slug": "thronholt"
     },
     {
       "type": "Haus",
@@ -37,20 +47,20 @@ window.HAEUSER_DATA = {
   "classification": {
     "category": "Familien Häuser und Clans",
     "houseType": "Ritterhaus",
-    "scale": "Ritterhaus",
-    "parentHouseId": "",
-    "rootHouseId": "haus-von-hochreuth",
-    "territoryId": ""
+    "scale": "Ministerialenhaus",
+    "parentHouseId": "haus-roden",
+    "rootHouseId": "haus-roden",
+    "territoryId": "goldmund-hausbereich-roden"
   },
   "profile": {
-    "highestTitle": "Ritterherr",
-    "rank": "Ritterherr",
-    "houseType": "Ritterhaus",
+    "highestTitle": "Ministerialer",
+    "rank": "Ministerialer",
+    "houseType": "Ministerialenhaus",
     "motto": "",
     "quoteAuthor": "",
-    "seat": "",
-    "affiliation": "",
-    "liege": "",
+    "seat": "Burg Hochreuth · Lage noch offen",
+    "affiliation": "Herzogtum Goldmund",
+    "liege": "Haus Roden",
     "patron": "",
     "knightingPatron": "",
     "troopStrength": "",
@@ -64,25 +74,28 @@ window.HAEUSER_DATA = {
     "wealth": "",
     "religion": "",
     "patronDeities": "",
-    "origin": "",
+    "origin": "Goldmund",
     "cadetBranches": "",
     "allies": "",
     "enemies": ""
   },
+  "hiddenProfileGroups": [
+    "military"
+  ],
   "profileLabels": {
     "tiarna": "Ritter",
     "kerns": "Knechte"
   },
   "showMotto": false,
   "sections": {
-    "overview": "Haus von Hochreuth ist ein Ritterhaus aus Goldmund. Die Zuordnung seines Zweigs in Celtigerns Wacht ist noch zu klären. Weitere Inhalte folgen.",
-    "history": "Folgt …",
+    "overview": "Haus von Hochreuth ist ein Ministerialenhaus aus Goldmund. Es dient Haus Roden und gehört dessen Lehnsverband in Thronholt an. Burg Hochreuth ist der überlieferte Sitz; ihr genauer Kartenpunkt ist noch nicht vermessen.",
+    "history": "Altehrwürdiges Ministerialenhaus aus Goldmund und Vasall des Hauses Roden. Nach dem Stammwappen folgen Friedrichs drei Söhne Albrecht, Wilhelm und Leopold sowie seine wegverheiratete Tochter Dorothea. Nach dem Tod Albrechts und seiner drei Söhne beim Jagdausflug führt die rechtmäßige Erbfolge über Wilhelm zu Ruprecht. Otto gewinnt Burg und Titel erst 1736 durch einen politischen Eingriff des mit ihm mütterlicherseits verwandten Hauses Roden.",
     "traditions": "Folgt …",
     "knighthood": "Folgt …",
     "succession": "Folgt …",
-    "holdings": "Folgt …",
+    "holdings": "Burg Hochreuth fiel 1736 an Ottos Linie. Das Haus ist den Roden in Thronholt untergeordnet; die Burg erhält mit der Detailkarte einen eigenen Standort.",
     "cultureReligion": "Folgt …",
-    "conflictsAlliances": "Folgt …",
+    "conflictsAlliances": "Haus Roden hatte 1736 zugunsten Ottos in die Erbfolge eingegriffen. Ruprechts rechtmäßige Erblinie und die tatsächlich eingesetzte Linie bleiben in der Familienakte unterscheidbar.",
     "values": "Folgt …",
     "court": "Folgt …",
     "familyTree": "Die Hausbio öffnet sich über das Wappen im Stammbaum. Personen und Verbindungen sind in der Familienakte verzeichnet.",
@@ -106,13 +119,55 @@ window.HAEUSER_DATA = {
     },
     "haus-banner": {
       "src": "",
-      "href": "",
-      "alt": "Herrschaftsbanner von ",
+      "href": "../Kontinente/Lothir/Goldmund/goldmund-hausbereich-roden/index.html",
+      "alt": "Herrschaftsbanner von Herrschaft Haus Roden in Thronholt",
       "format": "square"
+    },
+    "hof-heads-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-hochreuth/ruprecht-von-hochreuth.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=ruprecht-von-hochreuth",
+      "alt": "Ruprecht von Hochreuth",
+      "format": "portrait"
     }
   },
   "court": {
-    "groups": [],
+    "groups": [
+      {
+        "id": "heads",
+        "title": "Oberhauptfolge · Haus von Hochreuth",
+        "note": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
+        "entries": [
+          {
+            "name": "Albrecht von Hochreuth",
+            "role": "Früheres Oberhaupt der rechtmäßigen Folge",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=albrecht-von-hochreuth",
+            "imageKey": ""
+          },
+          {
+            "name": "Wilhelm von Hochreuth",
+            "role": "Früheres Oberhaupt der rechtmäßigen Folge",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=wilhelm-von-hochreuth",
+            "imageKey": ""
+          },
+          {
+            "name": "Ruprecht von Hochreuth",
+            "role": "Früheres Oberhaupt der rechtmäßigen Folge",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=ruprecht-von-hochreuth",
+            "imageKey": "hof-heads-3"
+          },
+          {
+            "name": "Otto von Hochreuth",
+            "role": "Seit 1736 eingesetztes Oberhaupt",
+            "detail": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-von-hochreuth&mode=view&person=otto-von-hochreuth",
+            "imageKey": ""
+          }
+        ]
+      }
+    ],
     "cadets": []
   },
   "figures": {
@@ -125,6 +180,6 @@ window.HAEUSER_DATA = {
     "title": "Stammbaum von Haus von Hochreuth"
   },
   "trivia": [
-    "Folgt …"
+    "Bestehende Personen und Verbindungen des Hauses bleiben erhalten."
   ]
 };

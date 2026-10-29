@@ -1,0 +1,19 @@
+{
+  "id": "edwynne",
+  "kind": "character-revision",
+  "revision": "2026-10-29-helmet-variation-framing",
+  "rawTarget": "assets/warriors/generated/edwynne.png",
+  "before": {
+    "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne-framing/generated.png",
+    "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne-framing/production.png",
+    "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne-framing/preview.webp"
+  },
+  "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/edwynne.png",
+  "references": [
+    "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne-framing/production.png",
+    "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET. Its horse anatomy and orientation are now correct; preserve them exactly. Correct ONLY the FRAMING: the man's purple cloak is cut off at the left edge. Show the entire complete man-and-black-horse pair a little smaller, about 85% of current size, centred inside the SAME 1024x1536 portrait canvas, with a generous EMPTY TRANSPARENT MARGIN of at least 50 pixels on left and right, above all ears and below all feet. Reconstruct the complete natural left edge of the man's cloak inside the frame. Preserve the man's identity, facial features, helmet, armour, clothing, white horse emblem, sword, hands and pose. Preserve the horse's coherent left-facing orientation, exact head, black coat, four legs, four hooves, saddle, girth, purple-ivory saddlecloth and correctly rear-mounted tail. Do not change direction again. Reference 2 defines matte painted style only, not design. Complete full-body figures, no cut-off cloak, tail, foot or ear. TRUE transparent background and open gaps, no floor, scenery, shadow, halo, haze, frame or text.",
+  "outputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-c14116a7-29ea-4b4a-8ddb-64538ed6a096.png",
+  "copyExit": 0
+}

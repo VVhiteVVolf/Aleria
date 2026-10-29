@@ -1,6 +1,6 @@
 import { renderHouseCourt } from '../../modules/court/house-court.js?v=20261028-office-body-v2';
 import { renderHouseScenes } from '../../modules/house-content/house-scenes.js';
-import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-warrior-gallery.js?v=20260930a';
+import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-warrior-gallery.js?v=20261029a';
 
 (function () {
   "use strict";

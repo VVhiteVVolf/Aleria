@@ -200,6 +200,202 @@
   }
 
   const MAPS = [
+    // BEGIN ACCEPTED_TRIARCHIE_GENERATED
+    {
+      "id": "triarchie",
+      "title": "Die Triarchie · Besetztes Lothir",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "triarchie",
+          "title": "Triarchie"
+        }
+      ],
+      "folder": "Triarchie",
+      "images": {
+        "normal": "Triarchie/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Triarchie/data.json",
+      "territoryHref": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html",
+      "link": "karte.html?map=triarchie"
+    },
+    // END ACCEPTED_TRIARCHIE_GENERATED
+    // BEGIN ACCEPTED_DEITHEACH_GENERATED
+    {
+      "id": "deitheach",
+      "title": "Fürstentum Deitheach",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "deitheach",
+          "title": "Deitheach"
+        }
+      ],
+      "folder": "Deitheach",
+      "images": {
+        "normal": "Deitheach/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Deitheach/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Deitheach/fuerstentum-deitheach/index.html",
+      "link": "karte.html?map=deitheach"
+    },
+    // END ACCEPTED_DEITHEACH_GENERATED
+    // BEGIN ACCEPTED_IATHNEACH_GENERATED
+    {
+      "id": "iathneach",
+      "title": "Fürstentum Iathneach",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "iathneach",
+          "title": "Iathneach"
+        }
+      ],
+      "folder": "Iathneach",
+      "images": {
+        "normal": "Iathneach/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Iathneach/data.json",
+      "territoryHref": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "link": "karte.html?map=iathneach"
+    },
+    // END ACCEPTED_IATHNEACH_GENERATED
+    // BEGIN ACCEPTED_MOINNEACH_GENERATED
+    {
+      "id": "moinneach",
+      "title": "Fürstentum Moinneach",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "moinneach",
+          "title": "Moinneach"
+        }
+      ],
+      "folder": "Moinneach",
+      "images": {
+        "normal": "Moinneach/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Moinneach/data.json",
+      "territoryHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "link": "karte.html?map=moinneach"
+    },
+    // END ACCEPTED_MOINNEACH_GENERATED
+    // BEGIN ACCEPTED_WEISENFLUH_GENERATED
+    {
+      "id": "weisenfluh",
+      "title": "Königreich Weisenfluh",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "weisenfluh",
+          "title": "Weisenfluh"
+        }
+      ],
+      "folder": "Weisenfluh",
+      "images": {
+        "normal": "Weisenfluh/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Weisenfluh/data.json",
+      "territoryHref": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "link": "karte.html?map=weisenfluh"
+    },
+    // END ACCEPTED_WEISENFLUH_GENERATED
+    // BEGIN ACCEPTED_GOLDMUND_GENERATED
+    {
+      "id": "goldmund",
+      "title": "Herzogtum Goldmund",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "goldmund",
+          "title": "Goldmund"
+        }
+      ],
+      "folder": "Goldmund",
+      "images": {
+        "normal": "Goldmund/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Goldmund/data.json",
+      "territoryHref": "/Kontinente/Lothir/Goldmund/herzogtum-goldmund/index.html",
+      "link": "karte.html?map=goldmund"
+    },
+    // END ACCEPTED_GOLDMUND_GENERATED
+    // BEGIN ACCEPTED_ALDINGEN_GENERATED
+    {
+      "id": "aldingen",
+      "title": "Großherzogtum Aldingen",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "aldingen",
+          "title": "Aldingen"
+        }
+      ],
+      "folder": "Aldingen",
+      "images": {
+        "normal": "Aldingen/Kartenbilder/normal.webp"
+      },
+      "dataPath": "Aldingen/data.json",
+      "territoryHref": "/Kontinente/Lothir/Aldingen/grossherzogtum-aldingen/index.html",
+      "link": "karte.html?map=aldingen"
+    },
+    // END ACCEPTED_ALDINGEN_GENERATED
     // BEGIN UATHNEACH_GENERATED
     {
       "id": "uathneach",

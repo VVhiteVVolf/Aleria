@@ -1,0 +1,62 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile,access} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {houses} from '../Blutstadt/house-data.mjs';
+import {counties,settlements,territoryArt} from '../Blutstadt/territory-data.mjs';
+import {warriors} from '../Blutstadt/warrior-data.mjs';
+import {createPlacementState} from '../Blutstadt/placement-state.mjs';
+import {createCountryRenderer,renderCountryPage} from '../shared/country-workbench/render.mjs';
+import {context} from '../Blutstadt/realm-context.mjs';
+
+const root=new URL('../Blutstadt/',import.meta.url),workspace=new URL('../../',import.meta.url);
+test('Alle äußeren Sitze starten frei, Stadtresidenzen bleiben unabhängig',()=>{
+ const draft=createPlacementState();
+ assert.equal(houses.filter(h=>h.rank==='aristocrat').length,5);
+ assert.equal(houses.filter(h=>h.rank==='ministerial').length,10);
+ assert.ok(Object.values(draft.current()).every(s=>s===null));
+ assert.equal(houses.filter(h=>h.cityHome).length,5);
+ assert.equal(houses.find(h=>h.id==='rappenau').rank,'ministerial');
+ assert.ok(draft.move('bismarck','west-burg'));
+ assert.throws(()=>draft.move('kastell','west-burg'),/nur einem/);
+ assert.throws(()=>draft.move('bismarck','nordwest-burg'),/Burgsitz/);
+ assert.throws(()=>draft.move('kastell','ost-stadt'),/Burgsitz/);
+ assert.throws(()=>draft.move('staufenberg','west-nord'),/Hauptsitze/);
+ assert.throws(()=>draft.move('leuenried','blutstadt'),/Stadtresidenz/);
+ assert.ok(draft.move('kastell','sued-burg'));
+ assert.ok(draft.move('kelchthal','nordwest-burg'));
+ assert.ok(draft.move('leuenried','ost-stadt'));
+ assert.ok(draft.move('otterquell','west-nord'));
+ assert.ok(draft.move('hartenzeil','nordwest-bergwerk'));
+ const imported=createPlacementState();imported.restore(JSON.parse(draft.serialize()));
+ assert.deepEqual(imported.current(),draft.current());
+ const bad=JSON.parse(draft.serialize());bad.placements.kastell='ost-stadt';
+ assert.throws(()=>imported.restore(bad));assert.deepEqual(imported.current(),draft.current());
+ assert.ok(draft.reset());assert.ok(Object.values(draft.current()).every(s=>s===null));
+ assert.equal(houses.find(h=>h.id==='bismarck').cityHome,'Burg Rosenhagen');
+});
+test('Fünf farbige Bereiche mit je einem Hauptort umfassen alle 22 Außenorte',()=>{
+ assert.equal(counties.length,5);assert.equal(settlements.length,23);
+ assert.equal(settlements.filter(s=>s.principal).length,5);
+ const north=settlements.find(s=>s.id==='nordwest-burg');
+ assert.equal(north.kind,'Stadt');assert.equal(north.seatType,'town');
+ assert.equal(settlements.filter(s=>s.principal&&s.seatType==='castle').length,3);
+ const mine=settlements.find(s=>s.id==='nordwest-bergwerk');
+ assert.equal(mine.kind,'Bergbausiedlung');assert.equal(mine.principal,false);
+ assert.equal(mine.county,settlements.find(s=>s.id==='nordwest-ufer').county);
+ assert.ok(mine.point[1]>settlements.find(s=>s.id==='nordwest-ufer').point[1]);
+ assert.deepEqual(new Set(counties.flatMap(c=>c.seats)),new Set(settlements.filter(s=>s.county).map(s=>s.id)));
+ for(const c of counties){assert.equal(c.title,'Aristokratisches Herrschaftsgebiet');assert.equal(settlements.filter(s=>s.county===c.id&&s.principal).length,1);}
+ assert.equal(territoryArt.filter(t=>t.shape==='banner').length,5);
+ const cfg={houses,counties,settlements,territoryArt};
+ assert.doesNotThrow(()=>createCountryRenderer(cfg).renderSeats(createPlacementState().current(),null));
+ assert.match(renderCountryPage({...cfg,context}),/Hausleute/);
+});
+test('Originale bleiben unverändert und alle endgültigen Bildverweise existieren',async()=>{
+ const sources=JSON.parse(await readFile(new URL('assets.source.json',root),'utf8'));
+ assert.equal(sources.length,11);
+ for(const s of sources)assert.equal(createHash('sha256').update(await readFile(new URL(s.original,workspace))).digest('hex'),s.sha256,s.sourceFile);
+ assert.deepEqual(new Set(warriors.map(w=>w.id)),new Set(houses.map(h=>h.id)));
+ assert.equal(warriors.filter(w=>w.className==='Ritter der Blutstadt').length,3);
+ for(const path of [...houses.flatMap(h=>[h.crest,h.fullsize,h.original]),...warriors.flatMap(w=>[w.image,w.fullsize,w.classHref?.split('#')[0]]),...territoryArt.flatMap(t=>[t.image,t.fullsize])].filter(Boolean))await access(new URL(path,root));
+});

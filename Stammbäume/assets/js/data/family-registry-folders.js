@@ -6,9 +6,11 @@ import { BLAITHNEACH_REGISTRY_FOLDERS } from './blaithneach-territorial-catalog.
 import { FAELAORN_REGISTRY_FOLDERS } from './faelaorn-registry-folders.js';
 import { SKJAERHEIM_REGISTRY_FOLDERS } from './skjaerheim-territorial-plan.js';
 import { withReviewedAlbicFolders } from '../modules/albic-territories/family-placements.js';
+import { ACCEPTED_REALM_FOLDERS } from './accepted-realm-families.js';
 
 // Beschreibungen und belegte Gebiete ohne Familienakte ergänzen den Familienkatalog.
 export const FAMILY_REGISTRY_FOLDERS = withReviewedAlbicFolders([
+  ...ACCEPTED_REALM_FOLDERS,
   ...VENNYR_REGISTRY_FOLDERS,
   ...FJORDHEIM_REGISTRY_FOLDERS,
   ...DUNFAL_REGISTRY_FOLDERS,

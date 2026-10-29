@@ -1,0 +1,442 @@
+{
+  "imageSize": [
+    4096,
+    2349
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "weisenfluh-ewigensee",
+      "title": "Ewigensee",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-ewigensee",
+      "x": 3629.0559999999996,
+      "y": 1508.058,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-ewigensee",
+      "residentFamilyIds": [
+        "haus-goldkranz",
+        "haus-borgenicht",
+        "haus-goldberg",
+        "haus-immergluck",
+        "haus-kaltwasser"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "ewigensee",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          88.6,
+          35.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-ewiggruen",
+      "title": "Ewiggrün",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-ewiggruen",
+      "x": 2383.8720000000003,
+      "y": 1602.018,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-ewiggruen",
+      "residentFamilyIds": [
+        "haus-rosenblueth",
+        "haus-blumenthal",
+        "haus-catrannoch",
+        "haus-cnagallan",
+        "haus-rosenstolz"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "ewiggruen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          58.2,
+          31.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-weisshort",
+      "title": "Weishort",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-weisshort",
+      "x": 1187.84,
+      "y": 2125.8450000000003,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-weisshort",
+      "residentFamilyIds": [
+        "haus-sommerfeld",
+        "haus-feuerstein",
+        "haus-sonnenfeld"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "weisshort",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          29,
+          9.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-seeblick",
+      "title": "Seeblick",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-seeblick",
+      "x": 1064.96,
+      "y": 575.505,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-seeblick",
+      "residentFamilyIds": [
+        "haus-silberthal",
+        "haus-freudenthal",
+        "haus-rosenblatt"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "seeblick",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          26,
+          75.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-weisslauf",
+      "title": "Weislauf",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-weisslauf",
+      "x": 2588.672,
+      "y": 272.48399999999987,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-weisslauf",
+      "residentFamilyIds": [
+        "haus-weissmann",
+        "haus-torcradan",
+        "haus-weissberg",
+        "haus-weizmann"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "weisslauf",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          63.2,
+          88.4
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-wolfrieden",
+      "title": "Wolfrieden",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-wolfrieden",
+      "x": 536.576,
+      "y": 1620.81,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-wolfrieden",
+      "residentFamilyIds": [
+        "haus-wolfenstein"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "wolfrieden",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          13.1,
+          31
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-brueckenwacht",
+      "title": "Brückenwacht",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-brueckenwacht",
+      "x": 1945.6,
+      "y": 2132.892,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-brueckenwacht",
+      "residentFamilyIds": [
+        "haus-bruggemann"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "brueckenwacht",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          47.5,
+          9.2
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-silbermundt",
+      "title": "Silbermundt",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-silbermundt",
+      "x": 413.69599999999997,
+      "y": 925.5059999999999,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-silbermundt",
+      "residentFamilyIds": [
+        "haus-edelweiss"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "silbermundt",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          10.1,
+          60.6
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-weissklippe",
+      "title": "Weissklippe",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-weissklippe",
+      "x": 1708.0320000000002,
+      "y": 335.9069999999999,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-weissklippe",
+      "residentFamilyIds": [
+        "haus-sgaireag"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "weissklippe",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          41.7,
+          85.7
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-weissthal",
+      "title": "Weissthal",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-weissthal",
+      "x": 2973.696,
+      "y": 775.1700000000001,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-weissthal",
+      "residentFamilyIds": [
+        "haus-thalmann"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "weissthal",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          72.6,
+          67
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-ottersburg",
+      "title": "Ottersburg",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-ottersburg",
+      "x": 3305.472,
+      "y": 335.9069999999999,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-ottersburg",
+      "residentFamilyIds": [
+        "haus-otterberg"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "ottersburg",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          80.7,
+          85.7
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-hohenklamm",
+      "title": "Hohenklamm",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-hohenklamm",
+      "x": 3633.152,
+      "y": 1054.701,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-hohenklamm",
+      "residentFamilyIds": [
+        "haus-damhcallan",
+        "haus-taghradan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "hohenklamm",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          88.7,
+          55.1
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-maehrenfeld",
+      "title": "Mährenfeld",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-maehrenfeld",
+      "x": 2228.224,
+      "y": 1080.54,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-maehrenfeld",
+      "residentFamilyIds": [
+        "haus-honigblut",
+        "haus-iorcallan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "maehrenfeld",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          54.4,
+          54
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-aehrensass",
+      "title": "Ährensass",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "weisenfluh-sitz-aehrensass",
+      "x": 1634.3039999999999,
+      "y": 1179.198,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-aehrensass",
+      "residentFamilyIds": [
+        "haus-ritter-der-kornahre"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "aehrensass",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          39.9,
+          49.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "weisenfluh-rebenwacht",
+      "title": "Burg Rebenwacht",
+      "category": "Burg",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "weisenfluh-sitz-rebenwacht",
+      "x": 3399.68,
+      "y": 1432.8899999999999,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-rebenwacht",
+      "residentFamilyIds": [
+        "haus-weinlaub"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "rebenwacht",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          83,
+          39
+        ],
+        "provisional": true
+      }
+    },
+    {
+      "id": "weisenfluh-sonnenfels",
+      "title": "Burg Sonnenfels",
+      "category": "Burg",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/burgsiedlung.png",
+      "territoryId": "weisenfluh-sitz-sonnenfels",
+      "x": 2764.8,
+      "y": 434.565,
+      "href": "/Orte/grossstadt.html?id=weisenfluh-sonnenfels",
+      "residentFamilyIds": [
+        "haus-sonnenfels"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "sonnenfels",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          67.5,
+          81.5
+        ],
+        "provisional": true
+      }
+    }
+  ]
+}

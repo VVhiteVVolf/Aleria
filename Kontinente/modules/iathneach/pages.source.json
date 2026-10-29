@@ -1,0 +1,2400 @@
+{
+  "pages": [
+    {
+      "id": "fuerstentum-iathneach",
+      "title": "Fürstentum Iathneach",
+      "shortTitle": "Fürstentum Iathneach",
+      "type": "Fürstentum",
+      "kicker": "Fürstentum · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Lothir.html",
+      "parentLabel": "Lothir",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        }
+      ],
+      "aliases": [
+        "iathneach"
+      ],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/iathneach.webp",
+      "crestAlt": "Herrschaftszeichen · Fürstentum Iathneach",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Zwischen gebirgigen Waldtälern, Flusswegen und der westlichen Inselküste bewahrt Iathneach seine albische Kultur. Das Fürstentum hat Land verloren – seine Familien und die Erinnerung an diese Gebiete bestehen weiter.",
+          "Die Hauptsitze der drei nichtfürstlichen Mor Tiarnatümer sind in Karte und Quellen nicht eindeutig benannt. Örtliche Sitze werden vorbereitet; kein Mor-Herrscher wird erfunden."
+        ],
+        "history": [
+          "Ein albisches Fürstentum: Iathneach blieb albisch, während der südliche Nachbar Aldingen sich unter östlichen Einflüssen wandelte. Plaids, Tartan, Clanzugehörigkeit und das Tiarnatum prägen die Entwürfe.",
+          "Landverluste nach Süden: Vor dem Alerischen Kaiserreich, nach dem Beginn der Königslosigkeit der Alben, expandierte Aldingen nach Norden und eignete sich große Teile Iathneachs an. Diese frühere Expansion ist von der jüngeren Eroberung durch die Triarchie zu unterscheiden.",
+          "Cuansioda und die Mac Farraigeach: Vor etwa zwanzig Jahren fiel ein weiteres Mor Tiarnatum an die Triarchie. Die Mac Farraigeach, ehemalige Mor Tiarna dieses Gebietes aus Cuansioda, sitzen heute auf Sgeir Tearmainn. Cuansioda wird als verlorener Herkunftssitz geführt.",
+          "Die offene Hausordnung: Ui Nic Cétchathach ist die Fürstenfamilie und Herrin von Botharin. Für die sieben übrigen gelieferten Clans sind Sitze und Lehnsherren im Entwurf offen. Waffenklassen in den Hausfenstern sind Vorschläge zur Darstellung, keine Festlegung einer Ausbildung."
+        ],
+        "culture": [
+          "Berge, Wald und Wasser: Kettenzeug, Leder, praktische Helme und Wollstoffe folgen dem jeweiligen Motiv. Gebirgszüge, Flusstäler und die Inselküste liefern die Grundlage für die Regionalbanner.",
+          "Besetztes Erbe: Die verlorenen Gebiete erscheinen ausgegraut unter ihrem ursprünglichen Land. Die Besatzung macht weder Orte noch Familien zu freiwilligen Anhängern der Triarchie."
+        ],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Fürstentum"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ui Nic Cétchathach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cetchathach"
+            },
+            {
+              "label": "Rang",
+              "value": "Ard Tiarna"
+            },
+            {
+              "label": "Sitz",
+              "value": "Botharin",
+              "href": "/Orte/grossstadt.html?id=iathneach-botharin"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-cetchathach",
+              "name": "Ui Nic Cétchathach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cetchathach.webp",
+              "imageAlt": "Wappen Ui Nic Cétchathach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cetchathach",
+              "rank": "Ard Tiarna",
+              "seat": "Botharin",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Ard Tiarna"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "iathneach-region-sgeire",
+        "iathneach-region-beann",
+        "iathneach-region-allt",
+        "iathneach-region-coille",
+        "iathneach-ehemalig-triarchie-region-cuansioda"
+      ]
+    },
+    {
+      "id": "iathneach-region-sgeire",
+      "title": "Tir na Sgeire",
+      "shortTitle": "Tir na Sgeire",
+      "type": "Mor Tiarnatum",
+      "kicker": "Mor Tiarnatum · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "parentLabel": "Fürstentum Iathneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Sgeire",
+          "slug": "iathneach-region-sgeire"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/county-sgeire.webp",
+      "crestAlt": "Herrschaftszeichen · Tir na Sgeire",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na Sgeire gehört zu Iathneach. Das übergeordnete Amt ist noch keinem benannten Haus zugewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Mor Tiarnatum"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-cetchathach",
+              "name": "Ui Nic Cétchathach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cetchathach.webp",
+              "imageAlt": "Wappen Ui Nic Cétchathach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cetchathach",
+              "rank": "Ard Tiarna",
+              "seat": "Botharin",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-farraigeach",
+              "name": "Mac Farraigeach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+              "imageAlt": "Wappen Mac Farraigeach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach",
+              "rank": "Laird",
+              "seat": "Sgeir Tearmainn",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "iathneach-sitz-botharin",
+        "iathneach-sitz-sgeir-tearmainn"
+      ]
+    },
+    {
+      "id": "iathneach-region-beann",
+      "title": "Tir nam Beann",
+      "shortTitle": "Tir nam Beann",
+      "type": "Mor Tiarnatum",
+      "kicker": "Mor Tiarnatum · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "parentLabel": "Fürstentum Iathneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir nam Beann",
+          "slug": "iathneach-region-beann"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/county-beann.webp",
+      "crestAlt": "Herrschaftszeichen · Tir nam Beann",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir nam Beann gehört zu Iathneach. Das übergeordnete Amt ist noch keinem benannten Haus zugewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Mor Tiarnatum"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-treathai",
+              "name": "Tir An Treathai",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/treathai.webp",
+              "imageAlt": "Wappen Tir An Treathai",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-treathai",
+              "rank": "Laird",
+              "seat": "Ailtean",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-tairise",
+              "name": "Nic Tairise",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/tairise.webp",
+              "imageAlt": "Wappen Nic Tairise",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tairise",
+              "rank": "Laird",
+              "seat": "Mharaich",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "iathneach-sitz-ailtean",
+        "iathneach-sitz-mharaich"
+      ]
+    },
+    {
+      "id": "iathneach-region-allt",
+      "title": "Tir nan Allt",
+      "shortTitle": "Tir nan Allt",
+      "type": "Mor Tiarnatum",
+      "kicker": "Mor Tiarnatum · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "parentLabel": "Fürstentum Iathneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir nan Allt",
+          "slug": "iathneach-region-allt"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/county-allt.webp",
+      "crestAlt": "Herrschaftszeichen · Tir nan Allt",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir nan Allt gehört zu Iathneach. Das übergeordnete Amt ist noch keinem benannten Haus zugewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Mor Tiarnatum"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-cannog",
+              "name": "Dâl Cannog",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cannog.webp",
+              "imageAlt": "Wappen Dâl Cannog",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cannog",
+              "rank": "Laird",
+              "seat": "Tirnafaoi",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-rieach",
+              "name": "Tir An Rieach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/rieach.webp",
+              "imageAlt": "Wappen Tir An Rieach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rieach",
+              "rank": "Laird",
+              "seat": "Sidheanna",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "iathneach-sitz-tirnafaoi",
+        "iathneach-sitz-sidheanna"
+      ]
+    },
+    {
+      "id": "iathneach-region-coille",
+      "title": "Tir na Coille",
+      "shortTitle": "Tir na Coille",
+      "type": "Mor Tiarnatum",
+      "kicker": "Mor Tiarnatum · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "parentLabel": "Fürstentum Iathneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Coille",
+          "slug": "iathneach-region-coille"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/county-coille.webp",
+      "crestAlt": "Herrschaftszeichen · Tir na Coille",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Tir na Coille gehört zu Iathneach. Das übergeordnete Amt ist noch keinem benannten Haus zugewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Mor Tiarnatum"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-salaig",
+              "name": "An Salaig",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/salaig.webp",
+              "imageAlt": "Wappen An Salaig",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-salaig",
+              "rank": "Laird",
+              "seat": "Fiontarach",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-muiredaigh",
+              "name": "Ruin Muiredaigh",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/muiredaigh.webp",
+              "imageAlt": "Wappen Ruin Muiredaigh",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-muiredaigh",
+              "rank": "Laird",
+              "seat": "Famhair",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "iathneach-sitz-fiontarach",
+        "iathneach-sitz-famhair"
+      ]
+    },
+    {
+      "id": "iathneach-sitz-botharin",
+      "title": "Fürstliche Domäne Machair Botharin",
+      "shortTitle": "Fürstliche Domäne Machair Botharin",
+      "type": "Fürstliche Domäne",
+      "kicker": "Fürstliche Domäne · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-sgeire/index.html",
+      "parentLabel": "Tir na Sgeire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Sgeire",
+          "slug": "iathneach-region-sgeire"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Fürstliche Domäne Machair Botharin",
+          "slug": "iathneach-sitz-botharin"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/botharin.webp",
+      "crestAlt": "Herrschaftszeichen · Fürstliche Domäne Machair Botharin",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Fürstliche Domäne Machair Botharin gehört zu Iathneach. Ui Nic Cétchathach führt hier den Rang Ard Tiarna mit Sitz in Botharin."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Küstenstadt am westlichen Zugang des fruchtbaren Fluss- und Wegenetzes."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Fürstliche Domäne"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ui Nic Cétchathach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cetchathach"
+            },
+            {
+              "label": "Rang",
+              "value": "Ard Tiarna"
+            },
+            {
+              "label": "Sitz",
+              "value": "Botharin",
+              "href": "/Orte/grossstadt.html?id=iathneach-botharin"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Sgeire",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-sgeire/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-cetchathach",
+              "name": "Ui Nic Cétchathach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cetchathach.webp",
+              "imageAlt": "Wappen Ui Nic Cétchathach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cetchathach",
+              "rank": "Ard Tiarna",
+              "seat": "Botharin",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Ard Tiarna"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-deaghaide",
+              "name": "Ua Deaghaide",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/deaghaide.webp",
+              "imageAlt": "Wappen Ua Deaghaide",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-deaghaide",
+              "rank": "Laird",
+              "seat": "Botharin",
+              "liege": "Ui Nic Cétchathach",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-botharin",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-botharin"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "iathneach-hausbereich-deaghaide"
+      ]
+    },
+    {
+      "id": "iathneach-sitz-sgeir-tearmainn",
+      "title": "Lairdherrschaft Sgeirean Tearmainn",
+      "shortTitle": "Lairdherrschaft Sgeirean Tearmainn",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-sgeire/index.html",
+      "parentLabel": "Tir na Sgeire",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Sgeire",
+          "slug": "iathneach-region-sgeire"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Sgeirean Tearmainn",
+          "slug": "iathneach-sitz-sgeir-tearmainn"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/sgeir-tearmainn.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Sgeirean Tearmainn",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Sgeirean Tearmainn gehört zu Iathneach. Mac Farraigeach führt hier den Rang Laird mit Sitz in Sgeir Tearmainn."
+        ],
+        "history": [
+          "Mac Farraigeach stammt aus Cuansioda und führte dort zuvor den Rang Mor Tiarna. Der heutige Sitz liegt in Sgeir Tearmainn."
+        ],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Befestigter Hauptfelsen des westlichen Archipels. Gegenwärtiger Sitz der aus Cuansioda verdrängten Mac Farraigeach."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Mac Farraigeach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Sgeir Tearmainn",
+              "href": "/Orte/grossstadt.html?id=iathneach-sgeir-tearmainn"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Sgeire",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-sgeire/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-farraigeach",
+              "name": "Mac Farraigeach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+              "imageAlt": "Wappen Mac Farraigeach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach",
+              "rank": "Laird",
+              "seat": "Sgeir Tearmainn",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-sgeir-tearmainn",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-sgeir-tearmainn"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-sitz-ailtean",
+      "title": "Lairdherrschaft Braigh Ailtean",
+      "shortTitle": "Lairdherrschaft Braigh Ailtean",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-beann/index.html",
+      "parentLabel": "Tir nam Beann",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir nam Beann",
+          "slug": "iathneach-region-beann"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Braigh Ailtean",
+          "slug": "iathneach-sitz-ailtean"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/ailtean.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Braigh Ailtean",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Braigh Ailtean gehört zu Iathneach. Tir An Treathai führt hier den Rang Laird mit Sitz in Ailtean."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Gebirgsvorland am südlichen Ausgang der nördlichen Bergkette; Zugang zu Wald und Höhenwegen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Tir An Treathai",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-treathai"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ailtean",
+              "href": "/Orte/grossstadt.html?id=iathneach-ailtean"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir nam Beann",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-beann/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-treathai",
+              "name": "Tir An Treathai",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/treathai.webp",
+              "imageAlt": "Wappen Tir An Treathai",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-treathai",
+              "rank": "Laird",
+              "seat": "Ailtean",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-ailtean",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-ailtean"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-sitz-mharaich",
+      "title": "Lairdherrschaft Gleann Mharaich",
+      "shortTitle": "Lairdherrschaft Gleann Mharaich",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-beann/index.html",
+      "parentLabel": "Tir nam Beann",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir nam Beann",
+          "slug": "iathneach-region-beann"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Gleann Mharaich",
+          "slug": "iathneach-sitz-mharaich"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/mharaich.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Gleann Mharaich",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Gleann Mharaich gehört zu Iathneach. Nic Tairise führt hier den Rang Laird mit Sitz in Mharaich."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Befestigter Talort unter den östlichen Bergen, über Fluss und Brücken mit den südlichen Ebenen verbunden."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Nic Tairise",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tairise"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Mharaich",
+              "href": "/Orte/grossstadt.html?id=iathneach-mharaich"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir nam Beann",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-beann/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-tairise",
+              "name": "Nic Tairise",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/tairise.webp",
+              "imageAlt": "Wappen Nic Tairise",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tairise",
+              "rank": "Laird",
+              "seat": "Mharaich",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-mharaich",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-mharaich"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-sitz-tirnafaoi",
+      "title": "Lairdherrschaft Comar Tirnafaoi",
+      "shortTitle": "Lairdherrschaft Comar Tirnafaoi",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-allt/index.html",
+      "parentLabel": "Tir nan Allt",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir nan Allt",
+          "slug": "iathneach-region-allt"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Comar Tirnafaoi",
+          "slug": "iathneach-sitz-tirnafaoi"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/tirnafaoi.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Comar Tirnafaoi",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Comar Tirnafaoi gehört zu Iathneach. Dâl Cannog führt hier den Rang Laird mit Sitz in Tirnafaoi."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Stadt im Zusammenfluss mehrerer Wasserläufe, umgeben von Wegen, Wiesen und Wald."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Dâl Cannog",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cannog"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Tirnafaoi",
+              "href": "/Orte/grossstadt.html?id=iathneach-tirnafaoi"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir nan Allt",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-allt/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-cannog",
+              "name": "Dâl Cannog",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cannog.webp",
+              "imageAlt": "Wappen Dâl Cannog",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cannog",
+              "rank": "Laird",
+              "seat": "Tirnafaoi",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-tirnafaoi",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-tirnafaoi"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-sitz-sidheanna",
+      "title": "Lairdherrschaft Creagan Sidheanna",
+      "shortTitle": "Lairdherrschaft Creagan Sidheanna",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-allt/index.html",
+      "parentLabel": "Tir nan Allt",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir nan Allt",
+          "slug": "iathneach-region-allt"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Creagan Sidheanna",
+          "slug": "iathneach-sitz-sidheanna"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/sidheanna.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Creagan Sidheanna",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Creagan Sidheanna gehört zu Iathneach. Tir An Rieach führt hier den Rang Laird mit Sitz in Sidheanna."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Ort am Fuß eines markanten östlichen Bergstocks, über den Fluss an Tirnafaoi angebunden."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Tir An Rieach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rieach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Sidheanna",
+              "href": "/Orte/grossstadt.html?id=iathneach-sidheanna"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir nan Allt",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-allt/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-rieach",
+              "name": "Tir An Rieach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/rieach.webp",
+              "imageAlt": "Wappen Tir An Rieach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rieach",
+              "rank": "Laird",
+              "seat": "Sidheanna",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-sidheanna",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-sidheanna"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-sitz-fiontarach",
+      "title": "Lairdherrschaft Coire Fiontarach",
+      "shortTitle": "Lairdherrschaft Coire Fiontarach",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-coille/index.html",
+      "parentLabel": "Tir na Coille",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Coille",
+          "slug": "iathneach-region-coille"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Coire Fiontarach",
+          "slug": "iathneach-sitz-fiontarach"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/fiontarach.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Coire Fiontarach",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Coire Fiontarach gehört zu Iathneach. An Salaig führt hier den Rang Laird mit Sitz in Fiontarach."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Bergnahe Stadt unter den westlichen Hängen; ein Weg führt in das bewaldete südliche Tal."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "An Salaig",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-salaig"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Fiontarach",
+              "href": "/Orte/grossstadt.html?id=iathneach-fiontarach"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Coille",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-coille/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-salaig",
+              "name": "An Salaig",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/salaig.webp",
+              "imageAlt": "Wappen An Salaig",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-salaig",
+              "rank": "Laird",
+              "seat": "Fiontarach",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-fiontarach",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-fiontarach"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-sitz-famhair",
+      "title": "Lairdherrschaft Srath Famhair",
+      "shortTitle": "Lairdherrschaft Srath Famhair",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-region-coille/index.html",
+      "parentLabel": "Tir na Coille",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Coille",
+          "slug": "iathneach-region-coille"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Srath Famhair",
+          "slug": "iathneach-sitz-famhair"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/iathneach/famhair.webp",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Srath Famhair",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Srath Famhair gehört zu Iathneach. Ruin Muiredaigh führt hier den Rang Laird mit Sitz in Famhair."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Südöstliche Talstadt am großen Fluss; Wälder und offene Flächen liegen zwischen den Wasserläufen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ruin Muiredaigh",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-muiredaigh"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Famhair",
+              "href": "/Orte/grossstadt.html?id=iathneach-famhair"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Tir na Coille",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-region-coille/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-muiredaigh",
+              "name": "Ruin Muiredaigh",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/muiredaigh.webp",
+              "imageAlt": "Wappen Ruin Muiredaigh",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-muiredaigh",
+              "rank": "Laird",
+              "seat": "Famhair",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-sitz-famhair",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-famhair"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-hausbereich-deaghaide",
+      "title": "Herrschaft Ua Deaghaide in Botharin",
+      "shortTitle": "Herrschaft Ua Deaghaide in Botharin",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/iathneach-sitz-botharin/index.html",
+      "parentLabel": "Fürstliche Domäne Machair Botharin",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Mor Tiarnatum",
+          "name": "Tir na Sgeire",
+          "slug": "iathneach-region-sgeire"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Fürstliche Domäne Machair Botharin",
+          "slug": "iathneach-sitz-botharin"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft Ua Deaghaide in Botharin",
+          "slug": "iathneach-hausbereich-deaghaide"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/deaghaide.webp",
+      "crestAlt": "Herrschaftszeichen · Herrschaft Ua Deaghaide in Botharin",
+      "map": {
+        "title": "Karte · Iathneach",
+        "imageSrc": "/Karten/Iathneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Iathneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=iathneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft Ua Deaghaide in Botharin gehört zu Iathneach. Ua Deaghaide führt hier den Rang Laird mit Sitz in Botharin.",
+          "Unmittelbarer Lehnsherr ist Ui Nic Cétchathach.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ua Deaghaide",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-deaghaide"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Botharin"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstliche Domäne Machair Botharin",
+              "href": "/Kontinente/Lothir/Iathneach/iathneach-sitz-botharin/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-deaghaide",
+              "name": "Ua Deaghaide",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/deaghaide.webp",
+              "imageAlt": "Wappen Ua Deaghaide",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-deaghaide",
+              "rank": "Laird",
+              "seat": "Botharin",
+              "liege": "Ui Nic Cétchathach",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-ehemalig-triarchie-region-cuansioda",
+      "title": "Ehemaliges Mor Tiarnatum Cuansioda",
+      "shortTitle": "Ehemaliges Mor Tiarnatum Cuansioda",
+      "type": "Ehemaliges Herrschaftsgebiet",
+      "kicker": "Historische Herrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "parentLabel": "Fürstentum Iathneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+          "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/triarchie/county-cuansioda.webp",
+      "crestAlt": "Herrschaftszeichen · Ehemaliges Mor Tiarnatum Cuansioda",
+      "map": {
+        "title": "Karte · Triarchie",
+        "imageSrc": "/Karten/Triarchie/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Triarchie; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=triarchie"
+      },
+      "copy": {
+        "overview": [
+          "Ehemaliges Mor Tiarnatum Cuansioda hatte zu Iathneach gehört. Mac Farraigeach hatte hier den Rang Laird geführt."
+        ],
+        "history": [
+          "Dieses Gebiet war dem Herkunftsland durch die Eroberung der Triarchie verloren gegangen. Die Besatzung wird in einer eigenen gegenwärtigen Herrschaftsakte geführt.",
+          "Mac Farraigeach stammt aus Cuansioda und führte dort zuvor den Rang Mor Tiarna. Der heutige Sitz liegt in ."
+        ],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ehemaliges Herrschaftsgebiet"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Mac Farraigeach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-region-cuansioda/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-farraigeach",
+              "name": "Mac Farraigeach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+              "imageAlt": "Wappen Mac Farraigeach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach",
+              "rank": "Laird",
+              "seat": "",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "iathneach-ehemalig-triarchie-sitz-dorchain",
+        "iathneach-ehemalig-triarchie-sitz-cuansioda",
+        "iathneach-ehemalig-triarchie-sitz-fiorail",
+        "iathneach-ehemalig-triarchie-sitz-doire-fionn"
+      ]
+    },
+    {
+      "id": "iathneach-ehemalig-triarchie-sitz-dorchain",
+      "title": "Ehemalige Herrschaft Braigh Dorchain",
+      "shortTitle": "Ehemalige Herrschaft Braigh Dorchain",
+      "type": "Ehemaliges Herrschaftsgebiet",
+      "kicker": "Historische Herrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html",
+      "parentLabel": "Ehemaliges Mor Tiarnatum Cuansioda",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+          "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemalige Herrschaft Braigh Dorchain",
+          "slug": "iathneach-ehemalig-triarchie-sitz-dorchain"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/triarchie/dorchain.webp",
+      "crestAlt": "Herrschaftszeichen · Ehemalige Herrschaft Braigh Dorchain",
+      "map": {
+        "title": "Karte · Triarchie",
+        "imageSrc": "/Karten/Triarchie/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Triarchie; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=triarchie"
+      },
+      "copy": {
+        "overview": [
+          "Ehemalige Herrschaft Braigh Dorchain hatte zu Iathneach gehört. An Taghan hatte hier den Rang Dún Tiarna geführt."
+        ],
+        "history": [
+          "Dieses Gebiet war dem Herkunftsland durch die Eroberung der Triarchie verloren gegangen. Die Besatzung wird in einer eigenen gegenwärtigen Herrschaftsakte geführt."
+        ],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Westliches Berg- und Waldgebiet. Zugang zu Höhenwegen und möglichen Stollenplätzen; Bergbau ist hier ein Entwurfsthema."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ehemaliges Herrschaftsgebiet"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "An Taghan",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-an-taghan"
+            },
+            {
+              "label": "Rang",
+              "value": "Dún Tiarna"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dorchain",
+              "href": "/Orte/grossstadt.html?id=iathneach-dorchain"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Ehemaliges Mor Tiarnatum Cuansioda",
+              "href": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-sitz-dorchain/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-an-taghan",
+              "name": "An Taghan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/taghan.webp",
+              "imageAlt": "Wappen An Taghan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-an-taghan",
+              "rank": "Dún Tiarna",
+              "seat": "Dorchain",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Dún Tiarna"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-ehemalig-triarchie-sitz-dorchain",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-dorchain"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-ehemalig-triarchie-sitz-cuansioda",
+      "title": "Ehemalige Herrschaft Cuan Cuansioda",
+      "shortTitle": "Ehemalige Herrschaft Cuan Cuansioda",
+      "type": "Ehemaliges Herrschaftsgebiet",
+      "kicker": "Historische Herrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html",
+      "parentLabel": "Ehemaliges Mor Tiarnatum Cuansioda",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+          "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemalige Herrschaft Cuan Cuansioda",
+          "slug": "iathneach-ehemalig-triarchie-sitz-cuansioda"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/triarchie/cuansioda.webp",
+      "crestAlt": "Herrschaftszeichen · Ehemalige Herrschaft Cuan Cuansioda",
+      "map": {
+        "title": "Karte · Triarchie",
+        "imageSrc": "/Karten/Triarchie/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Triarchie; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=triarchie"
+      },
+      "copy": {
+        "overview": [
+          "Ehemalige Herrschaft Cuan Cuansioda hatte zu Iathneach gehört. Mac Farraigeach hatte hier den Rang Laird geführt."
+        ],
+        "history": [
+          "Dieses Gebiet war dem Herkunftsland durch die Eroberung der Triarchie verloren gegangen. Die Besatzung wird in einer eigenen gegenwärtigen Herrschaftsakte geführt.",
+          "Mac Farraigeach stammt aus Cuansioda und führte dort zuvor den Rang Mor Tiarna. Der heutige Sitz liegt in Cuansioda."
+        ],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Nordöstlicher Küsten- und Hafenraum des verlorenen Iathneacher Mor Tiarnatums. Herkunftssitz der Mac Farraigeach, die heute auf Sgeir Tearmainn sitzen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ehemaliges Herrschaftsgebiet"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Mac Farraigeach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Cuansioda",
+              "href": "/Orte/grossstadt.html?id=iathneach-cuansioda"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Ehemaliges Mor Tiarnatum Cuansioda",
+              "href": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-sitz-cuansioda/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-farraigeach",
+              "name": "Mac Farraigeach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+              "imageAlt": "Wappen Mac Farraigeach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach",
+              "rank": "Laird",
+              "seat": "",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-ehemalig-triarchie-sitz-cuansioda",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-cuansioda"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-ehemalig-triarchie-sitz-fiorail",
+      "title": "Ehemalige Herrschaft Cladach Fiorail",
+      "shortTitle": "Ehemalige Herrschaft Cladach Fiorail",
+      "type": "Ehemaliges Herrschaftsgebiet",
+      "kicker": "Historische Herrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html",
+      "parentLabel": "Ehemaliges Mor Tiarnatum Cuansioda",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+          "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemalige Herrschaft Cladach Fiorail",
+          "slug": "iathneach-ehemalig-triarchie-sitz-fiorail"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/triarchie/fiorail.webp",
+      "crestAlt": "Herrschaftszeichen · Ehemalige Herrschaft Cladach Fiorail",
+      "map": {
+        "title": "Karte · Triarchie",
+        "imageSrc": "/Karten/Triarchie/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Triarchie; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=triarchie"
+      },
+      "copy": {
+        "overview": [
+          "Ehemalige Herrschaft Cladach Fiorail hatte zu Iathneach gehört. Ua Guilbneach hatte hier den Rang Laird geführt."
+        ],
+        "history": [
+          "Dieses Gebiet war dem Herkunftsland durch die Eroberung der Triarchie verloren gegangen. Die Besatzung wird in einer eigenen gegenwärtigen Herrschaftsakte geführt."
+        ],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Westlicher Rand des besetzten Mor Tiarnatums; offene Ebenen und Gehölze zwischen Küstenzugang und inneren Hügeln."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ehemaliges Herrschaftsgebiet"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Ua Guilbneach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-guilbneach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Fiorail",
+              "href": "/Orte/grossstadt.html?id=iathneach-fiorail"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Ehemaliges Mor Tiarnatum Cuansioda",
+              "href": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-sitz-fiorail/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-ua-guilbneach",
+              "name": "Ua Guilbneach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/guilbneach.webp",
+              "imageAlt": "Wappen Ua Guilbneach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-guilbneach",
+              "rank": "Laird",
+              "seat": "Fiorail",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-ehemalig-triarchie-sitz-fiorail",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-fiorail"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "iathneach-ehemalig-triarchie-sitz-doire-fionn",
+      "title": "Ehemalige Herrschaft Coill Fhionn",
+      "shortTitle": "Ehemalige Herrschaft Coill Fhionn",
+      "type": "Ehemaliges Herrschaftsgebiet",
+      "kicker": "Historische Herrschaft · Iathneach",
+      "parentHref": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html",
+      "parentLabel": "Ehemaliges Mor Tiarnatum Cuansioda",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Iathneach",
+          "slug": "fuerstentum-iathneach"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+          "slug": "iathneach-ehemalig-triarchie-region-cuansioda"
+        },
+        {
+          "type": "Ehemaliges Herrschaftsgebiet",
+          "name": "Ehemalige Herrschaft Coill Fhionn",
+          "slug": "iathneach-ehemalig-triarchie-sitz-doire-fionn"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/triarchie/doire-fionn.webp",
+      "crestAlt": "Herrschaftszeichen · Ehemalige Herrschaft Coill Fhionn",
+      "map": {
+        "title": "Karte · Triarchie",
+        "imageSrc": "/Karten/Triarchie/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Triarchie; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=triarchie"
+      },
+      "copy": {
+        "overview": [
+          "Ehemalige Herrschaft Coill Fhionn hatte zu Iathneach gehört. Ruin Coilleach hatte hier den Rang Laird geführt."
+        ],
+        "history": [
+          "Dieses Gebiet war dem Herkunftsland durch die Eroberung der Triarchie verloren gegangen. Die Besatzung wird in einer eigenen gegenwärtigen Herrschaftsakte geführt."
+        ],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Südöstlicher bewaldeter Übergang zwischen den nördlichen Höhen und den aldingischen Ebenen. Neuer albischer Ortsname für den Kartenplatzhalter."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Ehemaliges Herrschaftsgebiet"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Iathneach",
+              "href": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Ruin Coilleach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ruin-coilleach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Doire Fionn",
+              "href": "/Orte/grossstadt.html?id=iathneach-doire-fionn"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Ehemaliges Mor Tiarnatum Cuansioda",
+              "href": "/Kontinente/Lothir/Iathneach/ehemalige-gebiete/triarchie-region-cuansioda/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-sitz-doire-fionn/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-ruin-coilleach",
+              "name": "Ruin Coilleach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/triarchie/coilleach.webp",
+              "imageAlt": "Wappen Ruin Coilleach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ruin-coilleach",
+              "rank": "Laird",
+              "seat": "Doire Fionn",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "iathneach-ehemalig-triarchie-sitz-doire-fionn",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "iathneach-doire-fionn"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    }
+  ]
+}

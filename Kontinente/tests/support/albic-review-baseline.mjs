@@ -1,4 +1,6 @@
 import { createHash } from 'node:crypto';
+import assert from 'node:assert/strict';
+import acceptedMetadata from './accepted-realm-metadata-review-20261029.json' with { type: 'json' };
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
@@ -14,6 +16,17 @@ export function protectedAlbicFamilies(records) {
     copy.family.document.houseProfile = { ...copy.family.document.houseProfile };
     omitLocation(copy.houseProfile);
     omitLocation(copy.family.document.houseProfile);
+    // Project only explicitly approved scalar changes back to the historical
+    // snapshot. Validate their exact new values first; never omit genealogy.
+    const accepted = acceptedMetadata.families[record.id];
+    if (accepted) {
+      for (const profile of [copy.houseProfile, copy.family.document.houseProfile]) {
+        for (const [field, value] of Object.entries(accepted.after)) assert.equal(profile[field], value, `${record.id}/${field}`);
+        Object.assign(profile, accepted.before);
+      }
+      delete copy.family.extensions.acceptedRealmPlacement;
+      delete copy.family.extensions.registryManagedHouseProfileFieldRevisions;
+    }
     copy.additionalPlacements = (copy.additionalPlacements || []).map(placement => {
       const projected = { ...placement, houseProfile: { ...placement.houseProfile } };
       delete projected.folderPath;

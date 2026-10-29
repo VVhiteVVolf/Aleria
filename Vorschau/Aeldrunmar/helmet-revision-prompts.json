@@ -1,0 +1,110 @@
+{
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "alphaCleanupAuthorized": true,
+  "jobs": [
+    {
+      "id": "halfax",
+      "kind": "character-revision",
+      "revision": "2026-10-29-helmet-variation",
+      "rawTarget": "assets/warriors/generated/halfax.png",
+      "before": {
+        "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/halfax/generated.png",
+        "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/halfax/production.png",
+        "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/halfax/preview.webp"
+      },
+      "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/halfax.png",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/halfax/production.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET and is already the accepted complete Aeldrunmar illustration. Reference 2 is PAINTING STYLE ONLY: matte restrained painted fantasy figure, fine even pigment grain, soft thin painted contours. Do not copy its blue griffin, western helmet or external haze. Preserve the source illustration's identity, house heraldry, colours, armour, equipment, proportions, calm full-body stance and exact canvas layout, except for the requested edit. All unaffected parts should remain visually unchanged. Change ONLY the female rider's HELMET: replace the open helmet with a CLOSED Rohirrim-style steel cavalry helmet, recognizably Rohan / Anglo-Saxon in design, with integrated sculpted nose ridge, curved cheek-and-mouth protection forming a full metal face mask and narrow eye openings. The face is now protected and hidden, not an open nasal helmet and not a western cylindrical great helm. Add TWO clearly visible branching STAG ANTLERS mounted symmetrically at the temples, medium size, black-brown with several ivory tips, sweeping outward and upward within the existing free space. Keep her blonde braids visible below the helmet, the entire brown horse and its tack, reins, quiver, sword and clothing absolutely unchanged. Nothing else needs correction.\nOutput: exactly 1024x1536 portrait 2:3 PNG with TRUE transparent background and open gaps. Keep every antler/horn tip, ear, horse hoof, human foot and weapon tip fully visible, with transparent margins, no cropping. If necessary keep new helmet ornaments compact and swept sideways to fit the existing headroom. Do not zoom or crop the accepted image. No scenery, floor, cast shadow, halo, haze, text or watermark."
+    },
+    {
+      "id": "beran",
+      "kind": "character-revision",
+      "revision": "2026-10-29-helmet-variation",
+      "rawTarget": "assets/warriors/generated/beran.png",
+      "before": {
+        "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/beran/generated.png",
+        "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/beran/production.png",
+        "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/beran/preview.webp"
+      },
+      "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/beran.png",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/beran/production.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET and is already the accepted complete Aeldrunmar illustration. Reference 2 is PAINTING STYLE ONLY: matte restrained painted fantasy figure, fine even pigment grain, soft thin painted contours. Do not copy its blue griffin, western helmet or external haze. Preserve the source illustration's identity, house heraldry, colours, armour, equipment, proportions, calm full-body stance and exact canvas layout, except for the requested edit. All unaffected parts should remain visually unchanged. Change ONLY the man's HELMET and its crest into a decorative STEEL LION HELMET with a RED MANE. The helmet itself is carefully forged silver steel shaped as a lion's head, not an actual animal pelt or living animal. Its OPEN LION MOUTH forms the semi-open face aperture: lion upper jaw and snout above the man's brow, discreet blunt metal tooth shapes at the rim, lion lower jaw framing his chin; his human eyes, nose and red beard remain visible inside that mouth opening. Sculpted steel lion ears above, red horsehair mane firmly attached around the crown and back. Elegant heraldic craftsmanship, not grotesque or oversized. Preserve his red scale armour, green mantle, chest lion emblem, hands resting on the sword and full sword unchanged.\nOutput: exactly 1024x1536 portrait 2:3 PNG with TRUE transparent background and open gaps. Keep every antler/horn tip, ear, horse hoof, human foot and weapon tip fully visible, with transparent margins, no cropping. If necessary keep new helmet ornaments compact and swept sideways to fit the existing headroom. Do not zoom or crop the accepted image. No scenery, floor, cast shadow, halo, haze, text or watermark."
+    },
+    {
+      "id": "irwynne",
+      "kind": "character-revision",
+      "revision": "2026-10-29-helmet-variation",
+      "rawTarget": "assets/warriors/generated/irwynne.png",
+      "before": {
+        "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/irwynne/generated.png",
+        "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/irwynne/production.png",
+        "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/irwynne/preview.webp"
+      },
+      "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/irwynne.png",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/irwynne/production.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET and is already the accepted complete Aeldrunmar illustration. Reference 2 is PAINTING STYLE ONLY: matte restrained painted fantasy figure, fine even pigment grain, soft thin painted contours. Do not copy its blue griffin, western helmet or external haze. Preserve the source illustration's identity, house heraldry, colours, armour, equipment, proportions, calm full-body stance and exact canvas layout, except for the requested edit. All unaffected parts should remain visually unchanged. KEEP the existing silver-and-gold HELMET exactly as it is, including its angular shape, nasal guard, cheek plates and small gold brow leaves. Add a matching PAIR OF STAG ANTLERS, mounted visibly at its temples. Strong readable branching light-brown antlers with about four or five tines on each side, swept upward and outward, not straight bull horns. Fit them naturally in the free space beside the helmet, entirely within the canvas. Preserve the man's face, blue cloak, silver armour, gold trim, shoulder heraldry, sword and stance unchanged.\nOutput: exactly 1024x1536 portrait 2:3 PNG with TRUE transparent background and open gaps. Keep every antler/horn tip, ear, horse hoof, human foot and weapon tip fully visible, with transparent margins, no cropping. If necessary keep new helmet ornaments compact and swept sideways to fit the existing headroom. Do not zoom or crop the accepted image. No scenery, floor, cast shadow, halo, haze, text or watermark."
+    },
+    {
+      "id": "aubigny",
+      "kind": "character-revision",
+      "revision": "2026-10-29-helmet-variation",
+      "rawTarget": "assets/warriors/generated/aubigny.png",
+      "before": {
+        "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/aubigny/generated.png",
+        "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/aubigny/production.png",
+        "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/aubigny/preview.webp"
+      },
+      "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/aubigny.png",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/aubigny/production.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET and is already the accepted complete Aeldrunmar illustration. Reference 2 is PAINTING STYLE ONLY: matte restrained painted fantasy figure, fine even pigment grain, soft thin painted contours. Do not copy its blue griffin, western helmet or external haze. Preserve the source illustration's identity, house heraldry, colours, armour, equipment, proportions, calm full-body stance and exact canvas layout, except for the requested edit. All unaffected parts should remain visually unchanged. KEEP the man's existing steel HELMET and add TWO actual unbranched BULL HORNS attached to its sides with small bronze sockets. The horns are thick at the root, pale ivory with darker brown tips, sweeping outward and then upward in a broad proud bull-horn curve. They must visibly belong to the HELMET, never the horse. Preserve the rider's face and beard, brown cloak, gold-brown scale armour and bull badge, sword, hands, full brown horse, horse ears, horse anatomy and ALL tack unchanged. No stag antlers and no additional animal head.\nOutput: exactly 1024x1536 portrait 2:3 PNG with TRUE transparent background and open gaps. Keep every antler/horn tip, ear, horse hoof, human foot and weapon tip fully visible, with transparent margins, no cropping. If necessary keep new helmet ornaments compact and swept sideways to fit the existing headroom. Do not zoom or crop the accepted image. No scenery, floor, cast shadow, halo, haze, text or watermark."
+    },
+    {
+      "id": "trent",
+      "kind": "character-revision",
+      "revision": "2026-10-29-helmet-variation",
+      "rawTarget": "assets/warriors/generated/trent.png",
+      "before": {
+        "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/trent/generated.png",
+        "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/trent/production.png",
+        "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/trent/preview.webp"
+      },
+      "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/trent.png",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/trent/production.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET and is already the accepted complete Aeldrunmar illustration. Reference 2 is PAINTING STYLE ONLY: matte restrained painted fantasy figure, fine even pigment grain, soft thin painted contours. Do not copy its blue griffin, western helmet or external haze. Preserve the source illustration's identity, house heraldry, colours, armour, equipment, proportions, calm full-body stance and exact canvas layout, except for the requested edit. All unaffected parts should remain visually unchanged. KEEP the existing steel HELMET and add a bold symmetrical PAIR OF BULL HORNS to its sides, with sturdy dark bases, ivory shafts and dark tips. These are smooth unbranched horns, sweeping sideways and upward, mounted securely in modest brass collars. Keep the face and red beard visible. Preserve the entire black scale armour, ochre mantle, gold bull emblem, spear including every tip, hands and posture unchanged. Do not attach the horns to shoulders, do not create deer antlers.\nOutput: exactly 1024x1536 portrait 2:3 PNG with TRUE transparent background and open gaps. Keep every antler/horn tip, ear, horse hoof, human foot and weapon tip fully visible, with transparent margins, no cropping. If necessary keep new helmet ornaments compact and swept sideways to fit the existing headroom. Do not zoom or crop the accepted image. No scenery, floor, cast shadow, halo, haze, text or watermark."
+    },
+    {
+      "id": "edwynne",
+      "kind": "character-revision",
+      "revision": "2026-10-29-helmet-variation",
+      "rawTarget": "assets/warriors/generated/edwynne.png",
+      "before": {
+        "generated": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne/generated.png",
+        "production": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne/production.png",
+        "preview": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne/preview.webp"
+      },
+      "after": "diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/after/edwynne.png",
+      "references": [
+        "E:/Aleria/diagnostics/aeldrunmar/revisions/2026-10-29-helmet-variation/before/edwynne/production.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Bestiarium/assets/horse-profiles/brycing.webp"
+      ],
+      "prompt": "Use case: precise-object-edit. Reference 1 is the EDIT TARGET and is already the accepted complete Aeldrunmar illustration. Reference 2 is PAINTING STYLE ONLY: matte restrained painted fantasy figure, fine even pigment grain, soft thin painted contours. Do not copy its blue griffin, western helmet or external haze. Preserve the source illustration's identity, house heraldry, colours, armour, equipment, proportions, calm full-body stance and exact canvas layout, except for the requested edit. All unaffected parts should remain visually unchanged. CORRECT ONLY the BLACK HORSE'S ORIENTATION AND ANATOMY. Preserve the male knight on the LEFT exactly, including his face, helmet, purple mantle, armour, white horse emblem, sword, hands and pose. Redraw his black Brycing stallion on the RIGHT in one coherent standing THREE-QUARTER LEFT-FACING SIDE VIEW: the horse's head, neck, chest and front legs are on the LEFT side of its own body, with its barrel, saddle, hindquarters and rear legs continuing clearly to the RIGHT. Head and body face the SAME direction, gently toward the knight. A natural tail grows ONLY from the CROUP at the far RIGHT REAR of the horse, falling behind its hindquarters. Four anatomically coherent legs and four hooves, no reversed torso, twisted neck, front-mounted tail or mismatched legs. Keep the entire horse including both ears, muzzle, croup, tail and all hooves in frame. One functional saddle facing the same way as the horse, coherent purple-and-ivory saddlecloth with correct girth under belly, bridle and one logical pair of reins leading from bit to the knight's existing hand. The proud tall, deep-chested stallion remains BLACK and all fabric remains purple and ivory. Reference 3 supplies Brycing anatomy only; do not copy its rearing pose, white coat, rider, background or anime painting style.\nOutput: exactly 1024x1536 portrait 2:3 PNG with TRUE transparent background and open gaps. Keep every antler/horn tip, ear, horse hoof, human foot and weapon tip fully visible, with transparent margins, no cropping. If necessary keep new helmet ornaments compact and swept sideways to fit the existing headroom. Do not zoom or crop the accepted image. No scenery, floor, cast shadow, halo, haze, text or watermark."
+    }
+  ]
+}

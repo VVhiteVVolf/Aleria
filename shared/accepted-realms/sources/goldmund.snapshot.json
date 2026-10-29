@@ -1,0 +1,791 @@
+{
+  "schemaVersion": 1,
+  "realm": "goldmund",
+  "capturedAt": "2026-10-28",
+  "previewDirectory": "Goldmund",
+  "collectiveName": "Die Goldenen Grafschaften",
+  "counties": [
+    {
+      "id": "kronenau",
+      "name": "Kronenau",
+      "kind": "Fürstliche Grafschaft",
+      "colour": "#b49a3e",
+      "description": "Der westliche, goldgelb markierte Teil der Karte mit Thronholt und Brakenstein. Kronenau stellt die Nähe zur fürstlichen Residenz in den Mittelpunkt."
+    },
+    {
+      "id": "aurelmark",
+      "name": "Aurelmark",
+      "kind": "Grafschaft",
+      "colour": "#6e8c45",
+      "description": "Der nordöstliche, grün markierte Teil mit Bregen, Haarlen und Aldermoor. Aurelmark greift den goldmundischen Klang und das Motiv der Aurelianerpferde auf."
+    },
+    {
+      "id": "edelstrom",
+      "name": "Edelstrom",
+      "kind": "Grafschaft",
+      "colour": "#4b8b88",
+      "description": "Der südöstliche, türkis markierte Teil mit Bramsen, Niedenfels und Hartenstein. Edelstrom verbindet die sichtbaren Wasserläufe mit der vornehmen Bildsprache des Landes."
+    }
+  ],
+  "houses": [
+    {
+      "id": "broeck",
+      "name": "Broeck",
+      "crest": "crests/broeck.webp",
+      "original": "assets/originals/houses/broeck.png",
+      "fullsize": "assets/originals/houses/broeck.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Geliefertes Haus",
+      "revised": false,
+      "description": "Geliefertes Hauswappen. Sitz und weitere Rolle sind in dieser Vorbereitung noch offen."
+    },
+    {
+      "id": "goldveld",
+      "name": "Goldveld",
+      "crest": "crests/goldveld.webp",
+      "original": "assets/originals/houses/goldveld.png",
+      "fullsize": "assets/production/goldveld.png",
+      "rank": "prince",
+      "sourceSeat": "thronholt",
+      "source": "Geliefertes Haus",
+      "revised": true,
+      "description": "Die Fürstenfamilie in Thronholt. Der neue Entwurf verwendet einen goldenen Löwen und einen goldenen Rahmen."
+    },
+    {
+      "id": "lanette",
+      "name": "Lanette",
+      "crest": "crests/lanette.webp",
+      "original": "assets/originals/houses/lanette.png",
+      "fullsize": "assets/production/lanette.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Geliefertes Haus",
+      "revised": true,
+      "description": "Der neue Entwurf zeigt einen golden gerüsteten Reiter mit vorgehaltener Lanze."
+    },
+    {
+      "id": "roden",
+      "name": "Roden",
+      "crest": "crests/roden.webp",
+      "original": "assets/originals/houses/roden.png",
+      "fullsize": "assets/production/roden.png",
+      "rank": "knight-prince",
+      "sourceSeat": "thronholt",
+      "source": "Geliefertes Haus",
+      "revised": true,
+      "description": "Die Ritterfürstenfamilie in Thronholt. Der neue Entwurf zeigt eine Prunkkutsche, gezogen von goldenen Aurelianerpferden."
+    },
+    {
+      "id": "roosenvelt",
+      "name": "Roosenvelt",
+      "crest": "crests/roosenvelt.webp",
+      "original": "assets/originals/houses/roosenvelt.png",
+      "fullsize": "assets/originals/houses/roosenvelt.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Geliefertes Haus",
+      "revised": false,
+      "description": "Geliefertes Hauswappen. Sitz und weitere Rolle sind in dieser Vorbereitung noch offen."
+    },
+    {
+      "id": "aurelshain",
+      "name": "Arenberg",
+      "theme": "Aurelianerpferde · Pferdezucht",
+      "description": "Ein goldenes Aurelianerpferd als stolzes Hauptmotiv. Vorschlag für ein Haus mit besonderer Verbindung zur Pferdezucht.",
+      "crest": "crests/aurelshain.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/aurelshain.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "gueldenfels",
+      "name": "Velten",
+      "theme": "Gold · Beständigkeit",
+      "description": "Ein goldener Steinbock. Ein kraftvolles, hochadeliges Motiv für Gold, Besitz und unerschütterlichen Anspruch.",
+      "crest": "crests/gueldenfels.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/gueldenfels.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "falkengold",
+      "name": "Severin",
+      "theme": "Stolz · Höfische Würde",
+      "description": "Ein gekrönter schwarzer Falke mit rotem Edelstein auf Elfenbein, gefasst in Silber. Das Motiv verbindet adeligen Stolz mit der feierlichen Pracht Goldmunds.",
+      "crest": "crests/falkengold.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/falkengold.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "rebenkron",
+      "name": "Belcourt",
+      "theme": "Wein · Edle Güter",
+      "description": "Ein silberner Kelch mit grünem Weinlaub und purpurnen Trauben, gefasst in Bronze. Ein Entwurf für Wohlstand durch erlesenen Wein und höfische Gastlichkeit.",
+      "crest": "crests/rebenkron.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/rebenkron.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "seidenwarth",
+      "name": "Lanvier",
+      "theme": "Kostbare Stoffe · Extravaganz",
+      "description": "Ein saphir- und petrolblauer Pfau auf hellem Elfenbein, gefasst in Silber. Ein Vorschlag für ein Haus, dessen Bildsprache an Seide, kostbare Stoffe und höfischen Luxus anknüpft.",
+      "crest": "crests/seidenwarth.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/seidenwarth.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "greifenau",
+      "name": "Marholt",
+      "theme": "Pompöses Rittertum · Turnierkultur",
+      "description": "Ein schwarzer Greif mit silberner Turnierlanze auf warmem Ocker, gefasst in Bronze. Stolze Wehrhaftigkeit und repräsentatives Rittertum als heraldischer Schwerpunkt.",
+      "crest": "crests/greifenau.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/greifenau.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "eitelborn",
+      "name": "Belmont",
+      "theme": "Höfische Eitelkeit · Eleganz",
+      "description": "Ein eitler schwarzer Pudel mit silbernen Schurpompons und Perlenhalsband auf hellem Altrosa, gefasst in Silber. Ein selbstbewusster, verspielter Entwurf für höfische Eleganz.",
+      "crest": "crests/eitelborn.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/eitelborn.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "herzau",
+      "name": "Arden",
+      "theme": "Aurelianerpferde · Verbundenheit",
+      "description": "Zwei goldene Aurelianerpferde wenden sich zärtlich einander zu, ihre Nasen berühren sich und ihre Halslinien formen ein Herz. Dunkles Weinrot und ein Silberrahmen fassen das Motiv.",
+      "crest": "crests/herzau.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/herzau.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "silberhorst",
+      "name": "Berden",
+      "theme": "Bussard · Stolze Wachsamkeit",
+      "description": "Ein silberner Bussard mit goldenen Flügelspitzen auf Nachtblau, gefasst in Bronze. Ein stolzes heraldisches Tier mit einem fein abgestimmten Wechsel aus Silber und Gold.",
+      "crest": "crests/silberhorst.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/silberhorst.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "samtborn",
+      "name": "Sorel",
+      "theme": "Edle Katze · Höfische Anmut",
+      "description": "Eine weiße heraldische Edelkatze mit silbernem Saphirhalsband auf dunklem Grün, gefasst in Bronze. Ein Entwurf mit ruhiger Anmut und kostbaren Akzenten.",
+      "crest": "crests/samtborn.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/samtborn.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "weisshorn",
+      "name": "Wolter",
+      "theme": "Weißer Stier · Würde und Kraft",
+      "description": "Ein weißer heraldischer Stier auf dunklem Purpur, gefasst in einem schwarzsilbernen Rahmen. Klare Kraft und adelige Würde als Hauptmotiv.",
+      "crest": "crests/weisshorn.webp",
+      "original": null,
+      "sourceOriginal": null,
+      "fullsize": "assets/production/weisshorn.png",
+      "rank": "open",
+      "sourceSeat": null,
+      "source": "Neuer Hausvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "mac-ruan",
+      "name": "Ruan",
+      "theme": "Albischer Clan · Hase und Moosgrün",
+      "description": "Ein kleiner albischer Clan in Goldmund, dessen Sitz im Entwurf noch offen ist. Ein naturweißer Hase auf moosgrün bemalten Brettern, eingefasst von einem schmalen dunklen Holzring. Ein ruhiges, schmuckloses Familienzeichen.",
+      "clan": true,
+      "culture": "albic",
+      "crest": "crests/mac-ruan.webp",
+      "fullsize": "assets/production/mac-ruan.png",
+      "original": null,
+      "sourceOriginal": null,
+      "rank": "laird",
+      "sourceSeat": null,
+      "source": "Albischer Clanvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "mac-callan",
+      "name": "Callan",
+      "theme": "Albischer Clan · Krähe und Eisen",
+      "description": "Ein weniger wohlhabender albischer Clan in Goldmund. Eine schwarze Krähe auf einem ocker-grau geteilten Feld mit schrägen Brettern. Ein dunkler Eisenring mit Nieten und wenigen Kerbzeichen gibt dem Wappen einen eigenen, handfesten Charakter.",
+      "clan": true,
+      "culture": "albic",
+      "crest": "crests/mac-callan.webp",
+      "fullsize": "assets/production/mac-callan.png",
+      "original": null,
+      "sourceOriginal": null,
+      "rank": "laird",
+      "sourceSeat": null,
+      "source": "Albischer Clanvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "an-brenn",
+      "name": "Brenn",
+      "theme": "Albischer Clan · Gerste und Birkenholz",
+      "description": "Ein bescheidener albischer Clan in Goldmund. Eine helle Gerstenähre liegt über einem schwarzen Querbalken auf rostroten waagerechten Brettern. Der helle Birkenholzrahmen trägt vier kleine geometrische Clanrunen und einfache Holzstifte.",
+      "clan": true,
+      "culture": "albic",
+      "crest": "crests/an-brenn.webp",
+      "fullsize": "assets/production/an-brenn.png",
+      "original": null,
+      "sourceOriginal": null,
+      "rank": "laird",
+      "sourceSeat": null,
+      "source": "Albischer Clanvorschlag",
+      "proposed": true,
+      "isNew": true
+    },
+    {
+      "id": "na-fenn",
+      "name": "Fenn",
+      "theme": "Albischer Clan · Fisch und Tauwerk",
+      "description": "Ein kleiner albischer Clan in Goldmund. Ein hellgrauer Flussfisch auf schieferblauen und graugrünen Wasserbändern. Ein schmaler Hanfseilring mit dunklen Bindungen fasst das Wappen ohne Edelmetall oder aufwendigen Zierrat.",
+      "clan": true,
+      "culture": "albic",
+      "crest": "crests/na-fenn.webp",
+      "fullsize": "assets/production/na-fenn.png",
+      "original": null,
+      "sourceOriginal": null,
+      "rank": "laird",
+      "sourceSeat": null,
+      "source": "Albischer Clanvorschlag",
+      "proposed": true,
+      "isNew": true
+    }
+  ],
+  "rankLabels": {
+    "prince": "Fürstenfamilie",
+    "knight-prince": "Ritterfürstenfamilie",
+    "laird": "Laird-Clan",
+    "open": "Rang noch offen"
+  },
+  "realmDesigns": [
+    {
+      "id": "sonnenkrone",
+      "name": "Die Sonnenkrone",
+      "motif": "Goldene Sonne auf Bordeaux",
+      "description": "Fürstliche Würde und Strahlkraft in warmem Gold auf tiefem Bordeauxrot.",
+      "fullsize": "assets/production/sonnenkrone.png"
+    },
+    {
+      "id": "doppeladler",
+      "name": "Schwarzer Doppeladler",
+      "motif": "Schwarzer Adler · Silberkrone · Bronzerahmen",
+      "description": "Ein schwarzer imperialer Doppeladler auf Elfenbein. Ein betont imperiales Zeichen für den Anspruch, das kaiserliche Erbe zu bewahren.",
+      "fullsize": "assets/production/doppeladler.png"
+    },
+    {
+      "id": "aurelianerkrone",
+      "name": "Die Aurelianerkrone",
+      "motif": "Goldene Pferde · Dunkelgrün · Silberrahmen",
+      "description": "Goldene Aurelianerpferde auf dunklem Grün, in Silber gefasst. Edle Pferde und fürstliche Repräsentation als eigenes Zeichen.",
+      "fullsize": "assets/production/aurelianerkrone.png"
+    },
+    {
+      "id": "goldkelch",
+      "name": "Prunkkelch",
+      "motif": "Silberner Kelch · Purpur · Bronzerahmen",
+      "description": "Ein silberner Prunkkelch auf dunklem Purpur, in Bronze gefasst. Eine höfische Interpretation von Wohlstand und edlen Gütern.",
+      "fullsize": "assets/production/goldkelch.png"
+    }
+  ],
+  "regions": [
+    {
+      "id": "thronmark",
+      "name": "Thronmark",
+      "county": "kronenau",
+      "seat": "thronholt",
+      "kind": "Fürstliche Baronie",
+      "idea": "Die fürstliche Residenz bildet den Bezugspunkt des Namens."
+    },
+    {
+      "id": "brakenwacht",
+      "name": "Brakenwacht",
+      "county": "kronenau",
+      "seat": "brakenstein",
+      "kind": "Baronie",
+      "idea": "Ein Name mit dem Klang eines befestigten, standhaften Herrschaftsgebiets."
+    },
+    {
+      "id": "bregenau",
+      "name": "Bregenau",
+      "county": "aurelmark",
+      "seat": "bregen",
+      "kind": "Baronie",
+      "idea": "An den vorhandenen Ortsnamen angelehnt; ein weicher Landschaftsname."
+    },
+    {
+      "id": "haarlenried",
+      "name": "Haarlenried",
+      "county": "aurelmark",
+      "seat": "haarlen",
+      "kind": "Baronie",
+      "idea": "Ein regionaler Name mit Bezug zum bereits benannten Haarlen."
+    },
+    {
+      "id": "alderweiden",
+      "name": "Alderweiden",
+      "county": "aurelmark",
+      "seat": "aldermoor",
+      "kind": "Ritterfürstentum",
+      "idea": "Eine vorläufige Landschaftsbezeichnung rund um Aldermoor."
+    },
+    {
+      "id": "bramsenquell",
+      "name": "Bramsenquell",
+      "county": "edelstrom",
+      "seat": "bramsen",
+      "kind": "Baronie",
+      "idea": "Die Wasserlandschaft der Karte prägt diesen Namensvorschlag."
+    },
+    {
+      "id": "niedenmark",
+      "name": "Niedenmark",
+      "county": "edelstrom",
+      "seat": "niedenfels",
+      "kind": "Baronie",
+      "idea": "Ein knapper Herrschaftsname, abgeleitet von Niedenfels."
+    },
+    {
+      "id": "hartenfels",
+      "name": "Hartenfels",
+      "county": "edelstrom",
+      "seat": "hartenstein",
+      "kind": "Ritterfürstentum",
+      "idea": "Ein ritterlicher Name mit Bezug auf den felsigen Sitz Hartenstein."
+    }
+  ],
+  "settlements": [
+    {
+      "id": "thronholt",
+      "name": "Thronholt",
+      "county": "kronenau",
+      "region": "thronmark",
+      "kind": "Fürstliche Residenz",
+      "point": [
+        26.5,
+        25
+      ],
+      "pin": [
+        31.5,
+        21
+      ]
+    },
+    {
+      "id": "brakenstein",
+      "name": "Brakenstein",
+      "county": "kronenau",
+      "region": "brakenwacht",
+      "kind": "Baroniesitz",
+      "point": [
+        20,
+        46.3
+      ],
+      "pin": [
+        14.5,
+        51
+      ]
+    },
+    {
+      "id": "bregen",
+      "name": "Bregen",
+      "county": "aurelmark",
+      "region": "bregenau",
+      "kind": "Baroniesitz",
+      "point": [
+        59.5,
+        9.2
+      ],
+      "pin": [
+        64,
+        7
+      ]
+    },
+    {
+      "id": "haarlen",
+      "name": "Haarlen",
+      "county": "aurelmark",
+      "region": "haarlenried",
+      "kind": "Baroniesitz",
+      "point": [
+        70.1,
+        19.4
+      ],
+      "pin": [
+        74.5,
+        24
+      ]
+    },
+    {
+      "id": "aldermoor",
+      "name": "Aldermoor",
+      "county": "aurelmark",
+      "region": "alderweiden",
+      "kind": "Ritterfürstensitz",
+      "point": [
+        46.6,
+        26.5
+      ],
+      "pin": [
+        41.5,
+        30.5
+      ]
+    },
+    {
+      "id": "bramsen",
+      "name": "Bramsen",
+      "county": "edelstrom",
+      "region": "bramsenquell",
+      "kind": "Baroniesitz",
+      "point": [
+        48.2,
+        53.8
+      ],
+      "pin": [
+        44,
+        58.5
+      ]
+    },
+    {
+      "id": "niedenfels",
+      "name": "Niedenfels",
+      "county": "edelstrom",
+      "region": "niedenmark",
+      "kind": "Baroniesitz",
+      "point": [
+        75.1,
+        36.3
+      ],
+      "pin": [
+        82,
+        35
+      ]
+    },
+    {
+      "id": "hartenstein",
+      "name": "Hartenstein",
+      "county": "edelstrom",
+      "region": "hartenfels",
+      "kind": "Ritterfürstensitz",
+      "point": [
+        79.8,
+        53.3
+      ],
+      "pin": [
+        86,
+        58
+      ]
+    }
+  ],
+  "warriors": [
+    {
+      "id": "aurelshain",
+      "name": "Arenberg",
+      "className": "Oraner",
+      "classId": "oraner",
+      "mounted": true,
+      "palette": "Blau · Gold · Elfenbein",
+      "reason": "Pferdezucht und Aurelianerhengst legen einen berittenen Prestigeritter nahe.",
+      "equipment": "Schwert, Schild, prunkvolles Reitzeug und weizenverzierter Harnisch.",
+      "image": "assets/warriors/previews/aurelshain.webp",
+      "fullsize": "assets/warriors/production/aurelshain.png"
+    },
+    {
+      "id": "broeck",
+      "name": "Broeck",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "palette": "Schwarz · Silber · Rot",
+      "reason": "Turm und Bergmotiv passen zu einem standfesten Ritter mit Stangenwaffe.",
+      "equipment": "Hellebarde, geschlossener Schaller und schwarzsilberner Plattenharnisch.",
+      "image": "assets/warriors/previews/broeck.webp",
+      "fullsize": "assets/warriors/production/broeck.png"
+    },
+    {
+      "id": "goldveld",
+      "name": "Goldveld",
+      "className": "Güldner",
+      "classId": "guldner",
+      "mounted": false,
+      "palette": "Gold · Bordeaux · Dunkelgrün",
+      "reason": "Die Fürstenfamilie erhält einen besonders repräsentativen Entwurf der ritterlichen Elite.",
+      "equipment": "Löwenverzierter Harnisch, Schwert und Fürstenschild.",
+      "image": "assets/warriors/previews/goldveld.webp",
+      "fullsize": "assets/warriors/production/goldveld.png"
+    },
+    {
+      "id": "lanette",
+      "name": "Lanette",
+      "className": "Oraner",
+      "classId": "oraner",
+      "mounted": true,
+      "palette": "Petrol · Gold",
+      "reason": "Der goldene Lanzenreiter des Wappens wird als repräsentativer Oraner aufgegriffen.",
+      "equipment": "Reiterlanze, Tartsche und goldener Reitharnisch.",
+      "image": "assets/warriors/previews/lanette.webp",
+      "fullsize": "assets/warriors/production/lanette.png"
+    },
+    {
+      "id": "roden",
+      "name": "Roden",
+      "className": "Güldner",
+      "classId": "guldner",
+      "mounted": false,
+      "palette": "Purpur · Gold",
+      "reason": "Die Ritterfürstenfamilie verbindet ihre Kutschenheraldik mit einem prunkvollen Geleitrüstungsvorschlag.",
+      "equipment": "Schwert, Rundschild und purpurner Mantel mit goldenem Besatz.",
+      "image": "assets/warriors/previews/roden.webp",
+      "fullsize": "assets/warriors/production/roden.png"
+    },
+    {
+      "id": "roosenvelt",
+      "name": "Roosenvelt",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "palette": "Silber · Eisblau",
+      "reason": "Die helle Getreideähre und die kühle Palette werden in eine klare Stangenwaffensilhouette übersetzt.",
+      "equipment": "Partisane, offener Burgunderhelm und heller Plattenharnisch.",
+      "image": "assets/warriors/previews/roosenvelt.webp",
+      "fullsize": "assets/warriors/production/roosenvelt.png"
+    },
+    {
+      "id": "gueldenfels",
+      "name": "Velten",
+      "className": "Güldner",
+      "classId": "guldner",
+      "mounted": false,
+      "palette": "Waldgrün · Bronze · Gold",
+      "reason": "Steinbock und Goldmotiv geben einen schweren, standfesten Eliteharnisch vor.",
+      "equipment": "Breitschwert, grüner Wappenschild und bronzefarbener Harnisch.",
+      "image": "assets/warriors/previews/gueldenfels.webp",
+      "fullsize": "assets/warriors/production/gueldenfels.png"
+    },
+    {
+      "id": "falkengold",
+      "name": "Severin",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "palette": "Silber · Rubinrot · Elfenbein · Schwarz",
+      "reason": "Der schwarze Falke eignet sich für einen Husaren mit dunklem Federschmuck.",
+      "equipment": "Reitersäbel, silberner Halbharnisch und schwarze Rückenflügel.",
+      "image": "assets/warriors/previews/falkengold.webp",
+      "fullsize": "assets/warriors/production/falkengold.png"
+    },
+    {
+      "id": "rebenkron",
+      "name": "Belcourt",
+      "className": "Schirmer",
+      "classId": "schirmer",
+      "mounted": false,
+      "palette": "Pflaume · Bronze · Elfenbein",
+      "reason": "Wein und höfische Gastlichkeit passen zur kultivierten Erscheinung eines Fechtmeisters.",
+      "equipment": "Rapier, Parierdolch, feiner Wams und weinlaubbestickter Mantel.",
+      "image": "assets/warriors/previews/rebenkron.webp",
+      "fullsize": "assets/warriors/production/rebenkron.png"
+    },
+    {
+      "id": "seidenwarth",
+      "name": "Lanvier",
+      "className": "Oraner",
+      "classId": "oraner",
+      "mounted": false,
+      "palette": "Saphir · Petrol · Silber · Elfenbein",
+      "reason": "Der Pfau und die kostbaren Stoffe bieten Raum für einen besonders prächtigen Oraner.",
+      "equipment": "Schwert, reiches Seidenwams über Silberharnisch und Pfauenhelmschmuck.",
+      "image": "assets/warriors/previews/seidenwarth.webp",
+      "fullsize": "assets/warriors/production/seidenwarth.png"
+    },
+    {
+      "id": "greifenau",
+      "name": "Marholt",
+      "className": "Oraner",
+      "classId": "oraner",
+      "mounted": false,
+      "palette": "Ocker · Schwarz · Bronze · Silber",
+      "reason": "Greif und Turnierlanze sprechen für einen selbstbewussten Prestigeritter.",
+      "equipment": "Turnierlanze, Tartsche und dunkler Harnisch mit bronzenem Besatz.",
+      "image": "assets/warriors/previews/greifenau.webp",
+      "fullsize": "assets/warriors/production/greifenau.png"
+    },
+    {
+      "id": "eitelborn",
+      "name": "Belmont",
+      "className": "Schirmer",
+      "classId": "schirmer",
+      "mounted": false,
+      "palette": "Altrosa · Schwarz · Silber",
+      "reason": "Der eitle Pudel wird durch höfische Mode und die Haltung eines Fechtmeisters aufgegriffen.",
+      "equipment": "Rapier, Parierdolch, Federhut und fein bestickter Mantel.",
+      "image": "assets/warriors/previews/eitelborn.webp",
+      "fullsize": "assets/warriors/production/eitelborn.png"
+    },
+    {
+      "id": "herzau",
+      "name": "Arden",
+      "className": "Güldner",
+      "classId": "guldner",
+      "mounted": false,
+      "palette": "Weinrot · Silber · Gold",
+      "reason": "Die einander zugewandten Aurelianer ergeben ein feierliches Motiv für einen wohlhabenden Eliteritter.",
+      "equipment": "Langschwert, silberner Harnisch und weinroter Überwurf.",
+      "image": "assets/warriors/previews/herzau.webp",
+      "fullsize": "assets/warriors/production/herzau.png"
+    },
+    {
+      "id": "silberhorst",
+      "name": "Berden",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "palette": "Nachtblau · Silber · Bronze · Gold",
+      "reason": "Der silbergoldene Bussard lässt sich als heller Federschmuck eines Husaren lesen.",
+      "equipment": "Reitersäbel, navyblauer Waffenrock und einzelner geschwungener Rückenflügel.",
+      "image": "assets/warriors/previews/silberhorst.webp",
+      "fullsize": "assets/warriors/production/silberhorst.png"
+    },
+    {
+      "id": "samtborn",
+      "name": "Sorel",
+      "className": "Schirmer",
+      "classId": "schirmer",
+      "mounted": false,
+      "palette": "Smaragd · Weiß · Bronze",
+      "reason": "Die Edelkatze wird durch präzise Eleganz, hellen Stoff und eine schlanke Fechtsilhouette aufgegriffen.",
+      "equipment": "Rapier, leichter Brustschutz, edler Mantel und flacher Federhut.",
+      "image": "assets/warriors/previews/samtborn.webp",
+      "fullsize": "assets/warriors/production/samtborn.png"
+    },
+    {
+      "id": "weisshorn",
+      "name": "Wolter",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "palette": "Weiß · Purpur · Schwarzsilber",
+      "reason": "Der weiße Stier passt zur kraftvollen Erscheinung eines Ritters mit Stangenwaffe.",
+      "equipment": "Kriegsspeer, dunkler Plattenharnisch und weißer Waffenrock.",
+      "image": "assets/warriors/previews/weisshorn.webp",
+      "fullsize": "assets/warriors/production/weisshorn.png"
+    },
+    {
+      "id": "mac-ruan",
+      "name": "Ruan",
+      "className": "Eldner",
+      "classId": "eldner",
+      "mounted": false,
+      "palette": "Moosgrün · Naturweiß · Stahl",
+      "reason": "Der Hase und die zurückhaltenden Naturfarben passen zum beweglichen Waldläuferritter.",
+      "equipment": "Armbrust, Axt, Schaller und moosgrüner Tartan.",
+      "image": "assets/warriors/previews/mac-ruan.webp",
+      "fullsize": "assets/warriors/production/mac-ruan.png"
+    },
+    {
+      "id": "mac-callan",
+      "name": "Callan",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "palette": "Ocker · Grau · Schwarz · Eisen",
+      "reason": "Die Krähe legt einen schlichten, dunkel gefiederten Husarenentwurf nahe.",
+      "equipment": "Reitersäbel, Kettenzeug, Eisenbrust und grauockerner Plaid.",
+      "image": "assets/warriors/previews/mac-callan.webp",
+      "fullsize": "assets/warriors/production/mac-callan.png"
+    },
+    {
+      "id": "an-brenn",
+      "name": "Brenn",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "palette": "Rostrot · Elfenbein · Anthrazit",
+      "reason": "Die Gerstenähre und das klare Balkenmotiv passen zu einem bodenständigen Stangenwaffenritter.",
+      "equipment": "Hellebarde, Brustharnisch, rostfarbener Kilt und heller Plaid.",
+      "image": "assets/warriors/previews/an-brenn.webp",
+      "fullsize": "assets/warriors/production/an-brenn.png"
+    },
+    {
+      "id": "na-fenn",
+      "name": "Fenn",
+      "className": "Eldner",
+      "classId": "eldner",
+      "mounted": false,
+      "palette": "Flussblau · Graugrün · Silber",
+      "reason": "Flussfisch und Wellenfarben passen zu einem leichter gerüsteten Grenzritter.",
+      "equipment": "Bogen, Seitenaxt, leichter Harnisch und blaugrüner Tartan.",
+      "image": "assets/warriors/previews/na-fenn.webp",
+      "fullsize": "assets/warriors/production/na-fenn.png"
+    }
+  ]
+}

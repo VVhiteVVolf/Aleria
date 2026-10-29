@@ -1,104 +1,74 @@
 <!doctype html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kontinente - Aleria</title>
-  <meta name="description" content="Das Kontinentregister des Aleria-Almanachs: acht Kontinente, ihre Banner und die Reiche Estrylls.">
-  <link rel="stylesheet" href="assets/css/kontinente-overview.css?v=atlas-20261018a">
-  <script src="kontinente.registry.js?v=aldrimar-20261020"></script>
-  <script src="assets/js/kontinente-loader.js?v=vortigern-20261018" data-default-id="kontinente-startseite"></script>
-</head>
-<body class="continent-atlas">
+<!-- Gemeinsame Atlas-Schale: Kontinente/modules/continent-overview/page-shell.mjs -->
+<html lang="de"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontinente – Aleria</title>
+  <meta name="description" content="Der Aleria-Atlas: acht Kontinente und ihre Länder im gemeinsamen Verzeichnis.">
+  <link rel="stylesheet" href="/Kontinente/assets/css/kontinente-overview.css?v=atlas-unified-20261029b">
+  <script src="/Kontinente/kontinente.registry.js?v=atlas-unified-20261029b"></script>
+  <script src="/Kontinente/assets/js/kontinente-loader.js?v=vortigern-20261018" data-default-id="kontinente-startseite"></script>
+
+</head><body class="continent-atlas">
   <main class="kingdom-page continent-page continent-start-page" data-page-type="continent-overview" data-kontinent-root data-orte-static-template data-default-id="kontinente-startseite">
-    <section class="continent-parchment continent-parchment--centered" aria-labelledby="kontinente-title">
-      <div class="atlas-folio">
-        <span>Aleria · Weltenalmanach</span>
-        <span>Geographie / Register</span>
-      </div>
+    <section class="continent-parchment" aria-labelledby="kontinente-title">
+      <div class="atlas-folio"><a href="/Kontinente/index.html">Aleria <span>Atlas & Chronik</span></a><span>Das Register der Kontinente</span></div>
+      <nav class="atlas-continent-nav" aria-label="Kontinent wählen"><a href="/Kontinente/index.html" aria-current="page">Alle Kontinente</a><a href="/Kontinente/Estryll/Estryll.html">Estryll</a><a href="/Kontinente/Lothir/Lothir.html">Lothir</a><a href="/Kontinente/Aldervan/Aldervan.html">Aldervan</a></nav>
       <header class="continent-page-header" id="seitenanfang">
-        <div class="atlas-eyebrow">Von den Ländern der Welt</div>
-        <h1 id="kontinente-title" data-kontinent-title data-orte-explicit-inline>Kontinente</h1>
-        <div class="atlas-ornament" aria-hidden="true">✦</div>
-        <div class="atlas-introduction">Acht Kontinente, verewigt unter ihren Bannern.<br>Ein Verzeichnis der Länder und ihrer Reiche.</div>
-      </header>
+    <div class="atlas-title-block"><p class="atlas-eyebrow">Der Aleria-Atlas</p>
+      <h1 id="kontinente-title" data-kontinent-title data-orte-explicit-inline>Kontinente</h1>
+      <p class="atlas-introduction">Acht Kontinente. Ihre Länder, ihre Wappen und die Spuren vergangener Reiche.</p></div>
+    <div class="atlas-volume" aria-hidden="true"><span>ALERIA</span><strong>VIII</strong><span>Kontinente</span></div>
+  </header>
 
-      <div class="atlas-register-heading">
-        <span>Das Kontinentregister</span>
-        <span>VIII Kontinente</span>
-      </div>
-      <div class="continent-grid continent-grid--overview" role="list">
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Estryll</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-estryll-banner" data-orte-image-label="Banner Estryll" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Estryll">
-            <a class="continent-card-link" href="Estryll/Estryll.html" aria-label="Kontinent Estryll öffnen">
-              <img src="../IconOrdner/L%C3%A4nder%20Icons/Estryll%20Kontinent.png" alt="Banner Estryll">
-            </a>
-          </span>
-          <span class="atlas-entry-status" aria-hidden="true">Reiche erkunden &nbsp;↗</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Lothir</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-lothir-banner" data-orte-image-label="Banner Lothir" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Lothir">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Lothir%20Kontinent.png" alt="Banner Lothir">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Tirnara</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-tirnara-banner" data-orte-image-label="Banner Tirnara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Tirnara">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Tirnara%20Kontinent.png" alt="Banner Tirnara">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Aldervan</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-aldervan-banner" data-orte-image-label="Banner Aldervan" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Aldervan">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Aldervan%20Kontinent.png" alt="Banner Aldervan">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Sundara</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-sundara-banner" data-orte-image-label="Banner Sundara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Sundara">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Sundara%20Kontinent.png" alt="Banner Sundara">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Emberon</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-emberon-banner" data-orte-image-label="Banner Emberon" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Emberon">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Emberon%20Kontinent.png" alt="Banner Emberon">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Yrmandrall</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yrmandrall-banner" data-orte-image-label="Banner Yrmandrall" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yrmandrall">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Yrmandrall%20Kontinent.png" alt="Banner Yrmandrall">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-
-        <article class="continent-card" role="listitem">
-          <h2 data-orte-explicit-inline>Yanokuro</h2>
-          <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yanokuro-banner" data-orte-image-label="Banner Yanokuro" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yanokuro">
-            <img src="../IconOrdner/L%C3%A4nder%20Icons/Yanokuro%20Kontinent.png" alt="Banner Yanokuro">
-          </span>
-          <span class="atlas-entry-status">Noch kein Eintrag</span>
-        </article>
-      </div>
-      <footer class="atlas-footer">
-        <span>Aleria · Länder, Wappen &amp; Überlieferungen</span>
-        <span>Das Register der Kontinente</span>
-      </footer>
+      <div class="atlas-register-heading"><span>Das Kontinentregister</span><span>VIII Kontinente</span></div><div class="continent-grid continent-grid--overview" role="list"><article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Estryll</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-estryll-banner" data-orte-image-label="Banner Estryll" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Estryll">
+    <a class="continent-card-link" href="/Kontinente/Estryll/Estryll.html" aria-label="Kontinent Estryll öffnen"><img src="/IconOrdner/L%C3%A4nder%20Icons/Estryll%20Kontinent.png" alt="Banner Estryll" loading="lazy"></a>
+  </span><span class="atlas-entry-status">Länder entdecken ↗</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Lothir</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-lothir-banner" data-orte-image-label="Banner Lothir" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Lothir">
+    <a class="continent-card-link" href="/Kontinente/Lothir/Lothir.html" aria-label="Kontinent Lothir öffnen"><img src="/IconOrdner/L%C3%A4nder%20Icons/Lothir%20Kontinent.png" alt="Banner Lothir" loading="lazy"></a>
+  </span><span class="atlas-entry-status">Länder entdecken ↗</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Tirnara</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-tirnara-banner" data-orte-image-label="Banner Tirnara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Tirnara">
+    <img src="/IconOrdner/L%C3%A4nder%20Icons/Tirnara%20Kontinent.png" alt="Banner Tirnara" loading="lazy">
+  </span><span class="atlas-entry-status">Noch kein Eintrag</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Aldervan</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-aldervan-banner" data-orte-image-label="Banner Aldervan" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Aldervan">
+    <a class="continent-card-link" href="/Kontinente/Aldervan/Aldervan.html" aria-label="Kontinent Aldervan öffnen"><img src="/IconOrdner/L%C3%A4nder%20Icons/Aldervan%20Kontinent.png" alt="Banner Aldervan" loading="lazy"></a>
+  </span><span class="atlas-entry-status">Länder entdecken ↗</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Sundara</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-sundara-banner" data-orte-image-label="Banner Sundara" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Sundara">
+    <img src="/IconOrdner/L%C3%A4nder%20Icons/Sundara%20Kontinent.png" alt="Banner Sundara" loading="lazy">
+  </span><span class="atlas-entry-status">Noch kein Eintrag</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Emberon</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-emberon-banner" data-orte-image-label="Banner Emberon" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Emberon">
+    <img src="/IconOrdner/L%C3%A4nder%20Icons/Emberon%20Kontinent.png" alt="Banner Emberon" loading="lazy">
+  </span><span class="atlas-entry-status">Noch kein Eintrag</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Yrmandrall</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yrmandrall-banner" data-orte-image-label="Banner Yrmandrall" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yrmandrall">
+    <img src="/IconOrdner/L%C3%A4nder%20Icons/Yrmandrall%20Kontinent.png" alt="Banner Yrmandrall" loading="lazy">
+  </span><span class="atlas-entry-status">Noch kein Eintrag</span>
+</article>
+<article class="continent-card" role="listitem">
+  <h2 data-orte-explicit-inline>Yanokuro</h2>
+  <span class="orte-image-slot continent-banner-slot" data-orte-image-key="kontinent-yanokuro-banner" data-orte-image-label="Banner Yanokuro" data-orte-image-width="100" data-orte-image-format="banner" data-orte-image-max-height="280" aria-label="Banner Yanokuro">
+    <img src="/IconOrdner/L%C3%A4nder%20Icons/Yanokuro%20Kontinent.png" alt="Banner Yanokuro" loading="lazy">
+  </span><span class="atlas-entry-status">Noch kein Eintrag</span>
+</article></div>
+      <footer class="atlas-footer"><a href="/Kontinente/index.html">← Zum Kontinentregister</a><a href="#seitenanfang">Zurück zum Seitenanfang ↑</a></footer>
     </section>
   </main>
-</body>
-</html>
+</body></html>

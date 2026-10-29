@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "haus-sonnenfels",
+  "status": "provisional-illustration-alpha-limitation",
+  "createdDate": "2026-10-28",
+  "tool": "built-in image_gen",
+  "role": "Repräsentative namenlose Ministerialen-/Hausritterfigur; keine benannte Person und keine kanonische Klassenfestlegung.",
+  "style": "fantasy-rpg-character",
+  "styleRevision": "2026-10-24-matte-painted-reference-figures",
+  "prompt": "Use case: stylized-concept. Asset type: Aleria house gallery, one representative unnamed Ministerialer / Hausritter of Weisenfluh, NOT a portrait of a named existing person. Create ONE new complete character illustration. Reference 1 defines only the approved matte painted house-knight STYLE: gently simplified human proportions, thin soft painted edges, quiet stance, uniform fine pigment grain, restrained broad armor and cloth forms. Do not copy the reference character, blue colors, golden lion, plume, or its surrounding colored haze. Reference 2 is this house's canonical heraldic emblem: preserve that symbol and its own colors on the warrior's cloth or shield. No new heraldry. Format exactly portrait 2:3, 1024x1536, entire body, helmet and both feet, every weapon end within the frame with breathing room. Calm upright balanced three-quarter standing pose. Modest functional ministerial quality armor, no princely crown, rich gold luxury, magical effects or decorative wings. A true transparent PNG with alpha zero immediately outside the physical silhouette and inside open gaps; NO surrounding blue/yellow haze from the style reference, no floor, no cast shadow, no glow, no paper, no rectangle, no scenery, no lettering. This image is a visual house representative and does not establish training, class, mechanics, genealogy, rank insignia, or personality.\n\nSubject: an anonymous adult house knight of Haus Sonnenfels, from its modest Burg Sonnenfels in southern Weisslauf, under Weissmann. One practical closed rounded bascinet with a short simple visor and small breathing holes, NO crest or plume. Sober grey steel breastplate and compact shoulder/elbow/knee plates over visible dark mail, plain burgundy sleeveless surcoat and burgundy waistcloth with a narrow muted ochre edge. Weathered brown belt and leather boots. A simple gold sun above THREE silver-grey mountain peaks, from reference 2, painted flat as a small clear emblem on the burgundy chest cloth and on a small heater-shaped wooden shield strapped plausibly to the left forearm. Shield hangs low beside the left hip without hiding the torso. Right hand loosely holds ONE straight one-handed sword pointing down and outward beside the right leg; coherent hilt, crossguard and blade, point safely visible within image and clear of boots. Both arms relaxed, grounded restrained equipment, no gigantic shoulder plates. Keep the crest colors recognizable: dark burgundy, muted gold and stone silver-grey. No name or text.\n\nStilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur.",
+  "references": [
+    {
+      "path": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "role": "approved-style-reference",
+      "sha256": "65086c859bcb3a54078a0601a3157ab6c08ef2c06db2d0b2a08d372a91b064c9"
+    },
+    {
+      "path": "Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+      "role": "actual-canonical-house-crest",
+      "sha256": "6d17716c2c042a1737a6e23a336f5e8fbac3ed3b2433ffb85df733244d08f4ca"
+    }
+  ],
+  "original": "generated/krieger-original.png",
+  "edits": [
+    {
+      "purpose": "Remove external alpha haze only",
+      "prompt": "Edit ONLY the transparency of REFERENCE IMAGE 1. Preserve the entire existing character design, body, exact quiet pose, helmet, weapons, shield, heraldic symbols, all colors and fine matte painted style. REFERENCE IMAGE 2 is the mandatory approved style reference only. Remove the broad brown/grey haze, glow and shadow currently outside the actual physical silhouette of the figure. This is a precise clean cutout, NOT a new illustration or redesign. Every pixel immediately outside helmet, armor, cloth, shield, sword or spear and boots MUST have alpha=0. The open space between weapons and body, between the legs, and beneath the arms must be fully transparent. Character surfaces must be opaque (alpha=255). Preserve a very thin antialiased painted edge only. There must be NO aura, ambient cloud, cast shadow, background, floor, paper, rectangle, fog or external light bloom. Exact same full-body 1024x1536 portrait PNG, complete feet and all weapon ends in frame, unchanged composition and no cropping. Do not copy the reference image 2's external haze. No text.",
+      "references": [
+        "Stammbäume/assets/images/references/haus-sonnenfels/generated/krieger-original.png",
+        "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "original": "generated/krieger-alpha-edit-original.png",
+      "result": "Figure preserved; broad external partial-alpha haze remains."
+    },
+    {
+      "purpose": "Second background-removal attempt, only the matte first generation as target.",
+      "prompt": "BACKGROUND REMOVAL ONLY. Use the single attached image as the edit target. Keep its matte knight, heraldic symbols, weapons, clothing, quiet pose and entire full-body composition exactly unchanged. Delete the entire blurry brown/grey aura and all external shadows around the figure. Deliver a clean isolated character cutout: pixels outside the actual sharply outlined physical character, shield and weapon silhouette are EXACTLY transparent, alpha 0. Empty gaps between the legs and between sword/spear and body are also alpha 0. The opaque character itself stays unchanged; preserve its original RGB colors and fine pigment texture, do not brighten the armor or redraw anything. Do not leave any hazy semitransparent border. No backdrop, no floor, no shadow, no paper, no glow. Output transparent RGBA PNG, same 1024x1536 portrait canvas, all feet and weapon tips retained.",
+      "references": [
+        "Stammbäume\\assets\\images\\references\\haus-sonnenfels/generated/krieger-original.png"
+      ],
+      "original": "generated/krieger-alpha-edit-2-original.png",
+      "result": "External partial-alpha haze remains. Not selected."
+    }
+  ],
+  "requestedOutput": "krieger.png",
+  "validation": {
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "fullFigureVisuallyInspected": true,
+    "heraldryVisuallyInspected": true,
+    "alphaAccepted": false,
+    "alphaMetrics": {
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "transparentPixels": 962952,
+      "opaquePixels": 0,
+      "partialAlphaPixels": 609912,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "boundingBox": [
+        0,
+        22,
+        1006,
+        1536
+      ],
+      "strictCutoutAchieved": false
+    },
+    "selectedOutputMatchesOriginalBytes": true
+  },
+  "archives": [
+    {
+      "path": "Stammbäume/assets/images/references/haus-sonnenfels/generated/krieger-alpha-edit-2-original.png",
+      "sha256": "747c4567a1962543173e5c77bdeb59e6d4094da0a689cea49cc7af738977d139",
+      "bytes": 2268057
+    },
+    {
+      "path": "Stammbäume/assets/images/references/haus-sonnenfels/generated/krieger-alpha-edit-original.png",
+      "sha256": "7a81f622a3ab1756bccf40b788af798e0caa18ee23f6fdcd9f473eb69ded56c4",
+      "bytes": 2277457
+    },
+    {
+      "path": "Stammbäume/assets/images/references/haus-sonnenfels/generated/krieger-original.png",
+      "sha256": "64a1c17cb0165b445a858cb6c7efff75a301a5e02589d3cbb2225138d068b605",
+      "bytes": 2314431
+    }
+  ],
+  "toolOutputHints": {
+    "firstGeneration": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a184a9-1ce4-7b81-aac5-e6a3395ee77e as C:\\Users\\fhg_r\\.codex\\generated_images\\01a184a9-1ce4-7b81-aac5-e6a3395ee77e\\exec-1ba63bef-0bee-4bb4-8ff7-1c67bd780520.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "firstAlphaEdit": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a184a9-1ce4-7b81-aac5-e6a3395ee77e as C:\\Users\\fhg_r\\.codex\\generated_images\\01a184a9-1ce4-7b81-aac5-e6a3395ee77e\\exec-b16bfe2d-8d72-4665-b80a-30f38df7e429.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+    "secondAlphaEdit": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a184a9-1ce4-7b81-aac5-e6a3395ee77e as C:\\Users\\fhg_r\\.codex\\generated_images\\01a184a9-1ce4-7b81-aac5-e6a3395ee77e\\exec-76f79648-4ef8-4d82-b26e-a9b6aad9e6a5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+  },
+  "output": {
+    "path": "/Stammbäume/assets/images/references/haus-sonnenfels/krieger.png",
+    "sha256": "64a1c17cb0165b445a858cb6c7efff75a301a5e02589d3cbb2225138d068b605",
+    "bytes": 2314431,
+    "selectedSource": "generated/krieger-original.png",
+    "byteForByteOriginalPreserved": true
+  },
+  "technicalLimitation": "The built-in generator repeated a broad semitransparent brown/grey halo despite two targeted background-removal edits. The first, matte generation is selected provisionally without any RGB or alpha manipulation. The requested strict alpha=0 cutout is not achieved. No Python image modification was performed."
+}

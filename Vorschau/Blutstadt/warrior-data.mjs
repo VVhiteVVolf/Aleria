@@ -1,0 +1,2 @@
+import {houses} from './house-data.mjs';
+export const warriors=Object.freeze(houses.map(h=>Object.freeze({id:h.id,name:h.name,className:h.className,classHref:h.classHref,palette:h.palette,equipment:h.equipment,reason:h.reason,image:`assets/warriors/previews/${h.id}.webp`,fullsize:`assets/warriors/production/${h.id}.png`,representationLabel:h.className==='Ritter der Blutstadt'?'Ritterdarstellung · Entwurf':'Hausvertretung · Entwurf',roleLabel:h.className==='Ritter der Blutstadt'?'Klassenvorschlag':'Berufs- und Rollenentwurf'})));

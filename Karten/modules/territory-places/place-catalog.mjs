@@ -27,6 +27,7 @@ export function createPlaceRegister(markers, describePlace) {
       id: marker.id, name: marker.title, type: marker.category,
       iconSrc: marker.icon, iconAlt: `${marker.category}: ${marker.title}`,
       house: details.house, houseHref: details.houseHref, description: details.text,
+      ...(marker.href || details.href ? { href: marker.href || details.href } : {}),
       ...(details.coRulers?.length ? { coRulers: details.coRulers } : {}),
     })];
   }));

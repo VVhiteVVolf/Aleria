@@ -14,9 +14,9 @@
       imageSrc: options.imageSrc || "",
       imageAlt: options.imageAlt || `Wappen Haus ${name}`,
       href: familyId && options.linked !== false
-        ? (options.housePage
+        ? (options.href || (options.housePage
           ? `/Familien%20H%C3%A4user%20und%20Clans/${options.housePage}?haus=${encodeURIComponent(familyId)}`
-          : `${familyTreePage}?family=${encodeURIComponent(familyId)}&mode=view`)
+          : `${familyTreePage}?family=${encodeURIComponent(familyId)}&mode=view`))
         : "",
       seat: options.seat || "",
       liege: options.liege || "",

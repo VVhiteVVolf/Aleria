@@ -2,7 +2,7 @@ import { HOUSE_RANKS } from '../house-content/house-ranks.generated.mjs';
 import { HOUSE_OFFICES, houseOfficeFor } from './house-office-catalog.mjs?v=20261028-office-body-v2';
 
 // Aldrimar's kingdom source explicitly includes landless Huskarle/Walküren.
-const nobleRank = /ritter|freiherr|baron|gr[aä]f|fürst|herzog|könig|kaiser|tiarna|laird|jarl|thane|thengr|hesir|hersir|huskarl|walküre|earl|duke|king|lord|adlig|adelig/i;
+const nobleRank = /ritter|freiherr|junker|ministerial|baron|gr[aä]f|fürst|herzog|könig|kaiser|tiarna|laird|jarl|thane|thengr|hesir|hersir|huskarl|walküre|earl|duke|king|lord|adlig|adelig/i;
 const unnamed = /^(?:nicht benannt|noch nicht benannt|unbekannt|unbesetzt|amtsinhaber nicht überliefert|offen|folgt\s*…?|\?+|rolle)$/i;
 const areaTitles = { militaer: 'Militär', klerus: 'Klerus', gerichtsbarkeit: 'Gerichtsbarkeit', finanzen: 'Finanzen', diplomatie: 'Diplomatie', unterhaltung: 'Unterhaltung' };
 export const namedOfficeHolder = name => Boolean(/\p{L}/u.test(String(name || '')) && !unnamed.test(String(name).trim()));

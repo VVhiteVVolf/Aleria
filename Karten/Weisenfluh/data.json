@@ -1,0 +1,1811 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Weisenfluh/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "59e3acfc4801f495642675cb54f84470244fcf82090e65a4387338c4f565087f",
+  "state": {
+    "pins": [
+      {
+        "id": "weisenfluh-ewigensee",
+        "title": "Ewigensee",
+        "x": 0.8859999999999999,
+        "y": 0.358,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/goldkranz.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldkranz",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/ewigensee.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewigensee/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Goldkranz",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ewigensee"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Goldkranz"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Goldkranz, Haus Borgenicht, Haus Goldberg, Haus Immerglück, Haus Kaltwasser"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Königliche Domäne Ewigensee"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-ewigensee",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "ewigensee",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            88.6,
+            35.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-goldkranz",
+          "haus-borgenicht",
+          "haus-goldberg",
+          "haus-immergluck",
+          "haus-kaltwasser"
+        ]
+      },
+      {
+        "id": "weisenfluh-ewiggruen",
+        "title": "Ewiggrün",
+        "x": 0.5820000000000001,
+        "y": 0.31799999999999995,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/rosenbluth.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rosenblueth",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/ewiggruen.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ewiggruen/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Rosenblüth",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ewiggrün"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Rosenblüth"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Rosenblüth, Haus Blumenthal, Catrannoch, Cnagallan, Haus Rosenstolz"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Ewiggrün"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-ewiggruen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "ewiggruen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            58.2,
+            31.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-rosenblueth",
+          "haus-blumenthal",
+          "haus-catrannoch",
+          "haus-cnagallan",
+          "haus-rosenstolz"
+        ]
+      },
+      {
+        "id": "weisenfluh-weisshort",
+        "title": "Weishort",
+        "x": 0.29,
+        "y": 0.09499999999999986,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sommerfeld.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sommerfeld",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/weisshort.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisshort/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Sommerfeld",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Weishort"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sommerfeld"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Sommerfeld, Haus Feuerstein, Haus Sonnenfeld"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Weishort"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Weisshort"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-weisshort",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "weisshort",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            29,
+            9.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-sommerfeld",
+          "haus-feuerstein",
+          "haus-sonnenfeld"
+        ]
+      },
+      {
+        "id": "weisenfluh-seeblick",
+        "title": "Seeblick",
+        "x": 0.26,
+        "y": 0.755,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/silberthal.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-silberthal",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/seeblick.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-seeblick/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Silberthal",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Seeblick"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Silberthal"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Silberthal, Haus Freudenthal, Haus Rosenblatt"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Seeblick"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-seeblick",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "seeblick",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            26,
+            75.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-silberthal",
+          "haus-freudenthal",
+          "haus-rosenblatt"
+        ]
+      },
+      {
+        "id": "weisenfluh-weisslauf",
+        "title": "Weislauf",
+        "x": 0.632,
+        "y": 0.8840000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weissmann.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weissmann",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/weisslauf.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weisslauf/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Weißmann",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Weislauf"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Weißmann"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Weißmann, Torcradan, Haus Weißberg, Haus Weizmann"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Weislauf"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Weisslauf"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-weisslauf",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "weisslauf",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            63.2,
+            88.4
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-weissmann",
+          "haus-torcradan",
+          "haus-weissberg",
+          "haus-weizmann"
+        ]
+      },
+      {
+        "id": "weisenfluh-wolfrieden",
+        "title": "Wolfrieden",
+        "x": 0.131,
+        "y": 0.31000000000000005,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/wolfenstein.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wolfenstein",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/wolfrieden.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-wolfrieden/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Wolfenstein",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Wolfrieden"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Wolfenstein"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Wolfenstein"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Wolfrieden"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Wolfenried"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-wolfrieden",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "wolfrieden",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            13.1,
+            31
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-wolfenstein"
+        ]
+      },
+      {
+        "id": "weisenfluh-brueckenwacht",
+        "title": "Brückenwacht",
+        "x": 0.475,
+        "y": 0.09200000000000008,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/bruggemann.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bruggemann",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/brueckenwacht.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-brueckenwacht/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Brüggemann",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brückenwacht"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Brüggemann"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Brüggemann"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Brückenwacht"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-brueckenwacht",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "brueckenwacht",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            47.5,
+            9.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-bruggemann"
+        ]
+      },
+      {
+        "id": "weisenfluh-silbermundt",
+        "title": "Silbermundt",
+        "x": 0.10099999999999999,
+        "y": 0.6060000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/edelweiss.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-edelweiss",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/silbermundt.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-silbermundt/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Edelweiss",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Silbermundt"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Edelweiss"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Edelweiss"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Silbermundt"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-silbermundt",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "silbermundt",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            10.1,
+            60.6
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-edelweiss"
+        ]
+      },
+      {
+        "id": "weisenfluh-weissklippe",
+        "title": "Weissklippe",
+        "x": 0.41700000000000004,
+        "y": 0.857,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/sgaireag.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sgaireag",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/weissklippe.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weissklippe/index.html",
+        "region": "Weisenfluh",
+        "house": "Sgàireag",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Weissklippe"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Sgàireag"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Sgàireag"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Weissklippe"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-weissklippe",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "weissklippe",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            41.7,
+            85.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-sgaireag"
+        ]
+      },
+      {
+        "id": "weisenfluh-weissthal",
+        "title": "Weissthal",
+        "x": 0.726,
+        "y": 0.6699999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/thalmann.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-thalmann",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/weissthal.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-weissthal/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Thalmann",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Weissthal"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Thalmann"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Thalmann"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Weissthal"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-weissthal",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "weissthal",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            72.6,
+            67
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-thalmann"
+        ]
+      },
+      {
+        "id": "weisenfluh-ottersburg",
+        "title": "Ottersburg",
+        "x": 0.807,
+        "y": 0.857,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/otterberg.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-otterberg",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/ottersburg.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-ottersburg/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Otterberg",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ottersburg"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Otterberg"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Otterberg"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Ottersburg"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-ottersburg",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "ottersburg",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            80.7,
+            85.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-otterberg"
+        ]
+      },
+      {
+        "id": "weisenfluh-hohenklamm",
+        "title": "Hohenklamm",
+        "x": 0.887,
+        "y": 0.5509999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/damhcallan.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damhcallan",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/hohenklamm.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-hohenklamm/index.html",
+        "region": "Weisenfluh",
+        "house": "Damhcallan",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hohenklamm"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Damhcallan"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Damhcallan, Taghradan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Hohenklamm"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-hohenklamm",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "hohenklamm",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            88.7,
+            55.1
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-damhcallan",
+          "haus-taghradan"
+        ]
+      },
+      {
+        "id": "weisenfluh-maehrenfeld",
+        "title": "Mährenfeld",
+        "x": 0.544,
+        "y": 0.54,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/honigfeld.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-honigblut",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/maehrenfeld.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-maehrenfeld/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Honigblüt",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mährenfeld"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Honigblüt"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Honigblüt, Iorcallan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Mährenfeld"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-maehrenfeld",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "maehrenfeld",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            54.4,
+            54
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-honigblut",
+          "haus-iorcallan"
+        ]
+      },
+      {
+        "id": "weisenfluh-aehrensass",
+        "title": "Ährensass",
+        "x": 0.39899999999999997,
+        "y": 0.498,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/die-ritter-der-kornahre.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ritter-der-kornahre",
+        "banner": "/Stammbäume/assets/images/regions/weisenfluh/aehrensass.webp",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-aehrensass/index.html",
+        "region": "Weisenfluh",
+        "house": "Die Ritter der Kornähre",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ährensass"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Die Ritter der Kornähre"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Die Ritter der Kornähre"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Ordensgebiet Ährensass"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-aehrensass",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "aehrensass",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            39.9,
+            49.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-ritter-der-kornahre"
+        ]
+      },
+      {
+        "id": "weisenfluh-rebenwacht",
+        "title": "Burg Rebenwacht",
+        "x": 0.83,
+        "y": 0.39,
+        "cat": "accepted-realm-burg",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-weinlaub",
+        "banner": "/Stammbäume/assets/images/houses/Weisenfluh/haus-weinlaub.png",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-rebenwacht/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Weinlaub",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Burg Rebenwacht"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Weinlaub"
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Ministerialensitz Burg Rebenwacht"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Weinlaub"
+          }
+        ],
+        "text": "Burg Rebenwacht liegt nahe Ewigensee. Die Kartenposition ist vorläufig. Ungefähre Kartenposition.",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-rebenwacht",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "rebenwacht",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            83,
+            39
+          ],
+          "provisional": true
+        },
+        "residentFamilyIds": [
+          "haus-weinlaub"
+        ]
+      },
+      {
+        "id": "weisenfluh-sonnenfels",
+        "title": "Burg Sonnenfels",
+        "x": 0.675,
+        "y": 0.815,
+        "cat": "accepted-realm-burg",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sonnenfels",
+        "banner": "/Stammbäume/assets/images/houses/Weisenfluh/haus-sonnenfels.png",
+        "bannerLink": "/Kontinente/Lothir/Weisenfluh/weisenfluh-sitz-sonnenfels/index.html",
+        "region": "Weisenfluh",
+        "house": "Haus Sonnenfels",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Burg Sonnenfels"
+          },
+          {
+            "k": "Typ",
+            "v": "Burg"
+          },
+          {
+            "k": "Befehlshaber",
+            "v": ""
+          },
+          {
+            "k": "Unterstellung",
+            "v": ""
+          },
+          {
+            "k": "Besatzung",
+            "v": ""
+          },
+          {
+            "k": "Aufgaben",
+            "v": ""
+          },
+          {
+            "k": "Ausrüstung",
+            "v": ""
+          },
+          {
+            "k": "Befestigung",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gerüchte",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Sonnenfels"
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Ministerialensitz Burg Sonnenfels"
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sonnenfels"
+          }
+        ],
+        "text": "Burg Sonnenfels liegt im südlichen Weislauf. Das Ministerialenhaus Sonnenfels untersteht dem Haus Weißmann; die genaue Kartenposition ist vorläufig. Ungefähre Kartenposition.",
+        "secret": false,
+        "dominionId": "weisenfluh-sitz-sonnenfels",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "sonnenfels",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            67.5,
+            81.5
+          ],
+          "provisional": true
+        },
+        "residentFamilyIds": [
+          "haus-sonnenfels"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "accepted-realm-burg",
+        "label": "Burg",
+        "color": "#79617e",
+        "marker": "/Karten/assets/icons/welt/burgsiedlung.png",
+        "placeholderCategoryId": "mmfls5afqqpr"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "koenigreich-weisenfluh",
+        "name": "Königreich Weisenfluh",
+        "type": "Königreich",
+        "ruler": "Haus Goldkranz",
+        "seat": "Ewigensee",
+        "parentId": ""
+      },
+      {
+        "id": "weisenfluh-region-ewigensee",
+        "name": "Königliche Provinz Ewigensee",
+        "type": "Königliche Provinz",
+        "ruler": "Haus Goldkranz",
+        "seat": "Ewigensee",
+        "parentId": "koenigreich-weisenfluh"
+      },
+      {
+        "id": "weisenfluh-region-ewiggruen",
+        "name": "Freiherrentum Ewiggrün",
+        "type": "Freiherrentum",
+        "ruler": "Haus Rosenblüth",
+        "seat": "Ewiggrün",
+        "parentId": "koenigreich-weisenfluh"
+      },
+      {
+        "id": "weisenfluh-region-weisshort",
+        "name": "Freiherrentum Weishort",
+        "type": "Freiherrentum",
+        "ruler": "Haus Sommerfeld",
+        "seat": "Weishort",
+        "parentId": "koenigreich-weisenfluh"
+      },
+      {
+        "id": "weisenfluh-region-seeblick",
+        "name": "Freiherrentum Seeblick",
+        "type": "Freiherrentum",
+        "ruler": "Haus Silberthal",
+        "seat": "Seeblick",
+        "parentId": "koenigreich-weisenfluh"
+      },
+      {
+        "id": "weisenfluh-region-weisslauf",
+        "name": "Freiherrentum Weislauf",
+        "type": "Freiherrentum",
+        "ruler": "Haus Weißmann",
+        "seat": "Weislauf",
+        "parentId": "koenigreich-weisenfluh"
+      },
+      {
+        "id": "weisenfluh-sitz-ewigensee",
+        "name": "Königliche Domäne Ewigensee",
+        "type": "Königliche Domäne",
+        "ruler": "Haus Goldkranz",
+        "seat": "Ewigensee",
+        "parentId": "weisenfluh-region-ewigensee"
+      },
+      {
+        "id": "weisenfluh-sitz-ewiggruen",
+        "name": "Freiherrentum Ewiggrün",
+        "type": "Freiherrentum",
+        "ruler": "Haus Rosenblüth",
+        "seat": "Ewiggrün",
+        "parentId": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "id": "weisenfluh-sitz-weisshort",
+        "name": "Freiherrentum Weishort",
+        "type": "Freiherrentum",
+        "ruler": "Haus Sommerfeld",
+        "seat": "Weishort",
+        "parentId": "weisenfluh-region-weisshort"
+      },
+      {
+        "id": "weisenfluh-sitz-seeblick",
+        "name": "Freiherrentum Seeblick",
+        "type": "Freiherrentum",
+        "ruler": "Haus Silberthal",
+        "seat": "Seeblick",
+        "parentId": "weisenfluh-region-seeblick"
+      },
+      {
+        "id": "weisenfluh-sitz-weisslauf",
+        "name": "Freiherrentum Weislauf",
+        "type": "Freiherrentum",
+        "ruler": "Haus Weißmann",
+        "seat": "Weislauf",
+        "parentId": "weisenfluh-region-weisslauf"
+      },
+      {
+        "id": "weisenfluh-sitz-wolfrieden",
+        "name": "Junkerherrschaft Wolfrieden",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Wolfenstein",
+        "seat": "Wolfrieden",
+        "parentId": "weisenfluh-region-weisshort"
+      },
+      {
+        "id": "weisenfluh-sitz-brueckenwacht",
+        "name": "Junkerherrschaft Brückenwacht",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Brüggemann",
+        "seat": "Brückenwacht",
+        "parentId": "weisenfluh-region-weisshort"
+      },
+      {
+        "id": "weisenfluh-sitz-silbermundt",
+        "name": "Junkerherrschaft Silbermundt",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Edelweiss",
+        "seat": "Silbermundt",
+        "parentId": "weisenfluh-region-seeblick"
+      },
+      {
+        "id": "weisenfluh-sitz-weissklippe",
+        "name": "Junkerherrschaft Weissklippe",
+        "type": "Junkerherrschaft",
+        "ruler": "Sgàireag",
+        "seat": "Weissklippe",
+        "parentId": "weisenfluh-region-weisslauf"
+      },
+      {
+        "id": "weisenfluh-sitz-weissthal",
+        "name": "Junkerherrschaft Weissthal",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Thalmann",
+        "seat": "Weissthal",
+        "parentId": "weisenfluh-region-weisslauf"
+      },
+      {
+        "id": "weisenfluh-sitz-ottersburg",
+        "name": "Junkerherrschaft Ottersburg",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Otterberg",
+        "seat": "Ottersburg",
+        "parentId": "weisenfluh-region-weisslauf"
+      },
+      {
+        "id": "weisenfluh-sitz-hohenklamm",
+        "name": "Junkerherrschaft Hohenklamm",
+        "type": "Junkerherrschaft",
+        "ruler": "Damhcallan",
+        "seat": "Hohenklamm",
+        "parentId": "weisenfluh-region-ewigensee"
+      },
+      {
+        "id": "weisenfluh-sitz-maehrenfeld",
+        "name": "Junkerherrschaft Mährenfeld",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Honigblüt",
+        "seat": "Mährenfeld",
+        "parentId": "weisenfluh-region-ewiggruen"
+      },
+      {
+        "id": "weisenfluh-sitz-aehrensass",
+        "name": "Ordensgebiet Ährensass",
+        "type": "Ordensgebiet",
+        "ruler": "Die Ritter der Kornähre",
+        "seat": "Ährensass",
+        "parentId": "koenigreich-weisenfluh"
+      },
+      {
+        "id": "weisenfluh-sitz-rebenwacht",
+        "name": "Ministerialensitz Burg Rebenwacht",
+        "type": "Ministerialensitz",
+        "ruler": "Haus Weinlaub",
+        "seat": "Burg Rebenwacht",
+        "parentId": "weisenfluh-region-ewigensee"
+      },
+      {
+        "id": "weisenfluh-sitz-sonnenfels",
+        "name": "Ministerialensitz Burg Sonnenfels",
+        "type": "Ministerialensitz",
+        "ruler": "Haus Sonnenfels",
+        "seat": "Burg Sonnenfels",
+        "parentId": "weisenfluh-region-weisslauf"
+      },
+      {
+        "id": "weisenfluh-hausbereich-catrannoch",
+        "name": "Herrschaft Catrannoch in Ewiggrün",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Catrannoch",
+        "seat": "Ewiggrün",
+        "parentId": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "id": "weisenfluh-hausbereich-cnagallan",
+        "name": "Herrschaft Cnagallan in Ewiggrün",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Cnagallan",
+        "seat": "Ewiggrün",
+        "parentId": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "id": "weisenfluh-hausbereich-iorcallan",
+        "name": "Hausdienst Iorcallan in Mährenfeld",
+        "type": "Ministerialenhaus",
+        "ruler": "Iorcallan",
+        "seat": "Mährenfeld",
+        "parentId": "weisenfluh-sitz-maehrenfeld"
+      },
+      {
+        "id": "weisenfluh-hausbereich-taghradan",
+        "name": "Hausdienst Taghradan in Hohenklamm",
+        "type": "Ministerialenhaus",
+        "ruler": "Taghradan",
+        "seat": "Hohenklamm",
+        "parentId": "weisenfluh-sitz-hohenklamm"
+      },
+      {
+        "id": "weisenfluh-hausbereich-torcradan",
+        "name": "Herrschaft Torcradan in Weislauf",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Torcradan",
+        "seat": "Weislauf",
+        "parentId": "weisenfluh-sitz-weisslauf"
+      },
+      {
+        "id": "weisenfluh-hausbereich-blumenthal",
+        "name": "Herrschaft Haus Blumenthal in Ewiggrün",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Blumenthal",
+        "seat": "Ewiggrün",
+        "parentId": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "id": "weisenfluh-hausbereich-rosenstolz",
+        "name": "Herrschaft Haus Rosenstolz in Ewiggrün",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Rosenstolz",
+        "seat": "Ewiggrün",
+        "parentId": "weisenfluh-sitz-ewiggruen"
+      },
+      {
+        "id": "weisenfluh-hausbereich-freudenthal",
+        "name": "Herrschaft Haus Freudenthal in Seeblick",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Freudenthal",
+        "seat": "Seeblick",
+        "parentId": "weisenfluh-sitz-seeblick"
+      },
+      {
+        "id": "weisenfluh-hausbereich-rosenblatt",
+        "name": "Herrschaft Haus Rosenblatt in Seeblick",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Rosenblatt",
+        "seat": "Seeblick",
+        "parentId": "weisenfluh-sitz-seeblick"
+      },
+      {
+        "id": "weisenfluh-hausbereich-feuerstein",
+        "name": "Herrschaft Haus Feuerstein in Weishort",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Feuerstein",
+        "seat": "Weishort",
+        "parentId": "weisenfluh-sitz-weisshort"
+      },
+      {
+        "id": "weisenfluh-hausbereich-sonnenfeld",
+        "name": "Herrschaft Haus Sonnenfeld in Weishort",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Sonnenfeld",
+        "seat": "Weishort",
+        "parentId": "weisenfluh-sitz-weisshort"
+      },
+      {
+        "id": "weisenfluh-hausbereich-weizmann",
+        "name": "Herrschaft Haus Weizmann in Weislauf",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Weizmann",
+        "seat": "Weislauf",
+        "parentId": "weisenfluh-sitz-weisslauf"
+      },
+      {
+        "id": "weisenfluh-hausbereich-weissberg",
+        "name": "Herrschaft Haus Weißberg in Weislauf",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Weißberg",
+        "seat": "Weislauf",
+        "parentId": "weisenfluh-sitz-weisslauf"
+      },
+      {
+        "id": "weisenfluh-hausbereich-borgenicht",
+        "name": "Herrschaft Haus Borgenicht in Ewigensee",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Borgenicht",
+        "seat": "Ewigensee",
+        "parentId": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "id": "weisenfluh-hausbereich-goldberg",
+        "name": "Herrschaft Haus Goldberg in Ewigensee",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Goldberg",
+        "seat": "Ewigensee",
+        "parentId": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "id": "weisenfluh-hausbereich-immergluck",
+        "name": "Herrschaft Haus Immerglück in Ewigensee",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Immerglück",
+        "seat": "Ewigensee",
+        "parentId": "weisenfluh-sitz-ewigensee"
+      },
+      {
+        "id": "weisenfluh-hausbereich-kaltwasser",
+        "name": "Herrschaft Haus Kaltwasser in Ewigensee",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Kaltwasser",
+        "seat": "Ewigensee",
+        "parentId": "weisenfluh-sitz-ewigensee"
+      }
+    ],
+    "regionTitle": "Königreich Weisenfluh",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/weisenfluh/weisenfluh.webp",
+    "mapImages": {
+      "normal": "/Karten/Weisenfluh/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

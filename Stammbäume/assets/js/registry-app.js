@@ -1,5 +1,5 @@
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';
-import { mergePublishedRegistryRecords } from './modules/family-registry/published-registry-merge.js';
+import { mergePublishedRegistryRecords } from './modules/family-registry/published-registry-merge.js?v=20261029-placement-paths';
 import { createRegistryBrowser } from './modules/family-registry/registry-browser-controller.js';
 import { listFamilyRecords } from './services/family-library.js?v=20261024-vortigerns-v1';
 import { FAMILY_REGISTRY_FOLDERS } from './data/family-registry-folders.js';

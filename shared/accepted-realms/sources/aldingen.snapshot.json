@@ -1,0 +1,1659 @@
+{
+  "schemaVersion": 1,
+  "realm": "aldingen",
+  "capturedAt": "2026-10-28",
+  "previewDirectory": "Aldingen",
+  "houses": [
+    {
+      "id": "brechten",
+      "name": "Brechten",
+      "motif": "Ein weißer Pferdekopf auf rotem Feld, eingefasst von goldenem Lorbeer und einem schwarzgoldenen Sternenring.",
+      "palette": [
+        "Schwarz",
+        "Ziegelrot",
+        "Elfenbein und Gold"
+      ],
+      "frame": "dunklem Eisen mit vergoldeten schmalen Einlagen",
+      "ornament": "Lorbeer und wenige achtzackige Sterne",
+      "original": "assets/originals/brechten.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/brechten.webp",
+      "fullsize": "assets/production/brechten.png"
+    },
+    {
+      "id": "ehrenfeld",
+      "name": "Ehrenfeld",
+      "motif": "Ein kniender silberner Ritter mit aufrecht gehaltenem Schwert auf einem elfenbein-purpur geteilten Feld.",
+      "palette": [
+        "Aubergine",
+        "Elfenbein",
+        "Silber"
+      ],
+      "frame": "Silber mit schwarzen kleinen Rundnieten",
+      "ornament": "schmale violette Blattzweige innerhalb des Rings",
+      "original": "assets/originals/ehrenfeld.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/ehrenfeld.webp",
+      "fullsize": "assets/production/ehrenfeld.png"
+    },
+    {
+      "id": "graven",
+      "name": "Graven",
+      "motif": "Eine dunkelrote fünfblättrige Rose über symmetrischem schwarzem Blattwerk auf Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Karminrot"
+      ],
+      "frame": "schwarz gebeiztem Holz mit elfenbeinfarbenen Einlagen",
+      "ornament": "kleine rote Rosen und sparsame helle Ranken",
+      "original": "assets/originals/graven.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/graven.webp",
+      "fullsize": "assets/production/graven.png"
+    },
+    {
+      "id": "halbrecht",
+      "name": "Halbrecht",
+      "motif": "Eine weißgewandete geflügelte Gestalt mit kleinem orangefarbenem Brustschild vor einem warmen Sonnenring.",
+      "palette": [
+        "Schwarz",
+        "Elfenbein",
+        "Kupferorange"
+      ],
+      "frame": "Silber und geschwärztem Eisen",
+      "ornament": "vier flache, vollständig im Kreis liegende Speichenspitzen und kupferne Blätter",
+      "original": "assets/originals/halbrecht.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/halbrecht.webp",
+      "fullsize": "assets/production/halbrecht.png"
+    },
+    {
+      "id": "haldren",
+      "name": "Haldren",
+      "motif": "Eine goldene weibliche Gestalt in langem Gewand mit Schwert und kleinem goldenem Löwen auf schwarzem Schild vor goldockerfarbenen Brettern; darüber ein geschlossener Helm.",
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Elfenbein"
+      ],
+      "frame": "schwarz gefasstem Holz mit schmalem Bronzeabschluss",
+      "ornament": "schwarze heraldische Helmdecken, vier kleine goldene Blattnieten",
+      "original": "assets/originals/haldren.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/haldren.webp",
+      "fullsize": "assets/production/haldren.png"
+    },
+    {
+      "id": "hohenmund",
+      "name": "Hohenmund",
+      "motif": "Drei schwarze schneebedeckte Bergspitzen über einer hellen Blattranke auf kupferroten Brettern.",
+      "palette": [
+        "Kupferrot",
+        "Schwarz",
+        "Knochenweiß"
+      ],
+      "frame": "gealterter Bronze",
+      "ornament": "umlaufendes kräftiges Blattwerk und vier kleine Blattspangen",
+      "original": "assets/originals/hohenmund.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": "grimberg",
+      "rank": "open",
+      "crest": "assets/crests/hohenmund.webp",
+      "fullsize": "assets/production/hohenmund.png"
+    },
+    {
+      "id": "klingen",
+      "name": "Klingen",
+      "motif": "Zwei parallele silberne Schwerter mit Spitzen nach unten auf einem blau-gold gespaltenen Feld.",
+      "palette": [
+        "Dunkles Blau",
+        "Goldocker",
+        "Silber"
+      ],
+      "frame": "Silber mit schmalen vergoldeten Kanten",
+      "ornament": "zwei feine Lorbeerzweige, alle Elemente innerhalb der kreisrunden Kontur",
+      "original": "assets/originals/klingen.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": "klingenhagen",
+      "rank": "open",
+      "crest": "assets/crests/klingen.webp",
+      "fullsize": "assets/production/klingen.png"
+    },
+    {
+      "id": "lachmund",
+      "name": "Lachmund",
+      "motif": "Eine stehende elfenbeinfarbene Frau mit kleiner Harfe vor einem goldocker-blau geteilten Feld.",
+      "palette": [
+        "Goldocker",
+        "Blau",
+        "Elfenbein und Schwarz"
+      ],
+      "frame": "vergoldetem Bronzeholz",
+      "ornament": "kleine blaue Blüte oben und ein ruhiger goldener Blätterkranz",
+      "original": "assets/originals/lachmund.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/lachmund.webp",
+      "fullsize": "assets/production/lachmund.png"
+    },
+    {
+      "id": "riedenfeld",
+      "name": "Riedenfeld",
+      "motif": "Ein schwarzer gerüsteter Wächter hält eine Hellebarde diagonal vor weiß-grünen Wasserbändern.",
+      "palette": [
+        "Seegrün",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "frame": "Silber mit schwarzen Vertiefungen",
+      "ornament": "wenige helle Blüten und Blattbögen, alle Verzierungen innerhalb des geschlossenen Kreises",
+      "original": "assets/originals/riedenfeld.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/riedenfeld.webp",
+      "fullsize": "assets/production/riedenfeld.png"
+    },
+    {
+      "id": "ritten",
+      "name": "Ritten",
+      "motif": "Ein steigendes schwarzes Pferd auf hellem Schild vor einem blau-elfenbeinfarbenen Schachfeld.",
+      "palette": [
+        "Staubblau",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "frame": "dunklem Silber",
+      "ornament": "feine verschlungene Bänder und vier kleine helle Rundnieten",
+      "original": "assets/originals/ritten.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": "barenstadt",
+      "rank": "open",
+      "crest": "assets/crests/ritten.webp",
+      "fullsize": "assets/production/ritten.png"
+    },
+    {
+      "id": "rothmann",
+      "name": "Rothmann",
+      "motif": "Eine silberne kannelierte Säule auf tiefrotem Schild mit symmetrischen hellen Akanthusblättern.",
+      "palette": [
+        "Weinrot",
+        "Silber",
+        "Schwarz"
+      ],
+      "frame": "geschwärztem Silber",
+      "ornament": "helle Blattgirlanden und vier kleine rosafarbene Blüten",
+      "original": "assets/originals/rothmann.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/rothmann.webp",
+      "fullsize": "assets/production/rothmann.png"
+    },
+    {
+      "id": "truchsen",
+      "name": "Truchsen",
+      "motif": "Ein schwarz gekleideter gekrönter Herrscher auf einem Thron mit kleinem rotem Brustzeichen, auf Goldocker und Rot.",
+      "palette": [
+        "Schwarz",
+        "Goldocker",
+        "Dunkelrot"
+      ],
+      "frame": "dunkler Bronze",
+      "ornament": "schwarz-elfenbeinfarbene Dreiecksfelder und wenige goldene Sterne",
+      "original": "assets/originals/truchsen.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": "zollern",
+      "rank": "open",
+      "crest": "assets/crests/truchsen.webp",
+      "fullsize": "assets/production/truchsen.png"
+    },
+    {
+      "id": "velten",
+      "name": "Velten",
+      "motif": "Ein dunkelviolettes dreimastiges Segelschiff mit purpurnen Segeln auf elfenbeinfarbenem Holz.",
+      "palette": [
+        "Aubergine",
+        "Altrosa",
+        "Elfenbein"
+      ],
+      "frame": "dunklem Silber mit violett gefassten Einlagen",
+      "ornament": "ruhige rosafarbene Blattranken, vollständig innerhalb des Kreises",
+      "original": "assets/originals/velten.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/velten.webp",
+      "fullsize": "assets/production/velten.png"
+    },
+    {
+      "id": "welf",
+      "name": "Welf",
+      "motif": "Ein weißes Schloss mit grünen Dächern und kleinen Fahnen auf dunkelgrünem Schild vor hellen Brettern.",
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "frame": "dunkler Bronze",
+      "ornament": "kleine goldockerfarbene Blattranken und vier flache Rosetten",
+      "original": "assets/originals/welf.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/welf.webp",
+      "fullsize": "assets/production/welf.png"
+    },
+    {
+      "id": "wolfram",
+      "name": "Wolfram",
+      "motif": "Ein stolzer weißer Wolf im heraldischen Profil auf anthrazitfarbenem Feld, begleitet von hellen Blütenzweigen.",
+      "palette": [
+        "Anthrazit",
+        "Elfenbein",
+        "Silber"
+      ],
+      "frame": "Silber mit vier kleinen Bronzeeinlagen",
+      "ornament": "helle Zweige und Blüten, ohne überstehende Teile",
+      "original": "assets/originals/wolfram.png",
+      "source": "Geliefertes Haus · Überarbeitung",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/wolfram.webp",
+      "fullsize": "assets/production/wolfram.png"
+    },
+    {
+      "id": "rebhart",
+      "name": "Rebhart",
+      "motif": "Eine helle Weißweintraube mit zwei kräftigen grünen Weinblättern über einem silbernen Kelch.",
+      "palette": [
+        "Dunkles Tannengrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "frame": "Silber mit kleinen grün emaillierten Einlagen",
+      "ornament": "feine spätgotische Weinranken",
+      "theme": "Weißwein · Weinbau",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer Aldinger Hausvorschlag",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/rebhart.webp",
+      "fullsize": "assets/production/rebhart.png"
+    },
+    {
+      "id": "schenk",
+      "name": "Schenk",
+      "motif": "Eine flache silberne Champania-Schale mit drei kleinen perlenden Blasen, flankiert von zwei goldockerfarbenen Rebenzweigen.",
+      "palette": [
+        "Dunkles Burgunderrot",
+        "Silber",
+        "Blasses Goldocker"
+      ],
+      "frame": "geschwärztem Silber",
+      "ornament": "vier helle Perlenrosetten und schmale Rebenblätter",
+      "theme": "Champania · Höfische Gastlichkeit",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer Aldinger Hausvorschlag",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/schenk.webp",
+      "fullsize": "assets/production/schenk.png"
+    },
+    {
+      "id": "ankerhold",
+      "name": "Ankerhold",
+      "motif": "Ein breiter silberner Anker über einem geraden roten Querbalken und drei elfenbeinfarbenen Wellenbändern.",
+      "palette": [
+        "Mitternachtsblau",
+        "Silber",
+        "Ziegelrot"
+      ],
+      "frame": "dunkler Bronze mit silbernen Nieten",
+      "ornament": "stilisiertes Tauwerk und vier kleine Kompassblätter",
+      "theme": "Seefahrt · Seehandel",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer Aldinger Hausvorschlag",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/ankerhold.webp",
+      "fullsize": "assets/production/ankerhold.png"
+    },
+    {
+      "id": "rosswarth",
+      "name": "Rosswarth",
+      "motif": "Ein steigender schwarzer Herzogsschimmer mit ausnahmslos silberner Mähne und silbernem Schweif auf rauchblauem Feld.",
+      "palette": [
+        "Rauchblau",
+        "Schwarz",
+        "Silber"
+      ],
+      "frame": "Silber mit wenigen bronzegefassten Rosetten",
+      "ornament": "zurückhaltende Turnierlilien und ein schmaler bronzener Zierstreifen",
+      "theme": "Herzogsschimmer · Pferdezucht",
+      "bestiary": "../../Bestiarium/tiere/pferde/herzogsschimmer/index.html",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer Aldinger Hausvorschlag",
+      "sourceSeat": null,
+      "rank": "open",
+      "crest": "assets/crests/rosswarth.webp",
+      "fullsize": "assets/production/rosswarth.png"
+    },
+    {
+      "id": "adharcan",
+      "name": "Adharcan",
+      "clan": true,
+      "motif": "Ein einzelner knochenweißer Narwal mit langem geradem Stoßzahn im ruhigen heraldischen Profil über einem hellen Wasserstrich.",
+      "palette": [
+        "Schieferblau",
+        "Knochenweiß",
+        "Eisengrau"
+      ],
+      "frame": "schmalem dunklem Eisen mit vier einfachen Knochennieten",
+      "ornament": "wenige eingeritzte Winkelzeichen, keine Krone oder Edelsteine",
+      "field": "waagerechte dunkelblaue Holzbretter mit einem hellen Wasserstreifen",
+      "theme": "Narwal · Alte Küstenclans",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer albischer Clanvorschlag",
+      "sourceSeat": null,
+      "rank": "laird",
+      "crest": "assets/crests/adharcan.webp",
+      "fullsize": "assets/production/adharcan.png"
+    },
+    {
+      "id": "sgiathan",
+      "name": "Sgiathan",
+      "clan": true,
+      "motif": "Ein breiter heller Rochen von oben, mit gut erkennbaren seitlichen Flossen und einem einzelnen langen schmalen Schwanz.",
+      "palette": [
+        "Graugrün",
+        "Sandocker",
+        "Dunkelbraun"
+      ],
+      "frame": "dunklem Holz mit nur an vier Stellen befestigter grober Hanfwicklung",
+      "ornament": "ein schlichter gezackter Innenstreifen, keine Runen oder Metallzier",
+      "field": "diagonal geteilte graugrüne und sandfarbene bemalte Bretter",
+      "theme": "Rochen · Alte Küstenclans",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer albischer Clanvorschlag",
+      "sourceSeat": null,
+      "rank": "laird",
+      "crest": "assets/crests/sgiathan.webp",
+      "fullsize": "assets/production/sgiathan.png"
+    },
+    {
+      "id": "ronnach",
+      "name": "Ronnach",
+      "clan": true,
+      "motif": "Eine vollständige Meeresschildkröte von oben mit breitem ovalem olivbraunem Panzer, kleinem Kopf und vier gut unterscheidbaren Schwimmflossen.",
+      "palette": [
+        "Rostrot",
+        "Olivbraun",
+        "Elfenbein"
+      ],
+      "frame": "hellem Birkenholz mit einfachen dunklen Holzstiften",
+      "ornament": "vier kleine eingebrannte Kerbzeichen, unregelmäßig handgemalt",
+      "field": "rostrote senkrechte Bretter mit einem breiten unbemalten hellen Mittelstreifen",
+      "theme": "Meeresschildkröte · Alte Küstenclans",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer albischer Clanvorschlag",
+      "sourceSeat": null,
+      "rank": "laird",
+      "crest": "assets/crests/ronnach.webp",
+      "fullsize": "assets/production/ronnach.png"
+    },
+    {
+      "id": "dublann",
+      "name": "Dublann",
+      "clan": true,
+      "motif": "Eine helle heraldische Sepia mit breitem ovalem Mantel, seitlichem Flossensaum und kurzen geschwungenen Armen über einem kleinen schwarzen Tintenfleck.",
+      "palette": [
+        "Dunkles Petrol",
+        "Kalkweiß",
+        "Schwarz"
+      ],
+      "frame": "breitem verwittertem grauem Holz",
+      "ornament": "ein einfacher schwarzer Wellenstreifen nur an der unteren Innenkante, keine umlaufende Knotenkopie",
+      "field": "petrolfarbene Bretter mit einem asymmetrischen dunkleren unteren Viertel",
+      "theme": "Sepia · Alte Küstenclans",
+      "isNew": true,
+      "original": null,
+      "source": "Neuer albischer Clanvorschlag",
+      "sourceSeat": null,
+      "rank": "laird",
+      "crest": "assets/crests/dublann.webp",
+      "fullsize": "assets/production/dublann.png"
+    }
+  ],
+  "realmEmblem": {
+    "id": "aldingen",
+    "name": "Großherzogtum Aldingen",
+    "original": "assets/originals/aldingen.png",
+    "motif": "Eine große goldene Lilie auf einem blau-elfenbeinfarbenen Schild, kleine goldene Lilien im blauen Schildhaupt und eine innerhalb des Kreisrahmens liegende Herzogskrone.",
+    "palette": [
+      "Mitternachtsblau",
+      "Elfenbein",
+      "Goldocker"
+    ],
+    "frame": "dunkler Bronze mit einem breiten elfenbeinfarbenen Innenring",
+    "ornament": "sparsame kleine goldene Lilien und Blattbögen",
+    "crest": "assets/crests/aldingen.webp",
+    "fullsize": "assets/production/aldingen.png"
+  },
+  "counties": [
+    {
+      "id": "barenstadt",
+      "name": "Grafschaft Barenstadt",
+      "colour": "#556aa8",
+      "capital": "barenstadt",
+      "seats": [
+        "barenstadt",
+        "welden"
+      ],
+      "motif": "Ein aufgerichteter silberner Bär hält einen schwarzen Schlüssel über zwei hellen Bergspitzen auf blauem Feld.",
+      "palette": [
+        "Kornblumenblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "schmaler Silberrand und kleine dunkle Nieten",
+      "shield": "county-barenstadt"
+    },
+    {
+      "id": "borgeln",
+      "name": "Grafschaft Borgeln",
+      "colour": "#a563a1",
+      "capital": "borgeln",
+      "seats": [
+        "borgeln",
+        "hasselt"
+      ],
+      "motif": "Drei silberne Bergkristalle über einem violetten Berggrat, begleitet von zwei hellen Rebenzweigen.",
+      "palette": [
+        "Dunkles Violett",
+        "Silber",
+        "Elfenbein"
+      ],
+      "ornament": "geschwärzter Silberrand mit kleinen violetten Blattspangen",
+      "shield": "county-borgeln"
+    },
+    {
+      "id": "grimberg",
+      "name": "Grafschaft Grimberg",
+      "colour": "#6c9c45",
+      "capital": "grimberg",
+      "seats": [
+        "grimberg",
+        "sassel"
+      ],
+      "motif": "Ein silberner dreispitziger Berg über zwei goldockerfarbenen Ähren und einem schmalen hellen Flussband auf Grün.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Goldocker"
+      ],
+      "ornament": "Bronzerand mit flachen silbernen Eckspangen",
+      "shield": "county-grimberg"
+    },
+    {
+      "id": "zollern",
+      "name": "Grafschaft Zollern",
+      "colour": "#b6ac4b",
+      "capital": "zollern",
+      "seats": [
+        "zollern",
+        "bruchen",
+        "dreiken"
+      ],
+      "motif": "Ein schwarzes geöffnetes Tor über einem hellen Weg, flankiert von zwei goldockerfarbenen Ähren auf elfenbein-oliv geteiltem Feld.",
+      "palette": [
+        "Olivocker",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "dunkler Eisenrand mit schmaler silberner Einlage",
+      "shield": "county-zollern"
+    },
+    {
+      "id": "ducal",
+      "name": "Herzogliche Domäne",
+      "colour": "#4bada1",
+      "capital": "klingenhagen",
+      "seats": [
+        "klingenhagen",
+        "aldershafen"
+      ],
+      "ducal": true,
+      "shield": "klingenhagen",
+      "motif": "Eine goldene Lilie über zwei gekreuzten silbernen Schwertern auf dunkelblau-elfenbeinfarbenem Feld.",
+      "palette": [
+        "Mitternachtsblau",
+        "Elfenbein",
+        "Goldocker und Silber"
+      ],
+      "ornament": "Silberrand mit schmalem vergoldetem Innenstreifen"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "barenstadt",
+      "name": "Barenstadt",
+      "county": "barenstadt",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        71.3,
+        17.2
+      ],
+      "pin": [
+        70,
+        10
+      ],
+      "geography": "Die nördliche gräfliche Baronie liegt zwischen westlichen Höhenzügen und bewaldeten Ebenen.",
+      "motif": "Eine silberne dreitürmige Befestigung über einem schwarzen Hufeisen auf Blau, darunter zwei schlichte helle Bergspitzen.",
+      "palette": [
+        "Dunkles Blau",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "barenstadt"
+    },
+    {
+      "id": "welden",
+      "name": "Welden",
+      "county": "barenstadt",
+      "kind": "Herrschaft",
+      "point": [
+        87.6,
+        29.6
+      ],
+      "pin": [
+        91,
+        22
+      ],
+      "geography": "Welden bewacht die nordöstliche Küste; die eingezeichnete Burg steht nahe dem Meer.",
+      "motif": "Ein einzelner heller Küstenwachturm über drei blauen Wellen und einem schmalen kupferroten Querbalken.",
+      "palette": [
+        "Schieferblau",
+        "Elfenbein",
+        "Kupferrot"
+      ],
+      "shield": "welden"
+    },
+    {
+      "id": "borgeln",
+      "name": "Borgeln",
+      "county": "borgeln",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        74.9,
+        41.1
+      ],
+      "pin": [
+        69,
+        35
+      ],
+      "geography": "Borgeln liegt in einem von Höhen und Gebirge eingerahmten Tal westlich der östlichen Küste.",
+      "motif": "Ein silberner Berg mit einer schwarzen gewölbten Stollenöffnung und zwei kleinen hellen Kristallen auf Violett.",
+      "palette": [
+        "Aubergine",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "borgeln"
+    },
+    {
+      "id": "hasselt",
+      "name": "Hasselt",
+      "county": "borgeln",
+      "kind": "Baronie",
+      "point": [
+        94.6,
+        53.6
+      ],
+      "pin": [
+        91,
+        46
+      ],
+      "geography": "Die östliche Baronie Hasselt reicht bis an die Küste; Hügel und offenes Land liegen hinter der Hafenstadt.",
+      "motif": "Ein silberner Haselzweig mit drei Blättern und zwei Nüssen über einem dunklen Schiffsbug auf gedämpftem Purpur.",
+      "palette": [
+        "Altviolett",
+        "Silber",
+        "Anthrazit"
+      ],
+      "shield": "hasselt"
+    },
+    {
+      "id": "grimberg",
+      "name": "Grimberg",
+      "county": "grimberg",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        50.6,
+        52.1
+      ],
+      "pin": [
+        49,
+        45
+      ],
+      "geography": "Grimberg liegt am Rand nördlicher Höhenzüge über einem Wasserlauf und dem grünen Talraum.",
+      "motif": "Drei helle schneebedeckte Bergspitzen über einem einzelnen kupferfarbenen Eichenblatt auf tiefem Grün.",
+      "palette": [
+        "Tannengrün",
+        "Elfenbein",
+        "Kupferorange"
+      ],
+      "shield": "grimberg"
+    },
+    {
+      "id": "sassel",
+      "name": "Sassel",
+      "county": "grimberg",
+      "kind": "Herrschaft",
+      "point": [
+        44.9,
+        82.1
+      ],
+      "pin": [
+        45,
+        74
+      ],
+      "geography": "Sassel liegt im südlichen grünen Land nahe Flussarmen, Wäldern und der Küste.",
+      "motif": "Eine silberne flache Steinbrücke über zwei auseinanderlaufenden Wasserbändern, darüber ein schlichter Weidenzweig.",
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Dunkle Bronze"
+      ],
+      "shield": "sassel"
+    },
+    {
+      "id": "zollern",
+      "name": "Zollern",
+      "county": "zollern",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        15.8,
+        69.2
+      ],
+      "pin": [
+        17,
+        60
+      ],
+      "geography": "Zollern liegt im Westen hinter einer Meeresbucht; die sichtbare Brücke führt in den bewaldeten Talraum.",
+      "motif": "Ein schwarzer Torturm mit offenem Durchgang und einer silbernen Brücke auf olivockerfarbenem Feld.",
+      "palette": [
+        "Olivocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "shield": "zollern"
+    },
+    {
+      "id": "bruchen",
+      "name": "Bruchen",
+      "county": "zollern",
+      "kind": "Baronie",
+      "point": [
+        12.56,
+        84.6
+      ],
+      "pin": [
+        13,
+        77
+      ],
+      "geography": "Bruchen liegt an der südwestlichen Küste unterhalb bewaldeter Hügel.",
+      "motif": "Drei silberne Binsenhalme über einer dunklen Wurzelinsel und einem blauen Wasserband auf hellem Ocker.",
+      "palette": [
+        "Sandocker",
+        "Silber",
+        "Dunkles Blaugrün"
+      ],
+      "shield": "bruchen"
+    },
+    {
+      "id": "dreiken",
+      "name": "Dreiken",
+      "county": "zollern",
+      "kind": "Herrschaft",
+      "point": [
+        35.2,
+        81.8
+      ],
+      "pin": [
+        34,
+        74
+      ],
+      "geography": "Die südliche Herrschaft Dreiken reicht vom bewaldeten Binnenland an eine kleine Küstenbucht.",
+      "motif": "Drei dunkelgrüne Eichenblätter mit drei hellen Eicheln über einem kurzen silbernen Wellenbalken auf Ocker.",
+      "palette": [
+        "Ocker",
+        "Dunkles Grün",
+        "Elfenbein"
+      ],
+      "shield": "dreiken"
+    },
+    {
+      "id": "aldershafen",
+      "name": "Aldershafen",
+      "county": "ducal",
+      "kind": "Herrschaft",
+      "point": [
+        54.4,
+        89.3
+      ],
+      "pin": [
+        55,
+        81
+      ],
+      "geography": "Aldershafen liegt in dem schmalen türkis gekennzeichneten Küstengebiet westlich der herzoglichen Kernlande.",
+      "motif": "Ein silbernes Hafentor mit zwei kleinen Türmen über einem breiten Anker und drei türkisfarbenen Wasserbändern.",
+      "palette": [
+        "Dunkles Petrol",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "aldershafen"
+    },
+    {
+      "id": "klingenhagen",
+      "name": "Klingenhagen",
+      "county": "ducal",
+      "kind": "Herzogliche Grafschaft und Baronie",
+      "point": [
+        83.5,
+        89.1
+      ],
+      "pin": [
+        80,
+        80
+      ],
+      "geography": "Die herzogliche Kernregion nimmt die südöstlichen Ebenen zwischen Höhenzügen und Küste ein. Klingenhagen ist der benannte Hauptsitz.",
+      "motif": "Eine goldene Lilie über zwei gekreuzten silbernen Schwertern auf dunkelblau-elfenbeinfarbenem Feld.",
+      "palette": [
+        "Mitternachtsblau",
+        "Elfenbein",
+        "Goldocker und Silber"
+      ],
+      "shield": "klingenhagen"
+    }
+  ],
+  "territoryShields": [
+    {
+      "id": "county-barenstadt",
+      "name": "Grafschaft Barenstadt",
+      "colour": "#556aa8",
+      "capital": "barenstadt",
+      "seats": [
+        "barenstadt",
+        "welden"
+      ],
+      "motif": "Ein aufgerichteter silberner Bär hält einen schwarzen Schlüssel über zwei hellen Bergspitzen auf blauem Feld.",
+      "palette": [
+        "Kornblumenblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "schmaler Silberrand und kleine dunkle Nieten",
+      "shield": "county-barenstadt",
+      "kind": "Grafschaftsschild",
+      "frame": "Silber oder dunkler Bronze passend zur Palette"
+    },
+    {
+      "id": "county-borgeln",
+      "name": "Grafschaft Borgeln",
+      "colour": "#a563a1",
+      "capital": "borgeln",
+      "seats": [
+        "borgeln",
+        "hasselt"
+      ],
+      "motif": "Drei silberne Bergkristalle über einem violetten Berggrat, begleitet von zwei hellen Rebenzweigen.",
+      "palette": [
+        "Dunkles Violett",
+        "Silber",
+        "Elfenbein"
+      ],
+      "ornament": "geschwärzter Silberrand mit kleinen violetten Blattspangen",
+      "shield": "county-borgeln",
+      "kind": "Grafschaftsschild",
+      "frame": "Silber oder dunkler Bronze passend zur Palette"
+    },
+    {
+      "id": "county-grimberg",
+      "name": "Grafschaft Grimberg",
+      "colour": "#6c9c45",
+      "capital": "grimberg",
+      "seats": [
+        "grimberg",
+        "sassel"
+      ],
+      "motif": "Ein silberner dreispitziger Berg über zwei goldockerfarbenen Ähren und einem schmalen hellen Flussband auf Grün.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Goldocker"
+      ],
+      "ornament": "Bronzerand mit flachen silbernen Eckspangen",
+      "shield": "county-grimberg",
+      "kind": "Grafschaftsschild",
+      "frame": "Silber oder dunkler Bronze passend zur Palette"
+    },
+    {
+      "id": "county-zollern",
+      "name": "Grafschaft Zollern",
+      "colour": "#b6ac4b",
+      "capital": "zollern",
+      "seats": [
+        "zollern",
+        "bruchen",
+        "dreiken"
+      ],
+      "motif": "Ein schwarzes geöffnetes Tor über einem hellen Weg, flankiert von zwei goldockerfarbenen Ähren auf elfenbein-oliv geteiltem Feld.",
+      "palette": [
+        "Olivocker",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "dunkler Eisenrand mit schmaler silberner Einlage",
+      "shield": "county-zollern",
+      "kind": "Grafschaftsschild",
+      "frame": "Silber oder dunkler Bronze passend zur Palette"
+    },
+    {
+      "id": "barenstadt",
+      "name": "Barenstadt",
+      "county": "barenstadt",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        71.3,
+        17.2
+      ],
+      "pin": [
+        70,
+        10
+      ],
+      "geography": "Die nördliche gräfliche Baronie liegt zwischen westlichen Höhenzügen und bewaldeten Ebenen.",
+      "motif": "Eine silberne dreitürmige Befestigung über einem schwarzen Hufeisen auf Blau, darunter zwei schlichte helle Bergspitzen.",
+      "palette": [
+        "Dunkles Blau",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "barenstadt",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "welden",
+      "name": "Welden",
+      "county": "barenstadt",
+      "kind": "Herrschaft",
+      "point": [
+        87.6,
+        29.6
+      ],
+      "pin": [
+        91,
+        22
+      ],
+      "geography": "Welden bewacht die nordöstliche Küste; die eingezeichnete Burg steht nahe dem Meer.",
+      "motif": "Ein einzelner heller Küstenwachturm über drei blauen Wellen und einem schmalen kupferroten Querbalken.",
+      "palette": [
+        "Schieferblau",
+        "Elfenbein",
+        "Kupferrot"
+      ],
+      "shield": "welden",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "borgeln",
+      "name": "Borgeln",
+      "county": "borgeln",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        74.9,
+        41.1
+      ],
+      "pin": [
+        69,
+        35
+      ],
+      "geography": "Borgeln liegt in einem von Höhen und Gebirge eingerahmten Tal westlich der östlichen Küste.",
+      "motif": "Ein silberner Berg mit einer schwarzen gewölbten Stollenöffnung und zwei kleinen hellen Kristallen auf Violett.",
+      "palette": [
+        "Aubergine",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "borgeln",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "hasselt",
+      "name": "Hasselt",
+      "county": "borgeln",
+      "kind": "Baronie",
+      "point": [
+        94.6,
+        53.6
+      ],
+      "pin": [
+        91,
+        46
+      ],
+      "geography": "Die östliche Baronie Hasselt reicht bis an die Küste; Hügel und offenes Land liegen hinter der Hafenstadt.",
+      "motif": "Ein silberner Haselzweig mit drei Blättern und zwei Nüssen über einem dunklen Schiffsbug auf gedämpftem Purpur.",
+      "palette": [
+        "Altviolett",
+        "Silber",
+        "Anthrazit"
+      ],
+      "shield": "hasselt",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "grimberg",
+      "name": "Grimberg",
+      "county": "grimberg",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        50.6,
+        52.1
+      ],
+      "pin": [
+        49,
+        45
+      ],
+      "geography": "Grimberg liegt am Rand nördlicher Höhenzüge über einem Wasserlauf und dem grünen Talraum.",
+      "motif": "Drei helle schneebedeckte Bergspitzen über einem einzelnen kupferfarbenen Eichenblatt auf tiefem Grün.",
+      "palette": [
+        "Tannengrün",
+        "Elfenbein",
+        "Kupferorange"
+      ],
+      "shield": "grimberg",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "sassel",
+      "name": "Sassel",
+      "county": "grimberg",
+      "kind": "Herrschaft",
+      "point": [
+        44.9,
+        82.1
+      ],
+      "pin": [
+        45,
+        74
+      ],
+      "geography": "Sassel liegt im südlichen grünen Land nahe Flussarmen, Wäldern und der Küste.",
+      "motif": "Eine silberne flache Steinbrücke über zwei auseinanderlaufenden Wasserbändern, darüber ein schlichter Weidenzweig.",
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Dunkle Bronze"
+      ],
+      "shield": "sassel",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "zollern",
+      "name": "Zollern",
+      "county": "zollern",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        15.8,
+        69.2
+      ],
+      "pin": [
+        17,
+        60
+      ],
+      "geography": "Zollern liegt im Westen hinter einer Meeresbucht; die sichtbare Brücke führt in den bewaldeten Talraum.",
+      "motif": "Ein schwarzer Torturm mit offenem Durchgang und einer silbernen Brücke auf olivockerfarbenem Feld.",
+      "palette": [
+        "Olivocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "shield": "zollern",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "bruchen",
+      "name": "Bruchen",
+      "county": "zollern",
+      "kind": "Baronie",
+      "point": [
+        12.56,
+        84.6
+      ],
+      "pin": [
+        13,
+        77
+      ],
+      "geography": "Bruchen liegt an der südwestlichen Küste unterhalb bewaldeter Hügel.",
+      "motif": "Drei silberne Binsenhalme über einer dunklen Wurzelinsel und einem blauen Wasserband auf hellem Ocker.",
+      "palette": [
+        "Sandocker",
+        "Silber",
+        "Dunkles Blaugrün"
+      ],
+      "shield": "bruchen",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "dreiken",
+      "name": "Dreiken",
+      "county": "zollern",
+      "kind": "Herrschaft",
+      "point": [
+        35.2,
+        81.8
+      ],
+      "pin": [
+        34,
+        74
+      ],
+      "geography": "Die südliche Herrschaft Dreiken reicht vom bewaldeten Binnenland an eine kleine Küstenbucht.",
+      "motif": "Drei dunkelgrüne Eichenblätter mit drei hellen Eicheln über einem kurzen silbernen Wellenbalken auf Ocker.",
+      "palette": [
+        "Ocker",
+        "Dunkles Grün",
+        "Elfenbein"
+      ],
+      "shield": "dreiken",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "aldershafen",
+      "name": "Aldershafen",
+      "county": "ducal",
+      "kind": "Herrschaft",
+      "point": [
+        54.4,
+        89.3
+      ],
+      "pin": [
+        55,
+        81
+      ],
+      "geography": "Aldershafen liegt in dem schmalen türkis gekennzeichneten Küstengebiet westlich der herzoglichen Kernlande.",
+      "motif": "Ein silbernes Hafentor mit zwei kleinen Türmen über einem breiten Anker und drei türkisfarbenen Wasserbändern.",
+      "palette": [
+        "Dunkles Petrol",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "aldershafen",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "ruhiger schmaler Rand mit wenigen handwerklichen Nieten"
+    },
+    {
+      "id": "klingenhagen",
+      "name": "Klingenhagen",
+      "county": "ducal",
+      "kind": "Gemeinsames herzogliches Schild",
+      "point": [
+        83.5,
+        89.1
+      ],
+      "pin": [
+        80,
+        80
+      ],
+      "geography": "Die herzogliche Kernregion nimmt die südöstlichen Ebenen zwischen Höhenzügen und Küste ein. Klingenhagen ist der benannte Hauptsitz.",
+      "motif": "Eine goldene Lilie über zwei gekreuzten silbernen Schwertern auf dunkelblau-elfenbeinfarbenem Feld.",
+      "palette": [
+        "Mitternachtsblau",
+        "Elfenbein",
+        "Goldocker und Silber"
+      ],
+      "shield": "klingenhagen",
+      "frame": "Silber, dunklem Eisen oder Bronze passend zur Palette",
+      "ornament": "schmaler vergoldeter Innenstreifen und vier flache Rosetten"
+    }
+  ],
+  "context": {
+    "introduction": "Ein Großherzogtum auf Lothir: ehrgeizig, silberreich und dem kaiserlichen Erbe eng verbunden. Seine Pferde, Weißweine und Häfen gehören ebenso zu Aldingen wie sein ausgeprägter militärischer Anspruch.",
+    "history": [
+      {
+        "title": "Órneach und die Aulverner",
+        "text": "Aldingens und Goldmunds gemeinsame Vorgeschichte beginnt mit der albischen Volksgruppe Aulvernath und dem antiken Fürstentum Órneach. Aus den Aulvernern gingen unter zunehmendem östlichem Einfluss die Alwener, die Aldinger und das spätere Kaiservolk hervor. Aus den verwandten Völkern entstanden eigene Länder und schließlich auch die Blutstädter."
+      },
+      {
+        "title": "Der Weg nach Norden",
+        "text": "Das frühe Aldingen war kaum größer als das heutige Goldmund. Zwischen der Königslosigkeit der Alben und der Entstehung des Alerischen Kaiserreichs expandierte es nach Norden. In wiederholten Konflikten verlor das albisch gebliebene Iathneach große Territorien an seinen südlichen Nachbarn."
+      },
+      {
+        "title": "Unter dem Kaiserreich",
+        "text": "Das Alerische Kaiserreich befriedete die Länder und bestätigte Aldingen mit großzügigen Gebieten auf Lothir. Goldmund, Aldingen, Weisenfluh und die heutige Blutstadt durchliefen verwandte Entwicklungen. Die Blutstadt bildet im familiären Vergleich das kaiserliche Elternhaus: Goldmund ist der reiche kleine Bruder, Weisenfluh der brave ältere und Aldingen das schwierige mittlere Kind, das um Aufmerksamkeit ringt."
+      },
+      {
+        "title": "Nach dem Reich",
+        "text": "Nach dem Zerfall blieben Aldingen und Goldmund als eigenständige Länder bestehen. Beide betrachten sich mit Stolz als besonders nahe Erben des Kaiserreichs. Konflikte mit den Nachbarn kehrten immer wieder, wurden jedoch nicht dauerhaft bestimmend. Heute drängt die Bedrohung durch die Triarichie die verwandten Länder zur Zusammenarbeit."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Silber und Bergbau",
+        "text": "Aldingen ist für sein Silber und seinen Bergbau bekannt. Die Höhenzüge stehen neben ausgedehnten flachen Tälern und Ebenen, die intensive Landwirtschaft ermöglichen."
+      },
+      {
+        "title": "Pferde, Weißwein und Champania",
+        "text": "Gute Pferde, Sport und höfische Repräsentation prägen das Land. Weißweine und Champania gehören zu seinen bekannten Erzeugnissen. Der Herzogsschimmer ist ein schwarzes, athletisches Adelsross mit silberner Mähne und silbernem Schweif."
+      },
+      {
+        "title": "Ein Land verändert seine Landschaft",
+        "text": "Einst war Aldingen dicht bewaldet. Über Jahrhunderte ließen Schiffbau und Besiedlung die Wälder schrumpfen. Zahlreiche Sümpfe wurden trockengelegt; offene Agrarlandschaften gewannen an Bedeutung."
+      },
+      {
+        "title": "Häfen und Nachbarn",
+        "text": "Aldingen besitzt das stärkere Militär und den direkteren Zugang zum Meer. Goldmund begrenzt dagegen seinen Landhandel zur Blutstadt, während Goldmunds eigener Seehandel erst die Flüsse Weisenfluhs passieren muss. Diese gegenseitigen Abhängigkeiten führten früher zu Kämpfen und machen heute verlässliche Handelsbeziehungen besonders wertvoll."
+      },
+      {
+        "title": "Albische Herkunft und gesellschaftlicher Abstand",
+        "text": "Alteingesessene Albenclans leben weiterhin in Aldingen. Die Aristokratie drängte sie auf die niedrigste geduldete Rangstufe, die der Lairds. Ihr Fortbestehen wird mit der Erwartung verbunden, irgendwann aristokratischere Namen anzunehmen. Das höfische Überlegenheitsgefühl gegenüber albischer Kultur beruht auf einer vermeintlichen Fortschrittlichkeit, nicht auf einer tatsächlichen allgemeinen Überlegenheit."
+      },
+      {
+        "title": "Die Schuldzuweisung nach dem Zerfall",
+        "text": "Die Benachteiligung der Alben ist auch mit dem Ende des Kaiserreichs verbunden: Man gab ihnen die Schuld, weil sie sich geweigert hatten, für das Reich einzustehen. Die daraus gewachsene Antipathie ist in Aldingen, Goldmund und Weisenfluh verbreitet, aber weder überall gleich stark noch die Haltung jeder einzelnen Person. Spott über die Königslosigkeit albischer Fürstentümer bleibt widersprüchlich, denn auch Aldingen und Goldmund besitzen selbst keinen König."
+      }
+    ]
+  },
+  "warriors": [
+    {
+      "id": "brechten",
+      "name": "Brechten",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "withHorse": true,
+      "horse": "goldmaehne",
+      "albic": false,
+      "palette": [
+        "Schwarz",
+        "Ziegelrot",
+        "Elfenbein und Gold"
+      ],
+      "reason": "Der Pferdekopf passt zu einem erfahrenen Husaren mit einem belastbaren Reitpferd.",
+      "equipment": "Reitersäbel, schlichter Reitharnisch, ein Federbügel und eine Goldmähne.",
+      "helmet": "OPEN German BURGONET, rounded skull, short brow peak, two hinged cheek guards, no visor. Narrow oxblood band and a tiny horse-head pin; no plume.",
+      "image": "assets/warriors/previews/brechten.webp",
+      "fullsize": "assets/warriors/production/brechten.png",
+      "bestiary": "../../Bestiarium/tiere/pferde/goldmaehne/index.html"
+    },
+    {
+      "id": "ehrenfeld",
+      "name": "Ehrenfeld",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Aubergine",
+        "Elfenbein",
+        "Silber"
+      ],
+      "reason": "Der gerüstete Ritter des Wappens wird als standfester Aldmer mit Hellebarde aufgegriffen.",
+      "equipment": "Hellebarde, geschlossener Schaller und Silberharnisch mit purpurnem Waffenrock.",
+      "helmet": "CLOSED GERMAN SALLET, low rounded skull and distinct long swept rear tail, short smooth visor with one horizontal eye slit, separate bevor. No crest or plume.",
+      "image": "assets/warriors/previews/ehrenfeld.webp",
+      "fullsize": "assets/warriors/production/ehrenfeld.png"
+    },
+    {
+      "id": "graven",
+      "name": "Graven",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Karminrot"
+      ],
+      "reason": "Rose und schwarzweißes Blattwerk geben einem nüchternen Husaren eine markante Stoff- und Lederpalette.",
+      "equipment": "Reitersäbel, dunkler Brustharnisch und zwei schmale Federbügel.",
+      "helmet": "CLOSED fluted MAXIMILIAN-STYLE helmet with smoothly rounded skull and short rounded visor, regular small breath holes, narrow eye slit. No tall plume, horns or grotesque face.",
+      "image": "assets/warriors/previews/graven.webp",
+      "fullsize": "assets/warriors/production/graven.png"
+    },
+    {
+      "id": "halbrecht",
+      "name": "Halbrecht",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Schwarz",
+        "Elfenbein",
+        "Kupferorange"
+      ],
+      "reason": "Das geflügelte Wappenmotiv passt zu den tatsächlich getragenen Federbügeln eines Husaren.",
+      "equipment": "Kampfsäbel, kleiner Reiterschild und ein heller Federbügel.",
+      "helmet": "OPEN steel SCHALLER with swept neck tail and raised visor, unobstructed adult face, plain brow rim. No armet mask or feather crest.",
+      "image": "assets/warriors/previews/halbrecht.webp",
+      "fullsize": "assets/warriors/production/halbrecht.png"
+    },
+    {
+      "id": "haldren",
+      "name": "Haldren",
+      "className": "Flamberger",
+      "classId": "flamberger",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Elfenbein"
+      ],
+      "reason": "Die Schwertträgerin des Wappens wird als entschlossene Flambergerin mit wenig Plattenrüstung interpretiert.",
+      "equipment": "Zweihändiger Flamberg, Kettenkragen und schwarzockerfarbenes Wams.",
+      "helmet": "NO helmet. Low black wool BERET with a short dull ochre feather, visible mature woman's face and tied-back dark hair.",
+      "image": "assets/warriors/previews/haldren.webp",
+      "fullsize": "assets/warriors/production/haldren.png"
+    },
+    {
+      "id": "hohenmund",
+      "name": "Hohenmund",
+      "className": "Eldner",
+      "classId": "eldner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Kupferrot",
+        "Schwarz",
+        "Knochenweiß"
+      ],
+      "reason": "Grimbergs Höhenzüge und die Bergspitzen des Wappens legen den seltenen Eldner nahe.",
+      "equipment": "Armbrust, Gürtelbeil, leichter Harnisch und feste Bergstiefel.",
+      "helmet": "OPEN low iron KETTLE HAT, rounded bowl with a broad sloping brim, no cheek plates or visor. One small bone-white leaf clasp.",
+      "image": "assets/warriors/previews/hohenmund.webp",
+      "fullsize": "assets/warriors/production/hohenmund.png"
+    },
+    {
+      "id": "klingen",
+      "name": "Klingen",
+      "className": "Flamberger",
+      "classId": "flamberger",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Dunkles Blau",
+        "Goldocker",
+        "Silber"
+      ],
+      "reason": "Das Schwertpaar passt als Hausmotiv zu einem Flamberger; geführt wird ein einzelner brauchbarer Zweihänder.",
+      "equipment": "Flamberg, blauockerfarbenes Wams und kleiner Brustharnisch.",
+      "helmet": "OPEN MORION-shaped steel helmet with one modest central comb and gently lifted front and back brim, face completely visible. No plume or visor.",
+      "image": "assets/warriors/previews/klingen.webp",
+      "fullsize": "assets/warriors/production/klingen.png"
+    },
+    {
+      "id": "lachmund",
+      "name": "Lachmund",
+      "className": "Schirmer",
+      "classId": "schirmer",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Goldocker",
+        "Blau",
+        "Elfenbein und Schwarz"
+      ],
+      "reason": "Die Harfe wird als kleines Ziermotiv eines seltenen höfischen Fechtmeisters verwendet.",
+      "equipment": "Seitschwert, kleiner Faustschild, schlichter Mantel und Fechtwams.",
+      "helmet": "NO helmet. Soft low navy wool cap with short asymmetrical brim, one small ivory pin, no jester points or high plume.",
+      "image": "assets/warriors/previews/lachmund.webp",
+      "fullsize": "assets/warriors/production/lachmund.png"
+    },
+    {
+      "id": "riedenfeld",
+      "name": "Riedenfeld",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Seegrün",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "reason": "Der Wächter mit Stangenwaffe und die Wasserbänder werden unmittelbar in einen Aldmer übertragen.",
+      "equipment": "Hellebarde, dunkler Halbharnisch und grünweißer Waffenrock.",
+      "helmet": "CLOSED iron GREAT HELM with flat top, clean cylindrical outline, tiny eye slits and symmetrical round breathing holes. No plume, wings or crown.",
+      "image": "assets/warriors/previews/riedenfeld.webp",
+      "fullsize": "assets/warriors/production/riedenfeld.png"
+    },
+    {
+      "id": "ritten",
+      "name": "Ritten",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": true,
+      "withHorse": true,
+      "horse": "herzogsschimmer",
+      "albic": false,
+      "palette": [
+        "Staubblau",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "reason": "Pferdewappen und Barenstadts Ebenen passen zu einem berittenen Husaren auf einem Herzogsschimmer.",
+      "equipment": "Reitersäbel, schlichter Kavallerieharnisch und Herzogsschimmer.",
+      "helmet": "CLOSED German BURGUNDIAN SALLET, broad smooth skull, compact rounded visor and long rear tail, no plume or horns. Small blue/ivory cloth binding at brow.",
+      "image": "assets/warriors/previews/ritten.webp",
+      "fullsize": "assets/warriors/production/ritten.png",
+      "bestiary": "../../Bestiarium/tiere/pferde/herzogsschimmer/index.html"
+    },
+    {
+      "id": "rothmann",
+      "name": "Rothmann",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Weinrot",
+        "Silber",
+        "Schwarz"
+      ],
+      "reason": "Die Säule wird als ruhiges senkrechtes Motiv eines Aldmers mit langer Pike aufgegriffen.",
+      "equipment": "Pike, stählerner Brustharnisch und weinroter Waffenrock.",
+      "helmet": "OPEN iron BURGONET with a low central ridge, long brow peak and short cheek pieces, clearly visible grey-bearded face. No plume.",
+      "image": "assets/warriors/previews/rothmann.webp",
+      "fullsize": "assets/warriors/production/rothmann.png"
+    },
+    {
+      "id": "truchsen",
+      "name": "Truchsen",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Schwarz",
+        "Goldocker",
+        "Dunkelrot"
+      ],
+      "reason": "Die Herrscherheraldik erhält als Husar eine disziplinierte, zurückhaltende militärische Deutung.",
+      "equipment": "Reitersäbel, geschlossener Reiterhelm und dunkler Harnisch.",
+      "helmet": "CLOSED GERMAN ARMET, spherical skull, hinged cheek pieces, short smooth one-piece visor, narrow eye slit and small circular breath holes. Thin dark-red cloth band, no crown or high plume.",
+      "image": "assets/warriors/previews/truchsen.webp",
+      "fullsize": "assets/warriors/production/truchsen.png"
+    },
+    {
+      "id": "velten",
+      "name": "Velten",
+      "className": "Havner",
+      "classId": "havner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Aubergine",
+        "Altrosa",
+        "Elfenbein"
+      ],
+      "reason": "Das Segelschiff trägt den Entwurf eines gut ausgerüsteten Havners.",
+      "equipment": "Kampfsäbel, Rückenköcher, Halbharnisch und Möwe am geschützten Unterarm.",
+      "helmet": "NO helmet or hat. Wind-combed dark hair tied low, short beard and clear adult face, no crown or bandana.",
+      "image": "assets/warriors/previews/velten.webp",
+      "fullsize": "assets/warriors/production/velten.png"
+    },
+    {
+      "id": "welf",
+      "name": "Welf",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "reason": "Das Schlossmotiv passt zu einem zuverlässig gerüsteten Aldmer mit Partisane.",
+      "equipment": "Partisane, Kettenärmel und praktischer grüner Halbharnisch.",
+      "helmet": "CLOSED pointed HOUNDSKULL BASCINET with a recognisable tapered conical snout visor and high egg-shaped skull, mail aventail and small side breaths. No plume.",
+      "image": "assets/warriors/previews/welf.webp",
+      "fullsize": "assets/warriors/production/welf.png"
+    },
+    {
+      "id": "wolfram",
+      "name": "Wolfram",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Anthrazit",
+        "Elfenbein",
+        "Silber"
+      ],
+      "reason": "Wolf und kühle Palette geben einem Husaren einen klaren, militärischen Wiedererkennungswert.",
+      "equipment": "Reitersäbel, Lamellen über Brustplatte und ein silbergrauer Federbügel.",
+      "helmet": "OPEN banded CONICAL steel riding helmet with cheek plates and a narrow straight nasal guard, visible adult face. No wolf ears, antlers or face mask.",
+      "image": "assets/warriors/previews/wolfram.webp",
+      "fullsize": "assets/warriors/production/wolfram.png"
+    },
+    {
+      "id": "rebhart",
+      "name": "Rebhart",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Dunkles Tannengrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "reason": "Reben und Kelch erscheinen als zurückhaltende Stoffzier eines Aldmers in der Palette des Weißweinhauses.",
+      "equipment": "Hellebarde, einfacher Stahlharnisch und tannengrüner Waffenrock.",
+      "helmet": "OPEN low SALLET, smoothly rounded skull and long downward rear tail, no visor or crest, visible mature face and short brown beard.",
+      "image": "assets/warriors/previews/rebhart.webp",
+      "fullsize": "assets/warriors/production/rebhart.png"
+    },
+    {
+      "id": "schenk",
+      "name": "Schenk",
+      "className": "Flamberger",
+      "classId": "flamberger",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Dunkles Burgunderrot",
+        "Silber",
+        "Blasses Goldocker"
+      ],
+      "reason": "Die burgunderrote Schale wird als kleines Hauszeichen eines kräftigen Flambergers übernommen.",
+      "equipment": "Flamberg, burgunderrotes Wams, Kettenkragen und stählerne Brustplatte.",
+      "helmet": "NO helmet. Wide low burgundy wool cap with a single small folded ivory feather; visible older clean-shaven face.",
+      "image": "assets/warriors/previews/schenk.webp",
+      "fullsize": "assets/warriors/production/schenk.png"
+    },
+    {
+      "id": "ankerhold",
+      "name": "Ankerhold",
+      "className": "Havner",
+      "classId": "havner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": false,
+      "palette": [
+        "Mitternachtsblau",
+        "Silber",
+        "Ziegelrot"
+      ],
+      "reason": "Anker und Wellen passen zu einem Havner; eine neue Küstenzuordnung wird damit nicht festgelegt.",
+      "equipment": "Kampfsäbel, Köcher, offener Helm und Kormoran auf der Schulter.",
+      "helmet": "OPEN iron sea KETTLE HAT, modest round bowl and narrow flat brim, a simple red cloth band, unobstructed adult face.",
+      "image": "assets/warriors/previews/ankerhold.webp",
+      "fullsize": "assets/warriors/production/ankerhold.png"
+    },
+    {
+      "id": "rosswarth",
+      "name": "Rosswarth",
+      "className": "Husar",
+      "classId": "husar",
+      "mounted": false,
+      "withHorse": true,
+      "horse": "herzogsschimmer",
+      "albic": false,
+      "palette": [
+        "Rauchblau",
+        "Schwarz",
+        "Silber"
+      ],
+      "reason": "Das Herzogsschimmer-Motiv wird als Husar neben seinem entsprechenden Schlachtross unmittelbar sichtbar.",
+      "equipment": "Kampfsäbel, schlichter Reiterharnisch, Federbügel und Herzogsschimmer.",
+      "helmet": "CLOSED smooth RIDING ARMET with a rounded domed skull and short angular visor, subtle brow ridge, small breaths, no tall comb or plume. Thin smoke-blue strap.",
+      "image": "assets/warriors/previews/rosswarth.webp",
+      "fullsize": "assets/warriors/production/rosswarth.png",
+      "bestiary": "../../Bestiarium/tiere/pferde/herzogsschimmer/index.html"
+    },
+    {
+      "id": "adharcan",
+      "name": "Adharcan",
+      "className": "Havner",
+      "classId": "havner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": true,
+      "palette": [
+        "Schieferblau",
+        "Knochenweiß",
+        "Eisengrau"
+      ],
+      "reason": "Narwal und Schieferblau geben einem albischen Havner eine eigene kühle Küstenpalette.",
+      "equipment": "Kampfsäbel, Rückenköcher, Kettenkragen und schieferblauer Tartan.",
+      "helmet": "OPEN simple CONICAL iron helmet with a short straight nasal and mail neck guard, no cheek mask, horns or tusks. Human face visible.",
+      "image": "assets/warriors/previews/adharcan.webp",
+      "fullsize": "assets/warriors/production/adharcan.png"
+    },
+    {
+      "id": "sgiathan",
+      "name": "Sgiathan",
+      "className": "Havner",
+      "classId": "havner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": true,
+      "palette": [
+        "Graugrün",
+        "Sandocker",
+        "Dunkelbraun"
+      ],
+      "reason": "Der Rochen wird über sandgrüne Flächen und ein kleines Mantelzeichen in einen beweglichen Havner übersetzt.",
+      "equipment": "Kampfsäbel, Rückenköcher, leichte Brigantine und grünsandfarbener Plaid.",
+      "helmet": "NO helmet or hat. Adult human woman with auburn hair in a low practical braid, ordinary round ears.",
+      "image": "assets/warriors/previews/sgiathan.webp",
+      "fullsize": "assets/warriors/production/sgiathan.png"
+    },
+    {
+      "id": "ronnach",
+      "name": "Ronnach",
+      "className": "Aldmer",
+      "classId": "aldmar",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": true,
+      "palette": [
+        "Rostrot",
+        "Olivbraun",
+        "Elfenbein"
+      ],
+      "reason": "Der breite Schildkrötenpanzer wird als Motiv eines kleinen Rundschilds und eines standfesten Aldmers aufgegriffen.",
+      "equipment": "Speer, kleiner Rundschild, leichter Brustharnisch und rostroter Tartan.",
+      "helmet": "OPEN simple rounded SPANGENHELM with four narrow iron bands over curved panels, broad cheek guards and no visor or nasal. Clear adult human face, no turtle-shaped helmet.",
+      "image": "assets/warriors/previews/ronnach.webp",
+      "fullsize": "assets/warriors/production/ronnach.png"
+    },
+    {
+      "id": "dublann",
+      "name": "Dublann",
+      "className": "Havner",
+      "classId": "havner",
+      "mounted": false,
+      "withHorse": false,
+      "horse": null,
+      "albic": true,
+      "palette": [
+        "Dunkles Petrol",
+        "Kalkweiß",
+        "Schwarz"
+      ],
+      "reason": "Sepia und Tintenfarben werden zu einem dunklen, schlicht ausgerüsteten Havnerentwurf.",
+      "equipment": "Kampfsäbel, Rückenköcher, leichter Halbharnisch und petrolfarbener Plaid.",
+      "helmet": "OPEN low steel BURGONET with short swept brow peak and asymmetrical small cheek guards, no visor, plume or crown. Mature human face visible.",
+      "image": "assets/warriors/previews/dublann.webp",
+      "fullsize": "assets/warriors/production/dublann.png"
+    }
+  ]
+}

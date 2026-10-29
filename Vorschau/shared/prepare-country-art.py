@@ -59,6 +59,12 @@ def main():
                 canvas.paste(Image.fromarray(pixels),(padding['left'],padding['top']))
                 final=canvas
                 circle=dict(centre=[side//2,side//2],radius=radius)
+            elif job['shape']=='banner' and original.width!=original.height:
+                side=max(original.size)
+                padding=dict(left=(side-original.width)//2,top=(side-original.height)//2)
+                canvas=Image.new('RGBA',(side,side))
+                canvas.paste(final,(padding['left'],padding['top']))
+                final=canvas
             final.save(target)
             preview.parent.mkdir(parents=True, exist_ok=True)
             web = final.copy()

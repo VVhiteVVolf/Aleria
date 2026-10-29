@@ -34,7 +34,7 @@ test('every Aldingen family has one complete warrior asset set with real class, 
  for(const id of ['brechten','rosswarth'])assert.ok(corrections.some(c=>c.id===id));
 });
 
-test('Aldingen retains fifteen supplied houses, adds eight distinct unprefixed families and starts with only four specified seats',()=>{
+test('Aldingen retains its initial workshop proposal; the eight added names now have distinct accepted family records',()=>{
  assert.equal(houses.length,23);
  assert.equal(houses.filter(h=>!h.isNew).length,15);
  assert.equal(houses.filter(h=>h.isNew&&!h.clan).length,4);
@@ -45,7 +45,9 @@ test('Aldingen retains fifteen supplied houses, adds eight distinct unprefixed f
  assert.ok(houses.every(h=>h.clan?h.rank==='laird':h.rank==='open'));
  for(const house of houses.filter(h=>h.isNew)){
   assert.doesNotMatch(house.name,/^(?:von|zu|ua|mac|nic|dal)\s|[òó]/i);
-  assert.ok(!FAMILY_REGISTRY.some(f=>f.title.toLocaleLowerCase('de').includes(house.name.toLocaleLowerCase('de'))),house.name);
+  const admitted=FAMILY_REGISTRY.filter(f=>f.title.toLocaleLowerCase('de').includes(house.name.toLocaleLowerCase('de')));
+  assert.equal(admitted.length,1,house.name);
+  assert.equal(admitted[0].family.extensions.acceptedRealm,'aldingen',house.name);
  }
  const turtle=houses.find(h=>h.id==='ronnach');
  assert.match(turtle.motif,/Meeresschildkröte/);assert.doesNotMatch(turtle.motif,/Walross/);

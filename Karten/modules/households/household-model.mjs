@@ -8,7 +8,7 @@ export function normalizePlace(value) {
 
 const canonicalId = value => String(value || '').replace(/^house-/, 'haus-');
 const inactive = /ausgestorben|erloschen|inaktiv|historisch|antike clans/i;
-const ranks = ['king', 'ard-tiarna', 'prince', 'duke', 'jarl', 'county', 'mor-tiarna', 'thane', 'baron', 'dun-tiarna', 'hesir', 'knight-prince', 'knight', 'laird', 'commoner', 'unknown'];
+const ranks = ['royal', 'king', 'ard-tiarna', 'ducal', 'prince', 'duke', 'jarl', 'county', 'mor-tiarna', 'freiherr', 'thane', 'barony', 'baron', 'dun-tiarna', 'hesir', 'junker', 'knight-prince', 'laird', 'knightly-order', 'ministerial', 'knight', 'commoner', 'unknown'];
 const familyPath = value => /^(?:\/|https?:\/\/)/i.test(value) ? value : '/Stammbäume/' + value;
 
 export function createHouseholdCatalog(records, reviewedPins = {}, sources = {}) {

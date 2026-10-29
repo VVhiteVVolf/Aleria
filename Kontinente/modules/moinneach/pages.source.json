@@ -1,0 +1,1626 @@
+{
+  "pages": [
+    {
+      "id": "fuerstentum-moinneach",
+      "title": "Fürstentum Moinneach",
+      "shortTitle": "Fürstentum Moinneach",
+      "type": "Fürstentum",
+      "kicker": "Fürstentum · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Lothir.html",
+      "parentLabel": "Lothir",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        }
+      ],
+      "aliases": [
+        "moinneach",
+        "fuerstentum-moinneachs",
+        "moinneachs"
+      ],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/moinneach.png",
+      "crestAlt": "Herrschaftszeichen · Fürstentum Moinneach",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Moinneach ist ein gewaltiges Sumpfland. Mangrovenwurzeln, schwarzes Wasser, Pilze und versunkene Wege prägen seine gefährliche Landschaft. In Gergonax residieren die Tir An Cethrenn als Fürstenclan; die An Barrex dienen ihnen dort als Lairds."
+        ],
+        "history": [],
+        "culture": [
+          "Bewohnbare Inseln im Sumpf: Jeder bewohnbare Platz ist dem Sumpf mühsam abgerungen. Grobe, abgenutzte Banner greifen diesen Alltag auf. Zehn Stadtgebiete bilden die örtliche Gliederung; die Wege zwischen ihnen folgen den wenigen festen Übergängen und Wasserläufen."
+        ],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Fürstentum"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Tir An Cethrenn",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cethrenn"
+            },
+            {
+              "label": "Rang",
+              "value": "Ard Tiarna"
+            },
+            {
+              "label": "Sitz",
+              "value": "Gergonax",
+              "href": "/Orte/grossstadt.html?id=moinneach-gergonax"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-cethrenn",
+              "name": "Tir An Cethrenn",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/cethrenn.png",
+              "imageAlt": "Wappen Tir An Cethrenn",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cethrenn",
+              "rank": "Ard Tiarna",
+              "seat": "Gergonax",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Ard Tiarna"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-rowak",
+              "name": "Mac Rowak",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/rowak.png",
+              "imageAlt": "Wappen Mac Rowak",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rowak",
+              "rank": "Laird",
+              "seat": "Tarvex",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-kerlaouen",
+              "name": "Nic Kerlaouen",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/kerlaouen.png",
+              "imageAlt": "Wappen Nic Kerlaouen",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kerlaouen",
+              "rank": "Laird",
+              "seat": "Druanax",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-damona",
+              "name": "Dál Damona",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/damona.png",
+              "imageAlt": "Wappen Dál Damona",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damona",
+              "rank": "Laird",
+              "seat": "Drunemax",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-caddach",
+              "name": "Ard Caddach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/caddach.png",
+              "imageAlt": "Wappen Ard Caddach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caddach",
+              "rank": "Laird",
+              "seat": "Amabactoix",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-nic-adruinna",
+              "name": "Nic Adruinna",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/adruinna.png",
+              "imageAlt": "Wappen Nic Adruinna",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nic-adruinna",
+              "rank": "Laird",
+              "seat": "Vironax",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-avernax",
+              "name": "Ard Avernax",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/avernax.png",
+              "imageAlt": "Wappen Ard Avernax",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-avernax",
+              "rank": "Laird",
+              "seat": "Arvonax",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-ua-brigantex",
+              "name": "Ua Brigantex",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/brigantex.png",
+              "imageAlt": "Wappen Ua Brigantex",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-brigantex",
+              "rank": "Laird",
+              "seat": "Taranux",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-keravel",
+              "name": "Na Keravel",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/keravel.png",
+              "imageAlt": "Wappen Na Keravel",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-keravel",
+              "rank": "Laird",
+              "seat": "Senodex",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-nemetex",
+              "name": "Ord Nemetex",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/nemetex.png",
+              "imageAlt": "Wappen Ord Nemetex",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nemetex",
+              "rank": "Laird",
+              "seat": "Camulax",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "moinneach-sitz-tarvex",
+        "moinneach-sitz-druanax",
+        "moinneach-sitz-drunemax",
+        "moinneach-sitz-amabactoix",
+        "moinneach-sitz-vironax",
+        "moinneach-sitz-arvonax",
+        "moinneach-sitz-taranux",
+        "moinneach-sitz-senodex",
+        "moinneach-sitz-camulax",
+        "moinneach-sitz-gergonax"
+      ]
+    },
+    {
+      "id": "moinneach-sitz-tarvex",
+      "title": "Lairdherrschaft Tarvex",
+      "shortTitle": "Lairdherrschaft Tarvex",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Tarvex",
+          "slug": "moinneach-sitz-tarvex"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/tarvex.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Tarvex",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Tarvex gehört zu Moinneach. Mac Rowak führt hier den Rang Laird mit Sitz in Tarvex.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Tarvex liegt im südwestlichen Sumpfland. Wasserarme zerschneiden die mangrovenreichen Niederungen; feste Plätze und passierbare Übergänge sind zwischen den versumpften Wäldern selten."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Mac Rowak",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rowak"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Tarvex",
+              "href": "/Orte/grossstadt.html?id=moinneach-tarvex"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-rowak",
+              "name": "Mac Rowak",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/rowak.png",
+              "imageAlt": "Wappen Mac Rowak",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rowak",
+              "rank": "Laird",
+              "seat": "Tarvex",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-tarvex",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-tarvex"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-druanax",
+      "title": "Lairdherrschaft Druanax",
+      "shortTitle": "Lairdherrschaft Druanax",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Druanax",
+          "slug": "moinneach-sitz-druanax"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/druanax.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Druanax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Druanax gehört zu Moinneach. Nic Kerlaouen führt hier den Rang Laird mit Sitz in Druanax.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Druanax liegt im westlichen Bruchwald. Zwischen Wasserarmen und kleinen Erhebungen stehen nasse Wurzelgeflechte und pilzreiches Totholz. Nach Osten öffnet sich der Raum zu Gergonax’ Flussniederungen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Nic Kerlaouen",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kerlaouen"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Druanax",
+              "href": "/Orte/grossstadt.html?id=moinneach-druanax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-kerlaouen",
+              "name": "Nic Kerlaouen",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/kerlaouen.png",
+              "imageAlt": "Wappen Nic Kerlaouen",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kerlaouen",
+              "rank": "Laird",
+              "seat": "Druanax",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-druanax",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-druanax"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-drunemax",
+      "title": "Lairdherrschaft Drunemax",
+      "shortTitle": "Lairdherrschaft Drunemax",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Drunemax",
+          "slug": "moinneach-sitz-drunemax"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/drunemax.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Drunemax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Drunemax gehört zu Moinneach. Dál Damona führt hier den Rang Laird mit Sitz in Drunemax.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Drunemax liegt an einem südlichen Wasserlauf unterhalb felsiger Höhen. Die höheren Flächen unterbrechen das Sumpfland, während sich an ihrem Fuß schlammige Rinnen und vernässte Wälder sammeln."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Dál Damona",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damona"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Drunemax",
+              "href": "/Orte/grossstadt.html?id=moinneach-drunemax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-damona",
+              "name": "Dál Damona",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/damona.png",
+              "imageAlt": "Wappen Dál Damona",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-damona",
+              "rank": "Laird",
+              "seat": "Drunemax",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-drunemax",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-drunemax"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-amabactoix",
+      "title": "Lairdherrschaft Amabactoix",
+      "shortTitle": "Lairdherrschaft Amabactoix",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Amabactoix",
+          "slug": "moinneach-sitz-amabactoix"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/amabactoix.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Amabactoix",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Amabactoix gehört zu Moinneach. Ard Caddach führt hier den Rang Laird mit Sitz in Amabactoix.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Amabactoix liegt westlich des östlichen Gebirgszugs. Mangrovenreiche Wasserläufe und überflutete Wurzelräume verbinden das nördliche Sumpfland mit den mittleren Niederungen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ard Caddach",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caddach"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Amabactoix",
+              "href": "/Orte/grossstadt.html?id=moinneach-amabactoix"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-caddach",
+              "name": "Ard Caddach",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/caddach.png",
+              "imageAlt": "Wappen Ard Caddach",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caddach",
+              "rank": "Laird",
+              "seat": "Amabactoix",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-amabactoix",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-amabactoix"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-vironax",
+      "title": "Lairdherrschaft Vironax",
+      "shortTitle": "Lairdherrschaft Vironax",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Vironax",
+          "slug": "moinneach-sitz-vironax"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/vironax.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Vironax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Vironax gehört zu Moinneach. Nic Adruinna führt hier den Rang Laird mit Sitz in Vironax.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Vironax liegt an einem nördlichen Wasserlauf. Bewaldete Erhebungen ragen aus der nassen Landschaft; dazwischen ziehen sich Mangroven, schwer passierbare Ufer und Sumpfrinnen nach Süden."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Nic Adruinna",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nic-adruinna"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Vironax",
+              "href": "/Orte/grossstadt.html?id=moinneach-vironax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-nic-adruinna",
+              "name": "Nic Adruinna",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/adruinna.png",
+              "imageAlt": "Wappen Nic Adruinna",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nic-adruinna",
+              "rank": "Laird",
+              "seat": "Vironax",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-vironax",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-vironax"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-arvonax",
+      "title": "Lairdherrschaft Arvonax",
+      "shortTitle": "Lairdherrschaft Arvonax",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Arvonax",
+          "slug": "moinneach-sitz-arvonax"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/arvonax.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Arvonax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Arvonax gehört zu Moinneach. Ard Avernax führt hier den Rang Laird mit Sitz in Arvonax.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Arvonax liegt im südöstlichen Tal zwischen felsigen Höhen. Der eingezeichnete Weg durchquert einen engen Übergangsraum, in dessen Senken Wasser steht und versumpfte Waldstücke die Bewegung erschweren."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ard Avernax",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-avernax"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Arvonax",
+              "href": "/Orte/grossstadt.html?id=moinneach-arvonax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-avernax",
+              "name": "Ard Avernax",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/avernax.png",
+              "imageAlt": "Wappen Ard Avernax",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-avernax",
+              "rank": "Laird",
+              "seat": "Arvonax",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-arvonax",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-arvonax"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-taranux",
+      "title": "Lairdherrschaft Taranux",
+      "shortTitle": "Lairdherrschaft Taranux",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Taranux",
+          "slug": "moinneach-sitz-taranux"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/taranux.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Taranux",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Taranux gehört zu Moinneach. Ua Brigantex führt hier den Rang Laird mit Sitz in Taranux.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Taranux liegt zwischen Wasserlauf und östlichen Bergkämmen. Die bewachsenen Talflächen gehören zum Sumpfland; die umliegenden Höhen bieten nur schmale Übergänge zwischen nassen Senken und Wald."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ua Brigantex",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-brigantex"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Taranux",
+              "href": "/Orte/grossstadt.html?id=moinneach-taranux"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-ua-brigantex",
+              "name": "Ua Brigantex",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/brigantex.png",
+              "imageAlt": "Wappen Ua Brigantex",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ua-brigantex",
+              "rank": "Laird",
+              "seat": "Taranux",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-taranux",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-taranux"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-senodex",
+      "title": "Lairdherrschaft Senodex",
+      "shortTitle": "Lairdherrschaft Senodex",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Senodex",
+          "slug": "moinneach-sitz-senodex"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/senodex.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Senodex",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Senodex gehört zu Moinneach. Na Keravel führt hier den Rang Laird mit Sitz in Senodex.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Senodex liegt im östlichen Talgebiet über einer sichtbaren Wasserstufe. Unterhalb der Siedlung zieht der Wasserlauf durch sumpfige Mulden; überflutete Ufer und dichter Bewuchs fassen die Verbindung nach Süden ein."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Na Keravel",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-keravel"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Senodex",
+              "href": "/Orte/grossstadt.html?id=moinneach-senodex"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-keravel",
+              "name": "Na Keravel",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/keravel.png",
+              "imageAlt": "Wappen Na Keravel",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-keravel",
+              "rank": "Laird",
+              "seat": "Senodex",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-senodex",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-senodex"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-camulax",
+      "title": "Lairdherrschaft Camulax",
+      "shortTitle": "Lairdherrschaft Camulax",
+      "type": "Lairdherrschaft",
+      "kicker": "Lairdherrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Lairdherrschaft",
+          "name": "Lairdherrschaft Camulax",
+          "slug": "moinneach-sitz-camulax"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/camulax.png",
+      "crestAlt": "Herrschaftszeichen · Lairdherrschaft Camulax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Lairdherrschaft Camulax gehört zu Moinneach. Ord Nemetex führt hier den Rang Laird mit Sitz in Camulax.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Camulax liegt im nordöstlichen Tal zwischen bewaldeten und felsigen Höhen. Auch hier bleibt Moinneach ein unwirtliches Sumpfland: Wasserläufe, nasse Mulden und schmale feste Flächen bestimmen den Lebensraum."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Lairdherrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Ord Nemetex",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nemetex"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Camulax",
+              "href": "/Orte/grossstadt.html?id=moinneach-camulax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-nemetex",
+              "name": "Ord Nemetex",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/nemetex.png",
+              "imageAlt": "Wappen Ord Nemetex",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-nemetex",
+              "rank": "Laird",
+              "seat": "Camulax",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-camulax",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-camulax"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "moinneach-sitz-gergonax",
+      "title": "Fürstliche Domäne Gergonax",
+      "shortTitle": "Fürstliche Domäne Gergonax",
+      "type": "Fürstliche Domäne",
+      "kicker": "Fürstliche Domäne · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "parentLabel": "Fürstentum Moinneach",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Fürstliche Domäne Gergonax",
+          "slug": "moinneach-sitz-gergonax"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/moinneach/gergonax.png",
+      "crestAlt": "Herrschaftszeichen · Fürstliche Domäne Gergonax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Fürstliche Domäne Gergonax gehört zu Moinneach. Tir An Cethrenn führt hier den Rang Ard Tiarna mit Sitz in Gergonax."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Gergonax’ Burganlage liegt im mittleren Geflecht mehrerer Wasserläufe. Mangrovenwurzeln und überschwemmte Niederungen erschweren den Zugang; bewaldete Erhebungen gliedern den Übergang zu den Nachbargebieten."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Fürstliche Domäne"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "Tir An Cethrenn",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cethrenn"
+            },
+            {
+              "label": "Rang",
+              "value": "Ard Tiarna"
+            },
+            {
+              "label": "Sitz",
+              "value": "Gergonax",
+              "href": "/Orte/grossstadt.html?id=moinneach-gergonax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-cethrenn",
+              "name": "Tir An Cethrenn",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/cethrenn.png",
+              "imageAlt": "Wappen Tir An Cethrenn",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cethrenn",
+              "rank": "Ard Tiarna",
+              "seat": "Gergonax",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Ard Tiarna"
+            }
+          ]
+        },
+        {
+          "title": "Unmittelbare Häuser und Clans",
+          "houses": [
+            {
+              "familyId": "haus-barrex",
+              "name": "An Barrex",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+              "imageAlt": "Wappen An Barrex",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-barrex",
+              "rank": "Laird",
+              "seat": "Gergonax",
+              "liege": "Tir An Cethrenn",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "moinneach-sitz-gergonax",
+          "title": "Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "moinneach-gergonax"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": [
+        "moinneach-hausbereich-barrex"
+      ]
+    },
+    {
+      "id": "moinneach-hausbereich-barrex",
+      "title": "Herrschaft An Barrex in Gergonax",
+      "shortTitle": "Herrschaft An Barrex in Gergonax",
+      "type": "Örtliche Herrschaft",
+      "kicker": "Örtliche Herrschaft · Moinneach",
+      "parentHref": "/Kontinente/Lothir/Moinneach/moinneach-sitz-gergonax/index.html",
+      "parentLabel": "Fürstliche Domäne Gergonax",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Lothir",
+          "slug": "lothir"
+        },
+        {
+          "type": "Fürstentum",
+          "name": "Fürstentum Moinneach",
+          "slug": "fuerstentum-moinneach"
+        },
+        {
+          "type": "Fürstliche Domäne",
+          "name": "Fürstliche Domäne Gergonax",
+          "slug": "moinneach-sitz-gergonax"
+        },
+        {
+          "type": "Örtliche Herrschaft",
+          "name": "Herrschaft An Barrex in Gergonax",
+          "slug": "moinneach-hausbereich-barrex"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+      "crestAlt": "Herrschaftszeichen · Herrschaft An Barrex in Gergonax",
+      "map": {
+        "title": "Karte · Moinneach",
+        "imageSrc": "/Karten/Moinneach/Kartenbilder/normal.webp",
+        "imageAlt": "Vorhandene Übersichtskarte Moinneach; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=moinneach"
+      },
+      "copy": {
+        "overview": [
+          "Herrschaft An Barrex in Gergonax gehört zu Moinneach. An Barrex führt hier den Rang Laird mit Sitz in Gergonax.",
+          "Unmittelbarer Lehnsherr ist Tir An Cethrenn.",
+          "Dieser Hausbereich liegt innerhalb der bestehenden Siedlung. Er bezeichnet örtliche Rechte und Dienste; ein zusätzliches Landschaftsgebiet ist damit nicht ausgewiesen."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Herrschaft und Zugehörigkeit",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Örtliche Herrschaft"
+            },
+            {
+              "label": "Land",
+              "value": "Fürstentum Moinneach",
+              "href": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html"
+            },
+            {
+              "label": "Haus",
+              "value": "An Barrex",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-barrex"
+            },
+            {
+              "label": "Rang",
+              "value": "Laird"
+            },
+            {
+              "label": "Sitz",
+              "value": "Gergonax"
+            },
+            {
+              "label": "Oberherrschaft",
+              "value": "Fürstliche Domäne Gergonax",
+              "href": "/Kontinente/Lothir/Moinneach/moinneach-sitz-gergonax/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Herrschendes Haus",
+          "houses": [
+            {
+              "familyId": "haus-barrex",
+              "name": "An Barrex",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/moinneach/barrex.png",
+              "imageAlt": "Wappen An Barrex",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-barrex",
+              "rank": "Laird",
+              "seat": "Gergonax",
+              "liege": "Tir An Cethrenn",
+              "featured": true,
+              "featuredLabel": "Laird"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": []
+    }
+  ]
+}

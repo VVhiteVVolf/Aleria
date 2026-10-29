@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "sourcePriority": "Explizite Nutzerkorrekturen vor exportierten Zuordnungen vor den früheren Vorschauseiten.",
+  "exports": [
+    {
+      "realm": "aldingen",
+      "path": "shared/accepted-realms/sources/placements/aldingen-entwurf.json",
+      "sha256": "359571a62c284f7f841580bb5757ccc433aaff1ab56ea76c283a0a51d7ddfdb0"
+    },
+    {
+      "realm": "goldmund",
+      "path": "shared/accepted-realms/sources/placements/goldmund-entwurf.json",
+      "sha256": "78085e0691d563ba5c8ad5f78bfd120db3d1a6501b744fd14f1798cfe2ce654d"
+    },
+    {
+      "realm": "weisenfluh",
+      "path": "shared/accepted-realms/sources/placements/weisenfluh-entwurf.json",
+      "sha256": "82e055d9286d98244b4de28dd4857cb51f04581e8ba7b58cc8d4c86085adcaf3"
+    },
+    {
+      "realm": "iathneach",
+      "path": "shared/accepted-realms/sources/placements/iathneach-entwurf.json",
+      "sha256": "a50e86d1a73186dae6d3e49b461c87a31c6903148f6eee1a92fdb4266554226e"
+    },
+    {
+      "realm": "deitheach",
+      "path": "shared/accepted-realms/sources/placements/deitheach-entwurf.json",
+      "sha256": "71ef2be9e5a574ec5d0f0a17a8272751fc945b7e058cca9ea3afb3196c232278"
+    },
+    {
+      "realm": "triarchie",
+      "path": "shared/accepted-realms/sources/placements/triarchie-entwurf.json",
+      "sha256": "b7f5bfb1d827b3eede20739a1fe659fbb61517e02fffb5c7f4f6e13a2571f661"
+    }
+  ]
+}

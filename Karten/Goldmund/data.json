@@ -1,0 +1,959 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Goldmund/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "0b356487adc210df687685d0746d09b481e968d832457f976ebbe700ca9b99a4",
+  "state": {
+    "pins": [
+      {
+        "id": "goldmund-thronholt",
+        "title": "Thronholt",
+        "x": 0.265,
+        "y": 0.25,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/goldveld.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-goldveld",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/thronmark.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-thronholt/index.html",
+        "region": "Goldmund",
+        "house": "Haus Goldveld",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Thronholt"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Goldveld"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Goldveld, Haus Belmont, Haus Marholt, Haus Roden, Haus Sorel"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herzogliche Domäne Thronmark"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-thronholt",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "thronholt",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            26.5,
+            25
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-goldveld",
+          "haus-belmont",
+          "haus-marholt",
+          "haus-roden",
+          "haus-sorel"
+        ]
+      },
+      {
+        "id": "goldmund-brakenstein",
+        "title": "Brakenstein",
+        "x": 0.2,
+        "y": 0.46299999999999997,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/broeck.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-broek",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/brakenwacht.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-brakenstein/index.html",
+        "region": "Goldmund",
+        "house": "Haus Broek",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brakenstein"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Broek"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Broek, Haus Velten"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Brakenwacht"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-brakenstein",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "brakenstein",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            20,
+            46.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-broek",
+          "haus-velten-goldmund"
+        ]
+      },
+      {
+        "id": "goldmund-bregen",
+        "title": "Bregen",
+        "x": 0.595,
+        "y": 0.09200000000000008,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/aurelshain.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-arenberg",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/bregenau.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-bregen/index.html",
+        "region": "Goldmund",
+        "house": "Haus Arenberg",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bregen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arenberg"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Arenberg, Haus Belcourt"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Bregenau"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-bregen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "bregen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            59.5,
+            9.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-arenberg",
+          "haus-belcourt"
+        ]
+      },
+      {
+        "id": "goldmund-haarlen",
+        "title": "Haarlen",
+        "x": 0.701,
+        "y": 0.19399999999999995,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/lanette.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lanette",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/haarlenried.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-haarlen/index.html",
+        "region": "Goldmund",
+        "house": "Haus Lanette",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Haarlen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Lanette"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Lanette, Ruan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Haarlenried"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-haarlen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "haarlen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            70.1,
+            19.4
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-lanette",
+          "haus-ruan"
+        ]
+      },
+      {
+        "id": "goldmund-aldermoor",
+        "title": "Aldermoor",
+        "x": 0.466,
+        "y": 0.265,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/herzau.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-arden",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/alderweiden.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-aldermoor/index.html",
+        "region": "Goldmund",
+        "house": "Haus Arden",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aldermoor"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arden"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Arden"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Alderweiden"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-aldermoor",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "aldermoor",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            46.6,
+            26.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-arden"
+        ]
+      },
+      {
+        "id": "goldmund-bramsen",
+        "title": "Bramsen",
+        "x": 0.48200000000000004,
+        "y": 0.538,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/seidenwarth.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lanvier",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/bramsenquell.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-bramsen/index.html",
+        "region": "Goldmund",
+        "house": "Haus Lanvier",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bramsen"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Lanvier"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Lanvier, Fenn"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Bramsenquell"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-bramsen",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "bramsen",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            48.2,
+            53.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-lanvier",
+          "haus-fenn"
+        ]
+      },
+      {
+        "id": "goldmund-niedenfels",
+        "title": "Niedenfels",
+        "x": 0.7509999999999999,
+        "y": 0.363,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/silberhorst.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-berden",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/niedenmark.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-niedenfels/index.html",
+        "region": "Goldmund",
+        "house": "Haus Berden",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Niedenfels"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Berden"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Berden, Brenn, Haus Roosenvelt, Haus Wolter"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Freiherrentum Niedenmark"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-niedenfels",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "niedenfels",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            75.1,
+            36.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-berden",
+          "haus-brenn",
+          "haus-roosenvelt",
+          "haus-wolter"
+        ]
+      },
+      {
+        "id": "goldmund-hartenstein",
+        "title": "Hartenfels",
+        "x": 0.7979999999999999,
+        "y": 0.5329999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/falkengold.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-severin",
+        "banner": "/Stammbäume/assets/images/regions/goldmund/hartenfels.webp",
+        "bannerLink": "/Kontinente/Lothir/Goldmund/goldmund-sitz-hartenstein/index.html",
+        "region": "Goldmund",
+        "house": "Haus Severin",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hartenfels"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Severin"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Severin, Callan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Junkerherrschaft Hartenfels"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Hartenstein"
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "dominionId": "goldmund-sitz-hartenstein",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "hartenstein",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            79.8,
+            53.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-severin",
+          "haus-callan"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "herzogtum-goldmund",
+        "name": "Herzogtum Goldmund",
+        "type": "Herzogtum",
+        "ruler": "Haus Goldveld",
+        "seat": "Thronholt",
+        "parentId": ""
+      },
+      {
+        "id": "goldmund-region-kronenau",
+        "name": "Herzogliche Grafschaft Kronenau",
+        "type": "Grafschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "herzogtum-goldmund"
+      },
+      {
+        "id": "goldmund-region-aurelmark",
+        "name": "Grafschaft Aurelmark",
+        "type": "Grafschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "herzogtum-goldmund"
+      },
+      {
+        "id": "goldmund-region-edelstrom",
+        "name": "Grafschaft Edelstrom",
+        "type": "Grafschaft",
+        "ruler": "",
+        "seat": "",
+        "parentId": "herzogtum-goldmund"
+      },
+      {
+        "id": "goldmund-sitz-thronholt",
+        "name": "Herzogliche Domäne Thronmark",
+        "type": "Herzogliche Domäne",
+        "ruler": "Haus Goldveld",
+        "seat": "Thronholt",
+        "parentId": "goldmund-region-kronenau"
+      },
+      {
+        "id": "goldmund-sitz-brakenstein",
+        "name": "Freiherrentum Brakenwacht",
+        "type": "Freiherrentum",
+        "ruler": "Haus Broek",
+        "seat": "Brakenstein",
+        "parentId": "goldmund-region-kronenau"
+      },
+      {
+        "id": "goldmund-sitz-bregen",
+        "name": "Freiherrentum Bregenau",
+        "type": "Freiherrentum",
+        "ruler": "Haus Arenberg",
+        "seat": "Bregen",
+        "parentId": "goldmund-region-aurelmark"
+      },
+      {
+        "id": "goldmund-sitz-haarlen",
+        "name": "Freiherrentum Haarlenried",
+        "type": "Freiherrentum",
+        "ruler": "Haus Lanette",
+        "seat": "Haarlen",
+        "parentId": "goldmund-region-aurelmark"
+      },
+      {
+        "id": "goldmund-sitz-aldermoor",
+        "name": "Junkerherrschaft Alderweiden",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Arden",
+        "seat": "Aldermoor",
+        "parentId": "goldmund-region-aurelmark"
+      },
+      {
+        "id": "goldmund-sitz-bramsen",
+        "name": "Freiherrentum Bramsenquell",
+        "type": "Freiherrentum",
+        "ruler": "Haus Lanvier",
+        "seat": "Bramsen",
+        "parentId": "goldmund-region-edelstrom"
+      },
+      {
+        "id": "goldmund-sitz-niedenfels",
+        "name": "Freiherrentum Niedenmark",
+        "type": "Freiherrentum",
+        "ruler": "Haus Berden",
+        "seat": "Niedenfels",
+        "parentId": "goldmund-region-edelstrom"
+      },
+      {
+        "id": "goldmund-sitz-hartenstein",
+        "name": "Junkerherrschaft Hartenfels",
+        "type": "Junkerherrschaft",
+        "ruler": "Haus Severin",
+        "seat": "Hartenfels",
+        "parentId": "goldmund-region-edelstrom"
+      },
+      {
+        "id": "goldmund-hausbereich-roden",
+        "name": "Herrschaft Haus Roden in Thronholt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Roden",
+        "seat": "Thronholt",
+        "parentId": "goldmund-sitz-thronholt"
+      },
+      {
+        "id": "goldmund-hausbereich-roosenvelt",
+        "name": "Herrschaft Haus Roosenvelt in Niedenfels",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Roosenvelt",
+        "seat": "Niedenfels",
+        "parentId": "goldmund-sitz-niedenfels"
+      },
+      {
+        "id": "goldmund-hausbereich-gueldenfels",
+        "name": "Herrschaft Haus Velten in Brakenstein",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Velten",
+        "seat": "Brakenstein",
+        "parentId": "goldmund-sitz-brakenstein"
+      },
+      {
+        "id": "goldmund-hausbereich-rebenkron",
+        "name": "Herrschaft Haus Belcourt in Bregen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Belcourt",
+        "seat": "Bregen",
+        "parentId": "goldmund-sitz-bregen"
+      },
+      {
+        "id": "goldmund-hausbereich-greifenau",
+        "name": "Herrschaft Haus Marholt in Thronholt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Marholt",
+        "seat": "Thronholt",
+        "parentId": "goldmund-sitz-thronholt"
+      },
+      {
+        "id": "goldmund-hausbereich-eitelborn",
+        "name": "Herrschaft Haus Belmont in Thronholt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Belmont",
+        "seat": "Thronholt",
+        "parentId": "goldmund-sitz-thronholt"
+      },
+      {
+        "id": "goldmund-hausbereich-samtborn",
+        "name": "Herrschaft Haus Sorel in Thronholt",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Sorel",
+        "seat": "Thronholt",
+        "parentId": "goldmund-sitz-thronholt"
+      },
+      {
+        "id": "goldmund-hausbereich-weisshorn",
+        "name": "Herrschaft Haus Wolter in Niedenfels",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Haus Wolter",
+        "seat": "Niedenfels",
+        "parentId": "goldmund-sitz-niedenfels"
+      },
+      {
+        "id": "goldmund-hausbereich-mac-ruan",
+        "name": "Herrschaft Ruan in Haarlen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Ruan",
+        "seat": "Haarlen",
+        "parentId": "goldmund-sitz-haarlen"
+      },
+      {
+        "id": "goldmund-hausbereich-mac-callan",
+        "name": "Herrschaft Callan in Hartenfels",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Callan",
+        "seat": "Hartenfels",
+        "parentId": "goldmund-sitz-hartenstein"
+      },
+      {
+        "id": "goldmund-hausbereich-an-brenn",
+        "name": "Herrschaft Brenn in Niedenfels",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Brenn",
+        "seat": "Niedenfels",
+        "parentId": "goldmund-sitz-niedenfels"
+      },
+      {
+        "id": "goldmund-hausbereich-na-fenn",
+        "name": "Herrschaft Fenn in Bramsen",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Fenn",
+        "seat": "Bramsen",
+        "parentId": "goldmund-sitz-bramsen"
+      }
+    ],
+    "regionTitle": "Herzogtum Goldmund",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/goldmund/goldmund.webp",
+    "mapImages": {
+      "normal": "/Karten/Goldmund/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

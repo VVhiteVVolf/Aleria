@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-29",
+  "source": "Konkrete Nutzeranweisung nach der Vorschlagsliste",
+  "replacements": [
+    [
+      "Burg Hohenegg",
+      "Blutdorf"
+    ],
+    [
+      "Lindenau",
+      "Dahlen"
+    ],
+    [
+      "Westerau",
+      "Felsbrunn"
+    ],
+    [
+      "Buchenau",
+      "Buchen"
+    ],
+    [
+      "Burg Eberstein",
+      "Burg Rastenberg"
+    ],
+    [
+      "Wendhausen",
+      "Kesten"
+    ],
+    [
+      "Auenheim",
+      "Lahr"
+    ],
+    [
+      "Burg Altenried",
+      "Burg Blutstein"
+    ],
+    [
+      "Eichenried",
+      "Friedberg"
+    ],
+    [
+      "Langenau",
+      "Kronberg"
+    ],
+    [
+      "Waldstetten",
+      "Steinrode"
+    ],
+    [
+      "Seebach",
+      "Rethen"
+    ],
+    [
+      "Burg Hartenstein",
+      "Burg Ewigwacht"
+    ],
+    [
+      "Brunnau",
+      "Ewigblick"
+    ],
+    [
+      "Weidenau",
+      "Altwiek"
+    ],
+    [
+      "Birkheim",
+      "Stegen"
+    ],
+    [
+      "von Lichtenau",
+      "Erlach"
+    ],
+    [
+      "von Bredow",
+      "Altwern"
+    ],
+    [
+      "von Rantzau",
+      "Erenwarth"
+    ],
+    [
+      "von Hardenberg",
+      "Harden"
+    ],
+    [
+      "von Ottenhausen",
+      "von Ottersberg"
+    ],
+    [
+      "von Rodenburg",
+      "Voss"
+    ],
+    [
+      "von Hagenow",
+      "Ardel"
+    ],
+    [
+      "von Wartenberg",
+      "Velter"
+    ],
+    [
+      "von Alvensleben",
+      "Alwenwarth"
+    ],
+    [
+      "von Veltheim",
+      "Eltwern"
+    ]
+  ],
+  "newSettlement": {
+    "id": "nordwest-bergwerk",
+    "name": "Kappel",
+    "kind": "Bergbausiedlung",
+    "county": "nordwest",
+    "point": [
+      31.2,
+      30.5
+    ],
+    "position": "Südlich von Felsbrunn, am Stolleneingang der gelieferten Karte"
+  },
+  "reclassified": {
+    "id": "nordwest-burg",
+    "name": "Blutdorf",
+    "kind": "Stadt",
+    "seatType": "town"
+  },
+  "houseAliases": {
+    "Lichtau": "vorher von Lichtenau; jetzt Erlach",
+    "Bredau": "vorher von Bredow; jetzt Altwern"
+  },
+  "unchangedExplicitly": [
+    "Erlenbach",
+    "Oberried",
+    "Niederwerth",
+    "Hollern",
+    "von Westerholt"
+  ],
+  "unmentionedUnchanged": [
+    "Birkenau",
+    "von Riedern"
+  ],
+  "relatedFamily": "von Ottersberg in der Blutstadt unterscheidet sich durch Namenszusatz von und das gelieferte Wappen von Ottersberg aus Weisenfluh.",
+  "stableIdsPreserved": true
+}

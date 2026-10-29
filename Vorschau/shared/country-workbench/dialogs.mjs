@@ -10,7 +10,14 @@ export function createCountryDialogs({dialog,houses,warriors,territoryArt,settle
   showHouse(id){
    const h=houses.find(h=>h.id===id),w=warriors.find(w=>w.id===id);if(!h||!w)return;
    const seat=settlements.find(s=>s.id===getPlacements()[id]);
-   show(renderHouseDossier({title:`${h.clan?'Clan':'Haus'} ${h.name}`,source:h.source,headingId:'art-title',warrior:{...w,palette:w.palette.join(' · ')},classHref:w.classHref,crest:{image:h.crest,fullsize:h.fullsize},description:h.motif,facts:[{label:'Rolle',value:rankLabel(h)},{label:'Sitz im Entwurf',value:seat?.name??'Noch offen'},{label:'Rahmen',value:h.frame},{label:'Herkunftssitz',value:h.formerSeat??h.originLabel??'Nicht vorgegeben'},{label:'Zuordnung',value:h.sourceSeat?'Ausgangssitz nach Vorgabe beziehungsweise ausdrücklich markierter Vorschlag; bearbeitbar.':'Sitz und Lehnsherr offen.'}],houseId:id,canPlace:true,originalLink:h.isNew?null:h.original},e));
+   const facts=[{label:'Rolle',value:rankLabel(h)},{label:h.cityHome?'Äußerer Sitz im Entwurf':'Sitz im Entwurf',value:seat?.name??'Noch offen'},{label:'Rahmen',value:h.frame}];
+   if(h.focus)facts.push({label:'Schwerpunkt',value:h.focus});
+   if(h.cityHome)facts.push({label:'Stadtresidenz · Vorschlag',value:h.cityHome});
+   if(h.renamedFrom)facts.push({label:'Bisherige Vorlage',value:h.renamedFrom});
+   if(h.motto)facts.push({label:'Wahlspruch',value:h.motto});
+   if(h.placementNote)facts.push({label:'Zuordnung',value:h.placementNote});
+   else facts.push({label:'Herkunftssitz',value:h.formerSeat??h.originLabel??'Nicht vorgegeben'},{label:'Zuordnung',value:h.sourceSeat?'Ausgangssitz nach Vorgabe beziehungsweise ausdrücklich markierter Vorschlag; bearbeitbar.':'Sitz und Lehnsherr offen.'});
+   show(renderHouseDossier({title:`${h.clan?'Clan':'Haus'} ${h.name}`,source:h.source,headingId:'art-title',warrior:{...w,palette:w.palette.join(' · ')},classHref:w.classHref,crest:{image:h.crest,fullsize:h.fullsize},description:h.motif,facts,houseId:id,canPlace:true,originalLink:h.isNew?null:h.original},e));
   },
   showTerritory(id){const t=territoryArt.find(t=>t.id===id);if(!t)return;show(`<p class="eyebrow">${e(t.kind)} · Entwurf</p><h2 id="art-title">${e(t.name)}</h2><div class="art-detail-layout"><figure><a href="${e(t.fullsize)}" target="_blank" rel="noopener"><img src="${e(t.image)}" width="480" height="480" alt="${e(t.name)}"></a><figcaption><a href="${e(t.fullsize)}" target="_blank" rel="noopener">Großansicht ↗</a></figcaption></figure><div><p>${e(t.motif)}</p><p>${e(t.palette.join(' · '))}</p><p>${e(t.geography??'Gemeinsames Zeichen der farblich zusammengehörigen Teilgebiete.')}</p><p class="subtle">Ein Regionalzeichen legt keine Familie und keinen Lehnsherrn fest.</p></div></div>`);}
  };

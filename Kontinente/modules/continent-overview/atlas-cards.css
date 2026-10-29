@@ -1,0 +1,51 @@
+.continent-grid, .realm-grid { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.continent-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); counter-reset: continent; }
+.continent-card, .realm-card { position: relative; min-width: 0; border: 1px solid var(--continent-line-soft); border-radius: 3px; background: #fffdf780; }
+.continent-card { display: grid; grid-template-rows: 164px auto 28px; justify-items: center; align-content: center; min-height: 264px; padding: 20px 14px 16px; counter-increment: continent; text-align: center; }
+.continent-card::before { content: counter(continent, upper-roman); position: absolute; top: 12px; left: 14px; color: var(--continent-muted); font: 9px/1 Verdana, sans-serif; }
+.continent-card h2 { margin: 10px 0 0; font-size: 23px; font-weight: 500; line-height: 1.2; }
+.continent-banner-slot { --atlas-image-height: 150px; grid-row: 1; width: min(100%, 150px); height: 164px; }
+.atlas-entry-status { color: var(--continent-muted); font: 11px/1.5 Verdana, sans-serif; align-self: end; }
+.continent-card > .atlas-entry-status { padding-top: 8px; }
+.realm-card { display: grid; grid-template-columns: 88px minmax(0, 1fr); grid-template-rows: auto auto; align-content: center; align-items: center; gap: 8px 18px; min-height: 176px; padding: 22px 20px; text-align: left; }
+.realm-card h3 { grid-column: 2; grid-row: 1; margin: 0; padding-right: 8px; font-size: 20px; font-weight: 500; line-height: 1.3; overflow-wrap: anywhere; }
+.realm-card h3 a { text-decoration: none; }
+.realm-icon-slot { --atlas-image-height: 88px; grid-column: 1; grid-row: 1 / span 2; width: 88px; height: 100px; }
+.realm-card-meta, .realm-card > .atlas-entry-status { grid-column: 2; grid-row: 2; min-width: 0; margin: 0; color: var(--continent-muted); font-size: 13px; line-height: 1.5; font-style: normal; overflow-wrap: anywhere; }
+.realm-card > .atlas-entry-status { align-self: start; }
+.realm-card--wide, .realm-grid--featured .realm-card { width: 100%; justify-self: stretch; }
+.realm-grid--featured { margin-bottom: 14px; }
+.realm-open-emblem { display: grid; place-items: center; grid-column: 1; grid-row: 1 / span 2; width: 88px; height: 88px; border: 1px dashed var(--continent-line); border-radius: 50%; color: #a2957c; font: 30px/1 Georgia, serif; }
+.continent-card:has(a[href]), .realm-card:has(a[href]) { border-color: #b8bca8; transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease; }
+.continent-card:has(a[href]):hover, .realm-card:has(a[href]):hover { background-color: #f1f4e8; border-color: var(--continent-green); box-shadow: 0 5px 16px #273e2e14; }
+.continent-card:has(a[href]) > .atlas-entry-status { color: var(--continent-green); }
+.realm-card:has(a[href])::after { content: '↗'; position: absolute; right: 12px; bottom: 10px; color: var(--continent-green); font: 15px/1 Verdana, sans-serif; }
+/* The existing image link owns the complete card without adding focus stops. */
+.continent-card-link::after, .realm-card-link::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.continent-card:has(a:focus-visible), .realm-card:has(a:focus-visible) { outline: 2px solid var(--continent-red); outline-offset: 4px; }
+.realm-card--faded, .realm-card--ancient { border-style: dashed; background: #e6e2d850; }
+.continent-page :is(.realm-card--faded, .realm-card--ancient) img { filter: saturate(.55) drop-shadow(0 3px 2px #302c221a); }
+@media (max-width: 1120px) {
+  .realm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .realm-card { min-height: 184px; }
+  .continent-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .continent-card { grid-template-rows: 135px auto 32px; min-height: 230px; padding-inline: 10px; }
+  .continent-banner-slot { --atlas-image-height: 126px; height: 135px; }
+}
+@media (max-width: 760px) {
+  .continent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .realm-card { grid-template-columns: 76px minmax(0, 1fr); gap: 8px 14px; padding: 18px; min-height: 160px; }
+  .realm-icon-slot { --atlas-image-height: 76px; width: 76px; height: 88px; }
+  .realm-open-emblem { width: 76px; height: 76px; }
+  .realm-card h3 { font-size: 19px; }
+}
+@media (max-width: 620px) {
+  .realm-grid { grid-template-columns: minmax(0, 1fr); }
+  .realm-card { min-height: 160px; }
+}
+@media (max-width: 440px) {
+  .continent-card { min-height: 210px; grid-template-rows: 120px auto 30px; padding: 18px 8px 14px; }
+  .continent-banner-slot { --atlas-image-height: 112px; height: 120px; }
+  .continent-card h2 { font-size: 20px; }
+  .atlas-entry-status { font-size: 10px; }
+}

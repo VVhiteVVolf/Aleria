@@ -3,6 +3,7 @@ const houseLabels = Object.freeze({
   König: 'Königshaus', Kaiser: 'Kaiserhaus', Herzog: 'Herzogshaus',
   Fürst: 'Fürstenhaus', Graf: 'Grafenhaus', Baron: 'Baronenhaus',
   Ritterfürst: 'Ritterfürstenhaus', Ritterherr: 'Ritterherrenhaus',
+  Freiherr: 'Freiherrenhaus', Junker: 'Junkerhaus', Ministerialer: 'Ministerialenhaus',
   Bürgerlich: 'Bürgerliches Haus',
 });
 

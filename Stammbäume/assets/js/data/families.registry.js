@@ -18,6 +18,7 @@ import { HOUSE_BLEIDDORN_FAMILY } from './house-bleiddorn-family.js';
 import { HOUSE_CYMRATH_O_TRAETHLAN_FAMILY } from './house-cymrath-o-traethlan-family.js';
 import { HOUSE_HOCHREUTH_FAMILY } from './house-hochreuth-family.js';
 import { WEISENFLUH_HOUSE_FAMILIES } from './weisenfluh-house-families.js';
+import { ACCEPTED_REALM_FAMILIES, withAcceptedRealmPlacement } from './accepted-realm-families.js';
 import { VENALYS_HOUSE_FAMILIES } from './venalys-house-families.js';
 import { MORGORN_HOUSE_FAMILIES } from './morgorn-house-families.js';
 import { AELDRUNMAR_HOUSE_FAMILIES } from './aeldrunmar-house-families.js';
@@ -135,6 +136,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
   family = withLagaCounterpartUpgrade(family);
   family = withHouseBiographyDefault(family, HOUSE_BIOGRAPHY_DEFAULTS);
   family = withReviewedAlbicPlacement(family);
+  family = withAcceptedRealmPlacement(family);
   const folderPath = Object.freeze(createFolderPathFromHouseProfile(family.document.houseProfile));
   const additionalPlacements = additionalPlacementsFor(family, territorialPlacements);
   return Object.freeze({
@@ -153,6 +155,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
 }
 
 export const FAMILY_REGISTRY = Object.freeze([
+  ...ACCEPTED_REALM_FAMILIES.map(family => familyRecord({ id: family.document.id, title: family.document.title, family })),
   familyRecord({
     id: 'haus-arwydd',
     title: 'Haus Arwydd',

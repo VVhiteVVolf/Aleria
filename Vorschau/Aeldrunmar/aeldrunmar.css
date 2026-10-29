@@ -1,0 +1,11 @@
+.aeldrunmar-workbench{--accent:#455b3e;--ink:#302f25;--paper:#f5f0e2;--muted:#706e5b;--line:#cdc5ac;background:#d3d3c0}
+.aeldrunmar-workbench .hero{background:radial-gradient(ellipse at 85% 40%,#b9c29c55,transparent 66%)}
+.aeldrunmar-workbench .county-card{background:#fcf8ec}
+.aeldrunmar-workbench .county-card:last-child{grid-column:auto}
+.aeldrunmar-workbench .seat-card .shield-link span{display:none}
+.aeldrunmar-workbench .county-card .shield-link{font-size:23px}
+.aeldrunmar-workbench .country-warrior-card{background:linear-gradient(#efe9d8,#e5dfcb)}
+.aeldrunmar-workbench .map-canvas{min-width:1000px;container-type:inline-size}
+.aeldrunmar-workbench .city-name{display:flex;align-items:center;justify-content:center;width:8.2%;height:2.6%;box-sizing:border-box;font-size:clamp(8px,1.05cqw,46px);padding:0;background:#393d2c;max-width:none}
+.aeldrunmar-workbench .bestiary-reference{padding-top:16px;border-top:1px solid var(--line);font:13px/1.6 Arial,sans-serif}
+@media(max-width:650px){.aeldrunmar-workbench .county-card .shield-link{font-size:21px}}

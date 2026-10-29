@@ -1,0 +1,904 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Iathneach/data.json",
+  "revision": 1,
+  "updatedAt": "2026-10-29T00:00:00.000Z",
+  "generatedStateHash": "525bb37b0b7fbcfd9f38850180a1538e212ddfc6c8988fa40fe684e94f30a951",
+  "state": {
+    "pins": [
+      {
+        "id": "iathneach-botharin",
+        "title": "Botharin",
+        "x": 0.365,
+        "y": 0.4,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cetchathach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cetchathach",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/botharin.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-botharin/index.html",
+        "region": "Iathneach",
+        "house": "Ui Nic Cétchathach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Botharin"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ui Nic Cétchathach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ui Nic Cétchathach, Ua Deaghaide"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Fürstliche Domäne Machair Botharin"
+          }
+        ],
+        "text": "Küstenstadt am westlichen Zugang des fruchtbaren Fluss- und Wegenetzes.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-botharin",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "botharin",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            36.5,
+            40
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-cetchathach",
+          "haus-deaghaide"
+        ]
+      },
+      {
+        "id": "iathneach-sgeir-tearmainn",
+        "title": "Sgeir Tearmainn",
+        "x": 0.175,
+        "y": 0.31000000000000005,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/farraigeach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-farraigeach",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/sgeir-tearmainn.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-sgeir-tearmainn/index.html",
+        "region": "Iathneach",
+        "house": "Mac Farraigeach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sgeir Tearmainn"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Mac Farraigeach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Mac Farraigeach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Sgeirean Tearmainn"
+          }
+        ],
+        "text": "Befestigter Hauptfelsen des westlichen Archipels. Gegenwärtiger Sitz der aus Cuansioda verdrängten Mac Farraigeach.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-sgeir-tearmainn",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "sgeir-tearmainn",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            17.5,
+            31
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-farraigeach"
+        ]
+      },
+      {
+        "id": "iathneach-ailtean",
+        "title": "Ailtean",
+        "x": 0.585,
+        "y": 0.2340000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/treathai.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-treathai",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/ailtean.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-ailtean/index.html",
+        "region": "Iathneach",
+        "house": "Tir An Treathai",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ailtean"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir An Treathai"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir An Treathai"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Braigh Ailtean"
+          }
+        ],
+        "text": "Gebirgsvorland am südlichen Ausgang der nördlichen Bergkette; Zugang zu Wald und Höhenwegen.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-ailtean",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "ailtean",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            58.5,
+            23.4
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-treathai"
+        ]
+      },
+      {
+        "id": "iathneach-mharaich",
+        "title": "Mharaich",
+        "x": 0.872,
+        "y": 0.252,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/tairise.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tairise",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/mharaich.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-mharaich/index.html",
+        "region": "Iathneach",
+        "house": "Nic Tairise",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mharaich"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Nic Tairise"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Nic Tairise"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Gleann Mharaich"
+          }
+        ],
+        "text": "Befestigter Talort unter den östlichen Bergen, über Fluss und Brücken mit den südlichen Ebenen verbunden.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-mharaich",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "mharaich",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            87.2,
+            25.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-tairise"
+        ]
+      },
+      {
+        "id": "iathneach-tirnafaoi",
+        "title": "Tirnafaoi",
+        "x": 0.6400000000000001,
+        "y": 0.52,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/cannog.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cannog",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/tirnafaoi.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-tirnafaoi/index.html",
+        "region": "Iathneach",
+        "house": "Dâl Cannog",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tirnafaoi"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Dâl Cannog"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Dâl Cannog"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Comar Tirnafaoi"
+          }
+        ],
+        "text": "Stadt im Zusammenfluss mehrerer Wasserläufe, umgeben von Wegen, Wiesen und Wald.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-tirnafaoi",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "tirnafaoi",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            64,
+            52
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-cannog"
+        ]
+      },
+      {
+        "id": "iathneach-sidheanna",
+        "title": "Sidheanna",
+        "x": 0.8699999999999999,
+        "y": 0.53,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/rieach.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rieach",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/sidheanna.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-sidheanna/index.html",
+        "region": "Iathneach",
+        "house": "Tir An Rieach",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sidheanna"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Tir An Rieach"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Tir An Rieach"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Creagan Sidheanna"
+          }
+        ],
+        "text": "Ort am Fuß eines markanten östlichen Bergstocks, über den Fluss an Tirnafaoi angebunden.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-sidheanna",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "sidheanna",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            87,
+            53
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-rieach"
+        ]
+      },
+      {
+        "id": "iathneach-fiontarach",
+        "title": "Fiontarach",
+        "x": 0.55,
+        "y": 0.73,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/salaig.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-salaig",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/fiontarach.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-fiontarach/index.html",
+        "region": "Iathneach",
+        "house": "An Salaig",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fiontarach"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "An Salaig"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "An Salaig"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Coire Fiontarach"
+          }
+        ],
+        "text": "Bergnahe Stadt unter den westlichen Hängen; ein Weg führt in das bewaldete südliche Tal.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-fiontarach",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "fiontarach",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            55,
+            73
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-salaig"
+        ]
+      },
+      {
+        "id": "iathneach-famhair",
+        "title": "Famhair",
+        "x": 0.94,
+        "y": 0.78,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/muiredaigh.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-muiredaigh",
+        "banner": "/Stammbäume/assets/images/regions/iathneach/famhair.webp",
+        "bannerLink": "/Kontinente/Lothir/Iathneach/iathneach-sitz-famhair/index.html",
+        "region": "Iathneach",
+        "house": "Ruin Muiredaigh",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Famhair"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Ruin Muiredaigh"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Ruin Muiredaigh"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Lairdherrschaft Srath Famhair"
+          }
+        ],
+        "text": "Südöstliche Talstadt am großen Fluss; Wälder und offene Flächen liegen zwischen den Wasserläufen.",
+        "secret": false,
+        "dominionId": "iathneach-sitz-famhair",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-10-28",
+          "settlementId": "famhair",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            94,
+            78
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-muiredaigh"
+        ]
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "fuerstentum-iathneach",
+        "name": "Fürstentum Iathneach",
+        "type": "Fürstentum",
+        "ruler": "Ui Nic Cétchathach",
+        "seat": "Botharin",
+        "parentId": ""
+      },
+      {
+        "id": "iathneach-region-sgeire",
+        "name": "Tir na Sgeire",
+        "type": "Mor Tiarnatum",
+        "ruler": "",
+        "seat": "",
+        "parentId": "fuerstentum-iathneach"
+      },
+      {
+        "id": "iathneach-region-beann",
+        "name": "Tir nam Beann",
+        "type": "Mor Tiarnatum",
+        "ruler": "",
+        "seat": "",
+        "parentId": "fuerstentum-iathneach"
+      },
+      {
+        "id": "iathneach-region-allt",
+        "name": "Tir nan Allt",
+        "type": "Mor Tiarnatum",
+        "ruler": "",
+        "seat": "",
+        "parentId": "fuerstentum-iathneach"
+      },
+      {
+        "id": "iathneach-region-coille",
+        "name": "Tir na Coille",
+        "type": "Mor Tiarnatum",
+        "ruler": "",
+        "seat": "",
+        "parentId": "fuerstentum-iathneach"
+      },
+      {
+        "id": "iathneach-sitz-botharin",
+        "name": "Fürstliche Domäne Machair Botharin",
+        "type": "Fürstliche Domäne",
+        "ruler": "Ui Nic Cétchathach",
+        "seat": "Botharin",
+        "parentId": "iathneach-region-sgeire"
+      },
+      {
+        "id": "iathneach-sitz-sgeir-tearmainn",
+        "name": "Lairdherrschaft Sgeirean Tearmainn",
+        "type": "Lairdherrschaft",
+        "ruler": "Mac Farraigeach",
+        "seat": "Sgeir Tearmainn",
+        "parentId": "iathneach-region-sgeire"
+      },
+      {
+        "id": "iathneach-sitz-ailtean",
+        "name": "Lairdherrschaft Braigh Ailtean",
+        "type": "Lairdherrschaft",
+        "ruler": "Tir An Treathai",
+        "seat": "Ailtean",
+        "parentId": "iathneach-region-beann"
+      },
+      {
+        "id": "iathneach-sitz-mharaich",
+        "name": "Lairdherrschaft Gleann Mharaich",
+        "type": "Lairdherrschaft",
+        "ruler": "Nic Tairise",
+        "seat": "Mharaich",
+        "parentId": "iathneach-region-beann"
+      },
+      {
+        "id": "iathneach-sitz-tirnafaoi",
+        "name": "Lairdherrschaft Comar Tirnafaoi",
+        "type": "Lairdherrschaft",
+        "ruler": "Dâl Cannog",
+        "seat": "Tirnafaoi",
+        "parentId": "iathneach-region-allt"
+      },
+      {
+        "id": "iathneach-sitz-sidheanna",
+        "name": "Lairdherrschaft Creagan Sidheanna",
+        "type": "Lairdherrschaft",
+        "ruler": "Tir An Rieach",
+        "seat": "Sidheanna",
+        "parentId": "iathneach-region-allt"
+      },
+      {
+        "id": "iathneach-sitz-fiontarach",
+        "name": "Lairdherrschaft Coire Fiontarach",
+        "type": "Lairdherrschaft",
+        "ruler": "An Salaig",
+        "seat": "Fiontarach",
+        "parentId": "iathneach-region-coille"
+      },
+      {
+        "id": "iathneach-sitz-famhair",
+        "name": "Lairdherrschaft Srath Famhair",
+        "type": "Lairdherrschaft",
+        "ruler": "Ruin Muiredaigh",
+        "seat": "Famhair",
+        "parentId": "iathneach-region-coille"
+      },
+      {
+        "id": "iathneach-hausbereich-deaghaide",
+        "name": "Herrschaft Ua Deaghaide in Botharin",
+        "type": "Örtliche Herrschaft",
+        "ruler": "Ua Deaghaide",
+        "seat": "Botharin",
+        "parentId": "iathneach-sitz-botharin"
+      },
+      {
+        "id": "iathneach-ehemalig-triarchie-region-cuansioda",
+        "name": "Ehemaliges Mor Tiarnatum Cuansioda",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Mac Farraigeach",
+        "seat": "",
+        "parentId": "fuerstentum-iathneach"
+      },
+      {
+        "id": "iathneach-ehemalig-triarchie-sitz-dorchain",
+        "name": "Ehemalige Herrschaft Braigh Dorchain",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "An Taghan",
+        "seat": "Dorchain",
+        "parentId": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "id": "iathneach-ehemalig-triarchie-sitz-cuansioda",
+        "name": "Ehemalige Herrschaft Cuan Cuansioda",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Mac Farraigeach",
+        "seat": "Cuansioda",
+        "parentId": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "id": "iathneach-ehemalig-triarchie-sitz-fiorail",
+        "name": "Ehemalige Herrschaft Cladach Fiorail",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Ua Guilbneach",
+        "seat": "Fiorail",
+        "parentId": "iathneach-ehemalig-triarchie-region-cuansioda"
+      },
+      {
+        "id": "iathneach-ehemalig-triarchie-sitz-doire-fionn",
+        "name": "Ehemalige Herrschaft Coill Fhionn",
+        "type": "Ehemaliges Herrschaftsgebiet",
+        "ruler": "Ruin Coilleach",
+        "seat": "Doire Fionn",
+        "parentId": "iathneach-ehemalig-triarchie-region-cuansioda"
+      }
+    ],
+    "regionTitle": "Fürstentum Iathneach",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/iathneach/iathneach.webp",
+    "mapImages": {
+      "normal": "/Karten/Iathneach/Kartenbilder/normal.webp",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

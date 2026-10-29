@@ -152,7 +152,7 @@ function materializeStagedImages(record) {
   });
 }
 
-function registryEntry(family, revision, updatedAt) {
+export function registryEntry(family, revision, updatedAt) {
   const primaryHouse = family.houses.find(house => house.id === family.lineage.houseId) || family.houses[0];
   return {
     id: family.document.id,
@@ -163,6 +163,7 @@ function registryEntry(family, revision, updatedAt) {
     folderPath: folderPath(family),
     houseProfile: family.document.houseProfile || {},
     personCount: family.persons.length,
+    sourceRevision: Math.max(0, Number(family.extensions?.sourceRevision || 0)),
     revision,
     updatedAt,
     link: `Stammbaum.html?family=${encodeURIComponent(family.document.id)}&mode=view`,

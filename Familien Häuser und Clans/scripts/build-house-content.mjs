@@ -31,7 +31,11 @@ async function output(target, text) {
 }
 
 const relativePath = (base, target) => relative(fileURLToPath(base), fileURLToPath(target)).replaceAll('\\', '/');
-export const HOUSE_SOURCES = await findSources(new URL('Estryll/', featureRoot));
+const authoringRoots = ['Estryll', 'Lothir', 'Aldervan'];
+export const HOUSE_SOURCES = (await Promise.all(authoringRoots.map(async continent => {
+  try { return await findSources(new URL(`${continent}/`, featureRoot)); }
+  catch (error) { if (error.code === 'ENOENT') return []; throw error; }
+}))).flat();
 const pageEntries = [];
 const houseRanks = {};
 const biographyImports = [];

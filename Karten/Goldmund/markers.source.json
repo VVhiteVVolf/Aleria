@@ -1,0 +1,229 @@
+{
+  "imageSize": [
+    4096,
+    2659
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "goldmund-thronholt",
+      "title": "Thronholt",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-thronholt",
+      "x": 1085.44,
+      "y": 1994.25,
+      "href": "/Orte/grossstadt.html?id=goldmund-thronholt",
+      "residentFamilyIds": [
+        "haus-goldveld",
+        "haus-belmont",
+        "haus-marholt",
+        "haus-roden",
+        "haus-sorel"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "thronholt",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          26.5,
+          25
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-brakenstein",
+      "title": "Brakenstein",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-brakenstein",
+      "x": 819.2,
+      "y": 1427.883,
+      "href": "/Orte/grossstadt.html?id=goldmund-brakenstein",
+      "residentFamilyIds": [
+        "haus-broek",
+        "haus-velten-goldmund"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "brakenstein",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          20,
+          46.3
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-bregen",
+      "title": "Bregen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-bregen",
+      "x": 2437.12,
+      "y": 2414.372,
+      "href": "/Orte/grossstadt.html?id=goldmund-bregen",
+      "residentFamilyIds": [
+        "haus-arenberg",
+        "haus-belcourt"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "bregen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          59.5,
+          9.2
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-haarlen",
+      "title": "Haarlen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-haarlen",
+      "x": 2871.296,
+      "y": 2143.154,
+      "href": "/Orte/grossstadt.html?id=goldmund-haarlen",
+      "residentFamilyIds": [
+        "haus-lanette",
+        "haus-ruan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "haarlen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          70.1,
+          19.4
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-aldermoor",
+      "title": "Aldermoor",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-aldermoor",
+      "x": 1908.736,
+      "y": 1954.365,
+      "href": "/Orte/grossstadt.html?id=goldmund-aldermoor",
+      "residentFamilyIds": [
+        "haus-arden"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "aldermoor",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          46.6,
+          26.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-bramsen",
+      "title": "Bramsen",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-bramsen",
+      "x": 1974.2720000000002,
+      "y": 1228.458,
+      "href": "/Orte/grossstadt.html?id=goldmund-bramsen",
+      "residentFamilyIds": [
+        "haus-lanvier",
+        "haus-fenn"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "bramsen",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          48.2,
+          53.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-niedenfels",
+      "title": "Niedenfels",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-niedenfels",
+      "x": 3076.0959999999995,
+      "y": 1693.7830000000001,
+      "href": "/Orte/grossstadt.html?id=goldmund-niedenfels",
+      "residentFamilyIds": [
+        "haus-berden",
+        "haus-brenn",
+        "haus-roosenvelt",
+        "haus-wolter"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "niedenfels",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          75.1,
+          36.3
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "goldmund-hartenstein",
+      "title": "Hartenfels",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "goldmund-sitz-hartenstein",
+      "x": 3268.6079999999997,
+      "y": 1241.7530000000002,
+      "href": "/Orte/grossstadt.html?id=goldmund-hartenstein",
+      "residentFamilyIds": [
+        "haus-severin",
+        "haus-callan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-10-28",
+        "settlementId": "hartenstein",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          79.8,
+          53.3
+        ],
+        "provisional": false
+      }
+    }
+  ]
+}

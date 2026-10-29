@@ -1,0 +1,1606 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-10-28",
+  "id": "aldingen",
+  "name": "Aldingen",
+  "title": "Großherzogtum Aldingen",
+  "type": "Großherzogtum",
+  "continent": "Lothir",
+  "capital": "klingenhagen",
+  "ruler": "klingen",
+  "rootId": "grossherzogtum-aldingen",
+  "map": "/Karten/Aldingen/Kartenbilder/normal.webp",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/aldingen.webp",
+  "context": {
+    "introduction": "Ein Großherzogtum auf Lothir: ehrgeizig, silberreich und dem kaiserlichen Erbe eng verbunden. Seine Pferde, Weißweine und Häfen gehören ebenso zu Aldingen wie sein ausgeprägter militärischer Anspruch.",
+    "history": [
+      {
+        "title": "Órneach und die Aulverner",
+        "text": "Aldingens und Goldmunds gemeinsame Vorgeschichte beginnt mit der albischen Volksgruppe Aulvernath und dem antiken Fürstentum Órneach. Aus den Aulvernern gingen unter zunehmendem östlichem Einfluss die Alwener, die Aldinger und das spätere Kaiservolk hervor. Aus den verwandten Völkern entstanden eigene Länder und schließlich auch die Blutstädter."
+      },
+      {
+        "title": "Der Weg nach Norden",
+        "text": "Das frühe Aldingen war kaum größer als das heutige Goldmund. Zwischen der Königslosigkeit der Alben und der Entstehung des Alerischen Kaiserreichs expandierte es nach Norden. In wiederholten Konflikten verlor das albisch gebliebene Iathneach große Territorien an seinen südlichen Nachbarn."
+      },
+      {
+        "title": "Unter dem Kaiserreich",
+        "text": "Das Alerische Kaiserreich befriedete die Länder und bestätigte Aldingen mit großzügigen Gebieten auf Lothir. Goldmund, Aldingen, Weisenfluh und die heutige Blutstadt durchliefen verwandte Entwicklungen. Die Blutstadt bildet im familiären Vergleich das kaiserliche Elternhaus: Goldmund ist der reiche kleine Bruder, Weisenfluh der brave ältere und Aldingen das schwierige mittlere Kind, das um Aufmerksamkeit ringt."
+      },
+      {
+        "title": "Nach dem Reich",
+        "text": "Nach dem Zerfall blieben Aldingen und Goldmund als eigenständige Länder bestehen. Beide betrachten sich mit Stolz als besonders nahe Erben des Kaiserreichs. Konflikte mit den Nachbarn kehrten immer wieder, wurden jedoch nicht dauerhaft bestimmend. Heute drängt die Bedrohung durch die Triarichie die verwandten Länder zur Zusammenarbeit."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Silber und Bergbau",
+        "text": "Aldingen ist für sein Silber und seinen Bergbau bekannt. Die Höhenzüge stehen neben ausgedehnten flachen Tälern und Ebenen, die intensive Landwirtschaft ermöglichen."
+      },
+      {
+        "title": "Pferde, Weißwein und Champania",
+        "text": "Gute Pferde, Sport und höfische Repräsentation prägen das Land. Weißweine und Champania gehören zu seinen bekannten Erzeugnissen. Der Herzogsschimmer ist ein schwarzes, athletisches Adelsross mit silberner Mähne und silbernem Schweif."
+      },
+      {
+        "title": "Ein Land verändert seine Landschaft",
+        "text": "Einst war Aldingen dicht bewaldet. Über Jahrhunderte ließen Schiffbau und Besiedlung die Wälder schrumpfen. Zahlreiche Sümpfe wurden trockengelegt; offene Agrarlandschaften gewannen an Bedeutung."
+      },
+      {
+        "title": "Häfen und Nachbarn",
+        "text": "Aldingen besitzt das stärkere Militär und den direkteren Zugang zum Meer. Goldmund begrenzt dagegen seinen Landhandel zur Blutstadt, während Goldmunds eigener Seehandel erst die Flüsse Weisenfluhs passieren muss. Diese gegenseitigen Abhängigkeiten führten früher zu Kämpfen und machen heute verlässliche Handelsbeziehungen besonders wertvoll."
+      },
+      {
+        "title": "Albische Herkunft und gesellschaftlicher Abstand",
+        "text": "Alteingesessene Albenclans leben weiterhin in Aldingen. Die Aristokratie drängte sie auf die niedrigste geduldete Rangstufe, die der Lairds. Ihr Fortbestehen wird mit der Erwartung verbunden, irgendwann aristokratischere Namen anzunehmen. Das höfische Überlegenheitsgefühl gegenüber albischer Kultur beruht auf einer vermeintlichen Fortschrittlichkeit, nicht auf einer tatsächlichen allgemeinen Überlegenheit."
+      },
+      {
+        "title": "Die Schuldzuweisung nach dem Zerfall",
+        "text": "Die Benachteiligung der Alben ist auch mit dem Ende des Kaiserreichs verbunden: Man gab ihnen die Schuld, weil sie sich geweigert hatten, für das Reich einzustehen. Die daraus gewachsene Antipathie ist in Aldingen, Goldmund und Weisenfluh verbreitet, aber weder überall gleich stark noch die Haltung jeder einzelnen Person. Spott über die Königslosigkeit albischer Fürstentümer bleibt widersprüchlich, denn auch Aldingen und Goldmund besitzen selbst keinen König."
+      }
+    ]
+  },
+  "design": {},
+  "regions": [
+    {
+      "id": "barenstadt",
+      "name": "Grafschaft Barenstadt",
+      "colour": "#556aa8",
+      "capital": "barenstadt",
+      "seats": [
+        "barenstadt",
+        "welden"
+      ],
+      "motif": "Ein aufgerichteter silberner Bär hält einen schwarzen Schlüssel über zwei hellen Bergspitzen auf blauem Feld.",
+      "palette": [
+        "Kornblumenblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "schmaler Silberrand und kleine dunkle Nieten",
+      "shield": "county-barenstadt"
+    },
+    {
+      "id": "borgeln",
+      "name": "Grafschaft Borgeln",
+      "colour": "#a563a1",
+      "capital": "borgeln",
+      "seats": [
+        "borgeln",
+        "hasselt"
+      ],
+      "motif": "Drei silberne Bergkristalle über einem violetten Berggrat, begleitet von zwei hellen Rebenzweigen.",
+      "palette": [
+        "Dunkles Violett",
+        "Silber",
+        "Elfenbein"
+      ],
+      "ornament": "geschwärzter Silberrand mit kleinen violetten Blattspangen",
+      "shield": "county-borgeln"
+    },
+    {
+      "id": "grimberg",
+      "name": "Grafschaft Grimberg",
+      "colour": "#6c9c45",
+      "capital": "grimberg",
+      "seats": [
+        "grimberg",
+        "sassel"
+      ],
+      "motif": "Ein silberner dreispitziger Berg über zwei goldockerfarbenen Ähren und einem schmalen hellen Flussband auf Grün.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Goldocker"
+      ],
+      "ornament": "Bronzerand mit flachen silbernen Eckspangen",
+      "shield": "county-grimberg"
+    },
+    {
+      "id": "zollern",
+      "name": "Grafschaft Zollern",
+      "colour": "#b6ac4b",
+      "capital": "zollern",
+      "seats": [
+        "zollern",
+        "bruchen",
+        "dreiken"
+      ],
+      "motif": "Ein schwarzes geöffnetes Tor über einem hellen Weg, flankiert von zwei goldockerfarbenen Ähren auf elfenbein-oliv geteiltem Feld.",
+      "palette": [
+        "Olivocker",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "dunkler Eisenrand mit schmaler silberner Einlage",
+      "shield": "county-zollern"
+    },
+    {
+      "id": "ducal",
+      "name": "Herzogliche Domäne",
+      "colour": "#4bada1",
+      "capital": "klingenhagen",
+      "seats": [
+        "klingenhagen",
+        "aldershafen"
+      ],
+      "ducal": true,
+      "shield": "klingenhagen",
+      "motif": "Eine goldene Lilie über zwei gekreuzten silbernen Schwertern auf dunkelblau-elfenbeinfarbenem Feld.",
+      "palette": [
+        "Mitternachtsblau",
+        "Elfenbein",
+        "Goldocker und Silber"
+      ],
+      "ornament": "Silberrand mit schmalem vergoldetem Innenstreifen"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "barenstadt",
+      "name": "Barenstadt",
+      "county": "barenstadt",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        71.3,
+        17.2
+      ],
+      "pin": [
+        70,
+        10
+      ],
+      "geography": "Die nördliche gräfliche Baronie liegt zwischen westlichen Höhenzügen und bewaldeten Ebenen.",
+      "motif": "Eine silberne dreitürmige Befestigung über einem schwarzen Hufeisen auf Blau, darunter zwei schlichte helle Bergspitzen.",
+      "palette": [
+        "Dunkles Blau",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "barenstadt"
+    },
+    {
+      "id": "welden",
+      "name": "Welden",
+      "county": "barenstadt",
+      "kind": "Herrschaft",
+      "point": [
+        87.6,
+        29.6
+      ],
+      "pin": [
+        91,
+        22
+      ],
+      "geography": "Welden bewacht die nordöstliche Küste; die eingezeichnete Burg steht nahe dem Meer.",
+      "motif": "Ein einzelner heller Küstenwachturm über drei blauen Wellen und einem schmalen kupferroten Querbalken.",
+      "palette": [
+        "Schieferblau",
+        "Elfenbein",
+        "Kupferrot"
+      ],
+      "shield": "welden"
+    },
+    {
+      "id": "borgeln",
+      "name": "Borgeln",
+      "county": "borgeln",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        74.9,
+        41.1
+      ],
+      "pin": [
+        69,
+        35
+      ],
+      "geography": "Borgeln liegt in einem von Höhen und Gebirge eingerahmten Tal westlich der östlichen Küste.",
+      "motif": "Ein silberner Berg mit einer schwarzen gewölbten Stollenöffnung und zwei kleinen hellen Kristallen auf Violett.",
+      "palette": [
+        "Aubergine",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "borgeln"
+    },
+    {
+      "id": "hasselt",
+      "name": "Hasselt",
+      "county": "borgeln",
+      "kind": "Baronie",
+      "point": [
+        94.6,
+        53.6
+      ],
+      "pin": [
+        91,
+        46
+      ],
+      "geography": "Die östliche Baronie Hasselt reicht bis an die Küste; Hügel und offenes Land liegen hinter der Hafenstadt.",
+      "motif": "Ein silberner Haselzweig mit drei Blättern und zwei Nüssen über einem dunklen Schiffsbug auf gedämpftem Purpur.",
+      "palette": [
+        "Altviolett",
+        "Silber",
+        "Anthrazit"
+      ],
+      "shield": "hasselt"
+    },
+    {
+      "id": "grimberg",
+      "name": "Grimberg",
+      "county": "grimberg",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        50.6,
+        52.1
+      ],
+      "pin": [
+        49,
+        45
+      ],
+      "geography": "Grimberg liegt am Rand nördlicher Höhenzüge über einem Wasserlauf und dem grünen Talraum.",
+      "motif": "Drei helle schneebedeckte Bergspitzen über einem einzelnen kupferfarbenen Eichenblatt auf tiefem Grün.",
+      "palette": [
+        "Tannengrün",
+        "Elfenbein",
+        "Kupferorange"
+      ],
+      "shield": "grimberg"
+    },
+    {
+      "id": "sassel",
+      "name": "Sassel",
+      "county": "grimberg",
+      "kind": "Herrschaft",
+      "point": [
+        44.9,
+        82.1
+      ],
+      "pin": [
+        45,
+        74
+      ],
+      "geography": "Sassel liegt im südlichen grünen Land nahe Flussarmen, Wäldern und der Küste.",
+      "motif": "Eine silberne flache Steinbrücke über zwei auseinanderlaufenden Wasserbändern, darüber ein schlichter Weidenzweig.",
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Dunkle Bronze"
+      ],
+      "shield": "sassel"
+    },
+    {
+      "id": "zollern",
+      "name": "Zollern",
+      "county": "zollern",
+      "kind": "Gräfliche Baronie",
+      "point": [
+        15.8,
+        69.2
+      ],
+      "pin": [
+        17,
+        60
+      ],
+      "geography": "Zollern liegt im Westen hinter einer Meeresbucht; die sichtbare Brücke führt in den bewaldeten Talraum.",
+      "motif": "Ein schwarzer Torturm mit offenem Durchgang und einer silbernen Brücke auf olivockerfarbenem Feld.",
+      "palette": [
+        "Olivocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "shield": "zollern"
+    },
+    {
+      "id": "bruchen",
+      "name": "Bruchen",
+      "county": "zollern",
+      "kind": "Baronie",
+      "point": [
+        12.56,
+        84.6
+      ],
+      "pin": [
+        13,
+        77
+      ],
+      "geography": "Bruchen liegt an der südwestlichen Küste unterhalb bewaldeter Hügel.",
+      "motif": "Drei silberne Binsenhalme über einer dunklen Wurzelinsel und einem blauen Wasserband auf hellem Ocker.",
+      "palette": [
+        "Sandocker",
+        "Silber",
+        "Dunkles Blaugrün"
+      ],
+      "shield": "bruchen"
+    },
+    {
+      "id": "dreiken",
+      "name": "Dreiken",
+      "county": "zollern",
+      "kind": "Herrschaft",
+      "point": [
+        35.2,
+        81.8
+      ],
+      "pin": [
+        34,
+        74
+      ],
+      "geography": "Die südliche Herrschaft Dreiken reicht vom bewaldeten Binnenland an eine kleine Küstenbucht.",
+      "motif": "Drei dunkelgrüne Eichenblätter mit drei hellen Eicheln über einem kurzen silbernen Wellenbalken auf Ocker.",
+      "palette": [
+        "Ocker",
+        "Dunkles Grün",
+        "Elfenbein"
+      ],
+      "shield": "dreiken"
+    },
+    {
+      "id": "aldershafen",
+      "name": "Aldershafen",
+      "county": "ducal",
+      "kind": "Herrschaft",
+      "point": [
+        54.4,
+        89.3
+      ],
+      "pin": [
+        55,
+        81
+      ],
+      "geography": "Aldershafen liegt in dem schmalen türkis gekennzeichneten Küstengebiet westlich der herzoglichen Kernlande.",
+      "motif": "Ein silbernes Hafentor mit zwei kleinen Türmen über einem breiten Anker und drei türkisfarbenen Wasserbändern.",
+      "palette": [
+        "Dunkles Petrol",
+        "Silber",
+        "Schwarz"
+      ],
+      "shield": "aldershafen"
+    },
+    {
+      "id": "klingenhagen",
+      "name": "Klingenhagen",
+      "county": "ducal",
+      "kind": "Herzogliche Grafschaft und Baronie",
+      "point": [
+        83.5,
+        89.1
+      ],
+      "pin": [
+        80,
+        80
+      ],
+      "geography": "Die herzogliche Kernregion nimmt die südöstlichen Ebenen zwischen Höhenzügen und Küste ein. Klingenhagen ist der benannte Hauptsitz.",
+      "motif": "Eine goldene Lilie über zwei gekreuzten silbernen Schwertern auf dunkelblau-elfenbeinfarbenem Feld.",
+      "palette": [
+        "Mitternachtsblau",
+        "Elfenbein",
+        "Goldocker und Silber"
+      ],
+      "shield": "klingenhagen"
+    }
+  ],
+  "houses": [
+    {
+      "id": "brechten",
+      "sourceId": "brechten",
+      "name": "Brechten",
+      "houseId": "house-brechten",
+      "familyId": "haus-brechten",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "zollern",
+      "regionId": "zollern",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "truchsen",
+      "isSeatRuler": false,
+      "motif": "Ein weißer Pferdekopf auf rotem Feld, eingefasst von goldenem Lorbeer und einem schwarzgoldenen Sternenring.",
+      "palette": [
+        "Schwarz",
+        "Ziegelrot",
+        "Elfenbein und Gold"
+      ],
+      "ornament": "Lorbeer und wenige achtzackige Sterne",
+      "frame": "dunklem Eisen mit vergoldeten schmalen Einlagen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/brechten.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/brechten.png",
+      "warrior": {
+        "id": "brechten",
+        "name": "Brechten",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": false,
+        "withHorse": true,
+        "horse": "goldmaehne",
+        "albic": false,
+        "palette": [
+          "Schwarz",
+          "Ziegelrot",
+          "Elfenbein und Gold"
+        ],
+        "reason": "Der Pferdekopf passt zu einem erfahrenen Husaren mit einem belastbaren Reitpferd.",
+        "equipment": "Reitersäbel, schlichter Reitharnisch, ein Federbügel und eine Goldmähne.",
+        "helmet": "OPEN German BURGONET, rounded skull, short brow peak, two hinged cheek guards, no visor. Narrow oxblood band and a tiny horse-head pin; no plume.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/brechten/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/brechten/krieger.png",
+        "bestiary": "../../Bestiarium/tiere/pferde/goldmaehne/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/brechten/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "ehrenfeld",
+      "sourceId": "ehrenfeld",
+      "name": "Ehrenfeld",
+      "houseId": "house-ehrenfeld",
+      "familyId": "haus-ehrenfeld",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "grimberg",
+      "regionId": "grimberg",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "hohenmund",
+      "isSeatRuler": false,
+      "motif": "Ein kniender silberner Ritter mit aufrecht gehaltenem Schwert auf einem elfenbein-purpur geteilten Feld.",
+      "palette": [
+        "Aubergine",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "schmale violette Blattzweige innerhalb des Rings",
+      "frame": "Silber mit schwarzen kleinen Rundnieten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ehrenfeld.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ehrenfeld.png",
+      "warrior": {
+        "id": "ehrenfeld",
+        "name": "Ehrenfeld",
+        "className": "Aldmer",
+        "classId": "aldmar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Aubergine",
+          "Elfenbein",
+          "Silber"
+        ],
+        "reason": "Der gerüstete Ritter des Wappens wird als standfester Aldmer mit Hellebarde aufgegriffen.",
+        "equipment": "Hellebarde, geschlossener Schaller und Silberharnisch mit purpurnem Waffenrock.",
+        "helmet": "CLOSED GERMAN SALLET, low rounded skull and distinct long swept rear tail, short smooth visor with one horizontal eye slit, separate bevor. No crest or plume.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ehrenfeld/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ehrenfeld/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ehrenfeld/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "graven",
+      "sourceId": "graven",
+      "name": "Graven",
+      "houseId": "house-graven",
+      "familyId": "haus-graven",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "bruchen",
+      "regionId": "zollern",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "rebhart",
+      "isSeatRuler": false,
+      "motif": "Eine dunkelrote fünfblättrige Rose über symmetrischem schwarzem Blattwerk auf Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Karminrot"
+      ],
+      "ornament": "kleine rote Rosen und sparsame helle Ranken",
+      "frame": "schwarz gebeiztem Holz mit elfenbeinfarbenen Einlagen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/graven.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/graven.png",
+      "warrior": {
+        "id": "graven",
+        "name": "Graven",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Elfenbein",
+          "Schwarz",
+          "Karminrot"
+        ],
+        "reason": "Rose und schwarzweißes Blattwerk geben einem nüchternen Husaren eine markante Stoff- und Lederpalette.",
+        "equipment": "Reitersäbel, dunkler Brustharnisch und zwei schmale Federbügel.",
+        "helmet": "CLOSED fluted MAXIMILIAN-STYLE helmet with smoothly rounded skull and short rounded visor, regular small breath holes, narrow eye slit. No tall plume, horns or grotesque face.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/graven/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/graven/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/graven/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "halbrecht",
+      "sourceId": "halbrecht",
+      "name": "Halbrecht",
+      "houseId": "house-halbrecht",
+      "familyId": "haus-halbrecht",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "klingenhagen",
+      "regionId": "ducal",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "klingen",
+      "isSeatRuler": false,
+      "motif": "Eine weißgewandete geflügelte Gestalt mit kleinem orangefarbenem Brustschild vor einem warmen Sonnenring.",
+      "palette": [
+        "Schwarz",
+        "Elfenbein",
+        "Kupferorange"
+      ],
+      "ornament": "vier flache, vollständig im Kreis liegende Speichenspitzen und kupferne Blätter",
+      "frame": "Silber und geschwärztem Eisen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/halbrecht.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/halbrecht.png",
+      "warrior": {
+        "id": "halbrecht",
+        "name": "Halbrecht",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Schwarz",
+          "Elfenbein",
+          "Kupferorange"
+        ],
+        "reason": "Das geflügelte Wappenmotiv passt zu den tatsächlich getragenen Federbügeln eines Husaren.",
+        "equipment": "Kampfsäbel, kleiner Reiterschild und ein heller Federbügel.",
+        "helmet": "OPEN steel SCHALLER with swept neck tail and raised visor, unobstructed adult face, plain brow rim. No armet mask or feather crest.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/halbrecht/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/halbrecht/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/halbrecht/krieger.webp",
+      "identityReferences": [
+        {
+          "familyId": "haus-helgr",
+          "familyTitle": "Clan Helgr",
+          "houseId": "house-halbrecht",
+          "houseName": "Haus Halbrecht",
+          "ownFamily": false,
+          "persons": [
+            {
+              "id": "ludmilla-halbrecht",
+              "worldPersonId": "person--haus-halbrecht--ludmilla-halbrecht",
+              "name": "Ludmilla Halbrecht"
+            }
+          ],
+          "publishedCounterparts": []
+        }
+      ],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "haldren",
+      "sourceId": "haldren",
+      "name": "Haldren",
+      "houseId": "house-haldren",
+      "familyId": "haus-haldren",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "klingenhagen",
+      "regionId": "ducal",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "klingen",
+      "isSeatRuler": false,
+      "motif": "Eine goldene weibliche Gestalt in langem Gewand mit Schwert und kleinem goldenem Löwen auf schwarzem Schild vor goldockerfarbenen Brettern; darüber ein geschlossener Helm.",
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Elfenbein"
+      ],
+      "ornament": "schwarze heraldische Helmdecken, vier kleine goldene Blattnieten",
+      "frame": "schwarz gefasstem Holz mit schmalem Bronzeabschluss",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/haldren.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/haldren.png",
+      "warrior": {
+        "id": "haldren",
+        "name": "Haldren",
+        "className": "Flamberger",
+        "classId": "flamberger",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Goldocker",
+          "Schwarz",
+          "Elfenbein"
+        ],
+        "reason": "Die Schwertträgerin des Wappens wird als entschlossene Flambergerin mit wenig Plattenrüstung interpretiert.",
+        "equipment": "Zweihändiger Flamberg, Kettenkragen und schwarzockerfarbenes Wams.",
+        "helmet": "NO helmet. Low black wool BERET with a short dull ochre feather, visible mature woman's face and tied-back dark hair.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/haldren/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/haldren/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/haldren/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "hohenmund",
+      "sourceId": "hohenmund",
+      "name": "Hohenmund",
+      "houseId": "house-hohenmund",
+      "familyId": "haus-hohenmund",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "grimberg",
+      "regionId": "grimberg",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "klingen",
+      "isSeatRuler": true,
+      "motif": "Drei schwarze schneebedeckte Bergspitzen über einer hellen Blattranke auf kupferroten Brettern.",
+      "palette": [
+        "Kupferrot",
+        "Schwarz",
+        "Knochenweiß"
+      ],
+      "ornament": "umlaufendes kräftiges Blattwerk und vier kleine Blattspangen",
+      "frame": "gealterter Bronze",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/hohenmund.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/hohenmund.png",
+      "warrior": {
+        "id": "hohenmund",
+        "name": "Hohenmund",
+        "className": "Eldner",
+        "classId": "eldner",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Kupferrot",
+          "Schwarz",
+          "Knochenweiß"
+        ],
+        "reason": "Grimbergs Höhenzüge und die Bergspitzen des Wappens legen den seltenen Eldner nahe.",
+        "equipment": "Armbrust, Gürtelbeil, leichter Harnisch und feste Bergstiefel.",
+        "helmet": "OPEN low iron KETTLE HAT, rounded bowl with a broad sloping brim, no cheek plates or visor. One small bone-white leaf clasp.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/hohenmund/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/hohenmund/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/hohenmund/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "klingen",
+      "sourceId": "klingen",
+      "name": "Klingen",
+      "houseId": "house-klingen",
+      "familyId": "haus-klingen",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "klingenhagen",
+      "regionId": "ducal",
+      "rankId": "ducal",
+      "rank": "Herzog",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "motif": "Zwei parallele silberne Schwerter mit Spitzen nach unten auf einem blau-gold gespaltenen Feld.",
+      "palette": [
+        "Dunkles Blau",
+        "Goldocker",
+        "Silber"
+      ],
+      "ornament": "zwei feine Lorbeerzweige, alle Elemente innerhalb der kreisrunden Kontur",
+      "frame": "Silber mit schmalen vergoldeten Kanten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/klingen.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/klingen.png",
+      "warrior": {
+        "id": "klingen",
+        "name": "Klingen",
+        "className": "Flamberger",
+        "classId": "flamberger",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Dunkles Blau",
+          "Goldocker",
+          "Silber"
+        ],
+        "reason": "Das Schwertpaar passt als Hausmotiv zu einem Flamberger; geführt wird ein einzelner brauchbarer Zweihänder.",
+        "equipment": "Flamberg, blauockerfarbenes Wams und kleiner Brustharnisch.",
+        "helmet": "OPEN MORION-shaped steel helmet with one modest central comb and gently lifted front and back brim, face completely visible. No plume or visor.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/klingen/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/klingen/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/klingen/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "lachmund",
+      "sourceId": "lachmund",
+      "name": "Lachmund",
+      "houseId": "house-lachmund",
+      "familyId": "haus-lachmund",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "klingenhagen",
+      "regionId": "ducal",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "klingen",
+      "isSeatRuler": false,
+      "motif": "Eine stehende elfenbeinfarbene Frau mit kleiner Harfe vor einem goldocker-blau geteilten Feld.",
+      "palette": [
+        "Goldocker",
+        "Blau",
+        "Elfenbein und Schwarz"
+      ],
+      "ornament": "kleine blaue Blüte oben und ein ruhiger goldener Blätterkranz",
+      "frame": "vergoldetem Bronzeholz",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/lachmund.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/lachmund.png",
+      "warrior": {
+        "id": "lachmund",
+        "name": "Lachmund",
+        "className": "Schirmer",
+        "classId": "schirmer",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Goldocker",
+          "Blau",
+          "Elfenbein und Schwarz"
+        ],
+        "reason": "Die Harfe wird als kleines Ziermotiv eines seltenen höfischen Fechtmeisters verwendet.",
+        "equipment": "Seitschwert, kleiner Faustschild, schlichter Mantel und Fechtwams.",
+        "helmet": "NO helmet. Soft low navy wool cap with short asymmetrical brim, one small ivory pin, no jester points or high plume.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/lachmund/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/lachmund/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/lachmund/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "riedenfeld",
+      "sourceId": "riedenfeld",
+      "name": "Riedenfeld",
+      "houseId": "house-riedenfeld",
+      "familyId": "haus-riedenfeld",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "borgeln",
+      "regionId": "borgeln",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "rothmann",
+      "isSeatRuler": false,
+      "motif": "Ein schwarzer gerüsteter Wächter hält eine Hellebarde diagonal vor weiß-grünen Wasserbändern.",
+      "palette": [
+        "Seegrün",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "wenige helle Blüten und Blattbögen, alle Verzierungen innerhalb des geschlossenen Kreises",
+      "frame": "Silber mit schwarzen Vertiefungen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/riedenfeld.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/riedenfeld.png",
+      "warrior": {
+        "id": "riedenfeld",
+        "name": "Riedenfeld",
+        "className": "Aldmer",
+        "classId": "aldmar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Seegrün",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "reason": "Der Wächter mit Stangenwaffe und die Wasserbänder werden unmittelbar in einen Aldmer übertragen.",
+        "equipment": "Hellebarde, dunkler Halbharnisch und grünweißer Waffenrock.",
+        "helmet": "CLOSED iron GREAT HELM with flat top, clean cylindrical outline, tiny eye slits and symmetrical round breathing holes. No plume, wings or crown.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/riedenfeld/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/riedenfeld/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/riedenfeld/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "ritten",
+      "sourceId": "ritten",
+      "name": "Ritten",
+      "houseId": "house-ritten",
+      "familyId": "haus-ritten",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "barenstadt",
+      "regionId": "barenstadt",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "klingen",
+      "isSeatRuler": true,
+      "motif": "Ein steigendes schwarzes Pferd auf hellem Schild vor einem blau-elfenbeinfarbenen Schachfeld.",
+      "palette": [
+        "Staubblau",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "feine verschlungene Bänder und vier kleine helle Rundnieten",
+      "frame": "dunklem Silber",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ritten.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ritten.png",
+      "warrior": {
+        "id": "ritten",
+        "name": "Ritten",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": true,
+        "withHorse": true,
+        "horse": "herzogsschimmer",
+        "albic": false,
+        "palette": [
+          "Staubblau",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "reason": "Pferdewappen und Barenstadts Ebenen passen zu einem berittenen Husaren auf einem Herzogsschimmer.",
+        "equipment": "Reitersäbel, schlichter Kavallerieharnisch und Herzogsschimmer.",
+        "helmet": "CLOSED German BURGUNDIAN SALLET, broad smooth skull, compact rounded visor and long rear tail, no plume or horns. Small blue/ivory cloth binding at brow.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ritten/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ritten/krieger.png",
+        "bestiary": "../../Bestiarium/tiere/pferde/herzogsschimmer/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ritten/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "rothmann",
+      "sourceId": "rothmann",
+      "name": "Rothman",
+      "houseId": "house-rothman",
+      "familyId": "haus-rothman",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "borgeln",
+      "regionId": "borgeln",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "klingen",
+      "isSeatRuler": true,
+      "motif": "Eine silberne kannelierte Säule auf tiefrotem Schild mit symmetrischen hellen Akanthusblättern.",
+      "palette": [
+        "Weinrot",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "helle Blattgirlanden und vier kleine rosafarbene Blüten",
+      "frame": "geschwärztem Silber",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rothmann.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rothmann.png",
+      "warrior": {
+        "id": "rothmann",
+        "name": "Rothmann",
+        "className": "Aldmer",
+        "classId": "aldmar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Weinrot",
+          "Silber",
+          "Schwarz"
+        ],
+        "reason": "Die Säule wird als ruhiges senkrechtes Motiv eines Aldmers mit langer Pike aufgegriffen.",
+        "equipment": "Pike, stählerner Brustharnisch und weinroter Waffenrock.",
+        "helmet": "OPEN iron BURGONET with a low central ridge, long brow peak and short cheek pieces, clearly visible grey-bearded face. No plume.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rothmann/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rothmann/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rothmann/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "truchsen",
+      "sourceId": "truchsen",
+      "name": "Truchsen",
+      "houseId": "house-truchsen",
+      "familyId": "haus-truchsen",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "zollern",
+      "regionId": "zollern",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "klingen",
+      "isSeatRuler": true,
+      "motif": "Ein schwarz gekleideter gekrönter Herrscher auf einem Thron mit kleinem rotem Brustzeichen, auf Goldocker und Rot.",
+      "palette": [
+        "Schwarz",
+        "Goldocker",
+        "Dunkelrot"
+      ],
+      "ornament": "schwarz-elfenbeinfarbene Dreiecksfelder und wenige goldene Sterne",
+      "frame": "dunkler Bronze",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/truchsen.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/truchsen.png",
+      "warrior": {
+        "id": "truchsen",
+        "name": "Truchsen",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Schwarz",
+          "Goldocker",
+          "Dunkelrot"
+        ],
+        "reason": "Die Herrscherheraldik erhält als Husar eine disziplinierte, zurückhaltende militärische Deutung.",
+        "equipment": "Reitersäbel, geschlossener Reiterhelm und dunkler Harnisch.",
+        "helmet": "CLOSED GERMAN ARMET, spherical skull, hinged cheek pieces, short smooth one-piece visor, narrow eye slit and small circular breath holes. Thin dark-red cloth band, no crown or high plume.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/truchsen/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/truchsen/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/truchsen/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "velten",
+      "sourceId": "velten",
+      "name": "Velten",
+      "houseId": "house-velten-aldingen",
+      "familyId": "haus-velten-aldingen",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "hasselt",
+      "regionId": "borgeln",
+      "rankId": "county",
+      "rank": "Graf",
+      "liegeId": "klingen",
+      "isSeatRuler": true,
+      "motif": "Ein dunkelviolettes dreimastiges Segelschiff mit purpurnen Segeln auf elfenbeinfarbenem Holz.",
+      "palette": [
+        "Aubergine",
+        "Altrosa",
+        "Elfenbein"
+      ],
+      "ornament": "ruhige rosafarbene Blattranken, vollständig innerhalb des Kreises",
+      "frame": "dunklem Silber mit violett gefassten Einlagen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/velten.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/velten.png",
+      "warrior": {
+        "id": "velten",
+        "name": "Velten",
+        "className": "Havner",
+        "classId": "havner",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Aubergine",
+          "Altrosa",
+          "Elfenbein"
+        ],
+        "reason": "Das Segelschiff trägt den Entwurf eines gut ausgerüsteten Havners.",
+        "equipment": "Kampfsäbel, Rückenköcher, Halbharnisch und Möwe am geschützten Unterarm.",
+        "helmet": "NO helmet or hat. Wind-combed dark hair tied low, short beard and clear adult face, no crown or bandana.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/velten/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/velten/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/velten/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "welf",
+      "sourceId": "welf",
+      "name": "Welf",
+      "houseId": "house-welf",
+      "familyId": "haus-welf",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "grimberg",
+      "regionId": "grimberg",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "hohenmund",
+      "isSeatRuler": false,
+      "motif": "Ein weißes Schloss mit grünen Dächern und kleinen Fahnen auf dunkelgrünem Schild vor hellen Brettern.",
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "ornament": "kleine goldockerfarbene Blattranken und vier flache Rosetten",
+      "frame": "dunkler Bronze",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/welf.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/welf.png",
+      "warrior": {
+        "id": "welf",
+        "name": "Welf",
+        "className": "Aldmer",
+        "classId": "aldmar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Waldgrün",
+          "Elfenbein",
+          "Bronze"
+        ],
+        "reason": "Das Schlossmotiv passt zu einem zuverlässig gerüsteten Aldmer mit Partisane.",
+        "equipment": "Partisane, Kettenärmel und praktischer grüner Halbharnisch.",
+        "helmet": "CLOSED pointed HOUNDSKULL BASCINET with a recognisable tapered conical snout visor and high egg-shaped skull, mail aventail and small side breaths. No plume.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/welf/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/welf/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/welf/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "wolfram",
+      "sourceId": "wolfram",
+      "name": "Wolfram",
+      "houseId": "house-wolfram",
+      "familyId": "haus-wolfram",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "barenstadt",
+      "regionId": "barenstadt",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "ritten",
+      "isSeatRuler": false,
+      "motif": "Ein stolzer weißer Wolf im heraldischen Profil auf anthrazitfarbenem Feld, begleitet von hellen Blütenzweigen.",
+      "palette": [
+        "Anthrazit",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "helle Zweige und Blüten, ohne überstehende Teile",
+      "frame": "Silber mit vier kleinen Bronzeeinlagen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/wolfram.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/wolfram.png",
+      "warrior": {
+        "id": "wolfram",
+        "name": "Wolfram",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Anthrazit",
+          "Elfenbein",
+          "Silber"
+        ],
+        "reason": "Wolf und kühle Palette geben einem Husaren einen klaren, militärischen Wiedererkennungswert.",
+        "equipment": "Reitersäbel, Lamellen über Brustplatte und ein silbergrauer Federbügel.",
+        "helmet": "OPEN banded CONICAL steel riding helmet with cheek plates and a narrow straight nasal guard, visible adult face. No wolf ears, antlers or face mask.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/wolfram/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/wolfram/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/wolfram/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "rebhart",
+      "sourceId": "rebhart",
+      "name": "Rebhart",
+      "houseId": "house-rebhart",
+      "familyId": "haus-rebhart",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "bruchen",
+      "regionId": "zollern",
+      "rankId": "freiherr",
+      "rank": "Freiherr",
+      "liegeId": "truchsen",
+      "isSeatRuler": true,
+      "motif": "Eine helle Weißweintraube mit zwei kräftigen grünen Weinblättern über einem silbernen Kelch.",
+      "palette": [
+        "Dunkles Tannengrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "feine spätgotische Weinranken",
+      "frame": "Silber mit kleinen grün emaillierten Einlagen",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rebhart.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rebhart.png",
+      "warrior": {
+        "id": "rebhart",
+        "name": "Rebhart",
+        "className": "Aldmer",
+        "classId": "aldmar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Dunkles Tannengrün",
+          "Elfenbein",
+          "Silber"
+        ],
+        "reason": "Reben und Kelch erscheinen als zurückhaltende Stoffzier eines Aldmers in der Palette des Weißweinhauses.",
+        "equipment": "Hellebarde, einfacher Stahlharnisch und tannengrüner Waffenrock.",
+        "helmet": "OPEN low SALLET, smoothly rounded skull and long downward rear tail, no visor or crest, visible mature face and short brown beard.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rebhart/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rebhart/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rebhart/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "schenk",
+      "sourceId": "schenk",
+      "name": "Schenk",
+      "houseId": "house-schenk",
+      "familyId": "haus-schenk",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "zollern",
+      "regionId": "zollern",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "truchsen",
+      "isSeatRuler": false,
+      "motif": "Eine flache silberne Champania-Schale mit drei kleinen perlenden Blasen, flankiert von zwei goldockerfarbenen Rebenzweigen.",
+      "palette": [
+        "Dunkles Burgunderrot",
+        "Silber",
+        "Blasses Goldocker"
+      ],
+      "ornament": "vier helle Perlenrosetten und schmale Rebenblätter",
+      "frame": "geschwärztem Silber",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/schenk.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/schenk.png",
+      "warrior": {
+        "id": "schenk",
+        "name": "Schenk",
+        "className": "Flamberger",
+        "classId": "flamberger",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Dunkles Burgunderrot",
+          "Silber",
+          "Blasses Goldocker"
+        ],
+        "reason": "Die burgunderrote Schale wird als kleines Hauszeichen eines kräftigen Flambergers übernommen.",
+        "equipment": "Flamberg, burgunderrotes Wams, Kettenkragen und stählerne Brustplatte.",
+        "helmet": "NO helmet. Wide low burgundy wool cap with a single small folded ivory feather; visible older clean-shaven face.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/schenk/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/schenk/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/schenk/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "ankerhold",
+      "sourceId": "ankerhold",
+      "name": "Ankerhold",
+      "houseId": "house-ankerhold",
+      "familyId": "haus-ankerhold",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "dreiken",
+      "regionId": "zollern",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "truchsen",
+      "isSeatRuler": true,
+      "motif": "Ein breiter silberner Anker über einem geraden roten Querbalken und drei elfenbeinfarbenen Wellenbändern.",
+      "palette": [
+        "Mitternachtsblau",
+        "Silber",
+        "Ziegelrot"
+      ],
+      "ornament": "stilisiertes Tauwerk und vier kleine Kompassblätter",
+      "frame": "dunkler Bronze mit silbernen Nieten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ankerhold.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ankerhold.png",
+      "warrior": {
+        "id": "ankerhold",
+        "name": "Ankerhold",
+        "className": "Havner",
+        "classId": "havner",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": false,
+        "palette": [
+          "Mitternachtsblau",
+          "Silber",
+          "Ziegelrot"
+        ],
+        "reason": "Anker und Wellen passen zu einem Havner; eine neue Küstenzuordnung wird damit nicht festgelegt.",
+        "equipment": "Kampfsäbel, Köcher, offener Helm und Kormoran auf der Schulter.",
+        "helmet": "OPEN iron sea KETTLE HAT, modest round bowl and narrow flat brim, a simple red cloth band, unobstructed adult face.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ankerhold/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ankerhold/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ankerhold/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "map/location inference as authorized"
+    },
+    {
+      "id": "rosswarth",
+      "sourceId": "rosswarth",
+      "name": "Rosswarth",
+      "houseId": "house-rosswarth",
+      "familyId": "haus-rosswarth",
+      "clan": false,
+      "originRealm": "aldingen",
+      "seatId": "welden",
+      "regionId": "barenstadt",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "ritten",
+      "isSeatRuler": true,
+      "motif": "Ein steigender schwarzer Herzogsschimmer mit ausnahmslos silberner Mähne und silbernem Schweif auf rauchblauem Feld.",
+      "palette": [
+        "Rauchblau",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "zurückhaltende Turnierlilien und ein schmaler bronzener Zierstreifen",
+      "frame": "Silber mit wenigen bronzegefassten Rosetten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rosswarth.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/rosswarth.png",
+      "warrior": {
+        "id": "rosswarth",
+        "name": "Rosswarth",
+        "className": "Husar",
+        "classId": "husar",
+        "mounted": false,
+        "withHorse": true,
+        "horse": "herzogsschimmer",
+        "albic": false,
+        "palette": [
+          "Rauchblau",
+          "Schwarz",
+          "Silber"
+        ],
+        "reason": "Das Herzogsschimmer-Motiv wird als Husar neben seinem entsprechenden Schlachtross unmittelbar sichtbar.",
+        "equipment": "Kampfsäbel, schlichter Reiterharnisch, Federbügel und Herzogsschimmer.",
+        "helmet": "CLOSED smooth RIDING ARMET with a rounded domed skull and short angular visor, subtle brow ridge, small breaths, no tall comb or plume. Thin smoke-blue strap.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rosswarth/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rosswarth/krieger.png",
+        "bestiary": "../../Bestiarium/tiere/pferde/herzogsschimmer/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/rosswarth/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "map/location inference as authorized"
+    },
+    {
+      "id": "adharcan",
+      "sourceId": "adharcan",
+      "name": "Adharcan",
+      "houseId": "house-adharcan",
+      "familyId": "haus-adharcan",
+      "clan": true,
+      "originRealm": "aldingen",
+      "seatId": "aldershafen",
+      "regionId": "ducal",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "klingen",
+      "isSeatRuler": true,
+      "motif": "Ein einzelner knochenweißer Narwal mit langem geradem Stoßzahn im ruhigen heraldischen Profil über einem hellen Wasserstrich.",
+      "palette": [
+        "Schieferblau",
+        "Knochenweiß",
+        "Eisengrau"
+      ],
+      "ornament": "wenige eingeritzte Winkelzeichen, keine Krone oder Edelsteine",
+      "frame": "schmalem dunklem Eisen mit vier einfachen Knochennieten",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/adharcan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/adharcan.png",
+      "warrior": {
+        "id": "adharcan",
+        "name": "Adharcan",
+        "className": "Havner",
+        "classId": "havner",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": true,
+        "palette": [
+          "Schieferblau",
+          "Knochenweiß",
+          "Eisengrau"
+        ],
+        "reason": "Narwal und Schieferblau geben einem albischen Havner eine eigene kühle Küstenpalette.",
+        "equipment": "Kampfsäbel, Rückenköcher, Kettenkragen und schieferblauer Tartan.",
+        "helmet": "OPEN simple CONICAL iron helmet with a short straight nasal and mail neck guard, no cheek mask, horns or tusks. Human face visible.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/adharcan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/adharcan/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/adharcan/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "map/location inference as authorized"
+    },
+    {
+      "id": "sgiathan",
+      "sourceId": "sgiathan",
+      "name": "Sgiathan",
+      "houseId": "house-sgiathan",
+      "familyId": "haus-sgiathan",
+      "clan": true,
+      "originRealm": "aldingen",
+      "seatId": "barenstadt",
+      "regionId": "barenstadt",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "ritten",
+      "isSeatRuler": false,
+      "culturalTitle": "Laird · inoffizielle Eigenbezeichnung",
+      "motif": "Ein breiter heller Rochen von oben, mit gut erkennbaren seitlichen Flossen und einem einzelnen langen schmalen Schwanz.",
+      "palette": [
+        "Graugrün",
+        "Sandocker",
+        "Dunkelbraun"
+      ],
+      "ornament": "ein schlichter gezackter Innenstreifen, keine Runen oder Metallzier",
+      "frame": "dunklem Holz mit nur an vier Stellen befestigter grober Hanfwicklung",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/sgiathan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/sgiathan.png",
+      "warrior": {
+        "id": "sgiathan",
+        "name": "Sgiathan",
+        "className": "Havner",
+        "classId": "havner",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": true,
+        "palette": [
+          "Graugrün",
+          "Sandocker",
+          "Dunkelbraun"
+        ],
+        "reason": "Der Rochen wird über sandgrüne Flächen und ein kleines Mantelzeichen in einen beweglichen Havner übersetzt.",
+        "equipment": "Kampfsäbel, Rückenköcher, leichte Brigantine und grünsandfarbener Plaid.",
+        "helmet": "NO helmet or hat. Adult human woman with auburn hair in a low practical braid, ordinary round ears.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/sgiathan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/sgiathan/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/sgiathan/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    },
+    {
+      "id": "ronnach",
+      "sourceId": "ronnach",
+      "name": "Ronnach",
+      "houseId": "house-ronnach",
+      "familyId": "haus-ronnach",
+      "clan": true,
+      "originRealm": "aldingen",
+      "seatId": "sassel",
+      "regionId": "grimberg",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "hohenmund",
+      "isSeatRuler": true,
+      "motif": "Eine vollständige Meeresschildkröte von oben mit breitem ovalem olivbraunem Panzer, kleinem Kopf und vier gut unterscheidbaren Schwimmflossen.",
+      "palette": [
+        "Rostrot",
+        "Olivbraun",
+        "Elfenbein"
+      ],
+      "ornament": "vier kleine eingebrannte Kerbzeichen, unregelmäßig handgemalt",
+      "frame": "hellem Birkenholz mit einfachen dunklen Holzstiften",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ronnach.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/ronnach.png",
+      "warrior": {
+        "id": "ronnach",
+        "name": "Ronnach",
+        "className": "Aldmer",
+        "classId": "aldmar",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": true,
+        "palette": [
+          "Rostrot",
+          "Olivbraun",
+          "Elfenbein"
+        ],
+        "reason": "Der breite Schildkrötenpanzer wird als Motiv eines kleinen Rundschilds und eines standfesten Aldmers aufgegriffen.",
+        "equipment": "Speer, kleiner Rundschild, leichter Brustharnisch und rostroter Tartan.",
+        "helmet": "OPEN simple rounded SPANGENHELM with four narrow iron bands over curved panels, broad cheek guards and no visor or nasal. Clear adult human face, no turtle-shaped helmet.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ronnach/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ronnach/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/ronnach/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "map/location inference as authorized"
+    },
+    {
+      "id": "dublann",
+      "sourceId": "dublann",
+      "name": "Dublann",
+      "houseId": "house-dublann",
+      "familyId": "haus-dublann",
+      "clan": true,
+      "originRealm": "aldingen",
+      "seatId": "hasselt",
+      "regionId": "borgeln",
+      "rankId": "junker",
+      "rank": "Junker",
+      "liegeId": "velten",
+      "isSeatRuler": false,
+      "motif": "Eine helle heraldische Sepia mit breitem ovalem Mantel, seitlichem Flossensaum und kurzen geschwungenen Armen über einem kleinen schwarzen Tintenfleck.",
+      "palette": [
+        "Dunkles Petrol",
+        "Kalkweiß",
+        "Schwarz"
+      ],
+      "ornament": "ein einfacher schwarzer Wellenstreifen nur an der unteren Innenkante, keine umlaufende Knotenkopie",
+      "frame": "breitem verwittertem grauem Holz",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/dublann.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aldingen/dublann.png",
+      "warrior": {
+        "id": "dublann",
+        "name": "Dublann",
+        "className": "Havner",
+        "classId": "havner",
+        "mounted": false,
+        "withHorse": false,
+        "horse": null,
+        "albic": true,
+        "palette": [
+          "Dunkles Petrol",
+          "Kalkweiß",
+          "Schwarz"
+        ],
+        "reason": "Sepia und Tintenfarben werden zu einem dunklen, schlicht ausgerüsteten Havnerentwurf.",
+        "equipment": "Kampfsäbel, Rückenköcher, leichter Halbharnisch und petrolfarbener Plaid.",
+        "helmet": "OPEN low steel BURGONET with short swept brow peak and asymmetrical small cheek guards, no visor, plume or crown. Mature human face visible.",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aldingen/dublann/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aldingen/dublann/krieger.png"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aldingen/dublann/krieger.webp",
+      "identityReferences": [],
+      "rankBasis": "latest user instruction"
+    }
+  ],
+  "territoryArt": {
+    "county-barenstadt": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/county-barenstadt.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/county-barenstadt.png",
+      "shape": "kite"
+    },
+    "county-borgeln": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/county-borgeln.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/county-borgeln.png",
+      "shape": "kite"
+    },
+    "county-grimberg": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/county-grimberg.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/county-grimberg.png",
+      "shape": "kite"
+    },
+    "county-zollern": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/county-zollern.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/county-zollern.png",
+      "shape": "kite"
+    },
+    "barenstadt": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/barenstadt.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/barenstadt.png",
+      "shape": "kite"
+    },
+    "welden": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/welden.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/welden.png",
+      "shape": "kite"
+    },
+    "borgeln": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/borgeln.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/borgeln.png",
+      "shape": "kite"
+    },
+    "hasselt": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/hasselt.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/hasselt.png",
+      "shape": "kite"
+    },
+    "grimberg": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/grimberg.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/grimberg.png",
+      "shape": "kite"
+    },
+    "sassel": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/sassel.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/sassel.png",
+      "shape": "kite"
+    },
+    "zollern": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/zollern.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/zollern.png",
+      "shape": "kite"
+    },
+    "bruchen": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/bruchen.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/bruchen.png",
+      "shape": "kite"
+    },
+    "dreiken": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/dreiken.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/dreiken.png",
+      "shape": "kite"
+    },
+    "aldershafen": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/aldershafen.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/aldershafen.png",
+      "shape": "kite"
+    },
+    "klingenhagen": {
+      "image": "/Stammbäume/assets/images/regions/aldingen/klingenhagen.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aldingen/klingenhagen.png",
+      "shape": "kite"
+    }
+  },
+  "notes": [
+    "Hasselts Velten sind nach jüngster Vorgabe Grafen. Die ältere Kartenfarbgruppe Borgeln wird davon getrennt erhalten."
+  ]
+}

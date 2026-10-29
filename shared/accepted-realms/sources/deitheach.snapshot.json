@@ -1,0 +1,986 @@
+{
+  "schemaVersion": 1,
+  "realm": "deitheach",
+  "capturedAt": "2026-10-28",
+  "previewDirectory": "Deitheach",
+  "houses": [
+    {
+      "id": "ard-roth",
+      "name": "Mac Ard Roth",
+      "sourceFile": "Mac Ard Roth.png",
+      "sourceSeat": "ailseag",
+      "role": "Ehemaliger Fürstenclan Deitheachs · Mac Ard Roth",
+      "motif": "Ein goldener aufgerichteter Löwe auf dunkelgrünen Brettern, umgeben von hellen keltischen Knoten.",
+      "palette": [
+        "Tiefgrün",
+        "Altgold",
+        "Wollweiß"
+      ],
+      "frame": "Dunkles Holz mit hellem Knotenband",
+      "classId": "airig",
+      "equipment": "Langer Stoßspeer, Scheidenschwert, hochwertiges Kettenzeug mit kleinen Bronzeplatten; tiefgrüner Plaid mit ockerfarbenen Karos.",
+      "design": "Mature Albic male princely spear noble, dignified upright stance. Rounded iron spangenhelm with nasal and a narrow bronze lion brow badge, not a western crown. Fine long mail shirt with modest bronze shoulder plates, dark green and muted ochre belted plaid over an undyed tunic, practical leather boots. ONE straight long ash spear held upright by the central shaft in the right hand; left hand rests calmly on the belt beside a sheathed sword. A small ochre lion embroidered on the shoulder. No shield, no horse, no plate-knight harness.",
+      "reason": "Der Airig verband fürstlichen Rang und das Ideal des Tiarnatum. Die Löwenfarben bestimmten Stoff und kleine Beschläge, nicht eine überladene Tiergestalt.",
+      "clan": true,
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/ard-roth.webp",
+      "fullsize": "assets/originals/ard-roth.png",
+      "original": "assets/originals/ard-roth.png"
+    },
+    {
+      "id": "neill",
+      "name": "Mac Neill",
+      "sourceFile": "Mac Neill.png",
+      "sourceSeat": "beartain",
+      "motif": "Ein grüner Eberkopf mit hellen Hauern auf dunkelgrünem Holz; heller geknoteter Rand.",
+      "palette": [
+        "Tannengrün",
+        "Blattgrün",
+        "Knochenweiß"
+      ],
+      "frame": "Helles Holz mit schmalem grünem Rand",
+      "classId": "cateran",
+      "equipment": "Einhandschwert, runder Eberschild, Kettenhemd mit verstärkten Lederstücken und grün-elfenbeinfarbener Kilt.",
+      "design": "Broad middle-aged Albic male shield warrior, squat conical iron helmet with cheek plates and short mail neck guard, no horns. Forest-green and ivory tartan kilt, long practical mail shirt, reinforced dark brown leather shoulders. A round wooden shield firmly strapped to LEFT forearm, a green BOAR HEAD with ivory tusks painted flat on a dark green field, continuous iron rim and central boss. ONE straight single-handed sword in right hand held low away from the legs; blade and hilt form one coherent axis. Strong boots, quiet sturdy pose.",
+      "reason": "Der Eberkopf wurde als Schildbemalung eines standfesten Cateran aufgenommen. Dun Beartain war eine vorläufige Zuordnung im bewaldeten Bergland.",
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/neill.webp",
+      "fullsize": "assets/originals/neill.png",
+      "original": "assets/originals/neill.png"
+    },
+    {
+      "id": "caolan",
+      "name": "Nic Caolan",
+      "sourceFile": "Nic Caolan.png",
+      "sourceSeat": "dreasail",
+      "motif": "Ein grauer Wolfskopf auf graublauem Holz mit ockerfarbenem Knotensaum.",
+      "palette": [
+        "Schieferblau",
+        "Wolfsgrau",
+        "Ocker"
+      ],
+      "frame": "Graublau gefasstes Holz mit hellem Innenring",
+      "classId": "cateran",
+      "equipment": "Kurze Einhandaxt, längliches ovales Wolfsschild, bewegliches Kettenzeug und graublauer Schultertartan.",
+      "design": "Tall Albic female axe-and-shield warrior with dark braided hair, open rounded iron skullcap with cheek flaps, calm visible face. Slate-blue and grey checked shoulder plaid over a short mail hauberk, grey wool trousers and leather knee wraps. Elongated OVAL wooden shield on left forearm, pale grey wolf head painted on slate blue, realistic continuous rim and visible leather carrying strap. ONE compact iron single-bladed axe held low in right hand, correct straight haft and perpendicular blade. Small ochre clasp, no real wolf, no furry costume.",
+      "reason": "Der Wolf und das kühle Blau-Grau bestimmten einen anderen Cateran-Schnitt mit ovalem Schild. Der Entwurf griff die Lage unter dem Gebirge auf.",
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/caolan.webp",
+      "fullsize": "assets/originals/caolan.png",
+      "original": "assets/originals/caolan.png"
+    },
+    {
+      "id": "duach",
+      "name": "Dál Dúach",
+      "sourceFile": "Dál Dúach.png",
+      "sourceSeat": "carthain",
+      "motif": "Ein schwarzer Hirschkopf mit breitem Geweih auf Ocker, umgeben von dunklen keltischen Bändern.",
+      "palette": [
+        "Gelbocker",
+        "Kohlschwarz",
+        "Flachsweiß"
+      ],
+      "frame": "Dunkler Holzring mit ockerfarbenen Knoten",
+      "classId": "serf",
+      "equipment": "Langbogen in Ruhehaltung, Rückenköcher, kurzes Scheidenschwert, Lederweste und schwarz-ockerfarbener Plaid.",
+      "design": "Lean adult Albic male woodland archer with tied-back black hair, head bare, no antlers. Muted ochre tunic and black-ochre belted tartan plaid, supple dark leather armour over a small mail collar, leather leg wraps and sturdy shoes. ONE simple longbow held vertically in the left hand at the central grip; complete bow and single taut string visible, NO drawn arrow and right hand NOT touching string. Quiver on back, short sheathed sword at belt, small flat black stag embroidery on ochre shoulder cloth. Calm full-body stance.",
+      "reason": "Der Hirsch und die Waldsäume legten einen Serf nahe. Die dunkle und ockerfarbene Kleidung blieb für Wald und Tal praktisch.",
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/duach.webp",
+      "fullsize": "assets/originals/duach.png",
+      "original": "assets/originals/duach.png"
+    },
+    {
+      "id": "ardmhair",
+      "name": "Tir an Ardmhair",
+      "sourceFile": "Tir an Ardmhair.png",
+      "sourceSeat": "uamhar",
+      "motif": "Ein schwarzer Bär auf violettem Holz mit hellen Ranken und schmalem kupferbraunem Rand.",
+      "palette": [
+        "Heideviolett",
+        "Schwarzbraun",
+        "Elfenbein"
+      ],
+      "frame": "Schmaler kupferbrauner Holzring",
+      "classId": "riada",
+      "equipment": "Zweihändige lange Streitaxt, verstärkte Lederweste, einzelne eiserne Armschienen und violettbrauner Kilt.",
+      "design": "Strong stocky red-bearded Albic male Riada, bare head with hair tied back, purple-brown tartan kilt, dark reinforced leather vest over a plain linen shirt with rolled sleeves, separate modest iron bracers and a short brown wool cloak. ONE long two-handed single-bladed battle axe resting VERTICALLY beside him: both hands around the SAME straight wooden shaft below the axe head, blade well above hands, butt clearly on no painted ground. Small black bear sewn on pale chest patch. No shield, no huge fur pelt, no crown or plate armour. Relaxed upright guard.",
+      "reason": "Der Riada nahm die Bärenkraft mit einer klar geführten Axt und beweglicher Ausrüstung auf. Sein Bergsitz wurde nur als Ausgangsentwurf zugeteilt.",
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/ardmhair.webp",
+      "fullsize": "assets/originals/ardmhair.png",
+      "original": "assets/originals/ardmhair.png"
+    },
+    {
+      "id": "trodach",
+      "name": "Droch Trodach",
+      "sourceFile": "Droch Trodach.png",
+      "sourceSeat": "sceolan",
+      "motif": "Ein roter gerüsteter Löwenkrieger mit dreizinkiger Stangenwaffe auf Elfenbein, schwarzrote Ornamentringe.",
+      "palette": [
+        "Ziegelrot",
+        "Elfenbein",
+        "Anthrazit"
+      ],
+      "frame": "Helles Holz mit rot-schwarzen Knotenringen",
+      "classId": "airig",
+      "equipment": "Gerader Stoßspeer, kurzes Scheidenschwert, Kettenhemd mit roten Lederlamellen und rotweißem Plaid.",
+      "design": "Weathered older Albic male spear warrior with grey moustache, angular low conical iron helmet with simple nasal, no plume. Mail hauberk with restrained brick-red leather lamellar shoulder panels, red and ivory tartan plaid, dark wool leggings. ONE LONG STRAIGHT SPEAR with a SINGLE practical leaf-shaped iron tip, held slightly outward in left hand; right hand relaxed on belt. The emblem trident is represented ONLY by a tiny red embroidered badge on chest, not an impractical fork weapon. Entire spear point and butt visible. No horns, no western knight plate.",
+      "reason": "Die Stangenwaffe des Wappens wurde in die funktionale Speerführung eines Airig übertragen. Der Dreizack blieb ein Zeichen, keine unbegründete Seekriegerrolle.",
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/trodach.webp",
+      "fullsize": "assets/originals/trodach.png",
+      "original": "assets/originals/trodach.png"
+    },
+    {
+      "id": "torcmhar",
+      "name": "Ua Torcmhar",
+      "sourceFile": "Ua Torcmhar.png",
+      "sourceSeat": "loscarn",
+      "motif": "Ein zusammengerollter heller Eber auf schwarzem Rundfeld und braunen Brettern mit weißen Spiralen.",
+      "palette": [
+        "Rindenbraun",
+        "Wollweiß",
+        "Schwarz"
+      ],
+      "frame": "Schlichter brauner Holzrand",
+      "classId": "currach",
+      "equipment": "Kurzes gerades Schwert, leichte Lederpanzerung mit Kettenkragen, gesichertes Sturmseil und braunweißer Plaid.",
+      "design": "Middle-aged Albic female coastal warrior, short curly brown hair under a soft undyed wool cap, no metal helmet. Brown and ivory checked short plaid, weatherproof dark leather jerkin over a modest mail collar, brown wool trousers tucked into calf-high boots. ONE short straight sword held down in right hand, left hand rests on belt, coiled boarding rope and a compact grappling hook SAFELY attached to opposite hip. Small ivory curled boar embroidered on black shoulder patch, not a real animal. No shield, no bow in hands, no scenery.",
+      "reason": "Der Currach war ein Entwurf für die küstennahe Burg Tobar Loscarn. Das eingerollte Tier blieb ein zurückhaltendes Abzeichen.",
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Geliefertes Clanwappen · Sitz als historischer Entwurf",
+      "crest": "assets/crests/torcmhar.webp",
+      "fullsize": "assets/originals/torcmhar.png",
+      "original": "assets/originals/torcmhar.png"
+    },
+    {
+      "id": "snaith",
+      "name": "Mac Snaith",
+      "motif": "Ein rostfarbener Fichtenkreuzschnabel mit deutlich gekreuzten Schnabelspitzen auf einem kurzen Nadelzweig.",
+      "palette": [
+        "Nebelblau",
+        "Rostorange",
+        "Wollweiß"
+      ],
+      "frame": "Graues Holz mit zwei schmalen Eisenklammern",
+      "ornament": "Nur ein kurzer heller Zickzackbogen am oberen Rand",
+      "field": "Nebelblaue senkrechte Bretter, ein schmaler unbemalter rechter Rand; keine konzentrischen Ornamentringe",
+      "classId": "airig",
+      "equipment": "Stoßspeer, kleines Rundschild am Rücken, kurze Kette, nebelblauer und rostfarbener Plaid.",
+      "design": "Young fair-haired Albic male spear warrior, open riveted iron cap with no nasal, mist-blue and rust-orange belted plaid, short mail shirt over pale tunic and plain leather shoulder straps. ONE straight ash spear held upright on the LEFT side in one natural grip, right hand rests loosely on a leather belt. Small round wooden shield hangs securely on back, a tiny rust-red crossbill bird stitched on mist-blue shoulder cloth. No real bird, no plate knight armour. Quiet balanced pose, full leather boots visible.",
+      "reason": "Der Kreuzschnabel griff den Nadelwald auf. Ein beweglicher Airig ergänzte die vorhandenen Speerfiguren mit anderer Helm- und Schildführung.",
+      "isNew": true,
+      "sourceSeat": null,
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Neuer Clanentwurf · historische Einordnung und Sitz offen",
+      "crest": "assets/crests/snaith.webp",
+      "fullsize": "assets/production/snaith.png",
+      "original": "assets/production/snaith.png"
+    },
+    {
+      "id": "drisach",
+      "name": "Nic Drisach",
+      "motif": "Ein einzelner dunkelgrüner Eibenzweig mit drei stumpfroten Beeren auf hellem Holz.",
+      "palette": [
+        "Flachsweiß",
+        "Dunkelgrün",
+        "Weinrot"
+      ],
+      "frame": "Dunkles Holz, an einer Stelle mit grober heller Hanfnaht gebunden",
+      "ornament": "Keine Runen; nur zwei kleine eingekerbte Blattwinkel unten",
+      "field": "Unbemalte helle waagerechte Bretter mit einem weinroten schmalen Schrägbalken hinter dem Zweig",
+      "classId": "serf",
+      "equipment": "Eibenbogen, Rückenköcher, Jagdmesser, grüne Lederweste und weißgrün-roter Tartan.",
+      "design": "Adult Albic female archer with auburn braid and a dark green hood pushed back so face is visible. Flax-white tunic, forest-green leather vest, white-green tartan kilt with a thin wine-red stripe, leather calf wraps and closed shoes. ONE unstrung-looking but correctly SINGLE-STRINGED yew longbow held low and outward by the centre grip in the right hand, no arrow drawn, no hand on string; left hand relaxed. Back quiver and small sheathed hunting knife, small yew twig embroidery on cuff. No antlers, no fantasy pointed ears.",
+      "reason": "Der Eibenzweig wurde zu einem schlichten Waldläuferentwurf mit Bogen und Wollstoffen. Weder Druidenamt noch Vergiftung wurden daraus abgeleitet.",
+      "isNew": true,
+      "sourceSeat": null,
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Neuer Clanentwurf · historische Einordnung und Sitz offen",
+      "crest": "assets/crests/drisach.webp",
+      "fullsize": "assets/production/drisach.png",
+      "original": "assets/production/drisach.png"
+    },
+    {
+      "id": "tuairne",
+      "name": "Dál Tuairne",
+      "motif": "Ein schwarzer Auerhahn mit breit gefächertem Schwanz, hellem Flügelfleck und kleinem rotem Augenfleck.",
+      "palette": [
+        "Petrol",
+        "Kohlschwarz",
+        "Rostrot"
+      ],
+      "frame": "Breites dunkles Holz mit drei ungleichen Bronzeplättchen",
+      "ornament": "Kurze fächerförmige Kerben nur an den Seiten",
+      "field": "Petrolfarbenes Feld mit breitem rostfarbenem unteren Kreissegment, kein Ring aus Knoten",
+      "classId": "cateran",
+      "equipment": "Kurzes Schwert, runder Auerhahnschild, kurze Kette mit Lederschultern und petrol-roter Kilt.",
+      "design": "Broad dark-bearded Albic male shield warrior in petrol and rust-red tartan kilt, short iron mail, practical dark leather shoulder pieces. ROUND DOMED iron helmet with small cheek plates and ONE short black feather on a leather side socket, not a winged helmet. Round wood shield on left forearm painted petrol with black capercaillie silhouette and a small pale wing patch, continuous bronze rim and central boss. Short straight sword in right hand held low and outward, coherent hilt and blade, full tip visible. Quiet upright stance, closed boots.",
+      "reason": "Der Auerhahn ergänzte die Waldtiere und gab dem Cateran ein sparsam verwendetes Federdetail statt einer tierförmigen Rüstung.",
+      "isNew": true,
+      "sourceSeat": null,
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Neuer Clanentwurf · historische Einordnung und Sitz offen",
+      "crest": "assets/crests/tuairne.webp",
+      "fullsize": "assets/production/tuairne.png",
+      "original": "assets/production/tuairne.png"
+    },
+    {
+      "id": "seilgair",
+      "name": "Ruin Seilgair",
+      "motif": "Drei helle albische Wurfspeere nebeneinander, ihre Blattspitzen nach oben, über einem einzelnen bronzenen Schildbuckel.",
+      "palette": [
+        "Schiefergrün",
+        "Kreideweiß",
+        "Bronze"
+      ],
+      "frame": "Ungefasstes dunkles Eichenholz, ohne Metallring",
+      "ornament": "Drei helle senkrechte Kerben im unteren Rand, kein umlaufendes Band",
+      "field": "Schiefergrün und helles Naturholz senkrecht im Verhältnis zwei zu eins geteilt; Waffen vollständig innerhalb des Kreises",
+      "classId": "serf",
+      "equipment": "Ein Wurfspeer in der Hand, zwei im Rückenhalter, kurze Seitenklinge, verstärktes Leder und graugrüner Plaid.",
+      "design": "Lean athletic Albic female javelin skirmisher, bare head with short dark hair, slate-green and pale grey checked shoulder plaid, reinforced brown leather vest over a wool tunic, practical leggings and boots. ONE straight leaf-tipped javelin held vertically in right hand, completely visible. TWO spare javelins held parallel in a sensible narrow leather carrier on back, clear separate shafts and modest tips above left shoulder. Left hand rests at belt near a sheathed short blade. No bow, no shield, no crossed weapons through body, no primitive bone trophies.",
+      "reason": "Drei Wurfspeere verwiesen unmittelbar auf albisches Kriegertum. Die Serf-Ausbildung umfasste auch diese bewegliche Form des Fernkampfs.",
+      "isNew": true,
+      "sourceSeat": null,
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Neuer Clanentwurf · historische Einordnung und Sitz offen",
+      "crest": "assets/crests/seilgair.webp",
+      "fullsize": "assets/production/seilgair.png",
+      "original": "assets/production/seilgair.png"
+    },
+    {
+      "id": "eatharn",
+      "name": "Tir Eatharn",
+      "motif": "Ein heller aufrechter Tannenzapfen zwischen zwei kupferbraunen Nadelzweigen.",
+      "palette": [
+        "Nachtblau",
+        "Knochenweiß",
+        "Kupferbraun"
+      ],
+      "frame": "Naturbelassenes helles Holz mit einem dunklen senkrechten Riss als gemaltem Materialmerkmal",
+      "ornament": "Eine einzelne kleine Spirale oben; sonst glatter Rand",
+      "field": "Nachtblaue schräge Bretter mit breitem hellem horizontalem Band unter dem Zapfen, bewusst einfacher als fürstliche Wappen",
+      "classId": "riada",
+      "equipment": "Lange einhändige Axt, Lederrundschild, gefütterte Lederjacke und dunkelblau-kupferfarbener Kilt.",
+      "design": "Sturdy older Albic male Riada with grey beard, no helmet, simple dark wool headband. Night-blue and copper-brown tartan kilt, padded dark leather jack with plain bracers over an undyed shirt, short wool mantle. A plain small ROUND leather-covered wood shield strapped to left forearm with one pale fir-cone painted near the top, continuous natural wood rim. ONE simple long-hafted single-handed axe held down in right hand, head safely outside legs, natural grip and straight shaft. No chainmail full harness, no crown, no giant antlers. Relaxed upright stance.",
+      "reason": "Der Zapfen brachte ein schlichtes Waldmotiv ein. Der Riada blieb beweglicher und leichter ausgerüstet als die Cateran; sein späterer Sitz blieb offen.",
+      "isNew": true,
+      "sourceSeat": null,
+      "clan": true,
+      "role": "Clan des früheren Deitheach · historischer Rang offen",
+      "source": "Neuer Clanentwurf · historische Einordnung und Sitz offen",
+      "crest": "assets/crests/eatharn.webp",
+      "fullsize": "assets/production/eatharn.png",
+      "original": "assets/production/eatharn.png"
+    }
+  ],
+  "counties": [
+    {
+      "id": "caorthainn",
+      "name": "Iorras Ruscadal",
+      "title": "Ehemaliges fürstliches Mor Tiarnatum",
+      "colour": "#4a7942",
+      "seats": [
+        "ailseag",
+        "muirdean"
+      ],
+      "art": "ailseag",
+      "motif": "Ein aufgerichteter ockerfarbener Löwe zwischen zwei hellen Ebereschenzweigen auf tiefgrünem Wolltuch; ein schmaler heller Küstensaum.",
+      "palette": [
+        "Waldgrün",
+        "Altocker",
+        "Wollweiß"
+      ]
+    },
+    {
+      "id": "dorrain",
+      "name": "Sliabh Dorrain",
+      "title": "Ehemaliges Mor Tiarnatum",
+      "colour": "#80568e",
+      "seats": [
+        "beartain",
+        "loscarn"
+      ],
+      "art": "beartain",
+      "motif": "Ein heller bewaldeter Bergsattel über zwei gekreuzten dunkelgrünen Kiefernzweigen auf heideviolettem Tuch.",
+      "palette": [
+        "Heideviolett",
+        "Wollweiß",
+        "Tannengrün"
+      ]
+    },
+    {
+      "id": "fhasgair",
+      "name": "Coill Fhasgair",
+      "title": "Ehemaliges Mor Tiarnatum",
+      "colour": "#3f788b",
+      "seats": [
+        "dreasail",
+        "uamhar"
+      ],
+      "art": "dreasail",
+      "motif": "Drei silberhelle Tannen über einem schwarzen Felsen und einem schmalen geschwungenen Wasserband auf schieferblauem Tuch.",
+      "palette": [
+        "Schieferblau",
+        "Silbergrau",
+        "Waldschwarz"
+      ]
+    },
+    {
+      "id": "eirceann",
+      "name": "Magh Eirceann",
+      "title": "Ehemaliges Mor Tiarnatum",
+      "colour": "#a9843d",
+      "seats": [
+        "carthain",
+        "sceolan",
+        "treabhair"
+      ],
+      "art": "carthain",
+      "motif": "Ein schwarzer Hirschkopf mit breitem Geweih über einer hellen Weggabel auf gelbockerfarbenem Tuch; schmaler dunkler Zickzacksaum.",
+      "palette": [
+        "Gelbocker",
+        "Kohlschwarz",
+        "Flachsweiß"
+      ]
+    }
+  ],
+  "settlements": [
+    {
+      "id": "ailseag",
+      "name": "Rath Ailseag",
+      "regionName": "Lann Ailseag",
+      "county": "caorthainn",
+      "kind": "Ehemalige Hauptstadt · fürstliche Eigenherrschaft",
+      "point": [
+        10.8,
+        28.5
+      ],
+      "pin": [
+        13,
+        19
+      ],
+      "label": [
+        11,
+        39
+      ],
+      "mapName": "Hauptstadt",
+      "art": "ailseag",
+      "geography": "Die Hauptstadt lag an der bewaldeten Westküste unter dem Gebirge. Hier hatten die Mac Ard Roth ihren fürstlichen Sitz. Mor Tiarnatum und eigene Domäne führten dasselbe Banner."
+    },
+    {
+      "id": "muirdean",
+      "name": "Caol Muirdean",
+      "regionName": "Cladach Muirdean",
+      "county": "caorthainn",
+      "kind": "Ehemaliges Lairdtum · Küstenburg",
+      "point": [
+        5.5,
+        60.5
+      ],
+      "pin": [
+        10,
+        56
+      ],
+      "label": [
+        9,
+        72
+      ],
+      "mapName": "Burg",
+      "art": "muirdean",
+      "geography": "Die kleine Burg sicherte den südlichen Küstenabschnitt der fürstlichen Großregion. Seezugang und Wald lagen unmittelbar beieinander; die Besetzung des Sitzes blieb im ersten Entwurf offen.",
+      "motif": "Eine schmale weiße Meerespforte zwischen zwei dunklen Felsen über drei moosgrünen Wellen auf graublauem Leinentuch.",
+      "palette": [
+        "Graublau",
+        "Moosgrün",
+        "Kalkweiß"
+      ]
+    },
+    {
+      "id": "beartain",
+      "name": "Dun Beartain",
+      "regionName": "Braigh Beartain",
+      "county": "dorrain",
+      "kind": "Ehemaliger Hauptsitz · eigene Dun-Herrschaft",
+      "point": [
+        31.7,
+        40
+      ],
+      "pin": [
+        28,
+        30
+      ],
+      "label": [
+        32,
+        51
+      ],
+      "mapName": "Große Stadt",
+      "art": "beartain",
+      "geography": "Die große Stadt lag im bewaldeten westlichen Bergland. Höhenwege verbanden sie mit der Küste und den benachbarten Tälern. Ihr Gebiet war die Eigenherrschaft des Mor Tiarnatum."
+    },
+    {
+      "id": "loscarn",
+      "name": "Tobar Loscarn",
+      "regionName": "Rinn Loscarn",
+      "county": "dorrain",
+      "kind": "Ehemaliges Lairdtum · südliche Burg",
+      "point": [
+        20.5,
+        68
+      ],
+      "pin": [
+        24,
+        62
+      ],
+      "label": [
+        21,
+        78
+      ],
+      "mapName": "Burg",
+      "art": "loscarn",
+      "geography": "Die südliche Burg lag unweit der Küste am Rand des Wald- und Berglandes. Ihre Lage erlaubte einen maritimen Figurenentwurf, ohne daraus eine belegte Flotte abzuleiten.",
+      "motif": "Ein heller Quellring über einem einzelnen kupferbraunen Felsvorsprung auf tiefem Heideviolett, darunter ein schmales weißes Wellenband.",
+      "palette": [
+        "Heideviolett",
+        "Kupferbraun",
+        "Wollweiß"
+      ]
+    },
+    {
+      "id": "dreasail",
+      "name": "Inver Dreasail",
+      "regionName": "Srath Dreasail",
+      "county": "fhasgair",
+      "kind": "Ehemaliger Hauptsitz · eigene Dun-Herrschaft",
+      "point": [
+        47.2,
+        40
+      ],
+      "pin": [
+        49,
+        30
+      ],
+      "label": [
+        47,
+        51
+      ],
+      "mapName": "Große Stadt",
+      "art": "dreasail",
+      "geography": "Die große Stadt lag unter einem markanten Gebirgskamm. Nach Süden öffnete sich ihr bewaldeter Herrschaftsraum zu den Wasserläufen und Übergängen der Karte. Sie bildete die eigene Dun-Herrschaft des Mor Tiarna."
+    },
+    {
+      "id": "uamhar",
+      "name": "Creag Uamhar",
+      "regionName": "Coire Uamhar",
+      "county": "fhasgair",
+      "kind": "Ehemaliges Lairdtum · Bergburg",
+      "point": [
+        39.4,
+        63
+      ],
+      "pin": [
+        43,
+        59
+      ],
+      "label": [
+        39,
+        74
+      ],
+      "mapName": "Burg",
+      "art": "uamhar",
+      "geography": "Die Burg lag in einem schmalen südwestlichen Ausläufer des blauen Herrschaftsraums, zwischen bewaldeten Hängen und einem engen Zugang nach Süden.",
+      "motif": "Ein breiter weißer Bergkessel mit schwarzer Felspforte und einer einzelnen rostbraunen Tanne auf dunkelblauem Tuch.",
+      "palette": [
+        "Dunkelblau",
+        "Kreideweiß",
+        "Rostbraun"
+      ]
+    },
+    {
+      "id": "carthain",
+      "name": "Fiodh Carthain",
+      "regionName": "Gleann Carthain",
+      "county": "eirceann",
+      "kind": "Ehemaliger Hauptsitz · eigene Dun-Herrschaft",
+      "point": [
+        68,
+        48.5
+      ],
+      "pin": [
+        64,
+        43
+      ],
+      "label": [
+        68,
+        59
+      ],
+      "mapName": "Stadt",
+      "art": "carthain",
+      "geography": "Die Stadt lag am südlichen Rand des ockerfarbenen Großgebiets, zwischen den nördlichen Höhen, Waldstreifen und Wasserübergängen. Ihr Dun Tiarnatum war zugleich die eigene Herrschaft des Mor Tiarna."
+    },
+    {
+      "id": "sceolan",
+      "name": "Ard Sceolan",
+      "regionName": "Bealach Sceolan",
+      "county": "eirceann",
+      "kind": "Ehemaliges Lairdtum · nördliche Burg",
+      "point": [
+        64.4,
+        8.6
+      ],
+      "pin": [
+        60,
+        5
+      ],
+      "label": [
+        67,
+        19
+      ],
+      "mapName": "Burg",
+      "art": "sceolan",
+      "geography": "Die nördliche Burg stand im bergigen oberen Abschnitt des ockerfarbenen Raums. Sie lag an einem engen Wasser- und Höhenzugang; ihre Ausrüstung wurde entsprechend bergtauglich entworfen.",
+      "motif": "Ein dunkelbrauner stehender Speer vor zwei hellen Bergflanken auf stumpfem Senfgelb, darüber drei kleine weiße Wegsteine.",
+      "palette": [
+        "Senfgelb",
+        "Eisenbraun",
+        "Wollweiß"
+      ]
+    },
+    {
+      "id": "treabhair",
+      "name": "Maol Orsagail",
+      "regionName": "Achadh Orsagail",
+      "county": "eirceann",
+      "kind": "Ehemaliges Dun Tiarnatum · östliche Stadt",
+      "point": [
+        83.6,
+        35.6
+      ],
+      "pin": [
+        87,
+        29
+      ],
+      "label": [
+        84,
+        46
+      ],
+      "mapName": "Große Stadt",
+      "art": "treabhair",
+      "geography": "Die östliche große Stadt lag in einem breiten, offeneren Tal zwischen Wasserläufen. Sie gehörte zum östlichen Dun Tiarnatum; ihr Clan blieb im ersten Entwurf frei.",
+      "motif": "Drei dunkelgrüne, gelb blühende Feldkräuter unter einer kupferfarbenen Sonne und über zwei dunklen Wasserlinien auf ocker-elfenbein geteiltem Tuch.",
+      "palette": [
+        "Strohocker",
+        "Elfenbein",
+        "Kupfer"
+      ]
+    }
+  ],
+  "territoryArt": [
+    {
+      "id": "ailseag",
+      "name": "Iorras Ruscadal / Lann Ailseag",
+      "kind": "Mor Tiarnatum und eigene Dun-Herrschaft",
+      "shape": "banner",
+      "motif": "Ein aufgerichteter ockerfarbener Löwe zwischen zwei hellen Ebereschenzweigen auf tiefgrünem Wolltuch; ein schmaler heller Küstensaum.",
+      "palette": [
+        "Waldgrün",
+        "Altocker",
+        "Wollweiß"
+      ],
+      "geography": "Die Hauptstadt lag an der bewaldeten Westküste unter dem Gebirge. Hier hatten die Mac Ard Roth ihren fürstlichen Sitz. Mor Tiarnatum und eigene Domäne führten dasselbe Banner.",
+      "image": "assets/territories/ailseag.webp",
+      "fullsize": "assets/production/ailseag.png"
+    },
+    {
+      "id": "muirdean",
+      "name": "Cladach Muirdean",
+      "kind": "Ehemaliges Lairdtum · Küstenburg",
+      "shape": "banner",
+      "motif": "Eine schmale weiße Meerespforte zwischen zwei dunklen Felsen über drei moosgrünen Wellen auf graublauem Leinentuch.",
+      "palette": [
+        "Graublau",
+        "Moosgrün",
+        "Kalkweiß"
+      ],
+      "geography": "Die kleine Burg sicherte den südlichen Küstenabschnitt der fürstlichen Großregion. Seezugang und Wald lagen unmittelbar beieinander; die Besetzung des Sitzes blieb im ersten Entwurf offen.",
+      "image": "assets/territories/muirdean.webp",
+      "fullsize": "assets/production/muirdean.png"
+    },
+    {
+      "id": "beartain",
+      "name": "Sliabh Dorrain / Braigh Beartain",
+      "kind": "Mor Tiarnatum und eigene Dun-Herrschaft",
+      "shape": "banner",
+      "motif": "Ein heller bewaldeter Bergsattel über zwei gekreuzten dunkelgrünen Kiefernzweigen auf heideviolettem Tuch.",
+      "palette": [
+        "Heideviolett",
+        "Wollweiß",
+        "Tannengrün"
+      ],
+      "geography": "Die große Stadt lag im bewaldeten westlichen Bergland. Höhenwege verbanden sie mit der Küste und den benachbarten Tälern. Ihr Gebiet war die Eigenherrschaft des Mor Tiarnatum.",
+      "image": "assets/territories/beartain.webp",
+      "fullsize": "assets/production/beartain.png"
+    },
+    {
+      "id": "loscarn",
+      "name": "Rinn Loscarn",
+      "kind": "Ehemaliges Lairdtum · südliche Burg",
+      "shape": "banner",
+      "motif": "Ein heller Quellring über einem einzelnen kupferbraunen Felsvorsprung auf tiefem Heideviolett, darunter ein schmales weißes Wellenband.",
+      "palette": [
+        "Heideviolett",
+        "Kupferbraun",
+        "Wollweiß"
+      ],
+      "geography": "Die südliche Burg lag unweit der Küste am Rand des Wald- und Berglandes. Ihre Lage erlaubte einen maritimen Figurenentwurf, ohne daraus eine belegte Flotte abzuleiten.",
+      "image": "assets/territories/loscarn.webp",
+      "fullsize": "assets/production/loscarn.png"
+    },
+    {
+      "id": "dreasail",
+      "name": "Coill Fhasgair / Srath Dreasail",
+      "kind": "Mor Tiarnatum und eigene Dun-Herrschaft",
+      "shape": "banner",
+      "motif": "Drei silberhelle Tannen über einem schwarzen Felsen und einem schmalen geschwungenen Wasserband auf schieferblauem Tuch.",
+      "palette": [
+        "Schieferblau",
+        "Silbergrau",
+        "Waldschwarz"
+      ],
+      "geography": "Die große Stadt lag unter einem markanten Gebirgskamm. Nach Süden öffnete sich ihr bewaldeter Herrschaftsraum zu den Wasserläufen und Übergängen der Karte. Sie bildete die eigene Dun-Herrschaft des Mor Tiarna.",
+      "image": "assets/territories/dreasail.webp",
+      "fullsize": "assets/production/dreasail.png"
+    },
+    {
+      "id": "uamhar",
+      "name": "Coire Uamhar",
+      "kind": "Ehemaliges Lairdtum · Bergburg",
+      "shape": "banner",
+      "motif": "Ein breiter weißer Bergkessel mit schwarzer Felspforte und einer einzelnen rostbraunen Tanne auf dunkelblauem Tuch.",
+      "palette": [
+        "Dunkelblau",
+        "Kreideweiß",
+        "Rostbraun"
+      ],
+      "geography": "Die Burg lag in einem schmalen südwestlichen Ausläufer des blauen Herrschaftsraums, zwischen bewaldeten Hängen und einem engen Zugang nach Süden.",
+      "image": "assets/territories/uamhar.webp",
+      "fullsize": "assets/production/uamhar.png"
+    },
+    {
+      "id": "carthain",
+      "name": "Magh Eirceann / Gleann Carthain",
+      "kind": "Mor Tiarnatum und eigene Dun-Herrschaft",
+      "shape": "banner",
+      "motif": "Ein schwarzer Hirschkopf mit breitem Geweih über einer hellen Weggabel auf gelbockerfarbenem Tuch; schmaler dunkler Zickzacksaum.",
+      "palette": [
+        "Gelbocker",
+        "Kohlschwarz",
+        "Flachsweiß"
+      ],
+      "geography": "Die Stadt lag am südlichen Rand des ockerfarbenen Großgebiets, zwischen den nördlichen Höhen, Waldstreifen und Wasserübergängen. Ihr Dun Tiarnatum war zugleich die eigene Herrschaft des Mor Tiarna.",
+      "image": "assets/territories/carthain.webp",
+      "fullsize": "assets/production/carthain.png"
+    },
+    {
+      "id": "sceolan",
+      "name": "Bealach Sceolan",
+      "kind": "Ehemaliges Lairdtum · nördliche Burg",
+      "shape": "banner",
+      "motif": "Ein dunkelbrauner stehender Speer vor zwei hellen Bergflanken auf stumpfem Senfgelb, darüber drei kleine weiße Wegsteine.",
+      "palette": [
+        "Senfgelb",
+        "Eisenbraun",
+        "Wollweiß"
+      ],
+      "geography": "Die nördliche Burg stand im bergigen oberen Abschnitt des ockerfarbenen Raums. Sie lag an einem engen Wasser- und Höhenzugang; ihre Ausrüstung wurde entsprechend bergtauglich entworfen.",
+      "image": "assets/territories/sceolan.webp",
+      "fullsize": "assets/production/sceolan.png"
+    },
+    {
+      "id": "treabhair",
+      "name": "Achadh Orsagail",
+      "kind": "Ehemaliges Dun Tiarnatum · östliche Stadt",
+      "shape": "banner",
+      "motif": "Drei dunkelgrüne, gelb blühende Feldkräuter unter einer kupferfarbenen Sonne und über zwei dunklen Wasserlinien auf ocker-elfenbein geteiltem Tuch.",
+      "palette": [
+        "Strohocker",
+        "Elfenbein",
+        "Kupfer"
+      ],
+      "geography": "Die östliche große Stadt lag in einem breiten, offeneren Tal zwischen Wasserläufen. Sie gehörte zum östlichen Dun Tiarnatum; ihr Clan blieb im ersten Entwurf frei.",
+      "image": "assets/territories/treabhair.webp",
+      "fullsize": "assets/production/treabhair.png"
+    }
+  ],
+  "artDirection": {
+    "bannerHeraldryReference": "Vorschau/Deitheach/assets/originals/ard-roth.png",
+    "clanHeraldryReference": "Vorschau/Deitheach/assets/originals/neill.png"
+  },
+  "context": {
+    "title": "Das gefallene Fürstentum Deitheach",
+    "short": "Deitheach",
+    "realm": "deitheach",
+    "continent": "Aldervan",
+    "emblem": "assets/crests/deitheach.webp",
+    "emblemFull": "assets/originals/deitheach.png",
+    "imageSize": [
+      8192,
+      3150
+    ],
+    "historyLabel": "Das Land vor der Eroberung",
+    "historyHeading": "Deitheach, wie es gewesen war.",
+    "introduction": "Zwischen bewaldeten Gebirgszügen, Tälern und der westlichen Küste hatte Deitheach als albisches Fürstentum bestanden. Die Mac Ard Roth waren sein Fürstenclan gewesen. Vor zwanzig Jahren war das Land unter das Joch der Triarchie geraten.",
+    "note": "Diese Seite blickt auf das Fürstentum vor seiner Eroberung zurück. Namen und die Verteilung der sieben gelieferten Clans sind historische Besprechungsentwürfe. Fünf zusätzliche Clans bleiben frei. Ob einzelne Clans heute Widerstand leisten, sich fügen, vertrieben wurden oder anders zur Triarchie stehen, bleibt ausdrücklich unentschieden.",
+    "history": [
+      {
+        "title": "Unter den Mac Ard Roth",
+        "text": "Deitheach war ein albisches Fürstentum gewesen. Die Mac Ard Roth hatten als Fürstenclan über ihm gestanden. Ihr goldener Löwe auf Grün hatte sich auch im verwandten Landeszeichen wiedergefunden. Die Hauptstadt hatte zwischen der Westküste und den bewaldeten Ausläufern des Gebirges gelegen."
+      },
+      {
+        "title": "Vier große Herrschaftsräume",
+        "text": "Vier Mor Tiarnatümer hatten das Land gegliedert. Hauptstadt, große Städte, Stadt und Burgen hatten ihre Herrschaftsmittelpunkte gebildet; zwischen ihnen hatten Wald, Berge und Wasserläufe gelegen. Für die eigene Dun-Herrschaft eines Mor Tiarna hatte hier das gemeinsame Zeichen seines Mor Tiarnatum gegolten."
+      },
+      {
+        "title": "Die Eroberung vor zwanzig Jahren",
+        "text": "Die Triarchie hatte die Kriege und Unruhen jener Zeit ausgenutzt und Deitheach in ihren Machtbereich gezwungen. Ihre Herrschaft hatte auf Terror, Unterdrückung und infernaler Unterstützung beruht. Damit war die frühere Eigenständigkeit des Fürstentums gebrochen worden."
+      },
+      {
+        "title": "Das offene Schicksal der Clans",
+        "text": "Die Eroberung hatte die alte Ordnung gebrochen, doch sie hatte nicht für jeden Clan dasselbe Schicksal bedeutet. Wer sich widersetzt hatte, wer vertrieben worden war oder sich gefügt hatte, war hier bewusst offengeblieben. Diese Fragen sollten erst bei der Ausarbeitung der Triarchie auf Aldervan entschieden werden."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Nadelwald, Berge und Küste",
+        "text": "Dichte Wälder, Gebirgskämme und Wasserwege hatten die Landschaft geprägt. Wollstoffe, Plaids und Tartan hatten die Clanzugehörigkeit sichtbar gemacht; Kette und verstärktes Leder hatten beweglichen Schutz geboten. Speerträger, Schildkämpfer, Waldläufer und Küstenkrieger hatten jeweils eine eigene Ausrüstung getragen."
+      },
+      {
+        "title": "Die Erinnerung an das frühere Land",
+        "text": "Die hier versammelten Zeichen und Figuren hatten Deitheach vor seiner Unterwerfung gezeigt. Sie erinnerten an seine eigene albische Kultur und die frühere Herrschaftsordnung. Ihre Träger waren damit weder zu Anhängern der Triarchie noch zu ihren Gegnern erklärt worden."
+      }
+    ],
+    "resetMessage": "Die sieben gelieferten Clans kehren zu ihren historischen Ausgangsvorschlägen zurück; die fünf neuen Clans bleiben ohne Sitz.",
+    "classCulture": "alben",
+    "relatedPages": [
+      {
+        "href": "../Iathneach/",
+        "label": "Iathneach"
+      },
+      {
+        "href": "../Triarchie/",
+        "label": "Triarchie · bisher besetztes Lothir"
+      }
+    ]
+  },
+  "warriors": [
+    {
+      "id": "ard-roth",
+      "name": "Mac Ard Roth",
+      "classId": "airig",
+      "className": "Airig",
+      "equipment": "Langer Stoßspeer, Scheidenschwert, hochwertiges Kettenzeug mit kleinen Bronzeplatten; tiefgrüner Plaid mit ockerfarbenen Karos.",
+      "reason": "Der Airig verband fürstlichen Rang und das Ideal des Tiarnatum. Die Löwenfarben bestimmten Stoff und kleine Beschläge, nicht eine überladene Tiergestalt.",
+      "palette": [
+        "Tiefgrün",
+        "Altgold",
+        "Wollweiß"
+      ],
+      "image": "assets/warriors/previews/ard-roth.webp",
+      "fullsize": "assets/warriors/production/ard-roth.png",
+      "classHref": "../../Klassenordner/Alben/airig/index.html"
+    },
+    {
+      "id": "neill",
+      "name": "Mac Neill",
+      "classId": "cateran",
+      "className": "Cateran",
+      "equipment": "Einhandschwert, runder Eberschild, Kettenhemd mit verstärkten Lederstücken und grün-elfenbeinfarbener Kilt.",
+      "reason": "Der Eberkopf wurde als Schildbemalung eines standfesten Cateran aufgenommen. Dun Beartain war eine vorläufige Zuordnung im bewaldeten Bergland.",
+      "palette": [
+        "Tannengrün",
+        "Blattgrün",
+        "Knochenweiß"
+      ],
+      "image": "assets/warriors/previews/neill.webp",
+      "fullsize": "assets/warriors/production/neill.png",
+      "classHref": "../../Klassenordner/Alben/cateran/index.html"
+    },
+    {
+      "id": "caolan",
+      "name": "Nic Caolan",
+      "classId": "cateran",
+      "className": "Cateran",
+      "equipment": "Kurze Einhandaxt, längliches ovales Wolfsschild, bewegliches Kettenzeug und graublauer Schultertartan.",
+      "reason": "Der Wolf und das kühle Blau-Grau bestimmten einen anderen Cateran-Schnitt mit ovalem Schild. Der Entwurf griff die Lage unter dem Gebirge auf.",
+      "palette": [
+        "Schieferblau",
+        "Wolfsgrau",
+        "Ocker"
+      ],
+      "image": "assets/warriors/previews/caolan.webp",
+      "fullsize": "assets/warriors/production/caolan.png",
+      "classHref": "../../Klassenordner/Alben/cateran/index.html"
+    },
+    {
+      "id": "duach",
+      "name": "Dál Dúach",
+      "classId": "serf",
+      "className": "Serf",
+      "equipment": "Langbogen in Ruhehaltung, Rückenköcher, kurzes Scheidenschwert, Lederweste und schwarz-ockerfarbener Plaid.",
+      "reason": "Der Hirsch und die Waldsäume legten einen Serf nahe. Die dunkle und ockerfarbene Kleidung blieb für Wald und Tal praktisch.",
+      "palette": [
+        "Gelbocker",
+        "Kohlschwarz",
+        "Flachsweiß"
+      ],
+      "image": "assets/warriors/previews/duach.webp",
+      "fullsize": "assets/warriors/production/duach.png",
+      "classHref": "../../Klassenordner/Alben/serf/index.html"
+    },
+    {
+      "id": "ardmhair",
+      "name": "Tir an Ardmhair",
+      "classId": "riada",
+      "className": "Riada",
+      "equipment": "Zweihändige lange Streitaxt, verstärkte Lederweste, einzelne eiserne Armschienen und violettbrauner Kilt.",
+      "reason": "Der Riada nahm die Bärenkraft mit einer klar geführten Axt und beweglicher Ausrüstung auf. Sein Bergsitz wurde nur als Ausgangsentwurf zugeteilt.",
+      "palette": [
+        "Heideviolett",
+        "Schwarzbraun",
+        "Elfenbein"
+      ],
+      "image": "assets/warriors/previews/ardmhair.webp",
+      "fullsize": "assets/warriors/production/ardmhair.png",
+      "classHref": "../../Klassenordner/Alben/riada/index.html"
+    },
+    {
+      "id": "trodach",
+      "name": "Droch Trodach",
+      "classId": "airig",
+      "className": "Airig",
+      "equipment": "Gerader Stoßspeer, kurzes Scheidenschwert, Kettenhemd mit roten Lederlamellen und rotweißem Plaid.",
+      "reason": "Die Stangenwaffe des Wappens wurde in die funktionale Speerführung eines Airig übertragen. Der Dreizack blieb ein Zeichen, keine unbegründete Seekriegerrolle.",
+      "palette": [
+        "Ziegelrot",
+        "Elfenbein",
+        "Anthrazit"
+      ],
+      "image": "assets/warriors/previews/trodach.webp",
+      "fullsize": "assets/warriors/production/trodach.png",
+      "classHref": "../../Klassenordner/Alben/airig/index.html"
+    },
+    {
+      "id": "torcmhar",
+      "name": "Ua Torcmhar",
+      "classId": "currach",
+      "className": "Currach",
+      "equipment": "Kurzes gerades Schwert, leichte Lederpanzerung mit Kettenkragen, gesichertes Sturmseil und braunweißer Plaid.",
+      "reason": "Der Currach war ein Entwurf für die küstennahe Burg Tobar Loscarn. Das eingerollte Tier blieb ein zurückhaltendes Abzeichen.",
+      "palette": [
+        "Rindenbraun",
+        "Wollweiß",
+        "Schwarz"
+      ],
+      "image": "assets/warriors/previews/torcmhar.webp",
+      "fullsize": "assets/warriors/production/torcmhar.png",
+      "classHref": "../../Klassenordner/Alben/currach/index.html"
+    },
+    {
+      "id": "snaith",
+      "name": "Mac Snaith",
+      "classId": "airig",
+      "className": "Airig",
+      "equipment": "Stoßspeer, kleines Rundschild am Rücken, kurze Kette, nebelblauer und rostfarbener Plaid.",
+      "reason": "Der Kreuzschnabel griff den Nadelwald auf. Ein beweglicher Airig ergänzte die vorhandenen Speerfiguren mit anderer Helm- und Schildführung.",
+      "palette": [
+        "Nebelblau",
+        "Rostorange",
+        "Wollweiß"
+      ],
+      "image": "assets/warriors/previews/snaith.webp",
+      "fullsize": "assets/warriors/production/snaith.png",
+      "classHref": "../../Klassenordner/Alben/airig/index.html"
+    },
+    {
+      "id": "drisach",
+      "name": "Nic Drisach",
+      "classId": "serf",
+      "className": "Serf",
+      "equipment": "Eibenbogen, Rückenköcher, Jagdmesser, grüne Lederweste und weißgrün-roter Tartan.",
+      "reason": "Der Eibenzweig wurde zu einem schlichten Waldläuferentwurf mit Bogen und Wollstoffen. Weder Druidenamt noch Vergiftung wurden daraus abgeleitet.",
+      "palette": [
+        "Flachsweiß",
+        "Dunkelgrün",
+        "Weinrot"
+      ],
+      "image": "assets/warriors/previews/drisach.webp",
+      "fullsize": "assets/warriors/production/drisach.png",
+      "classHref": "../../Klassenordner/Alben/serf/index.html"
+    },
+    {
+      "id": "tuairne",
+      "name": "Dál Tuairne",
+      "classId": "cateran",
+      "className": "Cateran",
+      "equipment": "Kurzes Schwert, runder Auerhahnschild, kurze Kette mit Lederschultern und petrol-roter Kilt.",
+      "reason": "Der Auerhahn ergänzte die Waldtiere und gab dem Cateran ein sparsam verwendetes Federdetail statt einer tierförmigen Rüstung.",
+      "palette": [
+        "Petrol",
+        "Kohlschwarz",
+        "Rostrot"
+      ],
+      "image": "assets/warriors/previews/tuairne.webp",
+      "fullsize": "assets/warriors/production/tuairne.png",
+      "classHref": "../../Klassenordner/Alben/cateran/index.html"
+    },
+    {
+      "id": "seilgair",
+      "name": "Ruin Seilgair",
+      "classId": "serf",
+      "className": "Serf",
+      "equipment": "Ein Wurfspeer in der Hand, zwei im Rückenhalter, kurze Seitenklinge, verstärktes Leder und graugrüner Plaid.",
+      "reason": "Drei Wurfspeere verwiesen unmittelbar auf albisches Kriegertum. Die Serf-Ausbildung umfasste auch diese bewegliche Form des Fernkampfs.",
+      "palette": [
+        "Schiefergrün",
+        "Kreideweiß",
+        "Bronze"
+      ],
+      "image": "assets/warriors/previews/seilgair.webp",
+      "fullsize": "assets/warriors/production/seilgair.png",
+      "classHref": "../../Klassenordner/Alben/serf/index.html"
+    },
+    {
+      "id": "eatharn",
+      "name": "Tir Eatharn",
+      "classId": "riada",
+      "className": "Riada",
+      "equipment": "Lange einhändige Axt, Lederrundschild, gefütterte Lederjacke und dunkelblau-kupferfarbener Kilt.",
+      "reason": "Der Zapfen brachte ein schlichtes Waldmotiv ein. Der Riada blieb beweglicher und leichter ausgerüstet als die Cateran; sein späterer Sitz blieb offen.",
+      "palette": [
+        "Nachtblau",
+        "Knochenweiß",
+        "Kupferbraun"
+      ],
+      "image": "assets/warriors/previews/eatharn.webp",
+      "fullsize": "assets/warriors/production/eatharn.png",
+      "classHref": "../../Klassenordner/Alben/riada/index.html"
+    }
+  ]
+}

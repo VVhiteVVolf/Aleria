@@ -48,4 +48,4 @@ for (const realm of realms) {
 }
 await output('Stammbäume/assets/js/modules/albic-territories/placements.source.json',
   buildAlbicPlacements(catalogs, FAMILY_REGISTRY, aliases));
-console.log(`${realms.length} albische Fürstentümer: ${reviewedFiefs.length} Lehen, Hierarchien und Stammbaum-Zuordnungen ${check ? 'geprüft' : 'abgeglichen'}. Moinneach bleibt unentschieden.`);
+console.log(`${realms.length} bisherige albische Fürstentümer: ${reviewedFiefs.length} Lehen, Hierarchien und Stammbaum-Zuordnungen ${check ? 'geprüft' : 'abgeglichen'}. Weitere bestätigte Länder werden separat unter shared/accepted-realms geprüft.`);

@@ -16,10 +16,22 @@ const albicTerritoryInputs = ['Stammbäume/assets/js/modules/albic-territories/'
 // and family-chart geometry checks remain in site-build-tasks.mjs.
 export const WORLD_CONTENT_TASKS = [
   {
+    id: 'accepted-realms', label: 'Accepted countries, historical jurisdiction, houses, places and maps',
+    inputs: ['shared/accepted-realms/', 'Kontinente/modules/accepted-realms/',
+      'Stammbäume/assets/js/data/accepted-realm-families.js', 'Kontinente/kontinente.registry.js',
+      'Orte/orte.registry.js', 'Karten/karten.registry.js', 'Familien Häuser und Clans/',
+      'Gallerien/krieger/scripts/accepted-realm-references.mjs'],
+    commands: [['shared/accepted-realms/scripts/admit-art.mjs', '--check'],
+      ['shared/accepted-realms/scripts/build-pages.mjs', '--check'],
+      ['shared/accepted-realms/scripts/build-maps.mjs', '--check'],
+      tests('shared/accepted-realms/tests')]
+  },
+  {
     id: 'territory-pages', label: 'Realm hierarchies, territory pages and heraldry',
     inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
       'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
-    commands: [['Kontinente/scripts/review-albic-territories.mjs', '--check'],
+    commands: [['Kontinente/scripts/build-continent-overviews.mjs', '--check'],
+      ['Kontinente/scripts/review-albic-territories.mjs', '--check'],
       ['Kontinente/scripts/build-administration-vassals.mjs', '--check'],
       ...territoryBuilders.map(name => ['Kontinente/scripts/build-' + name + '.mjs', '--check']),
       tests('Kontinente/tests'), tests('Familien Häuser und Clans/tests')]

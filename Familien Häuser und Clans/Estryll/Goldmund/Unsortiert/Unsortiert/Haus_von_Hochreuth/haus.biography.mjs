@@ -8,7 +8,7 @@ export const HOUSE_BIOGRAPHY = {
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
-  "description": "Haus von Hochreuth ist ein Ritterhaus aus Goldmund. Die Zuordnung seines Zweigs in Celtigerns Wacht ist noch zu klären. Weitere Inhalte folgen.",
+  "description": "Haus von Hochreuth ist ein Ministerialenhaus aus Goldmund. Es dient Haus Roden und gehört dessen Lehnsverband in Thronholt an. Burg Hochreuth ist der überlieferte Sitz; ihr genauer Kartenpunkt ist noch nicht vermessen.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -19,7 +19,31 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Rang",
-      "Ritterherr"
+      "Ministerialer"
+    ],
+    [
+      "Stammsitz",
+      "Burg Hochreuth · Lage noch offen"
+    ],
+    [
+      "Grafschaft",
+      "Herzogliche Grafschaft Kronenau"
+    ],
+    [
+      "Oberhaupt",
+      "Otto von Hochreuth"
+    ],
+    [
+      "Erbe",
+      "Nicht abschließend benannt"
+    ],
+    [
+      "Lehnsherr",
+      "Haus Roden"
+    ],
+    [
+      "Ursprung",
+      "Goldmund"
     ]
   ],
   "house": {
@@ -28,11 +52,11 @@ export const HOUSE_BIOGRAPHY = {
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Haus von Hochreuth ist ein Ritterhaus aus Goldmund. Die Zuordnung seines Zweigs in Celtigerns Wacht ist noch zu klären. Weitere Inhalte folgen.",
+    "biographyText": "Haus von Hochreuth ist ein Ministerialenhaus aus Goldmund. Es dient Haus Roden und gehört dessen Lehnsverband in Thronholt an. Burg Hochreuth ist der überlieferte Sitz; ihr genauer Kartenpunkt ist noch nicht vermessen.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Folgt …",
+    "historyText": "Altehrwürdiges Ministerialenhaus aus Goldmund und Vasall des Hauses Roden. Nach dem Stammwappen folgen Friedrichs drei Söhne Albrecht, Wilhelm und Leopold sowie seine wegverheiratete Tochter Dorothea. Nach dem Tod Albrechts und seiner drei Söhne beim Jagdausflug führt die rechtmäßige Erbfolge über Wilhelm zu Ruprecht. Otto gewinnt Burg und Titel erst 1736 durch einen politischen Eingriff des mit ihm mütterlicherseits verwandten Hauses Roden.",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -40,7 +64,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Folgt …"
+        "text": "Haus Roden hatte 1736 zugunsten Ottos in die Erbfolge eingegriffen. Ruprechts rechtmäßige Erblinie und die tatsächlich eingesetzte Linie bleiben in der Familienakte unterscheidbar."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -56,6 +80,12 @@ export const HOUSE_BIOGRAPHY = {
         "title": "Haus von Hochreuth · vollständige Hausseite",
         "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-von-hochreuth"
+      },
+      {
+        "title": "Haus Roden · Lehnsherr in Thronholt",
+        "text": "Das übergeordnete Junkerhaus des Ministerialenhauses von Hochreuth.",
+        "icon": "../Stammbäume/assets/images/houses/accepted-realms/goldmund/roden.webp",
+        "link": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-roden"
       }
     ],
     "footer": ""

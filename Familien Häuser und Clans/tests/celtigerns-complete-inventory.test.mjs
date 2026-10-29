@@ -60,7 +60,12 @@ test('Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfunde
   const added = [...sources.values()].filter(c => c.registerPage);
   assert.ok(added.length >= 79);
   for (const content of added) {
-    if (content.prepared) {
+    if (content.historySource) {
+      await access(new URL(content.historySource, project));
+      const family = families.find(record => record.id === content.id).family;
+      assert.equal(content.sections.history, family.document.description.replace('Ritterherrenhaus', 'Ministerialenhaus'));
+      for (const head of content.heads) assert.ok(family.persons.some(person => person.id === head.id));
+    } else if (content.prepared) {
       assert.equal(content.sections.history, 'Folgt …');
       assert.equal(content.profile.founding, '');
       assert.equal(content.heads.length, 0);
