@@ -1,0 +1,699 @@
+{
+  "createdAt": "2026-10-30",
+  "generator": "Built-in image_gen",
+  "splitter": "AleriaAlmanach\\AvatarWerkstatt\\Werkzeuge\\Avatar Splitterer\\AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "configuration": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "character": "Blodwen Balchder",
+      "setId": "set-01",
+      "sheet": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Sheets\\blodwen-balchder-set-01.png",
+      "sheetSha256": "a5690526473b4f155aa06fe08c89987e5393597eb9426197a4faeec0afc0546e",
+      "sheetPixels": [
+        1254,
+        1254
+      ],
+      "referenceSha256": "629db9de48b4750355f0596d8d660a095b29c38770180a3e4f4820e9ae8e70a7",
+      "method": "AvatarSplitterProV3.get_crops; original implementation, no GUI or config changes",
+      "exports": [
+        {
+          "index": 1,
+          "emotion": "Redend / Erklärend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild1.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "fcf08260121b6566d15b3e785d9a83b39fab28fb926d69dc2bab72704ac930e4",
+          "bytes": 227656
+        },
+        {
+          "index": 2,
+          "emotion": "Freundlich / Begrüßend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild2.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "c09cd18e8fd298f19c546b1ea22705a41d9fd4eebffef2965532a4db8f7075bf",
+          "bytes": 219832
+        },
+        {
+          "index": 3,
+          "emotion": "Herzlich lachend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild3.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "f4521078a83690c46ebe287d9cf6a3e765ac82205e31f22f1e019cbe82a8621c",
+          "bytes": 219696
+        },
+        {
+          "index": 4,
+          "emotion": "Nachdenklich / Grübelnd",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild4.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "61d37e191016e283f92305885b4221ccde4735ecf4c1165acf54a6a255cdc0f9",
+          "bytes": 219129
+        },
+        {
+          "index": 5,
+          "emotion": "Skeptisch / Misstrauisch",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild5.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "e0df643c946094683f56b0300caff103204f3e40697be60741c92988642d5319",
+          "bytes": 216778
+        },
+        {
+          "index": 6,
+          "emotion": "Überrascht / Verblüfft",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild6.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "f6ca5c47d3a002715620e34b4d8568d0580df7a96fc41db944d750f8bc49531e",
+          "bytes": 232034
+        },
+        {
+          "index": 7,
+          "emotion": "Genervt / Abweisend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild7.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "af16b5b2276bbdb7221d58fb4db78c33b3b7c7dddd9401f89acd3dd05e1c5619",
+          "bytes": 226217
+        },
+        {
+          "index": 8,
+          "emotion": "Entschlossen / Ernst",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild8.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "60b0c255237e2e50c1ad0a11bec1bc02b64ad5f522651056d73a5b493fa4a1a1",
+          "bytes": 212455
+        },
+        {
+          "index": 9,
+          "emotion": "Wütend / Konfrontativ",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-01_Bild9.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "4af9fe8f7ce7d6e5571689ec9d9cfeeabcb11a2ea0d0571c488b97cda218f832",
+          "bytes": 228244
+        }
+      ]
+    },
+    {
+      "character": "Blodwen Balchder",
+      "setId": "set-02",
+      "sheet": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Sheets\\blodwen-balchder-set-02.png",
+      "sheetSha256": "9afcf9b36d5392863ab28cd89e3ad70296f6f384cc0e1db50d3e2635729e536b",
+      "sheetPixels": [
+        1254,
+        1254
+      ],
+      "referenceSha256": "629db9de48b4750355f0596d8d660a095b29c38770180a3e4f4820e9ae8e70a7",
+      "method": "AvatarSplitterProV3.get_crops; original implementation, no GUI or config changes",
+      "exports": [
+        {
+          "index": 1,
+          "emotion": "Traurig / Bedrückt",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild1.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "142e9384304860d405bc1303cf73471aa3e3664f3b34e9052f3354508d8e1dbe",
+          "bytes": 214444
+        },
+        {
+          "index": 2,
+          "emotion": "Weinend / Verzweifelt",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild2.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "0f852f063f68826e1662f541ce081e693f88d85a2f950878c855da42c9666f28",
+          "bytes": 219111
+        },
+        {
+          "index": 3,
+          "emotion": "Ängstlich / Erschrocken",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild3.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "0a3a2e9d7bfcd60024494acb779caf5f6d3d58e7750020614010f732bd72c502",
+          "bytes": 222596
+        },
+        {
+          "index": 4,
+          "emotion": "Verlegen / Beschämt",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild4.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "5b810aa0fe6d185a68d22545a78575ef22e65cb99f2673b9b8c0e20edf255ea8",
+          "bytes": 213025
+        },
+        {
+          "index": 5,
+          "emotion": "Schelmisch / Zuflüsternd",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild5.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "56223de1ab6177204b3395ea7c6cd79cee16d95e2746f74935b2a518ed2767d2",
+          "bytes": 215237
+        },
+        {
+          "index": 6,
+          "emotion": "Rufend / Verkündend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild6.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "7919e2125380c419d0373efd46657ccbac040b8e8667b72bf61f238df6622185",
+          "bytes": 227827
+        },
+        {
+          "index": 7,
+          "emotion": "Müde / Erschöpft",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild7.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "2cecabe0ba541a1bd246938d3dc84c384de1fa6bc77ebc71e57ec66c1583f8aa",
+          "bytes": 213375
+        },
+        {
+          "index": 8,
+          "emotion": "Stolz / Selbstsicher",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild8.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "12b090ccf4aef5b3cea3c767922970a400c572873d3151313f6adbad8aca5655",
+          "bytes": 224216
+        },
+        {
+          "index": 9,
+          "emotion": "Unsicher / Ratlos",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild9.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "fecdcad2ed4a5185dba3f7338fb515d0147f9aaa776bfa3bf7b4f3d7f73b8ecc",
+          "bytes": 225973
+        }
+      ]
+    },
+    {
+      "character": "Rice Balchder",
+      "setId": "set-01",
+      "sheet": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Sheets\\rice-balchder-set-01.png",
+      "sheetSha256": "90609d1363ce6c4755b17eac1fc53332e5c69ac549eb7accc77a38ed4199fd9c",
+      "sheetPixels": [
+        1254,
+        1254
+      ],
+      "referenceSha256": "c52fc21e02cb98abbcc4ff659d0dd92f7b3ab5102186dcedcfd1bd02d35619c2",
+      "method": "AvatarSplitterProV3.get_crops; original implementation, no GUI or config changes",
+      "exports": [
+        {
+          "index": 1,
+          "emotion": "Redend / Erklärend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild1.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "a97c216fd5ac1dcb059bfa7e8dd874afa897454989ff62b4f9b47a9beedcd017",
+          "bytes": 218995
+        },
+        {
+          "index": 2,
+          "emotion": "Freundlich / Begrüßend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild2.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "90fc1fbb5c4f8c894b7da5177b881ca943333e37a06f9fe117c867bbd14f3755",
+          "bytes": 206731
+        },
+        {
+          "index": 3,
+          "emotion": "Herzlich lachend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild3.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "a29831ce40845e7d1d02d9d7c9013a744fc6d5f872ca34aa5909aae1b1d0b296",
+          "bytes": 206897
+        },
+        {
+          "index": 4,
+          "emotion": "Nachdenklich / Grübelnd",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild4.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "807fc6cac214f497e4f8ed1069d6daf15d18862fc291af2d0f53a9909657a418",
+          "bytes": 203733
+        },
+        {
+          "index": 5,
+          "emotion": "Skeptisch / Misstrauisch",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild5.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "80f38c86f93159f1b91da20d177702d942e7172fbbfa1b131f9b66d1142d238f",
+          "bytes": 202237
+        },
+        {
+          "index": 6,
+          "emotion": "Überrascht / Verblüfft",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild6.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "2e9777575a393fe23faf357d744ddf35a43148802d9f3a6c9b493083accee3a3",
+          "bytes": 219217
+        },
+        {
+          "index": 7,
+          "emotion": "Genervt / Abweisend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild7.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "0ee869e975a6af094498173c0f452f8e79b1489b15f9578731c7adb892a76f11",
+          "bytes": 212682
+        },
+        {
+          "index": 8,
+          "emotion": "Entschlossen / Ernst",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild8.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "96dbd0b796680f27ddac41a7fc009b3d4f42d950d37f17795bff5980d25ea67a",
+          "bytes": 201522
+        },
+        {
+          "index": 9,
+          "emotion": "Wütend / Konfrontativ",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-01_Bild9.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "17c6dbf5a2ef8c6620a678efdc21766365cf5b81aa5b4530eebb7cc47ae9b66d",
+          "bytes": 211397
+        }
+      ]
+    },
+    {
+      "character": "Rice Balchder",
+      "setId": "set-02",
+      "sheet": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Sheets\\rice-balchder-set-02.png",
+      "sheetSha256": "247e381a6018fe85d9444b6302df08478091de2f1f2fac9711ff41ee228ca7f4",
+      "sheetPixels": [
+        1254,
+        1254
+      ],
+      "referenceSha256": "c52fc21e02cb98abbcc4ff659d0dd92f7b3ab5102186dcedcfd1bd02d35619c2",
+      "method": "AvatarSplitterProV3.get_crops; original implementation, no GUI or config changes",
+      "exports": [
+        {
+          "index": 1,
+          "emotion": "Traurig / Bedrückt",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild1.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "sha256": "81a67365a5b7aa30e155dd8a4cb7f8d401904add8d627831a8c1e56751d389a1",
+          "bytes": 208109
+        },
+        {
+          "index": 2,
+          "emotion": "Weinend / Verzweifelt",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild2.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "sha256": "5142ff1fb04274244d1b1d35a86c9ed785d7da70ad76c9d558085286f58d2aed",
+          "bytes": 216644
+        },
+        {
+          "index": 3,
+          "emotion": "Ängstlich / Erschrocken",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild3.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "sha256": "820089b8d862169b3e961e0a1ce3bebd30e78642f579ae085784af425af26bd8",
+          "bytes": 218937
+        },
+        {
+          "index": 4,
+          "emotion": "Verlegen / Beschämt",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild4.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "sha256": "f00c4f1ef103e2ceaffc709418ceb1b57c4134c6f54bbc7daebd5ff8249b4d74",
+          "bytes": 206074
+        },
+        {
+          "index": 5,
+          "emotion": "Schelmisch / Zuflüsternd",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild5.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "sha256": "6965a581a9f76817b0195cd104a3f68e957af8212d30097c229da7b6fd894338",
+          "bytes": 212731
+        },
+        {
+          "index": 6,
+          "emotion": "Rufend / Verkündend",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild6.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "sha256": "3e551187af7f303ab19c3664081b62cde99c369ed9b79e8dee8341107e52ffe5",
+          "bytes": 220363
+        },
+        {
+          "index": 7,
+          "emotion": "Müde / Erschöpft",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild7.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "sha256": "9ba00e51c31c3b9040376e995e4b5fe23b351446baa5bf10b5d212c871afe96f",
+          "bytes": 205013
+        },
+        {
+          "index": 8,
+          "emotion": "Stolz / Selbstsicher",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild8.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "sha256": "8d8a170edcb32a8c04b0627221aed1d003499520f54cacd6630fc4c226b7c5b1",
+          "bytes": 211625
+        },
+        {
+          "index": 9,
+          "emotion": "Unsicher / Ratlos",
+          "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild9.png",
+          "pixels": [
+            418,
+            418
+          ],
+          "cropBox": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "sha256": "9b03a943d340b788eab7075026dc97ddd05b4f652d4473ae30d21c05ace80980",
+          "bytes": 216161
+        }
+      ]
+    }
+  ],
+  "archive": {
+    "file": "AleriaAlmanach\\AvatarWerkstatt\\Output\\Balchder-Emotes-2026-10-30.zip",
+    "sha256": "3ac77cce8573e1de1e6639194f0fc25847006aebae1c7ecb2985ab31651f6d24",
+    "bytes": 14649647,
+    "entries": 67
+  },
+  "technicalStatus": "passed",
+  "visualStatus": "passed",
+  "visualReview": {
+    "reviewed": "All four complete sheets and all 36 exported PNGs in character-specific contact sheets",
+    "findings": "Distinct reactions and matching gestures; original character identities, age, dress, hair and warm room style retained; heads and gesturing hands visible; no text, separator lines or neighboring panels in final crops",
+    "contactSheets": [
+      "blodwen-balchder-18-emotes-pruefuebersicht.jpg",
+      "rice-balchder-18-emotes-pruefuebersicht.jpg"
+    ]
+  }
+}

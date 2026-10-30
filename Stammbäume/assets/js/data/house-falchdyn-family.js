@@ -172,7 +172,9 @@ const YOUNGEST_GENERATION = Object.freeze([
     registryManagedFields: ['title', 'tags', 'notes']
   }),
   person('gethin-falchdyn', 'Gethin Falchdyn', 'male', '1714', '', FALCHDYN_HOUSE_ID, {
-    notes: 'Unverheiratet und ohne Verlobung; seine berufliche Ausrichtung ist noch nicht festgelegt.',
+    title: 'Fürsprecher · vom gräflichen Hof für Gwrgan Cochdon bestellt',
+    tags: ['Fürsprecher', '26 Jahre', 'Gericht von Gwynthor'],
+    notes: 'Sohn Emrys Falchdyns und Lowri Llawens. Erlernte Schriftführung und Urkundenprüfung im Umfeld seiner Familie und wurde anschließend in der Gwynthorer Gerichtskanzlei zum Fürsprecher ausgebildet. Führt eine bescheidene eigene Praxis und übernimmt vom Hof zugewiesene Vertretungen mittelloser Parteien. Im Verfahren Gwrgan gegen Lleucu vertritt er den Heimkehrer. Er ist kein Mitglied des Marktes der Fortuna. Sachlich, beharrlich und mit Aktenarbeit vertraut; seine geringeren Mittel machen ihn nicht zum unfähigen Gegenpart Valeriano Faltos. Unverheiratet und ohne Verlobung.',
     registryManagedFields: ['title', 'tags', 'notes']
   }),
   person('seren-falchdyn', 'Seren Falchdyn', 'female', '1718', '', FALCHDYN_HOUSE_ID, {
@@ -532,9 +534,9 @@ export const HOUSE_FALCHDYN_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 2,
+    sourceRevision: 3,
     sourceModule: 'Haus Falchdyn und Celtigerns Echo (Ausarbeitung 1740)',
-    sourceNote: 'Haus Falchdyn folgt der vorgegebenen Struktur: ein unbekanntes Gründerpaar, genau ein serieller Überlieferungssprung und danach drei Brüder als Großvätergeneration. Dafydd und Iorwerth leben 1740 und führen die Linie über jeweils zwei Söhne bis zu elf unverheirateten Sprösslingen fort. Madoc besitzt ausschließlich vier wegverheiratete Töchter. Nur Llio wird mit dem bereits bestehenden Geraint Maerllys verbunden; dieselbe Weltperson und dieselbe Ehe erscheinen beidseitig, ohne fremde Nachkommen im Falchdyn-Baum zu doppeln. Die übrigen drei Zielhäuser bleiben mangels Vorgabe unbekannt. Dreizehn bereitgestellte Personenportraits, Wappen, Hausbild und Emblem von Celtigerns Echo wurden lokal gesichert und quellenbelegt. Die Berufsprofile der jungen Generation bleiben bis auf Ceredig, Branwen und Taliesin bewusst offen. Das eingebettete Häuser-Modul dokumentiert Zeitung, Schreiberschule, Redaktionsnetz und den volksnahen Familienkern.',
+    sourceNote: 'Haus Falchdyn folgt der vorgegebenen Struktur: ein unbekanntes Gründerpaar, genau ein serieller Überlieferungssprung und danach drei Brüder als Großvätergeneration. Dafydd und Iorwerth leben 1740 und führen die Linie über jeweils zwei Söhne bis zu elf unverheirateten Sprösslingen fort. Madoc besitzt ausschließlich vier wegverheiratete Töchter. Nur Llio wird mit dem bereits bestehenden Geraint Maerllys verbunden; dieselbe Weltperson und dieselbe Ehe erscheinen beidseitig, ohne fremde Nachkommen im Falchdyn-Baum zu doppeln. Die übrigen drei Zielhäuser bleiben mangels Vorgabe unbekannt. Dreizehn bereitgestellte Personenportraits und Gethins neu erzeugtes Porträt, Wappen, Hausbild und Emblem von Celtigerns Echo wurden lokal gesichert und quellenbelegt. Die Berufsprofile der jungen Generation bleiben bis auf Ceredig, Branwen, Taliesin und den gerichtlich ausgebildeten Fürsprecher Gethin bewusst offen. Das eingebettete Häuser-Modul dokumentiert Zeitung, Schreiberschule, Redaktionsnetz und den volksnahen Familienkern.',
     houseBiographyModule: FALCHDYN_HOUSE_BIOGRAPHY,
     chartLayoutPolicy: 'strict-v1',
     registryManagedHouseProfileFields: Object.freeze([

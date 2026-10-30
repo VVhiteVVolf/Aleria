@@ -103,7 +103,9 @@ test('five selected images retain dimensions, hashes and existing family emblems
   for (const hierarchy of post.pages.filter(p => p.hierarchyPage).map(p => p.hierarchy)) {
     for (const node of allNodes(hierarchy)) if (node.portrait) await access(new URL(node.portrait, new URL('AleriaAlmanach/', root)));
   }
-  assert.ok(FORTUNA_FACTIONS.slice(0, 2).every(f => f.emblem === '' && f.familyId === ''));
+  assert.equal(FORTUNA_FACTIONS[0].familyId, 'haus-falto');
+  assert.equal(FORTUNA_FACTIONS[1].familyId, '');
+  assert.ok(FORTUNA_FACTIONS.slice(0, 2).every(f => f.emblem === ''));
 });
 
 test('generated placement loads after all three businesses and uses the shared section destination', async () => {

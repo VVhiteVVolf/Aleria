@@ -106,7 +106,7 @@ function mountGallery(root, catalog) {
 
 const root = document.querySelector('[data-gallery]');
 try {
-  const response = await fetch(new URL('./data/catalog.json?v=20261030-bielle-brenor', import.meta.url));
+  const response = await fetch(new URL('./data/catalog.json?v=20261030-gwynthor-erbstreit', import.meta.url));
   if (!response.ok) throw new Error('Der Bildkatalog konnte nicht geladen werden. Bitte die Seite neu laden.');
   mountGallery(root, await response.json());
 } catch (error) {

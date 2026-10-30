@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-30",
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "gwrgan-cochdon",
+      "kind": "portrait",
+      "file": "portraits/gwrgan-cochdon.png",
+      "preset": "anime-scene-portrait",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4a554b2ce88ddc6d64a76d110c2d8b86ee10757a5677b88c10643253d3817600",
+      "promptFile": "portrait-specs-approved.json"
+    },
+    {
+      "id": "valeriano-falto",
+      "kind": "portrait",
+      "file": "portraits/valeriano-falto.png",
+      "preset": "anime-scene-portrait",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cf26489c6f3be71419a4f58d4b96ee53ae93ce2b9f303e99009f6ab962e66ebe",
+      "promptFile": "portrait-specs-approved.json"
+    },
+    {
+      "id": "lleucu-swyll",
+      "kind": "portrait",
+      "file": "portraits/lleucu-swyll.png",
+      "preset": "anime-scene-portrait",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6c611f8a62802ca083ee054c2f8aa5b0bf60bb5fb28cc870cc9f485c809ad21e",
+      "promptFile": "portrait-specs-approved.json"
+    },
+    {
+      "id": "eifion-twyllod",
+      "kind": "portrait",
+      "file": "portraits/eifion-twyllod.png",
+      "preset": "anime-scene-portrait",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "fb327809bf65ab28cf4b4875644aca62a62eb25ba4c198e57cfcc71985824e16",
+      "promptFile": "portrait-specs-approved.json"
+    },
+    {
+      "id": "gethin-falchdyn",
+      "kind": "portrait",
+      "file": "portraits/gethin-falchdyn.png",
+      "preset": "anime-scene-portrait",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "7d329cbefa742b408f0b511aac6ed8f636976daa1a97bf45b076e8d6f768e347",
+      "promptFile": "portrait-specs-approved.json"
+    },
+    {
+      "id": "cynfarch-llafnfor",
+      "kind": "portrait",
+      "file": "portraits/cynfarch-llafnfor.png",
+      "preset": "anime-scene-portrait",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "109921a54fdfef379c043caba005ee4ea9e96a1735f227b1d1b4f115b96d87e6",
+      "promptFile": "portrait-specs-approved.json"
+    },
+    {
+      "id": "crest-cochdon",
+      "kind": "crest",
+      "file": "crests/cochdon.png",
+      "preset": "fantasy-heraldic-emblem",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "3d77d273e78505d76d44c68ceb2971c37fdb8e4ca0ac6e7e30fe3bb5c9cfac44",
+      "promptFile": "heraldry-specs-approved.json",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "generatorOriginal": "diagnostics/gwynthor-erbstreit-2026-10-30/image-sources/cochdon-selected-generator.png",
+      "registryCopy": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Cochdon.png",
+      "corrections": "heraldry-edits.json"
+    },
+    {
+      "id": "crest-llafnfor",
+      "kind": "crest",
+      "file": "crests/llafnfor.png",
+      "preset": "fantasy-heraldic-emblem",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1f2976000d952f7fa5a4c48c5ec0696954959ec4b63f65368e570e27a762d693",
+      "promptFile": "heraldry-specs-approved.json",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "generatorOriginal": "diagnostics/gwynthor-erbstreit-2026-10-30/image-sources/llafnfor-selected-generator.png",
+      "registryCopy": "Stammbäume/assets/images/houses/Klaueninsel/haus-llafnfor.png",
+      "corrections": "heraldry-edits.json"
+    },
+    {
+      "id": "crest-twyllod",
+      "kind": "crest",
+      "file": "crests/twyllod.png",
+      "preset": "fantasy-heraldic-emblem",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a664d57e5207e9e9233a77a451584bcb8962dd401e081e6774aee3c849529553",
+      "promptFile": "heraldry-specs-approved.json",
+      "alphaValues": [
+        0,
+        255
+      ],
+      "rgbUnchanged": true,
+      "generatorOriginal": "diagnostics/gwynthor-erbstreit-2026-10-30/image-sources/twyllod-selected-generator.png",
+      "registryCopy": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Twyllod.png",
+      "corrections": "heraldry-edits.json"
+    }
+  ]
+}

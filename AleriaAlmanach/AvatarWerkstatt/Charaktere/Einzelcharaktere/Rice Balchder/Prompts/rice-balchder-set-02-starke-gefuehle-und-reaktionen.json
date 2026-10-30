@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "characterName": "Rice Balchder",
+  "characterFolder": "Charaktere/Einzelcharaktere/Rice Balchder",
+  "setId": "set-02",
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/rice-balchder.jpg",
+  "characterDescription": "Rice Balchder, the same 12-year-old boy as the reference, with child proportions and no ageing up. Preserve his softly rounded youthful face, large grey-blue eyes, short tousled copper/auburn-brown hair and little separated fringe locks. Identical dark charcoal/olive-black long-sleeved medieval tunic with a small notched round collar, small circular antique-gold house emblem on HIS LEFT chest (viewer right), simple brown leather waist belt with rectangular brass buckle. No beard, no adult musculature, no costume redesign. Expressions and gestures remain natural for a child.",
+  "theme": "Starke Gefühle und Reaktionen",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Überrascht / Verblüfft",
+      "gesture": "Eyes wide, eyebrows raised, mouth small and open in sudden surprise; both hands spontaneously lifted near the chest with separated relaxed fingers, palms tilted inward."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Ängstlich / Erschrocken",
+      "gesture": "Raised inner brows, fearful wide eyes and tense parted lips; upper body leaning back slightly, one open hand held protectively in front of the upper chest and the other clutching the opposite sleeve low. Keep the face visible."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Besorgt / Mitfühlend",
+      "gesture": "Brows drawn upward at their inner ends, worried compassionate eyes and softly speaking lips; one empty hand reaching gently forward palm up, the other resting low against the torso."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Wütend / Schreiend / Konfrontativ",
+      "gesture": "Angry knitted eyebrows and clearly open shouting mouth, intense direct gaze; one compact clenched fist at chest height, opposite palm making a firm emphatic downward gesture. No fighting equipment."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Genervt / Missbilligend / Geringschätzig",
+      "gesture": "Half-lidded unimpressed eyes, one brow lifted and a tight asymmetric mouth; one hand dismissively waving away at chest level, the other resting at the waist. Contained irritation, distinct from shouting."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Entschlossen / Stolz / Zuversichtlich",
+      "gesture": "Steady focused eyes and a small confident closed smile, chin slightly lifted, upright shoulders; one closed hand held firmly near the chest in a promise, the other hand on the hip. Civilian resolve."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Traurig / Enttäuscht / Weinend",
+      "gesture": "Downward gaze, eyebrows raised in the middle, trembling sad mouth and a few natural tears; one hand gently wiping the cheek with fingertips, the other lightly holding the opposite forearm, shoulders lowered. No exaggerated cartoon tears."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Verlegen / Ertappt / Entschuldigend",
+      "gesture": "Subtle natural blush, apologetic shy smile, eyes glancing down to the side; one hand rubbing the back of the neck while the other palm opens low in an awkward explanation."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Erschöpft / Resigniert / Überfordert",
+      "gesture": "Heavy eyelids and a weary exhale, brow tired and shoulders slumped; one hand rubbing the temple, opposite forearm resting across the lower torso. Eyes still visible, no sleep symbols."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "generationMode": "built-in image_gen",
+  "usedPrompt": "Prompts/rice-balchder-set-02-starke-gefuehle-und-reaktionen.txt",
+  "createdAt": "2026-10-30",
+  "userRequest": "Je zwei Sets für Blodwen und Rice; möglichst breites Emote-Spektrum.",
+  "sheetPath": "Sheets/rice-balchder-set-02-starke-gefuehle-und-reaktionen.png",
+  "sourceGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a18dac-d88b-7650-b68d-51abdba2594a\\exec-5bc57a99-4692-4569-a842-0527952419eb.png",
+  "visualReview": {
+    "reviewedAt": "2026-10-30",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle neun exportierten PNGs als Kontaktübersicht bei Originalgröße tatsächlich angesehen.",
+    "preview": "Verarbeitung/set-02/export-pruefung.png",
+    "checks": [
+      "Identität, Alter, Frisur, Kleidung und Farben gegenüber dem verbindlichen Originalporträt",
+      "18 unterschiedliche Reaktionen je Figur, passende leere Handgesten und konsistenter Anime-Stil",
+      "Köpfe und Gesten im Ausschnitt; keine Nachbarfinger oder Panelreste an den Schnittkanten",
+      "Keine Schrift, Nummerierung, Rahmen, weißen Trennlinien, Symbole oder ungefragten Requisiten",
+      "Alle exportierten PNGs in vier Kontaktübersichten bei Originalgröße visuell geprüft"
+    ]
+  }
+}

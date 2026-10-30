@@ -1,0 +1,446 @@
+{
+  "createdAt": "2026-10-30",
+  "character": "Rice Balchder",
+  "generationMode": "built-in image_gen",
+  "sourcePortrait": "Referenzen/rice-balchder.jpg",
+  "sourcePortraitSha256": "c52fc21e02cb98abbcc4ff659d0dd92f7b3ab5102186dcedcfd1bd02d35619c2",
+  "splitter": "AleriaAlmanach/AvatarWerkstatt/Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "splitterInvocation": "Vorhandene V3-get_crops/crop_box-Methoden mit Tcl-Variablen ohne GUI, ohne Änderung der Werkzeugdatei oder ihrer Konfiguration.",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Gespräch, Freude und Nähe",
+      "sheet": "Sheets/rice-balchder-set-01-gespraech-freude-und-naehe.png",
+      "sheetSha256": "fbc2e7657f1c607fcf9612459e46a30712c71db4a983ada19d4eb03165c3c659",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "position": "Oben links",
+          "emotion": "Freundlich / Begrüßend",
+          "gesture": "Warm welcoming smile, attentive eyes; one open hand raised beside the shoulder in a relaxed greeting, the other resting low. Keep all fingers inside this tile.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "ea4bd9caba68b373ed531bf2bd503e76f2157b788560969a812bddc883d728d0",
+          "bytes": 201550
+        },
+        {
+          "index": 2,
+          "position": "Oben Mitte",
+          "emotion": "Redend / Erklärend / Deutend",
+          "gesture": "Engaged speaking mouth, bright attentive brows; one open palm presenting to the side, the other hand making a small explanatory gesture close to the torso. Both hands entirely visible.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "2d0d1fde0dfe555053f6f8f8e715a92e37dc459b74168ee02d40ff825d9b62d3",
+          "bytes": 208487
+        },
+        {
+          "index": 3,
+          "position": "Oben rechts",
+          "emotion": "Nachdenklich / Abwägend",
+          "gesture": "Brows gently drawn together, eyes looking slightly upward to the side; fingertips touching the chin, opposite forearm supporting the elbow.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "e084df1d245e179d093d4d8e7d360cbf3a87cedca46ccfb38b58d63d4e92b348",
+          "bytes": 194454
+        },
+        {
+          "index": 4,
+          "position": "Mitte links",
+          "emotion": "Skeptisch / Misstrauisch",
+          "gesture": "One eyebrow raised, eyes narrowed slightly and lips doubtful; arms crossed at the lower chest, head tilted a little, shoulders guarded.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "0a6f83bb808a4fa31f4ed4249207b98af2b4dfe2fb77a55e15f22dc4604a948f",
+          "bytes": 194469
+        },
+        {
+          "index": 5,
+          "position": "Mitte Mitte",
+          "emotion": "Verwirrt / Ratlos / Unsicher",
+          "gesture": "Asymmetric puzzled brows, a small uncertain half-open mouth; both palms up in a compact shrug with slightly lifted shoulders, hands well inside the cell.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "24d78bbb0fc2a3dadf33c15b758f20e7a27ce14e6f98c4156de1e49110e4d6ea",
+          "bytes": 207921
+        },
+        {
+          "index": 6,
+          "position": "Mitte rechts",
+          "emotion": "Schelmisch / Vertraulich flüsternd",
+          "gesture": "Playful knowing sideways glance and small mischievous smile; one hand cupped beside the quietly speaking mouth without covering the face, the other relaxed across the lower torso.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "e23dd99c0d2d66ed894995900c50b30e69287d9393a33d2d3dfb3c1fe37e3bfc",
+          "bytes": 198975
+        },
+        {
+          "index": 7,
+          "position": "Unten links",
+          "emotion": "Rufend / Verkündend",
+          "gesture": "Mouth clearly open in a purposeful friendly call, brows lifted; one hand curved beside the mouth like a small megaphone and the other hand extended low toward the unseen listener. Clearly different from quiet whispering.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "1aa6c8851588963c845d8da575f58e15fe573c44efd30a1dd89bc662a438b4b3",
+          "bytes": 206257
+        },
+        {
+          "index": 8,
+          "position": "Unten Mitte",
+          "emotion": "Fröhlich / Herzlich lachend",
+          "gesture": "Genuine open joyful laughter, eyes happily narrowed, cheeks lifted; one hand lightly at the ribs and the other loosely lifted in amusement, torso only slightly inclined.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "bb3ce769fb84bd5db5cc2ae4e194689a3a6d0daec4c7bf08d5de822ba4f75c77",
+          "bytes": 204374
+        },
+        {
+          "index": 9,
+          "position": "Unten rechts",
+          "emotion": "Zuneigung / Dankbar / Erleichtert",
+          "gesture": "Gentle affectionate appreciative smile and soft eyes; one flat hand resting over the heart, the other open in a warm appreciative invitation, small grateful head incline. Family-friendly warmth.",
+          "file": "Output/rice-balchder-set-01-gespraech-freude-und-naehe_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "7775cbbea4ee8c3aadd6371be407b1ba8cb6e96058aa728f4346eb173affd327",
+          "bytes": 204525
+        }
+      ],
+      "usedPrompt": "Prompts/rice-balchder-set-01-gespraech-freude-und-naehe.txt",
+      "correctionPrompt": "Prompts/rice-balchder-set-01-lachen-korrektur.txt",
+      "cropCorrection": null,
+      "visualReview": {
+        "reviewedAt": "2026-10-30",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle neun exportierten PNGs als Kontaktübersicht bei Originalgröße tatsächlich angesehen.",
+        "preview": "Verarbeitung/set-01/export-pruefung.png",
+        "checks": [
+          "Identität, Alter, Frisur, Kleidung und Farben gegenüber dem verbindlichen Originalporträt",
+          "18 unterschiedliche Reaktionen je Figur, passende leere Handgesten und konsistenter Anime-Stil",
+          "Köpfe und Gesten im Ausschnitt; keine Nachbarfinger oder Panelreste an den Schnittkanten",
+          "Keine Schrift, Nummerierung, Rahmen, weißen Trennlinien, Symbole oder ungefragten Requisiten",
+          "Alle exportierten PNGs in vier Kontaktübersichten bei Originalgröße visuell geprüft"
+        ]
+      },
+      "correctionPrompts": [
+        "Prompts/rice-balchder-set-01-lachen-korrektur.txt"
+      ]
+    },
+    {
+      "setId": "set-02",
+      "theme": "Starke Gefühle und Reaktionen",
+      "sheet": "Sheets/rice-balchder-set-02-starke-gefuehle-und-reaktionen.png",
+      "sheetSha256": "3762f9eae1de69cad2ab7fba2625d01b0fada743405901912675938b155cd716",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "position": "Oben links",
+          "emotion": "Überrascht / Verblüfft",
+          "gesture": "Eyes wide, eyebrows raised, mouth small and open in sudden surprise; both hands spontaneously lifted near the chest with separated relaxed fingers, palms tilted inward.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "bb0b477fd584f8231c07779f805df6f8f391a0e6a12e0a5ed80db5fed32aa763",
+          "bytes": 221478
+        },
+        {
+          "index": 2,
+          "position": "Oben Mitte",
+          "emotion": "Ängstlich / Erschrocken",
+          "gesture": "Raised inner brows, fearful wide eyes and tense parted lips; upper body leaning back slightly, one open hand held protectively in front of the upper chest and the other clutching the opposite sleeve low. Keep the face visible.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "408da4d2bfeb039cf2033954cccaf65302f2fb7918b6585c0e096512c99d1d74",
+          "bytes": 211722
+        },
+        {
+          "index": 3,
+          "position": "Oben rechts",
+          "emotion": "Besorgt / Mitfühlend",
+          "gesture": "Brows drawn upward at their inner ends, worried compassionate eyes and softly speaking lips; one empty hand reaching gently forward palm up, the other resting low against the torso.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "7dfe6c680215d417aaac880823b6dc0b974990e15a146614add6ec8ae61cf708",
+          "bytes": 211643
+        },
+        {
+          "index": 4,
+          "position": "Mitte links",
+          "emotion": "Wütend / Schreiend / Konfrontativ",
+          "gesture": "Angry knitted eyebrows and clearly open shouting mouth, intense direct gaze; one compact clenched fist at chest height, opposite palm making a firm emphatic downward gesture. No fighting equipment.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "6dac0363ee45b577f29cbdfc3b23d0d38a99e5cf38419a8f871c70153f371105",
+          "bytes": 218734
+        },
+        {
+          "index": 5,
+          "position": "Mitte Mitte",
+          "emotion": "Genervt / Missbilligend / Geringschätzig",
+          "gesture": "Half-lidded unimpressed eyes, one brow lifted and a tight asymmetric mouth; one hand dismissively waving away at chest level, the other resting at the waist. Contained irritation, distinct from shouting.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "d0764269f3c92deb3845acac1b77e68837d27ac275cc5f54459a4d2baf01ea56",
+          "bytes": 216133
+        },
+        {
+          "index": 6,
+          "position": "Mitte rechts",
+          "emotion": "Entschlossen / Stolz / Zuversichtlich",
+          "gesture": "Steady focused eyes and a small confident closed smile, chin slightly lifted, upright shoulders; one closed hand held firmly near the chest in a promise, the other hand on the hip. Civilian resolve.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "61914261847a93c3539be09843b6753f320d40dc96c9431e3d627ed0c94dad87",
+          "bytes": 210206
+        },
+        {
+          "index": 7,
+          "position": "Unten links",
+          "emotion": "Traurig / Enttäuscht / Weinend",
+          "gesture": "Downward gaze, eyebrows raised in the middle, trembling sad mouth and a few natural tears; one hand gently wiping the cheek with fingertips, the other lightly holding the opposite forearm, shoulders lowered. No exaggerated cartoon tears.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "63fb97f24221c62a6b554d508041c8cf4ac40040808ea287c19698f68361cc0f",
+          "bytes": 206782
+        },
+        {
+          "index": 8,
+          "position": "Unten Mitte",
+          "emotion": "Verlegen / Ertappt / Entschuldigend",
+          "gesture": "Subtle natural blush, apologetic shy smile, eyes glancing down to the side; one hand rubbing the back of the neck while the other palm opens low in an awkward explanation.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "05250e66b867c7bc7546a88355753fe43343ba1857e723f0f4bbbbcc6988d1f3",
+          "bytes": 208410
+        },
+        {
+          "index": 9,
+          "position": "Unten rechts",
+          "emotion": "Erschöpft / Resigniert / Überfordert",
+          "gesture": "Heavy eyelids and a weary exhale, brow tired and shoulders slumped; one hand rubbing the temple, opposite forearm resting across the lower torso. Eyes still visible, no sleep symbols.",
+          "file": "Output/rice-balchder-set-02-starke-gefuehle-und-reaktionen_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "38f482a6bcdb7b6d0cdf2ed75969ac684044d13ee0d9ee346232acaedac52c6d",
+          "bytes": 204899
+        }
+      ],
+      "usedPrompt": "Prompts/rice-balchder-set-02-starke-gefuehle-und-reaktionen.txt",
+      "correctionPrompt": null,
+      "cropCorrection": null,
+      "visualReview": {
+        "reviewedAt": "2026-10-30",
+        "passed": true,
+        "reviewedAvatars": 9,
+        "method": "Alle neun exportierten PNGs als Kontaktübersicht bei Originalgröße tatsächlich angesehen.",
+        "preview": "Verarbeitung/set-02/export-pruefung.png",
+        "checks": [
+          "Identität, Alter, Frisur, Kleidung und Farben gegenüber dem verbindlichen Originalporträt",
+          "18 unterschiedliche Reaktionen je Figur, passende leere Handgesten und konsistenter Anime-Stil",
+          "Köpfe und Gesten im Ausschnitt; keine Nachbarfinger oder Panelreste an den Schnittkanten",
+          "Keine Schrift, Nummerierung, Rahmen, weißen Trennlinien, Symbole oder ungefragten Requisiten",
+          "Alle exportierten PNGs in vier Kontaktübersichten bei Originalgröße visuell geprüft"
+        ]
+      }
+    }
+  ],
+  "avatarCount": 18,
+  "outputFolder": "Output",
+  "visualReview": {
+    "reviewedAt": "2026-10-30",
+    "passed": true,
+    "reviewedAvatars": 18,
+    "checks": [
+      "Identität, Alter, Frisur, Kleidung und Farben gegenüber dem verbindlichen Originalporträt",
+      "18 unterschiedliche Reaktionen je Figur, passende leere Handgesten und konsistenter Anime-Stil",
+      "Köpfe und Gesten im Ausschnitt; keine Nachbarfinger oder Panelreste an den Schnittkanten",
+      "Keine Schrift, Nummerierung, Rahmen, weißen Trennlinien, Symbole oder ungefragten Requisiten",
+      "Alle exportierten PNGs in vier Kontaktübersichten bei Originalgröße visuell geprüft"
+    ]
+  }
+}

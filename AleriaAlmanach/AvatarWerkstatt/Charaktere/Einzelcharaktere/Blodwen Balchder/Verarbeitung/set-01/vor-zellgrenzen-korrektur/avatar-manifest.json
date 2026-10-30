@@ -1,0 +1,413 @@
+{
+  "createdAt": "2026-10-30",
+  "character": "Blodwen Balchder",
+  "generationMode": "built-in image_gen",
+  "sourcePortrait": "Referenzen/blodwen-balchder.jpg",
+  "sourcePortraitSha256": "629db9de48b4750355f0596d8d660a095b29c38770180a3e4f4820e9ae8e70a7",
+  "splitter": "AleriaAlmanach/AvatarWerkstatt/Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "splitterInvocation": "Vorhandene V3-get_crops/crop_box-Methoden mit Tcl-Variablen ohne GUI, ohne Änderung der Werkzeugdatei oder ihrer Konfiguration.",
+  "settings": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "sets": [
+    {
+      "setId": "set-01",
+      "theme": "Gespräch, Freude und Nähe",
+      "sheet": "Sheets/blodwen-balchder-set-01-gespraech-freude-und-naehe.png",
+      "sheetSha256": "4acdd416eee7c32aeebaae5898f76957e7f93aa0b55c4ea160cdee4f69a05ec4",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "position": "Oben links",
+          "emotion": "Freundlich / Begrüßend",
+          "gesture": "Warm welcoming smile, attentive eyes; one open hand raised beside the shoulder in a relaxed greeting, the other resting low. Keep all fingers inside this tile.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "072e041100e0460244798bc487d42550bb9e55df1abca94973f63f61dca74546",
+          "bytes": 218566
+        },
+        {
+          "index": 2,
+          "position": "Oben Mitte",
+          "emotion": "Redend / Erklärend / Deutend",
+          "gesture": "Engaged speaking mouth, bright attentive brows; one open palm presenting to the side, the other hand making a small explanatory gesture close to the torso. Both hands entirely visible.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "51c38f366dd89b54d84e859c2d39c7a4a1659693e5ffffcc191461ba108df5b7",
+          "bytes": 213528
+        },
+        {
+          "index": 3,
+          "position": "Oben rechts",
+          "emotion": "Nachdenklich / Abwägend",
+          "gesture": "Brows gently drawn together, eyes looking slightly upward to the side; fingertips touching the chin, opposite forearm supporting the elbow.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "52b11bb5e22a4c784fe91e83102592107524efc89da189b888d7e298e965037e",
+          "bytes": 208971
+        },
+        {
+          "index": 4,
+          "position": "Mitte links",
+          "emotion": "Skeptisch / Misstrauisch",
+          "gesture": "One eyebrow raised, eyes narrowed slightly and lips doubtful; arms crossed at the lower chest, head tilted a little, shoulders guarded.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "86520c11111b2b27776f76de0d575eb2740ed7bc20d38b9c3832ee9a3513438d",
+          "bytes": 207853
+        },
+        {
+          "index": 5,
+          "position": "Mitte Mitte",
+          "emotion": "Verwirrt / Ratlos / Unsicher",
+          "gesture": "Asymmetric puzzled brows, a small uncertain half-open mouth; both palms up in a compact shrug with slightly lifted shoulders, hands well inside the cell.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "28da98eb7cea374bc44e9f8b5290a9136f46aaec6fabab20a251e53667ebffcc",
+          "bytes": 216935
+        },
+        {
+          "index": 6,
+          "position": "Mitte rechts",
+          "emotion": "Schelmisch / Vertraulich flüsternd",
+          "gesture": "Playful knowing sideways glance and small mischievous smile; one hand cupped beside the quietly speaking mouth without covering the face, the other relaxed across the lower torso.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "412da0b979f9b1d5d39b151c71fa8d6b976a50d68028bb9c5453b78589e694ec",
+          "bytes": 213823
+        },
+        {
+          "index": 7,
+          "position": "Unten links",
+          "emotion": "Rufend / Verkündend",
+          "gesture": "Mouth clearly open in a purposeful friendly call, brows lifted; one hand curved beside the mouth like a small megaphone and the other hand extended low toward the unseen listener. Clearly different from quiet whispering.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "4c1e02298086de7cb7bd258420961c3b4a10c287d632495d3ea347dd4b405d58",
+          "bytes": 222971
+        },
+        {
+          "index": 8,
+          "position": "Unten Mitte",
+          "emotion": "Fröhlich / Herzlich lachend",
+          "gesture": "Genuine open joyful laughter, eyes happily narrowed, cheeks lifted; one hand lightly at the ribs and the other loosely lifted in amusement, torso only slightly inclined.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "330eff8138904157891052a0e891132396a117e078d83ee6038e2939192d8d23",
+          "bytes": 215009
+        },
+        {
+          "index": 9,
+          "position": "Unten rechts",
+          "emotion": "Zuneigung / Dankbar / Erleichtert",
+          "gesture": "Gentle affectionate appreciative smile and soft eyes; one flat hand resting over the heart, the other open in a warm appreciative invitation, small grateful head incline. Family-friendly warmth.",
+          "file": "Output/blodwen-balchder-set-01-gespraech-freude-und-naehe_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "9022049ce0a2d070bd28fc517a4510c911f06fdefa1a5fe13b09a01d250a4970",
+          "bytes": 213285
+        }
+      ],
+      "usedPrompt": "Prompts/blodwen-balchder-set-01-gespraech-freude-und-naehe.txt",
+      "correctionPrompt": "Prompts/blodwen-balchder-set-01-lachen-korrektur.txt",
+      "cropCorrection": null,
+      "visualReview": {
+        "passed": false,
+        "status": "Exportübersicht erstellt; Sichtprüfung ausstehend",
+        "preview": ".codex-temp/avatar-balchder-2026-10-30/blodwen-balchder-set-01-gespraech-freude-und-naehe-export-pruefung.png"
+      }
+    },
+    {
+      "setId": "set-02",
+      "theme": "Starke Gefühle und Reaktionen",
+      "sheet": "Sheets/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen.png",
+      "sheetSha256": "893ac70e608808846436814e1d8fa7af60dcd6d3a26e412a50b6d21cddfbb6ce",
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "cellSize": [
+        418,
+        418
+      ],
+      "avatarCount": 9,
+      "outputs": [
+        {
+          "index": 1,
+          "position": "Oben links",
+          "emotion": "Überrascht / Verblüfft",
+          "gesture": "Eyes wide, eyebrows raised, mouth small and open in sudden surprise; both hands spontaneously lifted near the chest with separated relaxed fingers, palms tilted inward.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild01.png",
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "0b5833eddba11cc73bbe7f2a008ae64143221026940b5fa2bffc3bad597c210f",
+          "bytes": 221788
+        },
+        {
+          "index": 2,
+          "position": "Oben Mitte",
+          "emotion": "Ängstlich / Erschrocken",
+          "gesture": "Raised inner brows, fearful wide eyes and tense parted lips; upper body leaning back slightly, one open hand held protectively in front of the upper chest and the other clutching the opposite sleeve low. Keep the face visible.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild02.png",
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "7e1b689787378121583de86d836bf40fb09255582ed651b0a1a58d73fe02bcc0",
+          "bytes": 217487
+        },
+        {
+          "index": 3,
+          "position": "Oben rechts",
+          "emotion": "Besorgt / Mitfühlend",
+          "gesture": "Brows drawn upward at their inner ends, worried compassionate eyes and softly speaking lips; one empty hand reaching gently forward palm up, the other resting low against the torso.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild03.png",
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "8b76f5a7fa798b2957182da8794528ab3484ab2196776c9ba9a1239c191cfc67",
+          "bytes": 220484
+        },
+        {
+          "index": 4,
+          "position": "Mitte links",
+          "emotion": "Wütend / Schreiend / Konfrontativ",
+          "gesture": "Angry knitted eyebrows and clearly open shouting mouth, intense direct gaze; one compact clenched fist at chest height, opposite palm making a firm emphatic downward gesture. No fighting equipment.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild04.png",
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "4e2fbb35a6ff36bba2834e9d572930aecaabea52ee118310dd7836835b7b6db0",
+          "bytes": 225015
+        },
+        {
+          "index": 5,
+          "position": "Mitte Mitte",
+          "emotion": "Genervt / Missbilligend / Geringschätzig",
+          "gesture": "Half-lidded unimpressed eyes, one brow lifted and a tight asymmetric mouth; one hand dismissively waving away at chest level, the other resting at the waist. Contained irritation, distinct from shouting.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild05.png",
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "1d49e8b0f03c98e6098ed29331a9dc3abeb14e58a2e0344f0ea015503804b6f8",
+          "bytes": 222807
+        },
+        {
+          "index": 6,
+          "position": "Mitte rechts",
+          "emotion": "Entschlossen / Stolz / Zuversichtlich",
+          "gesture": "Steady focused eyes and a small confident closed smile, chin slightly lifted, upright shoulders; one closed hand held firmly near the chest in a promise, the other hand on the hip. Civilian resolve.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild06.png",
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "a96c6e9f2f64fe57afab102fd50c985ad4df3feaa41b8b5edc7dbd751d6ad289",
+          "bytes": 214940
+        },
+        {
+          "index": 7,
+          "position": "Unten links",
+          "emotion": "Traurig / Enttäuscht / Weinend",
+          "gesture": "Downward gaze, eyebrows raised in the middle, trembling sad mouth and a few natural tears; one hand gently wiping the cheek with fingertips, the other lightly holding the opposite forearm, shoulders lowered. No exaggerated cartoon tears.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild07.png",
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "307c5569da9bb6e5e1e322f6cad1c5f36cc0a60013bf70f12554bb773811005a",
+          "bytes": 216228
+        },
+        {
+          "index": 8,
+          "position": "Unten Mitte",
+          "emotion": "Verlegen / Ertappt / Entschuldigend",
+          "gesture": "Subtle natural blush, apologetic shy smile, eyes glancing down to the side; one hand rubbing the back of the neck while the other palm opens low in an awkward explanation.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild08.png",
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "2ca6c670fcb2fc3e0e1bc7fbe7393fcdf2c3cfd3b11da5533b90cf40b37f6aec",
+          "bytes": 222260
+        },
+        {
+          "index": 9,
+          "position": "Unten rechts",
+          "emotion": "Erschöpft / Resigniert / Überfordert",
+          "gesture": "Heavy eyelids and a weary exhale, brow tired and shoulders slumped; one hand rubbing the temple, opposite forearm resting across the lower torso. Eyes still visible, no sleep symbols.",
+          "file": "Output/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen_Bild09.png",
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "size": [
+            418,
+            418
+          ],
+          "sha256": "742185369d51a10c2cc3bfe82834551ca785d4a2419e1ef42923eb4bce8ed41c",
+          "bytes": 215468
+        }
+      ],
+      "usedPrompt": "Prompts/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen.txt",
+      "correctionPrompt": "Prompts/blodwen-balchder-set-02-verlegenheit-korrektur.txt",
+      "cropCorrection": null,
+      "visualReview": {
+        "passed": false,
+        "status": "Exportübersicht erstellt; Sichtprüfung ausstehend",
+        "preview": ".codex-temp/avatar-balchder-2026-10-30/blodwen-balchder-set-02-starke-gefuehle-und-reaktionen-export-pruefung.png"
+      }
+    }
+  ],
+  "avatarCount": 18,
+  "outputFolder": "Output"
+}

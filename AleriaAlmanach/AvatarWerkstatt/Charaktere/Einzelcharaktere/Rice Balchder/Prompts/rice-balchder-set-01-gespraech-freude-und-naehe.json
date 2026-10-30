@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "characterName": "Rice Balchder",
+  "characterFolder": "Charaktere/Einzelcharaktere/Rice Balchder",
+  "setId": "set-01",
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/rice-balchder.jpg",
+  "characterDescription": "Rice Balchder, the same 12-year-old boy as the reference, with child proportions and no ageing up. Preserve his softly rounded youthful face, large grey-blue eyes, short tousled copper/auburn-brown hair and little separated fringe locks. Identical dark charcoal/olive-black long-sleeved medieval tunic with a small notched round collar, small circular antique-gold house emblem on HIS LEFT chest (viewer right), simple brown leather waist belt with rectangular brass buckle. No beard, no adult musculature, no costume redesign. Expressions and gestures remain natural for a child.",
+  "theme": "Gespräch, Freude und Nähe",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Freundlich / Begrüßend",
+      "gesture": "Warm welcoming smile, attentive eyes; one open hand raised beside the shoulder in a relaxed greeting, the other resting low. Keep all fingers inside this tile."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Redend / Erklärend / Deutend",
+      "gesture": "Engaged speaking mouth, bright attentive brows; one open palm presenting to the side, the other hand making a small explanatory gesture close to the torso. Both hands entirely visible."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Nachdenklich / Abwägend",
+      "gesture": "Brows gently drawn together, eyes looking slightly upward to the side; fingertips touching the chin, opposite forearm supporting the elbow."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Skeptisch / Misstrauisch",
+      "gesture": "One eyebrow raised, eyes narrowed slightly and lips doubtful; arms crossed at the lower chest, head tilted a little, shoulders guarded."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Verwirrt / Ratlos / Unsicher",
+      "gesture": "Asymmetric puzzled brows, a small uncertain half-open mouth; both palms up in a compact shrug with slightly lifted shoulders, hands well inside the cell."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Schelmisch / Vertraulich flüsternd",
+      "gesture": "Playful knowing sideways glance and small mischievous smile; one hand cupped beside the quietly speaking mouth without covering the face, the other relaxed across the lower torso."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Rufend / Verkündend",
+      "gesture": "Mouth clearly open in a purposeful friendly call, brows lifted; one hand curved beside the mouth like a small megaphone and the other hand extended low toward the unseen listener. Clearly different from quiet whispering."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Fröhlich / Herzlich lachend",
+      "gesture": "Genuine open joyful laughter, eyes happily narrowed, cheeks lifted; one hand lightly at the ribs and the other loosely lifted in amusement, torso only slightly inclined."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Zuneigung / Dankbar / Erleichtert",
+      "gesture": "Gentle affectionate appreciative smile and soft eyes; one flat hand resting over the heart, the other open in a warm appreciative invitation, small grateful head incline. Family-friendly warmth."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "rice-balchder-set-01-gespraech-freude-und-naehe_Bild01.png bis _Bild09.png",
+  "status": "erzeugt, mit V3 zerlegt und visuell geprüft",
+  "generationMode": "built-in image_gen",
+  "usedPrompt": "Prompts/rice-balchder-set-01-gespraech-freude-und-naehe.txt",
+  "createdAt": "2026-10-30",
+  "userRequest": "Je zwei Sets für Blodwen und Rice; möglichst breites Emote-Spektrum.",
+  "initialPromptIssue": "Im ersten Generierungsprompt wiederholte Bottom Center versehentlich die Center-Anweisung. Gesonderter Korrekturprompt stellt die geplante achte Reaktion her; Erstprompt und Erstfassung erhalten.",
+  "sheetPath": "Sheets/rice-balchder-set-01-gespraech-freude-und-naehe.png",
+  "sourceGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a18dac-d88b-7650-b68d-51abdba2594a\\exec-d221873c-13a9-47e3-9d46-28de8626e92c.png",
+  "correctionPrompt": "Prompts/rice-balchder-set-01-lachen-korrektur.txt",
+  "visualReview": {
+    "reviewedAt": "2026-10-30",
+    "passed": true,
+    "reviewedAvatars": 9,
+    "method": "Alle neun exportierten PNGs als Kontaktübersicht bei Originalgröße tatsächlich angesehen.",
+    "preview": "Verarbeitung/set-01/export-pruefung.png",
+    "checks": [
+      "Identität, Alter, Frisur, Kleidung und Farben gegenüber dem verbindlichen Originalporträt",
+      "18 unterschiedliche Reaktionen je Figur, passende leere Handgesten und konsistenter Anime-Stil",
+      "Köpfe und Gesten im Ausschnitt; keine Nachbarfinger oder Panelreste an den Schnittkanten",
+      "Keine Schrift, Nummerierung, Rahmen, weißen Trennlinien, Symbole oder ungefragten Requisiten",
+      "Alle exportierten PNGs in vier Kontaktübersichten bei Originalgröße visuell geprüft"
+    ]
+  },
+  "correctionPrompts": [
+    "Prompts/rice-balchder-set-01-lachen-korrektur.txt"
+  ]
+}

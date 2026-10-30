@@ -9,4 +9,6 @@ Diesen gesamten Ordner nach `Charaktere/Einzelcharaktere/<Charaktername>` oder `
 - `Verarbeitung/set-01`: Arbeitskopie eines Sheets für die Ordnerverarbeitung. V3 legt seine Ausgabe in `output` und verschiebt die Eingabe nach `Benutzt`.
 - `Output`: alle geprüften fertigen Einzelavatare dieser Figur, gemeinsam für sämtliche Sets. Keine Unterordner pro Set; Figur und Set im Dateinamen erhalten.
 
+Zur Übergabe immer zusätzlich den Ordner `AvatarWerkstatt/Output/<vollständiger Personenname>/` mit allen fertigen Einzelavatare-PNGs dieser Person bereitstellen und bei weiteren Sets ergänzen. Die Bilder liegen darin unmittelbar gemeinsam. Getrennte Set-Ordner nur auf ausdrückliche vorherige Nutzeranweisung, etwa „trenne set 1 von set2 ordnertechnisch“. Das gilt auch für Anlässe und Kleidungsvarianten. Vorhandene Dateien und Varianten erhalten; abweichende gleichnamige Bilder nicht still überschreiben.
+
 Die `.gitkeep`-Dateien erhalten leere Arbeitsordner in Git. Nur neue Verarbeitungsläufe bekommen eigene Arbeitsordner, etwa `Verarbeitung/set-02`. Fertige Bilder bleiben gemeinsam unter `Output` und erhalten eindeutige Dateinamen. Die Auftragsvorlage liegt zentral unter `Vorlagen/Avatar-Auftrag.json`, der vollständige Ablauf in `AvatarWerkstatt/README.md`.

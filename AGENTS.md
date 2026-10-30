@@ -2,6 +2,13 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
+Nutzerfreigabe vom 30. Oktober 2026: **„Dann los!“**, als Antwort auf den noch
+ausstehenden Push und Deploy des Gerichtsfalls. Sie umfasst Gwrgan gegen Lleucu,
+die korrigierte Swyll-Darstellung, den erweiterten Twyllod-Hof mit Glendowers
+Vorgeschichte, die neuen Familien, Porträts und Wappen sowie den vierseitigen
+Gerichtsaushang mit Plakat, Icons und Unterschriften. Quellen und Prüfbelege
+bleiben erhalten; private Dossiers und Browserentwürfe bleiben ausgeschlossen.
+
 Nutzerfreigabe vom 30. Oktober 2026: **„okay pushe alles auf master und deploy“**.
 Freigegeben ist der gesamte jetzt vorhandene lokale Stand einschließlich der
 Talyndor- und Brevanor-Vorbereitungsseiten, der sieben Brevanor-Klassen mit
@@ -127,6 +134,8 @@ Freigaben wie „alle lokalen Änderungen veröffentlichen“ schließen ausdrü
 geheime Dossiers nicht ein; ihre Offenlegung benötigt eine eigene Freigabe.
 
 # Dauerhafter Arbeitsablauf für Charakteravatare
+
+Verbindliche Ausgabevorgabe vom 30. Oktober 2026: Für jede Person einen Ordner mit ihrem vollständigen Namen unter `AleriaAlmanach/AvatarWerkstatt/Output/<Personenname>` bereitstellen. Alle fertigen Einzelavatare dieser Person liegen dort unmittelbar gemeinsam; weitere Sets ergänzen denselben Personenordner. Sets nur dann auf getrennte Ordner verteilen, wenn der Nutzer dies vor dem Auftrag ausdrücklich verlangt, etwa: „trenne set 1 von set2 ordnertechnisch“. Diese Vorgabe gilt auch für benannte Gruppenmitglieder und Kleidungsvarianten. Die interne Werkstattstruktur mit Quellen, Prompts, Sheets und Verarbeitung bleibt erhalten; bei neuen Exporten den benannten Ausgabeordner anhand der fertigen PNGs aktualisieren, vorhandene Dateien nicht still überschreiben.
 
 Die am 11. Oktober 2026 eingerichtete [AvatarWerkstatt](AleriaAlmanach/AvatarWerkstatt/README.md) enthält die drei originalen Avatar-Anleitungen mit vollständigen Text-Lesefassungen, den Avatar Splitter Pro V3, sechs angesehene 9er-Beispiele sowie die übernommenen Bestände von Idwals Crew, Lachende Nixe, Schwarzfische, Yvain und Gawains Hochzeit. Vor Avatar-Aufträgen die Werkstatt-Anweisungen und den Master-Prompt lesen und das verbindliche Charakterporträt tatsächlich ansehen. Reaktionssheets verwenden **1:1 mit 3×3 Feldern**; Identität, Kleidung, Stil, Hintergrund und Beleuchtung erhalten, jede Reaktion mit eigener Mimik und passender Gestik. Das 2:3-Format normaler Porträts gilt nicht für diese Sheets. Künftige Figuren bekommen Einzel- oder Gruppenordner nach der dortigen Vorlage. Originale erhalten; die verschiebende Ordnerverarbeitung des Splitterers ausschließlich mit Arbeitskopien verwenden. Auftrag, Sheets und fertige Einzelavatare im jeweiligen Charakterordner getrennt ablegen.
 

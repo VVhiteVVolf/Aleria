@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-30",
+  "tool": "built-in image_gen",
+  "presetSource": "AleriaAlmanach/docs/art/image-style-presets.json",
+  "decisions": {
+    "bride": "Lleucu Swyll; twin sister of Rhodri, child of Emyr and Tegwen",
+    "appointedAdvocate": "Gethin Falchdyn,26",
+    "rescuer": "46; approved proposed appearance"
+  },
+  "entries": [
+    {
+      "id": "gwrgan-cochdon",
+      "file": "portraits/gwrgan-cochdon.png",
+      "preset": "anime-scene-portrait",
+      "prompt": "Use case: illustration-story. Create ONE character portrait for Aleria, vertical 2:3, 1024x1536. Tales of Xillia/Frieren Anime Art Style. Markante Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: Gwrgan, approximately 43-year-old human seafarer returned after twenty years of captivity. Strong broad working build, mature weatherbeaten handsome face, tired BLUE eyes, scars across brow and cheek, healed scars visible on hands. He has been freshly shaved and decently clothed by his rescuer, NOT a ragged beggar. Very long brown hair extending past the shoulders: DARK BROWN at the roots and upper lengths, progressively fading naturally to LIGHT BROWN toward the long ends. Upper/back portions are tied together with a plain functional cord in a loose practical partial ponytail; remaining long hair stays down. Do not make him blond, white-haired, or gray-haired. Clean simple good wool shirt in muted slate blue, plain brown waistcoat and leather belt, no armour, no fancy uniform, no hat, no jewelry. His arms are demonstratively CROSSED over his chest; both forearms and hands naturally composed. Stubborn proud guarded expression with restrained hurt and exhaustion, not villainous, not smiling. Portrait framed from head to mid-thigh, entire hair and crossed forearms visible, natural human ears. Background: quiet softly simplified timber quay and one indistinct moored merchant ship at Gwynthor harbour in cool daylight; restful composition, few objects. No words, heraldic badges, labels, watermark or border."
+    },
+    {
+      "id": "valeriano-falto",
+      "file": "portraits/valeriano-falto.png",
+      "preset": "anime-scene-portrait",
+      "prompt": "Use case: illustration-story. Create ONE character portrait for Aleria, vertical 2:3, 1024x1536. Tales of Xillia/Frieren Anime Art Style. Markante Gesichtszüge und Proportionen, klare Anime-Lineart und sauberes Cel-Shading. Weiche simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Subject: Valeriano Falto, a 38-year-old human male legal advocate of a prosperous merchant guild, educated in Venalys and practicing in Gwynthor. Falto family appearance is distinctive: VERY PALE LIGHT SKY-BLUE naturally strongly CURLY hair and VERY PALE BLUE eyes, curly well-groomed beard in the same light sky-blue. Visible curls form the hair and neat full beard; not straight hair, not white or silver hair, not dark blue. Clearly a mature attractive 38-year-old man, intelligent expressive face and confident professional gaze, composed and courteous, not scheming or evil. Elegant Latin-Italian late-medieval fantasy civilian clothing: beautifully tailored dark wine doublet, cream shirt, dark navy short mantle, restrained fine gold edging and discreet clasp, high-quality rich fabric, no hat, no armour, no modern suit or necktie. One hand calmly holds a closed slim leather document folio at waist height, other relaxed on folio. Frame from head to mid-thigh, curls and hands fully visible, natural rounded human ears. Background: quiet warm stone arcade by a guild office, distant simplified harbour light, restful not crowded. No bookshelves stuffed with objects, no scales of justice, no text, guild logos, heraldic badges, labels, watermark or border."
+    },
+    {
+      "id": "lleucu-swyll",
+      "file": "portraits/lleucu-swyll.png",
+      "preset": "anime-scene-portrait",
+      "references": [
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-swyll\\meredith-swyll.png"
+      ],
+      "prompt": "Use case: illustration-story. Using the supplied Swyll portrait as FAMILY RESEMBLANCE and clear anime drawing reference, create a NEW DIFFERENT adult family member: Lleucu Swyll, 38-year-old prosperous human shipowning merchant woman. NOT the young woman in the reference; her aunt, distinctly mature, dignified and self-possessed. Red curly hair and vivid green eyes are the shared family features. Beautiful well-maintained 38-year-old face, subtle mature lines, proud poised expression, slightly raised chin, confident direct gaze with quiet warmth, never villainous or smug. Rich RED naturally CURLY hair elegantly partly pinned up with long loose ringlets around shoulders, not a straight braid. Dress as a wealthy Cenyri owner: elegant deep teal long-sleeved gown with fine restrained gold embroidery, cream inset and tasteful gold earrings, good quality fabric, no royal crown, no hat, no armour. Hands calmly together at waist, one resting over the other, composed upright stance. Portrait head to mid-thigh with all hair and hands visible. Quiet background: her tasteful timber-and-stone merchant house with soft harbour daylight at a window, very few props. Output2:3 portrait1024x1536. Tales of Xillia/Frieren Anime Art Style. Clear anime lineart, clean cel-shading, simple soft textures, expressive mature features, no photorealism or painted rendering. Natural rounded human ears. No text, labels, coat of arms or watermark."
+    },
+    {
+      "id": "eifion-twyllod",
+      "file": "portraits/eifion-twyllod.png",
+      "preset": "anime-scene-portrait",
+      "prompt": "Use case: illustration-story. Create ONE new portrait of Eifion Twyllod, a 44-year-old human Cenyri merchant-ship captain from an ordinary fishing family who worked his way up. Vertical2:3 portrait1024x1536. Tales of Xillia/Frieren Anime Art Style, clear anime lineart and clean cel-shading, simple soft textures, no realistic textures, photorealism or painted rendering. Sand-brown hair, neatly kept but lightly wind-tousled, warm BROWN eyes, short neatly trimmed brown beard. Healthy strong practical build, weathered attractive mature face with smile lines, reassuring capable gaze and quiet friendly expression. Good quality but practical late-medieval captain's seafaring clothes: dark navy wool coat open over warm cream linen shirt and muted brown waistcoat, leather belt, simple cuffs. NO HAT, NO TRICORN, no pirate costume, no eyepatch, no fancy military medals, no armour. Calm upright stance on the main merchant ship at the Gwynthor quay, one hand relaxed on a timber rail and other resting at his belt. Head to mid-thigh, hands and hair fully visible. Sparse simplified ship rail, rigging and soft harbour light in background. Human rounded ears. No words, heraldic badge, logo, frame or watermark."
+    },
+    {
+      "id": "gethin-falchdyn",
+      "file": "portraits/gethin-falchdyn.png",
+      "preset": "anime-scene-portrait",
+      "references": [
+        "E:\\Aleria\\Stammbäume\\assets\\images\\portraits\\haus-falchdyn\\emrys-falchdyn.png"
+      ],
+      "prompt": "Use case: illustration-story. Use the supplied portrait of Emrys Falchdyn as FAMILY RESEMBLANCE and anime art reference. Create a NEW DIFFERENT person, his 26-year-old human son Gethin Falchdyn, a properly trained local court advocate appointed to assist an indigent returned captive. Same family's dark brown hair, gray-hazel eyes, strong eyebrows and clear face shape, but clearly a younger clean-shaven adult, not a copy of his father. Medium-length neat brown hair tucked behind the ears, thoughtful attentive expression, restrained confidence and approachable serious gaze, not timid, naive, grinning or sinister. Simple well-maintained professional clothing in the Falchdyn palette: dark charcoal doublet, muted dark red sleeveless overcoat, cream collar, modest brass fasteners. More modest than a rich Italian guild advocate; no modern suit, wig, mortarboard, hat or armour. Holds a slim set of tied parchment case notes close to the waist, other hand relaxed, natural fingers. Head to mid-thigh portrait, entire hair and both hands visible. Background quiet stone arcade of a Cenyri courthouse, sparse with no legible signs, calm neutral daylight. 2:3 portrait1024x1536. Tales of Xillia/Frieren Anime Art Style, clean expressive lineart and cel-shading, soft simple anime textures, no realistic skin or painterly rendering. Normal rounded human ears. No text, press masthead, scales of justice, badge, frame or watermark."
+    },
+    {
+      "id": "cynfarch-llafnfor",
+      "file": "portraits/cynfarch-llafnfor.png",
+      "preset": "anime-scene-portrait",
+      "prompt": "Use case: illustration-story. Create ONE portrait of Sir Cynfarch Llafnfor, a 46-year-old human Cenyri knight-lord and experienced patrol-ship captain serving House Dyfrgi of Caer Cryftlawd in the Claw Islands. He rescued Gwrgan and twelve escaped thralls and became his reliable friend. Do not illustrate the rescue. Shoulder-length DARK BLOND hair with the first modest gray streaks at temples, gray-green eyes, short neatly groomed dark blond beard with a little gray. Powerful seafaring build, mature weather-beaten face with natural smile lines, steady warm direct gaze, dignified approachable expression. Good Cenyri knight-and-captain clothing: sensible dark navy high-collared doublet beneath a short sea-blue mantle fastened with plain silver, a restrained well-kept steel breastplate suitable for a shipboard knight, leather sword belt with only hilt at hip. No hat, no tricorn, no giant shoulder armour, no helmet, no modern naval uniform, no invented heraldic badge. Quiet confident stance, one hand naturally at his belt, other at his side. Head to mid-thigh portrait with hair and hands completely visible. Background his patrol vessel at a rocky Cenyri harbour with few ropes and soft blue sea, calm not dramatic. Vertical2:3 portrait1024x1536. Tales of Xillia/Frieren Anime Art Style, clear mature expressive lineart and clean cel-shading, soft simple anime textures, no realistic skin, photorealism or painterly rendering. Rounded human ears. No lettering, logos, frame or watermark."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { buildHouseholdQuestNotices } from './build-household-quests.mjs';
 import { buildZitteraaleWantedNotices } from './quests/zitteraale-wanted.mjs';
 import { buildFleischsammlerNotices, FLEISCHSAMMLER_BOARD_BINDING } from './quests/fleischsammler-wanted.mjs';
 import { buildNoticeSignoffUpdates } from './issuers/notice-signoffs.mjs';
+import { buildGwrganLleucuNotices, COURT_BOARD_BINDING } from './notices/gwrgan-gegen-lleucu.mjs';
 
 export async function buildGwynthorQuestPack() {
   const herluin = buildHerluinMissingNotices();
@@ -15,7 +16,10 @@ export async function buildGwynthorQuestPack() {
       { field: 'noticeGroupId', missing: true, to: current.noticeGroupId },
     ] };
   });
-  const notices = [...herluin, ...buildHouseholdQuestNotices(), ...buildZitteraaleWantedNotices(), ...await buildFleischsammlerNotices()];
+  const art = JSON.parse(await readFile(new URL('../assets/data/board-art-catalog.json', import.meta.url), 'utf8'));
+  const courtAsset = art.posters.find(asset => asset.id === COURT_BOARD_BINDING.assetId);
+  if (!courtAsset) throw new Error('Gerichtsplakat fehlt im Bildkatalog.');
+  const notices = [...herluin, ...buildHouseholdQuestNotices(), ...buildZitteraaleWantedNotices(), ...await buildFleischsammlerNotices(), ...buildGwrganLleucuNotices(courtAsset)];
   const voiceBaseline = JSON.parse(await readFile(new URL('./data/gwynthor-notice-voice-v1.json', import.meta.url), 'utf8'));
   for (const old of voiceBaseline.notices) {
     const current = notices.find(notice => notice.id === old.id);
@@ -42,7 +46,7 @@ export async function buildGwynthorQuestPack() {
     updates.push({ id: `${old.id}:20261021-egon-issuer-media`, noticeId: old.id, fields });
   }
   updates.push(...buildNoticeSignoffUpdates(notices.map(notice => notice.id)));
-  return { schemaVersion: 2, zettel: notices, updates, boardBindings: [FLEISCHSAMMLER_BOARD_BINDING] };
+  return { schemaVersion: 2, zettel: notices, updates, boardBindings: [FLEISCHSAMMLER_BOARD_BINDING, COURT_BOARD_BINDING] };
 }
 
 export async function writeGwynthorQuestPack({ check = false } = {}) {
@@ -52,7 +56,7 @@ export async function writeGwynthorQuestPack({ check = false } = {}) {
     if (await readFile(target, 'utf8') !== content) throw new Error('Gwynthors Quest-Aushänge müssen neu erzeugt werden.');
   } else {
     await writeFile(target, content);
-    console.log('Gwynthor: fünf Aushänge mit insgesamt achtzehn Blättern · Celynfor bleibt offen.');
+    console.log('Gwynthor: sechs Aushänge mit insgesamt zweiundzwanzig Blättern · Celynfor bleibt offen.');
   }
 }
 

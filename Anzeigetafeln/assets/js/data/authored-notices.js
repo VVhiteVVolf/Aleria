@@ -74,7 +74,20 @@
     for (const binding of bindings) {
       if (!binding || !addedIds.has(binding.noticeId) || next.posters.some(poster => poster.noticeId === binding.noticeId)) continue;
       const index = next.posters.findIndex(poster => poster.id === binding.posterId && poster.assetId === binding.assetId && !poster.noticeId);
-      if (index < 0) continue;
+      if (index < 0) {
+        // A newly authored publication may bring its own new paper once. An
+        // explicitly emptied board and deliberately removed/acknowledged
+        // publications remain untouched on subsequent loads.
+        const paper = binding.poster;
+        if (!paper || !next.posters.length || next.posters.length >= 500
+          || paper.id !== binding.posterId || paper.assetId !== binding.assetId
+          || next.posters.some(poster => poster.id === binding.posterId)) continue;
+        if (next === layout) next = { ...layout, posters: [...layout.posters] };
+        next.posters.push({ ...JSON.parse(JSON.stringify(paper)), noticeId: binding.noticeId,
+          layer: Math.max(Number(paper.layer) || 0, ...next.posters.map(poster => Number(poster.layer) || 0)) + 1,
+          pin: { ...paper.pin, enabled: true } });
+        continue;
+      }
       if (next === layout) next = { ...layout, posters: [...layout.posters] };
       const poster = next.posters[index];
       next.posters[index] = { ...poster, noticeId: binding.noticeId, pin: { ...poster.pin, enabled: true } };

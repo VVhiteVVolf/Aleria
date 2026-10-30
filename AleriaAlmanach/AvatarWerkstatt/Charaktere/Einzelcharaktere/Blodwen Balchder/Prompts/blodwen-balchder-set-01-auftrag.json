@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "characterName": "Blodwen Balchder",
+  "characterFolder": "Charaktere/Einzelcharaktere/Blodwen Balchder",
+  "setId": "set-01",
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/blodwen-balchder.jpg",
+  "characterDescription": "Blodwen Balchder, the young woman EXACTLY as in the reference: youthful oval face, warm fair skin, large grey-blue eyes, auburn brown side-swept hair in one thick braid over HER RIGHT shoulder (viewer's LEFT), same loose side locks. Same square-necked black long-sleeved medieval dress with muted gold curling floral embroidery on bodice and cuffs, same small oval gold medallion at center neckline. Preserve her youthful face, age, hairstyle and proportions; no new jewelry.",
+  "theme": "Gespräch, Freude und klare Reaktionen",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "width": 1254,
+    "height": 1254
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Redend / Erklärend",
+      "gesture": "Offene Handflächen, erläuternde Gestik, aufmerksamer Blick.",
+      "generationDirection": "Speaking and explaining: attentive eyes, mouth mid-sentence, one open palm offering an explanation, other hand making a small conversational gesture."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Freundlich / Begrüßend",
+      "gesture": "Warmes Lächeln, kleine offene Begrüßung mit einer Hand.",
+      "generationDirection": "Friendly greeting: warm closed-mouth smile, one hand raised in an open-palmed greeting at shoulder height, relaxed shoulders."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Herzlich lachend",
+      "gesture": "Fröhliche Augen, offen lachender Mund, Hand locker vor dem Mund.",
+      "generationDirection": "Wholehearted laughter: joyful narrowed eyes, open laughing mouth, one hand loosely near the mouth, other across upper abdomen."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Nachdenklich / Grübelnd",
+      "gesture": "Finger ans Kinn, seitlicher Blick nach oben, leicht gerunzelte Brauen.",
+      "generationDirection": "Thoughtful puzzling: fingertips under chin, eyes glancing upward sideways, gently knitted brows."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Skeptisch / Misstrauisch",
+      "gesture": "Eine Braue hochgezogen, prüfender Blick, verschränkte Arme.",
+      "generationDirection": "Skeptical suspicion: one eyebrow raised, narrowed appraising sideways gaze, pursed lips, folded arms."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Überrascht / Verblüfft",
+      "gesture": "Weite Augen, kleiner offener Mund, beide Hände spontan angehoben.",
+      "generationDirection": "Startled surprise: wide eyes, small open mouth, both open hands lifted beside upper chest."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Genervt / Abweisend",
+      "gesture": "Halb geschlossene Augen, angespannter Mund, abwinkende Hand.",
+      "generationDirection": "Annoyed disapproval: half-lidded eyes, taut mouth, one hand waving dismissively outward, other at waist."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Entschlossen / Ernst",
+      "gesture": "Direkter Blick, aufrecht, Faust ruhig vor der Brust.",
+      "generationDirection": "Quiet determination: focused direct eyes, firm closed mouth, upright posture, one clenched hand steadily before chest."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Wütend / Konfrontativ",
+      "gesture": "Gerunzelte Brauen, tadelnder Mund, Zeigefinger nach vorn.",
+      "generationDirection": "Angry confrontation: deeply knitted brows, mouth delivering a forceful rebuke, pointing forward, torso leaning slightly forward."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "blodwen-balchder-set-01_Bild1.png bis _Bild9.png",
+  "status": "exportiert",
+  "createdAt": "2026-10-30",
+  "referenceSource": "Stammbäume/assets/images/portraits/haus-balchder/blodwen-balchder.jpg",
+  "generator": "Built-in image_gen",
+  "promptFile": "blodwen-balchder-set-01-prompt.txt",
+  "sheetFile": "Sheets/blodwen-balchder-set-01.png",
+  "exportManifest": "Verarbeitung/set-01/export-manifest.json"
+}

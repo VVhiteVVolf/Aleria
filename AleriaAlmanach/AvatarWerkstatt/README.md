@@ -42,6 +42,8 @@ Jeder Gruppenordner besitzt dieselbe Struktur. Bei mehreren benannten Figuren in
 
 Für neue Figuren oder Gruppen [Vorlagen/Charakterordner](Vorlagen/Charakterordner/) an die passende Stelle kopieren und benennen. Pro neuem Set einen eigenen Arbeitsordner `set-02`, `set-03` usw. unter `Verarbeitung` anlegen. Seit Nutzervorgabe vom 18. Oktober 2026 liegen alle fertigen Avatare einer Figur direkt in ihrem gemeinsamen `Output`-Ordner; jede Figur hat einen eigenen Output. Dateinamen enthalten Figur und Set, beispielsweise `yvain-allgemein-set-01_Bild01.png`. Bestehende Dateien nicht überschreiben.
 
+Für die Übergabe gilt seit dem 30. Oktober 2026 zusätzlich: Unter `AvatarWerkstatt/Output/<vollständiger Personenname>/` alle fertigen Einzelavatare dieser Person direkt gemeinsam bereitstellen und diesen Personenordner verlinken. Weitere Sets ergänzen denselben Ordner, auch bei unterschiedlichen Anlässen oder Kleidungsvarianten. Die fertigen PNGs aus dem internen Werkstattexport bei jeder Ergänzung dorthin übernehmen; abweichende gleichnamige Dateien als Varianten erhalten. Nur eine vor dem Auftrag ausdrücklich gewünschte ordnertechnische Trennung, etwa „trenne set 1 von set2 ordnertechnisch“, erlaubt getrennte Set-Ordner. Quellen, Prompts, Sheets und technische Verarbeitung behalten ihre interne Werkstattstruktur.
+
 ## Avatar-Sheets erstellen
 
 1. Das verbindliche Porträt tatsächlich ansehen. Bei vorhandenen Figuren bestimmen seine Gesichtszüge, Alter, Haare, Bart, Kleidung, Rüstung, Farben und Zeichenstil die Identität. Andere Beispiele liefern nur Hinweise zu Layout und Gestik.

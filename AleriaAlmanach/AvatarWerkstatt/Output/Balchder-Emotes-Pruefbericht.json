@@ -1,0 +1,60 @@
+{
+  "createdAt": "2026-10-30",
+  "generationMode": "built-in image_gen",
+  "characters": [
+    {
+      "name": "Blodwen Balchder",
+      "sheets": 2,
+      "avatars": 18,
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "avatarSize": [
+        418,
+        418
+      ],
+      "visualReviewPassed": true,
+      "fileIntegrityPassed": true,
+      "manifest": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Blodwen Balchder/avatar-manifest.json"
+    },
+    {
+      "name": "Rice Balchder",
+      "sheets": 2,
+      "avatars": 18,
+      "sheetSize": [
+        1254,
+        1254
+      ],
+      "avatarSize": [
+        418,
+        418
+      ],
+      "visualReviewPassed": true,
+      "fileIntegrityPassed": true,
+      "manifest": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rice Balchder/avatar-manifest.json"
+    }
+  ],
+  "archives": [
+    {
+      "file": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Blodwen Balchder/Blodwen-Balchder-18-Reaktionsavatare.zip",
+      "bytes": 7285461,
+      "sha256": "5144517711feaec8619fe21f8b8252c994bf7bd221222a61ee0c1e89f2461f93",
+      "zipIntegrityPassed": true
+    },
+    {
+      "file": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rice Balchder/Rice-Balchder-18-Reaktionsavatare.zip",
+      "bytes": 7039111,
+      "sha256": "11ea9521ce9dba0a1cf236aab38039fedf1b1ad062ef63a34f0ec429f90e96de",
+      "zipIntegrityPassed": true
+    },
+    {
+      "file": "AleriaAlmanach/AvatarWerkstatt/Output/Balchder-36-Reaktionsavatare.zip",
+      "bytes": 14324550,
+      "sha256": "913231743c3ae991c1e825f44e546e4345270ce2725a0a4b9693f86172819e2b",
+      "zipIntegrityPassed": true
+    }
+  ],
+  "totalSheets": 4,
+  "totalAvatars": 36
+}

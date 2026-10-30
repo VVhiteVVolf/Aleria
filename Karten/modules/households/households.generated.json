@@ -10722,6 +10722,75 @@
       ]
     },
     {
+      "id": "haus-cochdon",
+      "name": "Haus Cochdon",
+      "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Cochdon.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-cochdon&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Llamreis Ankunft",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht"
+        }
+      ],
+      "priority": 21,
+      "residences": [
+        {
+          "seat": "Gwynthor",
+          "role": "Hauptsitz",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht",
+          "territory": "Llamreis Ankunft",
+          "rank": "commoner"
+        }
+      ]
+    },
+    {
+      "id": "haus-twyllod",
+      "name": "Familie Twyllod",
+      "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Twyllod.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Llamreis Ankunft",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht"
+        }
+      ],
+      "priority": 21,
+      "residences": [
+        {
+          "seat": "Twyllod-Hof",
+          "role": "Hauptsitz",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht",
+          "territory": "Llamreis Ankunft",
+          "rank": "commoner"
+        }
+      ]
+    },
+    {
+      "id": "haus-llafnfor",
+      "name": "Haus Llafnfor",
+      "crest": "/Stammbäume/assets/images/houses/Klaueninsel/haus-llafnfor.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-llafnfor&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Talklaue",
+          "kingdom": "Cenyr",
+          "county": "Klaueninsel"
+        }
+      ],
+      "priority": 20,
+      "residences": []
+    },
+    {
       "id": "haus-veltrane",
       "name": "Haus Veltrane",
       "crest": "/Stammbäume/assets/images/houses/Kaiserreich Argentum/Veltrane.png",
@@ -16900,6 +16969,9 @@
       ],
       "gwynthor-marking-151": [
         "haus-gwyllach"
+      ],
+      "gwynthor-marking-138": [
+        "haus-twyllod"
       ]
     }
   }

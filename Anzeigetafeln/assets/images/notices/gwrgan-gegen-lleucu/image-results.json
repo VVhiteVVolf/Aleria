@@ -1,0 +1,80 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "court-poster",
+      "file": "gericht-plakat-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "cfac0d0938e8b44de2e0424ba9290041e9400b47bb9bd67373c925e967c6ff66",
+      "mode": "RGBA"
+    },
+    {
+      "id": "court-icon",
+      "file": "gericht-icon-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4becc1c48b2b91d1e241271ce5d2470f32e02c084f30cd50bd0b3c95acbf5b5f",
+      "mode": "RGBA"
+    },
+    {
+      "id": "returnee-icon",
+      "file": "heimkehr-icon-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "ff078e9c97a444d6a77bc314cc4369ac5d510d6cea39e63ca9d12a4afae52ed9",
+      "mode": "RGBA"
+    },
+    {
+      "id": "shipping-icon",
+      "file": "reederei-icon-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "d252d35f31046d6ff0599624cb2b197ca58bb6c0c881cf640d0e323fe88aaa64",
+      "mode": "RGBA"
+    },
+    {
+      "id": "gethin-signature",
+      "file": "gethin-falchdyn-unterschrift-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "5a3a8e98b323e702be38eacee419300748c6efaa3b7e97710be693e330da691f",
+      "mode": "RGBA"
+    },
+    {
+      "id": "valeriano-signature",
+      "file": "valeriano-falto-unterschrift-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "5d3dc15b6ac1dc3e7fa25191d74347d14b61641f290934c5f3b86a729658578a",
+      "mode": "RGBA"
+    }
+  ],
+  "posterCatalog": {
+    "id": "gericht-gwrgan-lleucu",
+    "name": "Gräfliches Gericht · Gwrgan gegen Lleucu",
+    "category": "Ankündigungen",
+    "src": "assets/images/board-posters/display/gericht-gwrgan-lleucu.webp",
+    "width": 612,
+    "height": 612,
+    "bounds": {
+      "x": 104,
+      "y": 28,
+      "w": 404,
+      "h": 557
+    },
+    "aspect": 0.725314,
+    "originalSrc": "assets/images/notices/gwrgan-gegen-lleucu/gericht-plakat-v2.png",
+    "thumbnail": {
+      "src": "assets/images/board-posters/thumbnails/gericht-gwrgan-lleucu.webp",
+      "width": 145,
+      "height": 200,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 145,
+        "h": 200
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "character": "Blodwen Balchder",
+  "setId": "set-02",
+  "sheet": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Sheets\\blodwen-balchder-set-02.png",
+  "sheetSha256": "9afcf9b36d5392863ab28cd89e3ad70296f6f384cc0e1db50d3e2635729e536b",
+  "sheetPixels": [
+    1254,
+    1254
+  ],
+  "referenceSha256": "629db9de48b4750355f0596d8d660a095b29c38770180a3e4f4820e9ae8e70a7",
+  "method": "AvatarSplitterProV3.get_crops; original implementation, no GUI or config changes",
+  "exports": [
+    {
+      "index": 1,
+      "emotion": "Traurig / Bedrückt",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild1.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "sha256": "142e9384304860d405bc1303cf73471aa3e3664f3b34e9052f3354508d8e1dbe",
+      "bytes": 214444
+    },
+    {
+      "index": 2,
+      "emotion": "Weinend / Verzweifelt",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild2.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "sha256": "0f852f063f68826e1662f541ce081e693f88d85a2f950878c855da42c9666f28",
+      "bytes": 219111
+    },
+    {
+      "index": 3,
+      "emotion": "Ängstlich / Erschrocken",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild3.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "sha256": "0a3a2e9d7bfcd60024494acb779caf5f6d3d58e7750020614010f732bd72c502",
+      "bytes": 222596
+    },
+    {
+      "index": 4,
+      "emotion": "Verlegen / Beschämt",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild4.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "sha256": "5b810aa0fe6d185a68d22545a78575ef22e65cb99f2673b9b8c0e20edf255ea8",
+      "bytes": 213025
+    },
+    {
+      "index": 5,
+      "emotion": "Schelmisch / Zuflüsternd",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild5.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "sha256": "56223de1ab6177204b3395ea7c6cd79cee16d95e2746f74935b2a518ed2767d2",
+      "bytes": 215237
+    },
+    {
+      "index": 6,
+      "emotion": "Rufend / Verkündend",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild6.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "sha256": "7919e2125380c419d0373efd46657ccbac040b8e8667b72bf61f238df6622185",
+      "bytes": 227827
+    },
+    {
+      "index": 7,
+      "emotion": "Müde / Erschöpft",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild7.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "sha256": "2cecabe0ba541a1bd246938d3dc84c384de1fa6bc77ebc71e57ec66c1583f8aa",
+      "bytes": 213375
+    },
+    {
+      "index": 8,
+      "emotion": "Stolz / Selbstsicher",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild8.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "sha256": "12b090ccf4aef5b3cea3c767922970a400c572873d3151313f6adbad8aca5655",
+      "bytes": 224216
+    },
+    {
+      "index": 9,
+      "emotion": "Unsicher / Ratlos",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Blodwen Balchder\\Output\\blodwen-balchder-set-02_Bild9.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "sha256": "fecdcad2ed4a5185dba3f7338fb515d0147f9aaa776bfa3bf7b4f3d7f73b8ecc",
+      "bytes": 225973
+    }
+  ]
+}

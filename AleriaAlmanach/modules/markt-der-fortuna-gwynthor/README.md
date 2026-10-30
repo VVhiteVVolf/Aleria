@@ -5,7 +5,7 @@ Lokaler Schwesterbereich zum Münze-Handelsposten. Zwei Module: Handelshof mit g
 ## Verantwortung
 
 - `fortuna-section.mjs`: gemeinsamer Archivpfad und bestehende Gildensymbole; von den drei zugeordneten Geschäftsbuildern wiederverwendet.
-- `fortuna-factions.mjs`: sieben führende Häuser, neun institutionelle Ratssitze. Keine erfundenen Personen, Stammbäume oder Wappen für Falto/Nerva.
+- `fortuna-factions.mjs`: sieben führende Häuser, neun institutionelle Ratssitze. Falto verweist seit dem Personenauftrag vom 30.10.2026 auf seine neue, zunächst schmale Familienakte; Nerva bleibt institutionell. Beide Hauswappen bleiben offen.
 - `fortuna-network.mjs`: bestehende Partner mit ausdrücklicher Beziehungskategorie und Quellenpfad. Familienkontakte sind keine automatische Mitgliedschaft.
 - Vier eigene Hierarchiemodelle; gemeinsame Darstellungslogik in `modules/guild-trading-post/trading-post-hierarchy.mjs`. Die Münze verwendet dieselbe Darstellung mit unveränderten Ausgabedaten.
 - `fortuna-module.mjs`: Stories, Familien-/Partnerseiten und stabile Szenen-Threadschlüssel.
@@ -35,6 +35,8 @@ Aelmor dienen Saethwyr und bauen Handelsschiffe, keine Kriegsschiffe. Konkurrenz
 Tonnarth, Braglas, Aelmor, Coeddu und Maerllys besitzen bestehende Stammbäume; ihre aktuelle Fortuna-Führungszuordnung stammt aus diesem Nutzerauftrag. Falto/Nerva sind hier neue institutionelle Einordnungen. Ehen allein ziehen keine weitere Familie in die Gilde. Das Partnernetz ist nach Nutzerkorrektur auf Vann, Raves, Cadwgans Pendrwn-Zweig und die über Raves angebundenen Veltrane begrenzt.
 
 ## Prüfung und Artefakte
+
+Ergänzung vom 30.10.2026: Valeriano Falto (38), in Venalys ausgebildet, besetzt den neuen Kanzleiposten des Gildenfürsprechers und vertritt Lleucu Swyll. Kein zusätzlicher Ratssitz. Personenmodell und Familienakte liegen unter `Stammbäume/assets/js/data/gwynthor-erbstreit/`, Porträt und Bildprompts unter `assets/gwynthor-erbstreit/`.
 
 `npm run build:markt-der-fortuna-gwynthor`, `npm run check:markt-der-fortuna-gwynthor`, `npm run test:markt-der-fortuna-gwynthor`.
 

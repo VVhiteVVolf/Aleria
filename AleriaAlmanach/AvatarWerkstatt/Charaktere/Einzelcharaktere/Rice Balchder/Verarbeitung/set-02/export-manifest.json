@@ -1,0 +1,167 @@
+{
+  "character": "Rice Balchder",
+  "setId": "set-02",
+  "sheet": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Sheets\\rice-balchder-set-02.png",
+  "sheetSha256": "247e381a6018fe85d9444b6302df08478091de2f1f2fac9711ff41ee228ca7f4",
+  "sheetPixels": [
+    1254,
+    1254
+  ],
+  "referenceSha256": "c52fc21e02cb98abbcc4ff659d0dd92f7b3ab5102186dcedcfd1bd02d35619c2",
+  "method": "AvatarSplitterProV3.get_crops; original implementation, no GUI or config changes",
+  "exports": [
+    {
+      "index": 1,
+      "emotion": "Traurig / Bedrückt",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild1.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        0,
+        0,
+        418,
+        418
+      ],
+      "sha256": "81a67365a5b7aa30e155dd8a4cb7f8d401904add8d627831a8c1e56751d389a1",
+      "bytes": 208109
+    },
+    {
+      "index": 2,
+      "emotion": "Weinend / Verzweifelt",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild2.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        418,
+        0,
+        836,
+        418
+      ],
+      "sha256": "5142ff1fb04274244d1b1d35a86c9ed785d7da70ad76c9d558085286f58d2aed",
+      "bytes": 216644
+    },
+    {
+      "index": 3,
+      "emotion": "Ängstlich / Erschrocken",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild3.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        836,
+        0,
+        1254,
+        418
+      ],
+      "sha256": "820089b8d862169b3e961e0a1ce3bebd30e78642f579ae085784af425af26bd8",
+      "bytes": 218937
+    },
+    {
+      "index": 4,
+      "emotion": "Verlegen / Beschämt",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild4.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        0,
+        418,
+        418,
+        836
+      ],
+      "sha256": "f00c4f1ef103e2ceaffc709418ceb1b57c4134c6f54bbc7daebd5ff8249b4d74",
+      "bytes": 206074
+    },
+    {
+      "index": 5,
+      "emotion": "Schelmisch / Zuflüsternd",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild5.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        418,
+        418,
+        836,
+        836
+      ],
+      "sha256": "6965a581a9f76817b0195cd104a3f68e957af8212d30097c229da7b6fd894338",
+      "bytes": 212731
+    },
+    {
+      "index": 6,
+      "emotion": "Rufend / Verkündend",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild6.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        836,
+        418,
+        1254,
+        836
+      ],
+      "sha256": "3e551187af7f303ab19c3664081b62cde99c369ed9b79e8dee8341107e52ffe5",
+      "bytes": 220363
+    },
+    {
+      "index": 7,
+      "emotion": "Müde / Erschöpft",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild7.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        0,
+        836,
+        418,
+        1254
+      ],
+      "sha256": "9ba00e51c31c3b9040376e995e4b5fe23b351446baa5bf10b5d212c871afe96f",
+      "bytes": 205013
+    },
+    {
+      "index": 8,
+      "emotion": "Stolz / Selbstsicher",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild8.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        418,
+        836,
+        836,
+        1254
+      ],
+      "sha256": "8d8a170edcb32a8c04b0627221aed1d003499520f54cacd6630fc4c226b7c5b1",
+      "bytes": 211625
+    },
+    {
+      "index": 9,
+      "emotion": "Unsicher / Ratlos",
+      "file": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rice Balchder\\Output\\rice-balchder-set-02_Bild9.png",
+      "pixels": [
+        418,
+        418
+      ],
+      "cropBox": [
+        836,
+        836,
+        1254,
+        1254
+      ],
+      "sha256": "9b03a943d340b788eab7075026dc97ddd05b4f652d4473ae30d21c05ace80980",
+      "bytes": 216161
+    }
+  ]
+}

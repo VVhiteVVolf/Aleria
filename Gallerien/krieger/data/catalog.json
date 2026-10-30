@@ -6676,6 +6676,21 @@
       "missingNote": ""
     },
     {
+      "id": "haus-twyllod",
+      "name": "Familie Twyllod",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Bannkreis Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view",
+      "sources": [
+        "haus-twyllod",
+        "haus-swyll"
+      ],
+      "illustrationIds": [],
+      "missingNote": ""
+    },
+    {
       "id": "haus-fenn",
       "name": "Fenn",
       "kind": "registered",
@@ -8478,6 +8493,21 @@
       "missingNote": ""
     },
     {
+      "id": "haus-cochdon",
+      "name": "Haus Cochdon",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-cochdon&mode=view",
+      "sources": [
+        "haus-cochdon",
+        "haus-swyll"
+      ],
+      "illustrationIds": [],
+      "missingNote": ""
+    },
+    {
       "id": "haus-coeddu",
       "name": "Haus Coeddu",
       "kind": "registered",
@@ -9835,6 +9865,20 @@
       "tree": "Stammbäume/Stammbaum.html?family=haus-sonnenfels&mode=view",
       "sources": [
         "haus-sonnenfels"
+      ],
+      "illustrationIds": [],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-falto",
+      "name": "Haus Falto",
+      "kind": "registered",
+      "region": "Venalys",
+      "location": "Venalys",
+      "rank": "Magnarierhaus",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-falto&mode=view",
+      "sources": [
+        "haus-falto"
       ],
       "illustrationIds": [],
       "missingNote": ""
@@ -11389,6 +11433,20 @@
         "bild-d84714af1cfd6f91",
         "bild-0490d657f6f70ef7"
       ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-llafnfor",
+      "name": "Haus Llafnfor",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Klaueninsel · Talklaue · Caer Cryftlawd",
+      "rank": "Niederes Rittergeschlecht",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-llafnfor&mode=view",
+      "sources": [
+        "haus-llafnfor"
+      ],
+      "illustrationIds": [],
       "missingNote": ""
     },
     {
@@ -13776,7 +13834,9 @@
         "haus-swyll",
         "haus-draenmelyn",
         "haus-pendrwn",
-        "haus-maerllys"
+        "haus-maerllys",
+        "haus-cochdon",
+        "haus-twyllod"
       ],
       "illustrationIds": [
         "bild-e149972276fe5fa5"

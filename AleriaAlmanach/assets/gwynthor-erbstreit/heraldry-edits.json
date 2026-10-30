@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "id": "cochdon-v2",
+      "destination": "crests/cochdon.png",
+      "prompt": "Keep the silver leaping tuna, red dorsal crest and fins and deep petrol painted wood. Replace the pale broad Celtic frame with a dark iron ring bearing a narrow rope ornament. Show the entire exactly circular emblem centered at 88% width, with equal transparent margins; opaque interior, no outer shadow or colored artifacts."
+    },
+    {
+      "id": "twyllod-v2",
+      "destination": "crests/twyllod.png",
+      "prompt": "Keep the herring, net, ocher wooden field and simple iron frame. Show the entire exactly circular emblem centered at 88% width, with equal transparent margins; opaque interior, no outer shadow or colored artifacts."
+    },
+    {
+      "id": "llafnfor-v2",
+      "destination": "diagnostics/gwynthor-erbstreit-2026-10-30/image-sources/llafnfor-framing-v2.png",
+      "prompt": "Keep the silver swordfish, green sea serpent, blue wooden field and silver knot frame. Show the entire exactly circular emblem centered at 88% width, with equal transparent margins; opaque interior, no outer shadow or colored artifacts."
+    },
+    {
+      "id": "llafnfor-v3",
+      "destination": "crests/llafnfor.png",
+      "reason": "Nutzerkorrektur: Die Schlange hatte zwei Leiber.",
+      "prompt": "Use case: precise-object-edit. Edit target: attached round Llafnfor heraldic emblem. Correct ONLY the sea serpent anatomy: currently two separate green bodies appear attached to the neck. REDRAW the serpent as ONE unmistakable, continuous unbranched serpentine body flowing from the single head in the upper right down through ONE open S-curve to ONE pointed tail near the lower right. No loop, no crossing its own body, no branch, no second torso, no second tail. It should be possible to trace the whole single body from head to tail without interruption. Remove the duplicated thick body on the far right and fill the vacated space with the same opaque blue painted wood and white waves. Keep the silver swordfish on the left and its bill piercing the serpent's upper neck, single head, green scale palette, silver Celtic knot frame, and painted wooden heraldry style. Keep an EXACT circular silhouette centered at 88% width on square canvas with clear transparent margins. Interior including gaps between motifs is entirely opaque; exterior only transparent. No text, no glow, no outer shadow."
+    }
+  ]
+}

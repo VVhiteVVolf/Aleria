@@ -299,6 +299,13 @@
                         "portrait": ""
                       },
                       {
+                        "id": "fortuna-gildenfuersprecher",
+                        "title": "Gildenfürsprecher · Valeriano Falto",
+                        "subtitle": "1 Stelle · in Venalys ausgebildet · 38 Jahre",
+                        "text": "<p>Vertritt Gildenmitglieder in Erb-, Eigentums-, Vertrags- und vergleichbaren Verfahren. In Gwynthor tätig; im laufenden Verfahren Gwrgan gegen Lleucu für Lleucu Swyll bestellt. Seine Kanzleifunktion ist kein zusätzlicher Ratssitz.</p>",
+                        "portrait": "assets/gwynthor-erbstreit/portraits/valeriano-falto.png"
+                      },
+                      {
                         "id": "fortuna-vertraege",
                         "title": "Vertragsschreiber",
                         "subtitle": "6 Stellen",
@@ -478,7 +485,7 @@
               }
             ],
             "levels": [],
-            "footerNote": "Die Ratssitze und Ressorts bleiben institutionell besetzt. Mitarbeiterstellen tragen vorerst keine Namen."
+            "footerNote": "Die Ratssitze und Ressorts bleiben institutionell besetzt. Valeriano Falto ist als Gildenfürsprecher ausgearbeitet; weitere Mitarbeiterstellen tragen vorerst keine Namen."
           }
         },
         {
@@ -1146,7 +1153,7 @@
           "imageTall": true,
           "imageFit": "cover",
           "imagePosition": "center",
-          "description": "<p>Die <strong>Falto</strong> sind ein venalysisches Magnarierhaus im Dienst der <strong>Vinicius</strong>. Ihre Kaufleute und Bänker stützen sich auf viele Schiffe und lange gewachsene Verbindungen. Falto-Schiffe liefen Gwynthor bereits an, lange bevor die Klingende Münze hier ihren ersten Eisenpfennig verdiente.</p><p>Die örtliche Vertretung kann auf Generationen von Verträgen, Bekanntschaften und bewährten Fahrten zurückgreifen. Zwei Ratssitze und die Leitung der <strong>Blauen Bank</strong> geben dem Haus Gewicht bei Finanzierung, Zahlungswegen und Fernhandel. Der venalysische Ursprung und die Bindung an Vinicius bleiben dabei erhalten.</p><p>Ihre Hauptgegner innerhalb Fortunas sind die <strong>Nerva</strong>. Dass beide Häuser demselben Dienstherrn unterstehen, beendet den Streit um die örtliche Vormacht nicht. Für Falto zählen verlässlicher Absatz und die Macht über das verfügbare Kapital; die gewachsene Stellung in Gwynthor betrachten sie als ihren stärksten Anspruch.</p>",
+          "description": "<p>Die <strong>Falto</strong> sind ein venalysisches Magnarierhaus im Dienst der <strong>Vinicius</strong>. Ihre Kaufleute und Bänker stützen sich auf viele Schiffe und lange gewachsene Verbindungen. Falto-Schiffe liefen Gwynthor bereits an, lange bevor die Klingende Münze hier ihren ersten Eisenpfennig verdiente.</p><p>Die örtliche Vertretung kann auf Generationen von Verträgen, Bekanntschaften und bewährten Fahrten zurückgreifen. Zwei Ratssitze und die Leitung der <strong>Blauen Bank</strong> geben dem Haus Gewicht bei Finanzierung, Zahlungswegen und Fernhandel. Der venalysische Ursprung und die Bindung an Vinicius bleiben dabei erhalten.</p><p>Ihre Hauptgegner innerhalb Fortunas sind die <strong>Nerva</strong>. Dass beide Häuser demselben Dienstherrn unterstehen, beendet den Streit um die örtliche Vormacht nicht. Für Falto zählen verlässlicher Absatz und die Macht über das verfügbare Kapital; die gewachsene Stellung in Gwynthor betrachten sie als ihren stärksten Anspruch.</p><p><a href=\"../Stammbäume/Stammbaum.html?family=haus-falto&amp;mode=view\">Stammbaum des Hauses Falto</a></p>",
           "stats": [
             [
               "Herkunft",

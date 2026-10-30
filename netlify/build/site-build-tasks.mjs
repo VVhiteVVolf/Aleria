@@ -83,7 +83,7 @@ export const SITE_BUILD_TASKS = [
         'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-composition-migration.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs', 'Anzeigetafeln/tests/board-performance.test.mjs',
         'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs',
         'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs', 'Anzeigetafeln/tests/notice-seals.test.mjs', 'Anzeigetafeln/tests/notice-signoffs.test.mjs', 'Anzeigetafeln/tests/notice-module-links.test.mjs',
-        'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Anzeigetafeln/tests/fleischsammler.test.mjs', 'Orte/tests/poi-bridges.test.mjs',
+        'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Anzeigetafeln/tests/fleischsammler.test.mjs', 'Anzeigetafeln/tests/gwrgan-lleucu.test.mjs', 'Orte/tests/poi-bridges.test.mjs',
         ...['arcane-alphabet', 'rheunwaith-script', 'karnrith-script', 'laerelis-module'].map(almanach))]
   },
   {
@@ -98,6 +98,14 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/tests/authored-character-import.test.mjs'],
     commands: [['AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', '--check'],
       testCommand(almanach('schwarze-zitteraale'), almanach('arvel-skellor'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
+  },
+  {
+    id: 'gwynthor-erbstreit', label: 'Court families, linked Swyll branches and approved portrait assets',
+    inputs: ['Stammbäume/assets/js/data/', 'Stammbäume/tests/gwynthor-erbstreit.test.js',
+      'AleriaAlmanach/assets/gwynthor-erbstreit/', 'AleriaAlmanach/scripts/build-gwynthor-erbstreit-assets.mjs',
+      'AleriaAlmanach/modules/markt-der-fortuna-gwynthor/'],
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-erbstreit-assets.mjs', '--check'],
+      testCommand('Stammbäume/tests/gwynthor-erbstreit.test.js')]
   },
   {
     id: 'gwynthor-map', label: 'Gwynthor marker positions and existing house affiliations',

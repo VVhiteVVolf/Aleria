@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "characterName": "Blodwen Balchder",
+  "characterFolder": "Charaktere/Einzelcharaktere/Blodwen Balchder",
+  "setId": "set-02",
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/blodwen-balchder.jpg",
+  "characterDescription": "Blodwen Balchder, the young woman EXACTLY as in the reference: youthful oval face, warm fair skin, large grey-blue eyes, auburn brown side-swept hair in one thick braid over HER RIGHT shoulder (viewer's LEFT), same loose side locks. Same square-necked black long-sleeved medieval dress with muted gold curling floral embroidery on bodice and cuffs, same small oval gold medallion at center neckline. Preserve her youthful face, age, hairstyle and proportions; no new jewelry.",
+  "theme": "Trauer, Angst und soziale Zwischentöne",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "width": 1254,
+    "height": 1254
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Traurig / Bedrückt",
+      "gesture": "Gesenkter Blick, hängende Schultern, locker verschränkte Hände.",
+      "generationDirection": "Quiet sadness: downcast eyes, downturned closed mouth, drooping shoulders, hands loosely clasped low before torso; no tears."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Weinend / Verzweifelt",
+      "gesture": "Tränen, bebender Mund, Hand wischt Wange, andere am eigenen Oberarm.",
+      "generationDirection": "Tearful distress: tears on cheeks, trembling mouth, one hand wiping a cheek, other gently grasping own upper arm."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Ängstlich / Erschrocken",
+      "gesture": "Weite besorgte Augen, hochgezogene Schultern, schützende offene Hand.",
+      "generationDirection": "Fear: wide worried eyes, brows raised inward, shoulders drawn up, one protective open palm before torso, other hand close to collarbone."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Verlegen / Beschämt",
+      "gesture": "Errötete Wangen, Blick zur Seite, Hand reibt Nacken.",
+      "generationDirection": "Shy embarrassment: gently flushed cheeks, averted gaze, awkward small smile, one hand rubbing back of neck, tucked shoulders; innocent age-appropriate emotion."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Schelmisch / Zuflüsternd",
+      "gesture": "Wissendes Grinsen, Hand seitlich am Mund, vertrauliche Kopfneigung.",
+      "generationDirection": "Mischievous whisper: small knowing grin, sideways gaze, one hand cupped beside mouth, head leaning in as if sharing a harmless secret."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Rufend / Verkündend",
+      "gesture": "Rufender offener Mund, Hand als Schalltrichter, andere offen erhoben.",
+      "generationDirection": "Calling out: mouth open announcing, one hand cupped beside mouth, other open hand extended at shoulder height to get attention; energetic, not angry."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Müde / Erschöpft",
+      "gesture": "Schwere Lider, zusammengesunken, Hand reibt Schläfe.",
+      "generationDirection": "Exhaustion: heavy eyelids, small tired sigh, slumped posture, one hand rubbing temple, other arm relaxed."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Stolz / Selbstsicher",
+      "gesture": "Kinn etwas erhoben, zufriedenes Grinsen, Hand an Hüfte, kleine Präsentiergeste.",
+      "generationDirection": "Proud satisfaction: upright chest, slightly raised chin, satisfied asymmetric smile, one hand at hip, other in a small open-palmed presenting gesture."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Unsicher / Ratlos",
+      "gesture": "Ratloser Blick, schiefer Mund, beide Handflächen hoch im Achselzucken.",
+      "generationDirection": "Uncertain shrug: uneven lifted brows, crooked uncertain mouth, both palms up in a clear shrug, shoulders raised."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "blodwen-balchder-set-02_Bild1.png bis _Bild9.png",
+  "status": "exportiert",
+  "createdAt": "2026-10-30",
+  "referenceSource": "Stammbäume/assets/images/portraits/haus-balchder/blodwen-balchder.jpg",
+  "generator": "Built-in image_gen",
+  "promptFile": "blodwen-balchder-set-02-prompt.txt",
+  "sheetFile": "Sheets/blodwen-balchder-set-02.png",
+  "exportManifest": "Verarbeitung/set-02/export-manifest.json"
+}

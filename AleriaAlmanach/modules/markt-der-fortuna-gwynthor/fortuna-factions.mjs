@@ -1,9 +1,9 @@
 import { FORTUNA_SYMBOLS } from './fortuna-section.mjs';
 const emblem = name => `../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/${name}.png`;
 
-// New offices stay institutional. Existing relatives retain their own occupations.
+// Council offices stay institutional. Existing relatives retain their occupations.
 export const FORTUNA_FACTIONS = Object.freeze([
-  { id: 'falto', name: 'Falto', seats: 2, familyId: '', emblem: '', origin: 'Venalys · seit Jahrhunderten in Gwynthor vertreten', liege: 'Magnarierhaus · unter Vinicius',
+  { id: 'falto', name: 'Falto', seats: 2, familyId: 'haus-falto', emblem: '', origin: 'Venalys · seit Jahrhunderten in Gwynthor vertreten', liege: 'Magnarierhaus · unter Vinicius',
     business: 'Bankwesen · Kaufmannschaft · Handelsflotte', art: 'bankhalle',
     text: '<p>Die <strong>Falto</strong> sind ein venalysisches Magnarierhaus im Dienst der <strong>Vinicius</strong>. Ihre Kaufleute und Bänker stützen sich auf viele Schiffe und lange gewachsene Verbindungen. Falto-Schiffe liefen Gwynthor bereits an, lange bevor die Klingende Münze hier ihren ersten Eisenpfennig verdiente.</p><p>Die örtliche Vertretung kann auf Generationen von Verträgen, Bekanntschaften und bewährten Fahrten zurückgreifen. Zwei Ratssitze und die Leitung der <strong>Blauen Bank</strong> geben dem Haus Gewicht bei Finanzierung, Zahlungswegen und Fernhandel. Der venalysische Ursprung und die Bindung an Vinicius bleiben dabei erhalten.</p><p>Ihre Hauptgegner innerhalb Fortunas sind die <strong>Nerva</strong>. Dass beide Häuser demselben Dienstherrn unterstehen, beendet den Streit um die örtliche Vormacht nicht. Für Falto zählen verlässlicher Absatz und die Macht über das verfügbare Kapital; die gewachsene Stellung in Gwynthor betrachten sie als ihren stärksten Anspruch.</p>' },
   { id: 'nerva', name: 'Nerva', seats: 2, familyId: '', emblem: '', origin: 'Venalys · seit mehreren Jahrhunderten in Gwynthor vertreten', liege: 'Magnarierhaus · unter Vinicius',

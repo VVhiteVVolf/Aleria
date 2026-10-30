@@ -15,7 +15,7 @@ function feature() {
 }
 const llysfaen = 'Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/llysfaen/';
 
-test('all 29 existing sheets receive valid local signoffs without adding notices or altering their content', async () => {
+test('all 33 existing sheets receive valid local signoffs without adding notices or altering their content', async () => {
   const app = feature();
   const packs = [await buildGwynthorQuestPack(), await buildLlysfaenSignoffPack()];
   const originals = [copy(packs[0].zettel), read(`${llysfaen}data.json`).state.zettel];
@@ -39,7 +39,7 @@ test('all 29 existing sheets receive valid local signoffs without adding notices
       for (const field of ['siegel', 'unterschrift']) if (old[field]) assert.equal(notice[field], old[field]);
     }
   }
-  assert.equal(total, 29);
+  assert.equal(total, 33);
   assert.equal(packs[1].zettel.length, 0, 'Llysfaen is a correction pack, not a second copy of existing sheets');
 });
 

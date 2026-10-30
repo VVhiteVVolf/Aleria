@@ -14,6 +14,7 @@ export function buildFortunaMarketHierarchy() {
       ])] },
       { id: 'fortuna-kanzlei', label: 'Kanzlei & Mitgliederwesen', parentTreeId: 'fortuna-ressorts', levels: [level('Gemeinsamer Kontordienst', [
         office('fortuna-kanzleileitung', 'Kanzleileitung', '1 Stelle', 'Bereitet Ratsberatungen vor und führt Beschlüsse und Korrespondenz.'),
+        office('fortuna-gildenfuersprecher', 'Gildenfürsprecher · Valeriano Falto', '1 Stelle · in Venalys ausgebildet · 38 Jahre', 'Vertritt Gildenmitglieder in Erb-, Eigentums-, Vertrags- und vergleichbaren Verfahren. In Gwynthor tätig; im laufenden Verfahren Gwrgan gegen Lleucu für Lleucu Swyll bestellt. Seine Kanzleifunktion ist kein zusätzlicher Ratssitz.', 'assets/gwynthor-erbstreit/portraits/valeriano-falto.png'),
         office('fortuna-vertraege', 'Vertragsschreiber', '6 Stellen', 'Führen Einkauf, Verkauf, Lagervereinbarungen und die bestellten Dienste schriftlich aus.'),
         office('fortuna-register', 'Mitglieder- & Zunftschreiber', '4 Stellen', 'Führen Mitgliedschaften, Ansprechpartner und gewerbliche Interessen getrennt von bloßen Bezugsverträgen.'),
         office('fortuna-archiv', 'Archivare & Siegelschreiber', '4 Stellen', 'Verwahren Vertragsabschriften, Siegel und die laufende Geschäftspost.')
@@ -41,5 +42,5 @@ export function buildFortunaMarketHierarchy() {
         level('Weitere Inhaber und Zunftsmeister', [office('fortuna-weitere', 'Weiteres Mitglieder- und Partnerregister', 'Weitere Kaufleute und Gewerke', 'Die sieben führenden Häuser bilden den Rat, doch Markt und Handelshof verbinden weit mehr Betriebe. Eine Belieferung oder Verwandtschaft wird jeweils als solche verzeichnet.')])
       ] }
     ], [{ label: 'Rat', value: 'Falto 2 · Nerva 2 · fünf cenyrische Häuser je 1' }, { label: 'Bindungen', value: 'Falto und Nerva unter Vinicius · Aelmor unter Saethwyr' }, { label: 'Betriebe', value: 'Eigenständige Mitglieder, Kooperationspartner und Abnehmer' }],
-    'Die Ratssitze und Ressorts bleiben institutionell besetzt. Mitarbeiterstellen tragen vorerst keine Namen.');
+    'Die Ratssitze und Ressorts bleiben institutionell besetzt. Valeriano Falto ist als Gildenfürsprecher ausgearbeitet; weitere Mitarbeiterstellen tragen vorerst keine Namen.');
 }

@@ -1,6 +1,7 @@
 const PORTRAIT_ROOT = 'assets/images/portraits/haus-falchdyn';
 
 export const HOUSE_FALCHDYN_PORTRAITS = Object.freeze({
+  'gethin-falchdyn': '../AleriaAlmanach/assets/gwynthor-erbstreit/portraits/gethin-falchdyn.png',
   'aneirin-falchdyn': `${PORTRAIT_ROOT}/aneirin-falchdyn.webp`,
   'dafydd-falchdyn': `${PORTRAIT_ROOT}/dafydd-falchdyn.webp`,
   'iorwerth-falchdyn': `${PORTRAIT_ROOT}/iorwerth-falchdyn.webp`,

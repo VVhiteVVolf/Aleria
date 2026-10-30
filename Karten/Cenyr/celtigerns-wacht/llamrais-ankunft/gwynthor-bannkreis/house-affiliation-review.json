@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-10-25T04:27:22.523Z",
+  "reviewedAt": "2026-10-30",
   "dataRevision": 13,
   "policy": "Existing house records only; preserve pin IDs and positions. Distinguish family allegiance, local geography and land ownership. Unregistered families keep their existing proven local affiliation.",
   "sources": [
@@ -583,6 +583,37 @@
         }
       },
       "note": ""
+    },
+    {
+      "pinId": "gwynthor-marking-138",
+      "familyId": "haus-twyllod",
+      "familyName": "Familie Twyllod",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vo1h89v",
+      "source": "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Twyllod-Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Bannkreis Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "note": "Nutzerauftrag vom 30.10.2026: bestehende Fischerei mit der nun ausgearbeiteten Familie verbunden; Position, Pin-ID und Herrschaft erhalten."
     }
   ],
   "unreconciledFamilies": [
@@ -594,11 +625,6 @@
     {
       "pinId": "gwynthor-marking-071",
       "house": "Familie Afelwyn",
-      "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
-    },
-    {
-      "pinId": "gwynthor-marking-138",
-      "house": "Familie Twyllod",
       "reason": "Keine eigenständige Familienakte gefunden; vorhandene Zuordnung erhalten."
     },
     {
