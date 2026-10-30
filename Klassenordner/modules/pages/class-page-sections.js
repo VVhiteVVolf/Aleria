@@ -20,7 +20,7 @@ export function renderIllustration(document) {
 export function renderFacts(document) {
   return `<section class="class-facts" aria-labelledby="wissenswertes"><p class="eyebrow">Auf einen Blick</p><h2 id="wissenswertes">Wissenswertes</h2>
     <dl>${document.facts.length ? document.facts.map(fact => `<div><dt>${escape(fact.label)}</dt><dd>${fact.html}</dd></div>`).join('')
-      : `<div><dt>Klasse</dt><dd>${escape(document.name)}</dd></div><div><dt>Einordnung</dt><dd>Universalklasse</dd></div>`}</dl>
+      : `<div><dt>Klasse</dt><dd>${escape(document.name)}</dd></div><div><dt>Einordnung</dt><dd>${document.cultureId?'Kulturklasse':'Universalklasse'}</dd></div>`}</dl>
     ${document.facts.length ? '' : '<p class="class-facts-note">Weitere Angaben zum Klassenprofil folgen.</p>'}</section>`;
 }
 

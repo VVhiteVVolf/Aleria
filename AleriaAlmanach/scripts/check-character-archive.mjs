@@ -92,7 +92,8 @@ assert.equal(linkedCustomSpellIcon.source, customSpellIcon, 'Der Charakterbogen 
 assert.equal(linkedCustomSpellIcon.linked, true);
 
 const classIconEntries = getClassPageIconEntries();
-assert.equal(classIconEntries.length, CHARACTER_CLASS_TEMPLATES.length, 'Jede verwendete Charakterklasse braucht ein Icon aus der Klassenseite.');
+assert.equal(new Set(classIconEntries.map(entry => entry.id)).size, classIconEntries.length,
+  'Jede registrierte Klassenicon-ID muss eindeutig sein. Inhaltsklassen dürfen über die spielbaren Kampfklassen hinausgehen.');
 CHARACTER_CLASS_TEMPLATES.forEach(template => {
   assert.match(getClassPageIconSource(template.id), /^https:\/\/i\.imgur\.com\//, `Klassenicon fehlt: ${template.label}`);
 });
@@ -103,13 +104,15 @@ getClassPageIconAliases().forEach(alias => {
 globalThis.itemDbBuildIndex = () => [
   { canonicalKey: 'pferde:testross', title: 'Testross', category: 'pferde', categoryLabel: 'Pferde', type: 'Reitpferd', description: 'Ein Test-Pferd.', price: '500', currency: 'Taler', image: '', tags: ['Pferd'] },
   { canonicalKey: 'waffen:testschwert', title: 'Testschwert', category: 'waffen', categoryLabel: 'Waffen', type: 'Schwert', description: '', price: '10', currency: 'Gold', image: '', tags: [] },
-  { canonicalKey: 'ruestungen:testharnisch', title: 'Testharnisch', category: 'ruestungen', categoryLabel: 'Rüstungen', type: '', description: '', price: '', currency: '', image: '', tags: [] }
+  { canonicalKey: 'ruestungen:testharnisch', title: 'Testharnisch', category: 'ruestungen', categoryLabel: 'Rüstungen', type: '', description: '', price: '', currency: '', image: '', tags: [] },
+  { canonicalKey: 'unverknuepft:test', title: 'Nicht verknüpfte Probe', category: 'unverknuepft-test', tags: [] }
 ];
 const registerEntries = extractItemRegisterArchiveEntries();
-assert.equal(registerEntries.length, 2, 'Nur die verknuepften Registerkategorien duerfen als Archivbereiche erscheinen.');
+assert.equal(registerEntries.length, 3, 'Nur die verknuepften Registerkategorien duerfen als Archivbereiche erscheinen.');
 assert(registerEntries.some(entry => entry.kind === 'register-pferde' && entry.name === 'Testross'), 'Pferde-Registereintraege muessen im Archiv landen.');
 assert(registerEntries.some(entry => entry.kind === 'register-waffen' && entry.name === 'Testschwert'), 'Waffen-Registereintraege muessen im Archiv landen.');
-assert(!registerEntries.some(entry => entry.name === 'Testharnisch'), 'Nicht angeforderte Registerkategorien (z.B. Ruestungen) duerfen nicht auftauchen.');
+assert(registerEntries.some(entry => entry.kind === 'register-ruestungen' && entry.name === 'Testharnisch'), 'Das bereits verknüpfte Rüstungsregister muss im Archiv landen.');
+assert(!registerEntries.some(entry => entry.name === 'Nicht verknüpfte Probe'), 'Nicht verknüpfte Registerkategorien dürfen nicht auftauchen.');
 delete globalThis.itemDbBuildIndex;
 assert.deepEqual(extractItemRegisterArchiveEntries(), [], 'Ohne geladenes Item-Register darf die Extraktion nicht werfen.');
 

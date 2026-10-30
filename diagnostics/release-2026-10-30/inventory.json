@@ -1,0 +1,2370 @@
+{
+  "files": 563,
+  "bytes": 612707018,
+  "groups": {
+    "AGENTS.md": {
+      "files": 1,
+      "bytes": 26375
+    },
+    "AleriaAlmanach/docs": {
+      "files": 5,
+      "bytes": 9110625
+    },
+    "AleriaAlmanach/modules": {
+      "files": 10,
+      "bytes": 294465
+    },
+    "AleriaAlmanach/scripts": {
+      "files": 2,
+      "bytes": 6899
+    },
+    "Charakter Archiv Exporte/Module": {
+      "files": 4,
+      "bytes": 200497
+    },
+    "Gallerien/krieger": {
+      "files": 2,
+      "bytes": 1476739
+    },
+    "Klassenordner/Klassenseite.html": {
+      "files": 1,
+      "bytes": 57425
+    },
+    "Klassenordner/assets": {
+      "files": 39,
+      "bytes": 59981574
+    },
+    "Klassenordner/modules": {
+      "files": 10,
+      "bytes": 51608
+    },
+    "Klassenordner/scripts": {
+      "files": 3,
+      "bytes": 10755
+    },
+    "Kontinente/modules": {
+      "files": 3,
+      "bytes": 19376
+    },
+    "Kontinente/tests": {
+      "files": 2,
+      "bytes": 4815
+    },
+    "Stammbäume/assets": {
+      "files": 5,
+      "bytes": 50573
+    },
+    "netlify/build": {
+      "files": 2,
+      "bytes": 6633
+    },
+    "netlify/tests": {
+      "files": 1,
+      "bytes": 6436
+    },
+    "AleriaAlmanach/assets": {
+      "files": 2,
+      "bytes": 2429452
+    },
+    "AleriaAlmanach/tests": {
+      "files": 1,
+      "bytes": 5842
+    },
+    "Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29": {
+      "files": 5,
+      "bytes": 50590
+    },
+    "Klassenordner/Brevanor": {
+      "files": 23,
+      "bytes": 269388
+    },
+    "Klassenordner/tests": {
+      "files": 1,
+      "bytes": 5921
+    },
+    "Vorschau/Brevanor": {
+      "files": 242,
+      "bytes": 348441746
+    },
+    "Vorschau/Talyndor": {
+      "files": 175,
+      "bytes": 190107861
+    },
+    "Vorschau/tests": {
+      "files": 2,
+      "bytes": 10342
+    },
+    "diagnostics/brevanor-classes": {
+      "files": 2,
+      "bytes": 5611
+    },
+    "diagnostics/brevanor": {
+      "files": 14,
+      "bytes": 50181
+    },
+    "diagnostics/release-2026-10-30": {
+      "files": 1,
+      "bytes": 1162
+    },
+    "diagnostics/talyndor": {
+      "files": 5,
+      "bytes": 24127
+    }
+  },
+  "large": [],
+  "sensitiveNames": [],
+  "entries": [
+    {
+      "file": "AGENTS.md",
+      "bytes": 26375
+    },
+    {
+      "file": "AleriaAlmanach/docs/art/image-style-presets.json",
+      "bytes": 32001
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-archive/character-archive-page-data.js",
+      "bytes": 63568
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/catalog/balchder-companions.js",
+      "bytes": 5269
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-catalog.js",
+      "bytes": 47571
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-companion-link.js",
+      "bytes": 5792
+    },
+    {
+      "file": "AleriaAlmanach/modules/gestiefelte-muschi/muschi-biography.mjs",
+      "bytes": 4733
+    },
+    {
+      "file": "AleriaAlmanach/modules/gestiefelte-muschi/muschi-data.js",
+      "bytes": 147296
+    },
+    {
+      "file": "AleriaAlmanach/modules/gestiefelte-muschi/muschi-people.mjs",
+      "bytes": 15514
+    },
+    {
+      "file": "AleriaAlmanach/modules/gestiefelte-muschi/source-notes.json",
+      "bytes": 2676
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-companions.js",
+      "bytes": 918
+    },
+    {
+      "file": "AleriaAlmanach/scripts/sync-character-archive-pages.mjs",
+      "bytes": 3739
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Die Gestiefelte Muschi/gestiefelte-muschi-2026-10-18.json",
+      "bytes": 161864
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Die Gestiefelte Muschi/haus-bielle-2026-10-18.json",
+      "bytes": 2057
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Die Gestiefelte Muschi/haus-desele-2026-10-18.json",
+      "bytes": 3167
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Die Gestiefelte Muschi/personen-importplan-2026-10-18.json",
+      "bytes": 33409
+    },
+    {
+      "file": "Gallerien/krieger/data/catalog.json",
+      "bytes": 1469143
+    },
+    {
+      "file": "Gallerien/krieger/warrior-gallery.mjs",
+      "bytes": 7596
+    },
+    {
+      "file": "Klassenordner/Klassenseite.html",
+      "bytes": 57425
+    },
+    {
+      "file": "Klassenordner/assets/js/klassen.js",
+      "bytes": 6314
+    },
+    {
+      "file": "Klassenordner/modules/culture/culture-class-content.js",
+      "bytes": 1137
+    },
+    {
+      "file": "Klassenordner/modules/culture/culture-class-registry.js",
+      "bytes": 1531
+    },
+    {
+      "file": "Klassenordner/modules/culture/culture-class-template.js",
+      "bytes": 10500
+    },
+    {
+      "file": "Klassenordner/modules/culture/culture-order-overview.js",
+      "bytes": 4652
+    },
+    {
+      "file": "Klassenordner/modules/lore/class-lore-data.js",
+      "bytes": 24766
+    },
+    {
+      "file": "Klassenordner/modules/lore/class-lore-ui.js",
+      "bytes": 1690
+    },
+    {
+      "file": "Klassenordner/modules/pages/class-page-content.js",
+      "bytes": 3277
+    },
+    {
+      "file": "Klassenordner/modules/pages/class-page-sections.js",
+      "bytes": 2675
+    },
+    {
+      "file": "Klassenordner/scripts/build-culture-classes.mjs",
+      "bytes": 4358
+    },
+    {
+      "file": "Kontinente/modules/administration/administration-structured.mjs",
+      "bytes": 3005
+    },
+    {
+      "file": "Kontinente/modules/administration/data/celtigerns-diplomatie.mjs",
+      "bytes": 6921
+    },
+    {
+      "file": "Kontinente/modules/administration/data/diplomatie-briefs.mjs",
+      "bytes": 9450
+    },
+    {
+      "file": "Kontinente/tests/support/albic-review-baseline.mjs",
+      "bytes": 3518
+    },
+    {
+      "file": "Stammbäume/assets/js/data/brevanor-desele-bielle-records.js",
+      "bytes": 3054
+    },
+    {
+      "file": "Stammbäume/assets/js/data/house-balchder-family.js",
+      "bytes": 16912
+    },
+    {
+      "file": "Stammbäume/assets/js/data/house-gelyn-family.js",
+      "bytes": 8123
+    },
+    {
+      "file": "Stammbäume/assets/js/domain/house-profile.js",
+      "bytes": 11822
+    },
+    {
+      "file": "netlify/build/publication-policy.mjs",
+      "bytes": 461
+    },
+    {
+      "file": "netlify/build/world-content-tasks.mjs",
+      "bytes": 6172
+    },
+    {
+      "file": "netlify/tests/local-release.test.mjs",
+      "bytes": 6436
+    },
+    {
+      "file": "AleriaAlmanach/assets/companions/haus-balchder/silberwind-source.json",
+      "bytes": 583
+    },
+    {
+      "file": "AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+      "bytes": 2428869
+    },
+    {
+      "file": "AleriaAlmanach/docs/art/class-icon-style/morgorn-bragan.png",
+      "bytes": 3262066
+    },
+    {
+      "file": "AleriaAlmanach/docs/art/class-icon-style/morgorn-kuralan.png",
+      "bytes": 3005668
+    },
+    {
+      "file": "AleriaAlmanach/docs/art/class-icon-style/morgorn-varor.png",
+      "bytes": 2807009
+    },
+    {
+      "file": "AleriaAlmanach/docs/characters/BALCHDER_VERTRAGSSTUBE.md",
+      "bytes": 3881
+    },
+    {
+      "file": "AleriaAlmanach/modules/classes/brevanor/brevanor-class-registry.js",
+      "bytes": 1128
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-balchder-vertragsstube.mjs",
+      "bytes": 3160
+    },
+    {
+      "file": "AleriaAlmanach/tests/balchder-vertragsstube.test.mjs",
+      "bytes": 5842
+    },
+    {
+      "file": "Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29/blodwen-balchder.json",
+      "bytes": 7101
+    },
+    {
+      "file": "Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29/companion-kamber-silberwind.json",
+      "bytes": 20489
+    },
+    {
+      "file": "Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29/kamber-balchder.json",
+      "bytes": 13539
+    },
+    {
+      "file": "Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29/rice-balchder.json",
+      "bytes": 7089
+    },
+    {
+      "file": "Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29/silberwind-besitzzuordnung.json",
+      "bytes": 2372
+    },
+    {
+      "file": "Klassenordner/Brevanor/README.md",
+      "bytes": 2340
+    },
+    {
+      "file": "Klassenordner/Brevanor/breval/index.html",
+      "bytes": 9057
+    },
+    {
+      "file": "Klassenordner/Brevanor/breval/klasse.json",
+      "bytes": 1720
+    },
+    {
+      "file": "Klassenordner/Brevanor/cabrant/index.html",
+      "bytes": 9013
+    },
+    {
+      "file": "Klassenordner/Brevanor/cabrant/klasse.json",
+      "bytes": 1707
+    },
+    {
+      "file": "Klassenordner/Brevanor/cantrel/index.html",
+      "bytes": 8992
+    },
+    {
+      "file": "Klassenordner/Brevanor/cantrel/klasse.json",
+      "bytes": 1700
+    },
+    {
+      "file": "Klassenordner/Brevanor/generation-receipts.json",
+      "bytes": 66299
+    },
+    {
+      "file": "Klassenordner/Brevanor/hastrel/index.html",
+      "bytes": 9031
+    },
+    {
+      "file": "Klassenordner/Brevanor/hastrel/klasse.json",
+      "bytes": 1713
+    },
+    {
+      "file": "Klassenordner/Brevanor/havren/index.html",
+      "bytes": 8999
+    },
+    {
+      "file": "Klassenordner/Brevanor/havren/klasse.json",
+      "bytes": 1700
+    },
+    {
+      "file": "Klassenordner/Brevanor/icon-art-direction.mjs",
+      "bytes": 3148
+    },
+    {
+      "file": "Klassenordner/Brevanor/icon-comic-continuation.json",
+      "bytes": 23402
+    },
+    {
+      "file": "Klassenordner/Brevanor/icon-comic-prompts.json",
+      "bytes": 25204
+    },
+    {
+      "file": "Klassenordner/Brevanor/icon-prompts-initial.json",
+      "bytes": 30917
+    },
+    {
+      "file": "Klassenordner/Brevanor/icon-prompts.json",
+      "bytes": 21004
+    },
+    {
+      "file": "Klassenordner/Brevanor/icon-style-revision.json",
+      "bytes": 20955
+    },
+    {
+      "file": "Klassenordner/Brevanor/kerant/index.html",
+      "bytes": 8997
+    },
+    {
+      "file": "Klassenordner/Brevanor/kerant/klasse.json",
+      "bytes": 1700
+    },
+    {
+      "file": "Klassenordner/Brevanor/kultur.js",
+      "bytes": 1050
+    },
+    {
+      "file": "Klassenordner/Brevanor/silvain/index.html",
+      "bytes": 9028
+    },
+    {
+      "file": "Klassenordner/Brevanor/silvain/klasse.json",
+      "bytes": 1712
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/breval.webp",
+      "bytes": 55464
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/cabrant.webp",
+      "bytes": 65098
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/cantrel.webp",
+      "bytes": 61576
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/archive/breval-serious.png",
+      "bytes": 2003144
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/belgrant-comic.png",
+      "bytes": 2327842
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/belgrant-playful.png",
+      "bytes": 2248268
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/belgrant.png",
+      "bytes": 2304889
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/breval-comic.png",
+      "bytes": 2374744
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/breval-playful.png",
+      "bytes": 2160598
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/breval.png",
+      "bytes": 2003144
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/cabrant-comic.png",
+      "bytes": 2187692
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/cabrant-playful.png",
+      "bytes": 1999695
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/cantrel-comic.png",
+      "bytes": 2203218
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/cantrel-playful.png",
+      "bytes": 2341445
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/hastrel-comic.png",
+      "bytes": 1954636
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/hastrel-playful.png",
+      "bytes": 2165002
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/hastrel.png",
+      "bytes": 1880256
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/havren-comic.png",
+      "bytes": 2124888
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/havren-playful.png",
+      "bytes": 2259011
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/kerant-comic.png",
+      "bytes": 1952515
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/kerant-playful.png",
+      "bytes": 2011798
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/kerant.png",
+      "bytes": 1706821
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/silvain-comic.png",
+      "bytes": 2182032
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/generated/silvain-playful.png",
+      "bytes": 2230372
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/hastrel.webp",
+      "bytes": 50678
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/havren.webp",
+      "bytes": 56464
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/kerant.webp",
+      "bytes": 43292
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/manifest.json",
+      "bytes": 8324
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/breval.png",
+      "bytes": 2284908
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/cabrant.png",
+      "bytes": 2097504
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/cantrel.png",
+      "bytes": 2121695
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/hastrel.png",
+      "bytes": 1871124
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/havren.png",
+      "bytes": 2048828
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/kerant.png",
+      "bytes": 1859565
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/production/silvain.png",
+      "bytes": 2096867
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/icons/silvain.webp",
+      "bytes": 56766
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/realm/brevanor-original.png",
+      "bytes": 460087
+    },
+    {
+      "file": "Klassenordner/assets/images/brevanor/realm/brevanor.webp",
+      "bytes": 115010
+    },
+    {
+      "file": "Klassenordner/modules/culture/brevanor-class-page.css",
+      "bytes": 1040
+    },
+    {
+      "file": "Klassenordner/modules/pages/class-art-source.js",
+      "bytes": 340
+    },
+    {
+      "file": "Klassenordner/scripts/prepare-brevanor-icons.mjs",
+      "bytes": 3050
+    },
+    {
+      "file": "Klassenordner/scripts/prepare-brevanor-icons.py",
+      "bytes": 3347
+    },
+    {
+      "file": "Klassenordner/tests/brevanor-classes.test.mjs",
+      "bytes": 5921
+    },
+    {
+      "file": "Kontinente/tests/support/balchder-person-review-20261029.json",
+      "bytes": 1297
+    },
+    {
+      "file": "Stammbäume/assets/js/data/person-biographies/balchder-vertragsstube.js",
+      "bytes": 10662
+    },
+    {
+      "file": "Vorschau/Brevanor/README.md",
+      "bytes": 4724
+    },
+    {
+      "file": "Vorschau/Brevanor/REQUEST.md",
+      "bytes": 5555
+    },
+    {
+      "file": "Vorschau/Brevanor/art-prompts.json",
+      "bytes": 108731
+    },
+    {
+      "file": "Vorschau/Brevanor/assets.source.json",
+      "bytes": 3929
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/art-manifest.json",
+      "bytes": 25657
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/arvenac.webp",
+      "bytes": 137808
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/aubert.webp",
+      "bytes": 72672
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/bernant.webp",
+      "bytes": 131950
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/bielle.webp",
+      "bytes": 136690
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/brevanor.webp",
+      "bytes": 110226
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/caudren.webp",
+      "bytes": 58074
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/corvail.webp",
+      "bytes": 133014
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/ervaut.webp",
+      "bytes": 136388
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/ferant.webp",
+      "bytes": 128712
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/gerain.webp",
+      "bytes": 93052
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/guerin.webp",
+      "bytes": 95716
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/guivren.webp",
+      "bytes": 112556
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/iverac.webp",
+      "bytes": 145860
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/jorant.webp",
+      "bytes": 135092
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/kervaut.webp",
+      "bytes": 139442
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/landrec.webp",
+      "bytes": 141120
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/osmer.webp",
+      "bytes": 138794
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/perrec.webp",
+      "bytes": 65808
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/quernac.webp",
+      "bytes": 136616
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/renaut.webp",
+      "bytes": 140954
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/rovenne.webp",
+      "bytes": 74790
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/savrec.webp",
+      "bytes": 139616
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/trevain.webp",
+      "bytes": 132924
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/valdran.webp",
+      "bytes": 90178
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/varenne.webp",
+      "bytes": 112888
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/walaric.webp",
+      "bytes": 133326
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/crests/yveran.webp",
+      "bytes": 145480
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/bernant.png",
+      "bytes": 3203017
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/brethneach.png",
+      "bytes": 3041013
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/county-caerennes.png",
+      "bytes": 2058883
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/county-tervenne.png",
+      "bytes": 1876362
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/county-tregard.png",
+      "bytes": 1931720
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/county-vaudrec.png",
+      "bytes": 1918174
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-arselle.png",
+      "bytes": 2137242
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-brellan.png",
+      "bytes": 2054535
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-caerennes.png",
+      "bytes": 2055394
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-dervel.png",
+      "bytes": 2103538
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-garnac.png",
+      "bytes": 2108355
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-hervant.png",
+      "bytes": 2116674
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-marneval.png",
+      "bytes": 2071427
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-mirel.png",
+      "bytes": 2135859
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-orbec.png",
+      "bytes": 2204284
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-roscan.png",
+      "bytes": 2133982
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-rovanne.png",
+      "bytes": 2043015
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-sorven.png",
+      "bytes": 2306323
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-tervenne.png",
+      "bytes": 2068332
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-torvay.png",
+      "bytes": 2189741
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-tregard.png",
+      "bytes": 2128189
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-vaudrec.png",
+      "bytes": 2046894
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/district-virec.png",
+      "bytes": 1991797
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/ervaut.png",
+      "bytes": 3217007
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/ferant.png",
+      "bytes": 3164809
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/iverac.png",
+      "bytes": 3444394
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/jorant.png",
+      "bytes": 3216319
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/kervaut.png",
+      "bytes": 3286319
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/landrec.png",
+      "bytes": 3438184
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/osmer.png",
+      "bytes": 3232463
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/quernac.png",
+      "bytes": 3028125
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/renaut.png",
+      "bytes": 3224880
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/savrec.png",
+      "bytes": 3300144
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/trevain.png",
+      "bytes": 3139783
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/walaric.png",
+      "bytes": 3230283
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/generated/yveran.png",
+      "bytes": 3480173
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/history/brethneach.webp",
+      "bytes": 130412
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/map-full.webp",
+      "bytes": 4327652
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/map.webp",
+      "bytes": 2361862
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/arvenac.png",
+      "bytes": 1431514
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/aubert.png",
+      "bytes": 314737
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/bielle.png",
+      "bytes": 3105291
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/brevanor.png",
+      "bytes": 460087
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/caudren.png",
+      "bytes": 277276
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/corvail.png",
+      "bytes": 1293509
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/gerain.png",
+      "bytes": 386968
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/guerin.png",
+      "bytes": 424490
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/guivren.png",
+      "bytes": 1135718
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/perrec.png",
+      "bytes": 303325
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/rovenne.png",
+      "bytes": 359762
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/valdran.png",
+      "bytes": 326360
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/originals/varenne.png",
+      "bytes": 1045261
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/bernant.png",
+      "bytes": 3005995
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/brethneach.png",
+      "bytes": 2876845
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/county-caerennes.png",
+      "bytes": 1997710
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/county-tervenne.png",
+      "bytes": 1795914
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/county-tregard.png",
+      "bytes": 1856862
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/county-vaudrec.png",
+      "bytes": 1831462
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-arselle.png",
+      "bytes": 2024845
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-brellan.png",
+      "bytes": 1932350
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-caerennes.png",
+      "bytes": 1937068
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-dervel.png",
+      "bytes": 2013343
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-garnac.png",
+      "bytes": 1959088
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-hervant.png",
+      "bytes": 2010244
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-marneval.png",
+      "bytes": 1964517
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-mirel.png",
+      "bytes": 1985529
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-orbec.png",
+      "bytes": 2034010
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-roscan.png",
+      "bytes": 1957971
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-rovanne.png",
+      "bytes": 1908584
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-sorven.png",
+      "bytes": 2078572
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-tervenne.png",
+      "bytes": 1910580
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-torvay.png",
+      "bytes": 1991166
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-tregard.png",
+      "bytes": 1954590
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-vaudrec.png",
+      "bytes": 1935277
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/district-virec.png",
+      "bytes": 1941435
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/ervaut.png",
+      "bytes": 3072922
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/ferant.png",
+      "bytes": 3081327
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/iverac.png",
+      "bytes": 3219562
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/jorant.png",
+      "bytes": 3099314
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/kervaut.png",
+      "bytes": 3104230
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/landrec.png",
+      "bytes": 3221213
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/osmer.png",
+      "bytes": 3077480
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/quernac.png",
+      "bytes": 2974037
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/renaut.png",
+      "bytes": 3104834
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/savrec.png",
+      "bytes": 3132369
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/trevain.png",
+      "bytes": 2919887
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/walaric.png",
+      "bytes": 2994266
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/production/yveran.png",
+      "bytes": 3265862
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/shapes/county.png",
+      "bytes": 1731999
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/shapes/region.png",
+      "bytes": 1746871
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/shapes/royal.png",
+      "bytes": 1792262
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/county-caerennes.webp",
+      "bytes": 130834
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/county-tervenne.webp",
+      "bytes": 95020
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/county-tregard.webp",
+      "bytes": 114492
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/county-vaudrec.webp",
+      "bytes": 104316
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-arselle.webp",
+      "bytes": 108496
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-brellan.webp",
+      "bytes": 106336
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-caerennes.webp",
+      "bytes": 101432
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-dervel.webp",
+      "bytes": 105478
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-garnac.webp",
+      "bytes": 106504
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-hervant.webp",
+      "bytes": 110324
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-marneval.webp",
+      "bytes": 103432
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-mirel.webp",
+      "bytes": 112298
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-orbec.webp",
+      "bytes": 111714
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-roscan.webp",
+      "bytes": 104416
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-rovanne.webp",
+      "bytes": 95078
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-sorven.webp",
+      "bytes": 116930
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-tervenne.webp",
+      "bytes": 102640
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-torvay.webp",
+      "bytes": 105668
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-tregard.webp",
+      "bytes": 101378
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-vaudrec.webp",
+      "bytes": 103530
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/territories/district-virec.webp",
+      "bytes": 102600
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/alternates/aubert-v1.png",
+      "bytes": 2877332
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/alternates/trevain-v1.png",
+      "bytes": 2731769
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/arvenac.png",
+      "bytes": 2530862
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/aubert.png",
+      "bytes": 2811909
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/bernant.png",
+      "bytes": 2685505
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/bielle.png",
+      "bytes": 2652439
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/caudren.png",
+      "bytes": 2557410
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/corvail.png",
+      "bytes": 2477852
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/ervaut.png",
+      "bytes": 2635873
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/ferant.png",
+      "bytes": 2433303
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/gerain.png",
+      "bytes": 2330788
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/guerin.png",
+      "bytes": 2675872
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/guivren.png",
+      "bytes": 2574528
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/iverac.png",
+      "bytes": 2411235
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/jorant.png",
+      "bytes": 2289945
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/kervaut.png",
+      "bytes": 2615321
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/landrec.png",
+      "bytes": 2597638
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/osmer.png",
+      "bytes": 2473465
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/perrec.png",
+      "bytes": 2602855
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/quernac.png",
+      "bytes": 2508388
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/renaut.png",
+      "bytes": 2625707
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/rovenne.png",
+      "bytes": 2274391
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/savrec.png",
+      "bytes": 2482502
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/trevain.png",
+      "bytes": 2503668
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/valdran.png",
+      "bytes": 2529522
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/varenne.png",
+      "bytes": 2532850
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/walaric.png",
+      "bytes": 2600764
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/generated/yveran.png",
+      "bytes": 2594031
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/manifest.json",
+      "bytes": 67656
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/arvenac.webp",
+      "bytes": 243848
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/aubert.webp",
+      "bytes": 312696
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/bernant.webp",
+      "bytes": 264324
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/bielle.webp",
+      "bytes": 264734
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/caudren.webp",
+      "bytes": 243754
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/corvail.webp",
+      "bytes": 238314
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/ervaut.webp",
+      "bytes": 255184
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/ferant.webp",
+      "bytes": 239262
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/gerain.webp",
+      "bytes": 211702
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/guerin.webp",
+      "bytes": 263380
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/guivren.webp",
+      "bytes": 249604
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/iverac.webp",
+      "bytes": 223946
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/jorant.webp",
+      "bytes": 207036
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/kervaut.webp",
+      "bytes": 266776
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/landrec.webp",
+      "bytes": 251840
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/osmer.webp",
+      "bytes": 232442
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/perrec.webp",
+      "bytes": 254898
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/quernac.webp",
+      "bytes": 244056
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/renaut.webp",
+      "bytes": 259048
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/rovenne.webp",
+      "bytes": 208000
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/savrec.webp",
+      "bytes": 235826
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/trevain.webp",
+      "bytes": 272680
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/valdran.webp",
+      "bytes": 243960
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/varenne.webp",
+      "bytes": 240162
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/walaric.webp",
+      "bytes": 248284
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/previews/yveran.webp",
+      "bytes": 255090
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/arvenac.png",
+      "bytes": 2391992
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/aubert.png",
+      "bytes": 2672504
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/bernant.png",
+      "bytes": 2529612
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/bielle.png",
+      "bytes": 2513770
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/caudren.png",
+      "bytes": 2401039
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/corvail.png",
+      "bytes": 2316362
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/ervaut.png",
+      "bytes": 2490024
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/ferant.png",
+      "bytes": 2281609
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/gerain.png",
+      "bytes": 2170223
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/guerin.png",
+      "bytes": 2536172
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/guivren.png",
+      "bytes": 2428459
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/iverac.png",
+      "bytes": 2255971
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/jorant.png",
+      "bytes": 2137219
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/kervaut.png",
+      "bytes": 2449843
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/landrec.png",
+      "bytes": 2452710
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/osmer.png",
+      "bytes": 2327502
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/perrec.png",
+      "bytes": 2444244
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/quernac.png",
+      "bytes": 2362302
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/renaut.png",
+      "bytes": 2476519
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/rovenne.png",
+      "bytes": 2116900
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/savrec.png",
+      "bytes": 2333172
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/trevain.png",
+      "bytes": 2344769
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/valdran.png",
+      "bytes": 2376659
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/varenne.png",
+      "bytes": 2378797
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/walaric.png",
+      "bytes": 2441361
+    },
+    {
+      "file": "Vorschau/Brevanor/assets/warriors/production/yveran.png",
+      "bytes": 2437774
+    },
+    {
+      "file": "Vorschau/Brevanor/brevanor.css",
+      "bytes": 2879
+    },
+    {
+      "file": "Vorschau/Brevanor/cultural-references.mjs",
+      "bytes": 2496
+    },
+    {
+      "file": "Vorschau/Brevanor/generation-receipts-resumed.json",
+      "bytes": 12509
+    },
+    {
+      "file": "Vorschau/Brevanor/historical-emblem-receipt.json",
+      "bytes": 5034
+    },
+    {
+      "file": "Vorschau/Brevanor/historical-emblems.mjs",
+      "bytes": 2048
+    },
+    {
+      "file": "Vorschau/Brevanor/house-data.mjs",
+      "bytes": 10067
+    },
+    {
+      "file": "Vorschau/Brevanor/index.html",
+      "bytes": 900
+    },
+    {
+      "file": "Vorschau/Brevanor/placement-state.mjs",
+      "bytes": 734
+    },
+    {
+      "file": "Vorschau/Brevanor/prepare-warriors.py",
+      "bytes": 450
+    },
+    {
+      "file": "Vorschau/Brevanor/proposal-page.mjs",
+      "bytes": 641
+    },
+    {
+      "file": "Vorschau/Brevanor/realm-context.mjs",
+      "bytes": 5810
+    },
+    {
+      "file": "Vorschau/Brevanor/scripts/prepare-art.mjs",
+      "bytes": 9285
+    },
+    {
+      "file": "Vorschau/Brevanor/source-import.json",
+      "bytes": 3959
+    },
+    {
+      "file": "Vorschau/Brevanor/territory-data.mjs",
+      "bytes": 10115
+    },
+    {
+      "file": "Vorschau/Brevanor/warrior-art-direction.mjs",
+      "bytes": 16365
+    },
+    {
+      "file": "Vorschau/Brevanor/warrior-data.mjs",
+      "bytes": 711
+    },
+    {
+      "file": "Vorschau/Brevanor/warrior-prompts.json",
+      "bytes": 108502
+    },
+    {
+      "file": "Vorschau/Talyndor/README.md",
+      "bytes": 2460
+    },
+    {
+      "file": "Vorschau/Talyndor/REQUEST.md",
+      "bytes": 1977
+    },
+    {
+      "file": "Vorschau/Talyndor/art-prompts.json",
+      "bytes": 59792
+    },
+    {
+      "file": "Vorschau/Talyndor/assets.source.json",
+      "bytes": 3936
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/art-manifest.json",
+      "bytes": 15914
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/aldred.webp",
+      "bytes": 87178
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/ashton.webp",
+      "bytes": 77564
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/bramcote.webp",
+      "bytes": 138756
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/brigane.webp",
+      "bytes": 112356
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/egerton.webp",
+      "bytes": 92056
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/elwick.webp",
+      "bytes": 128092
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/holton.webp",
+      "bytes": 88070
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/kyme.webp",
+      "bytes": 71076
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/lennwyck.webp",
+      "bytes": 93496
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/rookden.webp",
+      "bytes": 130576
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/sedgeley.webp",
+      "bytes": 131508
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/talyndor.webp",
+      "bytes": 72688
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/thornwick.webp",
+      "bytes": 70424
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/tostan.webp",
+      "bytes": 130324
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/vernon.webp",
+      "bytes": 78342
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/warren.webp",
+      "bytes": 73456
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/wickton.webp",
+      "bytes": 79098
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/wulmer.webp",
+      "bytes": 129172
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/crests/yarwyck.webp",
+      "bytes": 78728
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/archive/earldom-brigane-horse-misreading.png",
+      "bytes": 1451501
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/aveldon.png",
+      "bytes": 1285513
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/bramcote.png",
+      "bytes": 2930544
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/bramwell.png",
+      "bytes": 1206886
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/brigane.png",
+      "bytes": 2378494
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/cawden.png",
+      "bytes": 1228785
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/dunworth.png",
+      "bytes": 1291881
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/earldom-aldred.png",
+      "bytes": 1403596
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/earldom-brigane.png",
+      "bytes": 1410258
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/earldom-lennwyck.png",
+      "bytes": 1385954
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/earldom-warren.png",
+      "bytes": 1447941
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/edrington.png",
+      "bytes": 1232562
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/eldenwick.png",
+      "bytes": 1239995
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/elwick.png",
+      "bytes": 2998111
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/fenhurst.png",
+      "bytes": 1225908
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/hartham.png",
+      "bytes": 1257993
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/norcombe.png",
+      "bytes": 1244662
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/rookden.png",
+      "bytes": 3004888
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/sedgeley.png",
+      "bytes": 2992021
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/ternford.png",
+      "bytes": 1232416
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/tostan.png",
+      "bytes": 2860615
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/wensbury.png",
+      "bytes": 1178281
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/wetherham.png",
+      "bytes": 1301035
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/generated/wulmer.png",
+      "bytes": 2985706
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/map-full.webp",
+      "bytes": 4456688
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/map.webp",
+      "bytes": 2414718
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/aldred.png",
+      "bytes": 380326
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/ashton.png",
+      "bytes": 341069
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/brigane.png",
+      "bytes": 406767
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/egerton.png",
+      "bytes": 424308
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/holton.png",
+      "bytes": 404854
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/kyme.png",
+      "bytes": 321391
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/lennwyck.png",
+      "bytes": 430370
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/talyndor.png",
+      "bytes": 350992
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/thornwick.png",
+      "bytes": 348749
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/vernon.png",
+      "bytes": 362905
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/warren.png",
+      "bytes": 336634
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/wickton.png",
+      "bytes": 358164
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/originals/yarwyck.png",
+      "bytes": 329586
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/aveldon.png",
+      "bytes": 1205093
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/bramcote.png",
+      "bytes": 2857120
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/bramwell.png",
+      "bytes": 1082699
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/brigane.png",
+      "bytes": 2300595
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/cawden.png",
+      "bytes": 1138787
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/dunworth.png",
+      "bytes": 1182659
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/earldom-aldred.png",
+      "bytes": 1332458
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/earldom-brigane.png",
+      "bytes": 1326226
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/earldom-lennwyck.png",
+      "bytes": 1341592
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/earldom-warren.png",
+      "bytes": 1303281
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/edrington.png",
+      "bytes": 1083406
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/eldenwick.png",
+      "bytes": 1111590
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/elwick.png",
+      "bytes": 2772288
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/fenhurst.png",
+      "bytes": 1138531
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/hartham.png",
+      "bytes": 1144414
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/norcombe.png",
+      "bytes": 1107405
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/rookden.png",
+      "bytes": 2902355
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/sedgeley.png",
+      "bytes": 2868209
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/ternford.png",
+      "bytes": 1136631
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/tostan.png",
+      "bytes": 2737739
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/wensbury.png",
+      "bytes": 1091571
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/wetherham.png",
+      "bytes": 1190706
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/production/wulmer.png",
+      "bytes": 2853153
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/aveldon.webp",
+      "bytes": 68872
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/bramwell.webp",
+      "bytes": 62244
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/cawden.webp",
+      "bytes": 62604
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/dunworth.webp",
+      "bytes": 61708
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/earldom-aldred.webp",
+      "bytes": 81914
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/earldom-brigane.webp",
+      "bytes": 81212
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/earldom-lennwyck.webp",
+      "bytes": 84694
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/earldom-warren.webp",
+      "bytes": 73806
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/edrington.webp",
+      "bytes": 60672
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/eldenwick.webp",
+      "bytes": 64994
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/fenhurst.webp",
+      "bytes": 67364
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/hartham.webp",
+      "bytes": 64824
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/norcombe.webp",
+      "bytes": 65620
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/ternford.webp",
+      "bytes": 64718
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/wensbury.webp",
+      "bytes": 59454
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/territories/wetherham.webp",
+      "bytes": 64776
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/aldred.png",
+      "bytes": 2666595
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/archive/ashton-framing-before.png",
+      "bytes": 2783748
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/archive/brigane-horse-misreading.png",
+      "bytes": 2520223
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/archive/thornwick-direction-before.png",
+      "bytes": 2676553
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/ashton.png",
+      "bytes": 2435508
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/bramcote.png",
+      "bytes": 2133894
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/brigane.png",
+      "bytes": 2569862
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/egerton.png",
+      "bytes": 2302534
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/elwick.png",
+      "bytes": 2056223
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/holton.png",
+      "bytes": 2241037
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/kyme.png",
+      "bytes": 2605555
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/lennwyck.png",
+      "bytes": 2485550
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/rookden.png",
+      "bytes": 2369482
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/sedgeley.png",
+      "bytes": 2393867
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/thornwick.png",
+      "bytes": 2477408
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/tostan.png",
+      "bytes": 2507100
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/vernon.png",
+      "bytes": 2318941
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/warren.png",
+      "bytes": 2285407
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/wickton.png",
+      "bytes": 2169403
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/wulmer.png",
+      "bytes": 2456942
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/generated/yarwyck.png",
+      "bytes": 2279656
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/manifest.json",
+      "bytes": 46966
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/aldred.webp",
+      "bytes": 257324
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/ashton.webp",
+      "bytes": 249306
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/bramcote.webp",
+      "bytes": 182818
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/brigane.webp",
+      "bytes": 246918
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/egerton.webp",
+      "bytes": 209520
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/elwick.webp",
+      "bytes": 168436
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/holton.webp",
+      "bytes": 196440
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/kyme.webp",
+      "bytes": 247658
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/lennwyck.webp",
+      "bytes": 233106
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/rookden.webp",
+      "bytes": 204994
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/sedgeley.webp",
+      "bytes": 222480
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/thornwick.webp",
+      "bytes": 251160
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/tostan.webp",
+      "bytes": 228500
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/vernon.webp",
+      "bytes": 202502
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/warren.webp",
+      "bytes": 191818
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/wickton.webp",
+      "bytes": 184404
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/wulmer.webp",
+      "bytes": 225372
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/previews/yarwyck.webp",
+      "bytes": 194470
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/aldred.png",
+      "bytes": 2531886
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/ashton.png",
+      "bytes": 2275604
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/bramcote.png",
+      "bytes": 1989823
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/brigane.png",
+      "bytes": 2446115
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/egerton.png",
+      "bytes": 2143347
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/elwick.png",
+      "bytes": 1904480
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/holton.png",
+      "bytes": 2088410
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/kyme.png",
+      "bytes": 2466146
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/lennwyck.png",
+      "bytes": 2343726
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/rookden.png",
+      "bytes": 2203341
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/sedgeley.png",
+      "bytes": 2246284
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/thornwick.png",
+      "bytes": 2313946
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/tostan.png",
+      "bytes": 2383106
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/vernon.png",
+      "bytes": 2176084
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/warren.png",
+      "bytes": 2146815
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/wickton.png",
+      "bytes": 2010788
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/wulmer.png",
+      "bytes": 2291984
+    },
+    {
+      "file": "Vorschau/Talyndor/assets/warriors/production/yarwyck.png",
+      "bytes": 2134000
+    },
+    {
+      "file": "Vorschau/Talyndor/correction-receipts.json",
+      "bytes": 7443
+    },
+    {
+      "file": "Vorschau/Talyndor/generation-receipts.json",
+      "bytes": 122621
+    },
+    {
+      "file": "Vorschau/Talyndor/house-data.mjs",
+      "bytes": 7048
+    },
+    {
+      "file": "Vorschau/Talyndor/index.html",
+      "bytes": 821
+    },
+    {
+      "file": "Vorschau/Talyndor/placement-state.mjs",
+      "bytes": 728
+    },
+    {
+      "file": "Vorschau/Talyndor/prepare-warriors.py",
+      "bytes": 450
+    },
+    {
+      "file": "Vorschau/Talyndor/proposal-page.mjs",
+      "bytes": 481
+    },
+    {
+      "file": "Vorschau/Talyndor/realm-context.mjs",
+      "bytes": 5175
+    },
+    {
+      "file": "Vorschau/Talyndor/scripts/prepare-art.mjs",
+      "bytes": 8797
+    },
+    {
+      "file": "Vorschau/Talyndor/source-import.json",
+      "bytes": 3828
+    },
+    {
+      "file": "Vorschau/Talyndor/talyndor.css",
+      "bytes": 1255
+    },
+    {
+      "file": "Vorschau/Talyndor/territory-data.mjs",
+      "bytes": 8389
+    },
+    {
+      "file": "Vorschau/Talyndor/warrior-art-direction.mjs",
+      "bytes": 10846
+    },
+    {
+      "file": "Vorschau/Talyndor/warrior-data.mjs",
+      "bytes": 703
+    },
+    {
+      "file": "Vorschau/Talyndor/warrior-prompts.json",
+      "bytes": 65621
+    },
+    {
+      "file": "Vorschau/tests/brevanor.test.mjs",
+      "bytes": 5888
+    },
+    {
+      "file": "Vorschau/tests/talyndor.test.mjs",
+      "bytes": 4454
+    },
+    {
+      "file": "diagnostics/brevanor-classes/QA.md",
+      "bytes": 2690
+    },
+    {
+      "file": "diagnostics/brevanor-classes/scaffold.mjs",
+      "bytes": 2921
+    },
+    {
+      "file": "diagnostics/brevanor/README.md",
+      "bytes": 3204
+    },
+    {
+      "file": "diagnostics/brevanor/assets-source-initial.json",
+      "bytes": 3929
+    },
+    {
+      "file": "diagnostics/brevanor/browser-checks.json",
+      "bytes": 26988
+    },
+    {
+      "file": "diagnostics/brevanor/browser-test-draft.json",
+      "bytes": 704
+    },
+    {
+      "file": "diagnostics/brevanor/inspect-markers.py",
+      "bytes": 1016
+    },
+    {
+      "file": "diagnostics/brevanor/inspect-sources.py",
+      "bytes": 1518
+    },
+    {
+      "file": "diagnostics/brevanor/inspect-updated-map.py",
+      "bytes": 1382
+    },
+    {
+      "file": "diagnostics/brevanor/inventory.json",
+      "bytes": 2555
+    },
+    {
+      "file": "diagnostics/brevanor/map-anchor-update.json",
+      "bytes": 2625
+    },
+    {
+      "file": "diagnostics/brevanor/map-markers.json",
+      "bytes": 2641
+    },
+    {
+      "file": "diagnostics/brevanor/map-update.json",
+      "bytes": 383
+    },
+    {
+      "file": "diagnostics/brevanor/review-generated.py",
+      "bytes": 677
+    },
+    {
+      "file": "diagnostics/brevanor/update-map-anchors.mjs",
+      "bytes": 1453
+    },
+    {
+      "file": "diagnostics/brevanor/warriors/audit.json",
+      "bytes": 1106
+    },
+    {
+      "file": "diagnostics/release-2026-10-30/inventory.mjs",
+      "bytes": 1162
+    },
+    {
+      "file": "diagnostics/talyndor/QA.md",
+      "bytes": 2642
+    },
+    {
+      "file": "diagnostics/talyndor/browser-checks.json",
+      "bytes": 19529
+    },
+    {
+      "file": "diagnostics/talyndor/draft-export-test.json",
+      "bytes": 472
+    },
+    {
+      "file": "diagnostics/talyndor/name-audit.json",
+      "bytes": 909
+    },
+    {
+      "file": "diagnostics/talyndor/warriors/audit.json",
+      "bytes": 575
+    }
+  ]
+}

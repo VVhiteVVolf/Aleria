@@ -1,12 +1,20 @@
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import acceptedMetadata from './accepted-realm-metadata-review-20261029.json' with { type: 'json' };
+import balchderPeople from './balchder-person-review-20261029.json' with { type: 'json' };
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function protectedAlbicFamilies(records) {
   return records.map(record => {
     const copy = structuredClone(record);
+    // Validate the exact approved biography/job metadata before projecting it
+    // back. All identity, portrait, life-date and relationship fields stay hashed.
+    for (const [personId, review] of Object.entries(balchderPeople.families[record.id] || {})) {
+      const person = copy.family.persons.find(person => person.id === personId);
+      assert.equal(reviewHash({ title: person.title, notes: person.notes, extensions: person.extensions }), review.afterSha256, `${record.id}/${personId}`);
+      Object.assign(person, structuredClone(review.before));
+    }
     delete copy.folderPath; delete copy.hierarchy;
     const omitLocation = profile => {
       if (!profile) return;

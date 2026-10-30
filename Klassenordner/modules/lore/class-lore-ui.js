@@ -1,4 +1,4 @@
-import { CLASS_LORE } from './class-lore-data.js?v=20260913-morgorn-names-v1';
+import { CLASS_LORE } from './class-lore-data.js?v=20261030-brevanor-v1';
 
 export function appendClassLore(groups) {
   for (const group of groups) {

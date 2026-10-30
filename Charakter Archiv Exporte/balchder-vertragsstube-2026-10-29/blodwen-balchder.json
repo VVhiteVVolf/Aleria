@@ -1,0 +1,181 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-29T00:00:00.000Z",
+  "character": {
+    "id": "person--haus-balchder--blodwen-balchder",
+    "name": "Blodwen Balchder",
+    "title": "Schreibergehilfin der Vertragsstube",
+    "fraktion": "Haus Balchder",
+    "role": "Schreibergehilfin unter Kamber Balchder",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Unterstützt ihren Vater Kamber Balchder mit Abschriften, Listen und der Ablage von Vertragsunterlagen.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-29T00:00:00.000Z",
+    "updatedAt": "2026-10-29T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-balchder/blodwen-balchder.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Blodwen Balchder"
+        },
+        {
+          "label": "Geboren",
+          "value": "1722"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Balchder"
+        },
+        {
+          "label": "Eltern",
+          "value": "Kamber Balchder und Senara Gelyn"
+        },
+        {
+          "label": "Geschwister",
+          "value": "Rice Balchder"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Schreibergehilfin der Vertragsstube"
+        },
+        {
+          "label": "Untersteht",
+          "value": "Kamber Balchder · Vertragsmeister"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Blodwen Balchder",
+        "biographyText": "<p><strong>Blodwen Balchder</strong>, geboren <strong>1722</strong>, ist die Tochter von <strong>Kamber Balchder</strong> und <strong>Senara Gelyn</strong>. Ihr jüngerer Bruder heißt <strong>Rice</strong>.</p><p>Sie arbeitet als <strong>Schreibergehilfin</strong> unter ihrem Vater in der Vertragsstube. Sie fertigt Abschriften an, ordnet Schriftstücke und überträgt von Kamber geprüfte Angaben in die Listen der Stube. Die inhaltliche Prüfung und Freigabe bleiben bei ihrem Vater; eine eigene Verhandlungs- oder Zeichnungsvollmacht besitzt sie durch diese Aufgabe nicht.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [],
+        "extraSections": [],
+        "historyTitle": "Hintergrund",
+        "historyText": "",
+        "worksTitle": "Aufgaben",
+        "works": [
+          "Abschriften nach den geprüften Vorlagen ihres Vaters anfertigen.",
+          "Vertragsunterlagen und zugehörige Belege geordnet ablegen.",
+          "Vorgegebene Fristen und Eingänge in die Listen der Vertragsstube übertragen."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Kamber Balchder",
+            "detail": "Vater und unmittelbarer Vorgesetzter in der Vertragsstube.",
+            "image": "../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Senara Gelyn",
+            "detail": "Mutter.",
+            "image": "../Stammbäume/assets/images/portraits/haus-gelyn/senara-gelyn.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rice Balchder",
+            "detail": "Jüngerer Bruder · Laufbursche unter Kamber.",
+            "image": "../Stammbäume/assets/images/portraits/haus-balchder/rice-balchder.jpg",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-balchder.png",
+            "title": "Familienakte",
+            "text": "Die belegte Familie Balchder.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=blodwen-balchder"
+          }
+        ],
+        "footer": ""
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-balchder--blodwen-balchder"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-balchder--blodwen-balchder",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-balchder",
+      "houseName": "Haus Balchder",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-balchder",
+          "personId": "blodwen-balchder",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-29T00:00:00.000Z",
+          "lastSyncedAt": "2026-10-29T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=blodwen-balchder",
+          "fingerprint": "{\"name\":\"Blodwen Balchder\",\"title\":\"Schreibergehilfin der Vertragsstube\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-balchder/blodwen-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kamber-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--kamber-balchder\",\"name\":\"Kamber Balchder\"},{\"personId\":\"senara-gelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gelyn--senara-gelyn\",\"name\":\"Senara Gelyn\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "kamber-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--kamber-balchder",
+            "name": "Kamber Balchder"
+          },
+          {
+            "personId": "senara-gelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gelyn--senara-gelyn",
+            "name": "Senara Gelyn"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

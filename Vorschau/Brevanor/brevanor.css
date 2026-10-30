@@ -1,0 +1,27 @@
+.brevanor-workbench{--accent:#286369;--ink:#293939;--paper:#f4eee0;--muted:#6f7770;--line:#c9c6b5;background:#d3d4c5}
+.brevanor-workbench .hero{background:radial-gradient(ellipse at 85% 40%,#5396962b,transparent 65%)}
+.brevanor-workbench .county-card{min-width:0;background:#faf5e9}
+.brevanor-workbench .county-card:last-child{grid-column:auto}
+.brevanor-workbench .county-card .shield-link span{min-width:0;overflow-wrap:anywhere}
+.brevanor-workbench .county-card .shield-link{font-size:23px}
+.brevanor-workbench .seat-card .shield-link span{display:none}
+.brevanor-workbench .country-warrior-card{background:linear-gradient(#eee9db,#d8dfd5)}
+.brevanor-workbench .map-canvas{min-width:1000px;container-type:inline-size}
+.brevanor-workbench .city-name{display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);width:12%;height:2.4%;box-sizing:border-box;font-size:clamp(8px,1.35cqw,48px);padding:0;background:#263d3c;max-width:none}
+.brevanor-workbench .bestiary-reference{padding-top:16px;border-top:1px solid var(--line);font:13px/1.6 Arial,sans-serif}
+.brevanor-cultural-references{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);display:grid;gap:38px}
+.brevanor-ancient-emblem{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);align-items:center;gap:32px;margin:28px 0 36px;padding:28px;background:#e4e9e0;border:1px solid var(--line)}
+.brevanor-ancient-emblem figure{margin:0;text-align:center}
+.brevanor-ancient-emblem img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.brevanor-ancient-emblem figcaption{margin-top:12px;font:12px/1.6 Arial,sans-serif;color:var(--muted)}
+.brevanor-rank-table{overflow:auto}
+.brevanor-rank-table table{width:100%;border-collapse:collapse;text-align:left;font:15px/1.55 Arial,sans-serif}
+.brevanor-rank-table th,.brevanor-rank-table td{padding:10px 14px;border-bottom:1px solid var(--line)}
+.brevanor-shape-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.brevanor-shape-grid figure{margin:0;padding:18px;background:#e4e9e0;border:1px solid var(--line)}
+.brevanor-shape-grid img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.brevanor-shape-grid figcaption strong{display:block;margin:14px 0;font-size:22px}
+.brevanor-shape-grid p{font-size:15px;line-height:1.6}
+@media(max-width:700px){.brevanor-shape-grid{grid-template-columns:1fr}.brevanor-shape-grid img{max-height:300px}.brevanor-workbench .county-card .shield-link{font-size:21px}}
+@media(max-width:400px){.brevanor-workbench .county-card .shield-link{flex-direction:column;align-items:flex-start}.brevanor-rank-table th,.brevanor-rank-table td{padding:8px}}
+@media(max-width:700px){.brevanor-ancient-emblem{grid-template-columns:1fr;gap:20px;padding:20px}.brevanor-ancient-emblem img{max-height:240px}.brevanor-ancient-emblem h3{overflow-wrap:anywhere}}

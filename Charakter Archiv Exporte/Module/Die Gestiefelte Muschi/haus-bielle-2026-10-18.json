@@ -6,9 +6,9 @@
     "title": "Haus Bielle",
     "emblem": "assets/images/houses/Brevanor/Bielle.png",
     "motto": "",
-    "description": "Brevanorisches Ritter- und Winzerhaus. Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an das Rittererbe und die Weingüter der Familie.",
+    "description": "Brevanorisches Brenor- und Winzerhaus (Baronenrang). Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an die Rittertradition und die Weingüter der Familie.",
     "houseProfile": {
-      "rankId": "knight-simple",
+      "rankId": "brenor",
       "seat": "",
       "barony": "",
       "county": "",
@@ -63,7 +63,8 @@
   "extensions": {
     "blankFamily": true,
     "heraldryOnly": true,
-    "sourceRevision": 1,
-    "sourceNote": "Autorenauftrag vom 18.10.2026: Wappen und Herkunft in Brevanor vermerken. Keine zusätzlichen Angehörigen, Ehen oder ausgearbeitete Familienlinien erfinden."
+    "sourceRevision": 2,
+    "sourceNote": "Autorenauftrag vom 18.10.2026: Wappen und Herkunft in Brevanor vermerken. Keine zusätzlichen Angehörigen, Ehen oder ausgearbeitete Familienlinien erfinden.",
+    "rankSource": "Nutzerkorrektur vom 30.10.2026 gemäß aktueller Ausarbeitung des Königreichs Brevanor: Brenor (Baron), ersetzt die frühere Einordnung als einfache Ritterfamilie."
   }
 }

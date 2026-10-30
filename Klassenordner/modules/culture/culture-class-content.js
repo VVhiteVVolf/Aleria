@@ -1,4 +1,5 @@
 import { validateClassDocument, validateClassRichText } from '../pages/class-page-content.js';
+import { isClassArtSource } from '../pages/class-art-source.js';
 
 export function resolveCultureClassDocument(document, culture) {
   if (document.cultureId !== culture.id) throw new Error(`${document.id}: Kultur stimmt nicht überein`);
@@ -8,7 +9,7 @@ export function resolveCultureClassDocument(document, culture) {
     return { ...section, html: [shared, section.html].filter(Boolean).join(' ') };
   });
   for (const art of [document.artwork, document.companionArtwork].filter(Boolean)) {
-    if (!/^https:\/\/i\.imgur\.com\/[a-zA-Z0-9]+\.(png|jpg|jpeg|webp)$/i.test(art.source)
+    if (!isClassArtSource(art.source)
       || !Number.isInteger(art.width) || !Number.isInteger(art.height) || art.width < 1 || art.height < 1) {
       throw new Error(`${document.id}: ungültige Illustration`);
     }

@@ -1,0 +1,11 @@
+/* Brevanor owns its turquoise, silver and charcoal cultural presentation. */
+[data-culture="brevanor"]{--class-accent:#27757b;--class-accent-dark:#194a50;--class-deep:#263a3c;--class-tint:#b5d4cf}
+[data-culture="brevanor"] .class-book-page{border-top-color:#397d82}
+[data-culture="brevanor"] .class-cover{background:linear-gradient(115deg,#c5d4c9,#f2ead6 64%,#d1d9cc);border-bottom:3px double #638d8c}
+[data-culture="brevanor"] .class-cover h1,[data-culture="brevanor"] .class-chapter-heading h2,[data-culture="brevanor"] .class-facts h2{color:#225c63}
+[data-culture="brevanor"] .class-emblem{background:#d5e0d8;border-color:#638c8c}
+[data-culture="brevanor"] .cenyr-cover-path{background:#254c51;color:#f3efe2}
+[data-culture="brevanor"] .cenyr-cover-path a{color:#f3efe2}
+[data-culture="brevanor"] .class-book-mark,[data-culture="brevanor"] .class-volume-nav a[aria-current="page"]{background:#d4ded4;border-color:#54848a}
+#brevanor .land-header{border-bottom:2px solid #49898b;padding-bottom:14px}
+#brevanor .land-info h2{color:#24585e}

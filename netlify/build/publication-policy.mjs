@@ -3,5 +3,6 @@
 export function isAuthoringArchive(file) {
   return file.startsWith('diagnostics/')
     || file.startsWith('output/heraldry/')
-    || /^Vorschau\/[^/]+\/assets\/(?:warriors\/)?generated(?:-archive)?\//.test(file);
+    || /^Vorschau\/[^/]+\/assets\/(?:warriors\/)?(?:generated(?:-archive)?|alternates)\//.test(file)
+    || /^Klassenordner\/assets\/images\/brevanor\/icons\/generated\//.test(file);
 }

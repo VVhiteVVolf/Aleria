@@ -121,7 +121,7 @@
           "biography": {
             "crestImage": "../Stammbäume/assets/images/houses/Brevanor/Desele.png",
             "biographyTitle": "Helviane Desele · Was sich retten ließ",
-            "biographyText": "<p>Helviane wurde 1668 als <strong>Bielle</strong> in Brevanor geboren. Ihr eigenes Haus verband Ritterdienst mit Weinbau; durch ihre Ehe kam sie zu den <strong>Desele</strong>, deren Champagnia und Parfüme weit über die Heimat hinaus einen Namen hatten. Sie lernte, wie man Seltenheit verkauft, ohne selbst um Aufmerksamkeit zu bitten. Mit zweiundsiebzig Jahren beherrscht sie diese Kunst unverändert.</p>",
+            "biographyText": "<p>Helviane wurde 1668 als <strong>Bielle</strong> in Brevanor geboren. Ihr Geburtshaus gehörte zu den <strong>Brenor</strong>, den Baronen Brevanors, und verband Rittertradition mit Weinbau. Durch ihre Ehe kam sie zu den bürgerlichen <strong>Desele</strong>, deren Champagnia und Parfüme weit über die Heimat hinaus einen Namen hatten. Sie lernte, wie man Seltenheit verkauft, ohne selbst um Aufmerksamkeit zu bitten. Mit zweiundsiebzig Jahren beherrscht sie diese Kunst unverändert.</p>",
             "historyTitle": "Zwei Fluchten und ein neuer Besitz",
             "historyText": "<p>Vor etwas mehr als zwanzig Jahren brachte die <strong>Triarchie</strong>, ein Bund dreier Hexer, Brevanor, Talyndor und Deitheach unter ihre Gewalt. Helvianes Kinder kämpften gegen den Umsturz. Die Niederlage zerriss die Familie: Angehörige blieben zurück, gingen verloren oder suchten nach Streit eigene Wege. Über das Schicksal jedes Einzelnen gibt Helviane keine vollständige Auskunft.</p><p>Sie floh zunächst nach <strong>Lothir</strong>. Als die Triarchie auch dort Fuß fasste, setzte sie den Weg bis nach <strong>Estryll</strong> fort. Vier Hausbedienstete und die Reste ihrer Garde hielten ihr die Treue. Ein Teil des Vermögens, Geschäftspapiere, Duftrezepte und ein kleiner Bestand alter Flaschen erreichten mit ihr Gwynthor.</p><p>Vom geretteten Vermögen kaufte sie ein bestehendes Etablissement und formte daraus die <strong>Gestiefelte Muschi</strong>. Heute tragen Ausschank, Unterhaltung, Zimmer und private Gesellschaft den laufenden Betrieb. Die seltenen Brevanorer Flaschen sind ein endlicher Besitz; gewöhnliche Getränke und Tirnaras Tabak kommen über die heutigen Handelswege.</p>",
             "abilitiesTitle": "Hinter dem Fächer",
@@ -162,12 +162,12 @@
               {
                 "name": "Haus Bielle · Brevanor",
                 "image": "../Stammbäume/assets/images/houses/Brevanor/Bielle.png",
-                "detail": "Ihr Geburtshaus: Ritter und Winzer. Turm und zweifarbige Trauben erinnern an die verlorenen Güter."
+                "detail": "Ihr Geburtshaus: Brenor (Barone) und Winzer. Turm und zweifarbige Trauben erinnern an die Rittertradition und die verlorenen Güter."
               },
               {
                 "name": "Haus Desele · Brevanor",
                 "image": "../Stammbäume/assets/images/houses/Brevanor/Desele.png",
-                "detail": "Ihr angeheiratetes Haus: Champagnia, Duftkompositionen und die verbliebene Garde."
+                "detail": "Ihr angeheiratetes bürgerliches Haus: Champagnia, Duftkompositionen und die verbliebene Garde."
               },
               {
                 "name": "Klingende Münze",
@@ -210,13 +210,13 @@
               {
                 "title": "Bielle",
                 "icon": "../Stammbäume/assets/images/houses/Brevanor/Bielle.png",
-                "text": "Brevanors Ritter und Winzer · Helvianes Geburtshaus.",
+                "text": "Brevanors Brenor (Barone) und Winzer · Helvianes Geburtshaus.",
                 "link": "../Stammbäume/Stammbaum.html?family=haus-bielle&mode=view"
               },
               {
                 "title": "Desele",
                 "icon": "../Stammbäume/assets/images/houses/Brevanor/Desele.png",
-                "text": "Champagnia, Parfüme und ein geretteter Teil des alten Haushalts.",
+                "text": "Bürgerliches Herstellerhaus für Champagnia und Parfüme; ein Teil des alten Haushalts blieb erhalten.",
                 "link": "../Stammbäume/Stammbaum.html?family=haus-desele&mode=view"
               }
             ]
@@ -282,7 +282,7 @@
                         "title": "Helviane Desele",
                         "subtitle": "Inhaberin · geborene Bielle",
                         "portrait": "./assets/gestiefelte-muschi/portraits/helviane.png",
-                        "text": "<p>72 Jahre. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.</p>"
+                        "text": "<p>72 Jahre. Stammt aus dem brevanorischen Brenorhaus Bielle (Baronenrang) und heiratete in das bürgerliche Haus Desele ein. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.</p>"
                       }
                     ]
                   },

@@ -1,0 +1,62 @@
+{
+  "tool": "built-in image_gen",
+  "reason": "Brigane: zwei wütende weiße Pitbulls. Ashton und Thornwick: vollständige Pferdeansicht und Bildränder.",
+  "date": "2026-10-29",
+  "entries": [
+    {
+      "id": "brigane",
+      "name": "Brigane",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/brigane.png",
+      "preview": "assets/crests/brigane.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "Edit this original Brigane circular heraldic crest. Correct the central animals to TWO ANGRY WHITE PITBULL DOGS, facing inward, snarling with bared teeth, broad blocky heads, short broad muzzles, muscular stocky canine bodies and raised front PAWS. They are NOT horses: no manes, hooves, long equine faces or flowing horse tails. Keep the same mirrored heraldic arrangement, blue field, small silver ring sign below, circular dark frame and silver interlaced ornament. Preserve all other design and colours. Exact circle fully inside square canvas with clear transparent margin, completely opaque inside circle, true transparent outside, no exterior shadow or text.",
+      "destination": "assets/generated/brigane.png",
+      "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-7cc9667d-18a1-4a7f-8fa9-07341761c63d.png"
+    },
+    {
+      "id": "earldom-brigane",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/generated/archive/earldom-brigane-horse-misreading.png"
+      ],
+      "destination": "assets/generated/earldom-brigane.png",
+      "prompt": "Edit this exact blue Brigane spear banner. REPLACE ONLY BOTH HORSES with TWO ANGRY WHITE PITBULL DOGS facing inward in the same mirrored rampant heraldic arrangement. Clearly canine: broad square blocky heads, short broad muzzles, bared teeth and snarling mouths, small folded dog ears, thick necks, broad muscular chests and stocky powerful bodies, raised front PAWS WITH TOES, short smooth coat and natural thin dog tails. No long muzzles, flowing manes, hooves or horse tails. Keep blue cloth, silver ring sign below, silver interlaced border, spear, single point blowing to RIGHT, embroidery, folds and painted style exactly as before. Square canvas with ENTIRE spear and banner fully visible with at least 5% clear margin on every side; reduce uniformly slightly if necessary to avoid crop. True transparent PNG exterior and open gaps. Opaque cloth and spear; no scenery, shadows or text.",
+      "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-7a872943-91bf-44ec-aca9-0b897b608473.png"
+    },
+    {
+      "id": "brigane-warrior",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/warriors/generated/archive/brigane-horse-misreading.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "destination": "assets/warriors/generated/brigane.png",
+      "prompt": "Edit this exact blue Brigane knight, preserving identity, armour, helmet, plume, pose, colours, sword, large shield, garments and matte painted style. REPLACE EVERY PAIR OF HORSE EMBLEMS on CHEST AND SHIELD with TWO ANGRY WHITE PITBULL DOGS facing inward. Clearly DOGS: broad blocky heads, short broad muzzles, bared teeth, small folded ears, muscular stocky bodies, raised front PAWS WITH TOES, short smooth coat, natural thin dog tails. No horses, manes, hooves, long equine faces or flowing tails. Keep silver small ring sign below each pair and all other decoration. Full body from plume to BOTH feet and sword point, entire shield inside exact 1024x1536 portrait canvas with at least 4% clear transparent margin top and bottom. Preserve matte soft thin painted contours and pigment grain. Reference2 is painting style only. True transparent PNG background and gaps, remove all exterior colour haze; no ground, scene, shadows, text or border.",
+      "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-dd1d9802-223e-43e3-91dd-7b4177dd94bf.png"
+    },
+    {
+      "id": "ashton",
+      "kind": "warrior-framing",
+      "destination": "assets/warriors/generated/ashton.png",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/warriors/generated/archive/ashton-framing-before.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Edit this exact Ashton green and ivory knight with black Brycing stallion. Preserve the knight identity, clothing, helmet, equipment, heraldry, horse coat and matte painted style. Correct ONLY composition and horse orientation/anatomy: show the ENTIRE tall strong horse standing quietly to the RIGHT of the person in coherent LEFT-FACING three-quarter view. Horse nose, neck, chest and front legs toward the LEFT; hindquarters and a single natural tail rooted on the RIGHT. Complete horse head, both ears, ENTIRE hindquarters, naturally attached tail and ALL FOUR legs and FOUR HOOVES visibly separate, even if rear pair partly behind the front pair. No cropped flank, tail or feet. Knight at LEFT stands beside horse, complete from helmet to both feet, logical single rein set held naturally. Zoom out composition uniformly enough to leave at least 7% clear transparent margin on EVERY side, especially right flank and highest ears. Exact 1024x1536 portrait PNG. Reference2 painting style only; no new armour or emblem. TRUE transparent exterior and open gaps, no coloured haze, paper, ground, external shadow or text.",
+      "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-bd9dcdfa-75f7-472d-82f3-3bb44ed93894.png"
+    },
+    {
+      "id": "thornwick",
+      "kind": "warrior-framing",
+      "destination": "assets/warriors/generated/thornwick.png",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/warriors/generated/archive/thornwick-direction-before.png",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ],
+      "prompt": "Edit this exact Thornwick olive-clad archer with bay Brycing stallion. Preserve the knight identity, clothing, helmet, equipment, heraldry, horse coat and matte painted style. Correct ONLY composition and horse orientation/anatomy: show the ENTIRE tall strong horse standing quietly to the RIGHT of the person in coherent LEFT-FACING three-quarter view. Horse nose, neck, chest and front legs toward the LEFT; hindquarters and a single natural tail rooted on the RIGHT. Complete horse head, both ears, ENTIRE hindquarters, naturally attached tail and ALL FOUR legs and FOUR HOOVES visibly separate, even if rear pair partly behind the front pair. No cropped flank, tail or feet. Knight at LEFT stands beside horse, complete from helmet to both feet, logical single rein set held naturally. Zoom out composition uniformly enough to leave at least 7% clear transparent margin on EVERY side, especially right flank and highest ears. Exact 1024x1536 portrait PNG. Reference2 painting style only; no new armour or emblem. TRUE transparent exterior and open gaps, no coloured haze, paper, ground, external shadow or text.",
+      "sourcePath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a184de-df6c-7c80-9d58-cedc47f415ee\\exec-70402809-bc73-46e7-84f0-e5bd6bf53266.png"
+    }
+  ]
+}

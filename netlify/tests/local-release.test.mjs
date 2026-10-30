@@ -23,12 +23,18 @@ async function fixture(t) {
 
 test('source archives leave the deploy while active originals, full-size art and templates remain', () => {
   for (const file of ['Vorschau/Triarchie/assets/generated/taghan.png',
-    'Vorschau/Iathneach/assets/warriors/generated-archive/old.png', 'diagnostics/review/REVIEW.md']) {
+    'Vorschau/Brevanor/assets/warriors/alternates/trevain-v1.png',
+    'Vorschau/Iathneach/assets/warriors/generated-archive/old.png', 'diagnostics/review/REVIEW.md',
+    'Klassenordner/assets/images/brevanor/icons/generated/breval-comic.png',
+    'Klassenordner/assets/images/brevanor/icons/generated/archive/belgrant.png']) {
     assert.equal(shouldPublish(file), false, file);
   }
   for (const file of ['Vorschau/Iathneach/assets/originals/cetchathach.png',
     'Vorschau/Triarchie/assets/warriors/production/taghan.png', 'Stammbäume/assets/images/portraits/person.png',
-    'Vorschau/COUNTRY_PREPARATION_TEMPLATE.md', 'output/Patrick-Ideenwerk.zip']) assert(shouldPublish(file), file);
+    'Vorschau/COUNTRY_PREPARATION_TEMPLATE.md', 'output/Patrick-Ideenwerk.zip',
+    'Klassenordner/assets/images/brevanor/icons/breval.webp',
+    'Klassenordner/assets/images/brevanor/icons/production/breval.png',
+    'Klassenordner/assets/images/brevanor/realm/brevanor-original.png']) assert(shouldPublish(file), file);
 });
 
 test('local push requires a selective skip marker rather than stopping all web publishers', () => {

@@ -2,6 +2,13 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
+Nutzerfreigabe vom 30. Oktober 2026: **„okay pushe alles auf master und deploy“**.
+Freigegeben ist der gesamte jetzt vorhandene lokale Stand einschließlich der
+Talyndor- und Brevanor-Vorbereitungsseiten, der sieben Brevanor-Klassen mit
+Comicicons, der jüngsten Bild-, Karten- und Rangkorrekturen sowie der übrigen
+lokalen Neuerungen. Quellen und Prüfbelege bleiben nach Releasepolicy erhalten;
+private Dossiers und lokale Browserentwürfe bleiben ausgeschlossen.
+
 Nutzerfreigabe vom 29. Oktober 2026: **„Dann los“**, als ausdrückliche Antwort
 auf die Übersicht des nächsten gemeinsamen Pushs und Deploys. Freigegeben ist
 der dort beschriebene vorhandene lokale Gesamtstand: die Übernahme der sieben
@@ -93,7 +100,19 @@ direkt für das jeweilige Haus übernehmen. Das gilt ausdrücklich für Fiachrao
 Solche Originale erhalten und lokal einbinden; neue Darstellungen nur für fehlende
 Motive ergänzen. Der aktuelle Zeichenstil gilt für diese neu erzeugten Ergänzungen.
 
-Die fünf Stilrichtungen nach Verwendungszweck getrennt verwenden. Vorhandene Figurenporträts und
+**Eigener Stil für vereinfachte Klassenicons (Nutzerkorrektur vom 30. Oktober 2026):**
+`fantasy-class-icon` ist ausdrücklich vom normalen Kriegerstil getrennt.
+Die bestehenden Morgorn-Klassenicons unter
+`AleriaAlmanach/docs/art/class-icon-style/` tatsächlich ansehen und als Bildreferenz
+verwenden: flache verspielte 2D-Comiczeichnung, kräftige gezeichnete Konturen,
+wenige große matte Farbflächen, höchstens zwei flache Tonwerte pro Material und
+einfache ausdrucksstarke Formen. Keine plastische Modellierung, Verläufe,
+Glanzstellen oder dreidimensionale Spielzeugfiguren. Transparenter Hintergrund.
+Für diese Registericons den Hausritter und `fantasy-rpg-character` nicht als
+Stilreferenz einsetzen. Normale Krieger-, Haus- und große Klassenillustrationen
+behalten unverändert den oben beschriebenen matten Figurenstil.
+
+Die Stilrichtungen nach Verwendungszweck getrennt verwenden. Vorhandene Figurenporträts und
 Wappen als Motivreferenzen berücksichtigen. Ausdrückliche Vorgaben des aktuellen
 Auftrags haben Vorrang; die Standards nicht bei jedem Bildauftrag erneut abfragen.
 

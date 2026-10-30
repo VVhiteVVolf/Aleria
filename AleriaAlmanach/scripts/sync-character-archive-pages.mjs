@@ -14,13 +14,16 @@ const [classHtml, horseHtml] = await Promise.all([
 ]);
 
 const classes = new Map();
+// Local register art must also work outside the register's own directory.
+const classCatalogIcon = source => /^assets\/images\/[a-z0-9/-]+\.(?:png|webp|jpe?g)$/.test(source)
+  ? `/Klassenordner/${source}` : source;
 function collectClasses(html, culture = '') {
   for (const match of html.matchAll(/<a\b[^>]*class="class-card\b[^>]*>([\s\S]*?)<\/a>/g)) {
     const name = text(match[1].match(/class="class-name">([^<]+)/)?.[1]);
     if (!name || name === 'Unterklasse') continue;
     const existing = classes.get(name);
     const href = attr(match[0], 'href');
-    const pageLinks = /^(?:Basisklassen|Cenyr|Vennyr|Aldrimar|Alben|Nordmaenner|Morgorn|Venalys)\/[a-z-]+\/index\.html$/.test(href)
+    const pageLinks = /^(?:Basisklassen|Cenyr|Vennyr|Aldrimar|Alben|Nordmaenner|Morgorn|Venalys|Brevanor)\/[a-z-]+\/index\.html$/.test(href)
       ? [{ culture, path: `Klassenordner/${href}` }] : [];
     if (existing) {
       if (culture && !existing.cultures.includes(culture)) existing.cultures.push(culture);
@@ -32,7 +35,7 @@ function collectClasses(html, culture = '') {
       id: (culture === 'Morgorn' && attr(match[0], 'data-class-id')) || slug(name),
       name, baseClass: !culture, cultures: culture ? [culture] : [],
       order: classes.size, description: attr(match[0], 'data-tooltip'),
-      icon: attr(match[1].match(/<img\b[^>]*>/)?.[0] || '', 'src'),
+      icon: classCatalogIcon(attr(match[1].match(/<img\b[^>]*>/)?.[0] || '', 'src')),
       sourcePage: 'Klassenordner/Klassenseite.html', pageLinks
     });
   }

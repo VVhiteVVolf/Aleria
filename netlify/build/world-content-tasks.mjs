@@ -16,6 +16,30 @@ const albicTerritoryInputs = ['Stammbäume/assets/js/modules/albic-territories/'
 // and family-chart geometry checks remain in site-build-tasks.mjs.
 export const WORLD_CONTENT_TASKS = [
   {
+    id: 'culture-classes', label: 'Culture class pages, icons, ranks and archive links',
+    inputs: ['Klassenordner/', 'AleriaAlmanach/modules/classes/',
+      'AleriaAlmanach/modules/character-archive/character-archive-page-data.js',
+      'AleriaAlmanach/modules/combat/character-creation-templates.js',
+      'AleriaAlmanach/scripts/check-character-archive.mjs',
+      'AleriaAlmanach/scripts/sync-character-archive-pages.mjs'],
+    commands: [['Klassenordner/scripts/build-culture-classes.mjs', '--check'],
+      ['AleriaAlmanach/scripts/sync-character-archive-pages.mjs', '--check'],
+      ['AleriaAlmanach/scripts/check-character-archive.mjs'], tests('Klassenordner/tests')]
+  },
+  {
+    id: 'balchder-vertragsstube', label: 'Balchder biographies, contract office and Silberwind ownership',
+    inputs: ['AleriaAlmanach/scripts/build-balchder-vertragsstube.mjs',
+      'AleriaAlmanach/modules/creatures/', 'AleriaAlmanach/modules/character-genealogy/',
+      'AleriaAlmanach/modules/item-register/item-register-companions.js',
+      'AleriaAlmanach/assets/companions/haus-balchder/', 'AleriaAlmanach/tests/balchder-vertragsstube.test.mjs',
+      'Stammbäume/assets/js/data/house-balchder-family.js', 'Stammbäume/assets/js/data/house-gelyn-family.js',
+      'Stammbäume/assets/js/data/person-biographies/balchder-vertragsstube.js',
+      'Stammbäume/assets/js/modules/person-biography/', 'Stammbäume/assets/js/services/family-registry-upgrade.js',
+      'Kontinente/modules/administration/', 'Charakter Archiv Exporte/balchder-vertragsstube-2026-10-29/'],
+    commands: [['AleriaAlmanach/scripts/build-balchder-vertragsstube.mjs', '--check'],
+      ['--test', '--experimental-test-isolation=none', 'AleriaAlmanach/tests/balchder-vertragsstube.test.mjs']]
+  },
+  {
     id: 'accepted-realms', label: 'Accepted countries, historical jurisdiction, houses, places and maps',
     inputs: ['shared/accepted-realms/', 'Kontinente/modules/accepted-realms/',
       'Stammbäume/assets/js/data/accepted-realm-families.js', 'Kontinente/kontinente.registry.js',

@@ -7,7 +7,7 @@ const loaders = {
   gerichtsbarkeit: () => import('./data/celtigerns-gerichtsbarkeit.mjs?v=20261028'),
   finanzen: () => import('./data/celtigerns-finanzen.mjs?v=20261028'),
   spionage: () => import('./data/celtigerns-spionage.mjs?v=20261028'),
-  diplomatie: () => import('./data/celtigerns-diplomatie.mjs?v=20261028'),
+  diplomatie: () => import('./data/celtigerns-diplomatie.mjs?v=20261029-balchder'),
   magie: () => import('./data/celtigerns-magie.mjs?v=20261028'),
   unterhaltung: () => import('./data/celtigerns-unterhaltung.mjs?v=20261028'),
 };

@@ -14,8 +14,11 @@ function heraldryRecord(id, title, description, rankId, persons = []) {
       sourceNote: 'Autorenauftrag vom 18.10.2026: Wappen und Herkunft in Brevanor vermerken. Keine zusätzlichen Angehörigen, Ehen oder ausgearbeitete Familienlinien erfinden.' } };
 }
 const helviane = muschiPerson('helviane');
-export const HOUSE_BIELLE_FAMILY = Object.freeze(heraldryRecord('bielle', 'Bielle',
-  'Brevanorisches Ritter- und Winzerhaus. Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an das Rittererbe und die Weingüter der Familie.', 'knight-simple'));
+const bielle = heraldryRecord('bielle', 'Bielle',
+  'Brevanorisches Brenor- und Winzerhaus (Baronenrang). Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an die Rittertradition und die Weingüter der Familie.', 'brenor');
+bielle.extensions.sourceRevision = 2;
+bielle.extensions.rankSource = 'Nutzerkorrektur vom 30.10.2026 gemäß aktueller Ausarbeitung des Königreichs Brevanor: Brenor (Baron), ersetzt die frühere Einordnung als einfache Ritterfamilie.';
+export const HOUSE_BIELLE_FAMILY = Object.freeze(bielle);
 const desele = heraldryRecord('desele', 'Desele',
   'Brevanorisches Herstellerhaus für Champagnia und namhafte Parfüme. Helviane, geborene Bielle und angeheiratete Desele, betreibt heute die Gestiefelte Muschi in Gwynthor. Gerettetes Vermögen, Duftrezepte und wenige alte Flaschen gelangten mit ihr über Lothir bis nach Estryll.', 'commoner',
   [createFamilyPerson({ id: helviane.id, worldPersonId: helviane.worldPersonId, name: helviane.name, sex: helviane.sex, birth: helviane.birth,

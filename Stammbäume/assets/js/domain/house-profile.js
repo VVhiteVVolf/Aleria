@@ -14,6 +14,7 @@ const RANK_DEFINITIONS = Object.freeze({
   jarl: Object.freeze({ id: 'jarl', label: 'Jarlsclan', order: 30 }),
   'mor-tiarna': Object.freeze({ id: 'mor-tiarna', label: 'Mor Tiarna (Graf)', order: 30 }),
   barony: Object.freeze({ id: 'barony', label: 'Baronengeschlecht', order: 40 }),
+  brenor: Object.freeze({ id: 'brenor', label: 'Brenor (Baron)', order: 40 }),
   freiherr: Object.freeze({ id: 'freiherr', label: 'Freiherrengeschlecht', order: 40 }),
   thane: Object.freeze({ id: 'thane', label: 'Thanenclan', order: 40 }),
   'dun-tiarna': Object.freeze({ id: 'dun-tiarna', label: 'Dún Tiarna (Baron)', order: 40 }),
@@ -42,6 +43,7 @@ const RANK_ICONS = Object.freeze({
   jarl: 'assets/images/ranks/graf.png',
   'mor-tiarna': 'assets/images/ranks/graf.png',
   barony: 'assets/images/ranks/baron.png',
+  brenor: 'assets/images/ranks/baron.png',
   freiherr: 'assets/images/ranks/baron.png',
   thane: 'assets/images/ranks/baron.png',
   // Kein eigenes Albisch-Icon vorhanden; teilt sich das Baron-Icon der gleichen Rangstufe.

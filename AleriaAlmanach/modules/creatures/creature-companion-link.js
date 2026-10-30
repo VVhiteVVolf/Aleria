@@ -81,5 +81,5 @@ export function linkCreatureToInventoryCompanion(character, companionId, creatur
   companion.creatureId = creature.id;
   companion.inventoryItemId = origin.inventoryItemId;
   // Reuse the same identity mapping as ordinary edits to a linked creature.
-  return inventoryWithCreatureIdentity({ ...character, inventory }, creature);
+  return inventoryWithCreatureIdentity({ ...character, inventory }, creature, now);
 }

@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_GELYN_PORTRAITS } from './house-gelyn-portraits.js';
+import { KAMBER_BALCHDER_BIOGRAPHY } from './person-biographies/balchder-vertragsstube.js';
 
 const GELYN_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-gelyn.png';
 const GELYN_HOUSE_ID = 'house-gelyn';
@@ -88,7 +89,11 @@ export const HOUSE_GELYN_FAMILY = Object.freeze({
     person('gwyron-gelyn', 'Gwyron', 'male', '1708', ''),
     person('gwawr-gelyn', 'Gwawr', 'female', '1710', ''),
     spouse('glinda', 'Glinda', 'female', '1702', ''),
-    person('kamber-balchder', 'Kamber Balchder', 'male', '1700', '', 'house-balchder', { familyRole: 'married' }),
+    person('kamber-balchder', 'Kamber Balchder', 'male', '1700', '', 'house-balchder', {
+      familyRole: 'married', title: 'Vertragsmeister · Uchelwyr',
+      notes: 'Vertragsmeister der Grafschaft; Ehemann Senara Gelyns und Vater von Blodwen und Rice Balchder. Reitet den Rhyfel-Schimmel Silberwind.',
+      extensions: { biographyModule: KAMBER_BALCHDER_BIOGRAPHY, registryManagedExtensionFields: ['biographyModule'], registryManagedSourceRevision: 2, registryManagedFields: ['title', 'notes'], registryManagedFieldRevisions: { title: 2, notes: 2 } }
+    }),
     spouse('ceciley', 'Ceciley', 'female', '1708', ''),
     spouse('maygan', 'Maygan', 'female', '1710', ''),
     spouse('wynfor', 'Wynfor', 'male', '1707', ''),
@@ -168,6 +173,7 @@ export const HOUSE_GELYN_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gelyn-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Die Herkunft des Gründers Cadoc und seiner Schwester Dehlia ist nicht überliefert; als junges Haus kennt Gelyn keine Überlieferungslücke. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Gelyn den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
-    sourceRevision: 1
+    registryManagedEntitySourceRevision: 1,
+    sourceRevision: 2
   }
 });

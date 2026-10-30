@@ -1,0 +1,309 @@
+{
+  "tool": "built-in image_gen",
+  "alphaCleanupAuthorized": true,
+  "alphaApproval": "Fortgeltende Nutzerfreigabe: Ja, Alpha bereinigen. Originale und RGB unverändert erhalten.",
+  "jobs": [
+    {
+      "id": "brigane",
+      "name": "Brigane",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/brigane.png",
+      "preview": "assets/crests/brigane.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "Edit this original Brigane circular heraldic crest. Correct the central animals to TWO ANGRY WHITE PITBULL DOGS, facing inward, snarling with bared teeth, broad blocky heads, short broad muzzles, muscular stocky canine bodies and raised front PAWS. They are NOT horses: no manes, hooves, long equine faces or flowing horse tails. Keep the same mirrored heraldic arrangement, blue field, small silver ring sign below, circular dark frame and silver interlaced ornament. Preserve all other design and colours. Exact circle fully inside square canvas with clear transparent margin, completely opaque inside circle, true transparent outside, no exterior shadow or text."
+    },
+    {
+      "id": "wulmer",
+      "name": "Wulmer",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/wulmer.png",
+      "preview": "assets/crests/wulmer.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Wulmer\n\n**Zentrales Symbol:** Ein elfenbeinfarbener schreitender Keiler über einem einzelnen roten Eichenblatt auf dunklem Rostrot.\n\n**Farbpalette:** Rostrot · Elfenbein · Eichenbraun\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Dunkles geschmiedetes Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchlichte ineinanderlaufende Winkelbänder im geschlossenen Eisenring\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReferences define craft and heraldic language ONLY, never copy their lion or animals. Culture: eleventh-century Anglo-Saxon and early Norman knightly fantasy, sibling kingdom of Aeldrunmar. Exact circular outer contour, all ornament inside. Field: Rostrote senkrechte Bretter. No text, lettering, heraldic motto, shield sticking out, exterior ornament or external shadows."
+    },
+    {
+      "id": "bramcote",
+      "name": "Bramcote",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/bramcote.png",
+      "preview": "assets/crests/bramcote.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Bramcote\n\n**Zentrales Symbol:** Eine große goldene gebundene Korngarbe über einem waagerechten silbernen Sichelschnitt auf dunkelblauem Holz.\n\n**Farbpalette:** Nachtblau · Goldocker · Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Gealtertes Messing mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchmale miteinander verflochtene Ähren im runden Messingring\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReferences define craft and heraldic language ONLY, never copy their lion or animals. Culture: eleventh-century Anglo-Saxon and early Norman knightly fantasy, sibling kingdom of Aeldrunmar. Exact circular outer contour, all ornament inside. Field: Dunkelblaue Bretter. No text, lettering, heraldic motto, shield sticking out, exterior ornament or external shadows."
+    },
+    {
+      "id": "elwick",
+      "name": "Elwick",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/elwick.png",
+      "preview": "assets/crests/elwick.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Elwick\n\n**Zentrales Symbol:** Ein silberner aufrecht stehender Reiher mit dunkelroten Beinen über zwei schmalen dunklen Wasserbändern auf gedämpftem Blaugrün.\n\n**Farbpalette:** Blaugrün · Silber · Dunkelrot\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Silberhelles Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nZurückhaltendes verschlungenes Wellenband im Außenring\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReferences define craft and heraldic language ONLY, never copy their lion or animals. Culture: eleventh-century Anglo-Saxon and early Norman knightly fantasy, sibling kingdom of Aeldrunmar. Exact circular outer contour, all ornament inside. Field: Gedämpft blaugrüne Bretter. No text, lettering, heraldic motto, shield sticking out, exterior ornament or external shadows."
+    },
+    {
+      "id": "sedgeley",
+      "name": "Sedgeley",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/sedgeley.png",
+      "preview": "assets/crests/sedgeley.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Sedgeley\n\n**Zentrales Symbol:** Ein schwarzer frontal gesehener Ochsenkopf mit elfenbeinfarbenen Hörnern über zwei grünen Grashalmen auf warmem Ocker.\n\n**Farbpalette:** Goldocker · Schwarz · Grün\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Dunkles Eichenholz mit kleinen eisernen Nieten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nBreites einfaches Rautenband, vollständig innerhalb des Kreises\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReferences define craft and heraldic language ONLY, never copy their lion or animals. Culture: eleventh-century Anglo-Saxon and early Norman knightly fantasy, sibling kingdom of Aeldrunmar. Exact circular outer contour, all ornament inside. Field: Ockerfarbene Bretter. No text, lettering, heraldic motto, shield sticking out, exterior ornament or external shadows."
+    },
+    {
+      "id": "rookden",
+      "name": "Rookden",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/rookden.png",
+      "preview": "assets/crests/rookden.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Rookden\n\n**Zentrales Symbol:** Eine silberne nach links blickende Saatkrähe auf einem einzelnen waagerechten goldbraunen Ast auf stumpfem Burgunderrot.\n\n**Farbpalette:** Burgunderrot · Silber · Bronze\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Dunkle Bronze mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nZwei schmale ineinander verschlungene Zweigbänder im runden Bronzerahmen\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReferences define craft and heraldic language ONLY, never copy their lion or animals. Culture: eleventh-century Anglo-Saxon and early Norman knightly fantasy, sibling kingdom of Aeldrunmar. Exact circular outer contour, all ornament inside. Field: Burgunderrote Bretter. No text, lettering, heraldic motto, shield sticking out, exterior ornament or external shadows."
+    },
+    {
+      "id": "tostan",
+      "name": "Tostan",
+      "kind": "crest",
+      "shape": "circle",
+      "production": "assets/production/tostan.png",
+      "preview": "assets/crests/tostan.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/brigane.png"
+      ],
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Haus Tostan\n\n**Zentrales Symbol:** Eine große goldene kleine Handglocke mit sichtbarem Klöppel über drei waagerechten silbernen Saiten auf tiefem Waldgrün.\n\n**Farbpalette:** Waldgrün · Altgold · Silber\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus Helles versilbertes Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nSchmale gegenläufige Flechtbänder ohne Schriftzeichen\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\nReferences define craft and heraldic language ONLY, never copy their lion or animals. Culture: eleventh-century Anglo-Saxon and early Norman knightly fantasy, sibling kingdom of Aeldrunmar. Exact circular outer contour, all ornament inside. Field: Dunkelgrüne Bretter. No text, lettering, heraldic motto, shield sticking out, exterior ornament or external shadows."
+    },
+    {
+      "id": "earldom-lennwyck",
+      "name": "Lennwyckland · Earltum der Lennwyck",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "earldom",
+      "production": "assets/production/earldom-lennwyck.png",
+      "preview": "assets/territories/earldom-lennwyck.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/lennwyck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA GRAND EARLDOM STANDARD, a deep large cloth body, wider expensive woven wool, broad embroidered metallic border matching the palette, dignified knot bands at hoist, two short small tassels, ornate spear socket. Reference 2 defines the RULING HOUSE heraldry; preserve its exact animal or castle, not the geography alone.\nTerritory Lennwyckland · Earltum der Lennwyck. Geography Das nördliche Earltum besitzt viel offenes, leicht hügeliges Land; im Osten und Süden steigen Berge auf.. EXACT MOTIF: Ein großer dunkelroter aufgerichteter Löwe auf Goldocker; schmale schwarze und rote Flechtbänder am Rand. Die Farben und der Löwe des Hauses Lennwyck bleiben bestimmend. Palette Goldocker, Dunkelrot, Eisenschwarz. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "earldom-warren",
+      "name": "Warrenfold · Earltum der Warren",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "earldom",
+      "production": "assets/production/earldom-warren.png",
+      "preview": "assets/territories/earldom-warren.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/warren.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA GRAND EARLDOM STANDARD, a deep large cloth body, wider expensive woven wool, broad embroidered metallic border matching the palette, dignified knot bands at hoist, two short small tassels, ornate spear socket. Reference 2 defines the RULING HOUSE heraldry; preserve its exact animal or castle, not the geography alone.\nTerritory Warrenfold · Earltum der Warren. Geography Das westliche Earltum umfasst offenes Weideland, niedrige Hügel und einen großen zusammenhängenden Laubwald um den Hauptort.. EXACT MOTIF: Ein großer dunkelroter frontal gesehener Wolfskopf auf Elfenbein, dunkelgraue schmale Randstreifen mit zurückhaltendem rotem Flechtband. Das persönliche Hauszeichen der Warren bestimmt das Earltumsbanner. Palette Elfenbein, Dunkelrot, Anthrazit. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "earldom-aldred",
+      "name": "Aldredhold · Königliches Earltum der Aldred",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "earldom",
+      "production": "assets/production/earldom-aldred.png",
+      "preview": "assets/territories/earldom-aldred.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/originals/aldred.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA GRAND EARLDOM STANDARD, a deep large cloth body, wider expensive woven wool, broad embroidered metallic border matching the palette, dignified knot bands at hoist, two short small tassels, ornate spear socket. Reference 2 defines the RULING HOUSE heraldry; preserve its exact animal or castle, not the geography alone.\nTerritory Aldredhold · Königliches Earltum der Aldred. Geography Die königliche Domäne liegt im Osten zwischen breitem Bergsaum, bewaldeten Hängen, offenem Land und einem südlichen Flusslauf.. EXACT MOTIF: Eine große elfenbeinfarbene dreitürmige Burg über drei hellen waagerechten Wellenlinien auf Dunkelrot, schmaler schwarzer Innenrand und edle helle Blütenranken. Motiv und Farben des namenlos gelieferten Königswappens erhalten; keine fremden Löwen oder Pferde hinzufügen. Palette Dunkelrot, Elfenbein, Schwarz. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "earldom-brigane",
+      "name": "Briganefold · Earltum der Brigane",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "earldom",
+      "production": "assets/production/earldom-brigane.png",
+      "preview": "assets/territories/earldom-brigane.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png",
+        "E:/Aleria/Vorschau/Talyndor/assets/production/brigane.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA GRAND EARLDOM STANDARD, a deep large cloth body, wider expensive woven wool, broad embroidered metallic border matching the palette, dignified knot bands at hoist, two short small tassels, ornate spear socket. Reference 2 defines the RULING HOUSE heraldry; preserve its exact animal or castle, not the geography alone.\nTerritory Briganefold · Earltum der Brigane. Geography Das südliche Earltum verbindet welliges offenes Land mit bewaldeten Bergen und den Tälern im Süden.. EXACT MOTIF: Zwei einander zugewandte wütende weiße Pitbulls mit breiten Köpfen, kurzen Schnauzen und kräftigen Körpern auf gedämpftem Blau; gefletschte Zähne, gehobene Vorderpfoten, darunter das kleine silberne Ringzeichen des Hauses. Silbernes Flechtband am dunklen Rand. Keine Pferde, Mähnen oder Hufe. Palette Blau, Silber, Anthrazit. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "wetherham",
+      "name": "Wetherfold · Wetherham",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/wetherham.png",
+      "preview": "assets/territories/wetherham.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Wetherfold · Wetherham. Geography Der Hauptort der Lennwyck liegt im nordwestlichen offenen Land. Niedrige Hügel, Weiden und vereinzelte Baumgruppen kennzeichnen die Umgebung.. EXACT MOTIF: Ein heller Widder über zwei niedrigen braunen Hügelbögen auf stumpfem Ockergelb. Palette Ockergelb, Wollweiß, Erdbraun. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "dunworth",
+      "name": "Dunworthmark · Dunworth",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/dunworth.png",
+      "preview": "assets/territories/dunworth.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Dunworthmark · Dunworth. Geography Nordöstliches Randgebiet mit offenem Hochland und steilen Bergen im Osten. Der Ortsanker liegt unmittelbar am Bergsaum.. EXACT MOTIF: Ein silberner Steinbockkopf über zwei dunklen Bergzacken auf warmem Rostbraun. Palette Rostbraun, Silber, Schiefergrau. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "cawden",
+      "name": "Cawdenhold · Cawden",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/cawden.png",
+      "preview": "assets/territories/cawden.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Cawdenhold · Cawden. Geography Südliches Gebiet der Lennwyck unter den östlichen Bergen. Offene Flächen und Hügel überwiegen; Wald tritt nur in kleinen Gruppen auf.. EXACT MOTIF: Drei goldene Gerstenähren über einem einzigen hellen Hügelbogen auf gedämpftem Rotbraun. Palette Rotbraun, Goldocker, Leinenweiß. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "eldenwick",
+      "name": "Eldenemnet · Eldenwick",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/eldenwick.png",
+      "preview": "assets/territories/eldenwick.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Eldenemnet · Eldenwick. Geography Der nordwestliche Teil der Warren besitzt offenes Weide- und Ackerland mit einer kleinen Hügelgruppe im Süden.. EXACT MOTIF: Ein brauner Rinderkopf zwischen zwei dunkelgrünen Grashalmen auf warmem Elfenbein. Palette Elfenbein, Kastanienbraun, Grün. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "wensbury",
+      "name": "Wensfold · Wensbury",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/wensbury.png",
+      "preview": "assets/territories/wensbury.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Wensfold · Wensbury. Geography Der Hauptort der Warren liegt mitten im großen Laubwald. Waldwirtschaft, Wild und Lichtungen bestimmen den landschaftlichen Entwurf.. EXACT MOTIF: Ein silberner Hirschkopf über drei goldbraunen Eichenblättern auf tiefem Waldgrün. Palette Waldgrün, Silber, Goldbraun. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "hartham",
+      "name": "Harthamland · Hartham",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/hartham.png",
+      "preview": "assets/territories/hartham.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Harthamland · Hartham. Geography Großes südwestliches Gebiet mit weitem offenem Land, niedrigen Hügeln und Gehölzgruppen am Übergang zu den südlichen Höhen.. EXACT MOTIF: Ein heller Feldhase unter einer einzelnen bronzenen Haselrute auf gedämpftem Wiesengrün. Palette Wiesengrün, Wollweiß, Bronze. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "edrington",
+      "name": "Edringfold · Edrington",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/edrington.png",
+      "preview": "assets/territories/edrington.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Edringfold · Edrington. Geography Der Königssitz liegt unter den hohen östlichen Bergen. Waldhänge und offenes Vorland schließen unmittelbar an den Hauptort an.. EXACT MOTIF: Eine silberne dreizackige Berggruppe über einem dunkelgrünen Eichenblatt auf hellem Salbeigrün. Landschaftszeichen des Königssitzes, ohne die Burg des königlichen Earltums zu wiederholen. Palette Salbeigrün, Silber, Dunkelgrün. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "ternford",
+      "name": "Ternemnet · Ternford",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/ternford.png",
+      "preview": "assets/territories/ternford.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Ternemnet · Ternford. Geography Der südliche königliche Bezirk liegt an einem gewundenen Fluss unter den bewaldeten östlichen Bergen. Die Wasserlinie ist Binnengewässer, keine Meeresküste.. EXACT MOTIF: Ein heller stehender Reiher über einem einzelnen geschwungenen silbernen Flussband auf gedämpftem Blaugrün. Palette Blaugrün, Elfenbein, Silber. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "fenhurst",
+      "name": "Fenhold · Fenhurst",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/fenhurst.png",
+      "preview": "assets/territories/fenhurst.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Fenhold · Fenhurst. Geography Der nördliche Bezirk der Brigane besitzt welliges offenes Land mit Gehölzgruppen und niedrigen Höhenzügen im Westen.. EXACT MOTIF: Ein goldener stehender Fasan über zwei hellen Grasschöpfen auf stumpfem Schieferblau. Palette Schieferblau, Goldocker, Leinenweiß. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "norcombe",
+      "name": "Norcombefold · Norcombe",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/norcombe.png",
+      "preview": "assets/territories/norcombe.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Norcombefold · Norcombe. Geography Der westliche Bezirk der Brigane verbindet offene Hügel und kleine Baumgruppen mit Bergen an seinem südlichen Rand.. EXACT MOTIF: Ein silberner Dachs vor einem dunkelgrünen Haselzweig auf blassem Grauviolett. Palette Grauviolett, Silber, Dunkelgrün. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "bramwell",
+      "name": "Brammark · Bramwell",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/bramwell.png",
+      "preview": "assets/territories/bramwell.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Brammark · Bramwell. Geography Östlicher Randbezirk der Brigane mit steilen Bergen im Osten und Süden; Waldflächen liegen zwischen den Ausläufern.. EXACT MOTIF: Eine dunkle Eibe zwischen zwei hellen Bergflanken auf gedämpftem Heideviolett. Palette Heideviolett, Eibengrün, Kreideweiß. Keep single rightward taper and generous clear margins."
+    },
+    {
+      "id": "aveldon",
+      "name": "Avelhold · Aveldon",
+      "kind": "territory",
+      "shape": "banner",
+      "level": "district",
+      "production": "assets/production/aveldon.png",
+      "preview": "assets/territories/aveldon.webp",
+      "references": [
+        "E:/Aleria/Vorschau/Aeldrunmar/assets/production/earldom-kendryck.png"
+      ],
+      "prompt": "Create ONE isolated medieval Talyndor heraldic field banner on a square 1024x1024 RGBA canvas. A SINGLE tapered pennant attached at its LEFT vertical hoist edge to ONE upright spear, cloth BLOWING HORIZONTALLY TO THE RIGHT and ending in ONE sharp long point at the RIGHT. No hanging banner, horizontal crossbar, shield, swallowtail or second flag. Full spearhead visible above hoist. Short shaft may START halfway up canvas, need not reach bottom. Entire banner and every spear part inside canvas with 7% clear transparent margin on ALL sides, especially right point. Gentle coherent horizontal folds, large readable flat painted motif, matte medieval pigments, restrained gouache grain, fine dark contours. Reference 1 defines right-pointing construction and craft ONLY; DO NOT COPY its horse, colours or mountain design. Eleventh-century Anglo-Saxon/early Norman fantasy, sibling kingdom of Aeldrunmar. True transparent PNG exterior and open gaps, opaque cloth and spear. No floor, shadow, scenery, paper, haze, person, text, numerals or watermark.\nA MODEST SINGLE-DISTRICT PENNANT: visibly slimmer and simpler linen or wool than the earldom banner, narrow plain stitched edge, plain iron socket, discreet woven geometric hem; NO gold fringe, tassels or royal crown.\nTerritory Avelhold · Aveldon. Geography Der Hauptort der Brigane liegt in einem südlichen Tal zwischen bewaldeten Berghängen. Im Norden öffnet sich das Land zu den übrigen Bezirken.. EXACT MOTIF: Ein heller Apfelbaum mit wenigen kupferroten Früchten über zwei schmalen silbernen Talbögen auf Nachtblau. Palette Nachtblau, Elfenbein, Kupferrot. Keep single rightward taper and generous clear margins."
+    }
+  ]
+}

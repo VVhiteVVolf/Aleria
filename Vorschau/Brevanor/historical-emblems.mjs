@@ -1,0 +1,10 @@
+export const historicalEmblems=Object.freeze([Object.freeze({
+ id:'brethneach',name:'Brethneach',title:'Antikes Fürstentum Brethneach',
+ motif:'Eine einzelne große silberne heraldische Lilie mit drei klaren Blütenblättern, schmalem Band und kurzem Fuß auf dunklem blaugrünem Holz.',
+ palette:['Dunkles Blaugrün','Silber','Gealterte Bronze'],frame:'Gealterte Bronze',ornament:'Breite einfache albisch-keltische Flechtbänder im vollständig geschlossenen Rahmen, keine Krone, Edelsteine oder spätgotischen Ranken.',
+ description:'Die Lilie war das Zeichen des antiken Fürstentums Brethneach. Es war aus den Siedlungen der Briath südlich des Flusses von Deitheach hervorgegangen. Handel und Kaiserzeit führten später zur eigenständigen Kultur Brevanors.',
+ caption:'Lilie des antiken Fürstentums · Farbgebung und Rahmen als Entwurf',
+ image:'assets/history/brethneach.webp',fullsize:'assets/production/brethneach.png',
+ references:['../../Vorschau/Goldmund/assets/production/orneach.png','../../Stammbäume/assets/images/houses/Leitheach/clan-ua-eirce.png'],
+ design:'ANCIENT ALBIC PRINCIPALITY BRETHNEACH, founded by the Briath Auenalben descended from the Deitheach group. This is its older ancestral LILY emblem, earlier than imperial Brevanor and its late-medieval noble houses. EXACTLY ONE LARGE SILVER HERALDIC LILY with three broad symmetrical petals, slim binding band and short pointed foot; no bird, swan, horse, Pegasus, second plant, royal crown or text. Deep muted blue-green painted wooden field. Aged bronze exact circular closed rim with broad restrained ancient Celtic interlace. The references supply ancient Albic heraldic paint and interlace ONLY: do NOT copy their swan, leaf-tree, gold field or motifs. Matte painted pigments, simple strong dark contours and even grain, old but intact, not a glossy relief or modern logo. Exact circle occupies 86% of square canvas with generous exterior transparent margins. Entire interior opaque, exterior alpha zero; no shadow, haze, supports, lettering or watermark.'
+})]);

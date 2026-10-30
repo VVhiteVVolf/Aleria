@@ -14,7 +14,8 @@ const CULTURE_FOLDERS = Object.freeze({
   alben: 'Alben',
   nordmaenner: 'Nordmaenner',
   morgorn: 'Morgorn',
-  venalys: 'Venalys'
+  venalys: 'Venalys',
+  brevanor: 'Brevanor'
 });
 
 function culturePageLabels(culture) {
@@ -46,13 +47,15 @@ function sharedCultureNote(document) {
 
 export function renderCultureClassPage(document, documents, culture, plan) {
   const written = document.sections.filter(section => section.status === 'written');
+  const unfilled = document.contentStatus === 'not-authored';
+  const introduction = written[0] || {id:'arbeitsstand',title:'Klassenprofil in Vorbereitung',html:'<p>Name und Rolle dieser Klasse sind festgelegt. Die einzelnen Kapitel werden noch ausgearbeitet.</p>'};
   const specialSection = getClassSpecialSection(document.id);
   if (specialSection) written.push(specialSection);
   const pending = document.sections.filter(section => section.status === 'pending');
   const hasProgression = Boolean(plan);
   const showOrderOverview = culture.classPage?.showOrderOverview !== false;
   const orderContents = showOrderOverview ? getCultureOrderContentsEntry(culture) : null;
-  const loreContents = [written[0], ...(orderContents ? [orderContents] : []), ...written.slice(1)];
+  const loreContents = [introduction, ...(orderContents ? [orderContents] : []), ...written.slice(1)];
   const contents = hasProgression
     ? [loreContents[0], { id: 'ausbildungsplan', title: 'Ausbildung · Stufe 1–20' }, ...loreContents.slice(1)]
     : loreContents;
@@ -73,7 +76,7 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   const progressionAttribute = hasProgression ? ` data-culture-class="${escape(plan.id)}"` : '';
   const orderOverview = showOrderOverview
     ? renderCultureOrderOverview(culture, { currentClassId: document.id, classHref: classId => pageHref({ cultureId: culture.id, id: classId }) }) : '';
-  const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner', 'morgorn', 'venalys'].includes(culture.id)
+  const cultureStyle = ['vennyr', 'aldrimar', 'alben', 'nordmaenner', 'morgorn', 'venalys', 'brevanor'].includes(culture.id)
     ? `<link rel="stylesheet" href="../../modules/culture/${culture.id}-class-page.css?v=${VERSION}">`
     : '';
   const labels = culturePageLabels(culture);
@@ -89,16 +92,16 @@ export function renderCultureClassPage(document, documents, culture, plan) {
   <script type="module" src="../../modules/pages/class-page.js?v=20260905-universal-v1"></script>
   ${hasProgression ? `<script type="module" src="../../modules/culture/culture-class-page.js?v=${runtimeVersion}"></script>` : ''}
 </head><body class="classes-page class-document-page cenyr-class-page ${escape(culture.id)}-class-page" data-class-document="${document.id}" data-culture="${escape(culture.id)}"${progressionAttribute} data-class-theme="sand" id="top">
-  <a class="skip-link" href="#einfuehrung">Zum Klasseninhalt</a>
+  <a class="skip-link" href="#${escape(introduction.id)}">Zum Klasseninhalt</a>
   <header class="site-header"><a href="../../Klassenseite.html#${escape(culture.id)}">← Zum Klassenregister</a><span class="site-brand">Aleria / ${escape(labels.brand)}</span><a class="class-almanach-link" href="../../../AleriaAlmanach/AleriaAlmanach.html">Zum Almanach</a></header>
   <div class="class-book"><aside class="class-book-navigation"><a class="class-book-mark" href="../../Klassenseite.html#${escape(culture.id)}"><img src="${escape(culture.emblem)}" alt="" width="48" height="48" data-fallback-src="${FALLBACK}"><span>${labels.traditions}</span></a>${renderContents(contents, pending.length > 0)}${cultureNavigation(documents, document.id, culture)}</aside>
   <main class="class-book-page"><header class="class-cover"><div class="class-cover-top"><p class="eyebrow">Kulturklassen · ${escape(culture.name)}</p><span class="class-volume-number">${String(index + 1).padStart(2, '0')} / ${String(documents.length).padStart(2, '0')}</span></div>
     <div class="class-cover-title"><div class="class-emblem"><img src="${escape(document.icon)}" alt="" width="100" height="100" data-role="class-icon" data-fallback-src="${FALLBACK}"></div><div><p class="class-cover-kind">${escape(affiliation)}</p><h1>${escape(document.title)}</h1><p class="class-cover-subtitle">${escape(focus)}</p></div></div>
-    <div class="cenyr-cover-path"><span>${escape(culture.name)}</span><span>${escape(document.name)}</span>${hasProgression ? `<a href="#ausbildungsplan">${escape(styleName)} · ${trainingLabel} ↓</a>` : '<a href="#geschichte">Kultur, Rolle &amp; Ausrüstung ↓</a>'}</div>
+    <div class="cenyr-cover-path"><span>${escape(culture.name)}</span><span>${escape(document.name)}</span>${hasProgression ? `<a href="#ausbildungsplan">${escape(styleName)} · ${trainingLabel} ↓</a>` : unfilled ? '<a href="#offene-kapitel">Inhalte werden ergänzt ↓</a>' : '<a href="#geschichte">Kultur, Rolle &amp; Ausrüstung ↓</a>'}</div>
   </header>
   ${sharedCultureNote(document)}
   <details class="class-mobile-nav"><summary>Inhalt &amp; ${escape(culture.name)}-Klassen</summary>${renderContents(contents, pending.length > 0)}${cultureNavigation(documents, document.id, culture)}</details>
-  <div class="class-reading-layout cenyr-introduction"><div class="class-chapters">${renderSection(written[0], 0)}</div><aside class="class-reference" aria-label="Klassenillustration">${renderIllustration(document)}</aside></div>
+  <div class="class-reading-layout cenyr-introduction"><div class="class-chapters">${renderSection(introduction, 0)}</div><aside class="class-reference" aria-label="Klassenillustration">${renderIllustration(document)}</aside></div>
   ${hasProgression && orderOverview ? renderCultureClassTraining(plan) : orderOverview}
   ${hasProgression && orderOverview ? orderOverview : hasProgression ? renderCultureClassTraining(plan) : ''}
   <div class="class-reading-layout"><div class="class-chapters">${written.slice(1).map((section, index) => renderSection(section, index + 1)).join('\n')}${renderPending(pending)}</div><aside class="class-reference" aria-label="Klassenprofil">${renderFacts(document)}${companion ? renderIllustration({ name: document.name, title: companion.caption, illustration: companion.source, artwork: companion }) : ''}</aside></div>

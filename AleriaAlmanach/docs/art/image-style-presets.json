@@ -1,14 +1,27 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-30",
   "description": "Dauerhafte Bildstil-Vorgaben des Nutzers für Aleria. Den passenden Stil ohne erneute Erinnerung verwenden; ausdrückliche Vorgaben des aktuellen Auftrags haben Vorrang.",
   "defaultPreset": "anime-scene-portrait",
   "presets": {
+    "fantasy-class-icon": {
+      "name": "Flache Comic-Klassenicons nach Morgorn",
+      "useFor": ["Vereinfachte Figurenicons im Klassenregister", "Kleine kulturelle Klassenfiguren"],
+      "aspectRatio": "2:3",
+      "transparentBackground": true,
+      "referenceDirectory": "AleriaAlmanach/docs/art/class-icon-style",
+      "referenceImages": ["morgorn-varor.png", "morgorn-kuralan.png", "morgorn-bragan.png"],
+      "referenceUsage": "Die passenden Morgorn-Klassenicons tatsächlich ansehen und als Bildreferenzen mitgeben. Nur die flache Comiczeichnung übernehmen; Kultur, Ausrüstung und Farben stammen aus dem Auftrag. Hintergrundflächen, Schatten und etwaige Beschnitte der Referenzen nicht übernehmen.",
+      "prompt": "Eine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.",
+      "separateFrom": "fantasy-rpg-character",
+      "scope": "Nur vereinfachte Klassenicons. Normale Krieger-, Haus- und große Klassenillustrationen behalten ihren eigenen Stil.",
+      "provenance": "Nutzerkorrektur vom 30. Oktober 2026: Zu dreidimensional; wirklich comichafte Darstellungen wie bei Morgorn. Diesen Stil ausdrücklich von normalen Kriegerdarstellungen trennen."
+    },
     "fantasy-rpg-character": {
       "name": "Freigestellte matte Fantasy-Hausfiguren",
       "useFor": [
         "Kriegergalerie und Hausabbildungen",
-        "Ritter- und Klassenillustrationen",
+        "Ritter- und große Klassenillustrationen; vereinfachte Registericons verwenden fantasy-class-icon",
         "Beruflich passende bürgerliche Hausfiguren",
         "Vollständige freigestellte Fantasy-Ganzkörperfiguren"
       ],

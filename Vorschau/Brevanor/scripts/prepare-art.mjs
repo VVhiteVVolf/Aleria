@@ -1,0 +1,46 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {houses} from '../house-data.mjs';
+import {territoryArt} from '../territory-data.mjs';
+import {classDesigns,warriorDirections} from '../warrior-art-direction.mjs';
+import {historicalEmblems} from '../historical-emblems.mjs';
+const root=new URL('../',import.meta.url);
+const local=p=>fileURLToPath(new URL(p,root)).replaceAll('\\','/');
+const presets=JSON.parse(await readFile(new URL('../../../AleriaAlmanach/docs/art/image-style-presets.json',import.meta.url),'utf8')).presets;
+const sources=houses.filter(h=>h.sourceFile).map(h=>({source:h.sourceFile,archive:h.original,previews:[{file:h.crest,size:[600,600]}]}));
+sources.push(
+ {source:local('../../Stammbäume/assets/images/houses/Brevanor/Bielle.png'),archive:'assets/originals/bielle.png',previews:[{file:'assets/crests/bielle.webp',size:[600,600]}]},
+ {source:'Brevanor.png',archive:'assets/originals/brevanor.png',previews:[{file:'assets/crests/brevanor.webp',size:[600,600]}]},
+ {source:'Königreich Brevanor Vorbereitungskarte.png',archive:'diagnostics/brevanor/source-originals/map.png',localArchive:true,previews:[{file:'assets/map.webp',size:[2800,2800],quality:95},{file:'assets/map-full.webp',size:[4096,4096],quality:96}]}
+);
+await writeFile(new URL('source-import.json',root),JSON.stringify({country:'Brevanor',sourceDirectory:'C:/Users/fhg_r/Downloads/Länder/Brevanor',files:sources},null,2)+'\n');
+function heraldicPrompt(h){
+ let prompt=presets['fantasy-heraldic-emblem'].prompt;
+ const replacements={'[NAME]':h.title??`Haus ${h.name}`,'[BESCHREIBUNG DES HAUPTMOTIVS]':h.motif,'[FARBE 1]':h.palette[0],'[FARBE 2]':h.palette[1],'[FARBE 3]':h.palette[2],'[EISEN / GOLD / SILBER / HOLZ]':h.frame,'[RUNEN / KELTISCHE KNOTEN / GEOMETRISCHE ORNAMENTE / KEINE VERZIERUNG]':h.ornament};
+ for(const [key,value] of Object.entries(replacements))prompt=prompt.replaceAll(key,value);
+ return prompt;
+}
+const jobs=houses.filter(h=>h.isNew).map(h=>{
+ const prompt=heraldicPrompt(h);
+ return {id:h.id,name:h.name,kind:'crest',shape:'circle',production:h.fullsize,preview:h.crest,references:[local('assets/originals/guivren.png'),local('assets/originals/rovenne.png'),local('assets/originals/bielle.png')],prompt:`${prompt}\nCURRENT CULTURE OVERRIDE: late-medieval French and Breton fantasy court heraldry of Brevanor, fine foliate/lily/vine engraving, NOT Nordic runes. The references define the hand-painted heraldic vocabulary ONLY; never copy their eagle, rose, tower, colours or layout. This is a NEW independent house crest. Round exact circle, no outer crown or shield shape. Field: ${h.field}. Make the central motif large and plainly readable. Respect the specified frame material and avoid automatic gold everywhere. No text, letters, motto, external shadow, scenery or watermark. Complete circle at 85% square canvas with a clean transparent margin, all pixels inside frame opaque.`};
+});
+for(const h of historicalEmblems){
+ jobs.push({id:h.id,name:h.title,kind:'historic',shape:'circle',production:h.fullsize,preview:h.image,references:h.references.map(local),prompt:`${heraldicPrompt(h)}\nCURRENT ANCIENT CULTURE BRIEF: ${h.design}`});
+}
+for(const t of territoryArt){
+ const shape=t.level==='royal'?'royal':t.level==='county'?'county':'region';
+ const tier=t.level==='royal'?'ROYAL DOMAIN: most magnificent tier, broad gold-and-silver lily border, turquoise jewels, royal crown above center peak, compact foliate shoulder flourishes.':t.level==='county'?'COMTEYR COUNTY: visibly richer than a single region, broad silver-and-gold engraved rim with a modest pearl comital coronet above center peak.':'SINGLE LOCAL REGION: modest narrow complete silver/iron/bronze rim, subtle vine engraving only, no crown, jewels or external flourishes.';
+ jobs.push({id:t.id,name:t.name,kind:'territory',shape:t.shape,level:t.level,production:t.fullsize,preview:t.image,references:[local(`assets/shapes/${shape}.png`),...(t.houseId?[local(houses.find(h=>h.id===t.houseId).fullsize)]:[])],prompt:`Create ONE heraldic TERRITORIAL SHIELD of historic Brevanor. Reference 1 defines the required ${shape.toUpperCase()} SHAPE and rank decoration only, NOT its field colour. Keep the distinctive scalloped outline: raised central top point, two shallow concave top scallops to angular high shoulders, strongly waisted upper sides, rounded lower hips and one bottom central point. NOT circular, NOT a kite, not a banner. ${tier}\n${t.houseId?'Reference 2 defines the governing HOUSE emblem and palette, which must be preserved for this county sign.':'Choose field and painted motif exactly from the following geography-based brief.'}\nNAME: ${t.name}. GEOGRAPHY: ${t.geography}. EXACT MOTIF: ${t.motif} COLOURS: ${t.palette.join(', ')}. Large central motif, matte historical pigments on opaque painted shield field, fine dark contour, restrained uniform grain and shallow two-tone painted modelling. Hand-painted French/Breton late-medieval fantasy heraldry, not shiny3D or a generic flat logo. Full crown if present and shield COMPLETELY INSIDE square1024x1024 with at least 9% CLEAR MARGIN ON ALL FOUR SIDES. TRUE TRANSPARENT PNG exterior including gaps around any royal ornament; entire shield interior solid opaque. No lettering, captions, banners, cloth, spear, supporters, scenery, floor, cast shadow, halo, watermark or checkerboard.`});
+}
+const characters=houses.map(h=>{
+ const d=warriorDirections.find(d=>d.id===h.id),c=classDesigns[d.classId];
+ const references=[local('../../AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png'),local(h.fullsize)];
+ if(c.withHorse)references.push(local('../../Bestiarium/assets/horse-profiles/cheval.webp'));
+ const horse=c.withHorse?`ONE noble ON FOOT beside ONE magnificent ${d.horseColour} CHEVAL STALLION. Reference3 supplies the Cheval's strong balanced warhorse anatomy and useful tack ONLY; DO NOT COPY the mounted rider, spider, landscape, combat pose or lighting. Person at LEFT, horse at RIGHT, both full length. Horse faces LEFT: muzzle/neck/frontlegs at its LEFT, hindquarters at its RIGHT, tail grows ONLY from rump on RIGHT. Four coherent visible hooves, deep chest, strong legs, noble decorated but functional bridle, saddle, girth and stirrups. Entire horse ears, muzzle, body and all hooves fit inside canvas. No extra animal.`:'ONE noble human figure only, no living animal or horse even if the house badge shows one.';
+ return {id:h.id,name:h.name,classId:d.classId,kind:'character',references,prompt:`Create ONE FULL-BODY noble house representative for Haus ${h.name}, class ${c.name}, historic Brevanor. Reference1 is PAINTING STYLE ONLY: matte restrained hand-painted forms, soft thin outlines, gentle even pigment grain and calm upright pose. Do NOT copy its blue griffin, armour, helmet, plume, colours or outer haze. Reference2 defines this HOUSE'S precise heraldic palette and badge, no floating full emblem behind person.\nCURRENT CULTURAL DESIGN, independent of the flat comic class icons: HIGH to LATE MEDIEVAL French knightly elite with Breton fantasy courtly romance. Magnificent ornate noble plate, finely engraved metal, rich velvet/silk, proud dignified pose; POMP and lavish details in sensible painted simplified forms. This replaces the earlier twelfth-century icon equipment for these normal large house warriors. Every house has its own distinct helmet architecture, face closure, weapon and cloth layout. Horns ONLY for genuinely horned/antlered heraldic animals, rich feather crests ONLY where explicitly specified for bird arms; no automatic horn or plume on every knight. Cantrel follows the user's early musketeer-romance FECHTER exception without guns.\nINDIVIDUAL EXACT DESIGN: ${d.design}\nCLASS/WEAPON: ${c.weapon}\nHERALDRY: ${h.motif} EXACT PALETTE: ${h.palette.join(', ')}. Natural skin, wood and brown leather allowed, main cloth follows the emblem.\n${horse}\n${presets['fantasy-rpg-character'].prompt}\nPortrait1024x1536, exact2:3, quiet complete three-quarter full-body composition. ALL highest helmet decorations, both boots, every weapon point, entire horse if any and all accessories INSIDE canvas with generous 7% EMPTY MARGIN. True transparent PNG exterior AND all open gaps. No paper, scenery, floor, shadow, glow, mist, frame, text or watermark. Coherent hands, grips, joints, reins and straight weapon shafts. Not a comic icon, chibi, realistic3D, glossy render or dramatic battle scene.`};
+});
+for(const path of ['assets/generated','assets/production','assets/territories','assets/crests','assets/warriors/generated','assets/warriors/production','assets/warriors/previews'])await mkdir(new URL(path,root),{recursive:true});
+const policy={tool:'built-in image_gen',alphaCleanupAuthorized:true,alphaApproval:'Fortgeltende Nutzerfreigabe: Ja, Alpha bereinigen. Originale und RGB unverändert erhalten.'};
+await writeFile(new URL('art-prompts.json',root),JSON.stringify({...policy,jobs},null,2)+'\n');
+await writeFile(new URL('warrior-prompts.json',root),JSON.stringify({...policy,jobs:characters},null,2)+'\n');
+console.log(JSON.stringify({sources:sources.length,houses:houses.length,territoryShields:territoryArt.length,newCrests:jobs.filter(j=>j.kind==='crest').length,characters:characters.length}));

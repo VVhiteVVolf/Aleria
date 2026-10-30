@@ -8,6 +8,8 @@ import { ALDRIMAR_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/aldrima
 import { getAldrimarClassProgression } from '../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-progression.js';
 import { ALBEN_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/alben/alben-class-registry.js';
 import { NORDMAENNER_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/nordmaenner/nordmaenner-class-registry.js';
+import { BREVANOR_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/brevanor/brevanor-class-registry.js';
+import { BREVANOR_CULTURE } from '../Brevanor/kultur.js';
 import { MORGORN_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/morgorn/morgorn-class-registry.js';
 import { getMorgornClassProgression } from '../../AleriaAlmanach/modules/classes/morgorn/morgorn-class-progression.js';
 import { VENALYS_CLASS_IDS } from '../../AleriaAlmanach/modules/classes/venalys/venalys-class-registry.js';
@@ -25,9 +27,10 @@ const volumes = await Promise.all([
   { folder: 'Alben', ids: ALBEN_CLASS_IDS, progression: null },
   { folder: 'Nordmaenner', ids: NORDMAENNER_CLASS_IDS, progression: null },
   { folder: 'Morgorn', ids: MORGORN_CLASS_IDS, progression: getMorgornClassProgression },
-  { folder: 'Venalys', ids: VENALYS_CLASS_IDS, progression: getVenalysClassProgression }
+  { folder: 'Venalys', ids: VENALYS_CLASS_IDS, progression: getVenalysClassProgression },
+  { folder: 'Brevanor', ids: BREVANOR_CLASS_IDS, progression: null, culture: BREVANOR_CULTURE }
 ].map(async volume => {
-  const culture = JSON.parse(await readFile(new URL(`${volume.folder}/kultur.json`, root), 'utf8'));
+  const culture = volume.culture || JSON.parse(await readFile(new URL(`${volume.folder}/kultur.json`, root), 'utf8'));
   const documents = await Promise.all(volume.ids.map(async id => resolveCultureClassDocument(
     JSON.parse(await readFile(new URL(`${volume.folder}/${id}/klasse.json`, root), 'utf8')), culture
   )));

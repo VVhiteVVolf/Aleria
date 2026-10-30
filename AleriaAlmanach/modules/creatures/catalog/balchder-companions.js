@@ -1,6 +1,7 @@
 import { createHouseholdCompanion } from './household-companion-profiles.js?v=20261013-wolfshorn-v1';
 
 export const ARMEL_BALCHDER_ID = 'person--haus-balchder--armel-balchder';
+export const KAMBER_BALCHDER_ID = 'person--haus-balchder--kamber-balchder';
 
 const argent = createHouseholdCompanion({
   profile: 'horse', slug: 'argent', name: 'Argent', ownerSlug: 'armel',
@@ -34,5 +35,28 @@ export const ARGENT_CREATURE_SOURCE = {
     connections: [{ type: 'connection', name: 'Armel Balchder',
       image: '/Stammbäume/assets/images/portraits/haus-balchder/armel-balchder.jpg',
       detail: 'Besitzer und Reiter; schätzt Argents Zuverlässigkeit ebenso wie seine edle Erscheinung.' }]
+  }
+};
+
+const silberwind = createHouseholdCompanion({
+  profile: 'horse', slug: 'silberwind', name: 'Silberwind', ownerSlug: 'kamber',
+  ownerId: KAMBER_BALCHDER_ID, ownerName: 'Kamber Balchder',
+  species: 'Rhyfel', level: 2,
+  location: 'Celtigerns Wacht', house: 'Haus Balchder', habitat: 'Bei Kamber Balchder, Celtigerns Wacht',
+  portrait: '/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png',
+  description: 'Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.'
+});
+
+export const SILBERWIND_CREATURE_SOURCE = {
+  ...silberwind, portraitCaption: 'Silberwind · Rhyfel-Schimmel · Kamber Balchder',
+  biography: {
+    ...silberwind.biography,
+    appearance: 'Heller Rhyfel-Schimmel mit silberweißer Mähne und hellem Schweif; kräftiger, tragfähiger Pferdekörper. Das neue Porträt zeigt braunes Reitzeug und eine dunkle Satteldecke mit schlichter goldener Einfassung.',
+    personality: '',
+    history: 'Persönliches Reittier Kamber Balchders. Das Pferd gehört zum heutigen Alltag des Vertragsmeisters. Ein Alter, eine bestimmte Herkunft, ein Kaufdatum oder frühere Kampfeinsätze sind nicht belegt.',
+    bonds: 'Besitzer und Reiter: Kamber Balchder, Haus Balchder.',
+    facts: [{ label: 'Rasse', value: 'Rhyfel' }, { label: 'Fellfarbe', value: 'Schimmel' }, { label: 'Rolle', value: 'Reittier' }, { label: 'Besitzer', value: 'Kamber Balchder' }],
+    traits: [],
+    connections: [{ type: 'connection', name: 'Kamber Balchder', image: '/Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg', detail: 'Besitzer und Reiter · Vertragsmeister der Grafschaft Celtigerns Wacht.' }]
   }
 };

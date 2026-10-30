@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-29",
+  "method": "Case-insensitive rg word-boundary search across existing Aleria text, data and source files before and after authoring",
+  "extensions": ["json", "js", "mjs", "html", "md"],
+  "excluded": ["Vorschau/Talyndor", "Vorschau/tests/talyndor.test.mjs", "diagnostics", "node_modules", ".release-state", ".site-publish", "vendor", "generated prompt catalogs"],
+  "newPlaces": ["Wetherham", "Dunworth", "Cawden", "Eldenwick", "Wensbury", "Hartham", "Edrington", "Ternford", "Fenhurst", "Norcombe", "Bramwell", "Aveldon"],
+  "newHouses": ["Aldred", "Wulmer", "Bramcote", "Elwick", "Sedgeley", "Rookden", "Tostan"],
+  "newRegions": ["Lennwyckland", "Warrenfold", "Aldredhold", "Briganefold", "Wetherfold", "Dunworthmark", "Cawdenhold", "Eldenemnet", "Wensfold", "Harthamland", "Edringfold", "Ternemnet", "Fenhold", "Norcombefold", "Brammark", "Avelhold"],
+  "existingMatches": []
+}

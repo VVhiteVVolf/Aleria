@@ -3,8 +3,10 @@ import { VENNYR_CLASS_IDS } from '../../../AleriaAlmanach/modules/classes/vennyr
 import { ALDRIMAR_CLASS_IDS } from '../../../AleriaAlmanach/modules/classes/aldrimar/aldrimar-class-registry.js';
 import { MORGORN_CLASS_IDS } from '../../../AleriaAlmanach/modules/classes/morgorn/morgorn-class-registry.js';
 import { VENALYS_CLASS_IDS } from '../../../AleriaAlmanach/modules/classes/venalys/venalys-class-registry.js';
+import { BREVANOR_CLASS_IDS } from '../../../AleriaAlmanach/modules/classes/brevanor/brevanor-class-registry.js';
 
 export function getCultureClassPageHref(cultureId, classId) {
+  if (cultureId === 'brevanor' && BREVANOR_CLASS_IDS.includes(classId)) return `Brevanor/${classId}/index.html`;
   if (cultureId === 'aldrimar' && ALDRIMAR_CLASS_IDS.includes(classId)) return `Aldrimar/${classId}/index.html`;
   if (cultureId === 'morgorn' && MORGORN_CLASS_IDS.includes(classId)) return `Morgorn/${classId}/index.html`;
   if (cultureId === 'venalys' && VENALYS_CLASS_IDS.includes(classId)) return `Venalys/${classId}/index.html`;

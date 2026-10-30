@@ -1,5 +1,12 @@
 // Authored cultural background, preserved from the original class page.
+import { BREVANOR_CULTURE } from '../../Brevanor/kultur.js';
 export const CLASS_LORE = {
+      brevanor: {
+        name:'Brevanor',subtitle:'Rittertum und Adelsränge',wappen:BREVANOR_CULTURE.catalogEmblem,
+        warriorhood:'Brevanors Klassen sind benannt und nach ihrer Rolle eingeordnet. Ihre ausführlichen Klassenbeschreibungen werden noch ausgearbeitet.',
+        society:'Die Adelshierarchie führt die Titel vom Riël bis zum Pajet. Chastor entspricht dem Ritterfürsten. Cavalier bezeichnet den einfachen Ritterstand; Cabrant ist die berittene Klasse.',
+        hierarchy:BREVANOR_CULTURE.orderOverview.nobleRanks.map(rank=>({rank:rank.title,desc:rank.subtitle}))
+      },
       basis: {
         name: 'Basisklassen',
         subtitle: 'Die Grundpfeiler des Kriegshandwerks',

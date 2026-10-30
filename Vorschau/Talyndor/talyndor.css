@@ -1,0 +1,13 @@
+.talyndor-workbench{--accent:#733f37;--ink:#342d29;--paper:#f6f0e2;--muted:#78695d;--line:#d1c2ab;background:#d7cebc}
+.talyndor-workbench .hero{background:radial-gradient(ellipse at 85% 40%,#bc8c5e33,transparent 66%)}
+.talyndor-workbench .county-card{min-width:0;background:#fcf7eb}
+.talyndor-workbench .county-card .shield-link span{min-width:0;overflow-wrap:anywhere}
+.talyndor-workbench .county-card:last-child{grid-column:auto}
+.talyndor-workbench .seat-card .shield-link span{display:none}
+.talyndor-workbench .county-card .shield-link{font-size:23px}
+.talyndor-workbench .country-warrior-card{background:linear-gradient(#f0e8d6,#e6dac4)}
+.talyndor-workbench .map-canvas{min-width:900px;container-type:inline-size}
+.talyndor-workbench .city-name{display:flex;align-items:center;justify-content:center;width:12%;height:2.4%;box-sizing:border-box;font-size:clamp(8px,1.35cqw,48px);padding:0;background:#352d27;max-width:none}
+.talyndor-workbench .bestiary-reference{padding-top:16px;border-top:1px solid var(--line);font:13px/1.6 Arial,sans-serif}
+@media(max-width:650px){.talyndor-workbench .county-card .shield-link{font-size:21px}}
+@media(max-width:400px){.talyndor-workbench .county-card .shield-link{flex-direction:column;align-items:flex-start}}

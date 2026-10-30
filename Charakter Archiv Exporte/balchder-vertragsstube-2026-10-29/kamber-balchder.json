@@ -1,0 +1,268 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-10-29T00:00:00.000Z",
+  "character": {
+    "id": "person--haus-balchder--kamber-balchder",
+    "name": "Kamber Balchder",
+    "title": "Vertragsmeister · Uchelwyr",
+    "fraktion": "Haus Balchder",
+    "role": "Vertragsmeister der Grafschaft Celtigerns Wacht",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Akribischer, empirisch und pragmatisch denkender Vertragsmeister mit zwischenmenschlichem Geschick. Vater und Vorgesetzter von Blodwen und Rice. Schwäche für gutes Essen; geringe körperliche Fitness und keine belegte jüngere Kampfpraxis. Reitet Silberwind, einen Rhyfel-Schimmel.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-29T00:00:00.000Z",
+    "updatedAt": "2026-10-29T00:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Kamber Balchder"
+        },
+        {
+          "label": "Geboren",
+          "value": "1700"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Balchder"
+        },
+        {
+          "label": "Amt",
+          "value": "Vertragsmeister der Grafschaft Celtigerns Wacht"
+        },
+        {
+          "label": "Untersteht",
+          "value": "Cadfan Draig · Herold des Grafen"
+        },
+        {
+          "label": "Ausbildung",
+          "value": "Uchelwyr"
+        },
+        {
+          "label": "Eltern",
+          "value": "Dalvin Balchder und Iseult Caerlaen"
+        },
+        {
+          "label": "Ehefrau",
+          "value": "Senara Gelyn"
+        },
+        {
+          "label": "Kinder",
+          "value": "Blodwen und Rice Balchder"
+        },
+        {
+          "label": "Reittier",
+          "value": "Silberwind · Rhyfel · Schimmel"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Kamber Balchder · Sorgfalt und Augenmaß",
+        "biographyText": "<p><strong>Kamber Balchder</strong> führt als Vertragsmeister die Klauseln, Fristen und Sicherheiten der Grafschaft Celtigerns Wacht. Der Sohn von <strong>Dalvin Balchder</strong> und <strong>Iseult Caerlaen</strong> arbeitet akribisch: Er vergleicht Fassungen, prüft Vollmachten und hält fest, welche Zusage tatsächlich erteilt wurde. Ein ordentliches Schriftstück ist für ihn erst dann brauchbar, wenn seine Bestimmungen auch im Alltag tragen.</p><p>Sein Denken ist <strong>empirisch und pragmatisch</strong>. Kamber zieht überprüfbare Angaben, vorhandene Belege und beobachtete Folgen einer gefälligen Behauptung vor. Taucht ein Widerspruch auf, geht er ihm nach; zeigt die Erfahrung, dass eine Regelung nicht funktioniert, sucht er eine bessere Lösung. Gründlichkeit ist für ihn ein Mittel, spätere Schwierigkeiten zu vermeiden.</p><p>Seine Genauigkeit hindert ihn nicht daran, mit Menschen umzugehen. Er hört zu, fragt verständlich nach und bemerkt, wenn hinter einem Einwand eine Sorge oder ein Missverständnis steckt. Bei einer strittigen Formulierung kann er sachlich bleiben und zugleich darauf achten, dass sein Gegenüber sich ernst genommen fühlt. So verbindet er das genaue Lesen eines Vertrages mit dem Gespür dafür, was die Beteiligten überhaupt miteinander vereinbaren wollen.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Akribisch",
+            "detail": "Vergleicht Abschriften und Belege, verfolgt Fristen und prüft auch unscheinbare Einzelheiten.",
+            "icon": "../IconOrdner/Traits%20Icon/Diligent.png"
+          },
+          {
+            "title": "Empirisch und pragmatisch",
+            "detail": "Fragt nach überprüfbaren Grundlagen und nach den praktischen Folgen einer Vereinbarung. Neue Erkenntnisse können sein Urteil verändern.",
+            "icon": "../IconOrdner/Traits%20Icon/Scholar.png"
+          },
+          {
+            "title": "Zwischenmenschliches Geschick",
+            "detail": "Kann zuhören, Bedenken erkennen und schwierige Sachverhalte so erklären, dass ein Gespräch weiterkommt.",
+            "icon": "../IconOrdner/Traits%20Icon/Gregarious.png"
+          },
+          {
+            "title": "Schwäche für gutes Essen",
+            "detail": "Ein gelungenes Essen verführt ihn leicht zu einer weiteren Portion. Seiner körperlichen Fitness ist das wenig zuträglich.",
+            "icon": "../IconOrdner/Traits%20Icon/Gluttonous.png"
+          }
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Silberwind",
+            "text": "<p>Kamber reitet <strong>Silberwind</strong>, einen <strong>Rhyfel-Schimmel</strong>. Das Pferd ist sein persönliches Reittier. Sein Name und seine Rasse sind bekannt; Alter, Herkunft und frühere Einsätze sind bisher nicht überliefert. Silberwinds Existenz sagt deshalb ebenso wenig über frühere Kämpfe aus wie Kambers ritterliche Ausbildung.</p>"
+          }
+        ],
+        "historyTitle": "Familie, Ausbildung und heutiger Dienst",
+        "historyText": "<p>Kamber wurde <strong>1700</strong> geboren. Er ist mit <strong>Senara Gelyn</strong> verheiratet; ihre Tochter <strong>Blodwen</strong> wurde 1722, ihr Sohn <strong>Rice</strong> 1728 geboren. Beide helfen inzwischen unter seiner unmittelbaren Anleitung in der Vertragsstube: Blodwen als Schreibergehilfin, Rice als Laufbursche.</p><p>Kamber ist als <strong>Uchelwyr</strong> ausgebildet. Sein heutiger Alltag verlangt vor allem Sorgfalt am Schreibtisch und im Gespräch. Körperlich ist er weniger fit, als man es von einem Ritter erwarten könnte. Gutes Essen ist seine erkennbare Schwäche, regelmäßige kämpferische Übung bestimmt sein Leben nicht. Sein letzter wirklicher Kampf liegt vermutlich sehr lange zurück, sofern er überhaupt je einen bestritten hat. Ein konkreter Kampfeinsatz ist nicht belegt.</p>",
+        "worksTitle": "Aufgaben in der Vertragsstube",
+        "works": [
+          "Vertragsprüfung · Klauseln, Fristen, Sicherheiten und Gegensiegel sorgfältig vergleichen und auf praktische Umsetzbarkeit prüfen.",
+          "Vollmachten · Prüfen, ob Unterzeichnende die jeweilige Zusage verbindlich erteilen dürfen.",
+          "Abstimmung · Strittige Rechtsfolgen mit der Gerichtsbarkeit und finanzielle Verpflichtungen mit der Kämmerei klären.",
+          "Kanzleiarbeit · Blodwens Abschriften und Rices Botengänge anleiten; geprüfte Fassungen geordnet an das Archiv übergeben."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie und Dienst",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Senara Gelyn",
+            "detail": "Ehefrau und Mutter von Blodwen und Rice.",
+            "image": "../Stammbäume/assets/images/portraits/haus-gelyn/senara-gelyn.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Blodwen Balchder",
+            "detail": "Tochter · Schreibergehilfin unter seiner unmittelbaren Anleitung.",
+            "image": "../Stammbäume/assets/images/portraits/haus-balchder/blodwen-balchder.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rice Balchder",
+            "detail": "Sohn · Laufbursche der Vertragsstube unter seiner unmittelbaren Anleitung.",
+            "image": "../Stammbäume/assets/images/portraits/haus-balchder/rice-balchder.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cadfan Draig",
+            "detail": "Herold des Grafen und Kambers Amtsvorgesetzter.",
+            "image": "../Stammbäume/assets/images/portraits/haus-draig/cadfan-draig.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Silberwind",
+            "detail": "Persönliches Reittier · Rhyfel-Schimmel.",
+            "image": "../AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Familienakte und Rasseprofil",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-balchder.png",
+            "title": "Haus Balchder",
+            "text": "Familienakte mit Eltern, Ehe und Kindern.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=kamber-balchder"
+          },
+          {
+            "icon": "../Bestiarium/assets/icons/pferde.webp",
+            "title": "Silberwind · Rhyfel",
+            "text": "Das tatsächlich vorhandene Rasseprofil seines Reittiers.",
+            "link": "../Bestiarium/tiere/pferde/rhyfel/index.html"
+          }
+        ],
+        "footer": ""
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-balchder--kamber-balchder"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-balchder--kamber-balchder",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "houseId": "house-balchder",
+      "houseName": "Haus Balchder",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-balchder",
+          "personId": "kamber-balchder",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-29T00:00:00.000Z",
+          "lastSyncedAt": "2026-10-29T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=kamber-balchder",
+          "fingerprint": "{\"name\":\"Kamber Balchder\",\"title\":\"Vertragsmeister · Uchelwyr\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dalvin-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--dalvin-balchder\",\"name\":\"Dalvin Balchder\"},{\"personId\":\"iseult-caerlaen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caerlaen--iseult-caerlaen\",\"name\":\"Iseult Caerlaen\"}],\"partners\":[{\"personId\":\"senara-gelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gelyn--senara-gelyn\",\"name\":\"Senara Gelyn\"}],\"children\":[{\"personId\":\"blodwen-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--blodwen-balchder\",\"name\":\"Blodwen Balchder\"},{\"personId\":\"rice-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--rice-balchder\",\"name\":\"Rice Balchder\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "dalvin-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--dalvin-balchder",
+            "name": "Dalvin Balchder"
+          },
+          {
+            "personId": "iseult-caerlaen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caerlaen--iseult-caerlaen",
+            "name": "Iseult Caerlaen"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "senara-gelyn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gelyn--senara-gelyn",
+            "name": "Senara Gelyn"
+          }
+        ],
+        "children": [
+          {
+            "personId": "blodwen-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--blodwen-balchder",
+            "name": "Blodwen Balchder"
+          },
+          {
+            "personId": "rice-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--rice-balchder",
+            "name": "Rice Balchder"
+          }
+        ]
+      }
+    }
+  }
+}

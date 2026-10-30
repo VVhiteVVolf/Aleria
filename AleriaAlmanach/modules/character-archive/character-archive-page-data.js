@@ -1583,6 +1583,132 @@ export const ARCHIVE_PAGE_CLASSES = Object.freeze([
     "icon": "https://i.imgur.com/XVBDnZP.png",
     "sourcePage": "Klassenordner/Klassenseite.html",
     "pageLinks": []
+  },
+  {
+    "id": "kerant",
+    "name": "Kerant",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 98,
+    "description": "Einfache Miliz",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/kerant.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/kerant/index.html"
+      }
+    ]
+  },
+  {
+    "id": "breval",
+    "name": "Breval",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 99,
+    "description": "Ritter mit vielseitiger Bewaffnung",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/breval.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/breval/index.html"
+      }
+    ]
+  },
+  {
+    "id": "hastrel",
+    "name": "Hastrel",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 100,
+    "description": "Ritter mit Stangenwaffe",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/hastrel.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/hastrel/index.html"
+      }
+    ]
+  },
+  {
+    "id": "cantrel",
+    "name": "Cantrel",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 101,
+    "description": "Kampfbarde",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/cantrel.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/cantrel/index.html"
+      }
+    ]
+  },
+  {
+    "id": "havren",
+    "name": "Havren",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 102,
+    "description": "Ritter zur See",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/havren.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/havren/index.html"
+      }
+    ]
+  },
+  {
+    "id": "silvain",
+    "name": "Silvain",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 103,
+    "description": "Fernkämpfender Ritter",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/silvain.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/silvain/index.html"
+      }
+    ]
+  },
+  {
+    "id": "cabrant",
+    "name": "Cabrant",
+    "baseClass": false,
+    "cultures": [
+      "Brevanor"
+    ],
+    "order": 104,
+    "description": "Berittener Ritter",
+    "icon": "/Klassenordner/assets/images/brevanor/icons/cabrant.webp",
+    "sourcePage": "Klassenordner/Klassenseite.html",
+    "pageLinks": [
+      {
+        "culture": "Brevanor",
+        "path": "Klassenordner/Brevanor/cabrant/index.html"
+      }
+    ]
   }
 ]);
 

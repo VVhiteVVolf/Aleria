@@ -1,0 +1,54 @@
+{
+  "ownerCharacterId": "person--haus-balchder--kamber-balchder",
+  "creatureId": "companion-kamber-silberwind",
+  "operation": "attachCreatureToInventory",
+  "rule": "Auf den aktuellen Besitzerstand anwenden; vorhandene Inventareinträge und Ressourcen erhalten.",
+  "inventoryAddition": {
+    "companions": [
+      {
+        "id": "card-kamber-silberwind",
+        "name": "Silberwind",
+        "species": "Rhyfel",
+        "image": "/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+        "description": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+        "summary": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+        "role": "Reittier",
+        "status": "Gesund",
+        "imageFormat": "portrait",
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "attributes": [],
+        "infoRows": [],
+        "creatureId": "companion-kamber-silberwind",
+        "inventoryItemId": "kamber-silberwind"
+      }
+    ],
+    "items": [
+      {
+        "id": "kamber-silberwind",
+        "instanceId": "kamber-silberwind",
+        "creatureId": "companion-kamber-silberwind",
+        "name": "Silberwind",
+        "image": "/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+        "description": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+        "type": "Rhyfel",
+        "category": "companion",
+        "registerCategory": "pferde",
+        "templateId": "",
+        "templateName": "Rhyfel",
+        "quantity": "1",
+        "itemStorageMode": "character",
+        "itemDbKey": "",
+        "originItemDbKey": "",
+        "ownerCharacterId": "person--haus-balchder--kamber-balchder",
+        "ownerCharacterName": "Kamber Balchder",
+        "imageFormat": "portrait",
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "attributes": [],
+        "infoRows": [],
+        "individualizedAt": "2026-10-29T00:00:00.000Z"
+      }
+    ]
+  }
+}

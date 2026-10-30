@@ -8,6 +8,7 @@ import {
 } from './family-record-builders.js';
 import { HOUSE_BALCHDER_PORTRAITS } from './house-balchder-portraits.js';
 import { ARMEL_BALCHDER_BIOGRAPHY } from './person-biographies/armel-balchder.js';
+import { KAMBER_BALCHDER_BIOGRAPHY, BLODWEN_BALCHDER_BIOGRAPHY, RICE_BALCHDER_BIOGRAPHY } from './person-biographies/balchder-vertragsstube.js';
 
 const BALCHDER_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-balchder.png';
 const SELDRYN_EMBLEM = 'assets/images/houses/Gwendolyns Ufer/Ritterliche/Seldryn.png';
@@ -138,7 +139,11 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
     person('ronda-rhyddid', 'Ronda Rhyddid', 'female', '1696', '', 'house-rhyddid'),
     person('cerrin-balchder', 'Cerrin Balchder', 'female', '1697', ''),
     person('wyett-barus', 'Wyett Barus', 'male', '1691', '', 'house-barus'),
-    person('kamber-balchder', 'Kamber Balchder', 'male', '1700', ''),
+    person('kamber-balchder', 'Kamber Balchder', 'male', '1700', '', BALCHDER_HOUSE_ID, {
+      title: 'Vertragsmeister · Uchelwyr',
+      notes: 'Akribischer, empirisch und pragmatisch denkender Vertragsmeister mit zwischenmenschlichem Geschick. Vater und Vorgesetzter von Blodwen und Rice. Schwäche für gutes Essen; geringe körperliche Fitness und keine belegte jüngere Kampfpraxis. Reitet Silberwind, einen Rhyfel-Schimmel.',
+      extensions: { biographyModule: KAMBER_BALCHDER_BIOGRAPHY, registryManagedExtensionFields: ['biographyModule'], registryManagedSourceRevision: 4, registryManagedFields: ['title', 'notes'], registryManagedFieldRevisions: { title: 4, notes: 4 } }
+    }),
     person('senara-gelyn', 'Senara Gelyn', 'female', '1704', '', 'house-gelyn'),
 
     // Kinder von Kimball und Revelyn
@@ -165,8 +170,14 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
     }),
 
     // Kinder von Kamber und Senara
-    person('blodwen-balchder', 'Blodwen Balchder', 'female', '1722', ''),
-    person('rice-balchder', 'Rice Balchder', 'male', '1728', ''),
+    person('blodwen-balchder', 'Blodwen Balchder', 'female', '1722', '', BALCHDER_HOUSE_ID, {
+      title: 'Schreibergehilfin der Vertragsstube', notes: 'Unterstützt ihren Vater Kamber Balchder mit Abschriften, Listen und der Ablage von Vertragsunterlagen.',
+      extensions: { biographyModule: BLODWEN_BALCHDER_BIOGRAPHY, registryManagedExtensionFields: ['biographyModule'], registryManagedSourceRevision: 4, registryManagedFields: ['title', 'notes'], registryManagedFieldRevisions: { title: 4, notes: 4 } }
+    }),
+    person('rice-balchder', 'Rice Balchder', 'male', '1728', '', BALCHDER_HOUSE_ID, {
+      title: 'Laufbursche der Vertragsstube', notes: 'Erledigt örtliche Botengänge und kleine Besorgungen nach Anweisung seines Vaters Kamber Balchder.',
+      extensions: { biographyModule: RICE_BALCHDER_BIOGRAPHY, registryManagedExtensionFields: ['biographyModule'], registryManagedSourceRevision: 4, registryManagedFields: ['title', 'notes'], registryManagedFieldRevisions: { title: 4, notes: 4 } }
+    }),
 
     // Kinder von Jenelle und Harald
     person('eniana-balchder', 'Eniana Balchder', 'female', '1720', ''),
@@ -310,6 +321,7 @@ export const HOUSE_BALCHDER_FAMILY = Object.freeze({
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Balchder-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Bronwen, Genofeva, Aerona, Klervi und Cerrin besitzen Wegverheiratungs-Knoten zu ihren Zielhäusern; Aerona ist als älteste Tochter Dalvins ergänzt. Avan und Ronda Rhyddid, Klervi und Rhain Cludwyr, Kamber und Senara Gelyn sowie Marven und Morgaine Chwedonol sind mit ihren bestehenden Stammbäumen als dieselben Weltpersonen verknüpft. Sheev Gwared ist Avans aufgenommenes Mündel und wird ausschließlich als Schutzbefohlener mit Vormundschaft, nicht als leibliches Kind, geführt. Als Ritterherrenhaus führt Balchder den silbernen Wappenrahmen. Die ergänzende Seldryn-Quelle synchronisiert Lugh und Bronwen samt beendeter Ehe, ersetzt Lughs älteres Portrait und gibt Bronwens Zielknoten das echte silbern gerahmte Wappen von Haus Seldryn.',
     blankFamily: false,
-    sourceRevision: 3
+    registryManagedEntitySourceRevision: 3,
+    sourceRevision: 4
   }
 });
