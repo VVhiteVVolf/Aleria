@@ -1,0 +1,23 @@
+{
+  "reason": "Mit dem Gesamtstand am 30. Oktober 2026 freigegebene Bielle-Korrektur: Brenor (Baron) und entsprechende Herkunftsnotiz Helvianes. Der isolierte Vergleich der bisherigen Git-Quellen ergibt exakt den unveränderten historischen Baseline-Hash; keine Identität, Beziehung oder Bildzuordnung ändert sich.",
+  "house": {
+    "id": "haus-bielle",
+    "rankId": {
+      "before": "knight-simple",
+      "after": "brenor"
+    },
+    "description": {
+      "before": "Brevanorisches Ritter- und Winzerhaus. Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an das Rittererbe und die Weingüter der Familie.",
+      "after": "Brevanorisches Brenor- und Winzerhaus (Baronenrang). Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an die Rittertradition und die Weingüter der Familie."
+    },
+    "rankSource": "Nutzerkorrektur vom 30.10.2026 gemäß aktueller Ausarbeitung des Königreichs Brevanor: Brenor (Baron), ersetzt die frühere Einordnung als einfache Ritterfamilie."
+  },
+  "person": {
+    "familyId": "haus-desele",
+    "id": "helviane-desele",
+    "notes": {
+      "before": "Geborene Bielle. 72 Jahre. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.",
+      "after": "Geborene Bielle. 72 Jahre. Stammt aus dem brevanorischen Brenorhaus Bielle (Baronenrang) und heiratete in das bürgerliche Haus Desele ein. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden."
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import acceptedMetadata from './accepted-realm-metadata-review-20261029.json' with { type: 'json' };
 import balchderPeople from './balchder-person-review-20261029.json' with { type: 'json' };
+import brevanorRank from './brevanor-rank-review-20261030.json' with { type: 'json' };
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
@@ -22,6 +23,24 @@ export function protectedAlbicFamilies(records) {
     };
     copy.houseProfile = { ...copy.houseProfile };
     copy.family.document.houseProfile = { ...copy.family.document.houseProfile };
+    // Project only the exact approved Bielle rank and its matching prose.
+    // Identities, relationships and every other family field stay hashed.
+    if (record.id === brevanorRank.house.id) {
+      const approved = brevanorRank.house;
+      for (const profile of [copy.houseProfile, copy.family.document.houseProfile]) {
+        assert.equal(profile.rankId, approved.rankId.after, `${record.id}/rankId`);
+        profile.rankId = approved.rankId.before;
+      }
+      assert.equal(copy.family.document.description, approved.description.after, `${record.id}/description`);
+      copy.family.document.description = approved.description.before;
+      assert.equal(copy.family.extensions.rankSource, approved.rankSource, `${record.id}/rankSource`);
+      delete copy.family.extensions.rankSource;
+    }
+    if (record.id === brevanorRank.person.familyId) {
+      const person = copy.family.persons.find(person => person.id === brevanorRank.person.id);
+      assert.equal(person?.notes, brevanorRank.person.notes.after, `${record.id}/${brevanorRank.person.id}/notes`);
+      person.notes = brevanorRank.person.notes.before;
+    }
     omitLocation(copy.houseProfile);
     omitLocation(copy.family.document.houseProfile);
     // Project only explicitly approved scalar changes back to the historical

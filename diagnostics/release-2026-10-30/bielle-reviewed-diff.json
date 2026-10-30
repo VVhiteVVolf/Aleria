@@ -1,0 +1,104 @@
+{
+  "beforeHash": "9b8b850e3068dcfb54ea6f2e90e9aa96bc9c3ae3dadc79139256d6f590bfd98a",
+  "afterHash": "6548b8487850e190364a9a0f94328431dc59c0b79f75377b36db10a628be9acd",
+  "changes": [
+    {
+      "path": [
+        "haus-bielle",
+        "houseProfile",
+        "rankId"
+      ],
+      "before": "knight-simple",
+      "after": "brenor"
+    },
+    {
+      "path": [
+        "haus-bielle",
+        "family",
+        "document",
+        "description"
+      ],
+      "before": "Brevanorisches Ritter- und Winzerhaus. Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an das Rittererbe und die Weingüter der Familie.",
+      "after": "Brevanorisches Brenor- und Winzerhaus (Baronenrang). Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an die Rittertradition und die Weingüter der Familie."
+    },
+    {
+      "path": [
+        "haus-bielle",
+        "family",
+        "document",
+        "houseProfile",
+        "rankId"
+      ],
+      "before": "knight-simple",
+      "after": "brenor"
+    },
+    {
+      "path": [
+        "haus-bielle",
+        "family",
+        "extensions",
+        "rankSource"
+      ],
+      "after": "Nutzerkorrektur vom 30.10.2026 gemäß aktueller Ausarbeitung des Königreichs Brevanor: Brenor (Baron), ersetzt die frühere Einordnung als einfache Ritterfamilie."
+    },
+    {
+      "path": [
+        "haus-desele",
+        "family",
+        "persons"
+      ],
+      "before": [
+        {
+          "id": "helviane-desele",
+          "worldPersonId": "person--haus-desele--helviane-desele",
+          "name": "Helviane Desele",
+          "title": "Inhaberin · geborene Bielle",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1668",
+          "death": "",
+          "portrait": "../AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png",
+          "portraitPlaceholder": "auto",
+          "houseId": "house-bielle",
+          "familyRole": "married",
+          "lineageRole": "branch",
+          "tags": [],
+          "notes": "Geborene Bielle. 72 Jahre. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.",
+          "extensions": {
+            "registryManagedFields": [
+              "title",
+              "notes",
+              "portrait"
+            ]
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "helviane-desele",
+          "worldPersonId": "person--haus-desele--helviane-desele",
+          "name": "Helviane Desele",
+          "title": "Inhaberin · geborene Bielle",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1668",
+          "death": "",
+          "portrait": "../AleriaAlmanach/assets/gestiefelte-muschi/portraits/helviane.png",
+          "portraitPlaceholder": "auto",
+          "houseId": "house-bielle",
+          "familyRole": "married",
+          "lineageRole": "branch",
+          "tags": [],
+          "notes": "Geborene Bielle. 72 Jahre. Stammt aus dem brevanorischen Brenorhaus Bielle (Baronenrang) und heiratete in das bürgerliche Haus Desele ein. Helviane hält Besitz, Kasse und Hausregeln in eigener Hand. Ihr Vermögen hat den Krieg überstanden, ihre ganze Familie nicht denselben Weg genommen. Sie erwartet Haltung selbst beim ausgelassensten Abend und lässt ihre Geringschätzung selten hinter dem Fächer verschwinden.",
+          "extensions": {
+            "registryManagedFields": [
+              "title",
+              "notes",
+              "portrait"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
