@@ -90,8 +90,15 @@ test('Alle registrierten Grafschaftsfamilien bleiben über örtliche Wappenkarte
     assert.ok(found.length, record.id);
     for (const card of found) {
       const target = new URL(card.href, 'http://aleria.local');
-      assert.equal(target.searchParams.get('haus'), record.id);
-      assert.match(target.pathname, /\/(haus|kleinehaeuser)\.html$/);
+      if (['haus-cochdon', 'haus-twyllod'].includes(record.id)) {
+        assert.equal(target.searchParams.get('family'), record.id);
+        assert.equal(target.searchParams.get('mode'), 'view');
+        assert.equal(decodeURIComponent(target.pathname), '/Stammbäume/Stammbaum.html');
+        assert.equal(card.rank, 'Bürgerliche Familie');
+      } else {
+        assert.equal(target.searchParams.get('haus'), record.id);
+        assert.match(target.pathname, /\/(haus|kleinehaeuser)\.html$/);
+      }
       target.search = '';
       // Leading slash denotes the site's root, not the filesystem root.
       await access(new URL(target.pathname.replace(/^\//, ''), root));

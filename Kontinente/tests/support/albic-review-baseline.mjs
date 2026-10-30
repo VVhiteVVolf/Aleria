@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import acceptedMetadata from './accepted-realm-metadata-review-20261029.json' with { type: 'json' };
 import balchderPeople from './balchder-person-review-20261029.json' with { type: 'json' };
 import brevanorRank from './brevanor-rank-review-20261030.json' with { type: 'json' };
+import gwynthorCourt from './gwynthor-court-family-review-20261030.json' with { type: 'json' };
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
@@ -64,6 +65,14 @@ export function protectedAlbicFamilies(records) {
     // feature. They can change while every person and relationship stays intact.
     for (const field of ['albicTerritorialReview', 'registryManagedHouseProfileFields', 'registryManagedRecordFields',
       'houseBiographyModule', 'registryManagedEntitySourceRevision', 'sourceRevision']) delete copy.family.extensions[field];
+    // The court story deliberately adds relatives and changes the two approved
+    // families. Check their complete current records before restoring the exact
+    // published records for the older territorial review; never rebase its hash.
+    const courtReview = gwynthorCourt.families[record.id];
+    if (courtReview) {
+      assert.equal(reviewHash(copy), courtReview.afterSha256, `${record.id}/gwynthor-court`);
+      return structuredClone(courtReview.before);
+    }
     return copy;
   });
 }
