@@ -62,7 +62,7 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
   assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['almanach-runtime', 'gameplay-guides']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['gameplay-guides']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['balchder-characters', 'gameplay-guides']);
 });
 
 test('chart CSS triggers the browser audit, portraits do not trigger geometry that blocks image requests', () => {

@@ -16,3 +16,10 @@ test('bounded import preserves every unrelated record and live field, and is ide
 test('authored additions cannot overwrite a preexisting person or another feature',()=>{
   assert.throws(()=>buildAuthoredCharacterImport(prior,[{...entries[0],character:{id:'old',name:'Replacement'}}],'test'),/nicht überschrieben/);
 });
+test('bounded projection counts retained historical document IDs instead of carrying a stale report count',()=>{
+  const existing=structuredClone(prior);
+  existing.registry.records[0].firestoreDocumentIds=['legacy-one','legacy-two'];
+  const result=buildAuthoredCharacterImport(existing,entries,'test');
+  assert.equal(result.report.summary.sourceDocuments,3);
+  assert.deepEqual(result.registry.records[0],existing.registry.records[0]);
+});

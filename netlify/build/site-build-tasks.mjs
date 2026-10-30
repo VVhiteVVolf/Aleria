@@ -38,6 +38,19 @@ const economySourceInputs = [
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
 export const SITE_BUILD_TASKS = [
   {
+    id: 'balchder-characters', label: 'Published Balchder biographies and bounded database import',
+    inputs: ['firebase/scripts/content/balchder-character-plan.mjs', 'firebase/scripts/content/publish-balchder-characters.mjs',
+      'firebase/scripts/content/content-publication-client.mjs', 'firebase/scripts/backup/firestore-value-codec.mjs',
+      'AleriaAlmanach/assets/biographies/balchder-vertragsstube/', 'AleriaAlmanach/modules/character-genealogy/',
+      'AleriaAlmanach/modules/characters/character-save-guard.js', 'Stammbäume/assets/js/',
+      'CharakterDatenbank/lib/', 'CharakterDatenbank/scripts/import-balchder-publication.mjs',
+      'CharakterDatenbank/generated/', 'CharakterDatenbank/registry.json', 'CharakterDatenbank/records/familien/haus-balchder/',
+      ...['kamber', 'blodwen', 'rice'].map(name => `Charakter Archiv Exporte/${name}-balchder-veroeffentlicht-2026-10-30.json`),
+      ...['balchder-character-publication', 'balchder-vertragsstube', 'authored-character-import', 'character-database-sync'].map(almanach)],
+    commands: [['CharakterDatenbank/scripts/import-balchder-publication.mjs', '--check'],
+      testCommand(...['balchder-character-publication', 'balchder-vertragsstube', 'authored-character-import', 'character-database-sync'].map(almanach))]
+  },
+  {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
     inputs: ['netlify/build/', 'netlify/release/', 'netlify/tests/'],
     commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs')]

@@ -21,6 +21,7 @@
     "Charakter Archiv Exporte/asgeir-wolfshorn-weapon-economy-2026-09-30.json",
     "Charakter Archiv Exporte/asgeir-wolfshorn.json",
     "Charakter Archiv Exporte/avZbi5bD7DFcx6XtefJ4-tierbegleiter-2026-10-11.json",
+    "Charakter Archiv Exporte/blodwen-balchder-veroeffentlicht-2026-10-30.json",
     "Charakter Archiv Exporte/cadell-ysgrif-schiffsmannschaft-2026-09-06.json",
     "Charakter Archiv Exporte/caradog-tonnarth-schiffsmannschaft-2026-09-06.json",
     "Charakter Archiv Exporte/carys-draig-reitpferd-v2-2026-10-13.json",
@@ -95,6 +96,7 @@
     "Charakter Archiv Exporte/iestyn-swyll-familienabgleich-2026-10-18.json",
     "Charakter Archiv Exporte/ifor-beryn-schiffsmannschaft-2026-09-06.json",
     "Charakter Archiv Exporte/isobel-draig-reitpferd-2026-10-13.json",
+    "Charakter Archiv Exporte/kamber-balchder-veroeffentlicht-2026-10-30.json",
     "Charakter Archiv Exporte/kane-draig-defense-balance-2026-10-03.json",
     "Charakter Archiv Exporte/kane-draig-erholung-2026-09-26.json",
     "Charakter Archiv Exporte/kane-draig-jungdrache-2026-09-30.json",
@@ -142,6 +144,7 @@
     "Charakter Archiv Exporte/rhy-dyger-schiffsmannschaft-2026-09-06.json",
     "Charakter Archiv Exporte/rhydwen-swyll-familienabgleich-2026-10-18.json",
     "Charakter Archiv Exporte/rhys-draig-reitpferd-v2-2026-10-13.json",
+    "Charakter Archiv Exporte/rice-balchder-veroeffentlicht-2026-10-30.json",
     "Charakter Archiv Exporte/sindre-brandstolz-biografie-2026-09-06.json",
     "Charakter Archiv Exporte/sindre-brandstolz-schiffsmannschaft-2026-09-06.json",
     "Charakter Archiv Exporte/talon-trydar-schiffsmannschaft-2026-09-06.json",
@@ -162,8 +165,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-10-21T00:00:00Z",
-  "count": 244,
+  "sourceExportedAt": "2026-10-30T18:10:16.584Z",
+  "count": 246,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -709,24 +712,6 @@
       "familyStatus": "linked",
       "path": "records/familien/haus-balchder/dalvin-balchder--40nxCJI0BfGcHkbYEVHl/character.json",
       "contentHash": "a255fa17acfbbdfbe137a64a0acd0828c7a67515e323def0b3423760011bf730"
-    },
-    {
-      "recordId": "character--person--haus-balchder--kamber-balchder",
-      "name": "Kamber Balchder",
-      "aliases": [],
-      "worldPersonId": "person--haus-balchder--kamber-balchder",
-      "firestoreDocumentId": "person--haus-balchder--kamber-balchder",
-      "firestoreDocumentIds": [
-        "person--haus-balchder--kamber-balchder"
-      ],
-      "primary": {
-        "kind": "family",
-        "id": "haus-balchder",
-        "label": "Haus Balchder"
-      },
-      "familyStatus": "linked",
-      "path": "records/familien/haus-balchder/kamber-balchder--person--haus-balchder--kamber-balchder/character.json",
-      "contentHash": "7f982ffae159fce0424eacb9fc3d916e73727d82874fcbc7ee42fc1533a65800"
     },
     {
       "recordId": "character--person--haus-beryn--ifor-beryn",
@@ -4764,6 +4749,60 @@
       "familyStatus": "pending",
       "path": "records/gruppen/schwarze-zitteraale/netznadel--zitteraale-netznadel/character.json",
       "contentHash": "bc95a02e9c6eb94afd76c348c1e27a780ec572a5282bb190af353ade01a5d58f"
+    },
+    {
+      "recordId": "character--person--haus-balchder--kamber-balchder",
+      "name": "Kamber Balchder",
+      "aliases": [],
+      "worldPersonId": "person--haus-balchder--kamber-balchder",
+      "firestoreDocumentId": "person--haus-balchder--kamber-balchder",
+      "firestoreDocumentIds": [
+        "person--haus-balchder--kamber-balchder"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-balchder",
+        "label": "Haus Balchder"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-balchder/kamber-balchder--person--haus-balchder--kamber-balchder/character.json",
+      "contentHash": "26b08902ab6cdd7c56011d0a7de37fa9555bf4c8a59bb51177e0702fffc1e2c4"
+    },
+    {
+      "recordId": "character--person--haus-balchder--blodwen-balchder",
+      "name": "Blodwen Balchder",
+      "aliases": [],
+      "worldPersonId": "person--haus-balchder--blodwen-balchder",
+      "firestoreDocumentId": "person--haus-balchder--blodwen-balchder",
+      "firestoreDocumentIds": [
+        "person--haus-balchder--blodwen-balchder"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-balchder",
+        "label": "Haus Balchder"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-balchder/blodwen-balchder--person--haus-balchder--blodwen-balchder/character.json",
+      "contentHash": "d634f6a27e0beb18f26e0b7a931c3bd75a28ae8eb2a27a3012ab01aa284e8f3f"
+    },
+    {
+      "recordId": "character--person--haus-balchder--rice-balchder",
+      "name": "Rice Balchder",
+      "aliases": [],
+      "worldPersonId": "person--haus-balchder--rice-balchder",
+      "firestoreDocumentId": "person--haus-balchder--rice-balchder",
+      "firestoreDocumentIds": [
+        "person--haus-balchder--rice-balchder"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-balchder",
+        "label": "Haus Balchder"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-balchder/rice-balchder--person--haus-balchder--rice-balchder/character.json",
+      "contentHash": "b441502d1a55c23ad84ec13d5da1341f34fad70411580a558a1d8ab159966ca9"
     }
   ]
 }

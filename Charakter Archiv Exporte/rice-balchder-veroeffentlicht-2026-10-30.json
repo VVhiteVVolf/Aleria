@@ -1,0 +1,183 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "exportedAt": "2026-10-30T18:10:16.584Z",
+  "character": {
+    "id": "person--haus-balchder--rice-balchder",
+    "updatedAt": "2026-10-30T18:10:16.584Z",
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "status": "active",
+    "relevance": "",
+    "aliases": [],
+    "archived": false,
+    "imageSetSchemaVersion": 0,
+    "name": "Rice Balchder",
+    "emotesOverride": false,
+    "fraktion": "Haus Balchder",
+    "role": "Laufbursche unter Kamber Balchder",
+    "emotes": [],
+    "bio": "Erledigt örtliche Botengänge und kleine Besorgungen nach Anweisung seines Vaters Kamber Balchder.",
+    "imageSets": [],
+    "playerOwner": "",
+    "origin": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-balchder/rice-balchder.jpg",
+    "biography": {
+      "biography": {
+        "connectionPortraitHeight": 68,
+        "documentsTitle": "Familienakte",
+        "works": [
+          "Aufgetragene Schriftstücke an die ausdrücklich benannten Empfänger bringen.",
+          "Antworten und Empfangsbestätigungen zu Kamber zurücktragen.",
+          "Kleine Besorgungen für die Vertragsstube nach Anweisung erledigen."
+        ],
+        "historyTitle": "Hintergrund",
+        "connectionTextOffset": 0,
+        "triviaTitle": "Trivia",
+        "connectionsTitle": "Familie",
+        "extraSections": [],
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [],
+        "footer": "",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Kamber Balchder",
+            "detail": "Vater und unmittelbarer Auftraggeber seiner Botengänge.",
+            "image": "../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Senara Gelyn",
+            "detail": "Mutter.",
+            "image": "../Stammbäume/assets/images/portraits/haus-gelyn/senara-gelyn.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Blodwen Balchder",
+            "detail": "Ältere Schwester · Schreibergehilfin unter Kamber.",
+            "image": "../Stammbäume/assets/images/portraits/haus-balchder/blodwen-balchder.jpg",
+            "imageFormat": "portrait"
+          }
+        ],
+        "biographyTitle": "Rice Balchder",
+        "worksTitle": "Aufgaben",
+        "sideWidth": 100,
+        "abilities": [],
+        "portrait": "../Stammbäume/assets/images/portraits/haus-balchder/rice-balchder.jpg",
+        "trivia": [],
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-balchder.png",
+            "title": "Familienakte",
+            "text": "Die belegte Familie Balchder.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=rice-balchder"
+          }
+        ],
+        "biographyText": "<p><strong>Rice Balchder</strong> wurde <strong>1728</strong> geboren. Er ist der Sohn von <strong>Kamber Balchder</strong> und <strong>Senara Gelyn</strong> sowie der jüngere Bruder von <strong>Blodwen</strong>.</p><p>Als <strong>Laufbursche der Vertragsstube</strong> erledigt er die von seinem Vater aufgetragenen Botengänge und kleinen Besorgungen. Er bringt Schriftstücke an die benannten Empfänger und kehrt mit Antworten oder Empfangsbestätigungen zu Kamber zurück. Sein Dienst umfasst örtliche Wege nach Anweisung; eigene Verhandlungen oder gefährliche Fernkurieraufträge sind damit nicht verbunden.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "quotesTitle": "Zitate",
+        "historyText": ""
+      },
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rice Balchder"
+        },
+        {
+          "label": "Geboren",
+          "value": "1728"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Balchder"
+        },
+        {
+          "label": "Eltern",
+          "value": "Kamber Balchder und Senara Gelyn"
+        },
+        {
+          "label": "Geschwister",
+          "value": "Blodwen Balchder"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Laufbursche der Vertragsstube"
+        },
+        {
+          "label": "Untersteht",
+          "value": "Kamber Balchder · Vertragsmeister"
+        }
+      ],
+      "schemaVersion": 1,
+      "quoteBy": "",
+      "revision": 1793383816584,
+      "quote": "",
+      "schema": "aleria.biography-module"
+    },
+    "plotNode": "",
+    "profileLink": "",
+    "createdAt": "2026-10-30T18:10:16.584Z",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "identity": {
+      "worldPersonId": "person--haus-balchder--rice-balchder"
+    },
+    "genealogy": {
+      "birth": "1728",
+      "relationships": {
+        "parents": [
+          {
+            "personId": "kamber-balchder",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-balchder--kamber-balchder",
+            "name": "Kamber Balchder"
+          },
+          {
+            "personId": "senara-gelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gelyn--senara-gelyn",
+            "name": "Senara Gelyn"
+          }
+        ],
+        "partners": [],
+        "children": []
+      },
+      "houseId": "house-balchder",
+      "status": "alive",
+      "worldPersonId": "person--haus-balchder--rice-balchder",
+      "sources": [
+        {
+          "familyId": "haus-balchder",
+          "personId": "rice-balchder",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-30T18:10:16.584Z",
+          "lastSyncedAt": "2026-10-30T18:10:16.584Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=rice-balchder",
+          "fingerprint": "{\"name\":\"Rice Balchder\",\"title\":\"Laufbursche der Vertragsstube\",\"birth\":\"1728\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-balchder/rice-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"kamber-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--kamber-balchder\",\"name\":\"Kamber Balchder\"},{\"personId\":\"senara-gelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gelyn--senara-gelyn\",\"name\":\"Senara Gelyn\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "tags": [],
+      "portraitPlaceholder": "auto",
+      "familyRole": "core",
+      "sex": "male",
+      "houseName": "Haus Balchder",
+      "death": ""
+    },
+    "title": "Laufbursche der Vertragsstube",
+    "currentLocation": ""
+  }
+}
