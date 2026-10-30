@@ -197,6 +197,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-cochdon",
+      "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
       "haus-gwregysdu",
@@ -207,6 +209,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-twyllod",
       "haus-penrudd",
       "haus-valerus",
       "haus-argall",
@@ -246,6 +249,43 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-ard-conbhron",
       "haus-ui-talamh",
       "haus-garrael",
+      "haus-llafnfor",
+      "haus-dyfrgi-caer-cryftlawd",
+      "haus-cwningod",
+      "haus-arth",
+      "haus-pawen",
+      "haus-crafanc",
+      "haus-diafol-talgarth",
+      "haus-beryn",
+      "haus-dyger",
+      "haus-gwyllt",
+      "haus-mathgraig",
+      "haus-prys",
+      "haus-morgwynt",
+      "haus-morglan",
+      "haus-bowen",
+      "haus-bevan",
+      "haus-arian",
+      "haus-hirschhorn",
+      "haus-penry",
+      "haus-parry",
+      "haus-gwernhelyd",
+      "haus-cledrann",
+      "haus-halenwych",
+      "haus-torawg",
+      "haus-ddraenen",
+      "haus-pluen",
+      "haus-morlan",
+      "haus-blodyn-talgarth",
+      "haus-unigol",
+      "haus-morthwyll",
+      "haus-eirth",
+      "haus-selwyn",
+      "haus-dianc-aberdail",
+      "haus-arfordir-aberdail",
+      "haus-blodyn-aberdail",
+      "haus-walwrs-caer-deheuol",
+      "haus-ard-follmhar",
       "haus-wylan",
       "haus-dinefwr",
       "haus-mochdaer",
@@ -356,42 +396,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-brathaireann",
       "haus-tonnmharra",
       "haus-tanwyn",
-      "haus-arth",
-      "haus-pawen",
-      "haus-crafanc",
-      "haus-diafol-talgarth",
-      "haus-beryn",
-      "haus-dyger",
-      "haus-gwyllt",
-      "haus-mathgraig",
-      "haus-prys",
-      "haus-morgwynt",
-      "haus-morglan",
-      "haus-bowen",
-      "haus-bevan",
-      "haus-arian",
-      "haus-hirschhorn",
-      "haus-penry",
-      "haus-parry",
-      "haus-gwernhelyd",
-      "haus-cledrann",
-      "haus-halenwych",
-      "haus-torawg",
-      "haus-ddraenen",
-      "haus-pluen",
-      "haus-morlan",
-      "haus-blodyn-talgarth",
-      "haus-unigol",
-      "haus-morthwyll",
-      "haus-eirth",
-      "haus-selwyn",
-      "haus-dianc-aberdail",
-      "haus-arfordir-aberdail",
-      "haus-blodyn-aberdail",
-      "haus-walwrs-caer-deheuol",
-      "haus-dyfrgi-caer-cryftlawd",
-      "haus-cwningod",
-      "haus-ard-follmhar",
       "haus-aderyn",
       "haus-eryr",
       "haus-tylluan",
@@ -2804,13 +2808,13 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "",
     "children": [
       "cenyr/celtigerns-wacht",
+      "cenyr/klaueninsel",
       "cenyr/weidebucht",
       "cenyr/sonnenkuste",
       "cenyr/vortigerns-ruh",
       "cenyr/ahrental",
       "cenyr/silberinsel",
       "cenyr/graue-weite",
-      "cenyr/klaueninsel",
       "cenyr/tal-der-milane"
     ],
     "houseIds": [
@@ -2858,6 +2862,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-cochdon",
+      "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
       "haus-gwregysdu",
@@ -2868,6 +2874,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-twyllod",
       "haus-penrudd",
       "haus-valerus",
       "haus-argall",
@@ -2907,6 +2914,43 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-ard-conbhron",
       "haus-ui-talamh",
       "haus-garrael",
+      "haus-llafnfor",
+      "haus-dyfrgi-caer-cryftlawd",
+      "haus-cwningod",
+      "haus-arth",
+      "haus-pawen",
+      "haus-crafanc",
+      "haus-diafol-talgarth",
+      "haus-beryn",
+      "haus-dyger",
+      "haus-gwyllt",
+      "haus-mathgraig",
+      "haus-prys",
+      "haus-morgwynt",
+      "haus-morglan",
+      "haus-bowen",
+      "haus-bevan",
+      "haus-arian",
+      "haus-hirschhorn",
+      "haus-penry",
+      "haus-parry",
+      "haus-gwernhelyd",
+      "haus-cledrann",
+      "haus-halenwych",
+      "haus-torawg",
+      "haus-ddraenen",
+      "haus-pluen",
+      "haus-morlan",
+      "haus-blodyn-talgarth",
+      "haus-unigol",
+      "haus-morthwyll",
+      "haus-eirth",
+      "haus-selwyn",
+      "haus-dianc-aberdail",
+      "haus-arfordir-aberdail",
+      "haus-blodyn-aberdail",
+      "haus-walwrs-caer-deheuol",
+      "haus-ard-follmhar",
       "haus-wylan",
       "haus-dinefwr",
       "haus-mochdaer",
@@ -3017,42 +3061,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-brathaireann",
       "haus-tonnmharra",
       "haus-tanwyn",
-      "haus-arth",
-      "haus-pawen",
-      "haus-crafanc",
-      "haus-diafol-talgarth",
-      "haus-beryn",
-      "haus-dyger",
-      "haus-gwyllt",
-      "haus-mathgraig",
-      "haus-prys",
-      "haus-morgwynt",
-      "haus-morglan",
-      "haus-bowen",
-      "haus-bevan",
-      "haus-arian",
-      "haus-hirschhorn",
-      "haus-penry",
-      "haus-parry",
-      "haus-gwernhelyd",
-      "haus-cledrann",
-      "haus-halenwych",
-      "haus-torawg",
-      "haus-ddraenen",
-      "haus-pluen",
-      "haus-morlan",
-      "haus-blodyn-talgarth",
-      "haus-unigol",
-      "haus-morthwyll",
-      "haus-eirth",
-      "haus-selwyn",
-      "haus-dianc-aberdail",
-      "haus-arfordir-aberdail",
-      "haus-blodyn-aberdail",
-      "haus-walwrs-caer-deheuol",
-      "haus-dyfrgi-caer-cryftlawd",
-      "haus-cwningod",
-      "haus-ard-follmhar",
       "haus-aderyn",
       "haus-eryr",
       "haus-tylluan",
@@ -3140,6 +3148,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-cochdon",
+      "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
       "haus-gwregysdu",
@@ -3150,6 +3160,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-twyllod",
       "haus-penrudd",
       "haus-valerus",
       "haus-argall",
@@ -3294,6 +3305,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-cochdon",
+      "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
       "haus-gwregysdu",
@@ -3304,6 +3317,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
+      "haus-twyllod",
       "haus-penrudd",
       "haus-valerus",
       "haus-argall"
@@ -3361,6 +3375,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falchdyn",
       "haus-coeddu",
       "craigddu",
+      "haus-cochdon",
+      "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
       "haus-gwregysdu",
@@ -3441,6 +3457,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "celtigerns-wacht",
     "children": [],
     "houseIds": [
+      "haus-twyllod",
       "haus-penrudd"
     ]
   },
@@ -3783,6 +3800,478 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-garrael"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel",
+    "parentId": "cenyr",
+    "name": "Klaueninsel",
+    "path": [
+      "Cenyr",
+      "Klaueninsel"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/klaueninsel.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/talklaue",
+      "cenyr/klaueninsel/sturmklaue",
+      "cenyr/klaueninsel/frostklaue",
+      "cenyr/klaueninsel/wellenklaue",
+      "cenyr/klaueninsel/nebelklaue",
+      "cenyr/klaueninsel/silberklaue",
+      "cenyr/klaueninsel/blutklaue",
+      "cenyr/klaueninsel/antike-hauser"
+    ],
+    "houseIds": [
+      "haus-llafnfor",
+      "haus-dyfrgi-caer-cryftlawd",
+      "haus-cwningod",
+      "haus-arth",
+      "haus-pawen",
+      "haus-crafanc",
+      "haus-diafol-talgarth",
+      "haus-beryn",
+      "haus-dyger",
+      "haus-gwyllt",
+      "haus-mathgraig",
+      "haus-prys",
+      "haus-morgwynt",
+      "haus-morglan",
+      "haus-bowen",
+      "haus-bevan",
+      "haus-arian",
+      "haus-hirschhorn",
+      "haus-penry",
+      "haus-parry",
+      "haus-gwernhelyd",
+      "haus-cledrann",
+      "haus-halenwych",
+      "haus-torawg",
+      "haus-ddraenen",
+      "haus-pluen",
+      "haus-morlan",
+      "haus-blodyn-talgarth",
+      "haus-unigol",
+      "haus-morthwyll",
+      "haus-eirth",
+      "haus-selwyn",
+      "haus-dianc-aberdail",
+      "haus-arfordir-aberdail",
+      "haus-blodyn-aberdail",
+      "haus-walwrs-caer-deheuol",
+      "haus-ard-follmhar"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/talklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Talklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Talklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/talklaue/caer-cryftlawd",
+      "cenyr/klaueninsel/talklaue/cra-fryn"
+    ],
+    "houseIds": [
+      "haus-llafnfor",
+      "haus-dyfrgi-caer-cryftlawd",
+      "haus-cwningod"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/talklaue/caer-cryftlawd",
+    "parentId": "cenyr/klaueninsel/talklaue",
+    "name": "Caer Cryftlawd",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Talklaue",
+      "Caer Cryftlawd"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-llafnfor",
+      "haus-dyfrgi-caer-cryftlawd"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/talklaue/cra-fryn",
+    "parentId": "cenyr/klaueninsel/talklaue",
+    "name": "Cra Fryn",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Talklaue",
+      "Cra Fryn"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-cwningod"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/sturmklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Sturmklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Sturmklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/sturmklaue/talgarth"
+    ],
+    "houseIds": [
+      "haus-arth",
+      "haus-pawen",
+      "haus-crafanc",
+      "haus-diafol-talgarth",
+      "haus-beryn",
+      "haus-dyger",
+      "haus-gwyllt",
+      "haus-mathgraig",
+      "haus-prys",
+      "haus-morgwynt",
+      "haus-morglan",
+      "haus-bowen",
+      "haus-bevan",
+      "haus-arian",
+      "haus-hirschhorn",
+      "haus-penry",
+      "haus-parry",
+      "haus-gwernhelyd",
+      "haus-cledrann",
+      "haus-halenwych",
+      "haus-torawg",
+      "haus-ddraenen",
+      "haus-pluen",
+      "haus-morlan",
+      "haus-blodyn-talgarth"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/sturmklaue/talgarth",
+    "parentId": "cenyr/klaueninsel/sturmklaue",
+    "name": "Talgarth",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Sturmklaue",
+      "Talgarth"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-arth",
+      "haus-pawen",
+      "haus-crafanc",
+      "haus-diafol-talgarth",
+      "haus-beryn",
+      "haus-dyger",
+      "haus-gwyllt",
+      "haus-mathgraig",
+      "haus-prys",
+      "haus-morgwynt",
+      "haus-morglan",
+      "haus-bowen",
+      "haus-bevan",
+      "haus-arian",
+      "haus-hirschhorn",
+      "haus-penry",
+      "haus-parry",
+      "haus-gwernhelyd",
+      "haus-cledrann",
+      "haus-halenwych",
+      "haus-torawg",
+      "haus-ddraenen",
+      "haus-pluen",
+      "haus-morlan",
+      "haus-blodyn-talgarth"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/frostklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Frostklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Frostklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Frostklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/frostklaue/caer-marwor"
+    ],
+    "houseIds": [
+      "haus-unigol"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/frostklaue/caer-marwor",
+    "parentId": "cenyr/klaueninsel/frostklaue",
+    "name": "Caer Marwor",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Frostklaue",
+      "Caer Marwor"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-unigol"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/wellenklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Wellenklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Wellenklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/wellenklaue/caer-morben"
+    ],
+    "houseIds": [
+      "haus-morthwyll"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/wellenklaue/caer-morben",
+    "parentId": "cenyr/klaueninsel/wellenklaue",
+    "name": "Caer Morben",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Wellenklaue",
+      "Caer Morben"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-morthwyll"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/nebelklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Nebelklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Nebelklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Nebelklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/nebelklaue/caer-glaslyn"
+    ],
+    "houseIds": [
+      "haus-eirth"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/nebelklaue/caer-glaslyn",
+    "parentId": "cenyr/klaueninsel/nebelklaue",
+    "name": "Caer Glaslyn",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Nebelklaue",
+      "Caer Glaslyn"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-eirth"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/silberklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Silberklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Silberklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Silberklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/silberklaue/caer-ebirth"
+    ],
+    "houseIds": [
+      "haus-selwyn"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/silberklaue/caer-ebirth",
+    "parentId": "cenyr/klaueninsel/silberklaue",
+    "name": "Caer Ebirth",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Silberklaue",
+      "Caer Ebirth"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-selwyn"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/blutklaue",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Blutklaue",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Blutklaue"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Blutklaue.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/blutklaue/aberdail",
+      "cenyr/klaueninsel/blutklaue/blutsturz"
+    ],
+    "houseIds": [
+      "haus-dianc-aberdail",
+      "haus-arfordir-aberdail",
+      "haus-blodyn-aberdail",
+      "haus-walwrs-caer-deheuol"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/blutklaue/aberdail",
+    "parentId": "cenyr/klaueninsel/blutklaue",
+    "name": "Aberdail",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Blutklaue",
+      "Aberdail"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/placeholders/neutral-crest.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-dianc-aberdail",
+      "haus-arfordir-aberdail",
+      "haus-blodyn-aberdail"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/blutklaue/blutsturz",
+    "parentId": "cenyr/klaueninsel/blutklaue",
+    "name": "Blutsturz",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Blutklaue",
+      "Blutsturz"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/blutklaue/blutsturz/caer-deheuol"
+    ],
+    "houseIds": [
+      "haus-walwrs-caer-deheuol"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/blutklaue/blutsturz/caer-deheuol",
+    "parentId": "cenyr/klaueninsel/blutklaue/blutsturz",
+    "name": "Caer Deheuol",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Blutklaue",
+      "Blutsturz",
+      "Caer Deheuol"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-walwrs-caer-deheuol"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/antike-hauser",
+    "parentId": "cenyr/klaueninsel",
+    "name": "Antike Häuser",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Antike Häuser"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/AntikeIcon.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [
+      "cenyr/klaueninsel/antike-hauser/ard-dunrath"
+    ],
+    "houseIds": [
+      "haus-ard-follmhar"
+    ]
+  },
+  {
+    "id": "cenyr/klaueninsel/antike-hauser/ard-dunrath",
+    "parentId": "cenyr/klaueninsel/antike-hauser",
+    "name": "Ard Dunrath",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Antike Häuser",
+      "Ard Dunrath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/AntikeIcon.png",
+    "countryId": "cenyr",
+    "regionId": "klaueninsel",
+    "children": [],
+    "houseIds": [
+      "haus-ard-follmhar"
     ]
   },
   {
@@ -5303,475 +5792,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-tanwyn"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel",
-    "parentId": "cenyr",
-    "name": "Klaueninsel",
-    "path": [
-      "Cenyr",
-      "Klaueninsel"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/klaueninsel.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/sturmklaue",
-      "cenyr/klaueninsel/frostklaue",
-      "cenyr/klaueninsel/wellenklaue",
-      "cenyr/klaueninsel/nebelklaue",
-      "cenyr/klaueninsel/silberklaue",
-      "cenyr/klaueninsel/blutklaue",
-      "cenyr/klaueninsel/talklaue",
-      "cenyr/klaueninsel/antike-hauser"
-    ],
-    "houseIds": [
-      "haus-arth",
-      "haus-pawen",
-      "haus-crafanc",
-      "haus-diafol-talgarth",
-      "haus-beryn",
-      "haus-dyger",
-      "haus-gwyllt",
-      "haus-mathgraig",
-      "haus-prys",
-      "haus-morgwynt",
-      "haus-morglan",
-      "haus-bowen",
-      "haus-bevan",
-      "haus-arian",
-      "haus-hirschhorn",
-      "haus-penry",
-      "haus-parry",
-      "haus-gwernhelyd",
-      "haus-cledrann",
-      "haus-halenwych",
-      "haus-torawg",
-      "haus-ddraenen",
-      "haus-pluen",
-      "haus-morlan",
-      "haus-blodyn-talgarth",
-      "haus-unigol",
-      "haus-morthwyll",
-      "haus-eirth",
-      "haus-selwyn",
-      "haus-dianc-aberdail",
-      "haus-arfordir-aberdail",
-      "haus-blodyn-aberdail",
-      "haus-walwrs-caer-deheuol",
-      "haus-dyfrgi-caer-cryftlawd",
-      "haus-cwningod",
-      "haus-ard-follmhar"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/sturmklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Sturmklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Sturmklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Sturmklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/sturmklaue/talgarth"
-    ],
-    "houseIds": [
-      "haus-arth",
-      "haus-pawen",
-      "haus-crafanc",
-      "haus-diafol-talgarth",
-      "haus-beryn",
-      "haus-dyger",
-      "haus-gwyllt",
-      "haus-mathgraig",
-      "haus-prys",
-      "haus-morgwynt",
-      "haus-morglan",
-      "haus-bowen",
-      "haus-bevan",
-      "haus-arian",
-      "haus-hirschhorn",
-      "haus-penry",
-      "haus-parry",
-      "haus-gwernhelyd",
-      "haus-cledrann",
-      "haus-halenwych",
-      "haus-torawg",
-      "haus-ddraenen",
-      "haus-pluen",
-      "haus-morlan",
-      "haus-blodyn-talgarth"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/sturmklaue/talgarth",
-    "parentId": "cenyr/klaueninsel/sturmklaue",
-    "name": "Talgarth",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Sturmklaue",
-      "Talgarth"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-arth",
-      "haus-pawen",
-      "haus-crafanc",
-      "haus-diafol-talgarth",
-      "haus-beryn",
-      "haus-dyger",
-      "haus-gwyllt",
-      "haus-mathgraig",
-      "haus-prys",
-      "haus-morgwynt",
-      "haus-morglan",
-      "haus-bowen",
-      "haus-bevan",
-      "haus-arian",
-      "haus-hirschhorn",
-      "haus-penry",
-      "haus-parry",
-      "haus-gwernhelyd",
-      "haus-cledrann",
-      "haus-halenwych",
-      "haus-torawg",
-      "haus-ddraenen",
-      "haus-pluen",
-      "haus-morlan",
-      "haus-blodyn-talgarth"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/frostklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Frostklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Frostklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Frostklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/frostklaue/caer-marwor"
-    ],
-    "houseIds": [
-      "haus-unigol"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/frostklaue/caer-marwor",
-    "parentId": "cenyr/klaueninsel/frostklaue",
-    "name": "Caer Marwor",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Frostklaue",
-      "Caer Marwor"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-unigol"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/wellenklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Wellenklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Wellenklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Wellenklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/wellenklaue/caer-morben"
-    ],
-    "houseIds": [
-      "haus-morthwyll"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/wellenklaue/caer-morben",
-    "parentId": "cenyr/klaueninsel/wellenklaue",
-    "name": "Caer Morben",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Wellenklaue",
-      "Caer Morben"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-morthwyll"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/nebelklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Nebelklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Nebelklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Nebelklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/nebelklaue/caer-glaslyn"
-    ],
-    "houseIds": [
-      "haus-eirth"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/nebelklaue/caer-glaslyn",
-    "parentId": "cenyr/klaueninsel/nebelklaue",
-    "name": "Caer Glaslyn",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Nebelklaue",
-      "Caer Glaslyn"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-eirth"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/silberklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Silberklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Silberklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Silberklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/silberklaue/caer-ebirth"
-    ],
-    "houseIds": [
-      "haus-selwyn"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/silberklaue/caer-ebirth",
-    "parentId": "cenyr/klaueninsel/silberklaue",
-    "name": "Caer Ebirth",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Silberklaue",
-      "Caer Ebirth"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-selwyn"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/blutklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Blutklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Blutklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Blutklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/blutklaue/aberdail",
-      "cenyr/klaueninsel/blutklaue/blutsturz"
-    ],
-    "houseIds": [
-      "haus-dianc-aberdail",
-      "haus-arfordir-aberdail",
-      "haus-blodyn-aberdail",
-      "haus-walwrs-caer-deheuol"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/blutklaue/aberdail",
-    "parentId": "cenyr/klaueninsel/blutklaue",
-    "name": "Aberdail",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Blutklaue",
-      "Aberdail"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/placeholders/neutral-crest.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-dianc-aberdail",
-      "haus-arfordir-aberdail",
-      "haus-blodyn-aberdail"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/blutklaue/blutsturz",
-    "parentId": "cenyr/klaueninsel/blutklaue",
-    "name": "Blutsturz",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Blutklaue",
-      "Blutsturz"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/blutklaue/blutsturz/caer-deheuol"
-    ],
-    "houseIds": [
-      "haus-walwrs-caer-deheuol"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/blutklaue/blutsturz/caer-deheuol",
-    "parentId": "cenyr/klaueninsel/blutklaue/blutsturz",
-    "name": "Caer Deheuol",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Blutklaue",
-      "Blutsturz",
-      "Caer Deheuol"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-walwrs-caer-deheuol"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/talklaue",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Talklaue",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Talklaue"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Klaueninsel/Talklaue.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/talklaue/caer-cryftlawd",
-      "cenyr/klaueninsel/talklaue/cra-fryn"
-    ],
-    "houseIds": [
-      "haus-dyfrgi-caer-cryftlawd",
-      "haus-cwningod"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/talklaue/caer-cryftlawd",
-    "parentId": "cenyr/klaueninsel/talklaue",
-    "name": "Caer Cryftlawd",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Talklaue",
-      "Caer Cryftlawd"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-dyfrgi-caer-cryftlawd"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/talklaue/cra-fryn",
-    "parentId": "cenyr/klaueninsel/talklaue",
-    "name": "Cra Fryn",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Talklaue",
-      "Cra Fryn"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-cwningod"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/antike-hauser",
-    "parentId": "cenyr/klaueninsel",
-    "name": "Antike Häuser",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Antike Häuser"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/AntikeIcon.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [
-      "cenyr/klaueninsel/antike-hauser/ard-dunrath"
-    ],
-    "houseIds": [
-      "haus-ard-follmhar"
-    ]
-  },
-  {
-    "id": "cenyr/klaueninsel/antike-hauser/ard-dunrath",
-    "parentId": "cenyr/klaueninsel/antike-hauser",
-    "name": "Ard Dunrath",
-    "path": [
-      "Cenyr",
-      "Klaueninsel",
-      "Antike Häuser",
-      "Ard Dunrath"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/AntikeIcon.png",
-    "countryId": "cenyr",
-    "regionId": "klaueninsel",
-    "children": [],
-    "houseIds": [
-      "haus-ard-follmhar"
     ]
   },
   {
@@ -9577,7 +9597,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "regionId": "",
     "children": [],
     "houseIds": [
-      "haus-falveri"
+      "haus-falveri",
+      "haus-falto"
     ]
   },
   {
@@ -19834,6 +19855,51 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=craigddu&mode=view"
+  },
+  {
+    "id": "haus-cochdon",
+    "name": "Haus Cochdon",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Cochdon.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cochdon&mode=view"
+  },
+  {
+    "id": "haus-twyllod",
+    "name": "Familie Twyllod",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Twyllod.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view"
+  },
+  {
+    "id": "haus-llafnfor",
+    "name": "Haus Llafnfor",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Klaueninsel/haus-llafnfor.png",
+    "path": [
+      "Cenyr",
+      "Klaueninsel",
+      "Talklaue",
+      "Caer Cryftlawd"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-llafnfor&mode=view"
+  },
+  {
+    "id": "haus-falto",
+    "name": "Haus Falto",
+    "image": "",
+    "path": [
+      "Venalys"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-falto&mode=view"
   },
   {
     "id": "haus-veltrane",

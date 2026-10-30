@@ -4353,6 +4353,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "c20a3161d672b0",
+    "name": "haus llafnfor",
+    "url": "/Stammbäume/assets/images/houses/Klaueninsel/haus-llafnfor.png",
+    "kind": "crest",
+    "group": "Klaueninsel",
+    "source": "Hauswappen"
+  },
+  {
     "id": "e70df9468f7101",
     "name": "haus morthwyll",
     "url": "/Stammbäume/assets/images/houses/Klaueninsel/haus-morthwyll.png",
@@ -5033,6 +5041,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "cd47f0b1a7ac9e",
+    "name": "Cochdon",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Cochdon.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "4967116a20c550",
     "name": "Coeddu",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Coeddu.png",
@@ -5164,6 +5180,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "id": "3a210ac932ba06",
     "name": "Trevoryn",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Trevoryn.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "886b74846cfc1d",
+    "name": "Twyllod",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Twyllod.png",
     "kind": "crest",
     "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
     "source": "Hauswappen"
