@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { getRegisteredFamily } from '../../Stammbäume/assets/js/data/families.registry.js';
-import { createFamilyCandidates } from '../../AleriaAlmanach/modules/character-genealogy/genealogy-mapping.js';
+import { createFamilyCandidates, buildFamilyPersonViewUrl } from '../../AleriaAlmanach/modules/character-genealogy/genealogy-mapping.js';
 import { BALCHDER_PROFILE_IDS } from '../../firebase/scripts/content/balchder-character-plan.mjs';
 import { buildCharacterDatabase } from '../lib/character-database-model.mjs';
 import { mergeCharacterExportAssignments } from '../lib/character-export-assignments.mjs';
@@ -28,7 +28,8 @@ charTabs.subtabs ||= {};
 charTabs.subtabMap ||= {};
 charTabs.subtabs[group] = [...new Set([...(charTabs.subtabs[group] || []), subgroup])];
 charTabs.subtabMap[group] = { ...charTabs.subtabMap[group], [subgroup]: [...new Set([...(charTabs.subtabMap[group]?.[subgroup] || []), ...ids])] };
-const candidates = ['haus-balchder', 'haus-gelyn'].map(getRegisteredFamily).flatMap(createFamilyCandidates);
+const candidates = ['haus-balchder', 'haus-gelyn'].map(getRegisteredFamily).flatMap(createFamilyCandidates)
+  .map(candidate => ({ ...candidate, url: buildFamilyPersonViewUrl(candidate) }));
 const records = exports.flatMap(entry => buildCharacterDatabase({ characters: [entry.character], charTabs, exportedAt: entry.exportedAt }, candidates, { sourcePath: entry.sourcePath }).records);
 for (const item of records) {
   const previous = registry.records.find(r => r.recordId === item.record.recordId);
@@ -38,6 +39,7 @@ for (const item of records) {
     if (item.record.local.authoredFeature) item.snapshotCharacter.localRecord.authoredFeature = item.record.local.authoredFeature;
   }
   assert.equal(item.record.classification.primary.id, 'haus-balchder');
+  assert(item.record.links.familyTree.every(link => link.url), 'Die kanonischen Stammbaumlinks müssen erhalten bleiben.');
 }
 const result = mergeCharacterRecordProjections({ registry, snapshot, report }, records, exports, charTabs);
 const outputs = records.map(item => ['CharakterDatenbank/' + item.path, item.record]);

@@ -31,7 +31,7 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=kamber-balchder",
         "fingerprint": "{\"name\":\"Kamber Balchder\",\"title\":\"Vertragsmeister · Uchelwyr\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"dalvin-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--dalvin-balchder\",\"name\":\"Dalvin Balchder\"},{\"personId\":\"iseult-caerlaen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caerlaen--iseult-caerlaen\",\"name\":\"Iseult Caerlaen\"}],\"partners\":[{\"personId\":\"senara-gelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gelyn--senara-gelyn\",\"name\":\"Senara Gelyn\"}],\"children\":[{\"personId\":\"blodwen-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--blodwen-balchder\",\"name\":\"Blodwen Balchder\"},{\"personId\":\"rice-balchder\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-balchder--rice-balchder\",\"name\":\"Rice Balchder\"}]}}",
         "score": 275
       },
@@ -50,7 +50,7 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gelyn&mode=view&person=kamber-balchder",
         "fingerprint": "{\"name\":\"Kamber Balchder\",\"title\":\"Vertragsmeister · Uchelwyr\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-balchder\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gelyn/kamber-balchder.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"senara-gelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gelyn--senara-gelyn\",\"name\":\"Senara Gelyn\"}],\"children\":[]}}",
         "score": 230
       }
@@ -95,13 +95,13 @@
         "familyId": "haus-balchder",
         "personId": "kamber-balchder",
         "worldPersonId": "person--haus-balchder--kamber-balchder",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-balchder&mode=view&person=kamber-balchder"
       },
       {
         "familyId": "haus-gelyn",
         "personId": "kamber-balchder",
         "worldPersonId": "person--haus-balchder--kamber-balchder",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gelyn&mode=view&person=kamber-balchder"
       }
     ],
     "profile": ""
@@ -114,7 +114,7 @@
     "sourceDocumentIds": [
       "person--haus-balchder--kamber-balchder"
     ],
-    "contentHash": "26b08902ab6cdd7c56011d0a7de37fa9555bf4c8a59bb51177e0702fffc1e2c4"
+    "contentHash": "6a115aa42814de2caa20c8e35cbb3d11b3c6c9805668ce9447563b22bba99df6"
   },
   "local": {
     "notes": "",
