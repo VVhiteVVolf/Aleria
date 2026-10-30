@@ -28,7 +28,7 @@ test('corrected source symbols retain unique IDs and their reviewed locations', 
 
 test('known house crests and allegiance chains follow existing family records', () => {
   const review = read('house-affiliation-review.json');
-  assert.equal(review.pins.length, 22);
+  assert.equal(review.pins.length, 23);
   for (const item of review.pins) {
     const record = getRegisteredFamily(item.familyId), place = pin(item.pinId);
     assert.equal(place.crest, `/Stammbäume/${record.family.document.emblem}`);
@@ -46,6 +46,9 @@ test('known house crests and allegiance chains follow existing family records', 
   }
   assert.equal(pin('gwynthor-marking-041').dominionId, 'cw-haus-penrudd');
   assert.equal(pin('gwynthor-marking-080').dominionId, 'cw-haus-penrudd');
+  assert.equal(pin('gwynthor-marking-138').house, 'Familie Twyllod');
+  assert.match(pin('gwynthor-marking-138').crestLink, /family=haus-twyllod/);
+  assert.deepEqual([pin('gwynthor-marking-138').x, pin('gwynthor-marking-138').y], [.9609375, .6537460317460319]);
   assert.equal(node('cw-haus-bradrhith').parentId, 'cw-haus-awenydd');
   assert.equal(node('cw-haus-tlawd').parentId, 'msa3c53vomlanj');
   assert.equal(node('cw-haus-loer').parentId, 'msa3c53viyll7z');

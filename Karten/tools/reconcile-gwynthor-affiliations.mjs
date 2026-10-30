@@ -13,7 +13,7 @@ for (const pair of [
   ['muoru8isnrnm', 'haus-arwydd'], ['muosoo81765w', 'haus-tlawd'],
   ['gwynthor-marking-003', 'haus-bradrhith'], ['gwynthor-marking-041', 'haus-penrudd'],
   ['gwynthor-marking-048', 'haus-draig'], ['gwynthor-marking-080', 'haus-penrudd'],
-  ['gwynthor-marking-141', 'haus-draig']
+  ['gwynthor-marking-141', 'haus-draig'], ['gwynthor-marking-138', 'haus-twyllod']
 ]) mapping.set(...pair);
 
 const houseWindow = {};
