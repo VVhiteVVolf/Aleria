@@ -23,3 +23,10 @@ test('bounded projection counts retained historical document IDs instead of carr
   assert.equal(result.report.summary.sourceDocuments,3);
   assert.deepEqual(result.registry.records[0],existing.registry.records[0]);
 });
+test('independent bounded imports remain reproducible after another feature adds people',()=>{
+  const first=buildAuthoredCharacterImport(prior,entries,'first');
+  const secondEntry={...entries[0],sourcePath:'test/second.json',character:{id:'second',name:'Zweite Person'}};
+  const second=buildAuthoredCharacterImport(first,[secondEntry],'second');
+  const repeated=buildAuthoredCharacterImport(second,entries,'first');
+  for(const projection of ['registry','snapshot','report'])assert.deepEqual(repeated[projection],second[projection],projection);
+});

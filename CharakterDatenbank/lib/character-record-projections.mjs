@@ -1,13 +1,24 @@
 // Replace only explicitly selected records in the three database projections.
 // Other characters, classifications, local notes and report details stay intact.
+function replaceProjectionEntries(current, replacements, key, selected) {
+  const remaining = new Map(replacements.map(row => [row[key], row]));
+  const result = current.flatMap(row => {
+    if (!selected.has(row[key])) return [row];
+    const replacement = remaining.get(row[key]);
+    remaining.delete(row[key]);
+    return replacement ? [replacement] : [];
+  });
+  return [...result, ...remaining.values()];
+}
+
 export function mergeCharacterRecordProjections({ registry, snapshot, report }, records, exports, charTabs) {
   const ids = new Set(records.map(item => item.snapshotCharacter.id));
   const recordIds = new Set(records.map(item => item.record.recordId));
   const nextRegistry = records.map(({ record, path }) => ({ recordId: record.recordId, name: record.identity.name, aliases: record.identity.aliases,
     worldPersonId: record.identity.worldPersonId, firestoreDocumentId: record.links.firestore.documentId, firestoreDocumentIds: record.links.firestore.documentIds,
     primary: record.classification.primary, familyStatus: record.classification.familyStatus, path, contentHash: record.sync.contentHash }));
-  const registryRows = [...registry.records.filter(r => !recordIds.has(r.recordId)), ...nextRegistry];
-  const characters = [...snapshot.characters.filter(c => !ids.has(c.id)), ...records.map(item => item.snapshotCharacter)];
+  const registryRows = replaceProjectionEntries(registry.records, nextRegistry, 'recordId', recordIds);
+  const characters = replaceProjectionEntries(snapshot.characters, records.map(item => item.snapshotCharacter), 'id', ids);
   const overlays = [...new Set([...(registry.sourceOverlays || []), ...exports.map(e => e.sourcePath)])].sort();
   const latest = [...exports.map(e => e.exportedAt), registry.sourceExportedAt].filter(Boolean).sort().at(-1);
   const summary = { ...report.summary, sourceDocuments: registryRows.reduce((sum, row) => sum + (Array.isArray(row.firestoreDocumentIds) ? row.firestoreDocumentIds.length : 1), 0),
@@ -19,5 +30,5 @@ export function mergeCharacterRecordProjections({ registry, snapshot, report }, 
     status: record.classification.familyStatus, primary: record.classification.primary, familyAlternatives: record.classification.familyAlternatives }));
   return { records, registry: { ...registry, sourceOverlays: overlays, sourceExportedAt: latest, count: registryRows.length, records: registryRows },
     snapshot: { ...snapshot, sourceOverlays: overlays, sourceExportedAt: latest, charTabs, characters },
-    report: { ...report, sourceExportedAt: latest, summary, pending: [...report.pending.filter(r => !recordIds.has(r.recordId)), ...pending] } };
+    report: { ...report, sourceExportedAt: latest, summary, pending: replaceProjectionEntries(report.pending, pending, 'recordId', recordIds) } };
 }
