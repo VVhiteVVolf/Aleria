@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-llythfor",
-  "revision": 4,
-  "updatedAt": "2026-10-31T01:16:59.450Z",
+  "revision": 5,
+  "updatedAt": "2026-10-31T02:56:05.112Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -577,31 +577,7 @@
         "extensions": {}
       }
     ],
-    "cadetBranches": [
-      {
-        "id": "linked-esyllt-penrudd-llythfor",
-        "name": "Esyllts Herkunft · Haus Penrudd",
-        "subtitle": "Wegverheiratete Linie",
-        "linkType": "married-away",
-        "parentPartnershipId": "marriage-cynddelw-llythfor-esyllt-penrudd",
-        "parentPersonId": "",
-        "childIds": [],
-        "houseId": "house-penrudd",
-        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
-        "emblemScale": 0.86,
-        "crestFrame": "iron",
-        "frameScale": 1,
-        "founded": "",
-        "targetFamilyId": "haus-penrudd",
-        "notes": "",
-        "extensions": {
-          "chartAlignBelowPartnership": true,
-          "registryManagedExtensionFields": [
-            "chartAlignBelowPartnership"
-          ]
-        }
-      }
-    ],
+    "cadetBranches": [],
     "timeJumps": [
       {
         "id": "gap-llythfor-to-1698",
@@ -686,14 +662,20 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 4,
+      "sourceRevision": 5,
+      "registryManagedEntitySourceRevision": 4,
       "chartLayoutPolicy": "strict-v1",
+      "registryTombstones": {
+        "cadetBranches": [
+          "linked-esyllt-penrudd-llythfor"
+        ]
+      },
+      "sourceNoteLayoutCorrection": "31.10.2026: Der irrtümliche Penrudd-Herkunftsknoten unter Cynddelws und Esyllts Ehe entfällt. Hier wird ausschließlich die Llythfor-Linie zur mittig angeordneten Tochter Eirlys fortgeführt; die wegverheiratete Verknüpfung gehört nur in die Penrudd-Akte. Bestehende Personen, Ehen, Elternzuordnungen und eigene Bearbeitungen bleiben erhalten.",
       "sourceNoteAddendum": "Nutzerkorrektur vom 31.10.2026: Eirlys ist zehn Jahre alt, geboren 1730 statt der zuvor angenommenen 1732. Neues Einzelporträt mit zwei Zöpfen, Malstift, Papierfetzen und Zahnlücke. Personen-ID und Verwandtschaft bleiben unverändert.",
       "sourceNote": "Nutzerauftrag vom 31.10.2026: neuer bislang unbelegter Nachname Llythfor, jüngste Penrudd-Tochter als Ehefrau, Stadt-Haushalt mit der Tochter, die Trötzli benannte. Keine zusätzliche Verwandtschaft oder eigenes Hauswappen erfunden. Unbekanntes Gründerpaar → brauner Hausknoten → genau ein serieller Zeitsprung → Cynddelw und Esyllt → Eirlys. Die Penrudd-Gegenakte endet an der Hausverknüpfung; die Tochter erscheint nur hier.",
-      "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 3,
-        "toRevision": 4
+        "fromRevision": 4,
+        "toRevision": 5
       }
     }
   }

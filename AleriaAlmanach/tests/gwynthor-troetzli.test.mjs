@@ -43,8 +43,36 @@ test('the new adult daughter is mirrored, while her child continues only behind 
   assert.match(daughter.portrait, /eirlys-llythfor\.png$/);
   assert.equal(penrudd.cadetBranches.find(b => b.parentPartnershipId === LLYTHFOR_MARRIAGE_ID).targetFamilyId, 'haus-llythfor');
   assert.equal(llythfor.document.emblem, LLYTHFOR_EMBLEM);
+  assert.deepEqual(llythfor.cadetBranches, []);
+  assert.equal(llythfor.partnerships.find(p => p.id === LLYTHFOR_MARRIAGE_ID).extensions.chartAlignParentPairOverChildPersonId, daughter.id);
   assert.equal(llythfor.timeJumps.length, 1);
   assert.deepEqual(llythfor.timeJumps[0].childIds, ['cynddelw-llythfor']);
+});
+
+test('the Llythfor correction removes only the erroneous origin branch from an existing draft', async () => {
+  const prior = (await read('Stammbäume/assets/data/published-families/haus-llythfor.json')).family;
+  prior.extensions.sourceRevision = 4;
+  prior.cadetBranches.push({
+    id: 'linked-esyllt-penrudd-llythfor', name: 'Esyllts Herkunft · Haus Penrudd',
+    linkType: 'married-away', parentPartnershipId: LLYTHFOR_MARRIAGE_ID,
+    houseId: 'house-penrudd', targetFamilyId: 'haus-penrudd', childIds: [],
+  });
+  prior.cadetBranches.push({
+    id: 'local-family-link', name: 'Eigene Verknüpfung', linkType: 'linked-line',
+    parentPersonId: 'cynddelw-llythfor', houseId: 'house-llythfor', childIds: [],
+  });
+  const father = prior.persons.find(p => p.id === 'cynddelw-llythfor');
+  father.birth = '1697'; father.notes = 'Eigene Familiennotiz';
+  father.portrait = '../eigene-darstellung.png';
+  prior.document.motto = 'Eigener Wahlspruch';
+  const upgraded = resolveRegisteredFamilyUpgrade(llythfor, prior);
+  assert.deepEqual(upgraded.cadetBranches.map(branch => branch.id), ['local-family-link']);
+  assert.deepEqual(upgraded.persons, prior.persons);
+  assert.deepEqual(upgraded.partnerships, prior.partnerships);
+  assert.deepEqual(upgraded.parentages, prior.parentages);
+  assert.deepEqual(upgraded.timeJumps, prior.timeJumps);
+  assert.equal(upgraded.document.motto, prior.document.motto);
+  assert.deepEqual(resolveRegisteredFamilyUpgrade(llythfor, upgraded), upgraded);
 });
 
 test('upgrading the old Penrudd tree adds the married-away household without overwriting an existing relative', () => {
