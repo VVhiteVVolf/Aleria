@@ -90,7 +90,7 @@ test('Alle registrierten Grafschaftsfamilien bleiben über örtliche Wappenkarte
     assert.ok(found.length, record.id);
     for (const card of found) {
       const target = new URL(card.href, 'http://aleria.local');
-      if (['haus-cochdon', 'haus-twyllod'].includes(record.id)) {
+      if (['haus-cochdon', 'haus-twyllod', 'haus-llythfor'].includes(record.id)) {
         assert.equal(target.searchParams.get('family'), record.id);
         assert.equal(target.searchParams.get('mode'), 'view');
         assert.equal(decodeURIComponent(target.pathname), '/Stammbäume/Stammbaum.html');

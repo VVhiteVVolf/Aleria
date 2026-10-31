@@ -1,0 +1,1455 @@
+{
+  "reviewedAt": "2026-10-31",
+  "beforeCommit": "c3d5f80b18ca15ed0526d3bc9ee6c758ed929267",
+  "previousProtectedSha256": "9b8b850e3068dcfb54ea6f2e90e9aa96bc9c3ae3dadc79139256d6f590bfd98a",
+  "reason": "Explicit user approval: add the youngest Penrudd daughter Esyllt, her marriage to Cynddelw Llythfor and the linked Llythfor household. Every existing Penrudd person, partnership and parentage is unchanged. The child continues only in the new independent Llythfor record. The exact approved current record is checked before restoring the exact former record for historical territorial proofs; their original hashes remain unchanged.",
+  "families": {
+    "haus-penrudd": {
+      "before": {
+        "id": "haus-penrudd",
+        "title": "Haus Penrudd",
+        "status": "active",
+        "type": "commoner",
+        "listing": "listed",
+        "additionalPlacements": [],
+        "houseProfile": {
+          "rankId": "commoner",
+          "secondarySeats": [
+            "Zum Roten Tor",
+            "Penrudd-Hof"
+          ],
+          "liegeHouseId": "house-draig",
+          "liegeHouseName": "Haus Draig"
+        },
+        "link": "Stammbaum.html?family=haus-penrudd&mode=view",
+        "family": {
+          "schema": "aleria.family-tree",
+          "schemaVersion": 1,
+          "document": {
+            "id": "haus-penrudd",
+            "title": "Haus Penrudd",
+            "motto": "Ein Platz am Feuer.",
+            "description": "Eigenständige cenyrische Wirts- und Bauernfamilie im Bannkreis Gwynthors. Gwilyms Familie führt die Herberge Zum Roten Tor; sein jüngerer Bruder Tudur bewirtschaftet mit Kindern und Enkeln den nahen Penrudd-Hof. Beide Haushalte rechnen ihre Lieferungen miteinander ab. Keine genealogische Verbindung zu Haus Penry aus Talgarth.",
+            "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+            "houseProfile": {
+              "rankId": "commoner",
+              "secondarySeats": [
+                "Zum Roten Tor",
+                "Penrudd-Hof"
+              ],
+              "liegeHouseId": "house-draig",
+              "liegeHouseName": "Haus Draig"
+            }
+          },
+          "houses": [
+            {
+              "id": "house-penrudd",
+              "name": "Haus Penrudd",
+              "motto": "Ein Platz am Feuer.",
+              "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+              "status": "active"
+            }
+          ],
+          "persons": [
+            {
+              "id": "haus-penrudd-gruender",
+              "worldPersonId": "person--haus-penrudd--haus-penrudd-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "dead",
+              "birth": "",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "founder",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+              "extensions": {}
+            },
+            {
+              "id": "haus-penrudd-gruenderin",
+              "worldPersonId": "person--haus-penrudd--haus-penrudd-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "dead",
+              "birth": "",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "married",
+              "lineageRole": "founder",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+              "extensions": {}
+            },
+            {
+              "id": "madoc-penrudd",
+              "worldPersonId": "person--haus-penrudd--madoc-penrudd",
+              "name": "Madoc Penrudd",
+              "title": "Früherer Wirt · Vater beider Brüder",
+              "sex": "male",
+              "status": "dead",
+              "birth": "1642",
+              "death": "1718",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/madoc.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Frühere Generation"
+              ],
+              "notes": "Führte den bereits bestehenden Familiengasthof. Vater Gwilyms und Tudurs; die unbekannten Generationen vor ihm werden ausschließlich über den Zeitsprung überbrückt. Nicht als gesicherter Urheber der Torgeschichte festgelegt. Erscheinung: Cenyri. Graues, ursprünglich braunes kurzes dichtes Haar; breiter kurzer grauer Vollbart; braune Augen. Lebensporträt aus 1712 im Alter von 70 Jahren. Kräftiger alter Mann, breite Familiennase, kantiger als Gwilym, tiefe Stirnfalten, ernstes freundliches Gesicht Kleidung: Dunkelbraune einfache Wollweste über cremefarbenem Leinenhemd, ziegelrotes Halstuch ohne Knotenornament. Haltung: Stehend frontal, Hände locker seitlich, gerade ruhige Haltung, kein Geister- oder Trauerbild.",
+              "extensions": {
+                "household": "historical",
+                "appearance": "Cenyri. Graues, ursprünglich braunes kurzes dichtes Haar; breiter kurzer grauer Vollbart; braune Augen. Lebensporträt aus 1712 im Alter von 70 Jahren. Kräftiger alter Mann, breite Familiennase, kantiger als Gwilym, tiefe Stirnfalten, ernstes freundliches Gesicht Kleidung: Dunkelbraune einfache Wollweste über cremefarbenem Leinenhemd, ziegelrotes Halstuch ohne Knotenornament. Haltung: Stehend frontal, Hände locker seitlich, gerade ruhige Haltung, kein Geister- oder Trauerbild.",
+                "culture": "Cenyri",
+                "portraitAge": 70,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "nest-penrudd",
+              "worldPersonId": "person--haus-penrudd--nest-penrudd",
+              "name": "Nest",
+              "title": "Frühere Wirtin · Mutter beider Brüder",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1647",
+              "death": "1726",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/nest.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Frühere Generation"
+              ],
+              "notes": "Madocs Gemahlin und Mutter Gwilyms und Tudurs. Versorgte Haushalt und Gäste. Ihr Herkunftshaus ist nicht festgelegt. Erscheinung: Cenyri. Vollständig graues, ursprünglich kastanienbraunes Haar, einfacher flacher Knoten unter lockerer Leinenhaube; braune Augen. Lebensporträt aus 1719 im Alter von 72 Jahren. Schmale kleine alte Frau, markante Wangenknochen, viele feine Falten, ruhiger milder Blick Kleidung: Schlichtes dunkelgrünes altes Wollkleid mit cremefarbener Leinenhaube und braunem Schultertuch. Haltung: Stehend leicht nach links, Hände entspannt ineinander vor der Taille, kein Geister- oder Trauerbild.",
+              "extensions": {
+                "household": "historical",
+                "appearance": "Cenyri. Vollständig graues, ursprünglich kastanienbraunes Haar, einfacher flacher Knoten unter lockerer Leinenhaube; braune Augen. Lebensporträt aus 1719 im Alter von 72 Jahren. Schmale kleine alte Frau, markante Wangenknochen, viele feine Falten, ruhiger milder Blick Kleidung: Schlichtes dunkelgrünes altes Wollkleid mit cremefarbener Leinenhaube und braunem Schultertuch. Haltung: Stehend leicht nach links, Hände entspannt ineinander vor der Taille, kein Geister- oder Trauerbild.",
+                "culture": "Cenyri",
+                "portraitAge": 72,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "gwilym-penrudd",
+              "worldPersonId": "person--haus-penrudd--gwilym-penrudd",
+              "name": "Gwilym Penrudd",
+              "title": "Alter Wirt · älterer Familienzweig",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1670",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/gwilym.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "70 Jahre. Älterer Sohn Madocs und Nests. Hat die Leitung an Carwyn abgegeben, begrüßt Stammgäste und erzählt die Geschichte vom roten Tor bei jeder Gelegenheit etwas anders. Bruder Tudurs, ohne Führungsaufgabe auf dessen Hof. Erscheinung: Cenyri. Vollständig graues, ehemals braunes, dichtes nach hinten gekämmtes Haar; kurzer grauer Vollbart; braune Augen. 70 Jahre, breite Wangen, kräftige Nase, Lachfalten, etwas rundlicher Bauch, lebhafte Augenbrauen und ein verschmitztes Lächeln Kleidung: Sauberes cremefarbenes Hemd, offene ziegelrote Wollweste, brauner Gürtel. Haltung: Stehend, Oberkörper leicht nach links gedreht, eine offene Hand locker auf Taillenhöhe wie beim Erzählen, die andere am Körper.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Vollständig graues, ehemals braunes, dichtes nach hinten gekämmtes Haar; kurzer grauer Vollbart; braune Augen. 70 Jahre, breite Wangen, kräftige Nase, Lachfalten, etwas rundlicher Bauch, lebhafte Augenbrauen und ein verschmitztes Lächeln Kleidung: Sauberes cremefarbenes Hemd, offene ziegelrote Wollweste, brauner Gürtel. Haltung: Stehend, Oberkörper leicht nach links gedreht, eine offene Hand locker auf Taillenhöhe wie beim Erzählen, die andere am Körper.",
+                "culture": "Cenyri",
+                "portraitAge": 70,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "enid-penrudd",
+              "worldPersonId": "person--haus-penrudd--enid-penrudd",
+              "name": "Enid",
+              "title": "Altenteil · Vorräte und Einmachen",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1672",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/enid.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "68 Jahre. Gwilyms Gemahlin. Kennt Lieferanten und alte Verpflichtungen, hilft beim Einmachen und behält den Vorratskeller im Blick. Ihr Herkunftshaus bleibt offen. Erscheinung: Cenyri. Graues, früher dunkelbraunes Haar, ordentlicher tiefer geflochtener Knoten; braune Augen. 68 Jahre, kleine kräftige Frau, rundes Gesicht, deutliche Altersfalten, schmale wache Augen und ein prüfendes, liebevolles Lächeln Kleidung: Dunkelblaues schlichtes Wollkleid, cremefarbene Leinenhaube am Hinterkopf, saubere beigefarbene Schürze. Haltung: Stehend fast frontal, Hände entspannt übereinander vor der Schürze, Kopf leicht geneigt.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Graues, früher dunkelbraunes Haar, ordentlicher tiefer geflochtener Knoten; braune Augen. 68 Jahre, kleine kräftige Frau, rundes Gesicht, deutliche Altersfalten, schmale wache Augen und ein prüfendes, liebevolles Lächeln Kleidung: Dunkelblaues schlichtes Wollkleid, cremefarbene Leinenhaube am Hinterkopf, saubere beigefarbene Schürze. Haltung: Stehend fast frontal, Hände entspannt übereinander vor der Schürze, Kopf leicht geneigt.",
+                "culture": "Cenyri",
+                "portraitAge": 68,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "carwyn-penrudd",
+              "worldPersonId": "person--haus-penrudd--carwyn-penrudd",
+              "name": "Carwyn Penrudd",
+              "title": "Betreiber · Ausschank und Gäste",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1694",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/carwyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "46 Jahre. Ältester Sohn Gwilyms und Enids. Geduldiger, praktischer Wirt; führt Ausschank, Gästeabsprachen und Einkauf. Vereinbart Lieferungen mit seinem Onkel Tudur und seinem Vetter Meurig. Erscheinung: Cenyri. Einfarbig mittelbraunes kurzes welliges Haar mit Seitenscheitel, kurzer gleichfarbiger gepflegter Bart; braune Augen. 46 Jahre, stämmiger Wirt, kantiger als sein Vater, breite Nase, müde freundliche Augen, ruhiges zugewandtes Lächeln Kleidung: Naturleinenhemd mit umgeschlagenen Ärmeln, dunkelrote geschlossene Weste und schlichte dunkelbraune Schürze. Haltung: Stehend im Dreiviertelwinkel nach rechts, hält einen einzelnen leeren Tonkrug locker tief neben der Hüfte, andere Hand frei.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig mittelbraunes kurzes welliges Haar mit Seitenscheitel, kurzer gleichfarbiger gepflegter Bart; braune Augen. 46 Jahre, stämmiger Wirt, kantiger als sein Vater, breite Nase, müde freundliche Augen, ruhiges zugewandtes Lächeln Kleidung: Naturleinenhemd mit umgeschlagenen Ärmeln, dunkelrote geschlossene Weste und schlichte dunkelbraune Schürze. Haltung: Stehend im Dreiviertelwinkel nach rechts, hält einen einzelnen leeren Tonkrug locker tief neben der Hüfte, andere Hand frei.",
+                "culture": "Cenyri",
+                "portraitAge": 46,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "olwen-penrudd",
+              "worldPersonId": "person--haus-penrudd--olwen-penrudd",
+              "name": "Olwen",
+              "title": "Küche und Hauswirtschaft",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1697",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/olwen.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "43 Jahre. Carwyns Gemahlin. Herzlich zu Gästen, bestimmt im Küchenalltag. Führt Küche und Hauswirtschaft; eingeheiratet, ohne festgelegten Geburtsnamen. Erscheinung: Cenyri. Einfarbig kupferrotes Haar, dicker einzelner geflochtener Zopf über einer Schulter; braune Augen. 43 Jahre, breite Schultern, kräftige Statur, offenes Gesicht mit Sommersprossen, entschlossener freundlicher Blick Kleidung: Moosgrünes Arbeitskleid mit cremefarbenen Leinenärmeln, saubere naturfarbene Kochschürze. Haltung: Stehend frontal, ein gefaltetes Leinentuch locker über dem Unterarm, freie Hand entspannt seitlich.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig kupferrotes Haar, dicker einzelner geflochtener Zopf über einer Schulter; braune Augen. 43 Jahre, breite Schultern, kräftige Statur, offenes Gesicht mit Sommersprossen, entschlossener freundlicher Blick Kleidung: Moosgrünes Arbeitskleid mit cremefarbenen Leinenärmeln, saubere naturfarbene Kochschürze. Haltung: Stehend frontal, ein gefaltetes Leinentuch locker über dem Unterarm, freie Hand entspannt seitlich.",
+                "culture": "Cenyri",
+                "portraitAge": 43,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "aled-penrudd",
+              "worldPersonId": "person--haus-penrudd--aled-penrudd",
+              "name": "Aled Penrudd",
+              "title": "Stall und Wagenhof · nächste Generation",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1716",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/aled.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "24 Jahre. Ältester Sohn Carwyns und Olwens. Verheiratet mit Cerys und Vater des kleinen Rhys. Führt Stall und Wagenhof, fährt zum Hof der Verwandten und kennt Zugtiere besser als die Absichten mancher Gäste. Erscheinung: Cenyri. Einfarbig braunes dichtes leicht lockiges Haar, kürzere Seiten, längere unordentliche Stirnlocke; glatt rasiert; braune Augen. 24 Jahre, athletisch und etwas schlanker als Carwyn, markantes Kinn, Familiennase, selbstsicheres offenes Lächeln Kleidung: Sandfarbenes Hemd mit offenem Schnürkragen, dunkelgrüne kurze Wollweste, schmaler Ledergürtel. Haltung: Stehend im Dreiviertelwinkel, eine Hand locker auf der Hüfte, andere seitlich; kein Pferd und keine Zügel.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig braunes dichtes leicht lockiges Haar, kürzere Seiten, längere unordentliche Stirnlocke; glatt rasiert; braune Augen. 24 Jahre, athletisch und etwas schlanker als Carwyn, markantes Kinn, Familiennase, selbstsicheres offenes Lächeln Kleidung: Sandfarbenes Hemd mit offenem Schnürkragen, dunkelgrüne kurze Wollweste, schmaler Ledergürtel. Haltung: Stehend im Dreiviertelwinkel, eine Hand locker auf der Hüfte, andere seitlich; kein Pferd und keine Zügel.",
+                "culture": "Cenyri",
+                "portraitAge": 24,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "cerys-penrudd",
+              "worldPersonId": "person--haus-penrudd--cerys-penrudd",
+              "name": "Cerys",
+              "title": "Gästeversorgung und Familienhaushalt",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1718",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/cerys.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "22 Jahre. Aleds Gemahlin und Mutter von Rhys. Hilft bei Frühstück und Gästeversorgung; ihre Arbeit wird mit der Betreuung ihres kleinen Kindes abgestimmt. Herkunftsfamilie offen. Erscheinung: Aldrimarerin. Einfarbig dunkelblondes glattes Haar, lockerer tiefer Seitenzopf und einzelne weiche Strähnen an den Schläfen; graublaue Augen. 22 Jahre, schlanke junge erwachsene Frau, langes schmales Gesicht, gerade zarte Nase, milder aufmerksamer Blick Kleidung: Himmelblaues schlichtes cenyrisches Kleid mit cremefarbenem Unterhemd und schmalem grauem Schürzenband. Haltung: Stehend leicht nach links, hält ein einziges gefaltetes sauberes Tuch tief vor dem Bauch, Hände unkompliziert.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Aldrimarerin. Einfarbig dunkelblondes glattes Haar, lockerer tiefer Seitenzopf und einzelne weiche Strähnen an den Schläfen; graublaue Augen. 22 Jahre, schlanke junge erwachsene Frau, langes schmales Gesicht, gerade zarte Nase, milder aufmerksamer Blick Kleidung: Himmelblaues schlichtes cenyrisches Kleid mit cremefarbenem Unterhemd und schmalem grauem Schürzenband. Haltung: Stehend leicht nach links, hält ein einziges gefaltetes sauberes Tuch tief vor dem Bauch, Hände unkompliziert.",
+                "culture": "Aldrimarerin",
+                "portraitAge": 22,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "rhys-penrudd",
+              "worldPersonId": "person--haus-penrudd--rhys-penrudd",
+              "name": "Rhys Penrudd",
+              "title": "Kleinkind · Gwilyms Urenkel",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1738",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/rhys.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "2 Jahre. Sohn Aleds und Cerys. Wächst im Familienhaushalt auf und hat keine Arbeitsaufgabe. Erscheinung: Cenyri mit aldrimarischer Mutter. Einfarbig braunes kurzes weiches Kinderhaar mit einer kleinen Stirnlocke; braune Augen. 2 Jahre, eindeutig kleines Kleinkind mit rundem Gesicht, sehr kurzen kindlichen Proportionen und vergnügtem Blick Kleidung: Einfache vollständig bekleidende cremefarbene Kleinkindtunika mit braunem Überwurf und weichem Kragen. Haltung: Steht sicher mit beiden Füßen auf dem Boden, Arme locker leicht vom Körper, keine Erwachsenenperson und kein Arbeitsgegenstand.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri mit aldrimarischer Mutter. Einfarbig braunes kurzes weiches Kinderhaar mit einer kleinen Stirnlocke; braune Augen. 2 Jahre, eindeutig kleines Kleinkind mit rundem Gesicht, sehr kurzen kindlichen Proportionen und vergnügtem Blick Kleidung: Einfache vollständig bekleidende cremefarbene Kleinkindtunika mit braunem Überwurf und weichem Kragen. Haltung: Steht sicher mit beiden Füßen auf dem Boden, Arme locker leicht vom Körper, keine Erwachsenenperson und kein Arbeitsgegenstand.",
+                "culture": "Cenyri mit aldrimarischer Mutter",
+                "portraitAge": 2,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "mared-penrudd",
+              "worldPersonId": "person--haus-penrudd--mared-penrudd",
+              "name": "Mared Penrudd",
+              "title": "Empfang · Zimmer und Rechnungsbuch",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1720",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/mared.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "20 Jahre. Unverheiratete Tochter Carwyns und Olwens. Aufmerksam und trockenhumorig; vergibt Zimmer und führt das Rechnungsbuch. Bei einer späteren Wegverheiratung würde sie den Betrieb verlassen. Erscheinung: Cenyri. Einfarbig braunes schulterlanges glattes Haar, sauberer Seitenscheitel, auf einer Seite hinters Ohr gesteckt; braune Augen. 20 Jahre, schlanke junge erwachsene Frau, klare Augenbrauen, schmale ovale Wangen und ein zurückhaltendes schiefes Lächeln Kleidung: Gedeckt bordeauxrotes schlichtes Wollkleid, cremefarbener Kragen, schmaler Gürtel, keine Schürze. Haltung: Stehend im Dreiviertelwinkel nach rechts, ein geschlossenes kleines Rechnungsbuch locker am Körper, andere Hand hängt entspannt.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig braunes schulterlanges glattes Haar, sauberer Seitenscheitel, auf einer Seite hinters Ohr gesteckt; braune Augen. 20 Jahre, schlanke junge erwachsene Frau, klare Augenbrauen, schmale ovale Wangen und ein zurückhaltendes schiefes Lächeln Kleidung: Gedeckt bordeauxrotes schlichtes Wollkleid, cremefarbener Kragen, schmaler Gürtel, keine Schürze. Haltung: Stehend im Dreiviertelwinkel nach rechts, ein geschlossenes kleines Rechnungsbuch locker am Körper, andere Hand hängt entspannt.",
+                "culture": "Cenyri",
+                "portraitAge": 20,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "dewi-penrudd",
+              "worldPersonId": "person--haus-penrudd--dewi-penrudd",
+              "name": "Dewi Penrudd",
+              "title": "Jüngster Sohn · kleine Hofdienste",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1727",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/dewi.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "13 Jahre. Jüngstes Kind Carwyns und Olwens. Hilft altersgemäß beim Wasserholen und mit kleinen Besorgungen im Hof. Kein vollwertiger Stallknecht; würde am liebsten mit jedem Fuhrmann mitreisen. Erscheinung: Cenyri. Einfarbig braunes zerzaustes kurzes Haar mit einer einzelnen abstehenden Stirnlocke; braune Augen. 13 Jahre, deutlich jugendlicher schmaler Junge, weiche Wangen, kleine Sommersprossen, neugieriger fast schelmischer Blick; kein Bart Kleidung: Saubere ausgewaschene ockerfarbene Tunika über schlichtem Leinenhemd, einfacher schmaler Gürtel. Haltung: Stehend, beide Arme locker, eine Schulter etwas angehoben, unbefangene kindliche Haltung; keine Arbeitslast.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig braunes zerzaustes kurzes Haar mit einer einzelnen abstehenden Stirnlocke; braune Augen. 13 Jahre, deutlich jugendlicher schmaler Junge, weiche Wangen, kleine Sommersprossen, neugieriger fast schelmischer Blick; kein Bart Kleidung: Saubere ausgewaschene ockerfarbene Tunika über schlichtem Leinenhemd, einfacher schmaler Gürtel. Haltung: Stehend, beide Arme locker, eine Schulter etwas angehoben, unbefangene kindliche Haltung; keine Arbeitslast.",
+                "culture": "Cenyri",
+                "portraitAge": 13,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "hywel-penrudd",
+              "worldPersonId": "person--haus-penrudd--hywel-penrudd",
+              "name": "Hywel Penrudd",
+              "title": "Keller · Lieferannahme und Instandhaltung",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1701",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/hywel.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "39 Jahre. Jüngerer Bruder Carwyns. Ruhiger Handwerker im Familienalltag; prüft Fässer und Lieferungen, hält kleine Schäden in Ordnung und betreut den Keller. Verheiratet mit Ffion. Erscheinung: Cenyri. Einfarbig braunes glattes Haar bis knapp unter die Ohren, sorgfältig nach hinten gestrichen; schmaler kurzer brauner Oberlippenbart; braune Augen. 39 Jahre, sehniger als Carwyn, lange Nase, schmale Wangen, ruhiger nüchterner Blick und dezentes Lächeln Kleidung: Graugrünes Hemd, einfache braune Lederweste ohne Rüstung, dunkelbrauner Gürtel. Haltung: Stehend im leichten Seitenwinkel, Hände entspannt auf dem Rücken, Schultern locker.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig braunes glattes Haar bis knapp unter die Ohren, sorgfältig nach hinten gestrichen; schmaler kurzer brauner Oberlippenbart; braune Augen. 39 Jahre, sehniger als Carwyn, lange Nase, schmale Wangen, ruhiger nüchterner Blick und dezentes Lächeln Kleidung: Graugrünes Hemd, einfache braune Lederweste ohne Rüstung, dunkelbrauner Gürtel. Haltung: Stehend im leichten Seitenwinkel, Hände entspannt auf dem Rücken, Schultern locker.",
+                "culture": "Cenyri",
+                "portraitAge": 39,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "ffion-penrudd",
+              "worldPersonId": "person--haus-penrudd--ffion-penrudd",
+              "name": "Ffion",
+              "title": "Wäsche und Gästezimmer",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1704",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/ffion.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "36 Jahre. Hywels Gemahlin, Mutter Iwans und Eleris. Organisiert Wäsche und Zimmerpflege gemeinsam mit weiteren Bediensteten. Ihr Herkunftshaus bleibt unbekannt. Erscheinung: Menschliche Albin aus einer albischen Familie. Einfarbig kastanienbraunes dichtes welliges Haar, kurz bis zum Kinn, mit einem schlichten Stoffband zurückgehalten; graugrüne Augen. 36 Jahre, längliche Nase, schmale längliche Gesichtszüge, einige Sommersprossen, zurückhaltendes freundliches Lächeln; gewöhnliche runde menschliche Ohren Kleidung: Staubig violettes schlichtes cenyrisches Arbeitskleid mit langen Ärmeln und weißer Leinenschürze. Haltung: Stehend frontal mit leicht geneigtem Kopf, ein sauber gefaltetes Bettlaken liegt über einem Unterarm.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Menschliche Albin aus einer albischen Familie. Einfarbig kastanienbraunes dichtes welliges Haar, kurz bis zum Kinn, mit einem schlichten Stoffband zurückgehalten; graugrüne Augen. 36 Jahre, längliche Nase, schmale längliche Gesichtszüge, einige Sommersprossen, zurückhaltendes freundliches Lächeln; gewöhnliche runde menschliche Ohren Kleidung: Staubig violettes schlichtes cenyrisches Arbeitskleid mit langen Ärmeln und weißer Leinenschürze. Haltung: Stehend frontal mit leicht geneigtem Kopf, ein sauber gefaltetes Bettlaken liegt über einem Unterarm.",
+                "culture": "Menschliche Albin aus einer albischen Familie",
+                "portraitAge": 36,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "iwan-penrudd",
+              "worldPersonId": "person--haus-penrudd--iwan-penrudd",
+              "name": "Iwan Penrudd",
+              "title": "Kind · Hywels Sohn",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1730",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/iwan.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "10 Jahre. Sohn Hywels und Ffions. Beobachtet gerne die Fuhrwerke; kleine Besorgungen ersetzen weder Unterricht noch freie Zeit. Erscheinung: Cenyri mit albischer Mutter. Einfarbig braunes glattes Haar, einfache kurze Schüsselfrisur mit leicht schiefem Pony; braune Augen. 10 Jahre, klar kindlicher schmaler Junge, längliche Nase wie Hywel, große neugierige Augen und ein zurückhaltendes Lächeln; gewöhnliche runde Ohren Kleidung: Schlichte waldgrüne Wolltunika über hellem Leinenhemd, vollständige praktische Kinderkleidung. Haltung: Stehend fast frontal, Arme locker; hält einen einzelnen kleinen Holzreifen tief neben der Hüfte.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri mit albischer Mutter. Einfarbig braunes glattes Haar, einfache kurze Schüsselfrisur mit leicht schiefem Pony; braune Augen. 10 Jahre, klar kindlicher schmaler Junge, längliche Nase wie Hywel, große neugierige Augen und ein zurückhaltendes Lächeln; gewöhnliche runde Ohren Kleidung: Schlichte waldgrüne Wolltunika über hellem Leinenhemd, vollständige praktische Kinderkleidung. Haltung: Stehend fast frontal, Arme locker; hält einen einzelnen kleinen Holzreifen tief neben der Hüfte.",
+                "culture": "Cenyri mit albischer Mutter",
+                "portraitAge": 10,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "eleri-penrudd",
+              "worldPersonId": "person--haus-penrudd--eleri-penrudd",
+              "name": "Eleri Penrudd",
+              "title": "Kind · Hywels Tochter",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1734",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/eleri.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "6 Jahre. Tochter Hywels und Ffions. Lebhaftes Familienkind ohne feste Arbeitsaufgabe. Erscheinung: Cenyri mit albischer Mutter. Einfarbig braunes feines Haar in zwei kurzen ungleichen Zöpfen, weicher Pony; braune Augen. 6 Jahre, eindeutig kleines Mädchen mit runden Kinderwangen, fröhlicher offener Ausdruck; gewöhnliche runde Ohren Kleidung: Schlichtes vollständig bekleidendes salbeigrünes Kinderkleid mit cremefarbenen Ärmeln. Haltung: Stehend, hält eine kleine einfache Stoffpuppe locker vor dem Bauch, aufrechte unbefangene Haltung.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri mit albischer Mutter. Einfarbig braunes feines Haar in zwei kurzen ungleichen Zöpfen, weicher Pony; braune Augen. 6 Jahre, eindeutig kleines Mädchen mit runden Kinderwangen, fröhlicher offener Ausdruck; gewöhnliche runde Ohren Kleidung: Schlichtes vollständig bekleidendes salbeigrünes Kinderkleid mit cremefarbenen Ärmeln. Haltung: Stehend, hält eine kleine einfache Stoffpuppe locker vor dem Bauch, aufrechte unbefangene Haltung.",
+                "culture": "Cenyri mit albischer Mutter",
+                "portraitAge": 6,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "rhosyn-penrudd",
+              "worldPersonId": "person--haus-penrudd--rhosyn-penrudd",
+              "name": "Rhosyn Penrudd",
+              "title": "Schankstube · Familienhilfe",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1705",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/rhosyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Zum Roten Tor"
+              ],
+              "notes": "35 Jahre. Jüngste Tochter Gwilyms und Enids, unverheiratet. Schlagfertig und selbstbewusst; arbeitet in der Schankstube und springt an arbeitsreichen Tagen am Empfang ein. Lebt aus eigener Entscheidung im Familienhaushalt. Erscheinung: Cenyri. Einfarbig braunes volles gewelltes Haar, locker halb hochgesteckt mit sichtbarer natürlicher Fülle; braune Augen. 35 Jahre, kräftige erwachsene Frau mit runden Wangen und markanten Augenbrauen, selbstbewusster humorvoller Ausdruck Kleidung: Rostrotes praktisches langärmeliges Miederkleid mit hoch geschlossenem cremefarbenem Unterhemd und dunkler Schürze. Haltung: Stehend leicht nach links, eine Hand locker am Schürzenbund, die andere offen seitlich, lebhaftes kleines Grinsen.",
+              "extensions": {
+                "household": "inn",
+                "appearance": "Cenyri. Einfarbig braunes volles gewelltes Haar, locker halb hochgesteckt mit sichtbarer natürlicher Fülle; braune Augen. 35 Jahre, kräftige erwachsene Frau mit runden Wangen und markanten Augenbrauen, selbstbewusster humorvoller Ausdruck Kleidung: Rostrotes praktisches langärmeliges Miederkleid mit hoch geschlossenem cremefarbenem Unterhemd und dunkler Schürze. Haltung: Stehend leicht nach links, eine Hand locker am Schürzenbund, die andere offen seitlich, lebhaftes kleines Grinsen.",
+                "culture": "Cenyri",
+                "portraitAge": 35,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "tudur-penrudd",
+              "worldPersonId": "person--haus-penrudd--tudur-penrudd",
+              "name": "Tudur Penrudd",
+              "title": "Hofwirt · Gwilyms jüngerer Bruder",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1674",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "66 Jahre. Jüngerer Sohn Madocs und Nests. Bewirtschaftet mit seiner Familie den Penrudd-Hof nordnordöstlich der Herberge. Sachlich, wetterkundig und sparsamer mit Worten als Gwilym. Überlässt schwere Arbeit zunehmend seinem Sohn Meurig. Erscheinung: Cenyri. Graues, ehemals braunes kurzes Haar mit zurückweichendem Ansatz; schmaler grauer Schnurrbart, kein Vollbart; braune Augen. 66 Jahre, hagerer als Gwilym, lange Wangen, dieselbe kräftige Familiennase, wettergegerbte Haut und ein reservierter, ruhiger Blick Kleidung: Ockerfarbene Wolltunika, dunkelbraunes ärmelloses Arbeitswams, schlichter Ledergürtel. Haltung: Stehend im Dreiviertelwinkel nach links, eine Hand locker am Gürtel, die andere hängt seitlich.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Cenyri. Graues, ehemals braunes kurzes Haar mit zurückweichendem Ansatz; schmaler grauer Schnurrbart, kein Vollbart; braune Augen. 66 Jahre, hagerer als Gwilym, lange Wangen, dieselbe kräftige Familiennase, wettergegerbte Haut und ein reservierter, ruhiger Blick Kleidung: Ockerfarbene Wolltunika, dunkelbraunes ärmelloses Arbeitswams, schlichter Ledergürtel. Haltung: Stehend im Dreiviertelwinkel nach links, eine Hand locker am Gürtel, die andere hängt seitlich.",
+                "culture": "Cenyri",
+                "portraitAge": 66,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "bethan-penrudd",
+              "worldPersonId": "person--haus-penrudd--bethan-penrudd",
+              "name": "Bethan",
+              "title": "Hofhaushalt und Vorräte",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1676",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/bethan.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "64 Jahre. Tudurs Gemahlin. Führt den Hofhaushalt und achtet auf Vorräte, Saatgut und die Versorgung der Hofleute. Ihr Herkunftshaus bleibt offen. Erscheinung: Aldrimarerin. Silbergraues, ursprünglich blondes Haar, zwei dicke Zöpfe am Hinterkopf zusammengelegt; blaue Augen. 64 Jahre, hochgewachsene kräftige Frau, breites nordisches Gesicht, deutliche Falten, gerade Nase und ein gelassenes kleines Lächeln Kleidung: Cenyrisches graublaues Wollkleid mit einfachen Leinenärmeln, braune Schürze und ein kleiner bronzener Gewandverschluss. Haltung: Stehend nach rechts gewandt, hält einen kleinen Korb mit gefaltetem Leinen tief vor der Hüfte, lockere Schultern.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Aldrimarerin. Silbergraues, ursprünglich blondes Haar, zwei dicke Zöpfe am Hinterkopf zusammengelegt; blaue Augen. 64 Jahre, hochgewachsene kräftige Frau, breites nordisches Gesicht, deutliche Falten, gerade Nase und ein gelassenes kleines Lächeln Kleidung: Cenyrisches graublaues Wollkleid mit einfachen Leinenärmeln, braune Schürze und ein kleiner bronzener Gewandverschluss. Haltung: Stehend nach rechts gewandt, hält einen kleinen Korb mit gefaltetem Leinen tief vor der Hüfte, lockere Schultern.",
+                "culture": "Aldrimarerin",
+                "portraitAge": 64,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "meurig-penrudd",
+              "worldPersonId": "person--haus-penrudd--meurig-penrudd",
+              "name": "Meurig Penrudd",
+              "title": "Hofnachfolge · Vieh und Feldarbeit",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1698",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/meurig.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "42 Jahre. Sohn Tudurs und Bethans, Vetter Carwyns. Verantwortet den täglichen Ablauf auf Weiden und Feldern. Führt die Lieferabsprachen fort, ohne den Gasthof mit kostenlosen Waren zu subventionieren. Erscheinung: Cenyri mit aldrimarischer Mutter. Einfarbig dunkelbraunes dichtes Haar, knapp über den Ohren geschnitten; kurzer kantiger brauner Kinnbart; braune Augen. 42 Jahre, großer breitschultriger Landwirt, längliches Gesicht, kräftiger Hals, kleine Falte zwischen den Brauen, sachlicher Blick Kleidung: Staubig blaues Leinenhemd, braune kurze Wollweste und breiter einfacher Gürtel. Haltung: Stehend leicht nach rechts, Arme entspannt, ein Arbeitshandschuh locker in einer Hand, ohne Werkzeug.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Cenyri mit aldrimarischer Mutter. Einfarbig dunkelbraunes dichtes Haar, knapp über den Ohren geschnitten; kurzer kantiger brauner Kinnbart; braune Augen. 42 Jahre, großer breitschultriger Landwirt, längliches Gesicht, kräftiger Hals, kleine Falte zwischen den Brauen, sachlicher Blick Kleidung: Staubig blaues Leinenhemd, braune kurze Wollweste und breiter einfacher Gürtel. Haltung: Stehend leicht nach rechts, Arme entspannt, ein Arbeitshandschuh locker in einer Hand, ohne Werkzeug.",
+                "culture": "Cenyri mit aldrimarischer Mutter",
+                "portraitAge": 42,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "nia-penrudd",
+              "worldPersonId": "person--haus-penrudd--nia-penrudd",
+              "name": "Nia",
+              "title": "Geflügel und Küchengarten",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1700",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/nia.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "40 Jahre. Meurigs Gemahlin und Mutter Gethins, Lowris und Osians. Kümmert sich um Geflügel, Eier und saisonales Gemüse; Herkunftsfamilie nicht festgelegt. Erscheinung: Menschliche Albin aus einer albischen Familie. Einfarbig sehr dunkelbraunes glattes Haar, glatt zurückgenommen und in einem kompakten hohen Knoten; haselnussbraune Augen. 40 Jahre, rundes Gesicht mit hohen Wangenknochen, kräftige Hände, warme Haut, ein breites heiteres Lächeln; gewöhnliche runde menschliche Ohren Kleidung: Terrakottafarbenes langärmeliges cenyrisches Arbeitskleid und dunkle Leinenschürze, schlichte kleine Kupferohrringe. Haltung: Stehend nach links, eine Hand locker auf der anderen am Schürzenbund, Kopf aufrecht.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Menschliche Albin aus einer albischen Familie. Einfarbig sehr dunkelbraunes glattes Haar, glatt zurückgenommen und in einem kompakten hohen Knoten; haselnussbraune Augen. 40 Jahre, rundes Gesicht mit hohen Wangenknochen, kräftige Hände, warme Haut, ein breites heiteres Lächeln; gewöhnliche runde menschliche Ohren Kleidung: Terrakottafarbenes langärmeliges cenyrisches Arbeitskleid und dunkle Leinenschürze, schlichte kleine Kupferohrringe. Haltung: Stehend nach links, eine Hand locker auf der anderen am Schürzenbund, Kopf aufrecht.",
+                "culture": "Menschliche Albin aus einer albischen Familie",
+                "portraitAge": 40,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "gethin-penrudd",
+              "worldPersonId": "person--haus-penrudd--gethin-penrudd",
+              "name": "Gethin Penrudd",
+              "title": "Fuhrwerk · Futter- und Warenlieferungen",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1719",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/gethin.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "21 Jahre. Ältester Sohn Meurigs und Nias, unverheiratet. Fährt Lieferungen zur Herberge und zu weiteren Abnehmern, hilft auf dem Feld und lernt die Viehwirtschaft seines Vaters. Erscheinung: Cenyri mit albischer Mutter. Einfarbig braunes dichtes Haar bis zum Nacken, locker hinten zusammengebunden; eine Strähne neben dem Gesicht, glatt rasiert; braune Augen. 21 Jahre, großer drahtiger junger Mann, kantige Wangenknochen, breite Nase wie Meurig, munteres offenes Lächeln; gewöhnliche runde Ohren Kleidung: Gedeckt rostrotes Leinenhemd, graubrauner kurzer Schulterüberwurf und einfacher Gürtel. Haltung: Stehend leicht nach rechts, ein Daumen locker hinter dem Gürtel, andere Hand seitlich, gelassene Schultern.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Cenyri mit albischer Mutter. Einfarbig braunes dichtes Haar bis zum Nacken, locker hinten zusammengebunden; eine Strähne neben dem Gesicht, glatt rasiert; braune Augen. 21 Jahre, großer drahtiger junger Mann, kantige Wangenknochen, breite Nase wie Meurig, munteres offenes Lächeln; gewöhnliche runde Ohren Kleidung: Gedeckt rostrotes Leinenhemd, graubrauner kurzer Schulterüberwurf und einfacher Gürtel. Haltung: Stehend leicht nach rechts, ein Daumen locker hinter dem Gürtel, andere Hand seitlich, gelassene Schultern.",
+                "culture": "Cenyri mit albischer Mutter",
+                "portraitAge": 21,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "lowri-penrudd",
+              "worldPersonId": "person--haus-penrudd--lowri-penrudd",
+              "name": "Lowri Penrudd",
+              "title": "Jugendliche · Ausbildung im Hofhaushalt",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1724",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/lowri.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "16 Jahre. Unverheiratete Tochter Meurigs und Nias. Lernt Gartenbau und Vorratshaltung, hilft unter Anleitung bei Geflügel und Milchverarbeitung. Keine alleinige Verantwortung für einen Arbeitsbereich. Erscheinung: Cenyri mit albischer Mutter. Einfarbig braunes glattes Haar, schlichter mittellanger Zopf, kleine Strähnen an den Schläfen; braune Augen. 16 Jahre, deutlich jugendliches Mädchen, weiches breites Gesicht, kleine Sommersprossen und ein neugieriges ruhiges Lächeln; gewöhnliche runde Ohren Kleidung: Praktisches vollständig bekleidendes hoch geschlossenes ockerfarbenes Bauernkleid mit weißem Leinenkragen und grüner Arbeitsschürze. Haltung: Stehend nach links, beide Hände locker vor der Schürze, keine schwere Arbeitslast.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Cenyri mit albischer Mutter. Einfarbig braunes glattes Haar, schlichter mittellanger Zopf, kleine Strähnen an den Schläfen; braune Augen. 16 Jahre, deutlich jugendliches Mädchen, weiches breites Gesicht, kleine Sommersprossen und ein neugieriges ruhiges Lächeln; gewöhnliche runde Ohren Kleidung: Praktisches vollständig bekleidendes hoch geschlossenes ockerfarbenes Bauernkleid mit weißem Leinenkragen und grüner Arbeitsschürze. Haltung: Stehend nach links, beide Hände locker vor der Schürze, keine schwere Arbeitslast.",
+                "culture": "Cenyri mit albischer Mutter",
+                "portraitAge": 16,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "osian-penrudd",
+              "worldPersonId": "person--haus-penrudd--osian-penrudd",
+              "name": "Osian Penrudd",
+              "title": "Kind · Meurigs jüngster Sohn",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1729",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/osian.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "11 Jahre. Jüngster Sohn Meurigs und Nias. Hilft altersgemäß mit kleinen Besorgungen und kennt die Tiere des Hofes beim Namen. Kein regulärer Knecht. Erscheinung: Cenyri mit albischer Mutter. Einfarbig braunes sehr kurzes Haar mit kleinem Wirbel am Scheitel; braune Augen. 11 Jahre, eindeutig kindlicher kräftiger Junge, rundes Gesicht, breite Nase und ein vorsichtiges freundliches Lächeln; gewöhnliche runde Ohren Kleidung: Schlichte dunkelblaue Wolltunika mit hellem Leinenkragen, vollständige Kinderkleidung. Haltung: Stehend im Dreiviertelwinkel, hält einen einzelnen kleinen Apfel tief in einer Hand, andere locker seitlich.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Cenyri mit albischer Mutter. Einfarbig braunes sehr kurzes Haar mit kleinem Wirbel am Scheitel; braune Augen. 11 Jahre, eindeutig kindlicher kräftiger Junge, rundes Gesicht, breite Nase und ein vorsichtiges freundliches Lächeln; gewöhnliche runde Ohren Kleidung: Schlichte dunkelblaue Wolltunika mit hellem Leinenkragen, vollständige Kinderkleidung. Haltung: Stehend im Dreiviertelwinkel, hält einen einzelnen kleinen Apfel tief in einer Hand, andere locker seitlich.",
+                "culture": "Cenyri mit albischer Mutter",
+                "portraitAge": 11,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            },
+            {
+              "id": "eluned-penrudd",
+              "worldPersonId": "person--haus-penrudd--eluned-penrudd",
+              "name": "Eluned Penrudd",
+              "title": "Milchkammer · Butter und einfacher Käse",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1704",
+              "death": "",
+              "portrait": "../AleriaAlmanach/assets/rotes-tor/portraits/eluned.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-penrudd",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Penrudd-Hof"
+              ],
+              "notes": "36 Jahre. Unverheiratete Tochter Tudurs und Bethans, Schwester Meurigs. Führt die Milchkammer und stellt Butter sowie einfachen Käse her. Achtet darauf, dass Lieferungen frisch bleiben; es gibt keine magische Kühlung. Erscheinung: Cenyri mit aldrimarischer Mutter. Einfarbig braunes dickes Haar in einem einzelnen Kranzzopf, einige kurze Strähnen im Nacken; braune Augen. 36 Jahre, hochgewachsene kräftige Frau, breite Schultern, langes Gesicht und gerade Nase, sachliches gelassenes Lächeln Kleidung: Cremefarbenes Leinenhemd, dunkelgrünes schlichtes Überkleid mit langer hellbrauner Schürze. Haltung: Stehend leicht nach rechts, Arme entspannt übereinander vor der Taille, unkomplizierte Haltung.",
+              "extensions": {
+                "household": "farm",
+                "appearance": "Cenyri mit aldrimarischer Mutter. Einfarbig braunes dickes Haar in einem einzelnen Kranzzopf, einige kurze Strähnen im Nacken; braune Augen. 36 Jahre, hochgewachsene kräftige Frau, breite Schultern, langes Gesicht und gerade Nase, sachliches gelassenes Lächeln Kleidung: Cremefarbenes Leinenhemd, dunkelgrünes schlichtes Überkleid mit langer hellbrauner Schürze. Haltung: Stehend leicht nach rechts, Arme entspannt übereinander vor der Taille, unkomplizierte Haltung.",
+                "culture": "Cenyri mit aldrimarischer Mutter",
+                "portraitAge": 36,
+                "registryManagedFields": [
+                  "name",
+                  "title",
+                  "notes",
+                  "portrait"
+                ],
+                "registryManagedExtensionFields": [
+                  "appearance",
+                  "culture",
+                  "portraitAge"
+                ]
+              }
+            }
+          ],
+          "partnerships": [
+            {
+              "id": "marriage-haus-penrudd-founders",
+              "participantIds": [
+                "haus-penrudd-gruender",
+                "haus-penrudd-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "ended",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Gründerehe des Hauses."
+            },
+            {
+              "id": "marriage-madoc-nest-penrudd",
+              "participantIds": [
+                "madoc-penrudd",
+                "nest-penrudd"
+              ],
+              "type": "marriage",
+              "status": "ended",
+              "start": "1668",
+              "end": "1718",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignChildGroupBelowParentPair": true
+              }
+            },
+            {
+              "id": "marriage-gwilym-enid-penrudd",
+              "participantIds": [
+                "gwilym-penrudd",
+                "enid-penrudd"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "1692",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignChildGroupBelowParentPair": true
+              }
+            },
+            {
+              "id": "marriage-carwyn-olwen-penrudd",
+              "participantIds": [
+                "carwyn-penrudd",
+                "olwen-penrudd"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "1715",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignChildGroupBelowParentPair": true
+              }
+            },
+            {
+              "id": "marriage-aled-cerys-penrudd",
+              "participantIds": [
+                "aled-penrudd",
+                "cerys-penrudd"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "1737",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignParentPairOverChildPersonId": "rhys-penrudd"
+              }
+            },
+            {
+              "id": "marriage-hywel-ffion-penrudd",
+              "participantIds": [
+                "hywel-penrudd",
+                "ffion-penrudd"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "1728",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignChildGroupBelowParentPair": true
+              }
+            },
+            {
+              "id": "marriage-tudur-bethan-penrudd",
+              "participantIds": [
+                "tudur-penrudd",
+                "bethan-penrudd"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "1696",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignChildGroupBelowParentPair": true
+              }
+            },
+            {
+              "id": "marriage-meurig-nia-penrudd",
+              "participantIds": [
+                "meurig-penrudd",
+                "nia-penrudd"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "1718",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {
+                "chartAlignChildGroupBelowParentPair": true
+              }
+            }
+          ],
+          "parentages": [
+            {
+              "id": "parentage-madoc-penrudd",
+              "childId": "madoc-penrudd",
+              "parentIds": [
+                "haus-penrudd-gruender",
+                "haus-penrudd-gruenderin"
+              ],
+              "partnershipId": "marriage-haus-penrudd-founders",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Hauszugehörigkeit über unbekannte Generationen, keine unmittelbare biologische Elternschaft.",
+              "extensions": {
+                "timeJumpId": "gap-penrudd-to-1642"
+              }
+            },
+            {
+              "id": "parentage-gwilym-penrudd",
+              "childId": "gwilym-penrudd",
+              "parentIds": [
+                "madoc-penrudd",
+                "nest-penrudd"
+              ],
+              "partnershipId": "marriage-madoc-nest-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-tudur-penrudd",
+              "childId": "tudur-penrudd",
+              "parentIds": [
+                "madoc-penrudd",
+                "nest-penrudd"
+              ],
+              "partnershipId": "marriage-madoc-nest-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-carwyn-penrudd",
+              "childId": "carwyn-penrudd",
+              "parentIds": [
+                "gwilym-penrudd",
+                "enid-penrudd"
+              ],
+              "partnershipId": "marriage-gwilym-enid-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-hywel-penrudd",
+              "childId": "hywel-penrudd",
+              "parentIds": [
+                "gwilym-penrudd",
+                "enid-penrudd"
+              ],
+              "partnershipId": "marriage-gwilym-enid-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-rhosyn-penrudd",
+              "childId": "rhosyn-penrudd",
+              "parentIds": [
+                "gwilym-penrudd",
+                "enid-penrudd"
+              ],
+              "partnershipId": "marriage-gwilym-enid-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-aled-penrudd",
+              "childId": "aled-penrudd",
+              "parentIds": [
+                "carwyn-penrudd",
+                "olwen-penrudd"
+              ],
+              "partnershipId": "marriage-carwyn-olwen-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-mared-penrudd",
+              "childId": "mared-penrudd",
+              "parentIds": [
+                "carwyn-penrudd",
+                "olwen-penrudd"
+              ],
+              "partnershipId": "marriage-carwyn-olwen-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-dewi-penrudd",
+              "childId": "dewi-penrudd",
+              "parentIds": [
+                "carwyn-penrudd",
+                "olwen-penrudd"
+              ],
+              "partnershipId": "marriage-carwyn-olwen-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-rhys-penrudd",
+              "childId": "rhys-penrudd",
+              "parentIds": [
+                "aled-penrudd",
+                "cerys-penrudd"
+              ],
+              "partnershipId": "marriage-aled-cerys-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-iwan-penrudd",
+              "childId": "iwan-penrudd",
+              "parentIds": [
+                "hywel-penrudd",
+                "ffion-penrudd"
+              ],
+              "partnershipId": "marriage-hywel-ffion-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-eleri-penrudd",
+              "childId": "eleri-penrudd",
+              "parentIds": [
+                "hywel-penrudd",
+                "ffion-penrudd"
+              ],
+              "partnershipId": "marriage-hywel-ffion-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-meurig-penrudd",
+              "childId": "meurig-penrudd",
+              "parentIds": [
+                "tudur-penrudd",
+                "bethan-penrudd"
+              ],
+              "partnershipId": "marriage-tudur-bethan-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-eluned-penrudd",
+              "childId": "eluned-penrudd",
+              "parentIds": [
+                "tudur-penrudd",
+                "bethan-penrudd"
+              ],
+              "partnershipId": "marriage-tudur-bethan-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-gethin-penrudd",
+              "childId": "gethin-penrudd",
+              "parentIds": [
+                "meurig-penrudd",
+                "nia-penrudd"
+              ],
+              "partnershipId": "marriage-meurig-nia-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-lowri-penrudd",
+              "childId": "lowri-penrudd",
+              "parentIds": [
+                "meurig-penrudd",
+                "nia-penrudd"
+              ],
+              "partnershipId": "marriage-meurig-nia-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "parentage-osian-penrudd",
+              "childId": "osian-penrudd",
+              "parentIds": [
+                "meurig-penrudd",
+                "nia-penrudd"
+              ],
+              "partnershipId": "marriage-meurig-nia-penrudd",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            }
+          ],
+          "lineage": {
+            "founderPartnershipId": "marriage-haus-penrudd-founders",
+            "houseId": "house-penrudd",
+            "crestSubtitle": "Zum Roten Tor · Penrudd-Hof",
+            "crestEmblemScale": 0.86,
+            "crestFrame": "iron",
+            "crestFrameScale": 1,
+            "timeGap": {
+              "enabled": false,
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": ""
+            }
+          },
+          "cadetBranches": [],
+          "timeJumps": [
+            {
+              "id": "gap-penrudd-to-1642",
+              "parentPartnershipId": "marriage-haus-penrudd-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "madoc-penrudd"
+              ],
+              "years": 0,
+              "fromYear": "????",
+              "toYear": "1642",
+              "label": "Nicht einzeln überlieferte Generationen bis Madoc",
+              "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+              "extensions": {
+                "preparedPlaceholder": false
+              }
+            }
+          ],
+          "presentation": {
+            "relationshipColors": {
+              "marriage": "#326c4a",
+              "engagement": "#b88b37",
+              "union": "#8e2724",
+              "affair": "#704485",
+              "concubinage": "#704485",
+              "political": "#9d7d48",
+              "forced": "#c7a974",
+              "biological": "#8e2724",
+              "adoptive": "#2f75a8",
+              "foster": "#2f75a8",
+              "step": "#7eb4d7",
+              "magical": "#704485",
+              "claimed": "#62615e"
+            }
+          },
+          "view": {
+            "focusPersonId": "carwyn-penrudd",
+            "orientation": "vertical",
+            "ancestorDepth": 12,
+            "descendantDepth": 12,
+            "showSiblings": true,
+            "limitGenerations": false
+          },
+          "extensions": {
+            "blankFamily": false,
+            "preparedTimeJump": true,
+            "pendingDescendantReview": false,
+            "chartLayoutPolicy": "strict-v1",
+            "holdings": {
+              "mapPath": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
+              "inn": {
+                "pinId": "gwynthor-marking-080",
+                "title": "Zum Roten Tor",
+                "location": "Unmittelbar vor Gwynthors Nordtor",
+                "household": "inn",
+                "managerId": "carwyn-penrudd"
+              },
+              "farm": {
+                "pinId": "gwynthor-marking-041",
+                "title": "Penrudd-Hof",
+                "location": "Nordnordöstlich des Gasthofs, nahe Owains Anwesen am nördlichen Weg",
+                "household": "farm",
+                "managerId": "tudur-penrudd",
+                "successorId": "meurig-penrudd",
+                "supplies": [
+                  "Milch",
+                  "Butter",
+                  "einfacher Käse",
+                  "Eier",
+                  "Geflügel",
+                  "saisonales Gemüse",
+                  "Heu",
+                  "Hafer"
+                ],
+                "livestock": "Ein überschaubarer Milchviehbestand, einige Schafe sowie Hühner und Gänse; gelegentlich Schlachtvieh.",
+                "settlement": "Beide Haushalte führen getrennte Kassen. Regelmäßige Lieferungen werden zu vereinbarten Preisen abgerechnet; Tierfutter, Transport und Verarbeitung bleiben echte Kosten. Schlachtvieh wird durch einen örtlichen Fleischer verarbeitet. Überschüsse gehen an weitere Abnehmer im Umland.",
+                "ownership": "Die Familie bewirtschaftet den Hof; ein bestimmter Grundeigentümer oder Pachtvertrag ist bislang nicht festgelegt."
+              }
+            },
+            "sourceNote": "Nutzerauftrag vom 19.10.2026: Penrudd ersetzt allein die Wirtsfamilie am Roten Tor; das bestehende Haus Penry aus Talgarth bleibt unverändert. Unbekannte Gründer → Hausknoten → genau ein serieller Zeitsprung → Vater Madoc mit Nest → Brüder Gwilym und Tudur → deren Nachkommen. Angeheiratete tragen ausschließlich Vornamen, ohne erfundene Geburtshäuser. Der freie Kartenhof gwynthor-marking-041 wird Tudurs Zweig zugeordnet; seine bestehende Position und Karten-ID bleiben erhalten. Personen, Lebensdaten, Rollen und Lieferbeziehungen sind neue autorisierte Ausarbeitung; die Torgeschichte bleibt eine nicht sicher datierte Familienüberlieferung. Revision 2 folgt dem anschließenden Auftrag: braunes Haar und braune Augen der geborenen Penrudds, altersbedingtes Grau, kulturell unterschiedliche Angeheiratete sowie 24 Einzelporträts. Sämtliche Alben sind Menschen mit gewöhnlichen runden Ohren. Unbekannte Gründer bleiben bildlich unbekannt. Personen-IDs, Weltidentitäten und Genealogie bleiben erhalten; das vollständige Gasthofmodul folgt gesondert."
+          }
+        }
+      },
+      "afterSha256": "bafd983e6e78c998493bb78643cc237483dedd35bfd73b78747ce22b65f3c84a"
+    }
+  }
+}
