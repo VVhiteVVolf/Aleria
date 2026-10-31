@@ -6,6 +6,7 @@ import { STANDARD_ITEMS } from '../modules/item-register/item-register-standard.
 import { buildTorMenu, TOR_DISHES, TOR_STANDARD_DRINK_IDS } from '../modules/rotes-tor/tor-menu.mjs';
 import { PENRUDD_PEOPLE } from '../modules/rotes-tor/penrudd-household.mjs';
 import { PENRUDD_APPEARANCES } from '../modules/rotes-tor/penrudd-appearances.mjs';
+import { TROETZLI_PEOPLE } from '../modules/gwynthor-troetzli/troetzli-household.mjs';
 import { readBreweryCatalogs } from '../modules/brewer-guilds/brewery-catalog-source.mjs';
 import { TOR_BEER_SELECTION } from '../modules/rotes-tor/tor-beer.mjs';
 const drinkCatalogs = await readBreweryCatalogs();
@@ -37,8 +38,14 @@ test('all born Penrudds have brown eyes and brown or age-gray hair, without chan
   for (const person of born) {
     const look = PENRUDD_APPEARANCES[person.id.replace(/-penrudd$/, '')];
     assert.equal(person.eyeColor, 'braun', person.name);
-    assert.equal(look.eyes, 'braune', person.name);
-    assert.match(look.hair, /braun/, person.name);
+    if (look) {
+      assert.equal(look.eyes, 'braune', person.name);
+      assert.match(look.hair, /braun/, person.name);
+    } else {
+      assert.equal(person, TROETZLI_PEOPLE.esyllt);
+      assert.equal(person.hairColor, 'braun', person.name);
+      assert.match(person.appearance, /braune Augen/);
+    }
     assert.ok(!/grüne Augen/.test(person.appearance), person.name);
   }
   for (const spouse of PENRUDD_PEOPLE.filter(person => person.spouse)) assert.ok(!/\s/.test(spouse.name));
@@ -54,12 +61,18 @@ test('every commissioned portrait and dish is saved locally and connected to its
   const results = JSON.parse(await readFile(new URL('../assets/rotes-tor/image-results.json', import.meta.url), 'utf8'));
   assert.equal(results.images.length, 38);
   assert.equal(new Set(results.images.map(image => image.destination)).size, 38);
+  const additions = JSON.parse(await readFile(new URL('../assets/gwynthor-troetzli/asset-manifest.json', import.meta.url), 'utf8'));
+  const portraits = [...results.images, ...additions.assets.map(asset => ({ personId: asset.name, destination: asset.path }))];
+  const siteRoot = new URL('../../', import.meta.url);
+  const almanachRoot = new URL('../', import.meta.url);
   for (const person of PENRUDD_PEOPLE) {
-    await access(new URL(`../${person.portrait.replace('./', '')}`, import.meta.url));
-    const record = results.images.find(image => image.personId === person.id);
+    const portraitUrl = person.portrait.startsWith('/')
+      ? new URL(person.portrait.slice(1), siteRoot)
+      : new URL(person.portrait, almanachRoot);
+    await access(portraitUrl);
+    const record = portraits.find(image => image.personId === person.id);
     assert.ok(record, person.name);
-    assert.equal(fileURLToPath(new URL(`../../${record.destination}`, import.meta.url)),
-      fileURLToPath(new URL(`../${person.portrait.replace('./', '')}`, import.meta.url)));
+    assert.equal(fileURLToPath(new URL(record.destination, siteRoot)), fileURLToPath(portraitUrl));
   }
   for (const item of buildTorMenu(drinkCatalogs).items.filter(item => item.image.startsWith('./'))) {
     await access(new URL(`../${item.image.replace('./', '')}`, import.meta.url));

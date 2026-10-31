@@ -201,6 +201,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
       "haus-fearnan",
@@ -2866,6 +2867,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
       "haus-fearnan",
@@ -3152,6 +3154,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
       "haus-fearnan",
@@ -3309,6 +3312,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
       "haus-fearnan",
@@ -3379,6 +3383,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falto",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
       "haus-fearnan",
@@ -19946,6 +19951,18 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Bannkreis Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+  },
+  {
+    "id": "haus-llythfor",
+    "name": "Haus Llythfor",
+    "image": "/Stammb%C3%A4ume/assets/images/placeholders/neutral-crest.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
   },
   {
     "id": "haus-gwregysdu",
