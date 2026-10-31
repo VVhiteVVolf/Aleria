@@ -156,6 +156,8 @@
       <input class="e-inp" value="${esc(z.title || '')}" placeholder="${tdef.label}…" data-input-action="zettel-field" data-field="title"/></div>
     <div class="e-group"><label class="lml">Untertitel</label>
       <input class="e-inp" value="${esc(z.untertitel || '')}" placeholder="Zusatz, Datum…" data-input-action="zettel-field" data-field="untertitel"/></div>
+    <div class="e-group"><label class="lml">Stand des Anschlags</label>
+      <select class="e-sel" data-input-action="zettel-field" data-field="publicationStatus">${option('open', 'Offen', z.publicationStatus || 'open')}${option('filled', 'Angenommen · ausgegraut', z.publicationStatus)}</select></div>
     ${window.TafelNoticeTypography.controls(z)}
     ${window.TafelNoticeStackEditor.render(z)}
     ${mediaFields(z)}

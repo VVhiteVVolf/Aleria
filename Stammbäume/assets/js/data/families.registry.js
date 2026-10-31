@@ -49,6 +49,7 @@ import { HOUSE_VELTRANE_FAMILY } from './eleganz-family-records.js';
 import { HOUSE_FONTANI_FAMILY } from './house-fontani-family.js';
 import { HOUSE_RHWYD_FAMILY } from './house-rhwyd-family.js';
 import { HOUSE_PENRUDD_FAMILY } from './house-penrudd-family.js';
+import { HOUSE_LLYTHFOR_FAMILY } from './house-llythfor-family.js';
 import { HOUSE_GWREGYSDU_FAMILY } from './house-gwregysdu-family.js';
 import { HOUSE_BIELLE_FAMILY, HOUSE_DESELE_FAMILY } from './brevanor-desele-bielle-records.js';
 import { HOUSE_LOTHAIRE_FAMILY } from './house-lothaire-family.js';
@@ -394,6 +395,7 @@ export const FAMILY_REGISTRY = Object.freeze([
   familyRecord({ id: 'haus-fontani', title: 'Haus Fontani', family: HOUSE_FONTANI_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-rhwyd', title: 'Haus Rhwyd', family: HOUSE_RHWYD_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-penrudd', title: 'Haus Penrudd', family: HOUSE_PENRUDD_FAMILY, type: 'commoner' }),
+  familyRecord({ id: 'haus-llythfor', title: 'Haus Llythfor', family: HOUSE_LLYTHFOR_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-gwregysdu', title: 'Haus Gwregysdu', family: HOUSE_GWREGYSDU_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'sept-cneacail', title: 'Sept Cneacail', family: SEPT_CNEACAIL_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-bielle', title: 'Haus Bielle', family: HOUSE_BIELLE_FAMILY }),

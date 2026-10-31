@@ -1,0 +1,253 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--rob-gwynthor-tageloehner",
+  "slug": "rob",
+  "identity": {
+    "name": "Rob",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "rob-gwynthor-tageloehner",
+      "documentIds": [
+        "rob-gwynthor-tageloehner"
+      ],
+      "documents": [
+        {
+          "documentId": "rob-gwynthor-tageloehner",
+          "createdAt": "2026-10-31T00:00:00Z",
+          "updatedAt": "2026-10-31T00:00:00Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/rob-gwynthor-tageloehner.json",
+    "sourceExportedAt": "2026-10-31T00:00:00Z",
+    "sourceUpdatedAt": "2026-10-31T00:00:00Z",
+    "sourceDocumentIds": [
+      "rob-gwynthor-tageloehner"
+    ],
+    "contentHash": "961b691c1473c79a8a4eb5b097caff219db7f9f1c761c11cfe84425af1a6fa59"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-lotsensuche"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "rob-gwynthor-tageloehner",
+        "name": "Rob",
+        "title": "Tagelöhner",
+        "fraktion": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+        "bio": "Rob ist ein dreiunddreißigjähriger Tagelöhner, der sich in Gwynthor mit wechselnden Hilfsarbeiten verdingt. Er trägt braunes Haar, ist glatt rasiert und kleidet sich schlicht. Mit seinem lockeren Mundwerk kommt er rasch ins Gespräch und hat zu vielen Dingen eine freche Bemerkung bereit.\n\nEr nimmt kleinere Besorgungen und Botengänge an und ist bei der Suche nach Tagesarbeit im Hafen und den umliegenden Straßen anzutreffen.",
+        "status": "Lebend",
+        "archived": false,
+        "createdAt": "2026-10-31T00:00:00Z",
+        "updatedAt": "2026-10-31T00:00:00Z",
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetSchemaVersion": 1,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Rob"
+            },
+            {
+              "label": "Alter",
+              "value": "33 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Tagelöhner"
+            },
+            {
+              "label": "Aufenthalt",
+              "value": "Gwynthor"
+            }
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+            "portraitFit": "cover",
+            "crestImage": "",
+            "biographyTitle": "Rob",
+            "biographyText": "<p>Rob verdient sich in Gwynthor seinen Unterhalt mit wechselnden Tagesarbeiten. Er hilft bei kleineren Besorgungen, übernimmt Botengänge und sucht im Hafenviertel nach dem nächsten Verdienst.</p><p>Der dreiunddreißigjährige Mann trägt braunes Haar und ein glatt rasiertes Gesicht. Seine Kleidung ist schlicht und alltagstauglich. Er redet ungezwungen, grinst gern und lässt eine Gelegenheit für eine freche Antwort selten aus. Im Gespräch gibt er sich umgänglich und findet schnell Anschluss.</p>",
+            "abilitiesTitle": "Auftreten",
+            "abilities": [
+              {
+                "title": "Gesprächig",
+                "detail": "Kommt mit anderen Leuten rasch ins Gespräch.",
+                "icon": ""
+              },
+              {
+                "title": "Freches Mundwerk",
+                "detail": "Hat oft eine spöttische oder schlagfertige Bemerkung bereit.",
+                "icon": ""
+              },
+              {
+                "title": "Wechselnde Arbeit",
+                "detail": "Nimmt kleinere Hilfsarbeiten und Besorgungen an.",
+                "icon": ""
+              }
+            ],
+            "worksTitle": "Tätigkeit",
+            "works": [],
+            "backgroundTitle": "Weitere Angaben",
+            "backgroundText": "",
+            "portraitStages": [],
+            "portraitCaptions": []
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "rob-gwynthor-tageloehner",
+    "name": "Rob",
+    "title": "Tagelöhner",
+    "fraktion": "",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+    "bio": "Rob ist ein dreiunddreißigjähriger Tagelöhner, der sich in Gwynthor mit wechselnden Hilfsarbeiten verdingt. Er trägt braunes Haar, ist glatt rasiert und kleidet sich schlicht. Mit seinem lockeren Mundwerk kommt er rasch ins Gespräch und hat zu vielen Dingen eine freche Bemerkung bereit.\n\nEr nimmt kleinere Besorgungen und Botengänge an und ist bei der Suche nach Tagesarbeit im Hafen und den umliegenden Straßen anzutreffen.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rob"
+        },
+        {
+          "label": "Alter",
+          "value": "33 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Tagelöhner"
+        },
+        {
+          "label": "Aufenthalt",
+          "value": "Gwynthor"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Rob",
+        "biographyText": "<p>Rob verdient sich in Gwynthor seinen Unterhalt mit wechselnden Tagesarbeiten. Er hilft bei kleineren Besorgungen, übernimmt Botengänge und sucht im Hafenviertel nach dem nächsten Verdienst.</p><p>Der dreiunddreißigjährige Mann trägt braunes Haar und ein glatt rasiertes Gesicht. Seine Kleidung ist schlicht und alltagstauglich. Er redet ungezwungen, grinst gern und lässt eine Gelegenheit für eine freche Antwort selten aus. Im Gespräch gibt er sich umgänglich und findet schnell Anschluss.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [
+          {
+            "title": "Gesprächig",
+            "detail": "Kommt mit anderen Leuten rasch ins Gespräch.",
+            "icon": ""
+          },
+          {
+            "title": "Freches Mundwerk",
+            "detail": "Hat oft eine spöttische oder schlagfertige Bemerkung bereit.",
+            "icon": ""
+          },
+          {
+            "title": "Wechselnde Arbeit",
+            "detail": "Nimmt kleinere Hilfsarbeiten und Besorgungen an.",
+            "icon": ""
+          }
+        ],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    },
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

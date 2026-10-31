@@ -1,0 +1,691 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-llythfor",
+  "revision": 3,
+  "updatedAt": "2026-10-31T01:02:34.055Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-llythfor",
+      "title": "Haus Llythfor",
+      "motto": "",
+      "description": "Kleiner Gwynthorer Bürgerhaushalt des Berichterstatters Cynddelw Llythfor, seiner Frau Esyllt Penrudd und ihrer Tochter Eirlys. Ein eigenes Wappen ist noch nicht festgelegt; der schlichte braune Platzhalter bleibt bestehen.",
+      "emblem": "assets/images/placeholders/neutral-crest.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-llythfor-gruender",
+        "worldPersonId": "person--haus-llythfor--haus-llythfor-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-llythfor-gruenderin",
+        "worldPersonId": "person--haus-llythfor--haus-llythfor-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "cynddelw-llythfor",
+        "worldPersonId": "person--haus-llythfor--cynddelw-llythfor",
+        "name": "Cynddelw Llythfor",
+        "title": "Berichterstatter bei Celtigerns Echo",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Gebürtiger Gwynthorer und Berichterstatter für Celtigerns Echo. Reist für Gespräche und Nachforschungen zwischen den Orten der Grafschaft. Lebt mit Esyllt Penrudd und ihrer Tochter Eirlys in Gwynthor. Sein alter Hest wird den Reisen nicht mehr lange gewachsen sein. Für 500 Kupfer kaufte er einem Söldner den jungen erwachsenen Rhyfel-Hengst Trötzli ab; dessen heftige Schreck- und Abwehrreaktionen überfordern ihn. Er verschweigt diese Schwierigkeiten keinem Kaufinteressenten und sucht nun Hilfe für die Überführung zu seinem Schwiegervater Tudur auf den Penrudd-Hof. Erscheinung: 42 Jahre. Glattes braunes Haar nach hinten gestrichen, lässige Wollmütze, frecher gepflegter Kinnbart und schmaler Schnurrbart. Drückt ein kleines Lederbuch an die Brust, die andere Hand am Kinn; verträumt grübelnder Blick zum Himmel. Schlichte gepflegte Bürgerkleidung.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "appearance": "42 Jahre. Glattes braunes Haar nach hinten gestrichen, lässige Wollmütze, frecher gepflegter Kinnbart und schmaler Schnurrbart. Drückt ein kleines Lederbuch an die Brust, die andere Hand am Kinn; verträumt grübelnder Blick zum Himmel. Schlichte gepflegte Bürgerkleidung.",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Cynddelw Llythfor"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "42 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Berichterstatter bei Celtigerns Echo"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Verheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Cynddelw Llythfor",
+              "biographyText": "<p>Gebürtiger Gwynthorer und Berichterstatter für Celtigerns Echo. Reist für Gespräche und Nachforschungen zwischen den Orten der Grafschaft. Lebt mit Esyllt Penrudd und ihrer Tochter Eirlys in Gwynthor. Sein alter Hest wird den Reisen nicht mehr lange gewachsen sein. Für 500 Kupfer kaufte er einem Söldner den jungen erwachsenen Rhyfel-Hengst Trötzli ab; dessen heftige Schreck- und Abwehrreaktionen überfordern ihn. Er verschweigt diese Schwierigkeiten keinem Kaufinteressenten und sucht nun Hilfe für die Überführung zu seinem Schwiegervater Tudur auf den Penrudd-Hof.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Aufmerksamer Zuhörer",
+                  "detail": "Sammelt Aussagen, Namen und offene Fragen in einem kleinen Lederbuch.",
+                  "icon": ""
+                },
+                {
+                  "title": "Ehrlich trotz eigener Not",
+                  "detail": "Verschweigt Kaufinteressenten Trötzlis Schwierigkeiten nicht.",
+                  "icon": ""
+                },
+                {
+                  "title": "Besser mit Worten als mit Pferden",
+                  "detail": "Hat mit dem vermeintlichen Schnäppchen seine Erfahrung überschätzt.",
+                  "icon": ""
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Erscheinung",
+              "historyText": "<p>42 Jahre. Glattes braunes Haar nach hinten gestrichen, lässige Wollmütze, frecher gepflegter Kinnbart und schmaler Schnurrbart. Drückt ein kleines Lederbuch an die Brust, die andere Hand am Kinn; verträumt grübelnder Blick zum Himmel. Schlichte gepflegte Bürgerkleidung.</p>",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Esyllt Penrudd",
+                  "detail": "Jüngste Tochter Tudurs · lebt in Gwynthor",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Eirlys Llythfor",
+                  "detail": "Tochter Cynddelws und Esyllts",
+                  "image": "",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                },
+                {
+                  "icon": "",
+                  "title": "Haus Penrudd",
+                  "text": "Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Cynddelw Llythfor"
+            }
+          },
+          "portraitAge": 42,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "household",
+            "culture",
+            "appearance",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "esyllt-penrudd",
+        "worldPersonId": "person--haus-penrudd--esyllt-penrudd",
+        "name": "Esyllt Penrudd",
+        "title": "Jüngste Tochter Tudurs · lebt in Gwynthor",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-penrudd",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Jüngste Tochter Tudurs und Bethans, jüngere Schwester Meurigs und Eluneds. Wuchs auf dem Penrudd-Hof auf und lebt seit ihrer Heirat mit dem Berichterstatter Cynddelw Llythfor in Gwynthor. Ihre gemeinsame Tochter heißt Eirlys. Der Kontakt zum Hof ist eng geblieben; Tudur weiß von der geplanten Aufnahme Trötzlis. Esyllt unterstützt die Suche nach erfahrener Hilfe, ohne ihrem Mann einzureden, er müsse das verängstigte Pferd selbst bezwingen. Erscheinung: 34 Jahre. Braunes dichtes Haar, halb geflochten und über einer Schulter offen, braune Augen und feine Sommersprossen. Ähnelt ihrer älteren Schwester Eluned in Nase und Augenbrauen, mit weicheren feineren Gesichtszügen und einem warmen, schelmischen Lächeln. Schlichtes gepflegtes blaugrünes Stadtkleid über hellem Leinen.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "appearance": "34 Jahre. Braunes dichtes Haar, halb geflochten und über einer Schulter offen, braune Augen und feine Sommersprossen. Ähnelt ihrer älteren Schwester Eluned in Nase und Augenbrauen, mit weicheren feineren Gesichtszügen und einem warmen, schelmischen Lächeln. Schlichtes gepflegtes blaugrünes Stadtkleid über hellem Leinen.",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Esyllt Penrudd"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "34 Jahre"
+              ],
+              [
+                "Haus",
+                "Penrudd"
+              ],
+              [
+                "Tätigkeit",
+                "Jüngste Tochter Tudurs · lebt in Gwynthor"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Verheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Esyllt Penrudd",
+              "biographyText": "<p>Jüngste Tochter Tudurs und Bethans, jüngere Schwester Meurigs und Eluneds. Wuchs auf dem Penrudd-Hof auf und lebt seit ihrer Heirat mit dem Berichterstatter Cynddelw Llythfor in Gwynthor. Ihre gemeinsame Tochter heißt Eirlys. Der Kontakt zum Hof ist eng geblieben; Tudur weiß von der geplanten Aufnahme Trötzlis. Esyllt unterstützt die Suche nach erfahrener Hilfe, ohne ihrem Mann einzureden, er müsse das verängstigte Pferd selbst bezwingen.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Mit dem Hof verbunden",
+                  "detail": "Lebt in der Stadt und hält Kontakt zu Eltern und Geschwistern auf dem Penrudd-Hof.",
+                  "icon": ""
+                },
+                {
+                  "title": "Praktische Unterstützung",
+                  "detail": "Sucht mit ihrem Mann nach einer tragfähigen Lösung für das Pferd.",
+                  "icon": ""
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Erscheinung",
+              "historyText": "<p>34 Jahre. Braunes dichtes Haar, halb geflochten und über einer Schulter offen, braune Augen und feine Sommersprossen. Ähnelt ihrer älteren Schwester Eluned in Nase und Augenbrauen, mit weicheren feineren Gesichtszügen und einem warmen, schelmischen Lächeln. Schlichtes gepflegtes blaugrünes Stadtkleid über hellem Leinen.</p>",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Cynddelw Llythfor",
+                  "detail": "Berichterstatter bei Celtigerns Echo",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Eirlys Llythfor",
+                  "detail": "Tochter Cynddelws und Esyllts",
+                  "image": "",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                },
+                {
+                  "icon": "",
+                  "title": "Haus Penrudd",
+                  "text": "Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Esyllt Penrudd"
+            }
+          },
+          "portraitAge": 34,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "household",
+            "culture",
+            "appearance",
+            "portraitAge"
+          ]
+        }
+      },
+      {
+        "id": "eirlys-llythfor",
+        "worldPersonId": "person--haus-llythfor--eirlys-llythfor",
+        "name": "Eirlys Llythfor",
+        "title": "Tochter Cynddelws und Esyllts",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "child",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Achtjährige Tochter Cynddelw Llythfors und Esyllt Penrudds. Lebt mit ihren Eltern in Gwynthor. Gab dem neuen Pferd den Namen Trötzli, weil es sich so trotzig benimmt. Ihre Zuneigung zum Tier bedeutet nicht, dass sie es allein führt oder reitet. Erscheinung: Für Eirlys ist noch kein individuelles Porträt ausgearbeitet.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "appearance": "Für Eirlys ist noch kein individuelles Porträt ausgearbeitet.",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Eirlys Llythfor"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "8 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Tochter Cynddelws und Esyllts"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Kind"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Eirlys Llythfor",
+              "biographyText": "<p>Achtjährige Tochter Cynddelw Llythfors und Esyllt Penrudds. Lebt mit ihren Eltern in Gwynthor. Gab dem neuen Pferd den Namen Trötzli, weil es sich so trotzig benimmt. Ihre Zuneigung zum Tier bedeutet nicht, dass sie es allein führt oder reitet.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Ein eigener Name",
+                  "detail": "Hat Trötzli wegen seines trotzigen Auftretens benannt.",
+                  "icon": ""
+                }
+              ],
+              "extraSections": [],
+              "historyTitle": "Erscheinung",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Cynddelw Llythfor",
+                  "detail": "Berichterstatter bei Celtigerns Echo",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Esyllt Penrudd",
+                  "detail": "Jüngste Tochter Tudurs · lebt in Gwynthor",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                },
+                {
+                  "icon": "",
+                  "title": "Haus Penrudd",
+                  "text": "Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Eirlys Llythfor"
+            }
+          },
+          "portraitAge": 8,
+          "registryManagedFields": [
+            "name",
+            "title",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedExtensionFields": [
+            "household",
+            "culture",
+            "appearance",
+            "portraitAge"
+          ]
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-llythfor-founders",
+        "participantIds": [
+          "haus-llythfor-gruender",
+          "haus-llythfor-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cynddelw-llythfor-esyllt-penrudd",
+        "participantIds": [
+          "cynddelw-llythfor",
+          "esyllt-penrudd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1730",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "eirlys-llythfor",
+          "crossFamilyRelationship": {
+            "linkId": "marriage-cynddelw-llythfor-esyllt-penrudd",
+            "counterpartFamilyId": "haus-penrudd"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-cynddelw-llythfor",
+        "childId": "cynddelw-llythfor",
+        "parentIds": [
+          "haus-llythfor-gruender",
+          "haus-llythfor-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-llythfor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Unbekannte Generationen; keine unmittelbare biologische Elternschaft behauptet.",
+        "extensions": {
+          "timeJumpId": "gap-llythfor-to-1698"
+        }
+      },
+      {
+        "id": "parentage-eirlys-llythfor",
+        "childId": "eirlys-llythfor",
+        "parentIds": [
+          "cynddelw-llythfor",
+          "esyllt-penrudd"
+        ],
+        "partnershipId": "marriage-cynddelw-llythfor-esyllt-penrudd",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-llythfor",
+        "name": "Haus Llythfor",
+        "motto": "",
+        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "status": "active",
+        "extensions": {}
+      },
+      {
+        "id": "house-penrudd",
+        "name": "Haus Penrudd",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "linked-esyllt-penrudd-llythfor",
+        "name": "Esyllts Herkunft · Haus Penrudd",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-cynddelw-llythfor-esyllt-penrudd",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-penrudd",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-penrudd",
+        "notes": "",
+        "extensions": {
+          "chartAlignBelowPartnership": true,
+          "registryManagedExtensionFields": [
+            "chartAlignBelowPartnership"
+          ]
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-llythfor-to-1698",
+        "parentPartnershipId": "marriage-haus-llythfor-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "cynddelw-llythfor"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1698",
+        "label": "Nicht einzeln überlieferte Generationen bis Cynddelw",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-llythfor-founders",
+      "houseId": "house-llythfor",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-llythfor-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 12,
+      "descendantDepth": 12,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 3,
+      "chartLayoutPolicy": "strict-v1",
+      "sourceNote": "Nutzerauftrag vom 31.10.2026: neuer bislang unbelegter Nachname Llythfor, jüngste Penrudd-Tochter als Ehefrau, Stadt-Haushalt mit der Tochter, die Trötzli benannte. Keine zusätzliche Verwandtschaft oder eigenes Hauswappen erfunden. Unbekanntes Gründerpaar → brauner Hausknoten → genau ein serieller Zeitsprung → Cynddelw und Esyllt → Eirlys. Die Penrudd-Gegenakte endet an der Hausverknüpfung; die Tochter erscheint nur hier.",
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 2,
+        "toRevision": 3
+      }
+    }
+  }
+}

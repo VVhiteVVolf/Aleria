@@ -11,11 +11,11 @@ const window = {};
 vm.runInNewContext(readFileSync(new URL('../assets/js/notes/notice-stacks.js', import.meta.url), 'utf8'), { window });
 const stacks = window.TafelNoticeStacks;
 
-test('Gwynthor includes 53 original sheets plus the new court paper without creating decorative quests', () => {
+test('Gwynthor includes 53 original sheets plus the court and guide papers without creating decorative quests', () => {
   const layout = normalizeLayout(preset.layout, catalog);
-  assert.equal(layout.posters.length, 54);
-  assert.equal(layout.posters.filter(poster => poster.noticeId).length, 5);
-  assert.equal(layout.posters.filter(poster => poster.pin.enabled).length, 5);
+  assert.equal(layout.posters.length, 55);
+  assert.equal(layout.posters.filter(poster => poster.noticeId).length, 6);
+  assert.equal(layout.posters.filter(poster => poster.pin.enabled).length, 6);
   for (const asset of catalog) {
     assert.ok(existsSync(new URL(`../${asset.src}`, import.meta.url)), asset.src);
     assert.ok(asset.aspect > 0 && asset.bounds.w <= asset.width && asset.bounds.h <= asset.height, asset.id);

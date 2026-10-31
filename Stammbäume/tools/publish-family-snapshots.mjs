@@ -6,12 +6,29 @@ import { reconcileFamilyWithProjectOrigin } from '../assets/js/modules/family-sy
 import { assertValidFamily } from '../assets/js/domain/family-schema.js';
 import { assertMirroredCrossFamilyBatch } from '../assets/js/modules/family-sync/cross-family-sync-invariant.js';
 
-export async function publishFamilySnapshots(familyIds, { apply = false, refreshHouseProfiles = false, houseProfilesOnly = false } = {}) {
+// Stable identities and house membership are never replaceable. A specifically
+// reviewed life-date correction must name the same person and exact old/new values.
+export function assertSnapshotPersonIdentity(familyId, previous, current, corrections = []) {
+  const applied = [];
+  for (const field of ['id', 'worldPersonId', 'birth', 'death', 'houseId']) {
+    if (current[field] === previous[field]) continue;
+    const correction = corrections.find(item => item.familyId === familyId
+      && item.personId === previous.id && item.worldPersonId === previous.worldPersonId
+      && item.field === field && item.from === previous[field] && item.to === current[field]);
+    assert(['birth', 'death'].includes(field) && correction && typeof correction.reason === 'string' && correction.reason.trim(),
+      `Nicht freigegebene Personenänderung: ${familyId}/${previous.id}/${field}`);
+    applied.push(correction);
+  }
+  return applied;
+}
+
+export async function publishFamilySnapshots(familyIds, { apply = false, refreshHouseProfiles = false, houseProfilesOnly = false, personFieldCorrections = [] } = {}) {
 assert(familyIds.length && new Set(familyIds).size === familyIds.length, 'Eindeutige Familienauswahl erforderlich.');
 const root = new URL('../assets/data/published-families/', import.meta.url);
 const registry = JSON.parse(await readFile(new URL('registry.json', root), 'utf8'));
 const now = new Date().toISOString();
 const records = [];
+const appliedPersonCorrections = [];
 for (const id of familyIds) {
   const registered = FAMILY_REGISTRY.find(record => record.id === id);
   assert(registered, id);
@@ -44,9 +61,7 @@ for (const record of records) for (const old of record.previous?.family.persons 
         `Abstammung der fortgeführten Person: ${old.id}`);
     }
   }
-  for (const field of ['id','worldPersonId','birth','death','houseId']) {
-    assert.equal(current[field], old[field], `${record.family.document.id}/${old.id}/${field}`);
-  }
+  appliedPersonCorrections.push(...assertSnapshotPersonIdentity(record.family.document.id, old, current, personFieldCorrections));
 }
 assertMirroredCrossFamilyBatch(records);
 const changed = records.filter(record => record.changed);
@@ -69,5 +84,6 @@ if(apply) {
   }
   if(changed.length) await writeFile(new URL('registry.json',root),JSON.stringify(registry,null,2)+'\n');
 }
-return {applied:apply,changed:changed.map(record=>record.family.document.id),preservedExistingIdentities:true};
+return {applied:apply,changed:changed.map(record=>record.family.document.id),preservedExistingIdentities:true,
+  ...(appliedPersonCorrections.length ? { personFieldCorrections: appliedPersonCorrections } : {})};
 }

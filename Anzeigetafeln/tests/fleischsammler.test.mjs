@@ -27,7 +27,7 @@ test('Fleischsammler is one four-page public announcement at the existing Mörde
   assert.equal(poster.assetId, 'moerder');
   assert.equal(poster.noticeId, root);
   assert.equal(poster.pin.enabled, true);
-  assert.equal(result.boardLayout.posters.length, 54);
+  assert.equal(result.boardLayout.posters.length, 55);
 });
 
 test('public texts and searchable metadata contain no private perpetrator background or speculative clues', () => {

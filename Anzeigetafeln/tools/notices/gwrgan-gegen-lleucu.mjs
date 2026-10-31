@@ -4,7 +4,7 @@ import { DEFAULT_BOARD_SIZE } from '../../assets/js/composition/board-compositio
 export const COURT_NOTICE_ID = 'gwynthor-gwrgan-gegen-lleucu';
 export const COURT_POSTER = Object.freeze({
   id: 'gwynthor-poster-gwrgan-gegen-lleucu', assetId: 'gericht-gwrgan-lleucu',
-  x: .377, y: .728, width: .086, rotation: -2, layer: 4000,
+  x: .377, y: .728, width: .05933, rotation: -2, layer: 4000,
   noticeId: COURT_NOTICE_ID,
   pin: { assetId: 'straight', x: .5, y: .045, size: .16, rotation: 4, enabled: true }
 });

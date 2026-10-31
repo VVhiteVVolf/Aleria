@@ -1,4 +1,4 @@
-import { NOTICE_HANDWRITING, noticeLanguageFonts, normalizeNoticeTypography } from './notice-font-catalog.mjs';
+import { NOTICE_HANDWRITING, noticeLanguageFonts, normalizeNoticeTypography } from './notice-font-catalog.mjs?v=20261031-schoolbell';
 import { ensureNoticeFont } from './notice-font-loader.mjs';
 
 const esc = value => window.TafelRuntime.esc(value);
@@ -9,6 +9,15 @@ const normalize = value => normalizeNoticeTypography(value, languages());
 const hand = id => NOTICE_HANDWRITING.find(font => font.id === id);
 const language = id => languages().find(font => font.id === id);
 const sampleText = 'Die flinke Füchsin läuft über den großen Markt. Bitte bringt fünf Krüge mit!';
+
+function commentStyle(comment) {
+  const font = hand(comment.typography?.font);
+  return font ? `font-family:'${font.family}',serif;font-weight:400;font-style:normal;font-synthesis:none` : '';
+}
+
+function commentRegions(root) {
+  return [...root.querySelectorAll('[data-comment-handwriting]')].map(element => ({ element, font: hand(element.dataset.commentHandwriting) })).filter(target => target.font);
+}
 
 function options(value, heading = false) {
   return `${heading ? `<option value="inherit" ${value === 'inherit' ? 'selected' : ''}>Wie der Text</option>` : ''}<option value="template" ${value === 'template' ? 'selected' : ''}>Schrift der Vorlage</option>${NOTICE_HANDWRITING.map(font => `<option value="${font.id}" ${value === font.id ? 'selected' : ''}>${esc(font.label)} · ${esc(font.family)}</option>`).join('')}`;
@@ -76,7 +85,8 @@ function regions(article) {
 function mount(root, notice) {
   const article = root.querySelector('[data-notice-layout]');
   const style = normalize(notice.typography);
-  if (!article || (style.font === 'template' && ['inherit', 'template'].includes(style.heading) && style.script === 'common')) return () => {};
+  const commentFonts = commentRegions(root).map(target => target.font);
+  if (!article || (style.font === 'template' && ['inherit', 'template'].includes(style.heading) && style.script === 'common' && !commentFonts.length)) return () => {};
   let disposed = false;
   let ready = false;
   let readable = false;
@@ -111,6 +121,8 @@ function mount(root, notice) {
       else target.element.removeAttribute('dir');
       for (const [node, text] of target.nodes) node.nodeValue = script && ready && !readable ? window.AleriaLanguageScripts.display(text, style.script) : text;
     }
+    // Resolve the current comment nodes again: adding a reply replaces this list.
+    for (const { element, font } of commentRegions(root)) element.style.fontFamily = readable ? '"EB Garamond", Georgia, serif' : `"${font.family}", serif`;
     label.textContent = failed ? 'Schrift nicht verfügbar · lesbare Fassung' : readable ? 'Lesbare Fassung' : `${script?.label || hand(style.font)?.label || hand(style.heading)?.label || 'Eigene Handschrift'}${ready ? '' : ' · Schrift wird geladen'}`;
     button.textContent = readable ? 'Originalschrift' : script ? 'Übersetzen' : 'Lesbar anzeigen';
     button.setAttribute('aria-pressed', String(readable));
@@ -119,7 +131,7 @@ function mount(root, notice) {
 
   buttons.set(button, () => { readable = !readable; paint(); });
   paint();
-  Promise.all([script || hand(style.font), !script && hand(style.heading)].filter(Boolean).map(ensureNoticeFont)).then(() => {
+  Promise.all([script || hand(style.font), !script && hand(style.heading), ...commentFonts].filter(Boolean).map(ensureNoticeFont)).then(() => {
     if (disposed) return;
     ready = true;
     paint();
@@ -134,6 +146,6 @@ function mount(root, notice) {
 }
 
 export function initializeNoticeTypography() {
-  window.TafelNoticeTypography = Object.freeze({ controls, field, mount, updateSample,
+  window.TafelNoticeTypography = Object.freeze({ controls, field, mount, updateSample, commentStyle,
     toggle: element => buttons.get(element)?.(), normalize });
 }

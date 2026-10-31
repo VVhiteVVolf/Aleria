@@ -8,6 +8,7 @@ const skellorFamilyInputs = [
 ];
 const gwynthorFamilyInputs = [
   'AleriaAlmanach/modules/gwynthor-heime/',
+  'AleriaAlmanach/modules/gwynthor-troetzli/',
   'AleriaAlmanach/modules/arkaneum/arkaneum-people.mjs',
   'AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-people.mjs',
   'AleriaAlmanach/modules/kleiner-durst/durst-people.mjs',
@@ -80,7 +81,7 @@ export const SITE_BUILD_TASKS = [
       ['Anzeigetafeln/tools/validate-tafeln-structure.mjs'],
       ['AleriaAlmanach/scripts/check-comment-language-bubbles.js'],
       testCommand('Anzeigetafeln/tests/authored-notices.test.mjs', 'Anzeigetafeln/tests/gwynthor-board.test.mjs',
-        'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-composition-migration.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs', 'Anzeigetafeln/tests/board-performance.test.mjs',
+        'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-composition-migration.test.mjs', 'Anzeigetafeln/tests/board-composition-sources.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs', 'Anzeigetafeln/tests/board-performance.test.mjs',
         'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs',
         'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs', 'Anzeigetafeln/tests/notice-seals.test.mjs', 'Anzeigetafeln/tests/notice-signoffs.test.mjs', 'Anzeigetafeln/tests/notice-module-links.test.mjs',
         'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Anzeigetafeln/tests/fleischsammler.test.mjs', 'Anzeigetafeln/tests/gwrgan-lleucu.test.mjs', 'Orte/tests/poi-bridges.test.mjs',
@@ -98,6 +99,28 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/tests/authored-character-import.test.mjs'],
     commands: [['AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', '--check'],
       testCommand(almanach('schwarze-zitteraale'), almanach('arvel-skellor'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
+  },
+  {
+    id: 'gwynthor-lotsensuche', label: 'Two guide notices, handwritten replies and public character records',
+    inputs: ['AleriaAlmanach/modules/gwynthor-lotsensuche/', 'AleriaAlmanach/assets/gwynthor-lotsensuche/',
+      'AleriaAlmanach/scripts/build-gwynthor-lotsensuche.mjs', 'Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/',
+      'CharakterDatenbank/lib/', 'CharakterDatenbank/scripts/import-authored-characters.mjs',
+      'Anzeigetafeln/', 'Fonts/Handwriting/'],
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-lotsensuche.mjs', '--check'],
+      ['Anzeigetafeln/tools/build-lotsensuche.mjs', '--check'],
+      testCommand('Anzeigetafeln/tests/lotsensuche.test.mjs')]
+  },
+  {
+    id: 'gwynthor-troetzli', label: 'Penrudd marriage, reporter household, named Rhyfel and Hilfe notice',
+    inputs: ['AleriaAlmanach/modules/gwynthor-troetzli/', 'AleriaAlmanach/assets/gwynthor-troetzli/',
+      'AleriaAlmanach/modules/creatures/', 'AleriaAlmanach/modules/character-genealogy/',
+      'AleriaAlmanach/modules/rotes-tor/penrudd-household.mjs', 'AleriaAlmanach/scripts/build-gwynthor-troetzli.mjs',
+      'AleriaAlmanach/tests/gwynthor-troetzli.test.mjs', 'CharakterDatenbank/lib/',
+      'CharakterDatenbank/scripts/import-authored-characters.mjs', 'Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/',
+      'Stammbäume/assets/js/', 'Stammbäume/assets/data/published-families/', 'Anzeigetafeln/', 'Zeitungen/'],
+    excludes: ['Stammbäume/assets/data/published-families/backups/'],
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-troetzli.mjs', '--check'],
+      testCommand(almanach('gwynthor-troetzli'), almanach('rotes-tor'), 'Stammbäume/tests/house-penrudd.test.js', 'Stammbäume/tests/family-snapshot-corrections.test.js', 'Zeitungen/tests/celtigerns-echo.test.mjs')]
   },
   {
     id: 'gwynthor-erbstreit', label: 'Court families, linked Swyll branches and approved portrait assets',

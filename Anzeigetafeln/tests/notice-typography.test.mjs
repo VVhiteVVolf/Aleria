@@ -9,14 +9,15 @@ vm.runInNewContext(readFileSync(new URL('../../AleriaAlmanach/modules/language/l
 const scripts = context.window.AleriaLanguageScripts;
 const languages = noticeLanguageFonts(scripts.entries);
 
-test('seven real local handwriting fonts and all twelve canonical language scripts are available', () => {
-  assert.equal(NOTICE_HANDWRITING.length, 7);
+test('eight real local handwriting fonts and all twelve canonical language scripts are available', () => {
+  assert.equal(NOTICE_HANDWRITING.length, 8);
   assert.equal(languages.length, 12);
   for (const font of [...NOTICE_HANDWRITING, ...languages]) {
     assert.ok(existsSync(new URL(font.url)), font.family);
     for (const dependency of font.dependencies || []) assert.ok(existsSync(new URL(dependency)), dependency);
   }
   assert.ok(NOTICE_HANDWRITING.some(font => font.id === 'monsieurladoulaise'));
+  assert.equal(normalizeNoticeTypography({ font: 'schoolbell' }).font, 'schoolbell');
 });
 
 test('font settings use safe IDs with independent title, handwriting and script choices', () => {

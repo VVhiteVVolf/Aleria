@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-30T18:10:16.584Z",
+  "sourceExportedAt": "2026-10-31T00:00:00Z",
   "summary": {
-    "sourceDocuments": 384,
-    "total": 246,
+    "sourceDocuments": 389,
+    "total": 251,
     "mergedSameNameGroups": 45,
     "familyLinked": 163,
     "familyAmbiguous": 0,
-    "familyPending": 83,
+    "familyPending": 88,
     "primaryFamily": 163,
     "primaryGroup": 31,
-    "primaryPlace": 18,
+    "primaryPlace": 23,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -975,6 +975,66 @@
         "kind": "group",
         "id": "schwarze-zitteraale",
         "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--vebrand-wolfsruf",
+      "name": "Vébrand Wolfsruf",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--rob-gwynthor-tageloehner",
+      "name": "Rob",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--haus-llythfor--cynddelw-llythfor",
+      "name": "Cynddelw Llythfor",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--haus-penrudd--esyllt-penrudd",
+      "name": "Esyllt Penrudd",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--haus-llythfor--eirlys-llythfor",
+      "name": "Eirlys Llythfor",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
         "source": "archive-tab"
       },
       "familyAlternatives": []

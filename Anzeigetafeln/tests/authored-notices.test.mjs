@@ -121,7 +121,7 @@ test('requested authored corrections update only unchanged defaults once, preser
   const restored = app.TafelAuthoredNotices.merge(app.TafelState.snapshot(), pack);
   assert.equal(restored.zettel[0].noticeGroupId, undefined, 'later deliberate ungrouping survives reload');
   assert.ok(!restored.zettel.some(item => item.id === pack.zettel[3].id), 'deleted authored sheet stays deleted');
-  assert.equal(restored.appliedAuthoredUpdateIds.length, pack.updates.length);
+  assert.equal(restored.appliedAuthoredUpdateIds.length, pack.updates.length + pack.boardLayoutUpdates.length);
 });
 
 for (const [baselineFile, revision] of [

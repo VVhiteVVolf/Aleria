@@ -26,7 +26,7 @@ const entries = Object.freeze([
     edition: "Gwynthor",
     cover: "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
     themeId: "celtigerns-echo",
-    issues: [issueEntry("/Zeitungen/data/celtigerns-echo-gwynthor/edition.mjs?v=20260903a")]
+    issues: [issueEntry("/Zeitungen/data/celtigerns-echo-gwynthor/edition.mjs?v=20261031-cynddelw")]
   }),
   kronenspiegelEntry("gwynthor"),
   publicationEntry({

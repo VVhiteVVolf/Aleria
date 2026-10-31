@@ -11,8 +11,8 @@ import { PENRUDD_PEOPLE, PENRUDD_HOLDINGS } from '../../AleriaAlmanach/modules/r
 test('Penrudd has one serial founder → house → time jump → father → brothers lineage', () => {
   assert.deepEqual(assertValidFamily(family).diagnostics, []);
   assert.deepEqual(auditFamilyChartLayoutPolicy(family).issues, []);
-  assert.equal(family.persons.length, 26);
-  assert.equal(new Set(family.persons.map(person => person.worldPersonId)).size, 26);
+  assert.equal(family.persons.length, 28);
+  assert.equal(new Set(family.persons.map(person => person.worldPersonId)).size, 28);
   assert.equal(family.timeJumps.length, 1);
   const [gap] = family.timeJumps;
   assert.equal(gap.parentPartnershipId, family.lineage.founderPartnershipId);
@@ -52,7 +52,7 @@ test('married-in people have only given names and dates permit every marriage an
   assert.equal(byId.get('gwilym-penrudd').birth, '1670');
   assert.equal(byId.get('tudur-penrudd').birth, '1674');
   assert.equal(byId.get('rhys-penrudd').birth, '1738');
-  assert.equal(PENRUDD_PEOPLE.filter(person => !person.death).length, 22);
+  assert.equal(PENRUDD_PEOPLE.filter(person => !person.death).length, 23);
 });
 
 test('the farm branch and inn are distinct households without replacing the existing Talgarth Penrys', () => {
@@ -100,7 +100,7 @@ test('portrait and appearance revision preserves identities, genealogy, local da
   prior.partnerships.find(item => item.id === 'marriage-carwyn-olwen-penrudd').notes = 'Lokale Familienüberlieferung';
   const upgraded = resolveRegisteredFamilyUpgrade(family, prior);
   const current = upgraded.persons.find(person => person.id === carwyn.id);
-  assert.equal(upgraded.extensions.sourceRevision, 2);
+  assert.equal(upgraded.extensions.sourceRevision, 5);
   assert.equal(upgraded.document.motto, prior.document.motto);
   assert.equal(current.worldPersonId, carwyn.worldPersonId);
   assert.equal(current.birth, '1693');

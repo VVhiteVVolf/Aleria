@@ -1,0 +1,271 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-10-31T00:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "id": "person--haus-llythfor--cynddelw-llythfor",
+    "name": "Cynddelw Llythfor",
+    "title": "Berichterstatter bei Celtigerns Echo",
+    "fraktion": "Haus Llythfor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Gebürtiger Gwynthorer und Berichterstatter für Celtigerns Echo. Reist für Gespräche und Nachforschungen zwischen den Orten der Grafschaft. Lebt mit Esyllt Penrudd und ihrer Tochter Eirlys in Gwynthor. Sein alter Hest wird den Reisen nicht mehr lange gewachsen sein. Für 500 Kupfer kaufte er einem Söldner den jungen erwachsenen Rhyfel-Hengst Trötzli ab; dessen heftige Schreck- und Abwehrreaktionen überfordern ihn. Er verschweigt diese Schwierigkeiten keinem Kaufinteressenten und sucht nun Hilfe für die Überführung zu seinem Schwiegervater Tudur auf den Penrudd-Hof.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00.000Z",
+    "updatedAt": "2026-10-31T00:00:00.000Z",
+    "portrait": "../AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetsOverride": false,
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-cynddelw-troetzli",
+          "name": "Trötzli",
+          "species": "Rhyfel-Hengst",
+          "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/troetzli.png",
+          "description": "Trötzli ist Cynddelw Llythfors hellbrauner, beigefarbener Rhyfel-Hengst. Erwachsen und kräftig, mit pelzigen Fesseln, vielen alten vollständig verheilten Narben und kurz gehaltenem, militärisch geflochtenem Langhaar. Er wirkt schreckhaft und abgekämpft und ist gegenwärtig nicht verlässlich reitbar. Warum er so reagiert und woher seine Verletzungen stammen, ist nicht bekannt.",
+          "summary": "Trötzli ist Cynddelw Llythfors hellbrauner, beigefarbener Rhyfel-Hengst. Erwachsen und kräftig, mit pelzigen Fesseln, vielen alten vollständig verheilten Narben und kurz gehaltenem, militärisch geflochtenem Langhaar. Er wirkt schreckhaft und abgekämpft und ist gegenwärtig nicht verlässlich reitbar. Warum er so reagiert und woher seine Verletzungen stammen, ist nicht bekannt.",
+          "role": "Pferd · derzeit nicht reitbar",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-cynddelw-troetzli",
+          "inventoryItemId": "cynddelw-troetzli"
+        }
+      ],
+      "items": [
+        {
+          "id": "cynddelw-troetzli",
+          "instanceId": "cynddelw-troetzli",
+          "creatureId": "companion-cynddelw-troetzli",
+          "name": "Trötzli",
+          "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/troetzli.png",
+          "description": "Trötzli ist Cynddelw Llythfors hellbrauner, beigefarbener Rhyfel-Hengst. Erwachsen und kräftig, mit pelzigen Fesseln, vielen alten vollständig verheilten Narben und kurz gehaltenem, militärisch geflochtenem Langhaar. Er wirkt schreckhaft und abgekämpft und ist gegenwärtig nicht verlässlich reitbar. Warum er so reagiert und woher seine Verletzungen stammen, ist nicht bekannt.",
+          "type": "Rhyfel-Hengst",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Rhyfel-Hengst",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-llythfor--cynddelw-llythfor",
+          "ownerCharacterName": "Cynddelw Llythfor",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-10-31T00:00:00.000Z"
+        }
+      ]
+    },
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Cynddelw Llythfor"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "42 Jahre"
+        },
+        {
+          "label": "Haus",
+          "value": "Llythfor"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Berichterstatter bei Celtigerns Echo"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Verheiratet"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Cynddelw Llythfor",
+        "biographyText": "<p>Gebürtiger Gwynthorer und Berichterstatter für Celtigerns Echo. Reist für Gespräche und Nachforschungen zwischen den Orten der Grafschaft. Lebt mit Esyllt Penrudd und ihrer Tochter Eirlys in Gwynthor. Sein alter Hest wird den Reisen nicht mehr lange gewachsen sein. Für 500 Kupfer kaufte er einem Söldner den jungen erwachsenen Rhyfel-Hengst Trötzli ab; dessen heftige Schreck- und Abwehrreaktionen überfordern ihn. Er verschweigt diese Schwierigkeiten keinem Kaufinteressenten und sucht nun Hilfe für die Überführung zu seinem Schwiegervater Tudur auf den Penrudd-Hof.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Aufmerksamer Zuhörer",
+            "detail": "Sammelt Aussagen, Namen und offene Fragen in einem kleinen Lederbuch.",
+            "icon": ""
+          },
+          {
+            "title": "Ehrlich trotz eigener Not",
+            "detail": "Verschweigt Kaufinteressenten Trötzlis Schwierigkeiten nicht.",
+            "icon": ""
+          },
+          {
+            "title": "Besser mit Worten als mit Pferden",
+            "detail": "Hat mit dem vermeintlichen Schnäppchen seine Erfahrung überschätzt.",
+            "icon": ""
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Erscheinung",
+        "historyText": "<p>42 Jahre. Glattes braunes Haar nach hinten gestrichen, lässige Wollmütze, frecher gepflegter Kinnbart und schmaler Schnurrbart. Drückt ein kleines Lederbuch an die Brust, die andere Hand am Kinn; verträumt grübelnder Blick zum Himmel. Schlichte gepflegte Bürgerkleidung.</p>",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Esyllt Penrudd",
+            "detail": "Jüngste Tochter Tudurs · lebt in Gwynthor",
+            "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eirlys Llythfor",
+            "detail": "Tochter Cynddelws und Esyllts",
+            "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Familienakten",
+        "documents": [
+          {
+            "icon": "",
+            "title": "Haus Llythfor",
+            "text": "Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+          },
+          {
+            "icon": "",
+            "title": "Haus Penrudd",
+            "text": "Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+          }
+        ],
+        "footer": "Personenakte · Cynddelw Llythfor"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-llythfor--cynddelw-llythfor"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-llythfor--cynddelw-llythfor",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1698",
+      "death": "",
+      "houseId": "house-llythfor",
+      "houseName": "Haus Llythfor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-penrudd",
+          "personId": "cynddelw-llythfor",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-31T00:00:00.000Z",
+          "lastSyncedAt": "2026-10-31T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view&person=cynddelw-llythfor",
+          "fingerprint": "{\"name\":\"Cynddelw Llythfor\",\"title\":\"Berichterstatter bei Celtigerns Echo\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-llythfor\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"esyllt-penrudd\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penrudd--esyllt-penrudd\",\"name\":\"Esyllt Penrudd\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-llythfor",
+          "personId": "cynddelw-llythfor",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-31T00:00:00.000Z",
+          "lastSyncedAt": "2026-10-31T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view&person=cynddelw-llythfor",
+          "fingerprint": "{\"name\":\"Cynddelw Llythfor\",\"title\":\"Berichterstatter bei Celtigerns Echo\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-llythfor\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-llythfor-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-llythfor--haus-llythfor-gruender\",\"name\":\"??? Llythfor\"},{\"personId\":\"haus-llythfor-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-llythfor--haus-llythfor-gruenderin\",\"name\":\"??? Llythfor\"}],\"partners\":[{\"personId\":\"esyllt-penrudd\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penrudd--esyllt-penrudd\",\"name\":\"Esyllt Penrudd\"}],\"children\":[{\"personId\":\"eirlys-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--eirlys-llythfor\",\"name\":\"Eirlys Llythfor\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "haus-llythfor-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-llythfor--haus-llythfor-gruender",
+            "name": "??? Llythfor"
+          },
+          {
+            "personId": "haus-llythfor-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-llythfor--haus-llythfor-gruenderin",
+            "name": "??? Llythfor"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "esyllt-penrudd",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-penrudd--esyllt-penrudd",
+            "name": "Esyllt Penrudd"
+          }
+        ],
+        "children": [
+          {
+            "personId": "eirlys-llythfor",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-llythfor--eirlys-llythfor",
+            "name": "Eirlys Llythfor"
+          }
+        ]
+      }
+    }
+  }
+}

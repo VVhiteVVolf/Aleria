@@ -1,0 +1,724 @@
+{
+  "type": "aleria-creature",
+  "creature": {
+    "schemaVersion": 7,
+    "entityType": "creature",
+    "itemOrigin": {
+      "instanceId": "cynddelw-troetzli",
+      "inventoryItemId": "cynddelw-troetzli",
+      "templateId": "",
+      "ownerCharacterId": "person--haus-llythfor--cynddelw-llythfor",
+      "ownerCharacterName": "Cynddelw Llythfor",
+      "disposition": "owned"
+    },
+    "needsStatReview": false,
+    "name": "Trötzli",
+    "type": "Tier",
+    "species": "Rhyfel-Hengst",
+    "bestiaryReference": {
+      "id": "tiere/pferde/rhyfel",
+      "name": "Rhyfel",
+      "url": "/Bestiarium/tiere/pferde/rhyfel/index.html"
+    },
+    "bestiaryAncestry": null,
+    "classification": {
+      "genus": "Pferde",
+      "location": "Gwynthor",
+      "house": "Haus Llythfor"
+    },
+    "habitat": "Gwynthor · Überführung zum Penrudd-Hof geplant",
+    "challengeRating": 3,
+    "size": "Groß",
+    "level": 3,
+    "biography": {
+      "schemaVersion": 2,
+      "revision": 0,
+      "summary": "Trötzli ist Cynddelw Llythfors hellbrauner, beigefarbener Rhyfel-Hengst. Erwachsen und kräftig, mit pelzigen Fesseln, vielen alten vollständig verheilten Narben und kurz gehaltenem, militärisch geflochtenem Langhaar. Er wirkt schreckhaft und abgekämpft und ist gegenwärtig nicht verlässlich reitbar. Warum er so reagiert und woher seine Verletzungen stammen, ist nicht bekannt.",
+      "appearance": "Hellbraunes bis beigefarbenes Fell, kräftiger gesunder Rhyfel-Körper mit natürlichen weicheren Konturen. Dicht behaarte Fesseln. Kurze geschorene und geflochtene Mähne, kurz gehaltener militärisch geflochtener Schweif. Viele alte Biss-, Brand-, Stich-, Hieb- und Krallennarben, sämtlich vollständig verheilt; keine frischen Wunden.",
+      "personality": "Schreckhaft, misstrauisch und schnell überfordert. Seine heftige Abwehr kann Menschen gefährden. Er ist weder ein böses Tier noch bereits ein verlässliches Reitpferd.",
+      "history": "Cynddelw kaufte den Hengst einem Söldner für 500 Kupfer ab. Weil sein alter Hest nicht mehr lange für Reisen taugt, hielt er das kräftige erwachsene Pferd zunächst für eine günstige Anschaffung. Seine Tochter Eirlys nannte es Trötzli, weil es trotzig wirkte. Cynddelw kann die Verhaltensprobleme nicht guten Gewissens verschweigen und fand deshalb keinen Käufer. Beim letzten eigenen Führversuch verfehlte ihn ein Huf nur knapp am Kopf; die Stadtwache brauchte sechs Stunden, um den entlaufenen Hengst zurückzubringen. Tudur Penrudd weiß Bescheid und ist bereit, dem Pferd auf seinem Hof Platz und Ruhe zu geben. Der Transport steht noch aus. Weder Misshandlung durch den Verkäufer noch bestimmte Kriegserlebnisse sind gesichert.",
+      "bonds": "Besitzer: Cynddelw Llythfor. Benannt von dessen Tochter Eirlys. Geplante Unterbringung bei Tudur Penrudd; dadurch wechselt der Besitz nicht automatisch.",
+      "habits": "",
+      "facts": [
+        {
+          "label": "Rasse",
+          "value": "Rhyfel"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Hengst"
+        },
+        {
+          "label": "Alter",
+          "value": "Erwachsen, in der Blüte seines Lebens; genaues Alter unbekannt"
+        },
+        {
+          "label": "Besitzer",
+          "value": "Cynddelw Llythfor"
+        },
+        {
+          "label": "Kaufpreis",
+          "value": "500 Kupfer"
+        },
+        {
+          "label": "Reitbarkeit",
+          "value": "Derzeit nicht verlässlich reitbar"
+        },
+        {
+          "label": "Ziel",
+          "value": "Penrudd-Hof · Tudur ist unterrichtet"
+        }
+      ],
+      "sections": [],
+      "quote": "",
+      "quoteBy": "",
+      "traitsTitle": "Persönlichkeit & Eigenschaften",
+      "connectionsTitle": "Verbindungen",
+      "traits": [
+        {
+          "icon": "",
+          "title": "Alte Narben",
+          "detail": "Sichtbare verheilte Verletzungen, keine frischen Wunden. Ihre genaue Geschichte ist unbekannt."
+        },
+        {
+          "icon": "",
+          "title": "Schreckhafte Abwehr",
+          "detail": "Braucht geduldigen, erfahrenen Umgang. Der Auftrag verlangt eine sichere Überführung, keine Zähmung auf Zeit."
+        }
+      ],
+      "connections": [
+        {
+          "type": "connection",
+          "title": "",
+          "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+          "icon": "",
+          "imageFormat": "portrait",
+          "name": "Cynddelw Llythfor",
+          "detail": "Besitzer · Berichterstatter bei Celtigerns Echo"
+        },
+        {
+          "type": "connection",
+          "title": "",
+          "image": "",
+          "icon": "",
+          "imageFormat": "portrait",
+          "name": "Tudur Penrudd",
+          "detail": "Schwiegervater des Besitzers; erwartet das Pferd auf dem Penrudd-Hof"
+        }
+      ]
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/troetzli.png",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/troetzli.png",
+    "avatars": [],
+    "portraitCaption": "Trötzli · Cynddelw Llythfor",
+    "templateId": "",
+    "instanceOrdinal": 0,
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "Rhyfel-Hengst",
+        "archetype": "Tier",
+        "background": "Gwynthor · Überführung zum Penrudd-Hof geplant"
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "level": 3,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 16,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 12,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 14,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 2,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 12,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 8,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": 35,
+        "temporary": 0,
+        "hitDie": 10,
+        "averagePerLevelOverride": null,
+        "maximumOverride": 35
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 18,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "cynddelw-troetzli-perception",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "trained",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "cynddelw-troetzli-natural",
+          "inventoryItemId": "",
+          "name": "Hufschlag",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "natural",
+          "training": "simple",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · 1,5 m",
+          "properties": "Naturwaffe",
+          "notes": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        },
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        }
+      ],
+      "armorItems": [],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "troetzli-schreckreaktion",
+          "name": "Schreckhafte Abwehr",
+          "description": "Reagiert auf Überforderung rasch mit Flucht, Beißen oder Ausschlagen. Lässt sich derzeit nicht sicher reiten; ruhiger Umgang und ein gelungener Transport sind keine sofortige Heilung seiner Schwierigkeiten.",
+          "usesCurrent": 0,
+          "usesMaximum": 0,
+          "recovery": "none",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "passive",
+          "delivery": "ability",
+          "resolutionType": "",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": false,
+          "target": "",
+          "range": "",
+          "duration": "",
+          "requirements": "",
+          "tags": "",
+          "aiInstructions": "",
+          "effects": [],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": "Trötzli ist Cynddelw Llythfors hellbrauner, beigefarbener Rhyfel-Hengst. Erwachsen und kräftig, mit pelzigen Fesseln, vielen alten vollständig verheilten Narben und kurz gehaltenem, militärisch geflochtenem Langhaar. Er wirkt schreckhaft und abgekämpft und ist gegenwärtig nicht verlässlich reitbar. Warum er so reagiert und woher seine Verletzungen stammen, ist nicht bekannt."
+    },
+    "loot": {
+      "currency": "",
+      "notes": "Persönlicher Begleiter; kein festgelegter Handelswert.",
+      "items": [],
+      "revision": 0
+    },
+    "notes": "Trötzli ist Cynddelw Llythfors hellbrauner, beigefarbener Rhyfel-Hengst. Erwachsen und kräftig, mit pelzigen Fesseln, vielen alten vollständig verheilten Narben und kurz gehaltenem, militärisch geflochtenem Langhaar. Er wirkt schreckhaft und abgekämpft und ist gegenwärtig nicht verlässlich reitbar. Warum er so reagiert und woher seine Verletzungen stammen, ist nicht bekannt.",
+    "id": "companion-cynddelw-troetzli"
+  }
+}

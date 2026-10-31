@@ -1,0 +1,91 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-31T00:00:00Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "id": "vebrand-wolfsruf",
+    "name": "Vébrand Wolfsruf",
+    "title": "Freiberuflicher Blutbundsöldner",
+    "fraktion": "Blutbund",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/vebrand-wolfsruf.png",
+    "bio": "Vébrand Wolfsruf, 43 Jahre, stammt aus Ulfsstad im aldrimarischen Dämmergrund. Seine Familie gehörte zur örtlichen Priesterschaft. Mit fünfzehn verließ er diesen Weg und schloss sich dem Blutbund an. Seitdem verdient er seinen Lebensunterhalt als Söldner, ohne ein eigenes Banner zu führen.\n\nSeit vier Jahren nimmt er über den Blutbund Vertragsarbeit für einen Mathragoner Auftraggeber an. Die Bezahlung ist gut; über weitere Geschäfte seines Auftraggebers stellt er keine Fragen. Gegenwärtig hält er sich beruflich in Gwynthor auf und sucht ortskundige Unterstützung.\n\nBlondes Haar im Nacken, ein langer breiter Bart und eine aus unterschiedlichen Stücken zusammengesetzte Rüstung prägen sein Auftreten. In seinen Harnisch ist eine Faust eingraviert. Er redet unverblümt und schreibt mit deutlich mehr Entschlossenheit als Übung.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/vebrand-wolfsruf.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Vébrand Wolfsruf"
+        },
+        {
+          "label": "Alter",
+          "value": "43 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Ulfsstad · Dämmergrund · Aldrimar"
+        },
+        {
+          "label": "Stand",
+          "value": "Söldner"
+        },
+        {
+          "label": "Verbindung",
+          "value": "Blutbund"
+        },
+        {
+          "label": "Derzeit",
+          "value": "Gwynthor"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/vebrand-wolfsruf.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Vébrand Wolfsruf",
+        "biographyText": "<p>Vébrand Wolfsruf stammt aus einer Priesterfamilie in Ulfsstad, einer Waldsiedlung im aldrimarischen Dämmergrund. Das Leben der Priesterschaft wollte er nicht übernehmen. Mit fünfzehn ging er zum Blutbund und suchte sich seinen eigenen Erwerb mit der Klinge.</p><p>Heute ist er dreiundvierzig und arbeitet freiberuflich, ohne eigenes Banner. Seit vier Jahren vermittelt ihm der Blutbund feste Vertragsarbeit für einen Mathragoner Auftraggeber. Solange der Sold stimmt, hält Vébrand sich mit Fragen nach dessen übrigen Unternehmungen zurück.</p><p>Seine Ausrüstung ist über viele Jahre zusammengekommen: Kettenzeug, unterschiedlich gearbeitete Schulterstücke, Leder und ein verbeulter Harnisch mit eingravierter Faust. Er trägt blondes Haar, im Nacken lang, und einen dichten breiten Bart. Derzeit arbeitet er in Gwynthor. Seine unverblümten Worte und seine unbeholfene Handschrift machen ihn auf der Anzeigetafel leicht erkennbar.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [
+          {
+            "title": "Pragmatischer Erwerb",
+            "detail": "Nimmt Arbeit an, wenn Auftrag und Bezahlung für ihn passen.",
+            "icon": ""
+          },
+          {
+            "title": "Zusammengesuchte Ausrüstung",
+            "detail": "Behält und ersetzt brauchbare Rüstungsteile nach Bedarf.",
+            "icon": ""
+          },
+          {
+            "title": "Unverblümte Worte",
+            "detail": "Spricht direkt und wird bei Ärger rasch ausfällig.",
+            "icon": ""
+          }
+        ],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    }
+  }
+}

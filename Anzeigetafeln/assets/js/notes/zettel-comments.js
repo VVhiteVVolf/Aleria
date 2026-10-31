@@ -46,7 +46,7 @@
           ${time ? `<span>${esc(time)}</span>` : ''}
           ${canDelete ? `<button type="button" data-action="zettel-comment-delete" data-zettel-id="${esc(zettelId)}" data-comment-id="${esc(comment.id)}">Entfernen</button>` : ''}
         </div>
-        <p>${esc(text).replace(/\n/g, '<br>')}</p>
+        <p data-comment-handwriting="${esc(comment.typography?.font || 'template')}" style="${window.TafelNoticeTypography?.commentStyle?.(comment) || ''}">${esc(text).replace(/\n/g, '<br>')}</p>
       </div>
     </article>`;
   }
@@ -63,14 +63,14 @@
           ? comments.map(comment => renderComment(comment, zettel.id)).join('')
           : '<p class="zettel-comments-empty">Noch hat niemand eine Antwort hinterlassen.</p>'}
       </div>
-      <details class="notice-reply"><summary>Eine Antwort hinterlassen</summary>
+      ${zettel.publicationStatus === 'filled' ? '' : `<details class="notice-reply"><summary>Eine Antwort hinterlassen</summary>
         <div class="zettel-comment-compose">
           <label>Dein Name <input type="text" class="e-inp" data-zettel-comment-name placeholder="Ohne Namen bleibt die Antwort anonym"></label>
           <div><label for="comment-avatar-${esc(zettel.id)}">Bild oder Charakter (optional)</label><div class="notice-comment-image"><input id="comment-avatar-${esc(zettel.id)}" type="url" class="e-inp" data-zettel-comment-avatar placeholder="Bildadresse …"><button type="button" class="s-btn s-cancel" data-action="zettel-comment-image" data-zettel-id="${esc(zettel.id)}">Wählen</button></div></div>
           <label class="notice-comment-message">Deine Nachricht <textarea class="e-ta" rows="3" data-zettel-comment-text placeholder="Setze deine Worte unter den Aushang …"></textarea></label>
           <button type="button" class="s-btn s-save" data-action="zettel-comment-add" data-zettel-id="${esc(zettel.id)}">Antwort anschlagen</button>
         </div>
-      </details>
+      </details>`}
     </section>`;
   }
 
@@ -93,7 +93,7 @@
 
   function add(zettelId){
     const zettel = zettelById(zettelId);
-    if(!zettel) return;
+    if(!zettel || zettel.publicationStatus === 'filled') return;
     const root = document.querySelector(`[data-zettel-comments="${cssEscape(zettelId)}"]`);
     if(!root) return;
     const text = root.querySelector('[data-zettel-comment-text]')?.value.trim() || '';

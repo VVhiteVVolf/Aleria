@@ -1,0 +1,4 @@
+/* A filled request remains legible as a complete historical sheet. */
+.notice-publication--filled { filter: grayscale(1); opacity: .68; }
+.notice-publication-status { margin: 0 0 1rem; padding: .6rem .9rem; border: 1px solid #a39983; color: #554f44; background: #e5dfd1; font: .9rem/1.4 Georgia, serif; }
+.zettel-comment-body p[data-comment-handwriting="schoolbell"] { font-size: 1.15rem; line-height: 1.5; }

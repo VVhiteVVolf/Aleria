@@ -8,6 +8,7 @@ import {
   createCeltigernsEchoPublication,
   createVacantEchoAuthor
 } from "../celtigerns-echo/publication.mjs";
+import { TROETZLI_PEOPLE } from "../../../AleriaAlmanach/modules/gwynthor-troetzli/troetzli-household.mjs";
 
 const portraitRoot = "/Stammbäume/assets/images/portraits/haus-falchdyn";
 const articleRoot = "/Zeitungen/data/celtigerns-echo-gwynthor/articles";
@@ -149,7 +150,18 @@ const authors = Object.freeze([
       "Taliesin zeichnet Eitelkeit größer, Ausreden dünner und den Alltag ein wenig ehrlicher. Seine Satire zielt auf Verhalten und Missstände; unbestätigter Klatsch allein ist ihm zu billig."
     ]
   }),
-  ...Array.from({ length: 4 }, (_, index) => createVacantEchoAuthor(index + 1, "Gwynthor"))
+  author({
+    id: TROETZLI_PEOPLE.cynddelw.id,
+    name: TROETZLI_PEOPLE.cynddelw.name,
+    role: "Reisender Berichterstatter",
+    beat: "Orte der Grafschaft, Gespräche und Nachforschungen vor Ort",
+    portrait: TROETZLI_PEOPLE.cynddelw.portrait,
+    biography: [
+      "Cynddelw sammelt Nachrichten für Celtigerns Echo unterwegs. In seinem kleinen Lederbuch stehen Namen, Wegbeschreibungen und Fragen, denen er noch nachgehen möchte. Er hört gern zu und schweift beim Nachdenken gelegentlich mit dem Blick zum Himmel ab.",
+      "Er lebt mit seiner Frau Esyllt Penrudd und ihrer Tochter Eirlys in Gwynthor. Ein gutes Reisepferd ist für ihn eine berufliche Notwendigkeit; von Pferden versteht er allerdings weniger als von einem gut geführten Gespräch."
+    ]
+  }),
+  ...Array.from({ length: 3 }, (_, index) => createVacantEchoAuthor(index + 2, "Gwynthor"))
 ]);
 
 export const publication = createCeltigernsEchoPublication({
@@ -168,7 +180,7 @@ export const publication = createCeltigernsEchoPublication({
 export default createIssue(publication, {
   id: "1740-03-18",
   publicationDate: DEFAULT_PUBLICATION_DATE,
-  summary: "Celtigerns Echo bereitet seine erste Gwynthorer Ausgabe mit dreizehn benannten Redaktionsmitgliedern und vier offenen Autorenstellen vor. Im Mittelpunkt stehen der Bannkreis, seine Nachbarschaften und die kleinen Geschichten, die für die Menschen vor Ort groß sind.",
+  summary: "Celtigerns Echo bereitet seine erste Gwynthorer Ausgabe mit vierzehn benannten Redaktionsmitgliedern und drei offenen Autorenstellen vor. Im Mittelpunkt stehen der Bannkreis, seine Nachbarschaften und die kleinen Geschichten, die für die Menschen vor Ort groß sind.",
   articles: Object.freeze([
     createArticle({
       id: "willkommen-bei-celtigerns-echo",

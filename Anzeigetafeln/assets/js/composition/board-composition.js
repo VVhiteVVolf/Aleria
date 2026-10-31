@@ -4,6 +4,7 @@ import { createPosterWizard } from './board-composition-creator.mjs?v=20261029-p
 import { createPosterInspector } from './board-composition-inspector.mjs?v=20261029-performance-v1';
 import { compositionConfig } from './board-composition-config.mjs?v=20261029-performance-v1';
 import { prepareBoardState } from './board-composition-migration.mjs?v=20261029-performance-v1';
+import { loadBoardCompositionSources } from './board-composition-sources.mjs?v=20261031-current-catalog';
 
 export async function initializeBoardComposition() {
   const config = compositionConfig(window.TAFEL_CONFIG);
@@ -13,13 +14,7 @@ export async function initializeBoardComposition() {
   const stacks = () => window.TafelNoticeStacks;
   let assets, preset;
   try {
-    const responses = await Promise.all([fetch('assets/data/board-art-catalog.json?v=20261029-performance-v1'),
-      ...(config.presetPath ? [fetch(config.presetPath, { cache: 'no-store' })] : [])]);
-    if (responses.some(response => !response.ok)) throw new Error('Plakatbibliothek oder Tafelanordnung fehlt.');
-    const sources = await Promise.all(responses.map(response => response.json()));
-    assets = sources[0].posters;
-    preset = sources[1] || { layout: { version: 1, posters: [] } };
-    if (!assets?.length || !normalizeLayout(preset.layout, assets)) throw new Error('Ungültige Tafelanordnung.');
+    ({ assets, preset } = await loadBoardCompositionSources(config));
   } catch (error) {
     console.warn('[board-composition]', error);
     window.setTimeout(() => rt()?.toast('Die neue Plakattafel konnte nicht geladen werden. Die bisherige Tafel bleibt verfügbar.'), 0);

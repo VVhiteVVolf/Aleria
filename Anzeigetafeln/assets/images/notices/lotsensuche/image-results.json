@@ -1,0 +1,57 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "file": "blutbund-wachssiegel-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4fce9865071d2627f10f9db0400e7d5d82c201b458a230a06fc03762c2270fd3",
+      "display": "blutbund-wachssiegel-v1.webp"
+    },
+    {
+      "file": "vebrand-unterschrift-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "861bc28ace1ee5c60d64b8406fbd077f201e52bb92ffd822222584ab40419c0b",
+      "display": "vebrand-unterschrift-v1.webp"
+    },
+    {
+      "file": "wegweiser-icon-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "cecafe1752541ed3611327951b363b902e2259b8dc3ace60230e5482a8e03bc1",
+      "display": "wegweiser-icon-v1.webp"
+    }
+  ],
+  "poster": {
+    "file": "lotsen-plakat-v2.png",
+    "sha256": "3d9fe05671c7093dda54537456fa66c9d64c4a877a7482d369ad8a0678e89b0c",
+    "catalog": {
+      "id": "lotsensuche-vebrand",
+      "name": "Lotsse gesucht",
+      "category": "Hilfsgesuche",
+      "src": "assets/images/board-posters/display/lotsensuche-vebrand.webp",
+      "width": 408,
+      "height": 612,
+      "bounds": {
+        "x": 9,
+        "y": 13,
+        "w": 392,
+        "h": 586
+      },
+      "aspect": 0.668942,
+      "originalSrc": "assets/images/notices/lotsensuche/lotsen-plakat-v2.png",
+      "thumbnail": {
+        "src": "assets/images/board-posters/thumbnails/lotsensuche-vebrand.webp",
+        "width": 134,
+        "height": 200,
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "w": 134,
+          "h": 200
+        }
+      }
+    }
+  }
+}

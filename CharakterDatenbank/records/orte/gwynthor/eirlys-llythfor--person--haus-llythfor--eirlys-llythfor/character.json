@@ -1,0 +1,447 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-llythfor--eirlys-llythfor",
+  "slug": "eirlys-llythfor",
+  "identity": {
+    "name": "Eirlys Llythfor",
+    "aliases": [],
+    "worldPersonId": "person--haus-llythfor--eirlys-llythfor"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-llythfor--eirlys-llythfor",
+      "documentIds": [
+        "person--haus-llythfor--eirlys-llythfor"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-llythfor--eirlys-llythfor",
+          "createdAt": "2026-10-31T00:00:00.000Z",
+          "updatedAt": "2026-10-31T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--eirlys-llythfor.json",
+    "sourceExportedAt": "2026-10-31T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-10-31T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-llythfor--eirlys-llythfor"
+    ],
+    "contentHash": "bd5097dc8389df5ee9f560e4b312425469d185a1c0cf5c9e243c14eac192096f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-troetzli"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-llythfor--eirlys-llythfor",
+        "name": "Eirlys Llythfor",
+        "title": "Tochter Cynddelws und Esyllts",
+        "fraktion": "Haus Llythfor",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Zehnjährige Tochter Cynddelw Llythfors und Esyllt Penrudds. Lebt mit ihren Eltern in Gwynthor und zeichnet gern. Mit ihren beiden Zöpfen, dem frechen Zahnlückengrinsen und einem Malstift in der Hand ist sie leicht wiederzuerkennen. Gab dem neuen Pferd den Namen Trötzli, weil es sich so trotzig benimmt, und steuerte die Zeichnung von Papas Beinahetritt zu seinem Gesuch bei. Ihre Zuneigung zum Tier bedeutet nicht, dass sie es allein führt oder reitet.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-31T00:00:00.000Z",
+        "updatedAt": "2026-10-31T00:00:00.000Z",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Eirlys Llythfor"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "10 Jahre"
+            },
+            {
+              "label": "Haus",
+              "value": "Llythfor"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Tochter Cynddelws und Esyllts"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Gwynthor"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Kind"
+            }
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Eirlys Llythfor",
+            "biographyText": "<p>Zehnjährige Tochter Cynddelw Llythfors und Esyllt Penrudds. Lebt mit ihren Eltern in Gwynthor und zeichnet gern. Mit ihren beiden Zöpfen, dem frechen Zahnlückengrinsen und einem Malstift in der Hand ist sie leicht wiederzuerkennen. Gab dem neuen Pferd den Namen Trötzli, weil es sich so trotzig benimmt, und steuerte die Zeichnung von Papas Beinahetritt zu seinem Gesuch bei. Ihre Zuneigung zum Tier bedeutet nicht, dass sie es allein führt oder reitet.</p>",
+            "abilitiesTitle": "Persönlichkeit",
+            "abilities": [
+              {
+                "title": "Ein eigener Name",
+                "detail": "Hat Trötzli wegen seines trotzigen Auftretens benannt.",
+                "icon": ""
+              },
+              {
+                "title": "Malstift und Papier",
+                "detail": "Hält ihre Einfälle und Beobachtungen in Zeichnungen fest. Ihre Skizze begleitet Papas Gesuch.",
+                "icon": ""
+              }
+            ],
+            "extraSections": [],
+            "historyTitle": "Erscheinung",
+            "historyText": "<p>Zehn Jahre. Braunes Haar in zwei Zöpfen, braune Augen und feine Sommersprossen. Grinst frech mit einer sichtbaren Zahnlücke. Hält einen einfachen Malstift und einen Papierfetzen in den Händen; schlichte blaugrüne Kinderkleidung über hellem Leinen.</p>",
+            "worksTitle": "Bekannte Werke",
+            "works": [],
+            "triviaTitle": "Trivia",
+            "trivia": [],
+            "quotesTitle": "Zitate",
+            "quotes": [],
+            "connectionsTitle": "Familie",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Cynddelw Llythfor",
+                "detail": "Berichterstatter bei Celtigerns Echo",
+                "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Esyllt Penrudd",
+                "detail": "Jüngste Tochter Tudurs · lebt in Gwynthor",
+                "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familienakten",
+            "documents": [
+              {
+                "icon": "",
+                "title": "Haus Llythfor",
+                "text": "Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt",
+                "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+              },
+              {
+                "icon": "",
+                "title": "Haus Penrudd",
+                "text": "Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor",
+                "link": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+              }
+            ],
+            "footer": "Personenakte · Eirlys Llythfor"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-llythfor--eirlys-llythfor"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-llythfor--eirlys-llythfor",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1730",
+          "death": "",
+          "houseId": "house-llythfor",
+          "houseName": "Haus Llythfor",
+          "familyRole": "core",
+          "portraitPlaceholder": "child",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-llythfor",
+              "personId": "eirlys-llythfor",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-31T00:00:00.000Z",
+              "lastSyncedAt": "2026-10-31T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view&person=eirlys-llythfor",
+              "fingerprint": "{\"name\":\"Eirlys Llythfor\",\"title\":\"Tochter Cynddelws und Esyllts\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-llythfor\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png\",\"portraitPlaceholder\":\"child\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cynddelw-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--cynddelw-llythfor\",\"name\":\"Cynddelw Llythfor\"},{\"personId\":\"esyllt-penrudd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penrudd--esyllt-penrudd\",\"name\":\"Esyllt Penrudd\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "cynddelw-llythfor",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-llythfor--cynddelw-llythfor",
+                "name": "Cynddelw Llythfor"
+              },
+              {
+                "personId": "esyllt-penrudd",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-penrudd--esyllt-penrudd",
+                "name": "Esyllt Penrudd"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-llythfor--eirlys-llythfor",
+    "name": "Eirlys Llythfor",
+    "title": "Tochter Cynddelws und Esyllts",
+    "fraktion": "Haus Llythfor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Zehnjährige Tochter Cynddelw Llythfors und Esyllt Penrudds. Lebt mit ihren Eltern in Gwynthor und zeichnet gern. Mit ihren beiden Zöpfen, dem frechen Zahnlückengrinsen und einem Malstift in der Hand ist sie leicht wiederzuerkennen. Gab dem neuen Pferd den Namen Trötzli, weil es sich so trotzig benimmt, und steuerte die Zeichnung von Papas Beinahetritt zu seinem Gesuch bei. Ihre Zuneigung zum Tier bedeutet nicht, dass sie es allein führt oder reitet.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00.000Z",
+    "updatedAt": "2026-10-31T00:00:00.000Z",
+    "portrait": "../AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Eirlys Llythfor"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "10 Jahre"
+        },
+        {
+          "label": "Haus",
+          "value": "Llythfor"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Tochter Cynddelws und Esyllts"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Kind"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Eirlys Llythfor",
+        "biographyText": "<p>Zehnjährige Tochter Cynddelw Llythfors und Esyllt Penrudds. Lebt mit ihren Eltern in Gwynthor und zeichnet gern. Mit ihren beiden Zöpfen, dem frechen Zahnlückengrinsen und einem Malstift in der Hand ist sie leicht wiederzuerkennen. Gab dem neuen Pferd den Namen Trötzli, weil es sich so trotzig benimmt, und steuerte die Zeichnung von Papas Beinahetritt zu seinem Gesuch bei. Ihre Zuneigung zum Tier bedeutet nicht, dass sie es allein führt oder reitet.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Ein eigener Name",
+            "detail": "Hat Trötzli wegen seines trotzigen Auftretens benannt.",
+            "icon": ""
+          },
+          {
+            "title": "Malstift und Papier",
+            "detail": "Hält ihre Einfälle und Beobachtungen in Zeichnungen fest. Ihre Skizze begleitet Papas Gesuch.",
+            "icon": ""
+          }
+        ],
+        "extraSections": [],
+        "historyTitle": "Erscheinung",
+        "historyText": "<p>Zehn Jahre. Braunes Haar in zwei Zöpfen, braune Augen und feine Sommersprossen. Grinst frech mit einer sichtbaren Zahnlücke. Hält einen einfachen Malstift und einen Papierfetzen in den Händen; schlichte blaugrüne Kinderkleidung über hellem Leinen.</p>",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Cynddelw Llythfor",
+            "detail": "Berichterstatter bei Celtigerns Echo",
+            "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Esyllt Penrudd",
+            "detail": "Jüngste Tochter Tudurs · lebt in Gwynthor",
+            "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Familienakten",
+        "documents": [
+          {
+            "icon": "",
+            "title": "Haus Llythfor",
+            "text": "Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+          },
+          {
+            "icon": "",
+            "title": "Haus Penrudd",
+            "text": "Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
+          }
+        ],
+        "footer": "Personenakte · Eirlys Llythfor"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-llythfor--eirlys-llythfor"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-llythfor--eirlys-llythfor",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1730",
+      "death": "",
+      "houseId": "house-llythfor",
+      "houseName": "Haus Llythfor",
+      "familyRole": "core",
+      "portraitPlaceholder": "child",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-llythfor",
+          "personId": "eirlys-llythfor",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-31T00:00:00.000Z",
+          "lastSyncedAt": "2026-10-31T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view&person=eirlys-llythfor",
+          "fingerprint": "{\"name\":\"Eirlys Llythfor\",\"title\":\"Tochter Cynddelws und Esyllts\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-llythfor\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png\",\"portraitPlaceholder\":\"child\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cynddelw-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--cynddelw-llythfor\",\"name\":\"Cynddelw Llythfor\"},{\"personId\":\"esyllt-penrudd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penrudd--esyllt-penrudd\",\"name\":\"Esyllt Penrudd\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "cynddelw-llythfor",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-llythfor--cynddelw-llythfor",
+            "name": "Cynddelw Llythfor"
+          },
+          {
+            "personId": "esyllt-penrudd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-penrudd--esyllt-penrudd",
+            "name": "Esyllt Penrudd"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

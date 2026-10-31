@@ -86,6 +86,11 @@
     "Charakter Archiv Exporte/gwendolyn-draig-aderyn.json",
     "Charakter Archiv Exporte/gwendolyn-draig-defense-balance-2026-10-03.json",
     "Charakter Archiv Exporte/gwendolyn-draig-patrick.json",
+    "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/rob-gwynthor-tageloehner.json",
+    "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/vebrand-wolfsruf.json",
+    "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--cynddelw-llythfor.json",
+    "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--eirlys-llythfor.json",
+    "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-penrudd--esyllt-penrudd.json",
     "Charakter Archiv Exporte/hTN74LdJjXUFz7X7ReRr-tierbegleiter-2026-10-11.json",
     "Charakter Archiv Exporte/halvar-wolfshorn-gefaehrten-2026-10-13.json",
     "Charakter Archiv Exporte/heledd-gafyr-biografie-2026-09-12.json",
@@ -165,8 +170,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-10-30T18:10:16.584Z",
-  "count": 246,
+  "sourceExportedAt": "2026-10-31T00:00:00Z",
+  "count": 251,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -4803,6 +4808,101 @@
       "familyStatus": "linked",
       "path": "records/familien/haus-balchder/rice-balchder--person--haus-balchder--rice-balchder/character.json",
       "contentHash": "e2c37ecd73d94ae5bcfd813962f1452a7ac095b468bababac01be77007b001ef"
+    },
+    {
+      "recordId": "character--vebrand-wolfsruf",
+      "name": "Vébrand Wolfsruf",
+      "aliases": [],
+      "worldPersonId": "",
+      "firestoreDocumentId": "vebrand-wolfsruf",
+      "firestoreDocumentIds": [
+        "vebrand-wolfsruf"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/vebrand-wolfsruf--vebrand-wolfsruf/character.json",
+      "contentHash": "cc029d35ba68bf34274d1d8c6495ca193433a7bb943078dacf67181d4764274a"
+    },
+    {
+      "recordId": "character--rob-gwynthor-tageloehner",
+      "name": "Rob",
+      "aliases": [],
+      "worldPersonId": "",
+      "firestoreDocumentId": "rob-gwynthor-tageloehner",
+      "firestoreDocumentIds": [
+        "rob-gwynthor-tageloehner"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/rob--rob-gwynthor-tageloehner/character.json",
+      "contentHash": "961b691c1473c79a8a4eb5b097caff219db7f9f1c761c11cfe84425af1a6fa59"
+    },
+    {
+      "recordId": "character--person--haus-llythfor--cynddelw-llythfor",
+      "name": "Cynddelw Llythfor",
+      "aliases": [],
+      "worldPersonId": "person--haus-llythfor--cynddelw-llythfor",
+      "firestoreDocumentId": "person--haus-llythfor--cynddelw-llythfor",
+      "firestoreDocumentIds": [
+        "person--haus-llythfor--cynddelw-llythfor"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json",
+      "contentHash": "fd7c506af242d28f893bbe9bf6440d0c5d779e184888784da7e137b278a3d70c"
+    },
+    {
+      "recordId": "character--person--haus-penrudd--esyllt-penrudd",
+      "name": "Esyllt Penrudd",
+      "aliases": [],
+      "worldPersonId": "person--haus-penrudd--esyllt-penrudd",
+      "firestoreDocumentId": "person--haus-penrudd--esyllt-penrudd",
+      "firestoreDocumentIds": [
+        "person--haus-penrudd--esyllt-penrudd"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json",
+      "contentHash": "763ee4c6131513bedbdd26f9afc2f6bdb26cd58683ae1cdbc45c50238e898d30"
+    },
+    {
+      "recordId": "character--person--haus-llythfor--eirlys-llythfor",
+      "name": "Eirlys Llythfor",
+      "aliases": [],
+      "worldPersonId": "person--haus-llythfor--eirlys-llythfor",
+      "firestoreDocumentId": "person--haus-llythfor--eirlys-llythfor",
+      "firestoreDocumentIds": [
+        "person--haus-llythfor--eirlys-llythfor"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/eirlys-llythfor--person--haus-llythfor--eirlys-llythfor/character.json",
+      "contentHash": "bd5097dc8389df5ee9f560e4b312425469d185a1c0cf5c9e243c14eac192096f"
     }
   ]
 }

@@ -11,11 +11,11 @@ import { HOUSE_FALCHDYN_FAMILY } from "../../Stammbäume/assets/js/data/house-fa
 import { HOUSE_FALCHDYN_PORTRAITS } from "../../Stammbäume/assets/js/data/house-falchdyn-portraits.js";
 
 const workspaceRoot = resolve(import.meta.dirname, "../..");
-const namedEditorialIds = Object.freeze(Object.keys(HOUSE_FALCHDYN_PORTRAITS));
+// Gethin's later portrait belongs to his court-appointed legal role, not the newsroom.
+const namedEditorialIds = Object.freeze(Object.keys(HOUSE_FALCHDYN_PORTRAITS).filter(id => id !== 'gethin-falchdyn'));
 const youngerFalchdynWithoutRoles = Object.freeze([
   "tegid-falchdyn",
   "eluned-falchdyn",
-  "gethin-falchdyn",
   "seren-falchdyn",
   "aled-falchdyn",
   "maredudd-falchdyn",
@@ -23,7 +23,7 @@ const youngerFalchdynWithoutRoles = Object.freeze([
   "idris-falchdyn"
 ]);
 
-test("Gwynthors Celtigerns Echo führt alle portraitierten Falchdyn und vier freie Autorenstellen", () => {
+test("Gwynthors Celtigerns Echo führt die Redaktion, Cynddelw und drei freie Autorenstellen", () => {
   assert.equal(gwynthor.id, "celtigerns-echo-gwynthor");
   assert.equal(gwynthor.titleId, "celtigerns-echo");
   assert.equal(gwynthor.authors.length, 17);
@@ -32,7 +32,8 @@ test("Gwynthors Celtigerns Echo führt alle portraitierten Falchdyn und vier fre
 
   const authorsById = new Map(gwynthor.authors.map((author) => [author.id, author]));
   namedEditorialIds.forEach((personId) => assert.ok(authorsById.has(personId), personId));
-  assert.equal(gwynthor.authors.filter((author) => author.role === "Freie Autorenstelle").length, 4);
+  assert.equal(gwynthor.authors.filter((author) => author.role === "Freie Autorenstelle").length, 3);
+  assert.equal(authorsById.get("cynddelw-llythfor").role, "Reisender Berichterstatter");
   assert.equal(authorsById.get("ceredig-falchdyn").role, "Lokalreporter von Gwynthors Bannkreis");
   assert.equal(authorsById.get("branwen-falchdyn").role, "Freche Nachwuchsreporterin");
   assert.equal(authorsById.get("taliesin-falchdyn").role, "Karikaturist und Satiriker");
@@ -68,6 +69,7 @@ test("Falchdyns Lebensdaten, Namen und bewusst offene Sprösslingsprofile entspr
     assert.equal(personsById.get(personId).title, "", personId);
     assert.deepEqual(personsById.get(personId).tags, [], personId);
   });
+  assert.match(personsById.get("gethin-falchdyn").title, /Fürsprecher/);
 });
 
 test("Alle Falchdyn-Portraits und Druckzeichen liegen lokal und webtauglich vor", async () => {
@@ -77,7 +79,7 @@ test("Alle Falchdyn-Portraits und Druckzeichen liegen lokal und webtauglich vor"
   ), "utf8"));
   assert.deepEqual(Object.keys(portraitSources), namedEditorialIds);
 
-  await Promise.all(Object.values(HOUSE_FALCHDYN_PORTRAITS).map(async (portraitPath) => {
+  await Promise.all(namedEditorialIds.map(id => HOUSE_FALCHDYN_PORTRAITS[id]).map(async (portraitPath) => {
     const absolutePath = toWorkspacePath(`/Stammbäume/${portraitPath}`);
     const bytes = await readFile(absolutePath);
     assert.equal(bytes.subarray(0, 4).toString("ascii"), "RIFF");

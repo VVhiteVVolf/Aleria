@@ -1,8 +1,8 @@
 # Handschriften für Alerias Aushänge
 
-Die sieben unveränderten Originalschriften werden lokal ausgeliefert. Es gibt
+Die acht unveränderten Originalschriften werden lokal ausgeliefert. Es gibt
 keine Laufzeitverbindung zu einem externen Fontdienst. Jede Schrift liegt mit
-ihrer eigenen `OFL.txt` vor; Herkunft, genaue Upstream-Revision, Originaldateiname
+ihrem eigenen Lizenztext vor (`OFL.txt`, bei Schoolbell `LICENSE.txt` unter Apache 2.0); Herkunft, genaue Upstream-Revision, Originaldateiname
 und SHA-256-Prüfsumme stehen in [manifest.json](manifest.json).
 
 | Schrift | Auswahl im Aushang |
@@ -13,6 +13,7 @@ und SHA-256-Prüfsumme stehen in [manifest.json](manifest.json).
 | Dancing Script | Elegante Schreibschrift |
 | La Belle Aurore | Unregelmäßige Feder |
 | Beth Ellen | Krakelige Handschrift |
+| Schoolbell | Unbeholfene Druckschrift |
 | Monsieur La Doulaise | Wilde Schnörkel · schwer lesbar |
 
 Quelle: [offizielles Google-Fonts-Repository](https://github.com/google/fonts).
@@ -28,3 +29,5 @@ node Anzeigetafeln/tools/vendor-notice-handwriting.mjs --check
 
 Die Ausführung ohne `--check` aktualisiert den Bestand aus dem offiziellen
 Repository und ist ein bewusster Wartungsschritt, kein Teil des Website-Builds.
+Mit `--add=schoolbell` wird nur die gewählte Schrift an der bereits archivierten
+Upstream-Revision ergänzt; die übrigen Originaldateien bleiben erhalten.

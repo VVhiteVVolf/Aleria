@@ -944,7 +944,7 @@
         "assetId": "gericht-gwrgan-lleucu",
         "x": 0.377,
         "y": 0.728,
-        "width": 0.086,
+        "width": 0.05933,
         "rotation": -2,
         "layer": 4000,
         "noticeId": "gwynthor-gwrgan-gegen-lleucu",
@@ -954,6 +954,24 @@
           "y": 0.045,
           "size": 0.16,
           "rotation": 4,
+          "enabled": true
+        }
+      },
+      {
+        "id": "gwynthor-poster-lotsensuche",
+        "assetId": "lotsensuche-vebrand",
+        "x": 0.646,
+        "y": 0.729,
+        "width": 0.05933,
+        "rotation": 2,
+        "layer": 4002,
+        "noticeId": "gwynthor-lotsensuche",
+        "pin": {
+          "assetId": "straight",
+          "x": 0.5,
+          "y": 0.045,
+          "size": 0.16,
+          "rotation": -3,
           "enabled": true
         }
       }

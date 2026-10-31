@@ -94,9 +94,14 @@
     return renderGeneric(z);
   }
 
-  function renderLive(z, options){
-    return renderByType(z, options) + renderComments(z);
+  function publication(z, content){
+    return z.publicationStatus === 'filled'
+      ? `<div class="notice-publication notice-publication--filled" data-publication-status="filled"><p class="notice-publication-status">Angenommen · dieser ältere Anschlag ist nicht mehr offen.</p>${content}</div>`
+      : content;
   }
+
+  function renderLive(z, options){ return publication(z, renderByType(z, options) + renderComments(z)); }
+  function renderPreview(z, options){ return publication(z, renderByType(z, options)); }
 
   function handleImageError(image){
     const mode = image?.dataset?.imageFallback;
@@ -128,6 +133,7 @@
     renderGeneric,
     renderByType,
     renderLive,
+    renderPreview,
     setSteckbriefPage,
     handleImageError
   };

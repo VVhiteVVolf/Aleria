@@ -334,7 +334,7 @@
     stopPreviewLayout();
     stopPreviewTypography();
     content.innerHTML = notice
-      ? `<div class="editor-preview-card">${window.TafelZettelViews.renderByType(notice)}</div>`
+      ? `<div class="editor-preview-card">${window.TafelZettelViews.renderPreview(notice)}</div>`
       : '<div class="editor-preview-empty">Kein Aushang gewählt.</div>';
     stopPreviewTypography = notice ? window.TafelNoticeTypography.mount(content, notice) : () => {};
     stopPreviewLayout = window.TafelNoticeTextLayout.observe(content);

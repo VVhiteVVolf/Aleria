@@ -7,6 +7,7 @@ export const NOTICE_HANDWRITING = Object.freeze([
   ['dancingscript', 'Elegante Schreibschrift', 'Dancing Script'],
   ['labelleaurore', 'Unregelmäßige Feder', 'La Belle Aurore'],
   ['bethellen', 'Krakelige Handschrift', 'Beth Ellen'],
+  ['schoolbell', 'Unbeholfene Druckschrift', 'Schoolbell'],
   ['monsieurladoulaise', 'Wilde Schnörkel · schwer lesbar', 'Monsieur La Doulaise'],
 ].map(([id, label, family]) => Object.freeze({ id, label, family,
   url: new URL(`../../../../Fonts/Handwriting/${id}/regular.ttf`, import.meta.url).href })));

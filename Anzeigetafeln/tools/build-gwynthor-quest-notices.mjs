@@ -5,6 +5,8 @@ import { buildZitteraaleWantedNotices } from './quests/zitteraale-wanted.mjs';
 import { buildFleischsammlerNotices, FLEISCHSAMMLER_BOARD_BINDING } from './quests/fleischsammler-wanted.mjs';
 import { buildNoticeSignoffUpdates } from './issuers/notice-signoffs.mjs';
 import { buildGwrganLleucuNotices, COURT_BOARD_BINDING } from './notices/gwrgan-gegen-lleucu.mjs';
+import { buildLotsensucheNotices, LOTSENSUCHE_BOARD_BINDING, LOTSENSUCHE_COMMENT_CORRECTION } from './quests/lotsensuche.mjs';
+import { buildTroetzliNotice } from './quests/troetzli.mjs';
 
 export async function buildGwynthorQuestPack() {
   const herluin = buildHerluinMissingNotices();
@@ -19,7 +21,9 @@ export async function buildGwynthorQuestPack() {
   const art = JSON.parse(await readFile(new URL('../assets/data/board-art-catalog.json', import.meta.url), 'utf8'));
   const courtAsset = art.posters.find(asset => asset.id === COURT_BOARD_BINDING.assetId);
   if (!courtAsset) throw new Error('Gerichtsplakat fehlt im Bildkatalog.');
-  const notices = [...herluin, ...buildHouseholdQuestNotices(), ...buildZitteraaleWantedNotices(), ...await buildFleischsammlerNotices(), ...buildGwrganLleucuNotices(courtAsset)];
+  const guideAsset = art.posters.find(asset => asset.id === LOTSENSUCHE_BOARD_BINDING.assetId);
+  if (!guideAsset) throw new Error('Lotsenplakat fehlt im Bildkatalog.');
+  const notices = [...herluin, ...buildHouseholdQuestNotices(), ...buildZitteraaleWantedNotices(), ...await buildFleischsammlerNotices(), ...buildGwrganLleucuNotices(courtAsset), ...buildLotsensucheNotices(guideAsset), buildTroetzliNotice()];
   const voiceBaseline = JSON.parse(await readFile(new URL('./data/gwynthor-notice-voice-v1.json', import.meta.url), 'utf8'));
   for (const old of voiceBaseline.notices) {
     const current = notices.find(notice => notice.id === old.id);
@@ -46,7 +50,14 @@ export async function buildGwynthorQuestPack() {
     updates.push({ id: `${old.id}:20261021-egon-issuer-media`, noticeId: old.id, fields });
   }
   updates.push(...buildNoticeSignoffUpdates(notices.map(notice => notice.id)));
-  return { schemaVersion: 2, zettel: notices, updates, boardBindings: [FLEISCHSAMMLER_BOARD_BINDING, COURT_BOARD_BINDING] };
+  updates.push(LOTSENSUCHE_COMMENT_CORRECTION);
+  const boardLayoutUpdates = [
+    { id: 'gwynthor-court-standard-paper-size-20261031', posterId: COURT_BOARD_BINDING.posterId,
+      assetId: COURT_BOARD_BINDING.assetId, field: 'width', from: .086, to: COURT_BOARD_BINDING.poster.width },
+    { id: 'gwynthor-guide-standard-paper-size-20261031', posterId: LOTSENSUCHE_BOARD_BINDING.posterId,
+      assetId: LOTSENSUCHE_BOARD_BINDING.assetId, field: 'width', from: .088, to: LOTSENSUCHE_BOARD_BINDING.poster.width },
+  ];
+  return { schemaVersion: 2, zettel: notices, updates, boardBindings: [FLEISCHSAMMLER_BOARD_BINDING, COURT_BOARD_BINDING, LOTSENSUCHE_BOARD_BINDING], boardLayoutUpdates };
 }
 
 export async function writeGwynthorQuestPack({ check = false } = {}) {
@@ -56,7 +67,7 @@ export async function writeGwynthorQuestPack({ check = false } = {}) {
     if (await readFile(target, 'utf8') !== content) throw new Error('Gwynthors Quest-Aushänge müssen neu erzeugt werden.');
   } else {
     await writeFile(target, content);
-    console.log('Gwynthor: sechs Aushänge mit insgesamt zweiundzwanzig Blättern · Celynfor bleibt offen.');
+    console.log('Gwynthor: acht Aushänge mit insgesamt fünfundzwanzig Blättern · Celynfor bleibt offen.');
   }
 }
 

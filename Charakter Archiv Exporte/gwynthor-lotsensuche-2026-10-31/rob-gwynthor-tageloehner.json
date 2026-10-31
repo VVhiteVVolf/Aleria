@@ -1,0 +1,83 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-31T00:00:00Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "id": "rob-gwynthor-tageloehner",
+    "name": "Rob",
+    "title": "Tagelöhner",
+    "fraktion": "",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+    "bio": "Rob ist ein dreiunddreißigjähriger Tagelöhner, der sich in Gwynthor mit wechselnden Hilfsarbeiten verdingt. Er trägt braunes Haar, ist glatt rasiert und kleidet sich schlicht. Mit seinem lockeren Mundwerk kommt er rasch ins Gespräch und hat zu vielen Dingen eine freche Bemerkung bereit.\n\nEr nimmt kleinere Besorgungen und Botengänge an und ist bei der Suche nach Tagesarbeit im Hafen und den umliegenden Straßen anzutreffen.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rob"
+        },
+        {
+          "label": "Alter",
+          "value": "33 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Tagelöhner"
+        },
+        {
+          "label": "Aufenthalt",
+          "value": "Gwynthor"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-lotsensuche/portraits/rob.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Rob",
+        "biographyText": "<p>Rob verdient sich in Gwynthor seinen Unterhalt mit wechselnden Tagesarbeiten. Er hilft bei kleineren Besorgungen, übernimmt Botengänge und sucht im Hafenviertel nach dem nächsten Verdienst.</p><p>Der dreiunddreißigjährige Mann trägt braunes Haar und ein glatt rasiertes Gesicht. Seine Kleidung ist schlicht und alltagstauglich. Er redet ungezwungen, grinst gern und lässt eine Gelegenheit für eine freche Antwort selten aus. Im Gespräch gibt er sich umgänglich und findet schnell Anschluss.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [
+          {
+            "title": "Gesprächig",
+            "detail": "Kommt mit anderen Leuten rasch ins Gespräch.",
+            "icon": ""
+          },
+          {
+            "title": "Freches Mundwerk",
+            "detail": "Hat oft eine spöttische oder schlagfertige Bemerkung bereit.",
+            "icon": ""
+          },
+          {
+            "title": "Wechselnde Arbeit",
+            "detail": "Nimmt kleinere Hilfsarbeiten und Besorgungen an.",
+            "icon": ""
+          }
+        ],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    }
+  }
+}

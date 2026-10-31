@@ -1,4 +1,5 @@
 import { PENRUDD_APPEARANCES } from './penrudd-appearances.mjs';
+import { TROETZLI_PEOPLE } from '../gwynthor-troetzli/troetzli-household.mjs';
 
 /** Shared identities for the family chart and the inn's developing module. */
 export const PENRUDD_MOTTO = 'Ein Platz am Feuer.';
@@ -88,7 +89,8 @@ export const PENRUDD_PEOPLE = Object.freeze([
   member('osian', 'Osian', 'male', 1729, 'Kind · Meurigs jüngster Sohn', 'farm',
     '11 Jahre. Jüngster Sohn Meurigs und Nias. Hilft altersgemäß mit kleinen Besorgungen und kennt die Tiere des Hofes beim Namen. Kein regulärer Knecht.'),
   member('eluned', 'Eluned', 'female', 1704, 'Milchkammer · Butter und einfacher Käse', 'farm',
-    '36 Jahre. Unverheiratete Tochter Tudurs und Bethans, Schwester Meurigs. Führt die Milchkammer und stellt Butter sowie einfachen Käse her. Achtet darauf, dass Lieferungen frisch bleiben; es gibt keine magische Kühlung.')
+    '36 Jahre. Unverheiratete Tochter Tudurs und Bethans, Schwester Meurigs. Führt die Milchkammer und stellt Butter sowie einfachen Käse her. Achtet darauf, dass Lieferungen frisch bleiben; es gibt keine magische Kühlung.'),
+  TROETZLI_PEOPLE.esyllt,
 ]);
 
 export const PENRUDD_MARRIAGES = Object.freeze([
@@ -107,6 +109,6 @@ export const PENRUDD_DESCENDANTS = Object.freeze([
   ['carwyn-olwen', ['aled', 'mared', 'dewi']],
   ['aled-cerys', ['rhys']],
   ['hywel-ffion', ['iwan', 'eleri']],
-  ['tudur-bethan', ['meurig', 'eluned']],
+  ['tudur-bethan', ['meurig', 'eluned', 'esyllt']],
   ['meurig-nia', ['gethin', 'lowri', 'osian']]
 ].map(([marriage, children]) => Object.freeze({ marriage, children: Object.freeze(children) })));

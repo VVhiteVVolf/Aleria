@@ -2579,6 +2579,77 @@
       "updatedAt": "2026-10-21T20:43:40.568Z",
       "link": "Stammbaum.html?family=haus-merek&mode=view",
       "source": "github"
+    },
+    {
+      "id": "haus-penrudd",
+      "familyId": "haus-penrudd",
+      "title": "Haus Penrudd",
+      "motto": "Ein Platz am Feuer.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Bannkreis Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Zum Roten Tor",
+          "Penrudd-Hof"
+        ],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 28,
+      "revision": 3,
+      "updatedAt": "2026-10-31T01:16:59.450Z",
+      "link": "Stammbaum.html?family=haus-penrudd&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-llythfor",
+      "familyId": "haus-llythfor",
+      "title": "Haus Llythfor",
+      "motto": "",
+      "emblem": "assets/images/placeholders/neutral-crest.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 5,
+      "revision": 4,
+      "updatedAt": "2026-10-31T01:16:59.450Z",
+      "link": "Stammbaum.html?family=haus-llythfor&mode=view",
+      "source": "github"
     }
   ]
 }

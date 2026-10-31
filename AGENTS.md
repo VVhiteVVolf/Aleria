@@ -2,6 +2,16 @@
 
 ## Aktuelle Veröffentlichungsfreigabe
 
+Nutzerfreigabe vom 31. Oktober 2026: **„Push and deploy alle neuerungen.“**
+Sie umfasst den gesamten aktuellen lokalen Stand: Vébrands zweiblättrige
+Lotsensuche, die öffentlichen Figuren und Bilder, Handschrift und Blutbundsiegel,
+die korrigierten Plakatgrößen und Kommentare sowie den behobenen Tafel-Ladefehler;
+außerdem „Der Städter und sein Pferd“ am Hilfe-Plakat mit Cynddelw, Esyllt,
+Eirlys (zehn Jahre), Trötzli, Familienverknüpfungen, Kinderzeichnung und der
+Belohnung aus 50 Kupferstücken, Notizbuch und Schreibutensilien. Zugehörige
+Quellen, Registerabgleiche und Prüfbelege bleiben erhalten. Private Dossiers,
+geheime Vorgeschichten und lokale Browserentwürfe bleiben ausgeschlossen.
+
 Nutzerfreigabe vom 30. Oktober 2026: **„Dann los!“**, als Antwort auf den noch
 ausstehenden Push und Deploy des Gerichtsfalls. Sie umfasst Gwrgan gegen Lleucu,
 die korrigierte Swyll-Darstellung, den erweiterten Twyllod-Hof mit Glendowers
