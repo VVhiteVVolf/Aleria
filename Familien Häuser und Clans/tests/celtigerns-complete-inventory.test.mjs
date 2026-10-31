@@ -43,8 +43,8 @@ test('Jede der 93 Familien besitzt eine erreichbare Hausseite und eine korrekt v
   }
 });
 
-test('Neue Cochdon- und Twyllod-Akten besitzen Familienbeschreibungen und eine gezielt ausgearbeitete Twyllod-Bio', () => {
-  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), ['haus-cochdon', 'haus-twyllod']);
+test('Neue Cochdon-, Llythfor- und Twyllod-Akten besitzen Familienbeschreibungen und eine gezielt ausgearbeitete Twyllod-Bio', () => {
+  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), ['haus-cochdon', 'haus-llythfor', 'haus-twyllod']);
   for (const record of familiesWithoutHousePage) {
     assert.ok(record.family.document.description.length > 150, record.id);
     assert.ok(record.family.persons.length > 0, record.id);
@@ -52,13 +52,13 @@ test('Neue Cochdon- und Twyllod-Akten besitzen Familienbeschreibungen und eine g
   assert.ok(familiesWithoutHousePage.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
 });
 
-test('Grafschaft führt ihre 55 ausgewählten Häuser mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
+test('Grafschaft führt ihre 56 ausgewählten Häuser mit direkten Seiten- oder Familienaktenlinks und lokalen Wappen', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
   const cards = sections.flatMap(section => section.cards);
-  assert.equal(cards.length, 55);
-  assert.equal(new Set(cards.map(c => c.id)).size, 55);
+  assert.equal(cards.length, 56);
+  assert.equal(new Set(cards.map(c => c.id)).size, 56);
   for (const card of cards) {
     assert.ok(areaFamilies.some(record => record.id === card.id), card.id);
     if (registry.byId(card.id)) {
