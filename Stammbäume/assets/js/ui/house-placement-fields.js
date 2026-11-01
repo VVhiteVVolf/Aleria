@@ -48,6 +48,7 @@ export function createHousePlacementFields(container, {
       <div>
         <p class="eyebrow">Systematische Registereinsortierung</p>
         <h4>Pfad vom Reich bis zur Ortschaft</h4>
+        <p>Maßgeblich ist der Wohnort oder Stammsitz. Dienst- und Lehnsherren werden separat im Hausprofil erfasst. Gwynthors Bannkreis gehört hier zu Gwynthor.</p>
         <p>Jede Ebene benötigt eine Bezeichnung und ein eigenes Icon. Die nächste Ebene wird erst danach freigeschaltet.</p>
       </div>
       <label class="checkbox-field house-placement__unclassified">

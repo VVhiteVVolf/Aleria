@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-01T01:26:56.456Z",
+  "groups": [
+    {
+      "file": "frontend-final.log",
+      "tests": 179,
+      "passed": 179,
+      "failed": 0
+    },
+    {
+      "file": "server-final.log",
+      "tests": 272,
+      "passed": 272,
+      "failed": 0
+    },
+    {
+      "file": "rules-final.log",
+      "tests": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    {
+      "file": "notice-rewards-final.log",
+      "tests": 21,
+      "passed": 21,
+      "failed": 0
+    },
+    {
+      "file": "adventure-final.log",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "file": "release-final.log",
+      "tests": 25,
+      "passed": 25,
+      "failed": 0
+    }
+  ],
+  "passed": 518,
+  "buildSucceeded": true,
+  "sourceCatalog": {
+    "quests": 15,
+    "boards": 3,
+    "maps": 69,
+    "modules": 89,
+    "rewardRows": 1110,
+    "sharedDefinitions": 807
+  },
+  "broadSuite": {
+    "scope": "Earlier full-suite snapshot; affected cases rerun in the current targeted suite.",
+    "tests": 1941,
+    "initialFailures": 17,
+    "retestedModuleStoreCases": 22,
+    "correctedAdapterFailures": [
+      "the actual split loader keeps an ISO release newer than the eight-person cache",
+      "the split module round trip retains section icons and content"
+    ],
+    "remainingFailures": [
+      "alle Kämpferklassen verwenden die Rüstungskategorie auch bei älteren Einträgen",
+      "Duncans local database record and prepared online inventory use the same Carreg identity",
+      "the notice joins Hilfe as its own publication and never adds a poster or reveals an invented trauma",
+      "chosen ship cats survive creature import with distinct portraits, histories and Trevor ownership",
+      "both cats link once to Trevor while existing possessions, money and combat remain unchanged",
+      "Kanne service insertion preserves reviewed pages, comment identities and purchase offers",
+      "all catalog action/reaction damage starts with the real weapon; all pure bonus techniques remain capped",
+      "local records and review exports link each companion to its actual owner; Freki and Skarns status remain distinct",
+      "triple 15,15,15, save 1: independent attacks, one final save, exact damage/costs",
+      "triple 15,15,15, save 20: independent attacks, one final save, exact damage/costs",
+      "triple 15,2,15, save 1: independent attacks, one final save, exact damage/costs",
+      "triple 15,2,15, save 20: independent attacks, one final save, exact damage/costs",
+      "triple 20,20,20, save 1: independent attacks, one final save, exact damage/costs",
+      "triple 20,20,20, save 20: independent attacks, one final save, exact damage/costs",
+      "triple fixed dice survive two-handed grip; ordinary two-strike sequence has no training die"
+    ],
+    "identicalToPreviousBaseline": true
+  },
+  "browser": {
+    "create": true,
+    "startParty": true,
+    "travelLog": true,
+    "finish": true,
+    "claim": true,
+    "archiveSearch": true,
+    "landingTemplateProjection": true,
+    "allFiveSidebarIconsLoaded": true,
+    "moduleRewardSelection": true
+  },
+  "questPresentation": {
+    "selectedBanner": "gwynthor-companions-banner-v2.png",
+    "userApproved": true,
+    "portraitMedaillons": true,
+    "plainCopperWithSeparateAmount": true,
+    "sceneLocationUiVerified": true,
+    "groupPayoutUiVerified": true,
+    "routeKm": 6.5454784966306985
+  },
+  "emulator": {
+    "projectId": "demo-aleria-quests",
+    "host": "127.0.0.1:8187",
+    "liveWrites": false,
+    "originalTestFiguresOnly": true
+  },
+  "published": false,
+  "liveMigration": false
+}

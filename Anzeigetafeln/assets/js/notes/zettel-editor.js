@@ -158,6 +158,7 @@
       <input class="e-inp" value="${esc(z.untertitel || '')}" placeholder="Zusatz, Datum…" data-input-action="zettel-field" data-field="untertitel"/></div>
     <div class="e-group"><label class="lml">Stand des Anschlags</label>
       <select class="e-sel" data-input-action="zettel-field" data-field="publicationStatus">${option('open', 'Offen', z.publicationStatus || 'open')}${option('filled', 'Angenommen · ausgegraut', z.publicationStatus)}</select></div>
+    <div class="e-group" data-notice-date-editor></div>
     ${window.TafelNoticeTypography.controls(z)}
     ${window.TafelNoticeStackEditor.render(z)}
     ${mediaFields(z)}
@@ -200,6 +201,7 @@
     <button class="s-btn" style="margin-left:auto;color:var(--red);border-color:var(--red);" data-action="zettel-delete" data-zettel-id="${z.id}">🗑</button>
   </div>`;
     rt().openEditorShell('zettel', z.id);
+    window.TafelNoticeTimeline?.mountEditor(document.querySelector('#sidebar [data-notice-date-editor]'), z);
     window.TafelNoticeTypography.updateSample(document.querySelector('#sidebar [data-notice-font-sample]'), z);
   }
 

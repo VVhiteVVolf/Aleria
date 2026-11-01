@@ -8,7 +8,7 @@ const costs = ids => ids.map(resourceId => ({ resourceId, name: names[resourceId
 const A = 'action', B = 'bonus-action', R = 'reaction', S = 'special-action';
 const startDuration = { kind: 'actor-comments', remainingActorComments: 1, expiresAt: 'actor-start' };
 const nextDuration = { kind: 'actor-comments', remainingActorComments: 1 };
-const damageEffect = { type: 'damage', target: 'target', on: 'hit' };
+const damageEffect = { type: 'damage', target: 'target', on: 'hit', inheritWeaponDamageType: true };
 const penalty = amount => {
   const condition = createPositionCondition(false);
   return { ...condition, description: `Der nächste eigene Waffen-/Technikangriff erhält −${amount} Angriff; auch bei Fehlschlag verbraucht. Verfällt am Ende des nächsten eigenen Beitrags.`,

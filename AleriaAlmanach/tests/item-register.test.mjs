@@ -123,7 +123,7 @@ test('provider variants stay separate and configured buyback overrides the defau
   assert.equal(resalePrice({ purchase: { unitCopper: 500 } }, first), 123);
 });
 test('weapons with explicit game values enter the sheet and retain edits through inventory sync', () => {
-  const weapon = { ...horse, id: 'offer:weapon', section: 'offer', category: 'waffen', combatDefinition: { kind: 'weapon', damageFormula: '1d8', damageType: 'Schnitt' } };
+  const weapon = { ...horse, definitionRef: null, id: 'offer:weapon', section: 'offer', category: 'waffen', combatDefinition: { kind: 'weapon', damageFormula: '1d8', damageType: 'Schnitt' } };
   const purchased = buy(character(), weapon);
   assert.equal(purchased.combatProfile.weapons[0].damageFormula, '1d8');
   const updated = customizeOwnedItem({ ...character(), ...purchased }, { inventoryItemId: 'owned-afol', name: 'Nachtklinge' }, '2026-09-12');

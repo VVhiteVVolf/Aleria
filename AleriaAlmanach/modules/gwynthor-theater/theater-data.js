@@ -30,7 +30,9 @@
     "person--gwynthorer-theater--sabjorn",
     "person--gwynthorer-theater--aelir",
     "person--gwynthorer-theater--nuala",
-    "person--gwynthorer-theater--faelan"
+    "person--gwynthorer-theater--faelan",
+    "person--gwynthor-formlingssache--lleuwen",
+    "person--gwynthor-formlingssache--orvar"
   ],
   "pages": [
     {
@@ -337,7 +339,7 @@
           },
           {
             "label": "Ensemble",
-            "value": "13 benannte Darstellerinnen und Darsteller"
+            "value": "13 im festen Ensemble · 2 in Statisterie und Nebenrollen"
           }
         ],
         "trees": [
@@ -485,6 +487,25 @@
                     "subtitle": "Schauspieler · Boten und ältere Charakterrollen",
                     "portrait": "./assets/gwynthor-theater/portraits/faelan.png",
                     "text": "Schauspieler · Boten und ältere Charakterrollen"
+                  }
+                ]
+              },
+              {
+                "label": "Statisterie und kleinere Nebenrollen",
+                "nodes": [
+                  {
+                    "id": "theater-person-lleuwen",
+                    "title": "Lleuwen",
+                    "subtitle": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+                    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+                    "text": "Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.\n\nIhre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.\n\nOrvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen."
+                  },
+                  {
+                    "id": "theater-person-orvar",
+                    "title": "Orvar Schattentänzer",
+                    "subtitle": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+                    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+                    "text": "Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.\n\nMit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.\n\nAls Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus."
                   }
                 ]
               },

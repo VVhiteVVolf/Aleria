@@ -5,6 +5,7 @@
 export const CHARACTER_EQUIPMENT_LINK_SCHEMA_VERSION = 1;
 import { normalizeEquipmentDamageProtection } from './equipment-damage-protection.js';
 import { applyArmorBalance, balanceArmorInventoryItem } from './equipment-armor-rules.js';
+import { materializeInventoryItem, storeInventoryItem, storeDefinitionInventory, resolveItemDefinition } from '../item-definitions/item-definition-resolver.js';
 
 const EQUIPMENT_KINDS = Object.freeze({ weapon: 'weapons', armor: 'armorItems' });
 
@@ -35,6 +36,7 @@ function equipmentId(kind, entryId, usedIds = new Set()) {
 }
 
 function equipmentKindFromInventoryItem(item = {}) {
+  if (item.definitionRef && item.combatDefinition) return item.combatDefinition.kind;
   const category = text(item.category || item.type).toLocaleLowerCase('de');
   const linkedKind = text(item.equipmentLink?.kind || item.combatDefinition?.kind).toLocaleLowerCase('de');
   if (linkedKind === 'weapon' || category === 'weapon' || /waffe|schwert|dolch|bogen|speer|axt|keule/.test(category)) return 'weapon';
@@ -68,6 +70,8 @@ function armorCombatDefinition(entry = {}) {
   entry = applyArmorBalance(entry);
   return {
     kind: 'armor',
+    ...(entry.armorRuleVersion === 2 ? { armorRuleVersion: 2 } : {}),
+    ...(entry.equipCosts?.length ? { equipCosts: clone(entry.equipCosts) } : {}),
     mechanics: clone(entry.mechanics || {}),
     damageProtection: normalizeEquipmentDamageProtection(entry.damageProtection),
     triggerRules: clone(entry.triggerRules || []),
@@ -120,6 +124,9 @@ function inventoryItemFromCombat(entry, kind, context, usedIds) {
 }
 
 function mergeInventoryItemFromCombat(item, entry, kind) {
+  if (item.definitionRef) return storeInventoryItem({ ...item,
+    name: text(entry.name, item.name), image: text(entry.image, item.image), equipped: entry.equipped === true,
+    equipmentLink: { schemaVersion: CHARACTER_EQUIPMENT_LINK_SCHEMA_VERSION, kind, combatEntryId: text(entry.id) } });
   const definition = kind === 'weapon' ? weaponCombatDefinition(entry) : armorCombatDefinition(entry);
   return {
     ...item,
@@ -143,50 +150,63 @@ function combatEntryFromInventory(item, entry, kind) {
   const definition = item.combatDefinition && typeof item.combatDefinition === 'object'
     ? item.combatDefinition
     : {};
+  const ruleText = (key, previous, fallback = '') => item.definitionRef && Object.hasOwn(definition, key)
+    ? String(definition[key] ?? '').trim() : text(definition[key], previous || fallback);
   if (kind === 'weapon') {
     return {
       ...entry,
+      ...(item.definitionRef ? {
+        effects: clone(definition.effects || []), activationType: definition.activationType || 'action',
+        costs: clone(definition.costs || []), auraBypass: clone(definition.auraBypass || { allowed: true, resourceId: '', cost: 1 }),
+        spendAllRegularActions: definition.spendAllRegularActions === true,
+        ammunition: definition.ammunition ? { ...clone(definition.ammunition), inventoryItemId: text(item.itemState?.ammunitionItemId || entry.ammunition?.inventoryItemId) } : null
+      } : {}),
       inventoryItemId: text(item.id),
-      equipped: typeof item.equipped === 'boolean' ? item.equipped : entry.equipped,
+      equipped: typeof item.equipped === 'boolean' ? item.equipped : entry.equipped === true,
       name: text(item.name, entry.name),
       image: text(item.image || item.icon, entry.image),
       weaponType: text(definition.weaponType, entry.weaponType),
-      weaponProfileId: text(definition.weaponProfileId, entry.weaponProfileId),
+      weaponProfileId: ruleText('weaponProfileId', entry.weaponProfileId),
       triggerRules: clone(definition.triggerRules ?? entry.triggerRules ?? []),
       training: text(definition.training, entry.training),
       damageFormula: text(definition.damageFormula, entry.damageFormula),
-      versatileDamageFormula: text(definition.versatileDamageFormula, entry.versatileDamageFormula),
+      versatileDamageFormula: ruleText('versatileDamageFormula', entry.versatileDamageFormula),
       damageType: text(definition.damageType, entry.damageType),
       attackAttribute: text(definition.attackAttribute, entry.attackAttribute),
-      proficient: definition.proficient == null ? entry.proficient : definition.proficient !== false,
-      attackBonus: definition.attackBonus == null ? entry.attackBonus : Number(definition.attackBonus) || 0,
-      damageBonus: definition.damageBonus == null ? entry.damageBonus : Number(definition.damageBonus) || 0,
+      proficient: definition.proficient == null ? entry.proficient !== false : definition.proficient !== false,
+      attackBonus: Number(definition.attackBonus ?? entry.attackBonus) || 0,
+      damageBonus: Number(definition.damageBonus ?? entry.damageBonus) || 0,
       range: text(definition.range, entry.range),
-      properties: text(definition.properties, entry.properties),
+      properties: ruleText('properties', entry.properties),
       notes: text(definition.notes || item.description, entry.notes),
-      requirements: text(definition.requirements, entry.requirements),
-      aiInstructions: text(definition.aiInstructions, entry.aiInstructions)
+      requirements: ruleText('requirements', entry.requirements),
+      aiInstructions: ruleText('aiInstructions', entry.aiInstructions)
     };
   }
+  const { armorRuleVersion, equipCosts, ...unversionedEntry } = entry;
   return applyArmorBalance({
-    ...entry,
+    ...(item.definitionRef ? unversionedEntry : entry),
+    ...(definition.armorRuleVersion === 2 ? { armorRuleVersion: 2 } : {}),
+    ...(definition.equipCosts?.length ? { equipCosts: clone(definition.equipCosts) } : {}),
+    ...(item.definitionRef ? { definitionRef: clone(item.definitionRef), definitionTitle: text(item.definitionTitle) } : {}),
     inventoryItemId: text(item.id),
-    equipped: typeof item.equipped === 'boolean' ? item.equipped : entry.equipped,
+    equipped: typeof item.equipped === 'boolean' ? item.equipped : entry.equipped === true,
     name: text(item.name, entry.name),
     image: text(item.image || item.icon, entry.image),
     kind: text(definition.armorKind, entry.kind),
-    armorCategory: text(definition.armorCategory, entry.armorCategory),
+    armorCategory: ruleText('armorCategory', entry.armorCategory),
     mechanics: clone(definition.mechanics ?? entry.mechanics ?? {}),
     damageProtection: normalizeEquipmentDamageProtection(definition.damageProtection === undefined ? entry.damageProtection : definition.damageProtection),
     triggerRules: clone(definition.triggerRules ?? entry.triggerRules ?? []),
-    baseArmorClass: definition.baseArmorClass == null ? entry.baseArmorClass : Number(definition.baseArmorClass),
-    armorClassBonus: definition.armorClassBonus == null ? entry.armorClassBonus : Number(definition.armorClassBonus) || 0,
-    dexterityMode: text(definition.dexterityMode, entry.dexterityMode),
-    dexterityCap: definition.dexterityCap == null ? entry.dexterityCap : Number(definition.dexterityCap) || 0,
+    baseArmorClass: definition.baseArmorClass === undefined ? entry.baseArmorClass ?? null
+      : definition.baseArmorClass === null ? null : Number(definition.baseArmorClass),
+    armorClassBonus: Number(definition.armorClassBonus ?? entry.armorClassBonus) || 0,
+    dexterityMode: text(definition.dexterityMode, entry.dexterityMode || 'full'),
+    dexterityCap: Number(definition.dexterityCap ?? entry.dexterityCap) || 0,
     dexterityUnlockLevel: definition.dexterityUnlockLevel == null
-      ? entry.dexterityUnlockLevel
+      ? Math.max(0, Number(entry.dexterityUnlockLevel) || 0)
       : Math.max(0, Number(definition.dexterityUnlockLevel) || 0),
-    properties: text(definition.properties, entry.properties),
+    properties: ruleText('properties', entry.properties),
     notes: text(definition.notes || item.description, entry.notes)
   });
 }
@@ -220,7 +240,7 @@ export function synchronizeEquipmentFromCombat({ inventory = {}, combatProfile =
   return { inventory: nextInventory, combatProfile: nextProfile };
 }
 
-export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfile = {}, addMissingEquipment = false } = {}) {
+export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfile = {}, addMissingEquipment = false, definitions, preserveLoadout = false } = {}) {
   const nextInventory = clone(inventory && typeof inventory === 'object' ? inventory : {});
   const nextProfile = clone(combatProfile && typeof combatProfile === 'object' ? combatProfile : {});
   nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items.map(balanceArmorInventoryItem) : [];
@@ -231,12 +251,17 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
     nextProfile[collectionName] = entries
       .filter(entry => !entry.inventoryItemId || itemsById.has(text(entry.inventoryItemId)))
       .map(entry => {
-        const item = itemsById.get(text(entry.inventoryItemId));
+        const source = itemsById.get(text(entry.inventoryItemId));
+        const definition = source?.definitionRef ? resolveItemDefinition(source, definitions) : null;
+        if (source?.definitionRef && !definition) return entry;
+        if (definition && definition.combatDefinition?.kind !== kind) return null;
+        const item = source ? materializeInventoryItem(source, definitions) : null;
         if (!item || equipmentKindFromInventoryItem(item) !== kind) return entry;
-        return combatEntryFromInventory(item, entry, kind);
-      });
+        return combatEntryFromInventory(preserveLoadout ? { ...item, equipped: entry.equipped === true } : item, entry, kind);
+      }).filter(Boolean);
     if (addMissingEquipment) {
-      for (const item of nextInventory.items) {
+      for (const source of nextInventory.items) {
+        const item = materializeInventoryItem(source, definitions);
         if (!item.combatDefinition || equipmentKindFromInventoryItem(item) !== kind) continue;
         if (nextProfile[collectionName].some(entry => text(entry.inventoryItemId) === text(item.id))) continue;
         const id = text(item.equipmentLink?.combatEntryId || item.id);
@@ -246,7 +271,7 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
     }
   });
 
-  return { inventory: nextInventory, combatProfile: nextProfile };
+  return { inventory: storeDefinitionInventory(nextInventory), combatProfile: nextProfile };
 }
 
 export function getInventoryEquipmentKind(item = {}) {

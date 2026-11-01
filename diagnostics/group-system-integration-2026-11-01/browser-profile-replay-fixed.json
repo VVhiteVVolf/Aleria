@@ -1,0 +1,59 @@
+{
+  "source": "browser-before-state.json",
+  "backend": "commitGroupInventoryOperation",
+  "storage": "isolated-in-memory",
+  "operations": 5,
+  "allSixProfilesExactlyUnchanged": true,
+  "profiles": [
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "profileUnchanged": true,
+      "beforeHash": "4d4a1c7bc23a9983198ceb9f451630ff9a1004b3738aedcbf29f49a87c491ce1",
+      "afterHash": "4d4a1c7bc23a9983198ceb9f451630ff9a1004b3738aedcbf29f49a87c491ce1"
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "profileUnchanged": true,
+      "beforeHash": "dd8b989be95a2699decd4c7dc3c2ca23fc38c6c162d7e80268bf6e126fcc8f4e",
+      "afterHash": "dd8b989be95a2699decd4c7dc3c2ca23fc38c6c162d7e80268bf6e126fcc8f4e"
+    },
+    {
+      "id": "tmfBA2zPTc88EMMGkyyA",
+      "name": "Duncan Gafyr",
+      "profileUnchanged": true,
+      "beforeHash": "b4660190fdad829c06622a5af3d1af1be904856a101e6a5b8575481fc7a8817b",
+      "afterHash": "b4660190fdad829c06622a5af3d1af1be904856a101e6a5b8575481fc7a8817b"
+    },
+    {
+      "id": "companion-tanor",
+      "name": "Tanor",
+      "profileUnchanged": true,
+      "beforeHash": "0dff66d8e495e5e8d154531f04268d766c9e825a0cc2b266cef306e061e63750",
+      "afterHash": "0dff66d8e495e5e8d154531f04268d766c9e825a0cc2b266cef306e061e63750"
+    },
+    {
+      "id": "companion-ylva-freki",
+      "name": "Freki",
+      "profileUnchanged": true,
+      "beforeHash": "d5ca4d1e3d736cc8d17801ae4422ce2d109eed0d1214f408a8f1950520856520",
+      "afterHash": "d5ca4d1e3d736cc8d17801ae4422ce2d109eed0d1214f408a8f1950520856520"
+    },
+    {
+      "id": "companion-duncan-carreg",
+      "name": "Carreg",
+      "profileUnchanged": true,
+      "beforeHash": "2534e12a95c3283f16eb104f8ad9dff53ca27a1cd50b5f345052fc29ba9d597d",
+      "afterHash": "2534e12a95c3283f16eb104f8ad9dff53ca27a1cd50b5f345052fc29ba9d597d"
+    }
+  ],
+  "moneyConserved": true,
+  "groupCopperBefore": 50,
+  "groupCopperAfter": 47,
+  "duncanReceivedCopper": 3,
+  "rationAndPotionQuantitiesConserved": true,
+  "greatswordGranted": 1,
+  "groupRevisions": 5,
+  "receipts": 5
+}

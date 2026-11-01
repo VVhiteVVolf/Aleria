@@ -29,6 +29,18 @@ nur den lokalen Push. Netlify dokumentiert das unter
 [Skip a deploy](https://docs.netlify.com/deploy/manage-deploys/manage-deploys-overview/#skip-a-deploy).
 Bei gemeinsam gepushten Commits gilt die Markierung des jüngsten Commits.
 
+Die featurebezogenen Prüfungen `group-community` und `item-mechanics` validieren
+die gemeinsamen Gruppen-/Storyprojektionen, Gawains öffentliche Quellen,
+Itemversionen, Schildstandards und autoritative Bestandsoperationen. Die
+Katalog-/Bundlebuilder laufen darin mit `--check`; sie ändern keine Quellen.
+Ein rein lesender Vergleich stellt zusätzlich sicher, dass die bereits
+generierten Servermechaniken ihren aktuellen Browserquellen entsprechen.
+Der Aushang-Belohnungskatalog wird gegen die aktuellen Itemrevisionen geprüft.
+Benötigte verschachtelte Testpakete werden vor ihrer ersten Verwendung anhand
+der vorhandenen Lockfiles geprüft und wiederverwendet. Nur fehlende oder
+abweichende Pakete lösen ein `npm ci` im zugehörigen Paket aus. Ein unpassendes
+Lockfile oder eine fehlgeschlagene Vorbereitung stoppt die Prüfung.
+
 ## Befehle
 
 ```text

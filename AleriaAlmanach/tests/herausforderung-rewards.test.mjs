@@ -27,6 +27,7 @@ for (const actor of actors) test(`${actor.name}: register reward preserves exist
   assert.equal(item.image, weapon.image);
   assert.deepEqual(item.valuation, weapon.priceRange);
   assert.equal(item.equipped, false);
+  assert.equal(item.purchase, undefined, 'a reward is not a paid purchase');
   assert.equal(inventoryCardModel(item).kind, 'weapon');
   assert.ok(reward.combatProfile.weapons.some(entry => entry.inventoryItemId === item.id));
   assert.deepEqual(reward.combatProfile.resources, original.combatProfile.resources);

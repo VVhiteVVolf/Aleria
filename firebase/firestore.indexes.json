@@ -1,4 +1,35 @@
 {
-  "indexes": [],
+  "indexes": [
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "updatedAt", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "endedKey", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "links.modules", "arrayConfig": "CONTAINS" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "updatedAt", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "links.modules", "arrayConfig": "CONTAINS" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "endedKey", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "links.scenes", "arrayConfig": "CONTAINS" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "updatedAt", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "links.scenes", "arrayConfig": "CONTAINS" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "endedKey", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "partyKeys", "arrayConfig": "CONTAINS" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "updatedAt", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_runs", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "partyKeys", "arrayConfig": "CONTAINS" }, { "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "endedKey", "order": "DESCENDING" }
+    ] },
+    { "collectionGroup": "quest_events", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "runId", "order": "ASCENDING" }, { "fieldPath": "sequence", "order": "ASCENDING" }
+    ] },
+    { "collectionGroup": "comments", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "entryId", "order": "ASCENDING" }, { "fieldPath": "orderKey", "order": "DESCENDING" }
+    ] }
+  ],
   "fieldOverrides": []
 }

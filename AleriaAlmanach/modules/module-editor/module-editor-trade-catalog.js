@@ -111,6 +111,8 @@ function buildTradeCatalogAttributeEditor(item, index, mode = 'module') {
 function buildTradeCatalogItemHiddenMeta(item = {}) {
   const meta = {
     id: item.id || '',
+    ...(item.canonicalKey ? { canonicalKey: item.canonicalKey } : {}),
+    ...(item.definitionRef ? { definitionRef: { ...item.definitionRef }, definitionCategory: item.definitionCategory || '' } : {}),
     descriptionTitle: item.descriptionTitle || '',
     featuresTitle: item.featuresTitle || '',
     originTitle: item.originTitle || '',
@@ -237,6 +239,8 @@ function createTradeCatalogItemFromItemDbItem(item = {}, categories = []) {
     ? [{ icon: '*', text: details }]
     : [];
   return sanitizeTradeCatalogItems([{
+    canonicalKey: item.templateId || item.canonicalKey || item.id || '',
+    ...(item.definitionRef ? { definitionRef: { ...item.definitionRef }, definitionCategory: item.category } : {}),
     title: item.title || 'Neues Handelsgut',
     subtitle: item.type || item.categoryLabel || '',
     category: getTradeImportCategory(item, categories),

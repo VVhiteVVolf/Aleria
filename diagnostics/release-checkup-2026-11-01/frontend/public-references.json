@@ -1,0 +1,4171 @@
+{
+  "files": 111,
+  "references": 694,
+  "errors": [],
+  "checked": [
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-client.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "source": "../quests/quest-client.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-definitions/item-definition-store.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "source": "../item-definitions/item-definition-store.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "source": "./group-account-view.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-account-dialog.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "source": "./group-account-dialog.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-account-operations.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "source": "./group-account-operations.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-markup.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-dialog.js",
+      "source": "./group-landing-markup.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register-templates.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-dialog.js",
+      "source": "../item-register/item-register-templates.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register-template-picker.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-dialog.js",
+      "source": "../item-register/item-register-template-picker.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-register.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-dialog.js",
+      "source": "./group-landing-register.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register-model.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-operations.js",
+      "source": "../item-register/item-register-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register-money.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "source": "../item-register/item-register-money.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/currency/currency-art.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "source": "../currency/currency-art.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-definitions/item-definition-resolver.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "source": "../item-definitions/item-definition-resolver.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-card-model.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "source": "../character-inventory/character-inventory-card-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-equipment/equipment-artwork.js",
+      "file": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "source": "../character-equipment/equipment-artwork.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat/combat-wait-action.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-combat.js",
+      "source": "../combat/combat-wait-action.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-model.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./landing-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-model.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-data.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-view.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-view.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-roster-window.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-roster-window.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-editor.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-editor.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-scene-controls.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-scene-controls.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-navigation.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-navigation.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-inventory-view.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-inventory-view.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-map.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-landing-map.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-quest-model.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./landing-quest-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-quest-account.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "source": "./group-quest-account.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat/combat-state-model.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "../combat/combat-state-model.js?v=20260928-equipment-art-v4",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-roster.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "./group-landing-roster.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-companions.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "./group-landing-companions.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat/combat-profile-resolver.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "../combat/combat-profile-resolver.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-scene-state.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "./group-scene-state.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-combat.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "./group-landing-combat.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-scenes.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "source": "./group-landing-scenes.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-treasury.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-editor.js",
+      "source": "./group-landing-treasury.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-fields.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-editor.js",
+      "source": "./group-landing-fields.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-inventory-editor.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-editor.js",
+      "source": "./group-landing-inventory-editor.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-inventory.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-inventory-editor.js",
+      "source": "./group-landing-inventory.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-folio-view.js",
+      "file": "AleriaAlmanach/modules/landing/group-landing-view.js",
+      "source": "./landing-folio-view.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "file": "AleriaAlmanach/modules/landing/group-quest-account.js",
+      "source": "./group-account-controller.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-migration.js",
+      "file": "AleriaAlmanach/modules/landing/landing-classic-api.js",
+      "source": "./group-landing-migration.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-map-model.js",
+      "file": "AleriaAlmanach/modules/landing/landing-classic-api.js",
+      "source": "./landing-map-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/assets/landing-folio/aleria-paths-cover-v1.webp",
+      "file": "AleriaAlmanach/modules/landing/landing-folio-view.js",
+      "source": "/AleriaAlmanach/assets/landing-folio/aleria-paths-cover-v1.webp",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Stammbäume/assets/images/frames/crest-bronze.png",
+      "file": "AleriaAlmanach/modules/landing/landing-folio.css",
+      "source": "/Stammbäume/assets/images/frames/crest-bronze.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/DokumentenWerkstatt/assets/parchments/archive-ivory.png",
+      "file": "AleriaAlmanach/modules/landing/landing-folio.css",
+      "source": "../../DokumentenWerkstatt/assets/parchments/archive-ivory.png",
+      "kind": "css"
+    },
+    {
+      "target": "Stammbäume/assets/images/frames/crest-bronze.png",
+      "file": "AleriaAlmanach/modules/landing/landing-folio.css",
+      "source": "/Stammbäume/assets/images/frames/crest-bronze.png",
+      "kind": "css"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-view.js",
+      "file": "AleriaAlmanach/modules/landing/landing-quest-journal.js",
+      "source": "../quests/quest-view.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-model.js",
+      "file": "AleriaAlmanach/modules/landing/landing-quest-journal.js",
+      "source": "../quests/quest-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-sources.js",
+      "file": "AleriaAlmanach/modules/landing/landing-quest-journal.js",
+      "source": "../quests/quest-sources.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-board-availability.js",
+      "file": "AleriaAlmanach/modules/landing/landing-quest-journal.js",
+      "source": "../quests/quest-board-availability.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/troetzli-road-v1.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/troetzli-road-v1.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/troetzli-v1.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/chibi/troetzli-v1.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/portraits/troetzli.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/troetzli.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/rotes-tor/portraits/tudur.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/esyllt-penrudd.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/display/gwynthor-normal-2048-q90.webp",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/display/gwynthor-normal-2048-q90.webp",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-v1.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-v1.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/items/schickes-notizbuch-v1.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/items/schickes-notizbuch-v1.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/items/schreibutensilien-v1.png",
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-troetzli/items/schreibutensilien-v1.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/timeline/notice-dates.mjs",
+      "file": "AleriaAlmanach/modules/quests/quest-board-availability.js",
+      "source": "../../../Anzeigetafeln/assets/js/timeline/notice-dates.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/archive/notice-archive-model.mjs",
+      "file": "AleriaAlmanach/modules/quests/quest-board-availability.js",
+      "source": "../../../Anzeigetafeln/assets/js/archive/notice-archive-model.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Kontinente/Lothir/Triarchie/triarchie-lothir/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Aldervan/Deitheach/fuerstentum-deitheach/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Aldervan/Deitheach/fuerstentum-deitheach/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Lothir/Iathneach/fuerstentum-iathneach/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Lothir/Moinneach/fuerstentum-moinneach/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Lothir/Weisenfluh/koenigreich-weisenfluh/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Lothir/Goldmund/herzogtum-goldmund/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Lothir/Goldmund/herzogtum-goldmund/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Lothir/Aldingen/grossherzogtum-aldingen/index.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Lothir/Aldingen/grossherzogtum-aldingen/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Uathneach/Fürstentum Uathneach.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Fürstentum Leitheach.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sleagh/Tir na Sleagh.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sinsear/Tir na Sinsear.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Gortanna/Tir na Gortanna.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Tonn/Tir na Tonn.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Tir an Comhchuibhis/Tir an Comhchuibhis.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "source": "/Kontinente/Estryll/Fürstentum Leitheach/Tir na Sruth/Tir na Sruth.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/modules/auth/firebase-client-context.js",
+      "file": "AleriaAlmanach/modules/quests/quest-client.js",
+      "source": "../auth/firebase-client-context.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-firebase.js",
+      "file": "AleriaAlmanach/modules/quests/quest-client.js",
+      "source": "./quest-firebase.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-route-map.js",
+      "file": "AleriaAlmanach/modules/quests/quest-context-bridge.js",
+      "source": "./quest-route-map.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-store.js",
+      "file": "AleriaAlmanach/modules/quests/quest-controller.js",
+      "source": "./quest-store.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-forms.js",
+      "file": "AleriaAlmanach/modules/quests/quest-controller.js",
+      "source": "./quest-forms.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-entry-serialization.js",
+      "file": "AleriaAlmanach/modules/quests/quest-firebase.js",
+      "source": "../module-store/module-entry-serialization.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-board-source.js",
+      "file": "AleriaAlmanach/modules/quests/quest-firebase.js",
+      "source": "./quest-board-source.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-reward-editor.js",
+      "file": "AleriaAlmanach/modules/quests/quest-forms.js",
+      "source": "./quest-reward-editor.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat/combat-encounter-model.js",
+      "file": "AleriaAlmanach/modules/quests/quest-journal.js",
+      "source": "../combat/combat-encounter-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-definitions/item-definition-model.js",
+      "file": "AleriaAlmanach/modules/quests/quest-model.js",
+      "source": "../item-definitions/item-definition-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-dossier-model.js",
+      "file": "AleriaAlmanach/modules/quests/quest-model.js",
+      "source": "./quest-dossier-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-controller.js",
+      "file": "AleriaAlmanach/modules/quests/quest-page.js",
+      "source": "./quest-controller.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register-standard.js",
+      "file": "AleriaAlmanach/modules/quests/quest-page.js",
+      "source": "../item-register/item-register-standard.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-definitions/item-definition-client.js",
+      "file": "AleriaAlmanach/modules/quests/quest-page.js",
+      "source": "../item-definitions/item-definition-client.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-definitions/item-reward-catalog.js",
+      "file": "AleriaAlmanach/modules/quests/quest-page.js",
+      "source": "../item-definitions/item-reward-catalog.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-reward-allocation.js",
+      "file": "AleriaAlmanach/modules/quests/quest-reward-editor.js",
+      "source": "./quest-reward-allocation.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-builder/item-builder-controller.js",
+      "file": "AleriaAlmanach/modules/quests/quest-reward-editor.js",
+      "source": "../item-builder/item-builder-controller.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "file": "AleriaAlmanach/modules/quests/quest-route-map.js",
+      "source": "./quest-authored-dossiers.js",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/links/notice-module-links-model.mjs",
+      "file": "AleriaAlmanach/modules/quests/quest-sources.js",
+      "source": "../../../Anzeigetafeln/assets/js/links/notice-module-links-model.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-journal.js",
+      "file": "AleriaAlmanach/modules/quests/quest-view.js",
+      "source": "./quest-journal.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-dossier-view.js",
+      "file": "AleriaAlmanach/modules/quests/quest-view.js",
+      "source": "./quest-dossier-view.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/assets/currency/aleria-goldtaler-v1.webp",
+      "file": "AleriaAlmanach/modules/currency/currency-art.global.js",
+      "source": "/AleriaAlmanach/assets/currency/aleria-goldtaler-v1.webp",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/currency/aleria-silbertaler-v1.webp",
+      "file": "AleriaAlmanach/modules/currency/currency-art.global.js",
+      "source": "/AleriaAlmanach/assets/currency/aleria-silbertaler-v1.webp",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png",
+      "file": "AleriaAlmanach/modules/currency/currency-art.global.js",
+      "source": "/AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "CharakterDatenbank/lib/character-database-model.mjs",
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-character-database.mjs",
+      "source": "../../../CharakterDatenbank/lib/character-database-model.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "CharakterDatenbank/lib/character-record-projections.mjs",
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-character-database.mjs",
+      "source": "../../../CharakterDatenbank/lib/character-record-projections.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs",
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-character-database.mjs",
+      "source": "./gawain-public-biography.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-duncan-module.mjs",
+      "source": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-duncan-module.mjs",
+      "source": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/modules/group-adventures/anaraut-content.mjs",
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventure-content.mjs",
+      "source": "./anaraut-content.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/creatures/catalog/idwal-ship-cats.js",
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventure-content.mjs",
+      "source": "../creatures/catalog/idwal-ship-cats.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/group-adventures/group-adventure-content.mjs",
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventures-classic-api.mjs",
+      "source": "./group-adventure-content.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gawain-duncan/gawain-duncan-module.mjs",
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventures-classic-api.mjs",
+      "source": "../gawain-duncan/gawain-duncan-module.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-formlingssache/formlingssache-people.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-formlingssache/formlingssache-characters.mjs",
+      "source": "./formlingssache-people.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Bestiarium/wesen/inferniiden/formwandler/index.html",
+      "file": "AleriaAlmanach/modules/gwynthor-formlingssache/formlingssache-people.mjs",
+      "source": "/Bestiarium/wesen/inferniiden/formwandler/index.html",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-cathedral/patriarch-adjutant.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-formlingssache/formlingssache-people.mjs",
+      "source": "../gwynthor-cathedral/patriarch-adjutant.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-people.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-hierarchy.mjs",
+      "source": "./cathedral-people.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-hierarchy.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-module.mjs",
+      "source": "./cathedral-hierarchy.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-cathedral/patriarch-biography.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-module.mjs",
+      "source": "./patriarch-biography.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-rooms.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-module.mjs",
+      "source": "./cathedral-rooms.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Stammbäume/assets/js/data/house-saethwyr-family.js",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-people.mjs",
+      "source": "../../../Stammbäume/assets/js/data/house-saethwyr-family.js",
+      "kind": "module"
+    },
+    {
+      "target": "Stammbäume/assets/js/data/house-bradrhith-family.js",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-people.mjs",
+      "source": "../../../Stammbäume/assets/js/data/house-bradrhith-family.js",
+      "kind": "module"
+    },
+    {
+      "target": "Stammbäume/assets/js/data/house-eneiniog-family.js",
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-people.mjs",
+      "source": "../../../Stammbäume/assets/js/data/house-eneiniog-family.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-theater/theater-people.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-characters.mjs",
+      "source": "./theater-people.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Stammbäume/assets/js/data/house-draig-family.js",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-characters.mjs",
+      "source": "../../../Stammbäume/assets/js/data/house-draig-family.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-genealogy/genealogy-mapping.js",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-characters.mjs",
+      "source": "../character-genealogy/genealogy-mapping.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-genealogy/character-group-import-plan.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-characters.mjs",
+      "source": "../character-genealogy/character-group-import-plan.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
+      "source": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-theater/theater-hierarchy.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-module.mjs",
+      "source": "./theater-hierarchy.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-theater/theater-program.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-module.mjs",
+      "source": "./theater-program.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-theater/theater-rooms.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-module.mjs",
+      "source": "./theater-rooms.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Stammbäume/Stammbaum.html",
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-biographies.mjs",
+      "source": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Stammbäume/assets/js/modules/person-biography/person-biography-model.js",
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-biographies.mjs",
+      "source": "../../../Stammbäume/assets/js/modules/person-biography/person-biography-model.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-household.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-biographies.mjs",
+      "source": "./troetzli-household.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-troetzli/llythfor-relatives.mjs",
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-biographies.mjs",
+      "source": "./llythfor-relatives.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/archive/notice-archive-floor.mjs",
+      "file": "Anzeigetafeln/assets/js/archive/notice-archive.mjs",
+      "source": "./notice-archive-floor.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/archive/notice-archive-dialog.mjs",
+      "file": "Anzeigetafeln/assets/js/archive/notice-archive.mjs",
+      "source": "./notice-archive-dialog.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/timeline/calendar-numeral-art.mjs",
+      "file": "Anzeigetafeln/assets/js/timeline/board-calendar-view.mjs",
+      "source": "./calendar-numeral-art.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/calendar/calendar-date-picker.mjs",
+      "file": "Anzeigetafeln/assets/js/timeline/board-calendar-view.mjs",
+      "source": "../../../../AleriaAlmanach/modules/calendar/calendar-date-picker.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/auth/firebase-public-config.js",
+      "file": "Anzeigetafeln/assets/js/timeline/board-world-date-source.mjs",
+      "source": "../../../../AleriaAlmanach/modules/auth/firebase-public-config.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/world-date/world-date-read-repository.mjs",
+      "file": "Anzeigetafeln/assets/js/timeline/board-world-date-source.mjs",
+      "source": "../../../../AleriaAlmanach/modules/world-date/world-date-read-repository.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/core/aleria-calendar.js",
+      "file": "Anzeigetafeln/assets/js/timeline/notice-dates.mjs",
+      "source": "../../../../AleriaAlmanach/modules/core/aleria-calendar.js",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/timeline/board-date-state.mjs",
+      "file": "Anzeigetafeln/assets/js/timeline/notice-timeline.mjs",
+      "source": "./board-date-state.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/timeline/board-world-date-source.mjs",
+      "file": "Anzeigetafeln/assets/js/timeline/notice-timeline.mjs",
+      "source": "./board-world-date-source.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/timeline/board-calendar-view.mjs",
+      "file": "Anzeigetafeln/assets/js/timeline/notice-timeline.mjs",
+      "source": "./board-calendar-view.mjs?v=20261031-a38-calendar-v2",
+      "kind": "module"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs",
+      "file": "Anzeigetafeln/assets/js/rewards/notice-award-dialog.js",
+      "source": "./notice-rewards-model.mjs",
+      "kind": "module"
+    },
+    {
+      "target": "IconOrdner/Geldbeutel.PNG",
+      "file": "Anzeigetafeln/assets/js/rewards/notice-rewards.js",
+      "source": "/IconOrdner/Geldbeutel.PNG",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "IconOrdner/Fazit Icons/Ritter.png",
+      "file": "Anzeigetafeln/assets/js/rewards/notice-rewards.js",
+      "source": "/IconOrdner/Fazit%20Icons/Ritter.png",
+      "kind": "absolute-asset"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/rewards/notice-award-dialog.js",
+      "file": "Anzeigetafeln/assets/js/rewards/notice-rewards.js",
+      "source": "./notice-award-dialog.js",
+      "kind": "module"
+    },
+    {
+      "target": "AleriaAlmanach/modules/loading-screen/loading-screen-sound.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/loading-screen/loading-screen-sound.js?v=20261013-v5",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/loading-screen/loading-screen.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/loading-screen/loading-screen.js?v=20261013-v9",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/loading-screen/loading-screen.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/loading-screen/loading-screen.css?v=20261013-v8",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/public/assets/loading-screen/gawain-stand-v4.webp",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./public/assets/loading-screen/gawain-stand-v4.webp",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/public/assets/loading-screen/freya-stand-v4.webp",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./public/assets/loading-screen/freya-stand-v4.webp",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/ReiterIcons/Platzhalter.png",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../IconOrdner/ReiterIcons/Platzhalter.png",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles.css?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/archive.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/archive.css?v=20260912-module-manager-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-section-manager/module-section-manager.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-section-manager/module-section-manager.css?v=20260912-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-shell.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-shell.css?v=20260922-responsive-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/dashboard/dashboard.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/dashboard/dashboard.css?v=20260922-responsive-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-navigation.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-navigation.css?v=20261006-sidebar-equipment-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-quest-journal.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/landing-quest-journal.css?v=20261101-quest-journal-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-scene-tracker.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/quests/quest-scene-tracker.css?v=20261101-troetzli-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-scene-tracker.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/quests/quest-scene-tracker.js?v=20261101-troetzli-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-entry-card.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-entry-card.css?v=20260910-archive-navigation-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-hierarchy.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/modal.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/modal.css?v=20261006-story-spacing-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comments.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comments.css?v=20261017-wide-interactions-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-backup.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-backup.css?v=20261012-scene-backup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/embedded-comments.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comments-fazit.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comments-fazit.css?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-transactions.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-transactions.css?v=20260803-transaction-lock-v1",
+      "kind": "html"
+    },
+    {
+      "target": "Fonts/Rheunwaith-Font-1.000/rheunwaith.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../Fonts/Rheunwaith-Font-1.000/rheunwaith.css?v=2-gezeiten",
+      "kind": "html"
+    },
+    {
+      "target": "Fonts/Karnrith-Font-2.000/karnrith.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../Fonts/Karnrith-Font-2.000/karnrith.css?v=3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-bubbles.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-bubbles.css?v=20260913-karnrith-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-module-reveal.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-dice.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-dice.css?v=20260802-dice-audio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat.css?v=20261015-ledger-layout-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-action-card.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-action-card.css?v=20261015-scenarios-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-action-table.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-action-table.css?v=20260927-arsenal-grid-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-payment-card.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-payment-card.css?v=20260905-compact-action-card-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/skill-checks.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/skill-checks.css?v=20261017-immersive-outcomes-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/inventory-use.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/inventory-use.css?v=20260803-inventory-use-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-items.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-items.css?v=20260922-scene-items-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-inventory.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-inventory.css?v=20260710-scene-inventory-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-attachment.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-attachment.css?v=20260710-image-attachment-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-time.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-time.css?v=20260919-play-days-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/calendar/calendar-date-picker.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/calendar/calendar-date-picker.css?v=20260911-calendar-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/calendar/calendar-preview.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/calendar/calendar-preview.css?v=20260911-calendar-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-rest.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-rest.css?v=20260806-undo-btn-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-encounter.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-encounter.css?v=20260905-encounter-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/loot.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/loot.css?v=20260807-loot-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/herausforderung.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/herausforderung.css?v=20261017-compact-receipts-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/herausforderung-attempt.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/herausforderung-attempt.css?v=20261016-guided-checks-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-transition.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-transition.css?v=20260622-comment-action-icons-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-polls.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-polls.css?v=20260625-scene-polls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/speaker-profile.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/speaker-profile.css?v=20260606-ai-context-controls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-character-picker.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-character-picker.css?v=20260922-composer-design-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-composer.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-composer.css?v=20260922-composer-design-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/session.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/session.css?v=20261017-intro-collapse-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/characters.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/characters.css?v=20261013-avatar-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-categories.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-categories.css?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-combat-profile.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-combat-profile.css?v=20261015-check-options-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-equipment-artwork.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-equipment-artwork.css?v=20260928-equipment-art-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-combat-status.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-combat-status.css?v=20260906-character-vitality-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-archive.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-archive.css?v=20260912-almanach-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-combat-setup.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-combat-setup.css?v=20260906-character-vitality-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-entry-editor.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-entry-editor.css?v=20260803-spell-grades-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/creatures.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/creatures.css?v=20261011-creature-groups-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/creatures/creature-sheet-pages.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/creatures/creature-sheet-pages.css?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/creatures/creature-biography.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/creatures/creature-biography.css?v=20260925-creature-biography-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/creature-dossier.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/creature-dossier.css?v=20261012-bestiary-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/creature-editor-theme.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/creature-editor-theme.css?v=20260906-troll-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-genealogy.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-genealogy.css?v=20260903-genealogy-bulk-import-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-editor.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-editor.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/aleria-calendar.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/aleria-calendar.css?v=20260723-aleria-calendar-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/family-editor.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/family-editor.css?v=20260715-family-workbench-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/family-workbench.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/family-workbench.css?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-bestiary.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-bestiary.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-quest.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-quest.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-biography.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-biography.css?v=20261015-portrait-captions-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-house.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-house.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-house-warriors.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-house-warriors.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-boards.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-boards.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-profiles.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-profiles.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-character-inventory.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-character-inventory.css?v=20260922-itemization-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/character-inventory-cards.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/character-inventory-cards.css?v=20260928-collapsible-diagram-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-hierarchy.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-hierarchy.css?v=20261007-hierarchy-tabs-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/vendor/family-chart/0.9.0/family-chart.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./vendor/family-chart/0.9.0/family-chart.css?v=20260715-family-chart-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-family.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-family.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-family-tree.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-family-tree.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-caste.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-caste.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-court.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-court.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-bounty.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-bounty.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-goods.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-goods.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-trade-catalog.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-trade-catalog.css?v=20261018-availability-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/trade-item-card.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/trade-item-card.css?v=20261017-item-card-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-map-template.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-map-template.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-language.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-language.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-name-list.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-name-list.css?v=20260913-karnrith-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-script-table.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-script-table.css?v=20260913-morgar-v20",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/arcane-alphabet.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/arcane-alphabet.css?v=20260911-arcane-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/laerelis/laerelis.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/laerelis/laerelis.css?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-landing.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-landing.css?v=20261005-group-overview-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/group-landing.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/group-landing.css?v=20261005-group-overview-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-folio.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/landing-folio.css?v=20261101-folio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-community.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/group-community.css?v=20261101-group-systems-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-account.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/group-account.css?v=20261101-group-systems-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-guest-register.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-guest-register.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/module-page-artifact-recipe.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/module-page-artifact-recipe.css?v=20261011-material-frame-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/crop-dialog.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/crop-dialog.css?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/scene-blocks.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/scene-blocks.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/layout-sidebar.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/layout-sidebar.css?v=20261006-sidebar-equipment-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/item-database.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/item-database.css?v=20260625-item-db-register-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-register/item-register.css?v=20261006-regional-equipment-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-register/item-register-providers.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-register/item-register-providers.css?v=20261007-provider-groups-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/regional-equipment/regional-equipment.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/regional-equipment/regional-equipment.css?v=20261006-regional-equipment-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/icon-directory.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/icon-directory.css?v=20260704-icon-directory-list-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/topic-board.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/topic-board.css?v=20261012-topic-board-image-button-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/topic-board-participants.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/topic-board-participants.css?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/world-date.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/world-date.css?v=20260911-calendar-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/mobile.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/mobile.css?v=20260910-archive-navigation-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/session-mobile.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/session-mobile.css?v=20261017-intro-collapse-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comment-combat-mini-profile.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comment-combat-mini-profile.css?v=20261013-combat-checkup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-status.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-status.css?v=20260922-profile-design-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/comments-condition-tracker.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/comments-condition-tracker.css?v=20260906-effect-rolls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/combat-roll-mode.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/combat-roll-mode.css?v=20260906-effect-rolls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-navigation.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-navigation.css?v=20260908-module-layout-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-surface.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-surface.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-preview.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-preview.css?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/organization-network/organization-network.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/organization-network/organization-network.css?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/guild-services/guild-services.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/guild-services/guild-services.css?v=20261016-gofrann-scenes-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/economy-calculator/economy-calculator.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/economy-calculator/economy-calculator.css?v=20261019-economy-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/theatre-program/theatre-program.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/theatre-program/theatre-program.css?v=20261017-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/styles/account.css",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./styles/account.css?v=20261012-guild-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/auth/firebase-bootstrap.mjs",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/auth/firebase-bootstrap.mjs?v=20261012-guild-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-genealogy/genealogy-import-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-genealogy/genealogy-import-controller.js?v=20260903-genealogy-portrait-sync-v1",
+      "kind": "html"
+    },
+    {
+      "target": "Fonts/Rheunwaith-Font-1.000/rheunwaith.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../Fonts/Rheunwaith-Font-1.000/rheunwaith.js?v=2-gezeiten",
+      "kind": "html"
+    },
+    {
+      "target": "Fonts/Karnrith-Font-2.000/karnrith.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../Fonts/Karnrith-Font-2.000/karnrith.js?v=3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-script-display.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-script-display.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-script-registry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-script-registry.js?v=20261020-notice-fonts-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/name-list/name-list-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/name-list/name-list-data.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/script-table/script-table-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/script-table/script-table-data.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/morgar/morgar-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/morgar/morgar-data.js?v=20260913-morgar-v21",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/morgar/morgar-tables.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/morgar/morgar-tables.js?v=20260913-morgar-v21",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/morgar/morgar-entry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/morgar/morgar-entry.js?v=20260913-morgar-v21",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/morgar/morgar-terminology-migration.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/morgar/morgar-terminology-migration.js?v=20260913-morgar-v21",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/morgar/morgar-migration.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/morgar/morgar-migration.js?v=20260913-morgar-v21",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/laerelis/laerelis-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/laerelis/laerelis-data.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/laerelis/laerelis-script.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/laerelis/laerelis-script.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/laerelis/laerelis-tables.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/laerelis/laerelis-tables.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/laerelis/laerelis-entry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/laerelis/laerelis-entry.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-model.global.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/landing-model.global.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/group-adventures/group-adventures.global.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/group-adventures/group-adventures.global.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-geography/gwynthor-geography.global.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-geography/gwynthor-geography.global.js?v=20261019-bannkreis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-entry-migrations.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-entry-migrations.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-reference-entries.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1",
+      "kind": "html"
+    },
+    {
+      "target": "Fonts/Arkanes-Alphabet/arcane.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../Fonts/Arkanes-Alphabet/arcane.js?v=2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/arcane-alphabet-entry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/arcane-alphabet-entry.js?v=20260911-arcane-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/religion/nimuiten/nimuiten-entry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/religion/nimuiten/nimuiten-entry.js?v=20260919-nimuiten-scenes-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/religion/gruener-bund/gruener-bund-entry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/religion/gruener-bund/gruener-bund-entry.js?v=20261003-gruener-bund-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/piracy/piracy-entries.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/piracy/piracy-entries.js?v=20261025-piraterie-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/data/sections.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./data/sections.js?v=20261025-piraterie-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/draig-leibgarde/draig-leibgarde-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/draig-leibgarde/draig-leibgarde-data.js?v=20260930-draig-leibgarde-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/drachentanz-volkstanz/drachentanz-volkstanz-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/drachentanz-volkstanz/drachentanz-volkstanz-data.js?v=20260908-drachentanz-volkstanz-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/newspaper-guilds-module.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/newspaper-guilds-module.js?v=20261007-category-icons-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/celtigerns-echo.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/celtigerns-echo.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/schwarzbote.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/schwarzbote.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/kronenspiegel.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/kronenspiegel.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/fluesterfaecher.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/fluesterfaecher.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/waffengang.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/waffengang.js?v=20260909-six-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/newspaper-guilds/ross-und-sporn.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/newspaper-guilds/ross-und-sporn.js?v=20260909-six-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comann-braich-alba/comann-braich-alba-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comann-braich-alba/comann-braich-alba-data.js?v=20261007-category-icons-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/uisge-beatha-hueter/uisge-beatha-hueter-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/uisge-beatha-hueter/uisge-beatha-hueter-data.js?v=20260923-hueter-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gortach-brauerei/gortach-brewery-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gortach-brauerei/gortach-brewery-data.js?v=20261007-raised-prices-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/brewer-guilds/brewer-guilds-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/brewer-guilds/brewer-guilds-data.js?v=20261014-aldrimar-brewers-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/goettliche-eleganz/eleganz-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/goettliche-eleganz/eleganz-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-theater/theater-data.js?v=20261031-formlingssache",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-arena/arena-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-arena/arena-data.js?v=20261017-local-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-cathedral/cathedral-data.js?v=20261031-euddogwy",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-bathhouse/bathhouse-data.js?v=20261017-local-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/kleiner-durst/durst-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/kleiner-durst/durst-data.js?v=20261017-local-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/rotes-tor/tor-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/rotes-tor/tor-data.js?v=20261020-tor-menu-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/schwarze-zitteraale/zitteraale-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/schwarze-zitteraale/zitteraale-data.js?v=20261021-arvel-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/arkaneum/arkaneum-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/arkaneum/arkaneum-data.js?v=20261020-arkaneum-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-heime/homes-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-heime/homes-data.js?v=20261020-heime-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwynthor-heime/household-workplaces.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwynthor-heime/household-workplaces.js?v=20261020-heime-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/pendrwn-general-store/store-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/pendrwn-general-store/store-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gwregysdu-harbor/harbor-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gwregysdu-harbor/harbor-data.js?v=20261018-muenze-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gestiefelte-muschi/muschi-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gestiefelte-muschi/muschi-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/letzter-heller/heller-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/letzter-heller/heller-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/klingende-krone/krone-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/klingende-krone/krone-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/lachende-nixe/nixe-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/lachende-nixe/nixe-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/rote-klaue/klaue-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/rote-klaue/klaue-data.js?v=20261021-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/klingende-muenze-gwynthor/post-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/klingende-muenze-gwynthor/post-data.js?v=20261021-klaue-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/gofrann-schmiede/gofrann-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/letzte-rast/rast-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/letzte-rast/rast-data.js?v=20261019-prices-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/markt-der-fortuna-gwynthor/fortuna-data.js?v=20261018-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/house-retinues/house-retinues-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/house-retinues/house-retinues-data.js?v=20261007-mercenary-categories-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/skalli-retinue/retinue-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/skalli-retinue/retinue-data.js?v=20261018-skalli-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/windreiter/windreiter-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/windreiter/windreiter-data.js?v=20261007-windreiter-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/windreiter/windreiter-section-migration.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/windreiter/windreiter-section-migration.js?v=20261007-windreiter-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/group-section-migration.global.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/group-section-migration.global.js?v=20261018-cenyr-groups-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/albische-gastfreundschaft/albic-hospitality-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/albische-gastfreundschaft/albic-hospitality-data.js?v=20261007-albic-hospitality-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/natural-resources/natural-resources-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/natural-resources/natural-resources-data.js?v=20261011-tenebrium-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/albische-clans/albic-clans-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/albische-clans/albic-clans-data.js?v=20261008-albic-clans-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/drachentanz-kampfstil/drachentanz-kampfstil-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/drachentanz-kampfstil/drachentanz-kampfstil-data.js?v=20260909-dragon-parent-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/drachentanz-kampfstil/drachentanz-kampfstil-klassen-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/drachentanz-kampfstil/drachentanz-kampfstil-klassen-data.js?v=20260910-drachentanz-klassen-images-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/house-warriors/house-warriors-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/house-warriors/house-warriors-data.js?v=20260712-house-warriors-images-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/organization-network/organization-network-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/organization-network/organization-network-data.js?v=20261007-affiliated-sites-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/guild-services/guild-services-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/guild-services/guild-services-data.js?v=20261007-windreiter-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/theatre-program/theatre-program-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/theatre-program/theatre-program-data.js?v=20261017-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-data.js?v=20260712-language-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family-tree-embed/family-tree-embed-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family-tree-embed/family-tree-embed-catalog.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family-tree-embed/family-tree-embed-catalog.js?v=20260716-family-tree-registry-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/core/app-core.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/core/app-core.js?v=20261021-bandenakte-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/core/content-safety.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/core/content-safety.js?v=20260806-error-passthrough-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/core/aleria-calendar.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/core/aleria-calendar.js?v=20260919-play-days-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/economy-calculator/economy-runtime.global.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/economy-calculator/economy-runtime.global.js?v=20261020-heime-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/calendar/calendar-dashboard.mjs",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/calendar/calendar-dashboard.mjs?v=20260911-calendar-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-aleria-date-field.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-aleria-date-field.js?v=20260723-aleria-calendar-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/app/app-status.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/app/app-status.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/app/dialog-manager.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/app/dialog-manager.js?v=20260912-archive-dialogs-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/sync/firebase-sync-status.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/sync/firebase-sync-status.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/session/session-focus.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/session/session-focus.js?v=20260908-module-navigation-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-section-policy.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-store-tree.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-store-tree.js?v=20261019-bannkreis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-store-local.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-store-local.js?v=20261014-module-storage-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-store-sync.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-store-sync.js?v=20261019-bannkreis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-store-sections.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-store-sections.js?v=20261019-bannkreis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-entry-write.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/world-date/world-date-model.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/world-date/world-date-model.js?v=20260826-world-date-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/world-date/world-date-store.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/world-date/world-date-store.js?v=20260826-world-date-shared-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/world-date/world-date-scene-default.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/world-date/world-date-scene-default.js?v=20260911-calendar-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/world-date/world-date-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/world-date/world-date-ui.js?v=20260919-play-days-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/world-date/world-date-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/world-date/world-date-events.js?v=20260826-world-date-shared-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/icon-directory/icon-directory-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/icon-directory/icon-directory-data.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/icon-directory/icon-directory.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/icon-directory/icon-directory.js?v=20260925-creature-biography-v2",
+      "kind": "html"
+    },
+    {
+      "target": "Karten/karten.registry.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../Karten/karten.registry.js?v=20260723-landing-map-picker-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-section-manager/module-section-manager-template.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-section-manager/module-section-manager-template.js?v=20260912-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-section-manager/module-section-manager-view.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-section-manager/module-section-manager-view.js?v=20260912-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-store/module-section-management.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-store/module-section-management.js?v=20261017-unique-module-ids-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-auth.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-auth.js?v=20261005-group-edit-access-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-preview.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-preview.js?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-dnd.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-data.js?v=20261018-availability-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/family-api.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/family-api.js?v=20260715-family-editor-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/editor/family-editor-model.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/editor/family-editor-model.js?v=20260715-family-editor-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/workbench/family-workbench-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/workbench/family-workbench-state.js?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/workbench/family-workbench-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/workbench/family-workbench-ui.js?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/editor/family-editor-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/editor/family-editor-ui.js?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/services/family-presentation-service.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/services/family-presentation-service.js?v=20260715-family-editor-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-database/item-db-normalizer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-database/item-db-normalizer.js?v=20260625-item-db-config-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-database/item-db-extractors.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-database/item-db-extractors.js?v=20261020-arkaneum-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-database/item-db-store.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-database/item-db-store.js?v=20261020-arkaneum-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-database/item-db-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-database/item-db-ui.js?v=20260912-register-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-database/item-db-picker.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/item-database/item-db-picker.js?v=20260912-register-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/caste/caste-editor-schema.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/caste/caste-editor-schema.js?v=20260712-caste-dossier-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/court/court-editor-schema.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/court/court-editor-schema.js?v=20260603-court-editor-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-bounty.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-bounty.js?v=20260712-bounty-traits-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-goods.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-goods.js?v=20260623-goods-row-item-picker-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-trade-catalog.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-trade-catalog.js?v=20261018-availability-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-map-template.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-map-template.js?v=20260618-map-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-module-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-module-editor.js?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/name-list/name-list-module-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/name-list/name-list-module-editor.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/script-table/script-table-module-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/script-table/script-table-module-editor.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-landing.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-landing.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-guest-register.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-house-warriors.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family-tree-embed/family-tree-embed-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-templates.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-templates.js?v=20261019-economy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-workflow.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-workflow.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-drafts.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-cast-picker.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-simple-lines.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-simple-lines.js?v=20260809-character-biography-tab-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-scene-blocks.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-scene-blocks.js?v=20260604-scene-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-comment-blocks.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-comment-blocks.js?v=20260604-scene-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-page-cards.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-page-cards.js?v=20260911-page-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-artifact.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-artifact.js?v=20260603-module-editor-fields-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-card-layout.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-card-layout.js?v=20260616-card-tree-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-profiles.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-wanted.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/currency/currency-art.global.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/currency/currency-art.global.js?v=20261101-aleria-currency-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-character-inventory.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-character-inventory.js?v=20261101-aleria-currency-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-session.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-biography.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-biography.js?v=20261017-biography-portrait-fit-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-icon-field.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-icon-field.js?v=20260925-creature-biography-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-row-schemas.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/organization-network/organization-network-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/organization-network/organization-network-editor.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/guild-services/guild-services-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/guild-services/guild-services-editor.js?v=20261007-windreiter-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/theatre-program/theatre-program-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/theatre-program/theatre-program-editor.js?v=20261017-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-row-schemas.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-row-schemas.js?v=20260709-row-schema-pilot-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-house.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-house.js?v=20260712-image-tabs-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-guild.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-guild.js?v=20260712-image-tabs-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-bestiary.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-bestiary.js?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-recipe.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-recipe.js?v=20260603-module-editor-fields-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-quest.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-quest.js?v=20260623-quest-editor-parity-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-tournament.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-tournament.js?v=20260603-module-editor-fields-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-caste.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-caste.js?v=20260712-image-tabs-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-court.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-court.js?v=20260603-court-editor-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-hierarchy.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-hierarchy.js?v=20261017-hierarchy-twelve-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-family.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-family.js?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-template-transfer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-template-transfer.js?v=20260911-page-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-pages.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-pages.js?v=20260911-page-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-controller.js?v=20261021-bandenakte-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/module-editor/module-editor-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/module-editor/module-editor-events.js?v=20260806-clear-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/backup/almanach-backup.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/backup/almanach-backup.js?v=20261014-module-storage-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-session-io.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-state.js?v=20261014-module-storage-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-panels.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-panels.js?v=20260618-quest-file-layout-images-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-card-layout.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-card-layout.js?v=20260616-card-tree-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-profiles.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-profiles.js?v=20260616-inline-card-hierarchy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-wanted.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-wanted.js?v=20260616-inline-card-hierarchy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-bounty.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-bounty.js?v=20260712-bounty-traits-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-goods.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-goods.js?v=20260623-goods-row-item-picker-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-trade-catalog.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-trade-catalog.js?v=20260623-item-picker-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-map-template.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-map-template.js?v=20260618-map-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-inline-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-inline-editor.js?v=20260909-template-layout-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/name-list/name-list-inline-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/name-list/name-list-inline-editor.js?v=20260919-laerelis-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/script-table/script-table-inline-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/script-table/script-table-inline-editor.js?v=20260712-script-table-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-guest-register.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-tournament.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-tournament.js?v=20260603-inline-tournament-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-artifact-recipe.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-artifact-recipe.js?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-caste.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-caste.js?v=20260712-caste-dossier-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-court.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-court.js?v=20260603-court-inline-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-hierarchy.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-hierarchy.js?v=20261017-hierarchy-twelve-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-family.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-family.js?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-house-warriors.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-module-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-module-editor.js?v=20261019-economy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-biography.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-biography.js?v=20260711-doc-title-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-house.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-guild.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-bestiary.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-bestiary.js?v=20260603-inline-feature-extract-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-quest.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-quest.js?v=20260623-quest-editor-parity-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-tournament-league.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-tournament-league.js?v=20260603-inline-feature-extract-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inline-editor/inline-editor-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inline-editor/inline-editor-events.js?v=20260715-family-migration-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/court/court-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/court/court-renderer.js?v=20260617-court-dossier-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/bounty/bounty-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/bounty/bounty-renderer.js?v=20260712-bounty-traits-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/goods/goods-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/goods/goods-renderer.js?v=20260620-goods-details-toggle-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/trade-catalog/trade-catalog-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/trade-catalog/trade-catalog-renderer.js?v=20261018-availability-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/map-template/map-template-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/map-template/map-template-renderer.js?v=20260618-map-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/organization-network/organization-network-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/organization-network/organization-network-renderer.js?v=20260909-newspaper-guilds-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/guild-services/guild-services-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/guild-services/guild-services-renderer.js?v=20261016-gofrann-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/theatre-program/theatre-program-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/theatre-program/theatre-program-renderer.js?v=20261017-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/language/language-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/language/language-renderer.js?v=20260712-language-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/name-list/name-list-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/name-list/name-list-renderer.js?v=20260913-karnrith-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/script-table/script-table-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/script-table/script-table-renderer.js?v=20260913-morgar-v20",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/landing-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/landing-renderer.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/landing/group-landing-controller.js?v=20261101-group-systems-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-inventory/character-inventory-renderer.js?v=20261101-aleria-currency-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-card-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-inventory/character-inventory-card-editor.js?v=20260922-itemization-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-cards.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-inventory/character-inventory-cards.js?v=20260928-collapsible-diagram-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-questionnaire.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-inventory/character-inventory-questionnaire.js?v=20260922-itemization-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-inventory/character-inventory-events.js?v=20260922-itemization-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-inventory/character-inventory-integration.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-inventory/character-inventory-integration.js?v=20260928-equipment-art-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/guest-register/guest-register-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/hierarchy/hierarchy-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/hierarchy/hierarchy-renderer.js?v=20261017-hierarchy-twelve-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/vendor/d3/7.9.0/d3.min.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./vendor/d3/7.9.0/d3.min.js?v=20260715-family-chart-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/vendor/family-chart/0.9.0/family-chart.min.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./vendor/family-chart/0.9.0/family-chart.min.js?v=20260715-family-chart-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/compatibility/family-legacy-bridge.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/compatibility/family-legacy-bridge.js?v=20260715-family-chart-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/migration/family-migration-service.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/migration/family-migration-service.js?v=20260715-family-migration-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/adapters/family-chart-adapter.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/adapters/family-chart-adapter.js?v=20260715-family-card-portrait-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/workbench/family-workbench-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/workbench/family-workbench-controller.js?v=20260715-family-workbench-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/rendering/family-chart-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/rendering/family-chart-controller.js?v=20260715-family-preview-mount-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family/family-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family/family-renderer.js?v=20260715-family-chart-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/family-tree-embed/family-tree-embed-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/family-tree-embed/family-tree-embed-renderer.js?v=20261020-heime-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/house-warriors/house-warriors-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/house-warriors/house-warriors-renderer.js?v=20260712-house-warriors-images-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-navigation.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-navigation.js?v=20261004-biography-export-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/biography/biography-page-export.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/biography/biography-page-export.js?v=20261004-biography-export-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/biography/biography-card-rendering.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/biography/biography-card-rendering.js?v=20260925-creature-biography-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/story/story-description.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/story/story-description.js?v=20261006-story-spacing-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/rendering/module-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/rendering/module-renderer.js?v=20261017-biography-portrait-fit-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-card-meta.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-card-meta.js?v=20261019-economy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-entry-card.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-entry-card.js?v=20261019-navigation-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-section-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-section-ui.js?v=20261019-economy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-hierarchy-browser.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-hierarchy-browser.js?v=20261019-navigation-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-hierarchy-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-hierarchy-controller.js?v=20261019-navigation-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/dashboard/dashboard-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/dashboard/dashboard-state.js?v=20261019-economy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-dashboard.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-dashboard.js?v=20261019-navigation-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-module-stamp.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-navigation.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-navigation.js?v=20261019-navigation-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-view.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-view.js?v=20261019-navigation-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/image-library/image-library-model.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/image-library/image-library-model.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/image-library/image-library-import.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/image-library/image-library-import.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-image-sets.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-image-sets.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-data.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-data.js?v=20260906-character-vitality-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-taxonomy.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-taxonomy.js?v=20260930-categories-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-tabs.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-tabs.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-archive-io.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-archive-io.js?v=20260808-character-storage-audit-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-inventory-profile.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-inventory-profile.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-combat-profile.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-combat-profile.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/creatures/creature-system.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/creatures/creature-system.js?v=20261014-gameplay-guides-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/character-archive/character-archive-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/character-archive/character-archive-ui.js?v=20260928-equipment-art-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-avatar-import.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-avatar-import.js?v=20261013-avatar-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-album-import.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-album-import.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-image-set-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-image-set-editor.js?v=20261013-avatar-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-profile-sections.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-profile-sections.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-profile.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-profile.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-media-editor.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-media-editor.js?v=20261013-avatar-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-biography-tab.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-biography-tab.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-image-library-autosave.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-image-library-autosave.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-bulk-actions.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-bulk-actions.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-register-views.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-register-views.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-categories.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-categories.js?v=20260930-categories-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-dashboard.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-dashboard.js?v=20260930-categories-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-result-pages.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-result-pages.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-category-browser.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-category-browser.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-grid.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-grid.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-comment-picker.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-comment-picker.js?v=20261017-character-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/characters/character-profile-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/characters/character-profile-events.js?v=20261013-avatar-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/session/scene-read-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/session/scene-read-state.js?v=20260710-scene-read-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-inventory/scene-inventory-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-inventory/scene-inventory-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-inventory/scene-inventory-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-inventory/scene-inventory-renderer.js?v=20260710-scene-inventory-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-bridge.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-bridge.js?v=20261013-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-participants.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-participants.js?v=20260803-system-audit-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-narration.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-narration.js?v=20260928-equipment-art-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/skill-checks/skill-check-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/skill-checks/skill-check-controller.js?v=20261017-compact-receipts-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat/combat-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/combat/combat-controller.js?v=20261015-check-options-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/inventory-use/inventory-use-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/inventory-use/inventory-use-controller.js?v=20260928-equipment-art-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-items/scene-items-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-items/scene-items-controller.js?v=20261017-scene-item-artwork-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-state.js?v=20260802-dice-default-simple-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-ui.js?v=20260802-dice-default-simple-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-renderer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-renderer.js?v=20260802-dice-default-simple-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-time/scene-time-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-time/scene-time-state.js?v=20260919-play-days-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-time/scene-time-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-time/scene-time-ui.js?v=20260919-play-days-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-rest/scene-rest-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-rest/scene-rest-controller.js?v=20260928-equipment-art-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat-encounter/combat-encounter-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/combat-encounter/combat-encounter-controller.js?v=20261014-herausforderung-combat-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/loot/loot-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/loot/loot-controller.js?v=20260807-loot-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/herausforderung/herausforderung-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/herausforderung/herausforderung-controller.js?v=20261017-immersive-outcomes-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-transition/scene-transition-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-transition/scene-transition-state.js?v=20260622-scene-transition-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-transition/scene-transition-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-transition/scene-transition-ui.js?v=20260622-scene-transition-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-polls/scene-polls-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-polls/scene-polls-state.js?v=20260625-scene-polls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-polls/scene-polls-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-polls/scene-polls-ui.js?v=20260625-scene-polls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-spell-fonts.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-spell-fonts.js?v=20261020-notice-fonts-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-transaction-policy.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-transaction-policy.js?v=20260922-scene-items-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-combat-mini-profile.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-combat-mini-profile.js?v=20261013-combat-checkup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-render.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-render.js?v=20261013-combat-checkup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/combat/combat-test-scene.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-showcase-render.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-render.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-render.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-attachment-render.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-attachment-viewer.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-module-insert-render.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-routing.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-routing.js?v=20260911-page-comments-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-toolbar.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-toolbar.js?v=20261012-scene-backup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/session/session-status.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/session/session-status.js?v=20260710-session-status-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-page.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-page.js?v=20261017-intro-collapse-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-backend.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-backend.js?v=20260911-calendar-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-form-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-scene-cast.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-form.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-form.js?v=20261015-challenge-skill-choice-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-segment-base.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-segment-base.js?v=20261015-check-options-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-segments.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-segments.js?v=20261015-check-options-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-preview.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-preview.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-richtext.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-draft.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-draft.js?v=20261015-check-options-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/backup/scene-backup-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-turn.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-turn.js?v=20261012-scene-backup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-pagination.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-pagination.js?v=20260616-scene-timeline-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-thread.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-thread.js?v=20261014-herausforderung-combat-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/dashboard/dashboard-scene-activity.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/dashboard/dashboard-scene-activity.js?v=20261012-activity-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-time/scene-time-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-time/scene-time-events.js?v=20260919-play-days-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-dice/scene-dice-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-dice/scene-dice-events.js?v=20261013-performance-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-inventory/scene-inventory-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-inventory/scene-inventory-events.js?v=20260710-scene-inventory-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-transition/scene-transition-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-transition/scene-transition-events.js?v=20260622-scene-transition-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/scene-polls/scene-polls-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/scene-polls/scene-polls-events.js?v=20260625-scene-polls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-jump.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-jump.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-submit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-submit.js?v=20261014-herausforderung-combat-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-showcase.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-showcase.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-showcase-submit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-showcase-edit-submit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-showcase-profile.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-history.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-history.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-draft.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-draft.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-editor-markup.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-editor-markup.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-workbench.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-workbench.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-editor-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-editor-events.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-ai.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-ai.js?v=20260807-fazit-v4",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-submit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-submit.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-fazit-edit-submit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-fazit-edit-submit.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-attachments.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-module-insert.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-edit-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-edit-state.js?v=20260906-segment-avatars-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-edit-segments.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-edit-segments.js?v=20261015-check-options-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-edit-preview.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-edit-preview.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-edit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-edit.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-edit-character-picker.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-edit-character-picker.js?v=20260919-creature-pages-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-edit-submit.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-edit-submit.js?v=20260922-critical-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-delete.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-delete.js?v=20260622-scene-transition-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-mechanical-undo.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-markup.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-markup.js?v=20260906-segment-avatars-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-action-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-action-events.js?v=20260906-segment-avatars-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/aleria-gpt/aleria-gpt-config.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/aleria-gpt/aleria-gpt-client.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/aleria-gpt/aleria-gpt-context-builder.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20260804-referee-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/aleria-gpt/aleria-gpt-retrieval.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/aleria-gpt/aleria-gpt-retrieval.js?v=20260803-system-audit-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-dashboard-insights.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-dashboard-insights.js?v=20260830-dashboard-activity-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/speaker-profile/speaker-profile-stats.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/speaker-profile/speaker-profile-stats.js?v=20261012-activity-cache-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/speaker-profile/speaker-profile-render.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/speaker-profile/speaker-profile-render.js?v=20260605-netlify-ai-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/speaker-profile/speaker-profile-ai.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/speaker-profile/speaker-profile-ai.js?v=20260606-ai-context-controls-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/speaker-profile/speaker-profile-choice.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/speaker-profile/speaker-profile-choice.js?v=20260710-speaker-choice-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/speaker-profile/speaker-profile-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/speaker-profile/speaker-profile-events.js?v=20260710-speaker-choice-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-layout.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-layout.js?v=20260908-module-split-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-curl.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-curl.js?v=20260611-page-isolation-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-controller.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-controller.js?v=20261019-economy-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/modal/modal-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/modal/modal-events.js?v=20261004-biography-export-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/sidebar/sidebar-feed.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/sidebar/sidebar-registers.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/sidebar/sidebar-registers.js?v=20261006-sidebar-equipment-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-travel.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-travel.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-schedule.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-schedule.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-model.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-model.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-travel-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-travel-ui.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-schedule-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-schedule-ui.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-store.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-store.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-list-state.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-list-state.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-ui.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-ui.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/topic-board/topic-board-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/topic-board/topic-board-events.js?v=20260911-topic-board-studio-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/public/assets/topic-board/button-topic-board-v1.webp",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./public/assets/topic-board/button-topic-board-v1.webp",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/DokumentenWerkstatt.html",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./DokumentenWerkstatt.html",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/archive/archive-entry-links.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/archive/archive-entry-links.js?v=20261021-notice-links-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/app.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./app.js?v=20261014-module-storage-v2",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/module-richtext.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./module-richtext.js?v=20260520-cleanup-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/module-import-export.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./module-import-export.js?v=20260703-scene-module-editor-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/app/app-interactions.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/app/app-interactions.js?v=20260804-preview-debounce-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-segment-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-segment-events.js?v=20260816-segment-avatar-sets-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-assistant.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-assistant.js?v=20260816-segment-avatar-sets-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-input-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-input-events.js?v=20260821-fazit-workbench-v3",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-reader-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/comments/comments-overlay-events.js",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "./modules/comments/comments-overlay-events.js?v=20260709-scene-module-import-export-v1",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/Siluetten/Männliche Siluette2.png",
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "source": "../IconOrdner/Siluetten/Männliche Siluette2.png",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-book.css",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./modules/quests/quest-book.css",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-story.css",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./modules/quests/quest-story.css",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/item-builder/item-builder.css",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./modules/item-builder/item-builder.css",
+      "kind": "html"
+    },
+    {
+      "target": "Anzeigetafeln/assets/js/data/authored-notices.js",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../Anzeigetafeln/assets/js/data/authored-notices.js",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/modules/quests/quest-page.js",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./modules/quests/quest-page.js",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/AleriaAlmanach.html",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./AleriaAlmanach.html",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/ReiterIcons/Almanach.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../IconOrdner/ReiterIcons/Almanach.svg",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/quests.html",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./quests.html",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/ReiterIcons/Quests.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../IconOrdner/ReiterIcons/Quests.svg",
+      "kind": "html"
+    },
+    {
+      "target": "Karten/karte.html",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../Karten/karte.html",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/ReiterIcons/Kontinente.png",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../IconOrdner/ReiterIcons/Kontinente.png",
+      "kind": "html"
+    },
+    {
+      "target": "Anzeigetafeln/tafel.html",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../Anzeigetafeln/tafel.html",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/ReiterIcons/Anzeigetafeln.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../IconOrdner/ReiterIcons/Anzeigetafeln.svg",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/kalender.html",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./kalender.html",
+      "kind": "html"
+    },
+    {
+      "target": "IconOrdner/ReiterIcons/Kalender.png",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "../IconOrdner/ReiterIcons/Kalender.png",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/assets/quests/gwynthor-companions-banner-v2.png",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./assets/quests/gwynthor-companions-banner-v2.png",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/troetzli-v1.png",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./assets/gwynthor-troetzli/chibi/troetzli-v1.png",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/assets/quests/icons/way.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./assets/quests/icons/way.svg",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/assets/quests/icons/letter.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./assets/quests/icons/letter.svg",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/assets/quests/icons/book.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./assets/quests/icons/book.svg",
+      "kind": "html"
+    },
+    {
+      "target": "AleriaAlmanach/assets/quests/icons/compass.svg",
+      "file": "AleriaAlmanach/quests.html",
+      "source": "./assets/quests/icons/compass.svg",
+      "kind": "html"
+    }
+  ]
+}

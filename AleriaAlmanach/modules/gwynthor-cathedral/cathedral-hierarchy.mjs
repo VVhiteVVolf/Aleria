@@ -1,4 +1,4 @@
-import { PATRIARCH, ARIANWEN, PEREDUR, ANGHARAD, CHURCH_SYMBOL, CATHEDRAL_ART } from './cathedral-people.mjs';
+import { PATRIARCH, ARIANWEN, PEREDUR, ANGHARAD, EUDDOGWY, CHURCH_SYMBOL, CATHEDRAL_ART } from './cathedral-people.mjs';
 
 const office = (id, title, subtitle, text) => ({ id: `kathedrale-${id}`, title, subtitle, portrait: '', text });
 const positions = (id, count, title, text, subtitle = 'Person noch nicht benannt') => Array.from({ length: count }, (_, index) =>
@@ -54,7 +54,8 @@ export function buildCathedralHierarchy() {
         patriarchLevel('diener'),
         { label: 'Persönliche Leitung der Dienste', nodes: [office('haushofmeister', 'Haushofmeister', 'Eine Stelle', 'Ordnet den persönlichen Haushalt, die Tagesabläufe und die Zusammenarbeit der Diener des Patriarchen.')] },
         { label: 'Kanzlei und Schriftverkehr', nodes: [
-          office('sekretaer', 'Persönlicher Sekretär', 'Eine Stelle', 'Führt Termine, bereitet Audienzen vor und hält dringende Anliegen für Gwalchgwyn bereit.'),
+          { id: 'kathedrale-sekretaer', title: EUDDOGWY.name, subtitle: EUDDOGWY.role,
+            portrait: EUDDOGWY.portrait, text: EUDDOGWY.bio },
           office('siegler', 'Siegler und Registrator', 'Eine Stelle', 'Verwahrt das Amtssiegel, ordnet Ausfertigungen und sorgt für nachvollziehbare Ablage.'),
           ...positions('schreiber', 2, 'Schreiber', 'Fertigt Briefe, Berichte, Abschriften und Besuchsvermerke für den persönlichen Stab.'),
           office('bote', 'Kanzleibote', 'Eine Stelle', 'Überbringt Nachrichten zwischen Patriarch, Prälaten, Gemeinden und Hof.')

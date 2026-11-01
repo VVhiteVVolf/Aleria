@@ -155,6 +155,7 @@
         artikel: [{titel:'Artikel 1', text:''}],
         personen: typeId === 'steckbrief' ? [{portrait:'', title:'', untertitel:'', text:'', imageFit:'cover', imagePosition:'center', table:type.table.map(row => ({...row}))}] : [],
         comments: [],
+        ...(window.TafelNoticeTimeline ? { publishedOn: window.TafelNoticeTimeline.defaultPublicationDate() } : {}),
         secret: false,
       };
     },

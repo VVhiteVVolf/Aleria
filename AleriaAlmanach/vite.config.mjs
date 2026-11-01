@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { buildQuestCatalog } from './scripts/build-quest-catalog.mjs';
 import { buildMorgarReference, copyMorgarAssets } from './modules/language/morgar/morgar-build.mjs';
 import { buildLaerelisReference } from './modules/language/laerelis/laerelis-build.mjs';
 import { listSpellCatalogSchools } from './modules/spell-catalog/spell-catalog-schools.js';
@@ -13,7 +14,7 @@ import { buildReligionModules, copyReligionModuleAssets } from '../Religionen/mo
 import { getClergyPageInputs } from '../Religionen/modules/clergy/clergy-repository.mjs';
 import { cp, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { UNIVERSAL_CLASS_IDS } from '../Klassenordner/modules/pages/universal-class-registry.js';
 import { CENYR_CLASS_IDS } from './modules/classes/cenyr/cenyr-class-ids.js';
 import { VENNYR_CLASS_IDS } from './modules/classes/vennyr/vennyr-class-ids.js';
@@ -62,6 +63,13 @@ function preserveClassicAlmanachScripts() {
   return {
     name: 'preserve-classic-almanach-scripts',
     async buildStart() {
+      await buildQuestCatalog({ check: true });
+      const { buildTroetzliQuest } = await import(pathToFileURL(resolve(workspaceRoot, 'AleriaAlmanach/scripts/build-troetzli-quest.mjs')).href);
+      await buildTroetzliQuest({ check: true });
+      // Run the Node-only generator natively. Browser cache-query imports in
+      // its source adapters must not be bundled as Windows filesystem paths.
+      const { buildNoticeRewardCatalog } = await import(pathToFileURL(resolve(workspaceRoot, 'Anzeigetafeln/tools/build-notice-reward-catalog.mjs')).href);
+      await buildNoticeRewardCatalog({ check: true });
       await buildMorgarReference({ check: true });
       await buildLaerelisReference({ check: true });
       await buildReligionModules({ check: true });
@@ -148,6 +156,7 @@ export default defineConfig({
       input: {
         almanach: resolve(almanachRoot, 'AleriaAlmanach.html'),
         kalender: resolve(almanachRoot, 'kalender.html'),
+        quests: resolve(almanachRoot, 'quests.html'),
         ereignisse: resolve(workspaceRoot, 'Ereignisse/index.html'),
         ...coastalPageInputs(workspaceRoot),
         schlachtWellenruh: resolve(workspaceRoot, 'Ereignisse/Schlachten/Erste-Seeschlacht-bei-Wellenruh.html'),

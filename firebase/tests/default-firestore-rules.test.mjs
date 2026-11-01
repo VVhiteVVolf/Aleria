@@ -7,7 +7,8 @@ import {
 } from '@firebase/rules-unit-testing';
 import { deleteDoc, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
 
-const PROJECT_ID = 'aleria-default-rules-test';
+const PROJECT_ID = process.env.ALERIA_RULES_TEST_PROJECT || 'aleria-default-rules-test';
+if (process.env.ALERIA_RULES_TEST_PROJECT && !PROJECT_ID.startsWith('demo-')) throw Error('An isolated rules project must use a demo- project ID.');
 let environment;
 
 function comment(createdBy, overrides = {}) {
@@ -34,6 +35,51 @@ before(async () => {
 
 after(async () => environment?.cleanup());
 test.beforeEach(async () => environment.clearFirestore());
+
+test('Gruppenbuchungsbelege sind nur für Akteur und Spielleitung lesbar und für alle Browser schreibgeschützt', async () => {
+  const actor = environment.authenticatedContext('owner').firestore(), stranger = environment.authenticatedContext('other').firestore();
+  const gm = environment.authenticatedContext('gm', { aleriaRole: 'moderator' }).firestore();
+  await environment.withSecurityRulesDisabled(context => setDoc(doc(context.firestore(), 'group_inventory_transactions/test'), { actorUid: 'owner', groupId: 'crew' }));
+  await assertSucceeds(getDoc(doc(actor, 'group_inventory_transactions/test')));
+  await assertSucceeds(getDoc(doc(gm, 'group_inventory_transactions/test')));
+  await assertFails(getDoc(doc(stranger, 'group_inventory_transactions/test')));
+  await assertFails(getDoc(doc(environment.unauthenticatedContext().firestore(), 'group_inventory_transactions/test')));
+  for (const database of [actor, stranger, gm]) {
+    await assertFails(setDoc(doc(database, 'group_inventory_transactions/new'), { actorUid: 'owner' }));
+    await assertFails(updateDoc(doc(database, 'group_inventory_transactions/test'), { groupId: 'other' }));
+    await assertFails(deleteDoc(doc(database, 'group_inventory_transactions/test')));
+  }
+});
+
+test('Questverläufe sind öffentlich lesbar; Browser können Fortschritt und Auszahlungen auch als GM nicht fälschen', async () => {
+  const player=environment.authenticatedContext('owner').firestore(),gm=environment.authenticatedContext('gm',{aleriaRole:'moderator'}).firestore(),reader=environment.unauthenticatedContext().firestore();
+  await environment.withSecurityRulesDisabled(async context=>{
+    for(const name of ['quests','quest_runs','quest_events','quest_reward_claims','group_quest_accounts']) await setDoc(doc(context.firestore(),`${name}/test`),{title:'Test',actorUid:'owner'});
+    await setDoc(doc(context.firestore(),'quest_transactions/test'),{actorUid:'owner'});
+  });
+  for(const name of ['quests','quest_runs','quest_events','quest_reward_claims','group_quest_accounts']){
+    await assertSucceeds(getDoc(doc(reader,`${name}/test`)));
+    await assertFails(updateDoc(doc(player,`${name}/test`),{status:'completed'}));
+    await assertFails(setDoc(doc(gm,`${name}/forged`),{rewardStatus:'claimed'}));
+  }
+  await assertSucceeds(getDoc(doc(player,'quest_transactions/test')));
+  await assertFails(getDoc(doc(reader,'quest_transactions/test')));
+});
+test('kanonische Itemversionen sind öffentlich lesbar; Browser können Regeln und geschützten Besitz nicht überschreiben', async () => {
+  const player = environment.authenticatedContext('owner').firestore();
+  const reader = environment.unauthenticatedContext().firestore();
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'item_definitions/item:test'), { id: 'item:test', revision: 'one' });
+    await setDoc(doc(context.firestore(), 'item_definition_versions/item:test@one'), { id: 'item:test', revision: 'one' });
+    await setDoc(doc(context.firestore(), 'characters/owner'), { ownerUid: 'owner', name: 'Test', inventory: { definitionSchemaVersion: 1, items: [] }, combatProfile: {} });
+  });
+  await assertSucceeds(getDoc(doc(reader, 'item_definition_versions/item:test@one')));
+  await assertFails(setDoc(doc(player, 'item_definitions/item:test'), { revision: 'forged' }));
+  await assertFails(setDoc(doc(player, 'item_unique_claims/unique:test'), { instanceId: 'forged' }));
+  await assertFails(updateDoc(doc(player, 'characters/owner'), { inventory: { items: [] } }));
+  await assertFails(updateDoc(doc(player, 'characters/owner'), { combatProfile: { weapons: [] } }));
+  await assertSucceeds(updateDoc(doc(player, 'characters/owner'), { name: 'Bearbeitbare Biographie' }));
+});
 
 test('öffentliche Spieldaten bleiben ohne Anmeldung lesbar', async () => {
   await environment.withSecurityRulesDisabled(async context => {

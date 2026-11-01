@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import vm from 'node:vm';
 import { buildGwrganLleucuNotices, COURT_BOARD_BINDING, COURT_NOTICE_ID, COURT_TERM } from '../tools/notices/gwrgan-gegen-lleucu.mjs';
+import { withNoticeDate } from '../assets/js/timeline/notice-dates.mjs';
 import { buildGwynthorQuestPack } from '../tools/build-gwynthor-quest-notices.mjs';
 
 const read = path => JSON.parse(readFileSync(new URL('../' + path, import.meta.url), 'utf8'));
@@ -23,7 +24,7 @@ test('the hearing is one four-page civil announcement with three attributed voic
   assert.equal(pages[0].table.find(r => r.k === 'Verhandlung').v, COURT_TERM);
   assert.equal(COURT_TERM, 'In zwei Tagen, zur dritten Morgenstunde');
   const pack = await buildGwynthorQuestPack();
-  assert.deepEqual(pack.zettel.filter(p => p.noticeGroupId === COURT_NOTICE_ID), pages);
+  assert.deepEqual(pack.zettel.filter(p => p.noticeGroupId === COURT_NOTICE_ID), pages.map(withNoticeDate));
   assert.ok(pack.boardBindings.some(b => b.noticeId === COURT_NOTICE_ID));
   for (const name of ['Meurig Draig', 'Derwen Wyrm', 'Hywel Gafyr', 'Morwenna Saethwyr', 'Ceridwen Wyrm', 'Neithon Draig', 'Godwyn Sgrechiwr', 'Tegan Draig']) {
     assert.ok(JSON.stringify(pages[3]).includes(name), name);

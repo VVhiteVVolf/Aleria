@@ -16,7 +16,9 @@ function uniqueRecords(items, normalize) {
 
 export function normalizeGroupMemberState(source = {}) {
   source = source && typeof source === 'object' ? source : {};
-  return { id: text(source.id), characterId: text(source.characterId),
+  const creature = source.kind === 'creature' || !!text(source.creatureId);
+  return { id: text(source.id), characterId: creature ? '' : text(source.characterId),
+    kind: creature ? 'creature' : 'character', creatureId: creature ? text(source.creatureId) : '',
     linkMode: ['manual', 'none'].includes(source.linkMode) ? source.linkMode : 'auto',
     assignment: Object.hasOwn(GROUP_ASSIGNMENTS, source.assignment) ? source.assignment : 'reserve',
     status: Object.hasOwn(GROUP_MEMBER_STATUSES, source.status) ? source.status : 'auto', note: text(source.note),
@@ -30,10 +32,11 @@ export function normalizeGroupLandingState(source = {}) {
   return {
     version: 2, location: text(source.location), activity: text(source.activity), status: text(source.status),
     supplies: text(source.supplies), threadId: text(source.threadId),
+    includeCompanions: source.includeCompanions !== false,
     sceneThreads: [...new Set((Array.isArray(source.sceneThreads) ? source.sceneThreads : []).map(text).filter(Boolean))],
     members: uniqueRecords(source.members, normalizeGroupMemberState),
     guests: uniqueRecords(source.guests, guest => ({
-      ...normalizeGroupMemberState(guest), characterId: text(guest?.characterId),
+      ...normalizeGroupMemberState(guest),
       name: text(guest?.name), role: text(guest?.role || 'Gast'), portrait: text(guest?.portrait),
       until: text(guest?.until), temporary: guest?.temporary !== false
     })),

@@ -3,7 +3,7 @@ import { withVassals } from './administration-model.mjs';
 
 const loaders = {
   militaer: () => import('./data/celtigerns-militaer.mjs?v=20261028'),
-  klerus: () => import('./data/celtigerns-klerus.mjs?v=20261028'),
+  klerus: () => import('./data/celtigerns-klerus.mjs?v=20261031-euddogwy'),
   gerichtsbarkeit: () => import('./data/celtigerns-gerichtsbarkeit.mjs?v=20261028'),
   finanzen: () => import('./data/celtigerns-finanzen.mjs?v=20261028'),
   spionage: () => import('./data/celtigerns-spionage.mjs?v=20261028'),

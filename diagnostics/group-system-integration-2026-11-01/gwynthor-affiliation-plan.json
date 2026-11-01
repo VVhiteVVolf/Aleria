@@ -1,0 +1,247 @@
+{
+  "inputRevision": 13,
+  "pinCount": 170,
+  "pins": [],
+  "dominions": [
+    {
+      "id": "cw-haus-penrudd",
+      "title": "Haus Penrudd",
+      "changes": {
+        "seat": {
+          "before": "Bannkreis Gwynthor, Zum Roten Tor, Penrudd-Hof",
+          "expected": "Gwynthor, Zum Roten Tor, Penrudd-Hof"
+        }
+      }
+    }
+  ],
+  "otherChangedStateFields": [],
+  "positionsPreserved": true,
+  "sourceFamilies": [
+    {
+      "pinId": "gwynthor-marking-041",
+      "familyId": "haus-penrudd",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Zum Roten Tor",
+          "Penrudd-Hof"
+        ],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "dominionId": "cw-haus-penrudd"
+    },
+    {
+      "pinId": "gwynthor-marking-080",
+      "familyId": "haus-penrudd",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Zum Roten Tor",
+          "Penrudd-Hof"
+        ],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "dominionId": "cw-haus-penrudd"
+    }
+  ],
+  "reviewChanges": [
+    {
+      "pinId": "gwynthor-marking-041",
+      "familyId": "haus-penrudd",
+      "changes": {
+        "houseProfile": {
+          "before": {
+            "rankId": "commoner",
+            "seat": "Bannkreis Gwynthor",
+            "barony": "Llamreis Ankunft",
+            "county": "Celtigerns Wacht",
+            "kingdom": "Cenyr",
+            "secondarySeats": [
+              "Zum Roten Tor",
+              "Penrudd-Hof"
+            ],
+            "liegeHouseId": "house-draig",
+            "liegeHouseName": "Haus Draig",
+            "regionEmblems": {
+              "seat": "",
+              "barony": "",
+              "county": "",
+              "kingdom": ""
+            }
+          },
+          "expected": {
+            "rankId": "commoner",
+            "seat": "Gwynthor",
+            "barony": "Llamreis Ankunft",
+            "county": "Celtigerns Wacht",
+            "kingdom": "Cenyr",
+            "secondarySeats": [
+              "Zum Roten Tor",
+              "Penrudd-Hof"
+            ],
+            "liegeHouseId": "house-draig",
+            "liegeHouseName": "Haus Draig",
+            "folderPath": [
+              "Cenyr",
+              "Celtigerns Wacht",
+              "Llamreis Ankunft",
+              "Gwynthor"
+            ],
+            "regionEmblems": {
+              "seat": "",
+              "barony": "",
+              "county": "",
+              "kingdom": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "pinId": "gwynthor-marking-080",
+      "familyId": "haus-penrudd",
+      "changes": {
+        "houseProfile": {
+          "before": {
+            "rankId": "commoner",
+            "seat": "Bannkreis Gwynthor",
+            "barony": "Llamreis Ankunft",
+            "county": "Celtigerns Wacht",
+            "kingdom": "Cenyr",
+            "secondarySeats": [
+              "Zum Roten Tor",
+              "Penrudd-Hof"
+            ],
+            "liegeHouseId": "house-draig",
+            "liegeHouseName": "Haus Draig",
+            "regionEmblems": {
+              "seat": "",
+              "barony": "",
+              "county": "",
+              "kingdom": ""
+            }
+          },
+          "expected": {
+            "rankId": "commoner",
+            "seat": "Gwynthor",
+            "barony": "Llamreis Ankunft",
+            "county": "Celtigerns Wacht",
+            "kingdom": "Cenyr",
+            "secondarySeats": [
+              "Zum Roten Tor",
+              "Penrudd-Hof"
+            ],
+            "liegeHouseId": "house-draig",
+            "liegeHouseName": "Haus Draig",
+            "folderPath": [
+              "Cenyr",
+              "Celtigerns Wacht",
+              "Llamreis Ankunft",
+              "Gwynthor"
+            ],
+            "regionEmblems": {
+              "seat": "",
+              "barony": "",
+              "county": "",
+              "kingdom": ""
+            }
+          }
+        }
+      }
+    },
+    {
+      "pinId": "gwynthor-marking-138",
+      "familyId": "haus-twyllod",
+      "changes": {
+        "source": {
+          "before": "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js",
+          "expected": "Stammbäume/assets/js/data/families.registry.js"
+        },
+        "houseProfile": {
+          "before": {
+            "rankId": "commoner",
+            "seat": "Twyllod-Hof",
+            "barony": "Llamreis Ankunft",
+            "county": "Celtigerns Wacht",
+            "kingdom": "Cenyr",
+            "secondarySeats": [],
+            "liegeHouseId": "",
+            "liegeHouseName": "",
+            "folderPath": [
+              "Cenyr",
+              "Celtigerns Wacht",
+              "Llamreis Ankunft",
+              "Bannkreis Gwynthor"
+            ],
+            "regionEmblems": {
+              "seat": "",
+              "barony": "",
+              "county": "",
+              "kingdom": ""
+            }
+          },
+          "expected": {
+            "rankId": "commoner",
+            "seat": "Twyllod-Hof",
+            "barony": "Llamreis Ankunft",
+            "county": "Celtigerns Wacht",
+            "kingdom": "Cenyr",
+            "secondarySeats": [],
+            "liegeHouseId": "",
+            "liegeHouseName": "",
+            "folderPath": [
+              "Cenyr",
+              "Celtigerns Wacht",
+              "Llamreis Ankunft",
+              "Gwynthor"
+            ],
+            "regionEmblems": {
+              "seat": "",
+              "barony": "",
+              "county": "",
+              "kingdom": ""
+            }
+          }
+        },
+        "note": {
+          "before": "Nutzerauftrag vom 30.10.2026: bestehende Fischerei mit der nun ausgearbeiteten Familie verbunden; Position, Pin-ID und Herrschaft erhalten.",
+          "expected": ""
+        }
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { deriveCombatStateFromComments } from '../generated/combat/combat-state-
 import { isTrustedSceneContributionComment, sortSceneHistory } from '../mechanics/trusted-scene-history.js';
 import { nextMechanicalCommentOrderKey } from '../mechanics/mechanical-comment-order.js';
 import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from '../mechanics/critical-comment-lifecycle.js';
+import { containsPersistentMechanics, containsImmutableAuditMechanics } from '../mechanics/mechanical-comment-payload.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -24,32 +25,6 @@ function clonePayload(value) {
     if (error instanceof HttpsError) throw error;
     fail('invalid-argument', 'Der Beitrag enthÃ¤lt ungÃ¼ltige Daten.');
   }
-}
-
-function containsPersistentMechanics(metadata = {}) {
-  const segments = Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [];
-  return !!(
-    metadata.combatResolution
-    || metadata.combatTransaction
-    || metadata.inventoryTransaction
-    || metadata.restTransaction
-    || metadata.sceneRest
-    || metadata.combatEncounter
-    || metadata.combatStatus
-    || metadata.encounterTransaction
-    || metadata.sceneInventoryTransfer
-    || metadata.serverValidatedMechanics
-    || segments.some(segment => segment?.combatResolution || segment?.combatResolutions || segment?.inventoryUse || segment?.skillResolution)
-  );
-}
-
-function containsImmutableAuditMechanics(metadata = {}) {
-  const segments = Array.isArray(metadata.commentSegments) ? metadata.commentSegments : [];
-  return !!(
-    metadata.sceneDiceRoll
-    || metadata.sceneTimeEvent
-    || segments.some(segment => segment?.skillResolution || segment?.skillChallenge)
-  );
 }
 
 function hasValidSceneDay(metadata = {}) {

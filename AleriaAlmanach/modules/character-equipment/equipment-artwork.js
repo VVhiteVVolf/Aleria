@@ -1,4 +1,5 @@
 import { EQUIPMENT_ARTWORK } from './equipment-artwork-catalog.js?v=20260928-equipment-art-v4';
+import { resolveStandardItemImage } from '../item-register/item-register-standard-artwork.js';
 
 // A read projection only: no changes to ownership, equipment rules or snapshots.
 // Historical generic images are replaced; deliberate custom images take precedence.
@@ -25,11 +26,11 @@ export function resolveEquipmentImage(item = {}, { characterId = '', combatEntry
     .map(value => publishedRevisions.get(value) || value);
   const current = candidates[0] || '';
   const index = byCharacter.get(characterId || item.ownerCharacterId);
-  if (!index) return current;
+  if (!index) return resolveStandardItemImage(item, current);
   const ids = [item.id, item.inventoryItemId, item.equipmentLink?.combatEntryId, combatEntryId];
   const artwork = ids.map(id => index.get(id)).find(Boolean);
-  if (!artwork) return current;
-  return candidates.find(value => value !== artwork.image && !artwork.legacyImages.includes(value)) || artwork.image;
+  if (!artwork) return resolveStandardItemImage(item, current);
+  return resolveStandardItemImage(item, candidates.find(value => value !== artwork.image && !artwork.legacyImages.includes(value)) || artwork.image);
 }
 
 export function projectEquipmentArtwork(character = {}) {

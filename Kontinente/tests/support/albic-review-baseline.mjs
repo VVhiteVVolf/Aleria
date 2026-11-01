@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import acceptedMetadata from './accepted-realm-metadata-review-20261029.json' with { type: 'json' };
 import balchderPeople from './balchder-person-review-20261029.json' with { type: 'json' };
+import gawainPublic from './gawain-public-person-review-20261101.json' with { type: 'json' };
 import brevanorRank from './brevanor-rank-review-20261030.json' with { type: 'json' };
 import gwynthorCourt from './gwynthor-court-family-review-20261030.json' with { type: 'json' };
 import gwynthorTroetzli from './gwynthor-troetzli-family-review-20261031.json' with { type: 'json' };
@@ -13,10 +14,12 @@ export function protectedAlbicFamilies(records) {
     const copy = structuredClone(record);
     // Validate the exact approved biography/job metadata before projecting it
     // back. All identity, portrait, life-date and relationship fields stay hashed.
-    for (const [personId, review] of Object.entries(balchderPeople.families[record.id] || {})) {
-      const person = copy.family.persons.find(person => person.id === personId);
-      assert.equal(reviewHash({ title: person.title, notes: person.notes, extensions: person.extensions }), review.afterSha256, `${record.id}/${personId}`);
-      Object.assign(person, structuredClone(review.before));
+    for (const personReview of [balchderPeople, gawainPublic]) {
+      for (const [personId, review] of Object.entries(personReview.families[record.id] || {})) {
+        const person = copy.family.persons.find(person => person.id === personId);
+        assert.equal(reviewHash({ title: person.title, notes: person.notes, extensions: person.extensions }), review.afterSha256, `${record.id}/${personId}`);
+        Object.assign(person, structuredClone(review.before));
+      }
     }
     delete copy.folderPath; delete copy.hierarchy;
     const omitLocation = profile => {
@@ -66,6 +69,12 @@ export function protectedAlbicFamilies(records) {
     // feature. They can change while every person and relationship stays intact.
     for (const field of ['albicTerritorialReview', 'registryManagedHouseProfileFields', 'registryManagedRecordFields',
       'houseBiographyModule', 'registryManagedEntitySourceRevision', 'sourceRevision']) delete copy.family.extensions[field];
+    const locationFollowup = gwynthorTroetzli.locationFollowupReview;
+    if (record.id === locationFollowup.familyId) {
+      assert.deepEqual(copy.family.extensions.registryManagedHouseProfileFieldRevisions,
+        locationFollowup.managedFieldRevisions, `${record.id}/approved-location-revisions`);
+      delete copy.family.extensions.registryManagedHouseProfileFieldRevisions;
+    }
     // Approved Gwynthor stories add relatives to existing families. Check each
     // complete current record before restoring its exact published predecessor
     // for the older territorial review; never rebase the historical hash.

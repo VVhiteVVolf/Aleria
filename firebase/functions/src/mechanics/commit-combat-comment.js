@@ -1,7 +1,12 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
+import { readItemDefinitionIndex, hydrateItemRecord, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
+import { transferredEquipmentProfile } from '../items/item-transfer-equipment.js';
+import { removeTransferredSceneEquipment } from '../generated/scene-items/scene-item-equipment.js';
+import { materializeInventoryItem } from '../generated/item-definitions/item-definition-resolver.js';
 import { prepareCriticalCommentLifecycle } from './critical-comment-lifecycle.js';
 import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
-import { randomUUID, randomInt } from 'node:crypto';
+import { randomUUID, randomInt, createHash } from 'node:crypto';
+import { isDeepStrictEqual } from 'node:util';
 import { attachCriticalConsequences } from '../generated/combat-critical/combat-critical-resolution.js';
 import { CRITICAL_CONSEQUENCE_DIE } from '../generated/combat-critical/combat-critical-catalog.js';
 import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../generated/scene-items/scene-items-model.js';
@@ -31,6 +36,7 @@ import { ProvidedDiceAdapter } from './provided-dice-adapter.js';
 import { getTrustedSceneDay, isTrustedHerausforderungComment, isTrustedMechanicalComment, isTrustedSceneContributionComment, isTrustedSkillChallengeComment, sortSceneHistory } from './trusted-scene-history.js';
 import { skillSegments, validateSkillCommentSegments, persistSkillChallengeClaims } from './skill-comment-validator.js';
 import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
+import { undoInventoryFingerprint } from './mechanical-undo-inventory.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 const MAX_COMMENT_BYTES = 700_000;
@@ -118,7 +124,7 @@ function inventorySegments(metadata) {
 
 function inventoryDescriptor(entry) {
   const submitted = normalizeInventoryUse(entry.submitted);
-  if (submitted.actorPersistence?.kind === 'character' && submitted.actorPersistence.recordId) {
+  if (['character', 'creature'].includes(submitted.actorPersistence?.kind) && submitted.actorPersistence.recordId) {
     return {
       role: 'inventory-actor',
       actorId: submitted.actorId,
@@ -219,13 +225,28 @@ export async function commitCombatCommentOperation(request, {
     fail('invalid-argument', 'Beitrag und mindestens ein mechanischer Vorgang sind erforderlich.');
   }
 
-  const commentRef = database.collection('comments').doc();
+  const operationId = String(metadata.operationId || '');
+  if (operationId && !/^[\w:.-]{1,180}$/.test(operationId)) fail('invalid-argument', 'Die Beitragskennung ist ungültig.');
+  const requestFingerprint = createHash('sha256').update(JSON.stringify(payload)).digest('hex');
+  const requestKey = operationId ? createHash('sha256').update(`${request.auth.uid}:${operationId}`).digest('hex') : '';
+  const commentRef = requestKey ? database.collection('comments').doc(`mechanical-${requestKey}`) : database.collection('comments').doc();
+  const requestReceiptRef = requestKey ? database.collection('mechanical_comment_transactions').doc(requestKey) : null;
   let committedComment;
   let profileUpdates = [];
   let responseSegments = [];
   let criticalLifecycle = [];
 
   await database.runTransaction(async transaction => {
+    if (requestReceiptRef) {
+      const prior = await transaction.get(requestReceiptRef);
+      if (prior.exists) {
+        if (prior.data().fingerprint !== requestFingerprint) fail('already-exists', 'Dieser Beitrag wurde bereits mit anderem Inhalt verarbeitet.');
+        const comment = await transaction.get(commentRef);
+        if (!comment.exists) fail('already-exists', 'Dieser Vorgang wurde bereits ausgeführt und anschließend zurückgenommen.');
+        committedComment = comment.data(); responseSegments = committedComment.commentSegments || []; profileUpdates = [];
+        return;
+      }
+    }
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
@@ -267,8 +288,12 @@ export async function commitCombatCommentOperation(request, {
     const records = new Map();
     recordEntries.forEach((entry, index) => {
       if (!snapshots[index].exists) fail('not-found', `Das Profil ${entry.recordId} wurde nicht gefunden.`);
-      records.set(entry.key, snapshots[index].data() || {});
+      records.set(entry.key, { ...(snapshots[index].data() || {}), id: entry.recordId, _itemHolderKind: collectionFor(entry.kind) });
     });
+    const itemDefinitions = await readItemDefinitionIndex(database, transaction,
+      [...records.values(), { items: [...sceneItems.values()].map(entry => entry.item) }]);
+    const rawRecords = new Map(records);
+    for (const [key, record] of records) records.set(key, hydrateItemRecord(record, itemDefinitions, { requireEquipped: entries.length > 0, preserveLoadout: true }));
 
     const workingStates = new Map(historyStates);
     const workingInventories = new Map();
@@ -285,6 +310,7 @@ export async function commitCombatCommentOperation(request, {
       return clean;
     });
     const skillClaimWrites = [];
+    const uniqueItemMoves = [];
     const locallyClaimedSkills = new Set();
     const resolveSkillEntry = async entry => {
       const validated = await validateSkillCommentSegments({ database, transaction, request,
@@ -332,7 +358,7 @@ export async function commitCombatCommentOperation(request, {
         if (submittedUse.operation !== 'consume' && kind !== 'interact') fail('invalid-argument', 'Benutzen und Aufheben gehören in die Interagieren-Blase.');
         applied = applySceneItemInteraction({ entry: sceneItem, actor: actorProfile,
           sourceActor: sourceRecord ? { ...sourceRecord, id: sceneItem.sourceActorId, inventory: workingInventories.get(sourceKey) || sourceRecord.inventory } : null,
-          operation: submittedUse.operation, paymentResource: submittedUse.paymentResource, usageId: submittedUse.usageId });
+          operation: submittedUse.operation, paymentResource: submittedUse.paymentResource, usageId: submittedUse.usageId, definitions: itemDefinitions, recoveryDayKey });
         applySceneItemEvent(sceneItems, applied.inventoryUse.sceneItemEvent);
         applyDroppedWeaponsToStates(workingStates, sceneItems);
         actorProfile.resources = applied.resources;
@@ -340,7 +366,15 @@ export async function commitCombatCommentOperation(request, {
           workingInventories.set(sourceKey, applied.sourceInventory);
           const sourceUpdate = persistentUpdates.get(sourceKey) || { entry: uniqueRecords.get(sourceKey), record: sourceRecord };
           sourceUpdate.inventory = applied.sourceInventory;
-          sourceUpdate.equipment = applied.sourceCombatProfile;
+          const movedBinding = sourceRecord.combatProfile?.weapons?.find(weapon => weapon.id === sceneItem.weaponId)?.inventoryItemId || sceneItem.item.id;
+          const sourceProfile = sourceUpdate.equipment || rawRecords.get(sourceKey)?.combatProfile || {};
+          const hasStoredBinding = ['weapons', 'armorItems'].some(collection => (sourceProfile[collection] || [])
+            .some(entry => entry.inventoryItemId === movedBinding || collection === 'weapons' && entry.id === sceneItem.weaponId));
+          if (hasStoredBinding && !applied.sourceInventory.items.some(item => item.id === movedBinding)) {
+            sourceUpdate.equipment = removeTransferredSceneEquipment(sourceProfile, {
+              weaponId: sceneItem.weaponId, inventoryItemId: movedBinding
+            });
+          }
           if (sourceDescriptor.persistence.persistent) {
             persistentUpdates.set(sourceKey, sourceUpdate);
             records.set(sourceKey, { ...sourceRecord, inventory: applied.sourceInventory, combatProfile: applied.sourceCombatProfile });
@@ -351,13 +385,26 @@ export async function commitCombatCommentOperation(request, {
       } else {
         if ((actorState?.droppedWeapons || []).some(drop => drop.item.id === submittedUse.item.id)) fail('failed-precondition', 'Diese Waffe liegt in der Szene. Zuerst aufheben.');
         const item = (currentInventory.items || []).find(item => item.id === submittedUse.item.id);
-        if (item && (inferInventoryUseMode(item) === 'consume') !== (kind === 'consume')) fail('invalid-argument', 'Verbrauchsgüter gehören unter „Konsumieren“, andere Gegenstände unter „Interagieren“.');
+        if (item && (inferInventoryUseMode(item, itemDefinitions) === 'consume') !== (kind === 'consume')) fail('invalid-argument', 'Verbrauchsgüter gehören unter „Konsumieren“, andere Gegenstände unter „Interagieren“.');
         if (kind === 'interact') submittedUse.mode = submittedUse.requestedMode = 'use';
         if (kind === 'consume') submittedUse.mode = submittedUse.requestedMode = 'consume';
-        applied = applyInventoryUseToInventory(currentInventory, submittedUse);
+        applied = applyInventoryUseToInventory(currentInventory, submittedUse, { definitions: itemDefinitions, recoveryDayKey });
       }
       workingInventories.set(recordKey, applied.inventory);
-      const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey);
+      const usedItem = submittedUse.source === 'scene' ? sceneItem?.item : (currentInventory.items || []).find(item => item.id === submittedUse.item.id);
+      const usedDefinition = usedItem?.definitionRef ? itemDefinitions.get(`${usedItem.definitionRef.id}@${usedItem.definitionRef.revision}`) : null;
+      if (usedDefinition?.kind === 'unique' && (submittedUse.operation === 'pickup' || applied.inventoryUse.mode === 'consume')) {
+        const moved = applied.inventory.items?.find(item => item.instanceId === usedItem.instanceId);
+        const previousHolder = submittedUse.source === 'scene' ? sceneItem.sourceActorId
+          ? { kind: sourceDescriptor?.persistence.kind === 'creature' ? 'creatures' : 'characters', recordId: sceneItem.sourceActorId, itemId: usedItem.id }
+          : { kind: 'scene', recordId: entryId, itemId: sceneItem.sceneItemId }
+          : { kind: descriptor.persistence.kind === 'creature' ? 'creatures' : 'characters', recordId: descriptor.persistence.recordId, itemId: usedItem.id };
+        uniqueItemMoves.push({ definition: usedDefinition, instanceId: usedItem.instanceId || usedItem.id, quantity: 1, previousHolder,
+          holder: applied.inventoryUse.mode === 'consume'
+            ? { kind: 'consumed', recordId: commentRef.id, itemId: usedItem.instanceId || usedItem.id }
+            : { kind: descriptor.persistence.kind === 'creature' ? 'creatures' : 'characters', recordId: descriptor.persistence.recordId, itemId: moved?.id || usedItem.id } });
+      }
+      const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey, { definitions: itemDefinitions });
       enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: triggered.inventoryUse };
       if (triggered.changed || applied.resources) {
         workingStates.set(String(descriptor.actorId), {
@@ -365,6 +412,7 @@ export async function commitCombatCommentOperation(request, {
           resources: triggered.resources,
           abilities: triggered.abilities,
           temporaryConditions: triggered.conditions,
+          ...(triggered.hitPoints || {}),
           inventory: applied.inventory
         });
       }
@@ -372,7 +420,9 @@ export async function commitCombatCommentOperation(request, {
         const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
         existing.inventory = applied.inventory;
         if (applied.combatProfile) {
-          existing.equipment = applied.combatProfile;
+          const equipment = transferredEquipmentProfile(existing.equipment || rawRecords.get(recordKey)?.combatProfile,
+            applied.combatProfile, `scene:${sceneItem.sceneItemId}`, { preserveExisting: true });
+          if (equipment) existing.equipment = equipment;
           records.set(recordKey, { ...record, inventory: applied.inventory, combatProfile: applied.combatProfile });
         }
         persistentUpdates.set(recordKey, existing);
@@ -381,6 +431,7 @@ export async function commitCombatCommentOperation(request, {
         const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record };
         existing.resources = getPersistentCombatResources(actorBase.resources, triggered.resources);
         existing.abilities = triggered.abilities;
+        if (triggered.hitPoints) existing.hitPoints = triggered.hitPoints;
         persistentUpdates.set(recordKey, existing);
       }
     };
@@ -626,8 +677,10 @@ export async function commitCombatCommentOperation(request, {
     }
 
     while (nextPrecedingEntry < precedingEntries.length) await resolvePreceding(precedingEntries[nextPrecedingEntry++]);
+    const commitUniqueMoves = await prepareUniqueItemClaims(database, transaction, uniqueItemMoves, { actorUid: request.auth.uid });
     criticalLifecycle = lifecycle.finish({ ...metadata, commentSegments: enhancedSegments });
     persistSkillChallengeClaims(transaction, skillClaimWrites);
+    commitUniqueMoves();
     const mechanicalUndo = {};
     profileUpdates = [...persistentUpdates.values()].map(update => {
       const values = { updatedAt: new Date(nowClient).toISOString() };
@@ -650,16 +703,19 @@ export async function commitCombatCommentOperation(request, {
         values.inventory = update.inventory;
       }
       if (update.equipment) {
-        before.weapons = update.record?.combatProfile?.weapons || [];
-        before.armorItems = update.record?.combatProfile?.armorItems || [];
-        values['combatProfile.weapons'] = update.equipment.weapons || [];
-        values['combatProfile.armorItems'] = update.equipment.armorItems || [];
+        const originalProfile = rawRecords.get(update.entry.key)?.combatProfile || update.record?.combatProfile;
+        for (const collection of ['weapons', 'armorItems']) {
+          if (isDeepStrictEqual(originalProfile?.[collection], update.equipment[collection])) continue;
+          before[collection] = originalProfile?.[collection] || [];
+          values[`combatProfile.${collection}`] = update.equipment[collection] || [];
+        }
       }
       values['combatProfile.lastMechanicalCommentId'] = commentRef.id;
       mechanicalUndo[update.entry.key] = {
         kind: update.entry.kind,
         recordId: update.entry.recordId,
         before,
+        ...(update.inventory ? { afterInventoryFingerprint: undoInventoryFingerprint(update.inventory) } : {}),
         previousMechanicalCommentId: update.record?.combatProfile?.lastMechanicalCommentId || null
       };
       transaction.update(update.entry.ref, withProtectedRecordRevisions(
@@ -713,6 +769,7 @@ export async function commitCombatCommentOperation(request, {
         validatedBy: 'commitCombatComment'
       },
       mechanicalUndo: Object.keys(mechanicalUndo).length ? mechanicalUndo : null,
+      ...(commitUniqueMoves.undo.length ? { itemClaimUndo: commitUniqueMoves.undo } : {}),
       ...(inventoryEntries.length ? {
         inventoryTransaction: {
           schemaVersion: 2,
@@ -733,6 +790,7 @@ export async function commitCombatCommentOperation(request, {
       ts: FieldValue.serverTimestamp()
     };
     transaction.create(commentRef, committedComment);
+    if (requestReceiptRef) transaction.create(requestReceiptRef, { actorUid: request.auth.uid, fingerprint: requestFingerprint, operationId, commentId: commentRef.id, entryId, at: new Date(nowClient).toISOString() });
   });
 
   return {

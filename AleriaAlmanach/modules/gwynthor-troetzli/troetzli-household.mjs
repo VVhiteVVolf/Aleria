@@ -27,7 +27,7 @@ export const TROETZLI_PEOPLE = Object.freeze({
   }),
 });
 
-export const LLYTHFOR_EMBLEM = 'assets/images/placeholders/neutral-crest.png';
+export const LLYTHFOR_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png';
 export const LLYTHFOR_MARRIAGE_ID = 'marriage-cynddelw-llythfor-esyllt-penrudd';
 export const LLYTHFOR_MARRIAGE_YEAR = '1730';
 export const TROETZLI_PORTRAIT = `${portraits}/troetzli.png`;

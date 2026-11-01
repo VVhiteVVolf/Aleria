@@ -1,5 +1,8 @@
 # Anzeigetafeln
 
+Kalender, zukünftige Aushänge und die Papierablage sind in
+[Tagesansicht und Papierarchiv](TAGESANSICHT-UND-PAPIERARCHIV.md) beschrieben.
+
 `Anzeigetafeln` ist ein eigenes Aushangsystem. Es verwendet weder das Kartenmodul noch dessen Orts-Pins, Regionen, Markierungen, Kategorien oder Reiseverwaltung.
 
 Alle Tafeln verwenden die [gemeinsame Plakattafel](PLAKATTAFEL.md): leeres Brett,

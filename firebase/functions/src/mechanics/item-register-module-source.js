@@ -3,10 +3,11 @@ import { buildModuleOffers, isShopModule } from '../generated/item-register/item
 /** Read source and manifest inside the purchase transaction. Client rows and
  * prices are never authoritative, and hidden/template modules cannot be sold. */
 export async function resolveModuleProduct({ database, transaction, input, standards, existingItem }) {
-  if (input.action === 'sell' && existingItem?.offerId === input.productId) {
+  if (input.action === 'sell' && existingItem?.offerId === input.productId && existingItem.purchase?.moduleId) {
     // Paid, individualized goods can still be sold after a menu is revised.
     return { id: input.productId, section: 'offer', templateId: existingItem.templateId || '',
-      title: existingItem.name, category: existingItem.registerCategory, stock: null };
+      title: existingItem.name, category: existingItem.registerCategory, stock: null,
+      moduleId: existingItem.purchase.moduleId, listId: `module:${existingItem.purchase.moduleId}` };
   }
   const moduleId = String(input.moduleId || '');
   if (!moduleId || moduleId.length > 200 || /[\x00-\x1f]/.test(moduleId)) throw new Error('Die Herkunft des Angebots fehlt.');

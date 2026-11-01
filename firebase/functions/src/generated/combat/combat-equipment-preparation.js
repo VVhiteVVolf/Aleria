@@ -5,6 +5,7 @@ import { getCombatMounts, getCombatSupportEquipment, canCarryCombatShield, withC
 import { hasPairedCombatTraining } from './combat-paired-weapons.js';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js';
+import { getEquipmentPreparationCosts, describeEquipmentPreparationCosts } from '../character-equipment/equipment-preparation-costs.js';
 
 export function prepareCombatEquipment(character, requested, { free = false } = {}) {
   // A creature's named attacks are validated against its authoritative sheet.
@@ -30,11 +31,12 @@ export function prepareCombatEquipment(character, requested, { free = false } = 
   const supportChanged = support.shieldId !== shieldId || support.mountId !== mountId;
   const changed = before.rightWeaponId !== loadout.rightWeaponId || before.leftWeaponId !== loadout.leftWeaponId || supportChanged;
   if (!changed) return { character, preparation: null };
+  const enteringShield = support.shieldId !== shieldId ? (profile.armorItems || []).find(item => item.id === shieldId && item.kind === 'shield') : null;
   return {
     character: withCombatSupportEquipment(withEquippedCombatWeapon(character, loadout.rightWeaponId, loadout.leftWeaponId), { shieldId, mountId }),
     preparation: {
       before: { rightWeaponId: before.rightWeaponId, leftWeaponId: before.leftWeaponId, ...support }, after: { ...loadout, shieldId, mountId },
-      free, error: '', costs: free ? [] : [{ id: 'equipment-preparation', resourceId: 'bonus-action', name: 'Bonusaktion', amount: 1, scope: 'comment' }]
+      free, error: '', costs: free ? [] : getEquipmentPreparationCosts(enteringShield)
     }
   };
 }
@@ -42,7 +44,7 @@ export function prepareCombatEquipment(character, requested, { free = false } = 
 export function reserveCombatEquipment(profile, preparation) {
   if (!preparation) return profile;
   const payment = applyCombatResourceCosts(profile.resources || [], preparation.costs);
-  const error = preparation.error || (!payment.sufficient ? 'Für den Waffenwechsel fehlt 1 Bonusaktion. Hebe den Wechsel auf oder passe frühere Abschnitte an.' : '');
+  const error = preparation.error || (!payment.sufficient ? `Für den Ausrüstungswechsel fehlen ${describeEquipmentPreparationCosts(preparation.costs)}. Hebe den Wechsel auf oder passe frühere Abschnitte an.` : '');
   return { ...profile, resources: error ? profile.resources : payment.after,
     equipmentPreparation: { ...preparation, error, resourcesBefore: profile.resources || [] } };
 }

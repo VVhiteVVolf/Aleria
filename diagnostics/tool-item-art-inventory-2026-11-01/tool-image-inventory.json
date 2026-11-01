@@ -1,0 +1,1765 @@
+{
+  "createdAt": "2026-11-01T05:08:46.781Z",
+  "readOnly": true,
+  "standardVersion": "36e5f594322735b9",
+  "categories": [
+    "werkzeuge",
+    "sonstiges"
+  ],
+  "counts": {
+    "total": 43,
+    "werkzeuge": 43,
+    "sonstiges": 0,
+    "sharedFallback": 0,
+    "existingCandidate": 43,
+    "verifiedAlphaAndHash": 43,
+    "moduleGoodsTotal": 57,
+    "otherModuleGoods": 14,
+    "manifestTotal": 74,
+    "manifestTransparentItems": 57,
+    "manifestOpaquePortraitsAndScenes": 17
+  },
+  "otherModuleGoods": [
+    "balkenwaage.png",
+    "fasshahn.png",
+    "flaschenstopfen.png",
+    "gewuerzdose.png",
+    "klapphocker.png",
+    "oeltuch.png",
+    "rationen.png",
+    "reisepaket-klein.png",
+    "salzbeutel.png",
+    "schnallenkaestchen.png",
+    "schriftroehre.png",
+    "tuerkeil.png",
+    "verbandstoff.png",
+    "vorratsdose.png"
+  ],
+  "references": [
+    "AleriaAlmanach/docs/art/image-style-presets.json",
+    "AleriaAlmanach/assets/pendrwn-general-store/image-prompts.json",
+    "AleriaAlmanach/assets/pendrwn-general-store/image-validation.json"
+  ],
+  "items": [
+    {
+      "index": 1,
+      "id": "standard:gemischtwarenhandler:rucksack",
+      "title": "Rucksack",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/rucksack.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:rucksack",
+        "revision": "1f38cc255c60bbda4b5b01b7"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/rucksack.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "7b45f86ebcccff1140eb09e9b99ac73608ee514af85eaadb619193a9acccdd34",
+        "manifestId": "rucksack",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "rucksack",
+          "rowIndex": 0
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "id": "standard:gemischtwarenhandler:wasserschlauch",
+      "title": "Wasserschlauch",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/wasserschlauch.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:wasserschlauch",
+        "revision": "9ac0c4ae35ada6ac7f54ffd4"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/wasserschlauch.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "406a10fa5798d3bc636922754e4cdcdac6aa5d547bb1226d4a66b6c51f0b3fd9",
+        "manifestId": "wasserschlauch",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "wasserschlauch",
+          "rowIndex": 1
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": "standard:gemischtwarenhandler:bettrolle",
+      "title": "Bettrolle",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/bettrolle.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:bettrolle",
+        "revision": "3ab1d86886f483c2322f9da6"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/bettrolle.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "b1a6cc52368d7cb0526a733a4eac36bc24a532d73a1408585541b6571c7f385e",
+        "manifestId": "bettrolle",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "bettrolle",
+          "rowIndex": 2
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+      "title": "Feuerstein & Stahl",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+        "revision": "cdb8d503f7c8e15f7af760a6"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "0b81ab595db287c4989367e7c5468a677ab00fca9160f761133ae3d362dfa2c6",
+        "manifestId": "feuerstein-stahl",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "feuerstein-stahl",
+          "rowIndex": 3
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "id": "standard:gemischtwarenhandler:fackel",
+      "title": "Fackel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/fackel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:fackel",
+        "revision": "0a53ef0a795e805d7acf18a0"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/fackel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "22ed0283786a10f67881bf3df831fae58b4d01b8a28f26899fe1851f6670f58b",
+        "manifestId": "fackel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "fackel",
+          "rowIndex": 4
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": "standard:gemischtwarenhandler:laterne",
+      "title": "Laterne (einfach)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/laterne.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:laterne",
+        "revision": "2d96a893cc141eed38bff98b"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/laterne.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "97a2c52c86372893eea456f0dca99dad2cbfda0dad4c453d865491dedbe6019a",
+        "manifestId": "laterne",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "laterne",
+          "rowIndex": 5
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": "standard:gemischtwarenhandler:lampenoel",
+      "title": "Lampenöl (Flasche)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/lampenoel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:lampenoel",
+        "revision": "e911e3d6e618cade66d90b96"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/lampenoel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "d4304a45ce6477aed8b42eb6569d099d77066422b72410b1cac2c5ce788487bd",
+        "manifestId": "lampenoel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "lampenoel",
+          "rowIndex": 6
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "id": "standard:gemischtwarenhandler:seil",
+      "title": "Seil (Hanf, 15m)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/seil.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:seil",
+        "revision": "53da0a47271a1da6021cf7ee"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/seil.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "94b83e34baadaaf913b098ad99ec5b929150c36eb5bd781057a35c35e3ad1324",
+        "manifestId": "seil",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "seil",
+          "rowIndex": 7
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "id": "standard:gemischtwarenhandler:kreide",
+      "title": "Kreide (weiß)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kreide.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kreide",
+        "revision": "514b54f662a1d9159cf980f3"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/kreide.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "6178623a73af0eab47c14a44546e0104d9784323cb44a3d251084401e7a4f3c3",
+        "manifestId": "kreide",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "kreide",
+          "rowIndex": 8
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "id": "standard:gemischtwarenhandler:notizbuch",
+      "title": "Notizbuch (klein)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/notizbuch.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:notizbuch",
+        "revision": "49c9999873bc24a73529d569"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/notizbuch.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "8e67ad2909ab0c7724bd96f914d83a1b87105d6a52bdd751de60ba5c8f68bf9f",
+        "manifestId": "notizbuch",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "notizbuch",
+          "rowIndex": 9
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "id": "standard:gemischtwarenhandler:feder-tinte",
+      "title": "Feder & Tinte",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feder-tinte.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:feder-tinte",
+        "revision": "261195af426d183145b98220"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/feder-tinte.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "7930005b1809adde9729336e491a9e92ac0461d6023a27b031b9005e64a490f5",
+        "manifestId": "feder-tinte",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "feder-tinte",
+          "rowIndex": 10
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "id": "standard:gemischtwarenhandler:seife",
+      "title": "Seife",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/seife.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:seife",
+        "revision": "cbc4c228c36b9718df30439d"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/seife.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "c39b0cd84efecea7f9dafaad84ed5f3e778655cef354f75e1c1710dd10b2259d",
+        "manifestId": "seife",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "seife",
+          "rowIndex": 11
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "id": "standard:gemischtwarenhandler:nadel-faden",
+      "title": "Nadel & Faden",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:nadel-faden",
+        "revision": "b04f80d412691a2b54c5f430"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "733fe0c06489a7eebcb18c5740f6f53bac2e6d6a892dcb4849455843ea52ae4b",
+        "manifestId": "nadel-faden",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "nadel-faden",
+          "rowIndex": 12
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "id": "standard:gemischtwarenhandler:kleidung-einfach",
+      "title": "Kleidung (einfach)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kleidung-einfach.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kleidung-einfach",
+        "revision": "3b496bb361ab44a5f969d378"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/kleidung-einfach.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "df0b276195e229014f38eebc209054139e10602471c07e8f10437fee8b1f5019",
+        "manifestId": "kleidung-einfach",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "kleidung-einfach",
+          "rowIndex": 13
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "id": "standard:gemischtwarenhandler:guertelbeutel",
+      "title": "Gürtelbeutel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/guertelbeutel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:guertelbeutel",
+        "revision": "a0ac484bb88838ec9485aea7"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/guertelbeutel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "eaaef3e718290d1dee1e23b32db8580ccb076182379eaf163b27f8429c81956b",
+        "manifestId": "guertelbeutel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "guertelbeutel",
+          "rowIndex": 14
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "id": "standard:gemischtwarenhandler:spiegel",
+      "title": "Spiegel (Metall)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/spiegel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:spiegel",
+        "revision": "8d141c8e0d0124680c7f3c2f"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/spiegel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "f67fe29bb67e457b9df08638bffdb52dcd876594b806be2444849f5a6b6a3b39",
+        "manifestId": "spiegel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "spiegel",
+          "rowIndex": 15
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "id": "standard:gemischtwarenhandler:kochgeschirr",
+      "title": "Kochgeschirr",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kochgeschirr.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kochgeschirr",
+        "revision": "5a45f65e1bddcdcb52b19b44"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/kochgeschirr.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "5986f4e818ec77dd0f98a418a5d660a6dd719749bbaadf85c807d5eca54bb4ac",
+        "manifestId": "kochgeschirr",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "kochgeschirr",
+          "rowIndex": 16
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "id": "standard:gemischtwarenhandler:essbesteck",
+      "title": "Essbesteck & Schale",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/essbesteck.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:essbesteck",
+        "revision": "d37f0002c967194db2305a0c"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/essbesteck.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "2fdf4622aaa8c87bcc2df72b5ad06fd693d417b828f350d371d02c7047541c22",
+        "manifestId": "essbesteck",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "essbesteck",
+          "rowIndex": 17
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "id": "standard:gemischtwarenhandler:zelt-klein",
+      "title": "Zelt (klein)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/zelt-klein.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:zelt-klein",
+        "revision": "5b7277eb31d5f9cc14bf0067"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/zelt-klein.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "dbf0d2de4c9a0d9a96403ae1d7a58794b88085256e8c84272347932307940aae",
+        "manifestId": "zelt-klein",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "zelt-klein",
+          "rowIndex": 19
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "id": "standard:gemischtwarenhandler:signalpfeife",
+      "title": "Signalpfeife",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/signalpfeife.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:signalpfeife",
+        "revision": "50fc073cd20c5da4b7111cbc"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/signalpfeife.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "e0478ed27ab00034736bfc3d75f1e55d61a506739a9e504af7e053f357566400",
+        "manifestId": "signalpfeife",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "signalpfeife",
+          "rowIndex": 20
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "id": "standard:gemischtwarenhandler:kraeutermoerser",
+      "title": "Kräutermörser (klein)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kraeutermoerser.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kraeutermoerser",
+        "revision": "6ea0fe655db0905e20854911"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/kraeutermoerser.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "20a076ecf3292dee5f723d96bf96be08b6d4da56ddc155f47394e6337a0a06ab",
+        "manifestId": "kraeutermoerser",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "kraeutermoerser",
+          "rowIndex": 22
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "id": "standard:gemischtwarenhandler:holzkamm",
+      "title": "Holzkamm",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzkamm.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzkamm",
+        "revision": "21ee820a133052493f92a26f"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzkamm.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "7bf56bc2cb0896b52396a247ee12dbad93617eef23ba6df4059138ac799f1163",
+        "manifestId": "holzkamm",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzkamm",
+          "rowIndex": 23
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "id": "standard:gemischtwarenhandler:leinentasche",
+      "title": "Leinentasche",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/leinentasche.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:leinentasche",
+        "revision": "cbd4a801ac8a1391c356fd46"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/leinentasche.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "5dde47a909ed22ffa2f585b5fd6b97b79343bbb2d12e6d5ff4a2b0f70ef4891d",
+        "manifestId": "leinentasche",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "leinentasche",
+          "rowIndex": 24
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "id": "standard:gemischtwarenhandler:holzloeffel",
+      "title": "Holzlöffel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzloeffel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzloeffel",
+        "revision": "20d211bbe90a3c4ec52f1835"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzloeffel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "07eaa65c9403c8e908202ba8e1ae7ee6c44a7a517cad183b525fca29015d629f",
+        "manifestId": "holzloeffel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzloeffel",
+          "rowIndex": 25
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "id": "standard:gemischtwarenhandler:tonbecher",
+      "title": "Tonbecher",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/tonbecher.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:tonbecher",
+        "revision": "2bee9cccb361f74b2cd5dbdf"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/tonbecher.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "a8804f6e755b051c8de1450676fe1c6c97fe81203117634d22e9031dd2257d30",
+        "manifestId": "tonbecher",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "tonbecher",
+          "rowIndex": 26
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "id": "standard:gemischtwarenhandler:holzschuessel",
+      "title": "Holzschüssel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzschuessel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzschuessel",
+        "revision": "ebaf58c3de71e5bafbbcf144"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzschuessel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "af1a70f995d1a31286c806d43d8057e7aa72847f7431d7982deecad1b271973a",
+        "manifestId": "holzschuessel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzschuessel",
+          "rowIndex": 27
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "id": "standard:gemischtwarenhandler:trinkschlauch-klein",
+      "title": "Trinkschlauch (klein)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/trinkschlauch-klein.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:trinkschlauch-klein",
+        "revision": "05a7b709871bd8bbdb2f0563"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/trinkschlauch-klein.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "b950dbee191758b9627dd9409f3f6db6c513a2b95ae997f00a65bedf00a9c940",
+        "manifestId": "trinkschlauch-klein",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "trinkschlauch-klein",
+          "rowIndex": 28
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "id": "standard:gemischtwarenhandler:leinenband",
+      "title": "Leinenband (5m)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/leinenband.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:leinenband",
+        "revision": "b87ec5cbfd2644368bee2265"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/leinenband.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "ef2895c673814c490d826a2ab0781a5ea68cf26b53a3fdcc1d76a31aead5ac6a",
+        "manifestId": "leinenband",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "leinenband",
+          "rowIndex": 29
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "id": "standard:gemischtwarenhandler:pergamentrolle",
+      "title": "Pergamentrolle (leer)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/pergamentrolle.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:pergamentrolle",
+        "revision": "b3ba3c19d5dc2271e67b009f"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/pergamentrolle.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "042017cc2abf382fae1269b1dc056a5f20fc3f5777a5ff44b7cd5f59b7507c75",
+        "manifestId": "pergamentrolle",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "pergamentrolle",
+          "rowIndex": 30
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "id": "standard:gemischtwarenhandler:kieselsteinbeutel",
+      "title": "Kieselsteinbeutel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kieselsteinbeutel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kieselsteinbeutel",
+        "revision": "41ba02d2829228eea1c8e1b9"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/kieselsteinbeutel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "dde5f330db487a48762cc98f36deac32890a2cd84923b018f3eaf6e76a8bd107",
+        "manifestId": "kieselsteinbeutel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "kieselsteinbeutel",
+          "rowIndex": 31
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "id": "standard:gemischtwarenhandler:holzpfeife",
+      "title": "Holzpfeife",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzpfeife.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzpfeife",
+        "revision": "84f973bc6ee4db73022559e0"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzpfeife.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "bd86087f132ca0a3837fdf55ac7c7664dffb8d721f6dbe389d50fe7e06b0753c",
+        "manifestId": "holzpfeife",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzpfeife",
+          "rowIndex": 32
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "id": "standard:gemischtwarenhandler:holznadel",
+      "title": "Holznadel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holznadel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holznadel",
+        "revision": "01adb3c95b515242d925bd77"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holznadel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "e80614780bddc542cf744a1a6c8b2625e64617ef9d10816b5b0dddd37db5e6ce",
+        "manifestId": "holznadel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holznadel",
+          "rowIndex": 34
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "id": "standard:gemischtwarenhandler:talgkerze",
+      "title": "Talgkerze",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/talgkerze.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:talgkerze",
+        "revision": "8e95d685e1384606c548a888"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/talgkerze.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "6647eeb8c58a835a209d87bc25361f1f13c8b6594fc62fa6e49399bece9c1ea5",
+        "manifestId": "talgkerze",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "talgkerze",
+          "rowIndex": 35
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "id": "standard:gemischtwarenhandler:holzspielwuerfel",
+      "title": "Holzspielwürfel (Set)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzspielwuerfel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzspielwuerfel",
+        "revision": "4cfd7784122f9996e9de49d3"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzspielwuerfel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "2a37b279c26ed6508168a48353b02c73cfb212ef2d6cdac5754177e2eb52c9de",
+        "manifestId": "holzspielwuerfel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzspielwuerfel",
+          "rowIndex": 36
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "id": "standard:gemischtwarenhandler:kraeutersaeckchen",
+      "title": "Kräutersäckchen",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kraeutersaeckchen.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:kraeutersaeckchen",
+        "revision": "7797676621a55fbbcd8568d1"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/kraeutersaeckchen.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "eb7bae0a7ac9aa6716b8970dccf8300de151bcfe11df929481d1188cfc480582",
+        "manifestId": "kraeutersaeckchen",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "kraeutersaeckchen",
+          "rowIndex": 37
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "id": "standard:gemischtwarenhandler:wetzstein",
+      "title": "Wetzstein",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/wetzstein.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:wetzstein",
+        "revision": "0aaded8f3a86e07035d95b40"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/wetzstein.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "7680b782df1be732cc967b98e97fd730e41c8968c29fba40c533c097f8cb78f5",
+        "manifestId": "wetzstein",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "wetzstein",
+          "rowIndex": 38
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "id": "standard:gemischtwarenhandler:holzfigur",
+      "title": "Holzfigur (klein)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzfigur.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzfigur",
+        "revision": "176b07815c67a694f44f197b"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzfigur.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "214a9912e2cd02ecdeb38977393bd14ade27cdc2bf39d936a0a6f6b31d0bac43",
+        "manifestId": "holzfigur",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzfigur",
+          "rowIndex": 39
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "id": "standard:gemischtwarenhandler:stoffstreifen",
+      "title": "Stoffstreifen (10 Stk.)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/stoffstreifen.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:stoffstreifen",
+        "revision": "0e5add585bdeda9d4706c588"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/stoffstreifen.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "13c9d2e44c976353506a768ccfa5a375d26be3a77c4afa05df68dd32fb2192f1",
+        "manifestId": "stoffstreifen",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "stoffstreifen",
+          "rowIndex": 40
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "id": "standard:gemischtwarenhandler:wollmuetze",
+      "title": "Wollmütze",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/wollmuetze.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:wollmuetze",
+        "revision": "fa5a20be252c403a0f6323ac"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/wollmuetze.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "a2e9bb63a69398b8b157f277dbba02197a02aeb0cd6d332c5f03821c8141d21c",
+        "manifestId": "wollmuetze",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "wollmuetze",
+          "rowIndex": 41
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "id": "standard:gemischtwarenhandler:lederflicken",
+      "title": "Lederflicken",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/lederflicken.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:lederflicken",
+        "revision": "5d4b89404da0bf5c4b3b6397"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/lederflicken.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "ad18bfe3d0503e1d4aa296bba4f4ac608b2b37985861d19a2ea3e63df0a8cd44",
+        "manifestId": "lederflicken",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "lederflicken",
+          "rowIndex": 42
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "id": "standard:gemischtwarenhandler:holznadelspiel",
+      "title": "Holznadelspiel",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holznadelspiel.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holznadelspiel",
+        "revision": "d5396d73d611f97504b978af"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holznadelspiel.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "e0c64249535a8e0c7e05f79ab975a4a8659b2ae76b71451b9e2faf7dcf77e7aa",
+        "manifestId": "holznadelspiel",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holznadelspiel",
+          "rowIndex": 43
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "id": "standard:gemischtwarenhandler:tonlampe",
+      "title": "Tonlampe",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/tonlampe.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:tonlampe",
+        "revision": "4adb720ad6f09658c4cc00e1"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/tonlampe.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "58d87ec79c4aaf0655a3a0e59be75ec5ab8c8e01100d04266b717109155803f6",
+        "manifestId": "tonlampe",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "tonlampe",
+          "rowIndex": 44
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "id": "standard:gemischtwarenhandler:holzstab",
+      "title": "Holzstab (1m)",
+      "category": "werkzeuge",
+      "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzstab.png",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:holzstab",
+        "revision": "177ebbc2eb3a4e9a1c106dc4"
+      },
+      "reason": "individual-image-or-other",
+      "existingCandidate": "AleriaAlmanach/assets/pendrwn-general-store/goods/holzstab.png",
+      "candidateValidation": {
+        "exists": true,
+        "width": 1254,
+        "height": 1254,
+        "pngColorType": 6,
+        "sha256": "c11c32fe6e0344bb697d540d53bf9465a31a8c0b51dfcc8d3b69c3274337ed3b",
+        "manifestId": "holzstab",
+        "manifestHashMatches": true,
+        "recordedAlphaRange": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "styleMatchesInventoryPreset": true,
+        "subjectMatchesItem": true,
+        "requiresGeneration": false
+      },
+      "sourceRefs": [
+        {
+          "kind": "market-folder",
+          "market": "Gemischtwarenhändler",
+          "sourceId": "holzstab",
+          "rowIndex": 46
+        }
+      ]
+    }
+  ]
+}

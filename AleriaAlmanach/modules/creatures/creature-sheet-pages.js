@@ -6,6 +6,7 @@ export const CREATURE_SHEET_PAGES = Object.freeze([
   { id: 'abilities', label: 'Angriffe & Kräfte', subtitle: 'Waffen, Techniken & besondere Eigenschaften' },
   { id: 'magic', label: 'Magie & Aura', subtitle: 'Zauber, Zauberplätze & magischer Schutz' },
   { id: 'loot', label: 'Beute', subtitle: 'Lootbox · Münzen, Fundstücke & mögliche Drops' },
+  { id: 'inventory', label: 'Inventar', subtitle: 'Besitz und gemeinsam definierte Ausrüstung' },
   { id: 'images', label: 'Bilder & Emotes', subtitle: 'Portraits, Bildersets & Ausdrucksgalerie' }
 ]);
 

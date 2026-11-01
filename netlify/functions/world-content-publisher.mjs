@@ -1,4 +1,6 @@
 import { timingSafeEqual } from 'node:crypto';
+import { assertNoticeDate } from '../../Anzeigetafeln/assets/js/timeline/notice-dates.mjs';
+import { assertArchiveState } from '../../Anzeigetafeln/assets/js/archive/notice-archive-model.mjs';
 
 const API_VERSION = '2026-03-10';
 const MAX_REQUEST_BYTES = 5 * 1024 * 1024;
@@ -69,7 +71,10 @@ function validateBoardState(state) {
     if (typeof notice?.id !== 'string' || typeof notice?.x !== 'number' || typeof notice?.y !== 'number') {
       throw new Error(`Aushang "${notice?.title || notice?.id || '?'}" besitzt keine gültige id/x/y-Struktur.`);
     }
+    if (notice.publishedOn !== undefined) assertNoticeDate(notice.publishedOn);
+    for (const comment of notice.comments || []) if (comment.postedOn !== undefined) assertNoticeDate(comment.postedOn, 'Antwortdatum');
   }
+  if (state.noticeArchive !== undefined) assertArchiveState(state.noticeArchive, state.zettel);
   if (state.boardLayout !== undefined) {
     const layout = state.boardLayout;
     if (layout?.version !== 1 || !Array.isArray(layout.posters) || layout.posters.length > 500) throw new Error('Ungültige Plakatanordnung.');
@@ -99,6 +104,18 @@ function decodeContent(record, fallback) {
     return JSON.parse(Buffer.from(record.content.replace(/\s/g, ''), 'base64').toString('utf8'));
   } catch {
     throw new Error('Die bestehende GitHub-Datei enthält ungültiges JSON.');
+  }
+}
+
+function assertBoardArchiveContinuity(previous, next) {
+  const remaining = new Set(next.zettel.map(notice => notice.id));
+  for (const entry of previous?.noticeArchive?.entries || []) {
+    const retainedIds = entry.noticeIds.filter(id => remaining.has(id));
+    if (!retainedIds.length) continue;
+    const retained = next.noticeArchive?.entries.find(item => item.id === entry.id);
+    if (!retained || retainedIds.some(id => !retained.noticeIds.includes(id))) {
+      throw new Error('Der Speicherstand enthält das bestehende Papierarchiv nicht vollständig. Bitte die Tafel neu laden.');
+    }
   }
 }
 
@@ -142,6 +159,7 @@ async function publish({ scopeName, dataPath, state, expectedRevision }, config,
   const currentEnvelope = decodeContent(current, { revision: 0 });
   const actualRevision = Math.max(0, Number(currentEnvelope.revision || 0));
   if (actualRevision !== expectedRevision) return { conflict: { expectedRevision, actualRevision } };
+  if (scopeName === 'anzeigetafeln') assertBoardArchiveContinuity(currentEnvelope.state, validatedState);
 
   const envelope = {
     schemaVersion: 1,
@@ -200,6 +218,7 @@ export const __testables = Object.freeze({
   assertRelativeDataPath,
   validateDocumentState,
   validateBoardState,
+  assertBoardArchiveContinuity,
   decodeContent,
   publish,
 });

@@ -5121,6 +5121,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "662d844a438071",
+    "name": "Llythfor",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Llythfor.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor",
+    "source": "Hauswappen"
+  },
+  {
     "id": "30fceee2b32d4b",
     "name": "Maerllys",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Maerllys.png",
@@ -6182,6 +6190,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "url": "/Stammbäume/assets/images/houses/Uathneach/suilgeach.webp",
     "kind": "crest",
     "group": "Uathneach",
+    "source": "Hauswappen"
+  },
+  {
+    "id": "7b09b860aafb98",
+    "name": "haus falto",
+    "url": "/Stammbäume/assets/images/houses/Venalys/haus-falto.png",
+    "kind": "crest",
+    "group": "Venalys",
     "source": "Hauswappen"
   },
   {

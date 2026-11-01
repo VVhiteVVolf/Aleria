@@ -36,7 +36,7 @@
     const covered = window.TafelBoardComposition?.coveredNoticeIds() || new Set();
 
     const S = state();
-    window.TafelNoticeStacks.groups(S.zettel || [], { includeSecret: rt().isEditMode() }).forEach(group => {
+    window.TafelNoticeStacks.groups(rt().visibleNotices?.() || S.zettel || [], { includeSecret: rt().isEditMode() }).forEach(group => {
       if(group.notices.some(notice => covered.has(notice.id))) return;
       const z = group.notices[0];
       const type = typeById(z.typ);
@@ -57,6 +57,7 @@
 
       zl.appendChild(el);
     });
+    window.TafelArchive?.render();
   }
 
   function showTooltip(z, cx, cy, members = [z]){

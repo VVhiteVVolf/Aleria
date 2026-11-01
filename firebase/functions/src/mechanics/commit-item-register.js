@@ -1,12 +1,16 @@
 import { createHash, randomUUID } from 'node:crypto';
-import { getFirestore } from 'firebase-admin/firestore';
+import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { STANDARD_ITEMS, STANDARD_VERSION } from '../generated/item-register/item-register-standard.js';
 import { normalizeOffer, canManageCharacter } from '../generated/item-register/item-register-model.js';
 import { applyRegisterTrade, customizeOwnedItem } from '../generated/item-register/item-register-trade.js';
 import { toMinor } from '../generated/item-register/item-register-money.js';
+import { moneyTotal, moneyState, formatMoney } from '../generated/item-register/item-register-money.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { resolveModuleProduct } from './item-register-module-source.js';
+import { productWithItemDefinition, prepareTemplateDefinition, prepareUniqueItemClaims, readItemDefinitionIndex } from '../items/item-definition-repository.js';
+import { selectiveItemInventoryUpdate } from '../items/item-inventory-update.js';
+import { synchronizeEquipmentFromInventory } from '../generated/character-equipment/character-equipment-sync.js';
 
 const cleanId = value => {
   const id = String(value || '');
@@ -18,7 +22,7 @@ const assertRevision = (current, expected) => {
 };
 function safeOffer(data) {
   const output = {};
-  for (const key of ['id', 'templateId', 'title', 'listId', 'listName', 'category', 'type', 'description', 'details', 'image', 'priceRange', 'stock', 'buybackCopper', 'combatDefinition', 'tags', 'archived']) {
+  for (const key of ['id', 'templateId', 'definitionRef', 'sellerCharacterId', 'title', 'listId', 'listName', 'category', 'type', 'description', 'details', 'image', 'priceRange', 'stock', 'buybackCopper', 'combatDefinition', 'tags', 'archived']) {
     if (data[key] !== undefined) output[key] = data[key];
   }
   if (JSON.stringify(output).length > 60000) throw new Error('Das Angebot ist zu groß.');
@@ -43,12 +47,14 @@ export async function commitItemRegisterOperation(database, auth, input) {
   const now = new Date().toISOString();
   const instanceId = `possession-${randomUUID()}`;
   const newCreatureRef = database.collection('creatures').doc();
+  const sceneCommentRef = input.entryId ? database.collection('comments').doc() : null;
 
   return database.runTransaction(async transaction => {
     const prior = await transaction.get(receiptRef);
     if (prior.exists) {
       if (prior.data().fingerprint !== fingerprint) throw new HttpsError('already-exists', 'Diese Vorgangs-ID wurde bereits verwendet.');
-      return prior.data().result;
+      const character = input.characterId ? await transaction.get(database.collection('characters').doc(cleanId(input.characterId))) : null;
+      return { ...prior.data().result, ...(character?.exists ? { character: { ...character.data(), id: character.id } } : {}) };
     }
     let result;
     if (action === 'save-offer') {
@@ -58,14 +64,27 @@ export async function commitItemRegisterOperation(database, auth, input) {
       const ref = database.collection('item_register_offers').doc(id);
       const current = await transaction.get(ref);
       assertRevision(current.data()?.revision, input.expectedRevision);
-      const offer = { ...safeOffer(input.offer), id, revision: (current.data()?.revision || 0) + 1, updatedAt: now, updatedBy: auth.uid };
+      let offer = { ...safeOffer(input.offer), id, revision: (current.data()?.revision || 0) + 1, updatedAt: now, updatedBy: auth.uid };
+      if (!Object.hasOwn(input.offer, 'sellerCharacterId') && current.data()?.sellerCharacterId) offer.sellerCharacterId = current.data().sellerCharacterId;
+      if (offer.sellerCharacterId) {
+        const seller = await transaction.get(database.collection('characters').doc(cleanId(offer.sellerCharacterId)));
+        if (!seller.exists || !canManageCharacter(seller.data(), access)) throw new HttpsError('permission-denied', 'Ein Figurenkonto kann nur vom Besitzer oder der Spielleitung mit einem Sortiment verbunden werden.');
+      }
+      offer = productWithItemDefinition(offer);
+      const prepared = await prepareTemplateDefinition(database, transaction, offer, { actorUid: auth.uid, publishHead: true, now });
+      offer = { ...offer, definitionRef: { id: prepared.definition.id, revision: prepared.definition.revision },
+        category: prepared.definition.category, stackable: prepared.definition.stackable, combatDefinition: prepared.definition.combatDefinition,
+        useDefinition: prepared.definition.useDefinition, inventoryUseMode: prepared.definition.inventoryUseMode };
+      prepared.write();
       transaction.set(ref, offer);
       result = { offer, message: 'Sortiment gespeichert.' };
     } else {
       const characterRef = database.collection('characters').doc(cleanId(input.characterId));
       const characterSnapshot = await transaction.get(characterRef);
       if (!characterSnapshot.exists) throw new HttpsError('not-found', 'Die Figur wurde nicht gefunden.');
-      const character = { ...characterSnapshot.data(), id: characterRef.id };
+      const rawCharacter = { ...characterSnapshot.data(), id: characterRef.id };
+      const itemDefinitions = await readItemDefinitionIndex(database, transaction, [rawCharacter]);
+      const character = rawCharacter;
       if (!canManageCharacter(character, access)) throw new HttpsError('permission-denied', 'Nur der Besitzer der Figur oder die Spielleitung kann diesen Vorgang ausführen.');
       const lock = await transaction.get(database.doc(`combat_profile_locks/characters/records/${character.id}`));
       if (lock.data()?.activeEncounterKeys?.length) throw new HttpsError('failed-precondition', 'Während eines aktiven Kampfes ist das Inventar gesperrt.');
@@ -85,19 +104,78 @@ export async function commitItemRegisterOperation(database, auth, input) {
         const productId = cleanId(input.productId);
         const offerRef = productId.startsWith('offer:') ? database.collection('item_register_offers').doc(productId) : null;
         const offerSnapshot = offerRef ? await transaction.get(offerRef) : null;
-        const product = productId.startsWith('module:')
+        let product = productId.startsWith('module:')
           ? await resolveModuleProduct({ database, transaction, input, standards: STANDARD_ITEMS, existingItem })
           : offerRef ? offerSnapshot.data() : STANDARD_ITEMS.find(item => item.id === productId || item.aliases?.includes(productId));
         if (!product) throw new HttpsError('not-found', 'Das Angebot wurde nicht gefunden.');
         if (offerRef) assertRevision(product.revision, input.offerRevision);
-        const trade = applyRegisterTrade(character, product, { ...input, direction: action }, { instanceId, now });
-        updates = { inventory: trade.inventory, combatProfile: trade.combatProfile };
+        const vendorId = String(product.listId || product.moduleId || product.id);
+        const vendorRef = database.collection('item_vendor_wallets').doc(createHash('sha256').update(vendorId).digest('hex'));
+        const vendorWallet = await transaction.get(vendorRef);
+        const sellerRef = product.sellerCharacterId ? database.collection('characters').doc(cleanId(product.sellerCharacterId)) : null;
+        const sellerSnapshot = sellerRef ? await transaction.get(sellerRef) : null;
+        if (sellerRef) {
+          if (!sellerSnapshot.exists || sellerRef.id === character.id) throw new HttpsError('failed-precondition', 'Das Anbieterkonto fehlt oder ist mit dem Käufer identisch.');
+          const sellerLock = await transaction.get(database.doc(`combat_profile_locks/characters/records/${sellerRef.id}`));
+          if (sellerLock.data()?.activeEncounterKeys?.length) throw new HttpsError('failed-precondition', 'Das Anbieterkonto nimmt gerade an einem Kampf teil.');
+        }
+        let preparedDefinition = null, claim = () => {};
+        if (action === 'buy') {
+          product = productWithItemDefinition(product);
+          preparedDefinition = await prepareTemplateDefinition(database, transaction, product, { actorUid: auth.uid, publishHead: true, now });
+          if (preparedDefinition.definition) {
+            const definition = preparedDefinition.definition;
+            itemDefinitions.set(`${definition.id}@${definition.revision}`, definition);
+            product = { ...product, combatDefinition: definition.combatDefinition, inventoryUseMode: definition.inventoryUseMode,
+              useDefinition: definition.useDefinition, definitionKind: definition.kind, category: definition.category, stackable: definition.stackable };
+            claim = await prepareUniqueItemClaims(database, transaction, [{ definition, instanceId, quantity: input.quantity, holder: { kind: 'characters', recordId: character.id, itemId: instanceId } }], { now, actorUid: auth.uid });
+          }
+        }
+        const trade = applyRegisterTrade(character, product, { ...input, direction: action }, { instanceId, now,
+          ...(preparedDefinition?.definition ? { definition: preparedDefinition.definition } : {}), definitions: itemDefinitions });
+        if (action === 'sell' && existingItem?.definitionRef) claim = await prepareUniqueItemClaims(database, transaction, [{
+          definition: itemDefinitions.get(`${existingItem.definitionRef.id}@${existingItem.definitionRef.revision}`),
+          instanceId: existingItem.instanceId || existingItem.id, quantity: input.quantity,
+          holder: { kind: 'vendor', recordId: vendorId, itemId: existingItem.instanceId || existingItem.id },
+          previousHolder: { kind: 'characters', recordId: character.id, itemId: existingItem.id }
+        }], { actorUid: auth.uid, now });
+        updates = selectiveItemInventoryUpdate(character, trade, [trade.receipt.itemId], { preserveExisting: action === 'sell' });
+        const delta = toMinor(trade.receipt.totalCopper) * (action === 'buy' ? 1 : -1);
+        const netMinor = Number(vendorWallet.data()?.netMinor || 0) + delta;
+        if (!Number.isSafeInteger(netMinor)) throw new HttpsError('failed-precondition', 'Das Händlerkonto überschreitet den unterstützten Zahlenbereich.');
+        let sellerUpdates = null;
+        if (sellerRef) {
+          const seller = sellerSnapshot.data(), inventory = structuredClone(seller.inventory || { items: [] });
+          const balance = toMinor(moneyTotal(inventory.moneyState || inventory.money)) + delta;
+          if (!Number.isSafeInteger(balance) || balance < 0) throw new HttpsError('failed-precondition', 'Der Anbieter kann den Ankaufspreis nicht bezahlen.');
+          inventory.moneyState = moneyState(balance / 100); inventory.money = formatMoney(inventory.moneyState);
+          sellerUpdates = withProtectedRecordRevisions(seller, { inventory, updatedAt: now }, ['inventory']);
+        }
+        preparedDefinition?.write();
+        claim();
+        transaction.set(vendorRef, { vendorId, name: product.listName || 'Warenregister', netMinor, updatedAt: now });
+        if (sellerUpdates) transaction.update(sellerRef, sellerUpdates);
         if (offerRef && action === 'buy') transaction.update(offerRef, { stock: trade.stock, revision: product.revision + 1, updatedAt: now });
         if (creatureRef && action === 'sell') transaction.update(creatureRef, { itemOrigin: { ...creatureSnapshot.data().itemOrigin, ownerCharacterId: '', ownerCharacterName: '', disposition: 'sold', soldAt: now }, updatedAt: now });
         result = { receipt: trade.receipt, message: action === 'buy' ? 'Kauf abgeschlossen.' : 'Verkauf abgeschlossen.' };
+        if (sceneCommentRef) {
+          const text = `${character.name || 'Eine Figur'} ${action === 'buy' ? 'kauft' : 'verkauft'} ${input.quantity} × ${trade.receipt.name} für ${trade.receipt.totalCopper} KT bei ${product.listName || 'einem Händler'}.`;
+          transaction.create(sceneCommentRef, { entryId: String(input.entryId).slice(0, 240), text, charName: 'Erzähler', narrator: true,
+            characterId: '', avatarKind: 'narrator', commentMode: 'scene-inventory-transfer', commentKind: 'scene-inventory-transfer-event',
+            sceneInventoryTransfer: { transferId: operationId, schemaVersion: 3,
+              giver: { id: vendorId, name: product.listName || 'Händler' }, receiver: { id: character.id, name: character.name || '' },
+              object: { kind: 'register-item', name: trade.receipt.name, quantity: Number(input.quantity), totalCopper: trade.receipt.totalCopper, definitionRef: product.definitionRef || null },
+              flavour: String(input.flavour || '').slice(0, 3000), createdAt: now },
+            inventoryTransaction: { schemaVersion: 3, validatedBy: 'commitItemRegister', trade: true, operations: 1 },
+            serverValidatedMechanics: true, createdBy: auth.uid, createdByRole: role, schemaVersion: 3,
+            orderKey: Date.now(), createdAtClient: Date.now(), ts: FieldValue.serverTimestamp(), activityAt: FieldValue.serverTimestamp() });
+          result.commentId = sceneCommentRef.id;
+        }
       } else if (action === 'customize') {
         const customized = customizeOwnedItem(character, input, now);
-        updates = { inventory: customized.inventory, combatProfile: customized.combatProfile };
+        const synced = synchronizeEquipmentFromInventory({ inventory: customized.inventory, combatProfile: character.combatProfile || {},
+          definitions: itemDefinitions, preserveLoadout: true });
+        updates = selectiveItemInventoryUpdate(character, synced, [customized.item.id]);
         if (creatureRef) transaction.update(creatureRef, { name: customized.item.name, portrait: customized.item.image || '', notes: customized.item.description || '', updatedAt: now });
         result = { message: 'Besitz aktualisiert.' };
       } else if (action === 'link-creature') {

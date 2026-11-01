@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-10-31T22:51:09.681Z",
+  "productionWrites": false,
+  "published": false,
+  "groups": [
+    {
+      "file": "item-frontend-final.log",
+      "tests": 171,
+      "passed": 171,
+      "failed": 0
+    },
+    {
+      "file": "server-final.log",
+      "tests": 259,
+      "passed": 259,
+      "failed": 0
+    },
+    {
+      "file": "firestore-rules-final.log",
+      "tests": 19,
+      "passed": 19,
+      "failed": 0
+    },
+    {
+      "file": "notice-rewards-final.log",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "file": "item-definitions-emulator-final.log",
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "file": "transfer-emulator-final.log",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "file": "scene-items-final.log",
+      "tests": 3,
+      "passed": 3,
+      "failed": 0
+    }
+  ],
+  "passed": 470,
+  "buildSucceeded": true,
+  "broadSuite": {
+    "tests": 1920,
+    "originalFailures": 18,
+    "adapterFailuresSubsequentlyFixedAndRetested": 3,
+    "remainingFailures": [
+      "not ok 45 - alle Kämpferklassen verwenden die Rüstungskategorie auch bei älteren Einträgen",
+      "not ok 911 - Duncans local database record and prepared online inventory use the same Carreg identity",
+      "not ok 1140 - the notice joins Hilfe as its own publication and never adds a poster or reveals an invented trauma",
+      "not ok 1244 - chosen ship cats survive creature import with distinct portraits, histories and Trevor ownership",
+      "not ok 1246 - both cats link once to Trevor while existing possessions, money and combat remain unchanged",
+      "not ok 1393 - Kanne service insertion preserves reviewed pages, comment identities and purchase offers",
+      "not ok 1772 - all catalog action/reaction damage starts with the real weapon; all pure bonus techniques remain capped",
+      "not ok 1799 - local records and review exports link each companion to its actual owner; Freki and Skarns status remain distinct",
+      "not ok 1908 - triple 15,15,15, save 1: independent attacks, one final save, exact damage/costs",
+      "not ok 1909 - triple 15,15,15, save 20: independent attacks, one final save, exact damage/costs",
+      "not ok 1912 - triple 15,2,15, save 1: independent attacks, one final save, exact damage/costs",
+      "not ok 1913 - triple 15,2,15, save 20: independent attacks, one final save, exact damage/costs",
+      "not ok 1916 - triple 20,20,20, save 1: independent attacks, one final save, exact damage/costs",
+      "not ok 1917 - triple 20,20,20, save 20: independent attacks, one final save, exact damage/costs",
+      "not ok 1918 - triple fixed dice survive two-handed grip; ordinary two-strike sequence has no training die"
+    ]
+  },
+  "localMigrationOnly": true,
+  "emulator": {
+    "host": "127.0.0.1:8182",
+    "projectId": "demo-aleria-item-duels"
+  }
+}

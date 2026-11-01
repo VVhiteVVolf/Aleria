@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-10-31T00:00:00Z",
+  "sourceExportedAt": "2026-11-01T03:46:32.000Z",
   "summary": {
-    "sourceDocuments": 389,
-    "total": 251,
+    "sourceDocuments": 394,
+    "total": 255,
     "mergedSameNameGroups": 45,
     "familyLinked": 163,
     "familyAmbiguous": 0,
-    "familyPending": 88,
+    "familyPending": 92,
     "primaryFamily": 163,
     "primaryGroup": 31,
-    "primaryPlace": 23,
+    "primaryPlace": 27,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -1030,6 +1030,54 @@
     {
       "recordId": "character--person--haus-llythfor--eirlys-llythfor",
       "name": "Eirlys Llythfor",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--euddogwy",
+      "name": "Euddogwy O'Cenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--lleuwen",
+      "name": "Lleuwen",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--ulrich",
+      "name": "Ulrich Schniedel",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--orvar",
+      "name": "Orvar Schattentänzer",
       "status": "pending",
       "primary": {
         "kind": "place",

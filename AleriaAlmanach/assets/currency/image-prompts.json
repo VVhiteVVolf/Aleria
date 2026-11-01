@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-01",
+  "tool": "built-in image_gen",
+  "stylePreset": "fantasy-inventory-item",
+  "reference": "AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-v1.png",
+  "userDirection": "Vorhandene eigene Kupfer- und Eisenmünze erhalten; fehlende Gold-/Silbermünzen nach Nutzerantwort neu erzeugen. Zahlen bleiben Text neben dem Münzbild.",
+  "assets": [
+    {
+      "id": "gold",
+      "original": "aleria-goldtaler-v1.png",
+      "display": "aleria-goldtaler-v1.webp",
+      "sourceOutput": "exec-e6ed0545-5ce6-4c2a-a1be-572f6f6f4f2c.png",
+      "prompt": "Create ONE square 1:1 isolated fantasy RPG inventory icon: a single GOLDTALER coin for the original Aleria fantasy world. The only object is one thick round warm golden coin, almost frontal with a very slight three-quarter angle, full circular silhouette centered with 12 percent transparent margin. A raised simple sun emblem with twelve broad rays in the center, a closed double circular rim with a restrained braided Celtic detail. Rich muted golden yellow, aged warm recessed gold, hand-painted textured metal, crisp dark drawn outlines, simplified painterly shading and gentle illustrated highlights. Closely match the warm hand-painted readable inventory appearance of the supplied Aleria copper coin reference, but make this a clearly golden SUN coin, without copying its spiral emblem. NOT Dungeons and Dragons currency. No hourglass coin, no angular polygon coin, no holes. True transparent PNG alpha background, including outside the silhouette. No paper, floor, cast shadow, hands, scenery, piles, border frame around the icon, labels, digits, letters, watermark or background checkerboard. ONE complete coin only. This is a new separate denomination asset, not an edit to the copper coin. The reference supplies only the art style."
+    },
+    {
+      "id": "silver",
+      "original": "aleria-silbertaler-v1.png",
+      "display": "aleria-silbertaler-v1.webp",
+      "sourceOutput": "exec-b2afe6fd-68b7-49ee-a992-6aa54f3c2c7f.png",
+      "prompt": "Create ONE square 1:1 isolated fantasy RPG inventory icon: a single SILBERTALER coin for the original Aleria fantasy world. The only object is one thick round silver coin, almost frontal with a very slight three-quarter angle, full circular silhouette centered with 12 percent transparent margin. A clear embossed crescent moon above three broad simple sea waves in the center, a closed double circular rim with restrained braided Celtic detail. Muted cool silver, softly worn dark gray recesses, hand-painted textured metal, crisp dark drawn outlines, simplified painterly shading and gentle illustrated highlights. Closely match the warm hand-painted readable inventory appearance of the supplied Aleria copper coin reference, but make this a clearly SILVER MOON AND SEA coin, without copying its spiral emblem. NOT Dungeons and Dragons currency. No triangular coin, no angular polygon coin, no holes. True transparent PNG alpha background, including outside the silhouette. No paper, floor, cast shadow, hands, scenery, piles, border frame around the icon, labels, digits, letters, watermark or background checkerboard. ONE complete coin only. This is a new separate denomination asset, not an edit to the copper coin. The reference supplies only the art style."
+    }
+  ],
+  "validation": {
+    "originalDimensions": [
+      1254,
+      1254
+    ],
+    "displayDimensions": [
+      512,
+      512
+    ],
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "inspected": true,
+    "displayEncoding": "WebP quality 92; preserved transparent alpha; PNG originals retained",
+    "pngBytes": 4054623,
+    "displayBytes": 159738,
+    "displayReductionPercent": 96.06
+  }
+}

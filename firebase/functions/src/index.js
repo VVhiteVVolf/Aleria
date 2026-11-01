@@ -18,6 +18,15 @@ import { importBackupRecords } from './backup/import-backup-records.js';
 export { endSceneSession, writeSceneBackupToGitHub } from './backup/scene-backup-jobs.js';
 import { commitInventoryTransfer } from './mechanics/commit-inventory-transfer.js';
 export { commitItemRegister } from './mechanics/commit-item-register.js';
+export { commitQuest } from './quests/commit-quest.js';
+export { commitGroupInventory } from './groups/commit-group-inventory.js';
+export { questBackup } from './quests/quest-backup.js';
+export { commitItemDefinition } from './items/commit-item-definition.js';
+export { commitItemRecord } from './items/commit-item-record.js';
+export { commitItemTrade } from './items/commit-item-trade.js';
+export { commitItemAward } from './items/commit-item-award.js';
+export { commitItemMigration } from './items/commit-item-migration.js';
+export { itemBackup } from './items/item-backup.js';
 export { commitSceneItem } from './mechanics/commit-scene-item.js';
 import { commitNarrativeComment } from './comments/commit-narrative-comment.js';
 

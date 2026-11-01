@@ -13,13 +13,13 @@ const glendower = 'glendower-o-cenyr';
 const forcedOrigin = 'forced-eithne-unknown-glendower-origin';
 const source = 'CharakterDatenbank/records/unzugeordnet/unassigned/glendower-o-cenyr--glendower-o-cenyr/character.json';
 
-export const HOUSE_TWYLLOD_FAMILY = createCourtFamily({
+const family = createCourtFamily({
   id: 'haus-twyllod', title: 'Familie Twyllod', emblem: COURT_EMBLEMS.twyllod,
   houseProfile: normalizeHouseProfile({ rankId: 'commoner', kingdom: 'Cenyr', county: 'Celtigerns Wacht',
-    barony: 'Llamreis Ankunft', seat: 'Twyllod-Hof', folderPath: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Bannkreis Gwynthor'] }),
+    barony: 'Llamreis Ankunft', seat: 'Twyllod-Hof', folderPath: ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'] }),
   description: 'Gewöhnliche einheimische Fischerfamilie aus Gwynthors Bannkreis. Arian Twyllod ist aus Glendower O’Cenyrs Biografie belegt. Sein jüngerer Bruder Eifion arbeitete sich zum Schiffskapitän hoch und heiratete die anerkannte Witwe Lleucu Swyll. Die Familie hat keinen geschönten gemeinsamen Hintergrund: Ihre Ausstoßung Eithnes und Zweifel an deren Schilderung bleiben Teil der Vorgeschichte.',
   firstYear: '1665', roots: [parents[0]],
-  sourceRevision: 2, biography: TWYLLOD_BIOGRAPHY,
+  sourceRevision: 3, biography: TWYLLOD_BIOGRAPHY,
   people: [
     createFamilyPerson({ id: parents[0], name: 'Cynwrig Twyllod', sex: 'male', birth: '1665', houseId: 'house-twyllod', lineageRole: 'head', title: 'Alter Küstenfischer', notes: 'Vater Arians und Eifions. Die Familiengeschichte umfasst die Ausstoßung Eithnes; individuelle damalige Aussagen werden nicht erfunden.' }),
     createFamilyPerson({ id: parents[1], name: 'Morfudd', sex: 'female', birth: '1668', houseId: '', familyRole: 'married', title: 'Mutter Arians und Eifions', notes: 'Führte den einfachen Fischerhaushalt. Die Verantwortung einzelner Familienmitglieder im Fall Eithne bleibt offen.' }),
@@ -53,4 +53,13 @@ export const HOUSE_TWYLLOD_FAMILY = createCourtFamily({
   ],
   houses: [{ id: 'house-swyll', name: 'Haus Swyll', emblem: COURT_EMBLEMS.swyll, status: 'active' }],
   sourceNote: `Autorenauftrag vom 30.10.2026; Arian, Eithne und Glendowers Vorgeschichte aus ${source}. Twyllod wurde zuvor nur erwähnt, nicht als eigenes Register geführt. Die neue Verwandtschaft und passenden Lebensdaten werden als heutige Ausarbeitung ergänzt. Keine Live-Daten schreiben.`
+});
+
+export const HOUSE_TWYLLOD_FAMILY = Object.freeze({
+  ...family,
+  extensions: { ...family.extensions, registryManagedEntitySourceRevision: 2,
+    registryManagedHouseProfileFields: ['folderPath'],
+    registryManagedHouseProfileFieldRevisions: { folderPath: 3 },
+    registryManagedRecordFields: ['folderPath']
+  }
 });

@@ -1,0 +1,42 @@
+{
+  "errors": [],
+  "remoteWritesAllowed": false,
+  "views": [
+    {
+      "name": "desktop",
+      "bounds": {
+        "client": 1098,
+        "scroll": 1098
+      },
+      "allImagesDecoded": true
+    },
+    {
+      "name": "mobile",
+      "bounds": {
+        "client": 396,
+        "scroll": 396
+      },
+      "allImagesDecoded": true
+    }
+  ],
+  "binding": {
+    "noticeId": "Das Gelbe Formular A38",
+    "x": "179.1px",
+    "y": "717.2px",
+    "width": "62.9997px"
+  },
+  "calendarText": {
+    "checkedDates": 39,
+    "failures": []
+  },
+  "notice": {
+    "id": "gwynthor-gildenjahresrechnung-a38",
+    "type": "erlass",
+    "pages": 1,
+    "posted": {
+      "year": 1740,
+      "month": 3,
+      "day": 9
+    }
+  }
+}

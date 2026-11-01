@@ -15,6 +15,7 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 import { OWETA_DRAIG_BIOGRAPHY } from './person-biographies/oweta-draig.js';
 import { TRAHERN_DRAIG_BIOGRAPHY } from './person-biographies/trahern-draig.js';
 import { MYRIAD_DRAIG_BIOGRAPHY } from './person-biographies/myriad-draig.js';
+import { GAWAIN_PUBLIC_BIOGRAPHY, GAWAIN_PUBLIC_SUMMARY } from '../../../../AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs';
 import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20260911b';
 
 const HOUSE_EMBLEMS = Object.freeze({
@@ -402,7 +403,12 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
     person('neithon-1718-draig', 'Neithon', 'male', '1718', ''),
     person('isobel-1719-draig', 'Isobel', 'female', '1719', ''),
     person('rhiannon-draig', 'Rhiannon', 'female', '1721', ''),
-    person('gawain-draig', 'Gawain', 'male', '1722', ''),
+    person('gawain-draig', 'Gawain', 'male', '1722', '', DRAIG_HOUSE_ID, {
+      title: 'Sir', notes: GAWAIN_PUBLIC_SUMMARY,
+      extensions: { biographyModule: GAWAIN_PUBLIC_BIOGRAPHY, registryManagedSourceRevision: 12,
+        registryManagedFields: ['title', 'notes'], registryManagedFieldRevisions: { title: 12, notes: 12 },
+        registryManagedExtensionFields: ['biographyModule'] }
+    }),
     person('guinevere-neidr', 'Guinevere Neidr', 'female', '1722', '', 'house-neidr', { familyRole: 'ward' }),
     person('amadia-draig', 'Amadia', 'female', '1718', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
     person('rhygifarch-draig', 'Rhygifarch', 'male', '????', '', DRAIG_HOUSE_ID, { familyRole: 'bastard' }),
@@ -729,7 +735,8 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 11,
+    sourceRevision: 12,
+    registryManagedEntitySourceRevision: 11,
     houseBiographyModule: HOUSE_BIOGRAPHY
   }
 })));

@@ -13,7 +13,8 @@ import {
   writeBatch
 } from 'firebase/firestore';
 
-const PROJECT_ID = 'aleria-family-rules-test';
+const PROJECT_ID = process.env.ALERIA_RULES_TEST_PROJECT || 'aleria-family-rules-test';
+if (process.env.ALERIA_RULES_TEST_PROJECT && !PROJECT_ID.startsWith('demo-')) throw Error('An isolated rules project must use a demo- project ID.');
 const DATABASE_ID = 'family-trees';
 let environment;
 
@@ -44,7 +45,7 @@ before(async () => {
       databaseId: DATABASE_ID,
       rules: await readFile(new URL('../firestore.family-trees.rules', import.meta.url), 'utf8'),
       host: '127.0.0.1',
-      port: 8080
+      port: Number(process.env.FIRESTORE_RULES_TEST_PORT || 8080)
     }
   });
 });

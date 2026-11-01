@@ -1,4 +1,7 @@
 import { WORLD_CONTENT_TASKS } from './world-content-tasks.mjs';
+import { ADVENTURE_SYSTEM_TASKS } from './adventure-system-tasks.mjs';
+import { readFileSync } from 'node:fs';
+const questCatalogInputs = JSON.parse(readFileSync(new URL('../../AleriaAlmanach/modules/quests/quest-catalog.json', import.meta.url), 'utf8')).sourceFiles || [];
 
 const testCommand = (...files) => ['--test', '--experimental-test-isolation=none', ...files];
 const almanach = name => `AleriaAlmanach/tests/${name}.test.mjs`;
@@ -39,6 +42,22 @@ const economySourceInputs = [
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
 export const SITE_BUILD_TASKS = [
   {
+    id: 'quest-journal', label: 'Quest sources, prepared travel, landing bridges and atomic rewards',
+    inputs: ['AleriaAlmanach/quests.html', 'AleriaAlmanach/modules/quests/', 'AleriaAlmanach/modules/landing/',
+      'AleriaAlmanach/modules/gwynthor-troetzli/', 'AleriaAlmanach/modules/item-definitions/',
+      'AleriaAlmanach/scripts/build-quest-catalog.mjs', 'AleriaAlmanach/scripts/build-troetzli-quest.mjs',
+      'Anzeigetafeln/', 'Karten/karten.registry.js', 'Karten/assets/js/lsb/',
+      'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', 'Karten/assets/js/karto-app.js',
+      'Stammbäume/assets/data/published-families/haus-penrudd.json', ...questCatalogInputs,
+      'firebase/functions/src/quests/', 'firebase/functions/src/generated/quests/', 'firebase/functions/tests/quest-system.test.js',
+      'firebase/firestore.indexes.json',
+      ...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)],
+    commands: [['netlify/build/prepare-runtime-checks.mjs', '--scope=firebase'],
+      ['AleriaAlmanach/scripts/build-troetzli-quest.mjs', '--check'], ['AleriaAlmanach/scripts/build-quest-catalog.mjs', '--check'],
+      testCommand(...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)),
+      testCommand('firebase/functions/tests/quest-system.test.js')]
+  },
+  {
     id: 'balchder-characters', label: 'Published Balchder biographies and bounded database import',
     inputs: ['firebase/scripts/content/balchder-character-plan.mjs', 'firebase/scripts/content/publish-balchder-characters.mjs',
       'firebase/scripts/content/content-publication-client.mjs', 'firebase/scripts/backup/firestore-value-codec.mjs',
@@ -54,7 +73,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
     inputs: ['netlify/build/', 'netlify/release/', 'netlify/tests/'],
-    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs')]
+    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs', 'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs')]
   },
   {
     id: 'regional-catalog', label: 'Generate regional equipment catalog', always: true,
@@ -68,6 +87,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'notice-boards', label: 'Notice templates, typography, stacks, bounded text and goods rewards',
     inputs: ['Anzeigetafeln/', 'AleriaAlmanach/modules/archive/archive-entry-links.js', 'Orte/assets/js/orte-notice-board.js', 'Orte/tests/poi-bridges.test.mjs',
+      'AleriaAlmanach/modules/core/aleria-calendar.js', 'AleriaAlmanach/modules/world-date/', 'AleriaAlmanach/modules/calendar/calendar-date-picker.mjs',
       'IconOrdner/Steckis/', 'netlify/functions/world-content-publisher.mjs',
       'Fonts/', 'AleriaAlmanach/modules/language/', 'AleriaAlmanach/DokumentenWerkstatt/js/fonts/',
       'AleriaAlmanach/modules/comments/comments-spell-fonts.js',
@@ -82,7 +102,7 @@ export const SITE_BUILD_TASKS = [
       ['AleriaAlmanach/scripts/check-comment-language-bubbles.js'],
       testCommand('Anzeigetafeln/tests/authored-notices.test.mjs', 'Anzeigetafeln/tests/gwynthor-board.test.mjs',
         'Anzeigetafeln/tests/board-composition.test.mjs', 'Anzeigetafeln/tests/board-composition-migration.test.mjs', 'Anzeigetafeln/tests/board-composition-sources.test.mjs', 'Anzeigetafeln/tests/board-storage.test.mjs', 'Anzeigetafeln/tests/board-performance.test.mjs',
-        'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs',
+        'Anzeigetafeln/tests/notice-documents.test.mjs', 'Anzeigetafeln/tests/notice-search.test.mjs', 'Anzeigetafeln/tests/notice-timeline-archive.test.mjs',
         'Anzeigetafeln/tests/notice-stacks-rewards.test.mjs', 'Anzeigetafeln/tests/notice-publications.test.mjs', 'Anzeigetafeln/tests/notice-typography.test.mjs', 'Anzeigetafeln/tests/notice-seals.test.mjs', 'Anzeigetafeln/tests/notice-signoffs.test.mjs', 'Anzeigetafeln/tests/notice-module-links.test.mjs',
         'Anzeigetafeln/tests/single-layer-board.test.mjs', 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs', 'Anzeigetafeln/tests/fleischsammler.test.mjs', 'Anzeigetafeln/tests/gwrgan-lleucu.test.mjs', 'Orte/tests/poi-bridges.test.mjs',
         ...['arcane-alphabet', 'rheunwaith-script', 'karnrith-script', 'laerelis-module'].map(almanach))]
@@ -212,12 +232,16 @@ export const SITE_BUILD_TASKS = [
     // These feature boundaries are checked against actual Node imports by the
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
+      'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
+      'AleriaAlmanach/modules/item-register/item-register-standard.js',
+      'AleriaAlmanach/modules/item-register/item-register-standard-artwork.js',
       'Kontinente/modules/goldmund/goldmund-context.mjs',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
       'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs,
       ...['character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
         'combat-status', 'combat-styles', 'creatures', 'herausforderung', 'image-library',
-        'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'spell-catalog']
+        'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'spell-catalog',
+        'item-definitions', 'inventory-use']
         .map(feature => `AleriaAlmanach/modules/${feature}/`)],
     excludes: ['Gameplay Guide/assets/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'gameplay-guides'],
@@ -319,8 +343,9 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/public/assets/skalli-retinue/',
       'AleriaAlmanach/scripts/build-skalli-retinue.mjs', 'AleriaAlmanach/scripts/build-group-section-migration.mjs',
       almanach('skalli-retinue'), almanach('group-section-migration')],
-    commands: [['AleriaAlmanach/scripts/build-skalli-retinue.mjs', '--check'],
-      ['AleriaAlmanach/scripts/build-group-section-migration.mjs', '--prepare', '--check'],
+    commands: [['netlify/build/prepare-runtime-checks.mjs', '--scope=almanach'],
+      ['AleriaAlmanach/scripts/build-skalli-retinue.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-group-section-migration.mjs', '--check'],
       testCommand(almanach('skalli-retinue'), almanach('group-section-migration'))]
   },
   {
@@ -353,6 +378,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
+      'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
       'Kontinente/modules/goldmund/goldmund-context.mjs',
       'Stammbäume/vendor/', 'Stammbäume/tests/', 'Stammbäume/tools/',
       'Stammbäume/Stammbaum.html', 'Stammbäume/index.html',
@@ -365,7 +391,8 @@ export const SITE_BUILD_TASKS = [
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser']]
   },
-  ...WORLD_CONTENT_TASKS
+  ...WORLD_CONTENT_TASKS,
+  ...ADVENTURE_SYSTEM_TASKS
 ];
 
 export const SHARED_BUILD_INPUTS = ['netlify/build/', 'netlify/tests/', 'netlify.toml',

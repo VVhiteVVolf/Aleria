@@ -1,0 +1,82 @@
+{
+  "exports": [
+    {
+      "id": "person--haus-llythfor--cynddelw-llythfor",
+      "path": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--cynddelw-llythfor.json",
+      "changes": [],
+      "serializationOnly": true
+    },
+    {
+      "id": "person--haus-penrudd--esyllt-penrudd",
+      "path": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-penrudd--esyllt-penrudd.json",
+      "changes": [
+        {
+          "path": "character.taxonomyPath",
+          "before": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor",
+          "after": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+        }
+      ],
+      "serializationOnly": false
+    },
+    {
+      "id": "person--haus-llythfor--eirlys-llythfor",
+      "path": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--eirlys-llythfor.json",
+      "changes": [],
+      "serializationOnly": true
+    }
+  ],
+  "horse": {
+    "path": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/companion-cynddelw-troetzli.json",
+    "changes": []
+  },
+  "database": [
+    {
+      "path": "records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json",
+      "changes": []
+    },
+    {
+      "path": "records/orte/gwynthor/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json",
+      "changes": [
+        {
+          "path": "sync.contentHash",
+          "before": "763ee4c6131513bedbdd26f9afc2f6bdb26cd58683ae1cdbc45c50238e898d30",
+          "after": "4f72481cad270d0c536e8b9496a39ca239bc49e59a702613eea8ad60cd347828"
+        },
+        {
+          "path": "sources.firestoreExports.0.taxonomyPath",
+          "before": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor",
+          "after": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+        },
+        {
+          "path": "character.taxonomyPath",
+          "before": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor",
+          "after": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+        }
+      ]
+    },
+    {
+      "path": "records/orte/gwynthor/eirlys-llythfor--person--haus-llythfor--eirlys-llythfor/character.json",
+      "changes": []
+    }
+  ],
+  "registry": [
+    {
+      "path": "records.249.contentHash",
+      "before": "763ee4c6131513bedbdd26f9afc2f6bdb26cd58683ae1cdbc45c50238e898d30",
+      "after": "4f72481cad270d0c536e8b9496a39ca239bc49e59a702613eea8ad60cd347828"
+    }
+  ],
+  "snapshot": [
+    {
+      "path": "characters.249.taxonomyPath",
+      "before": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor",
+      "after": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor"
+    },
+    {
+      "path": "characters.249.localRecord.contentHash",
+      "before": "763ee4c6131513bedbdd26f9afc2f6bdb26cd58683ae1cdbc45c50238e898d30",
+      "after": "4f72481cad270d0c536e8b9496a39ca239bc49e59a702613eea8ad60cd347828"
+    }
+  ],
+  "report": []
+}

@@ -4,10 +4,40 @@ Discard faint exterior halos, keep the connected emblem and make its enclosed
 surface fully opaque. Originals remain in the image tool's generated archive.
 """
 from pathlib import Path
+import math
 import numpy as np
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def frame_circular_emblem(image, *, coverage=.86):
+    """Frame an opaque emblem as an exact circle, preserving its RGB pixels.
+
+    Call after alpha cleanup. The inscribed disc excludes the irregular outer
+    generator fringe; transparent padding retains the original source canvas.
+    """
+    if not 0 < coverage < 1:
+        raise ValueError('Circle coverage must be between zero and one.')
+    pixels = np.array(image.convert('RGBA'))
+    mask = pixels[:, :, 3] == 255
+    y, x = np.nonzero(mask)
+    cx, cy = round((x.min() + x.max()) / 2), round((y.min() + y.max()) / 2)
+    oy, ox = np.nonzero(~mask)
+    radius = math.floor(np.hypot(ox - cx, oy - cy).min()) - 1
+    if radius <= 0:
+        raise ValueError('Emblem has no fully opaque circular interior.')
+    yy, xx = np.ogrid[:image.height, :image.width]
+    pixels[:, :, 3] = np.where((xx - cx)**2 + (yy - cy)**2 <= radius**2, 255, 0).astype('uint8')
+    side = math.ceil(max(2 * radius / coverage, 2 * max(cx, image.width - cx, cy, image.height - cy) + 4))
+    if side % 2:
+        side += 1
+    padding = dict(left=side // 2 - cx, top=side // 2 - cy)
+    canvas = Image.new('RGBA', (side, side))
+    canvas.paste(Image.fromarray(pixels), (padding['left'], padding['top']))
+    return canvas, padding, dict(centre=[side // 2, side // 2], radius=radius)
+
+
 def normalize_emblem_alpha(path, *, fill_enclosed=True):
     path = Path(path).resolve()
     path.relative_to(ROOT)

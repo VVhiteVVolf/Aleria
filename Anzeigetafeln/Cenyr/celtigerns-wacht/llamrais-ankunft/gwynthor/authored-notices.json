@@ -74,7 +74,12 @@
       "artikel": [],
       "personen": [],
       "comments": [],
-      "secret": false
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "id": "gwynthor-herluin-angestellte-vermisst-cyrwyn",
@@ -141,7 +146,12 @@
       "artikel": [],
       "personen": [],
       "comments": [],
-      "secret": false
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "id": "gwynthor-herluin-angestellte-vermisst-torvald",
@@ -208,7 +218,12 @@
       "artikel": [],
       "personen": [],
       "comments": [],
-      "secret": false
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "id": "gwynthor-herluin-angestellte-vermisst-rioneth",
@@ -275,7 +290,12 @@
       "artikel": [],
       "personen": [],
       "comments": [],
-      "secret": false
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "verfasserName": "Muireann",
@@ -349,7 +369,12 @@
           "k": "Kontakt",
           "v": "Muireann und Eoghan Fearnan · Haus mit dem fröhlichen Baum"
         }
-      ]
+      ],
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "verfasserName": "Maonaid",
@@ -410,6 +435,10 @@
           "quantity": 1,
           "title": "Maonaids Familienamulett",
           "image": "assets/images/quests/torvik-seit-lyristag-vermisst/maonaids-familienamulett-v1.png",
+          "definitionRef": {
+            "id": "standard:arkanist:unverzaubertes-amulett",
+            "revision": "8c44cf33ebc1f73de37263a3"
+          },
           "description": "Ein altes silbernes Amulett mit mattem grünem Glas und schlichten eingeritzten Blättern. Die Kette wurde einmal ausgebessert. Maonaid würde das Erbstück ihrer Familie für die sichere Rückkehr ihres Mannes hergeben.",
           "details": "Persönliches Familienerbstück · unverzaubert · ein einzelnes Stück. Eine Belohnung für Haldors sichere Rückkehr; kein laufendes Handelsangebot.",
           "type": "Unverzaubertes Zubehör",
@@ -448,7 +477,12 @@
           "k": "Kontakt",
           "v": "Heim der Torvik · Marktviertel · kleines Hammerzeichen"
         }
-      ]
+      ],
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "verfasserName": "Maonaid",
@@ -527,7 +561,12 @@
           "k": "Kontakt",
           "v": "Maonaid · Heim der Torvik im Marktviertel"
         }
-      ]
+      ],
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -630,7 +669,12 @@
           "v": "Marschallamt in Castell Rhewglyn · Gwynthor"
         }
       ],
-      "text": "<p><strong>Im Namen der Grafschaft Celtigerns Wacht.</strong></p><p>Die Raubritterbande der <strong>Schwarzen Zitteraale</strong> wird wegen Mordes, Plünderung, Erpressung und weiterer schwerer Gewalttaten verfolgt. Ich fordere geeignete, bewaffnete Helfer auf, die auf den beigefügten Blättern bezeichneten Rädelsführer zu stellen und der gräflichen Obrigkeit zu übergeben.</p><p>Auf das Bandenhaupt, den <strong>Schwarzen Zitteraal</strong>, sind <strong>35 Goldtaler</strong> ausgesetzt. Als weitere Belohnung ist ein <strong>Ritterschlag</strong> ausgeschrieben. Die vier weiteren Köpfe sind mit ihren eigenen Kopfgeldern verzeichnet. Für jedes zweifelsfrei identifizierte niedere Mitglied beträgt die Belohnung <strong>einen Silbertaler</strong>.</p><p>Lebendige Gefangene sind sicher zu überstellen. Beim Bandenhaupt gilt die Fahndung tot oder lebendig; ein Todesnachweis muss zweifelsfrei sein. Auszahlung und etwaige Ehrung erfolgen nach amtlicher Prüfung. Für dieselbe Person wird ein Kopfgeld nur einmal gezahlt; die Belohnung für ein niederes Mitglied wird nicht zusätzlich zum Kopfgeld eines Rädelsführers ausgezahlt.</p><p>Ein behaupteter Beiname oder bloßes Tragen dunkler Kleidung genügt nicht als Beweis. Belastbare Hinweise und Gefangene sind dem <strong>Marschallamt in Castell Rhewglyn zu Gwynthor</strong> zuzuführen. Der derzeitige Sitz der Bande ist nicht bestätigt. Niemand erhält durch dieses Schreiben das Recht, Unbeteiligte zu bedrängen.</p><p><em>Sir Egon Gafyr<br>Marschall des Grafen zu Celtigerns Wacht</em></p>"
+      "text": "<p><strong>Im Namen der Grafschaft Celtigerns Wacht.</strong></p><p>Die Raubritterbande der <strong>Schwarzen Zitteraale</strong> wird wegen Mordes, Plünderung, Erpressung und weiterer schwerer Gewalttaten verfolgt. Ich fordere geeignete, bewaffnete Helfer auf, die auf den beigefügten Blättern bezeichneten Rädelsführer zu stellen und der gräflichen Obrigkeit zu übergeben.</p><p>Auf das Bandenhaupt, den <strong>Schwarzen Zitteraal</strong>, sind <strong>35 Goldtaler</strong> ausgesetzt. Als weitere Belohnung ist ein <strong>Ritterschlag</strong> ausgeschrieben. Die vier weiteren Köpfe sind mit ihren eigenen Kopfgeldern verzeichnet. Für jedes zweifelsfrei identifizierte niedere Mitglied beträgt die Belohnung <strong>einen Silbertaler</strong>.</p><p>Lebendige Gefangene sind sicher zu überstellen. Beim Bandenhaupt gilt die Fahndung tot oder lebendig; ein Todesnachweis muss zweifelsfrei sein. Auszahlung und etwaige Ehrung erfolgen nach amtlicher Prüfung. Für dieselbe Person wird ein Kopfgeld nur einmal gezahlt; die Belohnung für ein niederes Mitglied wird nicht zusätzlich zum Kopfgeld eines Rädelsführers ausgezahlt.</p><p>Ein behaupteter Beiname oder bloßes Tragen dunkler Kleidung genügt nicht als Beweis. Belastbare Hinweise und Gefangene sind dem <strong>Marschallamt in Castell Rhewglyn zu Gwynthor</strong> zuzuführen. Der derzeitige Sitz der Bande ist nicht bestätigt. Niemand erhält durch dieses Schreiben das Recht, Unbeteiligte zu bedrängen.</p><p><em>Sir Egon Gafyr<br>Marschall des Grafen zu Celtigerns Wacht</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -733,7 +777,12 @@
           "v": "Tot oder lebendig"
         }
       ],
-      "text": "<p><strong>Kennzeichen:</strong> Dunkelbraunes Haar unter schwarzer Kapuze, graugrüne Augen, gepflegter kurzer Bart; hochgewachsen und sehnig. Dunkler Panzer mit goldenen Kanten und Aalzeichen.</p><p><strong>Zur Last gelegt:</strong> Mord und Plünderung, Raub und Erpressung, Brandstiftung, Anführung einer Raubritterbande, Schändung und Gewalt gegen Schutzlose.</p><p>Wählt Ziele und Rückzugswege, verteilt Beute und hält die Rudelführer durch Abhängigkeit und Furcht zusammen. Sein Morgenstern Donnergrollen und der Hengst Zunder machen ihn im offenen Gefecht erkennbar.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+      "text": "<p><strong>Kennzeichen:</strong> Dunkelbraunes Haar unter schwarzer Kapuze, graugrüne Augen, gepflegter kurzer Bart; hochgewachsen und sehnig. Dunkler Panzer mit goldenen Kanten und Aalzeichen.</p><p><strong>Zur Last gelegt:</strong> Mord und Plünderung, Raub und Erpressung, Brandstiftung, Anführung einer Raubritterbande, Schändung und Gewalt gegen Schutzlose.</p><p>Wählt Ziele und Rückzugswege, verteilt Beute und hält die Rudelführer durch Abhängigkeit und Furcht zusammen. Sein Morgenstern Donnergrollen und der Hengst Zunder machen ihn im offenen Gefecht erkennbar.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -828,7 +877,12 @@
           "v": "Lebendig bevorzugt"
         }
       ],
-      "text": "<p><strong>Kennzeichen:</strong> Breiter Cenyri mit kahl rasiertem Kopf, kurzem rostbraunem Kinnbart und einer Lücke zwischen den oberen Schneidezähnen. Gebrochene Nase, schwere dunkle Lederweste über Kettenzeug.</p><p><strong>Zur Last gelegt:</strong> Bewaffneter Raub, Schwere Körperverletzung und Mord, Erpressung, Brandstiftung.</p><p>Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+      "text": "<p><strong>Kennzeichen:</strong> Breiter Cenyri mit kahl rasiertem Kopf, kurzem rostbraunem Kinnbart und einer Lücke zwischen den oberen Schneidezähnen. Gebrochene Nase, schwere dunkle Lederweste über Kettenzeug.</p><p><strong>Zur Last gelegt:</strong> Bewaffneter Raub, Schwere Körperverletzung und Mord, Erpressung, Brandstiftung.</p><p>Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -923,7 +977,12 @@
           "v": "Lebendig bevorzugt"
         }
       ],
-      "text": "<p><strong>Kennzeichen:</strong> Schmale braunhaarige Frau mit graubraunen Augen, tiefem seitlichem Zopf und kurz geschnittener rechter Schläfe. Dunkler Reisemantel, schmales Gesicht, Kerbe in der linken Braue.</p><p><strong>Zur Last gelegt:</strong> Vorbereitung bewaffneter Überfälle, Beihilfe zu Mord und Raub, Erpressung, Hehlerei.</p><p>Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+      "text": "<p><strong>Kennzeichen:</strong> Schmale braunhaarige Frau mit graubraunen Augen, tiefem seitlichem Zopf und kurz geschnittener rechter Schläfe. Dunkler Reisemantel, schmales Gesicht, Kerbe in der linken Braue.</p><p><strong>Zur Last gelegt:</strong> Vorbereitung bewaffneter Überfälle, Beihilfe zu Mord und Raub, Erpressung, Hehlerei.</p><p>Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -1018,7 +1077,12 @@
           "v": "Lebendig bevorzugt"
         }
       ],
-      "text": "<p><strong>Kennzeichen:</strong> Kräftiger Aldrimarer mit langem strohblondem Haar, einem straffen Nackenzopf und breitem geflochtenem Bart. Alte helle Narbe vom rechten Mundwinkel zum Kiefer; dunkles Eisen und grauer Wollkragen.</p><p><strong>Zur Last gelegt:</strong> Bewaffneter Raub, Beihilfe zu Mord, Gewaltsame Einschüchterung, Beteiligung an Plünderungen.</p><p>Überwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+      "text": "<p><strong>Kennzeichen:</strong> Kräftiger Aldrimarer mit langem strohblondem Haar, einem straffen Nackenzopf und breitem geflochtenem Bart. Alte helle Narbe vom rechten Mundwinkel zum Kiefer; dunkles Eisen und grauer Wollkragen.</p><p><strong>Zur Last gelegt:</strong> Bewaffneter Raub, Beihilfe zu Mord, Gewaltsame Einschüchterung, Beteiligung an Plünderungen.</p><p>Überwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -1113,7 +1177,12 @@
           "v": "Lebendig bevorzugt"
         }
       ],
-      "text": "<p><strong>Kennzeichen:</strong> Dünner rothaariger Cenyri mit grünen Augen, ungleichmäßig kurzem Pony, schmalem Schnurrbart und schiefer dunkler Kappe. Brauner Arbeitsrock, geflickte schwarze Schulterdecke, drahtige Hände.</p><p><strong>Zur Last gelegt:</strong> Hehlerei, Schmuggel, Beihilfe zu Raub und Erpressung, Versorgung einer Raubritterbande.</p><p>Verteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>"
+      "text": "<p><strong>Kennzeichen:</strong> Dünner rothaariger Cenyri mit grünen Augen, ungleichmäßig kurzem Pony, schmalem Schnurrbart und schiefer dunkler Kappe. Brauner Arbeitsrock, geflickte schwarze Schulterdecke, drahtige Hände.</p><p><strong>Zur Last gelegt:</strong> Hehlerei, Schmuggel, Beihilfe zu Raub und Erpressung, Versorgung einer Raubritterbande.</p><p>Verteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.</p><p>Die Zeichnung dient der Wiedererkennung und ersetzt keinen Identitätsnachweis. Dieses Blatt gehört zur Anordnung des Marschallamtes. Die dort genannten Bedingungen gelten auch für dieses Kopfgeld.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "noticeGroupId": "gwynthor-egon-schwarze-zitteraale-gesucht",
@@ -1200,7 +1269,12 @@
           "v": "Tatbeteiligung und Bandenbindung müssen geprüft werden"
         }
       ],
-      "text": "<p>Gesucht werden die niederen Komplizen der Schwarzen Zitteraale. Für jedes identifizierte und überstellte Mitglied wird nach Prüfung <strong>ein Silbertaler</strong> ausgezahlt.</p><p>Die Silhouette zeigt keine bestimmte Person. Kapuzen, alte Waffen oder ein ähnliches Kleidungsstück allein begründen keinen Verdacht. Erforderlich sind belastbare Umstände, die Bandenbindung und Beteiligung nachweisen.</p><p>Dieses Kopfgeld gilt nicht zusätzlich zu einem der fünf Rädelsführer-Kopfgelder. Gefangene sind dem Marschallamt oder der zuständigen Wache sicher zu übergeben.</p>"
+      "text": "<p>Gesucht werden die niederen Komplizen der Schwarzen Zitteraale. Für jedes identifizierte und überstellte Mitglied wird nach Prüfung <strong>ein Silbertaler</strong> ausgezahlt.</p><p>Die Silhouette zeigt keine bestimmte Person. Kapuzen, alte Waffen oder ein ähnliches Kleidungsstück allein begründen keinen Verdacht. Erforderlich sind belastbare Umstände, die Bandenbindung und Beteiligung nachweisen.</p><p>Dieses Kopfgeld gilt nicht zusätzlich zu einem der fünf Rädelsführer-Kopfgelder. Gefangene sind dem Marschallamt oder der zuständigen Wache sicher zu übergeben.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "stackId": "gwynthor-fleischsammler",
@@ -1273,7 +1347,12 @@
           "v": "Bauernhöfe, Straßen und Felder im östlichen Bannkreis · außerhalb der Stadt"
         }
       ],
-      "text": "<p><strong>An die Bürger Gwynthors und die Bewohner seines Bannkreises.</strong></p><p>Seit einem Monat werden im östlichen Umland Frauen ermordet aufgefunden. Was anfangs als einzelne, voneinander unabhängige Verbrechen behandelt wurde, hat sich nach dem Abgleich der Funde als <strong>zusammenhängende Mordserie</strong> erwiesen. Der Täter ist unter dem Beinamen <strong>Fleischsammler</strong> bekannt. Er ist noch nicht gefasst.</p><p><strong>Den Göttern sei Dank ist innerhalb Gwynthors bislang keinerlei Tätigkeit dieses Mörders festgestellt worden.</strong> Die bekannten Taten betreffen den östlichen Bannkreis: die Bauernhöfe, Straßen und Felder jenseits unserer Mauern. Gerade dort ist nach Einbruch der Dunkelheit äußerste Vorsicht geboten.</p><p>Die Fahndung arbeitet mit Nachdruck. Meine <strong>Cochllamwyr</strong> haben Gwynthor-Stadt zu sichern; dies ist ihr Auftrag, und diesen werden sie erfüllen. Für das Umland sind die dortigen <strong>Ortswachen</strong> zuständig. Ich habe dort <strong>doppelte Wachgänge und doppelte Schichten</strong> anordnen lassen. Kein Mann wird seinen Posten aus Bequemlichkeit räumen.</p><p>Doch auch eine verdoppelte Wache kann nicht gleichzeitig an jedem Feldweg stehen. <strong>Jeder Haushalt hat seinen Teil zu leisten.</strong> Lasst Eure Töchter, Mütter und Schwestern des Nachts nicht allein auf die Straße. Organisiert Begleitung. Wer spät heimkehren muss, soll den Heimweg in Gesellschaft antreten. Das gilt vorübergehend, bis dieser Mörder gefasst ist; bis dahin erwarte ich, dass diese Warnung ernst genommen wird.</p><p>Umsicht ist keine Feigheit. Für die Euren einzustehen ist Pflicht. Wir versehen unseren Dienst; verseht Ihr den Euren.</p><p><em>Gezeichnet: Sir Ferydnand Gafyr<br>Kommandant der Stadtwache von Gwynthor</em></p>"
+      "text": "<p><strong>An die Bürger Gwynthors und die Bewohner seines Bannkreises.</strong></p><p>Seit einem Monat werden im östlichen Umland Frauen ermordet aufgefunden. Was anfangs als einzelne, voneinander unabhängige Verbrechen behandelt wurde, hat sich nach dem Abgleich der Funde als <strong>zusammenhängende Mordserie</strong> erwiesen. Der Täter ist unter dem Beinamen <strong>Fleischsammler</strong> bekannt. Er ist noch nicht gefasst.</p><p><strong>Den Göttern sei Dank ist innerhalb Gwynthors bislang keinerlei Tätigkeit dieses Mörders festgestellt worden.</strong> Die bekannten Taten betreffen den östlichen Bannkreis: die Bauernhöfe, Straßen und Felder jenseits unserer Mauern. Gerade dort ist nach Einbruch der Dunkelheit äußerste Vorsicht geboten.</p><p>Die Fahndung arbeitet mit Nachdruck. Meine <strong>Cochllamwyr</strong> haben Gwynthor-Stadt zu sichern; dies ist ihr Auftrag, und diesen werden sie erfüllen. Für das Umland sind die dortigen <strong>Ortswachen</strong> zuständig. Ich habe dort <strong>doppelte Wachgänge und doppelte Schichten</strong> anordnen lassen. Kein Mann wird seinen Posten aus Bequemlichkeit räumen.</p><p>Doch auch eine verdoppelte Wache kann nicht gleichzeitig an jedem Feldweg stehen. <strong>Jeder Haushalt hat seinen Teil zu leisten.</strong> Lasst Eure Töchter, Mütter und Schwestern des Nachts nicht allein auf die Straße. Organisiert Begleitung. Wer spät heimkehren muss, soll den Heimweg in Gesellschaft antreten. Das gilt vorübergehend, bis dieser Mörder gefasst ist; bis dahin erwarte ich, dass diese Warnung ernst genommen wird.</p><p>Umsicht ist keine Feigheit. Für die Euren einzustehen ist Pflicht. Wir versehen unseren Dienst; verseht Ihr den Euren.</p><p><em>Gezeichnet: Sir Ferydnand Gafyr<br>Kommandant der Stadtwache von Gwynthor</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "stackId": "gwynthor-fleischsammler",
@@ -1360,7 +1439,12 @@
           "v": "Durch den Hof von Gwynthor"
         }
       ],
-      "text": "<p>Hiermit wird für das <strong>Auffinden und Zurstreckebringen des unter dem Beinamen Fleischsammler gesuchten Serienmörders eine Belohnung von drei Goldmünzen</strong> ausgesetzt. Die Auszahlung setzt voraus, dass die Identität des Täters und die zur Belohnung berechtigende Leistung durch den Hof festgestellt worden sind. Die bloße Benennung oder Beschuldigung einer Person begründet keinen Anspruch.</p><p>Für <strong>ernsthafte und nachweislich hilfreiche Informationen</strong> wird eine Belohnung von <strong>einer Silbermünze</strong> gewährt. Maßgeblich ist der festgestellte Nutzen der Auskunft. Ein unbestätigtes Gerücht allein genügt nicht. Über das Vorliegen der Voraussetzungen entscheidet die zuständige Stelle nach Prüfung.</p><p>Wer Angaben vorbringt, hat eigenes Wissen, Vermutung und fremde Mitteilung deutlich voneinander zu unterscheiden. Ein redlicher Irrtum ist keine wissentlich falsche Aussage. <strong>Erfundene Beobachtungen, vorsätzliche Falschbeschuldigungen und zum Zwecke der Bereicherung vorgebrachte Täuschungen werden dagegen streng geahndet.</strong> Auf Nachsicht soll sich dabei niemand berufen.</p><p>Dieser Aushang betrifft ein schweres Unglück im Bannkreis Gwynthors. Wer erwägt, daraus durch falsche Hinweise einen Vorteil zu ziehen, möge sein Vorhaben sorgfältig ein zweites Mal prüfen, ehe er damit vor den Hof tritt. <strong>Eine erschlichene Belohnung steht ihm nicht zu; die Verantwortung für seine Aussage verbleibt bei ihm.</strong></p><p><em>Neithon Draig<br>Adjutant des Justiziars von Gwynthor</em></p>"
+      "text": "<p>Hiermit wird für das <strong>Auffinden und Zurstreckebringen des unter dem Beinamen Fleischsammler gesuchten Serienmörders eine Belohnung von drei Goldmünzen</strong> ausgesetzt. Die Auszahlung setzt voraus, dass die Identität des Täters und die zur Belohnung berechtigende Leistung durch den Hof festgestellt worden sind. Die bloße Benennung oder Beschuldigung einer Person begründet keinen Anspruch.</p><p>Für <strong>ernsthafte und nachweislich hilfreiche Informationen</strong> wird eine Belohnung von <strong>einer Silbermünze</strong> gewährt. Maßgeblich ist der festgestellte Nutzen der Auskunft. Ein unbestätigtes Gerücht allein genügt nicht. Über das Vorliegen der Voraussetzungen entscheidet die zuständige Stelle nach Prüfung.</p><p>Wer Angaben vorbringt, hat eigenes Wissen, Vermutung und fremde Mitteilung deutlich voneinander zu unterscheiden. Ein redlicher Irrtum ist keine wissentlich falsche Aussage. <strong>Erfundene Beobachtungen, vorsätzliche Falschbeschuldigungen und zum Zwecke der Bereicherung vorgebrachte Täuschungen werden dagegen streng geahndet.</strong> Auf Nachsicht soll sich dabei niemand berufen.</p><p>Dieser Aushang betrifft ein schweres Unglück im Bannkreis Gwynthors. Wer erwägt, daraus durch falsche Hinweise einen Vorteil zu ziehen, möge sein Vorhaben sorgfältig ein zweites Mal prüfen, ehe er damit vor den Hof tritt. <strong>Eine erschlichene Belohnung steht ihm nicht zu; die Verantwortung für seine Aussage verbleibt bei ihm.</strong></p><p><em>Neithon Draig<br>Adjutant des Justiziars von Gwynthor</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "stackId": "gwynthor-fleischsammler",
@@ -1433,7 +1517,12 @@
           "v": "Zuerst beim Kommandanten der Stadtwache melden"
         }
       ],
-      "text": "<p>Die im östlichen Bannkreis während des vergangenen Monats aufgefundenen Frauen wurden zunächst als Opfer voneinander unabhängiger Taten betrachtet. Der Vergleich der Befunde hat diese Einordnung widerlegt. Die Fahndung geht inzwischen von <strong>einem Serientäter</strong> aus.</p><p>An den Leichnamen fehlen Teile des Körpers. Dieser sichtbare Umstand hat dem Täter den Namen <strong>Fleischsammler</strong> eingetragen. Der Beiname bezeichnet den Befund. <strong>Er erklärt weder den Beweggrund noch den Zweck der Taten.</strong> Beides ist unbekannt. Weitergehende Deutungen sind derzeit ohne gesicherte Grundlage.</p><p>Gesucht werden Beobachtungen, die sich <strong>auf den östlichen Bannkreis, die späten Abend- und Nachtstunden und den vergangenen Monat</strong> beziehen. Wer etwas mitteilen kann, soll angeben, was er selbst wahrgenommen hat, wo dies geschah und wann. Eine ungenaue Zeitangabe ist als solche zu bezeichnen. Von anderen Gehörtes ist als fremde Mitteilung kenntlich zu machen.</p><p><strong>Hinweise sind unmittelbar an den Hof von Gwynthor zu richten.</strong> Es genügt, die Beobachtung vollständig und ohne Ausschmückung vorzubringen. Ob sie mit anderen Feststellungen zusammenhängt, wird dort geprüft. Weitere Einzelheiten der Ermittlung werden an dieser Stelle nicht bekanntgegeben.</p><p><strong>Söldner, Kopfgeldjäger und andere zur Übernahme der Suche bereite Personen melden sich zunächst beim Kommandanten der Stadtwache.</strong> Eine Weiterleitung an die Fahndung erfolgt gegebenenfalls durch ihn. Die Meldung beim Kommandanten ersetzt nicht die unmittelbare Abgabe vorhandener Hinweise an den Hof.</p><p><em>Meredydd Gwyllach<br>Netzmeister der Fahndung</em></p>"
+      "text": "<p>Die im östlichen Bannkreis während des vergangenen Monats aufgefundenen Frauen wurden zunächst als Opfer voneinander unabhängiger Taten betrachtet. Der Vergleich der Befunde hat diese Einordnung widerlegt. Die Fahndung geht inzwischen von <strong>einem Serientäter</strong> aus.</p><p>An den Leichnamen fehlen Teile des Körpers. Dieser sichtbare Umstand hat dem Täter den Namen <strong>Fleischsammler</strong> eingetragen. Der Beiname bezeichnet den Befund. <strong>Er erklärt weder den Beweggrund noch den Zweck der Taten.</strong> Beides ist unbekannt. Weitergehende Deutungen sind derzeit ohne gesicherte Grundlage.</p><p>Gesucht werden Beobachtungen, die sich <strong>auf den östlichen Bannkreis, die späten Abend- und Nachtstunden und den vergangenen Monat</strong> beziehen. Wer etwas mitteilen kann, soll angeben, was er selbst wahrgenommen hat, wo dies geschah und wann. Eine ungenaue Zeitangabe ist als solche zu bezeichnen. Von anderen Gehörtes ist als fremde Mitteilung kenntlich zu machen.</p><p><strong>Hinweise sind unmittelbar an den Hof von Gwynthor zu richten.</strong> Es genügt, die Beobachtung vollständig und ohne Ausschmückung vorzubringen. Ob sie mit anderen Feststellungen zusammenhängt, wird dort geprüft. Weitere Einzelheiten der Ermittlung werden an dieser Stelle nicht bekanntgegeben.</p><p><strong>Söldner, Kopfgeldjäger und andere zur Übernahme der Suche bereite Personen melden sich zunächst beim Kommandanten der Stadtwache.</strong> Eine Weiterleitung an die Fahndung erfolgt gegebenenfalls durch ihn. Die Meldung beim Kommandanten ersetzt nicht die unmittelbare Abgabe vorhandener Hinweise an den Hof.</p><p><em>Meredydd Gwyllach<br>Netzmeister der Fahndung</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "stackId": "gwynthor-fleischsammler",
@@ -1504,7 +1593,12 @@
       "title": "Der Fleischsammler · Täter unbekannt",
       "untertitel": "Sinnbild · Keine Zeichnung nach Zeugenaussage",
       "table": [],
-      "text": "<p><strong>Eine brauchbare Personenbeschreibung liegt nicht vor.</strong> Gesicht, Alter, Größe, Statur und Kleidung des Täters sind unbekannt. Die Zeichnung ist ein Sinnbild. <strong>Weder Kapuze noch Hackebeil sind als Merkmal des Täters belegt.</strong></p><p>Nach den bisherigen Feststellungen erfolgen die Überfälle spätabends oder nachts. Die Opfer waren Frauen im Alter von <strong>sechzehn bis vierunddreißig Jahren</strong> und fast immer allein unterwegs. Daraus ergibt sich keine Beschreibung seines Aussehens.</p><p><em>Meredydd Gwyllach<br>Netzmeister der Fahndung</em></p>"
+      "text": "<p><strong>Eine brauchbare Personenbeschreibung liegt nicht vor.</strong> Gesicht, Alter, Größe, Statur und Kleidung des Täters sind unbekannt. Die Zeichnung ist ein Sinnbild. <strong>Weder Kapuze noch Hackebeil sind als Merkmal des Täters belegt.</strong></p><p>Nach den bisherigen Feststellungen erfolgen die Überfälle spätabends oder nachts. Die Opfer waren Frauen im Alter von <strong>sechzehn bis vierunddreißig Jahren</strong> und fast immer allein unterwegs. Daraus ergibt sich keine Beschreibung seines Aussehens.</p><p><em>Meredydd Gwyllach<br>Netzmeister der Fahndung</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "x": 0.3757010906332864,
@@ -1585,7 +1679,12 @@
           "v": "Lleucu Swyll · vertreten durch Valeriano Falto"
         }
       ],
-      "text": "<p><strong>Kund und zu wissen den Bürgern Gwynthors und den Bewohnern seines Bannkreises.</strong> Auf das beim Hof eingegangene Gesuch des heimgekehrten Seehändlers Gwrgan Cochdon wird in zwei Tagen, zur dritten Morgenstunde, vor dem gräflichen Gericht verhandelt. Die Sache wird unter dem Namen <strong>Gwrgan Cochdon gegen Lleucu Swyll</strong> geführt. Den Vorsitz hat Justiziar Meurig Draig.</p><p>Gwrgan Cochdon zog vor zwanzig Jahren mit seinen drei Brüdern im Aufgebot Rhodris des Großen nach Vennyr. Nach der Schlacht der tausend Wellen galten die Brüder als verloren. Gwrgan überlebte, geriet jedoch in die Gewalt der Nordmänner und wurde als Thrall für den Clan Valdruna zur Arbeit gezwungen. Nach seiner Flucht nahm ein Schiff des Dyfrgi-Vasallen Sir Cynfarch Llafnfor ihn und weitere Überlebende auf. Inzwischen ist Gwrgan nach Gwynthor zurückgekehrt. <strong>Dass er der heimgekehrte Gwrgan ist, wird von Lleucu nicht bestritten.</strong></p><p>Während seiner Abwesenheit wurde sein Tod amtlich angenommen. Sein Vater Gorwystl Cochdon lebte zunächst weiter und vermachte den verbliebenen Besitz später ausdrücklich seiner Schwiegertochter Lleucu. Diese führte den Seehandel fort und schloss nach anerkannter Witwenschaft eine zweite Ehe mit dem Kapitän Eifion Twyllod. Aus dieser Ehe stammen drei Kinder.</p><p>Der Kläger fordert die Herausgabe des von ihm beanspruchten Nachlasses und Hauses, Rechnung über die daraus gezogenen Einkünfte sowie eine Entschädigung. Ferner begehrt er die Feststellung, dass seine erste Ehe fortbestehe, und bestreitet daraus folgend den Personenstand der zweiten Ehe und ihrer Kinder. Die Beklagte widerspricht. Sie beruft sich auf die amtliche Todesannahme, das Testament, ihre redliche Wiederverheiratung und die Arbeit, mit der der Betrieb erhalten und vermehrt wurde.</p><p><strong>Keine dieser streitigen Forderungen ist durch diesen Aushang entschieden.</strong> Die zweite Ehe und der bisher anerkannte Stand der Kinder werden hier nicht aufgehoben. Beide Parteien werden durch ihre Fürsprecher gehört. Gethin Falchdyn ist dem mittellosen Kläger vom Hof bestellt; Valeriano Falto vertritt die Beklagte auf Bestellung des Marktes der Fortuna. Die beiden folgenden Blätter geben ihre jeweiligen Sachvorträge wieder. Die Gerichtsbesetzung und Ordnung stehen auf dem vierten Blatt.</p><p><em>Neithon Draig<br>Adjutant des Justiziars</em></p>"
+      "text": "<p><strong>Kund und zu wissen den Bürgern Gwynthors und den Bewohnern seines Bannkreises.</strong> Auf das beim Hof eingegangene Gesuch des heimgekehrten Seehändlers Gwrgan Cochdon wird in zwei Tagen, zur dritten Morgenstunde, vor dem gräflichen Gericht verhandelt. Die Sache wird unter dem Namen <strong>Gwrgan Cochdon gegen Lleucu Swyll</strong> geführt. Den Vorsitz hat Justiziar Meurig Draig.</p><p>Gwrgan Cochdon zog vor zwanzig Jahren mit seinen drei Brüdern im Aufgebot Rhodris des Großen nach Vennyr. Nach der Schlacht der tausend Wellen galten die Brüder als verloren. Gwrgan überlebte, geriet jedoch in die Gewalt der Nordmänner und wurde als Thrall für den Clan Valdruna zur Arbeit gezwungen. Nach seiner Flucht nahm ein Schiff des Dyfrgi-Vasallen Sir Cynfarch Llafnfor ihn und weitere Überlebende auf. Inzwischen ist Gwrgan nach Gwynthor zurückgekehrt. <strong>Dass er der heimgekehrte Gwrgan ist, wird von Lleucu nicht bestritten.</strong></p><p>Während seiner Abwesenheit wurde sein Tod amtlich angenommen. Sein Vater Gorwystl Cochdon lebte zunächst weiter und vermachte den verbliebenen Besitz später ausdrücklich seiner Schwiegertochter Lleucu. Diese führte den Seehandel fort und schloss nach anerkannter Witwenschaft eine zweite Ehe mit dem Kapitän Eifion Twyllod. Aus dieser Ehe stammen drei Kinder.</p><p>Der Kläger fordert die Herausgabe des von ihm beanspruchten Nachlasses und Hauses, Rechnung über die daraus gezogenen Einkünfte sowie eine Entschädigung. Ferner begehrt er die Feststellung, dass seine erste Ehe fortbestehe, und bestreitet daraus folgend den Personenstand der zweiten Ehe und ihrer Kinder. Die Beklagte widerspricht. Sie beruft sich auf die amtliche Todesannahme, das Testament, ihre redliche Wiederverheiratung und die Arbeit, mit der der Betrieb erhalten und vermehrt wurde.</p><p><strong>Keine dieser streitigen Forderungen ist durch diesen Aushang entschieden.</strong> Die zweite Ehe und der bisher anerkannte Stand der Kinder werden hier nicht aufgehoben. Beide Parteien werden durch ihre Fürsprecher gehört. Gethin Falchdyn ist dem mittellosen Kläger vom Hof bestellt; Valeriano Falto vertritt die Beklagte auf Bestellung des Marktes der Fortuna. Die beiden folgenden Blätter geben ihre jeweiligen Sachvorträge wieder. Die Gerichtsbesetzung und Ordnung stehen auf dem vierten Blatt.</p><p><em>Neithon Draig<br>Adjutant des Justiziars</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "x": 0.3757010906332864,
@@ -1658,7 +1757,12 @@
           "v": "Nachlass und Haus · Rechnungslegung · Entschädigung · Feststellung der Ehefolgen"
         }
       ],
-      "text": "<p><strong>Ich spreche für einen Mann, dessen Heimkehr niemand bestreitet und dessen Recht dennoch behandelt wird, als wäre er im Meer geblieben.</strong> Gwrgan Cochdon hat Gwynthor nicht verlassen, um Frau, Haus oder Gewerbe aufzugeben. Er zog mit seinen Brüdern in den Norden. Drei ertranken. Er selbst wurde halbtot an Land gespült und in Unfreiheit genommen.</p><p>Sechs Jahre arbeitete er in den Minen. Dass ihm später die Führung anderer Thralls und schließlich die Aufsicht an einem Hafen anvertraut wurden, machte ihn nicht frei. Er musste erst das Vertrauen seiner Herren gewinnen, ehe eine Flucht überhaupt möglich war. Wer aus seiner späteren Stellung schließen will, er habe sich bequem im Norden eingerichtet, soll erklären, weshalb ein freier Mann seine Heimfahrt unter Verfolgung und Lebensgefahr antreten müsste.</p><p>Er entkam mit fünfzig anderen. Sir Cynfarch Llafnfor rettete ihn und zwölf Mitflüchtende; achtunddreißig fanden auf dieser Flucht den Tod. Nach zwanzig verlorenen Jahren kehrte mein Mandant in die Stadt seiner Geburt zurück. Dort fand er seinen Vater tot, sein Haus in anderen Händen und seine Frau in einer neuen Ehe.</p><p>Ich bestreite nicht, dass Lleucu den Handel erhalten hat. Ebenso wenig behaupte ich, sie habe bei der Wiederheirat von Gwrgans Leben gewusst. <strong>Doch die redliche Annahme eines Todes ist nicht der Tod selbst.</strong> Zu prüfen ist, was von Gwrgans eigenen Rechten durch seine Abwesenheit ruhen durfte und was dadurch nicht endgültig vergehen konnte. Auch das Testament des Vaters kann nur darüber verfügen, was diesem selbst zustand. Es ersetzt nicht die Prüfung, welche Anteile, Ansprüche und Bindungen Gwrgan zuvor bereits besaß.</p><p>Darum beantragen wir die Offenlegung der damaligen Besitzverhältnisse, des Testaments, des Schiffsverkaufs und der späteren Rechnungen; sodann die Herausgabe dessen, was Gwrgan rechtlich zusteht, und die Prüfung seiner Entschädigungsansprüche. Der heutige Betrieb soll nicht mit einem bloßen Verweis auf seinen gewachsenen Wert jeder Prüfung entzogen werden. Gerade die Trennung zwischen altem Vermögen und späterer Leistung verlangt Rechnungslegung.</p><p>Gwrgan verlangt ferner die Feststellung, dass seine Ehe durch seine Gefangenschaft nicht geendet habe. Er zieht daraus Forderungen auch hinsichtlich der zweiten Ehe und ihrer Kinder. Diese weitreichenden Folgen sind dem Gericht vorzulegen; sie dürfen weder durch seinen Zorn noch durch das Unbehagen anderer bereits entschieden sein. <strong>Seine Gefangenschaft war keine freiwillige Preisgabe seines Lebens in Gwynthor.</strong> Diesem Umstand ist bei jeder Entscheidung Gewicht zu geben.</p><p><em>Gethin Falchdyn<br>Vom Hof bestellter Fürsprecher Gwrgan Cochdons</em></p>"
+      "text": "<p><strong>Ich spreche für einen Mann, dessen Heimkehr niemand bestreitet und dessen Recht dennoch behandelt wird, als wäre er im Meer geblieben.</strong> Gwrgan Cochdon hat Gwynthor nicht verlassen, um Frau, Haus oder Gewerbe aufzugeben. Er zog mit seinen Brüdern in den Norden. Drei ertranken. Er selbst wurde halbtot an Land gespült und in Unfreiheit genommen.</p><p>Sechs Jahre arbeitete er in den Minen. Dass ihm später die Führung anderer Thralls und schließlich die Aufsicht an einem Hafen anvertraut wurden, machte ihn nicht frei. Er musste erst das Vertrauen seiner Herren gewinnen, ehe eine Flucht überhaupt möglich war. Wer aus seiner späteren Stellung schließen will, er habe sich bequem im Norden eingerichtet, soll erklären, weshalb ein freier Mann seine Heimfahrt unter Verfolgung und Lebensgefahr antreten müsste.</p><p>Er entkam mit fünfzig anderen. Sir Cynfarch Llafnfor rettete ihn und zwölf Mitflüchtende; achtunddreißig fanden auf dieser Flucht den Tod. Nach zwanzig verlorenen Jahren kehrte mein Mandant in die Stadt seiner Geburt zurück. Dort fand er seinen Vater tot, sein Haus in anderen Händen und seine Frau in einer neuen Ehe.</p><p>Ich bestreite nicht, dass Lleucu den Handel erhalten hat. Ebenso wenig behaupte ich, sie habe bei der Wiederheirat von Gwrgans Leben gewusst. <strong>Doch die redliche Annahme eines Todes ist nicht der Tod selbst.</strong> Zu prüfen ist, was von Gwrgans eigenen Rechten durch seine Abwesenheit ruhen durfte und was dadurch nicht endgültig vergehen konnte. Auch das Testament des Vaters kann nur darüber verfügen, was diesem selbst zustand. Es ersetzt nicht die Prüfung, welche Anteile, Ansprüche und Bindungen Gwrgan zuvor bereits besaß.</p><p>Darum beantragen wir die Offenlegung der damaligen Besitzverhältnisse, des Testaments, des Schiffsverkaufs und der späteren Rechnungen; sodann die Herausgabe dessen, was Gwrgan rechtlich zusteht, und die Prüfung seiner Entschädigungsansprüche. Der heutige Betrieb soll nicht mit einem bloßen Verweis auf seinen gewachsenen Wert jeder Prüfung entzogen werden. Gerade die Trennung zwischen altem Vermögen und späterer Leistung verlangt Rechnungslegung.</p><p>Gwrgan verlangt ferner die Feststellung, dass seine Ehe durch seine Gefangenschaft nicht geendet habe. Er zieht daraus Forderungen auch hinsichtlich der zweiten Ehe und ihrer Kinder. Diese weitreichenden Folgen sind dem Gericht vorzulegen; sie dürfen weder durch seinen Zorn noch durch das Unbehagen anderer bereits entschieden sein. <strong>Seine Gefangenschaft war keine freiwillige Preisgabe seines Lebens in Gwynthor.</strong> Diesem Umstand ist bei jeder Entscheidung Gewicht zu geben.</p><p><em>Gethin Falchdyn<br>Vom Hof bestellter Fürsprecher Gwrgan Cochdons</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "x": 0.3757010906332864,
@@ -1731,7 +1835,12 @@
           "v": "Bestand von Testament und Erwerb · Schutz der anerkannten Ehe und Kinder · Abweisung pauschaler Herausgabe- und Entschädigungsforderungen"
         }
       ],
-      "text": "<p><strong>Meine Mandantin bestreitet weder Gwrgans Identität noch das ihm widerfahrene Unrecht.</strong> Seine Heimkehr verdient Gehör. Sie macht jedoch die zwanzig Jahre, in denen andere für das verlassene Haus einstanden, nicht ungeschehen.</p><p>Lleucu war achtzehn Jahre alt, als die Männer der Cochdon im Norden verloren gingen. Zurück blieben ein schwer getroffener Vater und ein Betrieb am Rand des Zusammenbruchs: zwei heruntergekommene Schiffe, dringende Ausbesserungen und geringe Mittel. Die Familie lebte damals nicht von einem Wohlstand, den man nur hätte bewachen müssen. Ohne Verkauf, neue Absprachen und tägliche Arbeit wäre bald wenig zu bewachen gewesen.</p><p>Mit Unterstützung ihrer eigenen Verwandten veräußerte Lleucu eines der Schiffe. Sie trat dem Markt der Fortuna bei, gewann Frachtaufträge und baute den Handel neu auf. Eifion Twyllod, damals ein für die Familie arbeitender Seemann aus einfachen Fischerverhältnissen, stand ihr dabei zur Seite. Heute führt er das Hauptschiff und hält den Betrieb der Flotte zusammen. Fünf Schiffe fahren für den Markt der Fortuna; das Vermögen hat sich gegenüber der damaligen Lage etwa vervierfacht. Dieser Mehrwert ist aus Arbeit, Wagnis, erneuter Anschaffung und geschlossenen Verträgen entstanden.</p><p>Auch der Vater war kein bloßer Zuschauer. Gorwystl überlebte den vermeintlichen Verlust seiner Söhne. <strong>Er vermachte Lleucu den ihm gehörenden Besitz ausdrücklich.</strong> Was er besaß und was er wirksam verfügen konnte, darf geprüft werden. Sein letzter Wille darf dabei aber nicht so behandelt werden, als habe es ihn nie gegeben. Ebenso sind die Beiträge ihrer Verwandten, Eifions Arbeit und spätere Verpflichtungen des Betriebs bei jeder Rechnung zu berücksichtigen.</p><p>Die zweite Ehe wurde nach amtlich anerkannter Witwenschaft geschlossen. Zwischen Lleucu und Eifion entstand über Jahre der gemeinsamen Sorge Liebe. Ihre drei Kinder wurden in einer anerkannten Ehe geboren. Meine Mandantin hat den ersten Mann nicht heimlich verlassen und den zweiten nicht in Kenntnis eines Betruges geheiratet. <strong>Wer auf eine Entscheidung des Hofes vertraut und sein Leben danach ordnet, muss sich auf mehr verlassen dürfen als auf die Hoffnung, dass diese Entscheidung niemals in Frage gestellt werde.</strong></p><p>Wir beantragen daher, eine pauschale Herausgabe des heutigen Vermögens und eine pauschale Entschädigung zurückzuweisen, das Testament und die eigenen Erwerbsleistungen zu würdigen und Ehe wie Kinder im bisher anerkannten Stand zu schützen. Soweit Gwrgan frühere eigene Ansprüche nachweist, sind sie im Einzelnen zu prüfen. Sein Leid begründet jedoch nicht von selbst jede der geforderten Rechtsfolgen. <strong>Lleucu hat in diesen Jahren gelebt, gearbeitet und Verantwortung übernommen. Auch das steht vor diesem Gericht.</strong></p><p><em>Valeriano Falto<br>Gildenfürsprecher des Marktes der Fortuna</em></p>"
+      "text": "<p><strong>Meine Mandantin bestreitet weder Gwrgans Identität noch das ihm widerfahrene Unrecht.</strong> Seine Heimkehr verdient Gehör. Sie macht jedoch die zwanzig Jahre, in denen andere für das verlassene Haus einstanden, nicht ungeschehen.</p><p>Lleucu war achtzehn Jahre alt, als die Männer der Cochdon im Norden verloren gingen. Zurück blieben ein schwer getroffener Vater und ein Betrieb am Rand des Zusammenbruchs: zwei heruntergekommene Schiffe, dringende Ausbesserungen und geringe Mittel. Die Familie lebte damals nicht von einem Wohlstand, den man nur hätte bewachen müssen. Ohne Verkauf, neue Absprachen und tägliche Arbeit wäre bald wenig zu bewachen gewesen.</p><p>Mit Unterstützung ihrer eigenen Verwandten veräußerte Lleucu eines der Schiffe. Sie trat dem Markt der Fortuna bei, gewann Frachtaufträge und baute den Handel neu auf. Eifion Twyllod, damals ein für die Familie arbeitender Seemann aus einfachen Fischerverhältnissen, stand ihr dabei zur Seite. Heute führt er das Hauptschiff und hält den Betrieb der Flotte zusammen. Fünf Schiffe fahren für den Markt der Fortuna; das Vermögen hat sich gegenüber der damaligen Lage etwa vervierfacht. Dieser Mehrwert ist aus Arbeit, Wagnis, erneuter Anschaffung und geschlossenen Verträgen entstanden.</p><p>Auch der Vater war kein bloßer Zuschauer. Gorwystl überlebte den vermeintlichen Verlust seiner Söhne. <strong>Er vermachte Lleucu den ihm gehörenden Besitz ausdrücklich.</strong> Was er besaß und was er wirksam verfügen konnte, darf geprüft werden. Sein letzter Wille darf dabei aber nicht so behandelt werden, als habe es ihn nie gegeben. Ebenso sind die Beiträge ihrer Verwandten, Eifions Arbeit und spätere Verpflichtungen des Betriebs bei jeder Rechnung zu berücksichtigen.</p><p>Die zweite Ehe wurde nach amtlich anerkannter Witwenschaft geschlossen. Zwischen Lleucu und Eifion entstand über Jahre der gemeinsamen Sorge Liebe. Ihre drei Kinder wurden in einer anerkannten Ehe geboren. Meine Mandantin hat den ersten Mann nicht heimlich verlassen und den zweiten nicht in Kenntnis eines Betruges geheiratet. <strong>Wer auf eine Entscheidung des Hofes vertraut und sein Leben danach ordnet, muss sich auf mehr verlassen dürfen als auf die Hoffnung, dass diese Entscheidung niemals in Frage gestellt werde.</strong></p><p>Wir beantragen daher, eine pauschale Herausgabe des heutigen Vermögens und eine pauschale Entschädigung zurückzuweisen, das Testament und die eigenen Erwerbsleistungen zu würdigen und Ehe wie Kinder im bisher anerkannten Stand zu schützen. Soweit Gwrgan frühere eigene Ansprüche nachweist, sind sie im Einzelnen zu prüfen. Sein Leid begründet jedoch nicht von selbst jede der geforderten Rechtsfolgen. <strong>Lleucu hat in diesen Jahren gelebt, gearbeitet und Verantwortung übernommen. Auch das steht vor diesem Gericht.</strong></p><p><em>Valeriano Falto<br>Gildenfürsprecher des Marktes der Fortuna</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "x": 0.3757010906332864,
@@ -1828,7 +1937,12 @@
           "v": "Tegan Draig"
         }
       ],
-      "text": "<p><strong>Die Verhandlung ist öffentlich, soweit der Raum und die Ordnung des Gerichts es gestatten.</strong> Godwyn Sgrechiwr ruft die Sache auf. Die Parteien erscheinen mit ihren Fürsprechern; vorgelegte Urkunden werden nach Anordnung des Richters verlesen und geprüft. Geladene Zeugen sprechen nach Aufruf. Zwischenrufe, Drohungen und eigenmächtige Wortergreifung sind zu unterlassen.</p><p>Gehört werden die Ansprüche auf den früheren Besitz, die Bedeutung von Todesannahme und Testament, die Zurechnung des inzwischen erworbenen Vermögens sowie die begehrten Feststellungen zu Ehe und Personenstand. <strong>Die Frage, welche Folge rechtens ist, wird nicht durch die Zahl der Anhänger einer Partei entschieden.</strong></p><p>Die Beiblätter der Fürsprecher geben den Vortrag der jeweiligen Partei wieder. Sie sind weder Urteil noch verbindliche Auskunft über den geltenden Personenstand. Die Gerichtskanzlei hält die eingereichten Gesuche und Urkunden für das Verfahren bereit. Über Reihenfolge, Anhörung und weitere Termine verfügt das Gericht.</p><p><em>Neithon Draig<br>Adjutant des Justiziars · für die Gerichtskanzlei zu Gwynthor</em></p>"
+      "text": "<p><strong>Die Verhandlung ist öffentlich, soweit der Raum und die Ordnung des Gerichts es gestatten.</strong> Godwyn Sgrechiwr ruft die Sache auf. Die Parteien erscheinen mit ihren Fürsprechern; vorgelegte Urkunden werden nach Anordnung des Richters verlesen und geprüft. Geladene Zeugen sprechen nach Aufruf. Zwischenrufe, Drohungen und eigenmächtige Wortergreifung sind zu unterlassen.</p><p>Gehört werden die Ansprüche auf den früheren Besitz, die Bedeutung von Todesannahme und Testament, die Zurechnung des inzwischen erworbenen Vermögens sowie die begehrten Feststellungen zu Ehe und Personenstand. <strong>Die Frage, welche Folge rechtens ist, wird nicht durch die Zahl der Anhänger einer Partei entschieden.</strong></p><p>Die Beiblätter der Fürsprecher geben den Vortrag der jeweiligen Partei wieder. Sie sind weder Urteil noch verbindliche Auskunft über den geltenden Personenstand. Die Gerichtskanzlei hält die eingereichten Gesuche und Urkunden für das Verfahren bereit. Über Reihenfolge, Anhörung und weitere Termine verfügt das Gericht.</p><p><em>Neithon Draig<br>Adjutant des Justiziars · für die Gerichtskanzlei zu Gwynthor</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "x": 0.6474083689593545,
@@ -1922,7 +2036,12 @@
             }
           }
         }
-      ]
+      ],
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "x": 0.6474083689593545,
@@ -2088,7 +2207,12 @@
             }
           }
         }
-      ]
+      ],
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
     },
     {
       "id": "gwynthor-der-staedter-und-sein-pferd",
@@ -2186,6 +2310,10 @@
           "quantity": 1,
           "title": "Schickes Notizbuch",
           "image": "/AleriaAlmanach/assets/gwynthor-troetzli/items/schickes-notizbuch-v1.png",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:notizbuch",
+            "revision": "49c9999873bc24a73529d569"
+          },
           "description": "Ein kleines, sorgfältig gebundenes Notizbuch mit dunkelgrünem Ledereinband, schlichter Flechtprägung, Messingecken und einem kleinen Verschluss. Zwanzig unbeschriebene Seiten aus handgeschöpftem Papier warten auf eigene Notizen oder Zeichnungen.",
           "details": "Ein einzelnes unbenutztes Notizbuch aus Cynddelws Vorrat. Enthält keine fremden Aufzeichnungen; unverzaubert. Persönliche Ausführung der vorhandenen Güterregistervorlage „Notizbuch (klein)“.",
           "type": "Schreibmaterial",
@@ -2197,6 +2325,10 @@
           "quantity": 1,
           "title": "Schreibutensilien",
           "image": "/AleriaAlmanach/assets/gwynthor-troetzli/items/schreibutensilien-v1.png",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feder-tinte",
+            "revision": "261195af426d183145b98220"
+          },
           "description": "Eine sauber zugeschnittene Schreibfeder und ein verschlossenes Tintenfläschchen mit Ruß- und Galläpfeltinte, zusammen mit einer schlichten braunen Lederhülle für unterwegs.",
           "details": "Ein vollständiges Set aus einer Feder, einem Tintenfläschchen und der Lederhülle. Gewöhnliches, unverzaubertes Schreibzeug auf Grundlage des Registereintrags „Feder & Tinte“.",
           "type": "Schreibmaterial",
@@ -2206,7 +2338,559 @@
       "artikel": [],
       "personen": [],
       "comments": [],
-      "secret": false
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    },
+    {
+      "x": 0.257591,
+      "y": 0.2445026541300362,
+      "stackId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "noticeGroupId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "typ": "erlass",
+      "bild": "",
+      "portrait": "",
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "sideWidth": 210,
+      "verfasser": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "verfasserName": "Euddogwy O'Cenyr · Kurator und persönlicher Adjutant des Patriarchen",
+      "unterschrift": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+      "siegel": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+      "emblem": "assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+      "typography": {
+        "font": "patrickhand",
+        "heading": "template",
+        "script": "common"
+      },
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "personId": "person--gwynthor-formlingssache--euddogwy",
+          "name": "Euddogwy O'Cenyr",
+          "src": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Euddogwy O'Cenyr · Unterschrift",
+          "src": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel der patriarchalen Kanzlei · flammender Kelch",
+          "src": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Buch, Waage und Flamme · kirchliche Anhörung",
+          "src": "assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "stackOrder": 0,
+      "title": "In der Sache Lleuwen, Schniedel und Schattentänzer",
+      "untertitel": "Kirchliche Verlautbarung · aus der persönlichen Kanzlei des Patriarchen · erstes Blatt",
+      "table": [
+        {
+          "k": "Vorsitz",
+          "v": "Patriarch Gwalchgwyn Saethwyr"
+        },
+        {
+          "k": "Ort",
+          "v": "Kapitelsaal der Großen Kathedrale der Neun zu Gwynthor"
+        },
+        {
+          "k": "Termin",
+          "v": "Noch nicht festgesetzt · nach Einschätzung der Kanzlei spätestens bis Ende der Woche"
+        },
+        {
+          "k": "Weltlicher Beistand",
+          "v": "Neithon Draig · Adjutant des Justiziars · wegen des tätlichen Angriffs"
+        }
+      ],
+      "text": "<p><strong>Im Auftrag des Patriarchen gebe ich der Gemeinde Gwynthors bekannt:</strong> Nach der Entlarvung eines Formlings am Theater und einer damit verbundenen tätlichen Auseinandersetzung hat die Stadtwache eingegriffen. Die Betroffene befindet sich in kirchlichem Gewahrsam; die Sache wird untersucht.</p><p>Das kirchliche Gericht wird sich unter dem Vorsitz <strong>Patriarch Gwalchgwyn Saethwyrs</strong> im Kapitelsaal der Großen Kathedrale der Neun zusammenfinden. <strong>Neithon Draig, Adjutant des Justiziars,</strong> wird wegen des tätlichen Angriffs für die weltliche Seite unterstützend anwesend sein. Welche weiteren Würdenträger teilnehmen können, steht noch nicht fest.</p><p>Ein Termin ist noch nicht festgesetzt. <strong>Nach gegenwärtiger Einschätzung dieser Kanzlei ist die Anhörung spätestens bis Ende der Woche zu erwarten.</strong> Tag und Stunde werden gesondert verkündet.</p><p>Die Beteiligten und die benötigten Zeugen werden gehört, die Umstände geprüft und die vorgebrachten Ansprüche behandelt. Die geistliche Entscheidung obliegt dem Patriarchen; die weltliche Gerichtsbarkeit bleibt gewahrt. Über die weitere Ordnung und einen Zutritt zur Anhörung wird mit dem Termin Auskunft gegeben.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    },
+    {
+      "x": 0.257591,
+      "y": 0.2445026541300362,
+      "stackId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "noticeGroupId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "typ": "ankuendigung",
+      "bild": "",
+      "portrait": "",
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "sideWidth": 210,
+      "verfasser": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "verfasserName": "Euddogwy O'Cenyr · Kurator und persönlicher Adjutant des Patriarchen",
+      "unterschrift": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+      "siegel": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+      "emblem": "assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+      "typography": {
+        "font": "patrickhand",
+        "heading": "template",
+        "script": "common"
+      },
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "personId": "person--gwynthor-formlingssache--euddogwy",
+          "name": "Euddogwy O'Cenyr",
+          "src": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Euddogwy O'Cenyr · Unterschrift",
+          "src": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel der patriarchalen Kanzlei · flammender Kelch",
+          "src": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Buch, Waage und Flamme · kirchliche Anhörung",
+          "src": "assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-lleuwen-kirchliche-anhoerung-vortraege",
+      "stackOrder": 1,
+      "title": "Die drei Streitparteien",
+      "untertitel": "Zur bevorstehenden Anhörung · zweites Blatt",
+      "table": [
+        {
+          "k": "Lleuwen",
+          "v": "Statistin am Gwynthorer Theater · als Formling entlarvt"
+        },
+        {
+          "k": "Ulrich Schniedel",
+          "v": "Hexenjäger · Richter des Reinen Blutes"
+        },
+        {
+          "k": "Orvar Schattentänzer",
+          "v": "Schauspieler am Gwynthorer Theater · Lleuwens Gefährte"
+        }
+      ],
+      "text": "<p><strong>Lleuwen</strong> steht wegen ihrer verborgenen infernalen Natur und ihres Aufenthalts unter den Bürgern Gwynthors vor dem kirchlichen Gericht. Sie verbleibt während der Untersuchung in Gewahrsam.</p><p><strong>Ulrich Schniedel</strong> hat den Formling entlarvt. Er erhebt gegen Orvar Beschwerde wegen eines tätlichen Angriffs und fordert Lohn für seine Arbeit sowie Entschädigung.</p><p><strong>Orvar Schattentänzer</strong> hat den Hexenjäger bei dem Vorfall mit einem Übungsschwert geschlagen. Er beruft sich auf den Schutz seiner Gefährtin und bittet um ihre Freilassung.</p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    },
+    {
+      "x": 0.257591,
+      "y": 0.2445026541300362,
+      "stackId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "noticeGroupId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "typ": "erlass",
+      "bild": "",
+      "portrait": "",
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "sideWidth": 210,
+      "verfasser": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "verfasserName": "Euddogwy O'Cenyr · Kurator und persönlicher Adjutant des Patriarchen",
+      "unterschrift": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+      "siegel": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+      "emblem": "assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+      "typography": {
+        "font": "patrickhand",
+        "heading": "template",
+        "script": "common"
+      },
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "personId": "person--gwynthor-formlingssache--euddogwy",
+          "name": "Euddogwy O'Cenyr",
+          "src": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Euddogwy O'Cenyr · Unterschrift",
+          "src": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel der patriarchalen Kanzlei · flammender Kelch",
+          "src": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Buch, Waage und Flamme · kirchliche Anhörung",
+          "src": "assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "id": "gwynthor-lleuwen-kirchliche-anhoerung-ordnung",
+      "stackOrder": 2,
+      "title": "An die Bürger Gwynthors",
+      "untertitel": "Ein Appell aus der Kanzlei des Patriarchen · drittes Blatt",
+      "table": [
+        {
+          "k": "Ansprechperson",
+          "v": "Euddogwy O'Cenyr · persönlicher Adjutant des Patriarchen"
+        },
+        {
+          "k": "Vorsprache",
+          "v": "Persönliche Kanzlei des Patriarchen · Große Kathedrale der Neun"
+        }
+      ],
+      "text": "<p><strong>Ich bitte die Bürger Gwynthors, Ruhe zu bewahren.</strong> Die Anwesenheit eines infernalen Wesens ist eine ernste Angelegenheit und verlangt Vorsicht. Die Kirche untersucht den Fall und die möglichen Gefahren mit der gebotenen Sorgfalt.</p><p>Lasst die beauftragten Geistlichen und die Wache ihre Arbeit tun. Seht von Aufläufen, Drohungen und eigenmächtigen Nachforschungen gegen die Beteiligten ab. Tragt unbestätigte Gerüchte nicht als Gewissheiten weiter; gesicherte Kunde wird durch die Kanzlei verkündet.</p><p><strong>Wer als Zeuge vorsprechen möchte, sachdienliche Angaben machen kann oder ein Anliegen zu dieser Sache vorzutragen hat, wende sich an mich, Euddogwy O’Cenyr, in der persönlichen Kanzlei des Patriarchen an der Großen Kathedrale der Neun.</strong> Ich nehme Eure Meldung entgegen und veranlasse das Weitere.</p><p>Ausgefertigt im Auftrag des Patriarchen Gwalchgwyn Saethwyr.<br><em>Euddogwy O’Cenyr<br>Kurator und persönlicher Adjutant des Patriarchen</em></p>",
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    },
+    {
+      "x": 0.17129024122263628,
+      "y": 0.23561881789304778,
+      "id": "gwynthor-sankt-padraigs-tag",
+      "noticeGroupId": "gwynthor-sankt-padraigs-tag",
+      "typ": "ankuendigung",
+      "verfasser": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "verfasserName": "Euddogwy O'Cenyr · Kurator und persönlicher Adjutant des Patriarchen",
+      "unterschrift": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+      "siegel": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+      "emblem": "assets/images/notices/sankt-padraigs-tag/padraig-kleeblatt-v1.webp",
+      "typography": {
+        "font": "patrickhand",
+        "heading": "template",
+        "script": "common"
+      },
+      "media": {
+        "verfasser": {
+          "kind": "character",
+          "personId": "person--gwynthor-formlingssache--euddogwy",
+          "name": "Euddogwy O'Cenyr",
+          "src": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+          "fit": "cover",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Euddogwy O'Cenyr · Unterschrift",
+          "src": "assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Wachssiegel der patriarchalen Kanzlei · flammender Kelch",
+          "src": "assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        },
+        "emblem": {
+          "kind": "image",
+          "name": "Padraigs heiliges Sinnbild · drei Kleeblätter an einem Stiel",
+          "src": "assets/images/notices/sankt-padraigs-tag/padraig-kleeblatt-v1.webp",
+          "fit": "contain",
+          "position": "center"
+        }
+      },
+      "title": "Sankt Padraigs Tag",
+      "untertitel": "Am 17. Lichtkehr · Bekanntmachung aus der Kanzlei des Patriarchen",
+      "bild": "",
+      "portrait": "",
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "sideWidth": 210,
+      "table": [
+        {
+          "k": "Festtag",
+          "v": "17. Lichtkehr 1740"
+        },
+        {
+          "k": "Ort",
+          "v": "Große Kathedrale der Neun und ihr Vorplatz · Gwynthor"
+        },
+        {
+          "k": "Feier",
+          "v": "Nach dem Morgengebet · Abschluss mit der Mittagsglocke"
+        }
+      ],
+      "text": "<p><strong>Den Bürgern Gwynthors sei der nahende Sankt Padraigs Tag verkündet.</strong> Am 17. Lichtkehr gedenken wir des großen Erzdruiden Padraig, eines frühen Druiden der ersten Menschen, der unseren Vorfahren das Verständnis der menschlichen und göttlichen Natur näherbrachte.</p><p>Padraig lehrte am dreiblättrigen Kleeblatt: <strong>Wie Körper, Geist und Seele voneinander unterschieden sind und doch ein Ganzes bilden, so gehören die drei Blätter zu demselben Stiel.</strong> Darum ist das Kleeblatt sein heiliges Sinnbild. Wer es an diesem Tag trägt, möge sich auch seiner Lehre erinnern.</p><p>Grüne Gewänder, Bänder und Speisen sind dem Volk über die Jahre lieb geworden. Tragt gern etwas Grünes und schmückt Euch mit einem dreiblättrigen Klee. Ihm oder der grünen Farbe besondere Glückskräfte zuzuschreiben, ist jedoch volkstümlicher Aberglaube und gehört nicht zu Padraigs Lehre. Das heilige Zeichen soll uns an seinen Sinn erinnern.</p><p>Nach dem Morgengebet wird das Kleeblattgleichnis vorgetragen. Ein kurzer Festzug mit grünen Bändern, Flöten und Trommeln führt um den Kathedralplatz. Anschließend sind Jung und Alt zu gemeinsamen Liedern und einem fröhlichen Reigen eingeladen. Für die Kinder wird Padraigs Gleichnis noch einmal am lebenden Kleeblatt erklärt.</p><p>Auf dem Vorplatz werden grünes Kräuterbrot, Erbsensuppe und Gemüse gereicht. Teilt die Tafel auch mit jenen, die selbst wenig mitbringen können; ein freundliches Wort und ein geteilter Bissen ehren den Tag ebenso wie ein schönes Gewand.</p><p><strong>Mit Rücksicht auf die Hochzeit von Prinz Tudwal und Lady Revelyn Penderyn wird die Feier in diesem Jahr kürzer und weniger prunkvoll ausfallen.</strong> Die Vorbereitungen beanspruchen viele Hände und Mittel. Der Festzug bleibt klein; zusätzliche Festwagen und aufwendiger Schmuck entfallen. Mit der Mittagsglocke endet das gemeinsame Programm. Ich bitte Euch, diese Beschränkung zu achten und den Tag in Freude und gutem Maß zu begehen.</p><p>Im Auftrag des Patriarchen Gwalchgwyn Saethwyr.</p>",
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    },
+    {
+      "id": "gwynthor-reisegeleit-nach-llysfaen",
+      "typ": "reise",
+      "publicationStatus": "open",
+      "stackId": "gwynthor-fearnan-die-verschwundene-schatulle",
+      "noticeGroupId": "gwynthor-reisegeleit-nach-llysfaen",
+      "stackOrder": 2,
+      "x": 0.705078125,
+      "y": 0.17317708333333334,
+      "title": "Geleit nach Llysfaen gesucht",
+      "untertitel": "Ein Weggefährte für eine private Reise",
+      "verfasserName": "Iorath Melyn",
+      "typography": {
+        "font": "kalam",
+        "heading": "dancingscript",
+        "script": "common"
+      },
+      "sealPreset": "buergerlich",
+      "unterschrift": "assets/images/issuers/signatures/iorath-melyn/unterschrift-v1.webp",
+      "siegel": "assets/images/seals/defaults/buergerlich-v1.png",
+      "verfasser": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png",
+      "media": {
+        "verfasser": {
+          "kind": "image",
+          "name": "Iorath Melyn · Bürger Gwynthors",
+          "src": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png",
+          "position": "top"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Iorath Melyn · Unterschrift",
+          "src": "assets/images/issuers/signatures/iorath-melyn/unterschrift-v1.webp",
+          "fit": "contain"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Bürgerliches Wachssiegel",
+          "src": "assets/images/seals/defaults/buergerlich-v1.png",
+          "fit": "contain"
+        }
+      },
+      "text": "<p>Ich muss in <strong>Llysfaen</strong> einige Schriftstücke persönlich abgeben und würde den Weg gern in Begleitung zurücklegen. Ich bin Gwynthorer Bürger und weder ein geübter Reiter noch ein besonders beherzter Reisender. Seit mein üblicher Weggefährte mit einem verstauchten Fuß zu Hause sitzt, fehlt mir jemand für diese Fahrt.</p><p>Gesucht ist ein verlässlicher Söldner oder eine andere wegekundige Person, die mich hin und wieder zurück begleitet. Ein ruhiges Pferd und meine Reisekosten habe ich selbst. Für das Geleit biete ich <strong>zwanzig Kupferstücke</strong> und übernehme unterwegs das einfache Essen.</p><p>Es liegt keine Bedrohung vor, die eine Untersuchung oder einen Einsatz der Stadtwache rechtfertigen würde. Ich wünsche mir schlicht Gesellschaft und jemanden, der ruhig bleibt, wenn ich es nicht tue.</p><p>Wer Zeit hat, möge mir hier eine Antwort hinterlassen. Ich warte vor dem Aufbruch bei der <strong>Krummen Kanne</strong>.</p>",
+      "table": [
+        {
+          "k": "Auftraggeber",
+          "v": "Iorath Melyn · Bürger Gwynthors"
+        },
+        {
+          "k": "Ziel",
+          "v": "Llysfaen und zurück nach Gwynthor"
+        },
+        {
+          "k": "Aufbruch",
+          "v": "9. Lichtkehr 1740 · nach Vereinbarung"
+        },
+        {
+          "k": "Treffpunkt",
+          "v": "Vor der Krummen Kanne"
+        },
+        {
+          "k": "Entlohnung",
+          "v": "20 Kupferstücke und einfaches Essen unterwegs"
+        }
+      ],
+      "comments": [
+        {
+          "id": "reisegeleit-raban-angebot",
+          "name": "Raban",
+          "postedOn": {
+            "year": 1740,
+            "month": 3,
+            "day": 9
+          },
+          "text": "Ich bin Söldner und habe den Weg in dieser Woche ohnehin vor. Zwanzig Kupfer und eine warme Mahlzeit passen. Wenn Euer Pferd gesattelt ist, können wir nach der Morgenandacht aufbrechen.",
+          "typography": {
+            "font": "kalam"
+          },
+          "avatar": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/raban.png",
+          "imagePosition": "top"
+        },
+        {
+          "id": "reisegeleit-iorath-zusage",
+          "name": "Iorath Melyn",
+          "postedOn": {
+            "year": 1740,
+            "month": 3,
+            "day": 9
+          },
+          "text": "Abgemacht, Raban. Ich warte mit dem Pferd vor der Kanne. Vielen Dank für die schnelle Antwort!",
+          "typography": {
+            "font": "kalam"
+          },
+          "avatar": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png",
+          "imagePosition": "top"
+        },
+        {
+          "id": "reisegeleit-iorath-abschluss",
+          "name": "Iorath Melyn",
+          "postedOn": {
+            "year": 1740,
+            "month": 3,
+            "day": 10
+          },
+          "text": "Erledigt — wir sind wohlbehalten wieder in Gwynthor. Herzlichen Dank an den Söldner Raban für das sichere Geleit und seine Geduld mit mir und dem Pferd. Die Schriftstücke sind abgegeben, die zwanzig Kupfer bezahlt und das versprochene Essen ebenfalls. Es wird keine weitere Begleitung gesucht. Dieses Blatt kann herunter.",
+          "typography": {
+            "font": "kalam"
+          },
+          "avatar": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png",
+          "imagePosition": "top"
+        },
+        {
+          "id": "reisegeleit-raban-abschluss",
+          "name": "Raban",
+          "postedOn": {
+            "year": 1740,
+            "month": 3,
+            "day": 10
+          },
+          "text": "Kann ich bestätigen. Lohn erhalten, Auftrag abgeschlossen. Das Pferd war vernünftiger, als Ihr ihm zugetraut habt. Bis zum nächsten Mal, Iorath.",
+          "typography": {
+            "font": "kalam"
+          },
+          "avatar": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/raban.png",
+          "imagePosition": "top"
+        }
+      ],
+      "artikel": [],
+      "personen": [],
+      "rewards": [],
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    },
+    {
+      "x": 0.13124789458926617,
+      "y": 0.5336032735497709,
+      "id": "gwynthor-gildenjahresrechnung-a38",
+      "noticeGroupId": "gwynthor-gildenjahresrechnung-a38",
+      "typ": "erlass",
+      "title": "Das Gelbe Formular A38",
+      "untertitel": "Letztmalig wiederholte Klarstellung zur Zunft- und Gildenjahresrechnung",
+      "verfasserName": "Tewdwr Gairfân · Beigeordneter Rechnungssekretär zweiter Ordnung",
+      "typography": {
+        "font": "template",
+        "heading": "template",
+        "script": "common"
+      },
+      "emblem": "assets/images/notices/gildenjahresrechnung-a38/gelbes-formular-a38-v1.webp",
+      "verfasser": "../IconOrdner/Gilden%20Orden%20Pins/WolkenderD%C3%A4mmerungPin-removebg-preview.png",
+      "portrait": "",
+      "unterschrift": "assets/images/notices/gildenjahresrechnung-a38/tewdwr-gairfan-unterschrift-v1.webp",
+      "siegel": "assets/images/seals/defaults/wolken-der-daemmerung-v1.png",
+      "sealPreset": "wolken-der-daemmerung",
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "sideWidth": 190,
+      "media": {
+        "emblem": {
+          "kind": "image",
+          "name": "Gelbes Formular A38 · Vorprüfung der Jahresrechnung",
+          "src": "assets/images/notices/gildenjahresrechnung-a38/gelbes-formular-a38-v1.webp",
+          "fit": "contain"
+        },
+        "verfasser": {
+          "kind": "image",
+          "name": "Gwynthorer Amtsstelle der Wolken der Dämmerung",
+          "src": "../IconOrdner/Gilden%20Orden%20Pins/WolkenderD%C3%A4mmerungPin-removebg-preview.png",
+          "fit": "contain"
+        },
+        "unterschrift": {
+          "kind": "image",
+          "name": "Tewdwr Gairfân · Unterschrift",
+          "src": "assets/images/notices/gildenjahresrechnung-a38/tewdwr-gairfan-unterschrift-v1.webp",
+          "fit": "contain"
+        },
+        "siegel": {
+          "kind": "image",
+          "name": "Amtssiegel der Wolken der Dämmerung",
+          "src": "assets/images/seals/defaults/wolken-der-daemmerung-v1.png",
+          "fit": "contain"
+        }
+      },
+      "table": [
+        {
+          "k": "Ausgebende Stelle",
+          "v": "Wolken der Dämmerung · Gwynthorer Amtsstelle"
+        },
+        {
+          "k": "Geltungsbereich",
+          "v": "Sämtliche in Gwynthor geführten Zünfte und Gilden"
+        },
+        {
+          "k": "Erste Anlaufstelle",
+          "v": "Amtsbüro für Abgaben und Leistungen · Raum A21"
+        }
+      ],
+      "text": "<p>Da einzelne Zünfte und Gilden die ordnungsgemäße Erfüllung ihrer längst hinreichend erläuterten Abgabenpflichten weiterhin zum Gegenstand vermeidbarer Rückfragen, unvollständiger Einreichungen und sonstiger eigener Auslegungen machen, sieht sich die Gwynthorer Amtsstelle der <strong>Wolken der Dämmerung</strong> zu nachstehender <strong>vereinfachter Verfahrensbelehrung</strong> veranlasst.</p><p>Nach Ablauf eines jeden Rechnungsjahres ist die <strong>Zunft- und Gildenjahresrechnung mit Abgabenschlussausgleich</strong> vorzulegen. Sie weist Einnahmen, Ausgaben, bereits geleistete Abgaben sowie geltend gemachte Nachlässe und Befreiungen aus. Ihr Zweck ist die abschließende Feststellung, ob eine <strong>Nachzahlung</strong> zu leisten, ein <strong>Abgabennachlass</strong> anzurechnen oder ein bereits überzahlter Betrag <strong>gutzuschreiben</strong> ist. Eine beiläufige Mitteilung, es sei „ungefähr wie im Vorjahr“, genügt dieser Feststellung nicht.</p><p><strong>1. Vorlegung der Vorlegungsunterlagen.</strong> Bücher, Belege und Jahresrechnung sind dem <strong>Amtsbüro für Abgaben und Leistungen, Raum A21</strong>, in zweifacher Abschrift zu überlassen; die Originale sind zur Einsicht mitzuführen und werden zurückgegeben. Belege sind fortlaufend zu zählen. Auch ausbleibende Einnahmen sind ausdrücklich als solche zu erklären. Ein leeres Feld ist keine Null, sondern ein leeres Feld.</p><p><strong>Zur Raumfrage:</strong> Der bisherige Raum <strong>B239</strong> bleibt wegen eines diesen Monat aufgetretenen <strong>Rattenproblems</strong> geschlossen. Die Zuständigkeit ist vollständig nach A21 verlegt. Die im bisherigen Raum verbliebenen Ratten sind zur Entgegennahme von Schriftstücken nicht ermächtigt.</p><p><strong>2. Erlangung des Gelben Formulars.</strong> Nach Abgabe der Abschriften erhalten Sie in A21 das <strong>Gelbe Formular A38 — Antrag auf Feststellung der Vorprüfungsfähigkeit einer Jahresrechnung</strong>. Es ist vollständig auszufüllen. Seine Aushändigung bestätigt weder die Vollständigkeit der Rechnung noch deren Richtigkeit, sondern ausschließlich die erfolgte Aushändigung des Gelben Formulars.</p><p><strong>3. Bescheinigung der Bescheinigungsfähigkeit.</strong> Das ausgefüllte A38 ist der <strong>Abteilung für Gildenrechnung und Abgabenausgleich, Raum C14</strong>, vorzulegen. Dort wird die <strong>Grüne Vorprüfungsbescheinigung U4</strong> ausgestellt. Deren grüne Färbung stellt keine abgabenrechtliche Entlastung dar. Sie bescheinigt lediglich, dass die Vorprüfung als grundsätzlich prüfbar vorgemerkt werden kann.</p><p><strong>4. Gegenzeichnung und geordneter Rücklauf.</strong> Mit A38 und U4 begeben Sie sich zur <strong>Gegenzeichnungsstelle, Raum A7</strong>, und erlangen die <strong>Rücklaufbestätigung R11</strong>. Anschließend legen Sie sämtliche drei Blätter erneut in <strong>A21</strong> vor. Dort erhalten Sie nach Abgleich der Gegenzeichnung die <strong>Ausgabefreigabe für eine Vorsprachenummer, N2</strong>. Die Gegenzeichnungsstelle vergibt keine Termine.</p><p><strong>5. Ordnungsgemäßer Empfang.</strong> Mit N2 wenden Sie sich an unsere geschätzte <strong>Empfangsdame Frau Briallen in der Vorhalle</strong>. Sie wird Ihnen mit der ihr eigenen Freundlichkeit eine <strong>Wartenummer</strong> aushändigen. Frau Briallen nimmt keine Jahresrechnungen entgegen und ersetzt weder Gegenzeichnung noch Rücklaufbestätigung. Auch wiederholtes freundliches Fragen ersetzt diese nicht.</p><p><strong>6. Zugang zur Terminvergabe.</strong> Nach Aufruf Ihrer Wartenummer dürfen Sie an <strong>Schalter 4</strong> einen <strong>Termin zur eigentlichen Sachprüfung</strong> vereinbaren. Die Wartenummer ist kein Termin. Die Vereinbarung eines Termins ist keine Sachprüfung. Eine Sachprüfung findet zum vereinbarten Termin statt.</p><p><strong>7. Abschließende Behandlung.</strong> Zum Termin finden Sie sich wieder in <strong>C14</strong> ein und führen Originale, A38, U4, R11, N2 und die Terminbestätigung mit. Nach Prüfung Ihrer Jahresrechnung ergeht der <strong>Abgabenschlussbescheid A38-E</strong> mit dem festgestellten Ausgleich. Erst diesem entnehmen Sie eine Nachforderung, einen anerkannten Nachlass oder eine Gutschrift. Bereits fällige Vorausabgaben werden durch das Warten auf einen Termin nicht aufgeschoben.</p><p><strong>Abschließend:</strong> Eine Abschrift auf ungefärbtem Papier gilt auch dann nicht als Gelbes Formular, wenn das Wort „gelb“ darauf vermerkt wurde. Die derzeitige Rattenlage ist kein anerkannter Grund für einen Abgabennachlass.</p><p>Es besteht somit kein Anlass zu weiteren Unklarheiten.</p><p><em>Im Auftrag der Gwynthorer Amtsstelle der Wolken der Dämmerung.</em></p>",
+      "artikel": [],
+      "personen": [],
+      "comments": [],
+      "secret": false,
+      "publishedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 9
+      }
+    }
+  ],
+  "archiveEntries": [
+    {
+      "id": "archive-gwynthor-reisegeleit-17400310",
+      "noticeIds": [
+        "gwynthor-reisegeleit-nach-llysfaen"
+      ],
+      "archivedOn": {
+        "year": 1740,
+        "month": 3,
+        "day": 10
+      },
+      "x": 0.22,
+      "y": 0.944
     }
   ],
   "updates": [
@@ -3058,6 +3742,97 @@
           "to": "Verpiss dich Rob! Du wahrst ein misserabler Lotse. Sechs tage und nichs gefunden!"
         }
       ]
+    },
+    {
+      "id": "gwynthor-reisegeleit-portraits-20261031-v2",
+      "noticeId": "gwynthor-reisegeleit-nach-llysfaen",
+      "fields": [
+        {
+          "field": "verfasser",
+          "fillEmpty": true,
+          "to": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png"
+        },
+        {
+          "field": "media.verfasser",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Iorath Melyn · Bürger Gwynthors",
+            "src": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png",
+            "position": "top"
+          }
+        },
+        {
+          "field": "unterschrift",
+          "fillEmpty": true,
+          "to": "assets/images/issuers/signatures/iorath-melyn/unterschrift-v1.webp"
+        },
+        {
+          "field": "media.unterschrift",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Iorath Melyn · Unterschrift",
+            "src": "assets/images/issuers/signatures/iorath-melyn/unterschrift-v1.webp",
+            "fit": "contain"
+          }
+        },
+        {
+          "field": "siegel",
+          "fillEmpty": true,
+          "to": "assets/images/seals/defaults/buergerlich-v1.png"
+        },
+        {
+          "field": "media.siegel",
+          "fillEmpty": true,
+          "to": {
+            "kind": "image",
+            "name": "Bürgerliches Wachssiegel",
+            "src": "assets/images/seals/defaults/buergerlich-v1.png",
+            "fit": "contain"
+          }
+        },
+        {
+          "field": "comments.reisegeleit-raban-angebot.avatar",
+          "fillEmpty": true,
+          "to": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/raban.png"
+        },
+        {
+          "field": "comments.reisegeleit-raban-angebot.imagePosition",
+          "fillEmpty": true,
+          "to": "top"
+        },
+        {
+          "field": "comments.reisegeleit-iorath-zusage.avatar",
+          "fillEmpty": true,
+          "to": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png"
+        },
+        {
+          "field": "comments.reisegeleit-iorath-zusage.imagePosition",
+          "fillEmpty": true,
+          "to": "top"
+        },
+        {
+          "field": "comments.reisegeleit-iorath-abschluss.avatar",
+          "fillEmpty": true,
+          "to": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png"
+        },
+        {
+          "field": "comments.reisegeleit-iorath-abschluss.imagePosition",
+          "fillEmpty": true,
+          "to": "top"
+        },
+        {
+          "field": "comments.reisegeleit-raban-abschluss.avatar",
+          "fillEmpty": true,
+          "to": "../AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/raban.png"
+        },
+        {
+          "field": "comments.reisegeleit-raban-abschluss.imagePosition",
+          "fillEmpty": true,
+          "to": "top"
+        }
+      ]
     }
   ],
   "boardBindings": [
@@ -3111,9 +3886,95 @@
           "enabled": true
         }
       }
+    },
+    {
+      "posterId": "gwynthor-poster-kirche",
+      "assetId": "kirche",
+      "noticeId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "poster": {
+        "id": "gwynthor-poster-kirche",
+        "assetId": "kirche",
+        "x": 0.277751,
+        "y": 0.276236,
+        "width": 0.048,
+        "rotation": 0,
+        "layer": 2001,
+        "noticeId": "gwynthor-lleuwen-kirchliche-anhoerung",
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.16781083142639205,
+          "rotation": 0,
+          "enabled": true
+        }
+      }
+    },
+    {
+      "posterId": "gwynthor-poster-feiertag",
+      "assetId": "feiertag",
+      "noticeId": "gwynthor-sankt-padraigs-tag",
+      "poster": {
+        "id": "gwynthor-poster-feiertag",
+        "assetId": "feiertag",
+        "x": 0.199043,
+        "y": 0.275279,
+        "width": 0.05933,
+        "rotation": -4,
+        "layer": 2000,
+        "noticeId": "gwynthor-sankt-padraigs-tag",
+        "pin": {
+          "assetId": "straight",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.1854036743637283,
+          "rotation": 0,
+          "enabled": true
+        }
+      }
+    },
+    {
+      "posterId": "gwynthor-poster-wolken-daemmerung",
+      "assetId": "wolken-daemmerung",
+      "noticeId": "gwynthor-gildenjahresrechnung-a38",
+      "poster": {
+        "id": "gwynthor-poster-wolken-daemmerung",
+        "assetId": "wolken-daemmerung",
+        "x": 0.142823,
+        "y": 0.57193,
+        "width": 0.050239,
+        "rotation": 15,
+        "layer": 3037,
+        "noticeId": "gwynthor-gildenjahresrechnung-a38",
+        "pin": {
+          "assetId": "left",
+          "x": 0.08,
+          "y": 0.05,
+          "size": 0.21895340273492703,
+          "rotation": 0,
+          "enabled": true
+        }
+      }
     }
   ],
   "boardLayoutUpdates": [
+    {
+      "id": "gwynthor-church-next-to-holiday-placement-20261031",
+      "posterId": "gwynthor-poster-kirche",
+      "assetId": "kirche",
+      "noticeId": "gwynthor-lleuwen-kirchliche-anhoerung",
+      "field": "placement",
+      "from": {
+        "x": 0.277751,
+        "y": 0.276236,
+        "width": 0.06555
+      },
+      "to": {
+        "x": 0.277751,
+        "y": 0.276236,
+        "width": 0.048
+      }
+    },
     {
       "id": "gwynthor-court-standard-paper-size-20261031",
       "posterId": "gwynthor-poster-gwrgan-gegen-lleucu",

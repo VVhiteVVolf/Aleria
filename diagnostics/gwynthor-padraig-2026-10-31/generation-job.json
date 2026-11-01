@@ -1,0 +1,17 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-31",
+  "preset": "fantasy-inventory-item",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a18d7a-c8d6-76d2-9f99-4e2eeaf22a8d\\exec-65c38792-48f1-49d9-a545-c97b57828f4e.png",
+  "file": "Anzeigetafeln/assets/images/notices/sankt-padraigs-tag/padraig-kleeblatt-v1.png",
+  "prompt": "ONE isolated small sacred THREE-LEAF SHAMROCK icon for a medieval fantasy feast proclamation. Reference image is STYLE ONLY: use its hand-painted illustrated fantasy inventory icon style, crisp dark brown outlines, matte colors, softly simplified shading and clearly readable silhouette; DO NOT copy book, scales or flame. Subject is one botanical shamrock sprig, frontal and gently stylized, exactly THREE broad heart-shaped GREEN LEAVES (one at top, one at left, one at right), all visibly joined to the SAME SINGLE short graceful green STEM at the center. All three leaves distinct and similarly sized, arranged like an ordinary Irish shamrock, unmistakably three, not four and not three separate plants. The three leaves symbolize body, mind and soul sharing one living whole. Restrained deep leaf green with muted lighter green highlights, a few simple veins, warm dark drawn contours. A simple dignified holy symbol, NOT a lucky charm: no horseshoe, coin, gold pot, rainbow, leprechaun, dice, jewels or glitter. No Christian cross, no letters, no label, no border or shield. Entire sprig centered at about 78 percent square canvas with ample margins, full curved stem visible. True transparent PNG outside the sprig, no background, ground, outer shadow, halo or checkerboard. Hand-painted fantasy inventory art, not realistic or CGI. 1:1 square.",
+  "references": [
+    "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.png"
+  ],
+  "inspected": {
+    "leaves": 3,
+    "commonStem": true,
+    "transparent": true
+  },
+  "displayRecipe": "Crop transparent padding using alpha >= 32 bounding box; thumbnail max 512x512 with Lanczos; WebP quality 94 method 6; keep original PNG."
+}

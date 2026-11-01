@@ -1,0 +1,6 @@
+{
+  "source": "https://firestore.googleapis.com/v1/projects/aleriaprojekt/databases/(default)/documents:runQuery",
+  "filter": "entryId in gawain-duncan prefix",
+  "readOnly": true,
+  "comments": []
+}

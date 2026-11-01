@@ -59,7 +59,7 @@ test('lehnt eine leere Auswahl ab', () => {
   );
 });
 
-test('legt Beute als neuen Inventareintrag an und fasst gleichnamige Gegenstände zusammen', () => {
+test('legt Beute mit eigener Besitzidentität an und erhält gleichnamigen Altbesitz', () => {
   const now = new Date('2026-08-07T12:00:00.000Z');
   const receiver = { id: 'gawain', name: 'Gawain Draig', inventory: { items: [{ id: 'old-1', name: 'Pfeile', quantity: '2' }] } };
   const inventory = lootClaimCommitInternals.applyLootToInventory(receiver, [
@@ -70,7 +70,24 @@ test('legt Beute als neuen Inventareintrag an und fasst gleichnamige Gegenständ
   assert.ok(sword);
   assert.equal(sword.quantity, '1');
   assert.equal(sword.ownerCharacterId, 'gawain');
-  const arrows = inventory.items.find(item => item.name === 'Pfeile');
-  assert.equal(arrows.quantity, '5');
-  assert.equal(inventory.items.filter(item => item.name === 'Pfeile').length, 1);
+  const arrows = inventory.items.filter(item => item.name === 'Pfeile');
+  assert.deepEqual(arrows.map(item => item.quantity), ['2', '3']);
+  assert.equal(arrows[1].instanceId, arrows[1].id);
+  assert.equal(arrows[1].description, 'Bündel');
+  assert.equal(receiver.inventory.items.length, 1);
+});
+
+test('leere Beute erzeugt keinen Gegenstand durch Aufrundung auf eins', () => {
+  assert.throws(() => lootClaimCommitInternals.validateRequestedItems([{ id: 'empty', quantity: 1 }],
+    [{ id: 'empty', name: 'Leer', quantity: 0 }]), /nicht mehr verfügbar/);
+});
+
+test('gleichnamige Beute verändert niemals den Statblock vorhandener Ausrüstung', () => {
+  const receiver = { id: 'owner', inventory: { items: [{ id: 'unique', name: 'Schwert', quantity: '1',
+    combatDefinition: { kind: 'weapon', damageFormula: '1d8', damageBonus: 1 } }] } };
+  const before = structuredClone(receiver);
+  const inventory = lootClaimCommitInternals.applyLootToInventory(receiver, [{ name: 'Schwert', quantity: 1, notes: 'Gewöhnlich' }], new Date());
+  assert.deepEqual(receiver, before);
+  assert.deepEqual(inventory.items[0], before.inventory.items[0]);
+  assert.equal(inventory.items.length, 2);
 });

@@ -1,6 +1,7 @@
 import { HOUSE_SAETHWYR_FAMILY } from '../../../Stammbäume/assets/js/data/house-saethwyr-family.js';
 import { HOUSE_BRADRHITH_FAMILY } from '../../../Stammbäume/assets/js/data/house-bradrhith-family.js';
 import { HOUSE_ENEINIOG_FAMILY } from '../../../Stammbäume/assets/js/data/house-eneiniog-family.js';
+export { EUDDOGWY } from './patriarch-adjutant.mjs';
 
 function existingPerson(family, id, name, onlineId, role) {
   const person = family.persons.find(person => person.id === id);

@@ -19,7 +19,7 @@ export function createYlvaDuelTechniques() {
     tags: 'Persönlich · Ylva Wolfshorn · Schaden und Kontrolle',
     description: 'Ylva stößt durch die Deckung, legt den Schaft hinter die geführte Waffe und hebelt sie mit einer Drehung aus dem Griff. (1× Waffenwürfel + Ausbildungswürfel + voller Schadensbonus. Nach Treffer KRF-Rettung: SG 10 + Waffenattribut + Kompetenz, derzeit 16. Bei Scheitern Entwaffnung; Körperwaffen erhalten stattdessen −1 Angriff im nächsten eigenen Beitrag.)',
     effect: '(Waffenschaden und Entwaffnung nach Treffer und misslungener KRF-Rettung; Aufheben und Waffenwechsel kosten reguläre Ressourcen.)',
-    target: 'Ein Gegner', range: 'Waffenreichweite', requirements: 'Ylvas persönliche Ausbildung; geführter Speer.', effects: [{ type: 'damage', target: 'target', on: 'hit' }],
+    target: 'Ein Gegner', range: 'Waffenreichweite', requirements: 'Ylvas persönliche Ausbildung; geführter Speer.', effects: [{ type: 'damage', target: 'target', on: 'hit', inheritWeaponDamageType: true }],
     secondarySave: createWeaponTechniqueSave( { id: 'ylva-schafthebel-entwaffnet', name: 'Entwaffnet', description: 'Die geführte Waffe liegt aufnehmbar in der Szene.', duration: '1 eigener Beitrag', disarm: true, mechanics: {} })
   }, { ...base, id: evadeId, name: 'Aus der Angriffslinie', activationType: 'reaction', costs: [reaction],
     description: 'Ylva bereitet mit dem Speer eine ausweichende Abwehr vor. Der nächste gegen sie gerichtete Waffen- oder Technikangriff erhält Nachteil. Einmalig, auch bei Fehlschlag verbraucht; verfällt spätestens am Ende ihres nächsten eigenen Beitrags. Kein Schaden, keine freie Bewegung und keine rückwirkende Änderung eines Wurfs.',

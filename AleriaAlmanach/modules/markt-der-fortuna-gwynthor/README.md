@@ -5,7 +5,7 @@ Lokaler Schwesterbereich zum Münze-Handelsposten. Zwei Module: Handelshof mit g
 ## Verantwortung
 
 - `fortuna-section.mjs`: gemeinsamer Archivpfad und bestehende Gildensymbole; von den drei zugeordneten Geschäftsbuildern wiederverwendet.
-- `fortuna-factions.mjs`: sieben führende Häuser, neun institutionelle Ratssitze. Falto verweist seit dem Personenauftrag vom 30.10.2026 auf seine neue, zunächst schmale Familienakte; Nerva bleibt institutionell. Beide Hauswappen bleiben offen.
+- `fortuna-factions.mjs`: sieben führende Häuser, neun institutionelle Ratssitze. Falto verweist auf seine schmale Familienakte und das am 31.10.2026 ausgearbeitete Hauswappen mit Handelsschiff und Münzen. Das Haus ist in Venalys sesshaft; Gwynthor ist seine örtliche Vertretung. Nerva bleibt institutionell und ohne eigenes Hauswappen.
 - `fortuna-network.mjs`: bestehende Partner mit ausdrücklicher Beziehungskategorie und Quellenpfad. Familienkontakte sind keine automatische Mitgliedschaft.
 - Vier eigene Hierarchiemodelle; gemeinsame Darstellungslogik in `modules/guild-trading-post/trading-post-hierarchy.mjs`. Die Münze verwendet dieselbe Darstellung mit unveränderten Ausgabedaten.
 - `fortuna-module.mjs`: Stories, Familien-/Partnerseiten und stabile Szenen-Threadschlüssel.

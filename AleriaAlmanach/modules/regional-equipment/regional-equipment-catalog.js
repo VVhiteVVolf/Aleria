@@ -198,9 +198,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-coeddu",
       "craigddu",
       "haus-cochdon",
-      "haus-falto",
+      "haus-twyllod",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-penrudd",
       "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
@@ -210,8 +211,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
-      "haus-twyllod",
-      "haus-penrudd",
       "haus-valerus",
       "haus-argall",
       "haus-gwefrydd",
@@ -570,6 +569,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-mac-morfhia",
       "haus-mac-corcaigh",
       "haus-falveri",
+      "haus-falto",
       "haus-karreg",
       "haus-frye",
       "haus-estmere",
@@ -2864,9 +2864,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-coeddu",
       "craigddu",
       "haus-cochdon",
-      "haus-falto",
+      "haus-twyllod",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-penrudd",
       "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
@@ -2876,8 +2877,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
-      "haus-twyllod",
-      "haus-penrudd",
       "haus-valerus",
       "haus-argall",
       "haus-gwefrydd",
@@ -3151,9 +3150,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-coeddu",
       "craigddu",
       "haus-cochdon",
-      "haus-falto",
+      "haus-twyllod",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-penrudd",
       "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
@@ -3163,8 +3163,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
-      "haus-twyllod",
-      "haus-penrudd",
       "haus-valerus",
       "haus-argall",
       "haus-gwefrydd",
@@ -3268,7 +3266,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/twr-traethlan",
       "cenyr/celtigerns-wacht/llamreis-ankunft/lynthor",
-      "cenyr/celtigerns-wacht/llamreis-ankunft/bannkreis-gwynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche",
       "cenyr/celtigerns-wacht/llamreis-ankunft/llysfaen"
     ],
@@ -3309,9 +3306,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-coeddu",
       "craigddu",
       "haus-cochdon",
-      "haus-falto",
+      "haus-twyllod",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-penrudd",
       "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
@@ -3321,8 +3319,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-bradrhith",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
-      "haus-twyllod",
-      "haus-penrudd",
       "haus-valerus",
       "haus-argall"
     ]
@@ -3380,9 +3376,10 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-coeddu",
       "craigddu",
       "haus-cochdon",
-      "haus-falto",
+      "haus-twyllod",
       "haus-fontani",
       "haus-rhwyd",
+      "haus-penrudd",
       "haus-llythfor",
       "haus-gwregysdu",
       "sept-cneacail",
@@ -3445,25 +3442,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-sgrechiwr"
-    ]
-  },
-  {
-    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/bannkreis-gwynthor",
-    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft",
-    "name": "Bannkreis Gwynthor",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Bannkreis Gwynthor"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "celtigerns-wacht",
-    "children": [],
-    "houseIds": [
-      "haus-twyllod",
-      "haus-penrudd"
     ]
   },
   {
@@ -19881,7 +19859,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Cenyr",
       "Celtigerns Wacht",
       "Llamreis Ankunft",
-      "Bannkreis Gwynthor"
+      "Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view"
   },
@@ -19900,7 +19878,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
   {
     "id": "haus-falto",
     "name": "Haus Falto",
-    "image": "",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Venalys/haus-falto.png",
     "path": [
       "Venalys"
     ],
@@ -19948,14 +19926,14 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Cenyr",
       "Celtigerns Wacht",
       "Llamreis Ankunft",
-      "Bannkreis Gwynthor"
+      "Gwynthor"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view"
   },
   {
     "id": "haus-llythfor",
     "name": "Haus Llythfor",
-    "image": "/Stammb%C3%A4ume/assets/images/placeholders/neutral-crest.png",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Llythfor.png",
     "path": [
       "Cenyr",
       "Celtigerns Wacht",

@@ -70,6 +70,7 @@ function renderItemDbPickerPanel() {
       <div class="item-db-picker-toolbar">
         <input type="search" value="${itemDbEscapeHtml(_itemDbPickerSession.search || '')}" placeholder="Item suchen..." data-item-db-picker-action="search">
         <button type="button" data-item-db-picker-action="refresh">Aktualisieren</button>
+        <button type="button" data-item-db-picker-action="build">Item-Builder · Neu / Variante / Unikat</button>
       </div>
       <div class="item-db-picker-list">${itemDbRenderPickerItems(visibleItems)}</div>
     </div>`;
@@ -113,6 +114,14 @@ async function handleItemDbPickerClick(event) {
     event.preventDefault();
     await itemDbEnsureGlobalSync();
     renderItemDbPickerPanel();
+    return;
+  }
+  if (action === 'build') {
+    event.preventDefault();
+    if (!window.AleriaItemRegister?.buildItem) return;
+    const session = _itemDbPickerSession;
+    const item = await window.AleriaItemRegister.buildItem({ templates: itemDbBuildIndex().filter(item => item.section !== 'owned'), key: `picker:${session.title}` });
+    if (item && session === _itemDbPickerSession) { closeItemDbPicker(); session.onSelect?.(item); }
     return;
   }
   if (action === 'select') {

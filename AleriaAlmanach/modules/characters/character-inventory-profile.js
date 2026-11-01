@@ -2,21 +2,13 @@ let _characterInventoryDraft = null;
 let _characterInventoryEditMode = false;
 
 function getDefaultCharacterInventoryProfileItems() {
-  return [
-    { category: 'weapon', icon: '*', name: 'Hauptwaffe', type: 'Waffe', description: 'Beschreibe Material, Zustand und besondere Merkmale.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'armor', icon: '*', name: 'Rüstung / Schutz', type: 'Rüstung', description: 'Rüstung, Kleidung oder magischer Schutz.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'equipment', icon: '*', name: 'Reiseausrüstung', type: 'Ausrüstung', description: 'Werkzeuge, Vorrat oder nützliche Gegenstände.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'potions', icon: '*', name: 'Heil- oder Verbrauchsgut', type: 'Trinktur', description: 'Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'documents', icon: '*', name: 'Dokumente / Urkunden', type: 'Dokument', description: 'Passierschein, Brief, Vertrag, Siegel oder Lizenz.', weight: 'Noch festlegen', quantity: '1' },
-    { category: 'other', icon: '*', name: 'Persönlicher Gegenstand', type: 'Sonstiges', description: 'Erbstück, Andenken, Siegel oder wichtiger Besitz.', weight: 'Noch festlegen', quantity: '1' }
-  ];
+  // Editor examples are not possessions. Actual class equipment is linked by
+  // character-equipment-sync; an empty sheet starts with an empty inventory.
+  return [];
 }
 
 function getDefaultCharacterInventoryProfileCompanions() {
-  return [
-    { name: 'Reittier / Gefährte', species: 'Tier oder Begleiter', role: 'Begleiter', summary: 'Kurzbeschreibung des Gefährten.', status: 'Gesund' },
-    { name: 'Treuer Begleiter', species: 'Tier / Person', role: 'Gefährte', summary: 'Besonderheit, Nutzen oder Bindung.', status: 'Noch festlegen' }
-  ];
+  return [];
 }
 
 function createCharacterInventoryDataFromCharacter(char = {}) {

@@ -10,7 +10,7 @@ function sanitizeLandingEvents(items) { return AleriaLandingModel.normalizeLandi
 function sanitizeLandingInfo(items) { return AleriaLandingModel.normalizeLandingInfo(items); }
 function sanitizeLandingData(data = {}) { return AleriaLandingModel.normalizeLandingData(data, sanitizeAleriaDate); }
 function createDefaultLandingPage(index = 0) {
-  return { ...AleriaLandingModel.createLandingPage(), pageTitle: getRomanPageLabel(index) + ' – Gruppenübersicht' };
+  return { ...AleriaLandingModel.createLandingPage(), pageTitle: getRomanPageLabel(index) + ' – Abenteuerfolio' };
 }
 
 function buildLandingInput(label, className, value, type = 'text') {
@@ -189,11 +189,20 @@ function collectLandingDataFromBlock(block) {
   try { base = JSON.parse(block.dataset?.landingBase || '{}'); } catch { /* Older templates have no preserved state. */ }
   return sanitizeLandingData({
     ...base,
+    presentation: block.querySelector('.me-landing-presentation')?.value ?? base.presentation,
+    coverImage: block.querySelector('.me-landing-coverImage')?.value ?? base.coverImage,
     bannerImage: getTrimmedFormValue(block, '.me-landing-bannerImage'),
     title: getTrimmedFormValue(block, '.me-landing-title'),
     subtitle: getTrimmedFormValue(block, '.me-landing-subtitle'),
     memberTitle: getTrimmedFormValue(block, '.me-landing-memberTitle'),
     questTitle: getTrimmedFormValue(block, '.me-landing-questTitle'),
+    questJournal: {
+      ...base.questJournal,
+      enabled: block.querySelector('.me-landing-quest-journal-enabled')?.checked ?? base.questJournal?.enabled,
+      includeMembers: block.querySelector('.me-landing-quest-journal-members')?.checked ?? base.questJournal?.includeMembers,
+      questIds: block.querySelector('.me-landing-quest-journal-quests')?.value ?? base.questJournal?.questIds,
+      runIds: block.querySelector('.me-landing-quest-journal-runs')?.value ?? base.questJournal?.runIds
+    },
     notesTitle: getTrimmedFormValue(block, '.me-landing-notesTitle'),
     eventsTitle: getTrimmedFormValue(block, '.me-landing-eventsTitle'),
     mapTitle: getTrimmedFormValue(block, '.me-landing-mapTitle'),
@@ -259,7 +268,15 @@ function buildLandingModuleEditorFields(page) {
         <div class="module-editor-field wide"><label>Kopfbereich</label><div class="trade-editor-grid">
           ${buildLandingInput('Titel', 'me-landing-title', data.title)}
           ${buildLandingInput('Untertitel', 'me-landing-subtitle', data.subtitle)}
-          ${buildLandingIconInput('Bannerbild', 'me-landing-bannerImage', data.bannerImage)}
+          <label><span>Darstellung</span><select class="inline-edit-input me-landing-presentation">${Object.entries(AleriaLandingModel.LANDING_PRESENTATIONS).map(([value, label]) => `<option value="${value}"${value === data.presentation ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('')}</select></label>
+          ${buildLandingInput('Coverbild · breite Bild-URL', 'me-landing-coverImage', data.coverImage)}
+          ${buildLandingIconInput('Wappen / bisheriges Bannerbild', 'me-landing-bannerImage', data.bannerImage)}
+        </div></div>
+        <div class="module-editor-field wide"><label>Gemeinsames Abenteuerjournal</label><p class="module-editor-help">Verknüpft diese Landingpage mit zentralen Quests und Gruppendurchläufen. Fortschritt und Belohnungen bleiben im Abenteuerjournal; bestehende Planungsaufgaben bleiben erhalten.</p><div class="trade-editor-grid">
+          <label><input type="checkbox" class="me-landing-quest-journal-enabled"${data.questJournal.enabled ? ' checked' : ''}> Abenteuerjournal anzeigen</label>
+          <label><input type="checkbox" class="me-landing-quest-journal-members"${data.questJournal.includeMembers ? ' checked' : ''}> Abenteuer der verknüpften Mitglieder anzeigen</label>
+          ${buildLandingTextarea('Zusätzliche Questkennungen · eine pro Zeile', 'me-landing-quest-journal-quests', data.questJournal.questIds.join('\n'))}
+          ${buildLandingTextarea('Zusätzliche Gruppendurchläufe · eine Kennung pro Zeile', 'me-landing-quest-journal-runs', data.questJournal.runIds.join('\n'))}
         </div></div>
         <div class="module-editor-field wide"><label>Ueberschriften</label><div class="trade-editor-grid">
           ${buildLandingInput('Abenteurer', 'me-landing-memberTitle', data.memberTitle)}
@@ -327,7 +344,9 @@ function buildInlineLandingEditor(page) {
       <div class="inline-edit-grid">
         <div class="inline-edit-field"><span class="inline-edit-label">Titel</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="title" value="${escapeHtml(data.title)}"></div>
         <div class="inline-edit-field"><span class="inline-edit-label">Untertitel</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="subtitle" value="${escapeHtml(data.subtitle)}"></div>
-        <div class="inline-edit-field wide"><span class="inline-edit-label">Bannerbild</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="bannerImage" value="${escapeHtml(data.bannerImage)}"></div>
+        <div class="inline-edit-field"><span class="inline-edit-label">Darstellung</span><select class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="presentation">${Object.entries(AleriaLandingModel.LANDING_PRESENTATIONS).map(([value, label]) => `<option value="${value}"${value === data.presentation ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('')}</select></div>
+        <div class="inline-edit-field wide"><span class="inline-edit-label">Coverbild · breite Bild-URL</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="coverImage" value="${escapeHtml(data.coverImage)}"></div>
+        <div class="inline-edit-field wide"><span class="inline-edit-label">Wappen / bisheriges Bannerbild</span><input class="inline-edit-input" data-inline-action="update-landing-field" data-landing-field="bannerImage" value="${escapeHtml(data.bannerImage)}"></div>
       </div>
       <div class="inline-placeholder-note">${data.group ? 'Zusammenstellung, Gäste, Status, Kasse und aktive Sitzung lassen sich in der fertigen Gruppenübersicht direkt bearbeiten. Die Hierarchie bleibt die Quelle der Mitglieder.' : 'Listen und Darstellung bearbeitest du im Modul-Editor. Aufgaben und Notizen lassen sich auch direkt in der fertigen Ansicht pflegen.'}</div>
     </div>`;

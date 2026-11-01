@@ -1,14 +1,14 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve, dirname } from 'node:path';
+import { projectHouseArmorSources } from './source-pages/house-armor-source.mjs';
 const frontend = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const root = resolve(frontend, '..');
 const manifest = JSON.parse(await readFile(resolve(frontend, 'public/assets/house-armor/image-prompts.json'), 'utf8'));
 const gallery = JSON.parse(await readFile(resolve(root, 'Gallerien/krieger/data/catalog.json'), 'utf8'));
-const expected = gallery.houses.filter(house => house.location.includes('Celtigerns Wacht')).map(house => house.id).sort();
-if (JSON.stringify(expected) !== JSON.stringify(manifest.houses.map(house => house.id).sort())) throw Error('Hausverzeichnis weicht von den Stammbäumen ab.');
+const sources = projectHouseArmorSources(gallery.houses, manifest.houses);
 const houses = [];
-for (const house of manifest.houses) {
+for (const house of sources) {
   if (house.generated) {
     if (!house.prompt) throw Error(`Prompt fehlt: ${house.id}`);
     const png = await readFile(resolve(frontend, 'public/assets/house-armor', house.regionId, house.file));

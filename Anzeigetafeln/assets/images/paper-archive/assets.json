@@ -1,0 +1,67 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "id": "single-1",
+      "original": "single-1-v1.png",
+      "display": "single-1-v1.webp",
+      "width": 640,
+      "height": 633,
+      "sha256": "54001812ce57d6fbcd28fc62d91073563e5189fe1c128a8fb92003548e5a5246",
+      "displaySha256": "3f41b1c33678f9f92b529732cc0f14930331267248fdb81dbaec34acd0cb3791",
+      "hasTransparency": true
+    },
+    {
+      "id": "single-2",
+      "original": "single-2-v1.png",
+      "display": "single-2-v1.webp",
+      "width": 640,
+      "height": 452,
+      "sha256": "bbc706336317fe665f51a6f2a1cba93b7671ca0fa44edd7642797552a7d9dc91",
+      "displaySha256": "5e4defc32b86347a0361c1e40b326b37ca65613bb11edeac6a47f048f33d86c4",
+      "hasTransparency": true
+    },
+    {
+      "id": "single-3",
+      "original": "single-3-v1.png",
+      "display": "single-3-v1.webp",
+      "width": 521,
+      "height": 640,
+      "sha256": "043e6e0a1b924bc3d19e5d5f1b5f91cb57d7ab2fc279b5424b2309099700244f",
+      "displaySha256": "ae2080e9d26d79f0bcfd607985c0843fcd1ce52a5e53ae6d9a72959495359705",
+      "hasTransparency": true
+    },
+    {
+      "id": "pile-small",
+      "original": "pile-small-v1.png",
+      "display": "pile-small-v1.webp",
+      "width": 640,
+      "height": 506,
+      "sha256": "49b276e048e71df1c0596b6316766df1624d38b80b8bff476569ece3869f8054",
+      "displaySha256": "9c6984120990cf855e7e9783e9d22f79fe17810e558d65f738ff1995c9db7c94",
+      "hasTransparency": true
+    },
+    {
+      "id": "pile-medium",
+      "original": "pile-medium-v1.png",
+      "display": "pile-medium-v1.webp",
+      "width": 640,
+      "height": 479,
+      "sha256": "50064cc2db38fa162c847dae898957a72bddb82dc002876a9ac46a540a342efd",
+      "displaySha256": "8f1413862c995597459bf3c0e374144854206e7d1f89d018be9def76712051c7",
+      "hasTransparency": true
+    },
+    {
+      "id": "pile-large",
+      "original": "pile-large-v1.png",
+      "display": "pile-large-v1.webp",
+      "width": 640,
+      "height": 466,
+      "sha256": "1987cb8ecf32484f3756b94c580495bbdd421307f85725c7b802e1ff285b9795",
+      "displaySha256": "f2244f37a2e6623a68c128f4dd7f1c8256e59e6f6c350f940c900657afb1f9f5",
+      "hasTransparency": true
+    }
+  ],
+  "originalsPreserved": true,
+  "contactShadowsPreserved": true
+}

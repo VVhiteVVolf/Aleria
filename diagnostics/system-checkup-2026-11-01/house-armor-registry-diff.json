@@ -1,0 +1,1163 @@
+{
+  "galleryVersion": 1,
+  "expectedCount": 94,
+  "manifestCount": 92,
+  "missing": [
+    {
+      "id": "haus-twyllod",
+      "name": "Familie Twyllod",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Bannkreis Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view",
+      "sources": [
+        "haus-twyllod",
+        "haus-swyll"
+      ],
+      "illustrationIds": [],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-cochdon",
+      "name": "Haus Cochdon",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-cochdon&mode=view",
+      "sources": [
+        "haus-cochdon",
+        "haus-swyll"
+      ],
+      "illustrationIds": [],
+      "missingNote": ""
+    }
+  ],
+  "obsolete": [],
+  "metadata": [
+    {
+      "id": "haus-celynfor",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-fearnan",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-torvik",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-aelmor",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-almarch",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-althin",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-annwyl",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-ard-conbhron",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-argall",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-arwydd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-awenor",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-awenydd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-balchder",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-barus",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-bekab",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-bleiddorn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-bradrhith",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-braglas",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-brinmarch",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-caerlaen",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-caerthwyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-cenfig",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-chwedlonol",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-cludwyr",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-coeddu",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-coedvarn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "craigddu",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-cymrath-o-traethlan",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-cysgodion",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-daran",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-draenmelyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-draig",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-dubhan-gwynthor",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-dubhdarach",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-edmy",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-eirfael",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-eneiniog",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-falchdyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-fontani",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gafyr",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-garrael",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gelyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-ghorswyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gofrann",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gostyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwardin",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwared",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwefrydd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwregysdu",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwyllach",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwynrhos",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwyntog",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-gwyvern",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-illysywen",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-iorwen",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-loer",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-madryn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-maerllys",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-maethan",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-merek",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-morveth",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-pendrwn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-penrudd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-penwyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-raves",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-rhen",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-rhenna",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-rhuddgar",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-rhwyd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-rhyddid",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-saethwyr",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-seldryn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-selog",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-sgrechiwr",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-skellor",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-svathamar",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-swyll",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-talinvyr",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-talmeirch",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-taranvyr",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-tawelgar",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-tirwyn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-tlawd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-tonnarth",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-trevoryn",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-trydar",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-ui-talamh",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-valerus",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-vann",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-wyrm",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-ymladd",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    },
+    {
+      "id": "haus-ysgrif",
+      "diff": {
+        "region": {
+          "manifest": "Celtigerns Wacht",
+          "gallery": "Cenyr"
+        },
+        "regionId": {
+          "manifest": "celtigerns-wacht"
+        }
+      }
+    }
+  ],
+  "manifestSample": {
+    "id": "craigddu",
+    "name": "Haus Craigddu",
+    "regionId": "celtigerns-wacht",
+    "region": "Celtigerns Wacht",
+    "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+    "tree": "Stammbäume/Stammbaum.html?family=craigddu&mode=view",
+    "sourceImage": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
+    "sourceIllustrationId": "bild-3b3adf1f46d9b259",
+    "file": "craigddu-harnisch-v1.png",
+    "prompt": "Single empty torso armor of Haus Craigddu, square inventory item art. HOUSE DESIGN: simple gray iron shoulder caps, BLUE chest cloth bearing PALE THREE-TOWER CASTLE on dark rocky crag. Reference 1 is its house warrior; preserve these unique colors, emblem and construction. Reference 2 shows painterly fantasy RPG inventory rendering STYLE only, do not copy its gold trim, shapes or emblem. Empty waist-length chest harness with open neck/armholes, small shoulder caps, short waist plates optional. No human/head/arms/legs/helmet/gloves/boots, cape/robe/skirt, weapon/shield/props. Cloth heraldry can fit over protective torso only, truncated at waist. Strong readable silhouette, textured materials, crisp dark outlines, slight three-quarter view. One item with clear margins. Genuine TRANSPARENT background and faint soft BLACK shadow directly under armor, no floor/stand/text/watermark.",
+    "generated": true,
+    "generator": "Built-in image_gen",
+    "styleReferences": [
+      "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png"
+    ],
+    "sha256": "21672dec974b3fef71ca861bd142baee8066503eaa800e083546d61f19372f6a",
+    "sourceSha256": "3b3adf1f46d9b259da04f84ab5002831ea76110a9af414df45a08fd8cf4a74ae"
+  }
+}

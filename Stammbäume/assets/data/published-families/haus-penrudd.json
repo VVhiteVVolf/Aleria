@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-penrudd",
-  "revision": 3,
-  "updatedAt": "2026-10-31T01:16:59.450Z",
+  "revision": 5,
+  "updatedAt": "2026-10-31T05:28:08.451Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -14,7 +14,7 @@
       "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Bannkreis Gwynthor/Penrudd.png",
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "Bannkreis Gwynthor",
+        "seat": "Gwynthor",
         "barony": "Llamreis Ankunft",
         "county": "Celtigerns Wacht",
         "kingdom": "Cenyr",
@@ -24,6 +24,12 @@
         ],
         "liegeHouseId": "house-draig",
         "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
         "regionEmblems": {
           "seat": "",
           "barony": "",
@@ -1658,9 +1664,16 @@
         "id": "house-llythfor",
         "name": "Haus Llythfor",
         "motto": "",
-        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "emblem"
+          ],
+          "registryManagedFieldRevisions": {
+            "emblem": 6
+          }
+        }
       }
     ],
     "cadetBranches": [
@@ -1673,7 +1686,7 @@
         "parentPersonId": "",
         "childIds": [],
         "houseId": "house-llythfor",
-        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
         "emblemScale": 0.86,
         "crestFrame": "iron",
         "frameScale": 1,
@@ -1684,7 +1697,13 @@
           "chartAlignBelowPartnership": true,
           "registryManagedExtensionFields": [
             "chartAlignBelowPartnership"
-          ]
+          ],
+          "registryManagedFields": [
+            "emblem"
+          ],
+          "registryManagedFieldRevisions": {
+            "emblem": 6
+          }
         }
       }
     ],
@@ -1772,7 +1791,8 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 5,
+      "sourceRevision": 7,
+      "registryManagedEntitySourceRevision": 5,
       "chartLayoutPolicy": "strict-v1",
       "holdings": {
         "mapPath": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
@@ -1805,9 +1825,19 @@
           "ownership": "Die Familie bewirtschaftet den Hof; ein bestimmter Grundeigentümer oder Pachtvertrag ist bislang nicht festgelegt."
         }
       },
+      "registryManagedHouseProfileFields": [
+        "seat",
+        "folderPath"
+      ],
+      "registryManagedHouseProfileFieldRevisions": {
+        "seat": 7,
+        "folderPath": 7
+      },
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
       "sourceNoteAddendum": "31.10.2026: Esyllt, geboren 1706, als jüngste Tochter Tudurs und Bethans ergänzt. Mit Cynddelw Llythfor verheiratet und in Gwynthor wohnhaft. Die gespiegelte Ehe endet hier am schlichten braunen Hausknoten; Tochter Eirlys wird ausschließlich in der Llythfor-Akte fortgeführt. Revision 4 verankert diesen Knoten direkt unter der Ehe.",
       "sourceNote": "Nutzerauftrag vom 19.10.2026: Penrudd ersetzt allein die Wirtsfamilie am Roten Tor; das bestehende Haus Penry aus Talgarth bleibt unverändert. Unbekannte Gründer → Hausknoten → genau ein serieller Zeitsprung → Vater Madoc mit Nest → Brüder Gwilym und Tudur → deren Nachkommen. Angeheiratete tragen ausschließlich Vornamen, ohne erfundene Geburtshäuser. Der freie Kartenhof gwynthor-marking-041 wird Tudurs Zweig zugeordnet; seine bestehende Position und Karten-ID bleiben erhalten. Personen, Lebensdaten, Rollen und Lieferbeziehungen sind neue autorisierte Ausarbeitung; die Torgeschichte bleibt eine nicht sicher datierte Familienüberlieferung. Revision 2 folgt dem anschließenden Auftrag: braunes Haar und braune Augen der geborenen Penrudds, altersbedingtes Grau, kulturell unterschiedliche Angeheiratete sowie 24 Einzelporträts. Sämtliche Alben sind Menschen mit gewöhnlichen runden Ohren. Unbekannte Gründer bleiben bildlich unbekannt. Personen-IDs, Weltidentitäten und Genealogie bleiben erhalten; das vollständige Gasthofmodul folgt gesondert.",
-      "registryManagedEntitySourceRevision": 5,
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
@@ -1894,8 +1924,8 @@
       },
       "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 4,
-        "toRevision": 5
+        "fromRevision": 6,
+        "toRevision": 7
       }
     }
   }

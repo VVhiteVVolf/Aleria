@@ -1,3 +1,5 @@
+import { EUDDOGWY } from '../../../../AleriaAlmanach/modules/gwynthor-cathedral/patriarch-adjutant.mjs';
+
 const portraits = '/Stammbäume/assets/images/portraits';
 const county = '/Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht';
 const clergyHref = '/Religionen/klerus/index.html';
@@ -52,10 +54,10 @@ export default {
       description: 'Ein persönlicher Dienst für die Tagesführung. Er bildet keinen zusätzlichen geistlichen Rang zwischen Patriarch und Prälaten.',
       roles: [{
         id: 'klerus-sekretaer',
-        title: 'Persönlicher Sekretär des Patriarchen',
-        name: '',
-        portrait: '',
-        description: 'Führt die persönliche Korrespondenz und unterstützt Termine, Schriftverkehr und die Weitergabe von Aufträgen. Der Dienst gehört zum bereits beschriebenen Kreis der Kirchdiener. Eine Person ist noch nicht benannt; die Kanzleifunktion verleiht weder Priesterweihe noch ein Prälatenamt.',
+        title: 'Persönlicher Adjutant des Patriarchen · Kurator',
+        name: EUDDOGWY.name,
+        portrait: EUDDOGWY.portrait,
+        description: EUDDOGWY.bio,
         reportsTo: patriarch,
         authority: 'Koordination im persönlichen Auftrag; keine eigene geistliche Oberhoheit.',
         links: [cathedral],

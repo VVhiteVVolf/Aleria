@@ -58,7 +58,7 @@ test('married-in people have only given names and dates permit every marriage an
 test('the farm branch and inn are distinct households without replacing the existing Talgarth Penrys', () => {
   assert.equal(FAMILY_REGISTRY.filter(record => record.id === 'haus-penrudd').length, 1);
   assert.deepEqual(FAMILY_REGISTRY.find(record => record.id === 'haus-penrudd').folderPath,
-    ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Bannkreis Gwynthor']);
+    ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
   const penry = FAMILY_REGISTRY.find(record => record.id === 'haus-penry');
   assert.equal(penry.family.document.houseProfile.seat, 'Talgarth');
   assert.ok(penry.family.persons.some(person => person.id === 'iorwerth-penry'));
@@ -100,7 +100,7 @@ test('portrait and appearance revision preserves identities, genealogy, local da
   prior.partnerships.find(item => item.id === 'marriage-carwyn-olwen-penrudd').notes = 'Lokale Familienüberlieferung';
   const upgraded = resolveRegisteredFamilyUpgrade(family, prior);
   const current = upgraded.persons.find(person => person.id === carwyn.id);
-  assert.equal(upgraded.extensions.sourceRevision, 5);
+  assert.equal(upgraded.extensions.sourceRevision, 7);
   assert.equal(upgraded.document.motto, prior.document.motto);
   assert.equal(current.worldPersonId, carwyn.worldPersonId);
   assert.equal(current.birth, '1693');

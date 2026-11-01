@@ -23,7 +23,7 @@ const partyWith = (actorAbilities, targetAbilities = []) => createCombatParty([
 ]);
 const pool = record => record.combatProfile.resources.find(resource => resource.id === 'test-pool').current;
 
-for (const [mode, natural, expectedDamage] of [['saving-throw', 20, 2], ['saving-throw', 1, 5], ['spell-attack', 20, 10]]) {
+for (const [mode, natural, expectedDamage] of [['saving-throw', 20, 2], ['saving-throw', 1, 5], ['spell-attack', 20, 15]]) {
   test(`Schadensvertrag mit Speicherung: ${mode}, W20=${natural}, Eigenschaden bleibt unabhängig`, async () => {
     const party = await partyWith([
       ability('mixed-damage', [
@@ -36,6 +36,10 @@ for (const [mode, natural, expectedDamage] of [['saving-throw', 20, 2], ['saving
     const saved = await party.commit(await party.prepare({ actor: 'a', targets: ['b'], actionId: 'ability:mixed-damage', natural }));
     const result = saved.mechanics.commentSegments[0].combatResolution;
     assert.equal(result.damage.total, expectedDamage);
+    if (mode === 'spell-attack') {
+      assert.equal(result.damage.criticalDamage.maximum, 10, 'Critical 1d6+1d4: maximum 6+4 plus the single rolled pool 3+2.');
+      assert.equal(result.damage.diceResults.length, 2);
+    }
     assert.equal(result.effectResults.find(entry => entry.recipient === 'actor').amount, 3);
     assert.equal((await party.record('a')).combatProfile.hitPoints.current, before.profiles.get('a').currentHitPoints - 3);
     assert.equal((await party.record('b')).combatProfile.hitPoints.current, before.profiles.get('b').currentHitPoints - expectedDamage);

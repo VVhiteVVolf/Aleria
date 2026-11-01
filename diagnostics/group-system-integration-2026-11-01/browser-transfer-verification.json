@@ -1,0 +1,50 @@
+{
+  "project": "demo-aleria-group-ui",
+  "operations": 2,
+  "actors": [
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "combatProfileUnchanged": true
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "combatProfileUnchanged": true
+    },
+    {
+      "id": "tmfBA2zPTc88EMMGkyyA",
+      "name": "Duncan Gafyr",
+      "combatProfileUnchanged": true
+    },
+    {
+      "id": "companion-tanor",
+      "name": "Tanor",
+      "combatProfileUnchanged": true
+    },
+    {
+      "id": "companion-ylva-freki",
+      "name": "Freki",
+      "combatProfileUnchanged": true
+    },
+    {
+      "id": "companion-duncan-carreg",
+      "name": "Carreg",
+      "combatProfileUnchanged": true
+    }
+  ],
+  "moneyConserved": true,
+  "groupCopper": {
+    "before": 47,
+    "after": 45
+  },
+  "ylvaCopperReceived": 2,
+  "rationConserved": true,
+  "rationTransferredToFreki": true,
+  "unrelatedItemQuantitiesPreserved": true,
+  "canonicalDefinitionRevision": "d2e935721c83427d",
+  "groupRevision": {
+    "before": 9,
+    "after": 11
+  }
+}

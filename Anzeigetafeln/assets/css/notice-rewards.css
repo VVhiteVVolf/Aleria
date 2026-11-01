@@ -42,3 +42,4 @@
   .notice-reward-item-image { width: 58px; height: 58px; }
   .notice-reward-editor-row { flex-wrap: wrap; }
 }
+ .notice-reward-money-button { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }

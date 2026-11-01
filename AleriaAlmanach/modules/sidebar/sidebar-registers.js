@@ -23,6 +23,7 @@ const ALMANACH_LEFT_REGISTER_ITEMS = [
   { key: 'ereignisse', label: 'Ereignisse', icon: 'Ereignisse.png', note: 'Kriege, Bündnisse und die Chronik Alerias', href: '../Ereignisse/index.html' },
   { key: 'fraktionen', label: 'Fraktionen', note: 'Gilden, Orden, Organisationen und Kulte', icon: 'Fraktionen.svg?v=20260913-pergament-v1', href: '../Fraktionen/index.html' },
   { key: 'kalender', label: 'Kalender', icon: 'Kalender.png', note: 'Festtage, Termine und Zusammenkünfte', href: './kalender.html' },
+  { key: 'quests', label: 'Quests & Abenteuer', icon: 'Quests.svg', note: 'Aufträge, Gruppen und das Abenteuerjournal', href: './quests.html' },
   { key: 'klassen', label: 'Klassen', note: 'Basisklassen und kulturelle Pfade', icon: 'Klassen.png', href: '../Klassenordner/Klassenseite.html' },
   { key: 'kontinente', label: 'Kontinente', note: 'Weltkarte und Reiche', icon: 'Kontinente.png', href: '../Kontinente/index.html' },
   { key: 'krieger-ruestungen', label: 'Krieger & Rüstungen', note: 'Illustrationen und Hausrüstungen', icon: 'Weltpfade/krieger-ruestungen.png', href: '../Gallerien/krieger/index.html', compact: true },

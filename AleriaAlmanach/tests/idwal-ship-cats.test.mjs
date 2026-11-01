@@ -8,13 +8,18 @@ import { withIdwalShipCatsHierarchy } from '../modules/ship-crews/idwal-ship-cat
 import { attachCreatureToInventory } from '../modules/creatures/creature-companion-link.js';
 import { inventoryCompanionViews } from '../modules/character-inventory/character-inventory-identity.js';
 
-test('chosen ship cats survive creature import with distinct portraits, histories and Trevor ownership', async () => {
+test('chosen ship cats retain portraits, histories and distinct personal or crew ownership through import', async () => {
   const catalog = getBuiltinCreatureTemplates();
   assert.deepEqual(IDWAL_SHIP_CATS.map(c => c.name), ['Bwmbo', 'Uffel']);
   for (const source of IDWAL_SHIP_CATS) {
     const [cat] = normalizeCreatureImportPayload(makeCreatureExportPayload(source));
     assert.equal(catalog.filter(c => c.id === cat.id).length, 1);
-    assert.equal(cat.itemOrigin.ownerCharacterId, TREVOR_CHARACTER_ID);
+    if (cat.name === 'Bwmbo') assert.equal(cat.itemOrigin.ownerCharacterId, TREVOR_CHARACTER_ID);
+    else {
+      assert.equal(cat.itemOrigin, null);
+      assert.match(cat.biography.bonds, /gesamten Mannschaft/);
+      assert.match(cat.biography.history, /keinen persönlichen Besitzer/);
+    }
     assert.equal(cat.level, 2);
     assert.equal(cat.combatProfile.progression.level, cat.level);
     assert.equal(cat.combatProfile.hitPoints.hitDie, 4);
@@ -45,8 +50,11 @@ test('fourth hierarchy tree leaves existing command trees and all other pages in
   assert.throws(() => withIdwalShipCatsHierarchy({ ...source, id: 'another-crew' }), /Mannschaftsmodul/);
 });
 
-test('both cats link once to Trevor while existing possessions, money and combat remain unchanged', () => {
+test('only the personally owned cat links to Trevor; the crew cat never becomes his possession', () => {
   const cats = IDWAL_SHIP_CATS.map(sanitizeCreature);
+  const ownedCats = cats.filter(cat => cat.itemOrigin?.ownerCharacterId === TREVOR_CHARACTER_ID);
+  const crewCat = cats.find(cat => cat.name === 'Uffel');
+  assert.deepEqual(ownedCats.map(cat => cat.name), ['Bwmbo']);
   const before = { id: TREVOR_CHARACTER_ID, name: 'Trevor Gwyvern', combatProfile: { hitPoints: { current: 7 }, conditions: [{ id: 'kept' }] }, inventory: {
     money: '17', items: [{ id: 'kept', name: 'Existing possession' }], companions: [
       { id: 'blank', name: 'Reittier / Gefährte', species: 'Tier oder Begleiter', image: '', description: '', status: 'Noch festlegen' },
@@ -54,15 +62,19 @@ test('both cats link once to Trevor while existing possessions, money and combat
     ]
   } };
   const after = structuredClone(before);
-  for (const cat of cats) after.inventory = attachCreatureToInventory(after, cat, '2026-10-12T12:00:00Z');
+  for (const cat of ownedCats) after.inventory = attachCreatureToInventory(after, cat, '2026-10-12T12:00:00Z');
   assert.deepEqual(after.combatProfile, before.combatProfile);
   assert.equal(after.inventory.money, before.inventory.money);
   assert.equal(after.inventory.companions[0].status, 'Gesund');
   assert.deepEqual(after.inventory.items[0], before.inventory.items[0]);
   assert.deepEqual(after.inventory.companions[1], before.inventory.companions[1]);
-  for (const cat of cats) {
+  for (const cat of ownedCats) {
     assert.equal(inventoryCompanionViews(after.inventory, cats).filter(c => c.creatureId === cat.id).length, 1);
     assert.deepEqual(attachCreatureToInventory(after, cat), after.inventory);
   }
+  const beforeRejectedAttachment = structuredClone(after);
+  assert.throws(() => attachCreatureToInventory(after, crewCat), /Besitzerzuordnung/);
+  assert.deepEqual(after, beforeRejectedAttachment);
+  assert.equal(inventoryCompanionViews(after.inventory, cats).some(cat => cat.creatureId === crewCat.id), false);
   assert.equal(before.inventory.companions[0].name, 'Reittier / Gefährte');
 });

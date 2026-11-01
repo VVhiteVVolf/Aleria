@@ -72,12 +72,15 @@ function buildCharacterInventoryItemFromDbItem(dbItem = {}, data = {}) {
     id: makeCharacterInventoryId('item-db', 0),
     instanceId: '',
     templateId: dbItem.templateId || dbItem.id || dbItem.canonicalKey,
+    ...(dbItem.definitionRef ? { definitionRef: { ...dbItem.definitionRef } } : {}),
     templateName: dbItem.title || '',
     registerCategory: dbItem.category || '',
     itemDbKey: '',
     originItemDbKey: dbItem.templateId || dbItem.id || dbItem.canonicalKey,
     itemStorageMode: 'character',
     combatDefinition: dbItem.combatDefinition || null,
+    inventoryUseMode: dbItem.inventoryUseMode || 'auto',
+    mechanicsStatus: dbItem.mechanicsStatus || '',
     valuation: dbItem.priceRange || null,
     ownerCharacterId: owner.ownerCharacterId,
     ownerCharacterName: owner.ownerCharacterName,
@@ -207,6 +210,11 @@ function buildCharacterInventoryCategories(data, activeCategory = '') {
     </div>`;
 }
 
+function buildCharacterInventoryCurrencyIcon(currency) {
+  return currency.icon ? `<img src="${escapeHtml(currency.icon)}" alt="${escapeHtml(currency.label)}" loading="lazy" decoding="async">`
+    : `<span class="ci-money-coin-text" aria-hidden="true">${escapeHtml(currency.short)}</span>`;
+}
+
 function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
   const money = sanitizeCharacterInventoryMoney(data.moneyState || data.money);
   const readOnly = options.readOnly === true;
@@ -223,7 +231,7 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
       <div class="ci-money-summary">
         ${CHARACTER_INVENTORY_CURRENCIES.map(currency => `
           <div class="ci-money-summary-item ci-coin-${escapeHtml(currency.id)}">
-            <img src="${escapeHtml(currency.icon)}" alt="${escapeHtml(currency.label)}" loading="lazy" decoding="async">
+            ${buildCharacterInventoryCurrencyIcon(currency)}
             <span>${escapeHtml(currency.label)}</span>
             <strong>${escapeHtml(String(money[currency.id] || 0))}</strong>
           </div>`).join('')}
@@ -243,7 +251,7 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
       <div class="ci-money-grid">
         ${CHARACTER_INVENTORY_CURRENCIES.map(currency => `
           <label class="ci-money-control ci-coin-${escapeHtml(currency.id)}">
-            <img src="${escapeHtml(currency.icon)}" alt="${escapeHtml(currency.label)}" loading="lazy" decoding="async">
+            ${buildCharacterInventoryCurrencyIcon(currency)}
             <span>${escapeHtml(currency.label)}</span>
             <input type="number" min="0" step="1" inputmode="numeric" data-ci-money-field="${escapeHtml(currency.id)}" value="${escapeHtml(String(money[currency.id] || 0))}">
           </label>`).join('')}

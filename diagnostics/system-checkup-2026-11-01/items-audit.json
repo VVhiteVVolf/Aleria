@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "scope": "Public repository sources and local character snapshot only; not a live Firebase census.",
+  "exclusions": [
+    "Private dossiers",
+    "Browser drafts and IndexedDB",
+    "Historical comments treated as current stock",
+    "Live Firebase records"
+  ],
+  "input": {
+    "characterSnapshot": "CharakterDatenbank/generated/characters.snapshot.json",
+    "characterSnapshotSha256": "420c487ada4888328204a9f78638a9fc4e32b4538b6cf8f2bc64650dfbe53746",
+    "standardVersion": "93acd0e88e010a61"
+  },
+  "standards": {
+    "count": 455,
+    "categories": {
+      "alchemie": {
+        "count": 62,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "arkanes": {
+        "count": 49,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "getraenke": {
+        "count": 10,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "pferde": {
+        "count": 28,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "ruestungen": {
+        "count": 205,
+        "withCombatDefinition": 205,
+        "linkedToTemplate": 0
+      },
+      "speisen": {
+        "count": 18,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "vieh": {
+        "count": 22,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "waffen": {
+        "count": 18,
+        "withCombatDefinition": 18,
+        "linkedToTemplate": 0
+      },
+      "werkzeuge": {
+        "count": 43,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      }
+    },
+    "regionalCount": 186,
+    "missingEquipmentMechanics": [],
+    "provisionalCount": 222
+  },
+  "moduleOffers": {
+    "count": 655,
+    "categories": {
+      "alchemie": {
+        "count": 32,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 30
+      },
+      "arkanes": {
+        "count": 42,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 37
+      },
+      "getraenke": {
+        "count": 253,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 84
+      },
+      "pferde": {
+        "count": 2,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "ruestungen": {
+        "count": 33,
+        "withCombatDefinition": 33,
+        "linkedToTemplate": 19
+      },
+      "sonstiges": {
+        "count": 72,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "speisen": {
+        "count": 140,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 73
+      },
+      "waffen": {
+        "count": 38,
+        "withCombatDefinition": 38,
+        "linkedToTemplate": 17
+      },
+      "werkzeuge": {
+        "count": 43,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 43
+      }
+    },
+    "sourceModulesScanned": 27,
+    "providers": 20,
+    "missingEquipmentMechanics": []
+  },
+  "characters": {
+    "count": 255,
+    "inventoryRows": 1139,
+    "untouchedPlaceholders": 1021,
+    "placeholdersByName": {
+      "Dokumente / Urkunden": 171,
+      "Hauptwaffe": 170,
+      "Heil- oder Verbrauchsgut": 171,
+      "Persönlicher Gegenstand": 169,
+      "Reiseausrüstung": 171,
+      "Rüstung / Schutz": 169
+    },
+    "realRows": 118,
+    "registerProjectionRows": 118,
+    "withCombatDefinition": 43,
+    "withTemplateReference": 14,
+    "unresolvedReferences": [],
+    "equipmentEntries": 62,
+    "virtualUnarmedEntries": 20,
+    "equipmentWithoutInventoryLink": [
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-lute",
+        "name": "Laute",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-sword",
+        "name": "Schwert",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-shield-bash",
+        "name": "Schild (Schildstoß)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-padded-armor",
+        "name": "Wattierter Waffenrock",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-shield",
+        "name": "Schild",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-greataxe",
+        "name": "Großaxt",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-handaxe-pair",
+        "name": "Einhandäxte (Paar)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-throwing-axe",
+        "name": "Wurfaxt",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-roundshield-bash",
+        "name": "Huskarl-Rundschild (Schildstoß)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-scale-mail",
+        "name": "Schuppenpanzer",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-roundshield",
+        "name": "Huskarl-Rundschild",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "HjDXMMexahez1G0rJrBE",
+        "equipmentId": "HjDXMMexahez1G0rJrBE-teulu-sword",
+        "name": "Kane Draig · Teulu-Ritterschwert",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-longbow",
+        "name": "Helwyr Langbogen",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-shortbow",
+        "name": "Helwyr Kurzbogen",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-sword",
+        "name": "Helwyr Schwert",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-hunting-daggers",
+        "name": "Helwyr Jagddolche (Paar)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-leather-armor",
+        "name": "Helwyr Lederrüstung",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "6atOllMA637Z2VNAZAxf",
+        "equipmentId": "6atOllMA637Z2VNAZAxf-teulu-sword",
+        "name": "Gethin · Teulu-Ritterschwert",
+        "collection": "weapons"
+      }
+    ]
+  },
+  "noticeRewards": {
+    "catalogRows": 1110,
+    "withCombatDefinition": 0,
+    "withResolvableRegisterId": 1110,
+    "withDefinitionReference": 1110,
+    "distinctDefinitions": 807,
+    "behavior": "Promises remain descriptive until a moderator awards them; one immutable claim per board and notice group prevents repeated payouts."
+  }
+}

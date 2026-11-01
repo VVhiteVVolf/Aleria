@@ -704,8 +704,8 @@
         }
       },
       "personCount": 177,
-      "revision": 2,
-      "updatedAt": "2026-09-28T15:05:59.250Z",
+      "revision": 3,
+      "updatedAt": "2026-11-01T04:05:07.211Z",
       "link": "Stammbaum.html?family=haus-draig&mode=view",
       "source": "github"
     },
@@ -2590,11 +2590,11 @@
         "Cenyr",
         "Celtigerns Wacht",
         "Llamreis Ankunft",
-        "Bannkreis Gwynthor"
+        "Gwynthor"
       ],
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "Bannkreis Gwynthor",
+        "seat": "Gwynthor",
         "barony": "Llamreis Ankunft",
         "county": "Celtigerns Wacht",
         "kingdom": "Cenyr",
@@ -2604,6 +2604,12 @@
         ],
         "liegeHouseId": "house-draig",
         "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
         "regionEmblems": {
           "seat": "",
           "barony": "",
@@ -2612,8 +2618,8 @@
         }
       },
       "personCount": 28,
-      "revision": 3,
-      "updatedAt": "2026-10-31T01:16:59.450Z",
+      "revision": 5,
+      "updatedAt": "2026-10-31T05:28:08.451Z",
       "link": "Stammbaum.html?family=haus-penrudd&mode=view",
       "source": "github"
     },
@@ -2622,7 +2628,7 @@
       "familyId": "haus-llythfor",
       "title": "Haus Llythfor",
       "motto": "",
-      "emblem": "assets/images/placeholders/neutral-crest.png",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
       "folderPath": [
         "Cenyr",
         "Celtigerns Wacht",
@@ -2645,9 +2651,9 @@
           "kingdom": ""
         }
       },
-      "personCount": 5,
-      "revision": 5,
-      "updatedAt": "2026-10-31T02:56:05.112Z",
+      "personCount": 11,
+      "revision": 6,
+      "updatedAt": "2026-10-31T03:18:01.852Z",
       "link": "Stammbaum.html?family=haus-llythfor&mode=view",
       "source": "github"
     }

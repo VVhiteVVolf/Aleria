@@ -27,7 +27,7 @@ export function buildHouseArmorTemplates(houses = HOUSE_ARMOR_HOUSES) {
     section: 'regional', category: HOUSE_ARMOR_CATEGORY, categoryLabel: 'Rüstungen',
     title: `${house.name} · ${rank.label}-Plattenrüstung`, type: 'Hausrüstung · Harnisch',
     description: `Harnisch des ${house.name.replace(/^Haus /, 'Hauses ')}. ${rank.label} ab Stufe ${rank.minimumLevel}.`,
-    details: `RK-Rahmen ${rank.armorClassRange}. Konkrete Kampfwerte sind noch nicht festgelegt. Alle Rangvarianten verwenden dasselbe Hausbild.`,
+    details: `RK-Rahmen ${rank.armorClassRange}. Das Güterregister ergänzt vorläufige gemeinsame Grundwerte je Rang. Alle Rangvarianten verwenden dasselbe Hausbild.`,
     houseArmor: { houseId: house.id, regionId: house.regionId, rankId: rank.id, minimumLevel: rank.minimumLevel, armorClassRange: rank.armorClassRange },
     image: house.image, attributes: [], infoRows: [{ label: 'Region', value: house.region }, { label: 'Haus', value: house.name }, { label: 'RK-Rahmen', value: rank.armorClassRange }, { label: 'Rang ab Stufe', value: String(rank.minimumLevel) }],
     tags: ['Cenyr', house.region, house.name, rank.label, 'Harnisch'],

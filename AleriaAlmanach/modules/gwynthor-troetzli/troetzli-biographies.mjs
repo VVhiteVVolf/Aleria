@@ -1,5 +1,15 @@
 import { normalizePersonBiographyModule } from '../../../Stammbäume/assets/js/modules/person-biography/person-biography-model.js';
 import { TROETZLI_PEOPLE } from './troetzli-household.mjs';
+import { LLYTHFOR_RELATIVES } from './llythfor-relatives.mjs';
+
+const relativeConnections = {
+  gwyddno: ['gwenddydd', 'edern', 'cynddelw', 'lliwen'],
+  gwenddydd: ['gwyddno', 'edern', 'cynddelw', 'lliwen'],
+  edern: ['gwyddno', 'gwenddydd', 'efrddyl', 'gwrhyr', 'cynddelw', 'lliwen'],
+  efrddyl: ['edern', 'gwrhyr'],
+  lliwen: ['gwyddno', 'gwenddydd', 'edern', 'cynddelw'],
+  gwrhyr: ['edern', 'efrddyl', 'eirlys'],
+};
 
 const traits = {
   cynddelw: [['Aufmerksamer Zuhörer', 'Sammelt Aussagen, Namen und offene Fragen in einem kleinen Lederbuch.'],
@@ -12,25 +22,29 @@ const traits = {
 };
 
 export function buildTroetzliBiography(key) {
-  const person = TROETZLI_PEOPLE[key];
+  const relative = LLYTHFOR_RELATIVES[key];
+  const person = relative || TROETZLI_PEOPLE[key];
+  const members = { ...LLYTHFOR_RELATIVES, ...TROETZLI_PEOPLE };
+  const connections = relative
+    ? relativeConnections[key].map(other => members[other])
+    : Object.entries(TROETZLI_PEOPLE).filter(([other]) => other !== key).map(([, person]) => person);
   const family = key === 'esyllt' ? 'Penrudd' : 'Llythfor';
   return normalizePersonBiographyModule({
     stats: [['Vollständiger Name', person.name], ['Alter im Jahr 1740', `${person.age} Jahre`],
       ['Haus', family], ['Tätigkeit', person.role], ['Wohnsitz', 'Gwynthor'],
-      ['Familienstand', key === 'eirlys' ? 'Kind' : 'Verheiratet']],
+      ['Familienstand', key === 'eirlys' ? 'Kind' : ['lliwen', 'gwrhyr'].includes(key) ? 'Unverheiratet' : 'Verheiratet']],
     biography: { portrait: person.portrait, biographyTitle: person.name,
       biographyText: `<p>${person.bio}</p>`,
-      abilitiesTitle: 'Persönlichkeit', abilities: traits[key].map(([title, detail]) => ({ title, detail })),
-      historyTitle: 'Erscheinung', historyText: `<p>${person.appearance}</p>`,
+      abilitiesTitle: 'Persönlichkeit', abilities: (traits[key] || []).map(([title, detail]) => ({ title, detail })),
+      ...(person.appearance ? { historyTitle: 'Erscheinung', historyText: `<p>${person.appearance}</p>` } : {}),
       connectionsTitle: 'Familie',
-      connections: Object.entries(TROETZLI_PEOPLE).filter(([other]) => other !== key)
-        .map(([, relative]) => ({ type: 'connection', name: relative.name, image: relative.portrait,
-          detail: relative.role })),
+      connections: connections.map(relative => ({ type: 'connection', name: relative.name, image: relative.portrait || '',
+        detail: relative.role })),
       documentsTitle: 'Familienakten',
-      documents: [{ title: 'Haus Llythfor', text: 'Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt',
+      documents: [{ title: 'Haus Llythfor', text: relative ? 'Die kleine Gwynthorer Familie' : 'Cynddelw, Esyllt und Eirlys · Gwynthorer Haushalt',
         link: '/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view' },
-      { title: 'Haus Penrudd', text: 'Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor',
-        link: '/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view' }],
+      ...(!relative ? [{ title: 'Haus Penrudd', text: 'Esyllts Herkunft · Penrudd-Hof und Zum Roten Tor',
+        link: '/Stammbäume/Stammbaum.html?family=haus-penrudd&mode=view' }] : [])],
       footer: `Personenakte · ${person.name}`,
     },
   });

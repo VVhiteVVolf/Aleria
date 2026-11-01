@@ -7,6 +7,7 @@ import {
 } from '../combat/combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 export const SCENE_REST_EVENT_KIND = 'scene-rest-event';
+import { recoverItemCharges } from '../inventory-use/item-charge-recovery.js';
 export const SCENE_REST_SCHEMA_VERSION = 1;
 
 export const SCENE_REST_TYPES = Object.freeze({
@@ -129,6 +130,7 @@ export function recoverSceneRestHitPoints(hitPoints = {}, fallbackMaximum = 0, o
 }
 
 export function buildSceneRestParticipant(profile = {}, restType = 'short', options = {}) {
+  const charges = recoverItemCharges(profile.inventory || {}, restType, options.recoveryDayKey, options.definitions);
   const actorId = cleanText(options.actorId || profile.characterId || profile.id, 180);
   const hitPoints = recoverSceneRestHitPoints({
     current: profile.currentHitPoints ?? profile.hitPoints?.current,
@@ -155,6 +157,7 @@ export function buildSceneRestParticipant(profile = {}, restType = 'short', opti
   });
   return {
     actorId,
+    ...(charges.changed ? { inventorySnapshot: { before: structuredClone(profile.inventory), after: charges.inventory } } : {}),
     sourceId: cleanText(options.sourceId, 180),
     name: cleanText(options.name || profile.name || 'Unbekannte Figur', 140),
     title: cleanText(options.title || profile.title, 180),
@@ -184,6 +187,7 @@ export function normalizeSceneRestParticipant(value = {}, index = 0) {
   const beforeConditions = (Array.isArray(source.before?.conditions) ? source.before.conditions : []).map(normalizeRuntimeCondition);
   const afterConditions = (Array.isArray(source.after?.conditions) ? source.after.conditions : beforeConditions).map(normalizeRuntimeCondition);
   return {
+    ...(source.inventorySnapshot ? { inventorySnapshot: structuredClone(source.inventorySnapshot) } : {}),
     actorId,
     sourceId: cleanText(source.sourceId, 180),
     name: cleanText(source.name || 'Unbekannte Figur', 140),
@@ -256,6 +260,7 @@ export function applySceneRestCommentToStateMap(states, comment = {}) {
       maximum: participant.after.hitPoints.maximum,
       temporary: participant.after.hitPoints.temporary,
       resources: participant.after.resources.map(resource => ({ ...resource })),
+      ...(participant.inventorySnapshot ? { inventory: structuredClone(participant.inventorySnapshot.after) } : {}),
       abilities: participant.after.abilities.map(ability => ({ ...ability })),
       temporaryConditions: participant.after.conditions.map(condition => ({ ...condition })),
       concentration: null,

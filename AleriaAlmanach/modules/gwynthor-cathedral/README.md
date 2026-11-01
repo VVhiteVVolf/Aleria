@@ -1,5 +1,12 @@
 # Große Kathedrale der Neun · Gwynthor
 
+Ergänzung vom 31. Oktober 2026: **Euddogwy O'Cenyr**, 38, ehemaliges Gwynthorer
+Waisenkind und Kurator, besetzt die bestehende persönliche Kanzleistelle als
+Adjutant des Patriarchen. Die neun Prälaten und 17 Kirchdiener bleiben erhalten.
+Seine gemeinsame Identität und die kirchliche Anhörung stehen im
+[Fallmodul](../gwynthor-formlingssache/README.md). Die folgenden Angaben
+dokumentieren den ursprünglichen Aufbau vom 17. Oktober.
+
 Lokaler Entwurf vom 17. Oktober 2026. **Nicht pushen, veröffentlichen oder in Firebase importieren**, solange die bestehende lokale Veröffentlichungspause gilt.
 
 ## Seiten

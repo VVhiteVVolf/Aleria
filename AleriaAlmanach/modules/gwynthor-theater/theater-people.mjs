@@ -1,4 +1,5 @@
 import { HOUSE_DRAIG_FAMILY } from '../../../Stammbäume/assets/js/data/house-draig-family.js';
+import { FORMLING_THEATER_PEOPLE } from '../gwynthor-formlingssache/formlingssache-people.mjs';
 
 export const THEATER_ID='gwynthorer-theater';
 export const THEATER_ART='./assets/gwynthor-theater';
@@ -45,5 +46,6 @@ export const THEATER_ENSEMBLE=Object.freeze([
   person('faelan','Faelan','male',48,'Albischer Herkunft','Schauspieler · Boten und ältere Charakterrollen',
     '48-year-old human man of Albic cultural origin, ordinary rounded human ears, brown hair in a short low tail, blue eyes, long lined face, aquiline nose and clean-shaven chin. Muted blue-grey medieval tunic with simple dark waistcoat. Relaxed standing three-quarter left, slight dry smile, no held objects.')
 ]);
-export const THEATER_PEOPLE=Object.freeze([THEATER_PATRON,THEATER_DIRECTOR,...THEATER_ENSEMBLE]);
+export const THEATER_SUPPORTING_CAST = FORMLING_THEATER_PEOPLE;
+export const THEATER_PEOPLE=Object.freeze([THEATER_PATRON,THEATER_DIRECTOR,...THEATER_ENSEMBLE,...THEATER_SUPPORTING_CAST]);
 export const theaterPerson=key=>{const p=THEATER_PEOPLE.find(p=>p.key===key);if(!p)throw new Error(`Unbekannte Theaterperson: ${key}`);return p;};

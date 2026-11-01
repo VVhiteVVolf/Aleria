@@ -224,7 +224,7 @@ async function buildFullAlmanachBackupPayload() {
   const commentBackend = typeof getCommentBackend === 'function'
     ? await getCommentBackend({ timeoutMs: 800 })
     : window._fb;
-  const [characters, creatures, charTabs, comments, commentTurns] = await Promise.all([
+  const [characters, creatures, charTabs, comments, commentTurns, itemSystem, questSystem] = await Promise.all([
     window._fb?.loadCharacters ? window._fb.loadCharacters() : Promise.resolve(_characters || []),
     window._fb?.loadCreatures ? window._fb.loadCreatures() : Promise.resolve(window.AleriaCreatures?.getAll?.() || []),
     window._fb?.loadCharTabs ? window._fb.loadCharTabs() : Promise.resolve({
@@ -235,10 +235,14 @@ async function buildFullAlmanachBackupPayload() {
       hiddenBuiltins: Array.from(_hiddenBuiltinCharacterIds)
     }),
     commentBackend?.loadAllComments ? commentBackend.loadAllComments() : Promise.resolve([]),
-    commentBackend?.loadAllCommentTurns ? commentBackend.loadAllCommentTurns() : Promise.resolve([])
+    commentBackend?.loadAllCommentTurns ? commentBackend.loadAllCommentTurns() : Promise.resolve([]),
+    window._fb?.itemDefinitions?.exportBackup ? window._fb.itemDefinitions.exportBackup() : Promise.resolve(null),
+    window._fb?.quests?.exportBackup ? window._fb.quests.exportBackup() : Promise.resolve(null)
   ]);
   return {
     type: 'aleria-almanach-backup',
+    itemSystem,
+    questSystem,
     version: ALMANACH_BACKUP_SCHEMA_VERSION,
     exportedAt: new Date().toISOString(),
     moduleStore: cloneForBackup(getModuleStorePayload(Date.now())),
@@ -278,6 +282,8 @@ function normalizeFullBackupPayload(parsed) {
   if (parsed.type !== 'aleria-almanach-backup') throw new Error('Das ist kein vollständiges Almanach-Backup.');
   return {
     moduleStore: normalizeModuleStorePayload(parsed.moduleStore),
+    itemSystem: parsed.itemSystem || null,
+    questSystem: parsed.questSystem || null,
     characters: Array.isArray(parsed.characters) ? parsed.characters : [],
     creatures: Array.isArray(parsed.creatures) ? parsed.creatures : [],
     charTabs: parsed.charTabs && typeof parsed.charTabs === 'object' ? parsed.charTabs : null,
@@ -324,6 +330,8 @@ async function applyFullAlmanachBackup(payload) {
   }
 
   if (window._fb?.importBackupRecords) {
+    if (backup.itemSystem) await window._fb.itemDefinitions.restoreBackup(backup.itemSystem);
+    if (backup.questSystem) await window._fb.quests.restoreBackup(backup.questSystem);
     await window._fb.importBackupRecords('characters', backup.characters.filter(char => String(char?.id || '').trim()));
     _characters = await window._fb.loadCharacters();
     _charactersLoaded = true;

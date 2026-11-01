@@ -11,11 +11,12 @@ import {
 const houseId = 'house-penrudd';
 const personId = key => `${key}-penrudd`;
 const marriageId = key => `marriage-${key}-penrudd`;
+const folderPath = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'];
 const base = createFounderTimeJumpPlaceholderHouseFamily({
   id: 'haus-penrudd', title: 'Haus Penrudd', emblem: PENRUDD_EMBLEM,
   houseProfile: createHouseProfileFromFolderPath(
-    ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Bannkreis Gwynthor'],
-    { rankId: 'commoner', secondarySeats: ['Zum Roten Tor', 'Penrudd-Hof'], liegeHouseId: 'house-draig', liegeHouseName: 'Haus Draig' }
+    folderPath,
+    { folderPath, rankId: 'commoner', secondarySeats: ['Zum Roten Tor', 'Penrudd-Hof'], liegeHouseId: 'house-draig', liegeHouseName: 'Haus Draig' }
   ),
   toYear: '1642', timeJumpLabel: 'Nicht einzeln überlieferte Generationen bis Madoc',
   description: 'Eigenständige cenyrische Wirts- und Bauernfamilie im Bannkreis Gwynthors. Gwilyms Familie führt die Herberge Zum Roten Tor; sein jüngerer Bruder Tudur bewirtschaftet mit Kindern und Enkeln den nahen Penrudd-Hof. Beide Haushalte rechnen ihre Lieferungen miteinander ab. Keine genealogische Verbindung zu Haus Penry aus Talgarth.'
@@ -38,7 +39,9 @@ export const HOUSE_PENRUDD_FAMILY = Object.freeze({
   ...base,
   document: { ...base.document, motto: PENRUDD_MOTTO },
   houses: [{ ...base.houses[0], motto: PENRUDD_MOTTO },
-    { id: 'house-llythfor', name: 'Haus Llythfor', emblem: LLYTHFOR_EMBLEM, status: 'active' }],
+    { id: 'house-llythfor', name: 'Haus Llythfor', emblem: LLYTHFOR_EMBLEM, status: 'active', extensions: {
+      registryManagedFields: ['emblem'], registryManagedFieldRevisions: { emblem: 6 },
+    } }],
   persons: [
     ...founders,
     ...PENRUDD_PEOPLE.map(person => person.id === TROETZLI_PEOPLE.esyllt.id ? createLlythforPerson('esyllt') : createFamilyPerson({
@@ -64,7 +67,8 @@ export const HOUSE_PENRUDD_FAMILY = Object.freeze({
     id: 'married-away-esyllt-llythfor', name: 'Haus Llythfor',
     parentPartnershipId: LLYTHFOR_MARRIAGE_ID, houseId: 'house-llythfor',
     targetFamilyId: 'haus-llythfor', emblem: LLYTHFOR_EMBLEM, crestFrame: 'iron',
-    extensions: { chartAlignBelowPartnership: true, registryManagedExtensionFields: ['chartAlignBelowPartnership'] },
+    extensions: { chartAlignBelowPartnership: true, registryManagedExtensionFields: ['chartAlignBelowPartnership'],
+      registryManagedFields: ['emblem'], registryManagedFieldRevisions: { emblem: 6 } },
     notes: 'Esyllt lebt mit Cynddelw und ihrer Tochter in Gwynthor. Der Haushalt wird ausschließlich in der Llythfor-Akte fortgeführt.',
   })],
   parentages: [
@@ -83,7 +87,10 @@ export const HOUSE_PENRUDD_FAMILY = Object.freeze({
   view: { ...base.view, focusPersonId: 'carwyn-penrudd', ancestorDepth: 12, descendantDepth: 12, limitGenerations: false },
   extensions: {
     ...base.extensions, blankFamily: false, pendingDescendantReview: false,
-    sourceRevision: 5, chartLayoutPolicy: 'strict-v1', holdings: PENRUDD_HOLDINGS,
+    sourceRevision: 7, registryManagedEntitySourceRevision: 5, chartLayoutPolicy: 'strict-v1', holdings: PENRUDD_HOLDINGS,
+    registryManagedHouseProfileFields: ['seat', 'folderPath'],
+    registryManagedHouseProfileFieldRevisions: { seat: 7, folderPath: 7 },
+    registryManagedRecordFields: ['folderPath'],
     sourceNoteAddendum: '31.10.2026: Esyllt, geboren 1706, als jüngste Tochter Tudurs und Bethans ergänzt. Mit Cynddelw Llythfor verheiratet und in Gwynthor wohnhaft. Die gespiegelte Ehe endet hier am schlichten braunen Hausknoten; Tochter Eirlys wird ausschließlich in der Llythfor-Akte fortgeführt. Revision 4 verankert diesen Knoten direkt unter der Ehe.',
     sourceNote: 'Nutzerauftrag vom 19.10.2026: Penrudd ersetzt allein die Wirtsfamilie am Roten Tor; das bestehende Haus Penry aus Talgarth bleibt unverändert. Unbekannte Gründer → Hausknoten → genau ein serieller Zeitsprung → Vater Madoc mit Nest → Brüder Gwilym und Tudur → deren Nachkommen. Angeheiratete tragen ausschließlich Vornamen, ohne erfundene Geburtshäuser. Der freie Kartenhof gwynthor-marking-041 wird Tudurs Zweig zugeordnet; seine bestehende Position und Karten-ID bleiben erhalten. Personen, Lebensdaten, Rollen und Lieferbeziehungen sind neue autorisierte Ausarbeitung; die Torgeschichte bleibt eine nicht sicher datierte Familienüberlieferung. Revision 2 folgt dem anschließenden Auftrag: braunes Haar und braune Augen der geborenen Penrudds, altersbedingtes Grau, kulturell unterschiedliche Angeheiratete sowie 24 Einzelporträts. Sämtliche Alben sind Menschen mit gewöhnlichen runden Ohren. Unbekannte Gründer bleiben bildlich unbekannt. Personen-IDs, Weltidentitäten und Genealogie bleiben erhalten; das vollständige Gasthofmodul folgt gesondert.'
   }

@@ -857,7 +857,7 @@ export class CombatResolutionService {
       targetConditionSnapshot: JSON.stringify(targetConditions) !== JSON.stringify(existingTemporaryConditions) ? {
         before: existingTemporaryConditions,
         after: targetConditions,
-        applied: appliedTemporaryCondition
+        applied: appliedTemporaryCondition ?? null
       } : null,
       actorConditionSnapshot: JSON.stringify(actorConditions) !== JSON.stringify(existingActorConditions) ? {
         before: existingActorConditions,

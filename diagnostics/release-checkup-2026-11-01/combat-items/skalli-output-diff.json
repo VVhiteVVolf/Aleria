@@ -1,0 +1,515 @@
+{
+  "generatedAt": "2026-11-01T06:12:55.831Z",
+  "method": "Read stored artifacts, call pure buildSkalliRetinue and serializer in memory; no builder, product file, Firestore or publication writes.",
+  "registration": {
+    "path": "AleriaAlmanach/modules/skalli-retinue/retinue-data.js",
+    "beforeSha256": "cffb917084ef74d5e423dc900252b912a73920a3f05ea8f7132188af28bd2be8",
+    "expectedSha256": "cb80b5c5154a4a02b2a5fd25d357ad4cc6f5eeb98440101762ed6b08ee0e24e1",
+    "differences": [
+      {
+        "path": "pages.3.landing.questTitle",
+        "change": "changed",
+        "before": "Aufgaben & Quests",
+        "after": "Gemeinsame Vorhaben"
+      },
+      {
+        "path": "pages.3.landing.notesTitle",
+        "change": "changed",
+        "before": "Notizen",
+        "after": "Aus dem Reisebuch"
+      },
+      {
+        "path": "pages.3.landing.eventsTitle",
+        "change": "changed",
+        "before": "Ereignisse",
+        "after": "Was bisher geschah"
+      },
+      {
+        "path": "pages.3.landing.mapTitle",
+        "change": "changed",
+        "before": "Aktuelle Karte",
+        "after": "Unsere Wege"
+      },
+      {
+        "path": "pages.3.landing.infoTitle",
+        "change": "changed",
+        "before": "Informationen",
+        "after": "Am Wegesrand"
+      },
+      {
+        "path": "pages.3.landing.group.members.0.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.0.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.1.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.1.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.2.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.2.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.3.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.3.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.4.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.4.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.5.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.5.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.6.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.6.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.7.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.7.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.8.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.8.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.9.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.9.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.10.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.10.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.11.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.11.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.12.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.12.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.13.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.13.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.14.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.14.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.15.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.15.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.16.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.16.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.17.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.17.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.members.18.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "pages.3.landing.group.members.18.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.group.includeCompanions",
+        "change": "added",
+        "after": true
+      },
+      {
+        "path": "pages.3.landing.presentation",
+        "change": "added",
+        "after": "folio"
+      },
+      {
+        "path": "pages.3.landing.coverImage",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "pages.3.landing.questJournal",
+        "change": "added",
+        "after": {
+          "enabled": true,
+          "questIds": [],
+          "runIds": [],
+          "includeMembers": true
+        }
+      }
+    ]
+  },
+  "archive": {
+    "path": "Charakter Archiv Exporte/Module/Skallis Gefolge/skallis-gefolge-2026-10-18.json",
+    "beforeSha256": "ff892065e1691faea7f10c6626625546329d67d7be9e9a3031040f109e2418fe",
+    "expectedSha256": "b3d76f6deec2766253e43853ad3c8787ca4e95c86f836fb470e25a76d5be0ec3",
+    "differences": [
+      {
+        "path": "module.entry.pages.3.landing.questTitle",
+        "change": "changed",
+        "before": "Aufgaben & Quests",
+        "after": "Gemeinsame Vorhaben"
+      },
+      {
+        "path": "module.entry.pages.3.landing.notesTitle",
+        "change": "changed",
+        "before": "Notizen",
+        "after": "Aus dem Reisebuch"
+      },
+      {
+        "path": "module.entry.pages.3.landing.eventsTitle",
+        "change": "changed",
+        "before": "Ereignisse",
+        "after": "Was bisher geschah"
+      },
+      {
+        "path": "module.entry.pages.3.landing.mapTitle",
+        "change": "changed",
+        "before": "Aktuelle Karte",
+        "after": "Unsere Wege"
+      },
+      {
+        "path": "module.entry.pages.3.landing.infoTitle",
+        "change": "changed",
+        "before": "Informationen",
+        "after": "Am Wegesrand"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.0.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.0.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.1.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.1.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.2.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.2.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.3.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.3.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.4.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.4.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.5.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.5.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.6.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.6.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.7.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.7.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.8.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.8.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.9.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.9.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.10.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.10.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.11.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.11.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.12.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.12.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.13.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.13.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.14.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.14.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.15.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.15.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.16.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.16.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.17.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.17.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.18.kind",
+        "change": "added",
+        "after": "character"
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.members.18.creatureId",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.group.includeCompanions",
+        "change": "added",
+        "after": true
+      },
+      {
+        "path": "module.entry.pages.3.landing.presentation",
+        "change": "added",
+        "after": "folio"
+      },
+      {
+        "path": "module.entry.pages.3.landing.coverImage",
+        "change": "added",
+        "after": ""
+      },
+      {
+        "path": "module.entry.pages.3.landing.questJournal",
+        "change": "added",
+        "after": {
+          "enabled": true,
+          "questIds": [],
+          "runIds": [],
+          "includeMembers": true
+        }
+      }
+    ]
+  },
+  "currentRegistrationAndArchiveEntriesEqual": true,
+  "counts": {
+    "currentPages": 5,
+    "expectedPages": 5,
+    "currentCast": 19,
+    "expectedCast": 19
+  }
+}

@@ -4,9 +4,10 @@ function migrateModuleEntryContent(entry) {
   const migrated = typeof migrateMorgarLanguageEntry === 'function'
     ? migrateMorgarLanguageEntry(entry)
     : entry;
+  const groupContent = globalThis.AleriaGroupAdventures?.upgradeEntry(migrated) || migrated;
   const landing = typeof AleriaLandingModel !== 'undefined'
-    ? AleriaLandingModel.migrateGroupLandingEntry(migrated)
-    : migrated;
+    ? AleriaLandingModel.migrateGroupLandingEntry(groupContent)
+    : groupContent;
   const gang = typeof migrateZitteraaleEntry === 'function' ? migrateZitteraaleEntry(landing) : landing;
   const household = typeof migrateHouseholdWorkplaceEntry === 'function'
     ? migrateHouseholdWorkplaceEntry(gang) : gang;
@@ -14,9 +15,10 @@ function migrateModuleEntryContent(entry) {
 }
 
 function migrateModuleEntryForSection(entry, section) {
+  const groupContent = globalThis.AleriaGroupAdventures?.upgradeEntry(entry) || entry;
   const migrated = typeof AleriaLandingModel !== 'undefined'
-    ? AleriaLandingModel.migrateGroupLandingEntry(entry, { tab: section?.tab || section?.key || '' })
-    : entry;
+    ? AleriaLandingModel.migrateGroupLandingEntry(groupContent, { tab: section?.tab || section?.key || '' })
+    : groupContent;
   const gang = typeof migrateZitteraaleEntry === 'function' ? migrateZitteraaleEntry(migrated) : migrated;
   const household = typeof migrateHouseholdWorkplaceEntry === 'function'
     ? migrateHouseholdWorkplaceEntry(gang) : gang;

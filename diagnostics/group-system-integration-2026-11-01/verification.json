@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "scope": "Acht Gruppenfolios, öffentliche Biografien, Charakter-/Kreaturbögen, Szenenprojektion, Gruppenbesitz, Standardausrüstung und Aleria-Bilder",
+  "publication": {
+    "localOnly": true,
+    "push": false,
+    "deploy": false,
+    "productionWrites": false,
+    "privateDossiersRead": false
+  },
+  "groups": {
+    "count": 8,
+    "ids": [
+      "gawain-duncan",
+      "skallis-gefolge",
+      "idwals-schiffsmannschaft",
+      "modul-1782120382311",
+      "rhydians-schiffsmannschaft",
+      "parzifals-schiffsmannschaft",
+      "lynnes-schiffsmannschaft",
+      "draig-leibgarde"
+    ],
+    "browserChecked": true,
+    "compactAbove": 4,
+    "pageSize": 20,
+    "testedRosterSize": 2000,
+    "desktopHorizontalOverflow": false,
+    "mobileHorizontalOverflow": false,
+    "evidence": "browser-groups.json"
+  },
+  "preservation": {
+    "publicCharacterCount": 255,
+    "addedCharacterIds": 0,
+    "removedCharacterIds": 0,
+    "changedInventoryOrCombatProfileHashes": 0,
+    "evidence": "final-gameplay-preservation.json"
+  },
+  "transactions": {
+    "browserOperations": 7,
+    "firstFiveReplayedAfterProfileFix": true,
+    "replayedProfilesExactlyPreserved": 6,
+    "finalBrowserProfilesExactlyPreserved": 6,
+    "moneyConserved": true,
+    "consumableQuantitiesConserved": true,
+    "emulatorIntegrations": 6,
+    "emulatorFailures": 0,
+    "liveDataModified": false,
+    "evidence": [
+      "browser-profile-replay-fixed.json",
+      "browser-transfer-verification.json"
+    ]
+  },
+  "mechanics": {
+    "standardVersion": "36e5f594322735b9",
+    "browserServerModules": 236,
+    "identical": true,
+    "oldPersonalEquipmentAndHistoricalRollsPreserved": true,
+    "equipmentEmulatorIntegrations": 2
+  },
+  "art": {
+    "ownGoldAndSilverGenerated": 2,
+    "originalPngRetained": true,
+    "alphaVerified": true,
+    "coinDisplayBytes": 159738,
+    "coinPrompts": "../../AleriaAlmanach/assets/currency/image-prompts.json",
+    "existingCopperAndPfennigReused": true,
+    "toolImagesConnected": 43,
+    "toolImagesMissing": 0,
+    "toolDefinitionChangesOnlyImage": 43,
+    "oldDndCoinPathsRemovedFromCurrentConsumers": true,
+    "toolEvidence": "../tool-item-art-inventory-2026-11-01/"
+  },
+  "tests": {
+    "finalFeatureGates": {
+      "pass": 587,
+      "fail": 0,
+      "blocks": [
+        96,
+        15,
+        166,
+        310
+      ]
+    },
+    "releasePolicy": {
+      "pass": 33,
+      "fail": 0
+    },
+    "serverUnits": {
+      "pass": 310,
+      "fail": 0
+    },
+    "currencyConsumersAndReleaseSelection": {
+      "pass": 57,
+      "fail": 0
+    },
+    "toolArtTargeted": {
+      "pass": 38,
+      "fail": 0
+    },
+    "frontendFullInitial": {
+      "cases": 2036,
+      "pass": 2033,
+      "fail": 3,
+      "resolution": "Ein enger Legacy-Kostenanzeigefehler korrigiert (33 gezielte Fälle grün); zwei esbuild-Sandbox-Startfehler außerhalb der Sandbox erfolgreich wiederholt (12 Fälle). Kein weiterer Gesamtlauf behauptet."
+    },
+    "viteBuild": {
+      "exitCode": 0,
+      "seconds": 7.66,
+      "log": "vite-final.log"
+    },
+    "diffCheck": {
+      "exitCode": 0
+    }
+  },
+  "openIndependentWork": [
+    "Koordinierte Gesamtwiederherstellung statt inkonsistentem Altbackup-Mischimport",
+    "Einheitliche ausdrückliche Figurensteuerungsfreigaben",
+    "Direkter Händlerkauf zulasten der Gruppenkasse",
+    "Kontrollierte Übernahme produktiver Altbestände",
+    "Sechs unabhängige Vorschläge zur Datenbank-Neuklassifikation nicht ausgeführt"
+  ],
+  "report": "../../AleriaAlmanach/docs/testing/GROUP_SYSTEMS_2026-11-01.md"
+}

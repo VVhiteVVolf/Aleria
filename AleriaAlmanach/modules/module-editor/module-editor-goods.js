@@ -55,7 +55,7 @@ function buildGoodsItemRows(items = [], columns = getDefaultGoodsColumns(), mode
     const values = item.values || {};
     const rowIndex = Number.isInteger(item.__goodsIndex) ? item.__goodsIndex : index;
     return `
-    <div class="goods-edit-row item dynamic ${mode === 'module' ? 'module-goods-item-row' : 'inline-goods-item-row'}">
+    <div class="goods-edit-row item dynamic ${mode === 'module' ? 'module-goods-item-row' : 'inline-goods-item-row'}" data-goods-canonical-key="${escapeHtml(item.canonicalKey || '')}" data-goods-definition-ref="${escapeHtml(JSON.stringify(item.definitionRef || null))}" data-goods-definition-category="${escapeHtml(item.definitionCategory || '')}">
       <div class="goods-row-meta">
         <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Bild-URL" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="image"` : ''}>
         <input class="inline-edit-input ${mode === 'module' ? 'me-goods-item-category' : ''}" type="text" value="${escapeHtml(item.category || '')}" placeholder="Kategorie-ID" ${mode === 'inline' ? `data-inline-action="update-goods-list-field" data-goods-list="goods" data-goods-table-index="${tableIndex}" data-goods-index="${rowIndex}" data-goods-field="category"` : ''}>
@@ -154,6 +154,8 @@ function createGoodsRowFromItemDbItem(item = {}, columns = getDefaultGoodsColumn
   setGoodsImportValue(values, findGoodsImportColumn(safeColumns, ['availability', 'verfuegbar', 'verfuegbarkeit', 'bestand']), item.hiddenMeta?.availability || item.availability);
   if (!Object.values(values).some(Boolean) && safeColumns[0]) values[safeColumns[0].id] = String(item.title || '').trim();
   return sanitizeGoodsRows([{
+    canonicalKey: item.templateId || item.canonicalKey || item.id || '',
+    ...(item.definitionRef ? { definitionRef: { ...item.definitionRef }, definitionCategory: item.category } : {}),
     image: item.image || '',
     imageFormat: 'landscape',
     imageFit: 'contain',
@@ -177,6 +179,9 @@ function fillModuleGoodsRowFromItem(row, item = {}, columns = getDefaultGoodsCol
   if (!row) return;
   const currentCategory = getTrimmedFormValue(row, '.me-goods-item-category') || row.closest('.goods-category-editor')?.dataset.goodsCategory || 'allgemein';
   const imported = createGoodsRowFromItemDbItem(item, columns, currentCategory);
+  row.dataset.goodsCanonicalKey = imported.canonicalKey || '';
+  row.dataset.goodsDefinitionRef = JSON.stringify(imported.definitionRef || null);
+  row.dataset.goodsDefinitionCategory = imported.definitionCategory || '';
   setModuleGoodsRowField(row, '.me-goods-item-image', imported.image);
   setModuleGoodsRowField(row, '.me-goods-item-category', imported.category);
   setModuleGoodsRowField(row, '.me-goods-item-imageFormat', imported.imageFormat);
@@ -454,6 +459,8 @@ function collectModuleGoodsItems(tableEditor) {
       if (columnId) values[columnId] = String(input.value || '').trim();
     });
     return {
+      ...(row.dataset.goodsCanonicalKey ? { canonicalKey: row.dataset.goodsCanonicalKey } : {}),
+      ...(row.dataset.goodsDefinitionRef && row.dataset.goodsDefinitionRef !== 'null' ? { definitionRef: JSON.parse(row.dataset.goodsDefinitionRef), definitionCategory: row.dataset.goodsDefinitionCategory || '' } : {}),
       image: getTrimmedFormValue(row, '.me-goods-item-image'),
       imageFormat: getTrimmedFormValue(row, '.me-goods-item-imageFormat'),
       imageFit: getTrimmedFormValue(row, '.me-goods-item-imageFit'),

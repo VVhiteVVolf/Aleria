@@ -3,6 +3,7 @@ import { getCombatSupportEquipment } from '../combat-support-equipment.js';
 import { renderCombatSupportEquipment } from './combat-support-equipment-view.js?v=20260928-equipment-art-v4';
 import { hasPairedCombatTraining } from '../combat-paired-weapons.js';
 import { getDroppedCombatWeapon } from '../combat-weapon-availability.js';
+import { describeEquipmentPreparationCosts, getEquipmentPreparationCosts } from '../../character-equipment/equipment-preparation-costs.js';
 
 const glyphs = Object.freeze({ unarmed: '✦', sword: '⚔', dagger: '†', axe: '⚒', mace: '◆', spear: '↟', polearm: 'Ψ', bow: '➳', crossbow: '⌖', staff: '⌇', shield: '⬙' });
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
@@ -27,6 +28,7 @@ export function renderWeaponLoadout(actor = {}, { freeEquipment = false, request
     && hasPairedCombatTraining(actor, loadout.right, weapon));
   const canPair = canUseCombatOffHand(loadout.right || {}) && leftOptions.length > 0;
   const preparation = actor.equipmentPreparation;
+  const preparationCosts = Array.isArray(preparation?.costs) ? preparation.costs : getEquipmentPreparationCosts();
   const support = getCombatSupportEquipment(actor);
   const shield = !loadout.dualWield && (actor.armorItems || []).find(item => item.id === support.shieldId);
   return `<section class="combat-weapon-loadout" aria-label="Waffenführung" data-current-right="${escape(loadout.rightWeaponId)}" data-current-left="${escape(loadout.leftWeaponId)}">
@@ -38,9 +40,9 @@ export function renderWeaponLoadout(actor = {}, { freeEquipment = false, request
     </div>
     <div class="combat-weapon-alternatives"><span class="combat-field-caption">Waffenwechsel <small>· ${freeEquipment ? 'Startausrüstung kostenlos' : '1 Bonusaktion'}</small></span>
       <div class="combat-weapon-slots">${weapons.filter(weapon => weapon.id !== loadout.rightWeaponId).map(weapon => weaponSlot(weapon, { free: freeEquipment, actor })).join('')}</div>
-      ${requestedLoadout ? `<div class="combat-equipment-preparation" role="status"><span>${escape(preparation?.error || (preparation?.free ? 'Startausrüstung gewählt · kostenlos' : preparation ? 'Waffe gewechselt · 1 Bonusaktion im Entwurf verbraucht' : 'Ausrüstung entspricht der vorherigen Auswahl'))}</span><button type="button" data-combat-controller-action="cancel-equipment">Wechsel aufheben</button></div>` : ''}
+      ${requestedLoadout ? `<div class="combat-equipment-preparation" role="status"><span>${escape(preparation?.error || (preparation?.free ? 'Startausrüstung gewählt · kostenlos' : preparation ? `Ausrüstung gewechselt · ${describeEquipmentPreparationCosts(preparationCosts)} im Entwurf verbraucht` : 'Ausrüstung entspricht der vorherigen Auswahl'))}</span><button type="button" data-combat-controller-action="cancel-equipment">Wechsel aufheben</button></div>` : ''}
     </div>
-    ${renderCombatSupportEquipment(actor, loadout)}
+    ${renderCombatSupportEquipment(actor, loadout, { freeEquipment })}
   </section>`;
 }
 

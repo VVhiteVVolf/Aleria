@@ -81,11 +81,13 @@ test('all catalog action/reaction damage starts with the real weapon; all pure b
     if (entry.damageModel.mode !== 'weapon-dice') continue;
     for (const damageFormula of ['1d4', '1d6', '1d8', '1d10', '1d12', '2d6']) {
       const result = resolveTechniqueDamageFormula(entry, { damageFormula }, { progression: { level: 20 } });
+      const positionCost = entry.damageModel.bonusModifier || 0;
+      assert.ok([0, -1].includes(positionCost), `${entry.id}: only the approved small position effect costs one damage`);
       if (entry.costs.every(cost => cost.resourceId === 'bonus-action')) {
-        assert.equal(result, damageFormula === '2d6' ? '2d4' : '1d4', entry.id);
+        assert.equal(result, `${damageFormula === '2d6' ? '2d4' : '1d4'}${positionCost ? '-1' : ''}`, entry.id);
         assert.deepEqual(entry.damageModel.scalingSteps, [], entry.id);
       } else if (entry.costs.some(cost => ['action', 'reaction'].includes(cost.resourceId))) {
-        assert.ok(averageDamageFormula(result) >= averageDamageFormula(damageFormula), entry.id);
+        assert.ok(averageDamageFormula(result) >= averageDamageFormula(damageFormula) + positionCost, entry.id);
       }
     }
   }

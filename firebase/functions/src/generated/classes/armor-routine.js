@@ -1,3 +1,5 @@
+import { BREVANOR_CLASS_IDS } from './brevanor/brevanor-class-registry.js';
+
 // Shared class rule. Equipment still owns its Dexterity mode and cap; this
 // feature controls when an armored fighter may use that contribution.
 export const ARMOR_ROUTINE = Object.freeze({
@@ -19,6 +21,7 @@ export const ARMOR_ROUTINE_CLASS_IDS = Object.freeze([
   'gardist', 'ritter', 'slogar', 'rathaire', 'coillan', 'druan', 'mordan',
   'landsknecht', 'landsprotektor', 'kurassier', 'harlekin', 'landsmariner', 'landsjager',
   'fyrd', 'isen', 'wigar', 'hyld', 'scoet', 's-rinc', 'gliwere', 'miles', 'ceorl',
+  ...BREVANOR_CLASS_IDS,
   'kampfer', 'reiter', 'asket', 'schurke', 'barde', 'eidgeschworener', 'barbar', 'waldlaufer', 'seefahrer'
 ]);
 const fighterClasses = new Set(ARMOR_ROUTINE_CLASS_IDS);

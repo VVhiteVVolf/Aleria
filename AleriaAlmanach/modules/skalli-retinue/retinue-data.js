@@ -651,22 +651,30 @@
           "pageTitle": "Gruppenübersicht",
           "landingPage": true,
           "landing": {
+            "presentation": "folio",
+            "coverImage": "",
             "bannerImage": "../Stammbäume/assets/images/houses/Aldrimar/clan-varulv.png",
             "title": "Skallis Gefolge",
             "subtitle": "Gemeinsame Wege, Aufgaben und Ausbildung",
             "memberTitle": "Die Gefährten der Schar",
-            "questTitle": "Aufgaben & Quests",
-            "notesTitle": "Notizen",
-            "eventsTitle": "Ereignisse",
-            "mapTitle": "Aktuelle Karte",
+            "questTitle": "Gemeinsame Vorhaben",
+            "notesTitle": "Aus dem Reisebuch",
+            "eventsTitle": "Was bisher geschah",
+            "mapTitle": "Unsere Wege",
             "mapKartenId": "",
             "mapImage": "",
             "mapDisplay": "embed",
             "mapLink": "",
             "mapButtonLabel": "Karte öffnen",
-            "infoTitle": "Informationen",
+            "infoTitle": "Am Wegesrand",
             "members": [],
             "quests": [],
+            "questJournal": {
+              "enabled": true,
+              "questIds": [],
+              "runIds": [],
+              "includeMembers": true
+            },
             "notes": [],
             "events": [],
             "info": [],
@@ -677,11 +685,14 @@
               "status": "",
               "supplies": "",
               "threadId": "",
+              "includeCompanions": true,
               "sceneThreads": [],
               "members": [
                 {
                   "id": "hierarchy:skalli varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -691,6 +702,8 @@
                 {
                   "id": "hierarchy:torben rotstahl",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -700,6 +713,8 @@
                 {
                   "id": "hierarchy:ragna bärenherz",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -709,6 +724,8 @@
                 {
                   "id": "hierarchy:hakon unholdbann",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -718,6 +735,8 @@
                 {
                   "id": "hierarchy:hvitserk skald",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -727,6 +746,8 @@
                 {
                   "id": "hierarchy:fenrir varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -736,6 +757,8 @@
                 {
                   "id": "hierarchy:ivar skald",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -745,6 +768,8 @@
                 {
                   "id": "hierarchy:joric nachtjäger",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -754,6 +779,8 @@
                 {
                   "id": "hierarchy:aradin hyrmgarthr",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -763,6 +790,8 @@
                 {
                   "id": "hierarchy:skadi varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -772,6 +801,8 @@
                 {
                   "id": "hierarchy:freya skald",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -781,6 +812,8 @@
                 {
                   "id": "hierarchy:jördis varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -790,6 +823,8 @@
                 {
                   "id": "hierarchy:aslaug eisenjungfer",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -799,6 +834,8 @@
                 {
                   "id": "hierarchy:eira eisenjungfer",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -808,6 +845,8 @@
                 {
                   "id": "hierarchy:gundel varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -817,6 +856,8 @@
                 {
                   "id": "hierarchy:svala bärenherz",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -826,6 +867,8 @@
                 {
                   "id": "hierarchy:embla varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -835,6 +878,8 @@
                 {
                   "id": "hierarchy:kjell rotstahl",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",
@@ -844,6 +889,8 @@
                 {
                   "id": "hierarchy:hati varulv",
                   "characterId": "",
+                  "kind": "character",
+                  "creatureId": "",
                   "linkMode": "auto",
                   "assignment": "active",
                   "status": "auto",

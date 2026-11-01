@@ -42,13 +42,14 @@
         "width": 0.05933,
         "rotation": -4,
         "layer": 2000,
+        "noticeId": "gwynthor-sankt-padraigs-tag",
         "pin": {
           "assetId": "straight",
           "x": 0.08,
           "y": 0.05,
           "size": 0.1854036743637283,
           "rotation": 0,
-          "enabled": false
+          "enabled": true
         }
       },
       {
@@ -56,16 +57,17 @@
         "assetId": "kirche",
         "x": 0.277751,
         "y": 0.276236,
-        "width": 0.06555,
+        "width": 0.048,
         "rotation": 0,
         "layer": 2001,
+        "noticeId": "gwynthor-lleuwen-kirchliche-anhoerung",
         "pin": {
           "assetId": "left",
           "x": 0.08,
           "y": 0.05,
           "size": 0.16781083142639205,
           "rotation": 0,
-          "enabled": false
+          "enabled": true
         }
       },
       {
@@ -681,8 +683,9 @@
           "y": 0.05,
           "size": 0.21895340273492703,
           "rotation": 0,
-          "enabled": false
-        }
+          "enabled": true
+        },
+        "noticeId": "gwynthor-gildenjahresrechnung-a38"
       },
       {
         "id": "gwynthor-poster-blank-verbrannt-unten-hinten",

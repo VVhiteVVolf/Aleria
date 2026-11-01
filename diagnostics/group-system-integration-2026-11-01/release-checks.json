@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-11-01T04:48:48.303Z",
+  "frontend": {
+    "fullInitial": {
+      "log": "diagnostics/group-system-integration-2026-11-01/frontend-full.log",
+      "tests": 2036,
+      "pass": 2033,
+      "fail": 3
+    },
+    "resolved": [
+      {
+        "reason": "Legacy equipment-preparation display without explicit costs; narrow UI fallback corrected",
+        "log": "diagnostics/group-system-integration-2026-11-01/equipment-ui-fix-final.log",
+        "tests": 33,
+        "pass": 33,
+        "fail": 0
+      },
+      {
+        "reason": "esbuild subprocess was blocked by sandbox; same two existing dice files passed outside sandbox",
+        "log": "diagnostics/group-system-integration-2026-11-01/dice-esbuild-retest.log",
+        "tests": 12,
+        "pass": 12,
+        "fail": 0
+      }
+    ],
+    "fullRerun": false
+  },
+  "server": {
+    "log": "diagnostics/group-system-integration-2026-11-01/server-units-full.log",
+    "tests": 307,
+    "pass": 307,
+    "fail": 0
+  },
+  "release": {
+    "policy": {
+      "log": "diagnostics/group-system-integration-2026-11-01/release-policy-final.log",
+      "tests": 32,
+      "pass": 32,
+      "fail": 0
+    },
+    "featureTasks": {
+      "log": "diagnostics/group-system-integration-2026-11-01/adventure-release-tasks-final.log",
+      "blocks": [
+        {
+          "tests": 90,
+          "pass": 90,
+          "fail": 0
+        },
+        {
+          "tests": 15,
+          "pass": 15,
+          "fail": 0
+        },
+        {
+          "tests": 160,
+          "pass": 160,
+          "fail": 0
+        },
+        {
+          "tests": 307,
+          "pass": 307,
+          "fail": 0
+        }
+      ]
+    },
+    "browserServerProjection": {
+      "modules": 235,
+      "identical": true,
+      "log": "diagnostics/group-system-integration-2026-11-01/mechanics-projection-check.log"
+    },
+    "inputCoverage": {
+      "gameplayGuides": 1434,
+      "familyCharts": 1254,
+      "logs": [
+        "diagnostics/group-system-integration-2026-11-01/release-gameplay-inputs-final.log",
+        "diagnostics/group-system-integration-2026-11-01/release-family-inputs-final.log"
+      ]
+    },
+    "noticeRewards": 1110,
+    "dependencyInstallationPerformed": false,
+    "generatorsPerformed": false
+  },
+  "equipmentEmulator": {
+    "project": "demo-aleria-equipment-standards",
+    "host": "127.0.0.1:8187",
+    "tests": 2,
+    "pass": 2,
+    "log": "diagnostics/equipment-standards-2026-11-01/buckler-emulator.log"
+  },
+  "uiBridge": {
+    "host": "127.0.0.1:8879",
+    "sessionId": 91827,
+    "runningForRootQA": true,
+    "project": "demo-aleria-group-ui",
+    "dataCleared": false
+  },
+  "remainingProductFailures": []
+}

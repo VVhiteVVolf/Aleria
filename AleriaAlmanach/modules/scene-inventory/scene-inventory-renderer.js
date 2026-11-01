@@ -24,6 +24,7 @@ function renderSceneInventoryTransferComment(comment, idx = 0) {
         <strong>${escapeHtml(object.name || 'Gegenstand')}</strong>
         ${object.description && object.description !== object.name ? `<p>${escapeHtml(object.description)}</p>` : ''}
         ${object.quantity > 1 && (object.kind === 'item' || object.kind === 'register-item') ? `<small>${escapeHtml(object.quantity)} Stück</small>` : ''}
+        ${object.totalCopper != null ? `<small>${escapeHtml(object.totalCopper)} KT bezahlt</small>` : ''}
         ${object.sourceLabel ? `<small class="scene-transfer-source">${escapeHtml(object.sourceLabel)}</small>` : ''}
       </div>
       ${renderSceneInventoryActor(transfer.receiver, 'receiver')}

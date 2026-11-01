@@ -9,11 +9,15 @@ import { reconcileSkjaldrCombatProfile } from '../classes/aldrimar/skjaldr-comba
 import { reconcileClassSpecialManeuvers } from '../classes/class-special-maneuvers.js';
 import { getAldrimarWeaponAttackBonus } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getCombatWeaponLoadout, canUseEquippedCombatShield } from './combat-weapon-loadout.js';
+import { getCombatSupportEquipment } from './combat-support-equipment.js';
 import { normalizeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { applyArmorBalance, getArmorDexterityRules } from '../character-equipment/equipment-armor-rules.js';
+import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
+import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-model.js';
+import { normalizeEquipmentPreparationCosts } from '../character-equipment/equipment-preparation-costs.js';
 import { getArmorStanceExcess } from './combat-armor-stances.js';
 import { reconcileMartialPositionEffects } from '../combat-styles/martial-position-effects.js';
 import { mergeRollModes } from './combat-roll-mode.js?v=20260906-effect-rolls-v1';
@@ -334,6 +338,9 @@ function sanitizeArmor(value = {}, index = 0) {
   const kind = normalizeText(source.kind, 20);
   const dexterityMode = normalizeText(source.dexterityMode, 20);
   return {
+    ...(source.armorRuleVersion === 2 ? { armorRuleVersion: 2 } : {}),
+    ...(source.equipCosts?.length ? { equipCosts: normalizeEquipmentPreparationCosts(source.equipCosts) } : {}),
+    ...(normalizeItemDefinitionRef(source.definitionRef) ? { definitionRef: normalizeItemDefinitionRef(source.definitionRef), definitionTitle: normalizeText(source.definitionTitle, 180) } : {}),
     ...(source.mechanics ? { mechanics: sanitizeMechanicalModifiers(source.mechanics) } : {}),
     id: normalizeId(source.id, `armor-${index + 1}`),
     inventoryItemId: normalizeText(source.inventoryItemId, 120),
@@ -789,6 +796,7 @@ function sanitizeTechnique(value = {}, index = 0) {
     criticalThreshold: normalizeNumber(source.criticalThreshold, 20, 2, 20),
     maximumTargets: normalizeNumber(source.maximumTargets, inferredMaximumTargets, 1, 20),
     range: normalizeText(source.range, 160),
+    ...(['melee', 'ranged'].includes(source.attackRange) ? { attackRange: source.attackRange } : {}),
     target: normalizeText(source.target, 160),
     duration: normalizeText(source.duration, 160),
     requirements: normalizeText(source.requirements, 1200),
@@ -1101,6 +1109,13 @@ export function getCombatEffectAttributeModifier(profile = {}, effect = {}) {
   return effect?.bonusAttribute ? getAttributeModifier(getEffectiveCombatAttribute(profile, effect.bonusAttribute)) : 0;
 }
 
+function isActiveEquippedArmor(profile, item) {
+  if (!item.equipped) return false;
+  if (item.kind !== 'shield') return true;
+  return canUseEquippedCombatShield(profile)
+    && (item.armorRuleVersion !== 2 || getCombatSupportEquipment(profile).shieldId === item.id);
+}
+
 function collectActiveMechanicalSources(profile) {
   const auraSources = [];
   if (profile.aura?.enabled && profile.aura.latentPresence?.enabled && profile.aura.latentPresence?.active) {
@@ -1109,7 +1124,9 @@ function collectActiveMechanicalSources(profile) {
   if (profile.aura?.enabled && profile.aura.activeForm?.enabled && profile.aura.activeForm?.active) {
     auraSources.push({ active: true, mechanics: profile.aura.activeForm.selfMechanics });
   }
-  return [...profile.quirks, ...profile.conditions, ...profile.abilities, ...auraSources]
+  const equipmentSources = (profile.armorItems || []).filter(item => item.armorRuleVersion === 2 && isActiveEquippedArmor(profile, item))
+    .map(item => ({ active: true, mechanics: item.mechanics }));
+  return [...profile.quirks, ...profile.conditions, ...profile.abilities, ...auraSources, ...equipmentSources]
     .filter(entry => entry.active)
     .map(entry => entry.mechanics);
 }
@@ -1234,7 +1251,7 @@ export function getArmorClass(profile = {}) {
     return normalized.armorClass.override - getBurningArmorPenalty(normalized);
   }
   const shieldAllowed = canUseEquippedCombatShield(normalized);
-  const equipped = normalized.armorItems.filter(item => item.equipped && (shieldAllowed || item.kind !== 'shield'));
+  const equipped = normalized.armorItems.filter(item => isActiveEquippedArmor(normalized, item));
   const bodyArmor = equipped
     .filter(item => item.kind === 'armor' && item.baseArmorClass != null)
     .sort((a, b) => b.baseArmorClass - a.baseArmorClass)[0] || null;
@@ -1449,6 +1466,11 @@ export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapo
 }
 
 export function resolveCharacterCombatProfile(character = {}) {
+  if (character.inventory?.items?.some(item => item.definitionRef)) {
+    const { combatProfile } = synchronizeEquipmentFromInventory({ inventory: character.inventory,
+      combatProfile: character.combatProfile || {}, preserveLoadout: true });
+    character = { ...character, combatProfile };
+  }
   const sanitized = sanitizeCharacterCombatProfile(character.combatProfile, {
     ensureRequiredSkills: character.entityType !== 'creature',
     ensureSpellSlots: character.entityType !== 'creature'

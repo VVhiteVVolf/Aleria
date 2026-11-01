@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head><base href="/AleriaAlmanach/">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aufträge, Abenteuergruppen und die Chronik ihrer Reisen in Aleria.">
+  <title>Quests &amp; Abenteuer · AleriaAlmanach</title>
+  <link rel="stylesheet" href="./modules/quests/quest-book.css">
+  <link rel="stylesheet" href="./modules/quests/quest-story.css">
+  <link rel="stylesheet" href="./modules/item-builder/item-builder.css">
+  <script defer src="./modules/core/aleria-calendar.js"></script>
+  <script defer src="../Anzeigetafeln/assets/js/data/authored-notices.js"></script>
+  <script type="module" src="/diagnostics/quest-system-2026-11-01/ui-harness.js"></script>
+</head>
+<body class="quest-body">
+  <div data-quest-page>
+    <aside class="quest-rail" aria-label="Register"><a class="quest-brand" href="./AleriaAlmanach.html" aria-label="Zum AleriaAlmanach">A<span>ALERIA</span></a>
+      <a class="quest-rail-entry" href="./AleriaAlmanach.html" title="Almanach"><img src="../IconOrdner/ReiterIcons/Almanach.svg" alt=""><small>Almanach</small></a>
+      <a class="quest-rail-entry is-current" href="./quests.html" aria-current="page"><img src="../IconOrdner/ReiterIcons/Quests.svg" alt=""><small>Quests &amp;<br>Abenteuer</small></a>
+      <a class="quest-rail-entry" href="../Karten/index.html"><img src="../IconOrdner/ReiterIcons/Kontinente.png" alt=""><small>Karten</small></a>
+      <a class="quest-rail-entry" href="../Anzeigetafeln/index.html"><img src="../IconOrdner/ReiterIcons/Anzeigetafeln.svg" alt=""><small>Tafeln</small></a>
+      <a class="quest-rail-entry" href="./kalender.html"><img src="../IconOrdner/ReiterIcons/Kalender.png" alt=""><small>Kalender</small></a>
+      <a class="quest-rail-return" href="./AleriaAlmanach.html">← Zurück</a>
+    </aside>
+    <main class="quest-main">
+      <nav class="quest-breadcrumb" aria-label="Brotkrumen"><a href="./AleriaAlmanach.html">AleriaAlmanach</a><span>/</span><span>Das Abenteuerjournal</span></nav>
+      <header class="quest-panorama-hero"><figure class="quest-panorama"><img src="./assets/quests/gwynthor-companions-banner-v2.png" alt="Gawain, Freya, Guinevere und Fenrir vor Gwynthors Küste" width="2172" height="724"><figcaption>Gawain · Freya · Guinevere · Fenrir <span>— Gwynthor, wo Landwege das Meer erreichen</span></figcaption></figure><div class="quest-book-title"><div><p class="quest-eyebrow">AUS DEN CHRONIKEN ALERIAS</p><h1>Quests <em>&amp;</em> Abenteuer</h1><span class="quest-title-flourish" aria-hidden="true">───── ❦ ─────</span></div><div><p>Manche Geschichten beginnen mit einem Aushang.<br>Andere mit einem Versprechen am Wegesrand.</p><div class="quest-hero-actions"><button class="quest-primary" data-action="browse" type="button">Eine Geschichte finden ↗</button><a href="../Anzeigetafeln/index.html">An den Anschlagbrettern</a></div></div></div></header>
+      <aside class="quest-pinned-invitation"><img src="./assets/gwynthor-troetzli/chibi/troetzli-v1.png" alt=""><div><small>Ein Gesuch aus Gwynthor</small><button type="button" data-action="open" data-kind="quest" data-id="notice:cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel:gwynthor-der-staedter-und-sein-pferd">Der Städter und sein Pferd</button><p>Ein schreckhafter Hengst. Ein besorgter Vater. Und ein Weg, der geduldige Hände braucht.</p></div><span aria-hidden="true">❦</span></aside>
+      <section class="quest-stats" aria-label="Übersicht" data-quest-stats hidden></section>
+      <div class="quest-toolbar"><nav class="quest-tabs" aria-label="Questansicht" data-quest-tabs><button type="button" data-tab="active" aria-pressed="true"><img src="./assets/quests/icons/way.svg" alt="">Auf den Wegen</button><button type="button" data-tab="available" aria-pressed="false"><img src="./assets/quests/icons/letter.svg" alt="">Gesuche &amp; Aufträge</button><button type="button" data-tab="archive" aria-pressed="false"><img src="./assets/quests/icons/book.svg" alt="">Die Chronik</button><button type="button" data-tab="sources" aria-pressed="false"><img src="./assets/quests/icons/compass.svg" alt="">Orte &amp; Geschichten</button></nav><label class="quest-search"><span class="quest-sr">Quest oder Gruppe suchen</span><input type="search" placeholder="In den Seiten stöbern …" data-quest-search></label></div>
+      <div class="quest-context" data-quest-context hidden></div>
+      <div class="quest-section-heading"><div><p class="quest-eyebrow" data-quest-kicker>AUF GEMEINSAMEN PFADEN</p><h2 data-quest-heading>Aktive Abenteuer</h2></div><label class="quest-sort">Sortieren <select data-quest-sort><option value="newest">Neueste zuerst</option><option value="oldest">Älteste zuerst</option><option value="title">Titel A–Z</option></select></label></div>
+      <div data-quest-results></div><button type="button" class="quest-more" data-action="more" hidden>Weitere Durchläufe laden</button>
+      <footer class="quest-footer"><details><summary>Aus der Schreibstube</summary><span data-quest-status role="status">Die Seiten werden aufgeschlagen …</span><button data-action="create" type="button">Ein neues Gesuch verfassen</button></details><span>❦ Aleria · Geschichten, die bleiben</span></footer>
+    </main>
+    <dialog class="quest-dialog quest-detail-dialog" data-quest-detail aria-label="Questakte"></dialog>
+    <dialog class="quest-dialog quest-form-dialog" data-quest-form aria-label="Quest bearbeiten"></dialog>
+    <div class="quest-toast" data-quest-toast role="status" hidden></div>
+  </div>
+</body>
+</html>

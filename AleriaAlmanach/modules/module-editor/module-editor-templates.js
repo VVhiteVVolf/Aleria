@@ -1354,8 +1354,17 @@ const MODULE_TEMPLATE_REGISTRY = {
     buildEditorFields: page => buildLandingModuleEditorFields(page),
     collectEditorPage: (card, page) => collectLandingModuleEditorPage(card, page),
     renderPage: (page, entry, pageIndex, total) => buildLandingPage(page, entry, pageIndex, total),
-    mountPage: context => globalThis.AleriaGroupLanding?.mount(context),
-    unmountPage: context => globalThis.AleriaGroupLanding?.unmount(context),
+    mountPage: context => {
+      globalThis.AleriaGroupLanding?.mount(context);
+      const journal = context.root?.querySelector('[data-landing-quest-journal]');
+      import('../landing/landing-quest-journal.js').then(module => {
+        if (journal?.isConnected && context.root?.contains(journal)) module.mountLandingQuestJournal(context);
+      }).catch(error => console.warn('Abenteuerjournal:', error));
+    },
+    unmountPage: context => {
+      globalThis.AleriaGroupLanding?.unmount(context);
+      import('../landing/landing-quest-journal.js').then(module => module.unmountLandingQuestJournal(context)).catch(error => console.warn('Abenteuerjournal:', error));
+    },
     renderInlinePage: (page, entry, pageIndex, total) => buildInlineComplexTemplatePage(page, entry, pageIndex, total, 'landing')
   },
   artifact: {

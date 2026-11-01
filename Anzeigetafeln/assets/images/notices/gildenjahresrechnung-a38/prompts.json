@@ -1,0 +1,17 @@
+{
+  "tool": "built-in image_gen",
+  "references": [
+    "Anzeigetafeln/assets/images/board-posters/display/wolken-daemmerung.webp",
+    "Anzeigetafeln/assets/images/seals/defaults/wolken-der-daemmerung-v1.png"
+  ],
+  "jobs": [
+    {
+      "id": "gelbes-formular-a38",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory illustration of a bureaucratic medieval guild-tax document called the Yellow Form A38. Reference 1 is the existing Gwynthor guild notice and defines parchment mood, bold hand-drawn dark outlines and the guild's sun/horizon symbol ONLY. Reference 2 is its official wax seal and defines the small impressed solar sign, not a red colored paper background. A slightly irregular mustard-yellow sheet of thick parchment, portrait-shaped within square canvas, overlapping two thinner duplicate copies, very slight three-quarter tilt, modestly curled lower corner. Clearly hand ruled bookkeeping table, many neat tiny empty boxes, short horizontal lines that imply unreadable official writing. At the top in large readable dark-brown hand-inked letters, the ONLY readable text must be exactly \"A38\". Below it a small single rising sun over a straight horizon line, matching the guild symbol. A tiny restrained dark red ink stamp at the bottom and a small yellow ribbon tab. Paperwork that looks absurdly official but still belongs to a medieval fantasy world. Hand-painted illustrated fantasy inventory art, crisp dark outlines, soft simplified shading, matte warm colors, readable clear silhouette at small size. The complete isolated document centered with 10% transparent margin on every side. No hands, quill, desk, coins, scene, detached extra objects, frame, watermark, modern printed UI or computer typeface, photorealism, CGI or glossy effects. No other legible words or numbers. TRUE transparent PNG alpha outside the sheets, only a faint tight black contact shadow."
+    },
+    {
+      "id": "tewdwr-gairfan-unterschrift",
+      "prompt": "Use case: stylized-concept. Create one isolated handwritten signature asset, dark walnut-brown quill ink on a TRUE transparent PNG background. Exact text on one horizontal line: \"Tewdwr Gairfân\". Below or after it a very small modest hand-drawn double underline, no other words. Character of the penmanship: an over-eager middle-ranking medieval bureaucrat, meticulously tidy, slightly fussy and self-important but fully legible. Compact disciplined late-medieval cursive, carefully formed capital T and G, a correct circumflex on the â in Gairfân, thin-to-medium natural quill pressure variation. Not modern computer lettering, not a royal monogram, not wild illegible swirls. Entire signature complete and centered with generous transparent margins. Match the warm dark-ink fantasy noticeboard asset style. No parchment, paper, desk, pen, crest, wax seal, shadows, background, frame, watermark or extra text."
+    }
+  ]
+}

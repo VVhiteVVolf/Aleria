@@ -36,6 +36,7 @@
 
   window.TafelRuntime = Object.freeze({
     state: () => window.TafelState.get(),
+    visibleNotices: () => window.TafelNoticeTimeline?.visibleNotices() || window.TafelState.get().zettel,
     uid,
     esc,
     save: () => window.TafelState.save(),

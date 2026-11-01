@@ -83,6 +83,7 @@ export function createSirenentanzTechnique(classId, spec) {
     ...damage, damageType: '', attackBonus: spec.attackBonus || 0, damageBonus: 0,
     targetDefenseModifier: spec.defenseModifier || 0, criticalThreshold: 20, rollMode: 'normal',
     maximumTargets: spec.targets || 1, range: spec.noDamage ? 'Selbst' : 'Waffenreichweite',
+    ...(weapon.ranged && !spec.noDamage ? { attackRange: 'ranged' } : {}),
     target: spec.noDamage ? 'Selbst' : 'Ein Gegner', duration: spec.noDamage ? '1 eigener Beitrag' : 'Sofort',
     requirements, costs, auraBypass: { allowed: true, resourceId: 'aura-focus', cost: 1 },
     effects: [...(spec.noDamage ? [] : [weaponDamageEffect(id)]), ...conditionEffects(id, { ...spec, styleName, sharedConditions: classId === 'derwyn' })],

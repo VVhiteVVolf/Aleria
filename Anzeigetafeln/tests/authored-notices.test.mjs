@@ -4,11 +4,34 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import vm from 'node:vm';
 import { buildHerluinMissingNotice, buildHerluinMissingNotices } from '../tools/build-herluin-missing-quest.mjs';
+import { withNoticeDate } from '../assets/js/timeline/notice-dates.mjs';
 import { buildGwynthorQuestPack } from '../tools/build-gwynthor-quest-notices.mjs';
+import { buildCompletedTravelNotice, completedTravelPortraitUpdate } from '../tools/notices/erledigtes-reisegeleit.mjs';
 
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const json = value => JSON.parse(JSON.stringify(value));
 const notice = buildHerluinMissingNotice();
+
+test('travel portraits fill older replies without replacing custom images, words or deleted replies', () => {
+  const app = feature();
+  const old = buildCompletedTravelNotice();
+  delete old.verfasser; delete old.media.verfasser;
+  old.comments = old.comments.slice(0, 3).map(reply => ({ ...reply, avatar: '', imagePosition: '' }));
+  old.comments[1].avatar = 'custom.png';
+  old.comments[1].imagePosition = 'center';
+  const before = json(old);
+  const source = { zettel: [], updates: [completedTravelPortraitUpdate()] };
+  const merged = app.TafelAuthoredNotices.merge({ zettel: [old] }, source);
+  assert.deepEqual(old, before);
+  assert.match(merged.zettel[0].verfasser, /iorath-melyn.png$/);
+  assert.match(merged.zettel[0].comments[0].avatar, /raban.png$/);
+  assert.equal(merged.zettel[0].comments[0].imagePosition, 'top');
+  assert.equal(merged.zettel[0].comments[1].avatar, 'custom.png');
+  assert.equal(merged.zettel[0].comments[1].imagePosition, 'center');
+  assert.deepEqual(Array.from(merged.zettel[0].comments, reply => reply.text), before.comments.map(reply => reply.text));
+  assert.equal(merged.zettel[0].comments.length, 3);
+  assert.deepEqual(json(app.TafelAuthoredNotices.merge(merged, source)), json(merged));
+});
 
 function feature({ published = null, draft = null, authored = [notice], fail = false } = {}) {
   const saved = new Map(draft ? [['aleria.tafeln.draft.test', JSON.stringify(draft)]] : []);
@@ -82,7 +105,7 @@ test('an uninitialized board shows the authored quest; an unavailable pack keeps
 test('Gwynthor quest uses canonical employees and portrait, agreed reward, template and exact nail position', async () => {
   const pack = JSON.parse(read('Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/authored-notices.json'));
   assert.deepEqual(pack, await buildGwynthorQuestPack());
-  assert.deepEqual(pack.zettel.slice(0, 4), buildHerluinMissingNotices());
+  assert.deepEqual(pack.zettel.slice(0, 4), buildHerluinMissingNotices().map(withNoticeDate));
   assert.equal(notice.typ, 'quest');
   assert.equal(notice.title, 'Angestellte Vermisst!');
   assert.equal(notice.table.find(row => row.k === 'Belohnung').v, '5 Silbertaler');

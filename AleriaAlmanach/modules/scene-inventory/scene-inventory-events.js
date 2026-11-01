@@ -1,5 +1,9 @@
 // Atomic inventory transfer and scene-event persistence.
+(function initializeSceneInventoryEvents() {
+let submitting = false;
+let pending = null;
 async function submitSceneInventoryTransfer() {
+  if (submitting) return;
   const threadId = getCurrentCommentThreadId();
   const kind = document.getElementById('scene-transfer-kind')?.value || 'money';
   const input = {
@@ -9,54 +13,79 @@ async function submitSceneInventoryTransfer() {
     currency: document.getElementById('scene-transfer-currency')?.value || 'gold',
     quantity: kind === 'item'
       ? document.getElementById('scene-transfer-item-amount')?.value
-      : kind === 'register-item'
+      : ['register-item', 'register-purchase'].includes(kind)
         ? document.getElementById('scene-transfer-register-amount')?.value
         : document.getElementById('scene-transfer-money-amount')?.value,
     itemId: document.getElementById('scene-transfer-item')?.value || '',
-    registerItem: getSceneInventoryRegisterItem()
+    registerItem: getSceneInventoryRegisterItem(),
+    ...(kind === 'register-purchase' ? { unitCopper: document.getElementById('scene-transfer-unit-copper')?.value } : {})
   };
   const flavour = String(document.getElementById('scene-transfer-flavour')?.value || '').trim();
   const visualIcon = String(document.getElementById('scene-transfer-icon')?.value || '').trim();
-  let prepared;
-  try { prepared = prepareSceneInventoryTransfer(input); }
-  catch (error) { setSceneInventoryStatus(error.message || 'Übergabe ist ungültig.', 'error'); return; }
   if (!threadId) { setSceneInventoryStatus('Kein aktiver Szenen-Thread gefunden.', 'error'); return; }
   if (!window._fb?.transferCharacterInventories) { setSceneInventoryStatus('Firebase-Inventarübertragung ist nicht verfügbar.', 'error'); return; }
+  const key = JSON.stringify({ threadId, input, flavour, visualIcon });
+  if (pending?.key !== key) pending = { key };
+  const attempt = pending;
   const submit = document.querySelector('[data-scene-inventory-action="submit"]');
+  submitting = true;
   if (submit) submit.disabled = true;
   try {
-    const transfer = {
-      transferId: `scene-transfer-${Date.now()}`,
-      giver: { id: prepared.giver.id, name: prepared.giver.name, portrait: prepared.giver.portrait || '' },
-      receiver: { id: prepared.receiver.id, name: prepared.receiver.name, portrait: prepared.receiver.portrait || '' },
-      object: { ...prepared.transfer, visualIcon },
-      flavour,
-      createdAt: new Date().toISOString(),
-      schemaVersion: 1
+    if (kind === 'register-purchase') {
+      const { purchaseSceneItem } = await import('./scene-inventory-purchase.js');
+      const committed = await purchaseSceneItem({ input, threadId, flavour, attempt, characters: _characters });
+      const index = _characters.findIndex(character => character.id === input.receiverId);
+      if (index >= 0 && committed.character) _characters[index] = committed.character;
+      pending = null;
+      closeSceneInventoryDialog(); requestCommentAutoScroll(threadId);
+      await loadCommentsIntoPage(threadId, true, { page: 'last' }); renderCharGrid();
+      return;
+    }
+    attempt.prepared ||= await prepareSceneInventoryTransfer(input);
+    const prepared = attempt.prepared;
+    // Preserve the exact operation through a lost response. Revalidation of a
+    // locally updated inventory must not prevent replaying the server receipt.
+    attempt.sceneEvent ||= {
+      text: `${prepared.giver.name} übergibt ${prepared.receiver.name} ${prepared.transfer.name}.`,
+      transfer: {
+        transferId: `scene-transfer-${crypto.randomUUID()}`,
+        giver: { id: prepared.giver.id, name: prepared.giver.name, portrait: prepared.giver.portrait || '' },
+        receiver: { id: prepared.receiver.id, name: prepared.receiver.name, portrait: prepared.receiver.portrait || '' },
+        object: { ...prepared.transfer, visualIcon }, flavour,
+        createdAt: new Date().toISOString(), schemaVersion: 2
+      },
+      orderKey: getNextCommentOrderKey(threadId)
     };
-    const text = `${prepared.giver.name} übergibt ${prepared.receiver.name} ${prepared.transfer.name}.`;
     const committed = await window._fb.transferCharacterInventories(
       prepared.giver.id,
       prepared.giverInventory,
       prepared.receiver.id,
       prepared.receiverInventory,
       threadId,
-      { text, transfer, orderKey: getNextCommentOrderKey(threadId) },
+      attempt.sceneEvent,
       COMMENT_DELETE_CODE
     );
     const giverIndex = _characters.findIndex(character => character.id === prepared.giver.id);
     const receiverIndex = _characters.findIndex(character => character.id === prepared.receiver.id);
     if (giverIndex >= 0) _characters[giverIndex] = { ..._characters[giverIndex], inventory: committed?.giverInventory || prepared.giverInventory };
     if (receiverIndex >= 0) _characters[receiverIndex] = { ..._characters[receiverIndex], inventory: committed?.receiverInventory || prepared.receiverInventory };
-    closeSceneInventoryDialog();
-    requestCommentAutoScroll(threadId);
-    await loadCommentsIntoPage(threadId, true, { page: 'last' });
-    renderCharGrid();
+    pending = null;
+    try {
+      closeSceneInventoryDialog();
+      requestCommentAutoScroll(threadId);
+      await loadCommentsIntoPage(threadId, true, { page: 'last' });
+      renderCharGrid();
+    } catch (refreshError) {
+      console.warn('Saved inventory transfer could not refresh its presentation:', refreshError);
+      if (typeof showAppStatus === 'function') showAppStatus('Übergabe gespeichert. Bitte die Szenenansicht neu laden.', 'info');
+    }
   } catch (error) {
     const message = typeof getFriendlyErrorMessage === 'function'
       ? getFriendlyErrorMessage(error, 'Übergabe konnte nicht gespeichert werden.')
       : (error?.message || 'Übergabe konnte nicht gespeichert werden.');
     setSceneInventoryStatus(message, 'error');
+  } finally {
+    submitting = false;
     if (submit) submit.disabled = false;
   }
 }
@@ -68,13 +97,15 @@ document.addEventListener('click', event => {
   const action = trigger.dataset.sceneInventoryAction;
   if (action === 'open') openSceneInventoryDialog();
   if (action === 'close') closeSceneInventoryDialog();
-  if (action === 'submit') submitSceneInventoryTransfer();
+  if (action === 'submit') return submitSceneInventoryTransfer();
   if (action === 'pick-register-item') {
     if (typeof openItemDbPicker !== 'function') return setSceneInventoryStatus('Das Item-Register ist nicht verfügbar.', 'error');
     openItemDbPicker({
       title: 'Item für die Szenenübergabe wählen',
       onSelect: item => {
         setSceneInventoryRegisterItem(item);
+        const price = document.getElementById('scene-transfer-unit-copper');
+        if (price) price.value = String(item.priceRange?.minCopper ?? 0);
         refreshSceneInventoryRegisterSummary();
         refreshSceneInventoryDialog();
       }
@@ -115,3 +146,5 @@ document.addEventListener('change', event => {
   if (!event.target?.closest?.('#scene-inventory-overlay')) return;
   refreshSceneInventoryDialog({ refreshItems: event.target?.id === 'scene-transfer-giver' });
 });
+
+}());

@@ -71,10 +71,11 @@ test('inventory attachments are idempotent and preserve existing Freki, possessi
 
 test('local records and review exports link each companion to its actual owner; Freki and Skarns status remain distinct', async () => {
   const registry = await read(new URL('../../CharakterDatenbank/registry.json', import.meta.url));
-  assert.equal(registry.count, 238);
+  assert.equal(registry.count, registry.records.length);
   for (const [slug, id] of Object.entries(WOLFSHORN_OWNER_IDS)) {
     const review = (await read(new URL(`${slug}-vollstaendiger-entwurf.json`, exportFolder))).character;
     const entry = registry.records.find(r => r.firestoreDocumentId === id);
+    assert.equal(registry.records.filter(r => r.firestoreDocumentId === id).length, 1);
     const local = (await read(new URL('../../CharakterDatenbank/' + entry.path, import.meta.url))).character;
     for (const owner of [review, local]) for (const creature of creatures.filter(c => c.itemOrigin.ownerCharacterId === id)) {
       const cards = owner.inventory.companions.filter(c => c.creatureId === creature.id);

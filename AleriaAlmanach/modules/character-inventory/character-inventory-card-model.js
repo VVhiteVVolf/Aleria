@@ -2,11 +2,13 @@ import { inferInventoryUseMode } from '../inventory-use/inventory-use-model.js';
 import { inventoryValuation, formatInventoryPrice } from './character-inventory-valuation.js';
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
+import { materializeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 
 const signed = value => Number(value) ? `${Number(value) > 0 ? '+' : '−'}${Math.abs(Number(value))}` : '';
 const dice = value => String(value || '').replace(/d/gi, 'W');
 
 export function inventoryCardKind(item = {}) {
+  item = materializeInventoryItem(item);
   if (item.creatureId || ['pferde', 'vieh'].includes(item.registerCategory)) return 'companion';
   if (item.combatDefinition?.kind === 'weapon' || item.category === 'weapon') return 'weapon';
   if (item.combatDefinition?.kind === 'armor' || item.category === 'armor') return 'armor';
@@ -17,7 +19,7 @@ export function inventoryCardKind(item = {}) {
 }
 
 export function inventoryCardModel(item = {}) {
-  item = balanceArmorInventoryItem(item);
+  item = balanceArmorInventoryItem(materializeInventoryItem(item));
   const kind = inventoryCardKind(item);
   const labels = { weapon: ['Waffe', '⚔'], armor: ['Rüstung', '◇'], consumable: ['Verbrauchsgut', '⚗'],
     artifact: ['Artefakt', '✧'], document: ['Dokument', '▤'], equipment: ['Ausrüstung', '⚒'], companion: ['Gefährte', '♞'] };
@@ -45,6 +47,7 @@ export function inventoryCardModel(item = {}) {
   const ruleLabels = new Set(rules.map(row => row.label.toLocaleLowerCase('de')));
   const rows = [
     ...rules,
+    ...(item.mechanicsStatus === 'provisional' ? [{ label: 'Regelstand', value: 'Vorläufige Standardwerte' }] : []),
     { label: 'Handelspreis / Stück', value: formatInventoryPrice(inventoryValuation(item)) },
     ...(item.valuationNote ? [{ label: 'Preisgrundlage', value: item.valuationNote }] : []),
     ...(item.purchase?.unitCopper != null ? [{ label: 'Gezahlter Kaufpreis', value: formatInventoryPrice({minCopper:item.purchase.unitCopper,maxCopper:item.purchase.unitCopper}) }] : []),

@@ -5,11 +5,13 @@ import { groupNameKey } from './group-landing-roster.js';
 import { html, groupPortrait } from './group-landing-markup.js';
 import { field, select, iconField, mountGroupIconFields } from './group-landing-fields.js';
 import { inventoryEditorBody, collectInventoryEdit, mountInventoryChooser } from './group-landing-inventory-editor.js';
+import { LANDING_PRESENTATIONS } from './landing-model.js';
 const archiveOptions = characters => [['', 'Ohne Verknüpfung'], ...characters.map(character => [character.id, `${character.name}${character.title ? ' · ' + character.title : ''}`])];
 const titles = { select: 'Mitglieder aus der Hierarchie auswählen', member: 'Mitglied anpassen', guest: 'Gast aus dem Charakterarchiv', settings: 'Gruppe & Darstellung bearbeiten', map: 'Aktuelle Karte auswählen', scene: 'Interaktive Sitzungen verknüpfen', treasury: 'Gruppenkasse', inventory: 'Güter aus dem Handelsregister', 'inventory-item': 'Gruppenbestand bearbeiten', 'save-preset': 'Zusammenstellung merken' };
 const value = (form, name) => String(new FormData(form).get(name) || '').trim();
 
 function selectionForm(members) {
+  members = members.filter(member => member.source !== 'companion');
   return `<p class="group-dialog-help">Namen, Rollen und Porträts stammen direkt aus der Hierarchie. Wähle „Dabei“ für die aktuelle Gruppe; zurückgebliebene Mitglieder bleiben in der Hierarchie.</p>${field('Name, Rolle oder Hierarchiezweig suchen', 'search')}
     <div class="group-selection-tools"><span data-group-selection-count role="status"></span><button type="button" data-group-selection="active">Gefilterte hinzufügen</button><button type="button" data-group-selection="reserve">Gefilterte zurücklassen</button></div>
     <div class="group-selection-list">${members.map(member => `<div class="group-selection-row" data-group-search-row data-search-text="${html(`${member.name} ${member.role} ${member.treeLabel}`.toLocaleLowerCase('de-DE'))}">
@@ -37,15 +39,16 @@ export function groupEditorBody(kind, context) {
     return `<p class="group-dialog-help">Die Karte öffnet sich direkt in der Gruppenübersicht: zoomen, verschieben, Ebenen und Markierungen nutzen.</p><div class="group-form-grid">${field('Karte suchen', 'search')}${select('Karte aus dem Kartenregister', 'mapKartenId', options, data.mapKartenId)}${select('Darstellung', 'mapDisplay', [['embed', 'Interaktive Karte (Iframe)'], ['image', 'Vorschaubild']], data.mapDisplay)}${field('Überschrift', 'mapTitle', data.mapTitle)}${iconField('Vorschaubild / Fallback', 'mapImage', data.mapImage)}${field('Alternatives Klickziel', 'mapLink', data.mapLink)}${field('Buttontext', 'mapButtonLabel', data.mapButtonLabel)}</div>`;
   }
   if (kind === 'inventory' || kind === 'inventory-item') return inventoryEditorBody(kind, context);
-  if (kind === 'settings') return `<fieldset class="group-form-section"><legend>Gruppe & aktuelle Lage</legend><div class="group-form-grid">${field('Titel', 'title', data.title)}${field('Untertitel', 'subtitle', data.subtitle)}${iconField('Wappen / Titelbild', 'bannerImage', data.bannerImage)}${field('Aktueller Ort', 'location', group.location)}${field('Gruppenstatus', 'status', group.status)}${field('Aktuelle Tätigkeit', 'activity', group.activity)}${field('Versorgung & Vorräte', 'supplies', group.supplies)}</div></fieldset>
+  if (kind === 'settings') return `<fieldset class="group-form-section"><legend>Darstellung & Bilder</legend><div class="group-form-grid">${select('Darstellung', 'presentation', Object.entries(LANDING_PRESENTATIONS), data.presentation)}${field('Coverbild · breite Bild-URL', 'coverImage', data.coverImage)}${iconField('Wappen / bisheriges Bannerbild', 'bannerImage', data.bannerImage)}</div></fieldset>
+    <fieldset class="group-form-section"><legend>Gruppe & aktuelle Lage</legend><div class="group-form-grid">${field('Titel', 'title', data.title)}${field('Untertitel', 'subtitle', data.subtitle)}${field('Aktueller Ort', 'location', group.location)}${field('Gruppenstatus', 'status', group.status)}${field('Aktuelle Tätigkeit', 'activity', group.activity)}${field('Versorgung & Vorräte', 'supplies', group.supplies)}</div></fieldset>
     <fieldset class="group-form-section"><legend>Überschriften</legend><div class="group-form-grid">${[['memberTitle', 'Mannschaft'], ['questTitle', 'Aufgaben'], ['notesTitle', 'Journal'], ['eventsTitle', 'Ereignisse'], ['mapTitle', 'Karte'], ['infoTitle', 'Informationen']].map(([key, label]) => field(label, key, data[key])).join('')}</div></fieldset>
     <fieldset class="group-form-section"><legend>Icons der Bereiche & Lage</legend><div class="group-form-grid">${Object.entries(GROUP_ICON_LABELS).map(([key, label]) => iconField(label, `icon:${key}`, group.icons[key])).join('')}</div></fieldset>`;
   if (kind === 'member') {
     if (!member) throw new Error('Das Mitglied ist nicht mehr verfügbar.');
-    return `<h4>${html(member.name)} · ${html(member.role)}</h4><div class="group-form-grid">${select('Aufenthalt', 'assignment', Object.entries(GROUP_ASSIGNMENTS), member.assignment)}${select('Zusätzlicher Gruppenstatus', 'status', Object.entries(GROUP_MEMBER_STATUSES), member.status)}${field('Charakterbogen suchen', 'search')}${select('Charakterbogen', 'characterId', archiveOptions(characters), member.characterId)}${iconField('Mitglieds-Icon', 'badgeIcon', member.badgeIcon)}${field('Notiz zum Mitglied', 'note', member.note)}${member.source === 'guest' ? field('Rolle', 'role', member.role) + field('Bleibt bis (Aleria-Datum / Ereignis)', 'until', member.until) : ''}</div>
+    return `<h4>${html(member.name)} · ${html(member.role)}</h4><div class="group-form-grid">${select('Aufenthalt', 'assignment', Object.entries(GROUP_ASSIGNMENTS), member.assignment)}${select('Zusätzlicher Gruppenstatus', 'status', Object.entries(GROUP_MEMBER_STATUSES), member.status)}${field('Charakterbogen suchen', 'search')}${member.kind === 'creature' ? select('Kreaturbogen', 'creatureId', [['', 'Ohne Verknüpfung'], ...(context.creatures || []).map(creature => [creature.id, creature.name])], member.creatureId) : select('Charakterbogen', 'characterId', archiveOptions(characters), member.characterId)}${iconField('Mitglieds-Icon', 'badgeIcon', member.badgeIcon)}${field('Notiz zum Mitglied', 'note', member.note)}${member.source === 'guest' ? field('Rolle', 'role', member.role) + field('Bleibt bis (Aleria-Datum / Ereignis)', 'until', member.until) : ''}</div>
       <p class="group-dialog-help">Kampfwerte und Zustände kommen aus dem Bogen und der aktiven Sitzung. „Bereit“ hebt Verletzungen oder Handlungsunfähigkeit dort nicht auf.</p>${member.source === 'guest' ? `<label class="group-checkbox"><input type="checkbox" name="temporary"${member.temporary ? ' checked' : ''}> Vorübergehendes Mitglied</label><label class="group-checkbox"><input type="checkbox" name="removeGuest"> Gast aus der Gruppe entfernen</label>` : ''}`;
   }
-  if (kind === 'guest') return `<div class="group-form-grid">${field('Charakter suchen', 'search')}${select('Charakter aus dem Archiv', 'characterId', archiveOptions(characters))}${field('Rolle in dieser Gruppe', 'role', 'Gast')}${iconField('Gast-Icon', 'badgeIcon')}${field('Bleibt bis (Aleria-Datum / Ereignis)', 'until')}<label class="group-checkbox"><input type="checkbox" name="temporary" checked> Vorübergehendes Mitglied</label></div>`;
+  if (kind === 'guest') return `<p class="group-dialog-help">Wähle eine Person oder einen Tierbegleiter. Inventargebundene Begleiter erscheinen zusätzlich automatisch bei ihren Besitzern.</p><div class="group-form-grid">${field('Im Archiv suchen', 'search')}${select('Person aus dem Archiv', 'characterId', archiveOptions(characters))}${select('Oder Tierbegleiter', 'creatureId', [['', 'Kein Tierbegleiter'], ...(context.creatures || []).map(creature => [creature.id, `${creature.name} · ${creature.species || 'Kreatur'}`])])}${field('Rolle in dieser Gruppe', 'role', 'Gast')}${iconField('Gast-Icon', 'badgeIcon')}${field('Bleibt bis (Aleria-Datum / Ereignis)', 'until')}<label class="group-checkbox"><input type="checkbox" name="temporary" checked> Vorübergehendes Mitglied</label></div>`;
   if (kind === 'save-preset') return field('Name der Zusammenstellung', 'name', '', 'text');
   if (kind === 'treasury') return `<p class="group-dialog-help">${group.treasury.openingCopper == null ? 'Trage den gemeinsamen Anfangsbestand ein.' : 'Einnahmen und Ausgaben werden im Kassenbuch festgehalten.'}</p><div class="group-form-grid">
     ${group.treasury.openingCopper == null ? '' : select('Buchung', 'direction', [['income', 'Einnahme'], ['expense', 'Ausgabe']])}
@@ -60,11 +63,13 @@ export function collectGroupEdit(kind, form, context) {
   let group = normalizeGroupLandingState(data.group);
   const ids = members.filter(member => member.source === 'hierarchy').map(member => member.id);
   const fields = new FormData(form);
-  if (kind === 'select') for (const member of members) group = updateGroupMember(group, member.id, { assignment: value(form, `assignment:${member.id}`) }, ids);
+  if (kind === 'select') for (const member of members.filter(member => member.source !== 'companion')) group = updateGroupMember(group, member.id, { assignment: value(form, `assignment:${member.id}`) }, ids);
   if (kind === 'settings') {
     for (const key of ['location', 'status', 'activity', 'supplies']) group[key] = value(form, key);
     group.icons = Object.fromEntries(Object.keys(GROUP_ICON_LABELS).map(key => [key, value(form, `icon:${key}`)]));
-    return { ...data, ...Object.fromEntries(['title', 'subtitle', 'bannerImage', 'memberTitle', 'questTitle', 'notesTitle', 'eventsTitle', 'mapTitle', 'infoTitle'].map(key => [key, value(form, key)])), group };
+    return { ...data, ...Object.fromEntries(['title', 'subtitle', 'bannerImage', 'memberTitle', 'questTitle', 'notesTitle', 'eventsTitle', 'mapTitle', 'infoTitle'].map(key => [key, value(form, key)])),
+      presentation: fields.has('presentation') ? value(form, 'presentation') : data.presentation,
+      coverImage: fields.has('coverImage') ? value(form, 'coverImage') : data.coverImage, group };
   }
   if (kind === 'map') {
     const mapKartenId = value(form, 'mapKartenId');
@@ -80,23 +85,28 @@ export function collectGroupEdit(kind, form, context) {
   }
   if (kind === 'member' || kind === 'guest') {
     const characterId = value(form, 'characterId');
+    const current = members.find(member => member.id === memberId);
+    const creatureId = fields.has('creatureId') ? value(form, 'creatureId') : current?.creatureId || '';
+    if (creatureId && characterId) throw new Error('Wähle entweder eine Person oder einen Tierbegleiter.');
+    if (creatureId && !(context.creatures || []).some(creature => creature.id === creatureId)) throw new Error('Der Kreaturbogen ist nicht mehr verfügbar.');
+    if (creatureId && members.some(member => member.id !== memberId && member.creatureId === creatureId)) throw new Error('Dieser Tierbegleiter ist bereits in der Gemeinschaft.');
     if (characterId && members.some(member => member.id !== memberId && member.characterId === characterId)) throw new Error('Dieser Charakter ist bereits in der Gruppe. Passe sein vorhandenes Mitglied an.');
     if (characterId && !characters.some(character => character.id === characterId)) throw new Error('Der Charakter ist nicht mehr im Archiv verfügbar.');
     if (kind === 'guest') {
-      const character = characters.find(item => item.id === characterId);
-      if (!character) throw new Error('Bitte einen Charakter auswählen.');
-      if (members.some(member => groupNameKey(member.name) === groupNameKey(character.name))) throw new Error('Diese Person steht bereits in der Hierarchie. Wähle sie unter „Zusammenstellen“ aus.');
-      group.guests.push({ id: makeId('guest'), characterId, name: character.name, portrait: character.portrait || '', badgeIcon: value(form, 'badgeIcon'), assignment: 'active', status: 'auto', note: '', role: value(form, 'role') || 'Gast', until: value(form, 'until'), temporary: fields.has('temporary') });
+      const character = (creatureId ? context.creatures || [] : characters).find(item => item.id === (creatureId || characterId));
+      if (!character) throw new Error('Bitte eine Person oder einen Tierbegleiter auswählen.');
+      if (!creatureId && members.some(member => member.kind !== 'creature' && groupNameKey(member.name) === groupNameKey(character.name))) throw new Error('Diese Person steht bereits in der Hierarchie. Wähle sie unter „Zusammenstellen“ aus.');
+      group.guests.push({ id: makeId('guest'), kind: creatureId ? 'creature' : 'character', creatureId, characterId, name: character.name, portrait: character.portrait || '', badgeIcon: value(form, 'badgeIcon'), assignment: 'active', status: 'auto', note: '', role: value(form, 'role') || 'Gast', until: value(form, 'until'), temporary: fields.has('temporary') });
     } else if (fields.has('removeGuest')) group.guests = group.guests.filter(guest => guest.id !== memberId);
     else {
-      group = updateGroupMember(group, memberId, { assignment: value(form, 'assignment'), status: value(form, 'status'), characterId, linkMode: characterId ? 'manual' : 'none', note: value(form, 'note'), badgeIcon: value(form, 'badgeIcon') }, ids);
+      group = updateGroupMember(group, memberId, { assignment: value(form, 'assignment'), status: value(form, 'status'), kind: creatureId ? 'creature' : 'character', creatureId, characterId, linkMode: characterId || creatureId ? 'manual' : 'none', note: value(form, 'note'), badgeIcon: value(form, 'badgeIcon') }, ids);
       group.guests = group.guests.map(guest => guest.id === memberId ? { ...guest, role: value(form, 'role') || 'Gast', until: value(form, 'until'), temporary: fields.has('temporary') } : guest);
     }
   }
   if (kind === 'save-preset') {
     const name = value(form, 'name');
     if (!name) throw new Error('Bitte einen Namen für die Zusammenstellung angeben.');
-    group.presets.push({ id: makeId('preset'), name, memberIds: members.filter(member => member.assignment === 'active').map(member => member.id) });
+    group.presets.push({ id: makeId('preset'), name, memberIds: members.filter(member => member.assignment === 'active' && member.source !== 'companion').map(member => member.id) });
   }
   if (kind === 'treasury') {
     if (group.treasury.openingCopper == null) {

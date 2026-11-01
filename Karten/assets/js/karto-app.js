@@ -439,6 +439,11 @@ window.KartoRuntime = {
   lsbState(){
     return lsbS;
   },
+  previewTravelGroup(group, scale){
+    // Keep published map state untouched until the user explicitly edits/saves travel data.
+    lsbS={...lsbS,groups:(lsbS.groups||[]).map(({_imgEl,...row})=>structuredClone(row)),calScale:scale};
+    lsbS.groups.push(group);
+  },
   selectedTravelGroup(){
     return lsbSelGid;
   },
@@ -1172,6 +1177,11 @@ function closeLMo(id){document.getElementById(id).classList.remove('open');}
 function lsbSave(){S.lsb=lsbS;saveD();window.KartoLsbCanvas.draw();}
 function lsbLoad(remote){
   if(remote&&remote.lsb){lsbS=remote.lsb;lsbS.groups=lsbS.groups||[];lsbIconSize=lsbS.iconSize||22;lsbS.customIcons=lsbS.customIcons||[];}
+  const calibration=window.KARTO_CONFIG?.travelCalibration;
+  if(!lsbS.calScale&&calibration?.widthKm>0&&calibration?.sourceWidth>0){
+    lsbS.calScale=calibration.widthKm/calibration.sourceWidth;
+    const distanceField=document.getElementById('lsb-ckm');if(distanceField)distanceField.value=calibration.widthKm;
+  }
   const sl=document.getElementById('lsb-icon-size');
   if(sl){sl.value=lsbIconSize;document.getElementById('lsb-icon-size-val').textContent=lsbIconSize;}
   lsbPreloadIcons();window.KartoLsbTools.updateCalibrationUi();lsbRenderGroups();lsbUpdResult();

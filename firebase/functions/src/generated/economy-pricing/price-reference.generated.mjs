@@ -2290,7 +2290,7 @@ export const STANDARD_PRICE_REFERENCE = [
   },
   {
     "id": "standard:waffen-rustungen:ritterschwert",
-    "title": "Ritterschwert",
+    "title": "Großschwert",
     "market": "Waffen & Rüstungen",
     "category": "waffen",
     "unit": "",
@@ -2466,7 +2466,7 @@ export const STANDARD_PRICE_REFERENCE = [
   },
   {
     "id": "standard:waffen-rustungen:ritterplatte",
-    "title": "Ritter-Plattenrüstung",
+    "title": "Plattenrüstung",
     "market": "Waffen & Rüstungen",
     "category": "ruestungen",
     "unit": "",
@@ -2521,7 +2521,7 @@ export const STANDARD_PRICE_REFERENCE = [
   },
   {
     "id": "standard:waffen-rustungen:turnierruestung",
-    "title": "Turnierrüstung",
+    "title": "Ritterrüstung",
     "market": "Waffen & Rüstungen",
     "category": "ruestungen",
     "unit": "",

@@ -19,8 +19,12 @@
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
+    import { createItemDefinitionsFirebase } from './modules/item-definitions/item-definition-firebase.js';
+    import { createQuestBackupClient } from './modules/quests/quest-backup-client.js';
+    import { readFirebaseModuleEntry as decodeFirebaseModuleEntry } from './modules/module-store/module-entry-serialization.js';
     import { prepareInventoryCompanionWrites, saveLinkedCreature } from './modules/item-register/item-register-companion-firebase.js?v=20261006-regional-equipment-v2';
     import { parseModuleStoreRevision, getFirebaseModuleStoreRevision } from './modules/module-store/module-store-revision.js';
+    import { createWorldDateReadRepository, WORLD_DATE_DOCUMENT } from './modules/world-date/world-date-read-repository.mjs';
 
     const app = initializeApp(firebasePublicConfig);
     const auth = getAuth(app);
@@ -31,6 +35,7 @@
       notifyAppStatus(getFirebaseErrorMessage(error, 'Firebase-Anmeldung fehlgeschlagen. Änderungen können noch nicht online gespeichert werden.'));
     });
     const db  = getFirestore(app);
+    const worldDateReadRepository = createWorldDateReadRepository({ db, sdk: { doc, getDoc, onSnapshot } });
     const commentActivity = createCommentActivityRepository({
       readState: async () => (await getDoc(doc(db, 'comment_activity_meta', 'state'))).data(),
       readThreads: async () => (await getDocs(collection(db, 'comment_activity'))).docs.map(record => record.data())
@@ -50,6 +55,7 @@
     const commitEditCombatEncounterTextCallable = httpsCallable(functions, 'commitEditCombatEncounterText', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
+    const commitItemRecordCallable = httpsCallable(functions, 'commitItemRecord', { timeout: 30000 });
     const commitLootClaimCallable = httpsCallable(functions, 'commitLootClaim', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
     const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
@@ -74,8 +80,8 @@
     const ITEM_DATABASE_SPLIT_FORMAT = 'split-v1';
     const CHARACTER_ARCHIVE_ENTRY_COLLECTION = 'character_archive_entries';
     const TOPIC_PROPOSAL_COLLECTION = 'topic_proposals';
-    const ALMANACH_SETTINGS_COLLECTION = 'almanach_settings';
-    const CURRENT_ALERIA_DATE_DOC = 'current-date';
+    const ALMANACH_SETTINGS_COLLECTION = WORLD_DATE_DOCUMENT.collection;
+    const CURRENT_ALERIA_DATE_DOC = WORLD_DATE_DOCUMENT.id;
 
     async function requireFirebaseUser() {
       return authSession.requireUser();
@@ -188,16 +194,8 @@
     }
 
     function readFirebaseModuleEntry(data) {
-      if (typeof data?.entryJson === 'string' && data.entryJson) {
-        try {
-          const parsed = JSON.parse(data.entryJson);
-          return parsed && typeof parsed === 'object' ? parsed : null;
-        } catch (error) {
-          console.warn('module store entry JSON parse failed:', error);
-          return null;
-        }
-      }
-      return data?.entry && typeof data.entry === 'object' ? data.entry : null;
+      try { return decodeFirebaseModuleEntry(data); }
+      catch (error) { console.warn('module store entry JSON parse failed:', error); return null; }
     }
 
     function getItemDatabaseEntryDocId(kind, key) {
@@ -885,13 +883,10 @@
         });
       },
       async loadCurrentAleriaDate() {
-        const snapshot = await getDoc(doc(db, ALMANACH_SETTINGS_COLLECTION, CURRENT_ALERIA_DATE_DOC));
-        return snapshot.exists() ? snapshot.data() : null;
+        return worldDateReadRepository.load();
       },
       subscribeCurrentAleriaDate(onNext, onError) {
-        return onSnapshot(doc(db, ALMANACH_SETTINGS_COLLECTION, CURRENT_ALERIA_DATE_DOC), snapshot => {
-          onNext(snapshot.exists() ? snapshot.data() : null);
-        }, error => {
+        return worldDateReadRepository.subscribe(onNext, error => {
           console.error('subscribeCurrentAleriaDate error:', error);
           if (onError) onError(error);
         });
@@ -1046,6 +1041,15 @@
       async saveCharacter(id, data, options = {}) {
         const user = await requireFirebaseUser();
         const sanitizedData = sanitizeCharacterBiographyForFirestore(data);
+        const known = id && globalThis.getCharacterById?.(id);
+        if ((sanitizedData?.inventory || sanitizedData?.combatProfile || options.replaceExisting) &&
+          (sanitizedData?.inventory?.definitionSchemaVersion === 1 || sanitizedData?.inventory?.items?.some(item => item.definitionRef) || known?.inventory?.definitionSchemaVersion === 1
+          || known?.inventory?.items?.some(item => item.definitionRef))) {
+          const recordId = id || doc(collection(db, 'characters')).id;
+          const result = (await commitItemRecordCallable({ kind: 'characters', id: recordId, data: cloneSerializableValue(sanitizedData),
+            options: { replaceExisting: options.replaceExisting === true, replaceImageLibrary: options.replaceImageLibrary === true, forceOverwrite: options.forceOverwrite === true }, operationId: crypto.randomUUID() })).data;
+          return options.returnWriteResult === true ? result : recordId;
+        }
         if (id) {
           const ref = doc(db, 'characters', id);
           const lockRef = doc(db, 'combat_profile_locks', 'characters', 'records', id);
@@ -1236,6 +1240,15 @@
       },
       async saveCreature(id, data, options = {}) {
         const user = await requireFirebaseUser();
+        const known = id && globalThis.AleriaCreatures?.getAll?.().find(creature => creature.id === id);
+        if ((data?.inventory || data?.combatProfile || options.replaceExisting) &&
+          (data?.inventory?.definitionSchemaVersion === 1 || data?.inventory?.items?.some(item => item.definitionRef) || known?.inventory?.definitionSchemaVersion === 1
+          || known?.inventory?.items?.some(item => item.definitionRef))) {
+          const recordId = id || doc(collection(db, 'creatures')).id;
+          const result = (await commitItemRecordCallable({ kind: 'creatures', id: recordId, data: cloneSerializableValue(data),
+            options: { forceOverwrite: options.forceOverwrite === true }, operationId: crypto.randomUUID() })).data;
+          return options.returnRecord ? { ...result.data, id: recordId } : recordId;
+        }
         if (id) {
           const ref = doc(db, 'creatures', id);
           const lockSnap = await getDoc(doc(db, 'combat_profile_locks', 'creatures', 'records', id));
@@ -1395,6 +1408,8 @@
         });
       },
       itemRegister: createItemRegisterFirebase({ db, collection, onSnapshot, httpsCallable, functions, requireUser: requireFirebaseUser }),
+      itemDefinitions: createItemDefinitionsFirebase({ db, collection, doc, getDoc, getDocs, onSnapshot, httpsCallable, functions, requireUser: requireFirebaseUser }),
+      quests: createQuestBackupClient({ httpsCallable, functions, requireUser: requireFirebaseUser }),
       async loadItemDatabase() {
         try {
           const snap = await getDoc(doc(db, ITEM_DATABASE_COLLECTION, ITEM_DATABASE_DOC));

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-llythfor",
-  "revision": 5,
-  "updatedAt": "2026-10-31T02:56:05.112Z",
+  "revision": 6,
+  "updatedAt": "2026-10-31T03:18:01.852Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -10,8 +10,8 @@
       "id": "haus-llythfor",
       "title": "Haus Llythfor",
       "motto": "",
-      "description": "Kleiner Gwynthorer Bürgerhaushalt des Berichterstatters Cynddelw Llythfor, seiner Frau Esyllt Penrudd und ihrer Tochter Eirlys. Ein eigenes Wappen ist noch nicht festgelegt; der schlichte braune Platzhalter bleibt bestehen.",
-      "emblem": "assets/images/placeholders/neutral-crest.png",
+      "description": "Kleine, bescheidene Gwynthorer Bürgerfamilie. Gwyddno und Gwenddydd haben drei Kinder: den Schuhflicker Edern, den Berichterstatter Cynddelw und die Näherin Lliwen. Edern und seine Frau Efrddyl haben einen Sohn, Gwrhyr; Cynddelw und Esyllt Penrudd die zehnjährige Eirlys. Die kleine Schuhflickerwerkstatt, Wasch- und Näharbeiten und Cynddelws Tätigkeit bei Celtigerns Echo tragen die Haushalte. Die ältere Herkunft bleibt hinter dem unbekannten Gründerpaar und einem einzigen Überlieferungssprung offen.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
       "houseProfile": {
         "rankId": "commoner",
         "seat": "Gwynthor",
@@ -69,6 +69,725 @@
         ],
         "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
         "extensions": {}
+      },
+      {
+        "id": "gwyddno-llythfor",
+        "worldPersonId": "person--haus-llythfor--gwyddno-llythfor",
+        "name": "Gwyddno Llythfor",
+        "title": "Schuhflicker im Ruhestand · Cynddelws Vater",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gwynthor"
+        ],
+        "notes": "Siebzigjähriger Gwynthorer Schuhflicker. Verdiente den Lebensunterhalt mit dem Flicken von Sohlen und dem Ausbessern abgetragener Schuhe. Überlässt die schwere Arbeit inzwischen seinem ältesten Sohn Edern und hilft gelegentlich noch an der Werkbank. Vater Ederns, Cynddelws und Lliwens. Seine kleine Werkstatt ernährt die Familie seit vielen Jahren bescheiden.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Gwyddno Llythfor"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "70 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Schuhflicker im Ruhestand · Cynddelws Vater"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Verheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Gwyddno Llythfor",
+              "biographyText": "<p>Siebzigjähriger Gwynthorer Schuhflicker. Verdiente den Lebensunterhalt mit dem Flicken von Sohlen und dem Ausbessern abgetragener Schuhe. Überlässt die schwere Arbeit inzwischen seinem ältesten Sohn Edern und hilft gelegentlich noch an der Werkbank. Vater Ederns, Cynddelws und Lliwens. Seine kleine Werkstatt ernährt die Familie seit vielen Jahren bescheiden.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Gwenddydd",
+                  "detail": "Cynddelws Mutter · früher Wäscherin",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Edern Llythfor",
+                  "detail": "Schuhflicker · Cynddelws älterer Bruder",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Cynddelw Llythfor",
+                  "detail": "Berichterstatter bei Celtigerns Echo",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Lliwen Llythfor",
+                  "detail": "Näherin · Cynddelws jüngere Schwester",
+                  "image": "",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Die kleine Gwynthorer Familie",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Gwyddno Llythfor"
+            }
+          }
+        }
+      },
+      {
+        "id": "gwenddydd-spouse-llythfor",
+        "worldPersonId": "person--haus-llythfor--gwenddydd-spouse-llythfor",
+        "name": "Gwenddydd",
+        "title": "Cynddelws Mutter · früher Wäscherin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1672",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gwynthor"
+        ],
+        "notes": "Achtundsechzig Jahre. Gwyddnos Frau und Mutter Ederns, Cynddelws und Lliwens. Trug lange mit Wasch- und Flickarbeiten zum Haushalt bei und hat die schweren Waschtage inzwischen aufgegeben. Hält den kleinen Familienhaushalt zusammen, kennt die Nachbarschaft und freut sich über Besuche der Enkel.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Gwenddydd"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "68 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Cynddelws Mutter · früher Wäscherin"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Verheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Gwenddydd",
+              "biographyText": "<p>Achtundsechzig Jahre. Gwyddnos Frau und Mutter Ederns, Cynddelws und Lliwens. Trug lange mit Wasch- und Flickarbeiten zum Haushalt bei und hat die schweren Waschtage inzwischen aufgegeben. Hält den kleinen Familienhaushalt zusammen, kennt die Nachbarschaft und freut sich über Besuche der Enkel.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Gwyddno Llythfor",
+                  "detail": "Schuhflicker im Ruhestand · Cynddelws Vater",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Edern Llythfor",
+                  "detail": "Schuhflicker · Cynddelws älterer Bruder",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Cynddelw Llythfor",
+                  "detail": "Berichterstatter bei Celtigerns Echo",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Lliwen Llythfor",
+                  "detail": "Näherin · Cynddelws jüngere Schwester",
+                  "image": "",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Die kleine Gwynthorer Familie",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Gwenddydd"
+            }
+          }
+        }
+      },
+      {
+        "id": "edern-llythfor",
+        "worldPersonId": "person--haus-llythfor--edern-llythfor",
+        "name": "Edern Llythfor",
+        "title": "Schuhflicker · Cynddelws älterer Bruder",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gwynthor"
+        ],
+        "notes": "Fünfundvierzig Jahre. Ältester Sohn Gwyddnos und Gwenddydds. Führt die kleine Schuhflickerwerkstatt seines Vaters weiter. Lebt mit Efrddyl und ihrem Sohn Gwrhyr in Gwynthor. Ein ruhiger Handwerker mit einer überschaubaren, überwiegend langjährigen Kundschaft.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Edern Llythfor"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "45 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Schuhflicker · Cynddelws älterer Bruder"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Verheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Edern Llythfor",
+              "biographyText": "<p>Fünfundvierzig Jahre. Ältester Sohn Gwyddnos und Gwenddydds. Führt die kleine Schuhflickerwerkstatt seines Vaters weiter. Lebt mit Efrddyl und ihrem Sohn Gwrhyr in Gwynthor. Ein ruhiger Handwerker mit einer überschaubaren, überwiegend langjährigen Kundschaft.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Gwyddno Llythfor",
+                  "detail": "Schuhflicker im Ruhestand · Cynddelws Vater",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gwenddydd",
+                  "detail": "Cynddelws Mutter · früher Wäscherin",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Efrddyl",
+                  "detail": "Wäscherin · Ederns Frau",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gwrhyr Llythfor",
+                  "detail": "Lernt das Schuhflicken · Cynddelws Neffe",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Cynddelw Llythfor",
+                  "detail": "Berichterstatter bei Celtigerns Echo",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Lliwen Llythfor",
+                  "detail": "Näherin · Cynddelws jüngere Schwester",
+                  "image": "",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Die kleine Gwynthorer Familie",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Edern Llythfor"
+            }
+          }
+        }
+      },
+      {
+        "id": "efrddyl-spouse-llythfor",
+        "worldPersonId": "person--haus-llythfor--efrddyl-spouse-llythfor",
+        "name": "Efrddyl",
+        "title": "Wäscherin · Ederns Frau",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gwynthor"
+        ],
+        "notes": "Dreiundvierzig Jahre. Ederns Frau und Gwrhyrs Mutter. Arbeitet als Wäscherin für einige benachbarte Haushalte. Ihr Verdienst trägt ebenso zum Familienunterhalt bei wie Ederns Werkstatt. Hat einen eigenen kleinen Kreis von Auftraggebern und achtet auf eine faire Bezahlung ihrer Arbeit.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Efrddyl"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "43 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Wäscherin · Ederns Frau"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Verheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Efrddyl",
+              "biographyText": "<p>Dreiundvierzig Jahre. Ederns Frau und Gwrhyrs Mutter. Arbeitet als Wäscherin für einige benachbarte Haushalte. Ihr Verdienst trägt ebenso zum Familienunterhalt bei wie Ederns Werkstatt. Hat einen eigenen kleinen Kreis von Auftraggebern und achtet auf eine faire Bezahlung ihrer Arbeit.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Edern Llythfor",
+                  "detail": "Schuhflicker · Cynddelws älterer Bruder",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gwrhyr Llythfor",
+                  "detail": "Lernt das Schuhflicken · Cynddelws Neffe",
+                  "image": "",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Die kleine Gwynthorer Familie",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Efrddyl"
+            }
+          }
+        }
+      },
+      {
+        "id": "lliwen-llythfor",
+        "worldPersonId": "person--haus-llythfor--lliwen-llythfor",
+        "name": "Lliwen Llythfor",
+        "title": "Näherin · Cynddelws jüngere Schwester",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gwynthor"
+        ],
+        "notes": "Siebenunddreißig Jahre. Jüngste Tochter Gwyddnos und Gwenddydds, unverheiratet und kinderlos. Verdient mit dem Ändern und Flicken einfacher Kleidung ihren eigenen Lebensunterhalt. Lebt im Haushalt ihrer Eltern und hilft ihnen im Alltag.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Lliwen Llythfor"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "37 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Näherin · Cynddelws jüngere Schwester"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Unverheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Lliwen Llythfor",
+              "biographyText": "<p>Siebenunddreißig Jahre. Jüngste Tochter Gwyddnos und Gwenddydds, unverheiratet und kinderlos. Verdient mit dem Ändern und Flicken einfacher Kleidung ihren eigenen Lebensunterhalt. Lebt im Haushalt ihrer Eltern und hilft ihnen im Alltag.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Gwyddno Llythfor",
+                  "detail": "Schuhflicker im Ruhestand · Cynddelws Vater",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gwenddydd",
+                  "detail": "Cynddelws Mutter · früher Wäscherin",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Edern Llythfor",
+                  "detail": "Schuhflicker · Cynddelws älterer Bruder",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Cynddelw Llythfor",
+                  "detail": "Berichterstatter bei Celtigerns Echo",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Die kleine Gwynthorer Familie",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Lliwen Llythfor"
+            }
+          }
+        }
+      },
+      {
+        "id": "gwrhyr-llythfor",
+        "worldPersonId": "person--haus-llythfor--gwrhyr-llythfor",
+        "name": "Gwrhyr Llythfor",
+        "title": "Lernt das Schuhflicken · Cynddelws Neffe",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-llythfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gwynthor"
+        ],
+        "notes": "Achtzehnjähriger Sohn Ederns und Efrddyls. Lernt das Handwerk bei seinem Vater, schneidet Leder zu und übernimmt kleinere Reparaturen. Unverheiratet und kinderlos. Seine jüngere Cousine Eirlys schaut ihm bei Besuchen gerne an der Werkbank über die Schulter.",
+        "extensions": {
+          "household": "city",
+          "culture": "Cenyri",
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              [
+                "Vollständiger Name",
+                "Gwrhyr Llythfor"
+              ],
+              [
+                "Alter im Jahr 1740",
+                "18 Jahre"
+              ],
+              [
+                "Haus",
+                "Llythfor"
+              ],
+              [
+                "Tätigkeit",
+                "Lernt das Schuhflicken · Cynddelws Neffe"
+              ],
+              [
+                "Wohnsitz",
+                "Gwynthor"
+              ],
+              [
+                "Familienstand",
+                "Unverheiratet"
+              ]
+            ],
+            "quote": "",
+            "quoteBy": "",
+            "biography": {
+              "portrait": "",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 68,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Gwrhyr Llythfor",
+              "biographyText": "<p>Achtzehnjähriger Sohn Ederns und Efrddyls. Lernt das Handwerk bei seinem Vater, schneidet Leder zu und übernimmt kleinere Reparaturen. Unverheiratet und kinderlos. Seine jüngere Cousine Eirlys schaut ihm bei Besuchen gerne an der Werkbank über die Schulter.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [],
+              "extraSections": [],
+              "historyTitle": "Hintergrund",
+              "historyText": "",
+              "worksTitle": "Bekannte Werke",
+              "works": [],
+              "triviaTitle": "Trivia",
+              "trivia": [],
+              "quotesTitle": "Zitate",
+              "quotes": [],
+              "connectionsTitle": "Familie",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Edern Llythfor",
+                  "detail": "Schuhflicker · Cynddelws älterer Bruder",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Efrddyl",
+                  "detail": "Wäscherin · Ederns Frau",
+                  "image": "",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Eirlys Llythfor",
+                  "detail": "Tochter Cynddelws und Esyllts",
+                  "image": "/AleriaAlmanach/assets/gwynthor-troetzli/portraits/eirlys-llythfor.png",
+                  "imageFormat": "portrait"
+                }
+              ],
+              "documentsTitle": "Familienakten",
+              "documents": [
+                {
+                  "icon": "",
+                  "title": "Haus Llythfor",
+                  "text": "Die kleine Gwynthorer Familie",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view"
+                }
+              ],
+              "footer": "Personenakte · Gwrhyr Llythfor"
+            }
+          }
+        }
       },
       {
         "id": "cynddelw-llythfor",
@@ -504,6 +1223,40 @@
         "extensions": {}
       },
       {
+        "id": "marriage-gwyddno-gwenddydd-llythfor",
+        "participantIds": [
+          "gwyddno-llythfor",
+          "gwenddydd-spouse-llythfor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1693",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-edern-efrddyl-llythfor",
+        "participantIds": [
+          "edern-llythfor",
+          "efrddyl-spouse-llythfor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1720",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "gwrhyr-llythfor"
+        }
+      },
+      {
         "id": "marriage-cynddelw-llythfor-esyllt-penrudd",
         "participantIds": [
           "cynddelw-llythfor",
@@ -527,8 +1280,8 @@
     ],
     "parentages": [
       {
-        "id": "parentage-cynddelw-llythfor",
-        "childId": "cynddelw-llythfor",
+        "id": "parentage-gwyddno-llythfor",
+        "childId": "gwyddno-llythfor",
         "parentIds": [
           "haus-llythfor-gruender",
           "haus-llythfor-gruenderin"
@@ -542,6 +1295,129 @@
         "extensions": {
           "timeJumpId": "gap-llythfor-to-1698"
         }
+      },
+      {
+        "id": "parentage-edern-llythfor",
+        "childId": "edern-llythfor",
+        "parentIds": [
+          "gwyddno-llythfor",
+          "gwenddydd-spouse-llythfor"
+        ],
+        "partnershipId": "marriage-gwyddno-gwenddydd-llythfor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "parentIds": 6,
+            "partnershipId": 6,
+            "type": 6,
+            "legitimacy": 6,
+            "certainty": 6,
+            "notes": 6
+          },
+          "registryManagedExtensionFields": [
+            "timeJumpId"
+          ]
+        }
+      },
+      {
+        "id": "parentage-cynddelw-llythfor",
+        "childId": "cynddelw-llythfor",
+        "parentIds": [
+          "gwyddno-llythfor",
+          "gwenddydd-spouse-llythfor"
+        ],
+        "partnershipId": "marriage-gwyddno-gwenddydd-llythfor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "parentIds": 6,
+            "partnershipId": 6,
+            "type": 6,
+            "legitimacy": 6,
+            "certainty": 6,
+            "notes": 6
+          },
+          "registryManagedExtensionFields": [
+            "timeJumpId"
+          ]
+        }
+      },
+      {
+        "id": "parentage-lliwen-llythfor",
+        "childId": "lliwen-llythfor",
+        "parentIds": [
+          "gwyddno-llythfor",
+          "gwenddydd-spouse-llythfor"
+        ],
+        "partnershipId": "marriage-gwyddno-gwenddydd-llythfor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "parentIds",
+            "partnershipId",
+            "type",
+            "legitimacy",
+            "certainty",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "parentIds": 6,
+            "partnershipId": 6,
+            "type": 6,
+            "legitimacy": 6,
+            "certainty": 6,
+            "notes": 6
+          },
+          "registryManagedExtensionFields": [
+            "timeJumpId"
+          ]
+        }
+      },
+      {
+        "id": "parentage-gwrhyr-llythfor",
+        "childId": "gwrhyr-llythfor",
+        "parentIds": [
+          "edern-llythfor",
+          "efrddyl-spouse-llythfor"
+        ],
+        "partnershipId": "marriage-edern-efrddyl-llythfor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
       },
       {
         "id": "parentage-eirlys-llythfor",
@@ -564,9 +1440,16 @@
         "id": "house-llythfor",
         "name": "Haus Llythfor",
         "motto": "",
-        "emblem": "assets/images/placeholders/neutral-crest.png",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "emblem"
+          ],
+          "registryManagedFieldRevisions": {
+            "emblem": 6
+          }
+        }
       },
       {
         "id": "house-penrudd",
@@ -585,15 +1468,31 @@
         "sharedParentPartnershipIds": [],
         "parentPersonId": "",
         "childIds": [
-          "cynddelw-llythfor"
+          "gwyddno-llythfor"
         ],
         "years": 0,
         "fromYear": "????",
-        "toYear": "1698",
-        "label": "Nicht einzeln überlieferte Generationen bis Cynddelw",
+        "toYear": "1670",
+        "label": "Nicht einzeln überlieferte Generationen bis Gwyddno",
         "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
         "extensions": {
-          "preparedPlaceholder": false
+          "preparedPlaceholder": false,
+          "registryManagedSourceRevision": 6,
+          "registryManagedFields": [
+            "childIds",
+            "toYear",
+            "label",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "childIds": 6,
+            "toYear": 6,
+            "label": 6,
+            "notes": 6
+          },
+          "registryManagedExtensionFields": [
+            "preparedPlaceholder"
+          ]
         }
       }
     ],
@@ -662,20 +1561,28 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 5,
+      "sourceRevision": 6,
       "registryManagedEntitySourceRevision": 4,
       "chartLayoutPolicy": "strict-v1",
+      "registryManagedDocumentFields": [
+        "emblem",
+        "description"
+      ],
+      "registryManagedDocumentFieldRevisions": {
+        "emblem": 6,
+        "description": 6
+      },
       "registryTombstones": {
         "cadetBranches": [
           "linked-esyllt-penrudd-llythfor"
         ]
       },
+      "sourceNote": "Nutzerauftrag vom 31.10.2026: neuer bislang unbelegter Nachname Llythfor, jüngste Penrudd-Tochter als Ehefrau, Stadt-Haushalt mit der Tochter, die Trötzli benannte. Keine zusätzliche Verwandtschaft oder eigenes Hauswappen erfunden. Unbekanntes Gründerpaar → brauner Hausknoten → genau ein serieller Zeitsprung → Cynddelw und Esyllt → Eirlys. Die Penrudd-Gegenakte endet an der Hausverknüpfung; die Tochter erscheint nur hier.",
       "sourceNoteLayoutCorrection": "31.10.2026: Der irrtümliche Penrudd-Herkunftsknoten unter Cynddelws und Esyllts Ehe entfällt. Hier wird ausschließlich die Llythfor-Linie zur mittig angeordneten Tochter Eirlys fortgeführt; die wegverheiratete Verknüpfung gehört nur in die Penrudd-Akte. Bestehende Personen, Ehen, Elternzuordnungen und eigene Bearbeitungen bleiben erhalten.",
       "sourceNoteAddendum": "Nutzerkorrektur vom 31.10.2026: Eirlys ist zehn Jahre alt, geboren 1730 statt der zuvor angenommenen 1732. Neues Einzelporträt mit zwei Zöpfen, Malstift, Papierfetzen und Zahnlücke. Personen-ID und Verwandtschaft bleiben unverändert.",
-      "sourceNote": "Nutzerauftrag vom 31.10.2026: neuer bislang unbelegter Nachname Llythfor, jüngste Penrudd-Tochter als Ehefrau, Stadt-Haushalt mit der Tochter, die Trötzli benannte. Keine zusätzliche Verwandtschaft oder eigenes Hauswappen erfunden. Unbekanntes Gründerpaar → brauner Hausknoten → genau ein serieller Zeitsprung → Cynddelw und Esyllt → Eirlys. Die Penrudd-Gegenakte endet an der Hausverknüpfung; die Tochter erscheint nur hier.",
       "registryUpgrade": {
-        "fromRevision": 4,
-        "toRevision": 5
+        "fromRevision": 5,
+        "toRevision": 6
       }
     }
   }

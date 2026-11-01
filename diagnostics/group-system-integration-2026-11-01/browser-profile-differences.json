@@ -1,0 +1,79 @@
+[
+  {
+    "kind": "characters",
+    "id": "bSYZYAEOwiRgy44f6OmO",
+    "name": "Ylva Wolfshorn",
+    "diffCount": 0,
+    "diffs": []
+  },
+  {
+    "kind": "characters",
+    "id": "q1QtSIug74FzzwUAqWrs",
+    "name": "Gawain Draig",
+    "diffCount": 4,
+    "diffs": [
+      [
+        "/revision",
+        "value",
+        "1790759733188",
+        "1793507952722"
+      ],
+      [
+        "/weapons/2/triggerRules",
+        "added"
+      ],
+      [
+        "/armorItems/0/image",
+        "value",
+        "https://i.imgur.com/7siJPXG.png",
+        "/AleriaAlmanach/public/assets/character-equipment/gawain-silberschuppe-v4.png"
+      ],
+      [
+        "/armorItems/0/mechanics",
+        "added"
+      ]
+    ]
+  },
+  {
+    "kind": "characters",
+    "id": "tmfBA2zPTc88EMMGkyyA",
+    "name": "Duncan Gafyr",
+    "diffCount": 1,
+    "diffs": [
+      [
+        "/revision",
+        "value",
+        "1790759733246",
+        "1793507915682"
+      ]
+    ]
+  },
+  {
+    "kind": "creatures",
+    "id": "companion-tanor",
+    "name": "Tanor",
+    "diffCount": 1,
+    "diffs": [
+      [
+        "/revision",
+        "value",
+        "0",
+        "1793507975921"
+      ]
+    ]
+  },
+  {
+    "kind": "creatures",
+    "id": "companion-ylva-freki",
+    "name": "Freki",
+    "diffCount": 0,
+    "diffs": []
+  },
+  {
+    "kind": "creatures",
+    "id": "companion-duncan-carreg",
+    "name": "Carreg",
+    "diffCount": 0,
+    "diffs": []
+  }
+]

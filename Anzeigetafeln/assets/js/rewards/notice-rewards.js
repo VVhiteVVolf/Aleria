@@ -1,10 +1,10 @@
 import { NOTICE_COINS, legacyNoticeRewards, rewardsOf, rewardText, rewardFromItem } from './notice-rewards-model.mjs';
+import { loadItemRewardCatalog } from '../../../../AleriaAlmanach/modules/item-definitions/item-reward-catalog.js';
 
 const rewardLabel = /^(belohnung|kopfgeld|entlohnung|preisgeld)$/i;
 const rt = () => window.TafelRuntime;
 const esc = value => rt().esc(value);
 const noticeById = id => rt().state().zettel.find(notice => notice.id === id);
-let catalogPromise;
 let dialog;
 let targetId = '';
 let catalog = [];
@@ -22,7 +22,7 @@ function coinMarkup(reward) {
 function render(notice, fallback = '') {
   const rewards = rewardsOf(notice, fallback);
   if (!rewards.length) return esc(fallback);
-  if (rewards.length === 1 && rewards[0].kind === 'money') return coinMarkup(rewards[0]);
+  if (rewards.length === 1 && rewards[0].kind === 'money') return `<button type="button" class="notice-reward-money-button" data-action="notice-reward-open" data-notice-id="${esc(notice.id)}" aria-label="Belohnung ansehen">${coinMarkup(rewards[0])}</button>`;
   return `<button class="notice-reward-button" type="button" data-action="notice-reward-open" data-notice-id="${esc(notice.id)}" aria-label="Belohnung ansehen" title="Belohnung ansehen"><img class="notice-reward-button-icon" src="/IconOrdner/Geldbeutel.PNG" width="34" height="34" alt="" aria-hidden="true"></button>`;
 }
 
@@ -87,6 +87,11 @@ function ensureDialog() {
     if (!action) return;
     if (action.dataset.rewardAction === 'close') dialog.close();
     if (action.dataset.rewardAction === 'more') { limit += 40; renderPicker(); }
+    if (action.dataset.rewardAction === 'builder') buildRewardItem(targetId).catch(failure => window.alert(failure.message));
+    if (action.dataset.rewardAction === 'award') {
+      const notice = noticeById(targetId);
+      import('./notice-award-dialog.js').then(module => module.openNoticeAwardDialog(notice, rewardsOf(notice, rowValue(notice)))).catch(failure => window.alert(failure.message));
+    }
     if (action.dataset.rewardAction === 'choose') {
       const item = catalog.find(item => item.id === action.dataset.itemId);
       if (!item || document.getElementById('sidebar').dataset.editorId !== targetId) return;
@@ -120,13 +125,9 @@ async function chooseItem(id) {
   dialog.innerHTML = shell('Güterregister', '<p class="notice-reward-status">Güter werden geladen …</p>');
   show();
   try {
-    catalogPromise ||= fetch('assets/data/notice-reward-catalog.json?v=20261020-notices-v2').then(response => {
-      if (!response.ok) throw new Error('Register nicht erreichbar');
-      return response.json();
-    }).then(data => data.items).catch(error => { catalogPromise = null; throw error; });
-    catalog = await catalogPromise;
+    catalog = await loadItemRewardCatalog();
     if (!dialog.open || targetId !== id) return;
-    dialog.innerHTML = shell('Aus dem Güterregister wählen', '<label class="notice-reward-search">Gegenstand suchen<input type="search" data-reward-search placeholder="Name, Art oder Anbieter …"></label><div class="notice-reward-catalog" data-reward-results></div>');
+    dialog.innerHTML = shell('Aus dem Güterregister wählen', '<button type="button" data-reward-action="builder">Item-Builder öffnen</button><label class="notice-reward-search">Gegenstand suchen<input type="search" data-reward-search placeholder="Name, Art oder Anbieter …"></label><div class="notice-reward-catalog" data-reward-results></div>');
     renderPicker();
     dialog.querySelector('input').focus();
   } catch {
@@ -151,8 +152,16 @@ function open(id) {
   const rewards = rewardsOf(notice, rowValue(notice));
   if (!rewards.length) return;
   ensureDialog();
+  targetId = id;
   dialog.innerHTML = shell('Ausgesetzte Belohnung', `<p class="notice-reward-status">${esc(notice.title)}</p><ul class="notice-reward-loot">${rewards.map(reward => `<li>${reward.kind === 'money' ? `${coinMarkup(reward)}${reward.condition ? `<p class="notice-reward-condition">${esc(reward.condition)}</p>` : ''}` : `${itemImage(reward, 'notice-reward-item-image')}<div><h3>${esc(rewardText(reward))}</h3>${reward.type ? `<small>${esc(reward.type)}</small>` : ''}${reward.description ? `<p>${esc(reward.description)}</p>` : ''}${reward.condition ? `<p class="notice-reward-condition">${esc(reward.condition)}</p>` : ''}${reward.details ? `<details><summary>Weitere Angaben</summary><p>${esc(reward.details)}</p></details>` : ''}</div>`}</li>`).join('')}</ul>`);
   show();
+  const award = document.createElement('button'); award.type = 'button'; award.dataset.rewardAction = 'award'; award.textContent = 'Durch Spielleitung einmalig vergeben'; dialog.appendChild(award);
+}
+
+async function buildRewardItem(id) {
+  const { openItemBuilder } = await import('../../../../AleriaAlmanach/modules/item-builder/item-builder-controller.js');
+  const item = await openItemBuilder({ templates: catalog, key: `notice:${id}` });
+  if (item && noticeById(id)) { update(id, rewards => rewards.push(rewardFromItem(item))); dialog.close(); }
 }
 
 export function initializeNoticeRewards() {

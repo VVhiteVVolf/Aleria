@@ -10791,6 +10791,26 @@
       "residences": []
     },
     {
+      "id": "haus-falto",
+      "name": "Haus Falto",
+      "crest": "/Stammbäume/assets/images/houses/Venalys/haus-falto.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-falto&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [],
+      "priority": 23,
+      "residences": [
+        {
+          "seat": "Gwynthor",
+          "role": "Hauptsitz",
+          "kingdom": "Venalys",
+          "county": "",
+          "territory": "",
+          "rank": "magnarian"
+        }
+      ]
+    },
+    {
       "id": "haus-veltrane",
       "name": "Haus Veltrane",
       "crest": "/Stammbäume/assets/images/houses/Kaiserreich Argentum/Veltrane.png",
@@ -10898,7 +10918,7 @@
     {
       "id": "haus-llythfor",
       "name": "Haus Llythfor",
-      "crest": "/Stammbäume/assets/images/placeholders/neutral-crest.png",
+      "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
       "href": "/Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view",
       "status": "active",
       "formerSeat": "",
@@ -16990,14 +17010,14 @@
       "gwynthor-marking-127": [
         "haus-loer"
       ],
+      "gwynthor-marking-138": [
+        "haus-twyllod"
+      ],
       "gwynthor-marking-141": [
         "haus-draig"
       ],
       "gwynthor-marking-151": [
         "haus-gwyllach"
-      ],
-      "gwynthor-marking-138": [
-        "haus-twyllod"
       ]
     }
   }

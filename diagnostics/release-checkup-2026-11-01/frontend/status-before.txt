@@ -1,0 +1,454 @@
+﻿ M AGENTS.md
+ M AleriaAlmanach/AleriaAlmanach.html
+ M AleriaAlmanach/assets/gwynthor-troetzli/README.md
+ M AleriaAlmanach/assets/gwynthor-troetzli/asset-manifest.json
+ M AleriaAlmanach/docs/ITEM_REGISTER.md
+ M AleriaAlmanach/firebase.js
+ M AleriaAlmanach/modules/archive/archive-entry-links.js
+ M AleriaAlmanach/modules/backup/almanach-backup.js
+ M AleriaAlmanach/modules/character-equipment/character-equipment-registration.js
+ M AleriaAlmanach/modules/character-equipment/character-equipment-sync.js
+ M AleriaAlmanach/modules/character-equipment/equipment-armor-rules.js
+ M AleriaAlmanach/modules/character-equipment/equipment-artwork.js
+ M AleriaAlmanach/modules/character-inventory/character-inventory-card-model.js
+ M AleriaAlmanach/modules/character-inventory/character-inventory-identity.js
+ M AleriaAlmanach/modules/character-inventory/character-inventory-integration.js
+ M AleriaAlmanach/modules/character-inventory/character-inventory-renderer.js
+ M AleriaAlmanach/modules/characters/character-combat-profile.js
+ M AleriaAlmanach/modules/characters/character-inventory-profile.js
+ M AleriaAlmanach/modules/characters/personal-techniques/ylva-duel-techniques.js
+ M AleriaAlmanach/modules/characters/personal-techniques/ylva-weapon-techniques.js
+ M AleriaAlmanach/modules/classes/armor-routine.js
+ M AleriaAlmanach/modules/combat-styles/huskarl/huskarl-technique-factory.js
+ M AleriaAlmanach/modules/combat-styles/sirenentanz/sirenentanz-technique-factory.js
+ M AleriaAlmanach/modules/combat/combat-equipment-preparation.js
+ M AleriaAlmanach/modules/combat/combat-follow-up-resolution.js
+ M AleriaAlmanach/modules/combat/combat-profile-model.js
+ M AleriaAlmanach/modules/combat/combat-profile-resolver.js
+ M AleriaAlmanach/modules/combat/combat-resolution-service.js
+ M AleriaAlmanach/modules/combat/combat-state-model.js
+ M AleriaAlmanach/modules/combat/combat-trigger-rules.js
+ M AleriaAlmanach/modules/combat/combat-wait-action.js
+ M AleriaAlmanach/modules/combat/ui/combat-support-equipment-view.js
+ M AleriaAlmanach/modules/combat/ui/combat-weapon-loadout-view.js
+ M AleriaAlmanach/modules/comments/comments-submit.js
+ M AleriaAlmanach/modules/creatures/creature-catalog.js
+ M AleriaAlmanach/modules/creatures/creature-model.js
+ M AleriaAlmanach/modules/creatures/creature-sheet-pages.js
+ M AleriaAlmanach/modules/creatures/creature-system.js
+ M AleriaAlmanach/modules/gwynthor-cathedral/README.md
+ M AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js
+ M AleriaAlmanach/modules/gwynthor-cathedral/cathedral-hierarchy.mjs
+ M AleriaAlmanach/modules/gwynthor-cathedral/cathedral-people.mjs
+ M AleriaAlmanach/modules/gwynthor-theater/README.md
+ M AleriaAlmanach/modules/gwynthor-theater/theater-characters.mjs
+ M AleriaAlmanach/modules/gwynthor-theater/theater-data.js
+ M AleriaAlmanach/modules/gwynthor-theater/theater-hierarchy.mjs
+ M AleriaAlmanach/modules/gwynthor-theater/theater-people.mjs
+ M AleriaAlmanach/modules/gwynthor-troetzli/troetzli-biographies.mjs
+ M AleriaAlmanach/modules/gwynthor-troetzli/troetzli-household.mjs
+ M AleriaAlmanach/modules/herausforderung/herausforderung-rewards.js
+ M AleriaAlmanach/modules/house-armor/house-armor-catalog.js
+ M AleriaAlmanach/modules/house-armor/house-armor-model.js
+ M AleriaAlmanach/modules/inventory-use/inventory-use-controller.js
+ M AleriaAlmanach/modules/inventory-use/inventory-use-model.js
+ M AleriaAlmanach/modules/item-database/item-db-picker.js
+ M AleriaAlmanach/modules/item-database/item-db-ui.js
+ M AleriaAlmanach/modules/item-register/item-register-forms.js
+ M AleriaAlmanach/modules/item-register/item-register-model.js
+ M AleriaAlmanach/modules/item-register/item-register-module-catalog.js
+ M AleriaAlmanach/modules/item-register/item-register-standard.js
+ M AleriaAlmanach/modules/item-register/item-register-store.js
+ M AleriaAlmanach/modules/item-register/item-register-template-picker.js
+ M AleriaAlmanach/modules/item-register/item-register-templates.js
+ M AleriaAlmanach/modules/item-register/item-register-trade.js
+ M AleriaAlmanach/modules/item-register/item-register-ui.js
+ M AleriaAlmanach/modules/item-register/item-register-version.json
+ M AleriaAlmanach/modules/item-register/item-register-view.js
+ M AleriaAlmanach/modules/landing/group-landing-controller.js
+ M AleriaAlmanach/modules/landing/group-landing-data.js
+ M AleriaAlmanach/modules/landing/group-landing-editor.js
+ M AleriaAlmanach/modules/landing/group-landing-markup.js
+ M AleriaAlmanach/modules/landing/group-landing-model.js
+ M AleriaAlmanach/modules/landing/group-landing-roster.js
+ M AleriaAlmanach/modules/landing/group-landing-view.js
+ M AleriaAlmanach/modules/landing/landing-classic-api.js
+ M AleriaAlmanach/modules/landing/landing-model.global.js
+ M AleriaAlmanach/modules/landing/landing-model.js
+ M AleriaAlmanach/modules/landing/landing-renderer.js
+ M AleriaAlmanach/modules/loot/loot-model.js
+ M AleriaAlmanach/modules/markt-der-fortuna-gwynthor/README.md
+ M AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-data.js
+ M AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-factions.mjs
+ M AleriaAlmanach/modules/modal/modal-controller.js
+ M AleriaAlmanach/modules/modal/modal-navigation.js
+ M AleriaAlmanach/modules/module-editor/module-editor-character-inventory.js
+ M AleriaAlmanach/modules/module-editor/module-editor-data.js
+ M AleriaAlmanach/modules/module-editor/module-editor-events.js
+ M AleriaAlmanach/modules/module-editor/module-editor-goods.js
+ M AleriaAlmanach/modules/module-editor/module-editor-landing.js
+ M AleriaAlmanach/modules/module-editor/module-editor-templates.js
+ M AleriaAlmanach/modules/module-editor/module-editor-trade-catalog.js
+ M AleriaAlmanach/modules/module-editor/module-editor-workflow.js
+ M AleriaAlmanach/modules/module-store/module-entry-migrations.js
+ M AleriaAlmanach/modules/regional-equipment/regional-equipment-catalog.js
+ M AleriaAlmanach/modules/scene-inventory/scene-inventory-events.js
+ M AleriaAlmanach/modules/scene-inventory/scene-inventory-renderer.js
+ M AleriaAlmanach/modules/scene-inventory/scene-inventory-state.js
+ M AleriaAlmanach/modules/scene-inventory/scene-inventory-transfer-model.js
+ M AleriaAlmanach/modules/scene-inventory/scene-inventory-ui.js
+ M AleriaAlmanach/modules/scene-items/scene-item-definition.js
+ M AleriaAlmanach/modules/scene-items/scene-item-interaction.js
+ M AleriaAlmanach/modules/scene-items/scene-items-composer.js
+ M AleriaAlmanach/modules/scene-items/scene-items-model.js
+ M AleriaAlmanach/modules/scene-rest/scene-rest-controller.js
+ M AleriaAlmanach/modules/scene-rest/scene-rest-model.js
+ M AleriaAlmanach/modules/sidebar/sidebar-registers.js
+ M AleriaAlmanach/modules/trade-catalog/trade-catalog-money.js
+ M AleriaAlmanach/package.json
+ M AleriaAlmanach/scripts/build-house-armor.mjs
+ M AleriaAlmanach/scripts/build-item-register.mjs
+ M AleriaAlmanach/scripts/build-landing-model.mjs
+ M AleriaAlmanach/scripts/heraldic_emblem_alpha.py
+ M AleriaAlmanach/tests/combat-action-card.test.mjs
+ M AleriaAlmanach/tests/comment-submit-completion.test.mjs
+ M AleriaAlmanach/tests/creature-system.test.mjs
+ M AleriaAlmanach/tests/duncan-carreg.test.mjs
+ M AleriaAlmanach/tests/group-landing-integration.test.mjs
+ M AleriaAlmanach/tests/group-landing-model.test.mjs
+ M AleriaAlmanach/tests/gwynthor-theater.test.mjs
+ M AleriaAlmanach/tests/gwynthor-troetzli.test.mjs
+ M AleriaAlmanach/tests/herausforderung-rewards.test.mjs
+ M AleriaAlmanach/tests/idwal-ship-cats.test.mjs
+ M AleriaAlmanach/tests/item-register-integration.test.mjs
+ M AleriaAlmanach/tests/item-register.test.mjs
+ M AleriaAlmanach/tests/krumme-kanne-services.test.mjs
+ M AleriaAlmanach/tests/markt-der-fortuna-gwynthor.test.mjs
+ M AleriaAlmanach/tests/module-store-revision.test.mjs
+ M AleriaAlmanach/tests/scene-inventory-transfer.test.mjs
+ M AleriaAlmanach/tests/trade-catalog-money.test.mjs
+ M AleriaAlmanach/tests/weapon-action-balancing.test.mjs
+ M AleriaAlmanach/tests/wolfshorn-companions.test.mjs
+ M AleriaAlmanach/tests/ylva-weapon-expansion.test.mjs
+ M AleriaAlmanach/vite.config.mjs
+ M Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/authored-notices.json
+ M Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/board-layout.json
+ M Anzeigetafeln/README.md
+ M Anzeigetafeln/assets/css/notice-rewards.css
+ M Anzeigetafeln/assets/data/notice-reward-catalog.json
+ M Anzeigetafeln/assets/js/board/notice-register.js
+ M Anzeigetafeln/assets/js/composition/board-composition-inspector.mjs
+ M Anzeigetafeln/assets/js/composition/board-composition.js
+ M Anzeigetafeln/assets/js/core/tafel-bootstrap.js
+ M Anzeigetafeln/assets/js/core/tafel-state.js
+ M Anzeigetafeln/assets/js/data/authored-notices.js
+ M Anzeigetafeln/assets/js/integrations/orte-notice-bridge.js
+ M Anzeigetafeln/assets/js/notes/notice-reader.js
+ M Anzeigetafeln/assets/js/notes/zettel-board.js
+ M Anzeigetafeln/assets/js/notes/zettel-comments.js
+ M Anzeigetafeln/assets/js/notes/zettel-config.js
+ M Anzeigetafeln/assets/js/notes/zettel-editor.js
+ M Anzeigetafeln/assets/js/notes/zettel-scroll-views.js
+ M Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs
+ M Anzeigetafeln/assets/js/rewards/notice-rewards.js
+ M Anzeigetafeln/assets/js/tafel-app.js
+ M Anzeigetafeln/tafel.html
+ M Anzeigetafeln/tests/authored-notices.test.mjs
+ M Anzeigetafeln/tests/board-composition.test.mjs
+ M Anzeigetafeln/tests/gwrgan-lleucu.test.mjs
+ M Anzeigetafeln/tests/lotsensuche.test.mjs
+ M Anzeigetafeln/tests/notice-module-links.test.mjs
+ M Anzeigetafeln/tests/notice-publications.test.mjs
+ M Anzeigetafeln/tests/notice-signoffs.test.mjs
+ M Anzeigetafeln/tools/build-gwynthor-quest-notices.mjs
+ M Anzeigetafeln/tools/build-notice-reward-catalog.mjs
+ M "Charakter Archiv Exporte/Module/Große Kathedrale der Neun/grosse-kathedrale-der-neun-2026-10-17.json"
+ M "Charakter Archiv Exporte/Module/Gwynthorer Theater/ensemble-und-fuehrung.json"
+ M "Charakter Archiv Exporte/Module/Gwynthorer Theater/gwynthorer-theater-2026-10-17.json"
+ M "Charakter Archiv Exporte/Module/Markt der Fortuna Gwynthor/gwynthor-fortuna-interessenbuende-2026-10-18.json"
+ M "Charakter Archiv Exporte/Module/Markt der Fortuna Gwynthor/gwynthor-handelshof-markt-der-fortuna-2026-10-18.json"
+ M "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--cynddelw-llythfor.json"
+ M CharakterDatenbank/README.md
+ M CharakterDatenbank/assets/js/character-database-client.mjs
+ M CharakterDatenbank/generated/characters.snapshot.json
+ M CharakterDatenbank/generated/sync-report.json
+ M CharakterDatenbank/records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json
+ M CharakterDatenbank/records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json
+ M CharakterDatenbank/registry.json
+ M CharakterDatenbank/scripts/sync-character-archive.mjs
+ M Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/template.config.js
+ M Karten/assets/js/core/karto-bootstrap.js
+ M Karten/assets/js/karto-app.js
+ M Karten/modules/households/households.generated.json
+ M "Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js"
+ M Kontinente/modules/administration/administration-dialog.js
+ M Kontinente/modules/administration/administration-structured.mjs
+ M Kontinente/modules/administration/data/celtigerns-klerus.mjs
+ M Kontinente/tests/support/gwynthor-troetzli-family-review-20261031.json
+ M Markt/WaffenRüstungen/data/shop-data.js
+ M Orte/tests/poi-bridges.test.mjs
+ M Stammbäume/assets/data/published-families/haus-draig.json
+ M Stammbäume/assets/data/published-families/haus-llythfor.json
+ M Stammbäume/assets/data/published-families/haus-penrudd.json
+ M Stammbäume/assets/data/published-families/registry.json
+ M Stammbäume/assets/js/data/gwynthor-erbstreit/falto-family.js
+ M Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js
+ M Stammbäume/assets/js/data/house-draig-family.js
+ M Stammbäume/assets/js/data/house-llythfor-family.js
+ M Stammbäume/assets/js/data/house-penrudd-family.js
+ M Stammbäume/assets/js/ui/house-placement-fields.js
+ M Stammbäume/register.html
+ M Stammbäume/tests/gwynthor-erbstreit.test.js
+ M Stammbäume/tests/house-penrudd.test.js
+ M Stammbäume/tests/registry-browser.test.js
+ M Vorschau/shared/prepare-country-art.py
+ M firebase/firestore.indexes.json
+ M firebase/firestore.rules
+ M firebase/functions/scripts/sync-almanach-mechanics.mjs
+ M firebase/functions/src/backup/import-backup-records.js
+ M firebase/functions/src/comments/commit-narrative-comment.js
+ M firebase/functions/src/generated/character-equipment/character-equipment-registration.js
+ M firebase/functions/src/generated/character-equipment/character-equipment-sync.js
+ M firebase/functions/src/generated/character-equipment/equipment-armor-rules.js
+ M firebase/functions/src/generated/character-equipment/equipment-artwork.js
+ M firebase/functions/src/generated/character-inventory/character-inventory-identity.js
+ M firebase/functions/src/generated/classes/armor-routine.js
+ M firebase/functions/src/generated/combat-styles/huskarl/huskarl-technique-factory.js
+ M firebase/functions/src/generated/combat-styles/sirenentanz/sirenentanz-technique-factory.js
+ M firebase/functions/src/generated/combat/combat-equipment-preparation.js
+ M firebase/functions/src/generated/combat/combat-follow-up-resolution.js
+ M firebase/functions/src/generated/combat/combat-profile-model.js
+ M firebase/functions/src/generated/combat/combat-profile-resolver.js
+ M firebase/functions/src/generated/combat/combat-resolution-service.js
+ M firebase/functions/src/generated/combat/combat-state-model.js
+ M firebase/functions/src/generated/combat/combat-trigger-rules.js
+ M firebase/functions/src/generated/combat/combat-wait-action.js
+ M firebase/functions/src/generated/herausforderung/herausforderung-rewards.js
+ M firebase/functions/src/generated/inventory-use/inventory-use-model.js
+ M firebase/functions/src/generated/item-register/item-register-model.js
+ M firebase/functions/src/generated/item-register/item-register-module-catalog.js
+ M firebase/functions/src/generated/item-register/item-register-standard.js
+ M firebase/functions/src/generated/item-register/item-register-trade.js
+ M firebase/functions/src/generated/loot/loot-model.js
+ M firebase/functions/src/generated/scene-inventory/scene-inventory-transfer-model.js
+ M firebase/functions/src/generated/scene-items/scene-item-definition.js
+ M firebase/functions/src/generated/scene-items/scene-item-interaction.js
+ M firebase/functions/src/generated/scene-items/scene-items-model.js
+ M firebase/functions/src/generated/scene-rest/scene-rest-model.js
+ M firebase/functions/src/index.js
+ M firebase/functions/src/mechanics/commit-combat-comment.js
+ M firebase/functions/src/mechanics/commit-combat-encounter.js
+ M firebase/functions/src/mechanics/commit-combat-status.js
+ M firebase/functions/src/mechanics/commit-inventory-transfer.js
+ M firebase/functions/src/mechanics/commit-item-register.js
+ M firebase/functions/src/mechanics/commit-loot-claim.js
+ M firebase/functions/src/mechanics/commit-scene-item.js
+ M firebase/functions/src/mechanics/commit-scene-rest.js
+ M firebase/functions/src/mechanics/commit-undo-mechanical-comment.js
+ M firebase/functions/src/mechanics/herausforderung-rewards.js
+ M firebase/functions/src/mechanics/item-register-module-source.js
+ M firebase/functions/src/mechanics/item-register-template.js
+ M firebase/functions/src/mechanics/scene-item-authoring.js
+ M firebase/functions/src/mechanics/skill-comment-validator.js
+ M firebase/functions/tests/commit-loot-claim.test.js
+ M firebase/functions/tests/fixtures/combat-transaction-database.js
+ M firebase/functions/tests/import-backup-records.test.js
+ M firebase/functions/tests/integration/combat-checkup-regressions.integration.mjs
+ M firebase/functions/tests/integration/scene-item-authoring.integration.mjs
+ M firebase/tests/default-firestore-rules.test.mjs
+ M netlify/build/site-build-tasks.mjs
+ M netlify/docs/LOCAL_RELEASES.md
+ M netlify/functions/world-content-publisher.mjs
+ M netlify/tests/site-build.test.mjs
+?? AleriaAlmanach/assets/currency/
+?? AleriaAlmanach/assets/gwynthor-formlingssache/
+?? AleriaAlmanach/assets/gwynthor-reisegeleit/
+?? AleriaAlmanach/assets/gwynthor-troetzli/chibi/
+?? AleriaAlmanach/assets/gwynthor-troetzli/crests/
+?? AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-manifest.json
+?? AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-v1.png
+?? AleriaAlmanach/assets/gwynthor-troetzli/items/reward-50-copper-v1.png
+?? AleriaAlmanach/assets/gwynthor-troetzli/troetzli-road-v1.png
+?? AleriaAlmanach/assets/landing-folio/
+?? AleriaAlmanach/assets/quests/
+?? AleriaAlmanach/docs/inventory/EQUIPMENT_STANDARDS_2026-11-01.md
+?? AleriaAlmanach/docs/inventory/ITEM_SYSTEM_AUDIT_2026-10-31.md
+?? AleriaAlmanach/docs/inventory/ITEM_SYSTEM_CHECKUP_2026-11-01.md
+?? AleriaAlmanach/docs/inventory/ITEM_SYSTEM_IMPLEMENTATION_2026-10-31.md
+?? AleriaAlmanach/docs/modules/LANDING_FOLIO_2026-11-01.md
+?? AleriaAlmanach/docs/quests/
+?? AleriaAlmanach/docs/testing/GROUP_SYSTEMS_2026-11-01.md
+?? AleriaAlmanach/docs/testing/SYSTEM_CHECKUP_2026-11-01.md
+?? AleriaAlmanach/modules/auth/firebase-client-context.js
+?? AleriaAlmanach/modules/character-equipment/equipment-preparation-costs.js
+?? AleriaAlmanach/modules/character-equipment/equipment-stat-description.js
+?? AleriaAlmanach/modules/character-inventory/inventory-placeholders.js
+?? AleriaAlmanach/modules/combat/combat-attack-range.js
+?? AleriaAlmanach/modules/comments/comments-mechanical-request.js
+?? AleriaAlmanach/modules/creatures/creature-inventory.js
+?? AleriaAlmanach/modules/currency/
+?? AleriaAlmanach/modules/gawain-duncan/
+?? AleriaAlmanach/modules/group-adventures/
+?? AleriaAlmanach/modules/gwynthor-cathedral/patriarch-adjutant.mjs
+?? AleriaAlmanach/modules/gwynthor-formlingssache/
+?? AleriaAlmanach/modules/gwynthor-troetzli/llythfor-relatives.mjs
+?? AleriaAlmanach/modules/inventory-use/item-charge-recovery.js
+?? AleriaAlmanach/modules/inventory-use/item-use-effects.js
+?? AleriaAlmanach/modules/item-builder/
+?? AleriaAlmanach/modules/item-definitions/
+?? AleriaAlmanach/modules/item-register/item-register-gameplay-defaults.js
+?? AleriaAlmanach/modules/item-register/item-register-standard-artwork.js
+?? AleriaAlmanach/modules/item-register/item-register-text.js
+?? AleriaAlmanach/modules/landing/GROUP_ACCOUNT.md
+?? AleriaAlmanach/modules/landing/group-account-controller.js
+?? AleriaAlmanach/modules/landing/group-account-dialog.js
+?? AleriaAlmanach/modules/landing/group-account-operations.js
+?? AleriaAlmanach/modules/landing/group-account-view.js
+?? AleriaAlmanach/modules/landing/group-account.css
+?? AleriaAlmanach/modules/landing/group-community.css
+?? AleriaAlmanach/modules/landing/group-landing-companions.js
+?? AleriaAlmanach/modules/landing/group-quest-account.js
+?? AleriaAlmanach/modules/landing/group-roster-window.js
+?? AleriaAlmanach/modules/landing/group-scene-state.js
+?? AleriaAlmanach/modules/landing/landing-folio-view.js
+?? AleriaAlmanach/modules/landing/landing-folio.css
+?? AleriaAlmanach/modules/landing/landing-quest-journal.css
+?? AleriaAlmanach/modules/landing/landing-quest-journal.js
+?? AleriaAlmanach/modules/landing/landing-quest-model.js
+?? AleriaAlmanach/modules/module-store/module-entry-serialization.js
+?? AleriaAlmanach/modules/quests/
+?? AleriaAlmanach/modules/scene-inventory/scene-inventory-purchase.js
+?? AleriaAlmanach/modules/world-date/world-date-read-repository.mjs
+?? AleriaAlmanach/quests.html
+?? AleriaAlmanach/scripts/audit-item-system.mjs
+?? AleriaAlmanach/scripts/build-currency-art.mjs
+?? AleriaAlmanach/scripts/build-gawain-character-database.mjs
+?? AleriaAlmanach/scripts/build-gawain-duncan-content.mjs
+?? AleriaAlmanach/scripts/build-gawain-family-snapshot.mjs
+?? AleriaAlmanach/scripts/build-group-adventures.mjs
+?? AleriaAlmanach/scripts/build-gwynthor-formlingssache.mjs
+?? AleriaAlmanach/scripts/build-quest-catalog.mjs
+?? AleriaAlmanach/scripts/build-troetzli-quest.mjs
+?? AleriaAlmanach/scripts/plan-item-migration.mjs
+?? AleriaAlmanach/scripts/source-pages/house-armor-source.mjs
+?? AleriaAlmanach/tests/character-export-sources.test.mjs
+?? AleriaAlmanach/tests/combat-condition-storage.test.mjs
+?? AleriaAlmanach/tests/currency-art.test.mjs
+?? AleriaAlmanach/tests/equipment-standards-2026-11.test.mjs
+?? AleriaAlmanach/tests/gawain-character-database.test.mjs
+?? AleriaAlmanach/tests/gawain-duncan.test.mjs
+?? AleriaAlmanach/tests/gawain-family-snapshot.test.mjs
+?? AleriaAlmanach/tests/group-account.test.mjs
+?? AleriaAlmanach/tests/group-adventure-content.test.mjs
+?? AleriaAlmanach/tests/group-community.test.mjs
+?? AleriaAlmanach/tests/group-roster-window.test.mjs
+?? AleriaAlmanach/tests/group-scene-state.test.mjs
+?? AleriaAlmanach/tests/gwynthor-formlingssache.test.mjs
+?? AleriaAlmanach/tests/house-armor-source.test.mjs
+?? AleriaAlmanach/tests/item-definitions.test.mjs
+?? AleriaAlmanach/tests/item-register-text.test.mjs
+?? AleriaAlmanach/tests/item-system-checkup.test.mjs
+?? AleriaAlmanach/tests/item-system-readiness.test.mjs
+?? AleriaAlmanach/tests/item-use-definitions.test.mjs
+?? AleriaAlmanach/tests/landing-folio-view.test.mjs
+?? AleriaAlmanach/tests/landing-presentation.test.mjs
+?? AleriaAlmanach/tests/landing-quest-journal.test.mjs
+?? AleriaAlmanach/tests/quest-system.test.mjs
+?? AleriaAlmanach/tests/standard-tool-artwork.test.mjs
+?? AleriaAlmanach/tests/troetzli-quest.test.mjs
+?? Anzeigetafeln/TAGESANSICHT-UND-PAPIERARCHIV.md
+?? Anzeigetafeln/assets/css/notice-archive.css
+?? Anzeigetafeln/assets/css/notice-timeline.css
+?? Anzeigetafeln/assets/images/board-calendar/
+?? Anzeigetafeln/assets/images/issuers/signatures/iorath-melyn/
+?? Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/
+?? Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/
+?? Anzeigetafeln/assets/images/notices/sankt-padraigs-tag/
+?? Anzeigetafeln/assets/images/paper-archive/
+?? Anzeigetafeln/assets/js/archive/
+?? Anzeigetafeln/assets/js/rewards/notice-award-dialog.js
+?? Anzeigetafeln/assets/js/timeline/
+?? Anzeigetafeln/tests/notice-timeline-archive.test.mjs
+?? Anzeigetafeln/tools/build-formling-notice-art.py
+?? Anzeigetafeln/tools/issuers/patriarch-chancery.mjs
+?? Anzeigetafeln/tools/notices/erledigtes-reisegeleit.mjs
+?? Anzeigetafeln/tools/notices/gildenjahresrechnung-a38.mjs
+?? Anzeigetafeln/tools/notices/lleuwens-anhoerung.mjs
+?? Anzeigetafeln/tools/notices/sankt-padraigs-tag.mjs
+?? Anzeigetafeln/tools/prepare-calendar-art.py
+?? "Charakter Archiv Exporte/gawain-draig-oeffentliche-biografie-2026-11-01.json"
+?? "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/"
+?? CharakterDatenbank/lib/character-export-sources.mjs
+?? CharakterDatenbank/records/orte/gwynthor/euddogwy-o-cenyr--person--gwynthor-formlingssache--euddogwy/
+?? CharakterDatenbank/records/orte/gwynthor/lleuwen--person--gwynthor-formlingssache--lleuwen/
+?? CharakterDatenbank/records/orte/gwynthor/orvar-schattentanzer--person--gwynthor-formlingssache--orvar/
+?? CharakterDatenbank/records/orte/gwynthor/ulrich-schniedel--person--gwynthor-formlingssache--ulrich/
+?? IconOrdner/ReiterIcons/Almanach.svg
+?? IconOrdner/ReiterIcons/Anzeigetafeln.svg
+?? IconOrdner/ReiterIcons/Quests.svg
+?? Stammbäume/assets/data/published-families/backups/haus-draig/r00000003-20261101T040507211Z.json
+?? Stammbäume/assets/data/published-families/backups/haus-llythfor/r00000006-20261031T031801852Z.json
+?? Stammbäume/assets/data/published-families/backups/haus-penrudd/r00000004-20261031T031801852Z.json
+?? Stammbäume/assets/data/published-families/backups/haus-penrudd/r00000005-20261031T052808451Z.json
+?? "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png"
+?? Stammbäume/assets/images/houses/Venalys/haus-falto.png
+?? Stammbäume/tools/prepare-falto-emblem.py
+?? diagnostics/falto-register-2026-10-31/
+?? diagnostics/group-adventures-2026-11-01/
+?? diagnostics/group-system-integration-2026-11-01/
+?? diagnostics/gwynthor-a38-2026-10-31/
+?? diagnostics/gwynthor-formlingssache-2026-10-31/
+?? diagnostics/gwynthor-llythfor-family-2026-10-31/
+?? diagnostics/gwynthor-padraig-2026-10-31/
+?? diagnostics/item-system-2026-10-31/
+?? diagnostics/landing-folio-2026-11-01/
+?? diagnostics/paper-archive-2026-10-31/
+?? diagnostics/quest-system-2026-11-01/
+?? diagnostics/system-checkup-2026-11-01/
+?? diagnostics/tool-item-art-inventory-2026-11-01/
+?? firebase/functions/src/generated/character-equipment/equipment-preparation-costs.js
+?? firebase/functions/src/generated/character-inventory/inventory-placeholders.js
+?? firebase/functions/src/generated/characters/character-import-policy.js
+?? firebase/functions/src/generated/characters/character-save-guard.js
+?? firebase/functions/src/generated/classes/brevanor/
+?? firebase/functions/src/generated/combat/combat-attack-range.js
+?? firebase/functions/src/generated/creatures/catalog/household-companion-profiles.js
+?? firebase/functions/src/generated/creatures/catalog/idwal-ship-cats.js
+?? firebase/functions/src/generated/gawain-duncan/
+?? firebase/functions/src/generated/group-adventures/
+?? firebase/functions/src/generated/house-armor/
+?? firebase/functions/src/generated/inventory-use/item-charge-recovery.js
+?? firebase/functions/src/generated/inventory-use/item-use-effects.js
+?? firebase/functions/src/generated/item-definitions/
+?? firebase/functions/src/generated/item-register/item-register-companion-firebase.js
+?? firebase/functions/src/generated/item-register/item-register-companions.js
+?? firebase/functions/src/generated/item-register/item-register-standard-artwork.js
+?? firebase/functions/src/generated/landing/
+?? firebase/functions/src/generated/quests/
+?? firebase/functions/src/groups/
+?? firebase/functions/src/items/
+?? firebase/functions/src/mechanics/mechanical-comment-payload.js
+?? firebase/functions/src/mechanics/mechanical-undo-inventory.js
+?? firebase/functions/src/quests/
+?? firebase/functions/tests/firestore-transaction-fixture.test.js
+?? firebase/functions/tests/group-content-membership.test.js
+?? firebase/functions/tests/group-inventory-audit.test.js
+?? firebase/functions/tests/group-inventory-profile.test.js
+?? firebase/functions/tests/group-inventory.test.js
+?? firebase/functions/tests/integration/combat-rest-lock.integration.mjs
+?? firebase/functions/tests/integration/equipment-standards.integration.mjs
+?? firebase/functions/tests/integration/group-inventory.integration.mjs
+?? firebase/functions/tests/integration/inventory-transfer.integration.mjs
+?? firebase/functions/tests/integration/item-definitions.integration.mjs
+?? firebase/functions/tests/integration/quest-adventure.integration.mjs
+?? firebase/functions/tests/inventory-transfer.test.js
+?? firebase/functions/tests/item-definitions.test.js
+?? firebase/functions/tests/item-system-checkup.test.js
+?? firebase/functions/tests/item-system-transactions.test.js
+?? firebase/functions/tests/mechanical-undo-inventory.test.js
+?? firebase/functions/tests/quest-system.test.js
+?? firebase/functions/tests/scene-rest-current-inventory.test.js
+?? netlify/build/adventure-system-tasks.mjs
+?? netlify/build/check-mechanics-projection.mjs
+?? netlify/build/prepare-runtime-checks.mjs
+?? netlify/tests/adventure-release.test.mjs

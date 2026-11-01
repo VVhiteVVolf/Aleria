@@ -95,6 +95,7 @@
   }
 
   function publication(z, content){
+    content = (window.TafelNoticeTimeline?.dateMarkup(z) || '') + content;
     return z.publicationStatus === 'filled'
       ? `<div class="notice-publication notice-publication--filled" data-publication-status="filled"><p class="notice-publication-status">Angenommen · dieser ältere Anschlag ist nicht mehr offen.</p>${content}</div>`
       : content;

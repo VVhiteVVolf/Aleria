@@ -1,0 +1,74 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-31T00:00:00Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "id": "person--gwynthor-formlingssache--ulrich",
+    "worldPersonId": "person--gwynthor-formlingssache--ulrich",
+    "name": "Ulrich Schniedel",
+    "title": "Hexenjäger · Richter des Reinen Blutes",
+    "role": "Hexenjäger · Richter des Reinen Blutes",
+    "sex": "male",
+    "race": "Mensch",
+    "birth": "1681",
+    "origin": "Aldingen · einfache Verhältnisse",
+    "currentLocation": "Gwynthor",
+    "fraktion": "Richter des Reinen Blutes",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+    "bio": "Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.\n\nNach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.\n\nIn Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.\n\nGraues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Ulrich Schniedel"
+        },
+        {
+          "label": "Alter",
+          "value": "59 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldingen · einfache Verhältnisse"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Hexenjäger · Richter des Reinen Blutes"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Ulrich Schniedel",
+        "biographyText": "<p>Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.</p><p>Nach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.</p><p>In Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.</p><p>Graues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    }
+  }
+}

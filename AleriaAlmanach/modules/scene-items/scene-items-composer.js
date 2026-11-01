@@ -1,6 +1,8 @@
 import { SCENE_ITEM_KINDS, SCENE_ITEM_AXES, sceneItemDraftFromTemplate, buildSceneItemDefinition } from './scene-item-definition.js';
 import { REGISTER_CATEGORIES } from '../item-register/item-register-model.js?v=20260928-equipment-art-v4';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
+import { openItemBuilder } from '../item-builder/item-builder-controller.js';
+import { materializeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const categories = Object.fromEntries(REGISTER_CATEGORIES.map(category => [category.id, category.label]));
 const bindings = new WeakMap();
@@ -33,6 +35,7 @@ export function renderSceneItemComposer(segment) {
   return `<section class="scene-item-editor" data-scene-editor="${escape(segment.id)}">
     <header><h3>Gegenstand Einfügen</h3><p>Registervorlage wählen oder einen eigenen Fund gestalten. Nach dem Eintragen ist er über „Interagieren“ aufnehmbar.</p></header>
     <label>Vorlage aus dem Handelsregister<select data-scene-field="template">${templateOptions(draft.template)}</select></label>
+    <button type="button" data-scene-build-item>Item-Builder · Definition, Variante oder Unikat</button>
     <div class="scene-item-fields">${input('name', 'Name', 'text', 'maxlength="160" required')}
       <label>Itemkarten-Template<select data-scene-field="category">${Object.entries(SCENE_ITEM_KINDS).map(([key, label]) => `<option value="${key}" ${draft.category === key ? 'selected' : ''}>${label}</option>`).join('')}</select></label>
       ${input('image', 'Bildlink', 'url', 'placeholder="https://…" maxlength="2000"')}${input('type', 'Unterart · z. B. Ritterschwert')}
@@ -41,8 +44,9 @@ export function renderSceneItemComposer(segment) {
     <label>Text in der Szene<textarea data-scene-field="sceneText" rows="2" maxlength="1800" placeholder="Zwischen den Wurzeln liegt … (optional)">${escape(draft.sceneText)}</textarea></label>
     <details open><summary>Handelspreis & Eigenschaften</summary><div class="scene-item-fields">${input('priceMin', 'Handelspreis ab · Kupfertaler', 'number', 'min="0" step="0.01"')}${input('priceMax', 'Handelspreis bis · Kupfertaler', 'number', 'min="0" step="0.01"')}${input('weight', 'Gewicht')}${input('valuationNote', 'Preisgrundlage')}</div>
       <div class="scene-item-axes">${SCENE_ITEM_AXES.map((label, index) => `<label>${label}<input type="number" min="0" max="10" data-scene-axis="${index}" value="${Number(draft.attributes?.[index]?.value) || 0}"></label>`).join('')}</div></details>
-    ${draft.category === 'weapon' ? `<div class="scene-item-fields">${input('damageFormula', 'Schaden · z. B. 1W8')}${input('damageType', 'Schadensart')}${input('attackBonus', 'Trefferbonus', 'number', 'min="-10" max="10"')}${input('damageBonus', 'Schadensbonus', 'number', 'min="-20" max="20"')}</div>` : ''}
-    ${draft.category === 'armor' ? `<div class="scene-item-fields">${input('baseArmorClass', 'Rüstungsklasse', 'number', 'min="0" max="30"')}${input('armorClassBonus', 'Rüstungsbonus', 'number', 'min="-10" max="10"')}</div>` : ''}
+    ${draft.definitionRef ? '<p class="scene-item-help">Die Regeln folgen der gewählten Definition. Für andere Werte im Item-Builder eine Serienvariante oder ein Unikat wählen.</p>' : ''}
+    ${draft.category === 'weapon' && !draft.definitionRef ? `<div class="scene-item-fields">${input('damageFormula', 'Schaden · z. B. 1W8')}${input('damageType', 'Schadensart')}${input('attackBonus', 'Trefferbonus', 'number', 'min="-10" max="10"')}${input('damageBonus', 'Schadensbonus', 'number', 'min="-20" max="20"')}</div>` : ''}
+    ${draft.category === 'armor' && !draft.definitionRef ? `<div class="scene-item-fields">${input('baseArmorClass', 'Rüstungsklasse', 'number', 'min="0" max="30"')}${input('armorClassBonus', 'Rüstungsbonus', 'number', 'min="-10" max="10"')}</div>` : ''}
     ${['weapon', 'armor'].includes(draft.category) ? input('properties', 'Handhabung & Eigenschaften') : ''}
     <label>Infotabelle & beschriebene Wirkungen<textarea data-scene-field="info" rows="3" maxlength="4000" placeholder="Qualität: Sorgfältig geschmiedet&#10;Wirkung: …">${escape(draft.info)}</textarea></label>
     <p class="scene-item-help">Pro Zeile „Bezeichnung: Inhalt“. Freitextwirkungen beschreibt die Spielleitung; Würfelwerte oben und hinterlegte Vorlageneffekte greifen automatisch.</p>
@@ -53,6 +57,21 @@ export function mountSceneItemComposer(root, { segments, onChange, onRender }) {
   bindings.set(root, { segments, onChange, onRender });
   if (root.dataset.sceneItemsBound) return;
   root.dataset.sceneItemsBound = 'true';
+  root.addEventListener('click', async event => {
+    const button = event.target.closest('[data-scene-build-item]');
+    if (!button) return;
+    const editor = button.closest('[data-scene-editor]'), binding = bindings.get(root);
+    const segment = binding?.segments.find(row => row.id === editor.dataset.sceneEditor);
+    if (!segment) return;
+    try {
+      const source = sceneTemplates().find(item => item.id === segment.sceneItemDraft.template);
+      const selected = await openItemBuilder({ source, templates: sceneTemplates(), key: `scene:${segment.id}` });
+      if (!selected) return;
+      const text = segment.sceneItemDraft.sceneText;
+      segment.sceneItemDraft = { ...sceneItemDraftFromTemplate(selected), sceneText: text };
+      binding.onChange(); binding.onRender();
+    } catch (error) { editor.querySelector('[data-scene-error]').textContent = error.message; }
+  });
   root.addEventListener('input', event => {
     const editor = event.target.closest('[data-scene-editor]');
     if (!editor) return;
@@ -74,7 +93,7 @@ export function mountSceneItemComposer(root, { segments, onChange, onRender }) {
   });
 }
 export function previewSceneItem(draft) {
-  return buildSceneItemDefinition(draft, sceneTemplates().find(item => item.id === draft.template));
+  return materializeInventoryItem(buildSceneItemDefinition(draft, sceneTemplates().find(item => item.id === draft.template)));
 }
 export function serializeSceneItemSegment(segment) {
   return { kind: 'sceneitem', commentKind: 'sceneitem', clientSegmentId: segment.id, narrator: true, charName: 'Erzähler', characterId: '',

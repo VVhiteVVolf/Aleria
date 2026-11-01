@@ -4,12 +4,19 @@ import { readFile, access } from 'node:fs/promises';
 import { withKanneServices } from '../modules/krumme-kanne/krumme-kanne-services.mjs';
 import { buildModuleOffers } from '../modules/item-register/item-register-module-catalog.js';
 import { applyVenuePriceReview } from '../modules/economy-pricing/price-review-model.mjs';
+import { withHouseholdWorkplaceLinks } from '../modules/gwynthor-heime/household-workplaces.mjs';
 const source = JSON.parse(await readFile(new URL('../modules/krumme-kanne/source/module-before-services.json', import.meta.url), 'utf8')).entry;
+const original = structuredClone(source);
 const entry = withKanneServices(source);
 
 test('Kanne service insertion preserves reviewed pages, comment identities and purchase offers', () => {
   assert.equal(entry.pages.length, source.pages.length + 1);
-  assert.deepEqual(entry.pages.filter(page => !page.guildServicesPage), applyVenuePriceReview(source).pages);
+  const pages = entry.pages.filter(page => !page.guildServicesPage);
+  const reviewed = withHouseholdWorkplaceLinks(applyVenuePriceReview(source));
+  assert.deepEqual(pages, reviewed.pages);
+  assert.deepEqual(source, original, 'the historical source snapshot stays unchanged');
+  const commentIdentity = page => [page.commentThreadKey, page.commentSequence, page.sessionDateAleria];
+  assert.deepEqual(pages.map(commentIdentity), source.pages.map(commentIdentity));
   assert.deepEqual(withKanneServices(entry), entry);
   assert.deepEqual(buildModuleOffers([entry], []), buildModuleOffers([source], []));
   const page = entry.pages[4];

@@ -75,6 +75,11 @@ async function submitComment() {
   let saveConfirmed = false;
 
   try {
+    const requestModule = await import('./comments-mechanical-request.js');
+    const requestState = requestModule.mechanicalCommentRequest(threadId, JSON.stringify({ name, title, portrait, text, commentSegments, actor: commentMetadata.characterId }));
+    if (requestState.metadata) {
+      commentMetadata = structuredClone(requestState.metadata); commentSegments = commentMetadata.commentSegments || [];
+    } else {
     window.AleriaSceneItems?.validateSubmission?.(commentSegments);
     if (window.AleriaSkillChecks?.handleSubmission) {
       const skillResult = await window.AleriaSkillChecks.handleSubmission({
@@ -129,6 +134,7 @@ async function submitComment() {
         }
         if (combatResult.published) {
           saveConfirmed = true;
+          requestModule.completeMechanicalCommentRequest(threadId);
           clearCommentDraft(threadId);
           closeCommentForm();
           requestCommentAutoScroll(threadId);
@@ -141,6 +147,9 @@ async function submitComment() {
           return;
         }
       }
+    }
+    commentMetadata.operationId = requestState.operationId;
+    requestState.metadata = structuredClone(commentMetadata);
     }
     backend = await getCommentBackend({ timeoutMs: 1200 });
     const hasProfileTransaction = (commentMetadata.commentSegments || [])
@@ -158,6 +167,7 @@ async function submitComment() {
         ? await backend.addSkillComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
         : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata));
     saveConfirmed = true;
+    requestModule.completeMechanicalCommentRequest(threadId);
     if (Array.isArray(saveResult?.profileUpdates) && saveResult.profileUpdates.length) {
       document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', {
         detail: { updates: saveResult.profileUpdates }

@@ -36,7 +36,8 @@
   function renderComment(comment, zettelId){
     const name = String(comment.name || '').trim() || 'Anonym';
     const text = String(comment.text || '').trim();
-    const time = comment.createdAt ? new Date(comment.createdAt).toLocaleString('de-DE') : '';
+    const time = comment.postedOn && window.TafelNoticeTimeline ? window.TafelNoticeTimeline.dateLabel(comment.postedOn)
+      : comment.createdAt ? new Date(comment.createdAt).toLocaleString('de-DE') : '';
     const canDelete = rt().canEditZettel?.();
     return `<article class="zettel-comment" data-comment-id="${esc(comment.id)}">
       <div class="zettel-comment-avatar">${renderAvatar(comment)}</div>
@@ -52,7 +53,7 @@
   }
 
   function render(zettel){
-    const comments = commentsOf(zettel);
+    const comments = window.TafelNoticeTimeline?.visibleComments(commentsOf(zettel)) || commentsOf(zettel);
     return `<section class="zettel-comments" data-zettel-comments="${esc(zettel.id)}">
       <div class="zettel-comments-head">
         <h3>Randnotizen & Antworten</h3>

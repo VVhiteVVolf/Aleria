@@ -24,14 +24,20 @@ var AleriaLandingModel = (() => {
     GROUP_ASSIGNMENTS: () => GROUP_ASSIGNMENTS,
     GROUP_ICON_LABELS: () => GROUP_ICON_LABELS,
     GROUP_MEMBER_STATUSES: () => GROUP_MEMBER_STATUSES,
+    LANDING_FOLIO_COVER: () => LANDING_FOLIO_COVER,
+    LANDING_PRESENTATIONS: () => LANDING_PRESENTATIONS,
     applyGroupPreset: () => applyGroupPreset,
     collectGroupRoster: () => collectGroupRoster,
     createLandingPage: () => createLandingPage,
+    groupMemberRecordId: () => groupMemberRecordId,
     groupNameKey: () => groupNameKey,
     isNamedGroupPerson: () => isNamedGroupPerson,
+    landingFolioIcon: () => landingFolioIcon,
     landingItemId: () => landingItemId,
     landingMapFrameSource: () => landingMapFrameSource,
     landingNumber: () => landingNumber,
+    landingQuestJournalHref: () => landingQuestJournalHref,
+    landingQuestJournalShell: () => landingQuestJournalShell,
     matchGroupCharacter: () => matchGroupCharacter,
     migrateGroupLandingEntry: () => migrateGroupLandingEntry,
     normalizeGroupLandingState: () => normalizeGroupLandingState,
@@ -41,7 +47,10 @@ var AleriaLandingModel = (() => {
     normalizeLandingInfo: () => normalizeLandingInfo,
     normalizeLandingMembers: () => normalizeLandingMembers,
     normalizeLandingNotes: () => normalizeLandingNotes,
+    normalizeLandingQuestJournal: () => normalizeLandingQuestJournal,
     normalizeLandingQuests: () => normalizeLandingQuests,
+    renderLandingFolioHeader: () => renderLandingFolioHeader,
+    renderLandingFolioIndex: () => renderLandingFolioIndex,
     resolveGroupRoster: () => resolveGroupRoster,
     updateGroupMember: () => updateGroupMember
   });
@@ -134,9 +143,12 @@ var AleriaLandingModel = (() => {
   }
   function normalizeGroupMemberState(source = {}) {
     source = source && typeof source === "object" ? source : {};
+    const creature = source.kind === "creature" || !!text2(source.creatureId);
     return {
       id: text2(source.id),
-      characterId: text2(source.characterId),
+      characterId: creature ? "" : text2(source.characterId),
+      kind: creature ? "creature" : "character",
+      creatureId: creature ? text2(source.creatureId) : "",
       linkMode: ["manual", "none"].includes(source.linkMode) ? source.linkMode : "auto",
       assignment: Object.hasOwn(GROUP_ASSIGNMENTS, source.assignment) ? source.assignment : "reserve",
       status: Object.hasOwn(GROUP_MEMBER_STATUSES, source.status) ? source.status : "auto",
@@ -154,11 +166,11 @@ var AleriaLandingModel = (() => {
       status: text2(source.status),
       supplies: text2(source.supplies),
       threadId: text2(source.threadId),
+      includeCompanions: source.includeCompanions !== false,
       sceneThreads: [...new Set((Array.isArray(source.sceneThreads) ? source.sceneThreads : []).map(text2).filter(Boolean))],
       members: uniqueRecords(source.members, normalizeGroupMemberState),
       guests: uniqueRecords(source.guests, (guest) => ({
         ...normalizeGroupMemberState(guest),
-        characterId: text2(guest?.characterId),
         name: text2(guest?.name),
         role: text2(guest?.role || "Gast"),
         portrait: text2(guest?.portrait),
@@ -196,9 +208,26 @@ var AleriaLandingModel = (() => {
     return group;
   }
 
+  // modules/landing/landing-quest-model.js
+  var ids = (input) => [...new Set((Array.isArray(input) ? input : String(input || "").split(/[\n,]/)).map((value) => String(value).trim()).filter((value) => /^[\w:.-]{1,300}$/.test(value)))].slice(0, 40);
+  function normalizeLandingQuestJournal(input = {}) {
+    input = input && typeof input === "object" ? input : {};
+    return { enabled: input.enabled !== false, questIds: ids(input.questIds), runIds: ids(input.runIds), includeMembers: input.includeMembers !== false };
+  }
+  function landingQuestJournalHref(entryId, view = "") {
+    const params = new URLSearchParams({ module: entryId });
+    if (view) params.set("view", view);
+    return `./quests.html?${params}`;
+  }
+  function landingQuestJournalShell(entryId) {
+    const safeHref = landingQuestJournalHref(entryId).replace(/&/g, "&amp;");
+    return `<section class="landing-panel landing-quest-journal" data-landing-quest-journal data-landing-quest-module="${encodeURIComponent(entryId)}" aria-label="Quests und Abenteuer"><header class="landing-panel-head"><h3><img src="../IconOrdner/ReiterIcons/Quests.svg" alt="">Quests &amp; Abenteuer</h3><a href="${safeHref}" target="_blank" rel="noopener">Abenteuerjournal \u2197</a></header><div data-landing-quest-content><p class="group-empty">Verkn\xFCpfte Auftr\xE4ge und Gruppen werden geladen \u2026</p></div></section>`;
+  }
+
   // modules/landing/landing-model.js
   var text3 = (value) => String(value ?? "").trim();
   var list = (items, limit) => (Array.isArray(items) ? items : []).slice(0, limit);
+  var LANDING_PRESENTATIONS = Object.freeze({ folio: "Abenteuerfolio", classic: "Klassisch" });
   var landingNumber = (value, fallback = 0, min = 0, max = 100) => {
     const number = Number(value);
     return Math.max(min, Math.min(max, Math.round(Number.isFinite(number) ? number : fallback)));
@@ -264,6 +293,8 @@ var AleriaLandingModel = (() => {
   function normalizeLandingData(data = {}, sanitizeDate) {
     data = data && typeof data === "object" ? data : {};
     return {
+      presentation: data.presentation === "folio" ? "folio" : "classic",
+      coverImage: text3(data.coverImage),
       bannerImage: text3(data.bannerImage),
       title: text3(data.title || "Gruppen\xFCbersicht"),
       subtitle: text3(data.subtitle),
@@ -280,14 +311,24 @@ var AleriaLandingModel = (() => {
       infoTitle: text3(data.infoTitle || "Informationen"),
       members: normalizeLandingMembers(data.members),
       quests: normalizeLandingQuests(data.quests),
+      questJournal: normalizeLandingQuestJournal(data.questJournal),
       notes: normalizeLandingNotes(data.notes),
       events: normalizeLandingEvents(data.events, sanitizeDate),
       info: normalizeLandingInfo(data.info),
       ...data.group ? { group: normalizeGroupLandingState(data.group) } : {}
     };
   }
-  function createLandingPage(title = "Gruppen\xFCbersicht") {
-    return { pageTitle: title, landingPage: true, landing: normalizeLandingData({ title }), stats: [], commentDivider: false, commentSequence: [] };
+  function createLandingPage(title = "Unser Abenteuerbuch") {
+    return { pageTitle: title, landingPage: true, landing: normalizeLandingData({
+      title,
+      presentation: "folio",
+      memberTitle: "Unsere Gef\xE4hrten",
+      questTitle: "Gemeinsame Vorhaben",
+      notesTitle: "Aus dem Reisebuch",
+      eventsTitle: "Was bisher geschah",
+      mapTitle: "Unsere Wege",
+      infoTitle: "Am Wegesrand"
+    }), stats: [], commentDivider: false, commentSequence: [] };
   }
 
   // modules/landing/group-landing-roster.js
@@ -295,8 +336,12 @@ var AleriaLandingModel = (() => {
     return String(value).replace(/<[^>]*>/g, "").replace(/^(?:lady|lord|sir|dame)\s+/i, "").normalize("NFKC").toLocaleLowerCase("de-DE").replace(/[’']/g, "").replace(/\s+/g, " ").trim();
   }
   var placeholder = /^(?:\?+|vakant|nicht benannt|unbekannt|neue[rn]? (?:rang|unterrang)|rang\s*\d*|abenteurer\s*\d+|pagen?|matrosen?|matrosinnen|gehilfen?)$/i;
-  var role = /^(?:anführer.*|kommandant.*|hauptmann.*|leibgardist.*|leutnant.*|ritter(?:\s.*)?|knapp[ei].*|page.*|erster maat|zweiter maat|kapitän.*|schiffskapitän.*|steuer(?:mann|frau)|boot(?:smann|sfrau)|quartiermeister.*|wachmeister.*|navigator.*|schiffs.*|waffenmeister.*|waffenknecht.*|segelmeister.*|ausguck.*|proviantmeister.*|seiler.*|handwerker.*|feldscher.*|altmatros.*)$/i;
-  var isNamedGroupPerson = (value) => !!String(value || "").trim() && !placeholder.test(String(value).trim()) && !role.test(String(value).trim()) && !/^(?:haus|clan|familie)\s/i.test(String(value).trim());
+  var role = /^(?:anführer.*|kommandant.*|hauptmann.*|leibgardist.*|leutnant.*|ritter(?:\s.*)?|knapp[ei].*|page(?:n|\s.*)?|erster maat|zweiter maat|kapitän.*|schiffskapitän.*|steuer(?:mann|frau)|boot(?:smann|sfrau)|quartiermeister.*|wachmeister.*|navigator.*|schiffs.*|waffenmeister.*|waffenknecht.*|segelmeister.*|ausguck.*|proviantmeister.*|seiler.*|handwerker.*|feldscher.*|altmatros.*)$/i;
+  var plainGroupLabel = (value) => String(value || "").replace(/<[^>]*>/g, "").replace(/&nbsp;/gi, " ").replace(/\s+/g, " ").trim();
+  var isNamedGroupPerson = (value) => {
+    const label = plainGroupLabel(value);
+    return !!label && !placeholder.test(label) && !role.test(label) && !/^(?:n\.?\s*n\.?|unbesetzt|(?:noch )?offen|nicht besetzt|vakante? stelle|[-\u2013\u2014_.?]+)$/i.test(label) && !/^(?:haus|clan|familie)\s/i.test(label);
+  };
   function matchGroupCharacter(name, characters = []) {
     const key = groupNameKey(name);
     const matches = characters.filter((character) => [character.name, ...character.aliases || []].some((alias) => groupNameKey(alias) === key));
@@ -309,19 +354,28 @@ var AleriaLandingModel = (() => {
       const hierarchy = page.hierarchy || {};
       const trees = hierarchy.trees?.length ? hierarchy.trees : [{ id: "main", label: "Hierarchie", levels: hierarchy.levels || [] }];
       for (const tree of trees) for (const level of tree.levels || []) for (const node of level.nodes || []) {
+        if (/\b(?:schiffskatzen|tierbegleiter|reittiere|tiere|schiffstiere|pferde|katzen)\b/i.test(`${tree.label || ""} ${level.label || ""}`)) continue;
         if (/ehemalig|verstorben|gefallen|pensioniert|ruhestand/i.test(`${tree.label || ""} ${level.label || ""}`)) continue;
-        const subtitle = String(node.subtitle || "").trim(), title = String(node.title || "").trim();
+        const subtitle = plainGroupLabel(node.subtitle), title = plainGroupLabel(node.title);
         if (/^(?:haus|clan|familie)\s/i.test(title)) continue;
         const inverted = role.test(subtitle) && isNamedGroupPerson(title);
         const name = inverted ? title : subtitle;
         if (!isNamedGroupPerson(name)) continue;
         const character = matchGroupCharacter(name, characters);
         const id = "hierarchy:" + groupNameKey(name);
-        if (result.has(id)) continue;
+        const position = { role: inverted ? subtitle : title, treeLabel: tree.label || "", levelLabel: level.label || "", hierarchyPageIndex: pageIndex };
+        const existing = result.get(id) || [...result.values()].find((member) => character?.id && member.characterId === character.id);
+        if (existing) {
+          existing.positions.push(position);
+          existing.role = [...new Set(existing.positions.map((position2) => position2.role).filter(Boolean))].join(" \xB7 ");
+          continue;
+        }
         result.set(id, {
           id,
           name,
-          role: inverted ? subtitle : title,
+          kind: "character",
+          role: position.role,
+          positions: [position],
           portrait: node.portrait || "",
           badgeIcon: node.icon || "",
           characterId: character?.id || "",
@@ -334,7 +388,10 @@ var AleriaLandingModel = (() => {
     }
     return [...result.values()];
   }
-  function resolveGroupRoster(entry, state, characters = []) {
+  function groupMemberRecordId(member) {
+    return member?.kind === "creature" ? member.creatureId || "" : member?.characterId || "";
+  }
+  function resolveGroupRoster(entry, state, characters = [], creatures = []) {
     const overrides = new Map((state.members || []).map((member) => [member.id, member]));
     const roster = collectGroupRoster(entry, characters).map((member) => ({
       assignment: "reserve",
@@ -349,14 +406,17 @@ var AleriaLandingModel = (() => {
       source: "hierarchy",
       badgeIcon: overrides.get(member.id)?.badgeIcon ?? member.badgeIcon
     }));
-    const characterIds = new Set(roster.map((member) => member.characterId).filter(Boolean));
-    const names = new Set(roster.map((member) => groupNameKey(member.name)));
+    const recordKeys = new Set(roster.filter((member) => groupMemberRecordId(member)).map((member) => `${member.kind}:${groupMemberRecordId(member)}`));
+    const names = new Set(roster.map((member) => `${member.kind}:${groupNameKey(member.name)}`));
     for (const guest of state.guests || []) {
-      if (characterIds.has(guest.characterId) || names.has(groupNameKey(guest.name))) continue;
-      const character = characters.find((item) => item.id === guest.characterId);
-      roster.push({ ...guest, name: character?.name || guest.name, portrait: character?.portrait || guest.portrait, source: "guest", treeLabel: "G\xE4ste" });
-      if (guest.characterId) characterIds.add(guest.characterId);
-      names.add(groupNameKey(guest.name));
+      const kind = guest.kind === "creature" || guest.creatureId ? "creature" : "character";
+      const recordId = kind === "creature" ? guest.creatureId : guest.characterId;
+      const key = `${kind}:${recordId}`;
+      if (recordId && recordKeys.has(key) || names.has(`${kind}:${groupNameKey(guest.name)}`)) continue;
+      const record = (kind === "creature" ? creatures : characters).find((item) => item.id === recordId);
+      roster.push({ ...guest, kind, name: record?.name || guest.name, portrait: record?.portrait || guest.portrait, source: "guest", treeLabel: kind === "creature" ? "Tierbegleiter" : "G\xE4ste" });
+      if (recordId) recordKeys.add(key);
+      names.add(`${kind}:${groupNameKey(guest.name)}`);
     }
     return roster;
   }
@@ -403,6 +463,57 @@ var AleriaLandingModel = (() => {
   function landingMapFrameSource(mapId, registry) {
     const map = registry?.byId?.(String(mapId || "").trim());
     return map?.id ? `../Karten/karte.html?map=${encodeURIComponent(map.id)}` : "";
+  }
+
+  // modules/landing/group-landing-markup.js
+  var html = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+  function imageSource(src) {
+    if (globalThis.sanitizeImageSrc) return globalThis.sanitizeImageSrc(src || "") ? String(src || "").trim() : "";
+    return /^(?:https?:\/\/|\.?\.?\/|[\wÀ-ž /-]+\.(?:png|jpe?g|webp))/i.test(src || "") ? src : "";
+  }
+  function groupPortrait(src, name, className = "group-member-portrait") {
+    const safe = imageSource(src);
+    return safe ? `<img class="${className}" src="${html(safe)}" alt="${html(name)}" loading="lazy" decoding="async">` : `<span class="${className} group-initial" aria-hidden="true">${html(name?.slice(0, 1) || "\xB7")}</span>`;
+  }
+
+  // modules/landing/landing-folio-view.js
+  var LANDING_FOLIO_COVER = "/AleriaAlmanach/assets/landing-folio/aleria-paths-cover-v1.webp";
+  var drawings = Object.freeze({
+    compass: '<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5zM12 1v3m0 16v3M1 12h3m16 0h3"/>',
+    people: '<circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 4a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5v2"/>',
+    book: '<path d="M12 5c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v15M5 8h3m-3 4h3m8-4h3m-3 4h3"/>',
+    map: '<path d="m2 5 6-3 8 3 6-3v17l-6 3-8-3-6 3Zm6-3v17m8-14v17M10 9l4 4m0-4-4 4"/>',
+    feather: '<path d="M4 21 17 8M8 17l-1-5c2-7 8-10 15-10 0 7-3 13-10 15Zm3-3 5 1M13 12V7"/>',
+    pack: '<path d="M8 6V4a4 4 0 0 1 8 0v2M5 8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Zm0 3h14M9 9v5m6-5v5M8 18h8"/>',
+    clock: '<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2M9 1h6"/>',
+    arrow: '<path d="M3 12h17m-6-6 6 6-6 6"/>'
+  });
+  function landingFolioIcon(name) {
+    return `<svg class="landing-folio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${drawings[name] || drawings.compass}</svg>`;
+  }
+  function renderLandingFolioHeader(data, { title = "", subtitle = "", symbol = "", group = false, clock = "", actions = "", location = "", status = "" } = {}) {
+    const heading = data.title || title;
+    const introduction = data.subtitle || subtitle;
+    const crest = data.bannerImage || symbol;
+    return `<header class="landing-folio-hero">
+    ${groupPortrait(data.coverImage || LANDING_FOLIO_COVER, "", "landing-folio-cover")}
+    <div class="landing-folio-hero-shade" aria-hidden="true"></div>
+    <div class="landing-folio-title">
+      <span class="landing-folio-kicker">${landingFolioIcon("compass")} Aleria <i></i> ${group ? "Eine gemeinsame Geschichte" : "Wege & Geschichten"}</span>
+      <h2>${html(heading)}</h2>
+      ${introduction ? `<p>${html(introduction)}</p>` : "<p>Von gemeinsamen Wegen und Geschichten, die bleiben.</p>"}
+      ${location || status ? `<div class="landing-folio-trail">${landingFolioIcon("map")}<span>${html([location, status].filter(Boolean).join(" \xB7 "))}</span></div>` : ""}
+      ${crest ? `<div class="landing-folio-seal">${groupPortrait(crest, heading, "group-crest")}<span>${group ? "Das Buch unserer Gef\xE4hrten" : "Ein neues Kapitel beginnt"}</span></div>` : ""}
+    </div>
+    ${clock ? `<aside class="landing-folio-clock"><span class="landing-folio-clock-icon">${landingFolioIcon("clock")}</span><div data-group-region="clock">${clock}</div></aside>` : ""}
+    ${actions ? `<div class="landing-folio-hero-actions">${actions}</div>` : ""}
+    <span class="landing-folio-hero-corner" aria-hidden="true"></span>
+  </header>`;
+  }
+  function renderLandingFolioIndex() {
+    return `<nav class="landing-folio-index" aria-label="Im Abenteuerfolio">
+    ${[["members", "people", "Die Gef\xE4hrten"], ["adventures", "book", "Unsere Abenteuer"], ["map", "map", "Weg & Welt"], ["notes", "feather", "Die Chronik"]].map(([key, icon, label], index) => `<button type="button" data-landing-action="jump-section" data-landing-section-target="${key}"><small>0${index + 1}</small>${landingFolioIcon(icon)}<span>${label}</span></button>`).join("")}
+  </nav>`;
   }
   return __toCommonJS(landing_classic_api_exports);
 })();

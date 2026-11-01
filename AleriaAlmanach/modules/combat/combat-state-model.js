@@ -375,6 +375,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
           const inventoryCondition = segment?.inventoryUse ? {
             actorId: segment.inventoryUse.actorId, actorConditionSnapshot: segment.inventoryUse.conditionSnapshot,
             actorResourceSnapshot: segment.inventoryUse.resourceSnapshot,
+            actorHitPointSnapshot: segment.inventoryUse.hitPointSnapshot,
             actorInventorySnapshot: segment.inventoryUse.inventorySnapshot,
             sceneItemEvent: segment.inventoryUse.sceneItemEvent
           } : null;

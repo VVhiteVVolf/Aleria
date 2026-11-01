@@ -1,0 +1,235 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-formlingssache--ulrich",
+  "slug": "ulrich-schniedel",
+  "identity": {
+    "name": "Ulrich Schniedel",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-formlingssache--ulrich",
+      "documentIds": [
+        "person--gwynthor-formlingssache--ulrich"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-formlingssache--ulrich",
+          "createdAt": "2026-10-31T00:00:00Z",
+          "updatedAt": "2026-10-31T00:00:00Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--ulrich.json",
+    "sourceExportedAt": "2026-10-31T00:00:00Z",
+    "sourceUpdatedAt": "2026-10-31T00:00:00Z",
+    "sourceDocumentIds": [
+      "person--gwynthor-formlingssache--ulrich"
+    ],
+    "contentHash": "afdb2811a0fe8695da066d9d4ea942b032b1c43e7d5b7e850832e451520f4fdf"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-formlingssache"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-formlingssache--ulrich",
+        "worldPersonId": "person--gwynthor-formlingssache--ulrich",
+        "name": "Ulrich Schniedel",
+        "title": "Hexenjäger · Richter des Reinen Blutes",
+        "role": "Hexenjäger · Richter des Reinen Blutes",
+        "sex": "male",
+        "race": "Mensch",
+        "birth": "1681",
+        "origin": "Aldingen · einfache Verhältnisse",
+        "currentLocation": "Gwynthor",
+        "fraktion": "Richter des Reinen Blutes",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+        "bio": "Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.\n\nNach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.\n\nIn Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.\n\nGraues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.",
+        "status": "Lebend",
+        "archived": false,
+        "createdAt": "2026-10-31T00:00:00Z",
+        "updatedAt": "2026-10-31T00:00:00Z",
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetSchemaVersion": 1,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Ulrich Schniedel"
+            },
+            {
+              "label": "Alter",
+              "value": "59 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Aldingen · einfache Verhältnisse"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Hexenjäger · Richter des Reinen Blutes"
+            }
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+            "portraitFit": "cover",
+            "crestImage": "",
+            "biographyTitle": "Ulrich Schniedel",
+            "biographyText": "<p>Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.</p><p>Nach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.</p><p>In Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.</p><p>Graues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.</p>",
+            "abilitiesTitle": "Auftreten",
+            "abilities": [],
+            "worksTitle": "Tätigkeit",
+            "works": [],
+            "backgroundTitle": "Weitere Angaben",
+            "backgroundText": "",
+            "portraitStages": [],
+            "portraitCaptions": []
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-formlingssache--ulrich",
+    "worldPersonId": "person--gwynthor-formlingssache--ulrich",
+    "name": "Ulrich Schniedel",
+    "title": "Hexenjäger · Richter des Reinen Blutes",
+    "role": "Hexenjäger · Richter des Reinen Blutes",
+    "sex": "male",
+    "race": "Mensch",
+    "birth": "1681",
+    "origin": "Aldingen · einfache Verhältnisse",
+    "currentLocation": "Gwynthor",
+    "fraktion": "Richter des Reinen Blutes",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+    "bio": "Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.\n\nNach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.\n\nIn Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.\n\nGraues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Ulrich Schniedel"
+        },
+        {
+          "label": "Alter",
+          "value": "59 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldingen · einfache Verhältnisse"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Hexenjäger · Richter des Reinen Blutes"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Ulrich Schniedel",
+        "biographyText": "<p>Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.</p><p>Nach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.</p><p>In Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.</p><p>Graues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    },
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

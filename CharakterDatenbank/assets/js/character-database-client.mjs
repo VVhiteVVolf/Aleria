@@ -1,3 +1,4 @@
+import { withGawainPublicBiography } from '../../../AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs';
 const LOCAL_CHARACTER_SNAPSHOT_URL = new URL('../../generated/characters.snapshot.json', import.meta.url);
 
 let localDatabasePromise = null;
@@ -203,7 +204,7 @@ export function mergeOnlineAndLocalCharacter(onlineCharacter, localCharacter) {
   merged.localRecord = clone(local.localRecord, clone(online.localRecord, null));
   merged.inventory = hasObjectData(online.inventory) ? online.inventory : clone(local.inventory, online.inventory);
   merged.combatProfile = mergeRuntimeCombatProfile(online.combatProfile, local.combatProfile);
-  return merged;
+  return withGawainPublicBiography(merged);
 }
 
 export function mergeCharacterDatabases(onlineCharacters = [], localCharacters = []) {
@@ -261,7 +262,7 @@ export function mergeCharacterDatabases(onlineCharacters = [], localCharacters =
     const key = text(local.localRecord?.recordId) || text(local.id);
     if (!consumedLocalRecords.has(key)) merged.push(clone(local, local));
   });
-  return merged.sort((first, second) => text(first?.name).localeCompare(text(second?.name), 'de', { sensitivity: 'base' }));
+  return merged.map(withGawainPublicBiography).sort((first, second) => text(first?.name).localeCompare(text(second?.name), 'de', { sensitivity: 'base' }));
 }
 
 function normalizeSnapshot(payload) {
@@ -272,7 +273,7 @@ function normalizeSnapshot(payload) {
     schemaVersion: Number(payload.schemaVersion) || 0,
     sourceArchive: text(payload.sourceArchive),
     sourceExportedAt: text(payload.sourceExportedAt),
-    characters: payload.characters.map(character => clone(character, character)),
+    characters: payload.characters.map(character => withGawainPublicBiography(clone(character, character))),
     charTabs: payload.charTabs && typeof payload.charTabs === 'object' ? clone(payload.charTabs, null) : null
   };
 }

@@ -65,12 +65,12 @@ test('Rhianna reuses her canonical identity and portrait, and import plans prese
   const before=structuredClone(prior);
   const plan=planTheaterCharacters([prior],{},'2026-10-17T12:00:00Z');
   assert.deepEqual(prior,before);
-  assert.equal(plan.entries.length,15);
-  assert.equal(new Set(plan.entries.map(p=>p.id)).size,15);
+  assert.equal(plan.entries.length,17);
+  assert.equal(new Set(plan.entries.map(p=>p.id)).size,17);
   const patron=plan.entries.find(p=>p.key==='rhianna');
   assert.equal(patron.id,prior.id);assert.equal(patron.create,false);
   assert.ok(Object.keys(patron.patch||{}).every(key=>['genealogy','updatedAt'].includes(key)));
-  assert.equal(plan.entries.filter(p=>p.create).length,14);
+  assert.equal(plan.entries.filter(p=>p.create).length,16);
 });
 
 test('repertoire retains four vacancies and the specified historical story facts',()=>{
@@ -111,6 +111,7 @@ test('all twenty-nine active project assets and reused portraits exist and match
     const bytes=await readFile(new URL(`../../${job.destination}`,import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'),results.images.find(r=>r.id===job.id)?.sha256,job.id);
   }
-  for(const person of THEATER_PEOPLE)await access(new URL(`../${person.portrait}`,import.meta.url));
+  for(const person of THEATER_PEOPLE)await access(new URL(person.portrait.startsWith('/')
+    ? `../../${person.portrait.slice(1)}` : `../${person.portrait}`,import.meta.url));
   for(const job of manifest.entries.filter(j=>j.id.startsWith('production-')))assert.match(job.prompt,/ordinary rounded HUMAN ears/);
 });

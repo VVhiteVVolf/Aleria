@@ -12,7 +12,7 @@
 
   function render() {
     if (!root) return;
-    const visible = window.TafelNoticeSearch.select(rt().state().zettel, { includeSecret: rt().isEditMode() });
+    const visible = window.TafelNoticeSearch.select(rt().visibleNotices?.() || rt().state().zettel, { includeSecret: rt().isEditMode() });
     const esc = rt().esc;
     const filter = root.querySelector('[data-role="notice-type-filter"]');
     const options = window.ZETTEL_TYPES.filter(item => visible.some(notice => notice.typ === item.id));
@@ -67,7 +67,7 @@
       type = event.target.value;
       render();
     });
-    for (const event of ['aleria:tafel:state-applied', 'aleria:tafel:state-saved', 'aleria:tafel:edit-mode']) window.addEventListener(event, render);
+    for (const event of ['aleria:tafel:state-applied', 'aleria:tafel:state-saved', 'aleria:tafel:edit-mode', 'aleria:tafel:date-changed']) window.addEventListener(event, render);
     render();
   }
 

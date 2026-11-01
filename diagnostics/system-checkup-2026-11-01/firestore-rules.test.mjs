@@ -1,0 +1,132 @@
+// Diagnostic test copy: isolated demo project on local emulator 8187.
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import test, { after, before } from 'node:test';
+import {
+  assertFails,
+  assertSucceeds,
+  initializeTestEnvironment
+} from 'file:///E:/Aleria/firebase/node_modules/@firebase/rules-unit-testing/dist/esm/index.esm.js';
+import {
+  doc,
+  getDoc,
+  setDoc,
+  writeBatch
+} from 'file:///E:/Aleria/firebase/node_modules/firebase/firestore/dist/index.mjs';
+
+const PROJECT_ID = 'demo-aleria-checkup-family-20261101';
+const DATABASE_ID = 'family-trees';
+let environment;
+
+function baseWorkspace(revision = 1, owner = 'owner') {
+  return {
+    familyId: 'haus-test',
+    schema: 'aleria.family-tree',
+    schemaVersion: 1,
+    title: 'Haus Test',
+    document: { id: 'haus-test', title: 'Haus Test' },
+    lineage: {},
+    presentation: {},
+    view: {},
+    extensions: {},
+    lifecycle: 'draft',
+    revision,
+    createdAt: 'test',
+    createdBy: owner,
+    updatedAt: 'test',
+    updatedBy: owner
+  };
+}
+
+before(async () => {
+  environment = await initializeTestEnvironment({
+    projectId: PROJECT_ID,
+    firestore: {
+      databaseId: DATABASE_ID,
+      rules: await readFile(new URL('file:///E:/Aleria/firebase/firestore.family-trees.rules'), 'utf8'),
+      host: '127.0.0.1',
+      port: 8187
+    }
+  });
+});
+
+after(async () => environment?.cleanup());
+
+test.beforeEach(async () => environment.clearFirestore());
+
+test('verweigert unangemeldeten Zugriff auf Arbeitsfassungen', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(DATABASE_ID), 'familyWorkspaces/haus-test'), baseWorkspace());
+  });
+  const database = environment.unauthenticatedContext().firestore(DATABASE_ID);
+  await assertFails(getDoc(doc(database, 'familyWorkspaces/haus-test')));
+});
+
+test('erlaubt öffentliche Releases ohne Anmeldung', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(DATABASE_ID), 'publishedFamilies/haus-test'), { activeReleaseId: 'r1' });
+  });
+  const database = environment.unauthenticatedContext().firestore(DATABASE_ID);
+  await assertSucceeds(getDoc(doc(database, 'publishedFamilies/haus-test')));
+});
+
+test('erlaubt dem Gründer eine atomare Arbeitsfassung mit Admin-Mitgliedschaft', async () => {
+  const database = environment.authenticatedContext('owner', { email: 'owner@example.test' }).firestore(DATABASE_ID);
+  const batch = writeBatch(database);
+  batch.set(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace());
+  batch.set(doc(database, 'familyWorkspaces/haus-test/members/owner'), {
+    uid: 'owner', role: 'admin', email: 'owner@example.test', createdAt: 'test', updatedAt: 'test'
+  });
+  batch.set(doc(database, 'familyWorkspaces/haus-test/persons/a'), { id: 'a', name: 'A' });
+  batch.set(doc(database, 'familyWorkspaces/haus-test/changeSets/0000000001'), {
+    revision: 1, actorId: 'owner', createdAt: 'test', changes: {}
+  });
+  await assertSucceeds(batch.commit());
+});
+
+test('erlaubt nur revisionsgebundene, atomare Änderungen', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    const database = context.firestore(DATABASE_ID);
+    await setDoc(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace(1));
+    await setDoc(doc(database, 'familyWorkspaces/haus-test/members/editor'), { uid: 'editor', role: 'editor' });
+    await setDoc(doc(database, 'familyWorkspaces/haus-test/persons/a'), { id: 'a', name: 'A' });
+  });
+  const database = environment.authenticatedContext('editor').firestore(DATABASE_ID);
+  await assertFails(setDoc(doc(database, 'familyWorkspaces/haus-test/persons/a'), { id: 'a', name: 'Ungesichert' }));
+  const batch = writeBatch(database);
+  batch.set(doc(database, 'familyWorkspaces/haus-test'), {
+    ...baseWorkspace(2),
+    updatedBy: 'editor'
+  });
+  batch.set(doc(database, 'familyWorkspaces/haus-test/persons/a'), { id: 'a', name: 'Revisionssicher' });
+  batch.set(doc(database, 'familyWorkspaces/haus-test/changeSets/0000000002'), {
+    revision: 2, actorId: 'editor', createdAt: 'test', changes: {}
+  });
+  await assertSucceeds(batch.commit());
+});
+
+test('jeder angemeldete Nutzer darf eine Arbeitsfassung lesen und revisionssicher bearbeiten, auch ohne Mitgliedschaft', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    const database = context.firestore(DATABASE_ID);
+    await setDoc(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace(1));
+  });
+  const database = environment.authenticatedContext('stranger').firestore(DATABASE_ID);
+  await assertSucceeds(getDoc(doc(database, 'familyWorkspaces/haus-test')));
+  await assertSucceeds(setDoc(doc(database, 'familyWorkspaces/haus-test'), { ...baseWorkspace(2), updatedBy: 'stranger' }));
+});
+
+test('verweigert unangemeldeten Nutzern jeden Zugriff, unabhängig von Mitgliedschaft', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    const database = context.firestore(DATABASE_ID);
+    await setDoc(doc(database, 'familyWorkspaces/haus-test'), baseWorkspace(1));
+  });
+  const database = environment.unauthenticatedContext().firestore(DATABASE_ID);
+  await assertFails(getDoc(doc(database, 'familyWorkspaces/haus-test')));
+  await assertFails(setDoc(doc(database, 'familyWorkspaces/haus-test'), { ...baseWorkspace(2), updatedBy: 'anonymous' }));
+});
+
+test('öffentliche Collections bleiben für Browser schreibgeschützt', async () => {
+  const database = environment.authenticatedContext('owner', { aleriaRole: 'admin' }).firestore(DATABASE_ID);
+  await assertFails(setDoc(doc(database, 'publishedFamilies/haus-test'), { activeReleaseId: 'fake' }));
+  assert.ok(true);
+});

@@ -2,9 +2,12 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
+import { readItemDefinitionIndex, hydrateItemRecord } from '../items/item-definition-repository.js';
 import { buildSceneRestParticipant, getSceneRestType, normalizeSceneRest } from '../generated/scene-rest/scene-rest-model.js';
 import { getTrustedSceneCursorSeconds, getTrustedSceneDay, isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
+import { undoInventoryFingerprint } from './mechanical-undo-inventory.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -56,13 +59,7 @@ function getRequestedRestTimeline(sceneTimeEvent = {}, previousCursor = 0, minim
   return { anchorDay, anchorSeconds: Math.floor(anchorSeconds), endCursor };
 }
 
-export const commitSceneRest = onCall({
-  region: 'europe-west1',
-  maxInstances: 10,
-  concurrency: 20,
-  enforceAppCheck: false,
-  timeoutSeconds: 30
-}, async request => {
+export async function commitSceneRestOperation(request, { database = getFirestore(), nowClient = Date.now() } = {}) {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const entryId = clean(request.data?.entryId, 240);
   const text = clean(request.data?.text);
@@ -74,9 +71,7 @@ export const commitSceneRest = onCall({
     fail('failed-precondition', `${getSceneRestType(requestedRest.type).label} benötigt mindestens ${minimumRestDuration / 3600} Stunde(n).`);
   }
 
-  const database = getFirestore();
   const commentRef = database.collection('comments').doc();
-  const nowClient = Date.now();
   let profileUpdates = [];
 
   await database.runTransaction(async transaction => {
@@ -102,14 +97,25 @@ export const commitSceneRest = onCall({
         key,
         ref: database.collection(descriptor.kind === 'creature' ? 'creatures' : 'characters').doc(descriptor.recordId)
       });
+      else if (descriptor.persistent) unique.get(key).persistent = true;
     });
     const targets = [...unique.values()];
     const snapshots = await Promise.all(targets.map(target => transaction.get(target.ref)));
+    for (const [index, target] of targets.entries()) {
+      if (!target.persistent) continue;
+      const lock = await transaction.get(database.doc(`combat_profile_locks/${target.kind === 'creature' ? 'creatures' : 'characters'}/records/${target.recordId}`));
+      if (lock.data()?.activeEncounterKeys?.length) {
+        const name = snapshots[index]?.data()?.name || 'Diese Figur';
+        fail('failed-precondition', `${name} nimmt noch an einem aktiven Kampf teil. Beende ihre Kampfteilnahme vor der Rast.`);
+      }
+    }
     const records = new Map();
     targets.forEach((target, index) => {
       if (!snapshots[index].exists) fail('not-found', `Das Profil ${target.recordId} wurde nicht gefunden.`);
-      records.set(target.key, snapshots[index].data() || {});
+      records.set(target.key, { ...(snapshots[index].data() || {}), id: target.recordId, _itemHolderKind: target.kind === 'creature' ? 'creatures' : 'characters' });
     });
+    const definitions = await readItemDefinitionIndex(database, transaction, [...records.values()]);
+    for (const [key, record] of records) records.set(key, hydrateItemRecord(record, definitions, { preserveLoadout: true }));
 
     const timelineDayChanged = sceneDay > previousSceneDay;
     let anyDayChanged = timelineDayChanged;
@@ -122,7 +128,12 @@ export const commitSceneRest = onCall({
         id: actorId,
         entityType: descriptor.kind === 'creature' ? 'creature' : 'character'
       });
-      const profile = overlayCombatHitPointState(base, combatStates.get(actorId) || null);
+      const profile = {
+        ...overlayCombatHitPointState(base, combatStates.get(actorId) || null),
+        // Scene receipts describe earlier possessions. Purchases and transfers may
+        // have changed the record since then; only the current inventory owns charges.
+        inventory: record.inventory || {}
+      };
       const participantDayChanged = shouldRecoverDailyOnRest(profile, recoveryDayKey, timelineDayChanged);
       anyDayChanged = anyDayChanged || participantDayChanged;
       return buildSceneRestParticipant(profile, requestedRest.type, {
@@ -133,6 +144,7 @@ export const commitSceneRest = onCall({
         portrait: String(participant.portrait || record.portrait || ''),
         persistence: participant.persistence,
         recoveryDayKey,
+        definitions,
         conditionsDayChanged: timelineDayChanged,
         dayChanged: participantDayChanged
       });
@@ -152,17 +164,20 @@ export const commitSceneRest = onCall({
       const target = unique.get(key);
       const record = records.get(key) || {};
       transaction.update(target.ref, withProtectedRecordRevisions(record, {
+        ...(committed.inventorySnapshot ? { inventory: committed.inventorySnapshot.after } : {}),
         'combatProfile.hitPoints.current': committed.after.hitPoints.current,
         'combatProfile.hitPoints.temporary': committed.after.hitPoints.temporary,
         'combatProfile.resources': committed.after.resources,
         'combatProfile.abilities': committed.after.abilities,
         'combatProfile.lastMechanicalCommentId': commentRef.id,
         updatedAt: new Date(nowClient).toISOString()
-      }, ['combatProfile'], nowClient));
+      }, committed.inventorySnapshot ? ['combatProfile', 'inventory'] : ['combatProfile'], nowClient));
       mechanicalUndo[key] = {
         kind: descriptor.kind,
         recordId: descriptor.recordId,
+        ...(committed.inventorySnapshot ? { afterInventoryFingerprint: undoInventoryFingerprint(committed.inventorySnapshot.after) } : {}),
         before: {
+          ...(committed.inventorySnapshot ? { inventory: record.inventory } : {}),
           hitPoints: record.combatProfile?.hitPoints || null,
           resources: record.combatProfile?.resources || null,
           abilities: record.combatProfile?.abilities || null
@@ -208,7 +223,7 @@ export const commitSceneRest = onCall({
       serverValidatedMechanics: true,
       createdBy: request.auth.uid,
       createdByRole: String(request.auth.token?.aleriaRole || 'player'),
-      orderKey: Number.isFinite(Number(metadata.orderKey)) ? Number(metadata.orderKey) : nowClient,
+      orderKey: nextMechanicalCommentOrderKey(allHistory, metadata.orderKey, nowClient),
       createdAtClient: nowClient,
       activityAtClient: nowClient,
       activityAt: FieldValue.serverTimestamp(),
@@ -217,7 +232,11 @@ export const commitSceneRest = onCall({
     });
   });
   return { id: commentRef.id, profileUpdates };
-});
+}
+
+export const commitSceneRest = onCall({
+  region: 'europe-west1', maxInstances: 10, concurrency: 20, enforceAppCheck: false, timeoutSeconds: 30
+}, request => commitSceneRestOperation(request));
 
 export const sceneRestCommitInternals = Object.freeze({
   getRequestedRestTimeline,

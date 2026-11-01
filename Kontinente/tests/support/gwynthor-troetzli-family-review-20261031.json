@@ -1449,7 +1449,32 @@
           }
         }
       },
-      "afterSha256": "bafd983e6e78c998493bb78643cc237483dedd35bfd73b78747ce22b65f3c84a"
+      "afterSha256": "1beec2ef9fcc835f4e410a3c74ff1ea9ac7a0777a657e5db8301b22d6a9f2b2d"
+    }
+  },
+  "emblemFollowupReview": {
+    "reviewedAt": "2026-10-31",
+    "beforeCommit": "fc325cbc21cdff4b5eaf526d04c233e184cb3c7d",
+    "reason": "User selected three ivory writing feathers on dark blue for Llythfor. Replace the old neutral crest in the Penrudd house reference and married-away link, with field-specific migration metadata. All Penrudd people and genealogy remain identical.",
+    "previousRecordSha256": "bafd983e6e78c998493bb78643cc237483dedd35bfd73b78747ce22b65f3c84a",
+    "currentRecordSha256": "1beec2ef9fcc835f4e410a3c74ff1ea9ac7a0777a657e5db8301b22d6a9f2b2d",
+    "changes": [
+      "family.houses.1.emblem",
+      "family.houses.1.extensions",
+      "family.cadetBranches.0.emblem",
+      "family.cadetBranches.0.extensions.registryManagedFields",
+      "family.cadetBranches.0.extensions.registryManagedFieldRevisions"
+    ],
+    "existingPeoplePreserved": 28
+  },
+  "locationFollowupReview": {
+    "reviewedAt": "2026-11-01",
+    "familyId": "haus-penrudd",
+    "source": "Stammbäume/assets/js/data/house-penrudd-family.js",
+    "reason": "AGENTS residence rule of 31 October: Gwynthor replaces the synonymous Bannkreis Gwynthor in the family register. The existing historical projection already excludes location fields and general migration metadata; validate and project back only the matching field-specific location revision metadata. All approved record hashes, people, portraits and genealogy remain unchanged.",
+    "managedFieldRevisions": {
+      "seat": 7,
+      "folderPath": 7
     }
   }
 }

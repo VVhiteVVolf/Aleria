@@ -54,6 +54,7 @@
     "Charakter Archiv Exporte/gawain-draig-defense-balance-2026-10-03.json",
     "Charakter Archiv Exporte/gawain-draig-erholung-2026-09-26.json",
     "Charakter Archiv Exporte/gawain-draig-jungdrache-2026-09-30.json",
+    "Charakter Archiv Exporte/gawain-draig-oeffentliche-biografie-2026-11-01.json",
     "Charakter Archiv Exporte/gawain-draig-weapon-economy-2026-09-30.json",
     "Charakter Archiv Exporte/gawain-draig.json",
     "Charakter Archiv Exporte/gefaehrten/argent-2026-10-14/armel-inventar-und-reittier.json",
@@ -86,6 +87,10 @@
     "Charakter Archiv Exporte/gwendolyn-draig-aderyn.json",
     "Charakter Archiv Exporte/gwendolyn-draig-defense-balance-2026-10-03.json",
     "Charakter Archiv Exporte/gwendolyn-draig-patrick.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--euddogwy.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--lleuwen.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--orvar.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--ulrich.json",
     "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/rob-gwynthor-tageloehner.json",
     "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/vebrand-wolfsruf.json",
     "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--cynddelw-llythfor.json",
@@ -170,8 +175,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-10-31T00:00:00Z",
-  "count": 251,
+  "sourceExportedAt": "2026-11-01T03:46:32.000Z",
+  "count": 255,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -1414,6 +1419,7 @@
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs",
+        "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs"
       ],
       "primary": {
@@ -1423,7 +1429,7 @@
       },
       "familyStatus": "linked",
       "path": "records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json",
-      "contentHash": "2ffefbe98fa521ff76420ba5d35d6ec9fcd8c47410085aa3f59f2c6eac43f9ec"
+      "contentHash": "8799c9e77f35957f54f69fa5667192cc27ce97dde96d046cc66eb6659f6bb19a"
     },
     {
       "recordId": "character--C9E5NjYfZp9mJDkbovDn",
@@ -4864,7 +4870,7 @@
       },
       "familyStatus": "pending",
       "path": "records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json",
-      "contentHash": "fd7c506af242d28f893bbe9bf6440d0c5d779e184888784da7e137b278a3d70c"
+      "contentHash": "04124c14770b1eb1d5be8790ac2ebf4e261610a0f44a875420494bbee45546c1"
     },
     {
       "recordId": "character--person--haus-penrudd--esyllt-penrudd",
@@ -4883,7 +4889,7 @@
       },
       "familyStatus": "pending",
       "path": "records/orte/gwynthor/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json",
-      "contentHash": "763ee4c6131513bedbdd26f9afc2f6bdb26cd58683ae1cdbc45c50238e898d30"
+      "contentHash": "4f72481cad270d0c536e8b9496a39ca239bc49e59a702613eea8ad60cd347828"
     },
     {
       "recordId": "character--person--haus-llythfor--eirlys-llythfor",
@@ -4903,6 +4909,82 @@
       "familyStatus": "pending",
       "path": "records/orte/gwynthor/eirlys-llythfor--person--haus-llythfor--eirlys-llythfor/character.json",
       "contentHash": "bd5097dc8389df5ee9f560e4b312425469d185a1c0cf5c9e243c14eac192096f"
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--euddogwy",
+      "name": "Euddogwy O'Cenyr",
+      "aliases": [],
+      "worldPersonId": "",
+      "firestoreDocumentId": "person--gwynthor-formlingssache--euddogwy",
+      "firestoreDocumentIds": [
+        "person--gwynthor-formlingssache--euddogwy"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/euddogwy-o-cenyr--person--gwynthor-formlingssache--euddogwy/character.json",
+      "contentHash": "63a9419830d44beed1e1145dc75ddfb9c59877f6bee69ae3261c70908eaa4589"
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--lleuwen",
+      "name": "Lleuwen",
+      "aliases": [],
+      "worldPersonId": "",
+      "firestoreDocumentId": "person--gwynthor-formlingssache--lleuwen",
+      "firestoreDocumentIds": [
+        "person--gwynthor-formlingssache--lleuwen"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/lleuwen--person--gwynthor-formlingssache--lleuwen/character.json",
+      "contentHash": "bd5d3b7b25d437b0a6495b3c0d2a36778ddae8a9b46f923dd369048f382c5e03"
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--ulrich",
+      "name": "Ulrich Schniedel",
+      "aliases": [],
+      "worldPersonId": "",
+      "firestoreDocumentId": "person--gwynthor-formlingssache--ulrich",
+      "firestoreDocumentIds": [
+        "person--gwynthor-formlingssache--ulrich"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/ulrich-schniedel--person--gwynthor-formlingssache--ulrich/character.json",
+      "contentHash": "afdb2811a0fe8695da066d9d4ea942b032b1c43e7d5b7e850832e451520f4fdf"
+    },
+    {
+      "recordId": "character--person--gwynthor-formlingssache--orvar",
+      "name": "Orvar Schattentänzer",
+      "aliases": [],
+      "worldPersonId": "",
+      "firestoreDocumentId": "person--gwynthor-formlingssache--orvar",
+      "firestoreDocumentIds": [
+        "person--gwynthor-formlingssache--orvar"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/orvar-schattentanzer--person--gwynthor-formlingssache--orvar/character.json",
+      "contentHash": "fc7b0a0451c3344bbc23941b1e66a78168e592448137985b3991e3f6ed7f6d08"
     }
   ]
 }

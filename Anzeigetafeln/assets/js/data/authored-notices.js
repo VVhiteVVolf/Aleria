@@ -13,6 +13,7 @@
       return { zettel: source.zettel.filter(notice => typeof notice?.id === 'string' && notice.id),
         updates: Array.isArray(source.updates) ? source.updates : [],
         boardBindings: Array.isArray(source.boardBindings) ? source.boardBindings : [],
+        archiveEntries: Array.isArray(source.archiveEntries) ? source.archiveEntries : [],
         boardLayoutUpdates: Array.isArray(source.boardLayoutUpdates) ? source.boardLayoutUpdates : [] };
     } catch (error) {
       console.warn('[authored-notices] Zusätzliche Aushänge konnten nicht geladen werden:', error);
@@ -23,7 +24,7 @@
 
   function merge(state, source) {
     const notices = Array.isArray(source) ? source : source?.zettel || [];
-    if (!notices.length && !source?.updates?.length && !source?.boardLayoutUpdates?.length) return state;
+    if (!notices.length && !source?.updates?.length && !source?.boardLayoutUpdates?.length && !source?.archiveEntries?.length) return state;
     const existing = Array.isArray(state?.zettel) ? state.zettel : [];
     const ids = new Set(existing.map(notice => notice.id));
     const applied = new Set(Array.isArray(state?.appliedAuthoredNoticeIds) ? state.appliedAuthoredNoticeIds : []);
@@ -44,12 +45,13 @@
         let updated = zettel[index];
         for (const change of update.fields || []) {
           const mediaKey = /^media\.(verfasser|portrait|emblem|unterschrift|siegel)$/.exec(change.field)?.[1];
-          const commentId = /^comments\.([a-z0-9-]+)\.text$/.exec(change.field)?.[1];
+          const commentField = /^comments\.([a-z0-9-]+)\.(text|avatar|imagePosition)$/.exec(change.field);
+          const commentId = commentField?.[1];
           const comment = commentId && updated.comments?.find(comment => comment.id === commentId);
           if (commentId && !comment) continue;
           if (!mediaKey && !commentId && !['text', 'portrait', 'verfasser', 'verfasserName', 'emblem', 'unterschrift', 'siegel', 'noticeGroupId'].includes(change.field)) continue;
           if (!Object.hasOwn(change, 'to')) continue;
-          const current = commentId ? comment.text : mediaKey ? updated.media?.[mediaKey] : updated[change.field];
+          const current = commentId ? comment[commentField[2]] : mediaKey ? updated.media?.[mediaKey] : updated[change.field];
           const empty = current === undefined || current === null || (typeof current === 'string' && !current.trim());
           const matches = change.fillEmpty ? empty : change.missing ? current === undefined : current === change.from;
           if (!matches || current === change.to) continue;
@@ -57,7 +59,7 @@
           // Formatting belongs to the replacement image, never to a custom one.
           if (change.fillEmpty && mediaKey && updated[mediaKey] !== change.to?.src) continue;
           if (updated === zettel[index]) updated = { ...updated };
-          if (commentId) updated.comments = updated.comments.map(reply => reply.id === commentId ? { ...reply, text: change.to } : reply);
+          if (commentId) updated.comments = updated.comments.map(reply => reply.id === commentId ? { ...reply, [commentField[2]]: change.to } : reply);
           else if (mediaKey) updated.media = { ...updated.media, [mediaKey]: JSON.parse(JSON.stringify(change.to)) };
           else updated[change.field] = change.to;
         }
@@ -66,23 +68,33 @@
       appliedUpdates.add(update.id);
     }
     const boardLayout = updateBoardLayout(bindAddedNotices(state?.boardLayout, source.boardBindings, additions), source.boardLayoutUpdates, appliedUpdates);
-    return { ...state, zettel, ...(boardLayout ? { boardLayout } : {}), appliedAuthoredNoticeIds: [...applied],
+    const merged = { ...state, zettel, ...(boardLayout ? { boardLayout } : {}), appliedAuthoredNoticeIds: [...applied],
       ...(appliedUpdates.size ? { appliedAuthoredUpdateIds: [...appliedUpdates] } : {}) };
+    return window.TafelArchive?.mergeAuthoredState(merged, source.archiveEntries) || merged;
   }
 
   // Correct only an unchanged published default, once. User placement, pin
   // positions, deliberate removals and independently chosen sizes stay intact.
+  function layoutPatch(poster, update) {
+    if (update.field === 'width' && Number.isFinite(update.from) && Number.isFinite(update.to)
+      && update.to > 0 && update.to <= 1 && poster.width === update.from) return { width: update.to };
+    if (update.field !== 'placement' || !update.noticeId || poster.noticeId !== update.noticeId) return null;
+    const fields = ['x', 'y', 'width'];
+    if (!fields.every(field => Number.isFinite(update.from?.[field]) && Number.isFinite(update.to?.[field])
+      && update.to[field] >= 0 && update.to[field] <= 1 && poster[field] === update.from[field])
+      || update.to.width <= 0) return null;
+    return Object.fromEntries(fields.map(field => [field, update.to[field]]));
+  }
+
   function updateBoardLayout(layout, updates, applied) {
     let next = layout;
     for (const update of updates || []) {
       if (typeof update?.id !== 'string' || applied.has(update.id)) continue;
-      const valid = update.field === 'width' && Number.isFinite(update.from)
-        && Number.isFinite(update.to) && update.to > 0 && update.to <= 1;
-      const index = valid && next?.posters?.findIndex(poster => poster.id === update.posterId
-        && poster.assetId === update.assetId && poster.width === update.from);
-      if (valid && Number.isInteger(index) && index >= 0) {
+      const index = next?.posters?.findIndex(poster => poster.id === update.posterId && poster.assetId === update.assetId);
+      const patch = Number.isInteger(index) && index >= 0 && layoutPatch(next.posters[index], update);
+      if (patch) {
         if (next === layout) next = { ...layout, posters: [...layout.posters] };
-        next.posters[index] = { ...next.posters[index], width: update.to };
+        next.posters[index] = { ...next.posters[index], ...patch };
       }
       applied.add(update.id);
     }

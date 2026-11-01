@@ -61,8 +61,8 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('gameplay-guides'));
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
-  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['almanach-runtime', 'gameplay-guides']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['balchder-characters', 'gameplay-guides']);
+  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['almanach-runtime', 'gameplay-guides', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['balchder-characters', 'gameplay-guides', 'group-community', 'item-mechanics']);
 });
 
 test('chart CSS triggers the browser audit, portraits do not trigger geometry that blocks image requests', () => {
@@ -199,4 +199,11 @@ test('world-content source changes invalidate their release consumers', () => {
   assert.ok(consumers('AleriaAlmanach/modules/calendar/calendar-events-model.mjs').includes('events-calendar'));
   assert.ok(consumers('Vorschau/Uathneach/clans.mjs').includes('uathneach-preview'));
   assert.ok(consumers('Stammbäume/assets/js/data/dunfal-portrait-upgrade.js').includes('family-records'));
+});
+test('quest consumers track their catalog sources, travel tool and shared landing page without unrelated UI invalidation', () => {
+  for (const file of ['AleriaAlmanach/modules/quests/quest-model.js', 'AleriaAlmanach/modules/landing/landing-model.js',
+    'Karten/assets/js/karto-app.js', 'AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js', 'firebase/firestore.indexes.json']) {
+    assert.ok(checks(select(changed(file).some(row => row.file === file) ? changed(file) : [...tree, source(file)])).includes('quest-journal'), file);
+  }
+  assert.ok(!checks(select(changed('AleriaAlmanach/modules/archive/archive-dashboard.js'))).includes('quest-journal'));
 });

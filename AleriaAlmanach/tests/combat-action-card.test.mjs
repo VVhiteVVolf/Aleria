@@ -69,6 +69,17 @@ test('ein vorbereiteter Wechsel zeigt die neue Waffe sofort und bietet eine ausd
   assert.match(weaponButton(markup, 'sword'), /data-combat-controller-action="select-weapon"/);
 });
 
+test('explicit equipment costs and a free opening override the legacy one-bonus-action display', () => {
+  const actor = weaponActor(), selection = { requestedLoadout: { rightWeaponId: 'dagger', leftWeaponId: '' } };
+  actor.equipmentPreparation = { free: false, costs: [{ resourceId: 'action', amount: 1 }, { resourceId: 'bonus-action', amount: 1 }] };
+  const before = JSON.stringify(actor);
+  assert.match(renderWeaponLoadout(actor, selection), /1 Aktion \+ 1 Bonusaktion im Entwurf verbraucht/);
+  assert.equal(JSON.stringify(actor), before);
+  actor.equipmentPreparation = { free: true };
+  assert.match(renderWeaponLoadout(actor, selection), /Startausrüstung gewählt · kostenlos/);
+  assert.doesNotMatch(renderWeaponLoadout(actor, selection), /im Entwurf verbraucht/);
+});
+
 test('mehrere natürliche Angriffe erhalten keine irreführende Waffenwechsel-Leiste', () => {
   assert.equal(renderWeaponLoadout({
     weapons: [{ id: 'bite', name: 'Biss', weaponType: 'natural' }],

@@ -1,0 +1,277 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-formlingssache--lleuwen",
+  "slug": "lleuwen",
+  "identity": {
+    "name": "Lleuwen",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-formlingssache--lleuwen",
+      "documentIds": [
+        "person--gwynthor-formlingssache--lleuwen"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-formlingssache--lleuwen",
+          "createdAt": "2026-10-31T00:00:00Z",
+          "updatedAt": "2026-10-31T00:00:00Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--lleuwen.json",
+    "sourceExportedAt": "2026-10-31T00:00:00Z",
+    "sourceUpdatedAt": "2026-10-31T00:00:00Z",
+    "sourceDocumentIds": [
+      "person--gwynthor-formlingssache--lleuwen"
+    ],
+    "contentHash": "bd5d3b7b25d437b0a6495b3c0d2a36778ddae8a9b46f923dd369048f382c5e03"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-formlingssache"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-formlingssache--lleuwen",
+        "worldPersonId": "person--gwynthor-formlingssache--lleuwen",
+        "name": "Lleuwen",
+        "title": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+        "role": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+        "sex": "female",
+        "race": "Formling",
+        "birth": "",
+        "origin": "Herkunft nicht bekannt · seit Jahren in Gwynthor",
+        "currentLocation": "Gwynthor · kirchlicher Gewahrsam",
+        "fraktion": "Gwynthorer Theater",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+        "bio": "Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.\n\nIhre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.\n\nOrvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen.",
+        "bestiaryReference": {
+          "id": "wesen/inferniiden/formwandler",
+          "name": "Formling & Formwandler",
+          "url": "/Bestiarium/wesen/inferniiden/formwandler/index.html"
+        },
+        "status": "Lebend",
+        "archived": false,
+        "createdAt": "2026-10-31T00:00:00Z",
+        "updatedAt": "2026-10-31T00:00:00Z",
+        "imageSets": [
+          {
+            "id": "menschlich",
+            "name": "Menschliche Erscheinung",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+            "emotes": []
+          },
+          {
+            "id": "wahre-gestalt",
+            "name": "Wahre Gestalt",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-wahre-gestalt.png",
+            "emotes": []
+          },
+          {
+            "id": "gewahrsam",
+            "name": "Gegenwärtiger Gewahrsam",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "gewahrsam",
+        "imageSetSchemaVersion": 1,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Lleuwen"
+            },
+            {
+              "label": "Alter",
+              "value": "Wirkt etwa 28 · tatsächliches Alter unbekannt"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Herkunft nicht bekannt · seit Jahren in Gwynthor"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut"
+            },
+            {
+              "label": "Art",
+              "value": "Formling · Inferniider"
+            }
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+            "portraitFit": "cover",
+            "crestImage": "",
+            "biographyTitle": "Lleuwen",
+            "biographyText": "<p>Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.</p><p>Ihre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.</p><p>Orvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen.</p><p><a href=\"/Bestiarium/wesen/inferniiden/formwandler/index.html\">Artprofil: Formling &amp; Formwandler</a></p>",
+            "abilitiesTitle": "Auftreten",
+            "abilities": [],
+            "worksTitle": "Tätigkeit",
+            "works": [],
+            "backgroundTitle": "Weitere Angaben",
+            "backgroundText": "",
+            "portraitStages": [],
+            "portraitCaptions": []
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-formlingssache--lleuwen",
+    "worldPersonId": "person--gwynthor-formlingssache--lleuwen",
+    "name": "Lleuwen",
+    "title": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+    "role": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+    "sex": "female",
+    "race": "Formling",
+    "birth": "",
+    "origin": "Herkunft nicht bekannt · seit Jahren in Gwynthor",
+    "currentLocation": "Gwynthor · kirchlicher Gewahrsam",
+    "fraktion": "Gwynthorer Theater",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+    "bio": "Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.\n\nIhre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.\n\nOrvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen.",
+    "bestiaryReference": {
+      "id": "wesen/inferniiden/formwandler",
+      "name": "Formling & Formwandler",
+      "url": "/Bestiarium/wesen/inferniiden/formwandler/index.html"
+    },
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "menschlich",
+        "name": "Menschliche Erscheinung",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+        "emotes": []
+      },
+      {
+        "id": "wahre-gestalt",
+        "name": "Wahre Gestalt",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-wahre-gestalt.png",
+        "emotes": []
+      },
+      {
+        "id": "gewahrsam",
+        "name": "Gegenwärtiger Gewahrsam",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "gewahrsam",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Lleuwen"
+        },
+        {
+          "label": "Alter",
+          "value": "Wirkt etwa 28 · tatsächliches Alter unbekannt"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Herkunft nicht bekannt · seit Jahren in Gwynthor"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut"
+        },
+        {
+          "label": "Art",
+          "value": "Formling · Inferniider"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Lleuwen",
+        "biographyText": "<p>Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.</p><p>Ihre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.</p><p>Orvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen.</p><p><a href=\"/Bestiarium/wesen/inferniiden/formwandler/index.html\">Artprofil: Formling &amp; Formwandler</a></p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    },
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

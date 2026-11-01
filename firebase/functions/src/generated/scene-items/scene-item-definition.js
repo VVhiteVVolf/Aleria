@@ -1,4 +1,5 @@
 // Shared authoring contract: a scene item becomes the same inventory record on pickup.
+import { storeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 export const SCENE_ITEM_KINDS = Object.freeze({ weapon: 'Waffe', armor: 'Rüstung', potions: 'Verbrauchsgut', artifact: 'Artefakt', equipment: 'Ausrüstung', documents: 'Dokument' });
 export const SCENE_ITEM_AXES = Object.freeze(['Schaden', 'Schutz', 'Wert', 'Seltenheit', 'Zuverlässigkeit', 'Handhabung']);
 const clean = (value, max = 160) => String(value ?? '').trim().slice(0, max);
@@ -8,6 +9,7 @@ const categoryMap = { waffen: 'weapon', ruestungen: 'armor', alchemie: 'potions'
 export function sceneItemDraftFromTemplate(template = {}) {
   const definition = template.combatDefinition || {};
   return { template: template.id || '', moduleId: template.moduleId || '', sourceRevision: template.sourceRevision || '',
+    ...(template.definitionRef ? { definitionRef: { ...template.definitionRef }, definitionChoice: 'existing' } : {}),
     name: template.title || template.name || '', image: template.image || '', description: template.description || template.details || '',
     category: definition.kind || categoryMap[template.category] || 'equipment', type: template.type || '',
     priceMin: template.priceRange?.minCopper ?? '', priceMax: template.priceRange?.maxCopper ?? '',
@@ -20,13 +22,14 @@ export function sceneItemDraftFromTemplate(template = {}) {
 }
 
 export function buildSceneItemDefinition(draft = {}, template = null, identity = 'preview') {
+  const canonical = template?.definitionRef && draft.definitionChoice === 'existing';
   const name = clean(draft.name), description = clean(draft.description, 1800);
   if (!name || !description) throw new Error('Bitte Name und Kurzbeschreibung des Gegenstands ergänzen.');
   const image = clean(draft.image, 2000);
   if (image && !/^https?:\/\//i.test(image) && image !== template?.image) throw new Error('Bitte einen gültigen HTTP-Bildlink verwenden.');
-  const category = Object.hasOwn(SCENE_ITEM_KINDS, draft.category) ? draft.category : 'equipment';
+  const category = canonical ? template.combatDefinition?.kind || categoryMap[template.category] || 'equipment' : Object.hasOwn(SCENE_ITEM_KINDS, draft.category) ? draft.category : 'equipment';
   let combatDefinition = template?.combatDefinition?.kind === category ? JSON.parse(JSON.stringify(template.combatDefinition)) : null;
-  if (category === 'weapon' || category === 'armor') {
+  if (!canonical && (category === 'weapon' || category === 'armor')) {
     combatDefinition = { ...combatDefinition, kind: category, properties: clean(draft.properties, 800) };
     if (category === 'weapon') {
       const formula = clean(draft.damageFormula || combatDefinition.damageFormula || '1d4').replace(/w/gi, 'd');
@@ -38,7 +41,8 @@ export function buildSceneItemDefinition(draft = {}, template = null, identity =
   const hasPrice = [draft.priceMin, draft.priceMax].some(value => value != null && value !== '') || !!template?.priceRange;
   const min = number(draft.priceMin === '' ? template?.priceRange?.minCopper : draft.priceMin ?? template?.priceRange?.minCopper, 0, 1e9);
   const max = number(draft.priceMax === '' ? min : draft.priceMax ?? template?.priceRange?.maxCopper ?? min, 0, 1e9);
-  return { id: `item:${identity}`, instanceId: `item:${identity}`, name, description, image, quantity: '1', equipped: false,
+  const item = { id: `item:${identity}`, instanceId: `item:${identity}`, name, description, image, quantity: '1', equipped: false,
+    ...(canonical ? { definitionRef: { ...template.definitionRef } } : {}),
     templateId: template?.templateId || template?.id || '', offerId: template?.section === 'offer' ? template.id : '',
     category, registerCategory: { weapon: 'waffen', armor: 'ruestungen', potions: 'alchemie', artifact: 'arkanes', equipment: 'werkzeuge', documents: 'sonstiges' }[category],
     type: clean(draft.type || SCENE_ITEM_KINDS[category]), weight: clean(draft.weight),
@@ -48,5 +52,8 @@ export function buildSceneItemDefinition(draft = {}, template = null, identity =
       const split = line.indexOf(':'); return { label: split > 0 ? clean(line.slice(0, split), 80) : 'Wirkung', value: clean(split > 0 ? line.slice(split + 1) : line, 500) };
     }),
     attributes: SCENE_ITEM_AXES.map(label => ({ label, value: number(draft.attributes?.find(row => row.label === label)?.value, 0, 10) })),
-    combatDefinition, inventoryUseMode: category === 'potions' ? 'consume' : 'use' };
+    combatDefinition, mechanicsStatus: template?.mechanicsStatus || '',
+    inventoryUseMode: template?.inventoryUseMode && template.inventoryUseMode !== 'auto'
+      ? template.inventoryUseMode : category === 'potions' ? 'consume' : 'use' };
+  return canonical ? storeInventoryItem(item) : item;
 }

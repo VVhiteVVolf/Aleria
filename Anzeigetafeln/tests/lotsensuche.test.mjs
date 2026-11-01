@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import vm from 'node:vm';
 import { buildLotsensucheNotices, LOTSENSUCHE_BOARD_BINDING as binding } from '../tools/quests/lotsensuche.mjs';
+import { withNoticeDate } from '../assets/js/timeline/notice-dates.mjs';
 import { buildLotsensucheCharacterExports, LOTSENSUCHE_PEOPLE } from '../../AleriaAlmanach/modules/gwynthor-lotsensuche/lotsensuche-characters.mjs';
 import { buildGwynthorQuestPack } from '../tools/build-gwynthor-quest-notices.mjs';
 
@@ -22,7 +23,7 @@ test('the two chronological sheets retain their independent replies and agreed p
   assert.match(notes[1].text, /WIRKLICH auskent/);
   assert.match(notes[1].text, /unter vier augen/);
   const pack = await buildGwynthorQuestPack();
-  assert.deepEqual(pack.zettel.filter(note => note.noticeGroupId === binding.noticeId), notes);
+  assert.deepEqual(pack.zettel.filter(note => note.noticeGroupId === binding.noticeId), notes.map(withNoticeDate));
 });
 
 test('Rob corrects exactly three errors in the final insult and the corrected reply retains the insult', () => {
@@ -102,8 +103,9 @@ test('size and duration corrections preserve saved placement, unrelated replies 
   const correction = pack.updates.find(update => update.id === 'gwynthor-lotsensuche-six-days-20261031');
   sheet.comments[1].text = correction.fields[0].from;
   sheet.comments.push({ id: 'user-reply', text: 'Eigene Antwort bleibt.' });
-  const source = { zettel: [], updates: [correction], boardLayoutUpdates: pack.boardLayoutUpdates };
-  const previous = { zettel: [sheet], boardLayout: { version: 1, posters: pack.boardLayoutUpdates.map(update => ({
+  const sizeUpdates = pack.boardLayoutUpdates.filter(update => update.field === 'width');
+  const source = { zettel: [], updates: [correction], boardLayoutUpdates: sizeUpdates };
+  const previous = { zettel: [sheet], boardLayout: { version: 1, posters: sizeUpdates.map(update => ({
     id: update.posterId, assetId: update.assetId, width: update.from, x: .123, y: .456, rotation: 17, pin: { x: .2, y: .3 } })) } };
   const original = JSON.stringify(previous);
   const changed = merge(previous, source);

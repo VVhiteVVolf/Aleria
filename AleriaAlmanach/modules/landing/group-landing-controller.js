@@ -1,25 +1,29 @@
 import { normalizeLandingData } from './landing-model.js';
 import { applyGroupPreset } from './group-landing-model.js';
-import { groupCharacters, groupScenes, groupMemberSnapshots, groupSceneSnapshot, observeGroupScene } from './group-landing-data.js';
-import { renderGroupBody, renderGroupRoster, renderGroupSummary, renderGroupScenePanel, renderGroupHeaderClock } from './group-landing-view.js';
+import { groupCharacters, groupCreatures, groupScenes, groupMemberSnapshots, groupSceneSnapshot, observeGroupScene } from './group-landing-data.js';
+import { renderGroupBody, renderGroupRosterResults, renderGroupSummary, renderGroupScenePanel, renderGroupHeaderClock } from './group-landing-view.js';
+import { mountGroupRosterWindow } from './group-roster-window.js';
 import { createGroupEditor } from './group-landing-editor.js';
 import { mountGroupSceneControls, unmountGroupSceneControls } from './group-landing-scene-controls.js';
 import { mountGroupNavigation } from './group-landing-navigation.js';
 import { renderGroupInventory } from './group-landing-inventory-view.js';
 import { mountGroupMap } from './group-landing-map.js';
+import { landingQuestJournalShell } from './landing-quest-model.js';
+import { mountGroupQuestAccount } from './group-quest-account.js';
 
 const mounts = new WeakMap();
 const canEdit = () => globalThis.canEditModuleContent?.() === true;
-const readonlyActions = new Set(['profile', 'open-scene', 'refresh', 'register', 'hierarchy']);
+const readonlyActions = new Set(['profile', 'creature-profile', 'open-scene', 'refresh', 'register', 'hierarchy']);
 const charactersEvents = ['aleria:characters-changed', 'aleria:character-saved', 'aleria:combat-profile-committed', 'almanach-world-date-state'];
 
 function sceneSnapshots(group, comments = []) {
   return groupScenes().map(scene => groupSceneSnapshot(scene, scene.threadId === group.threadId ? comments : globalThis.getCachedCommentsForThread?.(scene.threadId) || []));
 }
 
-function fragments(data) {
+function fragments(data, entry) {
   return { quests: globalThis.buildLandingQuests?.(data) || '', notes: globalThis.buildLandingNotes?.(data) || '',
     events: data.events.length ? globalThis.buildLandingEvents?.(data) || '' : '',
+    journal: data.questJournal.enabled ? landingQuestJournalShell(entry.id) : '',
     map: data.mapKartenId || data.mapImage || data.mapLink ? globalThis.buildLandingMap?.(data) || '' : '',
     info: data.info.length ? globalThis.buildLandingInfo?.(data) || '' : '', configure: globalThis.buildLandingConfigureButton?.() || '' };
 }
@@ -30,7 +34,7 @@ function renderBody(data, entry, pageIndex) {
   const active = scenes.find(scene => scene.threadId === data.group.threadId);
   // Supply current hierarchy names to task owners and note author selection.
   const displayData = { ...data, members };
-  return renderGroupBody(data, entry, pageIndex, members, scenes, active, fragments(displayData));
+  return renderGroupBody(data, entry, pageIndex, members, scenes, active, fragments(displayData, entry));
 }
 
 function mount(context) {
@@ -47,6 +51,8 @@ function mount(context) {
   const editor = createGroupEditor({ onSave: save });
   const stopNavigation = mountGroupNavigation(root, context.root, `${entry.id}:${context.pageIndex}`);
   const stopMap = mountGroupMap(root);
+  const rosterWindow = mountGroupRosterWindow(root, renderGroupRosterResults);
+  const stopQuestAccount = mountGroupQuestAccount(root, entry.id, { preview, getMembers: () => members, getSceneThread: () => group.threadId });
 
   function save(next) {
     if (preview || !canEdit()) throw new Error('Bitte zuerst die Bearbeitung freischalten.');
@@ -61,7 +67,7 @@ function mount(context) {
     members = groupMemberSnapshots(entry, group, comments);
     scenes = sceneSnapshots(group, comments);
     setRegion('summary', renderGroupSummary(members));
-    setRegion('roster', renderGroupRoster(members));
+    rosterWindow.update(members);
     setRegion('inventory', renderGroupInventory(group, members));
     const active = scenes.find(scene => scene.threadId === group.threadId);
     setRegion('scene', renderGroupScenePanel(group, scenes, active, connection));
@@ -81,7 +87,7 @@ function mount(context) {
     }, () => { connection = 'Szenenverbindung unterbrochen · letzter verfügbarer Stand'; refresh(); });
   }
   function editContext(memberId = '', itemId = '') {
-    return { data, members, characters: groupCharacters(), scenes, memberId, itemId, maps: globalThis.KartoMapRegistry?.all?.() || [],
+    return { data, members, characters: groupCharacters(), creatures: groupCreatures(), scenes, memberId, itemId, maps: globalThis.KartoMapRegistry?.all?.() || [],
       makeId: prefix => `${prefix}-${crypto.randomUUID()}`,
       dateLabel: globalThis.AleriaCalendar?.format(globalThis.AleriaCalendar.current(), { withPlayDay: true }) || '' };
   }
@@ -90,6 +96,7 @@ function mount(context) {
     if (!trigger || !root.contains(trigger)) return;
     const action = trigger.dataset.groupAction;
     if (action === 'profile') { globalThis.openCharProfile?.(trigger.dataset.characterId); return; }
+    if (action === 'creature-profile') { globalThis.AleriaCreatures?.open?.(trigger.dataset.creatureId); return; }
     if (action === 'register') { globalThis.AleriaItemRegister?.open?.(trigger.dataset.itemKey || ''); return; }
     if (action === 'hierarchy') {
       const pageIndex = entry.pages.findIndex(page => page.hierarchyPage);
@@ -133,6 +140,8 @@ function mount(context) {
     target.replaceWith(fallback);
   }, { capture: true, signal: abort.signal });
   for (const name of charactersEvents) document.addEventListener(name, refresh, { signal: abort.signal });
+  document.addEventListener('aleria:creatures-changed', refresh, { signal: abort.signal });
+  document.addEventListener('aleria:item-register-records', refresh, { signal: abort.signal });
   globalThis.addEventListener('aleria:auth-state-changed', refresh, { signal: abort.signal });
   globalThis.addEventListener('aleria:module-editor-access-changed', refresh, { signal: abort.signal });
   globalThis.addEventListener('fb-ready', refresh, { signal: abort.signal });
@@ -141,7 +150,7 @@ function mount(context) {
     if (event.detail?.threadId !== group.threadId || !Array.isArray(event.detail.comments)) return;
     comments = event.detail.comments; refresh();
   }, { signal: abort.signal });
-  mounts.set(context.root, { destroy() { stopped = true; abort.abort(); stopScene?.(); stopNavigation(); stopMap(); editor.close(); } });
+  mounts.set(context.root, { destroy() { stopped = true; abort.abort(); stopScene?.(); stopNavigation(); stopMap(); stopQuestAccount(); rosterWindow.destroy(); editor.close(); } });
   refresh(); connect();
 }
 

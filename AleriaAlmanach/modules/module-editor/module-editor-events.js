@@ -112,6 +112,7 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'remove-ci-item',
   'move-ci-item',
   'duplicate-ci-item',
+  'build-ci-item',
   'add-ci-item-row',
   'add-ci-item-attribute',
   'add-ci-companion',
@@ -628,6 +629,7 @@ function handleModuleEditorActionClick(event) {
     duplicateCharacterInventoryItem(trigger);
     return;
   }
+  if (action === 'build-ci-item') { buildCharacterInventoryItem(trigger); return; }
   if (action === 'add-ci-item-row') {
     addCharacterInventoryNestedRow(trigger, 'item');
     return;

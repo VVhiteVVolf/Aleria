@@ -42,8 +42,18 @@ for (const rolls of [[15,15,15], [2,2,2], [15,2,15], [2,15,2], [20,20,20]]) for 
     assert.equal(order.at(-1)[0],'rollSavingThrow'); assert.equal(result.secondarySaves[0].dc,18);
     const attacks = [result,...result.followUpAttacks];
     for (const [i, hit] of attacks.entries()) if (hit.attack.hit && hit.damage) {
-      assert.equal(hit.damage.notation,['1d4','1d8','1d6'][i]); assert.equal(hit.damage.modifier,i===2?5:0);
-      assert.equal(hit.damage.diceResults.length,rolls[i]===20?2:1);
+      const criticalMaximum = rolls[i] === 20 ? [4, 8, 6][i] : 0;
+      const modifier = (i === 2 ? 5 : 0) + criticalMaximum;
+      assert.equal(hit.damage.notation, `${['1d4','1d8','1d6'][i]}${modifier ? `+${modifier}` : ''}`);
+      assert.equal(hit.damage.modifier, modifier);
+      assert.equal(hit.damage.diceResults.length, 1, 'A critical hit maximizes one pool and rolls one pool.');
+      assert.equal(i === 0 ? hit.damage.primaryTotal : hit.damage.total, 2 + modifier);
+      assert.equal(hit.damage.criticalDamage?.maximum || 0, criticalMaximum);
+    }
+    const hits = result.effectResults.filter(effect => effect.effect.type === 'damage');
+    for (const hit of hits) {
+      assert.equal(hit.effect.damageType, 'Stich', 'Every spear hit must use the same typed armor protection.');
+      assert.equal(hit.applied.equipmentProtection?.reduction, Math.min(hit.amount, 1));
     }
     assert.deepEqual(result.resourceCosts.map(c=>c.resourceId).sort(),['action','bonus-action','reaction']);
     assert.equal(!!result.targetConditionSnapshot?.applied,save===1);
@@ -57,10 +67,10 @@ test('triple fixed dice survive two-handed grip; ordinary two-strike sequence ha
     const actor=profile('drei-dornen-ein-sturz','ylva-speer',grip);
     assert.equal(actor.weapon.damageFormula,'1d4'); assert.equal(actor.damageModifier,0);
     const result=await new CombatResolutionService(receipts()).resolveAttack({actor,target:target()});
-    assert.deepEqual(result.followUpAttacks.map(f=>f.damage.notation),['1d8','1d6']);
+    assert.deepEqual(result.followUpAttacks.map(f=>f.damage.notation),['1d8','1d6+5']);
   }
   const result=await new CombatResolutionService(receipts([2,15])).resolveAttack({actor:profile('zwei-dornen'),target:target()});
-  assert.equal(result.attack.hit,false); assert.equal(result.followUpAttacks[0].damage.notation,'1d8');
+  assert.equal(result.attack.hit,false); assert.equal(result.followUpAttacks[0].damage.notation,'1d8+5');
 });
 
 test('sweep is target-specific, survives unrelated posts, target lock expires on start, advantage after the full next contribution', async () => {

@@ -1,4 +1,5 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { prepareItemClaimUndo } from '../items/item-claim-undo.js';
 import { restoreCharacterHitPointSnapshot } from '../generated/combat/combat-profile-model.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
@@ -6,6 +7,7 @@ import { isTrustedSceneContributionComment, sortSceneHistory } from './trusted-s
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { findLaterMechanicalDependency } from './mechanical-comment-dependencies.js';
 import { getCombatRulesRelease } from '../generated/combat/combat-rules-release.js';
+import { getUndoInventoryFingerprint, undoInventoryFingerprint } from './mechanical-undo-inventory.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -42,6 +44,15 @@ async function verifyAndRevertMechanicalUndo(transaction, database, mechanicalUn
     if (!snapshot.exists) continue;
     const current = snapshot.data() || {};
     const currentMarker = current.combatProfile?.lastMechanicalCommentId || null;
+    const expectedInventory = options.comment && entry.before?.inventory !== undefined
+      ? getUndoInventoryFingerprint(options.comment, entry) : '';
+    if (expectedInventory && undoInventoryFingerprint(current.inventory) !== expectedInventory) {
+      const description = `eine neuere Besitz- oder Geldänderung von ${current.name || 'dieser Figur'}`;
+      if (!options.force) fail('failed-precondition', `Das Inventar wurde danach verändert. Eine automatische Rücknahme würde ${description} überschreiben.`);
+      blockingDescriptions.push(description);
+      skipRevert.add(index);
+      continue;
+    }
     if (currentMarker !== commentId) {
       const blockingSnapshot = currentMarker
         ? await transaction.get(database.collection('comments').doc(currentMarker))
@@ -99,6 +110,9 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
   const entryId = clean(request.data?.entryId, 240);
   const commentId = clean(request.data?.commentId, 240);
   const force = request.data?.force === true;
+  if (force && !['admin', 'moderator'].includes(request.auth.token?.aleriaRole)) {
+    fail('permission-denied', 'Erzwungene Rücknahmen verwaltet die Spielleitung.');
+  }
   if (!entryId || !commentId) fail('invalid-argument', 'Szene und Beitrag sind erforderlich.');
 
   const commentRef = database.collection('comments').doc(commentId);
@@ -109,13 +123,16 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
     if (!snapshot.exists) fail('not-found', 'Dieser Beitrag existiert nicht mehr.');
     const comment = snapshot.data() || {};
     if (clean(comment.entryId, 240) !== entryId) fail('failed-precondition', 'Der Beitrag gehört nicht zu dieser Szene.');
+    if (comment.inventoryTransaction?.group === true) {
+      fail('failed-precondition', 'Dieser Beitrag belegt eine Buchung des Gruppenbestands. Korrigiere sie durch eine Gegenbuchung in der Gruppenkasse; der Beleg bleibt erhalten.');
+    }
     if (!comment.serverValidatedMechanics && !comment.mechanicalAudit) {
       fail('failed-precondition', 'Dieser Beitrag ist kein serverseitig geprüfter Kampf-/Rast-Eintrag.');
     }
     if (!force && hasUnsupportedMechanics(comment)) {
       fail(
         'failed-precondition',
-        'Dieser Beitrag enthält auch eine Fertigkeitsprobe oder Inventarnutzung und kann derzeit nicht automatisch gelöscht werden.'
+        'Dieser Beitrag enthält auch eine Fertigkeitsprobe oder Herausforderung und kann derzeit nicht automatisch gelöscht werden.'
       );
     }
 
@@ -128,6 +145,7 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
     }
     const dependent = findLaterMechanicalDependency(history, commentId);
     if (!force && dependent) fail('failed-precondition', `Eine neuere Handlung hängt von diesem Kampfstand ab: ${describeComment(dependent)}. Nimm zuerst den neueren Beitrag zurück.`);
+    const undoItemClaims = await prepareItemClaimUndo(database, transaction, comment.itemClaimUndo || []);
     if (comment.commentKind === 'combat-encounter-event') {
       const encounterId = clean(comment.combatEncounter?.encounterId, 240);
       const encounterState = deriveCombatEncounterState(history).get(encounterId);
@@ -141,7 +159,7 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
           `Das kann nicht gelöscht werden, weil diese Kampfliste danach schon wieder ${laterOp[lastEvent?.operation] || 'verändert'} wurde. Lösche zuerst die neueren Kampflisten-Einträge dieses Kampfes.`
         );
       }
-      skippedReversal = await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId, { force }) || [];
+      skippedReversal = await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId, { force, comment }) || [];
       if (comment.encounterLockUndo?.descriptors?.length && (force || isLatestEncounterEvent)) {
         const { encounterKey, locksActivated, descriptors } = comment.encounterLockUndo;
         descriptors.forEach(descriptor => {
@@ -156,10 +174,11 @@ export async function undoMechanicalCommentOperation(request, { database = getFi
         });
       }
     } else {
-      skippedReversal = await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId, { force }) || [];
+      skippedReversal = await verifyAndRevertMechanicalUndo(transaction, database, comment.mechanicalUndo, commentId, { force, comment }) || [];
     }
 
-    transaction.delete(commentRef);
+    if (skippedReversal.length && comment.itemClaimUndo?.length) fail('failed-precondition', 'Die Unikatbindung kann ohne die zugehörige Inventarrücknahme nicht verändert werden.');
+    undoItemClaims(); transaction.delete(commentRef);
   });
 
   return { id: commentId, deleted: true, skippedReversal };

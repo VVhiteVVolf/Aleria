@@ -1,4 +1,5 @@
 import { categoryLabel } from './item-register-model.js';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js';
 import { formatPrice } from './item-register-money.js';
 import { indexRegisterTemplates, registerTemplateFacets, registerTemplateProvider, searchRegisterTemplates } from './item-register-template-search.js';
 
@@ -6,7 +7,7 @@ const bindings = new WeakMap();
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const plain = value => String(value || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 function image(item) {
-  const source = String(item.image || '');
+  const source = resolveEquipmentImage(item);
   if (!source || !/^(?:https:\/\/|\.?\.?\/|\/)/i.test(source)) return '<span class="ir-template-image ir-template-placeholder" aria-hidden="true">◇</span>';
   return `<img class="ir-template-image" src="${escape(source)}" alt="" loading="lazy" decoding="async">`;
 }

@@ -26,10 +26,10 @@ function ensureSceneInventoryDialog() {
         <section><div class="scene-inventory-portrait" data-scene-transfer-receiver-portrait></div><label>Empfänger<select id="scene-transfer-receiver"></select></label></section>
       </div>
       <div class="scene-inventory-fields">
-        <label><span>Quelle</span><select id="scene-transfer-kind"><option value="money">Geld</option><option value="item">Charakterinventar</option><option value="register-item">Item-Register</option></select></label>
+        <label><span>Quelle</span><select id="scene-transfer-kind"><option value="money">Geld übergeben</option><option value="item">Gegenstand übergeben</option><option value="register-purchase">Beim Anbieter kaufen</option><option value="register-item">Freie Registerzuteilung (Spielleitung)</option></select></label>
         <div class="scene-transfer-money-fields"><label><span>Währung</span><select id="scene-transfer-currency"><option value="gold">Gold</option><option value="silver">Silber</option><option value="copper">Kupfer</option></select></label><label><span>Menge</span><input id="scene-transfer-money-amount" type="number" min="1" step="1" value="1"></label></div>
         <div class="scene-transfer-item-fields" hidden><label><span>Gegenstand</span><select id="scene-transfer-item"></select></label><label><span>Menge</span><input id="scene-transfer-item-amount" type="number" min="1" step="1" value="1"></label></div>
-        <div class="scene-transfer-register-fields" hidden><button type="button" data-scene-inventory-action="pick-register-item">Item aus Register wählen</button><div data-scene-transfer-register-summary>Noch kein Registeritem gewählt</div><label><span>Menge</span><input id="scene-transfer-register-amount" type="number" min="1" step="1" value="1"></label></div>
+        <div class="scene-transfer-register-fields" hidden><button type="button" data-scene-inventory-action="pick-register-item">Item aus Register wählen</button><div data-scene-transfer-register-summary>Noch kein Registeritem gewählt</div><label><span>Menge</span><input id="scene-transfer-register-amount" type="number" min="1" step="1" value="1"></label><label data-scene-purchase-price hidden><span>Vereinbarter Stückpreis (KT)</span><input id="scene-transfer-unit-copper" type="number" min="0" step="0.01" value="0"></label></div>
         <label class="wide scene-transfer-icon-field"><span>Transaktionsicon <small>(optional)</small></span><span><input id="scene-transfer-icon" type="text" placeholder="Icon aus dem Aleria-Verzeichnis wählen"><button type="button" data-scene-inventory-action="pick-icon">Icon wählen</button><button type="button" data-scene-inventory-action="clear-icon" aria-label="Transaktionsicon entfernen">×</button></span></label>
         <label class="wide"><span>Flavourtext</span><textarea id="scene-transfer-flavour" rows="3" maxlength="500" placeholder="Gwendolyn legt den schweren Beutel in Gawains Hand …"></textarea></label>
       </div>
@@ -75,7 +75,9 @@ function refreshSceneInventoryDialog({ refreshItems = false } = {}) {
   renderSceneInventoryPortrait(receiver, document.querySelector('[data-scene-transfer-receiver-portrait]'));
   document.querySelector('.scene-transfer-money-fields').hidden = kind !== 'money';
   document.querySelector('.scene-transfer-item-fields').hidden = kind !== 'item';
-  document.querySelector('.scene-transfer-register-fields').hidden = kind !== 'register-item';
+  document.querySelector('.scene-transfer-register-fields').hidden = !['register-item', 'register-purchase'].includes(kind);
+  document.querySelector('[data-scene-purchase-price]').hidden = kind !== 'register-purchase';
+  document.getElementById('scene-transfer-giver').closest('section').hidden = kind === 'register-purchase';
   if (refreshItems) refreshSceneInventoryItems();
   const object = document.querySelector('[data-scene-transfer-object]');
   if (!object) return;
@@ -115,7 +117,7 @@ function refreshSceneInventoryRegisterSummary() {
 
 function openSceneInventoryDialog() {
   const characters = getSceneInventoryCharacters();
-  if (characters.length < 2) {
+  if (characters.length < 1) {
     if (typeof showAppStatus === 'function') showAppStatus('Für eine Übergabe werden mindestens zwei gespeicherte Charaktere benötigt.', 'error');
     return;
   }
@@ -124,7 +126,7 @@ function openSceneInventoryDialog() {
   overlay.querySelector('#scene-transfer-giver').innerHTML = options;
   overlay.querySelector('#scene-transfer-receiver').innerHTML = options;
   overlay.querySelector('#scene-transfer-giver').value = characters[0].id;
-  overlay.querySelector('#scene-transfer-receiver').value = characters[1].id;
+  overlay.querySelector('#scene-transfer-receiver').value = (characters[1] || characters[0]).id;
   overlay.querySelector('#scene-transfer-kind').value = 'money';
   overlay.querySelector('#scene-transfer-money-amount').value = '1';
   overlay.querySelector('#scene-transfer-item-amount').value = '1';

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-01T02:09:00.912333+00:00",
+  "scope": "Public repository worktree; synthetic local emulator fixtures only. No production data writes, migration, push or deploy.",
+  "checks": [
+    {
+      "id": "frontend",
+      "kind": "full-unit-model",
+      "log": "frontend-full.log",
+      "tests": 1963,
+      "pass": 1963,
+      "fail": 0
+    },
+    {
+      "id": "server",
+      "kind": "full-unit",
+      "log": "server-units-strict-fixture.log",
+      "tests": 292,
+      "pass": 292,
+      "fail": 0
+    },
+    {
+      "id": "combat",
+      "kind": "emulator-integration",
+      "log": "combat-integration-full.log",
+      "tests": 73,
+      "pass": 73,
+      "fail": 0
+    },
+    {
+      "id": "rules",
+      "kind": "emulator-rules",
+      "log": "rules.log",
+      "tests": 27,
+      "pass": 27,
+      "fail": 0
+    },
+    {
+      "id": "release",
+      "kind": "local-release-contract",
+      "log": "release-tests.log",
+      "tests": 25,
+      "pass": 25,
+      "fail": 0
+    },
+    {
+      "id": "quest",
+      "kind": "emulator-integration",
+      "log": "quest-adventure.log",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0
+    },
+    {
+      "id": "rest-lock",
+      "kind": "emulator-integration",
+      "log": "combat-rest-lock-emulator.log",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0
+    },
+    {
+      "id": "backup-contract",
+      "kind": "open-issue-reproduction",
+      "log": "backup-mixed-restore.log",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "interpretation": "Open P1 mixed-restore issue reproduced, NOT fixed."
+    }
+  ],
+  "build": {
+    "status": "passed",
+    "log": "vite-build.log",
+    "remainingWarnings": [
+      "Existing large JavaScript chunks; no load benchmark claimed."
+    ]
+  },
+  "catalogChecks": [
+    {
+      "status": "passed",
+      "log": "check-items.log"
+    },
+    {
+      "status": "passed",
+      "log": "check-quests.log"
+    },
+    {
+      "status": "passed",
+      "log": "check-horse-quest.log"
+    },
+    {
+      "status": "passed",
+      "log": "check-landing.log"
+    },
+    {
+      "status": "passed",
+      "log": "check-notice-rewards.log"
+    }
+  ],
+  "mechanicsGenerated": "Synchronized after final source and registry changes.",
+  "fixed": [
+    "rest-current-inventory",
+    "undo-later-economy-guard",
+    "force-undo-moderator-only",
+    "rest-active-combat-lock",
+    "rest-history-order",
+    "ylva-weapon-damage-type",
+    "brevanor-armor-routine",
+    "state-snapshot-firestore-values",
+    "strict-transaction-test-fixture",
+    "module-resale-vendor-identity",
+    "item-stackability-and-charges",
+    "quest-history-order-and-identity",
+    "quest-tracker-dialog-lifecycle",
+    "active-and-archived-quest-contexts",
+    "archive-completion-order",
+    "imported-mechanics-live-authority",
+    "growing-house-and-regional-catalogs"
+  ],
+  "unresolved": [
+    {
+      "id": "coordinated-backup-restore",
+      "priority": "P1",
+      "evidence": "backup-mixed-restore-result.json",
+      "status": "Confirmed. Separate historical restore design required."
+    },
+    {
+      "id": "group-account-outgoing-transactions",
+      "priority": "P1",
+      "status": "Missing controlled spending and outgoing item distribution."
+    },
+    {
+      "id": "shared-character-control-contract",
+      "priority": "P1",
+      "status": "Cooperative controls and inventory ownership require explicit shared design."
+    },
+    {
+      "id": "production-legacy-inventory-migration",
+      "priority": "P1-before-bulk-adoption",
+      "status": "Preview and reviewed batches required; no live migration performed."
+    },
+    {
+      "id": "player-trade-and-unique-lifecycle",
+      "priority": "P2",
+      "status": "Atomic paid player trade, unique destruction and same-instance vendor buyback incomplete."
+    },
+    {
+      "id": "scene-close-and-world-day-recovery",
+      "priority": "P2",
+      "status": "Cross-scene lifecycle and recovery contract remain to be defined."
+    },
+    {
+      "id": "large-inventory-and-builder-effects",
+      "priority": "P2/P3",
+      "status": "80-row inventory limit, safe consolidation, builder stackability and richer automatic effects remain."
+    }
+  ],
+  "releaseRequirements": [
+    "Six new quest composite indexes must be built before or with frontend rollout.",
+    "Coordinate Firebase Functions/Rules with frontend; Netlify alone does not publish Firebase changes."
+  ],
+  "report": "AleriaAlmanach/docs/testing/SYSTEM_CHECKUP_2026-11-01.md"
+}

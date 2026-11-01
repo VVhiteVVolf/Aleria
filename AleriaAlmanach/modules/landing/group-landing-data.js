@@ -1,11 +1,16 @@
-import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v4';
-import { resolveGroupRoster } from './group-landing-roster.js';
+import { overlayCombatHitPointState } from '../combat/combat-state-model.js?v=20260928-equipment-art-v4';
+import { resolveGroupRoster, groupMemberRecordId } from './group-landing-roster.js';
+import { appendGroupCompanions } from './group-landing-companions.js';
+import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
+import { deriveGroupSceneStates } from './group-scene-state.js';
 import { projectGroupReadiness } from './group-landing-combat.js';
 import { collectGroupScenes, projectGroupScene } from './group-landing-scenes.js';
 
 export function groupCharacters() {
   return globalThis.getAvailableCommentCharacters?.() || globalThis.getVisibleCharacterRecords?.() || [];
 }
+
+export function groupCreatures() { return globalThis.AleriaCreatures?.getAll?.() || []; }
 
 export function groupScenes() {
   return collectGroupScenes(globalThis.getAllSections?.() || []);
@@ -18,13 +23,22 @@ export function groupSceneSnapshot(scene, comments) {
 
 export function groupMemberSnapshots(entry, group, comments = []) {
   const characters = groupCharacters();
-  const ordered = globalThis.sortCommentsByTimeline?.(comments) || comments;
-  const states = ordered.length ? deriveCombatStateFromComments(ordered) : new Map();
-  return resolveGroupRoster(entry, group, characters).map(member => {
-    const character = characters.find(record => record.id === member.characterId);
+  const creatures = groupCreatures();
+  // Ordinary committed speech advances contribution clocks as well. Imported
+  // or undone receipts must not seed or advance any current group state.
+  const trusted = comments.filter(comment => !comment.importedHistoricalMechanics && !comment.mechanicalUndone && !comment.undoneAt
+    && (comment.serverValidatedMechanics === true || comment.serverCommitted === true));
+  const ordered = globalThis.sortCommentsByTimeline?.(trusted) || [...trusted].sort((a,b) => Number(a.orderKey || a.createdAtClient || 0) - Number(b.orderKey || b.createdAtClient || 0));
+  const states = ordered.length ? deriveGroupSceneStates(ordered) : new Map();
+  const people = resolveGroupRoster(entry, group, characters, creatures);
+  const roster = group.includeCompanions === false ? people : appendGroupCompanions(people, characters, creatures);
+  return roster.map(member => {
+    const recordId = groupMemberRecordId(member);
+    const character = (member.kind === 'creature' ? creatures : characters).find(record => record.id === recordId);
     const hasSheet = character?.combatProfile && Object.keys(character.combatProfile).length > 0;
-    const base = hasSheet ? globalThis.AleriaCombat?.getProfile?.(member.characterId) : null;
-    const profile = base ? overlayCombatHitPointState(base, states.get(member.characterId)) : null;
+    const base = hasSheet ? (member.kind !== 'creature' && globalThis.AleriaCombat?.getProfile?.(recordId))
+      || resolveCombatProfile(character, { id: recordId, entityType: member.kind === 'creature' ? 'creature' : 'character' }) : null;
+    const profile = base ? overlayCombatHitPointState(base, states.get(`${member.kind || 'character'}:${recordId}`)) : null;
     return { ...member, portrait: member.portrait || character?.portrait || '',
       className: profile?.classLabel || profile?.className || character?.combatProfile?.className || '',
       readiness: projectGroupReadiness(member, profile) };

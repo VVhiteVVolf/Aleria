@@ -1,0 +1,147 @@
+import assert from 'node:assert/strict';
+import { writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { chromium } from '../../Stammbäume/node_modules/playwright-core/index.mjs';
+import { startChartQualityServer } from '../../Stammbäume/tools/chart-quality-server.mjs';
+import { COURT_NOTICE_ID } from '../../Anzeigetafeln/tools/notices/gwrgan-gegen-lleucu.mjs';
+import { LOTSENSUCHE_BOARD_BINDING } from '../../Anzeigetafeln/tools/quests/lotsensuche.mjs';
+import { TROETZLI_NOTICE_ID } from '../../Anzeigetafeln/tools/quests/troetzli.mjs';
+import { TRAVEL_ARCHIVE_NOTICE_ID } from '../../Anzeigetafeln/tools/notices/erledigtes-reisegeleit.mjs';
+
+const server = await startChartQualityServer(fileURLToPath(new URL('../../', import.meta.url)));
+const browser = await chromium.launch({ headless: true, executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe' });
+const context = await browser.newContext({ viewport: { width: 1500, height: 1100 } });
+await context.route('**/*', route => new URL(route.request().url()).origin === server.origin
+  && route.request().method() === 'GET' ? route.continue() : route.abort());
+await context.addInitScript(() => localStorage.setItem('aleria.current-world-date.v1', JSON.stringify({ year: 1740, month: 3, day: 10 })));
+const page = await context.newPage(), errors = [], report = { errors, networkWritesAllowed: false };
+page.on('pageerror', error => errors.push(error.message));
+const shot = name => page.screenshot({ path: fileURLToPath(new URL(`${name}.png`, import.meta.url)), animations: 'disabled' });
+try {
+  await page.goto(`${server.origin}/Anzeigetafeln/tafel.html?tafel=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-anzeigetafel`);
+  await page.waitForFunction(() => window.TafelState?.get().zettel.length > 20 && document.querySelector('.board-poster'));
+  await page.locator('.board-poster img, .board-calendar img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+  assert.deepEqual(errors, []);
+  assert.equal(await page.locator('.board-calendar-leaf strong').first().textContent(), '10');
+  await shot('desktop-calendar');
+  report.loaded = await page.evaluate(() => ({ notices: window.TafelState.get().zettel.length,
+    calendar: window.TafelNoticeTimeline.getState(), dates: window.TafelState.get().zettel.every(note => note.publishedOn.day === 9) }));
+  const physical = page.locator('.board-calendar');
+  assert.equal(await page.locator('[data-archive-id]').count(), 1);
+  await page.locator('[data-archive-id]').click();
+  await page.locator('[data-archive-action="read"]').click();
+  await page.locator('#scroll-content img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+  assert.ok((await page.locator('#scroll-content').innerText()).includes('Herzlichen Dank an den Söldner Raban'));
+  assert.equal(await page.locator('.zettel-comment').count(), 4);
+  await page.locator('.zettel-comments').screenshot({ path: fileURLToPath(new URL('completed-travel-comments.png', import.meta.url)) });
+  await page.locator('#scroll-actions [data-action="close-scroll"]').click();
+  report.completedTravelExample = true;
+  report.calendarPlacement = await page.locator('.board-calendar').evaluate(calendar => {
+    const a = calendar.getBoundingClientRect();
+    return { beam: 'upper right vertical', overlaps: [...document.querySelectorAll('.board-poster')].filter(p => {
+      const b = p.getBoundingClientRect();
+      return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+    }).map(p => p.dataset.posterId) };
+  });
+  assert.deepEqual(report.calendarPlacement.overlaps, []);
+  await physical.locator('[data-board-date-action="previous"]').click();
+  await page.evaluate(id => window.TafelNoticeReader.open(id), TRAVEL_ARCHIVE_NOTICE_ID);
+  assert.equal(await page.locator('.zettel-comment').count(), 2, 'closing reply is not visible on the previous day');
+  await page.locator('#scroll-actions [data-action="close-scroll"]').click();
+  await physical.locator('[data-board-date-action="previous"]').click();
+  assert.equal(await page.locator('.board-poster[data-notice-id]').count(), 0, 'no dated papers before Play start');
+  await physical.locator('[data-board-date-action="today"]').click();
+  await page.locator('#btn-edit').click();
+  await page.locator('#pw-inp').fill('7777');
+  await page.locator('[data-action="check-password"]').click();
+  await page.evaluate(() => window.TafelNoticeReader.open('gwynthor-sankt-padraigs-tag'));
+  await page.locator('#scroll-actions [data-action="zettel-open-edit"]').click();
+  const editorDate = page.locator('[data-notice-date-editor]');
+  await editorDate.locator('summary').click();
+  await editorDate.locator('[data-calendar-day="12"]').click();
+  await page.locator('[data-action="zettel-save-close"]').click();
+  assert.equal(await page.locator('[data-poster-id="gwynthor-poster-feiertag"]').count(), 0);
+  await physical.locator('[data-board-date-action="next"]').click();
+  assert.equal(await page.locator('[data-poster-id="gwynthor-poster-feiertag"]').count(), 0);
+  await physical.locator('[data-board-date-action="next"]').click();
+  assert.equal(await page.locator('[data-poster-id="gwynthor-poster-feiertag"]').count(), 1);
+  await page.evaluate(() => window.dispatchEvent(new StorageEvent('storage', {
+    key: 'aleria.current-world-date.v1', newValue: JSON.stringify({ year: 1740, month: 3, day: 11 }) })));
+  assert.equal(await physical.locator('strong').textContent(), '12', 'browsing does not follow clock');
+  await physical.locator('[data-board-date-action="today"]').click();
+  assert.equal(await physical.locator('strong').textContent(), '11');
+  await page.evaluate(() => window.dispatchEvent(new StorageEvent('storage', {
+    key: 'aleria.current-world-date.v1', newValue: JSON.stringify({ year: 1740, month: 3, day: 10 }) })));
+  assert.equal(await physical.locator('strong').textContent(), '10');
+  report.futureScheduling = true;
+  const chosen = [COURT_NOTICE_ID, LOTSENSUCHE_BOARD_BINDING.noticeId, TROETZLI_NOTICE_ID];
+  assert.ok(chosen.every(Boolean), JSON.stringify(chosen));
+  const before = await page.evaluate(() => JSON.stringify(window.TafelState.get().zettel));
+  for (const id of chosen) {
+    await page.evaluate(id => window.TafelNoticeReader.open(id), id);
+    await page.locator('[data-action="archive-publication"]').click();
+    await page.waitForTimeout(1050);
+  }
+  assert.equal(await page.locator('[data-archive-id]').count(), 4);
+  assert.equal(await page.evaluate(() => JSON.stringify(window.TafelState.get().zettel)), before);
+  await page.locator('.paper-archive-object img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+  await shot('three-paper-wads');
+  const drag = async (source, target) => {
+    const a = await source.boundingBox(), b = await target.boundingBox();
+    await page.mouse.move(a.x + a.width / 2, a.y + a.height / 2); await page.mouse.down();
+    await page.mouse.move(b.x + b.width / 2, b.y + b.height / 2, { steps: 16 }); await page.mouse.up();
+  };
+  await drag(page.locator('[data-archive-id]').nth(0), page.locator('[data-archive-id]').nth(1));
+  assert.equal(await page.locator('[data-archive-id]').count(), 3);
+  await drag(page.locator('[data-archive-id]').nth(1), page.locator('[data-archive-id]').nth(0));
+  assert.equal(await page.locator('[data-archive-id]').count(), 2);
+  await drag(page.locator('[data-archive-id]').nth(1), page.locator('[data-archive-id]').nth(0));
+  assert.equal(await page.locator('[data-archive-id]').count(), 1);
+  await page.locator('.paper-archive-object img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+  await shot('paper-pile');
+  await page.locator('[data-archive-id]').click();
+  assert.equal(await page.locator('.notice-archive-row').count(), 4);
+  await page.locator('[data-archive-group]').selectOption('type');
+  await shot('archive-desktop');
+  await page.locator('[data-archive-query]').fill('Trötzli');
+  assert.equal(await page.locator('.notice-archive-row').count(), 1);
+  await page.locator('[data-archive-action="read"]').click();
+  report.archivedReadText = (await page.locator('#scroll-content').innerText()).slice(0, 500);
+  assert.ok((await page.locator('#scroll-content').innerText()).includes('fünfzig Kupferstücke'), report.archivedReadText);
+  await page.locator('#scroll-actions [data-action="close-scroll"]').click();
+  await page.locator('[data-action="board-open-archive"]').click();
+  await page.locator('[data-archive-query]').fill('');
+  await page.locator('[data-archive-action="restore"]').first().click();
+  assert.equal(await page.locator('[data-archive-action="restore"]').count(), 3);
+  await page.locator('[data-archive-action="close"]').last().click();
+  await page.evaluate(() => window.TafelState.saveNow());
+  const stored = await page.evaluate(() => JSON.stringify(window.TafelState.snapshot()));
+  await page.reload();
+  await page.waitForFunction(() => window.TafelState?.get().noticeArchive?.entries.length === 4);
+  assert.equal(await page.evaluate(() => JSON.stringify(window.TafelState.snapshot())), stored);
+  assert.equal(await page.locator('[data-archive-id]').count(), 1);
+  await physical.locator('[data-board-date-action="previous"]').click();
+  assert.equal(await page.locator('[data-archive-id]').count(), 0, 'archive does not exist before archival day');
+  assert.equal(await page.evaluate(() => window.TafelNoticeTimeline.visibleNotices().length), 30, 'only future holiday is hidden');
+  await physical.locator('[data-board-date-action="today"]').click();
+  report.crumpleDragMergeRestoreReload = true;
+  await page.setViewportSize({ width: 430, height: 900 });
+  await page.locator('#btn-register').click();
+  const mobile = page.locator('.board-calendar-mobile');
+  await mobile.locator('[data-board-date-action="choose"]').click();
+  await page.locator('.board-date-dialog [data-calendar-day="12"]').click();
+  assert.equal(await physical.locator('strong').textContent(), '12');
+  await mobile.locator('[data-board-date-action="today"]').click();
+  await shot('mobile-calendar');
+  await page.locator('[data-action="board-open-archive"]').click();
+  assert.equal(await page.locator('.notice-archive-row').count(), 4);
+  const widths = await page.locator('.notice-archive-dialog').evaluate(el => ({ client: el.clientWidth, scroll: el.scrollWidth }));
+  assert.ok(widths.scroll <= widths.client + 1);
+  await shot('archive-mobile');
+  report.mobile = { widths, datePicker: true };
+  assert.deepEqual(errors, []);
+  console.log(JSON.stringify(report));
+} finally {
+  await writeFile(new URL('browser-review.json', import.meta.url), JSON.stringify(report, null, 2) + '\n');
+  await browser.close(); await server.close();
+}

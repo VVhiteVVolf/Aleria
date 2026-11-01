@@ -34,7 +34,7 @@ export function createPosterInspector({ esc, assets, getSelected, getAsset, grou
         const current = group.notices.some(notice => notice.id === poster.noticeId) ? group.notices[0].id : poster.noticeId;
         return option(group.notices[0].id, group.notices[0].title || 'Ohne Titel', current);
       }).join('')}</select></label>
-      <div class="board-art-content-tools">${poster.noticeId ? button('edit-content', 'Inhalt bearbeiten') : button('new-content', 'Inhalt hinzufügen')}</div>
+      <div class="board-art-content-tools">${poster.noticeId ? `${button('edit-content', 'Inhalt bearbeiten')}<button type="button" data-action="archive-poster" data-notice-id="${esc(poster.noticeId)}">Plakat zusammenknüllen</button>` : button('new-content', 'Inhalt hinzufügen')}</div>
       <p class="board-art-help">Plakat und Nagel werden gemeinsam gespeichert. „Plakat entfernen“ erhält verknüpfte Texte und Kommentare.</p>
       <div class="board-art-content-tools">${button('duplicate', 'Duplizieren')}${button('delete', 'Plakat entfernen')}</div></div>`;
   }

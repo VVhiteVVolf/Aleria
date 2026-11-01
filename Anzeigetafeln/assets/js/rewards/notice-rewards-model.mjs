@@ -1,11 +1,9 @@
 import { localizedNumber, parsePrice } from '../../../../AleriaAlmanach/modules/item-register/item-register-money.js';
+import { ALERIA_CURRENCY_DISPLAY } from '../../../../AleriaAlmanach/modules/currency/currency-art.js';
 
-export const NOTICE_COINS = Object.freeze([
-  { id: 'gold', label: 'Goldtaler', code: 'GT', icon: '/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png' },
-  { id: 'silver', label: 'Silbertaler', code: 'ST', icon: '/AleriaAlmanach/public/assets/inventory/coins/silbertaler.png' },
-  { id: 'copper', label: 'Kupfertaler', code: 'KT', icon: '/AleriaAlmanach/public/assets/inventory/coins/kupfertaler.png' },
-  { id: 'pfennig', label: 'Eisenpfennig', code: 'Pf', icon: '/AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png' },
-]);
+export const NOTICE_COINS = Object.freeze(ALERIA_CURRENCY_DISPLAY.map(currency=>Object.freeze({
+  id:currency.id,label:currency.label,code:currency.short,icon:currency.icon
+})));
 
 export function legacyNoticeRewards(text) {
   const match = String(text || '').trim().match(/^(\d[\d.,]*)\s*(Goldtaler|Silbertaler|Kupfertaler|Eisenpfennig|Pfennig|GT|ST|KT|Pf)\.?$/i);
@@ -32,5 +30,7 @@ export function rewardText(reward) {
 
 export function rewardFromItem(item, quantity = 1) {
   return { kind: 'item', itemId: item.id, quantity, title: item.title, image: item.image || '',
+    ...(item.definitionRef ? { definitionRef: { ...item.definitionRef } } : {}),
+    ...(item.moduleId ? { moduleId: item.moduleId, sourceRevision: item.sourceRevision || '' } : {}),
     description: item.description || '', details: item.details || '', type: item.type || '', category: item.category || '' };
 }

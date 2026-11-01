@@ -23,6 +23,9 @@
 <link rel="stylesheet" href="./modules/archive/archive-shell.css?v=20260922-responsive-v1">
 <link rel="stylesheet" href="./modules/dashboard/dashboard.css?v=20260922-responsive-v1">
 <link rel="stylesheet" href="./modules/archive/archive-navigation.css?v=20261006-sidebar-equipment-v1">
+<link rel="stylesheet" href="./modules/landing/landing-quest-journal.css?v=20261101-quest-journal-v1">
+<link rel="stylesheet" href="./modules/quests/quest-scene-tracker.css?v=20261101-troetzli-v1">
+<script type="module" src="./modules/quests/quest-scene-tracker.js?v=20261101-troetzli-v1"></script>
 <link rel="stylesheet" href="./modules/archive/archive-entry-card.css?v=20260910-archive-navigation-v1">
 <link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
@@ -104,6 +107,9 @@
 <link rel="stylesheet" href="./modules/language/laerelis/laerelis.css?v=20260919-laerelis-v1">
 <link rel="stylesheet" href="./styles/module-page-landing.css?v=20261005-group-overview-v2">
 <link rel="stylesheet" href="./styles/group-landing.css?v=20261005-group-overview-v2">
+<link rel="stylesheet" href="./modules/landing/landing-folio.css?v=20261101-folio-v1">
+<link rel="stylesheet" href="./modules/landing/group-community.css?v=20261101-group-systems-v1">
+<link rel="stylesheet" href="./modules/landing/group-account.css?v=20261101-group-systems-v1">
 <link rel="stylesheet" href="./styles/module-page-guest-register.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-artifact-recipe.css?v=20261011-material-frame-v1">
 <link rel="stylesheet" href="./styles/crop-dialog.css?v=20260520-cleanup-v1">
@@ -149,9 +155,10 @@
   <script src="./modules/language/laerelis/laerelis-script.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/language/laerelis/laerelis-tables.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/language/laerelis/laerelis-entry.js?v=20260919-laerelis-v1" defer></script>
-  <script src="./modules/landing/landing-model.global.js?v=20261005-group-overview-v2" defer></script>
+  <script src="./modules/landing/landing-model.global.js?v=20261101-group-systems-v2" defer></script>
+  <script src="./modules/group-adventures/group-adventures.global.js?v=20261101-group-systems-v2" defer></script>
   <script src="./modules/gwynthor-geography/gwynthor-geography.global.js?v=20261019-bannkreis-v1" defer></script>
-  <script src="./modules/module-store/module-entry-migrations.js?v=20261021-bandenakte-v1" defer></script>
+  <script src="./modules/module-store/module-entry-migrations.js?v=20261101-group-systems-v2" defer></script>
   <script src="./modules/language/language-reference-entries.js?v=20260713-argenti-stoicheia-v1" defer></script>
   <script src="../Fonts/Arkanes-Alphabet/arcane.js?v=2" defer></script>
   <script src="./modules/language/arcane-alphabet-entry.js?v=20260911-arcane-v1" defer></script>
@@ -173,9 +180,9 @@
   <script src="./modules/gortach-brauerei/gortach-brewery-data.js?v=20261007-raised-prices-v2" defer></script>
   <script src="./modules/brewer-guilds/brewer-guilds-data.js?v=20261014-aldrimar-brewers-v1" defer></script>
   <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261019-prices-v1" defer></script>
-  <script src="./modules/gwynthor-theater/theater-data.js?v=20261017-freydis-v2" defer></script>
+  <script src="./modules/gwynthor-theater/theater-data.js?v=20261031-formlingssache" defer></script>
   <script src="./modules/gwynthor-arena/arena-data.js?v=20261017-local-v1" defer></script>
-  <script src="./modules/gwynthor-cathedral/cathedral-data.js?v=20261017-local-v1" defer></script>
+  <script src="./modules/gwynthor-cathedral/cathedral-data.js?v=20261031-euddogwy" defer></script>
   <script src="./modules/gwynthor-bathhouse/bathhouse-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/kleiner-durst/durst-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/rotes-tor/tor-data.js?v=20261020-tor-menu-v2" defer></script>
@@ -262,12 +269,12 @@
   <script src="./modules/language/language-module-editor.js?v=20260909-template-layout-v1" defer></script>
   <script src="./modules/name-list/name-list-module-editor.js?v=20260919-laerelis-v1" defer></script>
   <script src="./modules/script-table/script-table-module-editor.js?v=20260919-laerelis-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-landing.js?v=20261005-group-overview-v2" defer></script>
+  <script src="./modules/module-editor/module-editor-landing.js?v=20261101-group-systems-v2" defer></script>
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/module-editor/module-editor-templates.js?v=20261019-economy-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-workflow.js?v=20261017-theatre-program-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-workflow.js?v=20261101-group-systems-v2" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/module-editor/module-editor-simple-lines.js?v=20260809-character-biography-tab-v1" defer></script>
@@ -278,7 +285,8 @@
   <script src="./modules/module-editor/module-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/module-editor/module-editor-profiles.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261006-regional-equipment-v2" defer></script>
+  <script src="./modules/currency/currency-art.global.js?v=20261101-aleria-currency-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261101-aleria-currency-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20261017-biography-portrait-fit-v1" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260925-creature-biography-v2" defer></script>
@@ -342,9 +350,9 @@
   <script src="./modules/language/language-renderer.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/name-list/name-list-renderer.js?v=20260913-karnrith-v3" defer></script>
   <script src="./modules/script-table/script-table-renderer.js?v=20260913-morgar-v20" defer></script>
-  <script src="./modules/landing/landing-renderer.js?v=20261005-group-edit-access-v1" defer></script>
-  <script type="module" src="./modules/landing/group-landing-controller.js?v=20261005-group-edit-access-v1"></script>
-  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20261015-image-url-v1" defer></script>
+  <script src="./modules/landing/landing-renderer.js?v=20261101-group-systems-v2" defer></script>
+  <script type="module" src="./modules/landing/group-landing-controller.js?v=20261101-group-systems-v2"></script>
+  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20261101-aleria-currency-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-card-editor.js?v=20260922-itemization-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-cards.js?v=20260928-collapsible-diagram-v1" defer></script>
   <script src="./modules/character-inventory/character-inventory-questionnaire.js?v=20260922-itemization-v1" defer></script>

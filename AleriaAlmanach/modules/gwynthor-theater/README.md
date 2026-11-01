@@ -34,3 +34,11 @@ python AleriaAlmanach/scripts/audit-theater-art.py
 Das vollständige Modul liegt unter `Charakter Archiv Exporte/Module/Gwynthorer Theater/gwynthorer-theater-2026-10-17.json`, die Personenübersicht daneben als `ensemble-und-fuehrung.json`.
 
 Sabjorn (23, Aldrimar) ist Sigruns Bühnenpartner. Der frühere Schlacht-Titel und das zugehörige Bild sind aus dem aktiven Repertoire entfernt. Das neue Bild verwendet die drei konkreten Darsteller als Referenzen; zwölf Prüfungstafeln und Cadfans blonde Perücke sind visuell geprüft. [Bildrevision](../../assets/gwynthor-theater/image-revisions.json).
+
+## Ergänzung: Statisterie und Nebenrollen
+
+Seit dem 31. Oktober 2026 ergänzen **Lleuwen** und **Orvar Schattentänzer** das
+Haus in einer eigenen Ebene für Statisterie und kleinere Nebenrollen. Die
+13 bisherigen Ensemblemitglieder bleiben bestehen. Lleuwen befindet sich
+gegenwärtig in kirchlichem Gewahrsam. Identitäten, Porträts und Fall stehen im
+[gemeinsamen Fallmodul](../gwynthor-formlingssache/README.md).

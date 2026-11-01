@@ -1,0 +1,11 @@
+{
+  "algorithm": "sha256(json.dumps({'inventory':row.get('inventory'),'combatProfile':row.get('combatProfile')},sort_keys=True,separators=(',',':'),ensure_ascii=True).encode())",
+  "baselineCount": 255,
+  "snapshotCount": 255,
+  "recordCount": 255,
+  "addedIds": [],
+  "removedIds": [],
+  "changedSnapshotGameplay": [],
+  "changedRecordGameplay": [],
+  "snapshotRecordMismatch": []
+}

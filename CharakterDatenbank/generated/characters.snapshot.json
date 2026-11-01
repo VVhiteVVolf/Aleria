@@ -54,6 +54,7 @@
     "Charakter Archiv Exporte/gawain-draig-defense-balance-2026-10-03.json",
     "Charakter Archiv Exporte/gawain-draig-erholung-2026-09-26.json",
     "Charakter Archiv Exporte/gawain-draig-jungdrache-2026-09-30.json",
+    "Charakter Archiv Exporte/gawain-draig-oeffentliche-biografie-2026-11-01.json",
     "Charakter Archiv Exporte/gawain-draig-weapon-economy-2026-09-30.json",
     "Charakter Archiv Exporte/gawain-draig.json",
     "Charakter Archiv Exporte/gefaehrten/argent-2026-10-14/armel-inventar-und-reittier.json",
@@ -86,6 +87,10 @@
     "Charakter Archiv Exporte/gwendolyn-draig-aderyn.json",
     "Charakter Archiv Exporte/gwendolyn-draig-defense-balance-2026-10-03.json",
     "Charakter Archiv Exporte/gwendolyn-draig-patrick.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--euddogwy.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--lleuwen.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--orvar.json",
+    "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--ulrich.json",
     "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/rob-gwynthor-tageloehner.json",
     "Charakter Archiv Exporte/gwynthor-lotsensuche-2026-10-31/vebrand-wolfsruf.json",
     "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--cynddelw-llythfor.json",
@@ -170,7 +175,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-10-31T00:00:00Z",
+  "sourceExportedAt": "2026-11-01T03:46:32.000Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -53211,7 +53216,7 @@
     {
       "id": "q1QtSIug74FzzwUAqWrs",
       "name": "Gawain Draig",
-      "title": "Mundschenk des Grafen, Gwynthor",
+      "title": "Ritter des Hauses Draig · Mundschenk, Gwynthor",
       "fraktion": "Haus Draig, Celtigerns Wacht",
       "role": "",
       "status": "",
@@ -53222,11 +53227,11 @@
       "plotNode": "",
       "profileLink": "https://dieweltvonaleria.netlify.app/steckbriefe/land/cenyr/celtigernswacht/adelshäuser/hausdraig/gawaindraig/gawaindraigsteckbrief",
       "playerOwner": "erdi",
-      "bio": "Gawain Draig ist der jüngste Sohn von Galahad Draig und Gwendolyn Draig geb. Aderyn als auch der Mundschenk seiner hochwürden des Grafen.",
+      "bio": "Sir Gawain Draig, jüngster ehelicher Sohn Galahads und Gwendolyns, ist Ritter und Mundschenk am Hof von Gwynthor. Begabt, eitel und schlagfertig, sucht er ein Leben jenseits der Burgmauern. Unter seinem früheren Rittervater Sir Duncan Gafyr soll er nun im Dienst an der Stadt zeigen, dass seinem Mut auch Verlässlichkeit und Urteilskraft folgen.",
       "aliases": [],
       "archived": false,
       "createdAt": "2026-07-26T10:52:51.454Z",
-      "updatedAt": "2026-10-11T19:46:42.303Z",
+      "updatedAt": "2026-11-01T03:46:32.000Z",
       "imageSetSchemaVersion": 1,
       "imageSets": [
         {
@@ -58355,8 +58360,9 @@
         "recordId": "character--q1QtSIug74FzzwUAqWrs",
         "path": "records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json",
         "schemaVersion": 1,
-        "contentHash": "2ffefbe98fa521ff76420ba5d35d6ec9fcd8c47410085aa3f59f2c6eac43f9ec",
+        "contentHash": "8799c9e77f35957f54f69fa5667192cc27ce97dde96d046cc66eb6659f6bb19a",
         "firestoreDocumentIds": [
+          "q1QtSIug74FzzwUAqWrs",
           "q1QtSIug74FzzwUAqWrs",
           "q1QtSIug74FzzwUAqWrs",
           "q1QtSIug74FzzwUAqWrs",
@@ -58492,85 +58498,147 @@
         }
       },
       "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Sir Gawain Draig"
+          },
+          {
+            "label": "Geboren",
+            "value": "1722 · 18 Jahre im Jahr 1740"
+          },
+          {
+            "label": "Haus",
+            "value": "Draig · Celtigerns Wacht"
+          },
+          {
+            "label": "Stand",
+            "value": "Prinz des Hauses Draig · Ritter"
+          },
+          {
+            "label": "Dienst",
+            "value": "Mundschenk · ritterliche Bewährung in Gwynthor"
+          },
+          {
+            "label": "Rittervater",
+            "value": "Sir Duncan Gafyr"
+          },
+          {
+            "label": "Verlobt",
+            "value": "Guinevere Neidr"
+          }
+        ],
+        "quote": "Ich möchte nur sehen, wofür ich eines Tages Verantwortung tragen soll.",
+        "quoteBy": "— Gawain vor dem Offenen Gericht",
         "biography": {
-          "abilities": [],
-          "abilitiesTitle": "Persönlichkeit",
-          "biographyText": "",
-          "biographyTitle": "Biografie",
-          "connectionPortraitHeight": 68,
-          "connections": [],
-          "connectionsTitle": "Verbindungen",
-          "connectionTextOffset": 0,
-          "documents": [],
-          "documentsTitle": "Eigentum & Besitz",
-          "extraSections": [],
-          "footer": "Personenakte · Gawain Draig",
-          "historyText": "",
-          "historyTitle": "Hintergrund",
+          "portrait": "https://i.imgur.com/BceZTJo.jpeg",
           "portraitStages": [
             "",
             "",
             "",
             ""
           ],
-          "quotes": [],
-          "quotesTitle": "Zitate",
           "sideWidth": 100,
-          "trivia": [],
-          "triviaTitle": "Trivia",
-          "works": [],
-          "worksTitle": "Bekannte Werke"
-        },
-        "quote": "",
-        "quoteBy": "",
-        "schema": "aleria.biography-module",
-        "schemaVersion": 1,
-        "stats": [
-          {
-            "label": "Vollständiger Name",
-            "value": "Gawain Draig"
-          },
-          {
-            "label": "Haus",
-            "value": "Haus Draig"
-          },
-          {
-            "label": "Titel / Anrede",
-            "value": "Mundschenk des Grafen, Gwynthor"
-          },
-          {
-            "label": "Geboren",
-            "value": "1722"
-          },
-          {
-            "label": "Geburtsort",
-            "value": ""
-          },
-          {
-            "label": "Gestorben",
-            "value": "Lebend"
-          },
-          {
-            "label": "Geschlecht",
-            "value": "Unbekannt"
-          },
-          {
-            "label": "Familienstand",
-            "value": ""
-          },
-          {
-            "label": "Rang / Stand",
-            "value": ""
-          },
-          {
-            "label": "Tätigkeit",
-            "value": ""
-          },
-          {
-            "label": "Wohnsitz",
-            "value": ""
-          }
-        ]
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Ein Prinz vor der Burgpforte",
+          "biographyText": "<p>Gawain Draig ist in einem Haus aufgewachsen, in dem sein Name Türen öffnet, bevor er selbst die Hand an die Klinke legt. Der jüngste eheliche Sohn Galahads und Gwendolyns kennt die Stimmen des Rates, den Geschmack guter Weine und die kleinen Kriege einer großen Familie. Als Mundschenk steht er oft nahe genug am Thron, um alles zu hören. Stillzustehen und bloß zuzuhören fällt ihm erheblich schwerer.</p><p>Er liebt schöne Kleidung, glänzende Rüstung und ausgesuchte Düfte mit einer Ernsthaftigkeit, die andere Menschen für wichtigere Dinge aufheben. Dabei fehlt ihm keineswegs der Geschmack; er kann durchaus erklären, weshalb ein Parfüm zu einem Menschen passt. Was er nur widerwillig versteht, ist die Vorstellung, dass nicht jeder seine Bequemlichkeiten für unentbehrlich hält. Für Regen, schmutzige Stiefel und das eigenhändige Richten eines widerspenstigen Riemens besitzt er wenig Geduld. Für eine treffende Bemerkung findet er dagegen fast immer Zeit.</p><p>Hinter dieser Eitelkeit steckt ein junger Mann mit echtem Können. Duncan Gafyr bildete ihn als Knappen aus; sein Vater schlug ihn bereits zum Ritter. Die Grundstellungen des Drachentanzes sitzen auch dann, wenn Gawain über die Übung klagt. Er erkennt Öffnungen und findet im Kampf überraschend gute Antworten. Nur vertraut er seinem Talent häufig lieber als der mühsamen Wiederholung. Wo ihm vieles leichtfällt, hält er Ausdauer zu schnell für eine Zumutung.</p><p>Gawain will hinaus. Nicht nur, um einer besonders schönen Heldengeschichte nachzureiten, sondern auch, um die Dörfer, Wege und Menschen kennenzulernen, für die sein Haus Verantwortung trägt. Beides lässt sich bei ihm noch schwer voneinander trennen: die ehrliche Neugier auf die Welt und der Wunsch, darin eine eindrucksvolle Rolle zu spielen. Dass seine Mutter ihn schützen möchte, erlebt er leicht als Bevormundung. Dass sie Gründe für ihre Sorge hat, sieht er erheblich seltener ein.</p><p>Seine Schlagfertigkeit hat eine scharfe Kante. Er kann einen langen Bericht über Hunger, Heimatverlust und gestorbene Angehörige mit einer gelangweilten Bemerkung verletzen, weil er zuerst an seine eigene Unterhaltung denkt. Ylva Wolfshorn ließ ihn damit nicht davonkommen. Gawain versuchte nicht, sich hinter seinem Rang zu verstecken: Er hörte ihre Antwort, entschuldigte sich vor dem Hof und bot Hilfe an. Das macht aus ihm keinen geläuterten Musterknaben. Es zeigt aber, dass er erreichbar bleibt, wenn jemand seinen Übermut durchdringt.</p><p>Auch seine Zuneigung ist selten leise. Taliesin Draenmelyn ist für ihn nicht irgendein austauschbarer Diener, sondern sein bester Freund und engster Vertrauter. Dennoch denkt Gawain Freundschaft und Bedienung so selbstverständlich zusammen, dass ihm der Widerspruch kaum auffällt. Guinevere Neidr nennt er seine beste Freundin; die von ihren Eltern vereinbarte Verlobung wollte er selbst nicht. Seine wachsende Aufmerksamkeit für Ylva ist im Hof und auf dem Übungsplatz unübersehbar. Daraus ist jedoch weder eine aufgehobene Verlobung noch ein neuer Ehebund geworden.</p><p>Gawain kann Anerkennung annehmen und sie auch einem anderen geben. Nach seinem ersten Sieg über Gildas Gafyr reichte er dem unterlegenen Ritter die Hand und dankte ihm aufrichtig. Als Asgeir und Ylva ihr Können zeigten, wich seine Selbstsicherheit sichtlichem Respekt. Unter dem Wunsch, bewundert zu werden, liegt damit etwas, woran Duncan anknüpfen kann: Gawain möchte nicht bloß als Prinz behandelt werden. Er möchte, dass sein Können zählt.</p><p>Nun soll er lernen, dass ein Ritter auch dann gebraucht wird, wenn niemand eine Ballade über ihn schreibt. Zwei Wochen Dienst in Gwynthor, bis zu Tudwals Hochzeit: Patrouillen, Bürgeranliegen und die kleinen Pflichten außerhalb des Burghofs, unter Duncans wachsamen Augen und ohne Taliesins helfende Hände. Für Gawain ist das zugleich Einschränkung und endlich ein erster Schritt durch die Burgpforte. Ob daraus Verlässlichkeit wird, muss er noch zeigen.</p>",
+          "abilitiesTitle": "Wesen & Widersprüche",
+          "abilities": [
+            {
+              "title": "Eitel",
+              "detail": "Er pflegt sein Äußeres mit Überzeugung und möchte, dass sein Auftreten seinem Rang entspricht. Schmutz und Unordnung treffen ihn oft unmittelbarer als eine ernste Ermahnung.",
+              "icon": "/IconOrdner/Traits%20Icon/Proud.png"
+            },
+            {
+              "title": "Schlagfertig",
+              "detail": "Gawain erkennt die komische Seite einer Lage schnell und genießt eine gute Pointe. Nicht immer merkt er rechtzeitig, dass er gerade über die Wunde eines anderen lacht.",
+              "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+            },
+            {
+              "title": "Begabt, aber bequem",
+              "detail": "Sein Gespür für den Schwertkampf ist echt. Die Geduld, daraus durch tägliche Übung verlässliches Handwerk zu machen, muss Duncan ihm noch immer abverlangen.",
+              "icon": "/IconOrdner/Traits%20Icon/Slothful.png"
+            },
+            {
+              "title": "Hungrig auf die Welt",
+              "detail": "Abenteuer locken ihn, aber auch die Menschen jenseits der Burgmauern. Er möchte eigene Erfahrungen sammeln und seinen Platz nicht allein von anderen bestimmen lassen.",
+              "icon": "/IconOrdner/Traits%20Icon/Curious.png"
+            },
+            {
+              "title": "Loyal auf seine Weise",
+              "detail": "Taliesin und Guinevere sind ihm wichtig, auch wenn er Zuneigung, Stand und eigene Ansprüche nicht sauber auseinanderhält. Über vertraute Menschen darf nach seiner Auffassung längst nicht jeder spotten.",
+              "icon": "/IconOrdner/Traits%20Icon/Trusting.png"
+            },
+            {
+              "title": "Empfänglich für Anerkennung",
+              "detail": "Lob richtet ihn auf; Kränkungen reizen ihn. Trotzdem kann er eigene Grenzen benennen, einen Gegner respektieren und eine aufrichtige Entschuldigung aussprechen.",
+              "icon": "/IconOrdner/Traits%20Icon/Willful.png"
+            }
+          ],
+          "historyTitle": "Ritterschlag und Bewährung",
+          "historyText": "<p>Geboren 1722 als Sohn Galahad Draigs und Gwendolyns, geborener Aderyn, wuchs Gawain am Hof von Gwynthor auf. Duncan Gafyr war sein Rittervater während der Knappenzeit. Galahad hat ihn inzwischen zum Ritter geschlagen. An Duncans Seite soll er nun lernen, seinen Rang auch in den unscheinbaren Pflichten des Alltags auszufüllen.</p><p>Im Offenen Gericht entzündete sich an seiner Abenteuerlust die Frage, ob er Verantwortung schon tragen könne. Meurig schlug einen Dienst in Stadt und Vororten vor, Egon versprach den Dienstplan, und Gwendolyn band den Versuch an den Verzicht auf seinen Kammerdiener. Duncan sollte beobachten, anleiten und urteilen. Gawain stimmte zu, weil darin trotz aller Auflagen eine Möglichkeit lag, endlich häufiger aus der Burg zu kommen.</p><p>Auf dem Übungsplatz gelang ihm anschließend der erste Sieg gegen seinen langjährigen Trainingsgegner Gildas. Duncan erkannte das Verdienst an und benannte zugleich den riskanten Übermut der letzten Angriffsfolge. Für ihre gemeinsame Zeit ist das bezeichnend: Ein Fortschritt wird gewürdigt, aber nicht mit einer abgeschlossenen Entwicklung verwechselt.</p>",
+          "worksTitle": "Gegenwärtiger Weg",
+          "works": [
+            "Ritterlicher Dienst in Gwynthor unter Sir Duncans Aufsicht; die Bewährung ist noch nicht abgeschlossen."
+          ],
+          "triviaTitle": "Vertraute Dinge",
+          "trivia": [
+            "Sein Rhyfelhengst Tanor war ein Geschenk Sir Owains zu seinem achtzehnten Geburtstag.",
+            "Er möchte Ylva sowohl den Drachentanz mit der Klinge als auch den Volkstanz zeigen."
+          ],
+          "quotesTitle": "Eigene Worte",
+          "quotes": [
+            "„Ich pflege mich eben. Dafür schäme ich mich nicht.“"
+          ],
+          "connectionsTitle": "Menschen an seiner Seite",
+          "connections": [
+            {
+              "type": "connection",
+              "name": "Sir Duncan Gafyr",
+              "detail": "Früherer Rittervater und jetziger Leiter seiner Bewährung. Der alte Waffenmeister erkennt sein Talent, lässt aber Rang und Charme nicht für Arbeit gelten.",
+              "image": "https://i.imgur.com/zdChj0a.png",
+              "imageFormat": "portrait"
+            },
+            {
+              "type": "connection",
+              "name": "Gwendolyn Draig, geb. Aderyn",
+              "detail": "Seine Mutter schützt ihn mit Nachdruck. Gawain liebt sie und wehrt sich zugleich gegen die engen Grenzen, die ihre Sorge ihm setzt."
+            },
+            {
+              "type": "connection",
+              "name": "Taliesin Draenmelyn",
+              "detail": "Kammerdiener, bester Freund und Vertrauter. Während der Bewährung darf er Gawain auf den Patrouillen ausdrücklich nicht bedienen."
+            },
+            {
+              "type": "connection",
+              "name": "Guinevere Neidr",
+              "detail": "Seine beste Freundin und von den Eltern bestimmte Verlobte. Gawain beschreibt ihre Bindung als freundschaftlich, nicht als von ihm gewählte Liebesverbindung."
+            },
+            {
+              "type": "connection",
+              "name": "Ylva Wolfshorn",
+              "detail": "Gast aus Aldrimar, die seinen Spott zurückwies und seine Entschuldigung annahm. Zwischen beiden wachsen Neugier, Flirt und gegenseitiger Respekt."
+            },
+            {
+              "type": "connection",
+              "name": "Sir Gildas Gafyr",
+              "detail": "Langjähriger Trainingsgegner und vertrauter junger Ritter. Konkurrenz und Spott schließen gegenseitige Hilfe und Anerkennung nicht aus."
+            }
+          ],
+          "documentsTitle": "Eigentum & Begleiter",
+          "documents": [
+            {
+              "title": "Tanor",
+              "text": "Sein Rhyfelhengst, ein Geschenk Sir Owains zu seinem achtzehnten Geburtstag.",
+              "icon": "♞"
+            }
+          ],
+          "extraSections": [],
+          "footer": "Sir Gawain Draig · Haus Draig · Gwynthor"
+        }
       }
     },
     {
@@ -206313,26 +206381,26 @@
             "importedAt": "2026-10-31T00:00:00.000Z",
             "lastSyncedAt": "2026-10-31T00:00:00.000Z",
             "url": "../Stammbäume/Stammbaum.html?family=haus-llythfor&mode=view&person=cynddelw-llythfor",
-            "fingerprint": "{\"name\":\"Cynddelw Llythfor\",\"title\":\"Berichterstatter bei Celtigerns Echo\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-llythfor\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-llythfor-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-llythfor--haus-llythfor-gruender\",\"name\":\"??? Llythfor\"},{\"personId\":\"haus-llythfor-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-llythfor--haus-llythfor-gruenderin\",\"name\":\"??? Llythfor\"}],\"partners\":[{\"personId\":\"esyllt-penrudd\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penrudd--esyllt-penrudd\",\"name\":\"Esyllt Penrudd\"}],\"children\":[{\"personId\":\"eirlys-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--eirlys-llythfor\",\"name\":\"Eirlys Llythfor\"}]}}"
+            "fingerprint": "{\"name\":\"Cynddelw Llythfor\",\"title\":\"Berichterstatter bei Celtigerns Echo\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-llythfor\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-troetzli/portraits/cynddelw-llythfor.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwyddno-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--gwyddno-llythfor\",\"name\":\"Gwyddno Llythfor\"},{\"personId\":\"gwenddydd-spouse-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--gwenddydd-spouse-llythfor\",\"name\":\"Gwenddydd\"}],\"partners\":[{\"personId\":\"esyllt-penrudd\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-penrudd--esyllt-penrudd\",\"name\":\"Esyllt Penrudd\"}],\"children\":[{\"personId\":\"eirlys-llythfor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-llythfor--eirlys-llythfor\",\"name\":\"Eirlys Llythfor\"}]}}"
           }
         ],
         "relationships": {
           "parents": [
             {
-              "personId": "haus-llythfor-gruender",
-              "type": "claimed",
-              "legitimacy": "unknown",
-              "certainty": "unknown",
-              "worldPersonId": "person--haus-llythfor--haus-llythfor-gruender",
-              "name": "??? Llythfor"
+              "personId": "gwyddno-llythfor",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-llythfor--gwyddno-llythfor",
+              "name": "Gwyddno Llythfor"
             },
             {
-              "personId": "haus-llythfor-gruenderin",
-              "type": "claimed",
-              "legitimacy": "unknown",
-              "certainty": "unknown",
-              "worldPersonId": "person--haus-llythfor--haus-llythfor-gruenderin",
-              "name": "??? Llythfor"
+              "personId": "gwenddydd-spouse-llythfor",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-llythfor--gwenddydd-spouse-llythfor",
+              "name": "Gwenddydd"
             }
           ],
           "partners": [
@@ -206361,7 +206429,7 @@
         "recordId": "character--person--haus-llythfor--cynddelw-llythfor",
         "path": "records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json",
         "schemaVersion": 1,
-        "contentHash": "fd7c506af242d28f893bbe9bf6440d0c5d779e184888784da7e137b278a3d70c",
+        "contentHash": "04124c14770b1eb1d5be8790ac2ebf4e261610a0f44a875420494bbee45546c1",
         "firestoreDocumentIds": [
           "person--haus-llythfor--cynddelw-llythfor"
         ],
@@ -206394,7 +206462,7 @@
       "role": "",
       "status": "active",
       "relevance": "",
-      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
       "currentLocation": "Gwynthor",
       "origin": "",
       "plotNode": "",
@@ -206602,7 +206670,7 @@
         "recordId": "character--person--haus-penrudd--esyllt-penrudd",
         "path": "records/orte/gwynthor/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json",
         "schemaVersion": 1,
-        "contentHash": "763ee4c6131513bedbdd26f9afc2f6bdb26cd58683ae1cdbc45c50238e898d30",
+        "contentHash": "4f72481cad270d0c536e8b9496a39ca239bc49e59a702613eea8ad60cd347828",
         "firestoreDocumentIds": [
           "person--haus-penrudd--esyllt-penrudd"
         ],
@@ -206839,6 +206907,503 @@
         },
         "authoredFeature": "gwynthor-troetzli"
       }
+    },
+    {
+      "id": "person--gwynthor-formlingssache--euddogwy",
+      "worldPersonId": "person--gwynthor-formlingssache--euddogwy",
+      "name": "Euddogwy O'Cenyr",
+      "title": "Persönlicher Adjutant des Patriarchen · Kurator",
+      "role": "Persönlicher Adjutant des Patriarchen · Kurator",
+      "sex": "male",
+      "race": "Mensch",
+      "birth": "1702",
+      "origin": "Gwynthor · Cenyr",
+      "currentLocation": "Gwynthor",
+      "fraktion": "Alerische Kirche",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "bio": "Euddogwy O'Cenyr wuchs im Waisenhaus Gwynthors auf. Wie anderen Kindern ohne elterlichen Rückhalt eröffnete Patriarch Gwalchgwyn ihm einen Weg in den kirchlichen Dienst. Heute ist Euddogwy achtunddreißig und gehört als persönlicher Adjutant zur Kanzlei des Patriarchen.\n\nEr führt Termine und Korrespondenz, bereitet Audienzen vor und fertigt Verlautbarungen im Auftrag Gwalchgwyns aus. Sein priesterlicher Rang ist Kurator. Er strebt einen hohen geistlichen Posten an und nimmt die Nähe zum Patriarchen als Verpflichtung, sich durch zuverlässigen Dienst zu bewähren. Ein Prälatenamt hat er bisher nicht inne.\n\nRotes Haar, blaue Augen und ein aufmerksames, gepflegtes Auftreten zeichnen ihn aus. Im Gespräch hört er sorgfältig zu; bei Schriftstücken achtet er darauf, was bereits entschieden ist und was erst zur Entscheidung vorgelegt wird.",
+      "status": "Lebend",
+      "archived": false,
+      "createdAt": "2026-10-31T00:00:00Z",
+      "updatedAt": "2026-10-31T00:00:00Z",
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+          "emotes": []
+        }
+      ],
+      "activeImageSetId": "standard",
+      "imageSetSchemaVersion": 1,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Euddogwy O'Cenyr"
+          },
+          {
+            "label": "Alter",
+            "value": "38 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Cenyr"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Persönlicher Adjutant des Patriarchen · Kurator"
+          },
+          {
+            "label": "Priesterlicher Rang",
+            "value": "Kurator"
+          }
+        ],
+        "quote": "",
+        "quoteBy": "",
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+          "portraitFit": "cover",
+          "crestImage": "",
+          "biographyTitle": "Euddogwy O'Cenyr",
+          "biographyText": "<p>Euddogwy O'Cenyr wuchs im Waisenhaus Gwynthors auf. Wie anderen Kindern ohne elterlichen Rückhalt eröffnete Patriarch Gwalchgwyn ihm einen Weg in den kirchlichen Dienst. Heute ist Euddogwy achtunddreißig und gehört als persönlicher Adjutant zur Kanzlei des Patriarchen.</p><p>Er führt Termine und Korrespondenz, bereitet Audienzen vor und fertigt Verlautbarungen im Auftrag Gwalchgwyns aus. Sein priesterlicher Rang ist Kurator. Er strebt einen hohen geistlichen Posten an und nimmt die Nähe zum Patriarchen als Verpflichtung, sich durch zuverlässigen Dienst zu bewähren. Ein Prälatenamt hat er bisher nicht inne.</p><p>Rotes Haar, blaue Augen und ein aufmerksames, gepflegtes Auftreten zeichnen ihn aus. Im Gespräch hört er sorgfältig zu; bei Schriftstücken achtet er darauf, was bereits entschieden ist und was erst zur Entscheidung vorgelegt wird.</p>",
+          "abilitiesTitle": "Auftreten",
+          "abilities": [],
+          "worksTitle": "Tätigkeit",
+          "works": [],
+          "backgroundTitle": "Weitere Angaben",
+          "backgroundText": "",
+          "portraitStages": [],
+          "portraitCaptions": []
+        }
+      },
+      "aliases": [],
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--person--gwynthor-formlingssache--euddogwy",
+        "path": "records/orte/gwynthor/euddogwy-o-cenyr--person--gwynthor-formlingssache--euddogwy/character.json",
+        "schemaVersion": 1,
+        "contentHash": "63a9419830d44beed1e1145dc75ddfb9c59877f6bee69ae3261c70908eaa4589",
+        "firestoreDocumentIds": [
+          "person--gwynthor-formlingssache--euddogwy"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-formlingssache"
+      }
+    },
+    {
+      "id": "person--gwynthor-formlingssache--lleuwen",
+      "worldPersonId": "person--gwynthor-formlingssache--lleuwen",
+      "name": "Lleuwen",
+      "title": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+      "role": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut",
+      "sex": "female",
+      "race": "Formling",
+      "birth": "",
+      "origin": "Herkunft nicht bekannt · seit Jahren in Gwynthor",
+      "currentLocation": "Gwynthor · kirchlicher Gewahrsam",
+      "fraktion": "Gwynthorer Theater",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+      "bio": "Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.\n\nIhre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.\n\nOrvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen.",
+      "bestiaryReference": {
+        "id": "wesen/inferniiden/formwandler",
+        "name": "Formling & Formwandler",
+        "url": "/Bestiarium/wesen/inferniiden/formwandler/index.html"
+      },
+      "status": "Lebend",
+      "archived": false,
+      "createdAt": "2026-10-31T00:00:00Z",
+      "updatedAt": "2026-10-31T00:00:00Z",
+      "imageSets": [
+        {
+          "id": "menschlich",
+          "name": "Menschliche Erscheinung",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+          "emotes": []
+        },
+        {
+          "id": "wahre-gestalt",
+          "name": "Wahre Gestalt",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-wahre-gestalt.png",
+          "emotes": []
+        },
+        {
+          "id": "gewahrsam",
+          "name": "Gegenwärtiger Gewahrsam",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+          "emotes": []
+        }
+      ],
+      "activeImageSetId": "gewahrsam",
+      "imageSetSchemaVersion": 1,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Lleuwen"
+          },
+          {
+            "label": "Alter",
+            "value": "Wirkt etwa 28 · tatsächliches Alter unbekannt"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Herkunft nicht bekannt · seit Jahren in Gwynthor"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Statistin am Gwynthorer Theater · derzeit in kirchlicher Obhut"
+          },
+          {
+            "label": "Art",
+            "value": "Formling · Inferniider"
+          }
+        ],
+        "quote": "",
+        "quoteBy": "",
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+          "portraitFit": "cover",
+          "crestImage": "",
+          "biographyTitle": "Lleuwen",
+          "biographyText": "<p>Lleuwen arbeitet seit mehreren Jahren als Statistin am Gwynthorer Theater. Unter den Menschen gewann sie mit der Zeit Vertrauen und ein vertrautes Auskommen im Haus. In ihrer menschlichen Erscheinung wirkt sie etwa achtundzwanzig: eine schöne Frau mit sehr voluminösen roten Locken, grünen Augen, Sommersprossen und einem frechen Lächeln. Ihr tatsächliches Alter und ihre frühere Herkunft sind nicht bekannt.</p><p>Ihre Natur als Formling wurde bei einem öffentlichen Zwischenfall durch den Hexenjäger Ulrich Schniedel enthüllt. Die Stadtwache unterband die Auseinandersetzung. Seither befindet Lleuwen sich in kirchlicher Obhut und wartet auf die Entscheidung des Patriarchen. Halsreif und Fesseln aus Tenebrit halten sie gebunden; an den Kontaktstellen treten stark hervortretende violette Adern auf.</p><p>Orvar Schattentänzer, ihr langjähriger Gefährte und ebenfalls Schauspieler, setzt sich für ihre Freilassung ein. Er erklärt, sie habe ihm ihre Natur schon vor dem Zwischenfall anvertraut. Über ihre Zukunft, Ulrichs Forderungen und den tätlichen Streit ist noch kein Urteil ergangen.</p><p><a href=\"/Bestiarium/wesen/inferniiden/formwandler/index.html\">Artprofil: Formling &amp; Formwandler</a></p>",
+          "abilitiesTitle": "Auftreten",
+          "abilities": [],
+          "worksTitle": "Tätigkeit",
+          "works": [],
+          "backgroundTitle": "Weitere Angaben",
+          "backgroundText": "",
+          "portraitStages": [],
+          "portraitCaptions": []
+        }
+      },
+      "aliases": [],
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--person--gwynthor-formlingssache--lleuwen",
+        "path": "records/orte/gwynthor/lleuwen--person--gwynthor-formlingssache--lleuwen/character.json",
+        "schemaVersion": 1,
+        "contentHash": "bd5d3b7b25d437b0a6495b3c0d2a36778ddae8a9b46f923dd369048f382c5e03",
+        "firestoreDocumentIds": [
+          "person--gwynthor-formlingssache--lleuwen"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-formlingssache"
+      }
+    },
+    {
+      "id": "person--gwynthor-formlingssache--ulrich",
+      "worldPersonId": "person--gwynthor-formlingssache--ulrich",
+      "name": "Ulrich Schniedel",
+      "title": "Hexenjäger · Richter des Reinen Blutes",
+      "role": "Hexenjäger · Richter des Reinen Blutes",
+      "sex": "male",
+      "race": "Mensch",
+      "birth": "1681",
+      "origin": "Aldingen · einfache Verhältnisse",
+      "currentLocation": "Gwynthor",
+      "fraktion": "Richter des Reinen Blutes",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+      "bio": "Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.\n\nNach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.\n\nIn Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.\n\nGraues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.",
+      "status": "Lebend",
+      "archived": false,
+      "createdAt": "2026-10-31T00:00:00Z",
+      "updatedAt": "2026-10-31T00:00:00Z",
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+          "emotes": []
+        }
+      ],
+      "activeImageSetId": "standard",
+      "imageSetSchemaVersion": 1,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Ulrich Schniedel"
+          },
+          {
+            "label": "Alter",
+            "value": "59 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldingen · einfache Verhältnisse"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Hexenjäger · Richter des Reinen Blutes"
+          }
+        ],
+        "quote": "",
+        "quoteBy": "",
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+          "portraitFit": "cover",
+          "crestImage": "",
+          "biographyTitle": "Ulrich Schniedel",
+          "biographyText": "<p>Ulrich Schniedel stammt aus einfachen Verhältnissen in Aldingen. Der neunundfünfzigjährige Krieger gehört zu den Richtern des Reinen Blutes, einer eigenständigen Söldnergilde von Hexenjägern. Er arbeitet als Einzelgänger und hat sich in Lothir einen angesehenen Namen als Entlarver infernaler Wesen gemacht.</p><p>Nach seinem letzten Aufenthalt in Weisenfluh wechselte er nach Estryll. Über die persönlichen Gründe spricht er nicht. Hier begegnet er seltener Formwandlern und hält sich auch mit Geisterfällen und kleineren infernalen Aufgaben über Wasser. Ein verzaubertes Amulett, ein Tenebrit-Schwert, Tenebrium-Bolzen und alchemistische Mittel gehören zu seiner Ausrüstung.</p><p>In Gwynthor wurde er bei einer Theateraufführung auf Lleuwen aufmerksam. Nach einer Woche der Beobachtung setzte er aus kurzer Entfernung Tenebriumstaub ein, um ihre Verwandlung aufzubrechen. Orvar Schattentänzer schlug ihn mit einem Übungsschwert; die Stadtwache beendete den Streit. Ulrich fordert Lohn für die Entlarvung und Entschädigung für den Angriff und die aus seiner Sicht vereitelte Arbeit. Über diese Ansprüche ist noch nicht entschieden.</p><p>Graues zurückgebundenes Haar, ein Bart, die Augenklappe über dem vernarbten linken Auge und eine häufig gerauchte Pfeife prägen sein Erscheinungsbild. Er trägt vorwiegend Lederzeug mit wenigen Stahlteilen und einem Bandolier voller schmaler Phiolen.</p>",
+          "abilitiesTitle": "Auftreten",
+          "abilities": [],
+          "worksTitle": "Tätigkeit",
+          "works": [],
+          "backgroundTitle": "Weitere Angaben",
+          "backgroundText": "",
+          "portraitStages": [],
+          "portraitCaptions": []
+        }
+      },
+      "aliases": [],
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--person--gwynthor-formlingssache--ulrich",
+        "path": "records/orte/gwynthor/ulrich-schniedel--person--gwynthor-formlingssache--ulrich/character.json",
+        "schemaVersion": 1,
+        "contentHash": "afdb2811a0fe8695da066d9d4ea942b032b1c43e7d5b7e850832e451520f4fdf",
+        "firestoreDocumentIds": [
+          "person--gwynthor-formlingssache--ulrich"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-formlingssache"
+      }
+    },
+    {
+      "id": "person--gwynthor-formlingssache--orvar",
+      "worldPersonId": "person--gwynthor-formlingssache--orvar",
+      "name": "Orvar Schattentänzer",
+      "title": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+      "role": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+      "sex": "male",
+      "race": "Mensch",
+      "birth": "1707",
+      "origin": "Klangheim · Aldrimar",
+      "currentLocation": "Gwynthor",
+      "fraktion": "Gwynthorer Theater",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+      "bio": "Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.\n\nMit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.\n\nAls Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus.",
+      "status": "Lebend",
+      "archived": false,
+      "createdAt": "2026-10-31T00:00:00Z",
+      "updatedAt": "2026-10-31T00:00:00Z",
+      "imageSets": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+          "emotes": []
+        }
+      ],
+      "activeImageSetId": "standard",
+      "imageSetSchemaVersion": 1,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Orvar Schattentänzer"
+          },
+          {
+            "label": "Alter",
+            "value": "33 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Klangheim · Aldrimar"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Schauspieler · kleinere Ritter- und Kriegerrollen"
+          }
+        ],
+        "quote": "",
+        "quoteBy": "",
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+          "portraitFit": "cover",
+          "crestImage": "",
+          "biographyTitle": "Orvar Schattentänzer",
+          "biographyText": "<p>Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.</p><p>Mit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.</p><p>Als Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus.</p>",
+          "abilitiesTitle": "Auftreten",
+          "abilities": [],
+          "worksTitle": "Tätigkeit",
+          "works": [],
+          "backgroundTitle": "Weitere Angaben",
+          "backgroundText": "",
+          "portraitStages": [],
+          "portraitCaptions": []
+        }
+      },
+      "aliases": [],
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--person--gwynthor-formlingssache--orvar",
+        "path": "records/orte/gwynthor/orvar-schattentanzer--person--gwynthor-formlingssache--orvar/character.json",
+        "schemaVersion": 1,
+        "contentHash": "fc7b0a0451c3344bbc23941b1e66a78168e592448137985b3991e3f6ed7f6d08",
+        "firestoreDocumentIds": [
+          "person--gwynthor-formlingssache--orvar"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-formlingssache"
+      }
     }
   ],
   "charTabs": {
@@ -207002,7 +207567,11 @@
         "rob-gwynthor-tageloehner",
         "person--haus-llythfor--cynddelw-llythfor",
         "person--haus-penrudd--esyllt-penrudd",
-        "person--haus-llythfor--eirlys-llythfor"
+        "person--haus-llythfor--eirlys-llythfor",
+        "person--gwynthor-formlingssache--euddogwy",
+        "person--gwynthor-formlingssache--lleuwen",
+        "person--gwynthor-formlingssache--ulrich",
+        "person--gwynthor-formlingssache--orvar"
       ],
       "Dun Athar": [
         "2bCru7S3YGrzjFnYpnN9",

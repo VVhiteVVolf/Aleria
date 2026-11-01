@@ -102,7 +102,7 @@ window.ARMORY_DATA = {
       id: 'ritterschwert',
       category: 'Waffen',
       type: 'Schwert',
-      name: 'Ritterschwert',
+      name: 'Großschwert',
       rarity: 'Ungewoehnlich',
       weight: 2.8,
       enchantment: 'Keine',
@@ -110,8 +110,8 @@ window.ARMORY_DATA = {
       material: 'Stahl',
       price: { min: 2, max: 5, unit: 'G' },
       image: 'https://i.imgur.com/bthNwPb.png',
-      tags: ['Ritter', 'Meisterarbeit', 'Prestige'],
-      desc: 'Das Ritterschwert ist das Beste, was man in einem herkoemmlichen Geschaeft erwarten kann. Vielleicht stammt es aus altem Adelsbesitz, vielleicht aus einer Werkstatt mit echtem Koennen. Fuer einfache Soeldner ist es eine grosse Anschaffung.'
+      tags: ['Ritter', 'Zweihand', 'Schwer'],
+      desc: 'Das Großschwert ist eine schwere zweihändig geführte Klinge für weite, kraftvolle Hiebe. Es verursacht 1W12 Hiebschaden und lässt keine Hand für einen Schild frei. Die handlicheren persönlichen Ritterschwerter und Jungritterklingen bleiben eigenständige Waffen.'
     },
     {
       id: 'hellebarde',
@@ -343,7 +343,7 @@ window.ARMORY_DATA = {
       id: 'ritterplatte',
       category: 'Ruestungen',
       type: 'Schwer',
-      name: 'Ritter-Plattenruestung',
+      name: 'Plattenrüstung',
       rarity: 'Ungewoehnlich',
       weight: 25,
       enchantment: 'Keine',
@@ -352,7 +352,7 @@ window.ARMORY_DATA = {
       price: { min: 5, max: 40, unit: 'G' },
       image: 'https://i.imgur.com/9F6XSK5.png',
       tags: ['Schwer', 'Ritter', 'Prestige'],
-      desc: 'Die Ritterplattenruestung ist maximaler Schutz und sichtbarer Stand zugleich. Sie haelt viel aus, ist teuer, schwer und verlangt Uebung sowie Hilfe beim Anlegen.'
+      desc: 'Diese Plattenrüstung bildet den schweren Jungritterstandard: Basis-RK 15 ohne Geschicklichkeitsbonus. Ihr Grundschutz mindert Hieb-, Stich- und Wuchtschaden um 1 je Schadensinstanz; ein individueller stärkerer Schutz ersetzt diesen Grundschutz.'
     },
     {
       id: 'fellruestung',
@@ -418,8 +418,8 @@ window.ARMORY_DATA = {
       id: 'turnierruestung',
       category: 'Ruestungen',
       type: 'Schwer',
-      name: 'Turnierruestung',
-      subtitle: 'verziert',
+      name: 'Ritterrüstung',
+      subtitle: 'bessere Ritterrüstung',
       rarity: 'Selten',
       weight: 25,
       enchantment: 'Keine',
@@ -427,8 +427,8 @@ window.ARMORY_DATA = {
       material: 'Stahl, Gold, Silber',
       price: { min: 5, max: 50, unit: 'G' },
       image: 'https://i.imgur.com/t60KL2f.png',
-      tags: ['Prunk', 'Turnier', 'Adel'],
-      desc: 'Die Turnierruestung ist Prunkstueck, Statussymbol und Schutz fuer Ritterspiele. Auf dem Schlachtfeld ist sie oft zu schwer und zu auffaellig.'
+      tags: ['Schwer', 'Ritter', 'Adel'],
+      desc: 'Die Ritterrüstung bietet besseren schweren Schutz als die einfache Plattenrüstung. Ihre Basis-RK beträgt 18 ohne Geschicklichkeitsbonus; sie ist eine hochwertige Feldrüstung für erfahrene Ritter.'
     },
     {
       id: 'wappenrock-ruestung',

@@ -3,6 +3,7 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 import { buildSceneItemSegments } from './scene-item-authoring.js';
+import { prepareUniqueItemClaims } from '../items/item-definition-repository.js';
 const clean = (value, max) => String(value || '').trim().slice(0, max);
 
 export async function placeSceneItem({ database, auth, input, now = Date.now() }) {
@@ -25,16 +26,25 @@ export async function placeSceneItem({ database, auth, input, now = Date.now() }
       if (saved.entryId !== entryId || (saved.sceneItemFingerprint && saved.sceneItemFingerprint !== fingerprint)) throw new HttpsError('failed-precondition', 'Dieser Vorgang wurde bereits mit anderem Inhalt gespeichert. Bitte zuerst die Szene neu laden.');
       return { id, sceneItemEvent: saved.sceneItemEvent || saved.commentSegments?.find(segment => segment.sceneItemEvent)?.sceneItemEvent };
     }
-    const commentSegments = await buildSceneItemSegments(database, transaction, segments, id);
+    const definitionWrites = [], uniqueGrants = [];
+    const commentSegments = await buildSceneItemSegments(database, transaction, segments, id, { definitionWrites, uniqueGrants, actorUid: auth.uid });
     const sceneItemEvent = commentSegments.find(segment => segment.sceneItemEvent).sceneItemEvent;
     // Preserve the public identity of the original single-item API.
     if (legacy) { sceneItemEvent.sceneItemId = id; sceneItemEvent.item.id = `item:${id}`; sceneItemEvent.item.instanceId = `item:${id}`; }
+    if (legacy && uniqueGrants[0]) { uniqueGrants[0].instanceId = sceneItemEvent.item.instanceId; uniqueGrants[0].sceneItemId = sceneItemEvent.sceneItemId; }
     const thread = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const history = thread.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    const claim = await prepareUniqueItemClaims(database, transaction, uniqueGrants.map(grant => ({ ...grant, holder: { kind: 'scene', recordId: entryId, itemId: grant.sceneItemId } })), { actorUid: auth.uid });
+    const written = new Set();
+    for (const prepared of definitionWrites) if (!written.has(`${prepared.definition.id}@${prepared.definition.revision}`)) {
+      prepared.write(); written.add(`${prepared.definition.id}@${prepared.definition.revision}`);
+    }
+    claim();
     transaction.create(ref, { entryId, text: commentSegments.map(segment => segment.text).join('\n\n'), charName: 'Erzähler', narrator: true, characterId: '', portrait: null,
       commentKind: legacy ? 'scene-item-event' : 'narrator', commentMode: 'narrator',
       ...(legacy ? { sceneItemEvent, commentSegments: null } : { commentSegments }),
       sceneItemFingerprint: fingerprint, serverValidatedMechanics: true, mechanicalAudit: true, createdBy: auth.uid, createdByRole: auth.token.aleriaRole,
+      ...(claim.undo.length ? { itemClaimUndo: claim.undo } : {}),
       orderKey: nextMechanicalCommentOrderKey(history, null, now), createdAtClient: now, activityAtClient: now,
       activityAt: FieldValue.serverTimestamp(), ts: FieldValue.serverTimestamp(), schemaVersion: 3 });
     return { id, sceneItemEvent };

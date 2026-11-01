@@ -1,7 +1,9 @@
 import { normalizeGroupLandingState } from './group-landing-model.js';
+import { normalizeLandingQuestJournal } from './landing-quest-model.js';
 
 const text = value => String(value ?? '').trim();
 const list = (items, limit) => (Array.isArray(items) ? items : []).slice(0, limit);
+export const LANDING_PRESENTATIONS = Object.freeze({ folio: 'Abenteuerfolio', classic: 'Klassisch' });
 export const landingNumber = (value, fallback = 0, min = 0, max = 100) => {
   const number = Number(value);
   return Math.max(min, Math.min(max, Math.round(Number.isFinite(number) ? number : fallback)));
@@ -61,6 +63,7 @@ export function normalizeLandingInfo(items = []) {
 export function normalizeLandingData(data = {}, sanitizeDate) {
   data = data && typeof data === 'object' ? data : {};
   return {
+    presentation: data.presentation === 'folio' ? 'folio' : 'classic', coverImage: text(data.coverImage),
     bannerImage: text(data.bannerImage), title: text(data.title || 'Gruppenübersicht'), subtitle: text(data.subtitle),
     memberTitle: text(data.memberTitle || 'Aktuelle Gruppe'), questTitle: text(data.questTitle || 'Aufgaben & Quests'),
     notesTitle: text(data.notesTitle || 'Notizen'), eventsTitle: text(data.eventsTitle || 'Ereignisse'),
@@ -68,11 +71,15 @@ export function normalizeLandingData(data = {}, sanitizeDate) {
     mapDisplay: ['embed', 'image'].includes(data.mapDisplay) ? data.mapDisplay : data.group ? 'embed' : 'image',
     mapLink: text(data.mapLink), mapButtonLabel: text(data.mapButtonLabel || 'Karte öffnen'), infoTitle: text(data.infoTitle || 'Informationen'),
     members: normalizeLandingMembers(data.members), quests: normalizeLandingQuests(data.quests),
+    questJournal: normalizeLandingQuestJournal(data.questJournal),
     notes: normalizeLandingNotes(data.notes), events: normalizeLandingEvents(data.events, sanitizeDate), info: normalizeLandingInfo(data.info),
     ...(data.group ? { group: normalizeGroupLandingState(data.group) } : {})
   };
 }
 
-export function createLandingPage(title = 'Gruppenübersicht') {
-  return { pageTitle: title, landingPage: true, landing: normalizeLandingData({ title }), stats: [], commentDivider: false, commentSequence: [] };
+export function createLandingPage(title = 'Unser Abenteuerbuch') {
+  return { pageTitle: title, landingPage: true, landing: normalizeLandingData({ title, presentation: 'folio',
+    memberTitle: 'Unsere Gefährten', questTitle: 'Gemeinsame Vorhaben', notesTitle: 'Aus dem Reisebuch',
+    eventsTitle: 'Was bisher geschah', mapTitle: 'Unsere Wege', infoTitle: 'Am Wegesrand'
+  }), stats: [], commentDivider: false, commentSequence: [] };
 }

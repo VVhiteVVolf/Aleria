@@ -39,13 +39,13 @@ function buildLandingMembers(data) {
   return `
     <section class="landing-panel landing-members-panel">
       <div class="landing-panel-head"><h3>${escapeHtml(data.memberTitle)}</h3><span>${data.members.length}</span></div>
-      <div class="landing-member-grid">
+      <div class="landing-member-grid${data.presentation === 'folio' && data.members.length > 4 ? ' landing-member-grid-list' : ''}">
         ${data.members.length ? '' : '<p class="group-empty">Noch keine Mitglieder eingetragen.</p>'}
         ${data.members.map(member => `
           <article class="landing-member-card">
             <div class="landing-member-media">
               ${buildLandingImage(member.portrait, member.name, 'landing-member-portrait', getInitialChar(member.name))}
-              ${buildLandingIcon(member.badgeIcon, `${member.name} Icon`, 'landing-member-badge')}
+              ${data.presentation === 'folio' && (!member.badgeIcon || member.badgeIcon === '*') ? '' : buildLandingIcon(member.badgeIcon, `${member.name} Icon`, 'landing-member-badge')}
             </div>
             <div class="landing-member-body">
               <strong>${escapeHtml(member.name)}</strong>
@@ -429,7 +429,9 @@ function buildLandingSettingsBody(data) {
         <div class="landing-settings-grid">
           ${landingSettingsInput('Titel', 'title', data.title)}
           ${landingSettingsInput('Untertitel', 'subtitle', data.subtitle)}
-          ${landingSettingsIconInput('Bannerbild', 'bannerImage', data.bannerImage)}
+          ${landingSettingsSelect('Darstellung', 'presentation', data.presentation, Object.entries(AleriaLandingModel.LANDING_PRESENTATIONS).map(([value, label]) => ({ value, label })))}
+          ${landingSettingsInput('Coverbild · breite Bild-URL', 'coverImage', data.coverImage)}
+          ${landingSettingsIconInput('Wappen / bisheriges Bannerbild', 'bannerImage', data.bannerImage)}
         </div>
       </section>
       <section class="landing-settings-section">
@@ -449,6 +451,13 @@ function buildLandingSettingsBody(data) {
       </section>
       <section class="landing-settings-section">
         <h4>Quests</h4>
+        <div class="landing-settings-grid">
+          <label><input type="checkbox" data-landing-settings-field="questJournalEnabled"${data.questJournal.enabled ? ' checked' : ''}> Gemeinsames Abenteuerjournal anzeigen</label>
+          <label><input type="checkbox" data-landing-settings-field="questJournalMembers"${data.questJournal.includeMembers ? ' checked' : ''}> Abenteuer der Mitglieder einbeziehen</label>
+          ${landingSettingsTextarea('Zusätzliche Questkennungen · eine pro Zeile', 'questJournalQuests', data.questJournal.questIds.join('\n'))}
+          ${landingSettingsTextarea('Zusätzliche Gruppendurchläufe · eine Kennung pro Zeile', 'questJournalRuns', data.questJournal.runIds.join('\n'))}
+        </div>
+        <p>Fortschritt, Gruppenverlauf und Belohnungen werden zentral im Abenteuerjournal geführt. Die folgenden Aufgaben bleiben lokale Planungsnotizen.</p>
         ${buildLandingSettingsList('quest', data.quests, '+ Quest')}
       </section>
       <section class="landing-settings-section">
@@ -568,9 +577,18 @@ function collectLandingSettingsData(root) {
     ...base,
     title: getLandingSettingsValue(root, 'title'),
     subtitle: getLandingSettingsValue(root, 'subtitle'),
+    presentation: root.querySelector('[data-landing-settings-field="presentation"]')?.value ?? base.presentation,
+    coverImage: root.querySelector('[data-landing-settings-field="coverImage"]')?.value ?? base.coverImage,
     bannerImage: getLandingSettingsValue(root, 'bannerImage'),
     memberTitle: getLandingSettingsValue(root, 'memberTitle'),
     questTitle: getLandingSettingsValue(root, 'questTitle'),
+    questJournal: {
+      ...base.questJournal,
+      enabled: root.querySelector('[data-landing-settings-field="questJournalEnabled"]')?.checked ?? base.questJournal?.enabled,
+      includeMembers: root.querySelector('[data-landing-settings-field="questJournalMembers"]')?.checked ?? base.questJournal?.includeMembers,
+      questIds: root.querySelector('[data-landing-settings-field="questJournalQuests"]')?.value ?? base.questJournal?.questIds,
+      runIds: root.querySelector('[data-landing-settings-field="questJournalRuns"]')?.value ?? base.questJournal?.runIds
+    },
     notesTitle: getLandingSettingsValue(root, 'notesTitle'),
     eventsTitle: getLandingSettingsValue(root, 'eventsTitle'),
     mapTitle: getLandingSettingsValue(root, 'mapTitle'),
@@ -764,6 +782,14 @@ document.addEventListener('click', event => {
   const page = getLandingPageElement(trigger);
   if (!page) return;
   const action = trigger.dataset.landingAction;
+  if (action === 'jump-section') {
+    const target = trigger.dataset.landingSectionTarget || '';
+    if (!/^[a-z-]+$/.test(target)) return;
+    const section = page.querySelector(`[data-landing-section="${target}"]`);
+    section?.scrollIntoView({ behavior: globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    section?.focus({ preventScroll: true });
+    return;
+  }
   event.preventDefault();
 
   if (action === 'filter-quests') {
@@ -848,6 +874,7 @@ function buildLandingPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const data = sanitizeLandingData(page.landing || {});
   if (data.group && globalThis.AleriaGroupLanding) return `${nav}${globalThis.AleriaGroupLanding.renderBody(data, entry, pageIndex)}`;
+  if (data.presentation === 'folio') return `${nav}${buildLandingFolioPage(data, entry, pageIndex)}`;
   const banner = sanitizeImageSrc(data.bannerImage || entry?.symbol || '');
   const sym = entry.symbol ? `<img class="modal-symbol" src="${sanitizeImageSrc(entry.symbol)}" alt="" loading="lazy" decoding="async">` : '';
   return `
@@ -861,6 +888,7 @@ function buildLandingPage(page, entry, pageIndex, total) {
         </div>
       </header>
       <div class="landing-grid">
+        ${data.questJournal.enabled ? AleriaLandingModel.landingQuestJournalShell(entry.id) : ''}
         ${buildLandingMembers(data)}
         ${buildLandingQuests(data)}
         ${buildLandingNotes(data)}
@@ -871,4 +899,30 @@ function buildLandingPage(page, entry, pageIndex, total) {
       ${buildLandingConfigureButton()}
     </div>
     ${sym}`;
+}
+
+function buildLandingFolioPage(data, entry, pageIndex) {
+  const journal = data.questJournal.enabled ? AleriaLandingModel.landingQuestJournalShell(entry.id) : '';
+  const plans = journal ? `<details class="landing-folio-plans"${data.quests.length ? ' open' : ''}><summary>Eigene Vorhaben <span>${data.quests.length || '+'}</span></summary>${buildLandingQuests(data)}</details>` : buildLandingQuests(data);
+  return `<div class="landing-page landing-folio" data-landing-page-index="${pageIndex}">
+    ${AleriaLandingModel.renderLandingFolioHeader(data, { title: entry.title, subtitle: entry.subtitle, symbol: entry.symbol })}
+    ${AleriaLandingModel.renderLandingFolioIndex()}
+    <div class="landing-folio-body">
+      <div class="landing-folio-chapter"><span>Die Gemeinschaft</span><i></i><small>Personen & Verbindungen</small></div>
+      <div class="landing-folio-companions" data-landing-section="members" tabindex="-1">${buildLandingMembers(data)}</div>
+      <div class="landing-folio-columns">
+        <div class="landing-folio-story">
+          <section class="landing-folio-adventures" data-landing-section="adventures" tabindex="-1">${journal}${plans}</section>
+          <div data-landing-section="notes" tabindex="-1">${buildLandingNotes(data)}</div>
+          ${data.events.length ? buildLandingEvents(data) : ''}
+        </div>
+        <aside class="landing-folio-marginalia" aria-label="Am Wegesrand">
+          <div data-landing-section="map" tabindex="-1">${buildLandingMap(data)}</div>
+          ${data.info.length ? buildLandingInfo(data) : ''}
+          <div class="landing-folio-endmark" aria-hidden="true">${AleriaLandingModel.landingFolioIcon('compass')}<span>Jeder Weg wird eine Geschichte.</span></div>
+        </aside>
+      </div>
+      <footer class="landing-folio-footer"><span>Aleria <i>·</i> Das Abenteuer wird weitergeschrieben</span>${buildLandingConfigureButton()}</footer>
+    </div>
+  </div>`;
 }

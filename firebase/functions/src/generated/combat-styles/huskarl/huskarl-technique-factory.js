@@ -71,6 +71,7 @@ export function createHuskarlTechnique(classId, formId, spec) {
         damageControl: hasWeaponTechniqueControl(spec), damageControlTier: getWeaponTechniqueControlTier(spec) }, costs)),
     attackBonus: spec.attackBonus || 0, damageBonus: 0, damageType: '', criticalThreshold: 20,
     targetDefenseModifier: 0, maximumTargets: 1, target: spec.noDamage ? 'Selbst' : 'Ein Gegner', range: 'Waffenreichweite', requirements,
+    ...(weapon.ranged && !spec.noDamage ? { attackRange: 'ranged' } : {}),
     effects, secondarySave: reviseWeaponTechniqueSave(save, costs.some(cost => cost.resourceId === 'special-action')),
     followUpAttack: { enabled: false }, mechanics: {}, triggerRules: [],
     cultureTraining: { schemaVersion: 1, cultureIds: ['aldrimar'], allowedClassIds: [classId],

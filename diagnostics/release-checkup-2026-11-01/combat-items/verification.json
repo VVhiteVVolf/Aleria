@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-11-01T06:04:06.4597928Z",
+  "scope": "Fresh pre-publication Combat/Item/live-state audit after final shared source freeze",
+  "baseCommit": "fc325cbc21cdff4b5eaf526d04c233e184cb3c7d",
+  "workingTreeIncludesUncommittedChanges": true,
+  "standardItemVersion": "36e5f594322735b9",
+  "status": "passed",
+  "openBlockersInOwnedScope": [],
+  "checks": [
+    {
+      "id": "server-units-final",
+      "command": "node --test --experimental-test-isolation=none tests/*.test.js",
+      "cwd": "firebase/functions",
+      "tests": 330,
+      "pass": 330,
+      "fail": 0,
+      "durationMs": 17771.6638,
+      "log": "server-units-final.log",
+      "sha256": "66ccd9e0fb4ba24e9c6c8006b18c04bb90f04f6bf00e45d660bf8fa94503ac57"
+    },
+    {
+      "id": "release-state-emulator-final",
+      "file": "release-state.integration.mjs",
+      "projectId": "demo-aleria-release-combat-items",
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "durationMs": 11223.4893,
+      "log": "release-state-emulator-final.log",
+      "sha256": "8909fcf981d5d69b5eda9e78a3d44b6070b67ebe0fd79cbb617ee579b102bdc2"
+    },
+    {
+      "id": "equipment-emulator-final",
+      "file": "firebase/functions/tests/integration/equipment-standards.integration.mjs",
+      "projectId": "demo-aleria-equipment-standards",
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "durationMs": 3621.3988,
+      "log": "equipment-emulator-final.log",
+      "sha256": "9043101943e19bcfdf4146b1ade036f4657a767b7b4e7c8b2a1eeac37deb8041"
+    },
+    {
+      "id": "rest-emulator-final",
+      "file": "firebase/functions/tests/integration/combat-rest-lock.integration.mjs",
+      "projectId": "demo-aleria-combat-checkup",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "durationMs": 2023.0944,
+      "log": "rest-emulator-final.log",
+      "sha256": "17a3b8340b147894dd1ae9cb2fab488f80f3b21115a4e807a4d8a831536cbb6e"
+    },
+    {
+      "id": "mechanics-parity-final",
+      "command": "node netlify/build/check-mechanics-projection.mjs",
+      "identicalModules": 237,
+      "log": "mechanics-parity-final.log",
+      "sha256": "3b48f882d49ee9566b6d639a473e6a6ef640b6556ad2f3035d157116dfc4357f"
+    }
+  ],
+  "newDiagnosticEvidence": [
+    "Normal cash retry is booked once and does not rewrite exact saved profiles or revisions",
+    "Held weapon handoff rejects despite stale inventory equipped:false",
+    "Consumable recipient without a combat sheet gains no invented profile",
+    "Real gear handoff changes only moved bindings; retained legacy merge preserves held personal entry",
+    "Character and creature with the same collection-local ID remain separate typed wallets",
+    "Concurrent unique withdrawals yield one holder and one instance",
+    "Group inventory receipts reject ordinary and forced undo",
+    "Actual encounter locks block rest and group transfers for both actor kinds",
+    "Encounter end restores normal rest healing and charge recovery",
+    "Later purchase blocks destructive old rest undo; ordinary player force undo is rejected",
+    "Two normal rest undos work in reverse order and restore original HP and charges",
+    "Food pickup preserves equipment; gear pickup appends only incoming stowed binding",
+    "Later explicit weapon switch still costs bonus action and Flegel attack resolves 3d4",
+    "Earlier pickup and encounter receipts remain byte-for-byte equivalent Firestore data"
+  ],
+  "safety": {
+    "emulatorHostGuard": "127.0.0.1:8187",
+    "freshUuidDocuments": true,
+    "globalDelete": false,
+    "productionWrites": false,
+    "liveHistoryReevaluation": false,
+    "centralGeneratorsRunByThisAgent": false,
+    "pushOrDeployByThisAgent": false,
+    "sharedServicesStopped": false
+  },
+  "separateChecks": [
+    "Full frontend suite delegated to quests_checkup after browser source freeze",
+    "Final release gates and deployment verification coordinated by Root",
+    "Older 587 gates are explicitly not reused as this fresh check"
+  ]
+}

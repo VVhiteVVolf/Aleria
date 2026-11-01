@@ -4,8 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 import {
   buildCharacterDatabase,
-  CHARACTER_DATABASE_SCHEMA_VERSION,
-  markCharacterDatabaseOverlay
+  CHARACTER_DATABASE_SCHEMA_VERSION
 } from '../lib/character-database-model.mjs';
 import {
   buildFamilyPersonViewUrl,
@@ -13,6 +12,7 @@ import {
 } from '../../AleriaAlmanach/modules/character-genealogy/genealogy-mapping.js';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 import { mergeCharacterExportAssignments } from '../lib/character-export-assignments.mjs';
+import { readCharacterExportOverlays } from '../lib/character-export-sources.mjs';
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const databaseRoot = resolve(scriptDirectory, '..');
@@ -48,30 +48,12 @@ async function latestArchivePath() {
   return candidates[0].path;
 }
 
-async function readCharacterExportOverlays(sourcePath) {
-  const entries = await readdir(archiveRoot, { withFileTypes: true });
-  const overlays = [];
-  for (const entry of entries) {
-    if (!entry.isFile() || !entry.name.toLocaleLowerCase('de').endsWith('.json')) continue;
-    const path = resolve(archiveRoot, entry.name);
-    if (path === sourcePath) continue;
-    try {
-      const exported = JSON.parse(await readFile(path, 'utf8'));
-      if (exported?.type !== 'aleria-character' || !exported.character || typeof exported.character !== 'object') continue;
-      overlays.push({
-        path,
-        assignedTab: exported.assignedTab,
-        exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
-        character: markCharacterDatabaseOverlay(exported.character, {
-          replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields',
-          mergeCombatTechniques: exported.mergeStrategy === 'merge-combat-techniques'
-        })
-      });
-    } catch {
-      // Other JSON documents in the export directory are not character overlays.
-    }
-  }
-  return overlays.sort((first, second) => first.path.localeCompare(second.path, 'de'));
+async function registeredOverlaySources() {
+  const projections = await Promise.all(['registry.json', 'generated/characters.snapshot.json'].map(async name => {
+    try { return JSON.parse(await readFile(resolve(databaseRoot, name), 'utf8')); }
+    catch (error) { if (error.code === 'ENOENT') return null; throw error; }
+  }));
+  return projections.flatMap(projection => Array.isArray(projection?.sourceOverlays) ? projection.sourceOverlays : []);
 }
 
 function latestExportTimestamp(values = []) {
@@ -206,7 +188,7 @@ async function main() {
     throw new Error('Die Quelldatei ist kein gültiges Aleria-Charakterarchiv.');
   }
 
-  const overlays = await readCharacterExportOverlays(sourcePath);
+  const overlays = await readCharacterExportOverlays({ workspaceRoot, archiveRoot, sourcePath, registeredSources: await registeredOverlaySources() });
   const archive = {
     ...baseArchive,
     charTabs: mergeCharacterExportAssignments(baseArchive.charTabs, overlays),

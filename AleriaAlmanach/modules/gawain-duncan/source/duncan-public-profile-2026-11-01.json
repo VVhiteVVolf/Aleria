@@ -1,0 +1,189 @@
+{
+  "source": "https://firestore.googleapis.com/v1/projects/aleriaprojekt/databases/(default)/documents/characters/tmfBA2zPTc88EMMGkyyA",
+  "updateTime": "2026-10-14T22:36:31.304867Z",
+  "character": {
+    "id": "tmfBA2zPTc88EMMGkyyA",
+    "name": "Duncan Gafyr",
+    "title": "Ritterfürst des Hauses Gafyr & Waffenmeister des Hauses Draig, Gwynthor",
+    "bio": "Duncan Gafyr war Marschall der Grafschaft von Celtigerns Wacht. Heute dient der Ritterfürst im Ruhestand als Waffenmeister des Hauses Draig und als Mentor zahlreicher Ritter. Seine Beherrschung aller sieben Formen des Drachentanzes macht ihn zum lebenden Maßstab, an dem sich die kommende Heldengeneration messen lassen muss.",
+    "biography": null,
+    "portrait": "https://i.imgur.com/zdChj0a.png",
+    "identity": {
+      "worldPersonId": "person--haus-gafyr--duncan-gafyr"
+    },
+    "genealogy": {
+      "portraitPlaceholder": "auto",
+      "worldPersonId": "person--haus-gafyr--duncan-gafyr",
+      "tags": [],
+      "houseId": "house-gafyr",
+      "status": "alive",
+      "familyRole": "core",
+      "houseName": "Haus Gafyr",
+      "death": "",
+      "relationships": {
+        "partners": [
+          {
+            "personId": "morfudd-gwialen",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwialen--morfudd-gwialen",
+            "name": "Morfudd Gwialen"
+          }
+        ],
+        "children": [
+          {
+            "personId": "egon-gafyr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--egon-gafyr",
+            "name": "Egon Gafyr"
+          },
+          {
+            "personId": "aerwyn-gafyr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--aerwyn-gafyr",
+            "name": "Aerwyn Gafyr"
+          }
+        ],
+        "parents": [
+          {
+            "personId": "gerwyn-gafyr",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--gerwyn-gafyr",
+            "name": "Gerwyn Gafyr"
+          },
+          {
+            "personId": "siobhan-gallchobhair",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gallchobhair--siobhan-gallchobhair",
+            "name": "Siobhan Gallchobhair"
+          }
+        ]
+      },
+      "sex": "unknown",
+      "sources": [
+        {
+          "familyId": "haus-gafyr",
+          "personId": "duncan-gafyr",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=duncan-gafyr",
+          "fingerprint": "{\"name\":\"Duncan Gafyr\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--gerwyn-gafyr\",\"name\":\"Gerwyn Gafyr\"},{\"personId\":\"siobhan-gallchobhair\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gallchobhair--siobhan-gallchobhair\",\"name\":\"Siobhan Gallchobhair\"}],\"partners\":[{\"personId\":\"morfudd-gwialen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--morfudd-gwialen\",\"name\":\"Morfudd Gwialen\"}],\"children\":[{\"personId\":\"egon-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--egon-gafyr\",\"name\":\"Egon Gafyr\"},{\"personId\":\"aerwyn-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--aerwyn-gafyr\",\"name\":\"Aerwyn Gafyr\"}]}}"
+        },
+        {
+          "familyId": "haus-gwialen",
+          "personId": "duncan-gafyr",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T18:28:54.436Z",
+          "lastSyncedAt": "2026-08-03T18:28:54.436Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwialen&mode=view&person=duncan-gafyr",
+          "fingerprint": "{\"name\":\"Duncan Gafyr\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/duncan-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"morfudd-gwialen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwialen--morfudd-gwialen\",\"name\":\"Morfudd Gwialen\"}],\"children\":[]}}"
+        }
+      ],
+      "birth": "1670"
+    },
+    "companions": [
+      {
+        "image": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+        "name": "Carreg",
+        "imagePosition": "center",
+        "infoRows": [],
+        "role": "Reittier",
+        "inventoryItemId": "duncan-carreg",
+        "statusColor": "#5c7f20",
+        "attributes": [],
+        "imageFit": "contain",
+        "species": "Ritterschimmer",
+        "creatureId": "companion-duncan-carreg",
+        "id": "companion-mqu1vat2-0-zz2n",
+        "description": "Carreg ist das Ritterschimmer-Reitpferd von Sir Duncan Gafyr. Die benannte Zucht vereint Herzogsschimmer und Ceffyl. Sein schieferdunkles Fell, die lange silberweiße Mähne und der helle Schweif stehen im Kontrast zur schwarz-goldenen Gafyr-Schabracke mit Widderwappen.",
+        "status": "Gesund",
+        "imageFormat": "portrait",
+        "summary": "Carreg ist das Ritterschimmer-Reitpferd von Sir Duncan Gafyr. Die benannte Zucht vereint Herzogsschimmer und Ceffyl. Sein schieferdunkles Fell, die lange silberweiße Mähne und der helle Schweif stehen im Kontrast zur schwarz-goldenen Gafyr-Schabracke mit Widderwappen.",
+        "personality": ""
+      },
+      {
+        "id": "companion-mqu1vat2-1-5e7l",
+        "personality": "",
+        "imageFormat": "landscape",
+        "description": "",
+        "inventoryItemId": "",
+        "infoRows": [],
+        "imagePosition": "top",
+        "statusColor": "#5c7f20",
+        "creatureId": "",
+        "role": "Gefährte",
+        "attributes": [
+          {
+            "label": "Schnelligkeit",
+            "value": "6"
+          },
+          {
+            "label": "Ausdauer",
+            "value": "7"
+          },
+          {
+            "label": "Staerke",
+            "value": "5"
+          },
+          {
+            "label": "Agilitaet",
+            "value": "6"
+          },
+          {
+            "label": "Sozialverhalten",
+            "value": "4"
+          },
+          {
+            "label": "Robustheit",
+            "value": "5"
+          }
+        ],
+        "summary": "Besonderheit, Nutzen oder Bindung.",
+        "species": "Tier / Person",
+        "status": "Noch festlegen",
+        "name": "Treuer Begleiter",
+        "image": "",
+        "imageFit": "cover"
+      }
+    ],
+    "companionItems": [
+      {
+        "id": "duncan-carreg",
+        "instanceId": "duncan-carreg",
+        "creatureId": "companion-duncan-carreg",
+        "name": "Carreg",
+        "image": "/AleriaAlmanach/assets/companions/haus-gafyr/carreg.png",
+        "description": "Carreg ist das Ritterschimmer-Reitpferd von Sir Duncan Gafyr. Die benannte Zucht vereint Herzogsschimmer und Ceffyl. Sein schieferdunkles Fell, die lange silberweiße Mähne und der helle Schweif stehen im Kontrast zur schwarz-goldenen Gafyr-Schabracke mit Widderwappen.",
+        "type": "Ritterschimmer",
+        "category": "companion",
+        "registerCategory": "pferde",
+        "templateId": "",
+        "templateName": "Ritterschimmer",
+        "quantity": "1",
+        "itemStorageMode": "character",
+        "itemDbKey": "",
+        "originItemDbKey": "",
+        "ownerCharacterId": "tmfBA2zPTc88EMMGkyyA",
+        "ownerCharacterName": "Duncan Gafyr",
+        "imageFormat": "portrait",
+        "imageFit": "contain",
+        "imagePosition": "center",
+        "attributes": [],
+        "infoRows": [],
+        "individualizedAt": "2026-10-13T18:16:04.038Z"
+      }
+    ]
+  }
+}

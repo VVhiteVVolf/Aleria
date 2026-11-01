@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-01T02:39:39.175608+00:00",
+  "scope": "General landing-page template and opt-in group folio. No production data writes, migration, push or deploy.",
+  "checks": [
+    {
+      "log": "tests.log",
+      "tests": 63,
+      "pass": 63,
+      "fail": 0
+    },
+    {
+      "log": "release-tests.log",
+      "tests": 25,
+      "pass": 25,
+      "fail": 0
+    }
+  ],
+  "productionBuild": {
+    "status": "passed",
+    "log": "build.log"
+  },
+  "generatedClassicFacade": "Regenerated and --check passed.",
+  "visualQA": {
+    "preview": "http://127.0.0.1:8765/diagnostics/landing-folio-2026-11-01/preview.html",
+    "variants": [
+      "normal-folio",
+      "group-folio",
+      "legacy-classic",
+      "empty-new-folio"
+    ],
+    "desktop": {
+      "viewportCSS": 1278,
+      "pageOverflow": 0,
+      "brokenImages": 0,
+      "screenshot": "desktop.jpg"
+    },
+    "mobile": {
+      "viewportCSS": 390,
+      "pageOverflow": 0,
+      "brokenImages": 0,
+      "screenshot": "mobile.jpg"
+    },
+    "questScreenshot": "quest-area.jpg",
+    "interactions": [
+      "chapter jump and focus",
+      "group tabs",
+      "active/archive quest switch"
+    ],
+    "viewportOverride": "Reset; temporary mobile capture tab closed; desktop preview retained."
+  },
+  "compatibility": {
+    "legacyWithoutPresentation": "classic",
+    "newPages": "folio",
+    "coverSeparateFromCrest": true,
+    "liveRegionsAndActionsPreserved": true
+  },
+  "additionalFix": "Image query parameters escaped once; prior double-escaping reproduced in image-query-before.log.",
+  "artManifest": "AleriaAlmanach/assets/landing-folio/art-manifest.json",
+  "report": "AleriaAlmanach/docs/modules/LANDING_FOLIO_2026-11-01.md"
+}

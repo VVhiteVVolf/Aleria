@@ -7,6 +7,7 @@ import { buildOwnedItems } from '../../../../AleriaAlmanach/modules/item-registe
 import { inventoryCardModel } from '../../../../AleriaAlmanach/modules/character-inventory/character-inventory-card-model.js';
 import { mergeOnlineAndLocalCharacter } from '../../../../CharakterDatenbank/assets/js/character-database-client.mjs';
 import { STANDARD_ITEMS } from '../../src/generated/item-register/item-register-standard.js';
+import { readItemDefinition } from '../../src/items/item-definition-repository.js';
 
 after(() => database.terminate());
 const draft = { name: 'Silberklinge', category: 'weapon', image: 'https://example.org/silberklinge.png',
@@ -30,7 +31,8 @@ test('one narrator contribution persists several immediately lootable cards, ret
   assert.equal(entries.length, 2);assert.ok(entries.every(entry => entry.available));
   assert.equal(entries[0].item.valuation.minCopper, 1250.25);
   assert.equal(entries[0].item.attributes[0].value, 6);
-  assert.equal(entries[1].item.combatDefinition.baseArmorClass, 18);
+  const armor = await database.runTransaction(transaction => readItemDefinition(database, transaction, entries[1].item.definitionRef));
+  assert.equal(armor.combatDefinition.baseArmorClass, 18);
   await assert.rejects(place({ ...input, commentSegments: [{ kind: 'sceneitem', sceneItemDraft: { ...draft, name: 'Anderer Fund' } }] }), /anderem Inhalt/);
   await undo(first.id);
   assert.equal((await ground()).size, 0);
@@ -87,7 +89,8 @@ test('standard and online offer templates preserve images, prices and trusted we
   await database.collection('item_register_offers').doc(offer.id).set(offer);
   await place(inputFor([{ template: offer.id, name: 'Aus der Schmiede', description: 'Eine verzierte Klinge.' }]));
   const fromOffer = [...(await ground()).values()][1].item;
-  assert.deepEqual(fromOffer.combatDefinition.triggerRules, gawainSword.combatDefinition.triggerRules);
+  const definition = await database.runTransaction(transaction => readItemDefinition(database, transaction, fromOffer.definitionRef));
+  assert.deepEqual(definition.combatDefinition.triggerRules, gawainSword.combatDefinition.triggerRules);
   assert.equal(fromOffer.offerId, offer.id);
   const before = (await history()).length;
   await assert.rejects(place(inputFor([draft, { ...draft, image: 'javascript:alert(1)' }])), /Bildlink/);

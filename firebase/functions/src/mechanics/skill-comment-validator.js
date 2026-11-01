@@ -4,6 +4,9 @@ import { HttpsError } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources } from '../generated/combat/combat-action-economy.js';
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
+import { readItemDefinitionIndex, hydrateItemRecord } from '../items/item-definition-repository.js';
+import { productWithItemDefinition, prepareTemplateDefinition, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
+import { itemDefinitionFromTemplate } from '../generated/item-definitions/item-definition-model.js';
 import { overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { getCombatRuleAbilityUseRequests } from '../generated/combat/combat-rule-consumption.js';
 import { getActiveCombatPartyMap, getEncounterRelationship } from '../generated/combat/combat-encounter-model.js';
@@ -167,8 +170,10 @@ export async function validateSkillCommentSegments({
   const records = new Map();
   recordEntries.forEach((entry, index) => {
     if (!snapshots[index].exists) fail('not-found', 'Das Profil eines Fertigkeitsversuchs wurde nicht gefunden.');
-    records.set(entry.key, snapshots[index].data() || {});
+    records.set(entry.key, { ...(snapshots[index].data() || {}), id: entry.recordId, _itemHolderKind: entry.kind === 'creature' ? 'creatures' : 'characters' });
   });
+  const itemDefinitions = await readItemDefinitionIndex(database, transaction, [...records.values()]);
+  for (const [key, record] of records) records.set(key, hydrateItemRecord(record, itemDefinitions, { preserveLoadout: true }));
 
   const enhanced = (Array.isArray(metadata?.commentSegments) ? metadata.commentSegments : []).map(segment => ({ ...segment }));
   let usedKeys = usedRuleFrequencyKeys instanceof Set ? new Set(usedRuleFrequencyKeys) : new Set();
@@ -406,10 +411,21 @@ export async function validateSkillCommentSegments({
         if (!actorDescriptor.persistence.persistent && (benefits.copper || benefits.items?.length)) fail('failed-precondition', 'Gegenstände und Geld benötigen einen dauerhaften Inventarempfänger.');
         const key = recordKey(actorDescriptor.persistence);
         const update = persistentUpdates.get(key);
+        const rewardVersions = [];
+        for (const item of benefits.items || []) {
+          item.product = productWithItemDefinition(item.product);
+          const version = await prepareTemplateDefinition(database, transaction, item.product, { actorUid: request.auth.uid });
+          rewardVersions.push(version);
+          item.product = { ...item.product, combatDefinition: version.definition.combatDefinition, useDefinition: version.definition.useDefinition };
+        }
         const grant = applyHerausforderungRewardToAttempt({ challenge, resolution, actor, profile,
           state: workingStates.get(actorDescriptor.actorId) || {}, inventory: workingInventories.get(key) || update?.inventory || actorRecord.inventory || {},
           equipment: update?.equipment || {}, identity: claimId, encounterId });
         if (grant) {
+          const claimUnique = await prepareUniqueItemClaims(database, transaction, (benefits.items || []).map((item, index) => ({
+            definition: itemDefinitionFromTemplate(item.product), instanceId: `reward:${claimId}:${index}`, quantity: item.quantity,
+            holder: { kind: actorDescriptor.persistence.kind === 'creature' ? 'creatures' : 'characters', recordId: actorDescriptor.persistence.recordId, itemId: `reward:${claimId}:${index}` } })), { actorUid: request.auth.uid });
+          pendingClaims.push(...rewardVersions.map(version => ({ write: () => version.write() })), { write: claimUnique });
           const combat = await stageHerausforderungCombatBenefits({ challenge, actorId: actorDescriptor.actorId, benefits, identity: claimId,
             encounter, submitted: entry.submitted, descriptors, records, recordEntries, workingStates, persistentUpdates, recoveryDayKey: rulePeriods.day,
             history, rulePeriods, usedRuleFrequencyKeys: usedKeys, usedConsequenceKeys, maneuverDice });
@@ -439,7 +455,7 @@ export async function validateSkillCommentSegments({
     enhanced[entry.index] = { ...entry.segment, skillResolution: resolution };
   }
 
-  const claimWrites = pendingClaims.map(claim => ({ ref: claim.ref, data: {
+  const claimWrites = pendingClaims.map(claim => claim.write ? claim : ({ ref: claim.ref, data: {
     entryId: clean(entryId, 240),
     challengeId: claim.challenge.id,
     resolutionId: claim.resolution.resolutionId,
@@ -453,7 +469,7 @@ export async function validateSkillCommentSegments({
 }
 
 export function persistSkillChallengeClaims(transaction, claims = []) {
-  claims.forEach(claim => transaction.create(claim.ref, claim.data));
+  claims.forEach(claim => claim.write ? claim.write() : transaction.create(claim.ref, claim.data));
 }
 
 export const skillCommentValidatorInternals = Object.freeze({

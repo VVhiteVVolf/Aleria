@@ -1,4 +1,7 @@
 import { isZornkappe, applyZornkappeUse } from './zornkappe-effects.js';
+import { materializeInventoryItem, resolveItemDefinition } from '../item-definitions/item-definition-resolver.js';
+import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-model.js';
+import { applyDefinedItemEffects } from './item-use-effects.js';
 const INVENTORY_USE_MODES = new Set(['auto', 'consume', 'use']);
 const CONSUMABLE_CATEGORIES = new Set(['potions', 'consumable', 'consumables', 'food', 'ammunition']);
 const REUSABLE_CATEGORIES = new Set(['weapon', 'armor']);
@@ -25,13 +28,15 @@ export function getCharacterInventoryItems(character = {}) {
     .filter(item => item && cleanText(item.id || item.name));
 }
 
-export function inferInventoryUseMode(item = {}) {
+export function inferInventoryUseMode(item = {}, definitions) {
+  item = materializeInventoryItem(item, definitions);
   if (isZornkappe(item)) return 'consume';
   const explicit = cleanText(item.inventoryUseMode || item.useMode || item.usageMode).toLowerCase();
   if (['consume', 'consumable', 'verbrauch', 'verbrauchen'].includes(explicit)) return 'consume';
   if (['use', 'reusable', 'benutzen', 'wiederverwendbar'].includes(explicit)) return 'use';
   if (item.consumable === true) return 'consume';
   if (item.consumable === false) return 'use';
+  if (['speisen', 'getraenke'].includes(item.registerCategory)) return 'consume';
   const category = cleanText(item.category).toLowerCase();
   const identityText = [item.name, item.type, item.tags, category].map(value => cleanText(value, 600)).join(' ');
   if (CONSUMABLE_CATEGORIES.has(category) || CONSUMABLE_PATTERN.test(identityText)) return 'consume';
@@ -49,6 +54,7 @@ export function resolveInventoryUseMode(item = {}, requestedMode = 'auto') {
 
 export function getInventoryUsePersistence(character = {}) {
   const actorId = cleanText(character.id, 240);
+  if (actorId && !actorId.startsWith('builtin:') && character.entityType === 'creature' && !character.sourceCreatureId) return { kind: 'creature', recordId: actorId };
   if (!actorId || actorId.startsWith('builtin:') || character.entityType === 'creature' || character.sourceCreatureId) {
     return { kind: 'scene-actor', actorId };
   }
@@ -57,6 +63,7 @@ export function getInventoryUsePersistence(character = {}) {
 
 function normalizeItemSnapshot(item = {}) {
   return {
+    ...(normalizeItemDefinitionRef(item.definitionRef) ? { definitionRef: normalizeItemDefinitionRef(item.definitionRef) } : {}),
     id: cleanText(item.id, 240),
     name: cleanText(item.name || 'Gegenstand', 160),
     type: cleanText(item.type, 120),
@@ -93,6 +100,9 @@ export function normalizeInventoryUse(value = {}) {
     ...(source.sceneItemEvent ? { sceneItemEvent: clone(source.sceneItemEvent) } : {}),
     ...(source.resourceSnapshot ? { resourceSnapshot: clone(source.resourceSnapshot) } : {}),
     ...(source.inventorySnapshot ? { inventorySnapshot: clone(source.inventorySnapshot) } : {}),
+    ...(source.hitPointSnapshot ? { hitPointSnapshot: clone(source.hitPointSnapshot) } : {}),
+    ...(source.itemEffects ? { itemEffects: clone(source.itemEffects) } : {}),
+    ...(source.chargeSnapshot ? { chargeSnapshot: clone(source.chargeSnapshot) } : {}),
     usageId: cleanText(source.usageId, 240),
     actorId: cleanText(source.actorId, 240),
     actorName: cleanText(source.actorName || 'Unbekannt', 160),
@@ -133,7 +143,7 @@ function itemMatchesTrigger(item = {}, trigger = {}) {
   return tags.some(tag => itemText.includes(tag));
 }
 
-export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, recoveryDayKey = '') {
+export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, recoveryDayKey = '', { definitions } = {}) {
   const inventoryUse = normalizeInventoryUse(value);
   delete inventoryUse.conditionSnapshot;
   const conditionEffects = applyZornkappeUse(combatProfile.temporaryConditions || [], inventoryUse);
@@ -144,6 +154,11 @@ export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, 
   const abilities = clone(Array.isArray(combatProfile?.abilities) ? combatProfile.abilities : []);
   const dayKey = cleanText(recoveryDayKey, 160);
   const effects = [];
+  const defined = applyDefinedItemEffects(combatProfile, inventoryUse, resources, definitions);
+  delete inventoryUse.hitPointSnapshot;
+  delete inventoryUse.itemEffects;
+  if (defined.hitPointSnapshot) inventoryUse.hitPointSnapshot = defined.hitPointSnapshot;
+  if (defined.effects.length) inventoryUse.itemEffects = defined.effects;
 
   abilities.forEach(ability => {
     const trigger = ability?.inventoryUseTrigger;
@@ -180,8 +195,12 @@ export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, 
     });
   });
 
+  if (effects.length || defined.effects.length) inventoryUse.resourceSnapshot = {
+    before: clone(inventoryUse.resourceSnapshot?.before || combatProfile.resources || []), after: clone(resources)
+  };
   return {
-    changed: effects.length > 0 || conditionEffects.changed,
+    changed: effects.length > 0 || conditionEffects.changed || defined.hitPointsChanged || defined.effects.length > 0,
+    hitPoints: defined.hitPointsChanged ? defined.hitPoints : null,
     conditions: conditionEffects.conditions,
     resources,
     abilities,
@@ -208,7 +227,7 @@ export function prepareInventoryUse({ character = {}, itemId = '', requestedMode
   });
 }
 
-export function applyInventoryUseToInventory(inventory = {}, value = {}) {
+export function applyInventoryUseToInventory(inventory = {}, value = {}, { definitions, recoveryDayKey = '' } = {}) {
   const inventoryUse = normalizeInventoryUse(value);
   const nextInventory = clone(inventory && typeof inventory === 'object' ? inventory : {});
   const items = Array.isArray(nextInventory.items) ? nextInventory.items : [];
@@ -216,6 +235,25 @@ export function applyInventoryUseToInventory(inventory = {}, value = {}) {
   const index = items.findIndex(item => String(item?.id || '') === String(inventoryUse.item.id || ''));
   if (index < 0) throw new Error(`${inventoryUse.item.name || 'Der Gegenstand'} ist online nicht mehr im Inventar vorhanden.`);
   const item = items[index];
+  const definition = resolveItemDefinition(item, definitions);
+  if (item.definitionRef && !definition) throw new Error('Die Regelversion dieses Gegenstands ist noch nicht geladen.');
+  if (definition) {
+    inventoryUse.mode = definition.useDefinition.mode;
+    inventoryUse.quantity = definition.useDefinition.quantity;
+    const use = definition.useDefinition;
+    if (use.chargesMaximum > 0) {
+      const state = { ...item.itemState };
+      if (use.recovery === 'day' && recoveryDayKey && state.recoveryDayKey !== recoveryDayKey) {
+        state.chargesCurrent = use.chargesMaximum;
+        state.recoveryDayKey = recoveryDayKey;
+      }
+      const before = Number(state.chargesCurrent ?? use.chargesMaximum);
+      if (before < use.chargesPerUse) throw new Error('Dieser Gegenstand hat nicht genug Ladungen.');
+      state.chargesCurrent = before - use.chargesPerUse;
+      item.itemState = state;
+      inventoryUse.chargeSnapshot = { before, after: state.chargesCurrent, maximum: use.chargesMaximum };
+    }
+  }
   const available = getInventoryItemQuantity(item);
   if (available < inventoryUse.quantity) {
     throw new Error(`Von ${item.name || 'diesem Gegenstand'} sind nur noch ${available} verfügbar.`);
@@ -229,11 +267,13 @@ export function applyInventoryUseToInventory(inventory = {}, value = {}) {
   }
   return {
     inventory: nextInventory,
+    inventoryChanged: inventoryUse.mode === 'consume' || !!inventoryUse.chargeSnapshot,
     inventoryUse: {
       ...inventoryUse,
       item: normalizeItemSnapshot(item),
       quantityBefore: available,
-      quantityAfter
+      quantityAfter,
+      ...(inventoryUse.mode === 'consume' || inventoryUse.chargeSnapshot ? { inventorySnapshot: { before: clone(inventory), after: clone(nextInventory) } } : {})
     }
   };
 }

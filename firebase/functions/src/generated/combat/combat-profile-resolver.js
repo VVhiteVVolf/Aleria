@@ -153,6 +153,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
           versatileDamageFormula: versatileFormula,
           damageType: technique.damageType || activeWeapon?.damageType || 'physisch',
           range: technique.range || activeWeapon?.range || 'Nahkampf',
+          ...(['melee', 'ranged'].includes(technique.attackRange) ? { attackRange: technique.attackRange } : {}),
           properties: [activeWeapon?.properties, technique.tags].filter(Boolean).join(' · '),
           notes: [technique.description, technique.effect, technique.requirements].filter(Boolean).join('\n')
         },

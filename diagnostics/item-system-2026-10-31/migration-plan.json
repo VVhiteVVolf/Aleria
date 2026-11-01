@@ -1,0 +1,1760 @@
+{
+  "scope": "public-local-snapshot; dry-run only",
+  "counts": {
+    "safe": 5,
+    "review": 131,
+    "ignored": 1021
+  },
+  "plans": [
+    {
+      "recordId": "ksJQe8Ai4KbRE9jOAvb7",
+      "revision": 1791914130127,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "equipment-weapon-freya-lute",
+          "name": "Laute",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-freya-sword",
+          "name": "Schwert",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-freya-shield-bash",
+          "name": "Schild (Schildstoß)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-freya-padded-armor",
+          "name": "Wattierter Waffenrock",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-freya-shield",
+          "name": "Schild",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "freya-eldfaxi",
+          "name": "Eldfaxi",
+          "reason": "no-explicit-template"
+        },
+        {
+          "equipmentId": "freya-lute",
+          "collection": "weapons",
+          "name": "Laute",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "freya-sword",
+          "collection": "weapons",
+          "name": "Schwert",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "freya-shield-bash",
+          "collection": "weapons",
+          "name": "Schild (Schildstoß)",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "freya-padded-armor",
+          "collection": "armorItems",
+          "name": "Wattierter Waffenrock",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "freya-shield",
+          "collection": "armorItems",
+          "name": "Schild",
+          "reason": "sheet-only"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mshyqs5m-0-o2so",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshyqs5m-1-b5xe",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshyqs5m-2-qsz3",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshyqs5m-3-brtu",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshyqs5m-4-tcgb",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshyqs5m-5-uzcn",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "FKiXsSWVoV74rTgmpPip",
+      "revision": 1791914130160,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "equipment-weapon-fenrir-greataxe",
+          "name": "Großaxt",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-fenrir-handaxe-pair",
+          "name": "Einhandäxte (Paar)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-fenrir-throwing-axe",
+          "name": "Wurfaxt",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-fenrir-roundshield-bash",
+          "name": "Huskarl-Rundschild (Schildstoß)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-fenrir-scale-mail",
+          "name": "Schuppenpanzer",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-fenrir-roundshield",
+          "name": "Huskarl-Rundschild",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "fenrir-gaul",
+          "name": "Gaul",
+          "reason": "no-explicit-template"
+        },
+        {
+          "equipmentId": "fenrir-greataxe",
+          "collection": "weapons",
+          "name": "Großaxt",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "fenrir-handaxe-pair",
+          "collection": "weapons",
+          "name": "Einhandäxte (Paar)",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "fenrir-throwing-axe",
+          "collection": "weapons",
+          "name": "Wurfaxt",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "fenrir-roundshield-bash",
+          "collection": "weapons",
+          "name": "Huskarl-Rundschild (Schildstoß)",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "fenrir-scale-mail",
+          "collection": "armorItems",
+          "name": "Schuppenpanzer",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "fenrir-roundshield",
+          "collection": "armorItems",
+          "name": "Huskarl-Rundschild",
+          "reason": "sheet-only"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mshybav3-0-oynu",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshybav3-1-l83n",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshybav3-2-vyx4",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshybav3-3-zrnj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshybav3-4-ej8h",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mshybav3-5-d5u9",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "person--haus-varulv--skalli-varulv",
+      "revision": 1791977774204,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "skalli-astrid",
+          "name": "Astrid",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "oUlhJyX6C4Q69mtLS9u1",
+      "revision": 1791899426340,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "equipment-weapon-asgeir-axt-rechts",
+          "name": "Wolfshorn-Axt · rechte Hand",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-asgeir-axt-links",
+          "name": "Wolfshorn-Axt · linke Hand",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-asgeir-grossaxt",
+          "name": "Lange Wolfshorn-Streitaxt",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:streitaxt"
+        },
+        {
+          "itemId": "equipment-armor-asgeir-schuppen",
+          "name": "Wolfshorn-Schuppenpanzer",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:schuppenpanzer"
+        },
+        {
+          "itemId": "equipment-armor-asgeir-rundschild",
+          "name": "Wolfshorn-Rundschild",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:rundschild"
+        },
+        {
+          "itemId": "asgeir-haeppchen",
+          "name": "Häppchen",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "wvBnM1mHYYXycW9nnza9",
+      "revision": 1791899426318,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "halvar-lund",
+          "name": "Lund",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mr49cz9e-0-zqqm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr49cz9e-1-pfwc",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr49cz9e-2-ybrf",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr49cz9e-3-bnbh",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr49cz9e-4-58ix",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr49cz9e-5-cf1f",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "0caPdKpJoVazPUuu2KMu",
+      "revision": 1791899426306,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "hrolf-skarn",
+          "name": "Skarn",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "hrolf-myrk",
+          "name": "Myrk",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mr47nzgg-0-kw69",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr47nzgg-1-4aqw",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr47nzgg-2-r7lf",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr47nzgg-3-x3cb",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr47nzgg-4-98fe",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mr47nzgg-5-dujk",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "bSYZYAEOwiRgy44f6OmO",
+      "revision": 1791899426373,
+      "safe": [
+        {
+          "itemId": "equipment-weapon-ylva-saex",
+          "name": "Wolfshorn-Saex",
+          "definitionRef": {
+            "id": "standard:waffen-rustungen:saex",
+            "revision": "a0fc3266c407bdc1ce63ed4e"
+          }
+        }
+      ],
+      "review": [
+        {
+          "itemId": "equipment-weapon-ylva-langbogen",
+          "name": "Wolfshorn-Langbogen",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:langbogen"
+        },
+        {
+          "itemId": "equipment-weapon-ylva-speer",
+          "name": "Dornwacht · Wolfshorn-Jagdspeer",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-ylva-handaxt",
+          "name": "Wolfshorn-Handaxt",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-ylva-leder",
+          "name": "Verstärkte Jagdleder-Rüstung",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:verstaerkte-lederruestung"
+        },
+        {
+          "itemId": "ylva-pfeile",
+          "name": "Jagdpfeile",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "ylva-freki",
+          "name": "Freki",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "ylva-silberkrone",
+          "name": "Silberkrone",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "15ml9RhSvJPXof7z4qY3",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "gwendolyn-olwen",
+          "name": "Olwen",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gwendolyn-alwen",
+          "name": "Alwen",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gwendolyn-flam",
+          "name": "Flam",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "person--haus-balchder--armel-balchder",
+      "revision": 1791975419104,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "armel-argent",
+          "name": "Argent",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "fq586i4k2gj5Lg30dUwW",
+      "revision": 0,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "hTN74LdJjXUFz7X7ReRr",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "cadfan-ciaran",
+          "name": "Cíaran",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "cadfan-donn",
+          "name": "Donn",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "yLJ0Rr5suTSLa42sL743",
+      "revision": 1791914130283,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "carys-alaw",
+          "name": "Alaw",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "carys-roisin",
+          "name": "Roisin",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "27fN2uvUpVVNICNc4vQU",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "einion-greif",
+          "name": "Greif",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "person--haus-draig--galahad-draig",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "galahad-sturmwind",
+          "name": "Sturmwind",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "q1QtSIug74FzzwUAqWrs",
+      "revision": 1791748002303,
+      "safe": [
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "name": "Reisepaket · gewachste Hülle",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:reisepaket-klein",
+            "revision": "c035e13097a0ef114128f4c9"
+          }
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "name": "Wundverband · Draig-Reisevorrat",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:verbandstoff",
+            "revision": "98763d4dcb3546a5a986c226"
+          }
+        }
+      ],
+      "review": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "name": "Drachenzahn · Draig-Ritterschwert",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:ritterschwert"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "name": "Silberschuppe · Draig-Jungritter-Plattenrüstung",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:ritterplatte"
+        },
+        {
+          "itemId": "gawain-draig-dagger-item",
+          "name": "Draig-Dolch",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "name": "Dokumente / Urkunden",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gawain-tanor",
+          "name": "Tanor",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "person--haus-draig--gethin-1722-draig",
+      "revision": 1791974298916,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "equipment-weapon-starter-teulu-longsword",
+          "name": "Draig Ritterschwert",
+          "reason": "different-rules",
+          "templateId": "standard:waffen-rustungen:ritterschwert"
+        },
+        {
+          "itemId": "equipment-armor-starter-teulu-chainmail",
+          "name": "Draig Plattenrüstung",
+          "reason": "different-rules",
+          "templateId": "standard:cenyr-ruestungen:haus-draig:jungritter"
+        },
+        {
+          "itemId": "gethin-vivian",
+          "name": "Vivian",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "wnS8JOFUR3oS1izRzObH",
+      "revision": 1791914130260,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "isobel-rhoslyn",
+          "name": "Rhoslyn",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "isobel-pompoesa",
+          "name": "Fürstin Pompösa von Samtpfote",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "HjDXMMexahez1G0rJrBE",
+      "revision": 1791908297304,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "kane-aelwyn",
+          "name": "Aelwyn",
+          "reason": "no-explicit-template"
+        },
+        {
+          "equipmentId": "HjDXMMexahez1G0rJrBE-teulu-sword",
+          "collection": "weapons",
+          "name": "Kane Draig · Teulu-Ritterschwert",
+          "reason": "sheet-only"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "avZbi5bD7DFcx6XtefJ4",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "mair-nia",
+          "name": "Nia",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "mair-tiwlip",
+          "name": "Tiwlip",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "ZGiDqxIwkkvOHzpnKmyk",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "maredudd-cadarn",
+          "name": "Cadarn",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "maredudd-hari",
+          "name": "Hari",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "E8HXkgi2kdkXaqkxrnRo",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "meurig-emrys",
+          "name": "Emrys",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "ujMjNxdOs1pnR2jGNus4",
+      "revision": 1791914130300,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "myrddin-betty",
+          "name": "Betty",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "6Gpz6nJaoL7yo9rFu85H",
+      "revision": 1791904947250,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "neithon-cador",
+          "name": "Cador",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "7VjIYgifnq4uqNNfjzcM",
+      "revision": 1791904947255,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "odyar-morcant",
+          "name": "Morcant",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "vk0xAa3ZcEhVvGC1CzNq",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "oweta-heulwen",
+          "name": "Heulwen",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "y7MBxDiAaesbWHBtmw5Q",
+      "revision": 1791748002303,
+      "safe": [
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "name": "Haus Draig · Jungritter-Plattenrüstung",
+          "definitionRef": {
+            "id": "standard:cenyr-ruestungen:haus-draig:jungritter",
+            "revision": "a4db9594e824d1359ce7d5c5"
+          }
+        }
+      ],
+      "review": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "name": "Amethyst-Zauberstab",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "name": "Amulett",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "rhiannon-draig-dagger-item",
+          "name": "Dolch",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "rhiannon-mel",
+          "name": "Mél",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "9hurPRtv2yMJTYkAARkl",
+      "revision": 1791908297295,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "rhys-lot",
+          "name": "Lot",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "93PwKnPytHr0sOc9mNHi",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "steffan-guto",
+          "name": "Guto",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "steffan-uther",
+          "name": "Uther",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "fklEm9zDR9y1LuCaXeeb",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "tegan-alaw",
+          "name": "Alaw",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "tegan-twm",
+          "name": "Twm",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "fcNfoBWpVNvK3ORQUJwX",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "tudwal-ceiniog",
+          "name": "Ceiniog",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "tudwal-pryderi",
+          "name": "Pryderi",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "tmfBA2zPTc88EMMGkyyA",
+      "revision": 1791841309895,
+      "safe": [
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "name": "Haus Gafyr · Seniorritter-Plattenrüstung",
+          "definitionRef": {
+            "id": "standard:cenyr-ruestungen:haus-gafyr:seniorritter",
+            "revision": "60c7ba48e9edebd5a3ab4ca3"
+          }
+        }
+      ],
+      "review": [
+        {
+          "itemId": "duncan-carreg",
+          "name": "Carreg",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "gildas-gafyr",
+      "revision": 1790054758405,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "gildas-gafyr-duty-sword-item",
+          "name": "Pflichtschwur · Draig-Ritterschwert",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gildas-gafyr-watch-armor-item",
+          "name": "Gafyr-Plattenrüstung",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gildas-gafyr-dagger-item",
+          "name": "Draig-Dolch",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gildas-gafyr-draig-knight-signet-item",
+          "name": "Draig-Rittersiegelring",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gildas-gafyr-maintenance-kit",
+          "name": "Pflegeset für Klinge und Rüstung",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gildas-gafyr-training-ledger",
+          "name": "Übungsheft und Pflichtkalender",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gildas-gafyr-field-kit",
+          "name": "Schlichtes Feldzeug",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "OJEmpbD6YWhDFDmitk6R",
+      "revision": 1792090615772,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "branwen-eurwen",
+          "name": "Eurwen",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "branwen-mabon",
+          "name": "Mabon",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "branwen-eira",
+          "name": "Eira",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "J4wpNQON98GsdPzsaIUk",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "heledd-mabli",
+          "name": "Mabli",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "person--haus-gwyvern--huw-gwyvern",
+      "revision": 1791839346721,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "huw-dyreth",
+          "name": "Dyreth",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "person--haus-gwyvern--tegwen-gwyvern",
+      "revision": 1791839346719,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "tegwen-uffyrae",
+          "name": "Uffyrae",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "0Sku8euk5jhlWebdsskI",
+      "revision": 1791914130223,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "trevor-bwmbo",
+          "name": "Bwmbo",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "trevor-struppi",
+          "name": "Struppi",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-mqu1vat1-0-w8ef",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-1-exvo",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-2-0fx2",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-3-2lgm",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-4-ajrj",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-mqu1vat1-5-5kao",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "person--haus-neidr--guinevere-neidr",
+      "revision": 1791748002303,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "guinevere-arrows-standard",
+          "name": "Standardpfeile",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "guinevere-arrows-fire",
+          "name": "Feuerpfeile",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "guinevere-arrows-signal",
+          "name": "Signalpfeile",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "guinevere-arrows-crippling",
+          "name": "Krüpplungspfeile",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-longbow",
+          "name": "Helwyr Langbogen",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-longbow-fire",
+          "name": "Helwyr Langbogen (Feuerpfeil)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-longbow-crippling",
+          "name": "Helwyr Langbogen (Krüpplungspfeil)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-shortbow",
+          "name": "Helwyr Kurzbogen",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-shortbow-signal",
+          "name": "Helwyr Kurzbogen (Signalpfeil)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-sword",
+          "name": "Helwyr Schwert",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-guinevere-hunting-daggers",
+          "name": "Helwyr Jagddolche (Paar)",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-guinevere-leather-armor",
+          "name": "Helwyr Lederrüstung",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "guinevere-scath",
+          "name": "Scath",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "guinevere-uath",
+          "name": "Uath",
+          "reason": "no-explicit-template"
+        },
+        {
+          "equipmentId": "guinevere-longbow",
+          "collection": "weapons",
+          "name": "Helwyr Langbogen",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "guinevere-shortbow",
+          "collection": "weapons",
+          "name": "Helwyr Kurzbogen",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "guinevere-sword",
+          "collection": "weapons",
+          "name": "Helwyr Schwert",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "guinevere-hunting-daggers",
+          "collection": "weapons",
+          "name": "Helwyr Jagddolche (Paar)",
+          "reason": "sheet-only"
+        },
+        {
+          "equipmentId": "guinevere-leather-armor",
+          "collection": "armorItems",
+          "name": "Helwyr Lederrüstung",
+          "reason": "sheet-only"
+        }
+      ],
+      "ignored": [
+        {
+          "itemId": "item-ms1qmx6k-0-74ih",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-ms1qmx6k-1-it87",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-ms1qmx6k-2-uypw",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-ms1qmx6k-3-ozbk",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-ms1qmx6k-4-kfnq",
+          "reason": "placeholder"
+        },
+        {
+          "itemId": "item-ms1qmx6k-5-5l4o",
+          "reason": "placeholder"
+        }
+      ]
+    },
+    {
+      "recordId": "person--haus-saethwyr--nudd-saethwyr",
+      "revision": 1791843881567,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "equipment-weapon-starter-cantref-spear",
+          "name": "Dreifache Pflicht · Saethwyr-Dreizack",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-starter-cantref-chainmail",
+          "name": "Goldene Wacht · Saethwyr-Plattenrüstung",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-nudd-saethwyr-knightly-sword",
+          "name": "Eidwacht · Saethwyr-Ritterschwert",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "person--haus-wyrm--gais-wyrm",
+      "revision": 1789230187934,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "equipment-weapon-starter-uchelwyr-lance",
+          "name": "Lanze",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-weapon-starter-uchelwyr-longsword",
+          "name": "Langschwert",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "equipment-armor-starter-uchelwyr-chainmail",
+          "name": "Kettenhemd",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "gais-rabenstolz",
+          "name": "Saithor",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "6atOllMA637Z2VNAZAxf",
+      "revision": 1791974298918,
+      "safe": [],
+      "review": [
+        {
+          "equipmentId": "6atOllMA637Z2VNAZAxf-teulu-sword",
+          "collection": "weapons",
+          "name": "Gethin · Teulu-Ritterschwert",
+          "reason": "sheet-only"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "zitteraale-schwarzer-zitteraal",
+      "revision": 0,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "zitteraal-donnergrollen",
+          "name": "Donnergrollen",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "zitteraal-zitteraal-panzer",
+          "name": "Zitteraal-Plattenpanzer",
+          "reason": "no-explicit-template"
+        },
+        {
+          "itemId": "zitteraal-zunder",
+          "name": "Zunder",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    },
+    {
+      "recordId": "person--haus-llythfor--cynddelw-llythfor",
+      "revision": 0,
+      "safe": [],
+      "review": [
+        {
+          "itemId": "cynddelw-troetzli",
+          "name": "Trötzli",
+          "reason": "no-explicit-template"
+        }
+      ],
+      "ignored": []
+    }
+  ]
+}

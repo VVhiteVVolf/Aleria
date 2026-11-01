@@ -1,6 +1,7 @@
 // Beute-Ansprüche gegen besiegte Kampfgegner. Append-only, wie der Rest der Kampf-Historie:
 // ein Anspruch ist ein eigener Kommentar, der eine Kreaturinstanz je Kampf genau einmal freigibt.
 export const LOOT_CLAIM_EVENT_KIND = 'loot-claim-event';
+import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-model.js';
 export const LOOT_CLAIM_SCHEMA_VERSION = 1;
 
 function text(value, maximum = 240) {
@@ -17,6 +18,7 @@ export function normalizeLootClaimItem(value = {}, index = 0) {
   const source = value && typeof value === 'object' ? value : {};
   return {
     id: text(source.id, 120) || `loot-${index + 1}`,
+    ...(normalizeItemDefinitionRef(source.definitionRef) ? { definitionRef: normalizeItemDefinitionRef(source.definitionRef) } : {}),
     name: text(source.name || 'Gegenstand', 140),
     quantity: integer(source.quantity, 1, 1, 9999),
     notes: text(source.notes, 800)

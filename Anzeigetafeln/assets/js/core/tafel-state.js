@@ -16,6 +16,7 @@
     regionTitle: config.title || 'Anzeigetafel',
     boardImages: {},
     boardLayout: null,
+    noticeArchive: null,
     cardWidth: 1100,
   };
 
@@ -54,6 +55,7 @@
       regionTitle: state.regionTitle,
       boardImages: state.boardImages,
       ...(state.boardLayout ? { boardLayout: state.boardLayout } : {}),
+      ...(state.noticeArchive?.entries?.length ? { noticeArchive: window.TafelNoticeTimeline?.normalizeArchive(state.noticeArchive, state.zettel) || state.noticeArchive } : {}),
       cardWidth: state.cardWidth,
     });
   }
@@ -61,6 +63,7 @@
   function apply(incoming) {
     if (!incoming || typeof incoming !== 'object') return;
     incoming = window.TafelBoardComposition?.prepareState(incoming) || incoming;
+    incoming = window.TafelNoticeTimeline?.normalizeIncomingState(incoming) || incoming;
     if (Array.isArray(incoming.zettel)) {
       state.zettel = incoming.zettel.map(normalizeNotice).filter(notice => notice?.id);
       state.appliedAuthoredNoticeIds = Array.isArray(incoming.appliedAuthoredNoticeIds)
@@ -68,6 +71,7 @@
       state.appliedAuthoredUpdateIds = Array.isArray(incoming.appliedAuthoredUpdateIds)
         ? [...new Set(incoming.appliedAuthoredUpdateIds.filter(id => typeof id === 'string' && id))] : [];
       state.boardLayout = incoming.boardLayout ? clone(incoming.boardLayout) : null;
+      state.noticeArchive = incoming.noticeArchive ? clone(incoming.noticeArchive) : null;
     }
     if (incoming.regionIcon !== undefined) state.regionIcon = String(incoming.regionIcon || '');
     if (incoming.regionTitle) state.regionTitle = String(incoming.regionTitle);

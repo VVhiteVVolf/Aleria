@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "aleria-paths-cover-v1",
+  "title": "Wege ins Abenteuer",
+  "purpose": "Neutral decorative panoramic cover for the shared Aleria landing-page adventure folio.",
+  "generatedAt": "2026-11-01T02:18:00.858Z",
+  "generation": {
+    "tool": "built-in image_gen",
+    "mode": "generate",
+    "sourceGenerationId": "01a194ba-e987-7f73-b313-a79f454e3b5b",
+    "sourceImageName": "exec-4b6a624e-cd6f-4a55-b599-65b59e09d0a3.png",
+    "inputImages": [],
+    "transparentBackground": false,
+    "preset": "anime-scene-portrait",
+    "presetSource": "AleriaAlmanach/docs/art/image-style-presets.json",
+    "styleReference": "Tales of Xillia/Frieren",
+    "aspectRatioOverride": "3:1 requested for this landscape cover; the general portrait preset's 2:3 format does not apply.",
+    "prompt": "Use case: illustration-story.\nAsset type: a single very wide 3:1 landscape cover for an immersive fantasy adventure folio, ideally 3072 by 1024 pixels. This is neutral decorative scenery, not a map or a depiction of any named canonical city.\nPrimary request: An inviting hand-drawn anime fantasy landscape in the Tales of Xillia / Frieren visual tradition. Quiet, finely drawn natural shapes, clean subtle anime lineart and soft clean cel shading with simple illustrated textures, not photorealism, oil painting or 3D.\nScene and composition: One continuous panoramic view from a gently elevated countryside lane, looking over rolling grassy meadows toward a small distant medieval coastal town and a calm sea bay, with a hazy mountain ridge along the far horizon. A winding footpath begins near the lower middle-left and guides the eye through the soft hills toward the distant town, which stays small in the middle-right distance. The right side opens generously to shimmering water, cloud shapes and the golden sky.\nOn the leftmost 35–40 percent, a broad old tree canopy with softly layered leaves and a low weathered stone wall create a slightly darker, simple, calm area suitable for later white text overlay. This text zone must be naturally part of the landscape, restrained, readable and low contrast in detail; do not draw a box, flat panel, frame or any text. Let little shafts of sunlight touch a few leaves, grass edges and the wall. No large foreground object in the center. Preserve an open gentle sweep of landscape and a coherent continuous horizon, natural perspective, depth and believable connected paths.\nLighting and mood: warm late afternoon sunlight, welcoming and leisurely, a feeling of setting out on a small adventure. Sunlit honey-gold meadow edges and pale warm clouds, cool sage-green and muted petrol-blue shadows, soft golden reflections on distant water. Detailed enough to reward looking, but uncluttered, restful and not epic or ominous.\nConstraints: Entire output is artwork, edge to edge, exact ultra-wide 3:1 panorama, no letterbox bars and no collage. NO people or humanoid figures, no character portraits, no horses, no monsters, no weapons, no heraldry, no emblems, no symbols, no lettering, no numbers, no labels, no UI, no dashboard, no watermark. Do not reuse the existing companion group banner. The distant town must be an original unnamed imaginary settlement."
+  },
+  "content": {
+    "description": "A quiet winding country path below a shaded tree and old stone wall, opening over warm meadow hills toward a small unnamed coastal town, distant mountains and a sunlit bay.",
+    "canonicalLocation": null,
+    "canonicalMap": false,
+    "decorativeTemplate": true,
+    "people": false,
+    "text": false,
+    "heraldry": false,
+    "altText": "Ein gewundener Weg führt unter einem alten Baum und an einer Steinmauer vorbei durch sonnige Wiesenhügel zu einer fernen Küstenstadt am goldschimmernden Meer."
+  },
+  "files": [
+    {
+      "file": ".source/aleria-paths-cover-v1.source.png",
+      "bytes": 3205009,
+      "sha256": "f2184992103515df8814622892ed8d8f8f57199ff9683e125fdf3227c8e6eef8",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "file": "aleria-paths-cover-v1.png",
+      "bytes": 3760301,
+      "sha256": "d662e9a314d85b8ebffb003d917f0f425eb527681d1eae3a78ba633c82eb2f2e",
+      "width": 2046,
+      "height": 682
+    },
+    {
+      "file": "aleria-paths-cover-v1.webp",
+      "bytes": 437414,
+      "sha256": "952c88abe285c540dbdfc9da4655b5080b3ddf9ee6123b5f3a76d79f275bae39",
+      "width": 2046,
+      "height": 682
+    }
+  ],
+  "preferredWebFile": "aleria-paths-cover-v1.webp",
+  "processing": {
+    "tool": "existing FFmpeg 7.1.1 / libwebp",
+    "operations": [
+      "Resize from 2172×724 to 2046×682 using Lanczos; exact 3:1 ratio retained.",
+      "Encode PNG and WebP quality 88, compression level 6."
+    ],
+    "sourcePreserved": true,
+    "sourceArchivePolicy": "The original remains in .source/, excluded from static publication by the existing dot-directory policy. Active PNG and WebP remain public.",
+    "imageContentEdits": false,
+    "newDependencies": false
+  },
+  "visualReview": {
+    "sourceReviewed": true,
+    "finalWebPReviewed": true,
+    "reviewer": "Codex visual inspection",
+    "passed": true,
+    "notes": "Continuous landscape, usable darker foliage/stone zone at left, open warm coast at right; no figures, writing, UI, heraldry or identifiable canonical location. Original and previous project artwork retained."
+  }
+}
+

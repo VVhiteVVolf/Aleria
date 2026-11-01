@@ -7,6 +7,7 @@
 
   window.addEventListener("aleria:tafel:state-applied", publishNotices);
   window.addEventListener("aleria:tafel:state-saved", publishNotices);
+  window.addEventListener("aleria:tafel:date-changed", publishNotices);
   window.addEventListener("load", publishNotices, { once: true });
   window.addEventListener("message", event => {
     if (event.source !== window.parent || event.origin !== window.location.origin) return;
@@ -19,7 +20,7 @@
   });
 
   function publicNotices() {
-    return (runtime.state().zettel || []).filter(notice => !notice.secret);
+    return (runtime.visibleNotices?.() || runtime.state().zettel || []).filter(notice => !notice.secret);
   }
 
   function publishNotices() {

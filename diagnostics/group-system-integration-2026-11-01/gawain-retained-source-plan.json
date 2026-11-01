@@ -1,0 +1,46 @@
+{
+  "sourcePath": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
+  "oldCount": 255,
+  "count": 255,
+  "overlayCount": 171,
+  "removedIds": [],
+  "addedIds": [],
+  "classificationMoves": [
+    {
+      "id": "glendower-o-cenyr",
+      "name": "Glendower O'Cenyr",
+      "from": "records/unzugeordnet/unassigned/glendower-o-cenyr--glendower-o-cenyr/character.json",
+      "to": "records/familien/haus-twyllod/glendower-o-cenyr--glendower-o-cenyr/character.json"
+    },
+    {
+      "id": "go0D7CiweVxWK1CqVgZz",
+      "name": "Gruffudd Gwregysdu",
+      "from": "records/familien/haus-bradrhith/gruffudd-gwregysdu--go0D7CiweVxWK1CqVgZz/character.json",
+      "to": "records/familien/haus-gwregysdu/gruffudd-gwregysdu--go0D7CiweVxWK1CqVgZz/character.json"
+    },
+    {
+      "id": "person--haus-llythfor--cynddelw-llythfor",
+      "name": "Cynddelw Llythfor",
+      "from": "records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json",
+      "to": "records/familien/haus-llythfor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json"
+    },
+    {
+      "id": "person--haus-llythfor--eirlys-llythfor",
+      "name": "Eirlys Llythfor",
+      "from": "records/orte/gwynthor/eirlys-llythfor--person--haus-llythfor--eirlys-llythfor/character.json",
+      "to": "records/familien/haus-llythfor/eirlys-llythfor--person--haus-llythfor--eirlys-llythfor/character.json"
+    },
+    {
+      "id": "person--haus-penrudd--esyllt-penrudd",
+      "name": "Esyllt Penrudd",
+      "from": "records/orte/gwynthor/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json",
+      "to": "records/familien/haus-penrudd/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json"
+    },
+    {
+      "id": "zitteraale-schwarzer-zitteraal",
+      "name": "Der Schwarze Zitteraal",
+      "from": "records/gruppen/schwarze-zitteraale/der-schwarze-zitteraal--zitteraale-schwarzer-zitteraal/character.json",
+      "to": "records/familien/haus-skellor/der-schwarze-zitteraal--zitteraale-schwarzer-zitteraal/character.json"
+    }
+  ]
+}

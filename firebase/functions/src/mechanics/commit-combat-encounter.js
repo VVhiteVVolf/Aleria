@@ -15,6 +15,7 @@ import {
   getOrdinaryLevelForExperience
 } from '../generated/combat/combat-progression.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
+import { readItemDefinitionIndex, hydrateItemRecord } from '../items/item-definition-repository.js';
 import { isTrustedMechanicalComment, isTrustedSceneContributionComment, sortSceneHistory } from './trusted-scene-history.js';
 import { getEncounterValidationError, prepareEncounterParticipants } from '../generated/combat/combat-encounter-lifecycle.js';
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
@@ -176,8 +177,10 @@ export const commitCombatEncounter = onCall({
     const records = new Map();
     recordsToLoad.forEach((entry, index) => {
       if (!recordSnapshots[index].exists) fail('not-found', `Das Profil ${entry.recordId} wurde nicht gefunden.`);
-      records.set(entry.key, recordSnapshots[index].data() || {});
+      records.set(entry.key, { ...(recordSnapshots[index].data() || {}), id: entry.recordId, _itemHolderKind: entry.kind === 'creature' ? 'creatures' : 'characters' });
     });
+    const itemDefinitions = await readItemDefinitionIndex(database, transaction, [...records.values()]);
+    for (const [key, record] of records) records.set(key, hydrateItemRecord(record, itemDefinitions, { requireEquipped: true, preserveLoadout: true }));
 
     const resolvedProfiles = new Map(participantsToLoad.map(participant => {
       const descriptor = persistenceDescriptor(participant);

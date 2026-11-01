@@ -58,7 +58,8 @@ test('Duncans local database record and prepared online inventory use the same C
   assert.ok(entry);
   const record = await read(new URL('../../CharakterDatenbank/' + entry.path, import.meta.url));
   assert.equal(record.identity.worldPersonId, 'person--haus-gafyr--duncan-gafyr');
-  assert.equal(registry.count, 238);
+  assert.equal(registry.count, registry.records.length);
+  assert.equal(registry.records.filter(r => r.firestoreDocumentId === DUNCAN_CHARACTER_ID).length, 1);
   for (const character of [owner, record.character]) {
     const cards = character.inventory.companions.filter(c => c.creatureId === CARREG_CREATURE_SOURCE.id);
     assert.equal(cards.length, 1);

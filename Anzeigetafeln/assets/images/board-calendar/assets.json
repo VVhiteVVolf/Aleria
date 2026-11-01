@@ -1,0 +1,270 @@
+{
+  "tool": "built-in image_gen",
+  "sources": [
+    {
+      "file": "calendar-leaves-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "hasTransparency": true,
+      "sha256": "2b58a677547fc779d642fc35fb0b85235a9ad096d0608ecd32c4dfdd24247a49"
+    },
+    {
+      "file": "calendar-leaves-v2.png",
+      "width": 1254,
+      "height": 1254,
+      "hasTransparency": true,
+      "sha256": "62db1edf8b45d12a49aca2a17d4357f33403799ed4c8a58c03f1e731d5aa2940"
+    },
+    {
+      "file": "numerals-sheet-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "hasTransparency": true,
+      "sha256": "23a43a1cdddeb1e070ed622014c04cbfd41df55f5eaf109f7481fe369d192006"
+    }
+  ],
+  "calendar": {
+    "sourceCrop": [
+      199,
+      33,
+      1063,
+      1207
+    ],
+    "file": "calendar-leaves-v2.webp",
+    "width": 662,
+    "height": 900,
+    "hasTransparency": true,
+    "sha256": "11903bba405e06681089c59f804b0034d86e334f72907822aa1c54bf78ae2d0b"
+  },
+  "calendars": [
+    {
+      "sourceCrop": [
+        201,
+        34,
+        1061,
+        1206
+      ],
+      "file": "calendar-leaves-v1.webp",
+      "width": 660,
+      "height": 900,
+      "hasTransparency": true,
+      "sha256": "81bc3320de170dd2e8a538a4c293ca9c6a2baff13098e6df3578131f5f33816a"
+    },
+    {
+      "sourceCrop": [
+        199,
+        33,
+        1063,
+        1207
+      ],
+      "file": "calendar-leaves-v2.webp",
+      "width": 662,
+      "height": 900,
+      "hasTransparency": true,
+      "sha256": "11903bba405e06681089c59f804b0034d86e334f72907822aa1c54bf78ae2d0b"
+    }
+  ],
+  "digits": [
+    {
+      "digit": 0,
+      "cell": [
+        0,
+        0,
+        251,
+        627
+      ],
+      "inkBounds": [
+        45,
+        298,
+        238,
+        596
+      ],
+      "file": "numeral-0-v1.webp",
+      "width": 104,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "4249d892f6d9d72d335963d4330699a5211ea588820a94d075da716dfc2f1c37"
+    },
+    {
+      "digit": 1,
+      "cell": [
+        251,
+        0,
+        502,
+        627
+      ],
+      "inkBounds": [
+        70,
+        299,
+        217,
+        593
+      ],
+      "file": "numeral-1-v1.webp",
+      "width": 80,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "8e1209b20a7e6312bf981d45855e0b2e35d684ff8aaf4776cc8cbd5d65bde327"
+    },
+    {
+      "digit": 2,
+      "cell": [
+        502,
+        0,
+        752,
+        627
+      ],
+      "inkBounds": [
+        38,
+        297,
+        217,
+        589
+      ],
+      "file": "numeral-2-v1.webp",
+      "width": 98,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "0d3311ae4becf5ecd77ad79b2f817d5ca64de89a01e5dae1a224030741480651"
+    },
+    {
+      "digit": 3,
+      "cell": [
+        752,
+        0,
+        1003,
+        627
+      ],
+      "inkBounds": [
+        30,
+        300,
+        211,
+        596
+      ],
+      "file": "numeral-3-v1.webp",
+      "width": 98,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "8396c205a5f1f14aea60dcb758f2e2748eb94ed0c52203c092a5ef03dd24c7a1"
+    },
+    {
+      "digit": 4,
+      "cell": [
+        1003,
+        0,
+        1254,
+        627
+      ],
+      "inkBounds": [
+        14,
+        302,
+        210,
+        594
+      ],
+      "file": "numeral-4-v1.webp",
+      "width": 107,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "bb3574b00dd759d91e160e4458597a7424cddcdf200be6fde8da361cad004fd7"
+    },
+    {
+      "digit": 5,
+      "cell": [
+        0,
+        627,
+        251,
+        1254
+      ],
+      "inkBounds": [
+        44,
+        102,
+        231,
+        384
+      ],
+      "file": "numeral-5-v1.webp",
+      "width": 106,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "41cac14344b245683e2e4bf2fdfeb88bded2e930b5c17d9f8f7c449f6fbd3029"
+    },
+    {
+      "digit": 6,
+      "cell": [
+        251,
+        627,
+        502,
+        1254
+      ],
+      "inkBounds": [
+        45,
+        95,
+        228,
+        386
+      ],
+      "file": "numeral-6-v1.webp",
+      "width": 101,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "cdf09263be4bdfb58f19c82192eb014d188cf17d2bd7895b01f1d70dc90a6989"
+    },
+    {
+      "digit": 7,
+      "cell": [
+        502,
+        627,
+        752,
+        1254
+      ],
+      "inkBounds": [
+        43,
+        100,
+        227,
+        385
+      ],
+      "file": "numeral-7-v1.webp",
+      "width": 103,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "7b301b176866af63460a7c5cd462556edb33bd650a835cd3847b044d9da56433"
+    },
+    {
+      "digit": 8,
+      "cell": [
+        752,
+        627,
+        1003,
+        1254
+      ],
+      "inkBounds": [
+        44,
+        99,
+        221,
+        384
+      ],
+      "file": "numeral-8-v1.webp",
+      "width": 99,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "f2269aafd9e17bf90f5113f81cb10f46e8972fbd1e914b602260848b6df0d12f"
+    },
+    {
+      "digit": 9,
+      "cell": [
+        1003,
+        627,
+        1254,
+        1254
+      ],
+      "inkBounds": [
+        36,
+        96,
+        215,
+        387
+      ],
+      "file": "numeral-9-v1.webp",
+      "width": 98,
+      "height": 160,
+      "hasTransparency": true,
+      "sha256": "5e21a15da7020cc4e166f7b3eea9593196d5802e23ddbdeba7f3022a5ddabaed"
+    }
+  ],
+  "processing": "Alpha-aware crop, resize, atlas splitting, WebP encoding; original PNGs retained."
+}

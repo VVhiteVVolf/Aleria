@@ -15,6 +15,9 @@ export function applySceneItemEvent(items, event) {
     if (event.operation === 'drop' && [...items.values()].some(item => item.operation === 'drop' && item.available
       && item.sourceActorId === event.sourceActorId && item.weaponId === event.weaponId)) return items;
     if (!items.has(event.sceneItemId)) items.set(event.sceneItemId, { ...copy(event), available: true });
+  } else if (event.operation === 'use' && event.itemState) {
+    const item = items.get(event.sceneItemId);
+    if (item) items.set(event.sceneItemId, { ...item, item: { ...item.item, itemState: copy(event.itemState) } });
   } else if (event.operation === 'pickup' || event.operation === 'consume') {
     const item = items.get(event.sceneItemId);
     if (item) items.set(event.sceneItemId, { ...item, available: false, claimedBy: event.actorId, lastEvent: copy(event) });

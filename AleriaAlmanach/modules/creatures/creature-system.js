@@ -1,4 +1,6 @@
 import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, creaturePageFromKey } from './creature-sheet-pages.js?v=20260925-creature-biography-v1';
+import { renderCreatureInventory, grantCreatureInventoryItem } from './creature-inventory.js';
+import { itemDefinitionStore } from '../item-definitions/item-definition-store.js';
 import { createCreatureBiographyEditor, collectCreatureBiography } from './creature-biography-editor.js?v=20260925-creature-biography-v2';
 import { renderCreatureImages } from './creature-images-view.js?v=20260919-creature-pages-v1';
 import { createCreatureImagesEditor, collectCreatureImages } from './creature-images-editor.js?v=20260919-creature-pages-v1';
@@ -446,6 +448,7 @@ function renderSheet() {
       <div class="creature-sheet-columns">${renderAbilities(profile)}${renderCreatureDetailSection(profile, 'quirks', 'E', 'Marotten & Eigenschaften', 'quirk', 'Marotte')}</div>`,
     magic: `${renderCreatureMagic(profile)}${renderCreatureAura(profile)}`,
     loot: renderLoot(creature),
+    inventory: renderCreatureInventory(creature),
     images: renderCreatureImages(creature, escapeHtml, mediaEditor.viewState())
   };
   root.innerHTML = renderCreaturePages(contents, state.activePage);
@@ -579,6 +582,7 @@ function renderLoot(creature) {
       <label><span>Anzahl</span><input type="number" min="0" max="9999" data-loot-field="quantity" value="${item.quantity}"></label>
       <label><span>Chance %</span><input type="number" min="0" max="100" data-loot-field="chance" value="${item.chance}"></label>
       <input data-loot-field="notes" value="${escapeHtml(item.notes)}" placeholder="Qualität / Fundort">
+      <button type="button" data-creature-action="build-loot" data-index="${index}">${item.definitionRef ? 'Itemdefinition ändern' : 'Item-Builder'}</button>
       <button type="button" class="creature-row-remove" data-creature-action="remove-loot" data-index="${index}">×</button>
     </div>`).join('') || '<div class="creature-table-empty">Die Lootbox ist leer.</div>'}</div>
   </section>`;
@@ -758,10 +762,11 @@ async function saveCurrent() {
     // Kampfprofil/Loot nur mitschicken, wenn sie sich seit dem Öffnen des Bogens wirklich
     // geändert haben - sonst würde jede Kleinigkeit (z. B. eine Notiz) das komplette, evtl.
     // veraltete Kampfprofil zurückschreiben. Siehe character-save-guard.js/selectChangedSections.
-    const changedSections = new Set(selectChangedSections(data, baseline, ['combatProfile', 'loot', 'biography']));
+    const changedSections = new Set(selectChangedSections(data, baseline, ['combatProfile', 'inventory', 'loot', 'biography']));
     if (baseline && !changedSections.has('combatProfile')) delete data.combatProfile;
     if (baseline && !changedSections.has('loot')) delete data.loot;
     if (baseline && !changedSections.has('biography')) delete data.biography;
+    if (baseline && !changedSections.has('inventory')) delete data.inventory;
     const persisted = await backend.saveCreature(editingId || null, data, { returnRecord: true });
     const id = persisted.id;
     const previous = state.creatures.find(item => item.id === id) || {};
@@ -1054,6 +1059,24 @@ function handleClick(event) {
   else if (action === 'edit-detail') openCreatureDetailEditor(trigger);
   else if (action === 'remove-detail') removeCreatureDetail(trigger.dataset.collection, trigger.dataset.itemId);
   else if (action === 'add-spell') addCreatureRowFromArchive('spell');
+  else if (action === 'grant-inventory-item') {
+    const draft = collectDraftFromForm(), session = state.session;
+    if (selectChangedSections(draft, state.draftLoadedSnapshot, ['combatProfile', 'inventory', 'loot', 'biography', 'name', 'notes', 'portrait']).length) return setStatus('Speichere die Änderungen am Bogen, bevor du einen Gegenstand zuteilst.', 'error');
+    const source = state.creatures.find(creature => creature.id === state.editingId);
+    grantCreatureInventoryItem(source || draft).then(saved => {
+      if (!saved || state.session !== session) return;
+      const record = { ...sanitizeCreature(saved), _builtin: false };
+      state.creatures = state.creatures.map(creature => creature.id === record.id ? record : creature);
+      state.draft = clone(record); state.draftLoadedSnapshot = clone(record); renderSheet(); dispatchChanged(); setStatus('Gegenstand zugeteilt.');
+    }).catch(failure => setStatus(failure.message, 'error'));
+  }
+  else if (action === 'build-loot') {
+    collectDraftFromForm();
+    const item = state.draft.loot.items[Number(trigger.dataset.index)];
+    import('../item-builder/item-builder-controller.js').then(module => module.openItemBuilder({ source: item, intent: item.definitionRef ? 'existing' : 'variant', key: `loot:${item.id}` }))
+      .then(template => { if (template) { item.definitionRef = template.definitionRef; item.name = template.title; renderSheet(); } })
+      .catch(failure => window.alert(failure.message));
+  }
   else if (action === 'remove-spell') removeRow('spell', Number(trigger.dataset.index));
   else if (action.startsWith('add-')) addCreatureRowFromArchive(action.slice(4));
   else if (action.startsWith('remove-')) removeRow(action.slice(7), Number(trigger.dataset.index));
@@ -1116,6 +1139,7 @@ export async function loadCreatures(options = {}) {
   try {
     const backend = await ensureBackend();
     state.creatures = mergeCreatureCatalog(await backend.loadCreatures());
+    await itemDefinitionStore.ensureVersions(state.creatures);
     state.loaded = true;
     dispatchChanged();
   } catch (error) {

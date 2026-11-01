@@ -3,6 +3,7 @@
 import { getMaximumHitPoints, getArmorClass } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { inventoryValuation } from './character-inventory-valuation.js';
 import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
+import { materializeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 export function inventoryImage(...candidates) {
   return candidates.map(value => String(value || '').trim()).find(value =>
     /^(?:https?:\/\/|data:image\/(?:png|jpeg|webp|gif);|\.{0,2}\/|[\w-]+\/)/i.test(value)
@@ -14,7 +15,8 @@ export function indexInventoryTemplates(templates = []) {
     [item.id, item.canonicalKey, ...(item.aliases || [])].filter(Boolean).map(key => [key, item])));
 }
 
-export function resolveInventoryItem(item, { character = {}, templates = new Map(), creatures = [] } = {}) {
+export function resolveInventoryItem(item, { character = {}, templates = new Map(), creatures = [], definitions } = {}) {
+  item = materializeInventoryItem(item, definitions);
   const reference = [item.offerId, item.templateId, item.originItemDbKey, item.itemDbKey].find(key => templates.has(key));
   const template = templates.get(reference);
   const equipment = [...(character.combatProfile?.weapons || []), ...(character.combatProfile?.armorItems || [])]
@@ -35,7 +37,9 @@ export function resolveInventoryItem(item, { character = {}, templates = new Map
     registerCategory: item.registerCategory || template?.category || '',
     templateId: item.templateId || template?.templateId || template?.id || '',
     templateName: item.templateName || template?.title || '',
-    combatDefinition: item.combatDefinition || template?.combatDefinition || null,
+    combatDefinition: item.combatDefinition || (!item.definitionRef ? template?.combatDefinition : null) || null,
+    inventoryUseMode: item.inventoryUseMode && item.inventoryUseMode !== 'auto' ? item.inventoryUseMode : template?.inventoryUseMode || 'auto',
+    mechanicsStatus: item.mechanicsStatus || (item.combatDefinition ? '' : template?.mechanicsStatus) || '',
     valuation: inventoryValuation(item, template),
     attributes: item.attributes?.length ? item.attributes : template?.attributes || [],
     equipped: equipment ? equipment.equipped === true : item.equipped === true

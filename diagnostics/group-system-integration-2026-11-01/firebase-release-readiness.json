@@ -1,0 +1,538 @@
+{
+  "checkedAt": "2026-11-01T05:26:23.661Z",
+  "project": "aleriaprojekt",
+  "readOnly": true,
+  "localExports": [
+    "commitCombatComment",
+    "commitCombatEncounter",
+    "commitCombatStatus",
+    "commitEditCombatEncounterText",
+    "commitGroupInventory",
+    "commitHerausforderung",
+    "commitInventoryTransfer",
+    "commitItemAward",
+    "commitItemDefinition",
+    "commitItemMigration",
+    "commitItemRecord",
+    "commitItemRegister",
+    "commitItemTrade",
+    "commitLootClaim",
+    "commitNarrativeComment",
+    "commitQuest",
+    "commitResetCombatParticipants",
+    "commitSceneItem",
+    "commitSceneRest",
+    "commitSkillComment",
+    "commitUndoMechanicalComment",
+    "endSceneSession",
+    "finalizeCombatNarration",
+    "importBackupRecords",
+    "indexCommentActivity",
+    "itemBackup",
+    "publishFamily",
+    "questBackup",
+    "setAleriaRole",
+    "setFamilyMemberRole",
+    "uploadFamilyAsset",
+    "writeSceneBackupToGitHub"
+  ],
+  "config": {
+    "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firebase-config.json",
+    "firestore": [
+      {
+        "database": "(default)",
+        "rules": "firebase/firestore.rules",
+        "indexes": "firebase/firestore.indexes.json"
+      },
+      {
+        "database": "family-trees",
+        "rules": "firebase/firestore.family-trees.rules",
+        "indexes": "firebase/firestore.family-trees.indexes.json"
+      }
+    ],
+    "storage": {
+      "rules": "firebase/storage.rules"
+    },
+    "functions": [
+      {
+        "source": "firebase/functions",
+        "codebase": "family-trees",
+        "ignore": [
+          ".git",
+          ".runtimeconfig.json",
+          "firebase-debug.log",
+          "firebase-debug.*.log",
+          "node_modules"
+        ],
+        "predeploy": [
+          "npm --prefix \"$RESOURCE_DIR\" test"
+        ]
+      }
+    ],
+    "emulators": {
+      "auth": {
+        "port": 9099
+      },
+      "functions": {
+        "port": 5001
+      },
+      "firestore": {
+        "port": 8080
+      },
+      "storage": {
+        "port": 9199
+      },
+      "ui": {
+        "enabled": true,
+        "port": 4000
+      },
+      "singleProjectMode": true
+    }
+  },
+  "runtime": {
+    "node": "22",
+    "localNode": "v22.17.0",
+    "dependencies": {
+      "firebase-admin": "13.10.0",
+      "firebase-functions": "7.2.5"
+    },
+    "lockedRootDependenciesMatch": true,
+    "installed": {
+      "firebase-admin": "13.10.0",
+      "firebase-functions": "7.2.5"
+    },
+    "unresolvedRelativeImports": [],
+    "importsOutsideFunctions": []
+  },
+  "auth": {
+    "configuredAccount": true,
+    "refreshCredentialPresent": true,
+    "localToolsVersion": "14.27.0",
+    "accessAvailable": true
+  },
+  "functions": [
+    {
+      "name": "commitCombatComment",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-24T12:22:25.858376757Z"
+    },
+    {
+      "name": "commitCombatEncounter",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:11.716801452Z"
+    },
+    {
+      "name": "commitCombatStatus",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:06.220981145Z"
+    },
+    {
+      "name": "commitEditCombatEncounterText",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:08.767301120Z"
+    },
+    {
+      "name": "commitHerausforderung",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-17T13:59:07.642822262Z"
+    },
+    {
+      "name": "commitInventoryTransfer",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:09.474585862Z"
+    },
+    {
+      "name": "commitItemRegister",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:09.934083222Z"
+    },
+    {
+      "name": "commitLootClaim",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:07.158013144Z"
+    },
+    {
+      "name": "commitNarrativeComment",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:09.208597838Z"
+    },
+    {
+      "name": "commitResetCombatParticipants",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:09.678464592Z"
+    },
+    {
+      "name": "commitSceneItem",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:07.798116863Z"
+    },
+    {
+      "name": "commitSceneRest",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:06.880231015Z"
+    },
+    {
+      "name": "commitSkillComment",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-17T13:59:08.618204787Z"
+    },
+    {
+      "name": "commitUndoMechanicalComment",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-14T22:21:13.304450946Z"
+    },
+    {
+      "name": "endSceneSession",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:09.826946861Z"
+    },
+    {
+      "name": "finalizeCombatNarration",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:04.641764088Z"
+    },
+    {
+      "name": "importBackupRecords",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:04.226037081Z"
+    },
+    {
+      "name": "indexCommentActivity",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:12.917781796Z"
+    },
+    {
+      "name": "publishFamily",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:10.720418192Z"
+    },
+    {
+      "name": "setAleriaRole",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:09.219678667Z"
+    },
+    {
+      "name": "setFamilyMemberRole",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:13.307116873Z"
+    },
+    {
+      "name": "uploadFamilyAsset",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:17.732341951Z"
+    },
+    {
+      "name": "writeSceneBackupToGitHub",
+      "region": "europe-west1",
+      "state": "ACTIVE",
+      "environment": "GEN_2",
+      "runtime": "nodejs22",
+      "codebase": "family-trees",
+      "updatedAt": "2026-10-13T22:24:09.747789189Z"
+    }
+  ],
+  "missingFunctions": [
+    "commitGroupInventory",
+    "commitItemAward",
+    "commitItemDefinition",
+    "commitItemMigration",
+    "commitItemRecord",
+    "commitItemTrade",
+    "commitQuest",
+    "itemBackup",
+    "questBackup"
+  ],
+  "functionListHasMorePages": false,
+  "databases": [
+    {
+      "id": "(default)",
+      "type": "FIRESTORE_NATIVE",
+      "location": "eur3",
+      "deleteProtectionState": "DELETE_PROTECTION_DISABLED"
+    }
+  ],
+  "indexes": [],
+  "missingIndexes": [
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updatedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "endedKey",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "links.modules",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updatedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "links.modules",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "endedKey",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "links.scenes",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updatedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "links.scenes",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "endedKey",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "partyKeys",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updatedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_runs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "partyKeys",
+          "arrayConfig": "CONTAINS"
+        },
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "endedKey",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quest_events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "runId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "sequence",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "comments",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "entryId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "orderKey",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "indexListHasMorePages": false,
+  "rules": {
+    "releaseUpdatedAt": "2026-10-12T14:33:16.584659Z",
+    "localHash": "8d8e23f50ef05d37325d0a9148f3c39cd1aede3bf50d6880a578d992186fdd82",
+    "deployedHash": "d039ecb1dc628df473d0f26d8320587c1c0ef009785ba1670bcfa082782ea89f",
+    "matchesLocal": false
+  },
+  "cliSelectors": {
+    "projectLocal": {
+      "version": "14.27.0",
+      "defaultOnly": [
+        "(default)"
+      ]
+    },
+    "pathGlobal": {
+      "version": "15.33.0",
+      "defaultOnly": [
+        "(default)"
+      ]
+    }
+  },
+  "environmentFile": {
+    "present": true,
+    "keys": [
+      "ALERIA_SCENE_BACKUP_GITHUB_REPOSITORY",
+      "ALERIA_SCENE_BACKUP_GITHUB_BRANCH"
+    ],
+    "credentialValuesPrinted": false
+  }
+}

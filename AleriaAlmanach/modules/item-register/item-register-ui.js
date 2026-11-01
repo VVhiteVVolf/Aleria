@@ -9,6 +9,9 @@ import { watchStandardReleases } from './item-register-updates.js?v=20260919-sho
 import { watchModuleCatalog } from './item-register-module-sync.js?v=20261006-regional-equipment-v2';
 import { regionalEquipmentView } from '../regional-equipment/regional-equipment-view.js?v=20261014-aldrimar-brewers-v1';
 import { regionalQuery, regionalHomeForHouse } from '../regional-equipment/regional-equipment-model.js?v=20261006-regional-equipment-v2';
+import { openItemBuilder } from '../item-builder/item-builder-controller.js';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js';
+import { itemDefinitionStore } from '../item-definitions/item-definition-store.js';
 
 const state = { open: false, section: 'standard', category: '', territoryId: '', houseId: '', listId: '', search: '', sort: 'name', selectedId: '', limit: 48, equippedOnly: false, ownedExpanded: false, expandedProviderGroups: new Set() };
 let panel, editor, form = null, busy = false, pendingOperation = null;
@@ -43,7 +46,7 @@ function render() {
   sync.className = `ir-sync ir-sync-${data.status}`;
   sync.textContent = ({ live: 'Live verbunden', loading: 'Wird abgeglichen …', offline: 'Offline · letzter Stand', error: 'Abgleich unterbrochen' })[data.status];
   sync.title = data.error || (data.syncedAt ? `Letzter Abgleich: ${new Date(data.syncedAt).toLocaleTimeString('de-DE')}` : '');
-  for (const action of ['new-offer', 'import']) panel.querySelector(`[data-ir-action="${action}"]`).hidden = !access().canEditSharedContent;
+  for (const action of ['new-offer', 'new-definition', 'review-items', 'import']) panel.querySelector(`[data-ir-action="${action}"]`).hidden = !access().canEditSharedContent;
 }
 function ensurePanel() {
   if (panel) return;
@@ -94,7 +97,20 @@ function ensureEditor() {
   editor = document.createElement('section'); editor.id = 'item-register-editor'; editor.className = 'ir-form-overlay'; editor.hidden = true;
   editor.setAttribute('role', 'dialog'); editor.setAttribute('aria-modal', 'true'); editor.setAttribute('aria-labelledby', 'ir-form-title'); editor.tabIndex = -1;
   document.body.appendChild(editor);
-  editor.addEventListener('click', event => { if (event.target.closest('[data-ir-action="close-form"]')) closeForm(); });
+  editor.addEventListener('click', async event => {
+    if (event.target.closest('[data-ir-action="close-form"]')) return closeForm();
+    if (!event.target.closest('[data-ir-action="choose-definition"]') || !form || busy) return;
+    const current = form;
+    try {
+      const template = await openItemBuilder({ source: form.item, key: `offer-definition:${form.item.id}` });
+      if (!template || current !== form) return;
+      Object.assign(form.item, { definitionRef: template.definitionRef, combatDefinition: template.combatDefinition, category: template.category, templateId: template.templateId || template.id });
+      editor.querySelector('[name="templateId"]').value = form.item.templateId;
+      editor.querySelector('[name="category"]').value = template.category;
+      editor.querySelector('[data-ir-rule-fields]').disabled = true;
+      editor.querySelector('[data-ir-definition-label]').textContent = `${template.title} · gemeinsame Regelversion ${template.definitionRef.revision.slice(0, 8)}`;
+    } catch (failure) { const node = editor.querySelector('[data-ir-role="form-error"]'); node.hidden = false; node.textContent = failure.message; }
+  });
   editor.addEventListener('submit', submitForm);
   editor.addEventListener('input', updateQuote);
   editor.addEventListener('change', updateQuote);
@@ -178,7 +194,7 @@ async function handleClick(event) {
     if (action === 'close') return closeItemRegister();
     if (action === 'toggle-owned') { state.ownedExpanded = !state.ownedExpanded; return; }
     if (action === 'section') reset(trigger.dataset.id);
-    else if (action === 'category') { reset('standard'); state.category = trigger.dataset.id; }
+    else if (action === 'category') { reset(trigger.dataset.section || 'standard'); state.category = trigger.dataset.id; }
     else if (action === 'equipment-territory') { reset('regional'); state.territoryId = trigger.dataset.id; }
     else if (action === 'equipment-house') { state.houseId = trigger.dataset.id; state.selectedId = ''; state.search = ''; state.limit = 48; panel.querySelector('[data-ir-field="search"]').value = ''; }
     else if (action === 'list') { reset(trigger.dataset.section); state.listId = trigger.dataset.id; }
@@ -188,10 +204,24 @@ async function handleClick(event) {
     else if (action === 'more') state.limit += 48;
     else if (action === 'export') return exportRegister();
     else if (action === 'import') return roles('import').click();
+    else if (action === 'review-items') {
+      const { openItemMigrationDialog } = await import('../item-definitions/item-migration-dialog.js');
+      openItemMigrationDialog([...snapshot().characters, ...snapshot().creatures.map(record => ({ ...record, entityType: 'creature' }))]); return;
+    }
     else if (action === 'open-creature') { await globalThis.AleriaCreatures?.reload?.(); return globalThis.AleriaCreatures?.open?.(selected()?.creatureId); }
     else if (action === 'open-character') return globalThis.openCharProfile?.(selected()?.ownerCharacterId);
     else if (action === 'open-source') { closeItemRegister(); return globalThis.openEntryById?.(trigger.dataset.id); }
-    else if (['new-offer', 'variant', 'edit-offer', 'buy', 'sell', 'customize', 'link-creature'].includes(action)) return openForm(action, action === 'new-offer' ? {} : selected());
+    else if (action === 'new-definition') {
+      const template = await openItemBuilder();
+      if (template) { reset('definition'); state.category = template.category; state.selectedId = template.id; render(); }
+      return;
+    }
+    else if (action === 'new-offer' || action === 'variant') {
+      const template = await openItemBuilder({ source: action === 'variant' ? selected() : null, key: `offer:${selected()?.id || 'new'}` });
+      if (template) return openForm('variant', template);
+      return;
+    }
+    else if (['edit-offer', 'buy', 'sell', 'customize', 'link-creature'].includes(action)) return openForm(action, selected());
     render();
     if (['equipment-territory', 'equipment-house', 'section'].includes(action)) {
       panel.querySelector('.ir-main').scrollTo({ top: 0 });
@@ -210,7 +240,10 @@ function handleChange(event) {
   if (field === 'equippedOnly') { state.equippedOnly = event.target.checked; render(); }
   if (event.target === roles('import')) { importOffers(event.target.files[0]).catch(error => notice(error.message, true)); event.target.value = ''; }
 }
-function connect() { registerStore.connect(globalThis._fb?.itemRegister, globalThis._fb); }
+function connect() {
+  itemDefinitionStore.connect(globalThis._fb?.itemDefinitions);
+  registerStore.connect(globalThis._fb?.itemRegister, globalThis._fb);
+}
 
 if (typeof globalThis.itemDbExportDatabasePayload === 'function') registerStore.setLocalLegacy(globalThis.itemDbExportDatabasePayload());
 registerStore.subscribe(render);
@@ -219,6 +252,7 @@ window.addEventListener('fb-ready', connect);
 window.addEventListener('fb-load-error', connect);
 window.addEventListener('online', () => { registerStore.stop(); connect(); });
 window.addEventListener('aleria:auth-state-changed', render);
+document.addEventListener('aleria:item-definitions-changed', () => registerStore.refreshDefinitions());
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape' || !state.open || busy) return;
   const top = globalThis.getTopActiveDialog?.();
@@ -227,7 +261,7 @@ document.addEventListener('keydown', event => {
 }, true);
 
 globalThis.AleriaItemRegister = Object.freeze({ open: openItemRegister, openSection: openItemRegisterSection, close: closeItemRegister,
-  ensure: connect, store: registerStore, moneyState, moneyTotal,
+  ensure: connect, store: registerStore, moneyState, moneyTotal, buildItem: openItemBuilder, resolveImage: resolveEquipmentImage,
   getItems: () => registerStore.legacyIndex(), getByKey: key => { const item = registerStore.getByKey(key); return item ? toLegacyItem(item) : null; },
   formatPrice: item => formatPrice(item.priceRange || parsePrice(item.price, item.currency)) });
 if (globalThis._fb?.itemRegister) connect();

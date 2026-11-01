@@ -2,6 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createRegistryBrowserIndex, groupRegistryFamilies, registryPathKey, resolveRegistryLocation, searchRegistry } from '../assets/js/modules/family-registry/registry-browser-model.js';
 import { renderRegistryContent, renderRegistryNavigation } from '../assets/js/modules/family-registry/registry-browser-view.js';
+import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
+import { FAMILY_REGISTRY_FOLDERS } from '../assets/js/data/family-registry-folders.js';
+import { listFamilyRecords } from '../assets/js/services/family-library.js';
+import { saveFamilyRecord } from '../assets/js/services/family-persistence.js';
+import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
+import { mergePublishedRegistryRecords } from '../assets/js/modules/family-registry/published-registry-merge.js';
+import { normalizeFamily } from '../assets/js/domain/family-schema.js';
 
 const record = (id, path, extra = {}) => ({ id, title: `Haus ${id}`, folderPath: path, rankId: 'commoner', ...extra });
 const records = [
@@ -12,6 +19,78 @@ const records = [
   record('hidden', ['Versteckt'], { listing: 'linked-only' }),
   record('Ungeordnet', [])
 ];
+
+const gwynthorPath = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor'];
+const legacyGwynthorPath = [...gwynthorPath.slice(0, -1), 'Bannkreis Gwynthor'];
+const registeredFamily = id => FAMILY_REGISTRY.find(record => record.id === id);
+
+test('Falto lives only under Venalys; Twyllod and Penrudd share the existing Gwynthor location', () => {
+  const index = createRegistryBrowserIndex(FAMILY_REGISTRY, FAMILY_REGISTRY_FOLDERS);
+  assert.equal(index.nodes.has(registryPathKey(legacyGwynthorPath)), false);
+  const gwynthor = resolveRegistryLocation(index, gwynthorPath);
+  for (const id of ['haus-twyllod', 'haus-penrudd']) {
+    assert.ok(gwynthor.records.some(record => record.id === id), id);
+  }
+  assert.ok(!gwynthor.familyIds.has('haus-falto'));
+  const falto = index.families.get('haus-falto');
+  assert.deepEqual(falto.placements.map(({ node }) => node.path), [['Venalys']]);
+  assert.equal(falto.record.houseProfile.liegeHouseId, 'haus-vinicius');
+  assert.deepEqual(falto.record.houseProfile.secondarySeats, ['Gwynthor']);
+  assert.equal(registeredFamily('haus-twyllod').houseProfile.seat, 'Twyllod-Hof');
+  assert.equal(registeredFamily('haus-penrudd').houseProfile.seat, 'Gwynthor');
+  assert.deepEqual(registeredFamily('haus-falveri').folderPath, ['Venalys']);
+});
+
+test('a Lysfaen resident serving Wyrm stays in Lysfaen without a liege location', () => {
+  const path = ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Lysfaen'];
+  const index = createRegistryBrowserIndex([record('lysfaen-resident', path, {
+    houseProfile: { rankId: 'commoner', seat: 'Lysfaen', liegeHouseId: 'haus-wyrm', liegeHouseName: 'Haus Wyrm' }
+  })]);
+  assert.equal(resolveRegistryLocation(index, path).directCount, 1);
+  assert.ok(![...index.nodes.values()].some(node => /Wyrm/.test(node.name)));
+  assert.equal(searchRegistry(index, 'Wyrm').families[0].record.id, 'lysfaen-resident');
+});
+
+test('reviewed locations replace stale local and published paths without changing family history', () => {
+  for (const [id, revision] of [['haus-falto', 1], ['haus-twyllod', 2], ['haus-penrudd', 6]]) {
+    const registered = registeredFamily(id);
+    const prior = normalizeFamily(structuredClone(registered.family));
+    prior.extensions.sourceRevision = revision;
+    prior.document.motto = 'Eigene Devise erhalten';
+    prior.persons.at(-1).notes = 'Persönliche Notiz erhalten';
+    prior.view.focusPersonId = prior.persons.at(-1).id;
+    prior.view.ancestorDepth = 3;
+    prior.partnerships[0].notes = 'Lokale Überlieferung erhalten';
+    prior.document.houseProfile.folderPath = id === 'haus-falto' ? gwynthorPath : legacyGwynthorPath;
+    if (id === 'haus-penrudd') prior.document.houseProfile.seat = 'Bannkreis Gwynthor';
+    if (id === 'haus-falto') {
+      Object.assign(prior.document.houseProfile, { kingdom: 'Cenyr', county: 'Celtigerns Wacht', barony: 'Llamreis Ankunft', seat: 'Gwynthor' });
+      prior.document.emblem = '';
+      prior.houses[0].emblem = '';
+      prior.extensions.registryAdditionalPlacements = [{ folderPath: gwynthorPath, houseProfile: prior.document.houseProfile }];
+    }
+    const upgraded = resolveRegisteredFamilyUpgrade(registered.family, prior);
+    assert.deepEqual(upgraded.document.houseProfile, registered.houseProfile, id);
+    assert.equal(upgraded.document.motto, prior.document.motto);
+    for (const collection of ['persons', 'partnerships', 'parentages', 'cadetBranches', 'timeJumps']) {
+      assert.deepEqual(upgraded[collection], prior[collection], `${id}/${collection}`);
+    }
+    assert.deepEqual(upgraded.view, prior.view);
+    assert.deepEqual(resolveRegisteredFamilyUpgrade(registered.family, upgraded), upgraded);
+    if (id === 'haus-falto') {
+      assert.deepEqual(upgraded.extensions.registryAdditionalPlacements, []);
+      assert.equal(upgraded.houses[0].emblem, registered.family.document.emblem);
+    }
+    const entries = new Map();
+    const storage = { getItem: key => entries.get(key) || null, setItem: (key, value) => entries.set(key, value) };
+    saveFamilyRecord({ id, family: prior, folderPath: prior.document.houseProfile.folderPath }, storage);
+    assert.deepEqual(listFamilyRecords(storage).find(record => record.id === id).folderPath, registered.folderPath);
+    const [published] = mergePublishedRegistryRecords([registered], [{ id, sourceRevision: revision,
+      folderPath: prior.document.houseProfile.folderPath, houseProfile: prior.document.houseProfile }]);
+    assert.deepEqual(published.folderPath, registered.folderPath);
+    assert.deepEqual(published.houseProfile, registered.houseProfile);
+  }
+});
 
 test('counts unique houses and preserves multiple locations without hidden records', () => {
   const index = createRegistryBrowserIndex([...records, records[0]]);

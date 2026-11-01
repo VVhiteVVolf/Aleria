@@ -1,5 +1,13 @@
 # Items und Güter – Architektur und Veröffentlichung
 
+Aktueller Architekturabgleich und lokale Korrekturen vom 31. Oktober 2026:
+[Itemsystem-Audit](inventory/ITEM_SYSTEM_AUDIT_2026-10-31.md). Der Generator
+enthält inzwischen 269 allgemeine Vorlagen und 186 Hausrüstungsvarianten.
+Waffen, Rüstungen und Schilde besitzen nun vorläufige Grundwerte, soweit keine
+ausdrückliche Definition vorlag. Verbindliche gemeinsame Statblöcke über alle
+Altbestände sind ein weiterer Migrationsschritt; die nachstehende ursprüngliche
+Beschreibung dokumentiert den Ausbau vom September.
+
 Stand: 19. September 2026. Implementierung und lokale Prüfungen abgeschlossen; die hier beschriebenen Änderungen an Firebase-Funktion und Frontend wurden in dieser Arbeit **nicht veröffentlicht**.
 
 ## Verantwortlichkeiten

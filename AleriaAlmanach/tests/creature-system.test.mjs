@@ -1,5 +1,19 @@
 import test from 'node:test';
+import { STANDARD_ITEMS } from '../modules/item-register/item-register-standard.js';
 import assert from 'node:assert/strict';
+import { getInventoryUsePersistence } from '../modules/inventory-use/inventory-use-model.js';
+test('creature inventories retain rule references, charges and revision; duplicated shared equipment receives fresh possession IDs', () => {
+  const sword = STANDARD_ITEMS.find(item => item.id === 'standard:waffen-rustungen:langschwert');
+  const source = sanitizeCreature({ id: 'online-creature', name: 'Wächter', inventory: { revision: 17, items: [{ id: 'blade', instanceId: 'blade', name: 'Schwert', definitionRef: sword.definitionRef, itemState: { chargesCurrent: 2 }, combatDefinition: { kind: 'weapon', damageFormula: '99d100' } }] },
+    combatProfile: { weapons: [{ id: 'weapon', inventoryItemId: 'blade', name: 'Schwert', damageFormula: '1d8' }] } });
+  assert.equal(source.inventory.revision, 17); assert.equal(source.inventory.items[0].combatDefinition, undefined);
+  assert.equal(source.inventory.items[0].itemState.chargesCurrent, 2);
+  const duplicate = createCreatureDuplicate(source);
+  assert.notEqual(duplicate.inventory.items[0].instanceId, 'blade');
+  assert.deepEqual(duplicate.inventory.items[0].definitionRef, sword.definitionRef);
+  assert.equal(duplicate.combatProfile.weapons.find(item => item.id === 'weapon').inventoryItemId, duplicate.inventory.items[0].id);
+  assert.deepEqual(getInventoryUsePersistence(makeCreatureSceneActor(source)), { kind: 'creature', recordId: source.id });
+});
 import {
   createCreatureDraft,
   createCreatureDuplicate,

@@ -1,4 +1,5 @@
 import { renderAttributeIcon } from '../skill-checks/attribute-icon-registry.js?v=20261015-check-options-v1';
+import { describeConditionalEquipmentDefense } from '../character-equipment/equipment-stat-description.js';
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   COMBAT_WEAPON_TYPE_OPTIONS,
@@ -590,6 +591,7 @@ function renderArmor(profile) {
     <div class="cp-sheet-item-list">${profile.armorItems.length ? profile.armorItems.map(armor => `<article class="cp-sheet-item ${armor.equipped ? 'equipped' : ''}">
       <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="checkbox" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="equipped"${checked(armor.equipped)}> angelegt</label><input data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="name" value="${escapeMarkup(armor.name)}" maxlength="120" placeholder="Rüstung / Schild / Schutz">${armor.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : ''}<button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}">×</button></div>
       ${renderEquipmentArtwork(armor, { characterId: activeCharacter?.id })}
+      ${describeConditionalEquipmentDefense(armor).map(label => `<p class="cp-sheet-item-derived">${escapeMarkup(label)}</p>`).join('')}
       <div class="cp-sheet-fields armor">
         <label><span>Art</span><select data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="kind"><option value="armor"${selected(armor.kind, 'armor')}>Rüstung</option><option value="shield"${selected(armor.kind, 'shield')}>Schild</option><option value="ward"${selected(armor.kind, 'ward')}>Schutz / Magie</option></select></label>
         <label><span>Basis-RK</span><input type="number" min="0" max="99" data-combat-collection="armorItems" data-combat-item-id="${escapeMarkup(armor.id)}" data-combat-property="baseArmorClass" value="${armor.baseArmorClass ?? ''}" placeholder="keine"></label>

@@ -115,7 +115,7 @@ function buildUsageSegment(segment, actor, workingInventories, sceneItems, state
     requestedMode: consuming ? 'consume' : 'use',
     quantity: 1
   });
-  if (inventoryUse.mode === 'consume' && inventoryUse.actorPersistence.kind !== 'character') {
+  if (inventoryUse.mode === 'consume' && !['character', 'creature'].includes(inventoryUse.actorPersistence.kind)) {
     throw new Error(`${actor.name || 'Die Figur'} muss zuerst als Online-Charakter gespeichert werden, damit Gegenstände dauerhaft verbraucht werden können.`);
   }
   const applied = applyInventoryUseToInventory(currentInventory, inventoryUse);
@@ -160,9 +160,12 @@ function renderUsage(segment = {}) {
     .join('');
   const conditionEffects = (use.conditionSnapshot?.after || []).filter(condition => condition.sourceConditionId === 'zornkappe-rausch')
     .map(condition => `<span>${escapeHtml(condition.name)}: ${escapeHtml(condition.description)} Bis Kampfende.</span>`).join('');
+  const hitPoints = use.hitPointSnapshot ? `<span>TP ${escapeHtml(use.hitPointSnapshot.before.current)} → ${escapeHtml(use.hitPointSnapshot.after.current)} · Temporäre TP ${escapeHtml(use.hitPointSnapshot.after.temporary)}</span>` : '';
+  const charges = use.chargeSnapshot ? `<span>Ladungen ${escapeHtml(use.chargeSnapshot.before)} → ${escapeHtml(use.chargeSnapshot.after)} / ${escapeHtml(use.chargeSnapshot.maximum)}</span>` : '';
+  const itemEffects = (use.itemEffects || []).map(effect => `<span>${escapeHtml(effect.resourceId)} ${escapeHtml(effect.before)} → ${escapeHtml(effect.after)}</span>`).join('');
   return `<aside class="inventory-use-result" data-mode="${consumed ? 'consume' : 'use'}">
     ${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">` : '<span class="inventory-use-result-icon" aria-hidden="true">◆</span>'}
-    <div><small>${consumed ? 'Verbraucht' : 'Benutzt'}</small><strong>${escapeHtml(use.item.name)}</strong>${quantity}${abilityEffects}${conditionEffects}</div>
+    <div><small>${consumed ? 'Verbraucht' : 'Benutzt'}</small><strong>${escapeHtml(use.item.name)}</strong>${quantity}${abilityEffects}${conditionEffects}${hitPoints}${charges}${itemEffects}</div>
   </aside>`;
 }
 
@@ -170,6 +173,7 @@ document.addEventListener('change', event => {
   const field = event.target?.closest?.('[data-inventory-use-input]');
   if (field) handleInput(field);
 });
+document.addEventListener('aleria:item-definitions-changed', () => { if (latestComposerContext) remount(); });
 
 globalThis.AleriaInventoryUse = Object.freeze({
   mountComposer(list, context = {}) {

@@ -37,4 +37,5 @@ function refreshVisibleInventory() {
 }
 window.addEventListener('item-db-store-updated', refreshVisibleInventory);
 document.addEventListener('aleria:creatures-changed', refreshVisibleInventory);
+document.addEventListener('aleria:item-definitions-changed', refreshVisibleInventory);
 refreshVisibleInventory();

@@ -1,5 +1,6 @@
 window.KARTO_CONFIG = {
   mapId: "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+  travelCalibration: { widthKm: 30, sourceWidth: 8192 },
   title: "Gwynthor – Bannkreis",
   documentTitle: "Gwynthor – Bannkreis - Aleria",
   // Existing coordinates identify the head of each original raster marker.

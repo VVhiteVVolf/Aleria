@@ -25,7 +25,7 @@ test('The full module editor retains operational state and task links when editi
     presets: [{ id: 'shore', name: 'Landgang', memberIds: ['guest'] }], icons: { roster: '⚑' },
     inventory: [{ id: 'stock', sourceKey: 'standard:rope', name: 'Seil', quantity: 3 }] },
     quests: [{ id: 'q', title: 'Landgang', ownerMemberId: 'guest', moduleId: 'quest', dueDate: 'Tag 3' }] });
-  const block = { dataset: { landingBase: JSON.stringify(original) }, values: { '.me-landing-title': 'Neuer Titel' }, querySelectorAll(selector) {
+  const block = { dataset: { landingBase: JSON.stringify(original) }, values: { '.me-landing-title': 'Neuer Titel' }, querySelector() { return null; }, querySelectorAll(selector) {
     if (selector !== '.landing-editor-quest-row') return [];
     return [{ values: Object.fromEntries(Object.entries(original.quests[0]).map(([key, value]) => [`.me-landing-quest-${key}`, value])) }];
   } };

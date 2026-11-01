@@ -9,7 +9,7 @@
   const sourceCache = new Map();
   const moduleRoot = new URL('./', document.currentScript.src);
   const rendererUrl = new URL('./administration-renderer.mjs?v=20261028-office-body', moduleRoot);
-  const structuredUrl = new URL('./administration-structured.mjs?v=20261028-office-body', moduleRoot);
+  const structuredUrl = new URL('./administration-structured.mjs?v=20261031-euddogwy', moduleRoot);
   let loadRevision = 0;
   let dialog;
   let dialogKicker;

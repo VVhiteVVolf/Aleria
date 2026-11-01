@@ -3,7 +3,9 @@ export const button = (action, label, attributes = '', primary = false) => `<but
 export const empty = text => `<p class="group-empty">${html(text)}</p>`;
 
 function imageSource(src) {
-  if (globalThis.sanitizeImageSrc) return globalThis.sanitizeImageSrc(src || '');
+  // The application sanitizer returns escaped HTML. Validate here, then let the
+  // markup boundary escape the original URL exactly once (including query &).
+  if (globalThis.sanitizeImageSrc) return globalThis.sanitizeImageSrc(src || '') ? String(src || '').trim() : '';
   return /^(?:https?:\/\/|\.?\.?\/|[\wÀ-ž /-]+\.(?:png|jpe?g|webp))/i.test(src || '') ? src : '';
 }
 

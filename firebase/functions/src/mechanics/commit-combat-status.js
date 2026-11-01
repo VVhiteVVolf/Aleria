@@ -1,6 +1,7 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
+import { readItemDefinitionIndex, hydrateItemRecord } from '../items/item-definition-repository.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
 import { buildSceneRestParticipant } from '../generated/scene-rest/scene-rest-model.js';
@@ -48,7 +49,9 @@ export const commitCombatStatus = onCall({ region: 'europe-west1', maxInstances:
     const encounter = getActiveCombatEncounter(history);
     const snapshot = await transaction.get(recordRef);
     if (!snapshot.exists) fail('not-found', 'Das Figurenprofil wurde nicht gefunden.');
-    const record = snapshot.data() || {};
+    const rawRecord = { ...(snapshot.data() || {}), id: recordId, _itemHolderKind: kind === 'creature' ? 'creatures' : 'characters' };
+    const definitions = await readItemDefinitionIndex(database, transaction, [rawRecord]);
+    const record = hydrateItemRecord(rawRecord, definitions, { preserveLoadout: true });
     const lock = persistent ? await transaction.get(database.collection('combat_profile_locks')
       .doc(kind === 'creature' ? 'creatures' : 'characters').collection('records').doc(recordId)) : null;
     const activeKeys = lock?.data()?.activeEncounterKeys || [];

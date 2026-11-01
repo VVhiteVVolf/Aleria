@@ -100,7 +100,7 @@ function resolveCandidate(actor, sceneParticipant, combatStates) {
   const actorId = String(actor?.id || '');
   if (!actorId) return null;
   const resolved = profileResolver.resolve(actor);
-  const profile = overlayCombatHitPointState(resolved, combatStates.get(actorId) || null);
+  const profile = { ...overlayCombatHitPointState(resolved, combatStates.get(actorId) || null), inventory: resolved.inventory || {} };
   const name = String(actor.name || profile.name || 'Unbekannte Figur');
   const title = String(actor.title || '');
   return {

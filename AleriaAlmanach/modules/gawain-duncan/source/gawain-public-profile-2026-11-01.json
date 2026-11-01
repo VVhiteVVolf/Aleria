@@ -1,0 +1,249 @@
+{
+  "source": "https://firestore.googleapis.com/v1/projects/aleriaprojekt/databases/(default)/documents/characters/q1QtSIug74FzzwUAqWrs",
+  "updateTime": "2026-10-14T22:36:31.304867Z",
+  "character": {
+    "id": "q1QtSIug74FzzwUAqWrs",
+    "name": "Gawain Draig",
+    "title": "Mundschenk des Grafen, Gwynthor",
+    "bio": "Gawain Draig ist der jüngste Sohn von Galahad Draig und Gwendolyn Draig geb. Aderyn als auch der Mundschenk seiner hochwürden des Grafen.",
+    "biography": {
+      "schemaVersion": "1",
+      "schema": "aleria.biography-module",
+      "quoteBy": "",
+      "biography": {
+        "documentsTitle": "Eigentum & Besitz",
+        "connections": [],
+        "works": [],
+        "abilities": [],
+        "sideWidth": "100",
+        "worksTitle": "Bekannte Werke",
+        "biographyTitle": "Biografie",
+        "triviaTitle": "Trivia",
+        "extraSections": [],
+        "documents": [],
+        "historyText": "",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "quotes": [],
+        "connectionPortraitHeight": "68",
+        "connectionTextOffset": "0",
+        "historyTitle": "Hintergrund",
+        "biographyText": "",
+        "trivia": [],
+        "footer": "Personenakte · Gawain Draig",
+        "abilitiesTitle": "Persönlichkeit",
+        "connectionsTitle": "Verbindungen",
+        "quotesTitle": "Zitate"
+      },
+      "quote": "",
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Gawain Draig"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Draig"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Mundschenk des Grafen, Gwynthor"
+        },
+        {
+          "label": "Geboren",
+          "value": "1722"
+        },
+        {
+          "label": "Geburtsort",
+          "value": ""
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Unbekannt"
+        },
+        {
+          "label": "Familienstand",
+          "value": ""
+        },
+        {
+          "label": "Rang / Stand",
+          "value": ""
+        },
+        {
+          "label": "Tätigkeit",
+          "value": ""
+        },
+        {
+          "label": "Wohnsitz",
+          "value": ""
+        }
+      ]
+    },
+    "portrait": "https://i.imgur.com/BceZTJo.jpeg",
+    "identity": {
+      "worldPersonId": "person--haus-draig--gawain-draig"
+    },
+    "genealogy": {
+      "sources": [
+        {
+          "familyId": "haus-draig",
+          "personId": "gawain-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T16:37:25.630Z",
+          "lastSyncedAt": "2026-08-03T16:37:25.630Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-draig&mode=view&person=gawain-draig",
+          "fingerprint": "{\"name\":\"Gawain Draig\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"galahad-draig\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-draig--galahad-draig\",\"name\":\"Galahad Draig\"},{\"personId\":\"gwendolyn-aderyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aderyn--gwendolyn-aderyn\",\"name\":\"Gwendolyn Aderyn\"}],\"partners\":[{\"personId\":\"guinevere-neidr\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-neidr",
+          "personId": "gawain-draig",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-08-03T16:37:25.630Z",
+          "lastSyncedAt": "2026-08-03T16:37:25.630Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-neidr&mode=view&person=gawain-draig",
+          "fingerprint": "{\"name\":\"Gawain Draig\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-draig\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-draig/gawain-draig.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"guinevere-neidr\",\"type\":\"engagement\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-neidr--guinevere-neidr\",\"name\":\"Guinevere Neidr\"}],\"children\":[]}}"
+        }
+      ],
+      "sex": "unknown",
+      "status": "alive",
+      "houseId": "house-draig",
+      "death": "",
+      "familyRole": "core",
+      "tags": [],
+      "houseName": "Haus Draig",
+      "portraitPlaceholder": "auto",
+      "relationships": {
+        "children": [],
+        "partners": [
+          {
+            "personId": "guinevere-neidr",
+            "type": "engagement",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-neidr--guinevere-neidr",
+            "name": "Guinevere Neidr"
+          }
+        ],
+        "parents": [
+          {
+            "personId": "galahad-draig",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-draig--galahad-draig",
+            "name": "Galahad Draig"
+          },
+          {
+            "personId": "gwendolyn-aderyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aderyn--gwendolyn-aderyn",
+            "name": "Gwendolyn Aderyn"
+          }
+        ]
+      },
+      "birth": "1722",
+      "worldPersonId": "person--haus-draig--gawain-draig"
+    },
+    "companions": [
+      {
+        "species": "Rhyfel-Hengst",
+        "name": "Tanor",
+        "role": "Reittier",
+        "summary": "Eitler, prachtvoller Rhyfelhengst – liebt rote Äpfel, hasst Schlamm und Regen.",
+        "statusColor": "#c2883e",
+        "imagePosition": "top",
+        "description": "Tanor ist ein junger, prachtvoller Rhyfelhengst, den Gawain zu seinem achtzehnten Geburtstag von seinem Onkel Sir Owain, dem berühmten Pferdezüchter, geschenkt bekam. Owain nannte ihn damals „ein Ross für Grünschnäbel mit zu viel Stolz im Blick\" – und selten hatte er so recht. Tanor ist ein Tier von makelloser Statur und unverschämtem Selbstbewusstsein, mit einem Fell, das in der Sonne wie poliertes Gold glänzt, und einer Mähne, die eher gepflegt als geritten werden will.\n\nEr ist in jeder Hinsicht Gawains Spiegelbild – eitel, temperamentvoll, eigensinnig. Ein einziger Schlammfleck genügt, um ihn in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig, und wehe, man versucht ihn dazu zu überreden: dann wird geschnauft, geschnaubt und gestampft, bis selbst der Himmel kleinlaut wird. Tanor hat eine ausgesprochene Abneigung gegen alle anderen Pferderassen außer Rhyfel, Ceffyl und Hest – den Rest ignoriert er mit kühler Verachtung. Dafür liebt er rote Äpfel, und zwar so sehr, dass er Gawain mit einem gezielten Biss oder Tritt daran erinnert, wenn die Fütterung nicht pünktlich erfolgt.\n\nEin schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.",
+        "image": "https://i.imgur.com/YcL98jJ.png",
+        "status": "Prächtig, aber launisch",
+        "imageFormat": "landscape",
+        "id": "companion-mqu1vat2-0-zz2n",
+        "imageFit": "cover",
+        "attributes": [
+          {
+            "label": "Schnelligkeit",
+            "value": "7"
+          },
+          {
+            "label": "Ausdauer",
+            "value": "6"
+          },
+          {
+            "label": "Staerke",
+            "value": "7"
+          },
+          {
+            "value": "6",
+            "label": "Agilitaet"
+          },
+          {
+            "value": "3",
+            "label": "Sozialverhalten"
+          },
+          {
+            "label": "Robustheit",
+            "value": "5"
+          }
+        ],
+        "infoRows": [
+          {
+            "label": "Art",
+            "value": "Rhyfel-Hengst"
+          },
+          {
+            "value": "Gawain Draig",
+            "label": "Besitzer"
+          },
+          {
+            "label": "Rolle",
+            "value": "Reittier"
+          },
+          {
+            "value": "Tanor · Kreaturenregister",
+            "label": "Kreaturbogen"
+          }
+        ],
+        "creatureId": "companion-tanor",
+        "inventoryItemId": "gawain-tanor"
+      }
+    ],
+    "companionItems": [
+      {
+        "id": "gawain-tanor",
+        "instanceId": "gawain-tanor",
+        "creatureId": "companion-tanor",
+        "name": "Tanor",
+        "image": "https://i.imgur.com/Bkp2EVo.png",
+        "description": "Tanor ist ein junger, prachtvoller Rhyfelhengst, den Gawain zu seinem achtzehnten Geburtstag von seinem Onkel Sir Owain, dem berühmten Pferdezüchter, geschenkt bekam. Owain nannte ihn damals „ein Ross für Grünschnäbel mit zu viel Stolz im Blick\" – und selten hatte er so recht. Tanor ist ein Tier von makelloser Statur und unverschämtem Selbstbewusstsein, mit einem Fell, das in der Sonne wie poliertes Gold glänzt, und einer Mähne, die eher gepflegt als geritten werden will.\n\nEr ist in jeder Hinsicht Gawains Spiegelbild – eitel, temperamentvoll, eigensinnig. Ein einziger Schlammfleck genügt, um ihn in einen hysterischen Anfall zu treiben. Bei Regen reitet er keinen Schritt freiwillig, und wehe, man versucht ihn dazu zu überreden: dann wird geschnauft, geschnaubt und gestampft, bis selbst der Himmel kleinlaut wird. Tanor hat eine ausgesprochene Abneigung gegen alle anderen Pferderassen außer Rhyfel, Ceffyl und Hest – den Rest ignoriert er mit kühler Verachtung. Dafür liebt er rote Äpfel, und zwar so sehr, dass er Gawain mit einem gezielten Biss oder Tritt daran erinnert, wenn die Fütterung nicht pünktlich erfolgt.\n\nEin schwieriges Ross – aber eines, das seinem Reiter gleicht: stolz, schön, eigenwillig – und zu gut, um im Dreck zu stehen.",
+        "type": "Rhyfel",
+        "category": "companion",
+        "registerCategory": "pferde",
+        "templateId": "",
+        "templateName": "Rhyfel",
+        "quantity": "1",
+        "itemStorageMode": "character",
+        "itemDbKey": "",
+        "originItemDbKey": "",
+        "ownerCharacterId": "q1QtSIug74FzzwUAqWrs",
+        "ownerCharacterName": "Gawain Draig",
+        "imageFormat": "landscape",
+        "imageFit": "cover",
+        "imagePosition": "top",
+        "attributes": [],
+        "infoRows": [],
+        "individualizedAt": "2026-10-11T19:46:45.521Z"
+      }
+    ]
+  }
+}

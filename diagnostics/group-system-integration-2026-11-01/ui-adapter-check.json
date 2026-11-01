@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-11-01T04:19:36.437Z",
+  "adapter": "http://127.0.0.1:8879",
+  "project": "demo-aleria-group-ui",
+  "emulator": "127.0.0.1:8187",
+  "groupId": "gawain-duncan",
+  "accountRevision": 4,
+  "totalCopper": 50,
+  "characterCount": 3,
+  "creatureCount": 3,
+  "products": [
+    {
+      "name": "Rationen (1 Tag)",
+      "quantity": "6",
+      "definitionRef": {
+        "id": "standard:gemischtwarenhandler:rationen",
+        "revision": "2950af0712afbd90bc8a72ec"
+      }
+    },
+    {
+      "name": "Stahlschwert",
+      "quantity": "1",
+      "definitionRef": {
+        "id": "standard:waffen-rustungen:stahlschwert",
+        "revision": "33daa0788b0e5153b96d53cf"
+      }
+    },
+    {
+      "name": "Heiltrank",
+      "quantity": "2",
+      "definitionRef": {
+        "id": "standard:alchemist:heiltrank",
+        "revision": "b42f645812b23673d489c8bf"
+      }
+    }
+  ],
+  "wrongGroupStatus": 403,
+  "wrongOriginStatus": 403
+}

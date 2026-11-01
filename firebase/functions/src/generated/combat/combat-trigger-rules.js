@@ -2,6 +2,8 @@ import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260
 import { canUseEquippedCombatShield } from './combat-weapon-loadout.js';
 import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v4';
 import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './combat-resolution-tree.js';
+import { getCombatAttackRange } from './combat-attack-range.js';
+import { getCombatSupportEquipment } from './combat-support-equipment.js';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
   'pre-roll', 'pre-secondary-save', 'post-roll', 'post-hit', 'pre-damage', 'pre-hit-damage', 'on-damaged', 'post-damage',
@@ -125,6 +127,7 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     costs: normalizeCombatResourceCosts(source.costs),
     actionKinds: [...new Set(actionKinds)].slice(0, 12),
     ...(source.weaponAttackOnly === true ? { weaponAttackOnly: true } : {}),
+    ...(['melee', 'ranged'].includes(source.attackRange) ? { attackRange: source.attackRange } : {}),
     ...(source.requiredActorId ? { requiredActorId: text(source.requiredActorId, 180) } : {}),
     ...(source.requiredTargetId ? { requiredTargetId: text(source.requiredTargetId, 180) } : {}),
     ...(source.saveAttributes ? { saveAttributes: normalizedList(source.saveAttributes) } : {}),
@@ -160,7 +163,9 @@ function entryCollections(profile = {}) {
     ['ability', profile.abilities],
     ['technique', profile.techniques],
     ['weapon', profile.weapons],
-    ['armor', (profile.armorItems || []).filter(item => item.kind !== 'shield' || canUseEquippedCombatShield(profile))]
+    ['armor', (profile.armorItems || []).filter(item => item.kind !== 'shield'
+      || (canUseEquippedCombatShield(profile)
+        && (item.armorRuleVersion !== 2 || item.id === getCombatSupportEquipment(profile).shieldId)))]
   ];
 }
 
@@ -249,6 +254,7 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
   if (rule.saveAttributes?.length && !rule.saveAttributes.includes(state.saveAttribute
     || (state.actorProfile?.actionResolutionMode === 'saving-throw' ? state.actorProfile.actionSaveAttribute : ''))) return false;
   if (rule.weaponAttackOnly && state.actorProfile?.actionResolutionMode !== 'weapon-attack') return false;
+  if (rule.attackRange && rule.attackRange !== getCombatAttackRange(state.actorProfile)) return false;
   if (rule.damageTypes?.length && !rule.damageTypes.includes(String(state.actorProfile?.weapon?.damageType || '').toLowerCase())) return false;
   if (rule.requiredWeaponId) {
     if (!['weapon', 'technique'].includes(actionKind)) return false;

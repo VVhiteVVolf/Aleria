@@ -1103,5 +1103,29 @@ export const HOUSE_ARMOR_HOUSES = [
     "sourceImage": "",
     "image": "",
     "status": "missing-reference"
+  },
+  {
+    "id": "haus-twyllod",
+    "name": "Familie Twyllod",
+    "regionId": "celtigerns-wacht",
+    "region": "Celtigerns Wacht",
+    "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Bannkreis Gwynthor",
+    "tree": "Stammbäume/Stammbaum.html?family=haus-twyllod&mode=view",
+    "sourceIllustrationId": "",
+    "sourceImage": "",
+    "image": "",
+    "status": "missing-reference"
+  },
+  {
+    "id": "haus-cochdon",
+    "name": "Haus Cochdon",
+    "regionId": "celtigerns-wacht",
+    "region": "Celtigerns Wacht",
+    "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+    "tree": "Stammbäume/Stammbaum.html?family=haus-cochdon&mode=view",
+    "sourceIllustrationId": "",
+    "sourceImage": "",
+    "image": "",
+    "status": "missing-reference"
   }
 ];

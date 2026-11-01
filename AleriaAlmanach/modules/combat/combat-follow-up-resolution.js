@@ -2,6 +2,7 @@ import { getConditionUsageBenefits } from './combat-condition-usage.js?v=2026101
 import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
 import { getBonusDamageFormulas, getUniversalDamageBonus, getWeaponAttackModifier, getWeaponDamageModifier } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
+import { getCombatAttackRange } from './combat-attack-range.js';
 import { mergeRestrictedRollModes } from './combat-roll-mode.js';
 import { combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
 import { applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
@@ -30,7 +31,9 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
       const damageDelta = followUp.alternateHands ? getWeaponDamageModifier(actor, followWeapon) - getWeaponDamageModifier(actor, loadout.right) : 0;
       const offBalance = followUp.saveFailureBonus && secondarySaves.some(save => !save.succeeded);
       const extraDie = offBalance ? String(followFormula).match(/\d+d(\d+)/i)?.[1] : '';
-      const followActor = { ...actor, weapon: followWeapon, weapons: (actor.weapons || []).map(w => ({ ...w, equipped: w.id === followWeapon.id })) };
+      const effectiveFollowWeapon = followUp.inheritWeapon && !followUp.alternateHands
+        ? { ...followWeapon, attackRange: getCombatAttackRange(actor) } : followWeapon;
+      const followActor = { ...actor, weapon: effectiveFollowWeapon, weapons: (actor.weapons || []).map(w => ({ ...w, equipped: w.id === followWeapon.id })) };
       const followSources = followUp.triggerReactions === false
         ? ruleSources.map(source => ({ ...source, selectedRuleIds: [] }))
         : ruleSources;

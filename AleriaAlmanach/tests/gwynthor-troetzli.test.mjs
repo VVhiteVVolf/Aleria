@@ -9,6 +9,7 @@ import { auditFamilyChartLayoutPolicy } from '../../Stammbäume/assets/js/adapte
 import { assertMirroredCrossFamilyBatch } from '../../Stammbäume/assets/js/modules/family-sync/cross-family-sync-invariant.js';
 import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
 import { TROETZLI_PEOPLE, LLYTHFOR_MARRIAGE_ID, LLYTHFOR_EMBLEM } from '../modules/gwynthor-troetzli/troetzli-household.mjs';
+import { LLYTHFOR_RELATIVES } from '../modules/gwynthor-troetzli/llythfor-relatives.mjs';
 import { TROETZLI_CREATURE_SOURCE } from '../modules/creatures/catalog/troetzli.js';
 import { sanitizeCreature } from '../modules/creatures/creature-model.js';
 import { getBuiltinCreatureTemplates } from '../modules/creatures/creature-catalog.js';
@@ -46,12 +47,42 @@ test('the new adult daughter is mirrored, while her child continues only behind 
   assert.deepEqual(llythfor.cadetBranches, []);
   assert.equal(llythfor.partnerships.find(p => p.id === LLYTHFOR_MARRIAGE_ID).extensions.chartAlignParentPairOverChildPersonId, daughter.id);
   assert.equal(llythfor.timeJumps.length, 1);
-  assert.deepEqual(llythfor.timeJumps[0].childIds, ['cynddelw-llythfor']);
+  assert.deepEqual(llythfor.timeJumps[0].childIds, ['gwyddno-llythfor']);
+  assert.equal(llythfor.timeJumps[0].toYear, '1670');
+  assert.equal(llythfor.persons.length, 11, 'Nine known people and the two unknown founders');
+  assert.deepEqual(llythfor.parentages.find(p => p.childId === 'cynddelw-llythfor').parentIds,
+    ['gwyddno-llythfor', 'gwenddydd-spouse-llythfor']);
+  assert.deepEqual(llythfor.parentages.find(p => p.childId === 'gwrhyr-llythfor').parentIds,
+    ['edern-llythfor', 'efrddyl-spouse-llythfor']);
+  const sister = llythfor.persons.find(p => p.id === 'lliwen-llythfor');
+  assert.ok(!llythfor.partnerships.some(p => p.participantIds.includes(sister.id)));
+  for (const person of Object.values(LLYTHFOR_RELATIVES)) {
+    const entry = llythfor.persons.find(p => p.id === person.id);
+    assert.equal(entry.worldPersonId, person.worldPersonId);
+    assert.ok(entry.extensions.biographyModule.biography.biographyText.includes(person.bio));
+    if (person.spouse) { assert.equal(entry.houseId, ''); assert.ok(!person.name.includes(' ')); }
+  }
+  const people = new Map(llythfor.persons.map(p => [p.id, p]));
+  for (const parentage of llythfor.parentages.filter(p => p.type === 'biological')) {
+    for (const parentId of parentage.parentIds) assert.ok(Number(people.get(parentage.childId).birth) - Number(people.get(parentId).birth) >= 18);
+  }
 });
 
-test('the Llythfor correction removes only the erroneous origin branch from an existing draft', async () => {
+test('the Llythfor expansion upgrades the published small household without losing edits or restoring the false origin branch', async () => {
   const prior = (await read('Stammbäume/assets/data/published-families/haus-llythfor.json')).family;
-  prior.extensions.sourceRevision = 4;
+  prior.extensions.sourceRevision = 5;
+  const newIds = new Set(Object.values(LLYTHFOR_RELATIVES).map(person => person.id));
+  prior.persons = prior.persons.filter(person => !newIds.has(person.id));
+  prior.partnerships = prior.partnerships.filter(partnership => !partnership.participantIds.some(id => newIds.has(id)));
+  prior.parentages = prior.parentages.filter(parentage => !newIds.has(parentage.childId));
+  const oldCynddelwParentage = prior.parentages.find(p => p.childId === 'cynddelw-llythfor');
+  oldCynddelwParentage.parentIds = prior.partnerships[0].participantIds;
+  oldCynddelwParentage.partnershipId = prior.lineage.founderPartnershipId;
+  oldCynddelwParentage.type = 'claimed';
+  oldCynddelwParentage.extensions = { timeJumpId: prior.timeJumps[0].id };
+  prior.timeJumps[0].childIds = ['cynddelw-llythfor'];
+  prior.timeJumps[0].toYear = '1698';
+  prior.document.emblem = 'assets/images/placeholders/neutral-crest.png';
   prior.cadetBranches.push({
     id: 'linked-esyllt-penrudd-llythfor', name: 'Esyllts Herkunft · Haus Penrudd',
     linkType: 'married-away', parentPartnershipId: LLYTHFOR_MARRIAGE_ID,
@@ -67,10 +98,16 @@ test('the Llythfor correction removes only the erroneous origin branch from an e
   prior.document.motto = 'Eigener Wahlspruch';
   const upgraded = resolveRegisteredFamilyUpgrade(llythfor, prior);
   assert.deepEqual(upgraded.cadetBranches.map(branch => branch.id), ['local-family-link']);
-  assert.deepEqual(upgraded.persons, prior.persons);
-  assert.deepEqual(upgraded.partnerships, prior.partnerships);
-  assert.deepEqual(upgraded.parentages, prior.parentages);
-  assert.deepEqual(upgraded.timeJumps, prior.timeJumps);
+  for (const person of prior.persons) assert.deepEqual(upgraded.persons.find(p => p.id === person.id), person);
+  for (const partnership of prior.partnerships) assert.deepEqual(upgraded.partnerships.find(p => p.id === partnership.id), partnership);
+  assert.deepEqual(upgraded.parentages.find(p => p.childId === 'eirlys-llythfor'), prior.parentages.find(p => p.childId === 'eirlys-llythfor'));
+  const parentage = upgraded.parentages.find(p => p.childId === 'cynddelw-llythfor');
+  assert.deepEqual(parentage.parentIds, ['gwyddno-llythfor', 'gwenddydd-spouse-llythfor']);
+  assert.equal(parentage.type, 'biological');
+  assert.equal(parentage.extensions.timeJumpId, undefined);
+  assert.deepEqual(upgraded.timeJumps[0].childIds, ['gwyddno-llythfor']);
+  assert.equal(upgraded.timeJumps[0].toYear, '1670');
+  assert.equal(upgraded.document.emblem, LLYTHFOR_EMBLEM);
   assert.equal(upgraded.document.motto, prior.document.motto);
   assert.deepEqual(resolveRegisteredFamilyUpgrade(llythfor, upgraded), upgraded);
 });
@@ -116,8 +153,14 @@ test('the notice joins Hilfe as its own publication and never adds a poster or r
   vm.runInNewContext(await readFile(new URL('Anzeigetafeln/assets/js/notes/notice-stacks.js', root), 'utf8'), context);
   const model = context.window.TafelNoticeStacks, notice = buildTroetzliNotice();
   const stack = model.members(pack.zettel, FEARNAN_NOTICE_ID);
-  assert.deepEqual(Array.from(stack, n => n.id), [FEARNAN_NOTICE_ID, TROETZLI_NOTICE_ID]);
-  assert.equal(model.publication(pack.zettel, TROETZLI_NOTICE_ID).notices.length, 1);
+  const stackIds = Array.from(stack, n => n.id);
+  assert.ok(stackIds.includes(FEARNAN_NOTICE_ID));
+  assert.equal(stackIds.filter(id => id === TROETZLI_NOTICE_ID).length, 1);
+  assert.equal(notice.stackId, FEARNAN_NOTICE_ID);
+  assert.deepEqual(Array.from(model.members(pack.zettel, TROETZLI_NOTICE_ID), n => n.id), stackIds);
+  // The Hilfe nail may receive other independent announcements over time.
+  // Trötzli must still own exactly one publication and one reward claim.
+  assert.deepEqual(Array.from(model.publication(pack.zettel, TROETZLI_NOTICE_ID).notices, n => n.id), [TROETZLI_NOTICE_ID]);
   assert.ok(!pack.boardBindings.some(b => b.noticeId === TROETZLI_NOTICE_ID));
   const layout = await read('Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/board-layout.json');
   assert.equal(layout.layout.posters.find(p => p.id === 'gwynthor-poster-hilfe').noticeId, FEARNAN_NOTICE_ID);

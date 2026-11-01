@@ -1,0 +1,78 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-10-31T00:00:00Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "id": "person--gwynthor-formlingssache--euddogwy",
+    "worldPersonId": "person--gwynthor-formlingssache--euddogwy",
+    "name": "Euddogwy O'Cenyr",
+    "title": "Persönlicher Adjutant des Patriarchen · Kurator",
+    "role": "Persönlicher Adjutant des Patriarchen · Kurator",
+    "sex": "male",
+    "race": "Mensch",
+    "birth": "1702",
+    "origin": "Gwynthor · Cenyr",
+    "currentLocation": "Gwynthor",
+    "fraktion": "Alerische Kirche",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+    "bio": "Euddogwy O'Cenyr wuchs im Waisenhaus Gwynthors auf. Wie anderen Kindern ohne elterlichen Rückhalt eröffnete Patriarch Gwalchgwyn ihm einen Weg in den kirchlichen Dienst. Heute ist Euddogwy achtunddreißig und gehört als persönlicher Adjutant zur Kanzlei des Patriarchen.\n\nEr führt Termine und Korrespondenz, bereitet Audienzen vor und fertigt Verlautbarungen im Auftrag Gwalchgwyns aus. Sein priesterlicher Rang ist Kurator. Er strebt einen hohen geistlichen Posten an und nimmt die Nähe zum Patriarchen als Verpflichtung, sich durch zuverlässigen Dienst zu bewähren. Ein Prälatenamt hat er bisher nicht inne.\n\nRotes Haar, blaue Augen und ein aufmerksames, gepflegtes Auftreten zeichnen ihn aus. Im Gespräch hört er sorgfältig zu; bei Schriftstücken achtet er darauf, was bereits entschieden ist und was erst zur Entscheidung vorgelegt wird.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Euddogwy O'Cenyr"
+        },
+        {
+          "label": "Alter",
+          "value": "38 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor · Cenyr"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Persönlicher Adjutant des Patriarchen · Kurator"
+        },
+        {
+          "label": "Priesterlicher Rang",
+          "value": "Kurator"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Euddogwy O'Cenyr",
+        "biographyText": "<p>Euddogwy O'Cenyr wuchs im Waisenhaus Gwynthors auf. Wie anderen Kindern ohne elterlichen Rückhalt eröffnete Patriarch Gwalchgwyn ihm einen Weg in den kirchlichen Dienst. Heute ist Euddogwy achtunddreißig und gehört als persönlicher Adjutant zur Kanzlei des Patriarchen.</p><p>Er führt Termine und Korrespondenz, bereitet Audienzen vor und fertigt Verlautbarungen im Auftrag Gwalchgwyns aus. Sein priesterlicher Rang ist Kurator. Er strebt einen hohen geistlichen Posten an und nimmt die Nähe zum Patriarchen als Verpflichtung, sich durch zuverlässigen Dienst zu bewähren. Ein Prälatenamt hat er bisher nicht inne.</p><p>Rotes Haar, blaue Augen und ein aufmerksames, gepflegtes Auftreten zeichnen ihn aus. Im Gespräch hört er sorgfältig zu; bei Schriftstücken achtet er darauf, was bereits entschieden ist und was erst zur Entscheidung vorgelegt wird.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    }
+  }
+}

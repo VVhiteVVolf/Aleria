@@ -1,0 +1,218 @@
+/* Opt-in presentation for new landing pages. Classic pages retain their layout. */
+.landing-folio {
+  --folio-ink: #302e25;
+  --folio-muted: #746b57;
+  --folio-gold: #ac8450;
+  --folio-rule: #c9b78f;
+  --folio-green: #253e36;
+  --group-sea: #304f41;
+  --group-muted: #746b57;
+  --group-rule: #d0c19e;
+  padding: 0;
+  color: var(--folio-ink);
+  background: linear-gradient(#f7f0dfcf, #f7f0dfcf), #f5eedb url('../../DokumentenWerkstatt/assets/parchments/archive-ivory.png') center top / 100% auto;
+  border: 1px solid #baa27c;
+  font: 1rem/1.65 Georgia, 'Times New Roman', serif;
+  isolation: isolate;
+}
+.landing-folio-icon { width: 24px; height: 24px; flex: 0 0 auto; vertical-align: middle; }
+.landing-folio-hero { position: relative; min-height: 320px; display: flex; overflow: hidden; background: #34483a; color: #fff8dc; }
+.landing-folio-cover { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.landing-folio-hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #14251eea, #16251d92 45%, #15241c0a 78%), linear-gradient(0deg, #14251d4a, transparent 60%); }
+.landing-folio-title { position: relative; z-index: 1; width: min(70%, 690px); padding: 45px 40px 32px; }
+.landing-folio-kicker { display: flex; align-items: center; gap: 12px; color: #e6cf91; font: 500 10px/1.5 'Cinzel', Georgia, serif; letter-spacing: .16em; text-transform: uppercase; }
+.landing-folio-kicker i { width: 22px; height: 1px; background: #e6cf9180; }
+.landing-folio-title h2 { margin: 20px 0 13px; color: #fff5d9; font: 500 clamp(30px, 3.8vw, 53px)/1.14 'Cinzel', Georgia, serif; letter-spacing: -.025em; text-wrap: balance; overflow-wrap: anywhere; text-shadow: 0 2px 20px #10201870; }
+.landing-folio-title > p { max-width: 47ch; margin: 0; color: #f5edcf; font: italic 15px/1.7 Georgia, serif; }
+.landing-folio-trail { display: flex; align-items: center; gap: 9px; margin-top: 17px; color: #e2c78e; font: 500 10px/1.5 'Cinzel', Georgia, serif; letter-spacing: .04em; }
+.landing-folio-trail .landing-folio-icon { width: 17px; height: 17px; }
+.landing-folio-seal { display: flex; align-items: center; gap: 12px; margin-top: 23px; color: #e6d5a6; font: italic 12px/1.4 Georgia, serif; }
+.landing-folio-seal .group-crest { width: 45px; height: 45px; margin: 0; border-radius: 50%; border: 1px solid #d1b16c; outline: 1px solid #d1b16c70; outline-offset: 3px; object-fit: cover; background: #efe3bc; }
+.landing-folio-hero-corner { position: absolute; inset: 12px; border: 1px solid #ead39b55; pointer-events: none; }
+.landing-folio-hero-corner::after { content: '✧'; position: absolute; right: -7px; bottom: -16px; color: #ead39b; font-size: 25px; }
+.landing-folio-clock { position: absolute; z-index: 1; right: 32px; bottom: 30px; max-width: 200px; display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #1e322ce3; border: 1px solid #d3bb7d88; color: #efe1b9; }
+.landing-folio-clock-icon { color: #d4b678; }
+.landing-folio-clock small, .landing-folio-clock strong, .landing-folio-clock span { display: block; }
+.landing-folio-clock small { font: 9px/1.5 'Cinzel', Georgia, serif; letter-spacing: .12em; text-transform: uppercase; }
+.landing-folio-clock strong { margin-top: 4px; color: #fff4cf; font: 500 16px/1.5 'Cinzel', Georgia, serif; }
+.landing-folio-clock div > span { margin-top: 3px; font: 11px/1.4 Georgia, serif; }
+.landing-folio-hero-actions { position: absolute; z-index: 2; right: 25px; top: 24px; }
+.landing-folio .landing-folio-hero-actions button { background: #1d322ace; border-color: #d3bc7f90; color: #efe2be; font-size: 11px; }
+.landing-folio-index { display: grid; grid-template-columns: repeat(4, 1fr); padding: 0 20px; background: var(--folio-green); border-top: 1px solid #d8bd79; border-bottom: 3px double #a58a53; }
+.landing-folio-index button { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 66px; padding: 12px 8px; border: 0; border-right: 1px solid #d4bb7040; background: transparent; color: #f3e5bd; cursor: pointer; font: 500 11px/1.5 'Cinzel', Georgia, serif; letter-spacing: .025em; }
+.landing-folio-index button:last-child { border-right: 0; }
+.landing-folio-index small { color: #c0a66d; font: italic 12px Georgia, serif; }
+.landing-folio-index .landing-folio-icon { color: #d7be7c; width: 22px; height: 22px; }
+.landing-folio-index button:hover { background: #f3e5bd0d; }
+.landing-folio-body { max-width: 1280px; padding: 28px 36px 0; margin: 0 auto; }
+.landing-folio-chapter { display: flex; align-items: center; gap: 18px; color: #8b754e; font: 500 10px 'Cinzel', Georgia, serif; letter-spacing: .16em; text-transform: uppercase; }
+.landing-folio-chapter i { flex: 1; height: 1px; background: var(--folio-rule); }
+.landing-folio-chapter small { font: italic 12px Georgia, serif; letter-spacing: 0; text-transform: none; }
+.landing-folio .landing-panel { padding: 0; margin: 0; background: none; border: 0; min-width: 0; }
+.landing-folio .landing-panel-head { border-bottom: 1px solid var(--folio-rule); padding-bottom: 11px; margin-bottom: 18px; gap: 12px; flex-wrap: wrap; }
+.landing-folio .landing-panel-head h3 { color: #443e2d; font: 500 20px/1.4 'Cinzel', Georgia, serif; letter-spacing: -.015em; }
+.landing-folio .landing-members-panel { padding: 24px 0 28px; }
+.landing-folio .landing-members-panel > .landing-panel-head { border: 0; margin-bottom: 24px; }
+.landing-folio .landing-members-panel > .landing-panel-head > span { font: italic 15px Georgia, serif; color: var(--folio-muted); }
+.landing-folio .landing-member-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 28px 16px; max-height: none; overflow: visible; padding: 0; }
+.landing-folio .landing-member-card { border: 0; background: none; text-align: center; }
+.landing-folio .landing-member-media { width: 100px; height: 100px; aspect-ratio: 1; margin: 0 auto 16px; overflow: visible; }
+.landing-folio .landing-member-media::after { content: ''; position: absolute; inset: -9px; background: url('/Stammbäume/assets/images/frames/crest-bronze.png') center / contain no-repeat; pointer-events: none; }
+.landing-folio .landing-member-portrait { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 20%; background: #d5ccb0; }
+.landing-folio .landing-member-badge { position: absolute; bottom: -3px; right: -7px; z-index: 1; width: 23px; height: 23px; border-radius: 50%; border: 1px solid #b1975d; background: #f3e9c9; color: #695833; font-size: 12px; }
+.landing-folio .landing-member-body { padding: 0; }
+.landing-folio .landing-member-body strong { font: 500 16px/1.4 'Cinzel', Georgia, serif; color: #353d2d; }
+.landing-folio .landing-member-body em { display: block; margin-top: 5px; color: #85724d; font: italic 12px/1.5 Georgia, serif; }
+.landing-folio .landing-member-body > span { display: block; font-size: 11px; color: var(--folio-muted); }
+.landing-folio .landing-member-body small { display: inline-block; margin-top: 7px; padding: 0; border: 0; background: none; color: var(--landing-status, #506242); font-size: 11px; }
+.landing-folio-columns { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(240px, .9fr); gap: 36px; padding-top: 27px; border-top: 3px double var(--folio-rule); }
+.landing-folio-story { display: grid; gap: 32px; align-content: start; min-width: 0; }
+.landing-folio-marginalia { min-width: 0; padding-left: 26px; border-left: 1px solid var(--folio-rule); }
+.landing-folio-marginalia .landing-panel + .landing-panel { margin-top: 28px; }
+.landing-folio [data-landing-section] { scroll-margin-top: 24px; outline-offset: 6px; }
+.landing-folio .landing-quest-journal { margin-bottom: 22px; }
+.landing-folio .landing-quest-journal .landing-panel-head img { width: 34px; height: 34px; }
+.landing-folio .landing-quest-journal .landing-panel-head > a { font: italic 12px Georgia, serif; color: #6f5a35; }
+.landing-folio .landing-quest-journal-tabs { gap: 20px; border-bottom-color: var(--folio-rule); }
+.landing-folio .landing-quest-journal-tabs button { padding: 7px 1px 9px; font: 500 11px 'Cinzel', Georgia, serif; color: #796b50; border: 0; border-bottom: 2px solid transparent; background: transparent; }
+.landing-folio .landing-quest-journal-tabs button[aria-pressed="true"] { border-bottom-color: #51705b; color: #314f3c; }
+.landing-folio .landing-quest-journal-cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.landing-folio .landing-quest-journal-cards article { position: relative; padding: 20px 22px; border: 1px solid #baab8d; border-left: 3px solid #60745d; border-radius: 0; background: #fff9e73d; }
+.landing-folio .landing-quest-journal-cards article > span { color: #6e795b; opacity: 1; font: 500 9px 'Cinzel', Georgia, serif; letter-spacing: .1em; }
+.landing-folio .landing-quest-journal-cards h4 { margin: 9px 0; font: 500 19px/1.4 'Cinzel', Georgia, serif; color: #3c4935; }
+.landing-folio .landing-quest-journal-cards h4 a { color: inherit; text-decoration: none; }
+.landing-folio .landing-quest-journal-cards p { font: 13px/1.7 Georgia, serif; color: #6a624c; }
+.landing-folio .landing-quest-journal-cards small { font: italic 11px/1.6 Georgia, serif; color: #756a50; opacity: 1; }
+.landing-folio .landing-quest-journal-links { padding-top: 8px; gap: 18px; font: italic 12px Georgia, serif; color: #456042; }
+.landing-folio .landing-quest-journal-status { font: italic 11px/1.6 Georgia, serif; color: #746b57; opacity: 1; }
+.landing-folio .landing-quest-card { border: 1px solid #cabb99; border-radius: 0; background: #fff9e440; box-shadow: none; padding: 15px; gap: 13px; }
+.landing-folio .landing-quest-icon { width: 45px; height: 45px; object-fit: contain; background: none; border: 0; }
+.landing-folio .landing-quest-main > strong { font: 500 16px/1.5 'Cinzel', Georgia, serif; }
+.landing-folio .landing-quest-main > p { font: 13px/1.7 Georgia, serif; color: #6d634f; }
+.landing-folio .landing-progress { height: 3px; background: #c7bda447; border: 0; border-radius: 0; margin-top: 12px; }
+.landing-folio .landing-progress i { background: #5f7558; }
+.landing-folio .landing-folio-plans { padding-top: 8px; border-top: 1px solid var(--folio-rule); }
+.landing-folio-plans > summary { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 15px; cursor: pointer; font: 500 12px 'Cinzel', Georgia, serif; color: #6d624b; }
+.landing-folio-plans > summary::before { content: '+'; margin-right: 10px; }
+.landing-folio-plans[open] > summary::before { content: '−'; }
+.landing-folio-plans > summary span { margin-left: auto; font: italic 12px Georgia, serif; }
+.landing-folio-plans .landing-panel-head { justify-content: flex-end; border: 0; margin-bottom: 10px; padding: 0; }
+.landing-folio-plans .landing-panel-head h3 { display: none; }
+.landing-folio .landing-panel button { border: 1px solid #b9aa83; border-radius: 0; color: #5c623f; background: #fff8df60; font: 500 11px/1.5 'Cinzel', Georgia, serif; }
+.landing-folio .landing-panel button.active { background: #40573f; color: #fff3ce; }
+.landing-folio .landing-panel .landing-wide-action { width: 100%; margin-top: 13px; padding: 9px; background: transparent; border-style: dashed; }
+.landing-folio .landing-panel .landing-menu-toggle { border: 0; background: none; color: #7c6e4d; }
+.landing-folio .landing-quest-filters { gap: 4px; }
+.landing-folio .landing-quest-filters button { padding: 3px 7px; font-size: 9px; }
+.landing-folio .landing-note-list { max-height: none; overflow: visible; }
+.landing-folio .landing-note-card { padding: 16px 0; border: 0; border-bottom: 1px solid #c8b89485; background: none; border-radius: 0; }
+.landing-folio .landing-note-main > strong { font: 500 16px/1.4 'Cinzel', Georgia, serif; }
+.landing-folio .landing-note-main p { color: #6d634f; font: 14px/1.8 Georgia, serif; }
+.landing-folio .landing-note-main small { color: #8a7655; font: italic 11px/1.5 Georgia, serif; }
+.landing-folio .landing-map-frame { aspect-ratio: 1.25; max-height: 340px; margin-bottom: 0; border: 1px solid #ac9871; padding: 5px; background: #e8dfc4; box-shadow: 4px 4px 0 #b3a17b25; }
+.landing-folio .landing-map-frame-interactive { aspect-ratio: auto; }
+.landing-folio .landing-map-image { object-fit: cover; filter: saturate(.8) sepia(.12); }
+.landing-folio .landing-map-embed { min-height: 280px; height: 32dvh; }
+.landing-folio .landing-info-list { gap: 0; }
+.landing-folio .landing-info-row { padding: 13px 0; border: 0; border-bottom: 1px solid #c8b89485; background: none; }
+.landing-folio .landing-info-row strong { color: #5d543e; font: 500 13px 'Cinzel', Georgia, serif; }
+.landing-folio .landing-info-row small { margin-top: 5px; color: var(--folio-muted); font: 12px/1.7 Georgia, serif; }
+.landing-folio .landing-event-row { border-bottom-color: #c8b89485; font-size: 12px; }
+.landing-folio .group-empty { padding: 18px 0; border: 0; background: none; color: #887c61; font: italic 14px/1.8 Georgia, serif; }
+.landing-folio-endmark { display: grid; justify-items: center; gap: 12px; margin: 32px 0 10px; color: #9c865c; }
+.landing-folio-endmark .landing-folio-icon { width: 40px; height: 40px; }
+.landing-folio-endmark span { font: italic 12px Georgia, serif; }
+.landing-folio-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; margin-top: 32px; border-top: 1px solid var(--folio-rule); color: #8b7855; font: italic 11px Georgia, serif; }
+.landing-folio-footer i { padding: 0 8px; }
+.landing-folio .landing-config-button { position: static; background: none; border: 0; color: #7c6b4c; padding: 6px; font: italic 12px Georgia, serif; box-shadow: none; }
+.landing-folio :focus-visible { outline: 2px solid #7e8d52; outline-offset: 4px; }
+.landing-folio a { color: #4f6642; text-decoration-color: #9d9f7c; text-underline-offset: 4px; }
+.landing-folio a:hover { color: #263f2e; }
+.landing-folio .landing-quest-journal-tabs button { border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 7px 1px 9px; }
+.landing-folio .landing-quest-journal-tabs button[aria-pressed="true"] { border-bottom-color: #51705b; color: #314f3c; }
+.landing-folio [data-landing-quest-content] > h4 { margin: 20px 0 10px; color: #726449; font: 500 11px 'Cinzel', Georgia, serif; letter-spacing: .04em; }
+.landing-folio .landing-quest-journal-sources { margin: 0; font-size: 12px; }
+
+/* The group workspace keeps its existing tabs, live regions and inventory actions. */
+.landing-folio .group-metrics { display: flex; flex-wrap: wrap; gap: 0; padding: 18px 32px; background: #f8f0d95c; border: 0; }
+.landing-folio .group-metrics > div { flex: 1; min-width: 85px; padding: 0 16px; text-align: center; border-left-color: #cdbd9680; }
+.landing-folio .group-metrics > div:first-child { padding-left: 0; }
+.landing-folio .group-metrics strong { font: 500 21px 'Cinzel', Georgia, serif; color: #4d5940; }
+.landing-folio .group-metrics span { display: block; margin-top: 5px; font: italic 11px Georgia, serif; }
+.landing-folio .group-tabs { padding: 0 20px; background: var(--folio-green); border-top: 1px solid #b59a60; border-bottom: 3px double #a58a53; }
+.landing-folio .group-tabs button { flex-direction: column; gap: 7px; padding: 16px 10px 12px; font: 500 10px 'Cinzel', Georgia, serif; color: #c4c5a5; border-bottom: 3px solid transparent; }
+.landing-folio .group-tabs .landing-folio-icon { width: 23px; height: 23px; color: #c9b47c; }
+.landing-folio .group-tabs button[aria-selected="true"] { color: #fff2ca; border-bottom-color: #d4b66f; background: #e8dcb213; }
+.landing-folio .group-workspace { padding: 30px 34px; }
+.landing-folio .group-panel-head { padding-bottom: 16px; margin-bottom: 22px; border-bottom: 1px solid var(--folio-rule); }
+.landing-folio .group-panel-head h3 { font: 500 22px/1.5 'Cinzel', Georgia, serif; color: #424b35; }
+.landing-folio .group-eyebrow { color: #8a7650; font: 500 9px/1.5 'Cinzel', Georgia, serif; letter-spacing: .12em; }
+.landing-folio .group-button { border-radius: 0; background: #fff9e45e; font: 500 10px/1.5 'Cinzel', Georgia, serif; }
+.landing-folio .group-button-primary { background: #40573f; color: #fff4d0; }
+.landing-folio .group-active-roster { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 24px; }
+.landing-folio .group-member { grid-template-columns: 75px minmax(0, 1fr); align-items: start; gap: 8px 18px; padding: 19px 0 22px; border-bottom: 1px solid #c8b894; }
+.landing-folio .group-member-portrait { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center 20%; padding: 3px; border: 1px solid #937b4f; outline: 1px solid #b6a078; outline-offset: 3px; background: #ded1b3; }
+.landing-folio .group-member-copy { align-self: center; }
+.landing-folio .group-member-copy > strong { color: #3b4934; font: 500 16px/1.5 'Cinzel', Georgia, serif; }
+.landing-folio .group-member-role { color: #84714d; font: italic 12px/1.5 Georgia, serif; }
+.landing-folio .group-member-vitals { grid-column: 2; padding-top: 8px; }
+.landing-folio .group-readiness { padding: 0; border-radius: 0; background: none; font: italic 11px/1.5 Georgia, serif; }
+.landing-folio .group-health { margin-top: 7px; font-size: 10px; color: #7b7057; }
+.landing-folio .group-member meter { height: 5px; margin-top: 5px; }
+.landing-folio .group-member-actions { grid-column: 2; max-width: none; justify-content: start; padding-top: 7px; }
+.landing-folio .group-member-actions .group-button { font-size: 9px; padding: 3px 6px; background: none; }
+.landing-folio .group-reserves { margin-top: 15px; }
+.landing-folio .group-reserve-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.landing-folio .group-scene-current { background: #fff9e440; border-color: #c5b48e; border-radius: 0; }
+.landing-folio .group-quest-account { border-radius: 0; }
+.landing-folio .group-page-status { padding: 0 30px; }
+
+@media (min-width: 1400px) {
+  .landing-folio-hero { min-height: 370px; }
+  .landing-folio-title { padding: 58px 48px 38px; }
+}
+@media (max-width: 850px) {
+  .landing-folio-body { padding: 25px 23px 0; }
+  .landing-folio-columns { gap: 25px; grid-template-columns: minmax(0, 1.3fr) minmax(210px, 1fr); }
+  .landing-folio-marginalia { padding-left: 20px; }
+  .landing-folio .group-workspace { padding: 25px 23px; }
+  .landing-folio .group-active-roster { grid-template-columns: 1fr; }
+  .landing-folio .group-member { grid-template-columns: 75px minmax(0, 1fr) minmax(120px, .7fr); }
+  .landing-folio .group-member-vitals { grid-column: 3; grid-row: 1 / 3; }
+  .landing-folio .group-member-actions { grid-column: 2; }
+}
+@media (max-width: 620px) {
+  .landing-folio-hero { min-height: 310px; flex-direction: column; }
+  .landing-folio-title { width: 100%; padding: 36px 26px 26px; box-sizing: border-box; }
+  .landing-folio-title h2 { font-size: 31px; max-width: 18ch; }
+  .landing-folio-title > p { font-size: 14px; max-width: 35ch; }
+  .landing-folio-kicker { font-size: 8px; gap: 8px; }
+  .landing-folio-hero-shade { background: linear-gradient(90deg, #14251eea, #16251d85), linear-gradient(0deg, #14251d55, transparent); }
+  .landing-folio-clock { position: relative; right: auto; bottom: auto; margin: 0 26px 25px; max-width: none; align-self: flex-start; }
+  .landing-folio-hero-actions { position: relative; right: auto; top: auto; margin: 0 26px 22px; }
+  .landing-folio-index { grid-template-columns: repeat(4, minmax(68px, 1fr)); padding: 0 8px; }
+  .landing-folio-index button { flex-direction: column; gap: 5px; font-size: 8px; padding: 12px 6px; }
+  .landing-folio-index small { display: none; }
+  .landing-folio-chapter { gap: 10px; font-size: 9px; }
+  .landing-folio-chapter small { display: none; }
+  .landing-folio-body { padding: 23px 20px 0; }
+  .landing-folio .landing-member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 25px; }
+  .landing-folio-columns { grid-template-columns: 1fr; padding-top: 23px; }
+  .landing-folio-marginalia { border-left: 0; border-top: 3px double var(--folio-rule); padding: 25px 0 0; }
+  .landing-folio .landing-map-frame { max-height: 300px; }
+  .landing-folio-footer { align-items: flex-start; font-size: 10px; }
+  .landing-folio .group-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 17px 12px; row-gap: 15px; }
+  .landing-folio .group-metrics > div { min-width: 0; padding: 0 8px; }
+  .landing-folio .group-metrics strong { font-size: 18px; }
+  .landing-folio .group-metrics span { font-size: 9px; }
+  .landing-folio .group-tabs { padding: 0 6px; }
+  .landing-folio .group-tabs button { padding: 13px 9px 10px; font-size: 9px; }
+  .landing-folio .group-workspace { padding: 24px 20px; }
+  .landing-folio .group-member { grid-template-columns: 65px minmax(0, 1fr); }
+  .landing-folio .group-member-portrait { width: 62px; height: 62px; }
+  .landing-folio .group-member-vitals { grid-column: 2; grid-row: auto; }
+  .landing-folio .group-reserve-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-folio { scroll-behavior: auto; }
+}

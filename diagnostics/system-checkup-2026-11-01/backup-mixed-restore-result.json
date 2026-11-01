@@ -1,0 +1,294 @@
+{
+  "scope": {
+    "projectId": "demo-aleria-backup-checkup",
+    "host": "127.0.0.1:8187",
+    "liveWrites": false,
+    "globalDelete": false,
+    "syntheticFixtures": true
+  },
+  "findingConfirmed": true,
+  "operations": [
+    {
+      "section": "items",
+      "collection": "item_award_claims",
+      "result": {
+        "restored": 0,
+        "retained": 1
+      }
+    },
+    {
+      "section": "quests",
+      "collection": "quest_runs",
+      "result": {
+        "restored": 0,
+        "retained": 1
+      }
+    },
+    {
+      "section": "quests",
+      "collection": "quest_reward_claims",
+      "result": {
+        "restored": 0,
+        "retained": 1
+      }
+    },
+    {
+      "section": "quests",
+      "collection": "group_quest_accounts",
+      "result": {
+        "restored": 0,
+        "retained": 1
+      }
+    },
+    {
+      "section": "characters",
+      "result": {
+        "kind": "characters",
+        "imported": 1,
+        "stateAuthority": null
+      }
+    }
+  ],
+  "before": {
+    "character": {
+      "name": "Backup checkup test figure",
+      "ownerUid": "local-backup-checkup",
+      "updatedAt": "2026-11-01T08:00:00.000Z",
+      "inventory": {
+        "revision": 7,
+        "items": [],
+        "moneyState": {
+          "totalCopper": 37
+        }
+      },
+      "combatProfile": {
+        "revision": 7,
+        "hitPoints": {
+          "current": 6,
+          "maximumOverride": 12
+        }
+      }
+    },
+    "itemAward": {
+      "actorUid": "local-backup-checkup",
+      "operationId": "new-award",
+      "sourceKey": "notice:backup-checkup:one",
+      "at": "2026-11-01T08:00:00.000Z",
+      "result": {
+        "recordId": "backup-checkup-person",
+        "copper": 20
+      },
+      "fingerprint": "new-item-receipt"
+    },
+    "questRun": {
+      "id": "backup-checkup-run",
+      "status": "completed",
+      "rewardStatus": "claimed",
+      "revision": 7,
+      "updatedAt": "2026-11-01T08:00:00.000Z"
+    },
+    "questClaim": {
+      "runId": "backup-checkup-run",
+      "actorUid": "local-backup-checkup",
+      "at": "2026-11-01T08:00:00.000Z",
+      "allocations": [
+        {
+          "recordId": "backup-checkup-person",
+          "copper": 20
+        }
+      ]
+    },
+    "groupAccount": {
+      "id": "backup-checkup-group",
+      "schemaVersion": 1,
+      "revision": 7,
+      "updatedAt": "2026-11-01T08:00:00.000Z",
+      "inventory": {
+        "revision": 7,
+        "items": [],
+        "moneyState": {
+          "totalCopper": 50
+        }
+      },
+      "receipts": [
+        {
+          "runId": "backup-checkup-run",
+          "title": "Latest payout",
+          "copper": 50,
+          "at": "2026-11-01T08:00:00.000Z"
+        }
+      ]
+    }
+  },
+  "backup": {
+    "characters": [
+      {
+        "id": "backup-checkup-person",
+        "name": "Backup checkup test figure",
+        "ownerUid": "local-backup-checkup",
+        "updatedAt": "2026-10-30T08:00:00.000Z",
+        "inventory": {
+          "revision": 1,
+          "items": [],
+          "moneyState": {
+            "totalCopper": 100
+          }
+        },
+        "combatProfile": {
+          "revision": 1,
+          "hitPoints": {
+            "current": 12,
+            "maximumOverride": 12
+          }
+        }
+      }
+    ],
+    "itemSystem": {
+      "schemaVersion": 1,
+      "collections": {
+        "item_award_claims": [
+          {
+            "id": "backup-checkup-award",
+            "data": {
+              "actorUid": "local-backup-checkup",
+              "operationId": "old-award",
+              "sourceKey": "notice:backup-checkup:one",
+              "at": "2026-10-30T08:00:00.000Z",
+              "result": {
+                "recordId": "backup-checkup-person",
+                "copper": 5
+              },
+              "fingerprint": "old-item-receipt"
+            }
+          }
+        ]
+      }
+    },
+    "questSystem": {
+      "schemaVersion": 1,
+      "collections": {
+        "quest_runs": [
+          {
+            "id": "backup-checkup-run",
+            "data": {
+              "id": "backup-checkup-run",
+              "status": "active",
+              "rewardStatus": "pending",
+              "revision": 1,
+              "updatedAt": "2026-10-30T08:00:00.000Z"
+            }
+          }
+        ],
+        "quest_reward_claims": [
+          {
+            "id": "backup-checkup-run",
+            "data": {
+              "runId": "backup-checkup-run",
+              "actorUid": "local-backup-checkup",
+              "at": "2026-10-30T08:00:00.000Z",
+              "allocations": [
+                {
+                  "recordId": "backup-checkup-person",
+                  "copper": 5
+                }
+              ]
+            }
+          }
+        ],
+        "group_quest_accounts": [
+          {
+            "id": "backup-checkup-group",
+            "data": {
+              "id": "backup-checkup-group",
+              "schemaVersion": 1,
+              "revision": 1,
+              "updatedAt": "2026-10-30T08:00:00.000Z",
+              "inventory": {
+                "revision": 1,
+                "items": [],
+                "moneyState": {
+                  "totalCopper": 5
+                }
+              },
+              "receipts": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "after": {
+    "character": {
+      "name": "Backup checkup test figure",
+      "ownerUid": "local-backup-checkup",
+      "updatedAt": "2026-10-30T08:00:00.000Z",
+      "inventory": {
+        "revision": 1,
+        "items": [],
+        "moneyState": {
+          "totalCopper": 100
+        }
+      },
+      "combatProfile": {
+        "revision": 1,
+        "hitPoints": {
+          "current": 12,
+          "maximumOverride": 12
+        }
+      },
+      "importedAt": "2026-11-01T02:03:50.547Z",
+      "importedBy": "local-backup-checkup"
+    },
+    "itemAward": {
+      "actorUid": "local-backup-checkup",
+      "operationId": "new-award",
+      "sourceKey": "notice:backup-checkup:one",
+      "at": "2026-11-01T08:00:00.000Z",
+      "result": {
+        "recordId": "backup-checkup-person",
+        "copper": 20
+      },
+      "fingerprint": "new-item-receipt"
+    },
+    "questRun": {
+      "id": "backup-checkup-run",
+      "status": "completed",
+      "rewardStatus": "claimed",
+      "revision": 7,
+      "updatedAt": "2026-11-01T08:00:00.000Z"
+    },
+    "questClaim": {
+      "runId": "backup-checkup-run",
+      "actorUid": "local-backup-checkup",
+      "at": "2026-11-01T08:00:00.000Z",
+      "allocations": [
+        {
+          "recordId": "backup-checkup-person",
+          "copper": 20
+        }
+      ]
+    },
+    "groupAccount": {
+      "id": "backup-checkup-group",
+      "schemaVersion": 1,
+      "revision": 7,
+      "updatedAt": "2026-11-01T08:00:00.000Z",
+      "inventory": {
+        "revision": 7,
+        "items": [],
+        "moneyState": {
+          "totalCopper": 50
+        }
+      },
+      "receipts": [
+        {
+          "runId": "backup-checkup-run",
+          "title": "Latest payout",
+          "copper": 50,
+          "at": "2026-11-01T08:00:00.000Z"
+        }
+      ]
+    }
+  },
+  "conclusion": "A successful current full restore can combine an older figure/profile/inventory snapshot with retained newer transaction receipts, completed quest state and group balances. This probe documents the current contract; it does not propose or apply a restore migration."
+}

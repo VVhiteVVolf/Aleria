@@ -121,7 +121,8 @@ test('the Dyfrgi retainer has no invented estate and the Falto lawyer receives n
   assert.deepEqual(record('haus-llafnfor').folderPath, ['Cenyr', 'Klaueninsel', 'Talklaue', 'Caer Cryftlawd']);
   assert.equal(record('haus-llafnfor').family.persons.length, 3);
   assert.deepEqual(record('haus-falto').folderPath, ['Venalys']);
-  assert.deepEqual(record('haus-falto').additionalPlacements[0].folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
+  assert.deepEqual(record('haus-falto').additionalPlacements, []);
+  assert.deepEqual(record('haus-falto').houseProfile.secondarySeats, ['Gwynthor']);
   assert.equal(FORTUNA_COUNCIL.length, 9);
   assert.ok(!FORTUNA_COUNCIL.some(n => n.title.includes('Valeriano')));
   const posts = buildFortunaMarketHierarchy().trees.flatMap(t => t.levels.flatMap(l => l.nodes));

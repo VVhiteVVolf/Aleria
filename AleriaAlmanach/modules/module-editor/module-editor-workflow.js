@@ -259,6 +259,7 @@ function validateModulePageAssets(errors, page, index) {
   pushInvalidModuleAsset(errors, `${prefix} Questakte-Auftraggeberportrait`, page.questFile?.clientPortrait);
   pushInvalidModuleAsset(errors, `${prefix} Questakte-Skizze`, page.questFile?.sketchImage);
   pushInvalidModuleAsset(errors, `${prefix} Landing-Banner`, page.landing?.bannerImage);
+  pushInvalidModuleAsset(errors, `${prefix} Landing-Coverbild`, page.landing?.coverImage);
   pushInvalidModuleAsset(errors, `${prefix} Landing-Karte`, page.landing?.mapImage);
   pushInvalidModuleAsset(errors, `${prefix} Charakter-Inventar Portrait`, page.characterInventory?.portrait);
   pushInvalidModuleAsset(errors, `${prefix} Kopfgeldakte Hintergrund`, page.bountyFile?.backgroundImage);

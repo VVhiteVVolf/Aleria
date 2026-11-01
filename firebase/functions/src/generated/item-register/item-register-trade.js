@@ -3,6 +3,7 @@ import { moneyState, moneyTotal, toMinor, formatMoney } from './item-register-mo
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
 
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
+import { itemDefinitionFromTemplate, assertItemQuantity } from '../item-definitions/item-definition-model.js';
 
 const copy = value => JSON.parse(JSON.stringify(value));
 const requireQuantity = value => {
@@ -13,6 +14,7 @@ const requireQuantity = value => {
 
 export function resalePrice(item, product = null) {
   if (product?.section === 'offer' && product.buybackCopper != null) return toMinor(product.buybackCopper) / 100;
+  if (item?.purchase?.sourceKind === 'challenge-reward') return null;
   if (item?.purchase?.unitCopper == null) return null;
   return Math.floor(toMinor(item.purchase.unitCopper) / 2) / 100;
 }
@@ -22,7 +24,7 @@ function setWallet(inventory, minor) {
   inventory.money = formatMoney(inventory.moneyState);
 }
 /** Pure, shared validation. The caller must supply authoritative server records. */
-export function applyRegisterTrade(character, product, input, { instanceId, now } = {}) {
+export function applyRegisterTrade(character, product, input, { instanceId, now, definition = itemDefinitionFromTemplate(product), definitions } = {}) {
   const inventory = copy(character.inventory || {});
   inventory.items = inventory.items || [];
   const combatProfile = copy(character.combatProfile || {});
@@ -42,12 +44,11 @@ export function applyRegisterTrade(character, product, input, { instanceId, now 
     }
     if (wallet < totalMinor) throw new Error('Die Figur besitzt nicht genug Geld.');
     if (stock != null && stock < quantity) throw new Error('Der verfügbare Bestand reicht nicht aus.');
-    const individual = ['pferde', 'vieh', 'waffen', 'ruestungen'].includes(product.category);
-    if (individual && quantity !== 1) throw new Error('Tiere und Ausrüstung werden als einzelne Besitztümer gekauft.');
+    assertItemQuantity(definition || product, quantity);
     if (inventory.items.length >= 80) throw new Error('Das Inventar hat bereits 80 Einträge. Bitte zuerst Platz schaffen.');
     item = createOwnedItem(product, { id: instanceId, characterId: character.id, characterName: character.name, quantity, unitCopper: unitMinor / 100, now });
     inventory.items.push(item);
-    attachInventoryEquipment(combatProfile, item);
+    attachInventoryEquipment(combatProfile, item, { definition });
     setWallet(inventory, wallet - totalMinor);
     if (stock != null) stock -= quantity;
   } else if (input.direction === 'sell') {
@@ -71,7 +72,7 @@ export function applyRegisterTrade(character, product, input, { instanceId, now 
     // A sold, possibly customized instance remains in the receipt. It must not
     // silently become another generic copy in an unrelated provider's stock.
   } else throw new Error('Unbekannter Handelsvorgang.');
-  return { ...synchronizeEquipmentFromInventory({ inventory, combatProfile }), stock,
+  return { ...synchronizeEquipmentFromInventory({ inventory, combatProfile, definitions }), stock,
     receipt: { direction: input.direction, itemId: item.id, name: item.name, productId: product.id, quantity, unitCopper: unitMinor / 100, totalCopper: totalMinor / 100, at: now, itemSnapshot: copy(item) } };
 }
 
@@ -84,6 +85,7 @@ export function customizeOwnedItem(character, input, now) {
     if (Object.hasOwn(input, key)) item[key] = String(input[key] || '').trim().slice(0, limit);
   }
   if (input.combatDefinition != null) {
+    if (item.definitionRef) throw new Error('Gemeinsame Regeln werden im Item-Builder als neue Definitionversion oder Variante bearbeitet.');
     if (!['weapon', 'armor'].includes(item.combatDefinition?.kind)) throw new Error('Dieser Gegenstand hat noch keine Kampfdefinition.');
     item.combatDefinition = { ...item.combatDefinition, ...input.combatDefinition, kind: item.combatDefinition.kind };
   }

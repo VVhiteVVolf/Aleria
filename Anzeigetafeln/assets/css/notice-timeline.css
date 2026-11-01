@@ -1,0 +1,36 @@
+.board-calendar { position: absolute; left: 87.4%; top: 24%; width: 8%; z-index: 22000; transform: translateX(-50%) rotate(-2deg); text-align: center; pointer-events: auto; container-type: inline-size; }
+.board-calendar-art { display: block; width: 100%; height: auto; pointer-events: none; user-select: none; }
+.board-calendar button { position: absolute; padding: 0; border: 0; color: #3c2716; background: transparent; cursor: pointer; font-family: 'EB Garamond', serif; }
+.board-calendar-leaf { left: 27%; top: 31%; width: 46%; height: 44%; display: grid; grid-template-rows: 20% 57% 14%; row-gap: 4.5%; justify-items: center; align-items: center; }
+.board-calendar-leaf small { display: block; max-width: 100%; white-space: nowrap; font: 600 min(9cqw, calc(80cqw / var(--calendar-month-length, 9)))/1 'EB Garamond', serif; }
+.board-calendar-leaf strong { display: block; width: 100%; height: 100%; }
+.calendar-number-text { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.calendar-number-ink { display: flex; align-items: center; justify-content: center; gap: 5%; height: 100%; }
+.calendar-number-ink img { display: block; width: auto; height: 100%; max-width: 48%; object-fit: contain; pointer-events: none; }
+.board-calendar-year { display: block; height: 100%; width: 70%; }
+.board-calendar-year .calendar-number-ink { gap: 8%; }
+.board-calendar-previous, .board-calendar-next { top: 43%; width: 18%; height: 25%; font-size: 22cqw; line-height: 1; }
+.board-calendar-previous { left: 11%; }
+.board-calendar-next { right: 11%; }
+.board-calendar-today { left: 27%; top: 80%; width: 46%; height: 9%; font-size: 9cqw; }
+.board-calendar.is-browsing .board-calendar-today, .board-calendar-mobile.is-browsing .board-calendar-today { text-decoration: underline; text-underline-offset: 2px; }
+.board-calendar button:focus-visible, .board-calendar-mobile button:focus-visible { outline: 2px dashed #54341b; outline-offset: 2px; border-radius: 3px; }
+.board-calendar button:hover { color: #7f4215; }
+.board-calendar-mobile { display: none; }
+.board-date-dialog { margin: auto; width: min(580px, calc(100vw - 24px)); border: 2px solid #997646; background: #eddfbd; color: #3d2c1c; padding: 18px; overflow: visible; }
+.board-date-dialog::backdrop { background: #110c08bb; }
+.board-date-dialog header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.board-date-dialog h2 { font: 600 1.1rem 'Cinzel', serif; }
+.board-date-dialog header button { min-width: 44px; min-height: 44px; background: transparent; border: 1px solid #ac9168; font-size: 1.5rem; }
+.board-date-dialog .ac-picker-popover { position: static; width: auto; max-height: 70vh; overflow: auto; box-shadow: none; }
+.notice-date-help { font-size: .85rem; color: #725b3a; margin: .4rem 0; }
+.notice-posted-date { padding: .4rem 1rem; margin: 0; border-bottom: 1px solid #a1875780; color: #715737; text-align: right; font: .85rem 'EB Garamond', serif; }
+[data-notice-date-editor] .ac-picker { color: #392c1d; }
+@media (max-width: 700px) {
+  .board-calendar-mobile { display: flex; gap: 4px; }
+  .board-calendar-mobile button { min-height: 44px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .board-calendar-leaf { animation: board-calendar-leaf .18s ease-out; }
+  @keyframes board-calendar-leaf { from { transform: perspective(250px) rotateX(-30deg); opacity: .65; } to { transform: none; opacity: 1; } }
+}

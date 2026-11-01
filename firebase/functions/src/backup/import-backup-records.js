@@ -1,5 +1,9 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
+import { readItemDefinitionIndex, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
+import { itemDefinitionKey } from '../generated/item-definitions/item-definition-model.js';
+import { storeDefinitionInventory } from '../generated/item-definitions/item-definition-resolver.js';
+import { hasMechanicalCommentPayload as isMechanicalComment } from '../mechanics/mechanical-comment-payload.js';
 
 const COLLECTIONS = Object.freeze({
   characters: 'characters',
@@ -31,21 +35,6 @@ function cleanId(value) {
   const id = String(value || '').trim();
   if (!id || id.includes('/')) fail('invalid-argument', 'Ein Importdatensatz besitzt keine gÃ¼ltige ID.');
   return id.slice(0, 512);
-}
-
-function isMechanicalComment(comment = {}) {
-  const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
-  return !!(
-    comment.combatResolution
-    || comment.combatTransaction
-    || comment.inventoryTransaction
-    || comment.restTransaction
-    || comment.sceneRest
-    || comment.sceneInventoryTransfer
-    || comment.sceneDiceRoll
-    || comment.sceneTimeEvent
-    || segments.some(segment => segment?.combatResolution || segment?.skillResolution || segment?.inventoryUse)
-  );
 }
 
 function normalizeImportedComment(record, request, importedAt) {
@@ -87,6 +76,7 @@ export const importBackupRecords = onCall({
   timeoutSeconds: 60
 }, async request => {
   if (!request.auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
+  if (!['admin', 'moderator'].includes(request.auth.token?.aleriaRole)) fail('permission-denied', 'Vollbackups können nur durch die Spielleitung importiert werden.');
   const payload = clonePayload(request.data);
   const kind = String(payload.kind || '');
   const collectionName = COLLECTIONS[kind];
@@ -97,6 +87,26 @@ export const importBackupRecords = onCall({
   }
 
   const database = getFirestore();
+  if (['characters', 'creatures'].includes(kind)) return database.runTransaction(async transaction => {
+    const definitions = await readItemDefinitionIndex(database, transaction, records, { verifyHolders: false });
+    const claims = [], writes = [];
+    for (const record of records) {
+      const id = cleanId(record.id), ref = database.collection(collectionName).doc(id);
+      const lock = await transaction.get(database.doc(`combat_profile_locks/${collectionName}/records/${id}`));
+      if (lock.data()?.activeEncounterKeys?.length) fail('failed-precondition', 'Ein aktiver Kampfbogen darf nicht durch einen Backupimport überschrieben werden.');
+      for (const item of record.inventory?.items || []) if (item.definitionRef) {
+        const definition = definitions.get(itemDefinitionKey(item.definitionRef));
+        if (!definition) fail('failed-precondition', 'Die referenzierten Itemversionen müssen vor dem Inventar wiederhergestellt werden.');
+        claims.push({ definition, instanceId: item.instanceId || item.id, quantity: item.quantity ?? 1, holder: { kind, recordId: id, itemId: item.id } });
+      }
+      const data = normalizeRecord(kind, record, request, new Date().toISOString());
+      if (data.inventory) data.inventory = storeDefinitionInventory(data.inventory);
+      writes.push({ ref, data });
+    }
+    const claim = await prepareUniqueItemClaims(database, transaction, claims, { actorUid: request.auth.uid });
+    claim(); for (const write of writes) transaction.set(write.ref, write.data);
+    return { kind, imported: writes.length, stateAuthority: null };
+  });
   const batch = database.batch();
   const importedAt = new Date().toISOString();
   records.forEach(record => {

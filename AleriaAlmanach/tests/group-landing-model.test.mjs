@@ -123,7 +123,7 @@ test('Stored combat snapshots enrich the overview without changing comments or b
   const original = { currentHitPoints: 30, maximumHitPoints: 30, resources: [], conditions: [], abilities: [], totalDefense: 15 };
   globalThis.getAvailableCommentCharacters = () => [{ id: 'idwal', name: 'Idwal Draig', combatProfile: { level: 7 } }];
   globalThis.AleriaCombat = { getProfile: () => structuredClone(original) };
-  const comments = [{ combatResolution: { actorId: 'idwal', targetId: 'enemy', actorHitPointSnapshot: { after: { current: 9, maximum: 30, temporary: 0 } } } }];
+  const comments = [{ serverValidatedMechanics: true, combatResolution: { actorId: 'idwal', targetId: 'enemy', actorHitPointSnapshot: { after: { current: 9, maximum: 30, temporary: 0 } } } }];
   const copy = JSON.stringify(comments);
   const members = groupMemberSnapshots(entry, normalizeGroupLandingState({}), comments);
   assert.equal(members[0].readiness.current, 9);

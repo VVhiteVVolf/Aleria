@@ -1,0 +1,113 @@
+[
+  {
+    "id": "skallis-gefolge",
+    "title": "Skallis Gefolge",
+    "source": "AleriaAlmanach/modules/group-adventures/source/skallis-gefolge-2026-11-01.json",
+    "sourceSha256": "150c543011f6faa85c91f7368728beeb70bec0f8aaae2b30fe02503a0f99c409",
+    "sourceUpdateTime": "2026-10-17T23:37:19.270040Z",
+    "landingKey": "skalli-overview",
+    "sessionKeys": [
+      "skalli-camp"
+    ],
+    "hierarchyKeys": [
+      "skalli-hierarchy"
+    ],
+    "originalPageCount": 5,
+    "reviewPageCount": 5
+  },
+  {
+    "id": "idwals-schiffsmannschaft",
+    "title": "Idwals Schiffsmannschaft",
+    "source": "AleriaAlmanach/modules/group-adventures/source/idwals-schiffsmannschaft-2026-11-01.json",
+    "sourceSha256": "08a106e53e1fc2ff970825ad23e0c37cd08ca11e1e48f5f424eda0bb3c860f6e",
+    "sourceUpdateTime": "2026-10-16T16:31:10.158135Z",
+    "landingKey": "group-overview",
+    "sessionKeys": [
+      "3"
+    ],
+    "hierarchyKeys": [
+      "2"
+    ],
+    "originalPageCount": 5,
+    "reviewPageCount": 5
+  },
+  {
+    "id": "modul-1782120382311",
+    "title": "Anarauts Gefolge",
+    "source": "AleriaAlmanach/modules/group-adventures/source/modul-1782120382311-2026-11-01.json",
+    "sourceSha256": "c3a1c1a4f507e8c7cc1c66df7cd996c586618b4e6e10e0e87fb9ec60aa4b7098",
+    "sourceUpdateTime": "2026-10-16T16:31:10.211541Z",
+    "landingKey": "p-mqp19aou-3zph5",
+    "sessionKeys": [
+      "p-mqp19t4v-3tq42"
+    ],
+    "hierarchyKeys": [
+      "p-mqp0xaj7-63pzk",
+      "anaraut-arian-ship-hierarchy"
+    ],
+    "originalPageCount": 5,
+    "reviewPageCount": 6
+  },
+  {
+    "id": "rhydians-schiffsmannschaft",
+    "title": "Rhydians Schiffsmannschaft",
+    "source": "AleriaAlmanach/modules/group-adventures/source/rhydians-schiffsmannschaft-2026-11-01.json",
+    "sourceSha256": "3d64b6f5d521f588b341edfdb7aad3d35071d820bc27df07c08adcc1866b3d7b",
+    "sourceUpdateTime": "2026-10-16T16:31:10.305707Z",
+    "landingKey": "group-overview",
+    "sessionKeys": [
+      "3"
+    ],
+    "hierarchyKeys": [
+      "2"
+    ],
+    "originalPageCount": 5,
+    "reviewPageCount": 5
+  },
+  {
+    "id": "parzifals-schiffsmannschaft",
+    "title": "Parzifals Schiffsmannschaft",
+    "source": "AleriaAlmanach/modules/group-adventures/source/parzifals-schiffsmannschaft-2026-11-01.json",
+    "sourceSha256": "717639c9781fe4b010e52a653c6521f4f62e86ec96f121324d9f600a8f99e7fd",
+    "sourceUpdateTime": "2026-10-16T16:31:10.349854Z",
+    "landingKey": "group-overview",
+    "sessionKeys": [
+      "4"
+    ],
+    "hierarchyKeys": [
+      "2"
+    ],
+    "originalPageCount": 5,
+    "reviewPageCount": 5
+  },
+  {
+    "id": "lynnes-schiffsmannschaft",
+    "title": "Lynnes Schiffsmannschaft",
+    "source": "AleriaAlmanach/modules/group-adventures/source/lynnes-schiffsmannschaft-2026-11-01.json",
+    "sourceSha256": "468a30cbbd61d6f37b3f5015f6b2d5538e6a1c41c775a2a798d2e6b856844f6b",
+    "sourceUpdateTime": "2026-10-16T16:31:10.372155Z",
+    "landingKey": "group-overview",
+    "sessionKeys": [
+      "3"
+    ],
+    "hierarchyKeys": [
+      "2"
+    ],
+    "originalPageCount": 5,
+    "reviewPageCount": 5
+  },
+  {
+    "id": "draig-leibgarde",
+    "title": "Draig Leibgarde",
+    "source": "AleriaAlmanach/modules/group-adventures/source/draig-leibgarde-2026-11-01.json",
+    "sourceSha256": "39b5ef6edeb97126b7c01e14f2f54933e8aeedf5a26f4d4ddd4cc35abbca77ea",
+    "sourceUpdateTime": null,
+    "landingKey": "group-overview",
+    "sessionKeys": [],
+    "hierarchyKeys": [
+      "3"
+    ],
+    "originalPageCount": 4,
+    "reviewPageCount": 5
+  }
+]

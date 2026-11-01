@@ -69,6 +69,22 @@ Einzelfigurenexporte (`type: "aleria-character"`) im Exportverzeichnis ergänzen
 
 Eine bestätigte Namenskorrektur gilt bereits beim Gruppieren für alle Exporte derselben Dokument-ID. Die alte Schreibweise bleibt als Alias und in den historischen Quellen erhalten, erzeugt aber keine zweite Figur. Gleichnamige Figuren mit anderen Dokument-IDs werden dadurch nicht pauschal umbenannt; widersprechende Lebensdaten bleiben weiterhin getrennt.
 
+Bereits in `registry.json` oder `generated/characters.snapshot.json` registrierte
+`sourceOverlays` bleiben auch bei einer Ablage in einem Unterordner des
+öffentlichen Exportarchivs Quellen des nächsten Gesamtabgleichs.
+`lib/character-export-sources.mjs` liest genau diese benannten Dateien zusätzlich
+zu den bisherigen direkten Einzelexporten. Neue Unterordner werden nicht
+rekursiv durchsucht. Absolute Pfade, Quellen außerhalb des Exportarchivs und
+nach außen führende symbolische Verknüpfungen werden abgewiesen. Fehlt ein
+registrierter Export oder ist er beschädigt, bricht der Abgleich mit seinem
+Quellpfad ab, statt Personen oder Spielwerte aus dem nächsten Bestand zu verlieren.
+
+Der öffentliche Gawain-Biografieabgleich besitzt einen eigenen begrenzten Builder
+unter `AleriaAlmanach/scripts/build-gawain-character-database.mjs` (auch
+`--check`). Die Beschreibung und die Quellen stehen im Feature
+`AleriaAlmanach/modules/gawain-duncan/README.md`. Er erhält den bestehenden
+Datenbankbestand einschließlich aller fremden Klassifikationen und Spielwerte.
+
 ## Konfliktregel
 
 - Online gewinnt bei bearbeitbaren Profil- und Kampfwerten.

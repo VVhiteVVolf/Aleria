@@ -1,0 +1,4046 @@
+{
+  "checkedAt": "2026-11-01T06:29:30.642Z",
+  "changedFileCount": 806,
+  "existingChangedFiles": 806,
+  "changedBytes": 163748345,
+  "staticChangedFiles": 415,
+  "sourceOnlyChangedFiles": 391,
+  "largeFiles": [],
+  "findings": [],
+  "reviewedSyntheticReports": [
+    "diagnostics/group-system-integration-2026-11-01/browser-profile-differences.json",
+    "diagnostics/group-system-integration-2026-11-01/browser-profile-replay-fixed.json"
+  ],
+  "files": [
+    {
+      "file": "AGENTS.md",
+      "bytes": 30814,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/AleriaAlmanach.html",
+      "bytes": 151106,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/README.md",
+      "bytes": 3750,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/asset-manifest.json",
+      "bytes": 1894,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/ITEM_REGISTER.md",
+      "bytes": 12229,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/economy/price-review-2026-10-19.html",
+      "bytes": 470200,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/economy/price-review-2026-10-19.json",
+      "bytes": 794154,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/firebase.js",
+      "bytes": 74697,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/archive/archive-entry-links.js",
+      "bytes": 1519,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/backup/almanach-backup.js",
+      "bytes": 18051,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-equipment/character-equipment-registration.js",
+      "bytes": 1261,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-equipment/character-equipment-sync.js",
+      "bytes": 15254,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-equipment/equipment-armor-rules.js",
+      "bytes": 3235,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-equipment/equipment-artwork.js",
+      "bytes": 3114,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-inventory/character-inventory-card-model.js",
+      "bytes": 5978,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-inventory/character-inventory-identity.js",
+      "bytes": 5504,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-inventory/character-inventory-integration.js",
+      "bytes": 1930,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-inventory/character-inventory-renderer.js",
+      "bytes": 32250,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/characters/character-combat-profile.js",
+      "bytes": 114652,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/characters/character-inventory-profile.js",
+      "bytes": 14328,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/characters/personal-techniques/ylva-duel-techniques.js",
+      "bytes": 4558,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/characters/personal-techniques/ylva-weapon-techniques.js",
+      "bytes": 9160,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/classes/armor-routine.js",
+      "bytes": 3207,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat-styles/huskarl/huskarl-technique-factory.js",
+      "bytes": 7886,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat-styles/sirenentanz/sirenentanz-technique-factory.js",
+      "bytes": 9129,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-equipment-preparation.js",
+      "bytes": 4975,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-follow-up-resolution.js",
+      "bytes": 11644,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-profile-model.js",
+      "bytes": 86062,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-profile-resolver.js",
+      "bytes": 31976,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-resolution-service.js",
+      "bytes": 59445,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-state-model.js",
+      "bytes": 30832,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-trigger-rules.js",
+      "bytes": 20661,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-wait-action.js",
+      "bytes": 756,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/ui/combat-support-equipment-view.js",
+      "bytes": 2957,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/ui/combat-weapon-loadout-view.js",
+      "bytes": 5855,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/comments/comments-submit.js",
+      "bytes": 13581,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-catalog.js",
+      "bytes": 47885,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-model.js",
+      "bytes": 9674,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-sheet-pages.js",
+      "bytes": 2458,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-system.js",
+      "bytes": 74922,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/economy-calculator/economy-build.generated.json",
+      "bytes": 4591,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/economy-calculator/economy-runtime.global.js",
+      "bytes": 858270,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/economy-pricing/price-reference.generated.mjs",
+      "bytes": 56360,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/README.md",
+      "bytes": 6391,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js",
+      "bytes": 53726,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-hierarchy.mjs",
+      "bytes": 9157,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-people.mjs",
+      "bytes": 1627,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-theater/README.md",
+      "bytes": 6390,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-characters.mjs",
+      "bytes": 1646,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
+      "bytes": 45422,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-hierarchy.mjs",
+      "bytes": 3654,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-theater/theater-people.mjs",
+      "bytes": 9563,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-biographies.mjs",
+      "bytes": 3285,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/troetzli-household.mjs",
+      "bytes": 3861,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/herausforderung/herausforderung-rewards.js",
+      "bytes": 11032,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/house-armor/house-armor-catalog.js",
+      "bytes": 49112,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/house-armor/house-armor-model.js",
+      "bytes": 2809,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/inventory-use/inventory-use-controller.js",
+      "bytes": 11074,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/inventory-use/inventory-use-model.js",
+      "bytes": 14857,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-database/item-db-picker.js",
+      "bytes": 6115,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-database/item-db-ui.js",
+      "bytes": 1497,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-forms.js",
+      "bytes": 11298,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-model.js",
+      "bytes": 10301,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-module-catalog.js",
+      "bytes": 12263,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-standard.js",
+      "bytes": 965108,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-store.js",
+      "bytes": 6842,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-template-picker.js",
+      "bytes": 7411,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-templates.js",
+      "bytes": 380,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-trade.js",
+      "bytes": 6674,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-ui.js",
+      "bytes": 18633,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-version.json",
+      "bytes": 56,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-view.js",
+      "bytes": 17182,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-controller.js",
+      "bytes": 10658,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-data.js",
+      "bytes": 4198,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-editor.js",
+      "bytes": 19414,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-markup.js",
+      "bytes": 1451,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-model.js",
+      "bytes": 4349,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-roster.js",
+      "bytes": 5456,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-view.js",
+      "bytes": 14835,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-classic-api.js",
+      "bytes": 374,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-model.global.js",
+      "bytes": 29560,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-model.js",
+      "bytes": 4843,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-renderer.js",
+      "bytes": 48686,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/loot/loot-model.js",
+      "bytes": 2435,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/README.md",
+      "bytes": 5117,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-data.js",
+      "bytes": 78193,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-factions.mjs",
+      "bytes": 8643,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/modal/modal-navigation.js",
+      "bytes": 8106,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-character-inventory.js",
+      "bytes": 69800,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-data.js",
+      "bytes": 88959,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-events.js",
+      "bytes": 26942,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-goods.js",
+      "bytes": 38586,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-landing.js",
+      "bytes": 24880,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-templates.js",
+      "bytes": 106777,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-trade-catalog.js",
+      "bytes": 31013,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-editor/module-editor-workflow.js",
+      "bytes": 25137,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-store/module-entry-migrations.js",
+      "bytes": 1519,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/regional-equipment/regional-equipment-catalog.js",
+      "bytes": 590402,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-inventory/scene-inventory-events.js",
+      "bytes": 7648,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-inventory/scene-inventory-renderer.js",
+      "bytes": 2833,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-inventory/scene-inventory-state.js",
+      "bytes": 2822,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-inventory/scene-inventory-transfer-model.js",
+      "bytes": 10244,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-inventory/scene-inventory-ui.js",
+      "bytes": 10569,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-items/scene-item-definition.js",
+      "bytes": 5817,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-items/scene-item-interaction.js",
+      "bytes": 5890,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-items/scene-items-composer.js",
+      "bytes": 8794,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-items/scene-items-model.js",
+      "bytes": 5704,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-rest/scene-rest-controller.js",
+      "bytes": 16333,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-rest/scene-rest-model.js",
+      "bytes": 13072,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/sidebar/sidebar-registers.js",
+      "bytes": 4619,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/skalli-retinue/retinue-data.js",
+      "bytes": 51738,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/trade-catalog/trade-catalog-money.js",
+      "bytes": 1322,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/package.json",
+      "bytes": 14382,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-house-armor.mjs",
+      "bytes": 2007,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-item-register.mjs",
+      "bytes": 10300,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-landing-model.mjs",
+      "bytes": 859,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/heraldic_emblem_alpha.py",
+      "bytes": 3026,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/combat-action-card.test.mjs",
+      "bytes": 12259,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/comment-submit-completion.test.mjs",
+      "bytes": 4525,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/creature-system.test.mjs",
+      "bytes": 8709,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/duncan-carreg.test.mjs",
+      "bytes": 4928,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-landing-integration.test.mjs",
+      "bytes": 3659,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-landing-model.test.mjs",
+      "bytes": 11035,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/gwynthor-theater.test.mjs",
+      "bytes": 7221,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/gwynthor-troetzli.test.mjs",
+      "bytes": 13746,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/herausforderung-rewards.test.mjs",
+      "bytes": 7770,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/idwal-ship-cats.test.mjs",
+      "bytes": 5443,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-register-integration.test.mjs",
+      "bytes": 6440,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-register.test.mjs",
+      "bytes": 13610,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/krumme-kanne-services.test.mjs",
+      "bytes": 2163,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/markt-der-fortuna-gwynthor.test.mjs",
+      "bytes": 9138,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/module-store-revision.test.mjs",
+      "bytes": 20637,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/scene-inventory-transfer.test.mjs",
+      "bytes": 5356,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/trade-catalog-money.test.mjs",
+      "bytes": 1322,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/weapon-action-balancing.test.mjs",
+      "bytes": 10281,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/wolfshorn-companions.test.mjs",
+      "bytes": 7314,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/ylva-weapon-expansion.test.mjs",
+      "bytes": 8614,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/vite.config.mjs",
+      "bytes": 15826,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/authored-notices.json",
+      "bytes": 213891,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/board-layout.json",
+      "bytes": 25209,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/README.md",
+      "bytes": 9137,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/css/notice-rewards.css",
+      "bytes": 4657,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/data/notice-reward-catalog.json",
+      "bytes": 2733870,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/board/notice-register.js",
+      "bytes": 4068,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/composition/board-composition-inspector.mjs",
+      "bytes": 7659,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/composition/board-composition.js",
+      "bytes": 16185,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/core/tafel-bootstrap.js",
+      "bytes": 1239,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/core/tafel-state.js",
+      "bytes": 5510,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/data/authored-notices.js",
+      "bytes": 8372,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/integrations/orte-notice-bridge.js",
+      "bytes": 1824,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/notes/notice-reader.js",
+      "bytes": 6129,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/notes/zettel-board.js",
+      "bytes": 7781,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/notes/zettel-comments.js",
+      "bytes": 6091,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/notes/zettel-config.js",
+      "bytes": 7403,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/notes/zettel-editor.js",
+      "bytes": 24000,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/notes/zettel-scroll-views.js",
+      "bytes": 6630,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs",
+      "bytes": 2418,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/rewards/notice-rewards.js",
+      "bytes": 13362,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/tafel-app.js",
+      "bytes": 3012,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tafel.html",
+      "bytes": 19655,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tests/authored-notices.test.mjs",
+      "bytes": 13323,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tests/board-composition.test.mjs",
+      "bytes": 4707,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tests/gwrgan-lleucu.test.mjs",
+      "bytes": 4430,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tests/lotsensuche.test.mjs",
+      "bytes": 7717,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tests/notice-module-links.test.mjs",
+      "bytes": 4579,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tests/notice-publications.test.mjs",
+      "bytes": 4805,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tests/notice-signoffs.test.mjs",
+      "bytes": 5045,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tools/build-gwynthor-quest-notices.mjs",
+      "bytes": 6901,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/build-notice-reward-catalog.mjs",
+      "bytes": 3131,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Große Kathedrale der Neun/grosse-kathedrale-der-neun-2026-10-17.json",
+      "bytes": 57511,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Gwynthorer Theater/ensemble-und-fuehrung.json",
+      "bytes": 17779,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Gwynthorer Theater/gwynthorer-theater-2026-10-17.json",
+      "bytes": 48682,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Markt der Fortuna Gwynthor/gwynthor-fortuna-interessenbuende-2026-10-18.json",
+      "bytes": 17677,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Markt der Fortuna Gwynthor/gwynthor-handelshof-markt-der-fortuna-2026-10-18.json",
+      "bytes": 58017,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/Module/Skallis Gefolge/skallis-gefolge-2026-10-18.json",
+      "bytes": 50758,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-llythfor--cynddelw-llythfor.json",
+      "bytes": 13070,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gwynthor-troetzli-2026-10-31/person--haus-penrudd--esyllt-penrudd.json",
+      "bytes": 9823,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/README.md",
+      "bytes": 7791,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/assets/js/character-database-client.mjs",
+      "bytes": 12674,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/generated/characters.snapshot.json",
+      "bytes": 7398251,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/generated/sync-report.json",
+      "bytes": 47072,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/familien/haus-draig/gawain-draig--q1QtSIug74FzzwUAqWrs/character.json",
+      "bytes": 1314334,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/orte/gwynthor/cynddelw-llythfor--person--haus-llythfor--cynddelw-llythfor/character.json",
+      "bytes": 28937,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/orte/gwynthor/esyllt-penrudd--person--haus-penrudd--esyllt-penrudd/character.json",
+      "bytes": 22201,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/registry.json",
+      "bytes": 186190,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/scripts/sync-character-archive.mjs",
+      "bytes": 10000,
+      "published": true
+    },
+    {
+      "file": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
+      "bytes": 311286,
+      "published": true
+    },
+    {
+      "file": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/house-affiliation-review.json",
+      "bytes": 21555,
+      "published": true
+    },
+    {
+      "file": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/template.config.js",
+      "bytes": 3287,
+      "published": true
+    },
+    {
+      "file": "Karten/assets/js/core/karto-bootstrap.js",
+      "bytes": 259,
+      "published": true
+    },
+    {
+      "file": "Karten/assets/js/karto-app.js",
+      "bytes": 57278,
+      "published": true
+    },
+    {
+      "file": "Karten/assets/js/media/media-assets.registry.js",
+      "bytes": 372514,
+      "published": true
+    },
+    {
+      "file": "Karten/modules/households/households.generated.json",
+      "bytes": 480994,
+      "published": true
+    },
+    {
+      "file": "Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js",
+      "bytes": 11163,
+      "published": true
+    },
+    {
+      "file": "Kontinente/modules/administration/administration-dialog.js",
+      "bytes": 12753,
+      "published": true
+    },
+    {
+      "file": "Kontinente/modules/administration/administration-structured.mjs",
+      "bytes": 3014,
+      "published": true
+    },
+    {
+      "file": "Kontinente/modules/administration/data/celtigerns-klerus.mjs",
+      "bytes": 17087,
+      "published": true
+    },
+    {
+      "file": "Kontinente/tests/support/albic-review-baseline.mjs",
+      "bytes": 6015,
+      "published": false
+    },
+    {
+      "file": "Kontinente/tests/support/gwynthor-troetzli-family-review-20261031.json",
+      "bytes": 81520,
+      "published": false
+    },
+    {
+      "file": "Markt/WaffenRüstungen/data/shop-data.js",
+      "bytes": 23009,
+      "published": true
+    },
+    {
+      "file": "Orte/tests/poi-bridges.test.mjs",
+      "bytes": 4209,
+      "published": false
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/haus-draig.json",
+      "bytes": 264288,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/haus-llythfor.json",
+      "bytes": 60578,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/haus-penrudd.json",
+      "bytes": 92028,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/registry.json",
+      "bytes": 80697,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/js/data/gwynthor-erbstreit/falto-family.js",
+      "bytes": 2741,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js",
+      "bytes": 7579,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/js/data/house-draig-family.js",
+      "bytes": 46563,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/js/data/house-llythfor-family.js",
+      "bytes": 6202,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/js/data/house-penrudd-family.js",
+      "bytes": 7776,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/js/ui/house-placement-fields.js",
+      "bytes": 8224,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/register.html",
+      "bytes": 2695,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/tests/gwynthor-erbstreit.test.js",
+      "bytes": 9197,
+      "published": false
+    },
+    {
+      "file": "Stammbäume/tests/house-penrudd.test.js",
+      "bytes": 6848,
+      "published": false
+    },
+    {
+      "file": "Stammbäume/tests/registry-browser.test.js",
+      "bytes": 9506,
+      "published": false
+    },
+    {
+      "file": "Vorschau/shared/prepare-country-art.py",
+      "bytes": 5099,
+      "published": true
+    },
+    {
+      "file": "firebase/firestore.indexes.json",
+      "bytes": 2345,
+      "published": false
+    },
+    {
+      "file": "firebase/firestore.rules",
+      "bytes": 13646,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/scripts/sync-almanach-mechanics.mjs",
+      "bytes": 7706,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/backup/import-backup-records.js",
+      "bytes": 5552,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/comments/commit-narrative-comment.js",
+      "bytes": 7104,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-equipment/character-equipment-registration.js",
+      "bytes": 1261,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-equipment/character-equipment-sync.js",
+      "bytes": 15254,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-equipment/equipment-armor-rules.js",
+      "bytes": 3235,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-equipment/equipment-artwork.js",
+      "bytes": 3114,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-inventory/character-inventory-identity.js",
+      "bytes": 5504,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/classes/armor-routine.js",
+      "bytes": 3207,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat-styles/huskarl/huskarl-technique-factory.js",
+      "bytes": 7886,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat-styles/sirenentanz/sirenentanz-technique-factory.js",
+      "bytes": 9129,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-equipment-preparation.js",
+      "bytes": 4975,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-follow-up-resolution.js",
+      "bytes": 11644,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-profile-model.js",
+      "bytes": 86062,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-profile-resolver.js",
+      "bytes": 31976,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-resolution-service.js",
+      "bytes": 59445,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-state-model.js",
+      "bytes": 30832,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-trigger-rules.js",
+      "bytes": 20661,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-wait-action.js",
+      "bytes": 756,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/economy-pricing/price-reference.generated.mjs",
+      "bytes": 56360,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/herausforderung/herausforderung-rewards.js",
+      "bytes": 11032,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/inventory-use/inventory-use-model.js",
+      "bytes": 14857,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-model.js",
+      "bytes": 10301,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-module-catalog.js",
+      "bytes": 12263,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-standard.js",
+      "bytes": 965108,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-trade.js",
+      "bytes": 6674,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/loot/loot-model.js",
+      "bytes": 2435,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/scene-inventory/scene-inventory-transfer-model.js",
+      "bytes": 10244,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/scene-items/scene-item-definition.js",
+      "bytes": 5817,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/scene-items/scene-item-interaction.js",
+      "bytes": 5890,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/scene-items/scene-items-model.js",
+      "bytes": 5704,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/scene-rest/scene-rest-model.js",
+      "bytes": 13072,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/index.js",
+      "bytes": 2747,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-combat-comment.js",
+      "bytes": 49758,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-combat-encounter.js",
+      "bytes": 18184,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-combat-status.js",
+      "bytes": 7909,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-inventory-transfer.js",
+      "bytes": 11540,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-item-register.js",
+      "bytes": 18254,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-loot-claim.js",
+      "bytes": 9976,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-scene-item.js",
+      "bytes": 4797,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-scene-rest.js",
+      "bytes": 12252,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/commit-undo-mechanical-comment.js",
+      "bytes": 11010,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/herausforderung-rewards.js",
+      "bytes": 2923,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/item-register-module-source.js",
+      "bytes": 2579,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/item-register-template.js",
+      "bytes": 2914,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/scene-item-authoring.js",
+      "bytes": 3470,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/skill-comment-validator.js",
+      "bytes": 27232,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/commit-loot-claim.test.js",
+      "bytes": 4186,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/fixtures/combat-transaction-database.js",
+      "bytes": 2707,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/import-backup-records.test.js",
+      "bytes": 2687,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/combat-checkup-regressions.integration.mjs",
+      "bytes": 9597,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/scene-item-authoring.integration.mjs",
+      "bytes": 7842,
+      "published": false
+    },
+    {
+      "file": "firebase/tests/default-firestore-rules.test.mjs",
+      "bytes": 22699,
+      "published": false
+    },
+    {
+      "file": "firebase/tests/firestore-rules.test.mjs",
+      "bytes": 5822,
+      "published": false
+    },
+    {
+      "file": "netlify/build/publication-policy.mjs",
+      "bytes": 781,
+      "published": false
+    },
+    {
+      "file": "netlify/build/site-build-tasks.mjs",
+      "bytes": 31239,
+      "published": false
+    },
+    {
+      "file": "netlify/docs/LOCAL_RELEASES.md",
+      "bytes": 5736,
+      "published": false
+    },
+    {
+      "file": "netlify/functions/world-content-publisher.mjs",
+      "bytes": 10602,
+      "published": false
+    },
+    {
+      "file": "netlify/tests/site-build.test.mjs",
+      "bytes": 13579,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/assets/currency/aleria-goldtaler-v1.png",
+      "bytes": 2104640,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/currency/aleria-goldtaler-v1.webp",
+      "bytes": 90068,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/currency/aleria-silbertaler-v1.png",
+      "bytes": 1949983,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/currency/aleria-silbertaler-v1.webp",
+      "bytes": 69670,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/currency/image-prompts.json",
+      "bytes": 3758,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/asset-manifest.json",
+      "bytes": 3623,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "bytes": 1821323,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+      "bytes": 2587578,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+      "bytes": 1858809,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-wahre-gestalt.png",
+      "bytes": 2344111,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+      "bytes": 1895582,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+      "bytes": 2142960,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-reisegeleit/README.md",
+      "bytes": 941,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-reisegeleit/assets.json",
+      "bytes": 483,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/iorath-melyn.png",
+      "bytes": 2035699,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-reisegeleit/portraits/raban.png",
+      "bytes": 2104695,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/cynddelw-v1.png",
+      "bytes": 1663657,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/eirlys-v1.png",
+      "bytes": 2099973,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/esyllt-v1.png",
+      "bytes": 1682879,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/esyllt-v2.png",
+      "bytes": 1735918,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/manifest.json",
+      "bytes": 7238,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/troetzli-v1.png",
+      "bytes": 2315364,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/chibi/tudur-v1.png",
+      "bytes": 1835961,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/crests/llythfor-v1.png",
+      "bytes": 2376105,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-manifest.json",
+      "bytes": 1197,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/items/copper-coin-v1.png",
+      "bytes": 1204125,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/items/reward-50-copper-v1.png",
+      "bytes": 2609160,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/gwynthor-troetzli/troetzli-road-v1.png",
+      "bytes": 2891764,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/landing-folio/.source/aleria-paths-cover-v1.source.png",
+      "bytes": 3205009,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/assets/landing-folio/aleria-paths-cover-v1.png",
+      "bytes": 3760301,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/landing-folio/aleria-paths-cover-v1.webp",
+      "bytes": 437414,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/landing-folio/art-manifest.json",
+      "bytes": 5354,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/art-manifest.json",
+      "bytes": 4537,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/banner-variants.json",
+      "bytes": 7334,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/gwynthor-companions-banner-v1.png",
+      "bytes": 3198883,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/gwynthor-companions-banner-v2.png",
+      "bytes": 3123683,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/gwynthor-companions-evening-v2.png",
+      "bytes": 3068345,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/gwynthor-companions-walk-v1.png",
+      "bytes": 3288594,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/icons/book.svg",
+      "bytes": 349,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/icons/compass.svg",
+      "bytes": 404,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/icons/letter.svg",
+      "bytes": 356,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/assets/quests/icons/way.svg",
+      "bytes": 318,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/inventory/EQUIPMENT_STANDARDS_2026-11-01.md",
+      "bytes": 9136,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/inventory/ITEM_SYSTEM_AUDIT_2026-10-31.md",
+      "bytes": 22784,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/inventory/ITEM_SYSTEM_CHECKUP_2026-11-01.md",
+      "bytes": 6069,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/inventory/ITEM_SYSTEM_IMPLEMENTATION_2026-10-31.md",
+      "bytes": 11224,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/modules/LANDING_FOLIO_2026-11-01.md",
+      "bytes": 4257,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/quests/QUEST_SYSTEM_2026-11-01.md",
+      "bytes": 14949,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/quests/TROETZLI_QUEST_2026-11-01.md",
+      "bytes": 8076,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/testing/GROUP_SYSTEMS_2026-11-01.md",
+      "bytes": 6419,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/testing/RELEASE_CHECKUP_2026-11-01.md",
+      "bytes": 4370,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/docs/testing/SYSTEM_CHECKUP_2026-11-01.md",
+      "bytes": 15464,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/auth/firebase-client-context.js",
+      "bytes": 1327,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-equipment/equipment-preparation-costs.js",
+      "bytes": 1876,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-equipment/equipment-stat-description.js",
+      "bytes": 2430,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/character-inventory/inventory-placeholders.js",
+      "bytes": 1914,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/combat/combat-attack-range.js",
+      "bytes": 784,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/comments/comments-mechanical-request.js",
+      "bytes": 583,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/creatures/creature-inventory.js",
+      "bytes": 2702,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/currency/README.md",
+      "bytes": 1666,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/currency/currency-art-classic-api.mjs",
+      "bytes": 96,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/currency/currency-art.global.js",
+      "bytes": 1965,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/currency/currency-art.js",
+      "bytes": 972,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/README.md",
+      "bytes": 3743,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-character-database.mjs",
+      "bytes": 4640,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-duncan-module.mjs",
+      "bytes": 13568,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-family-snapshot.mjs",
+      "bytes": 2974,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs",
+      "bytes": 12198,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/celtigerns-wacht-anhoerung-online-2026-11-01.json",
+      "bytes": 13150,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/duncan-public-profile-2026-11-01.json",
+      "bytes": 8998,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/gawain-duncan-online-2026-11-01.json",
+      "bytes": 17539,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/gawain-public-profile-2026-11-01.json",
+      "bytes": 11303,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/group-public-scenes-2026-11-01.json",
+      "bytes": 207,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/public-character-scenes-2026-11-01.json",
+      "bytes": 182836,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/public-source-review.json",
+      "bytes": 38555,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gawain-duncan/source/reviewed-module.json",
+      "bytes": 26913,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/README.md",
+      "bytes": 2967,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/anaraut-content.mjs",
+      "bytes": 8584,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventure-content.mjs",
+      "bytes": 3581,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventures-classic-api.mjs",
+      "bytes": 374,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/group-adventures.global.js",
+      "bytes": 67842,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/draig-leibgarde-2026-11-01.json",
+      "bytes": 19443,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/idwals-schiffsmannschaft-2026-11-01.json",
+      "bytes": 47481,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/lynnes-schiffsmannschaft-2026-11-01.json",
+      "bytes": 61746,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/modul-1782120382311-2026-11-01.json",
+      "bytes": 29043,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/parzifals-schiffsmannschaft-2026-11-01.json",
+      "bytes": 69858,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/rhydians-schiffsmannschaft-2026-11-01.json",
+      "bytes": 53094,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/group-adventures/source/skallis-gefolge-2026-11-01.json",
+      "bytes": 47678,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-cathedral/patriarch-adjutant.mjs",
+      "bytes": 1386,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-formlingssache/README.md",
+      "bytes": 3124,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-formlingssache/formlingssache-characters.mjs",
+      "bytes": 2560,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-formlingssache/formlingssache-people.mjs",
+      "bytes": 5902,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/gwynthor-troetzli/llythfor-relatives.mjs",
+      "bytes": 3018,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/inventory-use/item-charge-recovery.js",
+      "bytes": 946,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/inventory-use/item-use-effects.js",
+      "bytes": 2391,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-builder/item-builder-controller.js",
+      "bytes": 10273,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-builder/item-builder-model.js",
+      "bytes": 1754,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-builder/item-builder-styles.js",
+      "bytes": 343,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-builder/item-builder-view.js",
+      "bytes": 11055,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-builder/item-builder.css",
+      "bytes": 2654,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-client.js",
+      "bytes": 691,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-firebase.js",
+      "bytes": 3047,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-model.js",
+      "bytes": 10817,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-registry.js",
+      "bytes": 1753,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-resolver.js",
+      "bytes": 1561,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-store.js",
+      "bytes": 3800,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-definition-versions.js",
+      "bytes": 1111557,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-migration-dialog.js",
+      "bytes": 3646,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-migration-model.js",
+      "bytes": 2667,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-migration-view.js",
+      "bytes": 1565,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-possession-duplication.js",
+      "bytes": 1343,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-definitions/item-reward-catalog.js",
+      "bytes": 859,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-gameplay-defaults.js",
+      "bytes": 5946,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-standard-artwork.js",
+      "bytes": 1683,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/item-register/item-register-text.js",
+      "bytes": 1489,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/GROUP_ACCOUNT.md",
+      "bytes": 4311,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-account-controller.js",
+      "bytes": 4889,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-account-dialog.js",
+      "bytes": 9661,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-account-operations.js",
+      "bytes": 3717,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-account-view.js",
+      "bytes": 4932,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-account.css",
+      "bytes": 5654,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-community.css",
+      "bytes": 3356,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-landing-companions.js",
+      "bytes": 2207,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-quest-account.js",
+      "bytes": 292,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-roster-window.js",
+      "bytes": 2571,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/group-scene-state.js",
+      "bytes": 10106,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-folio-view.js",
+      "bytes": 3381,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-folio.css",
+      "bytes": 21093,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-quest-journal.css",
+      "bytes": 1584,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-quest-journal.js",
+      "bytes": 6324,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/landing/landing-quest-model.js",
+      "bytes": 1320,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/module-store/module-entry-serialization.js",
+      "bytes": 366,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/README.md",
+      "bytes": 5007,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-authored-dossiers.js",
+      "bytes": 15066,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-backup-client.js",
+      "bytes": 1131,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-board-availability.js",
+      "bytes": 1448,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-board-source.js",
+      "bytes": 886,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-book.css",
+      "bytes": 17835,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-catalog.json",
+      "bytes": 213959,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-client.js",
+      "bytes": 648,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-context-bridge.js",
+      "bytes": 2009,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-controller.js",
+      "bytes": 15938,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-dossier-model.js",
+      "bytes": 3607,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-dossier-view.js",
+      "bytes": 6194,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-firebase.js",
+      "bytes": 8515,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-forms.js",
+      "bytes": 11265,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-journal.js",
+      "bytes": 2799,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-model.js",
+      "bytes": 5941,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-page.js",
+      "bytes": 2392,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-reward-allocation.js",
+      "bytes": 1024,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-reward-editor.js",
+      "bytes": 7426,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-route-map.js",
+      "bytes": 1271,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-scene-tracker.css",
+      "bytes": 1782,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-scene-tracker.js",
+      "bytes": 4559,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-sources.js",
+      "bytes": 3503,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-store.js",
+      "bytes": 5643,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-story.css",
+      "bytes": 7936,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/quests/quest-view.js",
+      "bytes": 9562,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-inventory/scene-inventory-purchase.js",
+      "bytes": 1338,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/scene-items/scene-item-equipment.js",
+      "bytes": 2134,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/modules/world-date/world-date-read-repository.mjs",
+      "bytes": 646,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/quests.html",
+      "bytes": 5640,
+      "published": true
+    },
+    {
+      "file": "AleriaAlmanach/scripts/audit-item-system.mjs",
+      "bytes": 6123,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-currency-art.mjs",
+      "bytes": 858,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-gawain-character-database.mjs",
+      "bytes": 2620,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-gawain-duncan-content.mjs",
+      "bytes": 1573,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-gawain-family-snapshot.mjs",
+      "bytes": 2708,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-group-adventures.mjs",
+      "bytes": 895,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-gwynthor-formlingssache.mjs",
+      "bytes": 1319,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-quest-catalog.mjs",
+      "bytes": 5409,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/build-troetzli-quest.mjs",
+      "bytes": 9140,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/plan-item-migration.mjs",
+      "bytes": 978,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/scripts/source-pages/house-armor-source.mjs",
+      "bytes": 1458,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/character-export-sources.test.mjs",
+      "bytes": 4652,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/combat-condition-storage.test.mjs",
+      "bytes": 1846,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/currency-art.test.mjs",
+      "bytes": 5544,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/equipment-standards-2026-11.test.mjs",
+      "bytes": 18469,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/gawain-character-database.test.mjs",
+      "bytes": 6488,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/gawain-duncan.test.mjs",
+      "bytes": 12426,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/gawain-family-snapshot.test.mjs",
+      "bytes": 4495,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-account.test.mjs",
+      "bytes": 18380,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-adventure-content.test.mjs",
+      "bytes": 10049,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-community.test.mjs",
+      "bytes": 11414,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-roster-window.test.mjs",
+      "bytes": 6059,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/group-scene-state.test.mjs",
+      "bytes": 17495,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/gwynthor-formlingssache.test.mjs",
+      "bytes": 7764,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/house-armor-source.test.mjs",
+      "bytes": 2356,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-definitions.test.mjs",
+      "bytes": 6054,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-register-text.test.mjs",
+      "bytes": 1805,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-system-checkup.test.mjs",
+      "bytes": 3082,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-system-readiness.test.mjs",
+      "bytes": 10578,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/item-use-definitions.test.mjs",
+      "bytes": 3345,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/landing-folio-view.test.mjs",
+      "bytes": 11444,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/landing-presentation.test.mjs",
+      "bytes": 7111,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/landing-quest-journal.test.mjs",
+      "bytes": 9769,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/quest-board-availability.test.mjs",
+      "bytes": 8787,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/quest-system.test.mjs",
+      "bytes": 14556,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/scene-item-equipment-preservation.test.mjs",
+      "bytes": 3836,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/standard-tool-artwork.test.mjs",
+      "bytes": 5904,
+      "published": false
+    },
+    {
+      "file": "AleriaAlmanach/tests/troetzli-quest.test.mjs",
+      "bytes": 3902,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/TAGESANSICHT-UND-PAPIERARCHIV.md",
+      "bytes": 6018,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/css/notice-archive.css",
+      "bytes": 4139,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/css/notice-timeline.css",
+      "bytes": 3490,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/README.md",
+      "bytes": 1336,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/assets.json",
+      "bytes": 5714,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/calendar-leaves-v1.png",
+      "bytes": 1708237,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/calendar-leaves-v1.webp",
+      "bytes": 196844,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/calendar-leaves-v2.png",
+      "bytes": 1523063,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/calendar-leaves-v2.webp",
+      "bytes": 144062,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/mount-edit-v2.json",
+      "bytes": 1241,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-0-v1.webp",
+      "bytes": 6310,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-1-v1.webp",
+      "bytes": 3952,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-2-v1.webp",
+      "bytes": 6016,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-3-v1.webp",
+      "bytes": 6208,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-4-v1.webp",
+      "bytes": 5698,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-5-v1.webp",
+      "bytes": 6586,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-6-v1.webp",
+      "bytes": 6284,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-7-v1.webp",
+      "bytes": 5622,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-8-v1.webp",
+      "bytes": 6692,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numeral-9-v1.webp",
+      "bytes": 6208,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/board-calendar/numerals-sheet-v1.png",
+      "bytes": 382899,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/issuers/signatures/iorath-melyn/assets.json",
+      "bytes": 302,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/issuers/signatures/iorath-melyn/unterschrift-v1.png",
+      "bytes": 243018,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/issuers/signatures/iorath-melyn/unterschrift-v1.webp",
+      "bytes": 51308,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/README.md",
+      "bytes": 1976,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/assets.json",
+      "bytes": 919,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/gelbes-formular-a38-v1.png",
+      "bytes": 2280169,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/gelbes-formular-a38-v1.webp",
+      "bytes": 226476,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/prompts.json",
+      "bytes": 2930,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/tewdwr-gairfan-unterschrift-v1.png",
+      "bytes": 442382,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/gildenjahresrechnung-a38/tewdwr-gairfan-unterschrift-v1.webp",
+      "bytes": 51238,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.png",
+      "bytes": 972995,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+      "bytes": 66086,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.png",
+      "bytes": 271791,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+      "bytes": 24464,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.png",
+      "bytes": 1940403,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+      "bytes": 75784,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/sankt-padraigs-tag/README.md",
+      "bytes": 1841,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/sankt-padraigs-tag/image-results.json",
+      "bytes": 482,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/sankt-padraigs-tag/padraig-kleeblatt-v1.png",
+      "bytes": 1038962,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/notices/sankt-padraigs-tag/padraig-kleeblatt-v1.webp",
+      "bytes": 71746,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/README.md",
+      "bytes": 769,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/assets.json",
+      "bytes": 2348,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/pile-large-v1.png",
+      "bytes": 1743501,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/pile-large-v1.webp",
+      "bytes": 136448,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/pile-medium-v1.png",
+      "bytes": 1544278,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/pile-medium-v1.webp",
+      "bytes": 134074,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/pile-small-v1.png",
+      "bytes": 1428142,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/pile-small-v1.webp",
+      "bytes": 130376,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/single-1-v1.png",
+      "bytes": 1205628,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/single-1-v1.webp",
+      "bytes": 176038,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/single-2-v1.png",
+      "bytes": 1201628,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/single-2-v1.webp",
+      "bytes": 125676,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/single-3-v1.png",
+      "bytes": 1215472,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/images/paper-archive/single-3-v1.webp",
+      "bytes": 120984,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/archive/notice-archive-dialog.mjs",
+      "bytes": 5152,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/archive/notice-archive-floor.mjs",
+      "bytes": 5960,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/archive/notice-archive-model.mjs",
+      "bytes": 9042,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/archive/notice-archive.mjs",
+      "bytes": 5075,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/rewards/notice-award-dialog.js",
+      "bytes": 3450,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/timeline/board-calendar-view.mjs",
+      "bytes": 4608,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/timeline/board-date-state.mjs",
+      "bytes": 623,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/timeline/board-world-date-source.mjs",
+      "bytes": 1909,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/timeline/calendar-numeral-art.mjs",
+      "bytes": 533,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/timeline/notice-dates.mjs",
+      "bytes": 1235,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/assets/js/timeline/notice-timeline.mjs",
+      "bytes": 4297,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tests/notice-timeline-archive.test.mjs",
+      "bytes": 9629,
+      "published": false
+    },
+    {
+      "file": "Anzeigetafeln/tools/build-formling-notice-art.py",
+      "bytes": 2010,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/issuers/patriarch-chancery.mjs",
+      "bytes": 1167,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/notices/erledigtes-reisegeleit.mjs",
+      "bytes": 5561,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/notices/gildenjahresrechnung-a38.mjs",
+      "bytes": 7682,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/notices/lleuwens-anhoerung.mjs",
+      "bytes": 6378,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/notices/sankt-padraigs-tag.mjs",
+      "bytes": 3903,
+      "published": true
+    },
+    {
+      "file": "Anzeigetafeln/tools/prepare-calendar-art.py",
+      "bytes": 2375,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gawain-draig-oeffentliche-biografie-2026-11-01.json",
+      "bytes": 12283,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--euddogwy.json",
+      "bytes": 3998,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--lleuwen.json",
+      "bytes": 5368,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--orvar.json",
+      "bytes": 4268,
+      "published": true
+    },
+    {
+      "file": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--ulrich.json",
+      "bytes": 5026,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/lib/character-export-sources.mjs",
+      "bytes": 2775,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/orte/gwynthor/euddogwy-o-cenyr--person--gwynthor-formlingssache--euddogwy/character.json",
+      "bytes": 10430,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/orte/gwynthor/lleuwen--person--gwynthor-formlingssache--lleuwen/character.json",
+      "bytes": 13214,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/orte/gwynthor/orvar-schattentanzer--person--gwynthor-formlingssache--orvar/character.json",
+      "bytes": 10945,
+      "published": true
+    },
+    {
+      "file": "CharakterDatenbank/records/orte/gwynthor/ulrich-schniedel--person--gwynthor-formlingssache--ulrich/character.json",
+      "bytes": 12458,
+      "published": true
+    },
+    {
+      "file": "IconOrdner/ReiterIcons/Almanach.svg",
+      "bytes": 1537,
+      "published": true
+    },
+    {
+      "file": "IconOrdner/ReiterIcons/Anzeigetafeln.svg",
+      "bytes": 1506,
+      "published": true
+    },
+    {
+      "file": "IconOrdner/ReiterIcons/Quests.svg",
+      "bytes": 1515,
+      "published": true
+    },
+    {
+      "file": "Kontinente/tests/albic-review-baseline.test.mjs",
+      "bytes": 3144,
+      "published": false
+    },
+    {
+      "file": "Kontinente/tests/support/gawain-public-person-review-20261101.json",
+      "bytes": 1060,
+      "published": false
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/backups/haus-draig/r00000003-20261101T040507211Z.json",
+      "bytes": 264288,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/backups/haus-llythfor/r00000006-20261031T031801852Z.json",
+      "bytes": 60578,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/backups/haus-penrudd/r00000004-20261031T031801852Z.json",
+      "bytes": 91638,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/data/published-families/backups/haus-penrudd/r00000005-20261031T052808451Z.json",
+      "bytes": 92028,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Llythfor.png",
+      "bytes": 2376105,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/assets/images/houses/Venalys/haus-falto.png",
+      "bytes": 2395600,
+      "published": true
+    },
+    {
+      "file": "Stammbäume/tools/prepare-falto-emblem.py",
+      "bytes": 2433,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/README.md",
+      "bytes": 2880,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/baseline-loader.mjs",
+      "bytes": 361,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/baseline-sources.json",
+      "bytes": 17353,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/emblem-audit.json",
+      "bytes": 673,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/image-prompts.json",
+      "bytes": 6152,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/prepare-baseline.py",
+      "bytes": 1388,
+      "published": false
+    },
+    {
+      "file": "diagnostics/falto-register-2026-10-31/test-baseline-comparison.json",
+      "bytes": 107,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/draig-leibgarde-review.json",
+      "bytes": 20497,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/group-inventory-rules.test.mjs",
+      "bytes": 22590,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/idwals-schiffsmannschaft-review.json",
+      "bytes": 45753,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/lynnes-schiffsmannschaft-review.json",
+      "bytes": 59923,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/manifest.json",
+      "bytes": 3523,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/modul-1782120382311-review.json",
+      "bytes": 39549,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/parzifals-schiffsmannschaft-review.json",
+      "bytes": 67657,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/rhydians-schiffsmannschaft-review.json",
+      "bytes": 51071,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-adventures-2026-11-01/skallis-gefolge-review.json",
+      "bytes": 47322,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/FIREBASE_RELEASE_READINESS.md",
+      "bytes": 14622,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/GAWAIN_PUBLIC_SYNC.md",
+      "bytes": 8613,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/README.md",
+      "bytes": 1655,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/TERRITORY_FAMILY_REVIEW.md",
+      "bytes": 2649,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/audit-firebase-release-readiness.mjs",
+      "bytes": 8452,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/audit-gwynthor-affiliation-plan.mjs",
+      "bytes": 3273,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/audit-historical-family-current.mjs",
+      "bytes": 1793,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/audit-historical-family-head.mjs",
+      "bytes": 1780,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/before-gawain-database-hashes.json",
+      "bytes": 116569,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/before-profile-hashes.json",
+      "bytes": 25363,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-after-state.json",
+      "bytes": 642872,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-before-state.json",
+      "bytes": 639164,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-groups.json",
+      "bytes": 1798,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-pre-profile-restart-state.json",
+      "bytes": 643918,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-profile-differences.json",
+      "bytes": 1501,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-profile-replay-fixed.json",
+      "bytes": 2116,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-stability-after-state.json",
+      "bytes": 643918,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-stability-before-state.json",
+      "bytes": 642872,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/browser-transfer-verification.json",
+      "bytes": 1083,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/check-character-source-plan.mjs",
+      "bytes": 3643,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/final-gameplay-preservation.json",
+      "bytes": 204,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/firebase-release-readiness.json",
+      "bytes": 13215,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/gawain-gameplay-preflight.json",
+      "bytes": 960,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/gawain-preservation-result.json",
+      "bytes": 1129,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/gawain-retained-source-gameplay.json",
+      "bytes": 88,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/gawain-retained-source-plan.json",
+      "bytes": 2108,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/gawain-sync-preflight.json",
+      "bytes": 9529,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/group-community-review.md",
+      "bytes": 3602,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/group-first-assignment-audit.json",
+      "bytes": 1944,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/gwynthor-affiliation-plan.json",
+      "bytes": 6696,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/historical-family-current-diff.json",
+      "bytes": 207,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/historical-family-head.json",
+      "bytes": 36423147,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/planned-gameplay-retained-sources.json",
+      "bytes": 4824609,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/planned-gameplay.json",
+      "bytes": 2754694,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/preview.html",
+      "bytes": 2519,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/preview.mjs",
+      "bytes": 7055,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/release-checks.json",
+      "bytes": 2683,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/replay-group-profile-transfers.mjs",
+      "bytes": 5503,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/ui-adapter-check.json",
+      "bytes": 945,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/ui-adapter-restart-check.json",
+      "bytes": 512,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/ui-server.mjs",
+      "bytes": 7459,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/verification.json",
+      "bytes": 3615,
+      "published": false
+    },
+    {
+      "file": "diagnostics/group-system-integration-2026-11-01/verify-browser-transfers.mjs",
+      "bytes": 2601,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-a38-2026-10-31/browser-review.json",
+      "bytes": 725,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-a38-2026-10-31/review.mjs",
+      "bytes": 5577,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/browser-failure.json",
+      "bytes": 8524,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/browser-review.json",
+      "bytes": 1465,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/generation-jobs.json",
+      "bytes": 11885,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/notice-art-jobs.json",
+      "bytes": 3436,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/review.mjs",
+      "bytes": 6614,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/richter-des-reinen-blutes-source.html",
+      "bytes": 47031,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-formlingssache-2026-10-31/verification.json",
+      "bytes": 1148,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-llythfor-family-2026-10-31/browser-review.json",
+      "bytes": 2602,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-llythfor-family-2026-10-31/emblem-alpha-review.json",
+      "bytes": 589,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-llythfor-family-2026-10-31/generation-jobs.json",
+      "bytes": 5827,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-llythfor-family-2026-10-31/inspect-family.mjs",
+      "bytes": 4048,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-llythfor-family-2026-10-31/penrudd-emblem-review.json",
+      "bytes": 829,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-padraig-2026-10-31/browser-review.json",
+      "bytes": 378,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-padraig-2026-10-31/generation-job.json",
+      "bytes": 2053,
+      "published": false
+    },
+    {
+      "file": "diagnostics/gwynthor-padraig-2026-10-31/review.mjs",
+      "bytes": 3855,
+      "published": false
+    },
+    {
+      "file": "diagnostics/item-system-2026-10-31/after-defaults.json",
+      "bytes": 12632,
+      "published": false
+    },
+    {
+      "file": "diagnostics/item-system-2026-10-31/audit-final.json",
+      "bytes": 7174,
+      "published": false
+    },
+    {
+      "file": "diagnostics/item-system-2026-10-31/before-defaults.json",
+      "bytes": 30471,
+      "published": false
+    },
+    {
+      "file": "diagnostics/item-system-2026-10-31/migration-plan.json",
+      "bytes": 44698,
+      "published": false
+    },
+    {
+      "file": "diagnostics/item-system-2026-10-31/ui-harness.html",
+      "bytes": 2236,
+      "published": false
+    },
+    {
+      "file": "diagnostics/item-system-2026-10-31/verification.json",
+      "bytes": 2909,
+      "published": false
+    },
+    {
+      "file": "diagnostics/landing-folio-2026-11-01/preview.html",
+      "bytes": 2767,
+      "published": false
+    },
+    {
+      "file": "diagnostics/landing-folio-2026-11-01/preview.mjs",
+      "bytes": 5445,
+      "published": false
+    },
+    {
+      "file": "diagnostics/landing-folio-2026-11-01/verification.json",
+      "bytes": 1794,
+      "published": false
+    },
+    {
+      "file": "diagnostics/paper-archive-2026-10-31/browser-review.json",
+      "bytes": 1185,
+      "published": false
+    },
+    {
+      "file": "diagnostics/paper-archive-2026-10-31/calendar-generation.json",
+      "bytes": 3375,
+      "published": false
+    },
+    {
+      "file": "diagnostics/paper-archive-2026-10-31/generation-jobs.json",
+      "bytes": 13041,
+      "published": false
+    },
+    {
+      "file": "diagnostics/paper-archive-2026-10-31/review.mjs",
+      "bytes": 10791,
+      "published": false
+    },
+    {
+      "file": "diagnostics/paper-archive-2026-10-31/travel-portraits-generation.json",
+      "bytes": 3438,
+      "published": false
+    },
+    {
+      "file": "diagnostics/paper-archive-2026-10-31/travel-signature-generation.json",
+      "bytes": 1233,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/adventure-result.json",
+      "bytes": 414282,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/banner-gallery.html",
+      "bytes": 1475,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/landing-harness.html",
+      "bytes": 719,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/landing-harness.js",
+      "bytes": 844,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/route-calculation.json",
+      "bytes": 1810,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/route-check.json",
+      "bytes": 1810,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/scene-harness.html",
+      "bytes": 965,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/scene-harness.js",
+      "bytes": 1818,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/ui-harness.html",
+      "bytes": 5690,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/ui-harness.js",
+      "bytes": 4824,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/verification.json",
+      "bytes": 3635,
+      "published": false
+    },
+    {
+      "file": "diagnostics/quest-system-2026-11-01/verify-results.mjs",
+      "bytes": 4577,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/audit-release-source.mjs",
+      "bytes": 2567,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/combat-items/findings.md",
+      "bytes": 7768,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/combat-items/release-state.integration.mjs",
+      "bytes": 22631,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/combat-items/skalli-output-diff.json",
+      "bytes": 14097,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/combat-items/skalli-output-diff.mjs",
+      "bytes": 3567,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/combat-items/verification.json",
+      "bytes": 4010,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/REVIEW.md",
+      "bytes": 6404,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/check-formling-art.mjs",
+      "bytes": 1154,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/check-gameplay-preservation.py",
+      "bytes": 2243,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/check-public-references.mjs",
+      "bytes": 4154,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/check-travel-source-window.mjs",
+      "bytes": 982,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/check-troetzli-export-diff.mjs",
+      "bytes": 2785,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/diff-numstat.txt",
+      "bytes": 16804,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/formling-art.json",
+      "bytes": 1980,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/full-tests-final-status.json",
+      "bytes": 79,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/gameplay-preservation.json",
+      "bytes": 395,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/public-references.json",
+      "bytes": 173139,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/run-frontend-tests.py",
+      "bytes": 940,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/status-before.txt",
+      "bytes": 27667,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/travel-source-window.json",
+      "bytes": 1195,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/frontend/troetzli-export-diff.json",
+      "bytes": 2990,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/full-release-preflight-status.json",
+      "bytes": 1137,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/gameplay-preservation-after-derived-refresh.json",
+      "bytes": 91,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/price-reference-refresh.json",
+      "bytes": 472,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/run-full-preflight.py",
+      "bytes": 1228,
+      "published": false
+    },
+    {
+      "file": "diagnostics/release-checkup-2026-11-01/source-inventory.json",
+      "bytes": 105816,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/backup-mixed-restore-result.json",
+      "bytes": 7361,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/backup-mixed-restore.integration.mjs",
+      "bytes": 7549,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/combat-findings.md",
+      "bytes": 12692,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/default-firestore-rules.test.mjs",
+      "bytes": 21402,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/firestore-rules.test.mjs",
+      "bytes": 5789,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/house-armor-registry-diff.json",
+      "bytes": 24892,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/items-audit.json",
+      "bytes": 7174,
+      "published": false
+    },
+    {
+      "file": "diagnostics/system-checkup-2026-11-01/verification.json",
+      "bytes": 4696,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/README.md",
+      "bytes": 2450,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/audit-tools.mjs",
+      "bytes": 3539,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/contact-inputs.json",
+      "bytes": 5871,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/contact-sheet.ps1",
+      "bytes": 1609,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/definition-image-only-proof.json",
+      "bytes": 13586,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/final-verification.json",
+      "bytes": 1689,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/tool-image-inventory.json",
+      "bytes": 54852,
+      "published": false
+    },
+    {
+      "file": "diagnostics/tool-item-art-inventory-2026-11-01/verification.json",
+      "bytes": 1689,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-equipment/equipment-preparation-costs.js",
+      "bytes": 1876,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/character-inventory/inventory-placeholders.js",
+      "bytes": 1914,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/characters/character-import-policy.js",
+      "bytes": 4632,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/characters/character-save-guard.js",
+      "bytes": 9576,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/classes/brevanor/brevanor-class-registry.js",
+      "bytes": 1128,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/combat/combat-attack-range.js",
+      "bytes": 784,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/creatures/catalog/household-companion-profiles.js",
+      "bytes": 5647,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/creatures/catalog/idwal-ship-cats.js",
+      "bytes": 4271,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/gawain-duncan/gawain-duncan-module.mjs",
+      "bytes": 13568,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/gawain-duncan/gawain-public-biography.mjs",
+      "bytes": 12198,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/group-adventures/anaraut-content.mjs",
+      "bytes": 8584,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/group-adventures/group-adventure-content.mjs",
+      "bytes": 3581,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/group-adventures/group-adventures-classic-api.mjs",
+      "bytes": 374,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/house-armor/house-armor-assignment.js",
+      "bytes": 5446,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/house-armor/house-armor-catalog.js",
+      "bytes": 49112,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/house-armor/house-armor-model.js",
+      "bytes": 2809,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/inventory-use/item-charge-recovery.js",
+      "bytes": 946,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/inventory-use/item-use-effects.js",
+      "bytes": 2391,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-definitions/item-definition-model.js",
+      "bytes": 10817,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-definitions/item-definition-registry.js",
+      "bytes": 1753,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-definitions/item-definition-resolver.js",
+      "bytes": 1561,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-definitions/item-definition-versions.js",
+      "bytes": 1111557,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-definitions/item-migration-model.js",
+      "bytes": 2667,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-companion-firebase.js",
+      "bytes": 4443,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-companions.js",
+      "bytes": 918,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/item-register/item-register-standard-artwork.js",
+      "bytes": 1683,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/group-landing-inventory.js",
+      "bytes": 2212,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/group-landing-migration.js",
+      "bytes": 3456,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/group-landing-model.js",
+      "bytes": 4349,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/group-landing-roster.js",
+      "bytes": 5456,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/group-landing-treasury.js",
+      "bytes": 2744,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/landing-model.js",
+      "bytes": 4843,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/landing/landing-quest-model.js",
+      "bytes": 1320,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/quests/quest-dossier-model.js",
+      "bytes": 3607,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/quests/quest-model.js",
+      "bytes": 5941,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/generated/scene-items/scene-item-equipment.js",
+      "bytes": 2134,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/groups/README.md",
+      "bytes": 4835,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/groups/commit-group-inventory.js",
+      "bytes": 8269,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/groups/group-inventory-equipment.js",
+      "bytes": 275,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/groups/group-inventory-membership.js",
+      "bytes": 2573,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/groups/group-inventory-scene.js",
+      "bytes": 2275,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/groups/group-inventory-transfer.js",
+      "bytes": 4297,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/commit-item-award.js",
+      "bytes": 6031,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/commit-item-definition.js",
+      "bytes": 6767,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/commit-item-migration.js",
+      "bytes": 7437,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/commit-item-record.js",
+      "bytes": 11319,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/commit-item-trade.js",
+      "bytes": 964,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/item-backup.js",
+      "bytes": 4264,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/item-claim-undo.js",
+      "bytes": 1009,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/item-definition-repository.js",
+      "bytes": 9897,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/item-grant-service.js",
+      "bytes": 3894,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/item-inventory-update.js",
+      "bytes": 2059,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/items/item-transfer-equipment.js",
+      "bytes": 1130,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/mechanical-comment-payload.js",
+      "bytes": 1304,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/mechanics/mechanical-undo-inventory.js",
+      "bytes": 2107,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/quests/commit-quest.js",
+      "bytes": 13083,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/quests/quest-backup.js",
+      "bytes": 2447,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/quests/quest-evidence.js",
+      "bytes": 784,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/quests/quest-group-account.js",
+      "bytes": 1668,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/quests/quest-rewards.js",
+      "bytes": 4625,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/src/quests/quest-scene-windows.js",
+      "bytes": 817,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/combat-inventory-hydration.test.js",
+      "bytes": 2645,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/firestore-transaction-fixture.test.js",
+      "bytes": 1810,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/group-content-membership.test.js",
+      "bytes": 7712,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/group-inventory-audit.test.js",
+      "bytes": 1344,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/group-inventory-profile.test.js",
+      "bytes": 7127,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/group-inventory.test.js",
+      "bytes": 12059,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/combat-rest-lock.integration.mjs",
+      "bytes": 3982,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/equipment-standards.integration.mjs",
+      "bytes": 12209,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/group-inventory.integration.mjs",
+      "bytes": 12965,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/inventory-transfer.integration.mjs",
+      "bytes": 3276,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/item-definitions.integration.mjs",
+      "bytes": 12079,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/item-passive-profile.integration.mjs",
+      "bytes": 7093,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/integration/quest-adventure.integration.mjs",
+      "bytes": 21632,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/inventory-transfer.test.js",
+      "bytes": 9499,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/item-definitions.test.js",
+      "bytes": 2916,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/item-passive-profile.test.js",
+      "bytes": 10834,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/item-system-checkup.test.js",
+      "bytes": 5312,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/item-system-transactions.test.js",
+      "bytes": 11565,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/mechanical-undo-inventory.test.js",
+      "bytes": 5187,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/quest-notice-reward-identity.test.js",
+      "bytes": 4780,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/quest-system.test.js",
+      "bytes": 14625,
+      "published": false
+    },
+    {
+      "file": "firebase/functions/tests/scene-rest-current-inventory.test.js",
+      "bytes": 4954,
+      "published": false
+    },
+    {
+      "file": "netlify/build/adventure-system-tasks.mjs",
+      "bytes": 6916,
+      "published": false
+    },
+    {
+      "file": "netlify/build/check-mechanics-projection.mjs",
+      "bytes": 1296,
+      "published": false
+    },
+    {
+      "file": "netlify/build/prepare-runtime-checks.mjs",
+      "bytes": 3680,
+      "published": false
+    },
+    {
+      "file": "netlify/tests/adventure-release.test.mjs",
+      "bytes": 9568,
+      "published": false
+    },
+    {
+      "file": "netlify/tests/frontend-source-publication.test.mjs",
+      "bytes": 3083,
+      "published": false
+    }
+  ]
+}

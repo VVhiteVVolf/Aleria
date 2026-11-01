@@ -1,0 +1,235 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-formlingssache--orvar",
+  "slug": "orvar-schattentanzer",
+  "identity": {
+    "name": "Orvar Schattentänzer",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-formlingssache--orvar",
+      "documentIds": [
+        "person--gwynthor-formlingssache--orvar"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-formlingssache--orvar",
+          "createdAt": "2026-10-31T00:00:00Z",
+          "updatedAt": "2026-10-31T00:00:00Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/gwynthor-formlingssache-2026-10-31/person--gwynthor-formlingssache--orvar.json",
+    "sourceExportedAt": "2026-10-31T00:00:00Z",
+    "sourceUpdatedAt": "2026-10-31T00:00:00Z",
+    "sourceDocumentIds": [
+      "person--gwynthor-formlingssache--orvar"
+    ],
+    "contentHash": "fc7b0a0451c3344bbc23941b1e66a78168e592448137985b3991e3f6ed7f6d08"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-formlingssache"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-formlingssache--orvar",
+        "worldPersonId": "person--gwynthor-formlingssache--orvar",
+        "name": "Orvar Schattentänzer",
+        "title": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+        "role": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+        "sex": "male",
+        "race": "Mensch",
+        "birth": "1707",
+        "origin": "Klangheim · Aldrimar",
+        "currentLocation": "Gwynthor",
+        "fraktion": "Gwynthorer Theater",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+        "bio": "Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.\n\nMit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.\n\nAls Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus.",
+        "status": "Lebend",
+        "archived": false,
+        "createdAt": "2026-10-31T00:00:00Z",
+        "updatedAt": "2026-10-31T00:00:00Z",
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+            "emotes": []
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetSchemaVersion": 1,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Orvar Schattentänzer"
+            },
+            {
+              "label": "Alter",
+              "value": "33 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Klangheim · Aldrimar"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Schauspieler · kleinere Ritter- und Kriegerrollen"
+            }
+          ],
+          "quote": "",
+          "quoteBy": "",
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+            "portraitFit": "cover",
+            "crestImage": "",
+            "biographyTitle": "Orvar Schattentänzer",
+            "biographyText": "<p>Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.</p><p>Mit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.</p><p>Als Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus.</p>",
+            "abilitiesTitle": "Auftreten",
+            "abilities": [],
+            "worksTitle": "Tätigkeit",
+            "works": [],
+            "backgroundTitle": "Weitere Angaben",
+            "backgroundText": "",
+            "portraitStages": [],
+            "portraitCaptions": []
+          }
+        }
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-formlingssache--orvar",
+    "worldPersonId": "person--gwynthor-formlingssache--orvar",
+    "name": "Orvar Schattentänzer",
+    "title": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+    "role": "Schauspieler · kleinere Ritter- und Kriegerrollen",
+    "sex": "male",
+    "race": "Mensch",
+    "birth": "1707",
+    "origin": "Klangheim · Aldrimar",
+    "currentLocation": "Gwynthor",
+    "fraktion": "Gwynthorer Theater",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+    "bio": "Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.\n\nMit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.\n\nAls Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus.",
+    "status": "Lebend",
+    "archived": false,
+    "createdAt": "2026-10-31T00:00:00Z",
+    "updatedAt": "2026-10-31T00:00:00Z",
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+        "emotes": []
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetSchemaVersion": 1,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Orvar Schattentänzer"
+        },
+        {
+          "label": "Alter",
+          "value": "33 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Klangheim · Aldrimar"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schauspieler · kleinere Ritter- und Kriegerrollen"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+        "portraitFit": "cover",
+        "crestImage": "",
+        "biographyTitle": "Orvar Schattentänzer",
+        "biographyText": "<p>Orvar Schattentänzer stammt aus Klangheim in Aldrimar und spielt am Gwynthorer Theater kleinere Nebenrollen. Mit dreiunddreißig ist er ein kräftiger, gutaussehender Darsteller mit blondem Haar, blauen Augen und einem offenen, charismatischen Auftreten. Seine Statur bringt ihm häufig die Rollen von Rittern und Kriegern ein.</p><p>Mit der Statistin Lleuwen ist er seit längerer Zeit verbunden. Nach seiner Aussage hatte sie ihm ihre Natur als Formling schon vor ihrer Entlarvung gestanden. Er habe sie dennoch geliebt und versprochen, auf sie aufzupassen. Beide wollten eines Tages gemeinsam weiterziehen und sich vielleicht einer Zirkusgruppe anschließen.</p><p>Als Ulrich Schniedel Lleuwen mit Tenebriumstaub entlarvte, griff Orvar nach einem Übungsschwert und schlug den Hexenjäger. Die Stadtwache unterband den Streit. Orvar beruft sich auf seine Liebe und bittet um Lleuwens Freilassung; wegen des Schlages steht zugleich Ulrichs Beschwerde gegen ihn im Raum. Die Anhörung und ihre Entscheidung stehen noch aus.</p>",
+        "abilitiesTitle": "Auftreten",
+        "abilities": [],
+        "worksTitle": "Tätigkeit",
+        "works": [],
+        "backgroundTitle": "Weitere Angaben",
+        "backgroundText": "",
+        "portraitStages": [],
+        "portraitCaptions": []
+      }
+    },
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

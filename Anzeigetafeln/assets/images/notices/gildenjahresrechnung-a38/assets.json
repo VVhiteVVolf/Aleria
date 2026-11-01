@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "images": [
+    {
+      "original": "gelbes-formular-a38-v1.png",
+      "display": "gelbes-formular-a38-v1.webp",
+      "crop": [
+        91,
+        33,
+        1188,
+        1223
+      ],
+      "width": 737,
+      "height": 800,
+      "originalSha256": "05b22a2e48733098a9fa45d4e2bf7c759b3ba7c36c971efd48f1b41a2994525d",
+      "displaySha256": "befc12652bdc8be761fcaf28a239236e857d705acd16d6318e00f3fa1188a7bf"
+    },
+    {
+      "original": "tewdwr-gairfan-unterschrift-v1.png",
+      "display": "tewdwr-gairfan-unterschrift-v1.webp",
+      "crop": [
+        161,
+        171,
+        2059,
+        589
+      ],
+      "width": 800,
+      "height": 176,
+      "originalSha256": "635b5ec24114a42853147e45c5698edc3503172f1e6e4aa0fc8b4f19de416103",
+      "displaySha256": "34cb98a3f51121b402f42134d7029b0db17c5f1d7ea912ef56bd733e4703de4c"
+    }
+  ]
+}

@@ -6,6 +6,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
 const targetRoot = resolve(root, 'firebase/functions/src/generated');
 const files = [
+  'landing/group-landing-roster.js',
+  'group-adventures/group-adventures-classic-api.mjs',
+  'quests/quest-model.js',
+  'quests/quest-dossier-model.js',
+  'item-definitions/item-migration-model.js',
+  'characters/character-save-guard.js',
+  'item-register/item-register-companion-firebase.js',
   'comments/comment-activity-preview.js',
   'combat-critical/combat-critical-conditions.js',
   'combat-critical/combat-critical-lifecycle.js',

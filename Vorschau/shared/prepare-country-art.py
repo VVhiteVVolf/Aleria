@@ -4,7 +4,6 @@ from importlib.util import spec_from_file_location, module_from_spec
 import argparse
 import hashlib
 import json
-import math
 import sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
@@ -44,21 +43,7 @@ def main():
             padding = dict(left=0,top=0)
             circle = None
             if job['shape']=='circle':
-                pixels=np.array(final)
-                mask=pixels[:,:,3]==255
-                y,x=np.nonzero(mask)
-                cx,cy=round((x.min()+x.max())/2),round((y.min()+y.max())/2)
-                oy,ox=np.nonzero(~mask)
-                radius=math.floor(np.hypot(ox-cx,oy-cy).min())-1
-                yy,xx=np.ogrid[:original.height,:original.width]
-                pixels[:,:,3]=np.where((xx-cx)**2+(yy-cy)**2<=radius**2,255,0).astype('uint8')
-                side=math.ceil(max(2*radius/.86,2*max(cx,original.width-cx,cy,original.height-cy)+4))
-                if side%2:side+=1
-                padding=dict(left=side//2-cx,top=side//2-cy)
-                canvas=Image.new('RGBA',(side,side))
-                canvas.paste(Image.fromarray(pixels),(padding['left'],padding['top']))
-                final=canvas
-                circle=dict(centre=[side//2,side//2],radius=radius)
+                final,padding,circle=module.frame_circular_emblem(final)
             elif job['shape']=='banner' and original.width!=original.height:
                 side=max(original.size)
                 padding=dict(left=(side-original.width)//2,top=(side-original.height)//2)

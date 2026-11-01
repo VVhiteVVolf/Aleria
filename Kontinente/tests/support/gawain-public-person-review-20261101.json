@@ -1,0 +1,24 @@
+{
+  "reviewedAt": "2026-11-01",
+  "beforeCommit": "fc325cbc21cdff4b5eaf526d04c233e184cb3c7d",
+  "reason": "Approved public Gawain biography from the group adventure work: Sir title, public summary and biographyModule, with field-specific source revision 12. The exact approved metadata is checked before restoring only its prior metadata for the existing historical territorial proof. Person identity, portrait, life dates, family relations and all neighboring records remain hashed; no historical aggregate checksum is changed.",
+  "sources": [
+    "AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs",
+    "Stammbäume/assets/js/data/house-draig-family.js"
+  ],
+  "families": {
+    "haus-draig": {
+      "gawain-draig": {
+        "before": {
+          "title": "",
+          "notes": "",
+          "extensions": {
+            "registryManagedSourceRevision": 11,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        "afterSha256": "6994f9355dacd689fbedf1a28e6524f11b08c8f4e23197f43899f58ee95e35ae"
+      }
+    }
+  }
+}

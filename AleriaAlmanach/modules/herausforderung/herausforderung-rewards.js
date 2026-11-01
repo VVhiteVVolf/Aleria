@@ -1,8 +1,9 @@
 import { validateConditionUsage } from '../combat/combat-condition-usage.js?v=20261015-graded-challenges-v1';
-import { createOwnedItem } from '../item-register/item-register-model.js';
+import { createGrantedItem } from '../item-register/item-register-model.js';
 import { moneyState, moneyTotal, toMinor, formatMoney, formatCopper, localizedNumber } from '../item-register/item-register-money.js';
 import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
 import { attachInventoryEquipment } from '../character-equipment/character-equipment-registration.js';
+import { itemDefinitionFromTemplate } from '../item-definitions/item-definition-model.js';
 import { createManualCombatCondition, buildCombatStatusChange, formatStatusDuration } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
 import { normalizeChallengeCombatEffects, validateChallengeCombatEffects, normalizeChallengeRecipient, formatChallengeCombatResult } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
@@ -18,6 +19,7 @@ export function normalizeHerausforderungBenefits(value = {}) {
     combatEffects: normalizeChallengeCombatEffects(value?.combatEffects),
     items: (Array.isArray(value?.items) ? value.items : []).slice(0, MAX_REWARD_ITEMS).map(item => ({
       template: clean(item?.template, 240), moduleId: clean(item?.moduleId, 240), sourceRevision: clean(item?.sourceRevision, 160),
+      ...(item?.definitionRef ? { definitionRef: copy(item.definitionRef) } : {}),
       quantity: Number(item?.quantity ?? 1), title: clean(item?.title), ...(item?.product ? { product: copy(item.product) } : {})
     })),
     effects: (Array.isArray(value?.effects) ? value.effects : []).slice(0, MAX_REWARD_EFFECTS).map(effect => ({
@@ -109,12 +111,11 @@ export function applyHerausforderungBenefits({ character, profile, state = {}, b
     if (inventory.items.length >= 80) throw Error('Das Inventar hat bereits 80 Einträge. Bitte zuerst Platz schaffen.');
     const id = `reward:${identity}:${index}`;
     if (inventory.items.some(item => item.id === id)) throw Error('Diese Belohnung ist bereits im Inventar.');
-    const item = createOwnedItem(product, { id, characterId: character.id, characterName: character.name,
-      quantity: reference.quantity, unitCopper: product.priceRange?.minCopper || 0, now });
+    const item = createGrantedItem(product, { id, characterId: character.id, characterName: character.name,
+      quantity: reference.quantity, now });
     item.acquisition = { kind: 'challenge-reward', challengeId, at: now };
-    item.purchase = { ...item.purchase, sourceKind: 'challenge-reward', paidCopper: 0 };
     inventory.items.push(item);
-    attachInventoryEquipment(combatProfile, item);
+    attachInventoryEquipment(combatProfile, item, { definition: itemDefinitionFromTemplate(product) });
     granted.push(item);
   }
   if (normalized.copper) {

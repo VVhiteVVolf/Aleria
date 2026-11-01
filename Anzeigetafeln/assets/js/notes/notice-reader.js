@@ -1,12 +1,14 @@
 (function () {
   'use strict';
   let activeId = '';
+  let archiveEntryId = '';
   let personPage = 0;
   let opener = null;
   let stopLayout = () => {};
   let stopTypography = () => {};
   const rt = () => window.TafelRuntime;
-  const visibleMembers = () => window.TafelNoticeStacks.members(rt().state().zettel, activeId, { includeSecret: rt().isEditMode() });
+  const readable = () => window.TafelNoticeTimeline?.readableNotices(archiveEntryId) || rt().state().zettel;
+  const visibleMembers = () => window.TafelNoticeStacks.members(readable(), activeId, { includeSecret: rt().isEditMode() });
 
   function render() {
     const stack = visibleMembers();
@@ -32,8 +34,14 @@
     content.innerHTML = window.TafelZettelViews.renderLive(notice, { personPage });
     content.scrollTop = 0;
     document.getElementById('scroll-actions').innerHTML = rt().isEditMode()
-      ? `<button class="s-btn s-edit" type="button" data-action="zettel-open-edit" data-zettel-id="${esc(activeId)}">Bearbeiten</button><button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>`
+      ? `<button class="s-btn s-edit" type="button" data-action="zettel-open-edit" data-zettel-id="${esc(activeId)}">Bearbeiten</button>${!archiveEntryId ? `<button class="s-btn" type="button" data-action="archive-publication" data-notice-id="${esc(activeId)}">Abhaken &amp; zusammenknüllen</button>` : ''}<button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>`
       : '<button class="s-btn s-cancel" type="button" data-action="close-scroll">Schließen</button>';
+    if (!notice.secret) {
+      const questLink = document.createElement('a'); questLink.className = 's-btn';
+      questLink.textContent = 'Quest & Abenteuer ↗'; questLink.target = '_blank'; questLink.rel = 'noopener';
+      questLink.href = `/AleriaAlmanach/quests.html?board=${encodeURIComponent(window.TAFEL_CONFIG.boardId)}&notice=${encodeURIComponent(notice.noticeGroupId || notice.id)}`;
+      document.getElementById('scroll-actions').append(questLink);
+    }
     const card = document.getElementById('scroll-card');
     card.style.width = `min(${Number(notice.cardWidth) || rt().state().cardWidth || 1100}px, calc(100vw - 32px))`;
     card.setAttribute('aria-label', notice.title || 'Aushang');
@@ -42,12 +50,15 @@
     stopLayout = window.TafelNoticeTextLayout.observe(content);
   }
 
-  function open(id) {
-    const notice = rt().state().zettel.find(item => item.id === id);
+  function open(id, options = {}) {
+    const requestedArchive = options.archiveEntryId || '';
+    const source = window.TafelNoticeTimeline?.readableNotices(requestedArchive) || rt().state().zettel;
+    const notice = source.find(item => item.id === id);
     if (!notice || (notice.secret && !rt().isEditMode())) return;
     const modal = document.getElementById('scroll-mo');
     if (!modal.classList.contains('open')) opener = document.activeElement;
     activeId = id;
+    archiveEntryId = requestedArchive;
     personPage = 0;
     modal.classList.add('open');
     render();
@@ -75,6 +86,7 @@
     stopLayout();
     stopTypography();
     activeId = '';
+    archiveEntryId = '';
     if (wasOpen && opener?.isConnected) opener.focus();
     opener = null;
   }
@@ -92,5 +104,6 @@
 
   window.addEventListener('aleria:tafel:state-applied', refresh);
   window.addEventListener('aleria:tafel:edit-mode', refresh);
+  window.addEventListener('aleria:tafel:date-changed', refresh);
   window.TafelNoticeReader = Object.freeze({ open, close, select, step, setPersonPage, refresh });
 })();

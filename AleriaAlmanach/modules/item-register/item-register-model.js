@@ -1,9 +1,12 @@
 import { parsePrice, formatPrice, moneyState } from './item-register-money.js?v=20260919-shop-v1';
 import { indexInventoryTemplates, resolveInventoryItem } from '../character-inventory/character-inventory-identity.js?v=20260928-equipment-art-v4';
 import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
+import { isInventoryPlaceholder } from '../character-inventory/inventory-placeholders.js';
+import { storeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 
 export const REGISTER_SECTIONS = Object.freeze([
   { id: 'standard', label: 'Standardgüter', text: 'Verbindliche Vorlagen und Preismaßstäbe.' },
+  { id: 'definition', label: 'Eigene Itemdefinitionen', text: 'Gemeinsame Serienvarianten und echte Unikate.' },
   { id: 'regional', label: 'Länder Spezifische Rüstungen und Waffen', text: 'Länder, Gebiete und Häuser nach ihren Wappen und Bannern.' },
   { id: 'offer', label: 'Anbieter & Sortimente', text: 'Besondere Waren, eigene Preise und verfügbare Bestände.' },
   { id: 'owned', label: 'Individuelle Listen', text: 'Besitz, Ausrüstung und Begleiter deiner Figuren.' }
@@ -34,10 +37,11 @@ export function normalizeOffer(input = {}, baseline = []) {
   const price = input.priceRange || parsePrice(input.price, input.currency);
   if (!String(input.id || '').trim() || !String(input.title || '').trim()) throw new Error('Ein Angebot braucht eine ID und einen Namen.');
   if (!String(input.listId || '').trim() || !String(input.listName || '').trim()) throw new Error('Bitte ein Sortiment benennen.');
-  if (input.templateId && !standard) throw new Error('Die Standardvorlage wurde nicht gefunden.');
+  if (input.templateId && !standard && !input.definitionRef) throw new Error('Die Standardvorlage wurde nicht gefunden.');
   const stock = input.stock == null || input.stock === '' ? null : Number(input.stock);
   if (stock != null && (!Number.isSafeInteger(stock) || stock < 0)) throw new Error('Der Bestand muss eine ganze Zahl ab 0 sein.');
   return { ...standard, ...input, section: 'offer', canonicalKey: input.id,
+    definitionRef: input.definitionRef || (input.combatDefinition && JSON.stringify(input.combatDefinition) !== JSON.stringify(standard?.combatDefinition) ? null : standard?.definitionRef) || null,
     aliases: [],
     templateId: standard?.id || '', title: String(input.title).trim().slice(0, 180),
     listId: String(input.listId).trim().slice(0, 180), listName: String(input.listName).trim().slice(0, 180),
@@ -50,7 +54,7 @@ export function normalizeOffer(input = {}, baseline = []) {
 export function buildOwnedItems(characters = [], templates = [], creatures = []) {
   const byKey = indexInventoryTemplates(templates);
   const creatureByItem = new Map(creatures.filter(creature => creature.itemOrigin?.instanceId).map(creature => [creature.itemOrigin.instanceId, creature]));
-  return characters.flatMap(character => (character.inventory?.items || []).map(item => {
+  return characters.flatMap(character => (character.inventory?.items || []).filter(item => !isInventoryPlaceholder(item)).map(item => {
     const resolved = resolveInventoryItem(item, { character, templates: byKey, creatures });
     const reference = item.templateId || item.originItemDbKey || item.itemDbKey;
     const template = byKey.get(reference);
@@ -65,11 +69,14 @@ export function buildOwnedItems(characters = [], templates = [], creatures = [])
         attributes: resolved.attributes, infoRows: item.infoRows || [], weight: item.weight || '',
       templateId: template?.templateId || template?.id || reference || '', templateName: template?.title || item.templateName || '',
       instanceId, inventoryItemId: item.id, ownerCharacterId: character.id, ownerCharacterName: character.name,
+      ...(item.definitionRef ? { definitionRef: { ...item.definitionRef } } : {}),
       listId: character.id, listName: character.name, priceRange: resolved.valuation,
       quantity: Number(item.quantity ?? 1), equipped: item.equipped === true ||
         (character.combatProfile?.weapons || []).some(weapon => weapon.inventoryItemId === item.id && weapon.equipped) ||
         (character.combatProfile?.armorItems || []).some(armor => armor.inventoryItemId === item.id && armor.equipped),
-      combatDefinition: item.combatDefinition || template?.combatDefinition || null,
+      combatDefinition: resolved.combatDefinition,
+      inventoryUseMode: resolved.inventoryUseMode,
+      mechanicsStatus: resolved.mechanicsStatus,
       houseArmor: item.houseArmor || template?.houseArmor || null,
       creatureId: creature?.id || item.creatureId || '', revision: character.inventory?.revision || 0,
       tags: Array.isArray(item.tags) ? item.tags : String(item.tags || '').split(',').filter(Boolean),
@@ -85,19 +92,27 @@ export function toLegacyItem(item) {
       ownerCharacterId: item.ownerCharacterId || '', ownerCharacterName: item.ownerCharacterName || '' } };
 }
 
-export function createOwnedItem(template, { id, characterId, characterName, quantity = 1, unitCopper, now }) {
+export function createGrantedItem(template, { id, characterId, characterName, quantity = 1, now }) {
   template = balanceArmorInventoryItem(template);
-  return { id, instanceId: id, templateId: template.templateId || template.id, templateName: template.title,
+  return storeInventoryItem({ id, instanceId: id, templateId: template.templateId || template.id, templateName: template.title,
+    ...(template.definitionRef ? { definitionRef: { ...template.definitionRef } } : {}),
     offerId: template.section === 'offer' ? template.id : '', registerCategory: template.category,
     itemDbKey: '', originItemDbKey: template.templateId || template.id, itemStorageMode: 'character',
-    ownerCharacterId: characterId, ownerCharacterName: characterName, acquiredAt: now,
+    ownerCharacterId: characterId || '', ownerCharacterName: characterName || '', acquiredAt: now || '',
     name: template.title, type: template.type || categoryLabel(template.category),
     category: inventoryCategory(template.category), description: [template.description, template.details].filter(Boolean).join('\n\n'),
     image: template.image || '', quantity: String(quantity), weight: String(template.hiddenMeta?.weight || ''),
-    tags: (template.tags || []).join(', '), combatDefinition: template.combatDefinition || null, equipped: false,
-    value: moneyState(unitCopper), valuation: template.priceRange || null,
-    purchase: { unitCopper, quantity, sourceId: template.id, at: now, ...(template.moduleId ? { moduleId: template.moduleId } : {}) },
-    infoRows: template.infoRows || [], attributes: template.attributes || [], ...(template.houseArmor ? { houseArmor: { ...template.houseArmor } } : {}) };
+    tags: (template.tags || []).join(', '), combatDefinition: template.combatDefinition ? structuredClone(template.combatDefinition) : null, equipped: false,
+    inventoryUseMode: template.inventoryUseMode || 'auto', mechanicsStatus: template.mechanicsStatus || '',
+    valuation: template.priceRange || null,
+    infoRows: structuredClone(template.infoRows || []), attributes: structuredClone(template.attributes || []),
+    ...(template.houseArmor ? { houseArmor: { ...template.houseArmor } } : {}) });
+}
+
+export function createOwnedItem(template, options) {
+  const { unitCopper, quantity = 1, now } = options;
+  return { ...createGrantedItem(template, options), value: moneyState(unitCopper),
+    purchase: { unitCopper, quantity, sourceId: template.id, at: now, ...(template.moduleId ? { moduleId: template.moduleId } : {}) } };
 }
 
 export function queryRegister(items, { section = 'standard', category = '', listId = '', search = '', sort = 'name', equippedOnly = false, regionId = '', houseId = '', houseIds = null } = {}) {

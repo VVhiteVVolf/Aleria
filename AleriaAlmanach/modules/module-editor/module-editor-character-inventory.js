@@ -31,11 +31,11 @@ const CHARACTER_INVENTORY_DEFAULT_CATEGORIES = [
 ];
 
 const CHARACTER_INVENTORY_CURRENCIES = [
-  { id: 'gold', label: 'Goldtaler', short: 'GT', value: 1000, icon: 'public/assets/inventory/coins/goldtaler.png' },
-  { id: 'silver', label: 'Silbertaler', short: 'ST', value: 100, icon: 'public/assets/inventory/coins/silbertaler.png' },
-  { id: 'copper', label: 'Kupfertaler', short: 'KT', value: 1, icon: 'public/assets/inventory/coins/kupfertaler.png' },
-  { id: 'pfennig', label: 'Eisenpfennig', short: 'Pf', value: 0.01, icon: 'public/assets/inventory/coins/eisenpfennig.png' }
-];
+  { id: 'gold', label: 'Goldtaler', short: 'GT', value: 1000 },
+  { id: 'silver', label: 'Silbertaler', short: 'ST', value: 100 },
+  { id: 'copper', label: 'Kupfertaler', short: 'KT', value: 1 },
+  { id: 'pfennig', label: 'Eisenpfennig', short: 'Pf', value: 0.01 }
+].map(currency => ({ ...currency, get icon() { return globalThis.AleriaCurrencyArt?.icon?.(currency.id) || ''; } }));
 
 const CHARACTER_INVENTORY_EQUIPMENT_QUIZ_QUESTIONS = [
   'Welchem Stand oder welcher sozialen Schicht entstammt die Figur?',
@@ -208,6 +208,7 @@ function sanitizeCharacterInventoryCombatDefinition(value = {}) {
       && JSON.stringify(source.damageProtection).length <= 4000 ? JSON.parse(JSON.stringify(source.damageProtection)) : null,
     triggerRules: Array.isArray(source.triggerRules) ? JSON.parse(JSON.stringify(source.triggerRules.slice(0, 20))) : [],
     weaponType: String(source.weaponType || '').trim().slice(0, 40),
+    weaponProfileId: String(source.weaponProfileId || '').trim().slice(0, 80),
     training: String(source.training || '').trim().slice(0, 40),
     damageFormula,
     versatileDamageFormula: String(source.versatileDamageFormula || '').trim().slice(0, 40),
@@ -226,6 +227,10 @@ function sanitizeCharacterInventoryCombatDefinition(value = {}) {
     requirements: String(source.requirements || '').trim().slice(0, 1000),
     aiInstructions: String(source.aiInstructions || '').trim().slice(0, 1600),
     armorKind: String(source.armorKind || 'armor').trim().slice(0, 40),
+    armorCategory: ['light', 'medium', 'heavy'].includes(source.armorCategory) ? source.armorCategory : '',
+    mechanics: source.mechanics && typeof source.mechanics === 'object'
+      && !Array.isArray(source.mechanics) && JSON.stringify(source.mechanics).length <= 12000
+      ? JSON.parse(JSON.stringify(source.mechanics)) : {},
     baseArmorClass,
     armorClassBonus: Number.isFinite(Number(source.armorClassBonus)) ? Number(source.armorClassBonus) : 0,
     dexterityMode: ['full', 'capped', 'none'].includes(String(source.dexterityMode || '')) ? String(source.dexterityMode) : 'full',
@@ -253,12 +258,18 @@ function collectCharacterInventoryPrice(minimum, maximum) {
   return { minCopper, maxCopper };
 }
 
+function hasCharacterItemDefinition(item) {
+  return !!(item?.definitionRef && /^[\w:.-]{1,220}$/.test(item.definitionRef.id || '') && /^[\w.-]{1,64}$/.test(item.definitionRef.revision || ''));
+}
 function sanitizeCharacterInventoryItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item, index) => ({
       id: String(item?.id || '').trim() || makeCharacterInventoryId('item', index),
       instanceId: String(item?.instanceId || item?.id || '').trim(),
+      ...(item?.itemState && typeof item.itemState === 'object' && JSON.stringify(item.itemState).length <= 2000 ? { itemState: JSON.parse(JSON.stringify(item.itemState)) } : {}),
       templateId: String(item?.templateId || item?.originItemDbKey || item?.itemDbKey || '').trim(),
+      ...(item?.definitionRef && /^[\w:.-]{1,220}$/.test(item.definitionRef.id || '') && /^[\w.-]{1,64}$/.test(item.definitionRef.revision || '')
+        ? { definitionRef: { id: item.definitionRef.id, revision: item.definitionRef.revision } } : {}),
       templateName: String(item?.templateName || '').trim(),
       offerId: String(item?.offerId || '').trim(),
       registerCategory: String(item?.registerCategory || '').trim(),
@@ -267,6 +278,8 @@ function sanitizeCharacterInventoryItems(items = []) {
       valuation: item?.valuation && typeof item.valuation === 'object' ? { ...item.valuation } : null,
       valuationNote: String(item?.valuationNote || '').trim().slice(0, 800),
       purchase: item?.purchase && typeof item.purchase === 'object' ? { ...item.purchase } : null,
+      ...(item?.acquisition && typeof item.acquisition === 'object' && !Array.isArray(item.acquisition)
+        && JSON.stringify(item.acquisition).length <= 4000 ? { acquisition: JSON.parse(JSON.stringify(item.acquisition)) } : {}),
       itemDbKey: String(item?.itemDbKey || '').trim(),
       originItemDbKey: String(item?.originItemDbKey || '').trim(),
       itemStorageMode: String(item?.itemStorageMode || (item?.itemDbKey ? 'linked' : 'character')).trim(),
@@ -297,18 +310,19 @@ function sanitizeCharacterInventoryItems(items = []) {
       description: String(item?.description || '').trim(),
       flavorText: String(item?.flavorText || '').trim().slice(0, 1600),
       inventoryUseMode: ['auto', 'consume', 'use'].includes(item?.inventoryUseMode) ? item.inventoryUseMode : 'auto',
+      mechanicsStatus: ['provisional', 'defined', 'narrative'].includes(item?.mechanicsStatus) ? item.mechanicsStatus : '',
       weight: String(item?.weight || '').trim(),
       quantity: String(item?.quantity ?? '1').trim(),
       tags: String(item?.tags || '').trim(),
       value: sanitizeCharacterInventoryMoney(item?.value),
       equipped: item?.equipped === true,
-      combatDefinition: sanitizeCharacterInventoryCombatDefinition(item?.combatDefinition || item?.combat),
+      combatDefinition: hasCharacterItemDefinition(item) ? null : sanitizeCharacterInventoryCombatDefinition(item?.combatDefinition || item?.combat),
       equipmentLink: sanitizeCharacterInventoryEquipmentLink(item?.equipmentLink),
       infoRows: sanitizeCharacterInventoryRows(item?.infoRows, [
         { label: 'Qualitaet', value: 'Noch festlegen' },
         { label: 'Zustand', value: 'Noch festlegen' }
       ]),
-      attributes: item?.houseArmor && !item.combatDefinition && !item.attributes?.length ? [] : sanitizeCharacterInventoryAttributes(item?.attributes, [
+      attributes: item?.houseArmor && !item.attributes?.length ? [] : sanitizeCharacterInventoryAttributes(item?.attributes, [
         { label: 'Schaden', value: 5 },
         { label: 'Schutz', value: 3 },
         { label: 'Wert', value: 4 },
@@ -395,6 +409,7 @@ function sanitizeCharacterInventoryData(data = {}) {
   }));
   return {
     characterId: String(data.characterId || '').trim(),
+    ...(data.definitionSchemaVersion === 1 || items.some(item => item.definitionRef) ? { definitionSchemaVersion: 1 } : {}),
     title: String(data.title || 'Charakter-Inventar').trim(),
     subtitle: String(data.subtitle || 'Ausrüstung, Gegenstände und Gefährten verwalten').trim(),
     portrait: String(data.portrait || '').trim(),
@@ -591,7 +606,7 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
   return `
     <section class="ci-editor-card" data-ci-item-row>
       <input type="hidden" class="me-ci-item-id" value="${escapeHtml(item.id)}">
-      <input type="hidden" class="me-ci-item-register-data" value="${escapeHtml(JSON.stringify({ instanceId: item.instanceId, templateId: item.templateId, templateName: item.templateName, offerId: item.offerId, registerCategory: item.registerCategory, creatureId: item.creatureId, valuation: item.valuation, purchase: item.purchase, value: item.value, equipped: item.equipped, combatDefinition: item.combatDefinition, equipmentLink: item.equipmentLink, flavorText: item.flavorText, inventoryUseMode: item.inventoryUseMode }))}">
+      <input type="hidden" class="me-ci-item-register-data" value="${escapeHtml(JSON.stringify(item))}">
       <input type="hidden" class="me-ci-item-db-key" value="${escapeHtml(item.itemDbKey || '')}">
       <input type="hidden" class="me-ci-item-origin-db-key" value="${escapeHtml(item.originItemDbKey || '')}">
       <input type="hidden" class="me-ci-item-storage-mode" value="${escapeHtml(item.itemStorageMode || 'character')}">
@@ -604,6 +619,7 @@ function buildCharacterInventoryItemEditor(item, index, categories) {
       <div class="ci-editor-card-head">
         <strong>Item ${index + 1}${item.itemDbKey ? ' - Registerlink' : item.originItemDbKey ? ' - Individuell' : ''}</strong>
         <div class="ci-editor-card-actions">
+          <button class="module-editor-mini-btn" type="button" data-module-editor-action="build-ci-item">Regeln / Item-Builder</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-ci-item" data-ci-direction="-1">Hoch</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="move-ci-item" data-ci-direction="1">Runter</button>
           <button class="module-editor-mini-btn" type="button" data-module-editor-action="duplicate-ci-item">Duplizieren</button>
@@ -1062,10 +1078,16 @@ function addCharacterInventoryNestedAttribute(button, targetKind) {
   });
 }
 
-function addCharacterInventoryItem(button) {
-  rerenderCharacterInventoryEditor(button, data => {
-    data.items.push({ name: 'Neuer Gegenstand', category: 'equipment', type: '', description: '', quantity: '1' });
-  });
+async function addCharacterInventoryItem(button) {
+  try {
+    if (!window.AleriaItemRegister?.buildItem) throw Error('Die gemeinsame Itemverwaltung wird noch geladen.');
+    const item = await window.AleriaItemRegister.buildItem({ key: `inventory:${_editingChar || 'template'}` });
+    if (!item || !button.isConnected) return;
+    rerenderCharacterInventoryEditor(button, data => {
+      if (data.items.length >= 80) throw Error('Das Inventar hat bereits 80 Einträge.');
+      data.items.push(buildCharacterInventoryItemFromDbItem(item, data));
+    });
+  } catch (error) { if (typeof showAppStatus === 'function') showAppStatus(error.message, 'error'); }
 }
 
 function addCharacterInventoryItemFromRegister(button) {
@@ -1119,8 +1141,11 @@ function moveCharacterInventoryItem(button) {
   });
 }
 
-function duplicateCharacterInventoryItem(button) {
+async function duplicateCharacterInventoryItem(button) {
   const row = button.closest('[data-ci-item-row]');
+  const original = collectCharacterInventoryJsonField(row, '.me-ci-item-register-data', {});
+  const { resolveItemDefinition } = await import('../item-definitions/item-definition-resolver.js');
+  if (resolveItemDefinition(original)?.kind === 'unique') { setModuleEditorStatus('Ein Unikat kann nicht dupliziert werden. Für einen anderen Gegenstand bitte eine eigene Variante anlegen.', true); return; }
   const index = getCharacterInventoryRowIndex(row, '[data-ci-item-row]');
   rerenderCharacterInventoryEditor(button, data => {
     const item = data.items[index];
@@ -1135,6 +1160,23 @@ function duplicateCharacterInventoryItem(button) {
     clone.name = `${clone.name || 'Gegenstand'} Kopie`;
     data.items.splice(index + 1, 0, clone);
   });
+}
+
+async function buildCharacterInventoryItem(button) {
+  const row = button.closest('[data-ci-item-row]');
+  const index = getCharacterInventoryRowIndex(row, '[data-ci-item-row]');
+  const original = collectCharacterInventoryJsonField(row, '.me-ci-item-register-data', {});
+  try {
+    const { openItemBuilder } = await import('../item-builder/item-builder-controller.js');
+    const template = await openItemBuilder({ source: original, key: `inventory:${original.id}`, intent: original.definitionRef ? 'existing' : 'variant' });
+    if (!template) return;
+    rerenderCharacterInventoryEditor(button, data => {
+      const item = data.items[index];
+      if (!item) return;
+      item.definitionRef = { ...template.definitionRef }; item.combatDefinition = null;
+      item.registerCategory = template.category; item.itemState = {};
+    });
+  } catch (failure) { setModuleEditorStatus(failure.message, true); }
 }
 
 function addCharacterInventoryCompanion(button) {

@@ -93,6 +93,7 @@ function buildNav(page, pageIndex, total) {
       <button class="modal-page-btn" type="button" data-modal-action="flip-page" data-direction="1" ${pageIndex === total - 1 ? 'disabled' : ''}>Weiter ›</button>
     </div>
     <div class="modal-page-actions">
+      ${entry ? `<a class="modal-page-tool" href="./quests.html?module=${encodeURIComponent(entry.id)}${thread?.threadId ? `&scene=${encodeURIComponent(thread.threadId)}` : ''}" target="_blank" rel="noopener">Quests &amp; Abenteuer ↗</a>` : ''}
       ${buildModalFocusToggleButton()}
       <details class="modal-tools-menu" data-modal-menu>
         <summary class="modal-page-tool modal-menu-toggle" aria-label="Weitere Modulaktionen" title="Weitere Modulaktionen">…</summary>
@@ -102,6 +103,7 @@ function buildNav(page, pageIndex, total) {
       </details>
     </div>
     ${buildModalChapterList(pages, pageIndex)}
+    ${thread ? `<aleria-quest-scene-tracker data-quest-scene-tracker data-module-id="${escapeHtml(entry.id)}" data-thread-id="${escapeHtml(thread.threadId)}"></aleria-quest-scene-tracker>` : ''}
   </div>`;
 }
 

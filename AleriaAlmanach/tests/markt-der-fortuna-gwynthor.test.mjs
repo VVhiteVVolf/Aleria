@@ -105,7 +105,9 @@ test('five selected images retain dimensions, hashes and existing family emblems
   }
   assert.equal(FORTUNA_FACTIONS[0].familyId, 'haus-falto');
   assert.equal(FORTUNA_FACTIONS[1].familyId, '');
-  assert.ok(FORTUNA_FACTIONS.slice(0, 2).every(f => f.emblem === ''));
+  assert.equal(FORTUNA_FACTIONS[0].emblem, '../Stammbäume/assets/images/houses/Venalys/haus-falto.png');
+  assert.match(FORTUNA_FACTIONS[0].origin, /In Venalys sesshaft/);
+  assert.equal(FORTUNA_FACTIONS[1].emblem, '');
 });
 
 test('generated placement loads after all three businesses and uses the shared section destination', async () => {

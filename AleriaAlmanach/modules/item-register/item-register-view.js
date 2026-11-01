@@ -6,12 +6,15 @@ import { escape, safeImage, listEmblem } from './item-register-markup.js?v=20261
 import { providerOverview, providerNavigation } from './item-register-provider-view.js?v=20261014-aldrimar-brewers-v1';
 export { escape, safeImage };
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
+import { registerDisplayText } from './item-register-text.js';
+import { describeEquipmentStats } from '../character-equipment/equipment-stat-description.js';
+import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js';
 
 const attr = escape;
 const amountLabel = (count, singular, plural) => `${count} ${count === 1 ? singular : plural}`;
 const categoryIcon = id => `./public/assets/item-register/categories/${id === 'ruestungen' ? 'ruestungen-v3' : id}.png`;
 export function itemImage(item, large = false) {
-  const image = safeImage(item.image);
+  const image = safeImage(resolveEquipmentImage(item));
   return `<span class="ir-image${large ? ' ir-image-large' : ''}">${image ? `<img src="${attr(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : `<span aria-hidden="true">${escape(REGISTER_CATEGORIES.find(category => category.id === item.category)?.icon || '◈')}</span>`}</span>`;
 }
 const button = (action, text, data = '', primary = false) => `<button type="button" data-ir-action="${action}" ${data} class="${primary ? 'ir-primary' : ''}">${text}</button>`;
@@ -19,7 +22,7 @@ const button = (action, text, data = '', primary = false) => `<button type="butt
 export function shell() {
   return `<div class="ir-shell">
     <header class="ir-header"><img src="./public/assets/dashboard/compass.svg" alt="" class="ir-mark"><div><p class="ir-kicker">Das Güterregister</p><h1 id="ir-title">Items und Güter</h1><p>Vorlagen, Sortimente und persönlicher Besitz an einem Ort.</p></div>
-      <div class="ir-header-actions"><span data-ir-role="sync" role="status"></span>${button('export', 'Exportieren')}${button('import', 'Importieren')}${button('new-offer', '+ Angebot')}${button('close', '×', 'aria-label="Register schließen"')}</div></header>
+      <div class="ir-header-actions"><span data-ir-role="sync" role="status"></span>${button('export', 'Exportieren')}${button('import', 'Importieren')}${button('review-items', 'Bestand prüfen')}${button('new-definition', '+ Itemdefinition')}${button('new-offer', '+ Angebot')}${button('close', '×', 'aria-label="Register schließen"')}</div></header>
     <div class="ir-layout"><aside class="ir-navigation" aria-label="Registerbereiche" data-ir-role="navigation"></aside>
       <main class="ir-main"><div class="ir-toolbar"><label class="ir-search"><span class="ir-sr-only">Güter suchen</span><input data-ir-field="search" type="search" placeholder="Nach Namen, Art oder Beschreibung suchen …"></label><label class="ir-sort">Sortierung<select data-ir-field="sort"><option value="name">Name A–Z</option><option value="price">Preis aufsteigend</option></select></label></div>
       <div data-ir-role="notice" role="status" class="ir-notice" hidden></div><div data-ir-role="results"></div></main>
@@ -45,6 +48,7 @@ function listCards(items, section, empty, providers = []) {
 }
 
 export function overview(snapshot, state, access) {
+  if (state.section === 'definition') return `<section class="ir-overview-section"><h2>Gemeinsame Itemdefinitionen</h2><p>Seriengegenstände teilen ihre Regeln. Unikate besitzen genau ein Exemplar. Neue Regelversionen werden bewusst an den Besitz übernommen.</p><div class="ir-category-grid">${REGISTER_CATEGORIES.map(category => `<button type="button" data-ir-action="category" data-section="definition" data-id="${category.id}"><strong>${category.label}</strong><span>${(snapshot.definitions || []).filter(item => item.category === category.id).length} Definitionen</span></button>`).join('')}</div></section>`;
   const standard = `<section class="ir-overview-section"><div class="ir-section-heading"><div><p class="ir-kicker">01 / Der Maßstab</p><h2>Standardgüter</h2><p>Wähle eine Warengruppe. Diese Vorlagen bilden die unveränderliche Grundlage.</p></div><span class="ir-count">${snapshot.standards.filter(item => item.section === 'standard').length} Vorlagen</span></div>
     <div class="ir-category-grid">${REGISTER_CATEGORIES.map(category => `<button type="button" data-ir-action="category" data-id="${category.id}"><img class="ir-category-icon" src="${categoryIcon(category.id)}" alt="" loading="lazy" decoding="async" width="88" height="88"><strong>${category.label}</strong><span>${snapshot.standards.filter(item => item.section === 'standard' && item.category === category.id).length} Güter <b aria-hidden="true">↗</b></span></button>`).join('')}</div></section>`;
   const offers = `<section class="ir-overview-section"><div class="ir-section-heading"><div><p class="ir-kicker">03 / Händler und Handwerk</p><h2>Anbieter & Sortimente</h2><p>Nach Zunft und Gewerbe geordnet – mit regionalen Sortimenten, Preisen und Beständen.</p></div>${access.canEditSharedContent ? button('new-offer', '+ Sortiment anlegen') : ''}</div>${providerOverview(snapshot.offers, snapshot.providers)}</section>`;
@@ -71,17 +75,17 @@ export function detail(item, snapshot, access) {
   const source = snapshot.items.find(entry => entry.id === item.rawItem?.offerId) || snapshot.standards.find(entry => entry.id === item.templateId);
   const sale = item.section === 'owned' ? resalePrice(item.rawItem, source) : null;
   const combat = item.combatDefinition;
-  const fact = (label, value) => `<div><dt>${label}</dt><dd>${escape(value || 'Nicht festgelegt')}</dd></div>`;
+  const fact = (label, value) => `<div><dt>${label}</dt><dd>${escape(registerDisplayText(value) || 'Nicht festgelegt')}</dd></div>`;
   return `<div class="ir-detail-top"><p class="ir-kicker">${escape(REGISTER_SECTIONS.find(section => section.id === item.section)?.label)}</p>${button('clear-selection', '×', 'aria-label="Details schließen"')}</div>
     ${itemImage(item, true)}<h2>${escape(item.title)}</h2><p class="ir-detail-type">${escape(item.type || categoryLabel(item.category))}</p>
     <div class="ir-detail-price"><span>${item.section === 'owned' ? 'Referenzwert' : 'Preisspanne'}</span><strong>${escape(formatPrice(item.priceRange))}</strong>${item.section === 'owned' && sale != null ? `<small>Verkauf: ${escape(formatCopper(sale))} je Stück</small>` : ''}</div>
     <dl class="ir-facts">${fact('Kategorie', categoryLabel(item.category))}${fact(item.section === 'owned' ? 'Besitzer' : 'Herkunft', item.ownerCharacterName || item.listName || (item.section === 'regional' ? item.hiddenMeta?.origin : 'Standardgüter'))}${fact('Gewicht', item.hiddenMeta?.weight ? `${item.hiddenMeta.weight} kg` : '')}${fact('Zustand', item.section === 'owned' ? item.equipped ? 'Angelegt' : 'Im Besitz' : ['standard', 'regional'].includes(item.section) ? 'Geschützte Vorlage' : item.legacy ? 'Bisheriger Eintrag' : 'Angebot')}</dl>
-    ${['waffen', 'ruestungen'].includes(item.category) ? `<div class="ir-detail-block"><h3>Spielwerte</h3><p>${combat?.damageFormula ? `Schaden: <strong>${escape(combat.damageFormula)}</strong> ${escape(combat.damageType || '')}` : combat?.baseArmorClass != null ? `Rüstungsklasse: <strong>${combat.baseArmorClass}</strong>` : 'Spielwerte noch nicht hinterlegt.'}</p><small>${combat ? 'Wird mit der Ausrüstung im Charakterbogen verbunden.' : 'Die bisherigen Warenquellen enthalten hierfür keine verbindliche Kampfdefinition.'}</small></div>` : ''}
-    <div class="ir-detail-block"><h3>Beschreibung</h3><p class="ir-prose">${escape([item.description, item.details].filter(Boolean).join('\n\n') || 'Noch keine Beschreibung vorhanden.')}</p></div>
+    ${['waffen', 'ruestungen'].includes(item.category) ? `<div class="ir-detail-block"><h3>Spielwerte</h3>${combat ? describeEquipmentStats(combat).map(text => `<p>${escape(text)}</p>`).join('') : '<p>Spielwerte noch nicht hinterlegt.</p>'}<small>${combat ? 'Wird mit der Ausrüstung im Charakterbogen verbunden.' : 'Die bisherigen Warenquellen enthalten hierfür keine verbindliche Kampfdefinition.'}</small></div>` : ''}
+    <div class="ir-detail-block"><h3>Beschreibung</h3><p class="ir-prose">${escape(registerDisplayText([item.description, item.details].filter(Boolean).join('\n\n')) || 'Noch keine Beschreibung vorhanden.')}</p></div>
     ${item.attributes?.length ? `<div class="ir-detail-block"><h3>Eigenschaften</h3><dl class="ir-facts">${item.attributes.map(attribute => fact(escape(attribute.label), attribute.value == null ? '' : String(attribute.value))).join('')}</dl></div>` : ''}
     ${item.infoRows?.length ? `<div class="ir-detail-block"><h3>Gegenstandsdetails</h3><dl class="ir-facts">${item.infoRows.map(row => fact(escape(row.label), row.value)).join('')}</dl></div>` : ''}
     ${combat?.damageProtection ? `<div class="ir-detail-block"><h3>${escape(combat.damageProtection.name || 'Rüstungsschutz')}</h3><p>${escape(describeEquipmentDamageProtection(combat.damageProtection))}</p></div>` : ''}
-    ${combat?.triggerRules?.some(rule => rule.enabled !== false && rule.description) ? `<div class="ir-detail-block"><h3>Ausrüstungswirkungen</h3>${combat.triggerRules.filter(rule => rule.enabled !== false && rule.description).map(rule => `<h4>${escape(rule.name || 'Wirkung')}</h4><p class="ir-prose">${escape(rule.description)}</p>`).join('')}</div>` : ''}
+    ${combat?.triggerRules?.some(rule => rule.enabled !== false && rule.description) ? `<div class="ir-detail-block"><h3>Ausrüstungswirkungen</h3>${combat.triggerRules.filter(rule => rule.enabled !== false && rule.description).map(rule => `<h4>${escape(rule.name || 'Wirkung')}</h4><p class="ir-prose">${escape(registerDisplayText(rule.description))}</p>`).join('')}</div>` : ''}
     ${item.moduleSource ? `<div class="ir-detail-block"><h3>Warenregister des Hauses</h3><p>${escape(item.listName)} · ${escape(item.sourceRefs[0]?.pageTitle)}</p>${button('open-source', 'Zum Anbietermodul', `data-id="${attr(item.moduleId)}"`)}</div>` : ''}
     ${item.templateId && item.templateId !== item.id ? `<div class="ir-detail-block"><h3>Vorlage</h3>${button('reference', escape(snapshot.standards.find(template => template.id === item.templateId)?.title || item.templateName || 'Vorlage öffnen'), `data-id="${attr(item.templateId)}"`)}</div>` : ''}
     <div class="ir-detail-actions">${item.section === 'owned' ? `${canEdit ? button('customize', 'Besitz bearbeiten', '', true) + button('sell', 'Verkaufen', sale == null ? 'disabled title="Der Kaufpreis fehlt"' : '') : ''}${item.creatureId ? button('open-creature', 'Im Bestiarium öffnen') : canEdit && ['pferde', 'vieh'].includes(item.category) ? button('link-creature', 'Als Begleiter anlegen') : ''}${button('open-character', 'Charakterbogen öffnen')}` : `${button('buy', 'Für eine Figur kaufen', !item.priceRange || item.legacy ? 'disabled' : '', true)}${access.canEditSharedContent ? button('variant', 'Eigene Variante anlegen') : ''}${canEdit && item.section === 'offer' ? button('edit-offer', item.legacy ? 'Als Angebot übernehmen' : 'Angebot bearbeiten') : ''}`}</div>

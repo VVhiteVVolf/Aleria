@@ -1,0 +1,96 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-31",
+  "images": [
+    {
+      "id": "lleuwen-menschlich",
+      "kind": "portrait",
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-menschlich.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "f2f2165ef881986de2548a4f2ee27e1331421c15b4245fdb462c0d5f330526df"
+    },
+    {
+      "id": "lleuwen-wahre-gestalt",
+      "kind": "portrait",
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-wahre-gestalt.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "bd1f6fe30ac1315a37fe4c129c8875ea306e693aeeb866ba7302a57900d99fd6"
+    },
+    {
+      "id": "lleuwen-gefangen",
+      "kind": "portrait",
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/lleuwen-gefangen.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "37bb4f48047a166d8e5c74fb3b7abd47369cf06d00d05d97e8edcf2793cc907d"
+    },
+    {
+      "id": "euddogwy-ocenyr",
+      "kind": "portrait",
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/euddogwy-ocenyr.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8632101204a1f5a37669a8c76928534cae084535ad7b02e182a6e028a01298d7"
+    },
+    {
+      "id": "ulrich-schniedel",
+      "kind": "portrait",
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/ulrich-schniedel.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "43476a022feda9722f181acf84f133c1fce4957b014e2af61831f89ed5fbec47"
+    },
+    {
+      "id": "orvar-schattentaenzer",
+      "kind": "portrait",
+      "file": "AleriaAlmanach/assets/gwynthor-formlingssache/portraits/orvar-schattentaenzer.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "2a50a1787b287e196f49eb5ea282f06b4c10e7dea30b20b73acaec32916a201e"
+    },
+    {
+      "id": "kirchen-wachssiegel-v1",
+      "kind": "notice-art",
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "3f7b8b51856cdce2fda3ba0a9000d750bd0d5707be3fd82e65e3a4383748095f",
+      "display": {
+        "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/kirchen-wachssiegel-v1.webp",
+        "width": 505,
+        "height": 512,
+        "sha256": "6b47be4ae492244ca50a50aa3e3234dd1df16e649f733c3b8d45dff405321933"
+      }
+    },
+    {
+      "id": "euddogwy-unterschrift-v1",
+      "kind": "notice-art",
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.png",
+      "width": 2172,
+      "height": 724,
+      "sha256": "20e220cd34a216ebc2283d573a047e82aff925f45c23c56187f35ee7b0f62bd1",
+      "display": {
+        "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/euddogwy-unterschrift-v1.webp",
+        "width": 720,
+        "height": 125,
+        "sha256": "178578b18782a9158979cd797f2311c1297ec941b5c4d5352787745c69ebce9b"
+      }
+    },
+    {
+      "id": "anhoerung-icon-v1",
+      "kind": "notice-art",
+      "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "bd01d99489b2b793b5ec7163838f831350bf3edfff7a6d1756f142e5a2e8e952",
+      "display": {
+        "file": "Anzeigetafeln/assets/images/notices/lleuwens-anhoerung/anhoerung-icon-v1.webp",
+        "width": 480,
+        "height": 512,
+        "sha256": "bb4c5164e38187e12beca9083907d46bee760f02d99fb341a7064f87a11c71cb"
+      }
+    }
+  ]
+}

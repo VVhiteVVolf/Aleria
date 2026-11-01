@@ -1,7 +1,7 @@
 import { normalizeLayout, normalizePoster, groupForPoster, indexPosterGroups, pinPosition, moveLayer, unlinkDeletedNotice } from './board-composition-model.mjs?v=20261029-performance-v1';
 import { createPosterElement, positionElement } from './board-composition-view.mjs?v=20261029-performance-v1';
 import { createPosterWizard } from './board-composition-creator.mjs?v=20261029-performance-v1';
-import { createPosterInspector } from './board-composition-inspector.mjs?v=20261029-performance-v1';
+import { createPosterInspector } from './board-composition-inspector.mjs?v=20261031-paper-calendar-v1';
 import { compositionConfig } from './board-composition-config.mjs?v=20261029-performance-v1';
 import { prepareBoardState } from './board-composition-migration.mjs?v=20261029-performance-v1';
 import { loadBoardCompositionSources } from './board-composition-sources.mjs?v=20261031-current-catalog';
@@ -34,7 +34,13 @@ export async function initializeBoardComposition() {
   let inspector = null;
   let wizard = null;
   const selected = () => layout()?.posters.find(poster => poster.id === selectedId);
-  const group = (poster, includeSecret = editing()) => groupForPoster(poster, state().zettel, stacks(), includeSecret);
+  const group = (poster, includeSecret = editing()) => {
+    const all = groupForPoster(poster, state().zettel, stacks(), true);
+    if (!all) return null;
+    const visible = new Set((rt().visibleNotices?.() || state().zettel).filter(n => includeSecret || !n.secret).map(n => n.id));
+    const notices = all.notices.filter(n => visible.has(n.id));
+    return notices.length ? { ...all, notices } : null;
+  };
   const elementFor = posterId => document.querySelector(`[data-poster-id="${CSS.escape(posterId)}"]`);
 
   function prepareState(incoming) {
@@ -52,14 +58,17 @@ export async function initializeBoardComposition() {
     // preview never enters the persisted state.
     const visibleLayout = layout() || initialLayout;
     const board = window.TafelBoard.imageSize();
-    const index = indexPosterGroups(state().zettel, stacks());
     const isEditing = editing();
+    const visibleIds = new Set((rt().visibleNotices?.() || state().zettel).filter(n => isEditing || !n.secret).map(n => n.id));
+    const index = indexPosterGroups(state().zettel, stacks());
     for (const poster of [...visibleLayout.posters].sort((a, b) => a.layer - b.layer)) {
       const asset = assetMap.get(poster.assetId);
       if (!asset) continue;
-      const visibleGroup = (isEditing ? index.allById : index.visibleById).get(poster.noticeId);
+      const allGroup = index.allById.get(poster.noticeId);
+      const visibleMembers = allGroup?.notices.filter(n => visibleIds.has(n.id)) || [];
+      const visibleGroup = visibleMembers.length ? { ...allGroup, notices: visibleMembers } : null;
       // Do not reveal even the existence of a secret-only publication.
-      if (!isEditing && poster.noticeId && index.allById.has(poster.noticeId) && !visibleGroup) continue;
+      if (poster.noticeId && allGroup && !visibleGroup) continue;
       root.append(createPosterElement(poster, asset, board, {
         esc: rt().esc, selected: isEditing && poster.id === selectedId, editing: isEditing, group: visibleGroup,
       }));

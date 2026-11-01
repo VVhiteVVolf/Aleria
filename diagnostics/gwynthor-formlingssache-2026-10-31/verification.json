@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-31",
+  "feature": "gwynthor-formlingssache",
+  "targetedTests": { "passed": 32, "failed": 0 },
+  "generatedPackages": ["characters", "cathedral", "theater", "authored-notices"],
+  "browser": {
+    "proof": "browser-review.json",
+    "noticeViews": 6,
+    "hierarchyModules": 2,
+    "administration": true,
+    "pageErrors": [],
+    "churchPoster": { "x": 0.277751, "y": 0.276236, "width": 0.048,
+      "previousWidth": 0.06555, "placement": "Beside Feiertag", "overlappingPosters": [] }
+  },
+  "additionalAdministrationCheck": {
+    "passed": 14,
+    "failed": 1,
+    "test": "Der historische Familienbestand bleibt jenseits der geprüften Titel-, Lehns- und Portraitfreigaben identisch",
+    "record": "haus-penrudd/approved-gwynthor-family",
+    "expectedSha256": "1beec2ef9fcc835f4e410a3c74ff1ea9ac7a0777a657e5db8301b22d6a9f2b2d",
+    "actualSha256": "0ddca22a5c56f1f00c7571c62adbb945cecc2dc72e0074aabfe30fa6a3ae1833",
+    "note": "The separate Penrudd source and review fixture were not edited for this feature. Existing concurrent registry work remains intact."
+  },
+  "publication": "local-only",
+  "firebaseWrites": 0
+}

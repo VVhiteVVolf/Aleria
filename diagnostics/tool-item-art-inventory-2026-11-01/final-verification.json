@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-11-01T05:13:14.295Z",
+  "standardVersion": "36e5f594322735b9",
+  "inventory": {
+    "total": 43,
+    "werkzeuge": 43,
+    "sonstiges": 0,
+    "sharedFallback": 0,
+    "existingCandidate": 43,
+    "verifiedAlphaAndHash": 43,
+    "moduleGoodsTotal": 57,
+    "otherModuleGoods": 14,
+    "manifestTotal": 74,
+    "manifestTransparentItems": 57,
+    "manifestOpaquePortraitsAndScenes": 17
+  },
+  "onlyImageChangedDefinitions": 43,
+  "newArtworkGenerated": 0,
+  "existingSourceArtworkModified": 0,
+  "visualReviewContactSheet": "diagnostics/tool-item-art-inventory-2026-11-01/tool-items-contact-sheet.png",
+  "targetedTests": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0,
+    "log": "diagnostics/tool-item-art-inventory-2026-11-01/tool-artwork-tests-final.log"
+  },
+  "releasePolicy": {
+    "tests": 33,
+    "pass": 33,
+    "fail": 0,
+    "log": "diagnostics/tool-item-art-inventory-2026-11-01/release-policy-final.log"
+  },
+  "releaseGates": {
+    "blocks": [
+      {
+        "tests": 96,
+        "pass": 96,
+        "fail": 0
+      },
+      {
+        "tests": 15,
+        "pass": 15,
+        "fail": 0
+      },
+      {
+        "tests": 166,
+        "pass": 166,
+        "fail": 0
+      },
+      {
+        "tests": 310,
+        "pass": 310,
+        "fail": 0
+      }
+    ],
+    "log": "diagnostics/tool-item-art-inventory-2026-11-01/release-gates-final.log"
+  },
+  "mechanicsIdenticalModules": 236,
+  "noticeRewardCatalogItems": 1110,
+  "centralGeneratorsPerformedBy": "root",
+  "localBridgeSession": 59196,
+  "localBridgeKeptRunning": false,
+  "remainingProductErrors": [],
+  "localBridgeStoppedAt": "2026-11-01T05:15:29.613Z",
+  "localBridgeHttpReachable": false
+}

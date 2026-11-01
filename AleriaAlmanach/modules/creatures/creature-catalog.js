@@ -364,6 +364,7 @@ const BUILTIN_CREATURE_SOURCES = Object.freeze([
   },
   {
     id: 'companion-tanor',
+    itemOrigin: { instanceId: 'gawain-tanor', inventoryItemId: 'gawain-tanor', templateId: '', ownerCharacterId: 'q1QtSIug74FzzwUAqWrs', ownerCharacterName: 'Gawain Draig', disposition: 'owned' },
     name: 'Tanor',
     type: 'Reittier',
     species: 'Rhyfel',

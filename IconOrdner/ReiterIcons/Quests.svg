@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <radialGradient id="paper"><stop stop-color="#ecd098"/><stop offset="1" stop-color="#c8a162"/></radialGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" seed="17"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".16"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <g id="corner" stroke="#896434" stroke-width="2"><path d="M20 72V20h52M25 58c17-7 8-23 20-25s17 0 22-8M26 27l20 19M27 45l18-18"/></g>
+  </defs>
+  <path fill="url(#paper)" filter="url(#grain)" d="M0 0h256v256H0z"/>
+  <path stroke="#896434" stroke-width="3" d="M8 8h240v240H8z"/><path stroke="#aa854d" d="M14 14h228v228H14z"/>
+  <use href="#corner"/><use href="#corner" transform="rotate(90 128 128)"/><use href="#corner" transform="rotate(180 128 128)"/><use href="#corner" transform="rotate(270 128 128)"/>
+  <g stroke="#67431e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#e4c589" d="M61 62h113l18 23-13 105H66L48 170l13-108Z"/>
+    <path fill="#ba8d48" d="M61 62c-22 0-22 27 0 27h112M66 164c-22 0-22 27 0 27h113c-20 0-20-27 0-27H66Z"/>
+    <path stroke-dasharray="3 12" d="M85 137c4-31 50 16 56-18s-25-15-23-34"/>
+    <path stroke="#a75d2e" d="m144 138 15 15m-15 0 15-15"/>
+    <path fill="#b89961" d="m165 116 37-57 8-4 1 10-38 57-8-6Z"/><path d="m156 114 25 17m-16-6-13 19"/>
+  </g>
+</svg>

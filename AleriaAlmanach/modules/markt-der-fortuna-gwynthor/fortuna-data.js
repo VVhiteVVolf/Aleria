@@ -145,14 +145,14 @@
                         "id": "fortuna-rat-falto-handel",
                         "title": "Falto · Handel",
                         "subtitle": "Gleichrangiger Sitz im Neunerrat",
-                        "portrait": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+                        "portrait": "../Stammbäume/assets/images/houses/Venalys/haus-falto.png",
                         "text": "<p>Bankwesen · Kaufmannschaft · Handelsflotte. Magnarierhaus · unter Vinicius.</p>"
                       },
                       {
                         "id": "fortuna-rat-falto-bank",
                         "title": "Falto · Bank",
                         "subtitle": "Gleichrangiger Sitz im Neunerrat",
-                        "portrait": "../Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp",
+                        "portrait": "../Stammbäume/assets/images/houses/Venalys/haus-falto.png",
                         "text": "<p>Bankwesen · Kaufmannschaft · Handelsflotte. Magnarierhaus · unter Vinicius.</p>"
                       },
                       {
@@ -661,7 +661,7 @@
                         "title": "Falto",
                         "subtitle": "Bankwesen · Kaufmannschaft · Handelsflotte",
                         "text": "<p>Verbindung des führenden Hauses zur örtlichen Bank- und Handelsabstimmung. Guthaben und einzelne Kreditvereinbarungen werden gesondert geführt.</p>",
-                        "portrait": ""
+                        "portrait": "../Stammbäume/assets/images/houses/Venalys/haus-falto.png"
                       },
                       {
                         "id": "fortuna-bank-haus-nerva",
@@ -1157,7 +1157,7 @@
           "stats": [
             [
               "Herkunft",
-              "Venalys · seit Jahrhunderten in Gwynthor vertreten"
+              "In Venalys sesshaft · seit Jahrhunderten mit einer örtlichen Vertretung in Gwynthor"
             ],
             [
               "Bindung",

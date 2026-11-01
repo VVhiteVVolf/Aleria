@@ -1,6 +1,34 @@
+# Stammbaumregister: Wohnort und Hauszugehörigkeit
+
+Nutzerkorrektur vom 31. Oktober 2026: Die geografische Einsortierung folgt dem
+tatsächlichen Wohnort beziehungsweise Stammsitz, nicht der Dienst- oder
+Lehnsherrschaft. Eine Familie aus Lysfaen steht unter Lysfaen, auch wenn sie
+Haus Wyrm dient. Dienstbindungen werden separat im Hausprofil erfasst und
+begründen keine zusätzlichen Ortsreiter wie „Herrschaft Wyrm“ oder
+„Herrschaft Saethwyr“. Echte territoriale Ebenen wie Grafschaften und Baronien
+bleiben erhalten.
+
+„Bannkreis Gwynthor“ und „Gwynthor“ bezeichnen im Stammbaumregister dieselbe
+örtliche Gruppierung; dafür ausschließlich „Gwynthor“ verwenden. Konkrete
+Höfe und Wohnsitze bleiben im Hausprofil und in der Geschichte benannt.
+Haus Falto gehört wie Haus Falveri unmittelbar nach Venalys. Seine örtliche
+Vertretung in Gwynthor rechtfertigt keinen zweiten Registereintrag des gesamten
+Hauses; ein tatsächlich eigenständiger Zweig benötigt eine eigene belegte Akte.
+
 # Dauerhafte Bildstil-Vorgaben
 
 ## Aktuelle Veröffentlichungsfreigabe
+
+Nutzerfreigabe vom 1. November 2026: **„pus und deploy alles. Mach vorher aber
+einen gründlcihern checkup“**. Sie umfasst den gesamten aktuellen lokalen
+öffentlichen Stand einschließlich Item- und Questsystem, Gruppenfolios,
+Gawains öffentlicher Biografie, Ausrüstungsstandards, eigener Münzbilder,
+Werkzeugbilder sowie der übrigen lokalen Almanach-, Tafel- und Registerneuheiten.
+Vor Push und Veröffentlichung die vollständigen betroffenen Schnittstellen und
+Releaseprüfungen ausführen. Firebase-Backend, Rules und erforderliche Indizes
+mit dem Frontend abstimmen; keine persönlichen Inventare, Live-Ressourcen oder
+historischen Kampfbelege pauschal migrieren. Private Dossiers, geheime
+Vorgeschichten und lokale Browserentwürfe bleiben ausgeschlossen.
 
 Nutzerfreigabe vom 31. Oktober 2026: **„Push and deploy alle neuerungen.“**
 Sie umfasst den gesamten aktuellen lokalen Stand: Vébrands zweiblättrige
@@ -212,3 +240,7 @@ Die Aldrimar-Erweiterung umfasst 303 Katalogoptionen (zuvor 111), mindestens zwe
 Die zuletzt festgelegten Ausrüstungswerte stehen in der unten verlinkten Übernahme-Liste: Silberschuppe −2 Schaden gegen Hieb/Stich, Gafyr-Plattenrüstung −2 gegen alles außer Stich; beide ohne zusätzlichen RK-Bonus. Drachenzahn +1 Schaden und +2 bei kritischem Treffer (nicht nochmals verdoppelt); Pflichtschwur +1 Angriff/+1 Schaden ohne kritischen Zusatzeffekt. Frühere Vorschläge wie Schuppenpolster oder Wachtstellung sind ersetzt.
 
 Am 22. September 2026 hat der Nutzer die vorherige Veröffentlichungssperre ausdrücklich aufgehoben: **sämtliche Änderungen auf master pushen, veröffentlichen und online einsatzbereit machen.** Der bisherige Gildas–Gawain-Kampfverlauf einschließlich aller Würfe und Effekte muss unverändert bleiben; kommende Handlungen verwenden die neuen Regeln. Bestehende Beiträge niemals neu auswerten oder überschreiben. Die administrative `combat-rules-release`-Grenze aktiviert kritische Nebeneffekte für kommende Handlungen, gleicht Inventarsnapshots ab und darf weder Aktionsressourcen auffüllen noch Zustandsdauern fortschreiben. Automatische Rücknahmen über diese Grenze sind gesperrt, damit alte Ausrüstungsdaten nicht wiederhergestellt werden. Live-TP, Ressourcen, Zustände, Besitz und Online-IDs erhalten. Details: [Ausrüstungsübernahme](AleriaAlmanach/docs/inventory/PENDING_DUEL_EQUIPMENT_RELEASE.md).
+
+# Aktuelle Standardausrüstung vom 1. November 2026
+
+Für neue Standardköpfe gelten die [Waffen-, Rüstungs- und Schildstandards](AleriaAlmanach/docs/inventory/EQUIPMENT_STANDARDS_2026-11-01.md): Großschwert ersetzt den bisherigen Standardnamen Ritterschwert, Plattenrüstung die Ritter-Plattenrüstung und Ritterrüstung die Turnierrüstung. Stabile IDs und frühere Lookup-Aliase erhalten; persönliche Jungritterschwerter, vorhandener Besitz, gepinnte Revisionen und historische Würfe werden dadurch weder umbenannt noch umgewertet. Die verlinkte Regelquelle ist auch für die abgestuften Rüstungswerte, Schildnachteile und tatsächlichen Ausrüstungskosten verbindlich.

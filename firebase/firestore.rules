@@ -42,6 +42,9 @@ service cloud.firestore {
     function changesCombatRelevantProfile() {
       return request.resource.data.diff(resource.data).affectedKeys().hasAny(['combatProfile', 'inventory']);
     }
+    function canonicalInventory(data) {
+      return data.get('inventory', null) is map && data.inventory.get('definitionSchemaVersion', 0) == 1;
+    }
 
     function pureTimeMarker(data) {
       return data.get('sceneTimeEvent', null) is map
@@ -104,16 +107,18 @@ service cloud.firestore {
 
     match /characters/{recordId} {
       allow read: if true;
-      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid && !canonicalInventory(request.resource.data);
       allow update: if signedIn()
+        && (!(canonicalInventory(resource.data) || canonicalInventory(request.resource.data)) || !changesCombatRelevantProfile())
         && (!changesCombatRelevantProfile() || !combatProfileLocked('characters', recordId));
       allow delete: if signedIn() && !combatProfileLocked('characters', recordId);
     }
 
     match /creatures/{recordId} {
       allow read: if true;
-      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid && !canonicalInventory(request.resource.data);
       allow update: if signedIn()
+        && (!(canonicalInventory(resource.data) || canonicalInventory(request.resource.data)) || !changesCombatRelevantProfile())
         && (!changesCombatRelevantProfile() || !combatProfileLocked('creatures', recordId));
       allow delete: if signedIn() && !combatProfileLocked('creatures', recordId)
         && (resource.data.get('itemOrigin', null) == null || resource.data.itemOrigin.get('ownerCharacterId', '') == '');
@@ -152,6 +157,16 @@ service cloud.firestore {
       allow read: if true;
       allow write: if false;
     }
+    match /item_definitions/{documentId} { allow read: if true; allow write: if false; }
+    match /item_definition_versions/{documentId} { allow read: if true; allow write: if false; }
+    match /item_unique_claims/{documentId} { allow read, write: if false; }
+    match /item_vendor_wallets/{documentId} { allow read: if signedIn(); allow write: if false; }
+    match /item_award_claims/{documentId} { allow read: if isModerator(); allow write: if false; }
+    match /{collectionId}/{documentId} {
+      allow read: if collectionId in ['item_definition_transactions', 'item_record_transactions', 'item_migration_transactions', 'mechanical_comment_transactions', 'loot_claim_transactions']
+        && signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
+      allow write: if false;
+    }
 
     match /item_register_transactions/{documentId} {
       allow read: if signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
@@ -173,6 +188,35 @@ service cloud.firestore {
       allow write: if signedIn()
         && documentId.size() > 0
         && documentId.size() <= 180;
+    }
+
+    match /quests/{questId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /quest_runs/{runId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /quest_events/{eventId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /quest_reward_claims/{runId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /quest_transactions/{transactionId} {
+      allow read: if signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
+      allow write: if false;
+    }
+    match /group_quest_accounts/{groupId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /group_inventory_transactions/{transactionId} {
+      allow read: if signedIn() && (resource.data.actorUid == request.auth.uid || isModerator());
+      allow write: if false;
     }
 
     match /topic_proposals/{proposalId} {

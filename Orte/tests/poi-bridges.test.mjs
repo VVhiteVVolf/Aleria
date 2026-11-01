@@ -59,6 +59,11 @@ for (const kind of ["map", "board"]) {
       assert.match(sent.at(-1).payload.pois[0].searchText, /Rioneths Beschreibung/);
       message("aleria:map-poi-open", { id: "attachment" });
       assert.equal(opened.at(-1), 'attachment', 'old direct links to public attachments remain valid');
+      window.TafelRuntime.visibleNotices = () => [];
+      listeners.get('aleria:tafel:date-changed')();
+      assert.equal(sent.at(-1).payload.pois.length, 0, 'dated-out and archived notices leave the embedded search');
+      message('aleria:map-poi-open', { id: 'attachment' });
+      assert.equal(opened.length, 2, 'direct embedded requests cannot reopen hidden notices');
     }
   });
 }

@@ -5,7 +5,7 @@ function itemDbOpen() {
 }
 function itemDbClose() { window.AleriaItemRegister?.close(); }
 function itemDbRenderImage(item, className = 'item-db-image') {
-  const source = itemDbSanitizeImage(item.image || '');
+  const source = itemDbSanitizeImage(window.AleriaItemRegister?.resolveImage?.(item) || item.image || '');
   return source
     ? `<span class="${className}"><img src="${itemDbEscapeHtml(source)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>`
     : `<span class="${className} item-db-image-empty" aria-hidden="true">◇</span>`;

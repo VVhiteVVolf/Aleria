@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "scope": "Public repository sources and local character snapshot only; not a live Firebase census.",
+  "exclusions": [
+    "Private dossiers",
+    "Browser drafts and IndexedDB",
+    "Historical comments treated as current stock",
+    "Live Firebase records"
+  ],
+  "input": {
+    "characterSnapshot": "CharakterDatenbank/generated/characters.snapshot.json",
+    "characterSnapshotSha256": "420c487ada4888328204a9f78638a9fc4e32b4538b6cf8f2bc64650dfbe53746",
+    "standardVersion": "701d064f3fa19af6"
+  },
+  "standards": {
+    "count": 455,
+    "categories": {
+      "alchemie": {
+        "count": 62,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "arkanes": {
+        "count": 49,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "getraenke": {
+        "count": 10,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "pferde": {
+        "count": 28,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "ruestungen": {
+        "count": 205,
+        "withCombatDefinition": 205,
+        "linkedToTemplate": 0
+      },
+      "speisen": {
+        "count": 18,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "vieh": {
+        "count": 22,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "waffen": {
+        "count": 18,
+        "withCombatDefinition": 18,
+        "linkedToTemplate": 0
+      },
+      "werkzeuge": {
+        "count": 43,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      }
+    },
+    "regionalCount": 186,
+    "missingEquipmentMechanics": [],
+    "provisionalCount": 222
+  },
+  "moduleOffers": {
+    "count": 655,
+    "categories": {
+      "alchemie": {
+        "count": 32,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 30
+      },
+      "arkanes": {
+        "count": 42,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 37
+      },
+      "getraenke": {
+        "count": 253,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 84
+      },
+      "pferde": {
+        "count": 2,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "ruestungen": {
+        "count": 33,
+        "withCombatDefinition": 19,
+        "linkedToTemplate": 19
+      },
+      "sonstiges": {
+        "count": 72,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 0
+      },
+      "speisen": {
+        "count": 140,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 73
+      },
+      "waffen": {
+        "count": 38,
+        "withCombatDefinition": 17,
+        "linkedToTemplate": 17
+      },
+      "werkzeuge": {
+        "count": 43,
+        "withCombatDefinition": 0,
+        "linkedToTemplate": 43
+      }
+    },
+    "sourceModulesScanned": 27,
+    "providers": 20,
+    "missingEquipmentMechanics": [
+      {
+        "id": "module:4291b8501b272f4e:927347a33265c44b",
+        "title": "Gofrann-Stahldolch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:adbe43792d29cc29",
+        "title": "Gofrann-Kurzschwert",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:225a4461c6691e69",
+        "title": "Gofrann-Langschwert",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:e73186ebfb1f9fcd",
+        "title": "Gofrann-Bastardschwert",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:bd7a816ec30e9c32",
+        "title": "Gofrann-Zweihänder",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:4d524099af7ab329",
+        "title": "Gofrann-Säbel",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:1680401100df3fa9",
+        "title": "Gofrann-Handaxt",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:fb8a9113b72197c9",
+        "title": "Gofrann-Streitaxt",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:220959e3f31bb4c9",
+        "title": "Gofrann-Doppelaxt",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:0f01f0cb4c73e649",
+        "title": "Gofrann-Streitkolben",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:8e0e10ad2fe3b6b1",
+        "title": "Gofrann-Streithammer",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:f6188dea3028a5b2",
+        "title": "Gofrann-Kriegshammer",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:cc6b5e315bd1d0a9",
+        "title": "Gofrann-Speer",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:10d975c139f106e9",
+        "title": "Gofrann-Hellebarde",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:76c21e49586e7029",
+        "title": "Gofrann-Gleve",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:4dafdc9e7408b538",
+        "title": "Gofrann-Kettenmorgenstern",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:1247350591d82129",
+        "title": "Gofrann-Langbogen",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:b27b4264ede4b06a",
+        "title": "Gofrann-Stahlbogenarmbrust",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:0346ceb8b2ec0f72",
+        "title": "Gofrann-Plattenharnisch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:de3ec474c8bab2c0",
+        "title": "Gofrann-Brigantine",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:beb7814b53e3a723",
+        "title": "Gofrann-Kettenharnisch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:1b3fbbfd2ebf4423",
+        "title": "Gofrann-Lederharnisch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:db2bf8b158e23179",
+        "title": "Gofrann-Verstärkter Lederharnisch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:e394fee070e74380",
+        "title": "Gofrann-Wappenrock · Petrol und Leinen",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:efc1f2384dfe5dba",
+        "title": "Gofrann-Wappenrock · Rot und Schwarz",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:26de4955ccb12abd",
+        "title": "Gofrann-Kite-Schild",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:c0586a00773cbc4e",
+        "title": "Gofrann-Rundschild",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:c6601a1446faa78e",
+        "title": "Gofrann-Pavese",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:3eb1003c6df710be",
+        "title": "Gofrann-Buckler",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:e4d7a542c9f0c332",
+        "title": "Nachtader · Tenebrium-Schwert",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:96d71d99fd7a0f65",
+        "title": "Eid der Esse · Maßschwert",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:06d4afb20a9943f2",
+        "title": "Erzbrecher · Meister-Rabenschnabel",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:54ba54da13ced6da",
+        "title": "Violette Wacht · Tenebrium-Plattenharnisch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:0a82b92e03c6f39a",
+        "title": "Reitermaß · Persönlicher Plattenharnisch",
+        "moduleId": "zum-dritten-funken"
+      },
+      {
+        "id": "module:4291b8501b272f4e:6d3543ff071c7abf",
+        "title": "Adernhemd · Tenebrit-Kettenharnisch",
+        "moduleId": "zum-dritten-funken"
+      }
+    ]
+  },
+  "characters": {
+    "count": 255,
+    "inventoryRows": 1139,
+    "untouchedPlaceholders": 1021,
+    "placeholdersByName": {
+      "Dokumente / Urkunden": 171,
+      "Hauptwaffe": 170,
+      "Heil- oder Verbrauchsgut": 171,
+      "Persönlicher Gegenstand": 169,
+      "Reiseausrüstung": 171,
+      "Rüstung / Schutz": 169
+    },
+    "realRows": 118,
+    "registerProjectionRows": 118,
+    "withCombatDefinition": 43,
+    "withTemplateReference": 14,
+    "unresolvedReferences": [],
+    "equipmentEntries": 62,
+    "virtualUnarmedEntries": 20,
+    "equipmentWithoutInventoryLink": [
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-lute",
+        "name": "Laute",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-sword",
+        "name": "Schwert",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-shield-bash",
+        "name": "Schild (Schildstoß)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-padded-armor",
+        "name": "Wattierter Waffenrock",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "ksJQe8Ai4KbRE9jOAvb7",
+        "equipmentId": "freya-shield",
+        "name": "Schild",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-greataxe",
+        "name": "Großaxt",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-handaxe-pair",
+        "name": "Einhandäxte (Paar)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-throwing-axe",
+        "name": "Wurfaxt",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-roundshield-bash",
+        "name": "Huskarl-Rundschild (Schildstoß)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-scale-mail",
+        "name": "Schuppenpanzer",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "FKiXsSWVoV74rTgmpPip",
+        "equipmentId": "fenrir-roundshield",
+        "name": "Huskarl-Rundschild",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "HjDXMMexahez1G0rJrBE",
+        "equipmentId": "HjDXMMexahez1G0rJrBE-teulu-sword",
+        "name": "Kane Draig · Teulu-Ritterschwert",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-longbow",
+        "name": "Helwyr Langbogen",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-shortbow",
+        "name": "Helwyr Kurzbogen",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-sword",
+        "name": "Helwyr Schwert",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-hunting-daggers",
+        "name": "Helwyr Jagddolche (Paar)",
+        "collection": "weapons"
+      },
+      {
+        "characterId": "person--haus-neidr--guinevere-neidr",
+        "equipmentId": "guinevere-leather-armor",
+        "name": "Helwyr Lederrüstung",
+        "collection": "armorItems"
+      },
+      {
+        "characterId": "6atOllMA637Z2VNAZAxf",
+        "equipmentId": "6atOllMA637Z2VNAZAxf-teulu-sword",
+        "name": "Gethin · Teulu-Ritterschwert",
+        "collection": "weapons"
+      }
+    ]
+  },
+  "noticeRewards": {
+    "catalogRows": 1110,
+    "withCombatDefinition": 0,
+    "withResolvableRegisterId": 1110,
+    "behavior": "Descriptive promises; no claim or payment transaction."
+  }
+}

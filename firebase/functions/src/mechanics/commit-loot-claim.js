@@ -1,10 +1,13 @@
-import { randomUUID } from 'node:crypto';
+import { randomUUID, createHash } from 'node:crypto';
+import { prepareItemGrant } from '../items/item-grant-service.js';
+import { resolveRegisterItemTemplate } from './item-register-template.js';
+import { canManageCharacter } from '../generated/item-register/item-register-model.js';
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { deriveCombatEncounterState } from '../generated/combat/combat-encounter-model.js';
 import { collectClaimedLootActorIds, normalizeLootClaimEvent } from '../generated/loot/loot-model.js';
 import { isTrustedMechanicalComment, sortSceneHistory } from './trusted-scene-history.js';
-import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { withItemInventoryRevisions } from '../items/item-inventory-update.js';
 
 function fail(code, message) {
   throw new HttpsError(code, message);
@@ -44,9 +47,10 @@ function validateRequestedItems(requestedItems, lootTable) {
     const source = table.find(item => String(item?.id || '') === id);
     if (!source) fail('failed-precondition', 'Ein gewählter Gegenstand gehört nicht (mehr) zur Beute dieser Kreatur.');
     const maximum = Math.max(0, Math.trunc(Number(source.quantity) || 0));
+    if (maximum < 1) fail('failed-precondition', `${source.name || 'Der Gegenstand'} ist nicht mehr verfügbar.`);
     const clamped = Math.max(1, Math.min(maximum, quantity));
     if (clamped < 1) fail('failed-precondition', `${source.name || 'Der Gegenstand'} ist nicht mehr verfügbar.`);
-    return { id, name: clean(source.name, 140) || 'Gegenstand', quantity: clamped, notes: clean(source.notes, 800) };
+    return { id, name: clean(source.name, 140) || 'Gegenstand', quantity: clamped, notes: clean(source.notes, 800), ...(source.definitionRef ? { definitionRef: source.definitionRef } : {}) };
   });
 }
 
@@ -54,13 +58,13 @@ function applyLootToInventory(receiver, items, now) {
   const inventory = clone(receiver.inventory);
   inventory.items = Array.isArray(inventory.items) ? inventory.items : [];
   items.forEach(item => {
-    const match = inventory.items.find(existing => !existing.itemDbKey && existing.name === item.name);
-    if (match) {
-      match.quantity = String((Math.trunc(Number(match.quantity)) || 0) + item.quantity);
-      return;
-    }
+    // Loot names do not establish identity with existing equipment or stacks.
+    // Preserve every existing stat block and the provenance of the new find.
+    if (inventory.items.length >= 80) fail('failed-precondition', 'Das Inventar hat bereits 80 Einträge. Bitte zuerst Platz schaffen.');
+    const instanceId = `loot-${randomUUID()}`;
     inventory.items.push({
-      id: `loot-${randomUUID()}`,
+      id: instanceId,
+      instanceId,
       name: item.name,
       description: item.notes,
       type: 'Beute',
@@ -94,8 +98,15 @@ export const commitLootClaim = onCall({
   const commentRef = database.collection('comments').doc();
   const now = new Date();
   let lootClaim;
+  const claimRef = database.collection('loot_claim_transactions').doc(createHash('sha256').update(JSON.stringify([entryId, encounterId, actorId])).digest('hex'));
+  const fingerprint = createHash('sha256').update(JSON.stringify([receiverId, requestedItems])).digest('hex');
 
-  await database.runTransaction(async transaction => {
+  return database.runTransaction(async transaction => {
+    const prior = await transaction.get(claimRef);
+    if (prior.exists) {
+      if (prior.data().actorUid !== request.auth.uid || prior.data().fingerprint !== fingerprint) fail('already-exists', 'Diese Beute wurde bereits geborgen.');
+      return prior.data().result;
+    }
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const history = sortSceneHistory(threadSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
       .filter(isTrustedMechanicalComment);
@@ -122,13 +133,21 @@ export const commitLootClaim = onCall({
 
     const creature = creatureSnapshot.data() || {};
     const items = validateRequestedItems(requestedItems, creature.loot?.items);
-    const receiver = { id: receiverId, ...(receiverSnapshot.data() || {}) };
-    const receiverInventory = applyLootToInventory(receiver, items, now);
+    const receiver = { ...(receiverSnapshot.data() || {}), id: receiverId };
+    if (!canManageCharacter(receiver, { authenticated: true, uid: request.auth.uid, canModerate: ['admin', 'moderator'].includes(request.auth.token?.aleriaRole) })) fail('permission-denied', 'Die Beute kann nur in ein eigenes oder durch die Spielleitung verwaltetes Inventar übernommen werden.');
+    const grants = [];
+    for (const item of items) grants.push({ quantity: item.quantity, product: item.definitionRef
+      ? await resolveRegisterItemTemplate(database, transaction, { definitionRef: item.definitionRef }, { allowCreatures: true })
+      : { id: `loot:${creatureRecordId}:${item.id}`, title: item.name, description: item.notes, category: 'sonstiges', mechanicsStatus: 'provisional' } });
+    const granted = await prepareItemGrant(database, transaction, receiver, grants, { identity: `loot:${claimRef.id}`, actorUid: request.auth.uid, now: now.toISOString(),
+      acquisition: { kind: 'loot', encounterId, sourceActorId: actorId } });
+    const receiverInventory = granted.inventory;
 
-    transaction.update(receiverRef, withProtectedRecordRevisions(receiver, {
+    granted.write();
+    transaction.update(receiverRef, withItemInventoryRevisions(receiver, {
       inventory: receiverInventory,
-      updatedAt: now.toISOString()
-    }, ['inventory'], now.getTime()));
+      ...(Object.hasOwn(granted, 'combatProfile') ? { combatProfile: granted.combatProfile } : {})
+    }, now.toISOString(), now.getTime()));
 
     lootClaim = normalizeLootClaimEvent({
       encounterId,
@@ -163,9 +182,10 @@ export const commitLootClaim = onCall({
       schemaVersion: 3,
       ts: FieldValue.serverTimestamp()
     });
+    const result = { id: commentRef.id, lootClaim };
+    transaction.create(claimRef, { actorUid: request.auth.uid, fingerprint, entryId, encounterId, actorId, at: now.toISOString(), result });
+    return result;
   });
-
-  return { id: commentRef.id, lootClaim };
 });
 
 export const lootClaimCommitInternals = Object.freeze({

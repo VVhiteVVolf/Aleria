@@ -1,4 +1,7 @@
 import { normalizeCreatureImages, MAX_CREATURE_AVATARS } from './creature-images-model.js?v=20260919-creature-pages-v1';
+import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-model.js';
+import { storeDefinitionInventory } from '../item-definitions/item-definition-resolver.js';
+import { duplicateItemPossessions } from '../item-definitions/item-possession-duplication.js';
 import { normalizeCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v2';
 import { normalizeCreatureClassification } from './creature-classification.js?v=20261013-draig-breeds-v2';
 import { resolveCreatureBestiaryReference, resolveCreatureBestiaryAncestry } from './creature-bestiary-reference.js?v=20261013-draig-breeds-v2';
@@ -36,6 +39,7 @@ function normalizeId(value, fallback) {
 function sanitizeLootItem(item = {}, index = 0) {
   return {
     id: normalizeId(item.id, `loot-${index + 1}`),
+    ...(normalizeItemDefinitionRef(item.definitionRef) ? { definitionRef: normalizeItemDefinitionRef(item.definitionRef) } : {}),
     name: normalizeText(item.name, 140),
     quantity: normalizeNumber(item.quantity, 1, 0, 9999),
     chance: normalizeNumber(item.chance, 100, 0, 100),
@@ -104,6 +108,7 @@ export function sanitizeCreature(value = {}) {
   });
   const loot = source.loot && typeof source.loot === 'object' ? source.loot : {};
   const result = {
+    ...(source.inventory && typeof source.inventory === 'object' && !Array.isArray(source.inventory) ? { inventory: storeDefinitionInventory(structuredClone(source.inventory)) } : {}),
     schemaVersion: CREATURE_SCHEMA_VERSION,
     entityType: 'creature',
     itemOrigin: source.itemOrigin && typeof source.itemOrigin === 'object' ? { ...source.itemOrigin } : null,
@@ -185,6 +190,7 @@ export function createCreatureDuplicate(source, allCreatures = []) {
   const ordinal = Math.max(0, ...used) + 1;
   const duplicate = sanitizeCreature({
     ...original,
+    ...duplicateItemPossessions(original.inventory, original.combatProfile, `${baseName} ${toRomanNumeral(ordinal)}.`),
     id: '',
     itemOrigin: null,
     name: `${baseName} ${toRomanNumeral(ordinal)}.`,

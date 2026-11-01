@@ -19421,7 +19421,7 @@ var AleriaEconomy = (() => {
     },
     {
       "id": "standard:waffen-rustungen:ritterschwert",
-      "title": "Ritterschwert",
+      "title": "Gro\xDFschwert",
       "market": "Waffen & R\xFCstungen",
       "category": "waffen",
       "unit": "",
@@ -19597,7 +19597,7 @@ var AleriaEconomy = (() => {
     },
     {
       "id": "standard:waffen-rustungen:ritterplatte",
-      "title": "Ritter-Plattenr\xFCstung",
+      "title": "Plattenr\xFCstung",
       "market": "Waffen & R\xFCstungen",
       "category": "ruestungen",
       "unit": "",
@@ -19652,7 +19652,7 @@ var AleriaEconomy = (() => {
     },
     {
       "id": "standard:waffen-rustungen:turnierruestung",
-      "title": "Turnierr\xFCstung",
+      "title": "Ritterr\xFCstung",
       "market": "Waffen & R\xFCstungen",
       "category": "ruestungen",
       "unit": "",

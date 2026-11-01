@@ -1,8 +1,9 @@
 import { STANDARD_ITEMS, STANDARD_VERSION } from './item-register-standard.js?v=20261020-arkaneum-v1';
-import { buildOwnedItems, toLegacyItem } from './item-register-model.js?v=20261006-regional-equipment-v2';
+import { buildOwnedItems, toLegacyItem, categoryLabel } from './item-register-model.js?v=20261006-regional-equipment-v2';
 import { legacyOffers } from './item-register-migration.js?v=20261006-regional-equipment-v2';
 import { buildModuleOffers, isModuleScanDuplicate } from './item-register-module-catalog.js?v=20261020-arkaneum-v1';
 import { moduleProviders } from './item-register-providers.js?v=20261014-aldrimar-brewers-v1';
+import { itemDefinitionStore } from '../item-definitions/item-definition-store.js';
 
 export function createRegisterStore({ standards = STANDARD_ITEMS, version = STANDARD_VERSION, notify = () => {} } = {}) {
   let backend = null;
@@ -21,7 +22,10 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
     const remainingLocal = localLegacy.filter(item => !legacyIds.has(item.id) && !item.aliases.some(key => remoteDeletedKeys.has(key)));
     const offers = [...moduleOffers, ...state.offers, ...[...state.legacy, ...remainingLocal].filter(item => !remoteIds.has(item.id) && !isModuleScanDuplicate(item, moduleOffers))];
     const owned = buildOwnedItems(state.characters, [...standards, ...offers], state.creatures);
-    return { ...state, ready: undefined, charactersReady: state.ready.has('characters'), creaturesReady: state.ready.has('creatures'), standards, offers, providers, owned, items: [...standards, ...offers, ...owned], version };
+    const definitions = itemDefinitionStore.snapshot().templates.map(template => ({ ...template, canonicalKey: template.id,
+      categoryLabel: categoryLabel(template.category), listId: 'definitions', listName: 'Eigene Itemdefinitionen', priceRange: null }));
+    return { ...state, ready: undefined, charactersReady: state.ready.has('characters'), creaturesReady: state.ready.has('creatures'),
+      standards, offers, definitions, providers, owned, items: [...standards, ...definitions, ...offers, ...owned], version };
   }
   function changed() {
     const current = snapshot();
@@ -37,6 +41,8 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
   function setModules(entries) {
     modules = entries;
     moduleOffers = buildModuleOffers(modules, standards);
+    itemDefinitionStore.registerTemplates(moduleOffers);
+    itemDefinitionStore.ensureVersions([{ items: moduleOffers }]).catch(error => { state.error = error.message; changed(); });
     providers = moduleProviders(modules);
     changed();
   }
@@ -58,6 +64,7 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
     for (const kind of ['offers', 'characters', 'creatures']) {
       unsubscribes.push(api.subscribe(kind, (records, metadata = {}) => {
         state[kind] = records;
+        if (kind === 'characters' || kind === 'creatures') itemDefinitionStore.ensureVersions(records).catch(error => { state.error = error.message; changed(); });
         state.ready.add(kind);
         failures.delete(kind);
         if (metadata.fromCache) cached.add(kind); else cached.delete(kind);
@@ -81,9 +88,9 @@ export function createRegisterStore({ standards = STANDARD_ITEMS, version = STAN
   }
   function replaceStandards(next, nextVersion) {
     if (!Array.isArray(next) || !next.length || next.some(item => !['standard', 'regional'].includes(item.section) || !item.id?.startsWith('standard:')) || new Set(next.map(item => item.id)).size !== next.length) throw new Error('Die Vorlagendaten sind ungültig.');
-    standards = next; version = nextVersion; moduleOffers = buildModuleOffers(modules, standards); changed();
+    standards = next; version = nextVersion; itemDefinitionStore.registerTemplates(standards); moduleOffers = buildModuleOffers(modules, standards); changed();
   }
-  return Object.freeze({ snapshot, connect, stop, commit, setLegacy, setLocalLegacy, setModules, replaceStandards,
+  return Object.freeze({ snapshot, connect, stop, commit, setLegacy, setLocalLegacy, setModules, replaceStandards, refreshDefinitions: changed,
     subscribe(listener) { listeners.add(listener); listener(snapshot()); return () => listeners.delete(listener); },
     legacyIndex() { return snapshot().items.map(toLegacyItem); },
     getByKey(key) { return snapshot().items.find(item => item.id === key || item.aliases?.includes(key)) || null; }

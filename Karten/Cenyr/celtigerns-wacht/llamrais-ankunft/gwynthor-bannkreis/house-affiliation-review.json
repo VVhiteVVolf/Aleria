@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-10-30",
-  "dataRevision": 13,
+  "reviewedAt": "2026-11-01T06:10:48.232Z",
+  "dataRevision": 14,
   "policy": "Existing house records only; preserve pin IDs and positions. Distinguish family allegiance, local geography and land ownership. Unregistered families keep their existing proven local affiliation.",
   "sources": [
     "house-seat-sources.json",
     "Stammbäume/assets/js/data/families.registry.js",
-    "Familien Häuser und Clans/haeuser.registry.js"
+    "Familien Häuser und Clans/haeuser.registry.js",
+    "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js"
   ],
   "pins": [
     {
@@ -356,7 +357,7 @@
       "source": "Stammbäume/assets/js/data/families.registry.js",
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "Bannkreis Gwynthor",
+        "seat": "Gwynthor",
         "barony": "Llamreis Ankunft",
         "county": "Celtigerns Wacht",
         "kingdom": "Cenyr",
@@ -366,6 +367,12 @@
         ],
         "liegeHouseId": "house-draig",
         "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
         "regionEmblems": {
           "seat": "",
           "barony": "",
@@ -409,7 +416,7 @@
       "source": "Stammbäume/assets/js/data/families.registry.js",
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "Bannkreis Gwynthor",
+        "seat": "Gwynthor",
         "barony": "Llamreis Ankunft",
         "county": "Celtigerns Wacht",
         "kingdom": "Cenyr",
@@ -419,6 +426,12 @@
         ],
         "liegeHouseId": "house-draig",
         "liegeHouseName": "Haus Draig",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
         "regionEmblems": {
           "seat": "",
           "barony": "",
@@ -535,6 +548,37 @@
       "note": ""
     },
     {
+      "pinId": "gwynthor-marking-138",
+      "familyId": "haus-twyllod",
+      "familyName": "Familie Twyllod",
+      "liegeHouseId": "",
+      "dominionId": "msa3c53vo1h89v",
+      "source": "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Twyllod-Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "note": "Nutzerauftrag vom 30.10.2026: bestehende Fischerei mit der nun ausgearbeiteten Familie verbunden; Position, Pin-ID und Herrschaft erhalten."
+    },
+    {
       "pinId": "gwynthor-marking-141",
       "familyId": "haus-draig",
       "familyName": "Haus Draig",
@@ -583,37 +627,6 @@
         }
       },
       "note": ""
-    },
-    {
-      "pinId": "gwynthor-marking-138",
-      "familyId": "haus-twyllod",
-      "familyName": "Familie Twyllod",
-      "liegeHouseId": "",
-      "dominionId": "msa3c53vo1h89v",
-      "source": "Stammbäume/assets/js/data/gwynthor-erbstreit/twyllod-family.js",
-      "houseProfile": {
-        "rankId": "commoner",
-        "seat": "Twyllod-Hof",
-        "barony": "Llamreis Ankunft",
-        "county": "Celtigerns Wacht",
-        "kingdom": "Cenyr",
-        "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
-        "folderPath": [
-          "Cenyr",
-          "Celtigerns Wacht",
-          "Llamreis Ankunft",
-          "Bannkreis Gwynthor"
-        ],
-        "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
-        }
-      },
-      "note": "Nutzerauftrag vom 30.10.2026: bestehende Fischerei mit der nun ausgearbeiteten Familie verbunden; Position, Pin-ID und Herrschaft erhalten."
     }
   ],
   "unreconciledFamilies": [
