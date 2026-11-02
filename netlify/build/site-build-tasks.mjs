@@ -188,9 +188,9 @@ export const SITE_BUILD_TASKS = [
       'CharakterDatenbank/lib/', 'CharakterDatenbank/scripts/import-balchder-publication.mjs',
       'CharakterDatenbank/generated/', 'CharakterDatenbank/registry.json', 'CharakterDatenbank/records/familien/haus-balchder/',
       ...['kamber', 'blodwen', 'rice'].map(name => `Charakter Archiv Exporte/${name}-balchder-veroeffentlicht-2026-10-30.json`),
-      ...['balchder-character-publication', 'balchder-vertragsstube', 'authored-character-import', 'character-database-sync'].map(almanach)],
+      ...['balchder-publication-projection', 'balchder-character-publication', 'balchder-vertragsstube', 'authored-character-import', 'character-database-sync'].map(almanach)],
     commands: [['CharakterDatenbank/scripts/import-balchder-publication.mjs', '--check'],
-      testCommand(...['balchder-character-publication', 'balchder-vertragsstube', 'authored-character-import', 'character-database-sync'].map(almanach))]
+      testCommand(...['balchder-publication-projection', 'balchder-character-publication', 'balchder-vertragsstube', 'authored-character-import', 'character-database-sync'].map(almanach))]
   },
   {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
