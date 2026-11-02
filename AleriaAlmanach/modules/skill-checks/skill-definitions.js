@@ -28,4 +28,3 @@ const identities = new Map(SKILL_DEFINITIONS.flatMap(definition =>
   [definition.id, definition.label, ...definition.aliases].map(name => [normalize(name),definition.id])));
 
 export function getSkillIdentity(name) { return identities.get(normalize(name)) || normalize(name); }
-

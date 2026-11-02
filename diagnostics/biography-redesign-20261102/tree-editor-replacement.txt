@@ -26,4 +26,3 @@ function renderEditor(module, documentRef) {
       + inputField('Abstand zum Verbindungstext (px)','connectionTextOffset',d.connectionTextOffset,{type:'number',min:0,max:80}))}
   </div>`;
 }
-

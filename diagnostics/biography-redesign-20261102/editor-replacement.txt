@@ -51,4 +51,3 @@ function buildBiographyModuleEditorFields(page) {
       + field('Abstand zum Verbindungstext (px)', 'connection-text-offset', b.connectionTextOffset, 'number', 'min="0" max="80"'))}
   </div>`;
 }
-
