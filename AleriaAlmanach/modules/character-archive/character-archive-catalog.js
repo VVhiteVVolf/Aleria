@@ -10,6 +10,7 @@ import {
   normalizeCharacterArchiveEntry
 } from './character-archive-model.js?v=20260928-equipment-art-v4';
 import { FIRE_SPELL_ARSENAL } from './fire-spell-arsenal.js?v=20260810-fire-spell-arsenal-v1';
+import { DEVELOPMENT_TRAITS } from '../character-development/development-traits.js';
 import { buildSpellCatalogArchiveEntries } from '../spell-catalog/spell-catalog-archive.js';
 import { ARCHIVE_PAGE_CLASSES, ARCHIVE_PAGE_MOUNTS } from './character-archive-page-data.js?v=20260913-morgorn-names-v1';
 import { classifyCharacterArchiveEntries, createArchiveMountEntry } from './character-archive-classification.js?v=20260928-equipment-art-v4';
@@ -189,6 +190,9 @@ export function loadBuiltinCharacterArchiveEntries() {
       buildCombatStyleEntries(),
       buildFireSpellArsenalEntries(),
       buildSpellCatalogArchiveEntries(),
+      DEVELOPMENT_TRAITS.map(trait => normalizeCharacterArchiveEntry({ id: trait.id, kind: 'trait', name: trait.name,
+        description: trait.description, icon: trait.icon, data: trait, builtin: true,
+        sources: [{ kind: 'system', id: 'character-development', name: 'Individuelle Charakterentwicklung' }] })),
       libraryEntries,
       ARCHIVE_PAGE_MOUNTS.map(createArchiveMountEntry)
     ));

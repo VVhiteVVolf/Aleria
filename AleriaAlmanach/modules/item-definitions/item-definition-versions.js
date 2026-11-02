@@ -2,6 +2,1583 @@
 export const ARCHIVED_ITEM_DEFINITIONS = [
   {
     "schemaVersion": 1,
+    "id": "gwynthor-seven:briallen-awenor-ruestung",
+    "revision": "c6e490de004560b2073ac767",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Briallens Awenor-Rüstung",
+    "category": "ruestungen",
+    "type": "Rüstung",
+    "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-awenor-harnisch-v1.png",
+    "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "armor",
+      "properties": "Schwere Startrüstung",
+      "notes": "",
+      "triggerRules": [],
+      "armorKind": "armor",
+      "armorCategory": "heavy",
+      "baseArmorClass": 15,
+      "armorClassBonus": 0,
+      "dexterityMode": "none",
+      "dexterityCap": 2,
+      "dexterityUnlockLevel": 0,
+      "damageProtection": {
+        "name": "Plattengrundschutz",
+        "amount": 1,
+        "damageTypes": [
+          "hieb",
+          "stich",
+          "wucht"
+        ],
+        "excludedDamageTypes": []
+      },
+      "mechanics": {}
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "briallen-awenor-ruestung",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+    "revision": "fffeea152e6d27dccc5a0c54",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Caralyns Chwedonol-Rüstung",
+    "category": "ruestungen",
+    "type": "Rüstung",
+    "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-chwedlonol-harnisch-v1.png",
+    "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "armor",
+      "properties": "Schwere Startrüstung",
+      "notes": "",
+      "triggerRules": [],
+      "armorKind": "armor",
+      "armorCategory": "heavy",
+      "baseArmorClass": 15,
+      "armorClassBonus": 0,
+      "dexterityMode": "none",
+      "dexterityCap": 2,
+      "dexterityUnlockLevel": 0,
+      "damageProtection": {
+        "name": "Plattengrundschutz",
+        "amount": 1,
+        "damageTypes": [
+          "hieb",
+          "stich",
+          "wucht"
+        ],
+        "excludedDamageTypes": []
+      },
+      "mechanics": {}
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "caralyn-chwedlonol-ruestung",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:chwedonol-dreizack",
+    "revision": "529ebfbd3901612d362623dc",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Chwedonol Dreizack",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/chwedonol-dreizack.png",
+    "description": "Dreizack in grünen und goldenen Hausfarben.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Vielseitig",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "spear",
+      "weaponProfileId": "trident",
+      "training": "martial",
+      "damageFormula": "1d8",
+      "versatileDamageFormula": "1d10",
+      "damageType": "Stich",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "chwedonol-dreizack",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:chwedonol-enteraxt",
+    "revision": "0f5a3772f1c8ed645c0106a6",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Chwedonol Enteraxt",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/chwedonol-enteraxt.png",
+    "description": "Handliche Enteraxt für das Gedränge an Deck.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Enterhaken",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "axe",
+      "weaponProfileId": "boarding-axe",
+      "training": "martial",
+      "damageFormula": "1d6",
+      "versatileDamageFormula": "",
+      "damageType": "Hieb",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "chwedonol-enteraxt",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:chwedonol-harpune",
+    "revision": "4f6999981a4b22b9ed499925",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Chwedonol Harpune",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/chwedonol-harpune.png",
+    "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Wurfwaffe · Leine gesondert befestigen",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "spear",
+      "weaponProfileId": "harpoon",
+      "training": "martial",
+      "damageFormula": "1d6",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf · Wurf 6/18 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "chwedonol-harpune",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:draig-dolch",
+    "revision": "336c655ad86daf32a8fc06e3",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Draig Dolch",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/draig-dolch-v1.png",
+    "description": "Owetas Draig-Dolch in der vorhandenen Hausbauform. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Leicht · Finesse · Wurfwaffe",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "dagger",
+      "weaponProfileId": "dagger",
+      "training": "martial",
+      "damageFormula": "1d4",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf · Wurf 6/18 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "draig-dolch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:draig-jungritter-ruestung",
+    "revision": "9b73d0004b1619fc399ae817",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Draig - Jungritter Plattenrüstung",
+    "category": "ruestungen",
+    "type": "Rüstung",
+    "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-draig-harnisch-v1.png",
+    "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "armor",
+      "properties": "Schwere Startrüstung",
+      "notes": "",
+      "triggerRules": [],
+      "armorKind": "armor",
+      "armorCategory": "heavy",
+      "baseArmorClass": 15,
+      "armorClassBonus": 0,
+      "dexterityMode": "none",
+      "dexterityCap": 2,
+      "dexterityUnlockLevel": 0,
+      "damageProtection": {
+        "name": "Plattengrundschutz",
+        "amount": 1,
+        "damageTypes": [
+          "hieb",
+          "stich",
+          "wucht"
+        ],
+        "excludedDamageTypes": []
+      },
+      "mechanics": {}
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "draig-jungritter-ruestung",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:draig-ritterschwert",
+    "revision": "17c838fef740c4980877df3e",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Draig Ritterschwert",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "https://i.imgur.com/bthNwPb.png",
+    "description": "Owetas gewöhnliches Draig-Ritterschwert. Vorhandene Hausbauform; keine persönlichen Angriffs-, Schadens- oder Ausbildungsboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Vielseitig",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "sword",
+      "weaponProfileId": "sword",
+      "training": "martial",
+      "damageFormula": "1d8",
+      "versatileDamageFormula": "1d10",
+      "damageType": "Hieb",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "draig-ritterschwert",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:evie-rhyddid-ruestung",
+    "revision": "e691574cc5e3031680ed564d",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Evies Rhyddid-Rüstung",
+    "category": "ruestungen",
+    "type": "Rüstung",
+    "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-rhyddid-harnisch-v1.png",
+    "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "armor",
+      "properties": "Schwere Startrüstung",
+      "notes": "",
+      "triggerRules": [],
+      "armorKind": "armor",
+      "armorCategory": "heavy",
+      "baseArmorClass": 15,
+      "armorClassBonus": 0,
+      "dexterityMode": "none",
+      "dexterityCap": 2,
+      "dexterityUnlockLevel": 0,
+      "damageProtection": {
+        "name": "Plattengrundschutz",
+        "amount": 1,
+        "damageTypes": [
+          "hieb",
+          "stich",
+          "wucht"
+        ],
+        "excludedDamageTypes": []
+      },
+      "mechanics": {}
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "evie-rhyddid-ruestung",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:feuerpfeil",
+    "revision": "0ff4f92025ce20fa1353e102",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Feuerpfeil",
+    "category": "werkzeuge",
+    "type": "Munition",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-feuerpfeile-v1.png",
+    "description": "Brandmunition. Anzünden und Feuerwirkung gesondert auswerten; keine kostenlose Zusatzattacke.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "feuerpfeil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:feuerpfeil",
+    "revision": "945353b9f3a95e5bceebaeb7",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Feuerpfeil",
+    "category": "sonstiges",
+    "type": "Munition",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-feuerpfeile-v1.png",
+    "description": "Brandmunition. Anzünden und Feuerwirkung gesondert auswerten; keine kostenlose Zusatzattacke.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "feuerpfeil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:gafyr-ritterschwert",
+    "revision": "c7e1fc48f27949ee0f3c2304",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Gafyr Ritterschwert",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/gafyr-ritterschwert.png",
+    "description": "Lefrayes einhändiges Gafyr-Langschwert ohne persönliche Schadens- oder Ausbildungsboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Langschwert",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "sword",
+      "weaponProfileId": "sword",
+      "training": "martial",
+      "damageFormula": "1d8",
+      "versatileDamageFormula": "",
+      "damageType": "Hieb",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "gafyr-ritterschwert",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:helwyr-kampfdolch",
+    "revision": "481d6ae295b5755b9339364c",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Helwyr Kampfdolch",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/helwyr-kampfdolch.png",
+    "description": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Leicht · Finesse · Für beidhändige Führung geeignet",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "dagger",
+      "weaponProfileId": "dagger",
+      "training": "martial",
+      "damageFormula": "1d4",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "helwyr-kampfdolch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:helwyr-kurzbogen",
+    "revision": "bf743091ae32716860b9d997",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Helwyr Kurzbogen",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v3.png",
+    "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Zweihändig · Munition",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "bow",
+      "weaponProfileId": "shortbow",
+      "training": "martial",
+      "damageFormula": "1d6",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "24/96 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": {
+        "amountPerUse": 1,
+        "reloadAfter": 0,
+        "required": true
+      }
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "helwyr-kurzbogen",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:helwyr-kurzbogen",
+    "revision": "d31833b0e4543b030de4cab2",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Helwyr Kurzbogen",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-kurzbogen-v3.png",
+    "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Zweihändig · Munition",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "bow",
+      "weaponProfileId": "shortbow",
+      "training": "martial",
+      "damageFormula": "1d6",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "24/96 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "helwyr-kurzbogen",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:helwyr-langbogen",
+    "revision": "76949901b4b0439aa2072f63",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Helwyr Langbogen",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v4.png",
+    "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Zweihändig · Munition",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "bow",
+      "weaponProfileId": "longbow",
+      "training": "martial",
+      "damageFormula": "1d8",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "45/180 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "helwyr-langbogen",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:helwyr-langbogen",
+    "revision": "c6a9df36ed233df0ef7c0734",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Helwyr Langbogen",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-langbogen-v4.png",
+    "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Zweihändig · Munition",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "bow",
+      "weaponProfileId": "longbow",
+      "training": "martial",
+      "damageFormula": "1d8",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "45/180 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": {
+        "amountPerUse": 1,
+        "reloadAfter": 0,
+        "required": true
+      }
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "helwyr-langbogen",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:lefraye-gafyr-ruestung",
+    "revision": "5230569df97972a4fa5ad205",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Lefrayes Gafyr-Rüstung",
+    "category": "ruestungen",
+    "type": "Rüstung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/lefraye-ruestung.png",
+    "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "armor",
+      "properties": "Schwere Startrüstung",
+      "notes": "",
+      "triggerRules": [],
+      "armorKind": "armor",
+      "armorCategory": "heavy",
+      "baseArmorClass": 15,
+      "armorClassBonus": 0,
+      "dexterityMode": "none",
+      "dexterityCap": 2,
+      "dexterityUnlockLevel": 0,
+      "damageProtection": {
+        "name": "Plattengrundschutz",
+        "amount": 1,
+        "damageTypes": [
+          "hieb",
+          "stich",
+          "wucht"
+        ],
+        "excludedDamageTypes": []
+      },
+      "mechanics": {}
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "lefraye-gafyr-ruestung",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:netz",
+    "revision": "7bf133ff465d88734192a15b",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Netz",
+    "category": "werkzeuge",
+    "type": "Ausrüstung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/netz.png",
+    "description": "Ein Wurf- und Fangnetz. Kein automatischer Zustand ohne ausgearbeitete Aktion.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "netz",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:oweta-zinnritter",
+    "revision": "2a52c8cd289ec4041fbde252",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Kleiner Zinnritter",
+    "category": "sonstiges",
+    "type": "Zinnfigur",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/oweta-zinnritter-v1.png",
+    "description": "Eine kleine, silbrig matte Zinnfigur eines gerüsteten Ritters auf einem Metallfüßchen. Als einzelnes Reiseandenken passend zu Owetas Sammlung von Zinnsoldaten. Gewöhnliches Spielzeug ohne magische Wirkung.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "oweta-zinnritter",
+        "sourcePage": "AleriaAlmanach/modules/castell-draig-rooms/room-pages.mjs"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:rhosyn-kleid",
+    "revision": "5adcaa37cccc4adc7be241a2",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Rhosyns weinrotes Kleid",
+    "category": "sonstiges",
+    "type": "Kleidung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/rhosyn-kleid.png",
+    "description": "Weinrotes Kleid mit langem Rock und dezentem goldenen Turmzeichen nach Rhosyns Porträt.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rhosyn-kleid",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:rianna-dolch",
+    "revision": "16b917461d88c26d56253fa1",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Dolch",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gofrann-schmiede/items/stahldolch.png",
+    "description": "Schlichter Stahldolch für Rianna.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Leicht · Finesse · Wurfwaffe",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "dagger",
+      "weaponProfileId": "dagger",
+      "training": "martial",
+      "damageFormula": "1d4",
+      "versatileDamageFormula": "",
+      "damageType": "Stich",
+      "attackAttribute": "dexterity",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf · Wurf 6/18 m",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-dolch",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:rianna-wyrm-ruestung",
+    "revision": "eb4c0024c755d3bc11b2293a",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Riannas Wyrm-Rüstung",
+    "category": "ruestungen",
+    "type": "Rüstung",
+    "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-wyrm-harnisch-v1.png",
+    "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "armor",
+      "properties": "Schwere Startrüstung",
+      "notes": "",
+      "triggerRules": [],
+      "armorKind": "armor",
+      "armorCategory": "heavy",
+      "baseArmorClass": 15,
+      "armorClassBonus": 0,
+      "dexterityMode": "none",
+      "dexterityCap": 2,
+      "dexterityUnlockLevel": 0,
+      "damageProtection": {
+        "name": "Plattengrundschutz",
+        "amount": 1,
+        "damageTypes": [
+          "hieb",
+          "stich",
+          "wucht"
+        ],
+        "excludedDamageTypes": []
+      },
+      "mechanics": {}
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "rianna-wyrm-ruestung",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:saerwyn-kleid",
+    "revision": "ec74065d93e8a9922c5552c1",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Saerwyns pflaumenfarbenes Kleid",
+    "category": "sonstiges",
+    "type": "Kleidung",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/saerwyn-kleid.png",
+    "description": "Pflaumenfarbenes Kleid mit goldenen Borten, gerafften Ärmeln und breitem Taillengürtel nach Saerwyns Porträt.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "saerwyn-kleid",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:seil",
+    "revision": "37505e437934b6dfe789c899",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Seil",
+    "category": "werkzeuge",
+    "type": "Ausrüstung",
+    "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/seil.png",
+    "description": "Hanfseil, 15 m. Die Verbindung mit Netz oder Harpune muss tatsächlich hergestellt werden.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "seil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:signalpfeil",
+    "revision": "6dd23c36eb7d0b82dad8a547",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Signalpfeil",
+    "category": "sonstiges",
+    "type": "Munition",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-signalpfeile-v1.png",
+    "description": "Signalmunition. Signalwirkung situativ auswerten; kein automatischer Zusatzschaden.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "signalpfeil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:signalpfeil",
+    "revision": "c237ef37c965a41da0925ee7",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Signalpfeil",
+    "category": "werkzeuge",
+    "type": "Munition",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-signalpfeile-v1.png",
+    "description": "Signalmunition. Signalwirkung situativ auswerten; kein automatischer Zusatzschaden.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "signalpfeil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:standardpfeil",
+    "revision": "29d5d90cbb9f3fda51f77558",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Standard Pfeil",
+    "category": "werkzeuge",
+    "type": "Munition",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-standardpfeile-v1.png",
+    "description": "Gewöhnlicher Pfeil. Der Schaden stammt vom geführten Bogen.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "standardpfeil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:standardpfeil",
+    "revision": "8fe25c978bb9dde62e416f2f",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Standard Pfeil",
+    "category": "sonstiges",
+    "type": "Munition",
+    "image": "/AleriaAlmanach/public/assets/character-equipment/guinevere-standardpfeile-v1.png",
+    "description": "Gewöhnlicher Pfeil. Der Schaden stammt vom geführten Bogen.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": true,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "standardpfeil",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "gwynthor-seven:wyrm-ritterschwert",
+    "revision": "be4558653fc1a2ad76d4e633",
+    "kind": "shared",
+    "baseRef": null,
+    "title": "Wyrm Ritterschwert",
+    "category": "waffen",
+    "type": "Waffe",
+    "image": "/AleriaAlmanach/assets/gwynthor-seven/items/wyrm-ritterschwert.png",
+    "description": "Riannas gewöhnliches Langschwert. Der Hausname verleiht keinen magischen Bonus und ist kein Großschwertprofil.",
+    "mechanicsStatus": "defined",
+    "combatDefinition": {
+      "kind": "weapon",
+      "properties": "Einhändig · Langschwert",
+      "notes": "",
+      "triggerRules": [],
+      "weaponType": "sword",
+      "weaponProfileId": "sword",
+      "training": "martial",
+      "damageFormula": "1d8",
+      "versatileDamageFormula": "",
+      "damageType": "Hieb",
+      "attackAttribute": "strength",
+      "attackBonus": 0,
+      "damageBonus": 0,
+      "range": "Nahkampf",
+      "requirements": "",
+      "aiInstructions": "",
+      "effects": [],
+      "activationType": "action",
+      "costs": [],
+      "auraBypass": {
+        "allowed": true,
+        "resourceId": "",
+        "cost": 1
+      },
+      "spendAllRegularActions": false,
+      "ammunition": null
+    },
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "authored-equipment",
+        "sourceId": "wyrm-ritterschwert",
+        "sourcePage": "AleriaAlmanach/modules/gwynthor-seven/README.md"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
     "id": "standard:alchemist:aderpilz",
     "revision": "e32c2b4d316925da214c04ed",
     "kind": "shared",

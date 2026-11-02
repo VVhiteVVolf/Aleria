@@ -12,9 +12,9 @@ export function realmPlaces(realm) {
   const markers = realm.settlements.map(seat => {
     const category = categories.find(c => c.label === (seat.id === realm.capital ? 'Hauptstadt' : /Burg|Broch/.test(seat.kind || '') ? 'Burg' : 'Stadt'));
     return { id: placeId(realm, seat), title: seat.name, category: category.label, templateId: 'siedlung', icon: category.marker,
-      territoryId: `${realm.id}-sitz-${seat.id}`, x: seat.point[0], y: 100 - seat.point[1], href: placeHref(realm, seat),
-      residentFamilyIds: realm.historical ? [] : residentsAt(seat.id).map(h => h.familyId),
-      sourceRef: { provider: 'aleria-accepted-realms', acceptedOn: '2026-10-28', settlementId: seat.id,
+      territoryId: `${realm.id}-sitz-${seat.id}`, x: seat.point?.[0] ?? null, y: seat.point ? 100 - seat.point[1] : null, href: placeHref(realm, seat),
+      residentFamilyIds: realm.historical ? [] : residentsAt(seat.id).filter(h => !h.extinct).map(h => h.familyId),
+      sourceRef: { provider: 'aleria-accepted-realms', acceptedOn: realm.acceptedOn, settlementId: seat.id,
         coordinateOrigin: 'top-left', coordinateUnit: 'percent', coordinates: seat.point, provisional: !!seat.provisionalCoordinates } };
   });
   const describePlace = marker => {

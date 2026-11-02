@@ -1,6 +1,16 @@
 // Authoring sources remain in the source repository. Their public counterparts
 // (crests, previews, production images and explicit original downloads) stay live.
 const SOURCE_ARCHIVE_ROOTS = [
+  'AleriaAlmanach/modules/character-inventory/scripts/',
+  'AleriaAlmanach/assets/inventory-ui/',
+  'js/biography/sources/',
+  'AleriaAlmanach/modules/gwynthor-seven/source/',
+  'AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/',
+  'shared/accepted-realms/sources/',
+  'shared/accepted-realms/scripts/',
+  'shared/accepted-realms/authoring/',
+  'Vorschau/Venalys/sources/',
+  'AleriaAlmanach/assets/gwynthor-marktplatz/',
   'AleriaAlmanach/modules/gawain-duncan/source/',
   'AleriaAlmanach/modules/group-adventures/source/',
   'AleriaAlmanach/backups/scenes/'
@@ -8,6 +18,9 @@ const SOURCE_ARCHIVE_ROOTS = [
 
 export function isAuthoringArchive(file) {
   return file.startsWith('diagnostics/')
+    || file === 'AleriaAlmanach/public/assets/inventory-ui/dark-hide-v1.png'
+    || file === 'js/biography/build-public-biographies.mjs'
+    || /^AleriaAlmanach\/assets\/development-traits\/[^/]+\.png$/.test(file)
     || SOURCE_ARCHIVE_ROOTS.some(root => file.startsWith(root))
     || file === 'AleriaAlmanach/assets/currency/image-prompts.json'
     || file.startsWith('output/heraldry/')

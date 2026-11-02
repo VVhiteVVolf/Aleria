@@ -1,6 +1,7 @@
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 import { STATUS_DURATIONS, createManualCombatCondition } from './combat-status-model.js?v=20260906-effect-rolls-v1';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js?v=20260928-equipment-art-v4';
+import { getSceneConditionClock } from '../scene-time/scene-condition-clock.js';
 import { escapeCombatMarkup as e, renderCombatCondition as renderMiniProfileCondition } from './combat-status-view.js?v=20260906-effect-rolls-v1';
 
 let dialog = null;
@@ -19,7 +20,7 @@ export async function commitSceneCombatStatus(context, change) {
 
 function formMarkup() {
   return `<label>Vorlage<select name="presetId"><option value="">Eigener Zustand</option>${COMBAT_STATUS_PRESETS.map(item => `<option value="${item.id}">${e(item.name)}</option>`).join('')}</select></label>
-    <div data-status-preview></div><div class="combat-status-fields"><label>Name<input name="name" required maxlength="160" placeholder="Zum Beispiel: Ermutigt"></label>
+    <div data-status-preview></div><p data-status-fixed-rule hidden>Diese Vorlage verwendet feste Rauschwirkungen und interaktive Szenenzeit. Die Dauer kannst du unten in Szenenminuten einstellen.</p><div class="combat-status-fields"><label>Name<input name="name" required maxlength="160" placeholder="Zum Beispiel: Ermutigt"></label>
     <label>Art<select name="kind"><option value="condition">Zustand</option><option value="buff">Buff</option><option value="debuff">Debuff</option></select></label>
     <label>Dauer<select name="durationKind">${STATUS_DURATIONS.map(([key, label]) => `<option value="${key}">${e(label)}</option>`).join('')}</select></label>
     <label data-status-amount>Anzahl<input type="number" name="durationAmount" min="1" max="999" value="1" required></label></div>
@@ -27,6 +28,19 @@ function formMarkup() {
     <label>Wirkung / Hinweise<textarea name="description" rows="3" maxlength="1600"></textarea></label>
     <fieldset class="combat-status-roll-modes"><legend>Vorteil & Nachteil</legend><div class="combat-status-fields">${STATUS_ROLL_MODES.map(([key, label]) => `<label>${e(label)}<select name="${key}"><option value="normal">Keine Änderung</option><option value="advantage">Vorteil</option><option value="disadvantage">Nachteil</option></select></label>`).join('')}</div><p>Gilt automatisch, solange dieser Effekt aktiv ist. Vorteil und Nachteil heben sich gegenseitig auf.</p></fieldset>
     <details class="combat-status-modifiers"><summary>Boni & Mali automatisch einrechnen</summary><p>Nur eingetragene Zahlen werden automatisch verrechnet. Weitere Wirkungen wie Folgeschaden, Bewegung oder Handlungssperren werden als Hinweis verfolgt.</p><div class="combat-status-fields">${STATUS_MODIFIERS.map(([key, label]) => `<label>${e(label)}<input type="number" name="modifier-${key}" min="-30" max="30" value="0"></label>`).join('')}</div></details>`;
+}
+
+function renderPresetPreview(form) {
+  const preset = COMBAT_STATUS_PRESETS.find(item => item.id === form.elements.presetId.value);
+  const host = form.querySelector('[data-status-preview]');
+  if (!preset) { host.innerHTML = ''; return; }
+  try {
+    // The preview needs a relative duration only; submission checks the real scene clock.
+    const condition = preset.sceneMinutes ? createManualCombatCondition({ presetId: preset.id, durationAmount: form.elements.durationAmount.value },
+      { actorId: 'preview', sceneClockSeconds: 0 }) : { ...preset, presetId: preset.id };
+    if (preset.sceneMinutes) form.elements.source.value = condition.source;
+    host.innerHTML = `<ul class="comment-combat-conditions">${renderMiniProfileCondition(condition, { temporary: Boolean(preset.sceneMinutes) })}</ul>`;
+  } catch (error) { host.innerHTML = `<p role="status">${e(error.message)}</p>`; }
 }
 
 function ensureDialog() {
@@ -50,14 +64,24 @@ function ensureDialog() {
         form.elements.description.value = preset.description;
       }
       for (const [key] of STATUS_ROLL_MODES) form.elements[key].value = preset?.mechanics?.[key] || 'normal';
-      dialog.querySelector('[data-status-preview]').innerHTML = preset
-        ? `<ul class="comment-combat-conditions">${renderMiniProfileCondition({ ...preset, presetId: preset.id })}</ul>` : '';
+      for (const [key] of STATUS_MODIFIERS) form.elements[`modifier-${key}`].value = preset?.mechanics?.[key] || 0;
+      const fixed = Boolean(preset?.sceneMinutes);
+      for (const key of ['name', 'kind', 'description', 'source', 'durationKind', ...STATUS_ROLL_MODES.map(([key]) => key), ...STATUS_MODIFIERS.map(([key]) => `modifier-${key}`)]) form.elements[key].disabled = fixed;
+      dialog.querySelector('[data-status-fixed-rule]').hidden = !fixed;
+      form.elements.durationAmount.min = fixed && (preset.id === 'drunk' || preset.id === 'hangover') ? '60' : '1';
+      form.elements.durationAmount.max = fixed ? '180' : '999';
+      form.elements.durationAmount.step = preset?.id === 'hangover' ? '60' : '1';
+      if (preset?.sceneMinutes) {
+        form.elements.durationKind.value = 'scene-time'; form.elements.durationAmount.value = preset.sceneMinutes;
+        dialog.querySelector('[data-status-amount]').hidden = false; form.elements.durationAmount.disabled = false;
+      }
     }
     if (event.target.name === 'durationKind') {
-      const counted = ['actor-comments', 'scene-comments'].includes(event.target.value);
+      const counted = ['actor-comments', 'scene-comments', 'scene-time'].includes(event.target.value);
       dialog.querySelector('[data-status-amount]').hidden = !counted;
       form.elements.durationAmount.disabled = !counted;
     }
+    if (['presetId', 'durationAmount'].includes(event.target.name)) renderPresetPreview(form);
   });
   dialog.addEventListener('submit', event => { event.preventDefault(); void submit(); });
 }
@@ -84,7 +108,8 @@ async function submit() {
       condition = Object.fromEntries(new FormData(form));
       condition.mechanics = Object.fromEntries(STATUS_MODIFIERS.map(([key]) => [key, form.elements[`modifier-${key}`].value]));
       for (const [key] of STATUS_ROLL_MODES) condition.mechanics[key] = form.elements[key].value;
-      createManualCombatCondition(condition, { id: 'preview' });
+      createManualCombatCondition(condition, { id: 'preview', actorId: current.characterId, sceneId: current.threadId,
+        sceneClockSeconds: getSceneConditionClock(comments(current.threadId)).seconds });
     }
     if (current.operation === 'reset' && getActiveCombatEncounter(comments(current.threadId))) throw new Error('Inzwischen steht eine Kampfphase an. Zurücksetzen ist gesperrt.');
     current.submitting = true;

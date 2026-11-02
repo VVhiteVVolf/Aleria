@@ -1,5 +1,6 @@
-import { getCenyrClassDefinitionForProfile } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { getCenyrClassDefinitionForProfile, getCenyrClassDefinition } from './cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { hasEquippedCombatShield as hasEquippedShield } from '../../combat/combat-weapon-loadout.js';
+import { getDevelopmentTechniqueId } from '../../character-development/development-entry-reference.js';
 
 const WEAPON_PROFILE_ALIASES = Object.freeze([
   ['halberd', /hellebarde/],
@@ -67,7 +68,9 @@ function validateClassAndWeapon(definition, technique, weaponProfileId, weapon =
 // stored character attacks remain free of copied class/weapon bonuses.
 export function resolveCenyrTechniqueWeaponRules(profile = {}, technique = {}, weapon = {}) {
   const rules = emptyRules(technique);
-  const definition = getCenyrClassDefinitionForProfile(profile);
+  const purchase = profile.progression?.development?.mode === 'purchase'
+    ? profile.progression.development.purchases?.find(p => p.techniqueId === getDevelopmentTechniqueId(technique)) : null;
+  const definition = (purchase && getCenyrClassDefinition(purchase.classId)) || getCenyrClassDefinitionForProfile(profile);
   if (!definition || !['drachentanz', 'sirenentanz'].includes(technique.combatStyleId)) return rules;
   const weaponProfileId = getCenyrWeaponProfileId(weapon);
 

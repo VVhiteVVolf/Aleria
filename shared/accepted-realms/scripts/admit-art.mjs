@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourcesDirectory = path.join(root, 'shared/accepted-realms/sources');
 const manifestFile = path.join(sourcesDirectory, 'art-manifest.json');
-const realms = ['aldingen', 'goldmund', 'weisenfluh', 'moinneach', 'iathneach', 'deitheach', 'triarchie'];
+const realms = ['aldingen', 'goldmund', 'weisenfluh', 'moinneach', 'iathneach', 'deitheach', 'triarchie', 'aeldrunmar', 'talyndor', 'brevanor'];
 const houseRoot = '/Stammbäume/assets/images/houses/accepted-realms';
 const warriorRoot = '/Stammbäume/assets/images/references/accepted-realms';
 const territoryRoot = '/Stammbäume/assets/images/regions';
@@ -16,6 +16,14 @@ const absolute = url => path.join(root, url.replace(/^\//, ''));
 const rootUrl = filename => `/${path.relative(root, filename).replaceAll('\\', '/')}`;
 const readJson = filename => JSON.parse(fs.readFileSync(filename, 'utf8'));
 const sha256 = filename => crypto.createHash('sha256').update(fs.readFileSync(filename)).digest('hex');
+const additionsFile = path.join(sourcesDirectory, 'house-additions.json');
+const additions = fs.existsSync(additionsFile) ? readJson(additionsFile) : {};
+
+function snapshotsFor(realm) {
+  return [`${realm}.snapshot.json`, ...(additions[realm] || [])].map(file => ({
+    file: path.join(sourcesDirectory, file), data: readJson(path.join(sourcesDirectory, file)),
+  }));
+}
 
 function assertLocal(filename) {
   const relative = path.relative(root, filename);
@@ -57,8 +65,13 @@ function verifyManifest(manifest) {
       imagePath(territory.image, `${realm}/${id} territory image`);
       imagePath(territory.fullsize, `${realm}/${id} full territory image`);
     }
+    for (const [id, emblem] of Object.entries(data.historicalEmblems || {})) {
+      imagePath(emblem.image, `${realm}/${id} historical emblem`);
+      imagePath(emblem.fullsize, `${realm}/${id} full historical emblem`);
+    }
   }
-  if (houseCount !== 117) errors.push(`Expected 117 houses, found ${houseCount}.`);
+  const expectedHouses = realms.reduce((sum, realm) => sum + snapshotsFor(realm).reduce((n, s) => n + s.data.houses.length, 0), 0);
+  if (houseCount !== expectedHouses) errors.push(`Expected ${expectedHouses} houses, found ${houseCount}.`);
   for (const receipt of manifest.receipts) {
     const filename = absolute(receipt.path);
     assertLocal(filename);
@@ -97,7 +110,11 @@ function createPlan() {
   };
   for (const realm of realms) {
     const snapshotPath = path.join(sourcesDirectory, `${realm}.snapshot.json`);
-    const snapshot = readJson(snapshotPath);
+    const snapshots = snapshotsFor(realm);
+    const snapshot = { ...snapshots[0].data,
+      houses: snapshots.flatMap(s => s.data.houses), warriors: snapshots.flatMap(s => s.data.warriors),
+    };
+    if (new Set(snapshot.houses.map(h => h.id)).size !== snapshot.houses.length) throw Error(`Duplicate admitted house in ${realm}`);
     const preview = `/Vorschau/${snapshot.previewDirectory}`;
     const source = relative => `${preview}/${relative}`;
     const houseById = new Map(snapshot.houses.map(house => [house.id, house]));
@@ -105,6 +122,7 @@ function createPlan() {
     const crestSource = house => source(prefixAssets ? `assets/${house.crest}` : house.crest);
     const fullCrestSource = house => source(house.fullsize || house.original || (prefixAssets ? `assets/${house.crest}` : house.crest));
     const entry = { map: null, realmCrest: null, realmCrestFull: null, houses: {}, territories: {}, snapshot: rootUrl(snapshotPath), snapshotSha256: sha256(snapshotPath) };
+    if (snapshots.length > 1) entry.supplementalSnapshots = snapshots.slice(1).map(s => ({ path: rootUrl(s.file), sha256: sha256(s.file) }));
     manifest.realms[realm] = entry;
 
     const mapPath = realm === 'moinneach' ? snapshot.sourceProposal.map : 'assets/map.webp';
@@ -142,6 +160,14 @@ function createPlan() {
     } else {
       entry.realmCrestNote = 'No separate supplied national emblem; retain the known territory/house signs without inventing a Triarchie crest.';
       manifest.notes.push({ realm, reason: entry.realmCrestNote });
+    }
+
+    if (snapshot.historicalEmblems) {
+      entry.historicalEmblems = Object.fromEntries(snapshot.historicalEmblems.map(emblem => [emblem.id, {
+        ...emblem,
+        image: add(source(emblem.image), `${territoryRoot}/${realm}/history-${emblem.id}`, 'Approved historical emblem from the country workshop.'),
+        fullsize: add(source(emblem.fullsize), `${territoryRoot}/${realm}/history-${emblem.id}`, 'Approved historical emblem original.'),
+      }]));
     }
 
     const territory = (id, image, fullsize, metadata = {}, evidence = 'Snapshot territoryArt fields.') => {

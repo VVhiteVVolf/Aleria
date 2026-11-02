@@ -1,4 +1,4 @@
-import '../image-library/image-library-model.js?v=20260919-creature-pages-v1';
+import '../image-library/image-library-model.js?v=20261102-set-order-v1';
 
 export const CREATURE_IMAGE_LIBRARY = globalThis.AleriaCharacterImageSets;
 export const MAX_CREATURE_AVATARS = CREATURE_IMAGE_LIBRARY.avatarLimit;
@@ -6,7 +6,7 @@ export const MAX_CREATURE_AVATARS = CREATURE_IMAGE_LIBRARY.avatarLimit;
 export function normalizeCreatureImages(source = {}) {
   const avatars = Array.isArray(source.avatars) ? source.avatars : (source.emotes || []);
   const imageSets = CREATURE_IMAGE_LIBRARY.normalize({ ...source, entityType: 'creature', emotes: avatars });
-  const standard = imageSets[0];
+  const standard = imageSets.find(set => set.id === CREATURE_IMAGE_LIBRARY.defaultId);
   return {
     imageSetSchemaVersion: CREATURE_IMAGE_LIBRARY.schemaVersion,
     imageSets,
@@ -17,7 +17,8 @@ export function normalizeCreatureImages(source = {}) {
 }
 
 export function getCreatureImageSet(creature) {
-  return creature.imageSets.find(set => set.id === creature.activeImageSetId) || creature.imageSets[0];
+  return creature.imageSets.find(set => set.id === creature.activeImageSetId)
+    || creature.imageSets.find(set => set.id === CREATURE_IMAGE_LIBRARY.defaultId);
 }
 
 export function updateCreatureImageSet(creature, updates) {

@@ -150,6 +150,19 @@ test('Abschnittsauswahl rendert alle Sets und markiert nur das aktive', () => {
   assert.equal((markup.match(/aria-pressed="true"/g) || []).length, 1);
 });
 
+test('neue und bearbeitete Beiträge übernehmen die gespeicherte Reihenfolge ohne die Abschnittsauswahl zu ändern', () => {
+  const context = loadSegmentEditors();
+  vm.runInContext("getAvailableCommentCharacterById('char-1').imageSets.reverse()", context);
+  for (const edit of [false, true]) {
+    const segment = edit ? '_editCommentSegments[0]' : '_commentSegments[0]';
+    const markup = vm.runInContext(`getCommentSegmentImageSetPicker(${segment}, ${edit})`, context);
+    assert.ok(markup.indexOf('data-image-set-id="kampf"') < markup.indexOf('data-image-set-id="standard"'));
+    assert.equal(vm.runInContext(`getCommentSegmentImageSetContext(${segment}, ${edit}).selectedSet.id`, context), 'standard');
+    vm.runInContext(`${segment}.imageSetId = 'gelöscht'`, context);
+    assert.equal(vm.runInContext(`getCommentSegmentImageSetContext(${segment}, ${edit}).selectedSet.id`, context), 'standard');
+  }
+});
+
 test('Kreaturen wählen Bildersets und Avatare in neuen und bearbeiteten Kommentaren', () => {
   const context = loadSegmentEditors({ creature: true });
   vm.runInContext("_commentMode = 'creature'; _editMode = 'creature';", context);

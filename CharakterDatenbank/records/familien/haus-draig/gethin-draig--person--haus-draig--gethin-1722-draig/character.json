@@ -80,13 +80,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/gethin-draig-zuordnung-2026-10-14.json",
-    "sourceExportedAt": "2026-10-14T10:38:18.880Z",
-    "sourceUpdatedAt": "2026-10-14T10:38:18.880Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/person--haus-draig--gethin-1722-draig.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "person--haus-draig--gethin-1722-draig"
     ],
-    "contentHash": "a34c14d177ac19753d416e68f5b57760b5343147c3778fd8832f6455bfa30069"
+    "contentHash": "e188eee993df3fe3363cddfa2bbae4e657930a4d53495ce4043a538458646ff5"
   },
   "local": {
     "notes": "",
@@ -6161,6 +6161,20 @@
         "imageSetsOverride": true,
         "bio": "",
         "playerOwner": ""
+      },
+      {
+        "id": "person--haus-draig--gethin-1722-draig",
+        "name": "Gethin Draig",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": []
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": []
+          }
+        }
       }
     ]
   },
@@ -6775,7 +6789,7 @@
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "",
-    "updatedAt": "2026-10-14T10:38:18.880Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "createdBy": "vqDKXbzepJf0rsUwSO2QvQQ7fKF3",
     "ownerUid": "vqDKXbzepJf0rsUwSO2QvQQ7fKF3",
     "houseArmorAssignment": {
@@ -11377,113 +11391,7 @@
         "magicModifier": 0,
         "dexterityMode": "full"
       },
-      "quirks": [
-        {
-          "active": true,
-          "aiInstructions": "",
-          "triggerRules": [],
-          "target": "self",
-          "tags": "Volk · Cenyr",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "priority": 0,
-          "name": "Cenyri Kultur",
-          "stacking": "normal",
-          "mechanics": {
-            "initiative": 0,
-            "passivePerception": 0,
-            "movement": 0,
-            "armorClass": 0,
-            "spellAttack": 0,
-            "spellSaveDc": 0,
-            "skill": 0,
-            "attackRollMode": "normal",
-            "savingThrowDisadvantageAttributes": [],
-            "savingThrowAdvantageAttributes": [],
-            "attack": 0,
-            "savingThrow": 0,
-            "maximumHitPoints": 0,
-            "bonusDamageFormula": "",
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0
-          },
-          "id": "starter-ancestry-cenyr-trait-1",
-          "duration": "",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "trigger": "",
-          "type": "trait",
-          "limitations": ""
-        },
-        {
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "priority": 0,
-          "type": "trait",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "duration": "",
-          "stacking": "normal",
-          "triggerRules": [],
-          "target": "self",
-          "tags": "Volk · Cenyr",
-          "active": true,
-          "aiInstructions": "",
-          "limitations": "",
-          "trigger": "",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "name": "Höfische und religiöse Prägung",
-          "mechanics": {
-            "savingThrow": 0,
-            "armorClass": 0,
-            "initiative": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "maximumHitPoints": 0,
-            "damage": 0,
-            "skill": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "spellAttack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "spellSaveDc": 0,
-            "movement": 0,
-            "bonusDamageFormula": "",
-            "attack": 0
-          }
-        },
-        {
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "name": "Ritterliche Herkunft und Standespflicht",
-          "aiInstructions": "",
-          "target": "self",
-          "tags": "Hintergrund · Ritter",
-          "triggerRules": [],
-          "active": true,
-          "duration": "",
-          "type": "trait",
-          "stacking": "normal",
-          "mechanics": {
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "attackRollMode": "normal",
-            "savingThrow": 0,
-            "armorClass": 0,
-            "damage": 0,
-            "spellSaveDc": 0,
-            "skill": 0,
-            "passivePerception": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "spellAttack": 0,
-            "maximumHitPoints": 0,
-            "movement": 0
-          },
-          "trigger": "",
-          "priority": 0,
-          "limitations": "",
-          "id": "starter-background-ritter-trait-1",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind"
-        }
-      ],
+      "quirks": [],
       "schemaVersion": 11,
       "weapons": [
         {

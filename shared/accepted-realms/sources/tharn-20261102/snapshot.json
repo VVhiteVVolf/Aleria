@@ -1,0 +1,92 @@
+{
+  "realm": "aeldrunmar",
+  "acceptedOn": "2026-11-02",
+  "userRequest": "Zwei zusätzliche maritime Vasallenhäuser direkt in Tharns Earlsstadt Trentmorath, mit Fischwappen und Kriegerdarstellungen.",
+  "previewDirectory": "Aeldrunmar",
+  "houses": [
+    {
+      "id": "ransford",
+      "name": "Ransford",
+      "crest": "assets/crests/ransford.webp",
+      "fullsize": "assets/production/ransford.png",
+      "sourceSeat": "trentmorath",
+      "sourceFolder": "Earltum der Tharn",
+      "rank": "vassal",
+      "role": "Maritimes Vasallenhaus der Tharn",
+      "clan": false,
+      "extinct": false,
+      "isNew": true,
+      "motif": "Ein einzelner silberner Dorsch über zwei silbernen Wellen auf Petrol, umgeben von einem kupfernen Flechtrahmen.",
+      "palette": [
+        "Petrol",
+        "Silber",
+        "Kupfer"
+      ],
+      "focus": "Hochseefischerei, Geleit der Fangschiffe und die sichere Anlandung ihrer Fänge.",
+      "frame": "Kupfer",
+      "ornament": "Breite schlichte kupferne Tau- und Flechtbänder gleichmäßig im vollständig geschlossenen Außenring, keine Schrift und keine Runenzeichen."
+    },
+    {
+      "id": "heswick",
+      "name": "Heswick",
+      "crest": "assets/crests/heswick.webp",
+      "fullsize": "assets/production/heswick.png",
+      "sourceSeat": "trentmorath",
+      "sourceFolder": "Earltum der Tharn",
+      "rank": "vassal",
+      "role": "Maritimes Vasallenhaus der Tharn",
+      "clan": false,
+      "extinct": false,
+      "isNew": true,
+      "motif": "Drei goldene Heringe in drei waagerechten Reihen über einem silbernen Wellenband auf Burgunderrot, eingefasst von einem silbernen Flechtrahmen.",
+      "palette": [
+        "Burgunderrot",
+        "Mattgold",
+        "Silber"
+      ],
+      "focus": "Heringsfang, Salz- und Räucherfisch sowie die Versorgung der Häfen und Schiffsbesatzungen der Tharn.",
+      "frame": "Silber",
+      "ornament": "Silberne gegenläufige Wellen und feine schlichte Flechtbänder im vollständig geschlossenen Außenring, keine Schrift und keine Runenzeichen."
+    }
+  ],
+  "warriors": [
+    {
+      "id": "ransford",
+      "name": "Ransford",
+      "classId": "s-rinc",
+      "className": "Særinc",
+      "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+      "palette": [
+        "Petrol",
+        "Silber",
+        "Kupfer"
+      ],
+      "equipment": "Kräftiges gerades Seeritter-Schwert, beweglicher Ketten- und Schuppenharnisch, kurzer petrolfarbener Mantel und kupferne Säume. Halb offener spitzer Spangenhelm mit Nasal und Wangenklappen.",
+      "reason": "Ein Særinc vertritt die seefahrende Hausgemeinschaft. Dorsch, Arbeitsseil und beweglicher Harnisch greifen Hochseefischerei und den Geleitschutz der Fangschiffe auf.",
+      "withHorse": false,
+      "horseName": null,
+      "bestiary": "",
+      "image": "assets/warriors/previews/ransford.webp",
+      "fullsize": "assets/warriors/production/ransford.png"
+    },
+    {
+      "id": "heswick",
+      "name": "Heswick",
+      "classId": "s-rinc",
+      "className": "Særinc",
+      "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+      "palette": [
+        "Burgunderrot",
+        "Mattgold",
+        "Silber"
+      ],
+      "equipment": "Gerades Seeritter-Schwert, beweglicher Ketten- und Schuppenharnisch mit burgunderrotem Waffenrock, matten Goldsäumen und silbernen Schienen. Geschlossener hoher Helm mit schmalem Sehschlitz und Gesichtsschutz.",
+      "reason": "Ein Særinc steht für die maritime Gefolgschaft des Hauses. Die drei goldenen Heringe bleiben auf dem Waffenrock erkennbar; die geschlossene Helmform unterscheidet die Darstellung von Ransford.",
+      "withHorse": false,
+      "horseName": null,
+      "bestiary": "",
+      "image": "assets/warriors/previews/heswick.webp",
+      "fullsize": "assets/warriors/production/heswick.png"
+    }
+  ]
+}

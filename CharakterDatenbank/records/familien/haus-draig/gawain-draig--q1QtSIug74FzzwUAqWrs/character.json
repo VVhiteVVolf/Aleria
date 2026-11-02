@@ -88,6 +88,7 @@
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs",
+        "q1QtSIug74FzzwUAqWrs",
         "q1QtSIug74FzzwUAqWrs"
       ],
       "documents": [
@@ -135,6 +136,11 @@
           "documentId": "q1QtSIug74FzzwUAqWrs",
           "createdAt": "",
           "updatedAt": "2026-11-01T03:46:32.000Z"
+        },
+        {
+          "documentId": "q1QtSIug74FzzwUAqWrs",
+          "createdAt": "",
+          "updatedAt": "2026-11-01T03:46:32.000Z"
         }
       ]
     },
@@ -157,9 +163,10 @@
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
     "sourceArchive": "Charakter Archiv Exporte/gawain-draig-oeffentliche-biografie-2026-11-01.json",
-    "sourceExportedAt": "2026-11-01T03:46:32.000Z",
-    "sourceUpdatedAt": "2026-11-01T03:46:32.000Z",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
+      "q1QtSIug74FzzwUAqWrs",
       "q1QtSIug74FzzwUAqWrs",
       "q1QtSIug74FzzwUAqWrs",
       "q1QtSIug74FzzwUAqWrs",
@@ -170,7 +177,7 @@
       "q1QtSIug74FzzwUAqWrs",
       "q1QtSIug74FzzwUAqWrs"
     ],
-    "contentHash": "8799c9e77f35957f54f69fa5667192cc27ce97dde96d046cc66eb6659f6bb19a"
+    "contentHash": "9237ad82e42926b14ceb805cc83e9b111845d7b2ba9ff739af58ee7e7045652a"
   },
   "local": {
     "notes": "",
@@ -28185,6 +28192,218 @@
           }
         },
         "updatedAt": "2026-11-01T03:46:32.000Z"
+      },
+      {
+        "id": "q1QtSIug74FzzwUAqWrs",
+        "name": "Gawain Draig",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-neugier-vor-vorsicht",
+              "name": "Neugier vor Vorsicht",
+              "description": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+              "cost": -1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Besondere Eigenheit",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Nachforschungen",
+                    "bonus": 3
+                  }
+                ],
+                "saveAttributeModifiers": [
+                  {
+                    "attributeKey": "dexterity",
+                    "bonus": -2
+                  }
+                ]
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "development-trait-eigensinn",
+              "name": "Eigensinn",
+              "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+              "cost": 1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Besondere Eigenheit",
+              "mechanics": {
+                "saveAttributeModifiers": [
+                  {
+                    "attributeKey": "charisma",
+                    "bonus": 2
+                  }
+                ],
+                "skillModifiers": [
+                  {
+                    "name": "Überzeugen",
+                    "bonus": -2
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Neugier vor Vorsicht",
+                "detail": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
+              },
+              {
+                "title": "Eigensinn",
+                "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "q1QtSIug74FzzwUAqWrs",
+        "name": "Gawain Draig",
+        "bio": "Sir Gawain Draig, jüngster ehelicher Sohn Galahads und Gwendolyns, ist Ritter und Mundschenk am Hof von Gwynthor. Begabt, eitel und schlagfertig, sucht er ein Leben jenseits der Burgmauern. Unter seinem früheren Rittervater Sir Duncan Gafyr soll er nun im Dienst an der Stadt zeigen, dass seinem Mut auch Verlässlichkeit und Urteilskraft folgen.",
+        "title": "Ritter des Hauses Draig · Mundschenk, Gwynthor",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Sir Gawain Draig"
+            },
+            {
+              "label": "Geboren",
+              "value": "1722 · 18 Jahre im Jahr 1740"
+            },
+            {
+              "label": "Haus",
+              "value": "Draig · Celtigerns Wacht"
+            },
+            {
+              "label": "Stand",
+              "value": "Prinz des Hauses Draig · Ritter"
+            },
+            {
+              "label": "Dienst",
+              "value": "Mundschenk · ritterliche Bewährung in Gwynthor"
+            },
+            {
+              "label": "Rittervater",
+              "value": "Sir Duncan Gafyr"
+            },
+            {
+              "label": "Verlobt",
+              "value": "Guinevere Neidr"
+            }
+          ],
+          "quote": "Ich möchte nur sehen, wofür ich eines Tages Verantwortung tragen soll.",
+          "quoteBy": "— Gawain vor dem Offenen Gericht",
+          "biography": {
+            "portrait": "https://i.imgur.com/BceZTJo.jpeg",
+            "portraitStages": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "sideWidth": 100,
+            "connectionPortraitHeight": 68,
+            "connectionTextOffset": 0,
+            "biographyTitle": "Ein Prinz vor der Burgpforte",
+            "biographyText": "<p>Gawain Draig ist in einem Haus aufgewachsen, in dem sein Name Türen öffnet, bevor er selbst die Hand an die Klinke legt. Der jüngste eheliche Sohn Galahads und Gwendolyns kennt die Stimmen des Rates, den Geschmack guter Weine und die kleinen Kriege einer großen Familie. Als Mundschenk steht er oft nahe genug am Thron, um alles zu hören. Stillzustehen und bloß zuzuhören fällt ihm erheblich schwerer.</p><p>Er liebt schöne Kleidung, glänzende Rüstung und ausgesuchte Düfte mit einer Ernsthaftigkeit, die andere Menschen für wichtigere Dinge aufheben. Dabei fehlt ihm keineswegs der Geschmack; er kann durchaus erklären, weshalb ein Parfüm zu einem Menschen passt. Was er nur widerwillig versteht, ist die Vorstellung, dass nicht jeder seine Bequemlichkeiten für unentbehrlich hält. Für Regen, schmutzige Stiefel und das eigenhändige Richten eines widerspenstigen Riemens besitzt er wenig Geduld. Für eine treffende Bemerkung findet er dagegen fast immer Zeit.</p><p>Hinter dieser Eitelkeit steckt ein junger Mann mit echtem Können. Duncan Gafyr bildete ihn als Knappen aus; sein Vater schlug ihn bereits zum Ritter. Die Grundstellungen des Drachentanzes sitzen auch dann, wenn Gawain über die Übung klagt. Er erkennt Öffnungen und findet im Kampf überraschend gute Antworten. Nur vertraut er seinem Talent häufig lieber als der mühsamen Wiederholung. Wo ihm vieles leichtfällt, hält er Ausdauer zu schnell für eine Zumutung.</p><p>Gawain will hinaus. Nicht nur, um einer besonders schönen Heldengeschichte nachzureiten, sondern auch, um die Dörfer, Wege und Menschen kennenzulernen, für die sein Haus Verantwortung trägt. Beides lässt sich bei ihm noch schwer voneinander trennen: die ehrliche Neugier auf die Welt und der Wunsch, darin eine eindrucksvolle Rolle zu spielen. Dass seine Mutter ihn schützen möchte, erlebt er leicht als Bevormundung. Dass sie Gründe für ihre Sorge hat, sieht er erheblich seltener ein.</p><p>Seine Schlagfertigkeit hat eine scharfe Kante. Er kann einen langen Bericht über Hunger, Heimatverlust und gestorbene Angehörige mit einer gelangweilten Bemerkung verletzen, weil er zuerst an seine eigene Unterhaltung denkt. Ylva Wolfshorn ließ ihn damit nicht davonkommen. Gawain versuchte nicht, sich hinter seinem Rang zu verstecken: Er hörte ihre Antwort, entschuldigte sich vor dem Hof und bot Hilfe an. Das macht aus ihm keinen geläuterten Musterknaben. Es zeigt aber, dass er erreichbar bleibt, wenn jemand seinen Übermut durchdringt.</p><p>Auch seine Zuneigung ist selten leise. Taliesin Draenmelyn ist für ihn nicht irgendein austauschbarer Diener, sondern sein bester Freund und engster Vertrauter. Dennoch denkt Gawain Freundschaft und Bedienung so selbstverständlich zusammen, dass ihm der Widerspruch kaum auffällt. Guinevere Neidr nennt er seine beste Freundin; die von ihren Eltern vereinbarte Verlobung wollte er selbst nicht. Seine wachsende Aufmerksamkeit für Ylva ist im Hof und auf dem Übungsplatz unübersehbar. Daraus ist jedoch weder eine aufgehobene Verlobung noch ein neuer Ehebund geworden.</p><p>Gawain kann Anerkennung annehmen und sie auch einem anderen geben. Nach seinem ersten Sieg über Gildas Gafyr reichte er dem unterlegenen Ritter die Hand und dankte ihm aufrichtig. Als Asgeir und Ylva ihr Können zeigten, wich seine Selbstsicherheit sichtlichem Respekt. Unter dem Wunsch, bewundert zu werden, liegt damit etwas, woran Duncan anknüpfen kann: Gawain möchte nicht bloß als Prinz behandelt werden. Er möchte, dass sein Können zählt.</p><p>Nun soll er lernen, dass ein Ritter auch dann gebraucht wird, wenn niemand eine Ballade über ihn schreibt. Zwei Wochen Dienst in Gwynthor, bis zu Tudwals Hochzeit: Patrouillen, Bürgeranliegen und die kleinen Pflichten außerhalb des Burghofs, unter Duncans wachsamen Augen und ohne Taliesins helfende Hände. Für Gawain ist das zugleich Einschränkung und endlich ein erster Schritt durch die Burgpforte. Ob daraus Verlässlichkeit wird, muss er noch zeigen.</p>",
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Neugier vor Vorsicht",
+                "detail": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
+              },
+              {
+                "title": "Eigensinn",
+                "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+              }
+            ],
+            "historyTitle": "Ritterschlag und Bewährung",
+            "historyText": "<p>Geboren 1722 als Sohn Galahad Draigs und Gwendolyns, geborener Aderyn, wuchs Gawain am Hof von Gwynthor auf. Duncan Gafyr war sein Rittervater während der Knappenzeit. Galahad hat ihn inzwischen zum Ritter geschlagen. An Duncans Seite soll er nun lernen, seinen Rang auch in den unscheinbaren Pflichten des Alltags auszufüllen.</p><p>Im Offenen Gericht entzündete sich an seiner Abenteuerlust die Frage, ob er Verantwortung schon tragen könne. Meurig schlug einen Dienst in Stadt und Vororten vor, Egon versprach den Dienstplan, und Gwendolyn band den Versuch an den Verzicht auf seinen Kammerdiener. Duncan sollte beobachten, anleiten und urteilen. Gawain stimmte zu, weil darin trotz aller Auflagen eine Möglichkeit lag, endlich häufiger aus der Burg zu kommen.</p><p>Auf dem Übungsplatz gelang ihm anschließend der erste Sieg gegen seinen langjährigen Trainingsgegner Gildas. Duncan erkannte das Verdienst an und benannte zugleich den riskanten Übermut der letzten Angriffsfolge. Für ihre gemeinsame Zeit ist das bezeichnend: Ein Fortschritt wird gewürdigt, aber nicht mit einer abgeschlossenen Entwicklung verwechselt.</p>",
+            "worksTitle": "Gegenwärtiger Weg",
+            "works": [
+              "Ritterlicher Dienst in Gwynthor unter Sir Duncans Aufsicht; die Bewährung ist noch nicht abgeschlossen."
+            ],
+            "triviaTitle": "Vertraute Dinge",
+            "trivia": [
+              "Sein Rhyfelhengst Tanor war ein Geschenk Sir Owains zu seinem achtzehnten Geburtstag.",
+              "Er möchte Ylva sowohl den Drachentanz mit der Klinge als auch den Volkstanz zeigen."
+            ],
+            "quotesTitle": "Eigene Worte",
+            "quotes": [
+              "„Ich pflege mich eben. Dafür schäme ich mich nicht.“"
+            ],
+            "connectionsTitle": "Menschen an seiner Seite",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Sir Duncan Gafyr",
+                "detail": "Früherer Rittervater und jetziger Leiter seiner Bewährung. Der alte Waffenmeister erkennt sein Talent, lässt aber Rang und Charme nicht für Arbeit gelten.",
+                "image": "https://i.imgur.com/zdChj0a.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwendolyn Draig, geb. Aderyn",
+                "detail": "Seine Mutter schützt ihn mit Nachdruck. Gawain liebt sie und wehrt sich zugleich gegen die engen Grenzen, die ihre Sorge ihm setzt."
+              },
+              {
+                "type": "connection",
+                "name": "Taliesin Draenmelyn",
+                "detail": "Kammerdiener, bester Freund und Vertrauter. Während der Bewährung darf er Gawain auf den Patrouillen ausdrücklich nicht bedienen."
+              },
+              {
+                "type": "connection",
+                "name": "Guinevere Neidr",
+                "detail": "Seine beste Freundin und von den Eltern bestimmte Verlobte. Gawain beschreibt ihre Bindung als freundschaftlich, nicht als von ihm gewählte Liebesverbindung."
+              },
+              {
+                "type": "connection",
+                "name": "Ylva Wolfshorn",
+                "detail": "Gast aus Aldrimar, die seinen Spott zurückwies und seine Entschuldigung annahm. Zwischen beiden wachsen Neugier, Flirt und gegenseitiger Respekt."
+              },
+              {
+                "type": "connection",
+                "name": "Sir Gildas Gafyr",
+                "detail": "Langjähriger Trainingsgegner und vertrauter junger Ritter. Konkurrenz und Spott schließen gegenseitige Hilfe und Anerkennung nicht aus."
+              }
+            ],
+            "documentsTitle": "Eigentum & Begleiter",
+            "documents": [
+              {
+                "title": "Tanor",
+                "text": "Sein Rhyfelhengst, ein Geschenk Sir Owains zu seinem achtzehnten Geburtstag.",
+                "icon": "♞"
+              }
+            ],
+            "extraSections": [],
+            "footer": "Sir Gawain Draig · Haus Draig · Gwynthor"
+          }
+        },
+        "updatedAt": "2026-11-01T03:46:32.000Z"
       }
     ]
   },
@@ -28206,7 +28425,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-07-26T10:52:51.454Z",
-    "updatedAt": "2026-11-01T03:46:32.000Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -29540,108 +29759,6 @@
           "usesMaximum": 1
         },
         {
-          "delivery": "ability",
-          "aiInstructions": "Berücksichtige den Nachteil nur bei Flirten, Überreden, Täuschen, Auftreten, Überleben, Motiv erkennen und Religion.",
-          "channelComments": 0,
-          "active": true,
-          "triggerRules": [
-            {
-              "recipient": "actor",
-              "consumeReaction": false,
-              "authority": "passive",
-              "priority": 0,
-              "description": "Gawain würfelt die festgelegten Fertigkeitsversuche mit Nachteil.",
-              "radiusMeters": null,
-              "costs": [],
-              "resultEffects": [],
-              "phase": "pre-roll",
-              "sourceRelation": "self",
-              "frequency": "always",
-              "activation": "passive",
-              "skillIds": [
-                "seduction",
-                "persuasion",
-                "deception",
-                "performance",
-                "survival",
-                "insight",
-                "religion"
-              ],
-              "condition": "always",
-              "requiredTargetTags": [],
-              "name": "Unsicherheit durch mütterliche Prägung",
-              "enabled": true,
-              "actionKinds": [
-                "skill"
-              ],
-              "effects": {
-                "savingThrowModifier": 0,
-                "outcome": "none",
-                "spellSaveDcModifier": 0,
-                "skillModifier": 0,
-                "damageReduction": 0,
-                "defenseModifier": 0,
-                "attackModifier": 0,
-                "rollMode": "disadvantage",
-                "damageModifier": 0
-              },
-              "actionScope": "global",
-              "id": "gawain-muttersoehnchen-skill-disadvantage"
-            }
-          ],
-          "combatUsable": false,
-          "mechanics": {
-            "combatStartTemporaryHitPoints": 0,
-            "bonusDamageFormula": "",
-            "savingThrowAdvantageAttributes": [],
-            "savingThrow": 0,
-            "attackRollMode": "normal",
-            "movement": 0,
-            "spellAttack": 0,
-            "maximumHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "damage": 0,
-            "skill": 0,
-            "passivePerception": 0,
-            "initiative": 0,
-            "attack": 0,
-            "spellSaveDc": 0,
-            "armorClass": 0
-          },
-          "usesMaximum": 0,
-          "activationType": "passive",
-          "description": "Gawains starke Prägung durch seine Mutter macht ihn in bestimmten sozialen, weltlichen und religiösen Situationen unsicher.",
-          "tags": "Persönlichkeit · soziale Unsicherheit",
-          "concentration": false,
-          "target": "Selbst",
-          "recoveryDayKey": "",
-          "rollFormula": "",
-          "duration": "Dauerhaft",
-          "requirements": "Gilt nur für die ausdrücklich hinterlegten Fertigkeiten.",
-          "range": "Selbst",
-          "damageType": "physisch",
-          "id": "gawain-muttersoehnchen",
-          "name": "Muttersöhnchen",
-          "effects": [],
-          "costs": [],
-          "halfDamageOnSave": false,
-          "recovery": "none",
-          "auraBypass": {
-            "cost": 1,
-            "allowed": false,
-            "resourceId": "aura-focus"
-          },
-          "inventoryUseTrigger": {
-            "enabled": false,
-            "restoreResources": [],
-            "itemTags": [],
-            "requireActualRecovery": true
-          },
-          "saveAttribute": "dexterity",
-          "resolutionType": "",
-          "usesCurrent": 0
-        },
-        {
           "saveAttribute": "dexterity",
           "duration": "Solange der Ring getragen wird",
           "resolutionType": "",
@@ -29831,109 +29948,60 @@
       ],
       "quirks": [
         {
-          "stacking": "normal",
-          "active": true,
-          "tags": "Volk · Cenyr",
-          "id": "starter-ancestry-cenyr-trait-1",
-          "triggerRules": [],
-          "duration": "",
+          "id": "development-trait-neugier-vor-vorsicht",
+          "name": "Neugier vor Vorsicht",
+          "description": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+          "cost": -1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp",
           "type": "trait",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "aiInstructions": "",
-          "target": "self",
-          "limitations": "",
-          "priority": 0,
-          "name": "Cenyri Kultur",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "trigger": "",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
           "mechanics": {
-            "bonusDamageFormula": "",
-            "damage": 0,
-            "initiative": 0,
-            "spellAttack": 0,
-            "skill": 0,
-            "attack": 0,
-            "savingThrow": 0,
-            "passivePerception": 0,
-            "movement": 0,
-            "armorClass": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "spellSaveDc": 0,
-            "attackRollMode": "normal",
-            "maximumHitPoints": 0
-          }
+            "skillModifiers": [
+              {
+                "name": "Nachforschungen",
+                "bonus": 3
+              }
+            ],
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "dexterity",
+                "bonus": -2
+              }
+            ]
+          },
+          "triggerRules": []
         },
         {
-          "target": "self",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "limitations": "",
-          "triggerRules": [],
-          "active": true,
-          "aiInstructions": "",
-          "trigger": "",
-          "mechanics": {
-            "attackRollMode": "normal",
-            "spellSaveDc": 0,
-            "savingThrowAdvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "damage": 0,
-            "armorClass": 0,
-            "skill": 0,
-            "spellAttack": 0,
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "savingThrow": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "initiative": 0,
-            "passivePerception": 0
-          },
-          "name": "Höfische und religiöse Prägung",
-          "priority": 0,
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
           "type": "trait",
-          "duration": "",
-          "tags": "Volk · Cenyr",
-          "stacking": "normal",
-          "id": "starter-ancestry-cenyr-trait-2"
-        },
-        {
-          "triggerRules": [],
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "trigger": "",
-          "priority": 0,
-          "duration": "",
-          "mechanics": {
-            "attack": 0,
-            "spellSaveDc": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "damage": 0,
-            "armorClass": 0,
-            "bonusDamageFormula": "",
-            "movement": 0,
-            "spellAttack": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "skill": 0,
-            "savingThrowAdvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrow": 0
-          },
-          "limitations": "",
-          "stacking": "normal",
-          "tags": "Hintergrund · Ritter",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
           "active": true,
-          "type": "trait",
-          "id": "starter-background-ritter-trait-1",
-          "aiInstructions": "",
-          "target": "self",
-          "name": "Ritterliche Herkunft und Standespflicht"
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
+          "mechanics": {
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "charisma",
+                "bonus": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": -2
+              }
+            ]
+          },
+          "triggerRules": []
         }
       ],
       "techniques": [
@@ -32598,78 +32666,7 @@
           "live": true
         }
       ],
-      "conditions": [
-        {
-          "active": true,
-          "id": "gawain-strenge-gerueche",
-          "description": "Gawain erhält −2 auf Angriffswürfe gegen Gegner mit dem Trait oder Tag „Stinkend“.",
-          "name": "Kann strenge Gerüche nicht leiden",
-          "triggerRules": [
-            {
-              "sourceRelation": "self",
-              "recipient": "actor",
-              "authority": "passive",
-              "priority": -10,
-              "actionKinds": [
-                "weapon",
-                "technique",
-                "ability",
-                "spell",
-                "prayer",
-                "song"
-              ],
-              "actionScope": "global",
-              "name": "Abscheu vor stinkenden Gegnern",
-              "costs": [],
-              "phase": "pre-roll",
-              "frequency": "always",
-              "skillIds": [],
-              "requiredTargetTags": [
-                "stinkend"
-              ],
-              "radiusMeters": null,
-              "resultEffects": [],
-              "condition": "always",
-              "activation": "passive",
-              "enabled": true,
-              "id": "gawain-strenge-gerueche-stinkend",
-              "effects": {
-                "rollMode": "normal",
-                "outcome": "none",
-                "spellSaveDcModifier": 0,
-                "savingThrowModifier": 0,
-                "defenseModifier": 0,
-                "damageModifier": 0,
-                "damageReduction": 0,
-                "skillModifier": 0,
-                "attackModifier": -2
-              },
-              "description": "Nur wenn das aktuelle Ziel den Trait oder Tag Stinkend trägt.",
-              "consumeReaction": false
-            }
-          ],
-          "mechanics": {
-            "maximumHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "spellSaveDc": 0,
-            "skill": 0,
-            "initiative": 0,
-            "savingThrow": 0,
-            "attack": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "armorClass": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "spellAttack": 0,
-            "damage": 0
-          },
-          "source": "Persönliche Empfindlichkeit",
-          "duration": "Dauerhaft"
-        }
-      ],
+      "conditions": [],
       "damageAffinities": [],
       "armorItems": [
         {
@@ -33512,37 +33509,17 @@
         "connectionTextOffset": 0,
         "biographyTitle": "Ein Prinz vor der Burgpforte",
         "biographyText": "<p>Gawain Draig ist in einem Haus aufgewachsen, in dem sein Name Türen öffnet, bevor er selbst die Hand an die Klinke legt. Der jüngste eheliche Sohn Galahads und Gwendolyns kennt die Stimmen des Rates, den Geschmack guter Weine und die kleinen Kriege einer großen Familie. Als Mundschenk steht er oft nahe genug am Thron, um alles zu hören. Stillzustehen und bloß zuzuhören fällt ihm erheblich schwerer.</p><p>Er liebt schöne Kleidung, glänzende Rüstung und ausgesuchte Düfte mit einer Ernsthaftigkeit, die andere Menschen für wichtigere Dinge aufheben. Dabei fehlt ihm keineswegs der Geschmack; er kann durchaus erklären, weshalb ein Parfüm zu einem Menschen passt. Was er nur widerwillig versteht, ist die Vorstellung, dass nicht jeder seine Bequemlichkeiten für unentbehrlich hält. Für Regen, schmutzige Stiefel und das eigenhändige Richten eines widerspenstigen Riemens besitzt er wenig Geduld. Für eine treffende Bemerkung findet er dagegen fast immer Zeit.</p><p>Hinter dieser Eitelkeit steckt ein junger Mann mit echtem Können. Duncan Gafyr bildete ihn als Knappen aus; sein Vater schlug ihn bereits zum Ritter. Die Grundstellungen des Drachentanzes sitzen auch dann, wenn Gawain über die Übung klagt. Er erkennt Öffnungen und findet im Kampf überraschend gute Antworten. Nur vertraut er seinem Talent häufig lieber als der mühsamen Wiederholung. Wo ihm vieles leichtfällt, hält er Ausdauer zu schnell für eine Zumutung.</p><p>Gawain will hinaus. Nicht nur, um einer besonders schönen Heldengeschichte nachzureiten, sondern auch, um die Dörfer, Wege und Menschen kennenzulernen, für die sein Haus Verantwortung trägt. Beides lässt sich bei ihm noch schwer voneinander trennen: die ehrliche Neugier auf die Welt und der Wunsch, darin eine eindrucksvolle Rolle zu spielen. Dass seine Mutter ihn schützen möchte, erlebt er leicht als Bevormundung. Dass sie Gründe für ihre Sorge hat, sieht er erheblich seltener ein.</p><p>Seine Schlagfertigkeit hat eine scharfe Kante. Er kann einen langen Bericht über Hunger, Heimatverlust und gestorbene Angehörige mit einer gelangweilten Bemerkung verletzen, weil er zuerst an seine eigene Unterhaltung denkt. Ylva Wolfshorn ließ ihn damit nicht davonkommen. Gawain versuchte nicht, sich hinter seinem Rang zu verstecken: Er hörte ihre Antwort, entschuldigte sich vor dem Hof und bot Hilfe an. Das macht aus ihm keinen geläuterten Musterknaben. Es zeigt aber, dass er erreichbar bleibt, wenn jemand seinen Übermut durchdringt.</p><p>Auch seine Zuneigung ist selten leise. Taliesin Draenmelyn ist für ihn nicht irgendein austauschbarer Diener, sondern sein bester Freund und engster Vertrauter. Dennoch denkt Gawain Freundschaft und Bedienung so selbstverständlich zusammen, dass ihm der Widerspruch kaum auffällt. Guinevere Neidr nennt er seine beste Freundin; die von ihren Eltern vereinbarte Verlobung wollte er selbst nicht. Seine wachsende Aufmerksamkeit für Ylva ist im Hof und auf dem Übungsplatz unübersehbar. Daraus ist jedoch weder eine aufgehobene Verlobung noch ein neuer Ehebund geworden.</p><p>Gawain kann Anerkennung annehmen und sie auch einem anderen geben. Nach seinem ersten Sieg über Gildas Gafyr reichte er dem unterlegenen Ritter die Hand und dankte ihm aufrichtig. Als Asgeir und Ylva ihr Können zeigten, wich seine Selbstsicherheit sichtlichem Respekt. Unter dem Wunsch, bewundert zu werden, liegt damit etwas, woran Duncan anknüpfen kann: Gawain möchte nicht bloß als Prinz behandelt werden. Er möchte, dass sein Können zählt.</p><p>Nun soll er lernen, dass ein Ritter auch dann gebraucht wird, wenn niemand eine Ballade über ihn schreibt. Zwei Wochen Dienst in Gwynthor, bis zu Tudwals Hochzeit: Patrouillen, Bürgeranliegen und die kleinen Pflichten außerhalb des Burghofs, unter Duncans wachsamen Augen und ohne Taliesins helfende Hände. Für Gawain ist das zugleich Einschränkung und endlich ein erster Schritt durch die Burgpforte. Ob daraus Verlässlichkeit wird, muss er noch zeigen.</p>",
-        "abilitiesTitle": "Wesen & Widersprüche",
+        "abilitiesTitle": "Eigenschaften",
         "abilities": [
           {
-            "title": "Eitel",
-            "detail": "Er pflegt sein Äußeres mit Überzeugung und möchte, dass sein Auftreten seinem Rang entspricht. Schmutz und Unordnung treffen ihn oft unmittelbarer als eine ernste Ermahnung.",
-            "icon": "/IconOrdner/Traits%20Icon/Proud.png"
+            "title": "Neugier vor Vorsicht",
+            "detail": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
           },
           {
-            "title": "Schlagfertig",
-            "detail": "Gawain erkennt die komische Seite einer Lage schnell und genießt eine gute Pointe. Nicht immer merkt er rechtzeitig, dass er gerade über die Wunde eines anderen lacht.",
-            "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
-          },
-          {
-            "title": "Begabt, aber bequem",
-            "detail": "Sein Gespür für den Schwertkampf ist echt. Die Geduld, daraus durch tägliche Übung verlässliches Handwerk zu machen, muss Duncan ihm noch immer abverlangen.",
-            "icon": "/IconOrdner/Traits%20Icon/Slothful.png"
-          },
-          {
-            "title": "Hungrig auf die Welt",
-            "detail": "Abenteuer locken ihn, aber auch die Menschen jenseits der Burgmauern. Er möchte eigene Erfahrungen sammeln und seinen Platz nicht allein von anderen bestimmen lassen.",
-            "icon": "/IconOrdner/Traits%20Icon/Curious.png"
-          },
-          {
-            "title": "Loyal auf seine Weise",
-            "detail": "Taliesin und Guinevere sind ihm wichtig, auch wenn er Zuneigung, Stand und eigene Ansprüche nicht sauber auseinanderhält. Über vertraute Menschen darf nach seiner Auffassung längst nicht jeder spotten.",
-            "icon": "/IconOrdner/Traits%20Icon/Trusting.png"
-          },
-          {
-            "title": "Empfänglich für Anerkennung",
-            "detail": "Lob richtet ihn auf; Kränkungen reizen ihn. Trotzdem kann er eigene Grenzen benennen, einen Gegner respektieren und eine aufrichtige Entschuldigung aussprechen.",
-            "icon": "/IconOrdner/Traits%20Icon/Willful.png"
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
           }
         ],
         "historyTitle": "Ritterschlag und Bewährung",

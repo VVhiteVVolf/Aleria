@@ -1,0 +1,2981 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-11-01",
+  "admissionVersion": "20261101",
+  "id": "aeldrunmar",
+  "name": "Aeldrunmar",
+  "continent": "Aldervan",
+  "capital": "aeldrunhal",
+  "ruler": "kendryck",
+  "people": "Aeldrunmarer",
+  "rootId": "koenigreich-aeldrunmar",
+  "title": "Königreich Aeldrunmar",
+  "type": "Königreich",
+  "urbanHouseTerritories": false,
+  "mapSource": "/Karten/Aeldrunmar/Kartenbilder/normal.webp",
+  "map": "/Karten/Aeldrunmar/Kartenbilder/normal.svg",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aeldrunmar.webp",
+  "context": {
+    "introduction": "Ein Land der Pferde, Felder und Seewege. Aus dem besonders friedlichen Zusammenleben mit den einheimischen Alben und den Heiraten zwischen den Kulturen entstand das aeldrunmarische Volk. Landwirtschaft, Viehzucht, Seefahrt, Handel und Rittertum prägen seinen Alltag und sein Selbstverständnis.",
+    "history": [
+      {
+        "title": "Ein friedlicher gemeinsamer Ursprung",
+        "text": "Aeldrunmars Geschichte ähnelt der Aldrimars, verlief aber noch friedlicher. Einheimische Alben und die hinzukommende Kultur fanden zueinander. Heiraten verbanden Familien und Lebensweisen; daraus entstand über die Zeit das aeldrunmarische Volk. Seine Herkunft liegt im Zusammenwachsen dieser beiden Kulturen."
+      },
+      {
+        "title": "Eine Reiterkultur mit bäuerlichem Fundament",
+        "text": "Reitkunst und Rittertum stehen auf einer breiten landwirtschaftlichen Grundlage. Weiden, Viehzucht, Getreideanbau und die Pflege des Kulturlandes besitzen großen Wert. Pferdezucht und die sorgfältige Versorgung der Tiere verbinden das bäuerliche Leben mit dem Rittertum."
+      },
+      {
+        "title": "Seefahrt und Handel",
+        "text": "Die Küsten des Festlandes und die Insel der Tharn richten den Blick auch auf das Meer. Seefahrt und Handel gehören zum Kern des Landes. Reiter und Seeritter sind unterschiedliche Ausprägungen derselben aeldrunmarischen Adelskultur."
+      },
+      {
+        "title": "Earltümer, Thaintümer und kleinere Bezirke",
+        "text": "Sechs Earltümer gliedern das Land. Eigene Domänen, weitere Thaintümer und kleinere ritterliche Herrschaften besitzen ihre eigenen Feldzeichen. Virelath ist ein Thaintum, Luthirrith eine ritterliche Herrschaft. Hingstgard bleibt ein gesonderter ritterlicher Ordensbezirk ohne zugeteiltes Adelshaus."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Pferde und Vieh",
+        "text": "Weiden, Getreideanbau, Viehzucht und sorgfältige Pferdezucht bilden die Grundlage des Rittertums. Hyld und Scoet führen die kräftigen Brycing-Kriegspferde."
+      },
+      {
+        "title": "Wälder, Berge und Küsten",
+        "text": "Waldtiere, Gehölze, Bergformen und Seezeichen kennzeichnen die Landschaften. Mark bezeichnet Grenzgebiete, Mere Küsten; Fold, Hold, Emnet und Land ergänzen die Landschaftsnamen."
+      },
+      {
+        "title": "Ritterliche Ausbildungswege",
+        "text": "Isen kämpfen mit Schwertern, Wigar mit Stangenwaffen. Hyld sind Reiterritter, Scoet berittene Schützen. Særinc stehen für das Rittertum zur See; Gliwere verbinden Musik und Dichtung mit der Fechtkunst."
+      },
+      {
+        "title": "Die bekannten Schwerpunkte",
+        "text": "Fyr, Earncynne und Kendryck gelten als besonders stark in der Ausbildung der Isen. Kendryck sind außerdem für ihre Hyld berühmt. Tharn und Estmere stehen besonders für die Særinc."
+      }
+    ],
+    "notes": [
+      "Halfax und Ashby sind ausgestorben. Ihre Zuordnung nach Ældrunhal bezeichnet einen früheren Sitz.",
+      "Virelath ist ein Thaintum, Luthirrith eine ritterliche Herrschaft. Hingstgard bleibt ein eigenständiges Ordensgebiet ohne zugeordnetes Adelshaus."
+    ]
+  },
+  "notes": [
+    "Halfax und Ashby sind ausgestorben. Ihre Zuordnung nach Ældrunhal bezeichnet einen früheren Sitz.",
+    "Virelath ist ein Thaintum, Luthirrith eine ritterliche Herrschaft. Hingstgard bleibt ein eigenständiges Ordensgebiet ohne zugeordnetes Adelshaus."
+  ],
+  "design": {},
+  "mapAnnotations": [
+    {
+      "id": "luthirrith-status",
+      "text": "Ritterliche Herrschaft",
+      "position": [
+        81.6,
+        32
+      ],
+      "width": 10.5,
+      "height": 2.1
+    },
+    {
+      "id": "virelath-status",
+      "text": "Thaintum",
+      "position": [
+        38.2,
+        69.9
+      ],
+      "width": 7.2,
+      "height": 2.1
+    }
+  ],
+  "regions": [
+    {
+      "id": "beran",
+      "name": "Earltum der Beran",
+      "colour": "#976285",
+      "capital": "aeldros",
+      "motif": "Ein silberner schreitender Bär zwischen zwei dunklen Tannen über einem dreizackigen hellen Gebirgssaum auf Burgunderrot.",
+      "palette": [
+        "Burgunderrot",
+        "Silber",
+        "Tannenschwarz"
+      ],
+      "geography": "Das westliche Earltum vereint Berge, große Nadelwälder und offene Täler.",
+      "regionName": "Beranland",
+      "title": "Earltum",
+      "art": "earldom-beran",
+      "seats": [
+        "aeldros",
+        "mornhall",
+        "itharol"
+      ],
+      "ruler": "beran",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Beranland"
+    },
+    {
+      "id": "earncynne",
+      "name": "Earltum der Earncynne",
+      "colour": "#a3a53d",
+      "capital": "glenfara",
+      "motif": "Ein silberner laufender Hengst über drei grünen Hügelbögen und zwei goldenen Gerstenähren auf warmem Olivgelb.",
+      "palette": [
+        "Olivgelb",
+        "Silber",
+        "Dunkelgrün"
+      ],
+      "geography": "Offenes nördliches Weide- und Ackerland mit niedrigen Hügeln und Waldsäumen.",
+      "regionName": "Earnemnet",
+      "title": "Earltum",
+      "art": "earldom-earncynne",
+      "seats": [
+        "virelith",
+        "glenfara",
+        "ghrenholt"
+      ],
+      "ruler": "earncynne",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Earnemnet"
+    },
+    {
+      "id": "estmere",
+      "name": "Earltum der Estmere",
+      "colour": "#599c45",
+      "capital": "eldramar",
+      "motif": "Ein silberner Seeadler mit ausgebreiteten Schwingen über einem goldenen Eichenblatt und drei schmalen blauen Wellen auf Dunkelgrün.",
+      "palette": [
+        "Dunkelgrün",
+        "Silber",
+        "Meerblau"
+      ],
+      "geography": "Das östliche Festland verbindet große Wälder, landwirtschaftliche Flächen, Küsten und einen felsigen Vorsprung.",
+      "regionName": "Estmere",
+      "title": "Earltum",
+      "art": "earldom-estmere",
+      "seats": [
+        "rivisra",
+        "faelthar",
+        "thalrune",
+        "eldramar"
+      ],
+      "ruler": "estmere",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Estmere"
+    },
+    {
+      "id": "tharn",
+      "name": "Earltum der Tharn",
+      "colour": "#9d6bb0",
+      "capital": "trentmorath",
+      "motif": "Ein goldenes frühmittelalterliches Segelschiff mit einem hellen Segel über drei breiten silbernen Wellen auf Nachtviolett.",
+      "palette": [
+        "Nachtviolett",
+        "Mattgold",
+        "Silber"
+      ],
+      "geography": "Das Insel-Earltum ist allseitig vom Meer geprägt; bewaldete Inselhänge und Hafenorte ergänzen die Seefahrt.",
+      "regionName": "Tharnmere",
+      "title": "Earltum",
+      "art": "earldom-tharn",
+      "seats": [
+        "eadwick",
+        "linthar",
+        "luthirrith",
+        "trentmorath"
+      ],
+      "ruler": "tharn",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Tharnmere"
+    },
+    {
+      "id": "kendryck",
+      "name": "Königliches Earltum der Kendryck",
+      "colour": "#a88d58",
+      "capital": "aeldrunhal",
+      "motif": "Ein großer weißer Hengst vor einem dunkelgrünen unteren Feld und einem ziegelroten oberen Feld, darunter zwei goldene Ähren neben einem schmalen silbernen Gebirgssaum.",
+      "palette": [
+        "Dunkelgrün",
+        "Ziegelrot",
+        "Elfenbein"
+      ],
+      "geography": "Das königliche Earltum erstreckt sich zwischen westlichen Bergen, Wäldern und offenen Talflächen.",
+      "regionName": "Kendryckfold",
+      "title": "Königliches Earltum",
+      "art": "earldom-kendryck",
+      "seats": [
+        "kaldhorn",
+        "dunrath",
+        "glendir",
+        "aeldrunhal"
+      ],
+      "ruler": "kendryck",
+      "territoryType": "Königliches Earltum",
+      "territoryName": "Königliches Earltum Kendryckfold"
+    },
+    {
+      "id": "fyr",
+      "name": "Earltum der Fyr",
+      "colour": "#69a496",
+      "capital": "veyrthar",
+      "motif": "Zwei einander zugewandte silberne Pferdeköpfe über einer bronzenen Garbe und einer einzelnen dunkelgrünen Flusslinie auf gedämpftem Türkis.",
+      "palette": [
+        "Türkis",
+        "Silber",
+        "Bronze"
+      ],
+      "geography": "Südliches Weide- und Kulturland, Wälder, Wasserläufe und eine lange östliche Küste.",
+      "regionName": "Fyrland",
+      "title": "Earltum",
+      "art": "earldom-fyr",
+      "seats": [
+        "virelath",
+        "hydrathar",
+        "veyrthar",
+        "kaldun"
+      ],
+      "ruler": "frye",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Fyrland"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "aeldros",
+      "name": "Ældros",
+      "county": "beran",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        18.5,
+        5.8
+      ],
+      "geography": "Der Hauptort der Beran liegt unter den nördlichen Bergen. Nadelwald, Höhen und die Übergänge in das offene Vorland prägen die eigene Domäne.",
+      "motif": "Eine silberne dreizackige Berggruppe über einem einzelnen roten Ebereschenzweig auf rauchviolettem Tuch.",
+      "palette": [
+        "Rauchviolett",
+        "Silber",
+        "Beerenrot"
+      ],
+      "art": "aeldros",
+      "pin": [
+        21,
+        3
+      ],
+      "regionName": "Ældrosmark",
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Ældrosmark"
+    },
+    {
+      "id": "mornhall",
+      "name": "Mornhall",
+      "county": "beran",
+      "kind": "Thaintum",
+      "point": [
+        6.4,
+        15.5
+      ],
+      "geography": "Westliches Bergland mit einem schmaleren Talraum und den bewaldeten Ausläufern der nördlichen Höhen.",
+      "motif": "Eine dunkle Tanne zwischen zwei hellen Felsflanken unter einem schmalen kupfernen Mondsichelbogen auf hellem Heideviolett.",
+      "palette": [
+        "Heideviolett",
+        "Eisenbraun",
+        "Kreideweiß"
+      ],
+      "art": "mornhall",
+      "pin": [
+        8.9,
+        11.5
+      ],
+      "regionName": "Mornmark",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Mornmark"
+    },
+    {
+      "id": "itharol",
+      "name": "Itharol",
+      "county": "beran",
+      "kind": "Thaintum",
+      "point": [
+        22.8,
+        32.4
+      ],
+      "geography": "Eine ausgedehnte Waldlandschaft im Süden des Earltums; im Westen liegen Berge, im Osten öffnen sich die bewaldeten Flächen.",
+      "motif": "Ein heller Keiler unter zwei dunkelgrünen Fichtenzweigen auf erdigem Rotviolett.",
+      "palette": [
+        "Rotviolett",
+        "Knochenweiß",
+        "Tannengrün"
+      ],
+      "art": "itharol",
+      "pin": [
+        25.3,
+        28.4
+      ],
+      "regionName": "Itharhold",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Itharhold"
+    },
+    {
+      "id": "virelith",
+      "name": "Virelith",
+      "county": "earncynne",
+      "kind": "Thaintum",
+      "point": [
+        31,
+        5.8
+      ],
+      "geography": "Das nordwestliche Thaintum der Earncynne besitzt viel offenes Land und niedrige bewachsene Hügel.",
+      "motif": "Ein dunkelbrauner Rinderkopf über zwei silbernen Gerstenähren auf stumpfem Gelbgrün.",
+      "palette": [
+        "Gelbgrün",
+        "Dunkelbraun",
+        "Silber"
+      ],
+      "art": "virelith",
+      "pin": [
+        33.5,
+        3
+      ],
+      "regionName": "Virelmark",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Virelmark"
+    },
+    {
+      "id": "glenfara",
+      "name": "Glenfara",
+      "county": "earncynne",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        53,
+        10
+      ],
+      "geography": "Der Hauptort der Earncynne steht in einer offenen, landwirtschaftlich geprägten Hügellandschaft am nördlichen Rand des Landes.",
+      "motif": "Eine breite goldene Gerstengarbe über drei dunkelgrünen niedrigen Hügeln auf Elfenbein, mit einem schmalen olivfarbenen Rand.",
+      "palette": [
+        "Elfenbein",
+        "Goldocker",
+        "Olivgrün"
+      ],
+      "art": "glenfara",
+      "pin": [
+        55.5,
+        6
+      ],
+      "regionName": "Glenfold",
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Glenfold"
+    },
+    {
+      "id": "ghrenholt",
+      "name": "Greenholt",
+      "county": "earncynne",
+      "kind": "Thaintum",
+      "point": [
+        40.1,
+        24
+      ],
+      "geography": "Südwestlicher Bereich des Earltums mit niedrigen Bergen, offenen Flächen und Baumgruppen.",
+      "motif": "Ein silberner Rehbock vor einer dunklen Haselrute auf warmem Ockergelb.",
+      "palette": [
+        "Ockergelb",
+        "Silber",
+        "Haselbraun"
+      ],
+      "art": "ghrenholt",
+      "pin": [
+        42.6,
+        20
+      ],
+      "regionName": "Greenhold",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Greenhold"
+    },
+    {
+      "id": "rivisra",
+      "name": "Rivisra",
+      "county": "estmere",
+      "kind": "Thaintum",
+      "point": [
+        60.9,
+        19.5
+      ],
+      "geography": "Das nördliche Thaintum der Estmere liegt zwischen der Meeresküste und dem offenen grünen Hinterland.",
+      "motif": "Ein elfenbeinfarbener Widder über einem blauen Wasserband auf frischem Laubgrün.",
+      "palette": [
+        "Laubgrün",
+        "Elfenbein",
+        "Wasserblau"
+      ],
+      "art": "rivisra",
+      "pin": [
+        63.4,
+        15.5
+      ],
+      "regionName": "Rivismere",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Rivismere"
+    },
+    {
+      "id": "faelthar",
+      "name": "Faelthar",
+      "county": "estmere",
+      "kind": "Thaintum",
+      "point": [
+        53,
+        46
+      ],
+      "geography": "Große zusammenhängende Wälder bilden den südwestlichen Binnenraum des Earltums.",
+      "motif": "Ein heller Hirschkopf über drei kupferbraunen Eichenblättern auf tiefem Waldgrün.",
+      "palette": [
+        "Waldgrün",
+        "Elfenbein",
+        "Kupferbraun"
+      ],
+      "art": "faelthar",
+      "pin": [
+        55.5,
+        42
+      ],
+      "regionName": "Faelhold",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Faelhold"
+    },
+    {
+      "id": "thalrune",
+      "name": "Thalrune",
+      "county": "estmere",
+      "kind": "Herrschaft",
+      "point": [
+        70,
+        37.5
+      ],
+      "geography": "Schmale Küstenherrschaft am felsigen, bewaldeten Vorsprung nördlich der Hauptstadt.",
+      "motif": "Eine silberne Kiefer auf einem grauen Felsvorsprung über zwei dunkelblauen Wellen auf grünem Tuch.",
+      "palette": [
+        "Waldgrün",
+        "Silbergrau",
+        "Dunkelblau"
+      ],
+      "art": "thalrune",
+      "pin": [
+        72.5,
+        33.5
+      ],
+      "regionName": "Thalmere",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Thalmere"
+    },
+    {
+      "id": "eldramar",
+      "name": "Eldramar",
+      "county": "estmere",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        67,
+        58.8
+      ],
+      "geography": "Der Hauptort der Estmere liegt an der östlichen Küste, zwischen kultiviertem Land, Waldrändern und dem Meer.",
+      "motif": "Ein heller Reiher zwischen zwei goldenen Ähren über einem einzelnen blauen Wellenbogen auf Seegrün.",
+      "palette": [
+        "Seegrün",
+        "Elfenbein",
+        "Goldocker"
+      ],
+      "art": "eldramar",
+      "pin": [
+        69.5,
+        54.8
+      ],
+      "regionName": "Eldramere",
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Eldramere"
+    },
+    {
+      "id": "eadwick",
+      "name": "Eadwick",
+      "county": "tharn",
+      "kind": "Herrschaft",
+      "point": [
+        71,
+        14
+      ],
+      "label": [
+        70.6,
+        13.2
+      ],
+      "overlayLabel": true,
+      "mapName": "Neuer Name",
+      "geography": "Kleine nördliche Inselherrschaft. Die Karte trägt hier noch den Platzhalter „Neuer Name“; Eadwick ist ein vorläufiger Ortsvorschlag.",
+      "motif": "Eine silberne Möwe über einem einzelnen dunklen Fels und einer schmalen hellen Welle auf hellem Lavendel.",
+      "palette": [
+        "Lavendel",
+        "Silber",
+        "Felsgrau"
+      ],
+      "art": "eadwick",
+      "pin": [
+        73.5,
+        10
+      ],
+      "regionName": "Eadmere",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Eadmere"
+    },
+    {
+      "id": "linthar",
+      "name": "Linthar",
+      "county": "tharn",
+      "kind": "Thaintum",
+      "point": [
+        85.7,
+        20
+      ],
+      "geography": "Nordöstliches Inselgebiet mit einem befestigten Hauptort, offenen Flächen und Waldgruppen.",
+      "motif": "Ein heller Zinnenturm zwischen zwei dunkelvioletten Wacholderzweigen über einer goldenen Muschel auf Fliedergrau.",
+      "palette": [
+        "Fliedergrau",
+        "Kreideweiß",
+        "Altgold"
+      ],
+      "art": "linthar",
+      "pin": [
+        88.2,
+        16
+      ],
+      "regionName": "Linthmere",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Linthmere"
+    },
+    {
+      "id": "luthirrith",
+      "name": "Luthirrith",
+      "county": "tharn",
+      "kind": "Ritterliche Herrschaft",
+      "point": [
+        81,
+        29
+      ],
+      "geography": "Eine kleinere bewaldete ritterliche Herrschaft im westlichen Mittelteil der Insel.",
+      "motif": "Eine goldene schlichte Leuchte über einem geöffneten hellen Buch und einem dunkelgrünen Blattzweig auf dunklem Mauve.",
+      "palette": [
+        "Mauve",
+        "Altgold",
+        "Wollweiß"
+      ],
+      "art": "luthirrith",
+      "pin": [
+        83.5,
+        25
+      ],
+      "regionName": "Luthirmere",
+      "principal": false,
+      "territoryType": "Ritterliche Herrschaft",
+      "territoryName": "Ritterliche Herrschaft Luthirmere"
+    },
+    {
+      "id": "trentmorath",
+      "name": "Trentmorath",
+      "county": "tharn",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        87.8,
+        45.7
+      ],
+      "geography": "Die eigene Domäne und der Hauptort der Tharn liegen im südlichen Teil der Insel, zwischen Meer, Waldhängen und offenen Flächen.",
+      "motif": "Ein silberner Anker zwischen zwei goldbraunen Tangzweigen über einem einzelnen hellen Wellenband auf dunklem Violett.",
+      "palette": [
+        "Dunkelviolett",
+        "Silber",
+        "Goldbraun"
+      ],
+      "art": "trentmorath",
+      "pin": [
+        90.3,
+        41.7
+      ],
+      "regionName": "Trentmere",
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Trentmere"
+    },
+    {
+      "id": "kaldhorn",
+      "name": "Kaldhorn",
+      "county": "kendryck",
+      "kind": "Thaintum",
+      "point": [
+        11.7,
+        50.1
+      ],
+      "geography": "Westliches Thaintum im Gebirgs- und Waldgürtel des königlichen Earltums.",
+      "motif": "Ein dunkler Steinbockkopf über zwei hellen Bergspitzen auf sandfarbenem Tuch.",
+      "palette": [
+        "Sandocker",
+        "Kohlschwarz",
+        "Kreideweiß"
+      ],
+      "art": "kaldhorn",
+      "pin": [
+        14.2,
+        46.1
+      ],
+      "regionName": "Kaldmark",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Kaldmark"
+    },
+    {
+      "id": "dunrath",
+      "name": "Dunrath",
+      "county": "kendryck",
+      "kind": "Herrschaft",
+      "point": [
+        7.5,
+        60.5
+      ],
+      "geography": "Eine kleine Herrschaft am westlichen Rand des Landes, von steilen Bergen und Wald geprägt.",
+      "motif": "Ein silberner schmaler Bergpfad zwischen zwei braunen Felsflanken unter einem einzelnen grünen Kiefernzweig auf warmem Leinenweiß.",
+      "palette": [
+        "Leinenweiß",
+        "Felsbraun",
+        "Dunkelgrün"
+      ],
+      "art": "dunrath",
+      "pin": [
+        10,
+        56.5
+      ],
+      "regionName": "Dunmark",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Dunmark"
+    },
+    {
+      "id": "glendir",
+      "name": "Glendir",
+      "county": "kendryck",
+      "kind": "Thaintum",
+      "point": [
+        22.9,
+        67.2
+      ],
+      "geography": "Das südwestliche Thaintum besitzt bewaldete Täler und Berge im westlichen Teil.",
+      "motif": "Ein dunkelgrüner Laubbaum mit breiter Krone über zwei silbernen Talbögen auf stumpfem Goldocker.",
+      "palette": [
+        "Goldocker",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "art": "glendir",
+      "pin": [
+        25.4,
+        63.2
+      ],
+      "regionName": "Glendfold",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Glendfold"
+    },
+    {
+      "id": "aeldrunhal",
+      "name": "Ældrunhal",
+      "county": "kendryck",
+      "kind": "Eigenes Thaintum des Königs",
+      "point": [
+        32.6,
+        55.8
+      ],
+      "geography": "Der Königssitz liegt unter dem großen Gebirgszug im Zentrum der königlichen Domäne. Wald, Talflächen und Übergänge in das übrige Land liegen dicht beieinander.",
+      "motif": "Ein silberner Hengstkopf über einer goldenen Ähre vor einer dunkelgrünen dreizackigen Gebirgslinie auf Ziegelrot.",
+      "palette": [
+        "Ziegelrot",
+        "Silber",
+        "Dunkelgrün"
+      ],
+      "art": "aeldrunhal",
+      "pin": [
+        35.1,
+        51.8
+      ],
+      "regionName": "Ældrunland",
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Ældrunland"
+    },
+    {
+      "id": "virelath",
+      "name": "Virelath",
+      "county": "fyr",
+      "kind": "Thaintum",
+      "point": [
+        40.1,
+        72.7
+      ],
+      "geography": "Thaintum im nördlichen Teil des Earltums der Fyr, zwischen Wald, offenem Land und den westlichen Übergängen.",
+      "motif": "Ein heller Quellring unter einer goldenen Leuchte zwischen zwei kleinen grünen Schilfblättern auf blassem Türkis.",
+      "palette": [
+        "Blasstürkis",
+        "Altgold",
+        "Kreideweiß"
+      ],
+      "art": "virelath",
+      "pin": [
+        42.6,
+        68.7
+      ],
+      "regionName": "Virelemnet",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Virelemnet"
+    },
+    {
+      "id": "hydrathar",
+      "name": "Hydrathar",
+      "county": "fyr",
+      "kind": "Thaintum",
+      "point": [
+        17.5,
+        87.3
+      ],
+      "geography": "Südwestliches Thaintum mit größeren Waldflächen und offenen Säumen unter den westlichen Bergen.",
+      "motif": "Ein silberner Hirsch vor zwei dunklen Eibenblättern auf gedämpftem Blaugrün.",
+      "palette": [
+        "Blaugrün",
+        "Silber",
+        "Eibengrün"
+      ],
+      "art": "hydrathar",
+      "pin": [
+        20,
+        83.3
+      ],
+      "regionName": "Hydrafold",
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Hydrafold"
+    },
+    {
+      "id": "veyrthar",
+      "name": "Veyrthar",
+      "county": "fyr",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        57.9,
+        83
+      ],
+      "geography": "Der Hauptort der Fyr liegt im südöstlichen Küstenraum. Offene Weiden, Kulturland, Waldgruppen und Seewege prägen die eigene Domäne.",
+      "motif": "Ein dunkelbrauner Hengst unter zwei hellen Gerstenähren über einem silbernen Wasserband auf hellem Seegrün.",
+      "palette": [
+        "Seegrün",
+        "Dunkelbraun",
+        "Elfenbein"
+      ],
+      "art": "veyrthar",
+      "pin": [
+        60.4,
+        79
+      ],
+      "regionName": "Veyrmere",
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Veyrmere"
+    },
+    {
+      "id": "kaldun",
+      "name": "Kaldun",
+      "county": "fyr",
+      "kind": "Herrschaft",
+      "point": [
+        62,
+        61.5
+      ],
+      "geography": "Kleine östliche Küstenherrschaft südlich von Eldramar. Ihre türkisfarbene Fläche wird dem Earltum der Fyr zugerechnet.",
+      "motif": "Ein heller Fisch zwischen zwei dunkelgrünen Schilfbündeln über einer kupferfarbenen Küstenlinie auf Türkis.",
+      "palette": [
+        "Türkis",
+        "Elfenbein",
+        "Kupfer"
+      ],
+      "art": "kaldun",
+      "pin": [
+        64.5,
+        57.5
+      ],
+      "regionName": "Kaldmere",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Kaldmere"
+    },
+    {
+      "id": "hingstgard",
+      "name": "Hingstgard",
+      "county": null,
+      "administrationLabel": "Eigenständiger Ordensbezirk",
+      "kind": "Ritterlicher Orden",
+      "point": [
+        52,
+        59.5
+      ],
+      "geography": "Der gesondert eingefasste Ordensbezirk liegt zwischen königlicher Domäne, Estmere und Fyr. Er wird keinem Earl und keinem gelieferten Haus zugeteilt.",
+      "motif": "Ein dunkelgrünes Hufeisen über einem einzelnen silbernen Reitersporn auf elfenbeinfarbenem Tuch mit schmalem dunklem Rand.",
+      "palette": [
+        "Elfenbein",
+        "Dunkelgrün",
+        "Silber"
+      ],
+      "art": "hingstgard",
+      "pin": [
+        54.5,
+        55.5
+      ],
+      "regionName": "Hingsthold",
+      "principal": false,
+      "territoryType": "Ordensgebiet",
+      "territoryName": "Ordensgebiet Hingsthold"
+    },
+    {
+      "id": "scandmere",
+      "name": "Scandmere",
+      "county": "tharn",
+      "kind": "Rittersitz",
+      "regionName": "Scandmere",
+      "territoryType": "Rittersitz",
+      "territoryName": "Rittersitz Scandmere",
+      "point": null,
+      "geography": "Überlieferter Sitz des Hauses Scandyn im Thaintum Trenmorath, Earltum der Tharn. Seine genaue Lage auf der Übersichtskarte ist nicht verzeichnet."
+    }
+  ],
+  "houses": [
+    {
+      "id": "kendryck",
+      "sourceId": "kendryck",
+      "name": "Kendryck",
+      "houseId": "house-kendryck",
+      "familyId": "haus-kendryck",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "royal",
+      "rank": "König",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein weißes steigendes Pferd auf kleinem rotem Schild vor dunkelgrünen Brettern; dunkler Eisenrahmen mit feinen goldenen Ranken.",
+      "palette": [
+        "Dunkelgrün",
+        "Ziegelrot",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/kendryck.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/kendryck.png",
+      "warrior": {
+        "id": "kendryck",
+        "name": "Kendryck",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Dunkelgrün",
+          "Ziegelrot",
+          "Silber"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Das Königshaus wird als Hyld neben einem weißen Brycing gezeigt. Hochwertige Reitausrüstung und die Hausfarben greifen die berühmte Reitertradition der Kendryck auf.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/kendryck/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/kendryck/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/kendryck/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Die aus dem manuellen Stammbaum übernommene aktuelle Königslinie Aeldrunmars in Aeldrunhal.",
+      "knownHeads": [
+        {
+          "id": "person-25ff9d93",
+          "name": "Wulfhere Kendryck",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-6a655385",
+          "name": "Dunbrand Sigewulf",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-b334cace",
+          "name": "Dunhelm Eadric",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-322c0257",
+          "name": "Coelwulf Wulfgar",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/house-kendryck-family.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "boxton",
+      "sourceId": "boxton",
+      "name": "Boxton",
+      "houseId": "house-boxton",
+      "familyId": "haus-boxton",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "kendryck",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein brauner länglicher Schild mit senkrechtem Schwert auf dunkelgrünen Brettern; kupferfarbener Knotenrahmen.",
+      "palette": [
+        "Waldgrün",
+        "Lederbraun",
+        "Kupfer"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/boxton.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/boxton.png",
+      "warrior": {
+        "id": "boxton",
+        "name": "Boxton",
+        "historical": false,
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Waldgrün",
+          "Lederbraun",
+          "Kupfer"
+        ],
+        "equipment": "Speer, Pike oder Hellebarde; beweglicher Ketten- und Schuppenharnisch, kein Schild.",
+        "reason": "Das lange Schild- und Schwertzeichen wird als Brustabzeichen übernommen. Der Wigar ergänzt die königliche Gefolgschaft um einen Speerträger.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/boxton/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/boxton/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/boxton/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "halfax",
+      "sourceId": "halfax",
+      "name": "Halfax",
+      "houseId": "house-halfax",
+      "familyId": "haus-halfax",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "kendryck",
+      "isSeatRuler": false,
+      "extinct": true,
+      "motif": "Schwarzer Hirschkopf mit Geweih auf silbernem Schild vor dunklem Feld und hellem Eisenrahmen.",
+      "palette": [
+        "Silber",
+        "Kohlschwarz",
+        "Dunkelgrau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/halfax.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/halfax.png",
+      "warrior": {
+        "id": "halfax",
+        "name": "Halfax",
+        "historical": true,
+        "representationLabel": "Historische Kriegerdarstellung · Entwurf",
+        "roleLabel": "Historischer Klassenvorschlag",
+        "classId": "scoet",
+        "className": "Scoet",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-scoet",
+        "palette": [
+          "Silber",
+          "Kohlschwarz",
+          "Dunkelgrau"
+        ],
+        "equipment": "Rückenköcher mit Pfeilen, Scheidenschwert und beweglicher Reitharnisch; gesattelter Brycing-Hengst daneben.",
+        "reason": "Historischer Darstellungsentwurf für das ausgestorbene Haus. Hirschzeichen und kühle Farben passen zu einem beweglichen Scoet. Der geschlossene Reiterhelm mit Geweih ergänzt Köcher, Scheidenschwert und braunen Brycing.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/halfax/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/halfax/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/halfax/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "lir",
+      "sourceId": "lir",
+      "name": "Lir",
+      "houseId": "house-lir",
+      "familyId": "haus-lir",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "kendryck",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine helle aufgerichtete Hand mit Auge in der Handfläche auf dunkelblauem Rundfeld, umgeben von silberhellen Knoten.",
+      "palette": [
+        "Nachtblau",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/lir.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/lir.png",
+      "warrior": {
+        "id": "lir",
+        "name": "Lir",
+        "historical": false,
+        "classId": "gliwere",
+        "className": "Gliwere",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-gliwere",
+        "palette": [
+          "Nachtblau",
+          "Elfenbein",
+          "Silber"
+        ],
+        "equipment": "Duellantenschwert mit kräftiger gerader Klinge und Kreuzgefäß, Kettenzeug und verzierte Stoffe; kleine Leier sicher am Rücken.",
+        "reason": "Die offene Hand mit Auge wird als Hauszeichen eines höfischen Gliwere aufgenommen. Sie begründet keine neue Magie oder ein geheim festgelegtes Amt.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/lir/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/lir/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/lir/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "skelton",
+      "sourceId": "skelton",
+      "name": "Skelton",
+      "houseId": "house-skelton",
+      "familyId": "haus-skelton",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "kendryck",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein schwarzer gerüsteter Schwertträger mit zwei gekreuzten hellen Klingen auf Goldocker.",
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/skelton.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/skelton.png",
+      "warrior": {
+        "id": "skelton",
+        "name": "Skelton",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Goldocker",
+          "Schwarz",
+          "Silber"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Der schwarze Schwertträger und die zwei Klingen des Wappens führen zu einem Isen mit zwei Schwertern. Die königliche Gefolgschaft erhält damit eine eigenständige Schwertsilhouette.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/skelton/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/skelton/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/skelton/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "trevelyan",
+      "sourceId": "trevelyan",
+      "name": "Trevelyan",
+      "houseId": "house-trevelyan",
+      "familyId": "haus-trevelyan",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "kendryck",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein kupfergoldenes steigendes Pferd auf Violett in einem reichen kupferfarbenen Rahmen.",
+      "palette": [
+        "Violett",
+        "Kupfergold",
+        "Dunkelrot"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/trevelyan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/trevelyan.png",
+      "warrior": {
+        "id": "trevelyan",
+        "name": "Trevelyan",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Violett",
+          "Kupfergold",
+          "Dunkelrot"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Das steigende Pferd und die reiche violett-kupferne Heraldik bestimmen einen Hyld mit schwarzem Brycing.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/trevelyan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/trevelyan/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/trevelyan/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "beran",
+      "sourceId": "beran",
+      "name": "Beran",
+      "houseId": "house-beran",
+      "familyId": "haus-beran",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldros",
+      "regionId": "beran",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "kendryck",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein heller Löwenkopf mit roter Mähne auf Grün, dunkelroter Ring und helle verschlungene Ranken.",
+      "palette": [
+        "Dunkelrot",
+        "Waldgrün",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/beran.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/beran.png",
+      "warrior": {
+        "id": "beran",
+        "name": "Beran",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Dunkelrot",
+          "Waldgrün",
+          "Elfenbein"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Der Earl der Beran erscheint als schwerer Isen. Ein dekorativer stählerner Löwenhelm mit roter Mähne greift das Hauswappen auf; das halb offene Löwenmaul bildet seine Gesichtsöffnung.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/beran/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/beran/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/beran/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Vollständiger Registerstammbaum des Haus Beran in Aeldrunmar.",
+      "knownHeads": [
+        {
+          "id": "person-a96e45fa",
+          "name": "Æthelbearn Leofwine",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-ee3d9ccb",
+          "name": "Æthelmaer Cole",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/aeldrunmar-earltum-families.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "coelret",
+      "sourceId": "coelret",
+      "name": "Coelret",
+      "houseId": "house-coelret",
+      "familyId": "haus-coelret",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldros",
+      "regionId": "beran",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "beran",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein braunes steigendes Pferd vor grün-gelb geteiltem Schild, goldene Blattranken im dunklen Rund.",
+      "palette": [
+        "Grün",
+        "Ocker",
+        "Pferdebraun"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.png",
+      "warrior": {
+        "id": "coelret",
+        "name": "Coelret",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Grün",
+          "Ocker",
+          "Pferdebraun"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Das steigende braune Pferd führt zu einem Hyld neben einem kastanienbraunen Brycing.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/coelret/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/coelret/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/coelret/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "thynne",
+      "sourceId": "thynne",
+      "name": "Thynne",
+      "houseId": "house-thynne",
+      "familyId": "haus-thynne",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldros",
+      "regionId": "beran",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "beran",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine helle geistliche Figur vor einem brennenden Altar auf Rot in schmalen schwarzgoldenen Ringen.",
+      "palette": [
+        "Ziegelrot",
+        "Schwarz",
+        "Mattgold"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/thynne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/thynne.png",
+      "warrior": {
+        "id": "thynne",
+        "name": "Thynne",
+        "historical": false,
+        "classId": "gliwere",
+        "className": "Gliwere",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-gliwere",
+        "palette": [
+          "Ziegelrot",
+          "Schwarz",
+          "Mattgold"
+        ],
+        "equipment": "Duellantenschwert mit kräftiger gerader Klinge und Kreuzgefäß, Kettenzeug und verzierte Stoffe; kleine Leier sicher am Rücken.",
+        "reason": "Die geistliche Bildsprache des Wappens wird in einen andächtigen Gliwere-Entwurf übersetzt. Ein konkretes Kirchenamt oder eine neue klerikale Klasse wird nicht vergeben.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/thynne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/thynne/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/thynne/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "earncynne",
+      "sourceId": "earncynne",
+      "name": "Earncynne",
+      "houseId": "house-earncynne",
+      "familyId": "haus-earncynne",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "glenfara",
+      "regionId": "earncynne",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "kendryck",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner ausgebreiteter Adler auf dunkelblauen Brettern mit silbernem Knotensaum.",
+      "palette": [
+        "Nachtblau",
+        "Silber",
+        "Kohlschwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/earncynne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/earncynne.png",
+      "warrior": {
+        "id": "earncynne",
+        "name": "Earncynne",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Nachtblau",
+          "Silber",
+          "Kohlschwarz"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Die Earncynne stehen für besonders gute Isen. Ein sorgfältig gearbeiteter blau-silberner Harnisch und die große klare Schwertform zeigen diese Tradition ohne zusätzliche Spielwerte.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/earncynne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/earncynne/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/earncynne/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Vollständiger Registerstammbaum des Haus Earncynne in Aeldrunmar.",
+      "knownHeads": [
+        {
+          "id": "person-5dc06212",
+          "name": "Æthelwaerd Deorwine",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-d0c82360",
+          "name": "Aethelgarth Heardred",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/aeldrunmar-earltum-families.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "dunstan",
+      "sourceId": "dunstan",
+      "name": "Dunstan",
+      "houseId": "house-dunstan",
+      "familyId": "haus-dunstan",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "glenfara",
+      "regionId": "earncynne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "earncynne",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein goldenes Hufeisen um einen kleinen Flammen- oder Blattspross auf Burgunderrot, helle Blattranken und kupferner Rand.",
+      "palette": [
+        "Burgunderrot",
+        "Altgold",
+        "Kupfer"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/dunstan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/dunstan.png",
+      "warrior": {
+        "id": "dunstan",
+        "name": "Dunstan",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Burgunderrot",
+          "Altgold",
+          "Kupfer"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Hufeisen und die warmen Rot-Gold-Töne legen einen Hyld nahe. Das Pflanzenzeichen bleibt Schmuck und wird nicht als magisches Feuer gedeutet.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/dunstan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/dunstan/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/dunstan/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "granger",
+      "sourceId": "granger",
+      "name": "Granger",
+      "houseId": "house-granger",
+      "familyId": "haus-granger",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "glenfara",
+      "regionId": "earncynne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "earncynne",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein frühmittelalterliches Schiff mit schwarzweiß gestreiftem Segel über blauen Wellen auf hellem Feld.",
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Meerblau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/granger.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/granger.png",
+      "warrior": {
+        "id": "granger",
+        "name": "Granger",
+        "historical": false,
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Elfenbein",
+          "Schwarz",
+          "Meerblau"
+        ],
+        "equipment": "Gerades oder leicht gebogenes kräftiges Seeritter-Schwert, gut beweglicher Ketten- und Schuppenschutz, kurze Mantelflächen.",
+        "reason": "Das schwarzweiß besegelte Schiff führt zu einem Særinc, der Seefahrt und Rittertum verbindet.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/granger/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/granger/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/granger/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "estmere",
+      "sourceId": "estmere",
+      "name": "Estmere",
+      "houseId": "house-estmere",
+      "familyId": "haus-estmere",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "eldramar",
+      "regionId": "estmere",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "kendryck",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein heller Delfin und eine geschwungene Welle auf türkisfarbenem Holz mit hellem geflochtenem Ring.",
+      "palette": [
+        "Türkis",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/estmere.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/estmere.png",
+      "warrior": {
+        "id": "estmere",
+        "name": "Estmere",
+        "historical": false,
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Türkis",
+          "Elfenbein",
+          "Silber"
+        ],
+        "equipment": "Gerades oder leicht gebogenes kräftiges Seeritter-Schwert, gut beweglicher Ketten- und Schuppenschutz, kurze Mantelflächen.",
+        "reason": "Die Estmere gehören zu den besten Seerittern des Landes. Delfin, Türkis und Silber bestimmen den Særinc-Entwurf des Earlshauses.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/estmere/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/estmere/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/estmere/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Vollständiger Registerstammbaum des Haus Estmere in Aeldrunmar.",
+      "knownHeads": [
+        {
+          "id": "person-f542358e",
+          "name": "Ætheltorr Cenhelm",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-371b30d8",
+          "name": "Æthelsted  Hrothgar",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/aeldrunmar-earltum-families.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "irwynne",
+      "sourceId": "irwynne",
+      "name": "Irwynne",
+      "houseId": "house-irwynne",
+      "familyId": "haus-irwynne",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "eldramar",
+      "regionId": "estmere",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "estmere",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein heller Ritterhelm mit braunem Hirschgeweih auf blauem Feld zwischen goldenen Zweigen.",
+      "palette": [
+        "Meerblau",
+        "Silber",
+        "Altgold"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/irwynne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/irwynne.png",
+      "warrior": {
+        "id": "irwynne",
+        "name": "Irwynne",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Meerblau",
+          "Silber",
+          "Altgold"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Der silberne Helm des Isen erhält ein deutliches Hirschgeweih. Blau, Silber und die bestehenden goldenen Verzierungen bleiben erhalten.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/irwynne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/irwynne/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/irwynne/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "leofric",
+      "sourceId": "leofric",
+      "name": "Leofric",
+      "houseId": "house-leofric",
+      "familyId": "haus-leofric",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "eldramar",
+      "regionId": "estmere",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "estmere",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein heller Wolfskopf auf dunklem Petrol, umgeben von kupfernen und türkisfarbenen Knoten.",
+      "palette": [
+        "Petrol",
+        "Elfenbein",
+        "Kupfer"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/leofric.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/leofric.png",
+      "warrior": {
+        "id": "leofric",
+        "name": "Leofric",
+        "historical": false,
+        "classId": "scoet",
+        "className": "Scoet",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-scoet",
+        "palette": [
+          "Petrol",
+          "Elfenbein",
+          "Kupfer"
+        ],
+        "equipment": "Rückenköcher mit Pfeilen, Scheidenschwert und beweglicher Reitharnisch; gesattelter Brycing-Hengst daneben.",
+        "reason": "Der Wolfskopf und das Petrol führen zu einem Scoet mit dunkler Reitausrüstung und schwarzem Brycing.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/leofric/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/leofric/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/leofric/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "frye",
+      "sourceId": "frye",
+      "name": "Frye",
+      "houseId": "house-frye",
+      "familyId": "haus-frye",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "veyrthar",
+      "regionId": "fyr",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "kendryck",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarzer gerüsteter Ritterkopf auf gold-elfenbein geteiltem Feld, eingefasst von dunklen Ranken.",
+      "palette": [
+        "Goldocker",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/frye.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/frye.png",
+      "warrior": {
+        "id": "frye",
+        "name": "Frye",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Goldocker",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Das Haus Frye im Earltum der Fyr erhält einen Isen. Die besonders gute Schwertausbildung der Fyr zeigt sich in hochwertiger, klar geführter Ausrüstung.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/frye/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/frye/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/frye/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Vollständiger Registerstammbaum des Haus Frye in Aeldrunmar.",
+      "knownHeads": [
+        {
+          "id": "person-7754e04d",
+          "name": "Æthelheri Eghberth",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-1223eac9",
+          "name": "Æthelgar Harlan",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/aeldrunmar-earltum-families.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "brymwulf",
+      "sourceId": "brymwulf",
+      "name": "Brymwulf",
+      "houseId": "house-brymwulf",
+      "familyId": "haus-brymwulf",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "veyrthar",
+      "regionId": "fyr",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "fyr",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein dunkel umrandetes geometrisches Kreuz auf hellem Schild vor braunen Brettern mit schwarzem Zeichenring.",
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Holzbraun"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/brymwulf.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/brymwulf.png",
+      "warrior": {
+        "id": "brymwulf",
+        "name": "Brymwulf",
+        "historical": false,
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Elfenbein",
+          "Schwarz",
+          "Holzbraun"
+        ],
+        "equipment": "Speer, Pike oder Hellebarde; beweglicher Ketten- und Schuppenharnisch, kein Schild.",
+        "reason": "Das klare Kreuzzeichen bleibt das gelieferte Hausmotiv. Der Wigar trägt eine lange Pike; aus dem Symbol wird kein zusätzliches religiöses Amt abgeleitet.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/brymwulf/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/brymwulf/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/brymwulf/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "edwynne",
+      "sourceId": "edwynne",
+      "name": "Edwynne",
+      "houseId": "house-edwynne",
+      "familyId": "haus-edwynne",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "kaldun",
+      "regionId": "fyr",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "fyr",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein heller Pferdekopf auf violettem geviertem Schild vor dunkelvioletten Ranken.",
+      "palette": [
+        "Violett",
+        "Elfenbein",
+        "Kohlschwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/edwynne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/edwynne.png",
+      "warrior": {
+        "id": "edwynne",
+        "name": "Edwynne",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Violett",
+          "Elfenbein",
+          "Kohlschwarz"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Das Pferdehaupt auf Violett wird in einen Hyld mit schwarzem Brycing übertragen. Der Hengst steht in einheitlicher Dreiviertelansicht zum Ritter gewandt; Kopf, Rumpf, Beine und Reitausstattung folgen derselben Ausrichtung.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/edwynne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/edwynne/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/edwynne/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "tharn",
+      "sourceId": "tharn",
+      "name": "Tharn",
+      "houseId": "house-tharn",
+      "familyId": "haus-tharn",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "trentmorath",
+      "regionId": "tharn",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "kendryck",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner gebogener Fisch neben einem goldenen Dreizack auf Blau und kreisenden Wasserornamenten.",
+      "palette": [
+        "Meerblau",
+        "Silber",
+        "Altgold"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/tharn.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/tharn.png",
+      "warrior": {
+        "id": "tharn",
+        "name": "Tharn",
+        "historical": false,
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Meerblau",
+          "Silber",
+          "Altgold"
+        ],
+        "equipment": "Gerades oder leicht gebogenes kräftiges Seeritter-Schwert, gut beweglicher Ketten- und Schuppenschutz, kurze Mantelflächen.",
+        "reason": "Die Tharn gehören neben Estmere zu den besten Særinc. Der Earl wird in einem hochwertigen blauen Seeritter-Harnisch gezeigt; Fisch und Dreizack bleiben heraldische Abzeichen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/tharn/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/tharn/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/tharn/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "dimholt",
+      "sourceId": "dimholt",
+      "name": "Dimholt",
+      "houseId": "house-dimholt",
+      "familyId": "haus-dimholt",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "luthirrith",
+      "regionId": "tharn",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "tharn",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein dunkler geschlossener Helm mit gebogenem Kamm auf goldfarbenem Kreis und schwarzem Feld.",
+      "palette": [
+        "Schwarz",
+        "Goldocker",
+        "Eisengrau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/dimholt.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/dimholt.png",
+      "warrior": {
+        "id": "dimholt",
+        "name": "Dimholt",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Schwarz",
+          "Goldocker",
+          "Eisengrau"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Das dunkle Helmzeichen ergibt einen geschlossenen, zurückhaltenden Isen-Entwurf in Schwarz und Ocker.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/dimholt/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/dimholt/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/dimholt/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "wend",
+      "sourceId": "wend",
+      "name": "Wend",
+      "houseId": "house-wend",
+      "familyId": "haus-wend",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "linthar",
+      "regionId": "tharn",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "tharn",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein Schiff mit rotweiß gestreiftem Segel über hellen Wellen vor rotem Rundfeld.",
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/wend.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/wend.png",
+      "warrior": {
+        "id": "wend",
+        "name": "Wend",
+        "historical": false,
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Dunkelrot",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "equipment": "Gerades oder leicht gebogenes kräftiges Seeritter-Schwert, gut beweglicher Ketten- und Schuppenschutz, kurze Mantelflächen.",
+        "reason": "Das rotweiße Segel wird zur Stoffteilung eines Særinc. Die bewegliche Ausrüstung eignet sich für Deck und Küste.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/wend/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/wend/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/wend/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "ashby",
+      "sourceId": "ashby",
+      "name": "Ashby",
+      "houseId": "house-ashby",
+      "familyId": "haus-ashby",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "aeldrunhal",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": true,
+      "motif": "Ein silberner Schild mit goldenem Schwertzeichen vor Bergspitzen und einem Strahlenbogen.",
+      "palette": [
+        "Elfenbein",
+        "Silber",
+        "Goldocker"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/ashby.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/ashby.png",
+      "warrior": {
+        "id": "ashby",
+        "name": "Ashby",
+        "historical": true,
+        "representationLabel": "Historische Kriegerdarstellung · Entwurf",
+        "roleLabel": "Historischer Klassenvorschlag",
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Elfenbein",
+          "Silber",
+          "Goldocker"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Historischer Darstellungsentwurf für das ausgestorbene Haus. Schwert, Schildzeichen und Berge führen zu einem hellen Isen-Harnisch. Das Schild des Wappens wird nicht als zusätzlicher kleiner Ausrüstungsschild übernommen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/ashby/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/ashby/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/ashby/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "aubigny",
+      "sourceId": "aubigny",
+      "name": "Aubigny",
+      "houseId": "house-aubigny",
+      "familyId": "haus-aubigny",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "faelthar",
+      "regionId": "estmere",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein goldener langhaariger Rinderkopf auf Dunkelbraun in schmalem goldenen Knotenrahmen.",
+      "palette": [
+        "Dunkelbraun",
+        "Goldocker",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aubigny.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aubigny.png",
+      "warrior": {
+        "id": "aubigny",
+        "name": "Aubigny",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Dunkelbraun",
+          "Goldocker",
+          "Schwarz"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Der Rinderkopf und die braun-goldene Heraldik werden mit einem kräftigen Hyld verbunden. Stierhörner am Helm greifen das Wappen auf und ergänzen die Zuchtkultur des Hauses, ohne einen Sitz festzulegen.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/aubigny/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/aubigny/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/aubigny/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "cerdic",
+      "sourceId": "cerdic",
+      "name": "Cerdic",
+      "houseId": "house-cerdic",
+      "familyId": "haus-cerdic",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "ghrenholt",
+      "regionId": "earncynne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein gerüsteter Reiter auf dunklem Pferd mit goldenem Behang vor goldenem Feld und blauem Ring.",
+      "palette": [
+        "Goldocker",
+        "Kaiserblau",
+        "Eisengrau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/cerdic.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/cerdic.png",
+      "warrior": {
+        "id": "cerdic",
+        "name": "Cerdic",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Goldocker",
+          "Kaiserblau",
+          "Eisengrau"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Das gerüstete Reiterbild des Wappens wird als Hyld mit schwarzem Brycing und ockerblauem Pferdebehang aufgegriffen.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/cerdic/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/cerdic/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/cerdic/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "cutting",
+      "sourceId": "cutting",
+      "name": "Cutting",
+      "houseId": "house-cutting",
+      "familyId": "haus-cutting",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "dunrath",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein heller einzelner Zinnenturm auf dunkelblauem Feld mit hellen Knoten im Außenring.",
+      "palette": [
+        "Nachtblau",
+        "Elfenbein",
+        "Silbergrau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/cutting.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/cutting.png",
+      "warrior": {
+        "id": "cutting",
+        "name": "Cutting",
+        "historical": false,
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Nachtblau",
+          "Elfenbein",
+          "Silbergrau"
+        ],
+        "equipment": "Speer, Pike oder Hellebarde; beweglicher Ketten- und Schuppenharnisch, kein Schild.",
+        "reason": "Der einzelne Turm wird mit einem Wigar verbunden, dessen Hellebarde eine andere Silhouette als die Speerträger bietet.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/cutting/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/cutting/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/cutting/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "derwent",
+      "sourceId": "derwent",
+      "name": "Derwent",
+      "houseId": "house-derwent",
+      "familyId": "haus-derwent",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "rivisra",
+      "regionId": "estmere",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein gerüsteter Ritter und eine knieende Dame vor grün-goldenem Schild in goldenem Rahmen.",
+      "palette": [
+        "Waldgrün",
+        "Altgold",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/derwent.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/derwent.png",
+      "warrior": {
+        "id": "derwent",
+        "name": "Derwent",
+        "historical": false,
+        "classId": "gliwere",
+        "className": "Gliwere",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-gliwere",
+        "palette": [
+          "Waldgrün",
+          "Altgold",
+          "Elfenbein"
+        ],
+        "equipment": "Duellantenschwert mit kräftiger gerader Klinge und Kreuzgefäß, Kettenzeug und verzierte Stoffe; kleine Leier sicher am Rücken.",
+        "reason": "Die höfische Begegnung auf dem Wappen legt einen Gliwere nahe: Troubadour und geübter Fechter mit kräftigem Duellantenschwert.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/derwent/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/derwent/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/derwent/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "giffard",
+      "sourceId": "giffard",
+      "name": "Giffard",
+      "houseId": "house-giffard",
+      "familyId": "haus-giffard",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "mornhall",
+      "regionId": "beran",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Zwei helle gekreuzte Schwerter vor dunkelgrünen Brettern mit kupferfarbenem Knotenring.",
+      "palette": [
+        "Dunkelgrün",
+        "Silber",
+        "Kupfer"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/giffard.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/giffard.png",
+      "warrior": {
+        "id": "giffard",
+        "name": "Giffard",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Dunkelgrün",
+          "Silber",
+          "Kupfer"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Die gekreuzten Schwerter werden zum Hausabzeichen eines Isen. Ein einzelnes Zweihandschwert unterscheidet den Entwurf von Skeltons zwei Klingen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/giffard/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/giffard/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/giffard/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "humber",
+      "sourceId": "humber",
+      "name": "Humber",
+      "houseId": "house-humber",
+      "familyId": "haus-humber",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "glendir",
+      "regionId": "kendryck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein gerüsteter Bogenschütze vor einem ocker-grünen Feld mit dunklen Waldbäumen.",
+      "palette": [
+        "Ocker",
+        "Laubgrün",
+        "Anthrazit"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/humber.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/humber.png",
+      "warrior": {
+        "id": "humber",
+        "name": "Humber",
+        "historical": false,
+        "classId": "scoet",
+        "className": "Scoet",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-scoet",
+        "palette": [
+          "Ocker",
+          "Laubgrün",
+          "Anthrazit"
+        ],
+        "equipment": "Rückenköcher mit Pfeilen, Scheidenschwert und beweglicher Reitharnisch; gesattelter Brycing-Hengst daneben.",
+        "reason": "Der Bogenschütze vor Waldbäumen bestimmt einen Scoet. Der braune Brycing und der Rückenköcher machen seine berittene Ausbildung erkennbar.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/humber/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/humber/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/humber/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "oiscingas",
+      "sourceId": "oiscingas",
+      "name": "Oiscingas",
+      "houseId": "house-oiscingas",
+      "familyId": "haus-oiscingas",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "itharol",
+      "regionId": "beran",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarz-roter Eberkopf auf Orange mit kupfernen Nieten und dunklem Ring.",
+      "palette": [
+        "Ziegelrot",
+        "Kohlschwarz",
+        "Kupfer"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/oiscingas.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/oiscingas.png",
+      "warrior": {
+        "id": "oiscingas",
+        "name": "Oiscingas",
+        "historical": false,
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Ziegelrot",
+          "Kohlschwarz",
+          "Kupfer"
+        ],
+        "equipment": "Speer, Pike oder Hellebarde; beweglicher Ketten- und Schuppenharnisch, kein Schild.",
+        "reason": "Der Eberkopf und die kräftigen Rot-Schwarz-Töne führen zu einem Wigar mit standfester Haltung und Hellebarde.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/oiscingas/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/oiscingas/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/oiscingas/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "seolfor",
+      "sourceId": "seolfor",
+      "name": "Seolfor",
+      "houseId": "house-seolfor",
+      "familyId": "haus-seolfor",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "kaldhorn",
+      "regionId": "kendryck",
+      "rankId": "barony",
+      "rank": "Thain (Baron)",
+      "liegeId": "kendryck",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein heller berittener Speerkrieger auf Burgunderrot, silberne Blattranken und dunkler Rundrahmen.",
+      "palette": [
+        "Burgunderrot",
+        "Silber",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/seolfor.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/seolfor.png",
+      "warrior": {
+        "id": "seolfor",
+        "name": "Seolfor",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Burgunderrot",
+          "Silber",
+          "Elfenbein"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Der helle Reiter auf rotem Feld wird als Hyld neben einem weißen Brycing dargestellt. Der separat gelieferte Hausentwurf bleibt zunächst ohne Sitz.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/seolfor/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/seolfor/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/seolfor/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Vollständiger Registerstammbaum des Haus Seolfor in Aeldrunmar.",
+      "knownHeads": [
+        {
+          "id": "person-f8d352e2",
+          "name": "Walrik Cenred",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "person-3cabcb02",
+          "name": "Walmar Cedric",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/aeldrunmar-earltum-families.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "swygert",
+      "sourceId": "swygert",
+      "name": "Swygert",
+      "houseId": "house-swygert",
+      "familyId": "haus-swygert",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "virelith",
+      "regionId": "earncynne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein goldener berittener Ritter auf Violett im kupfergoldenen Rundrahmen.",
+      "palette": [
+        "Violett",
+        "Goldocker",
+        "Kupfer"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/swygert.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/swygert.png",
+      "warrior": {
+        "id": "swygert",
+        "name": "Swygert",
+        "historical": false,
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Violett",
+          "Goldocker",
+          "Kupfer"
+        ],
+        "equipment": "Reiterschwert, Schuppen- und Kettenharnisch, hoher Reiterhelm; gesattelter Brycing-Hengst daneben.",
+        "reason": "Der goldene Reiter auf Violett bestimmt einen Hyld mit schwarzem Brycing.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/swygert/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/swygert/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/swygert/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "thwing",
+      "sourceId": "thwing",
+      "name": "Thwing",
+      "houseId": "house-thwing",
+      "familyId": "haus-thwing",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "thalrune",
+      "regionId": "estmere",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein großes braunes Fass und zwei kleine Fässer auf Burgunderrot zwischen hellen Zweigen.",
+      "palette": [
+        "Burgunderrot",
+        "Eichenbraun",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/thwing.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/thwing.png",
+      "warrior": {
+        "id": "thwing",
+        "name": "Thwing",
+        "historical": false,
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Burgunderrot",
+          "Eichenbraun",
+          "Elfenbein"
+        ],
+        "equipment": "Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.",
+        "reason": "Die Fässer werden als Wappenabzeichen übernommen. Ein nüchterner Isen-Harnisch passt zu einem Haus im Umfeld landwirtschaftlicher Vorräte und Handelsgüter, ohne daraus Besitz oder Ämter festzulegen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/thwing/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/thwing/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/thwing/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "trent",
+      "sourceId": "trent",
+      "name": "Trent",
+      "houseId": "house-trent",
+      "familyId": "haus-trent",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "virelath",
+      "regionId": "fyr",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein goldener Stierkopf mit hellen Hörnern auf schwarzem Feld mit goldenem Pflanzenrand.",
+      "palette": [
+        "Schwarz",
+        "Goldocker",
+        "Knochenweiß"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/trent.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/trent.png",
+      "warrior": {
+        "id": "trent",
+        "name": "Trent",
+        "historical": false,
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Schwarz",
+          "Goldocker",
+          "Knochenweiß"
+        ],
+        "equipment": "Speer, Pike oder Hellebarde; beweglicher Ketten- und Schuppenharnisch, kein Schild.",
+        "reason": "Der Stierkopf und die Stierhörner am Helm geben dem Wigar eine breite, ruhige Erscheinung. Goldocker und Schwarz bleiben als große Stoff- und Metallflächen lesbar.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/trent/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/trent/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/trent/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "whiting",
+      "sourceId": "whiting",
+      "name": "Whiting",
+      "houseId": "house-whiting",
+      "familyId": "haus-whiting",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "eadwick",
+      "regionId": "tharn",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine silberne Windrose auf blauem Rundfeld, kleine Anker im äußeren Ring und helle Knoten.",
+      "palette": [
+        "Meerblau",
+        "Silber",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/whiting.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/whiting.png",
+      "warrior": {
+        "id": "whiting",
+        "name": "Whiting",
+        "historical": false,
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Meerblau",
+          "Silber",
+          "Elfenbein"
+        ],
+        "equipment": "Gerades oder leicht gebogenes kräftiges Seeritter-Schwert, gut beweglicher Ketten- und Schuppenschutz, kurze Mantelflächen.",
+        "reason": "Windrose und Anker bestimmen einen Særinc. Das nautische Zeichen bleibt ein lesbarer Beschlag an der blausilbernen Ausrüstung.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/whiting/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/whiting/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/whiting/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "edgcumbe",
+      "sourceId": "edgcumbe",
+      "name": "Edgcumbe",
+      "houseId": "house-edgcumbe",
+      "familyId": "haus-edgcumbe",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "hydrathar",
+      "regionId": "fyr",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine helle betende Gestalt im braunen Mantel auf dunklem Blau mit feinem silbernem Ornamentrahmen.",
+      "palette": [
+        "Nachtblau",
+        "Leinenweiß",
+        "Erdbraun"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen · Original unverändert",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/edgcumbe.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/edgcumbe.png",
+      "warrior": {
+        "id": "edgcumbe",
+        "name": "Edgcumbe",
+        "historical": false,
+        "classId": "gliwere",
+        "className": "Gliwere",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-gliwere",
+        "palette": [
+          "Nachtblau",
+          "Leinenweiß",
+          "Erdbraun"
+        ],
+        "equipment": "Duellantenschwert mit kräftiger gerader Klinge und Kreuzgefäß, Kettenzeug und verzierte Stoffe; kleine Leier sicher am Rücken.",
+        "reason": "Die betende Gestalt wird als andächtiger Gliwere interpretiert. Ritterliche Ausrüstung und kleine Leier erhalten die geforderte adelige Kriegerrolle; ein bestimmtes Kirchenamt bleibt offen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/edgcumbe/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/edgcumbe/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/edgcumbe/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "scandyn",
+      "name": "Scandyn",
+      "sourceId": "scandyn",
+      "houseId": "house-scandyn",
+      "familyId": "haus-scandyn",
+      "originRealm": "aeldrunmar",
+      "clan": false,
+      "seatId": "scandmere",
+      "regionId": "tharn",
+      "rankId": "knight",
+      "rank": "Ritterherr",
+      "liegeId": "tharn",
+      "isSeatRuler": true,
+      "existingFamily": true,
+      "knownDescription": "Niederes Rittergeschlecht der Insel Scandmere in Aeldrunmar. Als Særinc verbinden die Scandyn ritterliche Pflichten mit Seefahrt, Schiffsbau und Küstenschutz im Dienst des Hauses Tharn. Cenric stammt aus dem dritten und für die Hausnachfolge entbehrlichen Zweig der Familie.",
+      "knownHeads": [
+        {
+          "id": "unknown-founder-scandyn",
+          "name": "???",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "ealdwine-scandyn",
+          "name": "Ealdwine Scandyn",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "osric-scandyn",
+          "name": "Osric Scandyn",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "theodric-scandyn",
+          "name": "Theodric Scandyn",
+          "status": "alive",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "crest": "/Stammbäume/assets/images/houses/Aeldrunmar/haus-scandyn.png",
+      "crestFull": "/Stammbäume/assets/images/houses/Aeldrunmar/haus-scandyn.png",
+      "genealogySource": "Stammbäume/assets/js/data/house-scandyn-family.js"
+    }
+  ],
+  "territoryArt": {
+    "earldom-beran": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-beran.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-beran.png",
+      "shape": "banner"
+    },
+    "earldom-earncynne": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-earncynne.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-earncynne.png",
+      "shape": "banner"
+    },
+    "earldom-estmere": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-estmere.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-estmere.png",
+      "shape": "banner"
+    },
+    "earldom-tharn": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-tharn.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-tharn.png",
+      "shape": "banner"
+    },
+    "earldom-kendryck": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-kendryck.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-kendryck.png",
+      "shape": "banner"
+    },
+    "earldom-fyr": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-fyr.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/earldom-fyr.png",
+      "shape": "banner"
+    },
+    "aeldros": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/aeldros.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/aeldros.png",
+      "shape": "banner"
+    },
+    "mornhall": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/mornhall.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/mornhall.png",
+      "shape": "banner"
+    },
+    "itharol": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/itharol.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/itharol.png",
+      "shape": "banner"
+    },
+    "virelith": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/virelith.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/virelith.png",
+      "shape": "banner"
+    },
+    "glenfara": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/glenfara.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/glenfara.png",
+      "shape": "banner"
+    },
+    "ghrenholt": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/ghrenholt.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/ghrenholt.png",
+      "shape": "banner"
+    },
+    "rivisra": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/rivisra.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/rivisra.png",
+      "shape": "banner"
+    },
+    "faelthar": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/faelthar.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/faelthar.png",
+      "shape": "banner"
+    },
+    "thalrune": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/thalrune.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/thalrune.png",
+      "shape": "banner"
+    },
+    "eldramar": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/eldramar.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/eldramar.png",
+      "shape": "banner"
+    },
+    "eadwick": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/eadwick.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/eadwick.png",
+      "shape": "banner"
+    },
+    "linthar": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/linthar.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/linthar.png",
+      "shape": "banner"
+    },
+    "luthirrith": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/luthirrith.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/luthirrith.png",
+      "shape": "banner"
+    },
+    "trentmorath": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/trentmorath.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/trentmorath.png",
+      "shape": "banner"
+    },
+    "kaldhorn": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/kaldhorn.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/kaldhorn.png",
+      "shape": "banner"
+    },
+    "dunrath": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/dunrath.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/dunrath.png",
+      "shape": "banner"
+    },
+    "glendir": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/glendir.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/glendir.png",
+      "shape": "banner"
+    },
+    "aeldrunhal": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/aeldrunhal.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/aeldrunhal.png",
+      "shape": "banner"
+    },
+    "virelath": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/virelath.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/virelath.png",
+      "shape": "banner"
+    },
+    "hydrathar": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/hydrathar.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/hydrathar.png",
+      "shape": "banner"
+    },
+    "veyrthar": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/veyrthar.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/veyrthar.png",
+      "shape": "banner"
+    },
+    "kaldun": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/kaldun.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/kaldun.png",
+      "shape": "banner"
+    },
+    "hingstgard": {
+      "image": "/Stammbäume/assets/images/regions/aeldrunmar/hingstgard.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/aeldrunmar/hingstgard.png",
+      "shape": "banner"
+    }
+  },
+  "historicalEmblems": [],
+  "cultureSections": [
+    {
+      "title": "Krone, Earls und Thains",
+      "paragraphs": [
+        "Die Krone steht über den Earls der einzelnen Earltümer. Thaintümer und kleinere ritterliche Herrschaften gliedern die örtliche Ebene. Der persönliche Rang eines Hauses wird nur bei eigenem Beleg geführt."
+      ],
+      "links": [
+        {
+          "label": "Klassen der Zwillingskronen ↗",
+          "href": "/Klassenordner/Klassenseite.html#aeldrunmar"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+export function renderQuestArea(area, { e, href, id }) {
+  if (!area) return '';
+  const { x, y } = area.center, r = area.radius;
+  const clipId = `quest-area-${String(id).replace(/[^a-z0-9-]/gi, '-')}`;
+  return `<section class="quest-area" aria-label="Umland und Orte"><div class="quest-area-map"><svg viewBox="${x - r} ${y - r} ${r * 2} ${r * 2}" role="img" aria-label="${e(area.title)}"><defs><clipPath id="${e(clipId)}"><circle cx="${x}" cy="${y}" r="${r - 10}"></circle></clipPath></defs><g clip-path="url(#${e(clipId)})"><image href="${e(area.image)}" width="${area.width}" height="${area.height}"></image>${area.locations.map((place, index) => `<a href="${e(href('map', area.mapId, place.pinId))}" target="_blank" rel="noopener"><g><circle cx="${place.x * area.width}" cy="${place.y * area.height}" r="36" fill="#ead6a4" stroke="#5d4933" stroke-width="6"></circle><text x="${place.x * area.width}" y="${place.y * area.height + 2}" text-anchor="middle" dominant-baseline="middle" font-size="38" font-family="serif" fill="#332b20">${index + 1}</text><title>${e(place.name)}</title></g></a>`).join('')}</g><circle cx="${x}" cy="${y}" r="${r - 10}" fill="none" stroke="#ab8950" stroke-width="18"></circle></svg><a href="${e(href('map', area.mapId))}" target="_blank" rel="noopener">Bannkreiskarte öffnen ↗</a></div><div><p class="quest-eyebrow">ÖSTLICH VON GWYNTHOR</p><h3>${e(area.title)}</h3><p>${e(area.note)}</p><ol>${area.locations.map(place => `<li><a href="${e(href('map', area.mapId, place.pinId))}" target="_blank" rel="noopener">${e(place.name)} ↗</a></li>`).join('')}</ol></div></section>`;
+}
+
+export function renderQuestInformationSources(sources, { e, href }) {
+  if (!sources?.length) return '';
+  return `<section class="quest-information-sources" aria-label="Örtliche Informationsquellen"><h3>Örtliche Informationsquellen</h3><div class="quest-source-families">${sources.map(source => `<article>${source.image ? `<img src="${e(source.image)}" alt="Wappen der Familie ${e(source.name)}" loading="lazy">` : ''}<div><h4><a href="${e(source.profile)}" target="_blank" rel="noopener">${e(source.name)} ↗</a></h4><p>${e(source.description)}</p><a href="${e(href('map', source.mapId, source.pinId))}" target="_blank" rel="noopener">${e(source.placeName)} ↗</a></div></article>`).join('')}</div></section>`;
+}

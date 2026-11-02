@@ -8,7 +8,10 @@ import {
   CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
   getCharacterCreationTemplate
 } from './character-creation-templates.js?v=20260909-dragon-parent-v2';
-import { getCombatStyleTechniquesForGrants } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
+import { createCharacterLevelUpPlan, previewCharacterLevelUp } from './combat-level-up-model.js';
+import { normalizeDevelopment } from '../character-development/development-state.js';
+import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
+import { createCreationTrainingChoices, getSelectedCreationClasses, getCreationSkillSuggestions, applyCreationMagicChoice } from '../character-development/creation-training-model.js';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
 import { reconcileCenyrTrainingForLevel } from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v4';
 import { getCenyrClassDefinition } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
@@ -26,7 +29,8 @@ export const CHARACTER_CREATION_STEPS = Object.freeze([
   { id: 'attributes', label: 'Attribute' },
   { id: 'skills', label: 'Fertigkeiten' },
   { id: 'equipment', label: 'Kampfausbildung' },
-  { id: 'resources', label: 'Stufe-1-Regeln' },
+  { id: 'development', label: 'Attacken & Traits' },
+  { id: 'resources', label: 'Werte & Vorräte' },
   { id: 'review', label: 'Prüfen & übernehmen' }
 ]);
 
@@ -162,9 +166,13 @@ export function createCharacterCreationDraft(profileValue = {}, options = {}) {
   const backgroundId = profile.templateSelections.backgroundId || inferTemplateId('background', profile.identity.background);
   const classId = profile.templateSelections.classId || inferTemplateId('class', profile.identity.archetype);
   const freeAttributes = initialFreeAttributes(profile, ancestryId);
+  const existingBuild=Boolean(classId||ancestryId||backgroundId||profile.progression.level>1||profile.progression.specialLevels
+    ||profile.progression.experience||profile.hitPoints.current!=null||profile.quirks.length||profile.techniques.length
+    ||profile.attributes.some(attribute=>attribute.score!==10));
+  const resetLevelOne=options.resetLevelOne ?? !existingBuild;
   const method = CHARACTER_CREATION_METHODS.some(entry => entry.id === profile.templateSelections.attributeMethod)
     ? profile.templateSelections.attributeMethod
-    : 'standard-array';
+    : existingBuild ? 'free' : 'standard-array';
   const draft = {
     characterName: String(options.characterName || '').trim(),
     stepIndex: 0,
@@ -177,53 +185,23 @@ export function createCharacterCreationDraft(profileValue = {}, options = {}) {
     rolledPools: [],
     rolledAssignments: {},
     skillOverrides: {},
-    replaceStartingEquipment: true,
-    resetLevelOne: true
+    resetLevelOne,
+    developmentPlan: { ...createCharacterLevelUpPlan(profile), targetLevel: resetLevelOne ? 1 : profile.progression.level+profile.progression.specialLevels,
+      experience:resetLevelOne?0:profile.progression.experience },
+    ...createCreationTrainingChoices(profile,existingBuild)
   };
   return setCreationAttributeMethod(draft, method);
 }
 
 export function getTemplateGrantedSkills(draft = {}) {
-  if ((draft.skippedSteps || []).includes('templates')) return [];
-  return [...new Set([
-    ...(getCharacterCreationTemplate('ancestry', draft.selections?.ancestryId)?.skillProficiencies || []),
-    ...(getCharacterCreationTemplate('background', draft.selections?.backgroundId)?.skillProficiencies || []),
-    ...(getCharacterCreationTemplate('class', draft.selections?.classId)?.skillProficiencies || [])
-  ])];
+  return getCreationSkillSuggestions(draft).map(skill=>skill.name);
 }
 
-function mergeUnique(first = [], second = []) {
-  return [...new Set([...(Array.isArray(first) ? first : []), ...(Array.isArray(second) ? second : [])])];
-}
-
-function applyProficiencies(profile, ...sources) {
-  const next = clone(profile.proficiencies || {});
-  ['armor', 'weapons', 'tools', 'languages'].forEach(kind => {
-    next[kind] = sources.reduce((items, source) => mergeUnique(items, source?.[kind]), next[kind] || []);
+function applySkillTraining(profile, choices = {}) {
+  return profile.skills.map(skill=>{
+    const selected=choices[getSkillIdentity(skill.name)];
+    return {...skill,proficiency:['none','trained','expertise'].includes(selected)?selected:skill.proficiency};
   });
-  return next;
-}
-
-function applySkillTraining(profile, names = []) {
-  const result = clone(profile.skills || []);
-  names.forEach(name => {
-    const accepted = acceptedSkillNames(name);
-    let skill = result.find(candidate => accepted.has(normalizeLookup(candidate.name)));
-    if (!skill) {
-      skill = {
-        id: `template-skill-${normalizeLookup(name).replace(/\s+/g, '-')}`,
-        name,
-        attributeKey: 'charisma',
-        proficiency: 'none',
-        bonus: 0,
-        notes: ''
-      };
-      result.push(skill);
-    }
-    if (skill.proficiency === 'none') skill.proficiency = 'trained';
-    skill.notes = [skill.notes, 'Geübt durch Stufe-1-Vorlage'].filter(Boolean).join(' · ');
-  });
-  return result;
 }
 
 function mergeItems(existing = [], incoming = [], prefixesToReplace = []) {
@@ -268,6 +246,8 @@ function resetLevelOneResources(resources = []) {
     'special-action': [2, 2],
     'aura-focus': [0, 0],
     'mana-focus': [0, 0],
+    focus: [0, 0],
+    'pact-points': [0, 0],
     'celestial-points': [0, 0],
     'infernal-points': [0, 0],
     inspiration: [0, 1]
@@ -283,21 +263,14 @@ export function getCreationFoundationOptions(draft = {}) {
   return getCenyrClassDefinition(draft.selections?.classId)?.foundationSelection?.options || [];
 }
 
-export function getCreationStartingTechniques(draft = {}) {
-  const template = getCharacterCreationTemplate('class', draft.selections?.classId);
-  const definition = getCenyrClassDefinition(draft.selections?.classId);
-  const foundations = getCreationFoundationOptions(draft);
-  return getCombatStyleTechniquesForGrants(template?.combatStyleGrants, 1)
-    .filter(technique => !definition || !technique.cenyrTraining?.allowedClassIds?.length
-      || technique.cenyrTraining.allowedClassIds.includes(definition.classId))
-    .filter(technique => !foundations.some(option => option.formId === technique.combatStyleFormId)
-      || technique.combatStyleFormId === draft.foundationFormId);
-}
-
 export function validateCharacterCreationDraft(draft = {}) {
   const errors = [];
+  if(!(draft.skippedSteps||[]).includes('equipment')){
+    if((draft.includeCustomClass||draft.selections?.classId==='custom')&&!draft.customClass?.name?.trim())errors.push('Gib der eigenen Ausbildung einen Namen.');
+    if(getSelectedCreationClasses(draft).length>20)errors.push('Es können höchstens 20 Klassen oder Ausbildungen gespeichert werden.');
+  }
   const foundationOptions = getCreationFoundationOptions(draft);
-  if (!(draft.skippedSteps || []).includes('templates') && foundationOptions.length
+  if (!(draft.skippedSteps || []).includes('equipment') && foundationOptions.length
     && !foundationOptions.some(option => option.formId === draft.foundationFormId)) {
     errors.push('Wähle die Grundausbildung des Derwyn: Tanz des Jungdrachen oder Tanz der jungen Welle.');
   }
@@ -319,35 +292,31 @@ export function validateCharacterCreationDraft(draft = {}) {
   return errors;
 }
 
-export function applyCharacterCreationDraft(profileValue = {}, draft = {}, options = {}) {
-  const errors = validateCharacterCreationDraft(draft);
-  if (errors.length) return { ok: false, errors, profile: sanitizeCharacterCombatProfile(profileValue) };
-
+function buildCreationBaseProfile(profileValue, draft, options) {
   let profile = sanitizeCharacterCombatProfile(profileValue);
+  // Set the mode before any class reconciliation can grant starter techniques.
+  profile.progression.development = normalizeDevelopment(profile.progression.development);
   const skipped = new Set(draft.skippedSteps || []);
   const ancestry = getCharacterCreationTemplate('ancestry', draft.selections?.ancestryId);
   const background = getCharacterCreationTemplate('background', draft.selections?.backgroundId);
-  const classTemplate = getCharacterCreationTemplate('class', draft.selections?.classId);
+  const classes=getSelectedCreationClasses(draft);
+  const classTemplate = classes.find(template=>template.id===draft.selections?.classId);
 
   if (!skipped.has('templates')) {
     profile.identity = {
       ancestry: ancestry?.label || profile.identity.ancestry,
       background: background?.label || profile.identity.background,
-      archetype: classTemplate?.label || profile.identity.archetype
+      archetype: profile.identity.archetype
     };
     profile.templateSelections = {
+      ...profile.templateSelections,
       schemaVersion: CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION,
       ancestryId: ancestry?.id || '',
       backgroundId: background?.id || '',
-      classId: classTemplate?.id || '',
+      classId: profile.templateSelections.classId,
       attributeMethod: draft.attributeMethod,
       appliedAt: String(options.now || new Date().toISOString())
     };
-    profile.proficiencies = applyProficiencies(
-      profile,
-      background?.proficiencies,
-      classTemplate?.proficiencies
-    );
     profile.quirks = mergeItems(
       profile.quirks,
       templateTraits(ancestry, background),
@@ -366,36 +335,26 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
   }
 
   if (!skipped.has('skills')) {
-    profile.skills = applySkillTraining(profile, getTemplateGrantedSkills(draft));
+    profile.skills = applySkillTraining(profile, draft.skillChoices);
   }
 
-  if (!skipped.has('equipment') && classTemplate) {
-    profile.hitPoints.hitDie = classTemplate.hitDie || profile.hitPoints.hitDie;
+  if (!skipped.has('equipment')) {
+    const training=draft.trainingChoices||{};
+    const {classIds:oldClasses,customClass:oldCustom,...selection}=profile.templateSelections;
+    const classIds=classes.map(template=>template.id),primary=draft.selections?.classId||classIds[0]||'';
+    profile.templateSelections={...selection,classId:primary,...(classIds.length>1?{classIds}:{}),
+      ...(classIds.includes('custom')?{customClass:draft.customClass}:{})};
+    if(classes.length)profile.identity.archetype=classes.map(template=>template.label).join(' / ');
+    profile.hitPoints.hitDie = training.hitDieOverride || classTemplate?.hitDie || profile.hitPoints.hitDie;
     profile.savingThrows = profile.savingThrows.map(save => ({
       ...save,
-      proficient: (classTemplate.savingThrowProficiencies || []).includes(save.attributeKey)
-        ? true
-        : save.proficient
+      proficient:training.savingThrows?training.savingThrows.includes(save.attributeKey):save.proficient,
+      expertise:training.savingThrows&&!training.savingThrows.includes(save.attributeKey)?false:save.expertise
     }));
-    const starterWeapons = clone(classTemplate.weapons || []).map((item, index) => ({ ...item, equipped: index === 0 }));
-    const existingWeapons = draft.replaceStartingEquipment
-      ? profile.weapons.map(item => ({ ...item, equipped: false }))
-      : profile.weapons;
-    profile.weapons = mergeItems(existingWeapons, starterWeapons, draft.replaceStartingEquipment ? ['starter-'] : []);
-    profile.armorItems = mergeItems(profile.armorItems, classTemplate.armorItems || [], draft.replaceStartingEquipment ? ['starter-'] : []);
-    profile.abilities = mergeItems(profile.abilities, classTemplate.abilities || [], draft.replaceStartingEquipment ? ['starter-'] : []);
-    profile.techniques = mergeItems(
-      profile.techniques,
-      getCreationStartingTechniques(draft),
-      draft.replaceStartingEquipment ? ['combat-style-'] : []
-    );
-    profile.magic = {
-      ...profile.magic,
-      enabled: Boolean(classTemplate.magic?.enabled),
-      castingAttribute: classTemplate.magic?.castingAttribute || profile.magic.castingAttribute,
-      manaResourceId: 'mana-focus',
-      notes: classTemplate.magic?.notes || profile.magic.notes
-    };
+    if(training.proficiencies)profile.proficiencies={...profile.proficiencies,...clone(training.proficiencies)};
+    // Class choices provide training and core values. Equipment is authored per
+    // character, never granted, replaced or unequipped by this assistant.
+    applyCreationMagicChoice(profile,draft,classTemplate);
   }
 
   profile = sanitizeCharacterCombatProfile(profile);
@@ -418,13 +377,37 @@ export function applyCharacterCreationDraft(profileValue = {}, draft = {}, optio
   }
 
   profile = applyCenyrClassLevelProgression(profile, profile.progression.level).profile;
-  if (!skipped.has('templates') && getCreationFoundationOptions(draft).length) {
+  if (!skipped.has('equipment') && getCreationFoundationOptions(draft).some(option => option.formId === draft.foundationFormId)) {
     const foundation = selectCenyrTrainingOption(profile, { kind: 'foundation', selectionId: draft.foundationFormId, selectedAtLevel: 1 });
-    if (!foundation.ok) return foundation;
-    profile = foundation.profile;
+    if (foundation.ok) profile = foundation.profile;
   }
   profile = reconcileCenyrTrainingForLevel(profile, profile.progression.level, { autoFill: true }).profile;
-  return { ok: true, errors: [], profile: sanitizeCharacterCombatProfile(profile) };
+  return sanitizeCharacterCombatProfile(profile);
+}
+
+export function previewCharacterCreationDraft(profileValue = {}, draft = {}, options = {}) {
+  const baseProfile = buildCreationBaseProfile(profileValue, draft, options);
+  const plan = {
+    ...createCharacterLevelUpPlan(baseProfile), targetLevel: 1, ...draft.developmentPlan
+  };
+  if ((draft.skippedSteps || []).includes('development')) {
+    const unchanged = createCharacterLevelUpPlan(baseProfile);
+    Object.assign(plan, { targetLevel: baseProfile.progression.level + baseProfile.progression.specialLevels,
+      purchaseIds: [], traitIds: unchanged.traitIds, development: unchanged.development, attributeIncreases: {} });
+  }
+  if ((draft.skippedSteps || []).includes('resources')) plan.resourceIncreases = {};
+  const development = previewCharacterLevelUp(baseProfile, plan);
+  const errors = [...new Set([...validateCharacterCreationDraft(draft), ...development.errors])];
+  return { ...development, baseProfile, ready: errors.length === 0, errors };
+}
+
+export function applyCharacterCreationDraft(profileValue = {}, draft = {}, options = {}) {
+  const preview = previewCharacterCreationDraft(profileValue, draft, options);
+  return {
+    ok: preview.ready,
+    errors: preview.errors,
+    profile: preview.ready ? preview.profile : sanitizeCharacterCombatProfile(profileValue)
+  };
 }
 
 export const characterCreationInternals = Object.freeze({

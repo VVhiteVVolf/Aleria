@@ -1,6 +1,7 @@
 import { getHuskarlBasicTechniques } from '../../combat-styles/huskarl/huskarl-basic-techniques.js';
 import { getHuskarlExpertTechniques } from '../../combat-styles/huskarl/huskarl-expert-techniques.js';
 import { getCombatWeaponLoadout, hasEquippedCombatShield } from '../../combat/combat-weapon-loadout.js';
+import { getDevelopmentTechniqueId } from '../../character-development/development-entry-reference.js';
 
 const classId = profile => String(profile.templateSelections?.classId || '').toLowerCase();
 const techniques = new Map(['hird-maid', 'skjoldr', 'thegnar', 'skeidr', 'skjaldr', 'skytte', 'skalde']
@@ -14,15 +15,17 @@ export function getAldrimarWeaponAttackBonus(profile = {}, weapon = {}) {
 
 // Read requirements from the authored curriculum, even after profile sanitization.
 export function getHuskarlTechniqueRequirements(technique = {}) {
-  return technique.combatStyleId === 'huskarl-waffenlehre' ? techniques.get(technique.id)?.cultureTraining || {} : {};
+  return technique.combatStyleId === 'huskarl-waffenlehre' ? techniques.get(getDevelopmentTechniqueId(technique))?.cultureTraining || {} : {};
 }
 
 export function getHuskarlTechniqueUnavailableReason(profile = {}, technique = {}) {
   if (technique.combatStyleId !== 'huskarl-waffenlehre') return '';
-  const source = techniques.get(technique.id);
+  const source = techniques.get(getDevelopmentTechniqueId(technique));
   if (!source) return 'Diese Huskarl-Technik ist nicht im Ausbildungskatalog enthalten.';
   const rules = getHuskarlTechniqueRequirements(technique);
-  if (!rules.allowedClassIds.includes(classId(profile))) return 'Diese Technik gehört zu einer anderen Huskarl-Klasse.';
+  const purchasedClass = profile.progression?.development?.mode === 'purchase'
+    ? profile.progression.development.purchases?.find(p => p.techniqueId === getDevelopmentTechniqueId(technique))?.classId : '';
+  if (!rules.allowedClassIds.includes(purchasedClass || classId(profile))) return 'Diese Technik gehört zu einer anderen Huskarl-Klasse.';
   if (Number(profile.progression?.level || 1) < source.minimumLevel) return `Wird ab Stufe ${source.minimumLevel} freigeschaltet.`;
   const loadout = getCombatWeaponLoadout(profile);
   if (rules.requiresMounted && !profile.combat?.mounted) return 'Diese Technik benötigt ein geführtes Reittier.';

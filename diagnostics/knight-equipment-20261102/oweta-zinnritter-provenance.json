@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-11-02",
+  "tool": "built-in image_gen",
+  "preset": "fantasy-inventory-item",
+  "asset": "AleriaAlmanach/assets/gwynthor-seven/items/oweta-zinnritter-v1.png",
+  "sourceDesign": "AleriaAlmanach/modules/castell-draig-rooms/room-pages.mjs:58 (belegte Zinnsoldaten)",
+  "styleReference": "AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-gafyr-harnisch-v1.png",
+  "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a tiny medieval PEWTER TOY KNIGHT, a single five-centimetre cast tin soldier from a young knight's collection. It is an inanimate tabletop toy, entirely unpainted dull SILVERY GREY metal, on a small integral oval pewter footplate. Simple closed helmet, simplified plate armour, a modest round shield and a sword held upright beside its body. Slightly chunky hand-cast proportions and small casting seams make its miniature toy scale obvious. No face or living skin. Reference image defines ITEM ART STYLE ONLY: hand-painted illustrated fantasy inventory art, painterly textured metal, crisp dark outlines, soft simplified shading, muted warm silver-grey colors, gentle illustrated highlights, readable details and a clear silhouette at thumbnail size. Do NOT copy gold colors or goat heraldry from the armor reference. No house insignia is needed on this plain toy. Not photorealistic, not CGI or glossy 3D. Show the whole isolated single object centered and large, with about 10% clear margin. Gentle three-quarter view. TRUE transparent PNG alpha background, all empty gaps transparent. No real person, hands, mannequin, scenery, floor, display stand, decorative frame, text, watermark, checkerboard or outer shadow. The toy's small integral metal footplate is part of the object. Do not add unrelated objects.",
+  "cleanupPrompt": "Preserve exact toy; remove every haze, outer glow, backdrop and shadow outside the metal silhouette; Alpha=0 outside object and inside gaps.",
+  "originalGeneration": "C:/Users/fhg_r/.codex/generated_images/01a19d4d-df1a-7d02-8f51-67bb596ff1ab/exec-f0107250-bf6c-4b70-9533-de3b42796dcf.png",
+  "approvedAlphaGeneration": "C:/Users/fhg_r/.codex/generated_images/01a19d4d-df1a-7d02-8f51-67bb596ff1ab/exec-f758a624-4295-4096-8522-5e86b242cd6e.png",
+  "visualReview": {
+    "passed": true,
+    "subject": "Single unpainted pewter toy knight with sword, round shield and integral base",
+    "background": "clean true transparent background including leg gap"
+  }
+}

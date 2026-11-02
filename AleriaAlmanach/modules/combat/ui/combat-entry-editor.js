@@ -84,6 +84,7 @@ function renderMechanicsFields(item) {
   return `<fieldset class="combat-entry-editor-mechanics"><legend>Strukturierte Wirkung</legend>
     <p>Diese Werte werden vom Kampfsystem berechnet und von AleriaGPT verbindlich gelesen.</p>
     <div class="combat-entry-editor-number-grid">${fields.map(([key, label]) => `<label><span>${label}</span><input type="number" min="-9999" max="9999" data-entry-field="mechanics.${key}" value="${escapeHtml(mechanics[key] ?? 0)}"></label>`).join('')}</div>
+    <label><span>Geltung des allgemeinen Angriffsbonus</span><select data-entry-field="mechanics.attackScope"><option value=""${selected(mechanics.attackScope, '')}>Waffen und Zauber</option><option value="weapon"${selected(mechanics.attackScope, 'weapon')}>Nur Waffenangriffe und Waffentechniken</option></select></label>
     <label><span>Angriffswurf</span><select data-entry-field="mechanics.attackRollMode"><option value="normal"${selected(mechanics.attackRollMode, 'normal')}>Normal</option><option value="advantage"${selected(mechanics.attackRollMode, 'advantage')}>Vorteil</option><option value="disadvantage"${selected(mechanics.attackRollMode, 'disadvantage')}>Nachteil</option></select></label>
   </fieldset>`;
 }

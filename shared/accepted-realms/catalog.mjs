@@ -6,11 +6,14 @@ import iathneach from './data/iathneach.source.json' with { type: 'json' };
 import deitheach from './data/deitheach.source.json' with { type: 'json' };
 import triarchie from './data/triarchie.source.json' with { type: 'json' };
 import legacy from './data/weisenfluh-legacy.source.json' with { type: 'json' };
+import aeldrunmar from './data/aeldrunmar.source.json' with { type: 'json' };
+import talyndor from './data/talyndor.source.json' with { type: 'json' };
+import brevanor from './data/brevanor.source.json' with { type: 'json' };
 import { enrichRealm } from './realm-enrichment.mjs';
 import { compileTerritories, ancestors, houseTitle } from './territory-topology.mjs';
 
 export { houseTitle, houseHref, familyHref, placeHref, placeId, slug } from './territory-topology.mjs';
-export const realms = [aldingen, goldmund, weisenfluh, moinneach, iathneach, deitheach, triarchie].map(source => {
+export const realms = [aldingen, goldmund, weisenfluh, moinneach, iathneach, deitheach, triarchie, aeldrunmar, talyndor, brevanor].map(source => {
   const realm = enrichRealm(source, legacy);
   realm.territories = compileTerritories(realm);
   realm.territoriesById = new Map(realm.territories.map(t => [t.id, t]));

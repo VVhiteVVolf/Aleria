@@ -1,10 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { buildAuthoredCharacterImport } from '../../CharakterDatenbank/lib/authored-character-import.mjs';
+import { matchCharacterToFamily } from '../../CharakterDatenbank/lib/character-database-model.mjs';
 const prior={registry:{records:[{recordId:'old',familyStatus:'pending',primary:{kind:'group'},path:'keep'}],sourceOverlays:[],sourceExportedAt:'2026-01-01'},
   snapshot:{characters:[{id:'old',inventory:{items:[{id:'live-item'}]},combatProfile:{hitPoints:{current:2}},custom:'keep'}],charTabs:{tabs:['Alle'],map:{}}},
   report:{summary:{sourceDocuments:1,total:1},pending:[],other:'keep'}};
 const entries=[{type:'aleria-character',sourcePath:'test/new.json',exportedAt:'2026-10-21',assignedTab:'Schwarze Zitteraale',character:{id:'new',name:'Neu'}}];
+test('explicit world identity links a single given name and prevents another namesakes assignment',()=>{
+  const candidates=[{familyId:'family',personId:'mother',worldPersonId:'person--mother',displayName:'Gwenella',recordedName:'Gwenella'},
+    {familyId:'other',personId:'namesake',worldPersonId:'person--other',displayName:'Gwenella',recordedName:'Gwenella'}];
+  const linked=matchCharacterToFamily({name:'Gwenella',identity:{worldPersonId:'person--mother'}},candidates);
+  assert.equal(linked.status,'linked');
+  assert.equal(linked.primary.personId,'mother');
+  assert.equal(matchCharacterToFamily({name:'Gwenella',identity:{worldPersonId:'person--absent'}},candidates).status,'pending');
+  assert.equal(matchCharacterToFamily({name:'Gwenella'},candidates).status,'pending');
+});
 test('bounded import preserves every unrelated record and live field, and is idempotent',()=>{
   const result=buildAuthoredCharacterImport(prior,entries,'test');
   assert.deepEqual(result.snapshot.characters[0],prior.snapshot.characters[0]);

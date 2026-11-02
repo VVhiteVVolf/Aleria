@@ -1,3 +1,4 @@
+import { normalizeQuestArea } from './quest-area-model.js';
 // Optional editorial preparation. It is independent of party assignment and live progress.
 const text = (value, max = 1000) => String(value ?? '').trim().slice(0, max);
 const localAsset = value => /^\/(?!\/)[^\x00-\x1f]*$/.test(String(value || '')) ? text(value, 2000) : '';
@@ -8,6 +9,14 @@ export function normalizeQuestDossier(input) {
     participants: rows('participants', 30, row => ({ name: text(row.name, 180), role: text(row.role, 180), description: text(row.description),
       kind: ['character','creature'].includes(row.kind) ? row.kind : '', recordId: text(row.recordId, 300), image: localAsset(row.image), profile: localAsset(row.profile) })),
     route: normalizeQuestRoute(input.route),
+    ...(input.coverCaption ? { coverCaption: text(input.coverCaption, 300) } : {}),
+    ...(input.cardImageStyle === 'avatar' ? { cardImageStyle: 'avatar' } : {}),
+    ...(input.participantsTitle ? { participantsTitle: text(input.participantsTitle, 180) } : {}),
+    ...(input.area ? { area: normalizeQuestArea(input.area) } : {}),
+    ...(Array.isArray(input.informationSources) ? { informationSources: rows('informationSources', 24, row => ({
+      name: text(row.name, 180), description: text(row.description), familyId: text(row.familyId, 300),
+      image: localAsset(row.image), profile: localAsset(row.profile), placeName: text(row.placeName, 180),
+      mapId: text(row.mapId, 300), pinId: text(row.pinId, 300) })) } : {}),
     pois: rows('pois', 20, row => ({ name: text(row.name, 180), description: text(row.description), mapId: text(row.mapId, 300), pinId: text(row.pinId, 300), detourKm: Number.isFinite(row.detourKm) ? Math.max(0, row.detourKm) : null })),
     encounters: rows('encounters', 20, row => ({ title: text(row.title, 180), description: text(row.description, 2000), location: text(row.location, 300), profile: localAsset(row.profile) })),
     rewardArt: rows('rewardArt', 24, row => ({ title: text(row.title, 180), image: localAsset(row.image), kind: row.kind === 'money' ? 'money' : 'item',

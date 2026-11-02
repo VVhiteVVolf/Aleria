@@ -431,6 +431,12 @@
   color: var(--sheet-gold-bright);
 }
 
+.cp-sheet-attribute-effect {
+  color: var(--sheet-muted);
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
 .cp-sheet-attribute label {
   color: var(--sheet-muted);
   font-size: 0.62rem;

@@ -1,3 +1,73 @@
+# Venalys: Republik, Hausstände und Geschlechtsnamen
+
+Nutzerfestlegung vom 2. November 2026: Venalys liegt auf **Tirnara** und entstand
+aus einer Kolonie des **Marktes der Fortuna**, der ersten Kaufmannsgilde. Die
+fünf Patrizier-Gründerhäuser sind **Vinicius, Avenicci, Abor, Tullius und Arentino**.
+Patrizier leitet sich von **Patre** (Vater / Gründervater) ab. Avenicci und
+Sympathisanten gründeten später die kapitalorientiertere **Klingende Münze**.
+Beide Kaufmannsgilden haben ihre Heimat in Venalys. Abor besitzt eine eigene
+Söldnergilde, Arentino eine globale Baumeistergilde; beide Gildennamen sind offen.
+
+Geschlechtsbezeichnungen: **Tullius → Tullier**, **Abor → Abori**,
+**Vinicius → Vinicier**; **Arentino** und **Avenicci** bleiben unverändert.
+Diese Mehrzahlformen nicht automatisch in Personennamen oder neue Haus-IDs
+übertragen. Personen folgen dem vorhandenen Sprachmodul Lingua Argenti.
+
+Weitere Nutzerkorrektur vom 2. November 2026: Neue **Familiennamen** sollen
+natürlich wie Ergalla und Falto klingen. Klang geht vor einer künstlichen
+Ableitung aus Beruf, Schwerpunkt oder Gesinnung. Das Sprachmodul für
+Personennamen nicht als Pflichtschema für sprechende Familiennamen verwenden.
+
+Stände: Patrizier = hoher Adel; Magnarier = Lehensadel im Ritterfürstenrang;
+Mercantier = kein Adel, annähernd Ritterherrenstellung; Plebejer darunter.
+Advena sind Ausländer mit situativer Stellung, keine pauschale unterste Kaste.
+Bestätigte Magnarier-Zahlen: **Vinicius 5, Avenicci 5, Abor 3, Tullius 2,
+Arentino 2**. Falto und Nerva zählen zu Vinicius, Falveri und Ergalla zu
+Avenicci mit. Neue Entwürfe unter `Vorschau/Venalys/` bleiben Entwürfe.
+
+Regierung: **zwei Dogen**, Legat (Militär), Quästor (Finanzen), Advokat
+(Justiz), Augur (Religion), Zensor (Kultur/Unterhaltung), Herald (Diplomatie).
+Sekundär Ädil (Hafen) und Volkstribun (Bürgersprecher), weitere Ämter offen.
+Jeder Mann aus Patrizier- und Magnarierhäusern erhält ab **30 Jahren**
+Senatorenstatus. Die **1.000 Mann starke Stadtwache** nimmt ausschließlich
+einheimische Venalier auf, untersteht dem Legaten und bleibt von allen Haus-
+und Gildenstreitkräften getrennt. Keine Amtsinhaber oder Wahlregeln erfinden.
+Staatsreligion ist aus kommerziellem Nutzen die **Alerische Kirche**; andere
+Religionen werden akzeptiert. Früherer Staatsglaube: **Celestische Synode**.
+
+Für Hauskrieger spätrömisches Militär mit italienischen Condottieri verbinden;
+Helme deutlich variieren. Condottieri: gepanzerter edler Schwertkämpfer;
+Gondoleri: leichter gerüstet, Säbel, Rückenköcher; Lancieri: Stangenwaffe,
+gegebenenfalls seltene Reiterei; Stralieri: aufgestellte Pavese, lässig
+angelehnt, Schwert in der Hand, Rückenköcher. Limita für diese Hausbilder
+ausgeschlossen. Wappen römisch/frühitalienisch, untergeordnete Magnarier
+schlichter als die fünf gelieferten Patrizierwappen. Namensverbote stehen in
+`Vorschau/Venalys/sources/name-ban.json`. Bezirke bleiben manuell benennbar,
+Häuser können mehrere Bezirke und Außenorte erhalten.
+
+# Aeldrunmar: Personennamen und Kontinentzuordnung
+
+Nutzerfestlegung vom 2. November 2026 für künftig ausgearbeitete aeldrunmarische
+Häuser, Clans und ihre Angehörigen: Adelige Personennamen beginnen mit einem
+Präfix entsprechend dem Rang ihres Hauses:
+
+| Hausrang | Namenspräfix | Beispiele / Bedeutung |
+| --- | --- | --- |
+| Königshaus | **Coel-** | Coelwulf, Coelstan |
+| Earlshaus | **Æ-** oder **Æthel-** | Die Ligatur **Æ** verwenden, nicht die Tastaturersatzschreibung Ae/Aethel. |
+| Thainhaus | **Wol-** | Thain entspricht dem Baron. |
+| Reevehaus | **Dun-** | Reeve entspricht dem Ritterfürsten. |
+
+Diese Vorgabe betrifft **Personennamen**, nicht Orts- oder Regionsnamen.
+Keine zusätzlichen Regeln für Zweitnamen oder Vererbung erfinden. Sie gilt für
+künftige Ausarbeitungen; vorhandene belegte Personen nicht pauschal umbenennen.
+
+Dieselbe Nutzerkorrektur: **Aeldrunmar, Talyndor, Brevanor und Deitheach gehören
+sämtlich zum Kontinent Aldervan.** Bei neuen Seiten, Registerpfaden, Hausbios,
+Kartenverweisen und Länderübersichten diese Zuordnung verwenden. Lothir und
+Estryll sind für diese vier Länder keine Kontinentzuordnungen. Tatsächliche
+Wohnsitze einzelner ausgewanderter Personen bleiben davon unberührt.
+
 # Stammbaumregister: Wohnort und Hauszugehörigkeit
 
 Nutzerkorrektur vom 31. Oktober 2026: Die geografische Einsortierung folgt dem
@@ -18,6 +88,17 @@ Hauses; ein tatsächlich eigenständiger Zweig benötigt eine eigene belegte Akt
 # Dauerhafte Bildstil-Vorgaben
 
 ## Aktuelle Veröffentlichungsfreigabe
+
+Nutzerfreigabe vom 2. November 2026: Alle lokalen öffentlichen Neuerungen auf
+master pushen und deployen, einschließlich des sparsamen Traitabgleichs.
+Ausdrückliche Ausnahme: Die unveröffentlichten Fleischsammler-Inhalte bleiben
+hidden und geheim. Sie dürfen weder als Quellen noch als Bilder, Familien-/
+Personenakten, Kartendetails, Testdaten oder Diagnosekopien gepusht oder
+ausgeliefert werden. Gemischte Register und generierte Dateien vor dem Release
+inhaltlich bereinigen; bloßes Ausblenden in der Oberfläche genügt nicht.
+Lokale vollständige Arbeitsquellen erhalten. Tierbegleiter zusätzlich auf
+korrekte Besitzer und Inventarverknüpfungen prüfen; nur belegte Korrekturen
+gezielt übernehmen und sämtliche anderen Inventare und Live-Ressourcen erhalten.
 
 Nutzerfreigabe vom 1. November 2026: **„pus und deploy alles. Mach vorher aber
 einen gründlcihern checkup“**. Sie umfasst den gesamten aktuellen lokalen
@@ -205,6 +286,17 @@ Die aktuelle Zuordnung aller 23 Rhiannon-Zauber steht in [SPELL_ACTION_ECONOMY.m
 
 # Automatisch erlernte Kampfform-Techniken
 
+Ergänzung vom 2. November 2026: Der überarbeitete Stufenassistent verwendet für
+bearbeitete Figuren den gespeicherten Modus `progression.development.mode =
+"purchase"`. In diesem Modus werden keine Attacken automatisch vergeben oder
+beim Laden ergänzt. Vorhandene Techniken bleiben erhalten; neue werden einzeln
+aus den Klassenkatalogen gekauft, fremde Klassen kosten mehr. Balancepunkte
+dürfen negativ werden und blockieren keine Speicherung. Die darunter folgende
+automatische Formvergabe bleibt für ältere, noch nicht umgestellte Bögen gültig.
+Waffen-, Schild-, Reit- und Mindeststufenvoraussetzungen gelten beim Einsatz
+weiterhin. Gemeinsame Quellen: `modules/character-development/` und
+`modules/combat/combat-level-up-model.js`; Browser und Servermechanik abgleichen.
+
 Alle Techniken einer zugänglichen Kampfform werden beim Erreichen ihrer Mindeststufe automatisch ins Arsenal übernommen, auch bei bestehenden Bögen. Historische Attackenslots dürfen die Anzahl erlernter Techniken nicht begrenzen; Pfadwahl, Klassenzugang sowie Waffen-, Schild- und Reitvoraussetzungen bleiben verbindlich. Gemeinsame Vergabe: `modules/classes/class-form-arsenal.js` mit Cenyr-Ausbildungsabgleich; Browser und generierte Servermechanik müssen übereinstimmen.
 
 Am 26. September 2026 wurden die generischen **Besonderen Klassenmanöver vollständig gestrichen**, einschließlich ihrer automatischen Stufenvergaben. Reguläre Kampfform-Techniken und persönliche Fähigkeiten mit Besonderen Aktionen bleiben erhalten. Die bisherige Erholungsoption heißt klassenübergreifend **Durchschnaufen**: 1 eigener Klassen-Trefferwürfel + aufgerundete 10 % maximale TP heilen, ohne KON-Bonus; 1 Bonusaktion, einmal pro langer Rast. Jede Nahkampfklasse und alle bisherigen Empfänger erhalten sie. Zentrale Quelle: `modules/classes/martial-recovery.js`; Nutzungen bei wiederholtem Abgleich niemals auffüllen. Gais bleibt Uchelwyr. Selbstfähigkeiten wählen automatisch die eigene Figur. Schild- und Reittierwechsel verwenden die gemeinsame Ausrüstungs- und Kostenlogik und dürfen keine alten Kampfauswertungen verändern.
@@ -241,6 +333,98 @@ Die zuletzt festgelegten Ausrüstungswerte stehen in der unten verlinkten Übern
 
 Am 22. September 2026 hat der Nutzer die vorherige Veröffentlichungssperre ausdrücklich aufgehoben: **sämtliche Änderungen auf master pushen, veröffentlichen und online einsatzbereit machen.** Der bisherige Gildas–Gawain-Kampfverlauf einschließlich aller Würfe und Effekte muss unverändert bleiben; kommende Handlungen verwenden die neuen Regeln. Bestehende Beiträge niemals neu auswerten oder überschreiben. Die administrative `combat-rules-release`-Grenze aktiviert kritische Nebeneffekte für kommende Handlungen, gleicht Inventarsnapshots ab und darf weder Aktionsressourcen auffüllen noch Zustandsdauern fortschreiben. Automatische Rücknahmen über diese Grenze sind gesperrt, damit alte Ausrüstungsdaten nicht wiederhergestellt werden. Live-TP, Ressourcen, Zustände, Besitz und Online-IDs erhalten. Details: [Ausrüstungsübernahme](AleriaAlmanach/docs/inventory/PENDING_DUEL_EQUIPMENT_RELEASE.md).
 
+# Angeborene Blutträger-Linien
+
+Autorenfestlegung vom 2. November 2026: Blutträger sind **Menschen**, die einen
+infernalen oder celestialen Elternteil beziehungsweise einen solchen Vorfahren
+in ihrem Stammbaum haben. Das Erbe kann über mehrere Generationen fortbestehen
+und begründet eine angeborene magische Anlage. Es ist keine erlernbare Klasse,
+kein Infektionszustand und keine automatische Änderung der menschlichen Rasse.
+Myriad Draig ist durch seine Mutter Afallith „Lilith“ Tanwyn (Succubus) ein
+Blutträger; Aradin Hyrmgarthr ist durch den vampirischen Ursprung seines Clans
+ein Blutträger. Die Kontext- und Traitquelle liegt unter
+`AleriaAlmanach/modules/character-development/development-bloodline-traits.js`.
+Neue Merkmale dokumentieren dieses Erbe, ohne Vorfahren, Verwandlungen,
+vollständige Kräfte des Vorfahren oder Zauberpakete automatisch zu vergeben.
+
+# Theriantrophie und Silvanische Symbiose
+
+Nutzerfestlegung vom 2. November 2026: Bei Zatracher Theriantrophie immer die
+Tierform in Klammern benennen, etwa „Zatracher Theriantrophie (Werwolf)“.
+Fluchform und Jüngersegen gemäß dem Modul „Theriantrophie & Silvanische Symbiose“
+auseinanderhalten. Bei der Silvanischen Symbiose Clan und Tier nennen, etwa
+„Silvanische Symbiose der Varulv (Wolf)“. Symbiose ist erblich, nicht ansteckend
+und kein Zatrach-Fluch. Die Tierbindung der Varulv an den Wolf ist ausdrücklich
+vom Nutzer vorgegeben; die Bärenüberlieferungen der Mac Ard Diuid, Ó Lockart und
+Dál Haig stehen in ihren archivierten Mathgham-Quellen. Seltenheit und
+Überlieferungsstatus erhalten; nicht jedem Clanmitglied volle Tiergestalt oder
+Urform zuschreiben. Trait-Grundprägung, Tierkommunikation, Tiergestalt und
+Champion-Urform sind unterschiedliche Ausprägungen. Gemeinsame Quelle:
+`AleriaAlmanach/modules/character-development/development-theriantrophie-traits.js`.
+
+# Dauerhafte Leiden, Rauschmittel und Szenenzeit
+
+Nutzerauftrag vom 2. November 2026: Dauerhafte Krankheiten und Beeinträchtigungen
+werden nicht durch TP-Heilung oder Rast entfernt. Arkanistenfieber folgt dem
+vorhandenen Modul mit vier Hauptstadien und der Druidenvariante ohne Nekrose.
+Anzeichen und erste Symptome sind vorgeschaltete Spielausprägungen. Nur die
+passende höchste Stufe wirkt; Fortschritt wird bewusst dokumentiert, nicht beim
+Laden oder durch frei erfundene Fristen automatisch vergeben.
+
+Alkohol-, Kriss- und Smaragdflux-Abhängigkeiten besitzen drei Stadien. Nur der
+jeweils passende aktive Rausch unterdrückt Entzugsabzüge; Belastung unterhalb
+der Rauschschwelle und Verkatert genügen nicht. Abhängigkeit bleibt erhalten.
+Substanztoleranz immer mit Stoff in Klammern benennen; sie verdoppelt dessen
+Rauschschwelle, mindert aber keine Schäden, Nachwirkungen oder Krankheitsrisiken.
+
+Bei allen künftigen Alkoholen und Drogen ein ausdrückliches Wirkprofil führen.
+Alkohol benötigt Inhalt in ml und Alkoholgehalt; Drogen die wirksame Dosis pro
+ganzem Exemplar. Vorhandene Mengen und Gebinde erhalten: Fass, Flasche, Krug,
+Becher und Glas dürfen nicht als dieselbe Trinkmenge zählen. Der Item-Builder
+speichert dies unter `useDefinition.substance`; veröffentlichte Quellangebote
+prüft `scripts/build-substance-item-catalog.mjs`. Nutzerkorrektur im selben Auftrag:
+Für diese Leiden, Fieberstadien, Abhängigkeiten, Toleranzen und Rauschzustände
+eigene neue kreisförmige Comicicons generieren. Keine alten Baldur's-Gate-Icons
+oder bloßen Neuverknüpfungen vorhandener Traitbilder als Endfassung verwenden.
+
+Rausch und Kater verwenden ausschließlich die interaktive Szenenzeit, niemals
+reale Uhrzeit oder bloße Beitragszahlen. Betrunken dauert nach Belastung 1–3
+Szenenstunden; nach Rauschende folgen 1–3 Stunden Verkatert. Kriss und Flux haben
+eigene Zeitprofile. Zeitsprünge müssen die ganze Übergangskette auswerten; ein
+Rücksprung darf abgelaufene Wirkungen nicht wiederbeleben. Historische Belege,
+Bestände und Live-Ressourcen bleiben unverändert. Gemeinsame Quellen liegen in
+`modules/character-health/` und `modules/scene-time/scene-condition-clock.js`;
+Browser, Server, Inventar, Zustandsanzeige und Starthilfe zusammen prüfen.
+
+# Feste psychologische Spielprägungen
+
+Ergänzung vom 2. November 2026: Die sieben ausdrücklich gewünschten Prägungen
+stehen in `modules/character-development/development-psychological-traits.js`.
+Ihre Namen und Buffs/Mali sind Aleria-Spieldefinitionen, keine klinischen Aussagen.
+Die Grenze INT/WEI 3 bei „Geistig beschränkt“ betrifft den **Attributswert**,
+nicht einen Modifikator +3. Attributsboni und Obergrenzen werden aus
+`mechanics.attributeModifiers` und `mechanics.attributeCaps` gemeinsam in
+`modules/combat/combat-attribute-effects.js` berechnet; Grundwerte nicht
+destruktiv überschreiben. Grenzen gelten nach Boni und auch für freie
+Modifikatoren. Browser und Server müssen dieselben effektiven Werte verwenden.
+Alternative kognitive Ausprägungen werden nicht doppelt verrechnet.
+
 # Aktuelle Standardausrüstung vom 1. November 2026
+
+Nutzerkorrektur vom 2. November 2026: Die Charakter-Starthilfe und der
+Stufenassistent vergeben durch eine Klassenwahl **keine Standardwaffen,
+Rüstungen oder sonstigen Ausrüstungspakete**. Ausrüstung wird je Figur gesondert
+ausgearbeitet. Vorhandenen Besitz und Ausrüstungszustand erhalten. Die
+Marktstandards bleiben als Katalogeinträge bestehen. Beide Assistenten verwenden
+die individuelle Attackenwahl und den gemeinsamen Kaufmodus.
+
+Weitere Nutzerkorrektur vom 2. November 2026: In Schritt 3 werden Fertigkeiten
+manuell mit den vorhandenen Fertigkeitsicons gewählt. Klassen und Herkunft
+liefern nur Vorschläge, die erst ausdrücklich übernommen werden. Schritt 4
+erlaubt mehrere Klassen und eine eigene Ausbildung mit frei gewählten Kenntnissen.
+Eine Hauptklasse bestimmt die empfohlenen Stufenwerte; zusätzliche Klassen
+zählen für eigene Kaufpreise, geben aber keine zusätzlichen automatischen
+Stufenpakete, Items oder Attacken. Typische Klassenwaffen dürfen als bebilderte
+Orientierung angezeigt werden. Sichtbare Texte bleiben deutsch.
 
 Für neue Standardköpfe gelten die [Waffen-, Rüstungs- und Schildstandards](AleriaAlmanach/docs/inventory/EQUIPMENT_STANDARDS_2026-11-01.md): Großschwert ersetzt den bisherigen Standardnamen Ritterschwert, Plattenrüstung die Ritter-Plattenrüstung und Ritterrüstung die Turnierrüstung. Stabile IDs und frühere Lookup-Aliase erhalten; persönliche Jungritterschwerter, vorhandener Besitz, gepinnte Revisionen und historische Würfe werden dadurch weder umbenannt noch umgewertet. Die verlinkte Regelquelle ist auch für die abgestuften Rüstungswerte, Schildnachteile und tatsächlichen Ausrüstungskosten verbindlich.

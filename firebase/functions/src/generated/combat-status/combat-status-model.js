@@ -1,21 +1,27 @@
 import { createConditionUsage } from '../combat/combat-condition-usage.js?v=20261015-graded-challenges-v1';
+import { createSubstanceIntoxication, createSubstanceHangover } from '../character-health/substance-state.js';
 import { normalizeRuntimeCondition } from '../combat/combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from './combat-status-catalog.js?v=20260906-effect-rolls-v1';
 
 export const STATUS_DURATIONS = Object.freeze([
   ['actor-comments', 'Eigene Beiträge'], ['scene-comments', 'Szenenbeiträge'],
   ['combat', 'Bis zum Kampfende'], ['short-rest', 'Bis zur nächsten Rast'],
-  ['long-rest', 'Bis zur langen Rast'], ['day', 'Bis zum nächsten Szenentag'], ['permanent', 'Bis zum Entfernen']
+  ['long-rest', 'Bis zur langen Rast'], ['day', 'Bis zum nächsten Szenentag'], ['permanent', 'Bis zum Entfernen'], ['scene-time', 'Szenenminuten']
 ]);
 const clean = (value, maximum = 160) => String(value || '').trim().slice(0, maximum);
 
-export function createManualCombatCondition(value = {}, { id, encounterId = '' } = {}) {
+export function createManualCombatCondition(value = {}, { id, encounterId = '', actorId = 'manual', sceneId = '', sceneClockSeconds } = {}) {
   const preset = COMBAT_STATUS_PRESETS.find(item => item.id === value.presetId);
+  if (preset?.sceneMinutes) {
+    const options = { actorId, sceneId, seconds: sceneClockSeconds, minutes: Number(value.durationAmount) || preset.sceneMinutes };
+    return preset.id === 'hangover' ? createSubstanceHangover(options) : createSubstanceIntoxication(preset.substanceKind, options);
+  }
   const name = clean(value.name || preset?.name);
   if (!name) throw new Error('Gib dem Zustand einen Namen.');
   const kind = value.durationKind || 'actor-comments';
   if (!STATUS_DURATIONS.some(([key]) => key === kind)) throw new Error('Wähle eine gültige Dauer.');
   const amount = Number(value.durationAmount);
+  if (kind === 'scene-time' && (!Number.isFinite(sceneClockSeconds) || !Number.isInteger(amount) || amount < 1 || amount > 999)) throw Error('Szenenminuten benötigen eine gesetzte Szenenzeit und 1–999 ganze Minuten.');
   if (['actor-comments', 'scene-comments'].includes(kind) && (!Number.isInteger(amount) || amount < 1 || amount > 999)) {
     throw new Error('Die Dauer muss zwischen 1 und 999 Beiträgen liegen.');
   }
@@ -36,7 +42,8 @@ export function createManualCombatCondition(value = {}, { id, encounterId = '' }
     description: clean(value.description || preset?.description, 1600), mechanics, manual: true,
     ...createConditionUsage(value.usage, mechanics),
     ...(preset?.blockedResource ? { blockedResource: preset.blockedResource } : {}),
-    durationModel: { kind, amount, encounterId: kind === 'combat' ? encounterId : '' }
+    durationModel: { kind, amount, encounterId: kind === 'combat' ? encounterId : '',
+      ...(kind === 'scene-time' ? { sceneId, startedAtSeconds: sceneClockSeconds, expiresAtSeconds: sceneClockSeconds + amount * 60, remainingSeconds: amount * 60 } : {}) }
   });
 }
 
@@ -44,6 +51,7 @@ export function formatStatusDuration(condition = {}) {
   if (condition.usage) return condition.usage.scope === 'attack' ? 'Nächster passender Angriff' : 'Nächste passende Kampfaktion';
   if (condition.berserk) return `Bis Kampfende / ruhiger eigener Post · Rettung ${Number(condition.berserk.survivalCharges) > 0 ? '1/1' : '0/1'}`;
   const duration = normalizeRuntimeCondition(condition).durationModel;
+  if (duration.kind === 'scene-time') return `${Math.ceil(duration.remainingSeconds / 60)} Szenenminuten verbleibend`;
   if (duration.kind === 'actor-comments') return duration.remainingActorComments === 1 ? '1 eigener Beitrag' : `${duration.remainingActorComments} eigene Beiträge`;
   if (duration.kind === 'scene-comments') return duration.remainingSceneComments === 1 ? '1 Szenenbeitrag' : `${duration.remainingSceneComments} Szenenbeiträge`;
   if (duration.kind === 'concentration') return 'Konzentration';
@@ -65,7 +73,8 @@ export function buildCombatStatusChange({ operation, profile, state = {}, condit
   const conditions = (state.temporaryConditions || profile.temporaryConditions || []).map(normalizeRuntimeCondition).filter(item => item.active);
   if (operation === 'add') {
     if (conditions.length >= 60) throw new Error('Es sind bereits 60 temporäre Effekte aktiv. Entferne zuerst einen Effekt.');
-    return { temporaryConditions: [...conditions, condition] };
+    const retained = condition.substance ? conditions.filter(entry => entry.id !== condition.id && !(condition.substance.phase === 'intoxication' && entry.substance?.kind === condition.substance.kind)) : conditions;
+    return { temporaryConditions: [...retained, condition] };
   }
   if (operation === 'remove') {
     const existing = conditions.find(item => item.id === conditionId);

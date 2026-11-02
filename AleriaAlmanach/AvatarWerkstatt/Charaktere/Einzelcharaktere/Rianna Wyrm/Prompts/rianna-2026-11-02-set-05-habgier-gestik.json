@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "characterName": "Rianna Wyrm",
+  "characterFolder": "Charaktere/Einzelcharaktere/Rianna Wyrm",
+  "setId": "set-05-habgier-gestik",
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/rianna-wyrm.jpg",
+  "referenceImages": [
+    "Referenzen/rianna-wyrm.jpg",
+    "Output/rianna-2026-11-02-set-03_Bild9.png",
+    "Output/rianna-2026-11-02-set-04-geld-schmuck-tand_Bild1.png"
+  ],
+  "characterDescription": "Rote Zöpfe, bernsteinbraune Augen, schwarz-goldene Rüstung, schwarzer Drache auf Gelb; bloße Hände. Identität, Farben, Burghintergrund und Zeichenstil erhalten.",
+  "theme": "Habgier ausschließlich durch Mimik und Gestik, ohne Gegenstände",
+  "userConstraint": "Keine Gegenstände oder zusätzlichen Schmuckstücke; alle Hände leer.",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "promptFile": "Prompts/rianna-2026-11-02-set-05-habgier-gestik.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "pixelSize": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Habgierige Vorfreude",
+      "gesture": "Reibt beide leeren Handflächen vor der Brust aneinander; schmale erwartungsvolle Augen, verschwörerisches Grinsen."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Erst die Bezahlung",
+      "gesture": "Reibt Daumen gegen Zeige- und Mittelfinger in der Geldgeste; freie Hand offen fordernd, eine Augenbraue hoch."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Alles meins",
+      "gesture": "Zeigt mit beiden Daumen auf sich selbst; aufgerichtete stolze Haltung, herausforderndes besitzergreifendes Grinsen."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Gib her, mehr davon",
+      "gesture": "Lockt mit beiden leeren Händen zu sich; Finger nach innen gekrümmt, leicht vorgebeugt, gieriges erwartungsvolles Lächeln."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Berechnend",
+      "gesture": "Tippt mit dem Zeigefinger auf die Finger der anderen leeren Hand, als zähle sie ihren Gewinn; konzentrierter Blick, schiefes zufriedenes Lächeln."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Missgünstig",
+      "gesture": "Verschränkt die Arme und umfasst den gegenüberliegenden Oberarm; neidischer Seitenblick, vorgeschobene Unterlippe, leicht hochgezogene Schultern."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Ich gebe nichts ab",
+      "gesture": "Hält eine leere Handfläche abwehrend zum Betrachter; die andere Hand liegt flach auf der eigenen Brust, knauseriges überlegenes Lächeln."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Habgierig intrigierend",
+      "gesture": "Legt die Fingerspitzen beider Hände unter dem Kinn aneinander; halb geschlossene Augen, listiges selbstzufriedenes Grinsen."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Selig im Reichtum schwelgend",
+      "gesture": "Legt die zusammengefalteten leeren Hände seitlich an eine Wange; Augen geschlossen, leicht geneigter Kopf, verträumtes selbstzufriedenes Lächeln."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "rianna-2026-11-02-set-05-habgier-gestik_Bild1.png bis _Bild9.png",
+  "generationMode": "built-in image_gen",
+  "status": "fertig; Bild3-Handkorrektur v2; technische und visuelle Kontrolle bestanden",
+  "sheetPath": "Sheets/rianna-2026-11-02-set-05-habgier-gestik.png",
+  "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19d6d-82d8-75e2-9731-934b2318d4cc\\exec-e3dd9806-5f5d-4b74-a25f-f01b1053560b.png",
+  "exportReceipt": "Verarbeitung/set-05-habgier-gestik/export-receipt.json",
+  "visualReview": {
+    "allNineViewed": true,
+    "identityArmorAndBackground": "pass",
+    "expressionsAndDistinctGestures": "pass",
+    "bareEmptyHandsInAllNine": "pass",
+    "noPropsOrAddedJewelry": "pass",
+    "squareCropsWithoutNeighborPanels": "pass",
+    "reviewedAt": "2026-11-02",
+    "panel3ThumbCount": 2,
+    "panel3OneThumbPerHand": true
+  },
+  "corrections": [
+    {
+      "revision": 2,
+      "panel": 3,
+      "reason": "Extra thumb-like protrusions on both hands; corrected to one inward-pointing thumb per fist.",
+      "generatedSource": "E:\\Aleria\\AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rianna Wyrm\\Verarbeitung\\set-05-habgier-gestik\\Korrekturen\\Bild3-v2\\imagegen-handkorrektur-v2-original.png",
+      "prompt": "Prompts/rianna-2026-11-02-set-05-habgier-gestik_Bild3-handkorrektur-v2.txt",
+      "generationMode": "built-in image_gen edit",
+      "normalization": "AI output normalized to 418x418 with System.Drawing, assembled into panel 3, then exported with unchanged V3 get_crops.",
+      "originalsArchived": "AleriaAlmanach\\AvatarWerkstatt\\Charaktere\\Einzelcharaktere\\Rianna Wyrm\\Originale\\Korrekturen\\set-05-Bild3-v1",
+      "sheetChangesRestrictedToPanel3": true,
+      "otherEightAvatarsByteIdentical": true,
+      "avatarSize": [
+        418,
+        418
+      ],
+      "status": "corrected; exported avatar visually checked: two thumbs total, one per hand"
+    }
+  ]
+}

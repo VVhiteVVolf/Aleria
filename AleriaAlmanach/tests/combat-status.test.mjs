@@ -82,6 +82,9 @@ test('alle Ressourcen, Restdauern und sichere Namen erscheinen in der Karte', ()
   assert.equal(safeCombatImage('javascript:alert(1)'), '');
 });
 
-test('sämtliche angebotenen Baldurs-Gate-Icons liegen lokal vor', async () => {
-  for (const preset of COMBAT_STATUS_PRESETS) await access(new URL(`../../${getStatusIcon({ presetId: preset.id }).slice(3)}`, import.meta.url));
+test('alle angebotenen Zustandsicons liegen lokal vor', async () => {
+  for (const preset of COMBAT_STATUS_PRESETS) {
+    const path = getStatusIcon({ presetId: preset.id }).replace(/^\/|^\.\.\//, '');
+    await access(new URL(`../../${path}`, import.meta.url));
+  }
 });

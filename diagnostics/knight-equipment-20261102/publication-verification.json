@@ -1,0 +1,307 @@
+{
+  "dryRun": false,
+  "verifyOnly": false,
+  "profiles": [
+    {
+      "key": "caralyn-chwedlonol",
+      "id": "Eka4z7TWpzEgx8KjhIzy",
+      "create": false,
+      "changed": true,
+      "addedItemIds": [
+        "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+        "caralyn-chwedlonol-chwedonol-dreizack-2",
+        "caralyn-chwedlonol-chwedonol-enteraxt-3",
+        "caralyn-chwedlonol-chwedonol-harpune-4",
+        "caralyn-chwedlonol-chwedonol-harpune-5",
+        "caralyn-chwedlonol-chwedonol-harpune-6",
+        "caralyn-chwedlonol-netz-7",
+        "caralyn-chwedlonol-seil-8"
+      ],
+      "removedPlaceholderIds": [
+        "item-mqu1vat1-0-w8ef",
+        "item-mqu1vat1-1-exvo",
+        "item-mqu1vat1-2-0fx2",
+        "item-mqu1vat1-3-2lgm",
+        "item-mqu1vat1-4-ajrj",
+        "item-mqu1vat1-5-5kao"
+      ],
+      "items": [
+        {
+          "id": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "name": "Caralyns Chwedonol-Rüstung",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+            "revision": "7cfaf43ad2ef720765fb3ee9"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "name": "Chwedonol Dreizack",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-dreizack",
+            "revision": "be71b2bb8d14a2556f1159af"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "name": "Chwedonol Enteraxt",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-enteraxt",
+            "revision": "23a75879de27a0282d3be37a"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "name": "Chwedonol Harpune",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "name": "Chwedonol Harpune",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "name": "Chwedonol Harpune",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-netz-7",
+          "name": "Netz",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:netz",
+            "revision": "4a6e140389422fc425cc0d34"
+          }
+        },
+        {
+          "id": "caralyn-chwedlonol-seil-8",
+          "name": "Seil",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:seil",
+            "revision": "ea6062dea433bf62a09626bc"
+          }
+        }
+      ]
+    },
+    {
+      "key": "rianna-wyrm",
+      "id": "person--haus-wyrm--rianna-wyrm",
+      "create": true,
+      "changed": true,
+      "addedItemIds": [
+        "rianna-wyrm-rianna-wyrm-ruestung-1",
+        "rianna-wyrm-wyrm-ritterschwert-2",
+        "rianna-wyrm-rianna-dolch-3"
+      ],
+      "removedPlaceholderIds": [],
+      "items": [
+        {
+          "id": "rianna-wyrm-rianna-wyrm-ruestung-1",
+          "name": "Riannas Wyrm-Rüstung",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:rianna-wyrm-ruestung",
+            "revision": "c3e6fc9bf42b4d68a45af3d6"
+          }
+        },
+        {
+          "id": "rianna-wyrm-wyrm-ritterschwert-2",
+          "name": "Wyrm Ritterschwert",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:wyrm-ritterschwert",
+            "revision": "951230a50de94023d5b59199"
+          }
+        },
+        {
+          "id": "rianna-wyrm-rianna-dolch-3",
+          "name": "Dolch",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:rianna-dolch",
+            "revision": "1bb80ea5ef151438662ffb1a"
+          }
+        }
+      ]
+    },
+    {
+      "key": "lefraye-gafyr",
+      "id": "person--haus-gafyr--lefraye-gafyr",
+      "create": false,
+      "changed": true,
+      "addedItemIds": [
+        "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+        "lefraye-gafyr-helwyr-langbogen-2",
+        "lefraye-gafyr-helwyr-kurzbogen-3",
+        "lefraye-gafyr-gafyr-ritterschwert-4",
+        "lefraye-gafyr-helwyr-kampfdolch-5",
+        "lefraye-gafyr-helwyr-kampfdolch-6",
+        "lefraye-gafyr-signalpfeil-7",
+        "lefraye-gafyr-feuerpfeil-8",
+        "lefraye-gafyr-standardpfeil-9"
+      ],
+      "removedPlaceholderIds": [],
+      "items": [
+        {
+          "id": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+          "name": "Lefrayes Gafyr-Rüstung",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:lefraye-gafyr-ruestung",
+            "revision": "580b5986e02be383bffb99eb"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-langbogen-2",
+          "name": "Helwyr Langbogen",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-langbogen",
+            "revision": "d6ca6855411fd4a373c66f2a"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kurzbogen-3",
+          "name": "Helwyr Kurzbogen",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-kurzbogen",
+            "revision": "b343e2e2a367d5c42aa42c7b"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-gafyr-ritterschwert-4",
+          "name": "Gafyr Ritterschwert",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:gafyr-ritterschwert",
+            "revision": "d4fd0a7706fb4abb67bec9c3"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kampfdolch-5",
+          "name": "Helwyr Kampfdolch",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-kampfdolch",
+            "revision": "9a289e4d57e6bfd6f563d31d"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kampfdolch-6",
+          "name": "Helwyr Kampfdolch",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-kampfdolch",
+            "revision": "9a289e4d57e6bfd6f563d31d"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-signalpfeil-7",
+          "name": "Signalpfeil",
+          "quantity": "3",
+          "definitionRef": {
+            "id": "gwynthor-seven:signalpfeil",
+            "revision": "eee7aef8058e82f9fa5033b8"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-feuerpfeil-8",
+          "name": "Feuerpfeil",
+          "quantity": "2",
+          "definitionRef": {
+            "id": "gwynthor-seven:feuerpfeil",
+            "revision": "7dd640fd1dcfdc41542c88f6"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-standardpfeil-9",
+          "name": "Standard Pfeil",
+          "quantity": "30",
+          "definitionRef": {
+            "id": "gwynthor-seven:standardpfeil",
+            "revision": "c40d398a35c5f13c975b2096"
+          }
+        }
+      ]
+    },
+    {
+      "key": "oweta-draig",
+      "id": "vk0xAa3ZcEhVvGC1CzNq",
+      "create": false,
+      "changed": true,
+      "addedItemIds": [
+        "oweta-draig-draig-jungritter-ruestung-1",
+        "oweta-draig-draig-ritterschwert-2",
+        "oweta-draig-draig-dolch-3"
+      ],
+      "removedPlaceholderIds": [
+        "item-mqu1vat1-0-w8ef",
+        "item-mqu1vat1-1-exvo",
+        "item-mqu1vat1-2-0fx2",
+        "item-mqu1vat1-3-2lgm",
+        "item-mqu1vat1-4-ajrj",
+        "item-mqu1vat1-5-5kao"
+      ],
+      "items": [
+        {
+          "id": "oweta-heulwen",
+          "name": "Heulwen",
+          "quantity": "1"
+        },
+        {
+          "id": "oweta-draig-draig-jungritter-ruestung-1",
+          "name": "Draig - Jungritter Plattenrüstung",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:draig-jungritter-ruestung",
+            "revision": "5f4d39e1f20e6c70fbc28834"
+          }
+        },
+        {
+          "id": "oweta-draig-draig-ritterschwert-2",
+          "name": "Draig Ritterschwert",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:draig-ritterschwert",
+            "revision": "adbb1b3cef21db2db537331c"
+          }
+        },
+        {
+          "id": "oweta-draig-draig-dolch-3",
+          "name": "Draig Dolch",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:draig-dolch",
+            "revision": "0d8c1c3c21b5345af1e4e3af"
+          }
+        }
+      ]
+    }
+  ],
+  "missingDefinitionDocuments": 40,
+  "configChanged": true,
+  "existingLiveResourcesPreserved": true,
+  "verified": true,
+  "idempotent": true,
+  "committedAt": "2026-11-02T19:46:54.111285Z",
+  "unrelatedFieldsPreserved": true,
+  "imageCount": 20
+}

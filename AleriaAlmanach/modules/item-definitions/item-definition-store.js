@@ -1,4 +1,5 @@
 import { itemDefinitionRegistry } from './item-definition-registry.js';
+import { AUTHORED_ITEMS } from './authored-item-catalog.js';
 import { itemDefinitionFromTemplate, definitionTemplate, itemDefinitionKey, normalizeItemDefinitionRef } from './item-definition-model.js';
 
 let api = null, unsubscribe = null;
@@ -8,7 +9,11 @@ function changed() {
   for (const listener of listeners) listener(snapshot());
   if (typeof document !== 'undefined') document.dispatchEvent(new CustomEvent('aleria:item-definitions-changed'));
 }
-function snapshot() { return { templates: heads.map(definitionTemplate), status, error }; }
+function snapshot() {
+  const available = new Map(AUTHORED_ITEMS.map(itemDefinitionFromTemplate).filter(Boolean).map(d=>[d.id,d]));
+  for (const definition of heads) available.set(definition.id,definition);
+  return { templates: [...available.values()].map(definitionTemplate), status, error };
+}
 function addHeads(definitions) {
   itemDefinitionRegistry.add(definitions);
   const byId = new Map(heads.map(definition => [definition.id, definition]));

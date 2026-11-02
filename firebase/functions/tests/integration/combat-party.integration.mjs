@@ -3,6 +3,7 @@ import { after, test } from 'node:test';
 import { database, undo, commitAction } from './combat-test-context.mjs';
 import { createCombatParty } from './combat-party-context.mjs';
 import { CheckupDice } from './combat-test-actions.mjs';
+import { getDevelopmentAttackCatalog } from '../../../../AleriaAlmanach/modules/character-development/development-purchases.js';
 
 after(() => database.terminate());
 const mixed = [
@@ -93,8 +94,10 @@ test('Freya trifft mehrere Gegner mit dem Schrei: Eigenschaden und Fähigkeitsve
 });
 
 test('Stufe 8 bezahlt einen Angriff vollständig mit Aura, Folgeangriff verwendet den übrigen Aktionspool', async () => {
+  const purchase=getDevelopmentAttackCatalog().find(entry=>entry.classId==='teulu'&&entry.technique.id==='combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb');
+  assert.ok(purchase);
   const party = await createCombatParty([
-    { key: 'gawain', slug: 'gawain-draig', level: 8, team: 'Draig' },
+    { key: 'gawain', slug: 'gawain-draig', level: 8, purchaseIds:[purchase.id], team: 'Draig' },
     { key: 'ritter', creature: 'catalog-schwarzer-zitteraal-raubritter', team: 'Gegner' }
   ]);
   const first = await party.prepare({ actor: 'gawain', targets: ['ritter'], actionId: attack('06-sechsfacher-lehrhieb'), paymentMode: 'aura' });

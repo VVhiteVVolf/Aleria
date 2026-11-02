@@ -1,0 +1,3 @@
+git -c core.safecrlf=false diff --check -- <betroffene Projektdateien>
+Exitcode: 0
+Keine Whitespacefehler. Die vorhandene CRLF-Normalisierung bleibt erhalten.

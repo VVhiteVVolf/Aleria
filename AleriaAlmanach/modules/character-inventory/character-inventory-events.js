@@ -90,9 +90,11 @@ document.addEventListener('click', async event => {
         creatures.open(id);
       } catch (error) { window.showAppStatus?.(error.message || 'Kreaturbogen konnte nicht geöffnet werden.', 'error'); }
     } else {
-      if ((typeof _editingChar === 'undefined' || _editingChar !== data.characterId)
-        && typeof openCharProfile === 'function') openCharProfile(data.characterId);
-      if (typeof switchCharTab === 'function') switchCharTab(item?.combatDefinition ? 'combat' : 'inventory');
+      const ownerId = item?.ownerCharacterId || data.characterId;
+      if (ownerId && (typeof _editingChar === 'undefined' || _editingChar !== ownerId)
+        && typeof openCharProfile === 'function') openCharProfile(ownerId);
+      const kind = window.AleriaCharacterInventory?.card(item || {}).kind;
+      if (typeof switchCharTab === 'function') switchCharTab(['weapon', 'armor'].includes(kind) ? 'combat' : 'inventory');
     }
     return;
   }

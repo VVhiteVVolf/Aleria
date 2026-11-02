@@ -200,6 +200,90 @@
   }
 
   const MAPS = [
+    // BEGIN ACCEPTED_BREVANOR_GENERATED
+    {
+      "id": "brevanor",
+      "title": "Königreich Brevanor",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "brevanor",
+          "title": "Brevanor"
+        }
+      ],
+      "folder": "Brevanor",
+      "images": {
+        "normal": "Brevanor/Kartenbilder/normal.svg"
+      },
+      "dataPath": "Brevanor/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Brevanor/koenigreich-brevanor/index.html",
+      "link": "karte.html?map=brevanor"
+    },
+    // END ACCEPTED_BREVANOR_GENERATED
+    // BEGIN ACCEPTED_TALYNDOR_GENERATED
+    {
+      "id": "talyndor",
+      "title": "Königreich Talyndor",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "talyndor",
+          "title": "Talyndor"
+        }
+      ],
+      "folder": "Talyndor",
+      "images": {
+        "normal": "Talyndor/Kartenbilder/normal.svg"
+      },
+      "dataPath": "Talyndor/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html",
+      "link": "karte.html?map=talyndor"
+    },
+    // END ACCEPTED_TALYNDOR_GENERATED
+    // BEGIN ACCEPTED_AELDRUNMAR_GENERATED
+    {
+      "id": "aeldrunmar",
+      "title": "Königreich Aeldrunmar",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "aeldrunmar",
+          "title": "Aeldrunmar"
+        }
+      ],
+      "folder": "Aeldrunmar",
+      "images": {
+        "normal": "Aeldrunmar/Kartenbilder/normal.svg"
+      },
+      "dataPath": "Aeldrunmar/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Aeldrunmar/koenigreich-aeldrunmar/index.html",
+      "link": "karte.html?map=aeldrunmar"
+    },
+    // END ACCEPTED_AELDRUNMAR_GENERATED
     // BEGIN ACCEPTED_TRIARCHIE_GENERATED
     {
       "id": "triarchie",

@@ -199,7 +199,7 @@ export const HOUSE_GAFYR_FAMILY = Object.freeze({
       notes: 'Mündel Egon Gafyrs.'
     }),
     person('slevin-gafyr', 'Slevin', 'male', '1720'),
-    person('lefraye-gafyr', 'Lefraye', 'unknown', '1722'),
+    person('lefraye-gafyr', 'Lefraye', 'female', '1722', '', GAFYR_HOUSE_ID, { extensions: { registryManagedFields: ['sex'] } }),
     person('rheu-gafyr', 'Rheu', 'unknown', '1721'),
     person('braith-gafyr-1724', 'Braith', 'unknown', '1724'),
     person('gildas-gafyr', 'Gildas', 'male', '1722'),

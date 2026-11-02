@@ -1,8 +1,14 @@
 import { formatAge } from '../../domain/person-presentation.js';
+import '../../../../../AleriaAlmanach/modules/biography/biography-card-rendering.js';
+import '../../../../../js/biography/public-biographies.generated.js';
 
 export const PERSON_BIOGRAPHY_EXTENSION_ID = 'biographyModule';
 export const PERSON_BIOGRAPHY_SCHEMA = 'aleria.biography-module';
 export const PERSON_BIOGRAPHY_SCHEMA_VERSION = 1;
+
+export function createRemovedPersonBiographyModule() {
+  return { schema: PERSON_BIOGRAPHY_SCHEMA, schemaVersion: PERSON_BIOGRAPHY_SCHEMA_VERSION, disabled: true };
+}
 
 function clampNumber(value, fallback, minimum, maximum) {
   const parsed = Number(value);
@@ -86,7 +92,10 @@ function normalizeDocuments(value) {
 export function normalizeBiographyData(data = {}) {
   return {
     portrait: String(data.portrait || '').trim(),
+    ...(Array.isArray(data.knightMentors) ? { knightMentors: globalThis.AleriaBiographyCards.normalizeKnightMentors(data.knightMentors) } : {}),
     portraitStages: normalizePortraitStages(data.portraitStages),
+    ...(Array.isArray(data.portraitCaptions) ? { portraitCaptions: Array.from({length:5}, (_,index)=>String(data.portraitCaptions[index] || '').trim().slice(0,500)) } : {}),
+    ...(['cover','contain'].includes(data.portraitFit) ? { portraitFit: data.portraitFit } : {}),
     sideWidth: clampNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampNumber(data.connectionPortraitHeight, 68, 44, 140),
     connectionTextOffset: clampNumber(data.connectionTextOffset, 0, 0, 80),
@@ -122,6 +131,8 @@ function normalizeStats(value) {
 }
 
 export function normalizePersonBiographyModule(value = {}) {
+  if (value?.disabled === true) return createRemovedPersonBiographyModule();
+  value = value && typeof value === 'object' ? value : {};
   return {
     schema: PERSON_BIOGRAPHY_SCHEMA,
     schemaVersion: PERSON_BIOGRAPHY_SCHEMA_VERSION,
@@ -147,8 +158,13 @@ export function sanitizeBiographyStatsForFirestore(stats) {
 
 export function getPersonBiographyModule(person) {
   const stored = person?.extensions?.[PERSON_BIOGRAPHY_EXTENSION_ID];
-  return stored && typeof stored === 'object'
-    ? normalizePersonBiographyModule(stored)
+  if (stored?.disabled === true) return null;
+  const resolved = globalThis.AleriaBiographyCatalog.resolve(stored && typeof stored === 'object' ? stored : null, {
+    worldPersonId: person?.worldPersonId || person?.extensions?.identity?.worldPersonId,
+    personId: person?.id
+  });
+  return resolved
+    ? normalizePersonBiographyModule(resolved)
     : null;
 }
 

@@ -99,6 +99,12 @@ function handleCharacterProfileClick(event) {
     return;
   }
 
+  if (action === 'move-image-set') {
+    const index = _characterImageSets.findIndex(set => set.id === _activeCharacterImageSetId);
+    moveCharacterImageSet(_activeCharacterImageSetId, index + Number(actionTarget.dataset.direction));
+    return;
+  }
+
   if (action === 'delete-image-set') {
     deleteActiveCharacterImageSet();
     return;
@@ -166,6 +172,11 @@ function handleCharacterProfileKeydown(event) {
   if (event.defaultPrevented || event.repeat || event.isComposing) return;
   if (event.key !== 'Enter' && event.key !== ' ') return;
   if (!event.target.closest('#char-profile-overlay')) return;
+  if (event.key === 'Enter' && event.target.id === 'cp-new-image-set-name') {
+    event.preventDefault();
+    addCharacterImageSet();
+    return;
+  }
   // Native buttons already generate a click. Text fields must retain spaces
   // and Enter; only the custom, focusable emote placeholder needs activation.
   const target = getCharacterProfileActionTarget(event);

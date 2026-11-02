@@ -9,6 +9,9 @@ const descriptions = {
   iathneach: 'Albisches Fürstentum zwischen Waldtälern und Inselküste. Hauptstadt: Botharin.',
   deitheach: 'Früheres albisches Fürstentum. Seit zwanzig Jahren von der Triarchie beherrscht.',
   triarchie: 'Besetzte Teile Aldingens und Iathneachs unter der Herrschaft dreier Machthaber.',
+  aeldrunmar: 'Das Königreich der Kendryck: Reiter, Seewege, Felder und sechs Earltümer.',
+  talyndor: 'Bruderkönigreich Aeldrunmars. Historische Earltümer vor der Herrschaft der Triarchie.',
+  brevanor: 'Das frühere Königreich der Aubert: Ritterromantik, Wein und das Erbe Brethneachs.',
 };
 function realmCard(realm) {
   const href = escape(realm.territories[0].href);

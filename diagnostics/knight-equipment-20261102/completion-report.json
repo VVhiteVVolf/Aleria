@@ -1,0 +1,79 @@
+{
+  "capturedAt": "2026-11-02 20:06:47 UTC",
+  "biographyWidth": {
+    "sharedFullWidth": true,
+    "desktopAndMobileVerified": true,
+    "report": "diagnostics/biography-redesign-20261102/full-width-verification.json"
+  },
+  "published": {
+    "coreEquipment": true,
+    "startingPossessions": true,
+    "originalArtworkCount": 21,
+    "definitionHeadsAndVersions": 31,
+    "characters": [
+      {
+        "name": "Caralyn Chwedonol",
+        "id": "Eka4z7TWpzEgx8KjhIzy",
+        "onlineItemCount": 11,
+        "moneyCopper": 680
+      },
+      {
+        "name": "Rianna Wyrm",
+        "id": "person--haus-wyrm--rianna-wyrm",
+        "onlineItemCount": 6,
+        "moneyCopper": 1840
+      },
+      {
+        "name": "Lefraye Gafyr",
+        "id": "person--haus-gafyr--lefraye-gafyr",
+        "onlineItemCount": 12,
+        "moneyCopper": 760
+      },
+      {
+        "name": "Oweta Draig",
+        "id": "vk0xAa3ZcEhVvGC1CzNq",
+        "onlineItemCount": 7,
+        "moneyCopper": 1250
+      }
+    ],
+    "coreProof": "diagnostics/knight-equipment-20261102/publication-verification.json",
+    "startingProof": "diagnostics/knight-equipment-20261102/starting-publication-verification.json",
+    "repeatPlanChanged": false,
+    "startingRepeatAmount": 0,
+    "encryptedBeforeBackups": true,
+    "combatLocksAndUpdatePreconditions": true
+  },
+  "preservation": {
+    "otherOnlineFields": true,
+    "existingPossessions": true,
+    "liveCombatResources": true,
+    "historicalCombatResults": true,
+    "heulwen": true,
+    "localCompanionDraftItems": 5,
+    "unrelatedLocalCharacters": 261
+  },
+  "verification": {
+    "focusedTestsPassed": 49,
+    "buildPlanTestsPassed": 19,
+    "authoredCatalogCheck": true,
+    "seedBuilderCheck": true,
+    "confirmedDatabaseProjectionCheck": true,
+    "browserServerDefinitionCopiesEqual": true,
+    "localCoreBrowser": "diagnostics/knight-equipment-20261102/browser-integration.json",
+    "localPublishedStartingBrowser": "diagnostics/knight-equipment-20261102/browser-starting-integration.json",
+    "startingImagesDecoded": 31,
+    "allFourWalletsAndTwelvePersonalItemsVisible": true,
+    "productionObserved": "diagnostics/knight-equipment-20261102/production-browser-observed.json",
+    "productionLimit": "Later full online browser verification could not finish due Netlify connection timeouts; direct Firestore rereads and no-op repeat plans passed."
+  },
+  "localUIFixes": {
+    "preserveInventoryOwnerAndProfileContext": true,
+    "materializeCardKindForCombatNavigation": true,
+    "cacheVersionsUpdated": true,
+    "frontendDeployed": false
+  },
+  "git": {
+    "pushed": false,
+    "committed": false
+  }
+}

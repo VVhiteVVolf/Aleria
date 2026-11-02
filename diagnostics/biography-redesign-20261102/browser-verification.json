@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "widths": [
+    {
+      "width": 691,
+      "scroll": 691
+    }
+  ],
+  "charBounds": {
+    "width": 356,
+    "scroll": 356
+  },
+  "treeBounds": {
+    "width": 390,
+    "scroll": 390
+  },
+  "paragraphsAndHeadingsRetained": true,
+  "mobilePreviewToggle": true,
+  "inlineMentors": true,
+  "externalWritesBlocked": true,
+  "errors": [],
+  "output": ".tmp/biography-redesign-20261102/browser-1793642794281",
+  "screenshots": [
+    "module-desktop.png",
+    "character-editor-desktop.png",
+    "character-editor-phone.png",
+    "tree-preview-phone.png",
+    "tree-editor-phone.png",
+    "tree-editor-desktop.png",
+    "inline-editor-desktop.png"
+  ],
+  "visualReview": "Desktop- und Mobilbilder angesehen; keine horizontalen Formularueberlaeufe, eindeutige mobile Vorschau-/Fertig-Aktionen, Stammbaum-Formulare und Inline-Ausbildungskarten bedienbar.",
+  "baseline": {
+    "currentFailures": 55,
+    "baselineFailures": 55,
+    "introduced": [],
+    "resolved": [],
+    "sameFailureSet": true
+  }
+}

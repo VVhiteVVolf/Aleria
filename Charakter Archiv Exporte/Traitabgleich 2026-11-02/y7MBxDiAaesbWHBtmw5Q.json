@@ -1,0 +1,65 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "y7MBxDiAaesbWHBtmw5Q",
+    "name": "Rhiannon Draig",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-arkan-geschult",
+          "name": "Arkan geschult",
+          "description": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+          "cost": 3,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {},
+          "triggerRules": [
+            {
+              "id": "arkane-schulung",
+              "phase": "pre-roll",
+              "recipient": "actor",
+              "sourceRelation": "self",
+              "activation": "passive",
+              "frequency": "always",
+              "condition": "always",
+              "actionKinds": [
+                "skill"
+              ],
+              "skillIds": [
+                "arcane-kunde"
+              ],
+              "effects": {
+                "rollMode": "advantage"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Arkan geschult",
+            "detail": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp"
+          }
+        ]
+      }
+    }
+  }
+}

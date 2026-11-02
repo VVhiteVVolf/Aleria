@@ -1,0 +1,1652 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T20:00:31.921906Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Startbesitz 2026-11-02/lefraye-gafyr.json",
+  "character": {
+    "id": "person--haus-gafyr--lefraye-gafyr",
+    "name": "Lefraye Gafyr",
+    "inventory": {
+      "items": [
+        {
+          "id": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+          "instanceId": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+          "templateId": "gwynthor-seven:lefraye-gafyr-ruestung",
+          "templateName": "Lefrayes Gafyr-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:lefraye-gafyr-ruestung",
+            "revision": "580b5986e02be383bffb99eb"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:lefraye-gafyr-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Lefrayes Gafyr-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-b559d73c70c3f01f%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-langbogen-2",
+          "instanceId": "lefraye-gafyr-helwyr-langbogen-2",
+          "templateId": "gwynthor-seven:helwyr-langbogen",
+          "templateName": "Helwyr Langbogen",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-langbogen",
+            "revision": "d6ca6855411fd4a373c66f2a"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:helwyr-langbogen",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Helwyr Langbogen",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-7b7a75d57a30a658%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": [],
+          "itemState": {
+            "ammunitionItemId": "lefraye-gafyr-standardpfeil-9"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kurzbogen-3",
+          "instanceId": "lefraye-gafyr-helwyr-kurzbogen-3",
+          "templateId": "gwynthor-seven:helwyr-kurzbogen",
+          "templateName": "Helwyr Kurzbogen",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-kurzbogen",
+            "revision": "b343e2e2a367d5c42aa42c7b"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:helwyr-kurzbogen",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Helwyr Kurzbogen",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-41a5f4f210b66ff4%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": [],
+          "itemState": {
+            "ammunitionItemId": "lefraye-gafyr-standardpfeil-9"
+          }
+        },
+        {
+          "id": "lefraye-gafyr-gafyr-ritterschwert-4",
+          "instanceId": "lefraye-gafyr-gafyr-ritterschwert-4",
+          "templateId": "gwynthor-seven:gafyr-ritterschwert",
+          "templateName": "Gafyr Ritterschwert",
+          "definitionRef": {
+            "id": "gwynthor-seven:gafyr-ritterschwert",
+            "revision": "d4fd0a7706fb4abb67bec9c3"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:gafyr-ritterschwert",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Gafyr Ritterschwert",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Lefrayes einhändiges Gafyr-Langschwert ohne persönliche Schadens- oder Ausbildungsboni.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-35678e6208f2d139%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kampfdolch-5",
+          "instanceId": "lefraye-gafyr-helwyr-kampfdolch-5",
+          "templateId": "gwynthor-seven:helwyr-kampfdolch",
+          "templateName": "Helwyr Kampfdolch",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-kampfdolch",
+            "revision": "9a289e4d57e6bfd6f563d31d"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:helwyr-kampfdolch",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Helwyr Kampfdolch",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-a91c08e5da10891f%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kampfdolch-6",
+          "instanceId": "lefraye-gafyr-helwyr-kampfdolch-6",
+          "templateId": "gwynthor-seven:helwyr-kampfdolch",
+          "templateName": "Helwyr Kampfdolch",
+          "definitionRef": {
+            "id": "gwynthor-seven:helwyr-kampfdolch",
+            "revision": "9a289e4d57e6bfd6f563d31d"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:helwyr-kampfdolch",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Helwyr Kampfdolch",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-a91c08e5da10891f%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-gafyr-signalpfeil-7",
+          "instanceId": "lefraye-gafyr-signalpfeil-7",
+          "templateId": "gwynthor-seven:signalpfeil",
+          "templateName": "Signalpfeil",
+          "definitionRef": {
+            "id": "gwynthor-seven:signalpfeil",
+            "revision": "eee7aef8058e82f9fa5033b8"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:signalpfeil",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Signalpfeil",
+          "type": "Munition",
+          "category": "equipment",
+          "description": "Signalmunition. Signalwirkung situativ auswerten; kein automatischer Zusatzschaden.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-0ad3a02ae1264154%2Foriginal.png?alt=media",
+          "quantity": "3",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-gafyr-feuerpfeil-8",
+          "instanceId": "lefraye-gafyr-feuerpfeil-8",
+          "templateId": "gwynthor-seven:feuerpfeil",
+          "templateName": "Feuerpfeil",
+          "definitionRef": {
+            "id": "gwynthor-seven:feuerpfeil",
+            "revision": "7dd640fd1dcfdc41542c88f6"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:feuerpfeil",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Feuerpfeil",
+          "type": "Munition",
+          "category": "equipment",
+          "description": "Brandmunition. Anzünden und Feuerwirkung gesondert auswerten; keine kostenlose Zusatzattacke.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-6457260b602e1505%2Foriginal.png?alt=media",
+          "quantity": "2",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-gafyr-standardpfeil-9",
+          "instanceId": "lefraye-gafyr-standardpfeil-9",
+          "templateId": "gwynthor-seven:standardpfeil",
+          "templateName": "Standard Pfeil",
+          "definitionRef": {
+            "id": "gwynthor-seven:standardpfeil",
+            "revision": "c40d398a35c5f13c975b2096"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:standardpfeil",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T19:46:40.010Z",
+          "name": "Standard Pfeil",
+          "type": "Munition",
+          "category": "equipment",
+          "description": "Gewöhnlicher Pfeil. Der Schaden stammt vom geführten Bogen.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-28a655da47533436%2Foriginal.png?alt=media",
+          "quantity": "30",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "lefraye-agravaine",
+          "instanceId": "lefraye-agravaine",
+          "creatureId": "companion-lefraye-agravaine",
+          "name": "Agravaine",
+          "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png",
+          "description": "Agravaine, kurz Vain, ist Lefraye Gafyrs Mwyalchen-Drossel. Benannt ist der Singvogel nach Agravaine, dem Gründervater des Hauses Mwyalchen. Die Bildgestaltung greift dessen schwarzes Vogelmotiv auf. Alter und Geschlecht sind nicht festgelegt; Vain ist kein abgerichteter Greifvogel.",
+          "type": "Mwyalchen-Drossel",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Mwyalchen-Drossel",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-01T23:27:59.527Z"
+        },
+        {
+          "id": "lefraye-thalena",
+          "instanceId": "lefraye-thalena",
+          "creatureId": "companion-lefraye-thalena",
+          "name": "Thalena",
+          "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/thalena.png",
+          "description": "Thalena ist Lefraye Gafyrs Stute aus Tirashan und Rhyfel. Diese benannte Kreuzung heißt Farnschritt. Ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Bildgestaltung zeigt eine kräftige, geländegängige dunkelbraune Stute mit schwarzer Mähne, schwarzem Schweif und kleinem weißem Stirnstern; ihr Sattelzeug trägt die Farben und das Ziegenpaar des Hauses Gafyr. Ihr Alter ist nicht festgelegt.",
+          "type": "Farnschritt",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Farnschritt",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-01T23:27:59.527Z"
+        },
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-1",
+          "instanceId": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-1",
+          "templateId": "standard:gemischtwarenhandler:notizbuch",
+          "templateName": "Notizbuch (klein)",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:notizbuch",
+            "revision": "49c9999873bc24a73529d569"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:notizbuch",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Notizbuch (klein)",
+          "type": "Schreibmaterial",
+          "category": "equipment",
+          "description": "20 Seiten aus handgeschöpftem Papier, in Leder gebunden.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/notizbuch.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Papier, Leder, Notizen",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 8,
+            "maxCopper": 8
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 7
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 5
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 8
+            },
+            {
+              "label": "Alltag",
+              "value": 9
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-2",
+          "instanceId": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-2",
+          "templateId": "standard:gemischtwarenhandler:feder-tinte",
+          "templateName": "Feder & Tinte",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feder-tinte",
+            "revision": "261195af426d183145b98220"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:feder-tinte",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Feder & Tinte",
+          "type": "Schreibmaterial",
+          "category": "equipment",
+          "description": "Schreibfeder und Tinte aus Ruß und Galläpfeln.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feder-tinte.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Tinte, Feder, Schreiben",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 6
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 4
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 8
+            },
+            {
+              "label": "Alltag",
+              "value": 9
+            },
+            {
+              "label": "Reise",
+              "value": 5
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-3",
+          "instanceId": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-3",
+          "templateId": "standard:gemischtwarenhandler:feuerstein-stahl",
+          "templateName": "Feuerstein & Stahl",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+            "revision": "cdb8d503f7c8e15f7af760a6"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:feuerstein-stahl",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-gafyr--lefraye-gafyr",
+          "ownerCharacterName": "Lefraye Gafyr",
+          "acquiredAt": "2026-11-02T20:00:30.067Z",
+          "name": "Feuerstein & Stahl",
+          "type": "Werkzeug",
+          "category": "equipment",
+          "description": "Zum Entzünden von Feuer, langlebig und zuverlässig.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Feuer, Werkzeug, Langlebig",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 2,
+            "maxCopper": 2
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 8
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Alltag",
+              "value": 6
+            },
+            {
+              "label": "Reise",
+              "value": 10
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "definitionSchemaVersion": 1,
+      "companions": [
+        {
+          "id": "card-lefraye-agravaine",
+          "name": "Agravaine",
+          "species": "Mwyalchen-Drossel",
+          "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png",
+          "description": "Agravaine, kurz Vain, ist Lefraye Gafyrs Mwyalchen-Drossel. Benannt ist der Singvogel nach Agravaine, dem Gründervater des Hauses Mwyalchen. Die Bildgestaltung greift dessen schwarzes Vogelmotiv auf. Alter und Geschlecht sind nicht festgelegt; Vain ist kein abgerichteter Greifvogel.",
+          "summary": "Agravaine, kurz Vain, ist Lefraye Gafyrs Mwyalchen-Drossel. Benannt ist der Singvogel nach Agravaine, dem Gründervater des Hauses Mwyalchen. Die Bildgestaltung greift dessen schwarzes Vogelmotiv auf. Alter und Geschlecht sind nicht festgelegt; Vain ist kein abgerichteter Greifvogel.",
+          "role": "Gefährte",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-lefraye-agravaine",
+          "inventoryItemId": "lefraye-agravaine"
+        },
+        {
+          "id": "card-lefraye-thalena",
+          "name": "Thalena",
+          "species": "Farnschritt",
+          "image": "/AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/thalena.png",
+          "description": "Thalena ist Lefraye Gafyrs Stute aus Tirashan und Rhyfel. Diese benannte Kreuzung heißt Farnschritt. Ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Bildgestaltung zeigt eine kräftige, geländegängige dunkelbraune Stute mit schwarzer Mähne, schwarzem Schweif und kleinem weißem Stirnstern; ihr Sattelzeug trägt die Farben und das Ziegenpaar des Hauses Gafyr. Ihr Alter ist nicht festgelegt.",
+          "summary": "Thalena ist Lefraye Gafyrs Stute aus Tirashan und Rhyfel. Diese benannte Kreuzung heißt Farnschritt. Ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Bildgestaltung zeigt eine kräftige, geländegängige dunkelbraune Stute mit schwarzer Mähne, schwarzem Schweif und kleinem weißem Stirnstern; ihr Sattelzeug trägt die Farben und das Ziegenpaar des Hauses Gafyr. Ihr Alter ist nicht festgelegt.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-lefraye-thalena",
+          "inventoryItemId": "lefraye-thalena"
+        }
+      ],
+      "money": "0 Gold, 7 Silber, 60 Kupfer, 0 Eisenpfennig",
+      "moneyState": {
+        "silver": 7,
+        "pfennig": 0,
+        "totalCopper": 760,
+        "gold": 0,
+        "copper": 60
+      },
+      "revision": 2
+    },
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "",
+        "archetype": "Helwyr",
+        "background": ""
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "helwyr",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [
+          "light"
+        ],
+        "weapons": [
+          "simple",
+          "martial",
+          "bow",
+          "sword"
+        ],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "development": {
+          "version": 1,
+          "mode": "purchase",
+          "startingPoints": 3,
+          "pointsPerLevel": 3,
+          "ownClassCost": 2,
+          "foreignMultiplier": 2,
+          "levelSurcharge": 1,
+          "adjustment": 0,
+          "purchases": []
+        },
+        "level": 1,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 10,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": null,
+        "temporary": 0,
+        "hitDie": 10,
+        "averagePerLevelOverride": null,
+        "maximumOverride": null
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "default-skill-1",
+          "name": "Athletik",
+          "attributeKey": "strength",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-2",
+          "name": "Akrobatik",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-4",
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-5",
+          "name": "Arkane Kunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-6",
+          "name": "Geschichte",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-8",
+          "name": "Naturkunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-9",
+          "name": "Religion",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-13",
+          "name": "Überleben",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-17",
+          "name": "Täuschen",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-19",
+          "name": "Flirten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-20",
+          "name": "Körperbeherrschung",
+          "attributeKey": "constitution",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-langbogen-2",
+          "inventoryItemId": "lefraye-gafyr-helwyr-langbogen-2",
+          "effects": [],
+          "activationType": "action",
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "spendAllRegularActions": false,
+          "ammunition": {
+            "required": true,
+            "amountPerUse": 1,
+            "reloadAfter": 0,
+            "inventoryItemId": "lefraye-gafyr-standardpfeil-9"
+          },
+          "equipped": true,
+          "name": "Helwyr Langbogen",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-7b7a75d57a30a658%2Foriginal.png?alt=media",
+          "weaponType": "bow",
+          "weaponProfileId": "longbow",
+          "triggerRules": [],
+          "training": "martial",
+          "damageFormula": "1d8",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "dexterity",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "45/180 m",
+          "properties": "Zweihändig · Munition",
+          "notes": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+          "requirements": "",
+          "aiInstructions": ""
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kurzbogen-3",
+          "inventoryItemId": "lefraye-gafyr-helwyr-kurzbogen-3",
+          "effects": [],
+          "activationType": "action",
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "spendAllRegularActions": false,
+          "ammunition": {
+            "required": true,
+            "amountPerUse": 1,
+            "reloadAfter": 0,
+            "inventoryItemId": "lefraye-gafyr-standardpfeil-9"
+          },
+          "equipped": false,
+          "name": "Helwyr Kurzbogen",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-41a5f4f210b66ff4%2Foriginal.png?alt=media",
+          "weaponType": "bow",
+          "weaponProfileId": "shortbow",
+          "triggerRules": [],
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "dexterity",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "24/96 m",
+          "properties": "Zweihändig · Munition",
+          "notes": "Vorhandene Helwyr-Bauform und vorhandenes Inventarbild übernommen.",
+          "requirements": "",
+          "aiInstructions": ""
+        },
+        {
+          "id": "lefraye-gafyr-gafyr-ritterschwert-4",
+          "inventoryItemId": "lefraye-gafyr-gafyr-ritterschwert-4",
+          "effects": [],
+          "activationType": "action",
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "spendAllRegularActions": false,
+          "ammunition": null,
+          "equipped": false,
+          "name": "Gafyr Ritterschwert",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-35678e6208f2d139%2Foriginal.png?alt=media",
+          "weaponType": "sword",
+          "weaponProfileId": "sword",
+          "triggerRules": [],
+          "training": "martial",
+          "damageFormula": "1d8",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Einhändig · Langschwert",
+          "notes": "Lefrayes einhändiges Gafyr-Langschwert ohne persönliche Schadens- oder Ausbildungsboni.",
+          "requirements": "",
+          "aiInstructions": ""
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kampfdolch-5",
+          "inventoryItemId": "lefraye-gafyr-helwyr-kampfdolch-5",
+          "effects": [],
+          "activationType": "action",
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "spendAllRegularActions": false,
+          "ammunition": null,
+          "equipped": false,
+          "name": "Helwyr Kampfdolch",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-a91c08e5da10891f%2Foriginal.png?alt=media",
+          "weaponType": "dagger",
+          "weaponProfileId": "dagger",
+          "triggerRules": [],
+          "training": "martial",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "dexterity",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Einhändig · Leicht · Finesse · Für beidhändige Führung geeignet",
+          "notes": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+          "requirements": "",
+          "aiInstructions": ""
+        },
+        {
+          "id": "lefraye-gafyr-helwyr-kampfdolch-6",
+          "inventoryItemId": "lefraye-gafyr-helwyr-kampfdolch-6",
+          "effects": [],
+          "activationType": "action",
+          "costs": [],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "spendAllRegularActions": false,
+          "ammunition": null,
+          "equipped": false,
+          "name": "Helwyr Kampfdolch",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-a91c08e5da10891f%2Foriginal.png?alt=media",
+          "weaponType": "dagger",
+          "weaponProfileId": "dagger",
+          "triggerRules": [],
+          "training": "martial",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "dexterity",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Einhändig · Leicht · Finesse · Für beidhändige Führung geeignet",
+          "notes": "Ein leichter Kampfdolch. Zwei getrennte Besitzstücke bilden Lefrayes Paar; die gemeinsame Zweiwaffenlogik bestimmt den Einsatz.",
+          "requirements": "",
+          "aiInstructions": ""
+        }
+      ],
+      "armorItems": [
+        {
+          "id": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+          "inventoryItemId": "lefraye-gafyr-lefraye-gafyr-ruestung-1",
+          "definitionRef": {
+            "id": "gwynthor-seven:lefraye-gafyr-ruestung",
+            "revision": "580b5986e02be383bffb99eb"
+          },
+          "definitionTitle": "Lefrayes Gafyr-Rüstung",
+          "equipped": true,
+          "name": "Lefrayes Gafyr-Rüstung",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-gafyr%2Fknight-equipment-b559d73c70c3f01f%2Foriginal.png?alt=media",
+          "kind": "armor",
+          "armorCategory": "heavy",
+          "mechanics": {},
+          "damageProtection": {
+            "amount": 1,
+            "name": "Plattengrundschutz",
+            "damageTypes": [
+              "hieb",
+              "stich",
+              "wucht"
+            ],
+            "excludedDamageTypes": []
+          },
+          "triggerRules": [],
+          "baseArmorClass": 15,
+          "armorClassBonus": 0,
+          "dexterityMode": "none",
+          "dexterityCap": 2,
+          "dexterityUnlockLevel": 0,
+          "properties": "Schwere Startrüstung",
+          "notes": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni."
+        }
+      ],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        },
+        {
+          "id": "spell-slot-1",
+          "name": "Zauberplatz I",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-2",
+          "name": "Zauberplatz II",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 2,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-3",
+          "name": "Zauberplatz III",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 3,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-4",
+          "name": "Zauberplatz IV",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 4,
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-5",
+          "name": "Zauberplatz V",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 5,
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-6",
+          "name": "Zauberplatz VI",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 6,
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-7",
+          "name": "Zauberplatz VII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 7,
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-8",
+          "name": "Zauberplatz VIII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 8,
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-9",
+          "name": "Zauberplatz IX",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-10",
+          "name": "Zauberplatz X",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 10,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "martial-durchschnaufen",
+          "name": "Durchschnaufen",
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "usesCurrent": 1,
+          "usesMaximum": 1,
+          "recovery": "long-rest",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "",
+          "requirements": "",
+          "tags": "Erholung · Lange Rast",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "id": "second-wind-heal",
+              "type": "healing",
+              "target": "self",
+              "amount": 0,
+              "scaling": "hit-die-and-tenth-maximum",
+              "formula": "1d8",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "second-wind-bonus",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": ""
+    },
+    "updatedAt": "2026-11-02T20:00:31.921906Z"
+  }
+}

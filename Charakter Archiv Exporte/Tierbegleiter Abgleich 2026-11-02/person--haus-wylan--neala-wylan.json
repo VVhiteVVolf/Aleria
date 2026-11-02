@@ -1,0 +1,58 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-11-02T20:28:09.214Z",
+  "character": {
+    "id": "person--haus-wylan--neala-wylan",
+    "name": "Neala Wylan",
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-neala-floeckchen",
+          "name": "Flöckchen",
+          "species": "Ceffyl-Pferd",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+          "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+          "summary": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-neala-floeckchen",
+          "inventoryItemId": "neala-floeckchen"
+        }
+      ],
+      "items": [
+        {
+          "id": "neala-floeckchen",
+          "instanceId": "neala-floeckchen",
+          "creatureId": "companion-neala-floeckchen",
+          "name": "Flöckchen",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+          "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+          "type": "Ceffyl-Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Ceffyl-Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-wylan--neala-wylan",
+          "ownerCharacterName": "Neala Wylan",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-02T20:28:09.214Z"
+        }
+      ]
+    },
+    "updatedAt": "2026-11-02T20:28:09.214Z"
+  }
+}

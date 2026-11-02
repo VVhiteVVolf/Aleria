@@ -121,9 +121,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/martial-control-person--haus-wyrm--gais-wyrm-2026-10-15.json",
-    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
-    "sourceUpdatedAt": "2026-10-13T22:13:00.325Z",
+    "sourceArchive": "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wyrm--gais-wyrm.json",
+    "sourceExportedAt": "2026-11-02T20:28:09.214Z",
+    "sourceUpdatedAt": "2026-11-02T20:28:09.214Z",
     "sourceDocumentIds": [
       "person--haus-wyrm--gais-wyrm",
       "person--haus-wyrm--gais-wyrm",
@@ -135,7 +135,7 @@
       "person--haus-wyrm--gais-wyrm",
       "person--haus-wyrm--gais-wyrm"
     ],
-    "contentHash": "657880c043834a91a77c88df90cb3987ff885b3ed3c8465d2c31f2d779c36ccc"
+    "contentHash": "c6d950d80065a468f4c13bec39d340a5ce4656e3a353369893f9601eb2287a44"
   },
   "local": {
     "notes": "",
@@ -21619,13 +21619,518 @@
             }
           ]
         }
+      },
+      {
+        "id": "person--haus-wyrm--gais-wyrm",
+        "name": "Gais Wyrm",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-silberzunge",
+              "name": "Silberzunge",
+              "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+              "cost": 2,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung",
+              "mechanics": {
+                "skillProficiencies": [
+                  {
+                    "name": "Überzeugen",
+                    "proficiency": "expertise"
+                  }
+                ],
+                "skillModifiers": [
+                  {
+                    "name": "Motiv erkennen",
+                    "bonus": -1
+                  }
+                ]
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "development-trait-eigensinn",
+              "name": "Eigensinn",
+              "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+              "cost": 1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Besondere Eigenheit",
+              "mechanics": {
+                "saveAttributeModifiers": [
+                  {
+                    "attributeKey": "charisma",
+                    "bonus": 2
+                  }
+                ],
+                "skillModifiers": [
+                  {
+                    "name": "Überzeugen",
+                    "bonus": -2
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Silberzunge",
+                "detail": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
+              },
+              {
+                "title": "Eigensinn",
+                "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "person--haus-wyrm--gais-wyrm",
+        "name": "Gais Wyrm",
+        "inventory": {
+          "categories": [
+            {
+              "label": "Waffen",
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "id": "weapon"
+            },
+            {
+              "icon": "https://i.imgur.com/5qZtUiY.png",
+              "label": "Rüstung",
+              "id": "armor"
+            },
+            {
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "id": "equipment",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "id": "potions",
+              "label": "Trinkturen"
+            },
+            {
+              "label": "Dokumente",
+              "icon": "https://i.imgur.com/urdalGm.png",
+              "id": "documents"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "healthColor": "#5c7f20",
+          "status": "Gesund",
+          "level": "Stufe",
+          "moneyNotice": "",
+          "name": "Name des Charakters",
+          "revision": 1789230187934,
+          "money": "0 Gold, 0 Silber, 0 Kupfer",
+          "companions": [
+            {
+              "id": "card-gais-rabenstolz",
+              "name": "Saithor",
+              "species": "Edelsale-Hengst",
+              "image": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
+              "description": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
+              "summary": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-gais-rabenstolz",
+              "inventoryItemId": "gais-rabenstolz"
+            }
+          ],
+          "equipmentQuiz": {
+            "open": false,
+            "resultText": "",
+            "step": 0,
+            "status": "",
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "updatedAt": ""
+          },
+          "role": "Rolle",
+          "portraitPosition": "top",
+          "portrait": "",
+          "portraitFormat": "portrait",
+          "showInfoTable": false,
+          "infoRows": [],
+          "hitpoints": "48 / 52 TP",
+          "carryValue": "78,4 / 120 kg",
+          "items": [
+            {
+              "templateName": "",
+              "acquiredAt": "2026-09-12T16:21:11.647Z",
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [],
+                "weaponType": "spear",
+                "training": "martial",
+                "damageFormula": "1d12",
+                "versatileDamageFormula": "",
+                "damageType": "Stich",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "range": "Nahkampf",
+                "properties": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+                "notes": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+                "requirements": "",
+                "aiInstructions": ""
+              },
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "purchase": null,
+              "templateId": "",
+              "registerCategory": "",
+              "imageFormat": "square",
+              "originItemDbKey": "",
+              "imageFit": "contain",
+              "infoRows": [],
+              "creatureId": "",
+              "equipped": true,
+              "weight": "",
+              "individualizedAt": "",
+              "tags": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+              "itemDbKey": "",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "starter-uchelwyr-lance"
+              },
+              "image": "",
+              "category": "weapon",
+              "icon": "",
+              "ownerCharacterName": "Gais Wyrm",
+              "value": {
+                "copper": 0,
+                "gold": 0,
+                "silver": 0,
+                "totalCopper": 0
+              },
+              "valuation": null,
+              "description": "Beritten · Reichweite · Startausrüstung der gewählten Klasse",
+              "itemStorageMode": "character",
+              "name": "Lanze",
+              "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+              "quantity": "1",
+              "id": "equipment-weapon-starter-uchelwyr-lance",
+              "type": "Waffe",
+              "imagePosition": "center",
+              "instanceId": "equipment-weapon-starter-uchelwyr-lance",
+              "offerId": ""
+            },
+            {
+              "value": {
+                "silver": 0,
+                "gold": 0,
+                "totalCopper": 0,
+                "copper": 0
+              },
+              "icon": "",
+              "instanceId": "equipment-weapon-starter-uchelwyr-longsword",
+              "category": "weapon",
+              "valuation": null,
+              "itemDbKey": "",
+              "image": "",
+              "offerId": "",
+              "imagePosition": "center",
+              "imageFormat": "square",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "weapon",
+                "combatEntryId": "starter-uchelwyr-longsword"
+              },
+              "type": "Waffe",
+              "quantity": "1",
+              "ownerCharacterName": "Gais Wyrm",
+              "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+              "name": "Langschwert",
+              "id": "equipment-weapon-starter-uchelwyr-longsword",
+              "originItemDbKey": "",
+              "registerCategory": "",
+              "templateName": "",
+              "creatureId": "",
+              "purchase": null,
+              "description": "Startausrüstung der gewählten Klasse",
+              "combatDefinition": {
+                "kind": "weapon",
+                "triggerRules": [],
+                "weaponType": "sword",
+                "training": "martial",
+                "damageFormula": "1d8",
+                "versatileDamageFormula": "",
+                "damageType": "Hieb",
+                "attackAttribute": "strength",
+                "proficient": true,
+                "attackBonus": 0,
+                "damageBonus": 0,
+                "range": "Nahkampf",
+                "properties": "Startausrüstung der gewählten Klasse",
+                "notes": "Startausrüstung der gewählten Klasse",
+                "requirements": "",
+                "aiInstructions": ""
+              },
+              "weight": "",
+              "tags": "Startausrüstung der gewählten Klasse",
+              "imageFit": "contain",
+              "individualizedAt": "",
+              "infoRows": [],
+              "acquiredAt": "2026-09-12T16:21:11.647Z",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "templateId": "",
+              "itemStorageMode": "character",
+              "equipped": false
+            },
+            {
+              "combatDefinition": {
+                "mechanics": {},
+                "damageProtection": {
+                  "amount": 1,
+                  "name": "Plattengrundschutz",
+                  "damageTypes": [
+                    "hieb",
+                    "stich",
+                    "wucht"
+                  ],
+                  "excludedDamageTypes": []
+                },
+                "triggerRules": [],
+                "armorKind": "armor",
+                "armorCategory": "heavy",
+                "baseArmorClass": 15,
+                "armorClassBonus": 0,
+                "dexterityMode": "none",
+                "dexterityCap": 2,
+                "dexterityUnlockLevel": 0,
+                "properties": "Startausrüstung der gewählten Klasse",
+                "notes": "Startausrüstung der gewählten Klasse",
+                "kind": "armor"
+              },
+              "ownerCharacterName": "Gais Wyrm",
+              "category": "armor",
+              "registerCategory": "",
+              "id": "equipment-armor-starter-uchelwyr-chainmail",
+              "weight": "",
+              "itemStorageMode": "character",
+              "description": "Startausrüstung der gewählten Klasse",
+              "quantity": "1",
+              "individualizedAt": "",
+              "instanceId": "equipment-armor-starter-uchelwyr-chainmail",
+              "tags": "Startausrüstung der gewählten Klasse",
+              "templateName": "",
+              "templateId": "",
+              "acquiredAt": "2026-09-12T16:21:11.647Z",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "purchase": null,
+              "valuation": null,
+              "itemDbKey": "",
+              "icon": "",
+              "imagePosition": "center",
+              "name": "Kettenhemd",
+              "originItemDbKey": "",
+              "equipmentLink": {
+                "schemaVersion": 1,
+                "kind": "armor",
+                "combatEntryId": "starter-uchelwyr-chainmail"
+              },
+              "value": {
+                "copper": 0,
+                "silver": 0,
+                "totalCopper": 0,
+                "gold": 0
+              },
+              "imageFit": "contain",
+              "imageFormat": "square",
+              "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+              "type": "Rüstung",
+              "infoRows": [],
+              "offerId": "",
+              "image": "",
+              "creatureId": "",
+              "equipped": true
+            },
+            {
+              "id": "gais-rabenstolz",
+              "instanceId": "gais-rabenstolz",
+              "creatureId": "companion-gais-rabenstolz",
+              "name": "Saithor",
+              "image": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
+              "description": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
+              "type": "Edelsale-Hengst",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Edelsale-Hengst",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wyrm--gais-wyrm",
+              "ownerCharacterName": "Gais Wyrm",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-10-13T22:13:00.353Z"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "label": "Int",
+              "value": 5
+            },
+            {
+              "label": "Wei",
+              "value": 6
+            },
+            {
+              "label": "Cha",
+              "value": 5
+            }
+          ],
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "characterId": "",
+          "portraitFit": "cover",
+          "moneyState": {
+            "copper": 0,
+            "gold": 0,
+            "totalCopper": 0,
+            "silver": 0
+          },
+          "carryLabel": "Traglast"
+        },
+        "updatedAt": "2026-11-02T20:28:09.214Z"
       }
     ]
   },
   "character": {
     "id": "person--haus-wyrm--gais-wyrm",
     "name": "Gais Wyrm",
-    "updatedAt": "2026-10-13T22:13:00.325Z",
+    "updatedAt": "2026-11-02T20:28:09.214Z",
     "combatProfile": {
       "notes": "",
       "proficiencies": {
@@ -22067,109 +22572,60 @@
       },
       "quirks": [
         {
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "trigger": "",
-          "triggerRules": [],
-          "target": "self",
-          "priority": 0,
+          "id": "development-trait-silberzunge",
+          "name": "Silberzunge",
+          "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp",
           "type": "trait",
-          "mechanics": {
-            "skill": 0,
-            "spellSaveDc": 0,
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "savingThrowDisadvantageAttributes": [],
-            "savingThrow": 0,
-            "initiative": 0,
-            "attack": 0,
-            "movement": 0,
-            "spellAttack": 0,
-            "passivePerception": 0,
-            "damage": 0,
-            "maximumHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "armorClass": 0
-          },
-          "tags": "Volk · Cenyr",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
           "active": true,
-          "stacking": "normal",
-          "limitations": "",
-          "name": "Cenyri Kultur",
-          "duration": "",
-          "id": "starter-ancestry-cenyr-trait-1",
-          "aiInstructions": ""
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {
+            "skillProficiencies": [
+              {
+                "name": "Überzeugen",
+                "proficiency": "expertise"
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Motiv erkennen",
+                "bonus": -1
+              }
+            ]
+          },
+          "triggerRules": []
         },
         {
-          "stacking": "normal",
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
           "type": "trait",
-          "duration": "",
-          "tags": "Volk · Cenyr",
-          "limitations": "",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "priority": 0,
-          "name": "Höfische und religiöse Prägung",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "aiInstructions": "",
-          "mechanics": {
-            "skill": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "spellSaveDc": 0,
-            "bonusDamageFormula": "",
-            "passivePerception": 0,
-            "attack": 0,
-            "savingThrow": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "savingThrowAdvantageAttributes": [],
-            "damage": 0,
-            "spellAttack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "armorClass": 0,
-            "attackRollMode": "normal"
-          },
           "active": true,
-          "triggerRules": [],
-          "target": "self",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "trigger": ""
-        },
-        {
-          "target": "self",
-          "name": "Ritterliche Herkunft und Standespflicht",
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
           "mechanics": {
-            "attack": 0,
-            "maximumHitPoints": 0,
-            "spellAttack": 0,
-            "movement": 0,
-            "damage": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "skill": 0,
-            "initiative": 0,
-            "spellSaveDc": 0,
-            "attackRollMode": "normal",
-            "savingThrowDisadvantageAttributes": [],
-            "armorClass": 0,
-            "passivePerception": 0,
-            "combatStartTemporaryHitPoints": 0
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "charisma",
+                "bonus": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": -2
+              }
+            ]
           },
-          "tags": "Hintergrund · Ritter",
-          "trigger": "",
-          "aiInstructions": "",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "active": true,
-          "type": "trait",
-          "stacking": "normal",
-          "limitations": "",
-          "duration": "",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "priority": 0,
-          "triggerRules": [],
-          "id": "starter-background-ritter-trait-1"
+          "triggerRules": []
         }
       ],
       "magic": {
@@ -26592,7 +27048,7 @@
       "companions": [
         {
           "id": "card-gais-rabenstolz",
-          "name": "Rabenstolz",
+          "name": "Saithor",
           "species": "Edelsale-Hengst",
           "image": "/AleriaAlmanach/assets/companions/gais/rabenstolz.png",
           "description": "Sir Gais Wyrms schwarzer Edelsale-Hengst aus Ceffyl und Sale: elegant, ausdauernd und zuverlässig, mit langer schwarzer Mähne und dichtem Fesselbehang. Ein stolzer Reitgefährte mit überraschender Vorliebe für sorgfältig gefaltete Taschentücher.",
@@ -27034,37 +27490,17 @@
         "connectionTextOffset": 0,
         "biographyTitle": "Gais Wyrm – Iseults Goldjunge",
         "biographyText": "<p><strong>Sir Gais Wyrm</strong> ist neunzehn Jahre alt und bemüht sich, diesen Umstand möglichst selten als Entschuldigung zu benötigen. Er steht gerade, spricht deutlich und weiß gewöhnlich, wem in einem Raum zuerst die Aufmerksamkeit gebührt. Zu seinem roten Haar trägt er die schwarzen und goldenen Farben seines Hauses mit sichtlichem Stolz. Schon bevor er den Mund öffnet, soll man erkennen können, dass man einen ordentlich erzogenen jungen Ritter vor sich hat.</p><p>Gais ist tatsächlich ein anständiger junger Mann. Er nimmt Verpflichtungen ernst, bemüht sich um verlässliches Verhalten und möchte seinem Haus keine Schande bereiten. Dabei ist er weder scheu noch unnahbar. In Gesellschaft findet er leicht einen passenden Gesprächseinstieg, hört aufmerksam zu und kann ausgesprochen gewinnend sein. Er mag Menschen, gute Unterhaltung und einen gelungenen Abend. Albernheiten dagegen liegen ihm wenig. Wo andere eine Runde erst dann gelungen finden, wenn jemand auf dem Tisch steht, fragt Gais sich bereits, wer für das zerbrochene Geschirr aufkommen wird.</p><p>Sein Ernst sitzt allerdings auf einem sehr bequemen Fundament: Gais ist überzeugt, vieles schon recht gut verstanden zu haben. Wie man sich benimmt, was etwas wert ist und weshalb ein gutes Pferd einen Unterschied macht, hat ihm schließlich niemand Geringeres als seine Großmutter beigebracht. Dass es Menschen gibt, die ohne diese Kenntnisse durchaus anständig leben, weiß er. Ganz begreifen kann er ihre Zufriedenheit damit nicht immer.</p>",
-        "abilitiesTitle": "Persönlichkeit",
+        "abilitiesTitle": "Eigenschaften",
         "abilities": [
           {
-            "title": "Pflichtbewusst",
-            "detail": "Gais erledigt übertragene Aufgaben sorgfältig und nimmt Zusagen ernst. Wer sich auf ihn verlässt, soll keinen Anlass haben, seinen Namen mit einer Ausrede zu verbinden. Gerade in seiner Ausbildung ist er bereit, zuzuhören, sich vorzubereiten und auch die wenig glanzvollen Arbeiten ordentlich zu verrichten.",
-            "icon": "../IconOrdner/Traits%20Icon/Conscientious.png"
+            "title": "Silberzunge",
+            "detail": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
           },
           {
-            "title": "Charismatisch",
-            "detail": "Er findet in Gesellschaft rasch den richtigen Ton. Gais kann Interesse zeigen, ein stockendes Gespräch weiterführen und seinem Gegenüber das Gefühl geben, ernst genommen zu werden. Seine gewinnende Art hilft ihm auch dort, wo sein strenger Blick zunächst etwas anderes erwarten lässt.",
-            "icon": "../IconOrdner/Traits%20Icon/Charismatic_negotiator.png"
-          },
-          {
-            "title": "Kultiviert",
-            "detail": "Andere Kulturen, gepflegte Umgangsformen, Weine und gute Pferde interessieren ihn aufrichtig. Er merkt sich, was andernorts als höflich gilt, und versteht, dass ein angehender Gesandter mit cenyrischer Selbstverständlichkeit allein nicht überall weit kommt.",
-            "icon": "../IconOrdner/Traits%20Icon/Groomed.png"
-          },
-          {
-            "title": "Eitel",
-            "detail": "Gais gefällt sich in seiner gesitteten Erscheinung. Wird seine gute Erziehung gelobt, hört er sehr genau hin; wird sie übersehen, trifft ihn das stärker, als er zugeben möchte. Iseults unerschütterliche Bewunderung macht es ihm leicht, einen gelungenen Auftritt für einen Beweis besonderer Befähigung zu halten.",
-            "icon": "../IconOrdner/Traits%20Icon/Proud.png"
-          },
-          {
-            "title": "Materialistisch",
-            "detail": "Ansehen, Besitz und Dinge von Wert wiegen in seinem Urteil schwer. Ehre ist ihm wichtig, doch ein greifbarer Vorteil oder ein Gewinn an Prestige überzeugt ihn häufig eher als der schönere ritterliche Grundsatz. Einen Menschen unterschätzt er mitunter, weil dessen Möglichkeiten weniger eindrucksvoll aussehen.",
-            "icon": "../IconOrdner/Traits%20Icon/Greedy.png"
-          },
-          {
-            "title": "Pedantisch",
-            "detail": "Er hält an Formen fest, selbst wenn die Situation etwas Nachsicht vertragen könnte. Eine falsche Anrede, nachlässige Tischmanieren oder ein schlecht gewählter Scherz bleiben ihm lange im Gedächtnis. Bei Freunden kann seine vermeintlich hilfreiche Korrektur deshalb erheblich lästiger werden als der ursprüngliche Fehltritt.",
-            "icon": "../IconOrdner/Traits%20Icon/Stubborn.png"
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
           }
         ],
         "historyTitle": "Zwei Ritterväter und eine unüberhörbare Großmutter",

@@ -1,0 +1,2319 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Aeldrunmar/data.json",
+  "revision": 1,
+  "updatedAt": "2026-11-01T00:00:00.000Z",
+  "generatedStateHash": "e4ddd9d4355189c91f88499743e436ad5911bf1b6c961d07fa4b051640f9e3d8",
+  "state": {
+    "pins": [
+      {
+        "id": "aeldrunmar-aeldros",
+        "title": "Ældros",
+        "x": 0.185,
+        "y": 0.05799999999999994,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/beran.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-beran",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/aeldros.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-aeldros/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Beran",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ældros"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Beran"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Beran, Haus Coelret, Haus Thynne"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Ældrosmark"
+          }
+        ],
+        "text": "Der Hauptort der Beran liegt unter den nördlichen Bergen. Nadelwald, Höhen und die Übergänge in das offene Vorland prägen die eigene Domäne.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-aeldros",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "aeldros",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            18.5,
+            5.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-beran",
+          "haus-coelret",
+          "haus-thynne"
+        ]
+      },
+      {
+        "id": "aeldrunmar-mornhall",
+        "title": "Mornhall",
+        "x": 0.064,
+        "y": 0.15500000000000003,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/giffard.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-giffard",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/mornhall.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-mornhall/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Giffard",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mornhall"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Giffard"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Giffard"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Mornmark"
+          }
+        ],
+        "text": "Westliches Bergland mit einem schmaleren Talraum und den bewaldeten Ausläufern der nördlichen Höhen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-mornhall",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "mornhall",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            6.4,
+            15.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-giffard"
+        ]
+      },
+      {
+        "id": "aeldrunmar-itharol",
+        "title": "Itharol",
+        "x": 0.228,
+        "y": 0.32400000000000007,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/oiscingas.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-oiscingas",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/itharol.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-itharol/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Oiscingas",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Itharol"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Oiscingas"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Oiscingas"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Itharhold"
+          }
+        ],
+        "text": "Eine ausgedehnte Waldlandschaft im Süden des Earltums; im Westen liegen Berge, im Osten öffnen sich die bewaldeten Flächen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-itharol",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "itharol",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            22.8,
+            32.4
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-oiscingas"
+        ]
+      },
+      {
+        "id": "aeldrunmar-virelith",
+        "title": "Virelith",
+        "x": 0.31,
+        "y": 0.05799999999999994,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/swygert.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-swygert",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/virelith.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-virelith/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Swygert",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Virelith"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Swygert"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Swygert"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Virelmark"
+          }
+        ],
+        "text": "Das nordwestliche Thaintum der Earncynne besitzt viel offenes Land und niedrige bewachsene Hügel.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-virelith",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "virelith",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            31,
+            5.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-swygert"
+        ]
+      },
+      {
+        "id": "aeldrunmar-glenfara",
+        "title": "Glenfara",
+        "x": 0.53,
+        "y": 0.09999999999999998,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/earncynne.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-earncynne",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/glenfara.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-glenfara/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Earncynne",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Glenfara"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Earncynne"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Earncynne, Haus Dunstan, Haus Granger"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Glenfold"
+          }
+        ],
+        "text": "Der Hauptort der Earncynne steht in einer offenen, landwirtschaftlich geprägten Hügellandschaft am nördlichen Rand des Landes.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-glenfara",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "glenfara",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            53,
+            10
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-earncynne",
+          "haus-dunstan",
+          "haus-granger"
+        ]
+      },
+      {
+        "id": "aeldrunmar-ghrenholt",
+        "title": "Greenholt",
+        "x": 0.401,
+        "y": 0.24,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/cerdic.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cerdic",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/ghrenholt.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-ghrenholt/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Cerdic",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Greenholt"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cerdic"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Cerdic"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Greenhold"
+          }
+        ],
+        "text": "Südwestlicher Bereich des Earltums mit niedrigen Bergen, offenen Flächen und Baumgruppen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-ghrenholt",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "ghrenholt",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            40.1,
+            24
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-cerdic"
+        ]
+      },
+      {
+        "id": "aeldrunmar-rivisra",
+        "title": "Rivisra",
+        "x": 0.609,
+        "y": 0.19499999999999995,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/derwent.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-derwent",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/rivisra.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-rivisra/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Derwent",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rivisra"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Derwent"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Derwent"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Rivismere"
+          }
+        ],
+        "text": "Das nördliche Thaintum der Estmere liegt zwischen der Meeresküste und dem offenen grünen Hinterland.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-rivisra",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "rivisra",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            60.9,
+            19.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-derwent"
+        ]
+      },
+      {
+        "id": "aeldrunmar-faelthar",
+        "title": "Faelthar",
+        "x": 0.53,
+        "y": 0.45999999999999996,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aubigny.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aubigny",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/faelthar.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-faelthar/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Aubigny",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Faelthar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Aubigny"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Aubigny"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Faelhold"
+          }
+        ],
+        "text": "Große zusammenhängende Wälder bilden den südwestlichen Binnenraum des Earltums.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-faelthar",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "faelthar",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            53,
+            46
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-aubigny"
+        ]
+      },
+      {
+        "id": "aeldrunmar-thalrune",
+        "title": "Thalrune",
+        "x": 0.7,
+        "y": 0.375,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/thwing.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-thwing",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/thalrune.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-thalrune/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Thwing",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Thalrune"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Thwing"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Thwing"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Thalmere"
+          }
+        ],
+        "text": "Schmale Küstenherrschaft am felsigen, bewaldeten Vorsprung nördlich der Hauptstadt.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-thalrune",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "thalrune",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            70,
+            37.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-thwing"
+        ]
+      },
+      {
+        "id": "aeldrunmar-eldramar",
+        "title": "Eldramar",
+        "x": 0.67,
+        "y": 0.588,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/estmere.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-estmere",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/eldramar.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-eldramar/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Estmere",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eldramar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Estmere"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Estmere, Haus Irwynne, Haus Leofric"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Eldramere"
+          }
+        ],
+        "text": "Der Hauptort der Estmere liegt an der östlichen Küste, zwischen kultiviertem Land, Waldrändern und dem Meer.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-eldramar",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "eldramar",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            67,
+            58.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-estmere",
+          "haus-irwynne",
+          "haus-leofric"
+        ]
+      },
+      {
+        "id": "aeldrunmar-eadwick",
+        "title": "Eadwick",
+        "x": 0.71,
+        "y": 0.14,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/whiting.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-whiting",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/eadwick.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-eadwick/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Whiting",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eadwick"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Whiting"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Whiting"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Eadmere"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Neuer Name"
+          }
+        ],
+        "text": "Kleine nördliche Inselherrschaft. Die Karte trägt hier noch den Platzhalter „Neuer Name“; Eadwick ist ein vorläufiger Ortsvorschlag.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-eadwick",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "eadwick",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            71,
+            14
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-whiting"
+        ]
+      },
+      {
+        "id": "aeldrunmar-linthar",
+        "title": "Linthar",
+        "x": 0.857,
+        "y": 0.19999999999999996,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/wend.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wend",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/linthar.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-linthar/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Wend",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Linthar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Wend"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Wend"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Linthmere"
+          }
+        ],
+        "text": "Nordöstliches Inselgebiet mit einem befestigten Hauptort, offenen Flächen und Waldgruppen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-linthar",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "linthar",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            85.7,
+            20
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-wend"
+        ]
+      },
+      {
+        "id": "aeldrunmar-luthirrith",
+        "title": "Luthirrith",
+        "x": 0.81,
+        "y": 0.29000000000000004,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/dimholt.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dimholt",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/luthirrith.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-luthirrith/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Dimholt",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Luthirrith"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Dimholt"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Dimholt"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Ritterliche Herrschaft Luthirmere"
+          }
+        ],
+        "text": "Eine kleinere bewaldete ritterliche Herrschaft im westlichen Mittelteil der Insel.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-luthirrith",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "luthirrith",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            81,
+            29
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-dimholt"
+        ]
+      },
+      {
+        "id": "aeldrunmar-trentmorath",
+        "title": "Trentmorath",
+        "x": 0.878,
+        "y": 0.4570000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/tharn.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tharn",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/trentmorath.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-trentmorath/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Tharn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Trentmorath"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Tharn"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Tharn, Haus Heswick, Haus Ransford"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Trentmere"
+          }
+        ],
+        "text": "Die eigene Domäne und der Hauptort der Tharn liegen im südlichen Teil der Insel, zwischen Meer, Waldhängen und offenen Flächen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-trentmorath",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "trentmorath",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            87.8,
+            45.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-tharn",
+          "haus-heswick",
+          "haus-ransford"
+        ]
+      },
+      {
+        "id": "aeldrunmar-kaldhorn",
+        "title": "Kaldhorn",
+        "x": 0.11699999999999999,
+        "y": 0.501,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/seolfor.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-seolfor",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/kaldhorn.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-kaldhorn/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Seolfor",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Kaldhorn"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Seolfor"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Seolfor"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Kaldmark"
+          }
+        ],
+        "text": "Westliches Thaintum im Gebirgs- und Waldgürtel des königlichen Earltums.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-kaldhorn",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "kaldhorn",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            11.7,
+            50.1
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-seolfor"
+        ]
+      },
+      {
+        "id": "aeldrunmar-dunrath",
+        "title": "Dunrath",
+        "x": 0.075,
+        "y": 0.605,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/cutting.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-cutting",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/dunrath.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-dunrath/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Cutting",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dunrath"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Cutting"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Cutting"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Dunmark"
+          }
+        ],
+        "text": "Eine kleine Herrschaft am westlichen Rand des Landes, von steilen Bergen und Wald geprägt.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-dunrath",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "dunrath",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            7.5,
+            60.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-cutting"
+        ]
+      },
+      {
+        "id": "aeldrunmar-glendir",
+        "title": "Glendir",
+        "x": 0.22899999999999998,
+        "y": 0.672,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/humber.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-humber",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/glendir.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-glendir/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Humber",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Glendir"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Humber"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Humber"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Glendfold"
+          }
+        ],
+        "text": "Das südwestliche Thaintum besitzt bewaldete Täler und Berge im westlichen Teil.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-glendir",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "glendir",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            22.9,
+            67.2
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-humber"
+        ]
+      },
+      {
+        "id": "aeldrunmar-aeldrunhal",
+        "title": "Ældrunhal",
+        "x": 0.326,
+        "y": 0.558,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/kendryck.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kendryck",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/aeldrunhal.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-aeldrunhal/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Kendryck",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ældrunhal"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Kendryck"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Kendryck, Haus Ashby, Haus Boxton, Haus Halfax, Haus Lir, Haus Skelton, Haus Trevelyan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Ældrunland"
+          }
+        ],
+        "text": "Der Königssitz liegt unter dem großen Gebirgszug im Zentrum der königlichen Domäne. Wald, Talflächen und Übergänge in das übrige Land liegen dicht beieinander.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-aeldrunhal",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "aeldrunhal",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            32.6,
+            55.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-kendryck",
+          "haus-boxton",
+          "haus-lir",
+          "haus-skelton",
+          "haus-trevelyan"
+        ]
+      },
+      {
+        "id": "aeldrunmar-virelath",
+        "title": "Virelath",
+        "x": 0.401,
+        "y": 0.7270000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/trent.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-trent",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/virelath.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-virelath/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Trent",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Virelath"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Trent"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Trent"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Virelemnet"
+          }
+        ],
+        "text": "Thaintum im nördlichen Teil des Earltums der Fyr, zwischen Wald, offenem Land und den westlichen Übergängen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-virelath",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "virelath",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            40.1,
+            72.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-trent"
+        ]
+      },
+      {
+        "id": "aeldrunmar-hydrathar",
+        "title": "Hydrathar",
+        "x": 0.175,
+        "y": 0.873,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/edgcumbe.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-edgcumbe",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/hydrathar.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-hydrathar/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Edgcumbe",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hydrathar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Edgcumbe"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Edgcumbe"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Hydrafold"
+          }
+        ],
+        "text": "Südwestliches Thaintum mit größeren Waldflächen und offenen Säumen unter den westlichen Bergen.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-hydrathar",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "hydrathar",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            17.5,
+            87.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-edgcumbe"
+        ]
+      },
+      {
+        "id": "aeldrunmar-veyrthar",
+        "title": "Veyrthar",
+        "x": 0.579,
+        "y": 0.83,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/frye.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-frye",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/veyrthar.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-veyrthar/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Frye",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Veyrthar"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Frye"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Frye, Haus Brymwulf"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Veyrmere"
+          }
+        ],
+        "text": "Der Hauptort der Fyr liegt im südöstlichen Küstenraum. Offene Weiden, Kulturland, Waldgruppen und Seewege prägen die eigene Domäne.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-veyrthar",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "veyrthar",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            57.9,
+            83
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-frye",
+          "haus-brymwulf"
+        ]
+      },
+      {
+        "id": "aeldrunmar-kaldun",
+        "title": "Kaldun",
+        "x": 0.62,
+        "y": 0.615,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/edwynne.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-edwynne",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/kaldun.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-kaldun/index.html",
+        "region": "Aeldrunmar",
+        "house": "Haus Edwynne",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Kaldun"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Edwynne"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Edwynne"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Kaldmere"
+          }
+        ],
+        "text": "Kleine östliche Küstenherrschaft südlich von Eldramar. Ihre türkisfarbene Fläche wird dem Earltum der Fyr zugerechnet.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-kaldun",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "kaldun",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            62,
+            61.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": [
+          "haus-edwynne"
+        ]
+      },
+      {
+        "id": "aeldrunmar-hingstgard",
+        "title": "Hingstgard",
+        "x": 0.52,
+        "y": 0.595,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/aeldrunmar/hingstgard.webp",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/aeldrunmar/hingstgard.webp",
+        "bannerLink": "/Kontinente/Aldervan/Aeldrunmar/aeldrunmar-sitz-hingstgard/index.html",
+        "region": "Aeldrunmar",
+        "house": "Führung offen",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hingstgard"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Führung offen"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Ordensgebiet Hingsthold"
+          }
+        ],
+        "text": "Der gesondert eingefasste Ordensbezirk liegt zwischen königlicher Domäne, Estmere und Fyr. Er wird keinem Earl und keinem gelieferten Haus zugeteilt.",
+        "secret": false,
+        "dominionId": "aeldrunmar-sitz-hingstgard",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "hingstgard",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            52,
+            59.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "koenigreich-aeldrunmar",
+        "name": "Königreich Aeldrunmar",
+        "type": "Königreich",
+        "ruler": "Haus Kendryck",
+        "seat": "Ældrunhal",
+        "parentId": ""
+      },
+      {
+        "id": "aeldrunmar-region-beran",
+        "name": "Earltum Beranland",
+        "type": "Earltum",
+        "ruler": "Haus Beran",
+        "seat": "Ældros",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-region-earncynne",
+        "name": "Earltum Earnemnet",
+        "type": "Earltum",
+        "ruler": "Haus Earncynne",
+        "seat": "Glenfara",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-region-estmere",
+        "name": "Earltum Estmere",
+        "type": "Earltum",
+        "ruler": "Haus Estmere",
+        "seat": "Eldramar",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-region-tharn",
+        "name": "Earltum Tharnmere",
+        "type": "Earltum",
+        "ruler": "Haus Tharn",
+        "seat": "Trentmorath",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-region-kendryck",
+        "name": "Königliches Earltum Kendryckfold",
+        "type": "Königliches Earltum",
+        "ruler": "Haus Kendryck",
+        "seat": "Ældrunhal",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-region-fyr",
+        "name": "Earltum Fyrland",
+        "type": "Earltum",
+        "ruler": "Haus Frye",
+        "seat": "Veyrthar",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-sitz-aeldros",
+        "name": "Thaintum Ældrosmark",
+        "type": "Thaintum",
+        "ruler": "Haus Beran",
+        "seat": "Ældros",
+        "parentId": "aeldrunmar-region-beran"
+      },
+      {
+        "id": "aeldrunmar-sitz-mornhall",
+        "name": "Thaintum Mornmark",
+        "type": "Thaintum",
+        "ruler": "Haus Giffard",
+        "seat": "Mornhall",
+        "parentId": "aeldrunmar-region-beran"
+      },
+      {
+        "id": "aeldrunmar-sitz-itharol",
+        "name": "Thaintum Itharhold",
+        "type": "Thaintum",
+        "ruler": "Haus Oiscingas",
+        "seat": "Itharol",
+        "parentId": "aeldrunmar-region-beran"
+      },
+      {
+        "id": "aeldrunmar-sitz-virelith",
+        "name": "Thaintum Virelmark",
+        "type": "Thaintum",
+        "ruler": "Haus Swygert",
+        "seat": "Virelith",
+        "parentId": "aeldrunmar-region-earncynne"
+      },
+      {
+        "id": "aeldrunmar-sitz-glenfara",
+        "name": "Thaintum Glenfold",
+        "type": "Thaintum",
+        "ruler": "Haus Earncynne",
+        "seat": "Glenfara",
+        "parentId": "aeldrunmar-region-earncynne"
+      },
+      {
+        "id": "aeldrunmar-sitz-ghrenholt",
+        "name": "Thaintum Greenhold",
+        "type": "Thaintum",
+        "ruler": "Haus Cerdic",
+        "seat": "Greenholt",
+        "parentId": "aeldrunmar-region-earncynne"
+      },
+      {
+        "id": "aeldrunmar-sitz-rivisra",
+        "name": "Thaintum Rivismere",
+        "type": "Thaintum",
+        "ruler": "Haus Derwent",
+        "seat": "Rivisra",
+        "parentId": "aeldrunmar-region-estmere"
+      },
+      {
+        "id": "aeldrunmar-sitz-faelthar",
+        "name": "Thaintum Faelhold",
+        "type": "Thaintum",
+        "ruler": "Haus Aubigny",
+        "seat": "Faelthar",
+        "parentId": "aeldrunmar-region-estmere"
+      },
+      {
+        "id": "aeldrunmar-sitz-thalrune",
+        "name": "Herrschaft Thalmere",
+        "type": "Herrschaft",
+        "ruler": "Haus Thwing",
+        "seat": "Thalrune",
+        "parentId": "aeldrunmar-region-estmere"
+      },
+      {
+        "id": "aeldrunmar-sitz-eldramar",
+        "name": "Thaintum Eldramere",
+        "type": "Thaintum",
+        "ruler": "Haus Estmere",
+        "seat": "Eldramar",
+        "parentId": "aeldrunmar-region-estmere"
+      },
+      {
+        "id": "aeldrunmar-sitz-eadwick",
+        "name": "Herrschaft Eadmere",
+        "type": "Herrschaft",
+        "ruler": "Haus Whiting",
+        "seat": "Eadwick",
+        "parentId": "aeldrunmar-region-tharn"
+      },
+      {
+        "id": "aeldrunmar-sitz-linthar",
+        "name": "Thaintum Linthmere",
+        "type": "Thaintum",
+        "ruler": "Haus Wend",
+        "seat": "Linthar",
+        "parentId": "aeldrunmar-region-tharn"
+      },
+      {
+        "id": "aeldrunmar-sitz-luthirrith",
+        "name": "Ritterliche Herrschaft Luthirmere",
+        "type": "Ritterliche Herrschaft",
+        "ruler": "Haus Dimholt",
+        "seat": "Luthirrith",
+        "parentId": "aeldrunmar-region-tharn"
+      },
+      {
+        "id": "aeldrunmar-sitz-trentmorath",
+        "name": "Thaintum Trentmere",
+        "type": "Thaintum",
+        "ruler": "Haus Tharn",
+        "seat": "Trentmorath",
+        "parentId": "aeldrunmar-region-tharn"
+      },
+      {
+        "id": "aeldrunmar-sitz-kaldhorn",
+        "name": "Thaintum Kaldmark",
+        "type": "Thaintum",
+        "ruler": "Haus Seolfor",
+        "seat": "Kaldhorn",
+        "parentId": "aeldrunmar-region-kendryck"
+      },
+      {
+        "id": "aeldrunmar-sitz-dunrath",
+        "name": "Herrschaft Dunmark",
+        "type": "Herrschaft",
+        "ruler": "Haus Cutting",
+        "seat": "Dunrath",
+        "parentId": "aeldrunmar-region-kendryck"
+      },
+      {
+        "id": "aeldrunmar-sitz-glendir",
+        "name": "Thaintum Glendfold",
+        "type": "Thaintum",
+        "ruler": "Haus Humber",
+        "seat": "Glendir",
+        "parentId": "aeldrunmar-region-kendryck"
+      },
+      {
+        "id": "aeldrunmar-sitz-aeldrunhal",
+        "name": "Thaintum Ældrunland",
+        "type": "Thaintum",
+        "ruler": "Haus Kendryck",
+        "seat": "Ældrunhal",
+        "parentId": "aeldrunmar-region-kendryck"
+      },
+      {
+        "id": "aeldrunmar-sitz-virelath",
+        "name": "Thaintum Virelemnet",
+        "type": "Thaintum",
+        "ruler": "Haus Trent",
+        "seat": "Virelath",
+        "parentId": "aeldrunmar-region-fyr"
+      },
+      {
+        "id": "aeldrunmar-sitz-hydrathar",
+        "name": "Thaintum Hydrafold",
+        "type": "Thaintum",
+        "ruler": "Haus Edgcumbe",
+        "seat": "Hydrathar",
+        "parentId": "aeldrunmar-region-fyr"
+      },
+      {
+        "id": "aeldrunmar-sitz-veyrthar",
+        "name": "Thaintum Veyrmere",
+        "type": "Thaintum",
+        "ruler": "Haus Frye",
+        "seat": "Veyrthar",
+        "parentId": "aeldrunmar-region-fyr"
+      },
+      {
+        "id": "aeldrunmar-sitz-kaldun",
+        "name": "Herrschaft Kaldmere",
+        "type": "Herrschaft",
+        "ruler": "Haus Edwynne",
+        "seat": "Kaldun",
+        "parentId": "aeldrunmar-region-fyr"
+      },
+      {
+        "id": "aeldrunmar-sitz-hingstgard",
+        "name": "Ordensgebiet Hingsthold",
+        "type": "Ordensgebiet",
+        "ruler": "",
+        "seat": "Hingstgard",
+        "parentId": "koenigreich-aeldrunmar"
+      },
+      {
+        "id": "aeldrunmar-sitz-scandmere",
+        "name": "Rittersitz Scandmere",
+        "type": "Rittersitz",
+        "ruler": "Haus Scandyn",
+        "seat": "Scandmere",
+        "parentId": "aeldrunmar-region-tharn"
+      }
+    ],
+    "regionTitle": "Königreich Aeldrunmar",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/aeldrunmar.webp",
+    "mapImages": {
+      "normal": "/Karten/Aeldrunmar/Kartenbilder/normal.svg",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

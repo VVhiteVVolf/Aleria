@@ -1,0 +1,1307 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Talyndor/data.json",
+  "revision": 1,
+  "updatedAt": "2026-11-01T00:00:00.000Z",
+  "generatedStateHash": "d4f25557567c6f530aa358e34fefa598cac02379ac1462322db8b8e9c8f71e73",
+  "state": {
+    "pins": [
+      {
+        "id": "talyndor-wetherham",
+        "title": "Wetherham",
+        "x": 0.223,
+        "y": 0.138,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/lennwyck.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lennwyck",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/wetherham.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-wetherham/index.html",
+        "region": "Talyndor",
+        "house": "Haus Lennwyck",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Wetherham"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Lennwyck"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Lennwyck, Haus Holton"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Wetherfold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Name für eine Earlstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der Hauptort der Lennwyck liegt im nordwestlichen offenen Land. Niedrige Hügel, Weiden und vereinzelte Baumgruppen kennzeichnen die Umgebung. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-wetherham",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "wetherham",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            22.3,
+            13.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-dunworth",
+        "title": "Dunworth",
+        "x": 0.879,
+        "y": 0.08799999999999997,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/egerton.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-egerton",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/dunworth.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-dunworth/index.html",
+        "region": "Talyndor",
+        "house": "Haus Egerton",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dunworth"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Egerton"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Egerton"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Dunworthmark"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Nordöstliches Randgebiet mit offenem Hochland und steilen Bergen im Osten. Der Ortsanker liegt unmittelbar am Bergsaum. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-dunworth",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "dunworth",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            87.9,
+            8.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-cawden",
+        "title": "Cawden",
+        "x": 0.546,
+        "y": 0.28700000000000003,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/yarwyck.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-yarwyck",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/cawden.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-cawden/index.html",
+        "region": "Talyndor",
+        "house": "Haus Yarwyck",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Cawden"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Yarwyck"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Yarwyck"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Cawdenhold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Südliches Gebiet der Lennwyck unter den östlichen Bergen. Offene Flächen und Hügel überwiegen; Wald tritt nur in kleinen Gruppen auf. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-cawden",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "cawden",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            54.6,
+            28.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-eldenwick",
+        "title": "Eldenwick",
+        "x": 0.159,
+        "y": 0.377,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/elwick.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-elwick",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/eldenwick.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-eldenwick/index.html",
+        "region": "Talyndor",
+        "house": "Haus Elwick",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Eldenwick"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Elwick"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Elwick"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Eldenemnet"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der nordwestliche Teil der Warren besitzt offenes Weide- und Ackerland mit einer kleinen Hügelgruppe im Süden. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-eldenwick",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "eldenwick",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            15.9,
+            37.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-wensbury",
+        "title": "Wensbury",
+        "x": 0.419,
+        "y": 0.474,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/warren.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warren",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/wensbury.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-wensbury/index.html",
+        "region": "Talyndor",
+        "house": "Haus Warren",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Wensbury"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Warren"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Warren, Haus Thornwick"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Wensfold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Name für eine Earlstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der Hauptort der Warren liegt mitten im großen Laubwald. Waldwirtschaft, Wild und Lichtungen bestimmen den landschaftlichen Entwurf. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-wensbury",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "wensbury",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            41.9,
+            47.4
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-hartham",
+        "title": "Hartham",
+        "x": 0.131,
+        "y": 0.6579999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/sedgeley.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sedgeley",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/hartham.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-hartham/index.html",
+        "region": "Talyndor",
+        "house": "Haus Sedgeley",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hartham"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Sedgeley"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Sedgeley"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Harthamland"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Großes südwestliches Gebiet mit weitem offenem Land, niedrigen Hügeln und Gehölzgruppen am Übergang zu den südlichen Höhen. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-hartham",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "hartham",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            13.1,
+            65.8
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-edrington",
+        "title": "Edrington",
+        "x": 0.7829999999999999,
+        "y": 0.347,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/aldred.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/edrington.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-edrington/index.html",
+        "region": "Talyndor",
+        "house": "Haus Aldred",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Edrington"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Aldred"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Aldred, Haus Ashton, Haus Bramcote, Haus Tostan"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Edringfold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Name der Hauptstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der Königssitz liegt unter den hohen östlichen Bergen. Waldhänge und offenes Vorland schließen unmittelbar an den Hauptort an. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-edrington",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "edrington",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            78.3,
+            34.7
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-ternford",
+        "title": "Ternford",
+        "x": 0.778,
+        "y": 0.643,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/kyme.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kyme",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/ternford.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-ternford/index.html",
+        "region": "Talyndor",
+        "house": "Haus Kyme",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ternford"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Kyme"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Kyme"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Ternemnet"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der südliche königliche Bezirk liegt an einem gewundenen Fluss unter den bewaldeten östlichen Bergen. Die Wasserlinie ist Binnengewässer, keine Meeresküste. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-ternford",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "ternford",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            77.8,
+            64.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-fenhurst",
+        "title": "Fenhurst",
+        "x": 0.382,
+        "y": 0.6799999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wickton.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wickton",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/fenhurst.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-fenhurst/index.html",
+        "region": "Talyndor",
+        "house": "Haus Wickton",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Fenhurst"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Wickton"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Wickton"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Fenhold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der nördliche Bezirk der Brigane besitzt welliges offenes Land mit Gehölzgruppen und niedrigen Höhenzügen im Westen. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-fenhurst",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "fenhurst",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            38.2,
+            68
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-norcombe",
+        "title": "Norcombe",
+        "x": 0.046,
+        "y": 0.799,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/vernon.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-vernon",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/norcombe.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-norcombe/index.html",
+        "region": "Talyndor",
+        "house": "Haus Vernon",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Norcombe"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Vernon"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Vernon"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Norcombefold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der westliche Bezirk der Brigane verbindet offene Hügel und kleine Baumgruppen mit Bergen an seinem südlichen Rand. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-norcombe",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "norcombe",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            4.6,
+            79.9
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-bramwell",
+        "title": "Bramwell",
+        "x": 0.768,
+        "y": 0.825,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wulmer.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wulmer",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/bramwell.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-bramwell/index.html",
+        "region": "Talyndor",
+        "house": "Haus Wulmer",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Bramwell"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Wulmer"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Wulmer"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Brammark"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Östlicher Randbezirk der Brigane mit steilen Bergen im Osten und Süden; Waldflächen liegen zwischen den Ausläufern. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-bramwell",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "bramwell",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            76.8,
+            82.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "talyndor-aveldon",
+        "title": "Aveldon",
+        "x": 0.392,
+        "y": 0.9229999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/brigane.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brigane",
+        "banner": "/Stammbäume/assets/images/regions/talyndor/aveldon.webp",
+        "bannerLink": "/Kontinente/Aldervan/Talyndor/talyndor-sitz-aveldon/index.html",
+        "region": "Talyndor",
+        "house": "Haus Brigane",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Aveldon"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Brigane"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Brigane, Haus Rookden"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Thaintum Avelhold"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Name für eine Earlstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Der Hauptort der Brigane liegt in einem südlichen Tal zwischen bewaldeten Berghängen. Im Norden öffnet sich das Land zu den übrigen Bezirken. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "talyndor-sitz-aveldon",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "aveldon",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            39.2,
+            92.3
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "koenigreich-talyndor",
+        "name": "Königreich Talyndor",
+        "type": "Königreich",
+        "ruler": "Haus Aldred",
+        "seat": "Edrington",
+        "parentId": ""
+      },
+      {
+        "id": "talyndor-region-lennwyck",
+        "name": "Earltum Lennwyckland",
+        "type": "Earltum",
+        "ruler": "Haus Lennwyck",
+        "seat": "Wetherham",
+        "parentId": "koenigreich-talyndor"
+      },
+      {
+        "id": "talyndor-region-warren",
+        "name": "Earltum Warrenfold",
+        "type": "Earltum",
+        "ruler": "Haus Warren",
+        "seat": "Wensbury",
+        "parentId": "koenigreich-talyndor"
+      },
+      {
+        "id": "talyndor-region-aldred",
+        "name": "Königliches Earltum Aldredhold",
+        "type": "Königliches Earltum",
+        "ruler": "Haus Aldred",
+        "seat": "Edrington",
+        "parentId": "koenigreich-talyndor"
+      },
+      {
+        "id": "talyndor-region-brigane",
+        "name": "Earltum Briganefold",
+        "type": "Earltum",
+        "ruler": "Haus Brigane",
+        "seat": "Aveldon",
+        "parentId": "koenigreich-talyndor"
+      },
+      {
+        "id": "talyndor-sitz-wetherham",
+        "name": "Thaintum Wetherfold",
+        "type": "Thaintum",
+        "ruler": "Haus Lennwyck",
+        "seat": "Wetherham",
+        "parentId": "talyndor-region-lennwyck"
+      },
+      {
+        "id": "talyndor-sitz-dunworth",
+        "name": "Thaintum Dunworthmark",
+        "type": "Thaintum",
+        "ruler": "Haus Egerton",
+        "seat": "Dunworth",
+        "parentId": "talyndor-region-lennwyck"
+      },
+      {
+        "id": "talyndor-sitz-cawden",
+        "name": "Thaintum Cawdenhold",
+        "type": "Thaintum",
+        "ruler": "Haus Yarwyck",
+        "seat": "Cawden",
+        "parentId": "talyndor-region-lennwyck"
+      },
+      {
+        "id": "talyndor-sitz-eldenwick",
+        "name": "Thaintum Eldenemnet",
+        "type": "Thaintum",
+        "ruler": "Haus Elwick",
+        "seat": "Eldenwick",
+        "parentId": "talyndor-region-warren"
+      },
+      {
+        "id": "talyndor-sitz-wensbury",
+        "name": "Thaintum Wensfold",
+        "type": "Thaintum",
+        "ruler": "Haus Warren",
+        "seat": "Wensbury",
+        "parentId": "talyndor-region-warren"
+      },
+      {
+        "id": "talyndor-sitz-hartham",
+        "name": "Thaintum Harthamland",
+        "type": "Thaintum",
+        "ruler": "Haus Sedgeley",
+        "seat": "Hartham",
+        "parentId": "talyndor-region-warren"
+      },
+      {
+        "id": "talyndor-sitz-edrington",
+        "name": "Thaintum Edringfold",
+        "type": "Thaintum",
+        "ruler": "Haus Aldred",
+        "seat": "Edrington",
+        "parentId": "talyndor-region-aldred"
+      },
+      {
+        "id": "talyndor-sitz-ternford",
+        "name": "Thaintum Ternemnet",
+        "type": "Thaintum",
+        "ruler": "Haus Kyme",
+        "seat": "Ternford",
+        "parentId": "talyndor-region-aldred"
+      },
+      {
+        "id": "talyndor-sitz-fenhurst",
+        "name": "Thaintum Fenhold",
+        "type": "Thaintum",
+        "ruler": "Haus Wickton",
+        "seat": "Fenhurst",
+        "parentId": "talyndor-region-brigane"
+      },
+      {
+        "id": "talyndor-sitz-norcombe",
+        "name": "Thaintum Norcombefold",
+        "type": "Thaintum",
+        "ruler": "Haus Vernon",
+        "seat": "Norcombe",
+        "parentId": "talyndor-region-brigane"
+      },
+      {
+        "id": "talyndor-sitz-bramwell",
+        "name": "Thaintum Brammark",
+        "type": "Thaintum",
+        "ruler": "Haus Wulmer",
+        "seat": "Bramwell",
+        "parentId": "talyndor-region-brigane"
+      },
+      {
+        "id": "talyndor-sitz-aveldon",
+        "name": "Thaintum Avelhold",
+        "type": "Thaintum",
+        "ruler": "Haus Brigane",
+        "seat": "Aveldon",
+        "parentId": "talyndor-region-brigane"
+      }
+    ],
+    "regionTitle": "Königreich Talyndor",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/talyndor.webp",
+    "mapImages": {
+      "normal": "/Karten/Talyndor/Kartenbilder/normal.svg",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

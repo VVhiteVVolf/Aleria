@@ -1,0 +1,3190 @@
+// Cartographic source: the two supplied Venalys maps, 2 November 2026.
+// Neutral district names are intentionally editable; no house assignments are implied.
+export const mapGeometry = Object.freeze({width:8192,height:4698});
+
+export const districts = Object.freeze([
+  {
+    "id": "district-01",
+    "name": "Bezirk 01",
+    "point": [
+      42.9857,
+      11.5122
+    ],
+    "polygon": [
+      [
+        39.4167,
+        11.7733
+      ],
+      [
+        40.3333,
+        10.1744
+      ],
+      [
+        40.8333,
+        10.0291
+      ],
+      [
+        42.0833,
+        8.8663
+      ],
+      [
+        43.1667,
+        8.5756
+      ],
+      [
+        43.25,
+        8.1395
+      ],
+      [
+        43.5833,
+        7.9942
+      ],
+      [
+        44.0833,
+        6.9767
+      ],
+      [
+        44.75,
+        7.1221
+      ],
+      [
+        45.0833,
+        7.7035
+      ],
+      [
+        45.0833,
+        8.2849
+      ],
+      [
+        45.25,
+        8.2849
+      ],
+      [
+        45.1667,
+        10.4651
+      ],
+      [
+        44.9167,
+        11.1919
+      ],
+      [
+        44.6667,
+        11.3372
+      ],
+      [
+        44.6667,
+        12.3547
+      ],
+      [
+        44.8333,
+        12.3547
+      ],
+      [
+        44.8333,
+        12.7907
+      ],
+      [
+        45.0833,
+        12.7907
+      ],
+      [
+        45.25,
+        13.3721
+      ],
+      [
+        43.3333,
+        17.1512
+      ],
+      [
+        43.0833,
+        17.0058
+      ],
+      [
+        42.8333,
+        15.407
+      ],
+      [
+        42.5,
+        14.8256
+      ],
+      [
+        42.3333,
+        13.3721
+      ],
+      [
+        42.0,
+        12.7907
+      ],
+      [
+        39.5,
+        12.6453
+      ]
+    ],
+    "description": "Nördlicher Hafenbereich westlich der Stadtmitte mit dem südlich anschließenden Dreiecksviertel."
+  },
+  {
+    "id": "district-02",
+    "name": "Bezirk 02",
+    "point": [
+      51.9974,
+      11.6365
+    ],
+    "polygon": [
+      [
+        46.5833,
+        10.6105
+      ],
+      [
+        47.0,
+        8.7209
+      ],
+      [
+        47.6667,
+        8.8663
+      ],
+      [
+        47.6667,
+        7.8488
+      ],
+      [
+        51.1667,
+        8.1395
+      ],
+      [
+        52.5,
+        7.5581
+      ],
+      [
+        54.0,
+        5.5233
+      ],
+      [
+        55.25,
+        5.3779
+      ],
+      [
+        56.25,
+        5.814
+      ],
+      [
+        56.6667,
+        7.4128
+      ],
+      [
+        56.6667,
+        12.6453
+      ],
+      [
+        55.75,
+        13.8081
+      ],
+      [
+        54.6667,
+        14.5349
+      ],
+      [
+        54.4167,
+        15.2616
+      ],
+      [
+        54.0833,
+        15.407
+      ],
+      [
+        53.75,
+        16.2791
+      ],
+      [
+        53.4167,
+        16.2791
+      ],
+      [
+        52.75,
+        17.7326
+      ],
+      [
+        52.3333,
+        17.8779
+      ],
+      [
+        51.5833,
+        19.3314
+      ],
+      [
+        51.25,
+        19.3314
+      ],
+      [
+        51.0833,
+        18.75
+      ],
+      [
+        50.25,
+        17.7326
+      ],
+      [
+        50.0,
+        17.7326
+      ],
+      [
+        50.0,
+        17.2965
+      ],
+      [
+        49.25,
+        16.7151
+      ],
+      [
+        49.0833,
+        15.843
+      ],
+      [
+        48.5833,
+        15.407
+      ],
+      [
+        48.5833,
+        14.9709
+      ],
+      [
+        48.0,
+        14.2442
+      ],
+      [
+        47.4167,
+        12.936
+      ],
+      [
+        47.25,
+        11.7733
+      ],
+      [
+        46.75,
+        11.3372
+      ]
+    ],
+    "description": "Mittlerer nördlicher Hafenbezirk mit mehreren Hafenbecken und vorgelagerten Kais."
+  },
+  {
+    "id": "district-03",
+    "name": "Bezirk 03",
+    "point": [
+      60.5318,
+      11.7646
+    ],
+    "polygon": [
+      [
+        56.25,
+        16.1337
+      ],
+      [
+        56.6667,
+        15.6977
+      ],
+      [
+        57.25,
+        15.6977
+      ],
+      [
+        57.25,
+        15.2616
+      ],
+      [
+        57.8333,
+        14.9709
+      ],
+      [
+        57.8333,
+        14.2442
+      ],
+      [
+        58.25,
+        13.5174
+      ],
+      [
+        58.25,
+        12.5
+      ],
+      [
+        58.1667,
+        12.064
+      ],
+      [
+        58.0,
+        12.064
+      ],
+      [
+        58.0833,
+        7.5581
+      ],
+      [
+        58.75,
+        6.686
+      ],
+      [
+        61.25,
+        6.8314
+      ],
+      [
+        62.3333,
+        7.4128
+      ],
+      [
+        63.1667,
+        8.2849
+      ],
+      [
+        64.0833,
+        8.5756
+      ],
+      [
+        64.75,
+        9.4477
+      ],
+      [
+        65.5833,
+        11.3372
+      ],
+      [
+        65.5833,
+        12.3547
+      ],
+      [
+        65.5,
+        12.7907
+      ],
+      [
+        65.25,
+        12.7907
+      ],
+      [
+        65.25,
+        13.5174
+      ],
+      [
+        63.3333,
+        12.6453
+      ],
+      [
+        61.8333,
+        12.5
+      ],
+      [
+        61.4167,
+        13.0814
+      ],
+      [
+        61.0833,
+        14.2442
+      ],
+      [
+        61.0,
+        13.8081
+      ],
+      [
+        60.4167,
+        13.8081
+      ],
+      [
+        60.4167,
+        14.8256
+      ],
+      [
+        60.9167,
+        14.8256
+      ],
+      [
+        60.9167,
+        15.1163
+      ],
+      [
+        60.75,
+        15.1163
+      ],
+      [
+        60.5,
+        15.843
+      ],
+      [
+        60.4167,
+        15.5523
+      ],
+      [
+        59.8333,
+        15.5523
+      ],
+      [
+        59.8333,
+        16.5698
+      ],
+      [
+        60.0833,
+        16.7151
+      ],
+      [
+        58.9167,
+        18.314
+      ],
+      [
+        58.0833,
+        18.75
+      ],
+      [
+        57.6667,
+        19.3314
+      ],
+      [
+        57.5,
+        19.3314
+      ],
+      [
+        57.3333,
+        18.314
+      ]
+    ],
+    "description": "Nordöstlicher Hafenbezirk mit dem großen Gebäudeensemble unter dem hohen Turm."
+  },
+  {
+    "id": "district-04",
+    "name": "Bezirk 04",
+    "point": [
+      29.964,
+      15.3191
+    ],
+    "polygon": [
+      [
+        26.8333,
+        14.9709
+      ],
+      [
+        27.0833,
+        14.8256
+      ],
+      [
+        27.25,
+        14.0988
+      ],
+      [
+        27.5833,
+        13.9535
+      ],
+      [
+        27.6667,
+        13.0814
+      ],
+      [
+        28.0833,
+        12.3547
+      ],
+      [
+        28.6667,
+        11.7733
+      ],
+      [
+        29.0833,
+        11.7733
+      ],
+      [
+        29.0833,
+        11.3372
+      ],
+      [
+        30.0,
+        10.7558
+      ],
+      [
+        30.0833,
+        10.3198
+      ],
+      [
+        30.4167,
+        10.3198
+      ],
+      [
+        30.5,
+        9.8837
+      ],
+      [
+        31.0833,
+        9.4477
+      ],
+      [
+        31.25,
+        10.3198
+      ],
+      [
+        31.5,
+        10.4651
+      ],
+      [
+        31.5,
+        11.1919
+      ],
+      [
+        31.8333,
+        11.4826
+      ],
+      [
+        32.1667,
+        12.936
+      ],
+      [
+        32.3333,
+        12.936
+      ],
+      [
+        32.6667,
+        13.9535
+      ],
+      [
+        32.9167,
+        16.2791
+      ],
+      [
+        32.6667,
+        16.8605
+      ],
+      [
+        32.6667,
+        16.2791
+      ],
+      [
+        31.75,
+        15.9884
+      ],
+      [
+        31.75,
+        17.0058
+      ],
+      [
+        32.5833,
+        17.4419
+      ],
+      [
+        31.1667,
+        19.6221
+      ],
+      [
+        30.6667,
+        19.7674
+      ],
+      [
+        30.1667,
+        20.7849
+      ],
+      [
+        30.0,
+        21.657
+      ],
+      [
+        29.75,
+        21.8023
+      ],
+      [
+        28.4167,
+        18.75
+      ],
+      [
+        28.3333,
+        17.1512
+      ],
+      [
+        27.5833,
+        17.2965
+      ],
+      [
+        27.3333,
+        16.7151
+      ],
+      [
+        27.3333,
+        16.1337
+      ],
+      [
+        26.9167,
+        15.843
+      ]
+    ],
+    "description": "Nordwestlicher Bezirk um die beiden Kuppelbauten und ihre Gartenanlage."
+  },
+  {
+    "id": "district-05",
+    "name": "Bezirk 05",
+    "point": [
+      34.7207,
+      17.6904
+    ],
+    "polygon": [
+      [
+        30.8333,
+        24.8547
+      ],
+      [
+        32.0833,
+        21.8023
+      ],
+      [
+        32.5833,
+        21.657
+      ],
+      [
+        32.5833,
+        21.2209
+      ],
+      [
+        32.8333,
+        21.2209
+      ],
+      [
+        32.9167,
+        20.7849
+      ],
+      [
+        33.0,
+        21.0756
+      ],
+      [
+        33.5833,
+        21.0756
+      ],
+      [
+        33.6667,
+        19.9128
+      ],
+      [
+        34.3333,
+        19.9128
+      ],
+      [
+        34.3333,
+        18.8953
+      ],
+      [
+        34.0833,
+        18.75
+      ],
+      [
+        34.5,
+        17.2965
+      ],
+      [
+        34.4167,
+        12.3547
+      ],
+      [
+        34.0833,
+        12.064
+      ],
+      [
+        34.0833,
+        10.6105
+      ],
+      [
+        33.6667,
+        9.0116
+      ],
+      [
+        33.3333,
+        9.0116
+      ],
+      [
+        33.3333,
+        8.2849
+      ],
+      [
+        33.0,
+        7.7035
+      ],
+      [
+        33.5833,
+        6.9767
+      ],
+      [
+        34.8333,
+        6.8314
+      ],
+      [
+        37.75,
+        8.1395
+      ],
+      [
+        38.0833,
+        9.4477
+      ],
+      [
+        38.0,
+        11.6279
+      ],
+      [
+        37.5833,
+        11.6279
+      ],
+      [
+        37.4167,
+        14.5349
+      ],
+      [
+        37.1667,
+        14.6802
+      ],
+      [
+        37.0,
+        15.2616
+      ],
+      [
+        37.0,
+        17.1512
+      ],
+      [
+        36.6667,
+        17.5872
+      ],
+      [
+        36.5833,
+        18.75
+      ],
+      [
+        36.3333,
+        18.75
+      ],
+      [
+        36.25,
+        19.6221
+      ],
+      [
+        36.0,
+        20.0581
+      ],
+      [
+        36.0,
+        23.1105
+      ],
+      [
+        35.8333,
+        24.564
+      ],
+      [
+        35.5833,
+        24.8547
+      ],
+      [
+        35.5833,
+        25.5814
+      ],
+      [
+        35.3333,
+        25.5814
+      ],
+      [
+        35.1667,
+        26.3081
+      ],
+      [
+        34.6667,
+        26.7442
+      ],
+      [
+        34.5,
+        27.4709
+      ],
+      [
+        33.8333,
+        28.1977
+      ],
+      [
+        33.5833,
+        28.9244
+      ],
+      [
+        32.75,
+        29.6512
+      ],
+      [
+        32.75,
+        28.9244
+      ],
+      [
+        32.1667,
+        28.9244
+      ],
+      [
+        31.5833,
+        27.6163
+      ],
+      [
+        31.4167,
+        27.6163
+      ],
+      [
+        31.25,
+        26.3081
+      ],
+      [
+        31.0833,
+        26.3081
+      ],
+      [
+        30.8333,
+        25.5814
+      ]
+    ],
+    "description": "Nordwestlicher Hafen- und Palastbezirk; die rote Grenze umfasst mehrere Kanalinseln."
+  },
+  {
+    "id": "district-06",
+    "name": "Bezirk 06",
+    "point": [
+      38.1288,
+      28.492
+    ],
+    "polygon": [
+      [
+        33.75,
+        31.8314
+      ],
+      [
+        34.0833,
+        31.8314
+      ],
+      [
+        34.1667,
+        31.3953
+      ],
+      [
+        34.4167,
+        31.3953
+      ],
+      [
+        34.9167,
+        30.814
+      ],
+      [
+        34.9167,
+        30.5233
+      ],
+      [
+        35.25,
+        30.3779
+      ],
+      [
+        36.0,
+        28.9244
+      ],
+      [
+        36.3333,
+        28.7791
+      ],
+      [
+        36.3333,
+        28.343
+      ],
+      [
+        36.6667,
+        28.1977
+      ],
+      [
+        37.0833,
+        27.1802
+      ],
+      [
+        37.5833,
+        26.7442
+      ],
+      [
+        37.6667,
+        21.657
+      ],
+      [
+        37.8333,
+        20.7849
+      ],
+      [
+        38.1667,
+        20.6395
+      ],
+      [
+        38.4167,
+        19.186
+      ],
+      [
+        39.0,
+        18.75
+      ],
+      [
+        39.0,
+        17.8779
+      ],
+      [
+        39.25,
+        17.8779
+      ],
+      [
+        39.4167,
+        17.1512
+      ],
+      [
+        39.5833,
+        17.1512
+      ],
+      [
+        39.6667,
+        15.6977
+      ],
+      [
+        41.0,
+        15.2616
+      ],
+      [
+        41.3333,
+        16.4244
+      ],
+      [
+        41.3333,
+        17.1512
+      ],
+      [
+        41.5,
+        17.1512
+      ],
+      [
+        42.0,
+        18.4593
+      ],
+      [
+        42.4167,
+        21.2209
+      ],
+      [
+        41.25,
+        23.4012
+      ],
+      [
+        40.9167,
+        23.4012
+      ],
+      [
+        40.3333,
+        24.1279
+      ],
+      [
+        39.5833,
+        26.0174
+      ],
+      [
+        39.5833,
+        31.25
+      ],
+      [
+        39.9167,
+        31.25
+      ],
+      [
+        40.25,
+        33.1395
+      ],
+      [
+        40.0,
+        34.7384
+      ],
+      [
+        39.0833,
+        36.3372
+      ],
+      [
+        38.5833,
+        36.7733
+      ],
+      [
+        37.0833,
+        39.5349
+      ],
+      [
+        36.4167,
+        39.5349
+      ],
+      [
+        36.3333,
+        40.2616
+      ],
+      [
+        35.9167,
+        39.5349
+      ],
+      [
+        35.9167,
+        39.0988
+      ],
+      [
+        34.9167,
+        37.936
+      ],
+      [
+        34.9167,
+        37.5
+      ],
+      [
+        34.5,
+        37.5
+      ],
+      [
+        34.8333,
+        37.3547
+      ],
+      [
+        34.8333,
+        36.3372
+      ],
+      [
+        34.4167,
+        36.3372
+      ],
+      [
+        34.1667,
+        33.5756
+      ],
+      [
+        34.0,
+        33.4302
+      ]
+    ],
+    "description": "Westlicher mittlerer Bezirk mit mehreren Kanalinseln und dem großen südwestlichen Gebäudeensemble."
+  },
+  {
+    "id": "district-07",
+    "name": "Bezirk 07",
+    "point": [
+      47.1027,
+      22.8229
+    ],
+    "polygon": [
+      [
+        43.3333,
+        23.5465
+      ],
+      [
+        43.6667,
+        23.1105
+      ],
+      [
+        43.75,
+        22.3837
+      ],
+      [
+        44.0833,
+        22.093
+      ],
+      [
+        44.0,
+        20.9302
+      ],
+      [
+        44.25,
+        19.6221
+      ],
+      [
+        44.6667,
+        19.0407
+      ],
+      [
+        44.6667,
+        18.6047
+      ],
+      [
+        45.3333,
+        18.0233
+      ],
+      [
+        45.3333,
+        17.5872
+      ],
+      [
+        45.8333,
+        16.7151
+      ],
+      [
+        45.9167,
+        16.1337
+      ],
+      [
+        46.3333,
+        15.5523
+      ],
+      [
+        46.4167,
+        14.8256
+      ],
+      [
+        46.5833,
+        15.6977
+      ],
+      [
+        47.1667,
+        16.2791
+      ],
+      [
+        47.1667,
+        16.8605
+      ],
+      [
+        47.4167,
+        16.8605
+      ],
+      [
+        48.1667,
+        18.6047
+      ],
+      [
+        48.9167,
+        19.3314
+      ],
+      [
+        49.0833,
+        19.9128
+      ],
+      [
+        49.4167,
+        19.9128
+      ],
+      [
+        49.5,
+        20.3488
+      ],
+      [
+        49.75,
+        20.3488
+      ],
+      [
+        49.9167,
+        20.9302
+      ],
+      [
+        50.1667,
+        20.9302
+      ],
+      [
+        50.4167,
+        21.8023
+      ],
+      [
+        50.8333,
+        22.3837
+      ],
+      [
+        50.6667,
+        23.1105
+      ],
+      [
+        50.75,
+        24.564
+      ],
+      [
+        50.5,
+        25.8721
+      ],
+      [
+        50.0,
+        26.1628
+      ],
+      [
+        49.9167,
+        26.7442
+      ],
+      [
+        49.0,
+        27.907
+      ],
+      [
+        48.75,
+        28.9244
+      ],
+      [
+        47.4167,
+        29.5058
+      ],
+      [
+        47.0,
+        28.6337
+      ],
+      [
+        46.4167,
+        28.1977
+      ],
+      [
+        46.4167,
+        27.7616
+      ],
+      [
+        46.1667,
+        27.7616
+      ],
+      [
+        45.0,
+        26.0174
+      ],
+      [
+        44.6667,
+        25.8721
+      ],
+      [
+        44.5,
+        25.2907
+      ],
+      [
+        44.25,
+        25.2907
+      ]
+    ],
+    "description": "Zentraler Bezirk um den großen mehrtürmigen Kirchenbau und seine Plätze."
+  },
+  {
+    "id": "district-08",
+    "name": "Bezirk 08",
+    "point": [
+      61.4918,
+      21.9683
+    ],
+    "polygon": [
+      [
+        58.0833,
+        21.8023
+      ],
+      [
+        58.4167,
+        21.8023
+      ],
+      [
+        58.4167,
+        21.3663
+      ],
+      [
+        58.9167,
+        21.2209
+      ],
+      [
+        59.3333,
+        20.6395
+      ],
+      [
+        59.8333,
+        20.6395
+      ],
+      [
+        59.8333,
+        20.2035
+      ],
+      [
+        60.3333,
+        20.0581
+      ],
+      [
+        60.5833,
+        19.186
+      ],
+      [
+        61.6667,
+        17.7326
+      ],
+      [
+        62.4167,
+        15.2616
+      ],
+      [
+        63.1667,
+        14.9709
+      ],
+      [
+        64.3333,
+        15.843
+      ],
+      [
+        64.4167,
+        17.0058
+      ],
+      [
+        64.0833,
+        18.314
+      ],
+      [
+        63.9167,
+        18.314
+      ],
+      [
+        64.0833,
+        21.3663
+      ],
+      [
+        63.9167,
+        22.3837
+      ],
+      [
+        63.5833,
+        22.6744
+      ],
+      [
+        63.5,
+        23.6919
+      ],
+      [
+        63.1667,
+        24.1279
+      ],
+      [
+        63.1667,
+        25.1453
+      ],
+      [
+        62.75,
+        26.0174
+      ],
+      [
+        62.25,
+        28.7791
+      ],
+      [
+        61.5,
+        28.0523
+      ],
+      [
+        61.0833,
+        28.0523
+      ],
+      [
+        61.0833,
+        27.7616
+      ],
+      [
+        60.25,
+        26.8895
+      ],
+      [
+        59.6667,
+        26.7442
+      ],
+      [
+        59.6667,
+        26.3081
+      ],
+      [
+        59.4167,
+        26.3081
+      ],
+      [
+        58.9167,
+        25.7267
+      ],
+      [
+        58.5,
+        24.7093
+      ],
+      [
+        58.1667,
+        24.564
+      ]
+    ],
+    "description": "Östlicher nördlicher Mauerbezirk mit Wohnblöcken, Gartenanlage und Tor."
+  },
+  {
+    "id": "district-09",
+    "name": "Bezirk 09",
+    "point": [
+      43.0446,
+      30.6016
+    ],
+    "polygon": [
+      [
+        41.25,
+        27.6163
+      ],
+      [
+        41.4167,
+        26.8895
+      ],
+      [
+        42.3333,
+        25.7267
+      ],
+      [
+        42.6667,
+        26.5988
+      ],
+      [
+        44.4167,
+        28.7791
+      ],
+      [
+        44.4167,
+        29.6512
+      ],
+      [
+        45.0833,
+        29.6512
+      ],
+      [
+        45.25,
+        30.2326
+      ],
+      [
+        45.5833,
+        30.2326
+      ],
+      [
+        45.9167,
+        31.1047
+      ],
+      [
+        45.4167,
+        31.25
+      ],
+      [
+        45.4167,
+        31.5407
+      ],
+      [
+        45.0,
+        31.686
+      ],
+      [
+        45.0,
+        31.9767
+      ],
+      [
+        44.75,
+        31.9767
+      ],
+      [
+        44.6667,
+        32.4128
+      ],
+      [
+        44.1667,
+        32.8488
+      ],
+      [
+        44.0833,
+        33.2849
+      ],
+      [
+        43.8333,
+        33.2849
+      ],
+      [
+        43.8333,
+        33.7209
+      ],
+      [
+        43.0833,
+        34.8837
+      ],
+      [
+        42.8333,
+        35.9012
+      ],
+      [
+        42.5833,
+        36.0465
+      ],
+      [
+        42.0,
+        35.0291
+      ],
+      [
+        41.8333,
+        30.814
+      ],
+      [
+        41.6667,
+        30.6686
+      ],
+      [
+        41.5833,
+        29.3605
+      ],
+      [
+        41.3333,
+        28.9244
+      ]
+    ],
+    "description": "Kleiner innerer Bezirk unmittelbar südwestlich des zentralen Kirchenbaus."
+  },
+  {
+    "id": "district-10",
+    "name": "Bezirk 10",
+    "point": [
+      56.814,
+      29.3566
+    ],
+    "polygon": [
+      [
+        52.0833,
+        24.4186
+      ],
+      [
+        52.3333,
+        22.2384
+      ],
+      [
+        52.5,
+        22.2384
+      ],
+      [
+        52.5833,
+        21.3663
+      ],
+      [
+        52.75,
+        21.3663
+      ],
+      [
+        53.0833,
+        20.4942
+      ],
+      [
+        53.5,
+        20.2035
+      ],
+      [
+        53.5,
+        19.9128
+      ],
+      [
+        53.6667,
+        19.9128
+      ],
+      [
+        54.1667,
+        18.75
+      ],
+      [
+        54.5,
+        18.75
+      ],
+      [
+        54.5833,
+        18.314
+      ],
+      [
+        55.5,
+        18.6047
+      ],
+      [
+        55.5,
+        18.8953
+      ],
+      [
+        55.75,
+        18.8953
+      ],
+      [
+        55.9167,
+        19.3314
+      ],
+      [
+        56.3333,
+        20.7849
+      ],
+      [
+        56.3333,
+        21.5116
+      ],
+      [
+        56.5,
+        21.5116
+      ],
+      [
+        56.5,
+        22.6744
+      ],
+      [
+        56.6667,
+        22.8198
+      ],
+      [
+        56.5833,
+        24.2733
+      ],
+      [
+        57.0,
+        26.3081
+      ],
+      [
+        57.3333,
+        26.4535
+      ],
+      [
+        57.6667,
+        27.0349
+      ],
+      [
+        57.75,
+        27.7616
+      ],
+      [
+        58.0,
+        27.7616
+      ],
+      [
+        58.25,
+        28.343
+      ],
+      [
+        58.75,
+        28.4884
+      ],
+      [
+        59.0,
+        29.0698
+      ],
+      [
+        60.5,
+        30.2326
+      ],
+      [
+        60.6667,
+        30.814
+      ],
+      [
+        61.3333,
+        31.25
+      ],
+      [
+        61.3333,
+        31.5407
+      ],
+      [
+        61.6667,
+        31.5407
+      ],
+      [
+        62.4167,
+        34.157
+      ],
+      [
+        62.1667,
+        34.157
+      ],
+      [
+        62.0,
+        34.7384
+      ],
+      [
+        61.25,
+        34.7384
+      ],
+      [
+        61.25,
+        36.1919
+      ],
+      [
+        60.25,
+        37.5
+      ],
+      [
+        59.5833,
+        39.0988
+      ],
+      [
+        59.4167,
+        38.5174
+      ],
+      [
+        58.8333,
+        38.5174
+      ],
+      [
+        58.8333,
+        39.5349
+      ],
+      [
+        59.1667,
+        39.6802
+      ],
+      [
+        58.8333,
+        40.407
+      ],
+      [
+        56.4167,
+        36.3372
+      ],
+      [
+        56.4167,
+        35.4651
+      ],
+      [
+        56.1667,
+        35.3198
+      ],
+      [
+        56.0,
+        32.1221
+      ],
+      [
+        55.5833,
+        31.1047
+      ],
+      [
+        55.1667,
+        30.6686
+      ],
+      [
+        55.0833,
+        30.2326
+      ],
+      [
+        54.8333,
+        30.2326
+      ],
+      [
+        54.25,
+        29.2151
+      ],
+      [
+        53.9167,
+        29.0698
+      ],
+      [
+        53.75,
+        28.4884
+      ],
+      [
+        53.3333,
+        28.343
+      ],
+      [
+        53.0833,
+        27.6163
+      ],
+      [
+        52.0833,
+        26.7442
+      ]
+    ],
+    "description": "Östlicher mittlerer Bezirk mit Gartenquartier und dem großen Kuppelensemble am Mauerring."
+  },
+  {
+    "id": "district-11",
+    "name": "Bezirk 11",
+    "point": [
+      40.6174,
+      43.4405
+    ],
+    "polygon": [
+      [
+        37.4167,
+        42.5872
+      ],
+      [
+        38.1667,
+        41.2791
+      ],
+      [
+        38.8333,
+        40.843
+      ],
+      [
+        38.8333,
+        40.407
+      ],
+      [
+        39.5,
+        39.5349
+      ],
+      [
+        39.5,
+        39.0988
+      ],
+      [
+        39.75,
+        39.0988
+      ],
+      [
+        39.8333,
+        38.5174
+      ],
+      [
+        40.25,
+        38.3721
+      ],
+      [
+        41.0,
+        36.7733
+      ],
+      [
+        41.25,
+        37.5
+      ],
+      [
+        41.9167,
+        38.3721
+      ],
+      [
+        42.0833,
+        40.407
+      ],
+      [
+        42.8333,
+        42.1512
+      ],
+      [
+        42.9167,
+        43.1686
+      ],
+      [
+        43.1667,
+        43.4593
+      ],
+      [
+        43.3333,
+        46.8023
+      ],
+      [
+        43.1667,
+        48.2558
+      ],
+      [
+        42.9167,
+        48.4012
+      ],
+      [
+        42.75,
+        48.9826
+      ],
+      [
+        41.9167,
+        48.8372
+      ],
+      [
+        40.5,
+        48.1105
+      ],
+      [
+        40.0,
+        47.6744
+      ],
+      [
+        39.6667,
+        46.9477
+      ],
+      [
+        39.1667,
+        46.9477
+      ],
+      [
+        39.0833,
+        46.657
+      ],
+      [
+        39.5,
+        46.657
+      ],
+      [
+        39.5,
+        45.6395
+      ],
+      [
+        38.9167,
+        45.6395
+      ],
+      [
+        38.9167,
+        46.5116
+      ],
+      [
+        38.1667,
+        45.6395
+      ],
+      [
+        37.75,
+        44.6221
+      ],
+      [
+        37.5,
+        44.6221
+      ]
+    ],
+    "description": "Südwestlicher Eckbezirk um den großen Kuppel- und Turmbau."
+  },
+  {
+    "id": "district-12",
+    "name": "Bezirk 12",
+    "point": [
+      46.793,
+      41.9962
+    ],
+    "polygon": [
+      [
+        43.5,
+        38.2267
+      ],
+      [
+        43.75,
+        38.0814
+      ],
+      [
+        43.75,
+        37.6453
+      ],
+      [
+        44.0833,
+        37.5
+      ],
+      [
+        44.3333,
+        36.4826
+      ],
+      [
+        44.75,
+        36.1919
+      ],
+      [
+        45.6667,
+        34.3023
+      ],
+      [
+        45.9167,
+        34.3023
+      ],
+      [
+        45.9167,
+        34.0116
+      ],
+      [
+        46.5,
+        33.4302
+      ],
+      [
+        47.4167,
+        33.7209
+      ],
+      [
+        47.3333,
+        32.5581
+      ],
+      [
+        48.75,
+        31.3953
+      ],
+      [
+        48.6667,
+        32.8488
+      ],
+      [
+        48.8333,
+        35.1744
+      ],
+      [
+        49.0,
+        35.1744
+      ],
+      [
+        49.0833,
+        35.6105
+      ],
+      [
+        49.0833,
+        36.7733
+      ],
+      [
+        49.25,
+        36.7733
+      ],
+      [
+        49.5833,
+        38.5174
+      ],
+      [
+        49.75,
+        38.5174
+      ],
+      [
+        50.3333,
+        39.8256
+      ],
+      [
+        50.4167,
+        41.2791
+      ],
+      [
+        50.0,
+        42.5872
+      ],
+      [
+        49.0,
+        44.0407
+      ],
+      [
+        48.4167,
+        46.0756
+      ],
+      [
+        48.0,
+        46.657
+      ],
+      [
+        47.5833,
+        50.0
+      ],
+      [
+        47.5833,
+        52.1802
+      ],
+      [
+        47.75,
+        52.1802
+      ],
+      [
+        47.6667,
+        53.7791
+      ],
+      [
+        47.5833,
+        52.907
+      ],
+      [
+        47.4167,
+        52.7616
+      ],
+      [
+        46.8333,
+        52.7616
+      ],
+      [
+        46.8333,
+        53.7791
+      ],
+      [
+        46.5,
+        53.6337
+      ],
+      [
+        44.25,
+        50.5814
+      ],
+      [
+        44.75,
+        50.436
+      ],
+      [
+        44.75,
+        49.4186
+      ],
+      [
+        44.5833,
+        49.1279
+      ],
+      [
+        44.9167,
+        47.3837
+      ],
+      [
+        44.6667,
+        45.0581
+      ],
+      [
+        44.75,
+        43.1686
+      ],
+      [
+        44.5,
+        43.0233
+      ],
+      [
+        44.5,
+        42.4419
+      ],
+      [
+        44.0833,
+        41.2791
+      ],
+      [
+        44.0833,
+        40.5523
+      ],
+      [
+        43.6667,
+        39.6802
+      ]
+    ],
+    "description": "Südlicher mittlerer Bezirk mit mehrtürmigem Kirchenbau und Wohnquartieren."
+  },
+  {
+    "id": "district-13",
+    "name": "Bezirk 13",
+    "point": [
+      52.8093,
+      41.0694
+    ],
+    "polygon": [
+      [
+        49.0833,
+        52.4709
+      ],
+      [
+        49.25,
+        48.4012
+      ],
+      [
+        49.5,
+        48.1105
+      ],
+      [
+        49.75,
+        46.8023
+      ],
+      [
+        50.75,
+        45.2035
+      ],
+      [
+        51.0,
+        44.3314
+      ],
+      [
+        51.25,
+        44.186
+      ],
+      [
+        51.4167,
+        43.1686
+      ],
+      [
+        52.0,
+        42.2965
+      ],
+      [
+        52.0833,
+        41.5698
+      ],
+      [
+        52.0833,
+        40.2616
+      ],
+      [
+        51.9167,
+        40.2616
+      ],
+      [
+        51.8333,
+        39.0988
+      ],
+      [
+        51.25,
+        37.7907
+      ],
+      [
+        51.1667,
+        36.9186
+      ],
+      [
+        50.75,
+        36.3372
+      ],
+      [
+        50.5,
+        34.7384
+      ],
+      [
+        50.3333,
+        34.7384
+      ],
+      [
+        50.5,
+        29.2151
+      ],
+      [
+        51.0,
+        28.6337
+      ],
+      [
+        52.9167,
+        31.1047
+      ],
+      [
+        53.4167,
+        31.3953
+      ],
+      [
+        53.5,
+        31.8314
+      ],
+      [
+        54.25,
+        32.7035
+      ],
+      [
+        54.5833,
+        34.157
+      ],
+      [
+        54.5833,
+        35.4651
+      ],
+      [
+        55.0833,
+        36.7733
+      ],
+      [
+        55.3333,
+        38.5174
+      ],
+      [
+        55.5833,
+        38.5174
+      ],
+      [
+        55.6667,
+        39.0988
+      ],
+      [
+        56.5833,
+        39.9709
+      ],
+      [
+        56.5833,
+        40.407
+      ],
+      [
+        56.9167,
+        40.5523
+      ],
+      [
+        57.8333,
+        42.4419
+      ],
+      [
+        57.5833,
+        42.4419
+      ],
+      [
+        57.4167,
+        43.75
+      ],
+      [
+        56.3333,
+        44.186
+      ],
+      [
+        56.3333,
+        44.4767
+      ],
+      [
+        55.5,
+        44.9128
+      ],
+      [
+        54.9167,
+        45.6395
+      ],
+      [
+        54.25,
+        45.6395
+      ],
+      [
+        54.3333,
+        47.2384
+      ],
+      [
+        53.8333,
+        47.9651
+      ],
+      [
+        53.75,
+        48.6919
+      ],
+      [
+        53.3333,
+        48.9826
+      ],
+      [
+        52.6667,
+        50.2907
+      ],
+      [
+        52.0833,
+        50.436
+      ],
+      [
+        51.9167,
+        51.3081
+      ],
+      [
+        50.3333,
+        52.3256
+      ],
+      [
+        49.3333,
+        52.4709
+      ],
+      [
+        49.25,
+        52.907
+      ],
+      [
+        49.0833,
+        52.907
+      ]
+    ],
+    "description": "Südöstlicher Bezirk mit Amphitheater, größeren Gebäuden und den südlichen Wohnblöcken."
+  }
+]);
+
+export const pointsOfInterest = Object.freeze([
+  {
+    "id": "poi-t01",
+    "name": "Taverne, Herberge oder Bordell",
+    "kind": "Taverne, Herberge oder Bordell",
+    "point": [
+      23.5417,
+      15.9157
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Die genaue Nutzung als Taverne, Herberge oder Bordell bleibt offen.",
+    "sourceKind": "Tavernentyp.png / Tavernentype2.png"
+  },
+  {
+    "id": "poi-t02",
+    "name": "Taverne, Herberge oder Bordell",
+    "kind": "Taverne, Herberge oder Bordell",
+    "point": [
+      27.375,
+      26.1628
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Die genaue Nutzung als Taverne, Herberge oder Bordell bleibt offen.",
+    "sourceKind": "Tavernentyp.png / Tavernentype2.png"
+  },
+  {
+    "id": "poi-t03",
+    "name": "Taverne, Herberge oder Bordell",
+    "kind": "Taverne, Herberge oder Bordell",
+    "point": [
+      34.2917,
+      43.6047
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Die genaue Nutzung als Taverne, Herberge oder Bordell bleibt offen.",
+    "sourceKind": "Tavernentyp.png / Tavernentype2.png"
+  },
+  {
+    "id": "poi-t04",
+    "name": "Taverne, Herberge oder Bordell",
+    "kind": "Taverne, Herberge oder Bordell",
+    "point": [
+      49.625,
+      59.5203
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Die genaue Nutzung als Taverne, Herberge oder Bordell bleibt offen.",
+    "sourceKind": "Tavernentyp.png / Tavernentype2.png"
+  },
+  {
+    "id": "poi-t05",
+    "name": "Taverne, Herberge oder Bordell",
+    "kind": "Taverne, Herberge oder Bordell",
+    "point": [
+      67.875,
+      23.8372
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Die genaue Nutzung als Taverne, Herberge oder Bordell bleibt offen.",
+    "sourceKind": "Tavernentyp.png / Tavernentype2.png"
+  },
+  {
+    "id": "poi-t06",
+    "name": "Taverne, Herberge oder Bordell",
+    "kind": "Taverne, Herberge oder Bordell",
+    "point": [
+      53.75,
+      55.1599
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die genaue Nutzung als Taverne, Herberge oder Bordell bleibt offen.",
+    "sourceKind": "Tavernentyp.png / Tavernentype2.png"
+  },
+  {
+    "id": "poi-a01",
+    "name": "Anwesen 01",
+    "kind": "Anwesen",
+    "point": [
+      24.0,
+      23.9099
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a02",
+    "name": "Anwesen 02",
+    "kind": "Anwesen",
+    "point": [
+      24.2917,
+      32.9942
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a03",
+    "name": "Anwesen 03",
+    "kind": "Anwesen",
+    "point": [
+      25.7917,
+      41.2791
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a04",
+    "name": "Anwesen 04",
+    "kind": "Anwesen",
+    "point": [
+      33.0833,
+      57.1948
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a05",
+    "name": "Anwesen 05",
+    "kind": "Anwesen",
+    "point": [
+      36.0833,
+      60.6105
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a06",
+    "name": "Anwesen 06",
+    "kind": "Anwesen",
+    "point": [
+      41.75,
+      66.6424
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a07",
+    "name": "Anwesen 07",
+    "kind": "Anwesen",
+    "point": [
+      46.5833,
+      70.2035
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a08",
+    "name": "Anwesen 08",
+    "kind": "Anwesen",
+    "point": [
+      42.0833,
+      53.9244
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a09",
+    "name": "Anwesen 09",
+    "kind": "Anwesen",
+    "point": [
+      61.0417,
+      43.314
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a10",
+    "name": "Anwesen 10",
+    "kind": "Anwesen",
+    "point": [
+      69.0,
+      44.9855
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a11",
+    "name": "Anwesen 11",
+    "kind": "Anwesen",
+    "point": [
+      58.625,
+      71.7297
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a12",
+    "name": "Anwesen 12",
+    "kind": "Anwesen",
+    "point": [
+      67.25,
+      78.0523
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a13",
+    "name": "Anwesen 13",
+    "kind": "Anwesen",
+    "point": [
+      68.5,
+      82.6308
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-a14",
+    "name": "Anwesen 14",
+    "kind": "Anwesen",
+    "point": [
+      76.0833,
+      82.5581
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Violettes Einzelhaus oder zusammengehöriges Gebäudeensemble; Hausname und Zugehörigkeit bleiben offen.",
+    "sourceKind": "Venalys Anwesen.png; weitere violette Einzelhausvarianten"
+  },
+  {
+    "id": "poi-d01",
+    "name": "Vellano",
+    "kind": "Dorf",
+    "point": [
+      27.875,
+      34.5203
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d02",
+    "name": "Civena",
+    "kind": "Dorf",
+    "point": [
+      30.0,
+      42.4419
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d03",
+    "name": "Sernio",
+    "kind": "Dorf",
+    "point": [
+      34.125,
+      51.8169
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d04",
+    "name": "Onara",
+    "kind": "Dorf",
+    "point": [
+      31.1667,
+      61.1192
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d05",
+    "name": "Fidera",
+    "kind": "Dorf",
+    "point": [
+      42.9583,
+      58.939
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d06",
+    "name": "Orviano",
+    "kind": "Dorf",
+    "point": [
+      70.25,
+      16.2791
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d07",
+    "name": "Livena",
+    "kind": "Dorf",
+    "point": [
+      69.75,
+      31.1047
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d08",
+    "name": "Ventano",
+    "kind": "Dorf",
+    "point": [
+      67.625,
+      38.0814
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d09",
+    "name": "Velina",
+    "kind": "Dorf",
+    "point": [
+      79.4167,
+      39.8256
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d10",
+    "name": "Orveto",
+    "kind": "Dorf",
+    "point": [
+      73.375,
+      43.3866
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d11",
+    "name": "Valdessa",
+    "kind": "Dorf",
+    "point": [
+      64.375,
+      45.9302
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d12",
+    "name": "Cirello",
+    "kind": "Dorf",
+    "point": [
+      76.2917,
+      55.0872
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d13",
+    "name": "Sentina",
+    "kind": "Dorf",
+    "point": [
+      55.875,
+      62.2093
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d14",
+    "name": "Bellera",
+    "kind": "Dorf",
+    "point": [
+      78.125,
+      72.1657
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-d15",
+    "name": "Novera",
+    "kind": "Dorf",
+    "point": [
+      70.8333,
+      79.1424
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "DorfKleinerOrtGehöftHofWeilerEtc.png"
+  },
+  {
+    "id": "poi-w01",
+    "name": "Silvena",
+    "kind": "Waldsiedlung",
+    "point": [
+      59.9167,
+      51.6715
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Waldsiedlung.png"
+  },
+  {
+    "id": "poi-f01",
+    "name": "Castel Ligor",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      21.1667,
+      39.6802
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f02",
+    "name": "Castel Fortessa",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      21.5833,
+      55.9593
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f03",
+    "name": "Castel Orsena",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      36.0417,
+      70.6395
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f04",
+    "name": "Castel Vetario",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      42.7917,
+      73.2558
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f05",
+    "name": "Castel Bellona",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      70.7083,
+      9.593
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f06",
+    "name": "Castel Ordano",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      76.0417,
+      32.9942
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f07",
+    "name": "Castel Fidessa",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      70.4167,
+      51.5988
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f08",
+    "name": "Castel Argenna",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      85.0,
+      72.311
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-f09",
+    "name": "Castel Vercio",
+    "kind": "Ritterliches Gut oder Festung",
+    "point": [
+      65.4583,
+      73.2558
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Ringförmige Befestigung; genaue Nutzung als Gut oder Festung bleibt offen.",
+    "sourceKind": "RitterlichesGutoderFestung.png"
+  },
+  {
+    "id": "poi-r01",
+    "name": "Torre Levante",
+    "kind": "Turm",
+    "point": [
+      23.7917,
+      60.6105
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r02",
+    "name": "Torre Calvena",
+    "kind": "Turm",
+    "point": [
+      27.4583,
+      63.7355
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r03",
+    "name": "Torre Sernato",
+    "kind": "Turm",
+    "point": [
+      46.4583,
+      77.5436
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r04",
+    "name": "Torre Ventalis",
+    "kind": "Turm",
+    "point": [
+      79.6667,
+      56.686
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r05",
+    "name": "Torre Cerano",
+    "kind": "Turm",
+    "point": [
+      65.1667,
+      55.8866
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r06",
+    "name": "Torre Valora",
+    "kind": "Turm",
+    "point": [
+      60.1667,
+      79.5785
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r07",
+    "name": "Torre Spirano",
+    "kind": "Turm",
+    "point": [
+      67.7917,
+      89.7529
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-r08",
+    "name": "Torre Corvenna",
+    "kind": "Turm",
+    "point": [
+      54.25,
+      83.2849
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Turm.png"
+  },
+  {
+    "id": "poi-s01",
+    "name": "Senavia",
+    "kind": "Siedlung",
+    "point": [
+      21.25,
+      27.4709
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s02",
+    "name": "Valcena",
+    "kind": "Siedlung",
+    "point": [
+      25.5833,
+      52.907
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s03",
+    "name": "Civerna",
+    "kind": "Siedlung",
+    "point": [
+      39.3333,
+      62.2093
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s04",
+    "name": "Ordessa",
+    "kind": "Siedlung",
+    "point": [
+      44.875,
+      64.7529
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, westlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s05",
+    "name": "Artena",
+    "kind": "Siedlung",
+    "point": [
+      50.4583,
+      78.9244
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s06",
+    "name": "Bellario",
+    "kind": "Siedlung",
+    "point": [
+      67.3333,
+      13.6628
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s07",
+    "name": "Ferenza",
+    "kind": "Siedlung",
+    "point": [
+      72.625,
+      23.6192
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s08",
+    "name": "Noventa",
+    "kind": "Siedlung",
+    "point": [
+      84.5417,
+      36.9186
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s09",
+    "name": "Salerna",
+    "kind": "Siedlung",
+    "point": [
+      81.0,
+      48.8372
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s10",
+    "name": "Civento",
+    "kind": "Siedlung",
+    "point": [
+      69.6667,
+      61.5552
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s11",
+    "name": "Rovenna",
+    "kind": "Siedlung",
+    "point": [
+      80.0,
+      63.8081
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s12",
+    "name": "Varello",
+    "kind": "Siedlung",
+    "point": [
+      53.3333,
+      73.9099
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s13",
+    "name": "Libera",
+    "kind": "Siedlung",
+    "point": [
+      63.6667,
+      85.3924
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s14",
+    "name": "Fidora",
+    "kind": "Siedlung",
+    "point": [
+      58.0,
+      88.3721
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-s15",
+    "name": "Valtina",
+    "kind": "Siedlung",
+    "point": [
+      73.5,
+      89.2442
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland. Die gelieferte Kartenlegende bezeichnet diesen Typ als Siedlung für Handel und Handwerk.",
+    "sourceKind": "StandardSiedlungstypHandelHandwerk.png"
+  },
+  {
+    "id": "poi-k01",
+    "name": "Kloster Valerium",
+    "kind": "Kloster",
+    "point": [
+      26.5833,
+      46.5843
+    ],
+    "description": "Außerhalb des Stadtrings im nördlichen, westlichen Umland.",
+    "sourceKind": "Kloster.png"
+  },
+  {
+    "id": "poi-k02",
+    "name": "Kloster Fidaria",
+    "kind": "Kloster",
+    "point": [
+      64.3333,
+      66.1337
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Kloster.png"
+  },
+  {
+    "id": "poi-k03",
+    "name": "Kloster Honorium",
+    "kind": "Kloster",
+    "point": [
+      71.5417,
+      68.6047
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Kloster.png"
+  },
+  {
+    "id": "poi-k04",
+    "name": "Kloster Sapentia",
+    "kind": "Kloster",
+    "point": [
+      76.0417,
+      76.5262
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Kloster.png"
+  },
+  {
+    "id": "poi-c01",
+    "name": "Kirche Convalia",
+    "kind": "Kirche",
+    "point": [
+      74.6667,
+      63.6628
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Kirche.png"
+  },
+  {
+    "id": "poi-b01",
+    "name": "Burg Valcerra",
+    "kind": "Burg",
+    "point": [
+      62.75,
+      96.2209
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Große Burg.png"
+  },
+  {
+    "id": "poi-m01",
+    "name": "Arganella",
+    "kind": "Bergbausiedlung",
+    "point": [
+      82.9583,
+      78.4884
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Bergbausiedlung.png"
+  },
+  {
+    "id": "poi-m02",
+    "name": "Ferrano",
+    "kind": "Bergbausiedlung",
+    "point": [
+      80.8333,
+      84.4477
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Bergbausiedlung.png"
+  },
+  {
+    "id": "poi-m03",
+    "name": "Ferravia",
+    "kind": "Bergbausiedlung",
+    "point": [
+      76.5,
+      92.3692
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Bergbausiedlung.png"
+  },
+  {
+    "id": "poi-m04",
+    "name": "Rocavena",
+    "kind": "Bergbausiedlung",
+    "point": [
+      68.0833,
+      98.1105
+    ],
+    "description": "Außerhalb des Stadtrings im südlichen, östlichen Umland.",
+    "sourceKind": "Bergbausiedlung.png"
+  }
+]);

@@ -1,4 +1,4 @@
-import { BESTIARY_PROFILES } from './catalog/bestiary-profile-index.js?v=20261013-draig-breeds-v2';
+import { BESTIARY_PROFILES } from './catalog/bestiary-profile-index.js?v=20261102-farnschritt-v3';
 
 const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   .toLocaleLowerCase('de').replace(/[^a-z0-9]+/g, ' ').trim();

@@ -1,0 +1,97 @@
+{
+  "authorContext": {
+    "date": "2026-11-02",
+    "definition": "Humans with an infernal or celestial ancestor in their family tree; inherited magical aptitude.",
+    "examples": [
+      {
+        "name": "Myriad Draig",
+        "origin": "Succubus",
+        "reason": "Mother Afallith is a Succubus; explicit user statement."
+      },
+      {
+        "name": "Aradin Hyrmgarthr",
+        "origin": "Vampire",
+        "reason": "Clan of vampiric origin; explicit user statement."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "Bestiarium/wesen/gruppen/vampire/profil.json",
+      "sha256": "b9eb8f83e3918e841c36b3366ebbc206a4b94d7fa97a0e5c3597bca6fc12896b",
+      "title": "Vampire",
+      "summary": "Vampire sind direkte Schöpfungen Bhaals und Werkzeuge seiner Gier nach Blut, Seelen und Kontrolle. Ihre Ordnung reicht von uralten Fürsten bis zu verborgenen Jägern und niederen Blutsaugern; Rang, Entstehung und Lebensweise bestimmen, ob rohe Herrschaft, gesellschaftliche Täuschung oder stiller Verfall ihre größte Gefahr bildet.",
+      "excerpts": [
+        "Striga sind seltene Halbvampire, die aus der Verbindung eines Vampirs mit einem Menschen hervorgehen.",
+        "Die Striga ist die einzige hier überlieferte Form, die von Geburt an halb sterblich und halb vampirisch ist."
+      ]
+    },
+    {
+      "path": "Bestiarium/wesen/vampire/striga/profil.json",
+      "sha256": "720c5aaa0c3479ba0c73a194f501e39de3c109c221cf660db12dc353356b0020",
+      "title": "Striga",
+      "summary": "Striga sind seltene Halbvampire, die aus der Verbindung eines Vampirs mit einem Menschen hervorgehen. Sie benötigen kein Blut, können damit jedoch ihre schlummernde Magie stärken, besitzen weder klassische Vampirform noch übliche Sonnenfessel und ringen besonders im Erwachsenenalter mit Bhaals wachsendem Einfluss.",
+      "excerpts": [
+        "Striga sind seltene Halbvampire, die aus der Verbindung eines Vampirs mit einem Menschen hervorgehen. Sie benötigen kein Blut, können damit jedoch ihre schlummernde Magie stärken, besitzen weder klassische Vampirform noch übliche Sonnenfessel und ringen besonders im Erwachsenenalter mit Bhaals wachsendem Einfluss.",
+        "Durch die Verbindung eines Vampirs mit einem Menschen geboren",
+        "Die Striga ist keine durch Infektion entstandene Sprossform, sondern ein von Geburt an bestehender Halbvampir. Ihre Seltenheit folgt aus der gefährlichen Geburt, die menschliche Mütter häufig nicht überleben und der auch viele Kinder selbst nicht standhalten.",
+        "Ein vampirischer und ein menschlicher Elternteil verbinden zwei unvereinbare Naturen. Überlebende Kinder wirken lange menschlich, tragen Bhaals Erbe jedoch von Anfang an; im Erwachsenenalter drängen Blutgier und das Versprechen dunkler Macht zunehmend an die Oberfläche."
+      ]
+    },
+    {
+      "path": "Bestiarium/wesen/inferniiden/formwandler/profil.json",
+      "sha256": "250988cdcec5e4d58763b77c82b9e254a86c21bacc5d2b3cffd895af32a04359",
+      "title": "Formling & Formwandler",
+      "summary": "Formlinge, Doppler und Formwandler ahmen Körper, Stimme und soziale Rolle anderer Wesen nach. Maelachs Varianten stehlen die Gestalt angesehener Personen und verbreiten widersprüchliche Aussagen in deren Namen. Ihre Macht liegt in gestohlener Autorität, genauer Beobachtung und langfristig eingeschobenen Identitäten.",
+      "excerpts": []
+    },
+    {
+      "path": "Bestiarium/wesen/inferniiden/sukkubus-inkubus/profil.json",
+      "sha256": "f37e214afc1f9d830c2310f9531d91a776558c70cec19ecf34cff64901d7babe",
+      "title": "Sukkubus & Inkubus",
+      "summary": "Sukkuben und Inkuben sind hohe Diener Sanguines, die Erscheinung, Traum und Begierde als Waffen führen. Sie nähern sich ihren Opfern in einer gewünschten Gestalt, schwächen Widerstand durch Illusion und emotionale Abhängigkeit und nähren sich schließlich von Lebensenergie oder gebundenen Seelen.",
+      "excerpts": []
+    },
+    {
+      "path": "Bestiarium/wesen/inferniiden/satyr/profil.json",
+      "sha256": "ffd86f4ae0f9165639c3fc073d02d41b8c953ad27e5f7fd992927e6a07cc22d5",
+      "title": "Satyr",
+      "summary": "Satyre gehören zu Sanguines niederen Dienern und begleiten Feste, Rituale und Verführungen mit Musik, Illusion und gesteigerten Gefühlen. Sie unterstützen mächtigere Sukkuben und Inkuben, ordnen deren Gesellschaften und verwandeln harmlose Ausgelassenheit schrittweise in Abhängigkeit und Kontrollverlust.",
+      "excerpts": []
+    },
+    {
+      "path": "Bestiarium/wesen/gruppen/aelvar/profil.json",
+      "sha256": "9f5c1c5312746d9e5a038d91eacc91c09778e95a33d8621782c8e23ecfc915bd",
+      "title": "Aelvar",
+      "summary": "Die Aelvar sind finstere, mystische Finsteralben mit der Anmut von Nymphen und Elfen. Ihre streng matriarchale Ordnung, die Macht ihrer Matronen und ihre Bindung an Lunara, Hela, Nyxara oder Nemsara machen sie zu geduldigen Täuscherinnen, Zauberinnen und Mittlerinnen innerhalb der infernalen Welt.",
+      "excerpts": []
+    },
+    {
+      "path": "Bestiarium/themen/lichtalben/thema.json",
+      "sha256": "15ef462bd40f28c0cb195d51950c789f1684829a0d1ca042580721989e8fe402",
+      "title": "Celestiale",
+      "summary": "Ein Celestialer ist ein göttliches Wesen, das die Verkörperung der Engel eines der Neun Göttlichen darstellt. Sie sind himmlische Boten und Krieger, die die Tugenden und den Willen ihrer göttlichen Schöpfer in der Welt der Sterblichen manifestieren. Jeder der Neun Göttlichen hat seine eigenen Celestiale, die seine Domäne und Tugenden verkörpern. Ein Celestiale des Vaters kann beispielsweise als majestätischer Drache erscheinen, der Gerechtigkeit und Weisheit verkörpert, während ein Celestiale der Mutter als Nymphe die Güte und Fürsorge der Göttlichen ausstrahlt.",
+      "excerpts": [
+        "Die physische Erscheinung eines Celestiale spiegelt oft die Domäne ihres Gottes wider. Diese Engel können in zahlreichen Formen auftreten – von majestätischen Drachen über anmutige Nymphen bis hin zu strahlenden, engelhaften Kriegern. Im Gegensatz zu den infernalen Wesen werden Celestiale als schön und ehrfurchtgebietend beschrieben. Einige könnten über leuchtende Flügel, einen heiligen Schein oder eine glänzende Aura verfügen, die ihre göttliche Herkunft unbestreitbar macht. Diese Manifestationen sind jedoch nicht dazu gedacht, Angst einzuflößen, sondern vielmehr, Vertrauen und Ehrfurcht zu wecken.",
+        "Je nach dem Göttlichen, dem sie dienen, haben Celestiale die Macht, Elemente wie Feuer, Wasser, Wind oder Erde zu beherrschen. Ein Celestiale des Herrschers der Flammen könnte Flammen entfesseln, während ein Celestiale einer Wassergöttin die Fähigkeit hätte, Wasser zu kontrollieren oder Flutwellen zu erzeugen.",
+        "Celestiale treten nur selten in direkte und dauerhafte Beziehungen zu Sterblichen ein. Sie erscheinen meist in Zeiten großer Not oder um göttliche Botschaften zu überbringen. Ihr Wesen ist eng mit den Göttlichen verbunden, was sie oft distanziert und unerreichbar für normale Menschen erscheinen lässt. Dennoch gibt es Ausnahmen, bei denen Celestiale längere Zeit in der Welt der Sterblichen verweilen oder gar in besonderen Fällen Beziehungen zu Menschen eingehen. Diese Verbindungen führen gelegentlich zur Geburt von Lichtgeborenen, göttlich-menschlichen Mischwesen, die sowohl die Essenz des Göttlichen als auch die Sterblichkeit in sich tragen."
+      ]
+    },
+    {
+      "path": "Bestiarium/themen/dunkelalben/thema.json",
+      "sha256": "1e185b23346384ef16ad9c45d5e37fbf9e0ca60f042406b8c0e0203cdc271360",
+      "title": "Infernale",
+      "summary": "Der Infernale, auch Finsteralb genannt, ist das dunkle Gegenstück zum Celestialen und repräsentiert die dämonischen Götter, die als Spiegelbilder der Neun Göttlichen fungieren. Diese Wesen verkörpern die finsteren Aspekte der Existenz, wie Korruption, Verrat und Zerstörung. Anders als die Celestiale, die das Licht und die Tugenden der Göttlichen vertreten, stehen die Infernalen für Chaos und Verfall, wobei ihre Macht aus den Abgründen der Infernalen Sphären entspringt.",
+      "excerpts": [
+        "Paarungen zwischen Infernalen und Menschen kommen oft vor, besonders durch Wesen wie Succubi oder Inkubus, die Kinder mit Sterblichen zeugen. Auch andere Infernale können solche Verbindungen eingehen, doch solche Beziehungen sind meist unheilvoll. Diese Verbindungen haben fast immer negative Auswirkungen auf die Menschen, da diese Paarungen nicht im Sinne der Göttlichen sind und oft Verderbnis über die Nachkommen bringen."
+      ]
+    },
+    {
+      "path": "Bestiarium/modules/catalog/catalog-data.js",
+      "sha256": "42f3b0128c30f1f0b99088cdf2216025a055fcd0b7f2cedd19569965a7b44e27",
+      "title": "Bestiarium-Katalog",
+      "summary": "",
+      "excerpts": []
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import { applyChallengeOutcome, challengeBenefitBundles } from '../generated/herausforderung/herausforderung-outcomes.js';
 import { createHash, randomUUID } from 'node:crypto';
+import { getSceneConditionClock, sceneClockBeforeSegment } from '../generated/scene-time/scene-condition-clock.js';
+import { advanceSubstanceStateMap } from '../generated/character-health/substance-state.js';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources } from '../generated/combat/combat-action-economy.js';
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
@@ -111,6 +113,7 @@ export async function validateSkillCommentSegments({
   request,
   metadata,
   history = [],
+  sceneClock = null,
   challengeHistory = [],
   rulePeriods = {},
   usedRuleFrequencyKeys = new Set(),
@@ -180,6 +183,7 @@ export async function validateSkillCommentSegments({
   const pendingClaims = [];
 
   for (const entry of entries) {
+    advanceSubstanceStateMap(workingStates, sceneClockBeforeSegment(sceneClock || getSceneConditionClock(history), metadata.commentSegments, entry.index), entryId);
     const actorDescriptor = {
       actorId: clean(entry.submitted.actorId, 240),
       persistence: normalizePersistence(entry.submitted.actorPersistence, entry.submitted.actorId)
@@ -187,6 +191,7 @@ export async function validateSkillCommentSegments({
     const actorRecord = records.get(recordKey(actorDescriptor.persistence));
     const allowed = getChecksForCommentKind(entry.segment.commentKind || entry.segment.kind);
     const settings = normalizeSkillCheckSettings({
+      requiredSense: entry.segment.skillRequiredSense || entry.submitted.requiredSense,
       skillId: entry.segment.skillId || entry.submitted.skillId,
       customModifier: entry.segment.skillCustomModifier ?? entry.submitted.customModifier,
       difficulty: entry.segment.skillDifficulty ?? entry.submitted.difficulty,

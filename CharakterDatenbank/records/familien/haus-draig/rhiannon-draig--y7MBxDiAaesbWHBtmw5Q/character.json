@@ -107,9 +107,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-10-11T19:46:42.303Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/y7MBxDiAaesbWHBtmw5Q.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "y7MBxDiAaesbWHBtmw5Q",
       "y7MBxDiAaesbWHBtmw5Q",
@@ -117,7 +117,7 @@
       "y7MBxDiAaesbWHBtmw5Q",
       "y7MBxDiAaesbWHBtmw5Q"
     ],
-    "contentHash": "7298b817fd4521a576a7f6f9c0a6fb3644346e2c36c22b6d7a440dcddba7c30b"
+    "contentHash": "331e6b0cced4c2517679fdd5075320b46d343cab0475b47529c5250a640c24c9"
   },
   "local": {
     "notes": "",
@@ -13327,6 +13327,61 @@
           "hitpoints": "TP / Zustand"
         },
         "updatedAt": "2026-10-11T19:46:42.303Z"
+      },
+      {
+        "id": "y7MBxDiAaesbWHBtmw5Q",
+        "name": "Rhiannon Draig",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-arkan-geschult",
+              "name": "Arkan geschult",
+              "description": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+              "cost": 3,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung",
+              "mechanics": {},
+              "triggerRules": [
+                {
+                  "id": "arkane-schulung",
+                  "phase": "pre-roll",
+                  "recipient": "actor",
+                  "sourceRelation": "self",
+                  "activation": "passive",
+                  "frequency": "always",
+                  "condition": "always",
+                  "actionKinds": [
+                    "skill"
+                  ],
+                  "skillIds": [
+                    "arcane-kunde"
+                  ],
+                  "effects": {
+                    "rollMode": "advantage"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Arkan geschult",
+                "detail": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
@@ -13348,7 +13403,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-07-26T11:42:57.035Z",
-    "updatedAt": "2026-10-11T19:46:42.303Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -15897,182 +15952,38 @@
       "conditions": [],
       "quirks": [
         {
-          "target": "self",
-          "name": "Cenyri Kultur",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "trigger": "",
-          "mechanics": {
-            "damage": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "armorClass": 0,
-            "initiative": 0,
-            "skill": 0,
-            "maximumHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "movement": 0,
-            "spellSaveDc": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "attack": 0,
-            "bonusDamageFormula": ""
-          },
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "aiInstructions": "",
-          "stacking": "normal",
-          "limitations": "",
-          "active": true,
-          "id": "starter-ancestry-cenyr-trait-1",
-          "type": "trait",
-          "priority": 0,
-          "duration": "",
-          "tags": "Volk · Cenyr",
-          "triggerRules": []
-        },
-        {
-          "aiInstructions": "",
-          "tags": "Volk · Cenyr",
+          "id": "development-trait-arkan-geschult",
+          "name": "Arkan geschult",
+          "description": "Vorteil bei Proben auf Arkane Kunde. Gibt keinen zusätzlichen Zauberangriffs- oder Zauber-SG-Bonus.",
+          "cost": 3,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp",
           "type": "trait",
           "active": true,
-          "stacking": "normal",
-          "mechanics": {
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "savingThrowDisadvantageAttributes": [],
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "damage": 0,
-            "spellSaveDc": 0,
-            "movement": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "skill": 0,
-            "initiative": 0,
-            "armorClass": 0,
-            "maximumHitPoints": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attack": 0
-          },
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "priority": 0,
-          "limitations": "",
-          "triggerRules": [],
-          "name": "Höfische und religiöse Prägung",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "trigger": "",
-          "target": "self",
-          "duration": ""
-        },
-        {
-          "triggerRules": [],
-          "type": "trait",
-          "id": "starter-background-gelehrter-trait-1",
-          "duration": "",
-          "target": "self",
-          "priority": 0,
-          "tags": "Hintergrund · Gelehrter",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "limitations": "",
-          "mechanics": {
-            "attackRollMode": "normal",
-            "spellSaveDc": 0,
-            "armorClass": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "initiative": 0,
-            "savingThrowAdvantageAttributes": [],
-            "movement": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "passivePerception": 0,
-            "maximumHitPoints": 0,
-            "savingThrow": 0,
-            "attack": 0,
-            "spellAttack": 0,
-            "bonusDamageFormula": "",
-            "skill": 0
-          },
-          "description": "Jahre in Bibliotheken, Skriptorien oder als Lehrling eines Gelehrten verbracht; vertraut mit Schrift, Theorie und arkanem Grundwissen.",
-          "name": "Gelehrtes Grundwissen",
-          "stacking": "normal",
-          "active": true,
-          "aiInstructions": "",
-          "trigger": ""
-        },
-        {
-          "name": "Hervorragende Arkane Ausbildung",
-          "trigger": "",
-          "limitations": "",
-          "stacking": "normal",
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {},
           "triggerRules": [
             {
-              "activation": "passive",
-              "consumeReaction": false,
+              "id": "arkane-schulung",
+              "phase": "pre-roll",
+              "recipient": "actor",
               "sourceRelation": "self",
-              "radiusMeters": null,
-              "skillIds": [
-                "arcane-kunde"
-              ],
-              "priority": 0,
-              "name": "Myrddins Lehren",
-              "enabled": true,
-              "authority": "passive",
-              "description": "Vorteil bei Arkaner Kunde.",
+              "activation": "passive",
+              "frequency": "always",
+              "condition": "always",
               "actionKinds": [
                 "skill"
               ],
-              "actionScope": "global",
-              "frequency": "always",
-              "costs": [],
-              "condition": "always",
+              "skillIds": [
+                "arcane-kunde"
+              ],
               "effects": {
-                "damageReduction": 0,
-                "spellSaveDcModifier": 0,
-                "savingThrowModifier": 0,
-                "defenseModifier": 0,
-                "skillModifier": 0,
-                "attackModifier": 0,
-                "outcome": "none",
-                "damageModifier": 0,
                 "rollMode": "advantage"
-              },
-              "resultEffects": [],
-              "id": "rhiannon-arkane-ausbildung-advantage",
-              "requiredTargetTags": [],
-              "recipient": "actor",
-              "phase": "pre-roll"
+              }
             }
-          ],
-          "appliesWhen": "Immer, besonders bei arkaner Kunde und beim Zaubern",
-          "description": "Als persönliche Lehrlingin des großen Zauberers Myrddin genießt Rhiannon eine Ausbildung, von der andere Studierende nur träumen können.",
-          "id": "rhiannon-hervorragende-arkane-ausbildung",
-          "active": true,
-          "priority": 0,
-          "mechanics": {
-            "maximumHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "spellAttack": 1,
-            "damage": 0,
-            "savingThrow": 0,
-            "movement": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "spellSaveDc": 1,
-            "passivePerception": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "skill": 0,
-            "armorClass": 0
-          },
-          "type": "trait",
-          "duration": "",
-          "target": "self",
-          "tags": "Persönlichkeit · Myrddins Lehrling",
-          "aiInstructions": ""
+          ]
         }
       ],
       "abilities": [

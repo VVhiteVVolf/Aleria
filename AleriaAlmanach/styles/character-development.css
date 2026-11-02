@@ -1,0 +1,20 @@
+.development-balance { display:grid; gap:.4rem; padding:1rem; border:1px solid #b99b57; border-radius:.6rem; background:#29251e; color:#eee3cb; margin-bottom:1rem; }
+.development-balance strong { font-size:1.4rem; }
+.development-balance .development-negative { color:#ffbba9; }
+.development-attacks { display:grid; gap:.5rem; max-height:25rem; overflow:auto; margin:1rem 0; }
+.development-attack { display:flex; align-items:start; gap:.7rem; padding:.75rem; border:1px solid #9b845f66; border-radius:.4rem; cursor:pointer; }
+.development-attack span { flex:1; display:grid; gap:.25rem; }
+.development-attack small, .development-trait small { display:block; }
+.development-traits { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:.6rem; }
+.development-traits > .development-advice { grid-column:1 / -1; }
+.development-trait { display:flex; gap:.6rem; align-items:center; border:1px solid #9b845f66; padding:.6rem; border-radius:.5rem; cursor:pointer; }
+.development-trait img { width:54px; height:54px; border-radius:50%; object-fit:contain; flex:none; }
+.development-trait > span { min-width:0; overflow-wrap:anywhere; }
+.development-trait .development-clan-emblem { display:inline-block; width:22px; height:22px; vertical-align:middle; }
+.development-trait:has(input:checked), .development-attack:has(input:checked) { border-color:#cba75a; background:#bc9c4922; }
+.development-shop input[type=checkbox] { width:1.1rem; height:1.1rem; flex:none; }
+.development-shop details { margin:1rem 0; }
+.development-shop p { line-height:1.5; }
+.development-advice { padding:.75rem 1rem .75rem 1.5rem; border-left:3px solid #b99b57; background:#b99b5715; font-size:.85rem; }
+.development-advice li+li { margin-top:.4rem; }
+.development-existing-effect { margin-top:.4rem; color:#96763f; }

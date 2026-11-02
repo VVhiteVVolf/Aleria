@@ -1,5 +1,5 @@
 export const context={
- realm:'talyndor',short:'Talyndor',title:'Das Königreich Talyndor',continent:'Lothir',emblem:'assets/crests/talyndor.webp',emblemFull:'assets/originals/talyndor.png',imageSize:[7036,8192],
+ realm:'talyndor',short:'Talyndor',title:'Das Königreich Talyndor',continent:'Aldervan',emblem:'assets/crests/talyndor.webp',emblemFull:'assets/originals/talyndor.png',imageSize:[7036,8192],
  introduction:'Das Bruderkönigreich Aeldrunmars verbindet eine eng verwandte Kultur mit einer eigenen ritterlichen Prägung. Lange Kettenhauberks, starke Ritterhelme und große Mandelschilde bestimmen die Hausdarstellungen. Offenes Kulturland, ausgedehnte Wälder und hohe Bergsäume geben den einzelnen Gebieten ihre Zeichen.',
  note:'Vier Earltümer und zwölf Kartenorte erhalten eigene Banner. Alle Ortsnamen und der Name Aldred für das namenlose Königswappen sind Vorschläge. Die drei bezeichneten Earlshäuser und das Königshaus beginnen an ihren erkennbaren Hauptsitzen; alle übrigen Häuser bleiben frei. Sechs neue Haus- und Wappenentwürfe ergänzen die elf gelieferten Häuser und das bereits belegte Haus Thornwick. Die Karte zeigt die überlieferte Gliederung; gegenwärtige Herrschaft wird daraus nicht abgeleitet. Alle Sitzentwürfe bleiben lokal.',
  historyHeading:'Ein Bruderkönigreich mit eigener Ritterkultur.',

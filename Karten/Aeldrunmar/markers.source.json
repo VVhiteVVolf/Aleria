@@ -1,0 +1,618 @@
+{
+  "imageSize": [
+    8192,
+    6072
+  ],
+  "coordinateOrigin": "bottom-left",
+  "markers": [
+    {
+      "id": "aeldrunmar-aeldros",
+      "title": "Ældros",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-aeldros",
+      "x": 1515.52,
+      "y": 5719.8240000000005,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-aeldros",
+      "residentFamilyIds": [
+        "haus-beran",
+        "haus-coelret",
+        "haus-thynne"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "aeldros",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          18.5,
+          5.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-mornhall",
+      "title": "Mornhall",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-mornhall",
+      "x": 524.288,
+      "y": 5130.84,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-mornhall",
+      "residentFamilyIds": [
+        "haus-giffard"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "mornhall",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          6.4,
+          15.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-itharol",
+      "title": "Itharol",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-itharol",
+      "x": 1867.776,
+      "y": 4104.672,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-itharol",
+      "residentFamilyIds": [
+        "haus-oiscingas"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "itharol",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          22.8,
+          32.4
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-virelith",
+      "title": "Virelith",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-virelith",
+      "x": 2539.52,
+      "y": 5719.8240000000005,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-virelith",
+      "residentFamilyIds": [
+        "haus-swygert"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "virelith",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          31,
+          5.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-glenfara",
+      "title": "Glenfara",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-glenfara",
+      "x": 4341.76,
+      "y": 5464.8,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-glenfara",
+      "residentFamilyIds": [
+        "haus-earncynne",
+        "haus-dunstan",
+        "haus-granger"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "glenfara",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          53,
+          10
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-ghrenholt",
+      "title": "Greenholt",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-ghrenholt",
+      "x": 3284.992,
+      "y": 4614.72,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-ghrenholt",
+      "residentFamilyIds": [
+        "haus-cerdic"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "ghrenholt",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          40.1,
+          24
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-rivisra",
+      "title": "Rivisra",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-rivisra",
+      "x": 4988.928,
+      "y": 4887.96,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-rivisra",
+      "residentFamilyIds": [
+        "haus-derwent"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "rivisra",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          60.9,
+          19.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-faelthar",
+      "title": "Faelthar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-faelthar",
+      "x": 4341.76,
+      "y": 3278.88,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-faelthar",
+      "residentFamilyIds": [
+        "haus-aubigny"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "faelthar",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          53,
+          46
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-thalrune",
+      "title": "Thalrune",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-thalrune",
+      "x": 5734.4,
+      "y": 3795,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-thalrune",
+      "residentFamilyIds": [
+        "haus-thwing"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "thalrune",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          70,
+          37.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-eldramar",
+      "title": "Eldramar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-eldramar",
+      "x": 5488.64,
+      "y": 2501.664,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-eldramar",
+      "residentFamilyIds": [
+        "haus-estmere",
+        "haus-irwynne",
+        "haus-leofric"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "eldramar",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          67,
+          58.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-eadwick",
+      "title": "Eadwick",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-eadwick",
+      "x": 5816.32,
+      "y": 5221.92,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-eadwick",
+      "residentFamilyIds": [
+        "haus-whiting"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "eadwick",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          71,
+          14
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-linthar",
+      "title": "Linthar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-linthar",
+      "x": 7020.544,
+      "y": 4857.6,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-linthar",
+      "residentFamilyIds": [
+        "haus-wend"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "linthar",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          85.7,
+          20
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-luthirrith",
+      "title": "Luthirrith",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-luthirrith",
+      "x": 6635.52,
+      "y": 4311.12,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-luthirrith",
+      "residentFamilyIds": [
+        "haus-dimholt"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "luthirrith",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          81,
+          29
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-trentmorath",
+      "title": "Trentmorath",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-trentmorath",
+      "x": 7192.576,
+      "y": 3297.0959999999995,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-trentmorath",
+      "residentFamilyIds": [
+        "haus-tharn",
+        "haus-heswick",
+        "haus-ransford"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "trentmorath",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          87.8,
+          45.7
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-kaldhorn",
+      "title": "Kaldhorn",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-kaldhorn",
+      "x": 958.4639999999999,
+      "y": 3029.928,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-kaldhorn",
+      "residentFamilyIds": [
+        "haus-seolfor"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "kaldhorn",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          11.7,
+          50.1
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-dunrath",
+      "title": "Dunrath",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-dunrath",
+      "x": 614.4,
+      "y": 2398.44,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-dunrath",
+      "residentFamilyIds": [
+        "haus-cutting"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "dunrath",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          7.5,
+          60.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-glendir",
+      "title": "Glendir",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-glendir",
+      "x": 1875.9679999999998,
+      "y": 1991.6159999999998,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-glendir",
+      "residentFamilyIds": [
+        "haus-humber"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "glendir",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          22.9,
+          67.2
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-aeldrunhal",
+      "title": "Ældrunhal",
+      "category": "Hauptstadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-aeldrunhal",
+      "x": 2670.592,
+      "y": 2683.824,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-aeldrunhal",
+      "residentFamilyIds": [
+        "haus-kendryck",
+        "haus-boxton",
+        "haus-lir",
+        "haus-skelton",
+        "haus-trevelyan"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "aeldrunhal",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          32.6,
+          55.8
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-virelath",
+      "title": "Virelath",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-virelath",
+      "x": 3284.992,
+      "y": 1657.6559999999997,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-virelath",
+      "residentFamilyIds": [
+        "haus-trent"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "virelath",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          40.1,
+          72.7
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-hydrathar",
+      "title": "Hydrathar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-hydrathar",
+      "x": 1433.6,
+      "y": 771.1440000000002,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-hydrathar",
+      "residentFamilyIds": [
+        "haus-edgcumbe"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "hydrathar",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          17.5,
+          87.3
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-veyrthar",
+      "title": "Veyrthar",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-veyrthar",
+      "x": 4743.168,
+      "y": 1032.24,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-veyrthar",
+      "residentFamilyIds": [
+        "haus-frye",
+        "haus-brymwulf"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "veyrthar",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          57.9,
+          83
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-kaldun",
+      "title": "Kaldun",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-kaldun",
+      "x": 5079.04,
+      "y": 2337.7200000000003,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-kaldun",
+      "residentFamilyIds": [
+        "haus-edwynne"
+      ],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "kaldun",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          62,
+          61.5
+        ],
+        "provisional": false
+      }
+    },
+    {
+      "id": "aeldrunmar-hingstgard",
+      "title": "Hingstgard",
+      "category": "Stadt",
+      "templateId": "siedlung",
+      "icon": "/Karten/assets/icons/welt/stadt.png",
+      "territoryId": "aeldrunmar-sitz-hingstgard",
+      "x": 4259.84,
+      "y": 2459.1600000000003,
+      "href": "/Orte/grossstadt.html?id=aeldrunmar-hingstgard",
+      "residentFamilyIds": [],
+      "sourceRef": {
+        "provider": "aleria-accepted-realms",
+        "acceptedOn": "2026-11-01",
+        "settlementId": "hingstgard",
+        "coordinateOrigin": "top-left",
+        "coordinateUnit": "percent",
+        "coordinates": [
+          52,
+          59.5
+        ],
+        "provisional": false
+      }
+    }
+  ]
+}

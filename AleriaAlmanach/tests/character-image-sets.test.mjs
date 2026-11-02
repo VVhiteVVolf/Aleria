@@ -85,6 +85,39 @@ test('neue Sets erhalten beim ersten Serialisieren stabile Zeitstempel', () => {
   assert.equal(second[0].updatedAt, first[0].updatedAt);
 });
 
+test('freie Set-Reihenfolge bleibt beim Speichern und Laden erhalten; Standard bleibt Legacy-Quelle', () => {
+  const model = loadImageSetModel();
+  const imageSets = [
+    { id: 'kampf', name: 'Kampf', portrait: 'https://example.com/kampf.png' },
+    { id: 'hochzeit', name: 'Hochzeit' },
+    { id: 'standard', portrait: 'https://example.com/standard.png', emotes: [{ img: 'https://example.com/emote.png' }] }
+  ];
+  const saved = model.prepareStorage({ imageSets, activeImageSetId: 'kampf' });
+  assert.equal(JSON.stringify(saved.imageSets.map(set => set.id)), '["kampf","hochzeit","standard"]');
+  assert.equal(JSON.stringify(model.normalize(saved)), JSON.stringify(saved.imageSets));
+  assert.equal(saved.portrait, 'https://example.com/standard.png');
+  assert.equal(saved.emotes[0].img, 'https://example.com/emote.png');
+  assert.equal(saved.activeImageSetId, 'kampf');
+  assert.equal(model.get(saved, 'entfernt').id, 'standard');
+  assert.equal(imageSets[0].createdAt, undefined, 'Normalisierung verändert die Quelle nicht');
+});
+
+test('Standard bleibt bei überschrittenem Set-Limit erhalten, auch an letzter Position', () => {
+  const model = loadImageSetModel();
+  const imageSets = [...Array.from({ length: 25 }, (_, i) => ({ id: `set-${i}` })), { id: 'standard' }];
+  const sets = model.normalize({ imageSets });
+  assert.equal(sets.length, 20);
+  assert.equal(sets.at(-1).id, 'standard');
+  assert.equal(sets[0].id, 'set-0');
+});
+
+test('Browser und generiertes Servermodell verwenden dieselbe Set-Reihenfolge', () => {
+  assert.equal(
+    fs.readFileSync(new URL('../modules/image-library/image-library-model.js', import.meta.url), 'utf8'),
+    fs.readFileSync(new URL('../../firebase/functions/src/generated/image-library/image-library-model.js', import.meta.url), 'utf8')
+  );
+});
+
 test('Imgur-Proxy verwendet den offiziellen Album-Endpunkt und gibt nur direkte Bildlinks zurück', async () => {
   const previousClientId = process.env.ALERIA_IMGUR_CLIENT_ID;
   const previousFetch = globalThis.fetch;

@@ -3,7 +3,7 @@ import { housePlacement } from '../../../../shared/accepted-realms/house-placeme
 import { createBlankHouseFamily } from './blank-house-family-factory.js';
 import { normalizeHouseProfile } from '../domain/house-profile.js';
 
-const existing = new Set(['haus-sonnenfels', 'haus-weinlaub']);
+const existing = new Set(['haus-sonnenfels', 'haus-weinlaub', 'haus-kendryck', 'haus-beran', 'haus-earncynne', 'haus-estmere', 'haus-frye', 'haus-seolfor', 'haus-scandyn', 'haus-thornwick', 'haus-bielle']);
 export const ACCEPTED_REALM_FAMILIES = Object.freeze(allHouses.filter(h => !existing.has(h.familyId)).map(house => {
   const realm = realmsById.get(house.realmId);
   const placement = housePlacement(realm, house);
@@ -12,10 +12,10 @@ export const ACCEPTED_REALM_FAMILIES = Object.freeze(allHouses.filter(h => !exis
     emblem: house.crest.replace(/^\/Stammbäume\//, ''), houseProfile: profile,
     description: `${houseTitle(house)} · ${house.rank} · ${placement.seat}. Familienakte mit bestätigter örtlicher Zuordnung; Genealogie noch offen.` });
   return Object.freeze({ ...family,
-    houses: family.houses.map(h => ({ ...h, id: house.houseId })),
+    houses: family.houses.map(h => ({ ...h, id: house.houseId, ...(house.extinct ? { status: 'extinct' } : {}) })),
     lineage: { ...family.lineage, houseId: house.houseId, crestFrame: ['junker', 'ministerial', 'laird'].includes(house.rankId) ? 'silver' : 'gold' },
-    extensions: { ...family.extensions, sourceRevision: 1, acceptedRealm: realm.id, acceptedOn: '2026-10-28',
-      territorialSource: `shared/accepted-realms/data/${realm.id}.source.json`,
+    extensions: { ...family.extensions, sourceRevision: 1, acceptedRealm: realm.id, acceptedOn: house.acceptedOn || realm.acceptedOn,
+      territorialSource: house.territorialSource || `shared/accepted-realms/data/${realm.id}.source.json`,
       historicalJurisdiction: !!realm.historical, occupiedHomeland: !!realm.occupied,
       identityReferences: house.identityReferences || [] },
   });
@@ -32,7 +32,7 @@ export function withAcceptedRealmPlacement(family) {
   const placement = unlocatedGoldmund
     ? { ...rodenPlacement, rankId: 'ministerial', seat: 'Burg Hochreuth', liegeHouseId: 'house-roden', liegeHouseName: 'Haus Roden' }
     : housePlacement(realmsById.get(house.realmId), house);
-  const revision = unlocatedGoldmund ? 8 : 4;
+  const revision = unlocatedGoldmund ? 8 : house?.existingFamily ? 5 : 4;
   const fields = Object.keys(placement);
   return Object.freeze({ ...family, document: { ...family.document,
     houseProfile: { ...family.document.houseProfile, ...placement } },
@@ -40,7 +40,7 @@ export function withAcceptedRealmPlacement(family) {
       registryManagedHouseProfileFields: [...new Set([...(family.extensions?.registryManagedHouseProfileFields || []), ...fields])],
       registryManagedHouseProfileFieldRevisions: { ...family.extensions?.registryManagedHouseProfileFieldRevisions, ...Object.fromEntries(fields.map(field => [field, revision])) },
       registryManagedRecordFields: [...new Set([...(family.extensions?.registryManagedRecordFields || []), 'folderPath'])],
-      acceptedRealmPlacement: 1 } });
+      acceptedRealmPlacement: house?.existingFamily ? 2 : 1 } });
 }
 
 export const ACCEPTED_REALM_FOLDERS = Object.freeze([...new Map(allHouses.map(house => {

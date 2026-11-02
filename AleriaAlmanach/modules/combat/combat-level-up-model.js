@@ -11,19 +11,13 @@ import {
 } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
 import { getArmorRoutine } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
-import { getCharacterCreationTemplate } from './character-creation-templates.js?v=20260909-dragon-parent-v2';
-import { addMissingCombatStyleTechniques } from '../combat-styles/combat-style-registry.js?v=20260909-dragon-parent-v2';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
-import { getCenyrClassDefinitionForProfile } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
-import {
-  getCenyrLevelUpTrainingChoices,
-  selectCenyrTrainingOption
-} from '../classes/cenyr/cenyr-class-training.js?v=20260909-dragon-parent-v2';
-import {
-  reconcileCenyrTrainingForLevel
-} from '../classes/cenyr/cenyr-technique-selection.js?v=20260928-equipment-art-v4';
 
 import { getActionPoolChoiceGroups, fillActionPoolChoices, normalizeActionPoolChoices, ACTION_POOL_LABELS } from './combat-action-progression.js?v=20260905-resource-balance-v2';
+import { normalizeDevelopment } from '../character-development/development-state.js';
+import { applyDevelopmentChoices } from '../character-development/development-purchases.js';
+import { DEVELOPMENT_TRAITS } from '../character-development/development-traits.js';
+import { getDevelopmentTraitId } from '../character-development/development-entry-reference.js';
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);
 export const CHARACTER_ATTRIBUTE_INCREASE_LEVELS = Object.freeze([4, 8, 12, 16, 20]);
@@ -100,6 +94,14 @@ function normalizePlan(profile, value = {}) {
   const newSpell = value.newSpell || {};
   const skillProficiency = text(newSkill.proficiency, 20);
   return {
+    targetLevel: boundedInteger(value.targetLevel, Math.min(30, getEffectiveCombatLevel(profile) + 1), getEffectiveCombatLevel(profile), 30),
+    purchaseClass: value.purchaseClass == null ? 'own' : text(value.purchaseClass, 120),
+    purchaseSearch: text(value.purchaseSearch, 120),
+    traitSearch: text(value.traitSearch, 120),
+    traitGroup: ['all','selected','normal','body','unique','aptitude','bloodline','therianthropy','symbiosis','affliction','fever','addiction','tolerance','psychological','positive','negative'].includes(value.traitGroup) ? value.traitGroup : 'all',
+    development: normalizeDevelopment({ ...profile.progression.development, ...value.development }),
+    purchaseIds: [...new Set((Array.isArray(value.purchaseIds)?value.purchaseIds:[]).map(id => text(id, 400)))].slice(0, 256),
+    traitIds: [...new Set((Array.isArray(value.traitIds)?value.traitIds:profile.quirks.filter(q => q.active !== false && DEVELOPMENT_TRAITS.some(t => t.id === getDevelopmentTraitId(q))).map(getDevelopmentTraitId)).map(id => text(id, 120)))],
     experience: boundedInteger(value.experience, profile.progression.experience, 0, 999999999),
     nextLevelExperience: optionalInteger(value.nextLevelExperience, 1, 999999999),
     hitPointMode: HIT_POINT_MODES.has(hpMode) ? hpMode : 'recommended',
@@ -183,6 +185,20 @@ function applyOptionalAdditions(profile, plan, targetLevel, changes) {
   }
 }
 
+function applyResourceIncreases(profile, plan, changes) {
+  profile.resources.forEach(resource => {
+    if (['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'].includes(resource.id)) return;
+    const increase = plan.resourceIncreases[resource.id];
+    if (!increase) return;
+    const beforeMaximum = resource.maximum;
+    const beforeCurrent = resource.current;
+    resource.maximum = Math.max(0, Math.min(9999, resource.maximum + increase.maximum));
+    resource.current = Math.max(-9999, Math.min(9999, resource.current + increase.current));
+    appendChange(changes, `resource-${resource.id}-maximum`, `${resource.name} Maximum`, beforeMaximum, resource.maximum);
+    appendChange(changes, `resource-${resource.id}-current`, `${resource.name} aktuell`, beforeCurrent, resource.current);
+  });
+}
+
 export function getSuggestedHitPointGain(profile = {}) {
   const normalized = sanitizeCharacterCombatProfile(profile);
   const constitution = getAttribute(normalized, 'constitution');
@@ -209,7 +225,7 @@ export function createCharacterLevelUpPlan(profile = {}) {
   });
 }
 
-export function previewCharacterLevelUp(profile = {}, planValue = {}) {
+function previewSingleCharacterLevelUp(profile = {}, planValue = {}) {
   const beforeProfile = sanitizeCharacterCombatProfile(profile);
   const nextProgression = getNextProgression(beforeProfile);
   if (!nextProgression) {
@@ -225,15 +241,11 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   }
 
   const plan = normalizePlan(beforeProfile, planValue);
-  const classTrainingChoiceGroups = getCenyrLevelUpTrainingChoices(beforeProfile, nextProgression.level);
+  const classTrainingChoiceGroups = [];
   const attributePointAllowance = getLevelUpAttributePointAllowance(beforeProfile);
   const allocatedAttributePoints = Object.values(plan.attributeIncreases)
     .reduce((sum, value) => sum + Math.max(0, Number(value) || 0), 0);
-  const attributeErrors = allocatedAttributePoints === attributePointAllowance
-    ? []
-    : [attributePointAllowance > 0
-        ? `Verteile für diesen Stufenaufstieg genau ${attributePointAllowance} Attributspunkte (${allocatedAttributePoints} vergeben).`
-        : 'Dieser Stufenaufstieg gewährt keine Attributspunkte.'];
+  const attributeErrors = [];
   const classTrainingErrors = classTrainingChoiceGroups
     .filter(group => group.required && !plan.classTrainingChoices[group.kind])
     .map(group => `Wähle für diesen Stufenaufstieg: ${group.label}.`);
@@ -296,66 +308,10 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
       : Math.max(0, Math.min(afterMaximumHitPoints, interimProfile.hitPoints.current));
   }
 
-  interimProfile.resources.forEach(resource => {
-    if (['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'].includes(resource.id)) return;
-    const increase = plan.resourceIncreases[resource.id];
-    if (!increase) return;
-    const beforeMaximum = resource.maximum;
-    const beforeCurrent = resource.current;
-    resource.maximum = Math.max(0, Math.min(9999, resource.maximum + increase.maximum));
-    resource.current = Math.max(-9999, Math.min(9999, resource.current + increase.current));
-    appendChange(changes, `resource-${resource.id}-maximum`, `${resource.name} Maximum`, beforeMaximum, resource.maximum);
-    appendChange(changes, `resource-${resource.id}-current`, `${resource.name} aktuell`, beforeCurrent, resource.current);
-  });
-
-  const classTemplate = getCharacterCreationTemplate('class', interimProfile.templateSelections.classId);
-  const cenyrDefinition = getCenyrClassDefinitionForProfile(interimProfile);
-  let selectedTrainingProfile = interimProfile;
-  if (!cenyrDefinition) {
-    const styleProgression = addMissingCombatStyleTechniques(
-      interimProfile.techniques,
-      classTemplate?.combatStyleGrants,
-      beforeLevel + 1
-    );
-    selectedTrainingProfile.techniques = styleProgression.techniques;
-    styleProgression.added.forEach(technique => {
-      changes.push({
-        key: `combat-style-technique-${technique.id}`,
-        label: 'Neue Kampfstiltechnik',
-        before: '—',
-        after: technique.name
-      });
-    });
-  }
-  classTrainingChoiceGroups.forEach(group => {
-    const selectionId = plan.classTrainingChoices[group.kind];
-    if (!selectionId) return;
-    const result = selectCenyrTrainingOption(selectedTrainingProfile, {
-      kind: group.kind,
-      selectionId,
-      selectedAtLevel: nextProgression.level
-    });
-    if (!result.ok) {
-      classTrainingErrors.push(...result.errors);
-      return;
-    }
-    selectedTrainingProfile = result.profile;
-    const label = group.options.find(option => option.id === selectionId)?.name || selectionId;
-    changes.push({
-      key: `class-training-${group.kind}-${selectionId}`,
-      label: group.kind === 'foundation' ? 'Gewählte Grundausbildung' : group.kind === 'path' ? 'Gewählter Expertenpfad' : 'Gewählter Waffenweg',
-      before: '—',
-      after: `${label}${result.spentSlot ? ` · belegt ${result.spentSlot.id}` : ' · ohne Slotkosten'}`
-    });
-  });
+  applyResourceIncreases(interimProfile, plan, changes);
 
   const classTechniqueChoiceGroups = [];
-  selectedTrainingProfile = reconcileCenyrTrainingForLevel(selectedTrainingProfile, nextProgression.level, { autoFill: true }).profile;
-  const previousTechniqueIds = new Set((beforeProfile.techniques || []).map(technique => technique.id));
-  selectedTrainingProfile.techniques.filter(technique => !previousTechniqueIds.has(technique.id)).forEach(technique => changes.push({
-    key: `class-technique-${technique.id}`, label: 'Automatisch erlernte Formtechnik', before: '—', after: technique.name
-  }));
-  const classProgression = applyCenyrClassLevelProgression(selectedTrainingProfile, nextProgression.level);
+  const classProgression = applyCenyrClassLevelProgression(interimProfile, nextProgression.level);
   classProgression.unlockedFeatures.forEach(feature => changes.push({
     key: `class-feature-${feature.id}`,
     label: 'Neues Klassenmerkmal',
@@ -421,27 +377,68 @@ export function previewCharacterLevelUp(profile = {}, planValue = {}) {
   };
 }
 
+// Multi-level preview composes the existing HP/resource progression one level at
+// a time. Editorial additions and purchases are applied once, at the destination.
+export function previewCharacterLevelUp(profile = {}, planValue = {}) {
+  const before = sanitizeCharacterCombatProfile(profile);
+  const plan = normalizePlan(before, planValue);
+  let next = sanitizeCharacterCombatProfile(before);
+  next.progression.development = plan.development;
+  const startLevel = getEffectiveCombatLevel(before);
+  let last = null;
+  const changes = [], errors = [];
+  const attributePointAllowance = Array.from({ length: Math.max(0, plan.targetLevel - startLevel) }, (_, i) => startLevel + i + 1)
+    .reduce((sum, level) => sum + (level > 20 ? 4 : CHARACTER_ATTRIBUTE_INCREASE_LEVELS.includes(level) ? 2 : 0), 0);
+  while (getEffectiveCombatLevel(next) < plan.targetLevel) {
+    const finalStep = getEffectiveCombatLevel(next) + 1 === plan.targetLevel;
+    last = previewSingleCharacterLevelUp(next, { ...plan,
+      attributeIncreases: finalStep ? plan.attributeIncreases : {},
+      resourceIncreases: finalStep ? plan.resourceIncreases : {},
+      newSkill: finalStep ? plan.newSkill : {}, newAbility: finalStep ? plan.newAbility : {}, newSpell: finalStep ? plan.newSpell : {} });
+    next = last.profile;
+    changes.push(...last.changes.filter(c => c.key !== 'level'));
+    errors.push(...last.errors);
+  }
+  if (plan.targetLevel === startLevel) {
+    next.progression.experience=plan.experience;
+    next.progression.nextLevelExperience=plan.nextLevelExperience;
+    appendChange(changes,'experience','Erfahrung',before.progression.experience,plan.experience);
+    appendChange(changes,'next-level-experience','Nächste Stufe bei',before.progression.nextLevelExperience??'—',plan.nextLevelExperience??'—');
+    if(Object.keys(plan.actionPoolChoices).length){
+      const choices=[...next.progression.actionPoolChoices.filter(c=>!Object.hasOwn(plan.actionPoolChoices,c.level)),
+        ...Object.entries(plan.actionPoolChoices).map(([level,resourceId])=>({level:Number(level),resourceId}))];
+      next.progression.actionPoolChoices=normalizeActionPoolChoices(choices,next.progression.level);
+      for(const group of getActionPoolChoiceGroups(next.progression.actionPoolChoices,next.progression.level))if(!group.selectedId)errors.push(`Wähle eine gültige Poolsteigerung für Stufe ${group.level}.`);
+    }
+    applyResourceIncreases(next, plan, changes);
+    for (const attribute of next.attributes) attribute.score = Math.min(40, attribute.score + (plan.attributeIncreases[attribute.key] || 0));
+    applyOptionalAdditions(next, plan, startLevel, changes);
+  }
+  const choices = applyDevelopmentChoices(next, plan);
+  const finalProfile = sanitizeCharacterCombatProfile(choices.profile);
+  if (finalProfile.hitPoints.current != null) finalProfile.hitPoints.current = Math.min(finalProfile.hitPoints.current, getMaximumHitPoints(finalProfile));
+  const allocatedAttributePoints = Object.values(plan.attributeIncreases).reduce((sum, n) => sum + n, 0);
+  changes.unshift({ key: 'level', label: 'Gesamtstufe', before: startLevel, after: plan.targetLevel });
+  changes.push(...choices.changes, { key: 'development-balance', label: 'Balancepunkte übrig', before: '—', after: choices.balance.remaining });
+  errors.push(...choices.errors);
+  return { ...(last || {}), plan, ready: errors.length === 0, errors: [...new Set(errors)], profile: finalProfile, changes,
+    balance: choices.balance, attributePointAllowance, allocatedAttributePoints, remainingAttributePoints: attributePointAllowance - allocatedAttributePoints,
+    classTrainingChoiceGroups: [], classTechniqueChoiceGroups: [], actionPoolChoiceGroups: getActionPoolChoiceGroups(finalProfile.progression.actionPoolChoices,finalProfile.progression.level),
+    before: { level: startLevel, maximumHitPoints: getMaximumHitPoints(before), proficiencyBonus: getProficiencyBonus(before) },
+    after: { level: plan.targetLevel, normalLevel: finalProfile.progression.level, specialLevels: finalProfile.progression.specialLevels,
+      levelKind: plan.targetLevel > 20 ? 'special' : 'normal', maximumHitPoints: getMaximumHitPoints(finalProfile), proficiencyBonus: getProficiencyBonus(finalProfile) }
+  };
+}
+
 export function applyManualCharacterLevel(profile = {}, targetLevelValue = 1) {
   const beforeProfile = sanitizeCharacterCombatProfile(profile);
   const targetLevel = boundedInteger(targetLevelValue, beforeProfile.progression.level, 1, 20);
   const next = sanitizeCharacterCombatProfile(beforeProfile);
+  next.progression.development = normalizeDevelopment(beforeProfile.progression.development);
   next.progression.level = targetLevel;
   next.progression.actionPoolChoices = fillActionPoolChoices(next.progression.actionPoolChoices, targetLevel);
   if (targetLevel < 20) next.progression.specialLevels = 0;
-  const definition = getCenyrClassDefinitionForProfile(next);
-  let reconciled = { profile: next, added: [], pending: [] };
-
-  if (definition) {
-    reconciled = reconcileCenyrTrainingForLevel(next, targetLevel, { autoFill: true });
-    reconciled.profile = applyCenyrClassLevelProgression(reconciled.profile, targetLevel).profile;
-  } else if (targetLevel > beforeProfile.progression.level) {
-    const classTemplate = getCharacterCreationTemplate('class', next.templateSelections.classId);
-    const progression = addMissingCombatStyleTechniques(next.techniques, classTemplate?.combatStyleGrants, targetLevel);
-    next.techniques = progression.techniques;
-    reconciled = { profile: next, added: progression.added, pending: [] };
-  }
-
-  const normalized = sanitizeCharacterCombatProfile(reconcileCenyrTrainingForLevel(reconciled.profile, targetLevel, { autoFill: true }).profile);
+  const normalized = sanitizeCharacterCombatProfile(applyCenyrClassLevelProgression(next, targetLevel).profile);
   const maximumHitPoints = getMaximumHitPoints(normalized);
   if (normalized.hitPoints.current != null) {
     normalized.hitPoints.current = normalized.hitPoints.vitality
@@ -452,8 +449,8 @@ export function applyManualCharacterLevel(profile = {}, targetLevelValue = 1) {
     profile: normalized,
     beforeLevel: beforeProfile.progression.level,
     targetLevel,
-    addedTechniques: reconciled.added,
-    pendingTechniqueSlots: reconciled.pending
+    addedTechniques: [],
+    pendingTechniqueSlots: []
   };
 }
 

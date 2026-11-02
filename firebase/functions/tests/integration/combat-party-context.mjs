@@ -6,7 +6,7 @@ import { getBuiltinCreatureTemplates } from '../../../../AleriaAlmanach/modules/
 import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../../../../AleriaAlmanach/modules/combat/combat-state-model.js';
 import { withEquippedCombatWeapon } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
-import { applyManualCharacterLevel } from '../../../../AleriaAlmanach/modules/combat/combat-level-up-model.js';
+import { applyManualCharacterLevel, previewCharacterLevelUp } from '../../../../AleriaAlmanach/modules/combat/combat-level-up-model.js';
 
 const templates = new Map(getBuiltinCreatureTemplates().map(creature => [creature.id, creature]));
 
@@ -22,6 +22,10 @@ export async function createCombatParty(definitions, title = 'Gemischte Kampfgru
       actor.entityType = 'creature';
     }
     if (definition.level) actor.combatProfile = applyManualCharacterLevel(actor.combatProfile, definition.level).profile;
+    if(definition.purchaseIds){
+      const chosen=previewCharacterLevelUp(actor.combatProfile,{targetLevel:actor.combatProfile.progression.level,purchaseIds:definition.purchaseIds});
+      assert.equal(chosen.ready,true,chosen.errors.join(' '));actor.combatProfile=chosen.profile;
+    }
     if (definition.hitPoints != null) actor.combatProfile.hitPoints.current = definition.hitPoints;
     return { ...actor, combatTeam: definition.team, testKey: definition.key };
   }));

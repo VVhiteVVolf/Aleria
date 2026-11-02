@@ -93,7 +93,7 @@
     content.append(
       renderTableOfContents(),
       renderCopySection("uebersicht", "1.) Übersicht", article.copy?.overview),
-      renderCopySection("geschichte", "2.) Geschichte", article.copy?.history)
+      renderCopySection("geschichte", "2.) Geschichte", article.copy?.history, "", article.historySections)
     );
 
     const sidebar = document.createElement("td");
@@ -297,6 +297,19 @@
     for (const subsection of subsections || []) {
       section.append(createElement("h3", "herrschaft-subheading", subsection.title));
       appendParagraphs(section, subsection.paragraphs);
+      for (const item of subsection.images || []) {
+        const figure = createElement("figure", "herrschaft-history-emblem");
+        const link = createElement("a");
+        link.href = item.fullsize || item.src;
+        const image = createImage(item.src, item.alt || subsection.title);
+        image.width = 180;
+        image.height = 180;
+        image.loading = "lazy";
+        link.append(image);
+        figure.append(link);
+        if (item.caption) figure.append(createElement("figcaption", "", item.caption));
+        section.append(figure);
+      }
       for (const item of subsection.links || []) {
         const paragraph = createElement("p", "herrschaft-reference-link");
         const link = createElement("a", "", item.label);

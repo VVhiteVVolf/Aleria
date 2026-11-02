@@ -1,0 +1,1566 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-11-01",
+  "admissionVersion": "20261101",
+  "id": "talyndor",
+  "name": "Talyndor",
+  "continent": "Aldervan",
+  "capital": "edrington",
+  "ruler": "aldred",
+  "people": "Talyndorer",
+  "rootId": "koenigreich-talyndor",
+  "historical": true,
+  "occupier": "triarchie",
+  "title": "Königreich Talyndor",
+  "type": "Königreich",
+  "urbanHouseTerritories": false,
+  "mapSource": "/Karten/Talyndor/Kartenbilder/normal.webp",
+  "map": "/Karten/Talyndor/Kartenbilder/normal.svg",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/talyndor.webp",
+  "context": {
+    "introduction": "Talyndor war das Bruderkönigreich Aeldrunmars. Eine eng verwandte Reiter- und Agrarkultur verband die Zwillingskronen; Talyndor entwickelte zugleich eine eigene Tradition schwer gerüsteter Ritter und Fußkämpfer. Seit dem Umsturz von 1720 steht das Land unter der Herrschaft der Triarchie. Die hier verzeichneten Earltümer und Hausbindungen beschreiben seine frühere Ordnung.",
+    "history": [
+      {
+        "title": "Die Zwillingskronen",
+        "text": "Aeldrunmar und Talyndor galten als Bruderkönigreiche und teilten einen großen Teil ihrer Kultur. Landwirtschaft, ritterliche Ausbildung und die verwandten Traditionen ihrer Häuser verbanden beide Länder."
+      },
+      {
+        "title": "Earls, Thains und Königssitz",
+        "text": "Die Krone der Aldred hatte ihren Sitz in Edrington. Lennwyck, Warren und Brigane führten die drei weiteren Earltümer. Eigene Domänen und weitere Thaintümer gliederten das Land."
+      },
+      {
+        "title": "Die verlorene Eigenständigkeit",
+        "text": "Die Triarchie eignete sich Talyndor im Zusammenhang mit den Umwälzungen von 1720 an. Die frühere Sitzordnung belegt weder eine Rückeroberung noch die gegenwärtige Kontrolle durch einheimische Häuser."
+      },
+      {
+        "title": "Thornwick und Thornholt",
+        "text": "Thornwick war ein niederes Rittergeschlecht der Warren. Seine Waldburg Thornholt ging 1720 verloren. Refri führt das heimatlose Haus weiter. Die örtliche Zuordnung zu Wensbury hält den überlieferten Zusammenhang fest und stellt Thornholt nicht wieder her."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Land und Hauszeichen",
+        "text": "Offenes Kulturland, große Wälder und hohe Bergsäume prägten die Earltümer. Die Lennwyck führten den Löwen, die Warren den Wolf, die Brigane zwei wütende weiße Pitbulls und die Aldred eine Burg in ihrem Hauszeichen."
+      },
+      {
+        "title": "Miles und Ceorl",
+        "text": "Miles trugen lange Kettenhauberks, starke Ritterhelme, Schwerter und große Schilde. Ceorl kämpften als schwer gepanzerte Infanteristen mit Morgenstern, Flegel oder Streitkolben."
+      },
+      {
+        "title": "Weitere Ausbildungswege",
+        "text": "Isen führten Schwerter, Wigar Stangenwaffen. Hyld, Scoet und Gliwere waren seltener: Reiterritter, berittene Schützen und ritterliche Fechter mit Musik und Dichtung."
+      }
+    ],
+    "notes": [
+      "Die Familienzuordnungen beschreiben die überlieferte Heimat. Heutige Bewohner und tatsächliche Besitzrechte unter der Besatzung werden daraus nicht abgeleitet."
+    ]
+  },
+  "notes": [
+    "Die Familienzuordnungen beschreiben die überlieferte Heimat. Heutige Bewohner und tatsächliche Besitzrechte unter der Besatzung werden daraus nicht abgeleitet."
+  ],
+  "design": {},
+  "mapAnnotations": [],
+  "regions": [
+    {
+      "id": "lennwyck",
+      "name": "Earltum der Lennwyck",
+      "regionName": "Lennwyckland",
+      "colour": "#b57a49",
+      "capital": "wetherham",
+      "motif": "Ein großer dunkelroter aufgerichteter Löwe auf Goldocker; schmale schwarze und rote Flechtbänder am Rand. Die Farben und der Löwe des Hauses Lennwyck bleiben bestimmend.",
+      "palette": [
+        "Goldocker",
+        "Dunkelrot",
+        "Eisenschwarz"
+      ],
+      "geography": "Das nördliche Earltum besitzt viel offenes, leicht hügeliges Land; im Osten und Süden steigen Berge auf.",
+      "title": "Earltum",
+      "art": "earldom-lennwyck",
+      "seats": [
+        "wetherham",
+        "dunworth",
+        "cawden"
+      ],
+      "ruler": "lennwyck",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Lennwyckland"
+    },
+    {
+      "id": "warren",
+      "name": "Earltum der Warren",
+      "regionName": "Warrenfold",
+      "colour": "#9eaa3f",
+      "capital": "wensbury",
+      "motif": "Ein großer dunkelroter frontal gesehener Wolfskopf auf Elfenbein, dunkelgraue schmale Randstreifen mit zurückhaltendem rotem Flechtband. Das persönliche Hauszeichen der Warren bestimmt das Earltumsbanner.",
+      "palette": [
+        "Elfenbein",
+        "Dunkelrot",
+        "Anthrazit"
+      ],
+      "geography": "Das westliche Earltum umfasst offenes Weideland, niedrige Hügel und einen großen zusammenhängenden Laubwald um den Hauptort.",
+      "title": "Earltum",
+      "art": "earldom-warren",
+      "seats": [
+        "eldenwick",
+        "wensbury",
+        "hartham"
+      ],
+      "ruler": "warren",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Warrenfold"
+    },
+    {
+      "id": "aldred",
+      "name": "Königliches Earltum der Aldred",
+      "regionName": "Aldredhold",
+      "colour": "#58aa41",
+      "capital": "edrington",
+      "motif": "Eine große elfenbeinfarbene dreitürmige Burg über drei hellen waagerechten Wellenlinien auf Dunkelrot, schmaler schwarzer Innenrand und edle helle Blütenranken. Motiv und Farben des namenlos gelieferten Königswappens erhalten; keine fremden Löwen oder Pferde hinzufügen.",
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "geography": "Die königliche Domäne liegt im Osten zwischen breitem Bergsaum, bewaldeten Hängen, offenem Land und einem südlichen Flusslauf.",
+      "title": "Königliches Earltum",
+      "art": "earldom-aldred",
+      "seats": [
+        "edrington",
+        "ternford"
+      ],
+      "ruler": "aldred",
+      "territoryType": "Königliches Earltum",
+      "territoryName": "Königliches Earltum Aldredhold"
+    },
+    {
+      "id": "brigane",
+      "name": "Earltum der Brigane",
+      "regionName": "Briganefold",
+      "colour": "#6567a0",
+      "capital": "aveldon",
+      "motif": "Zwei einander zugewandte wütende weiße Pitbulls mit breiten Köpfen, kurzen Schnauzen und kräftigen Körpern auf gedämpftem Blau; gefletschte Zähne, gehobene Vorderpfoten, darunter das kleine silberne Ringzeichen des Hauses. Silbernes Flechtband am dunklen Rand. Keine Pferde, Mähnen oder Hufe.",
+      "palette": [
+        "Blau",
+        "Silber",
+        "Anthrazit"
+      ],
+      "geography": "Das südliche Earltum verbindet welliges offenes Land mit bewaldeten Bergen und den Tälern im Süden.",
+      "title": "Earltum",
+      "art": "earldom-brigane",
+      "seats": [
+        "fenhurst",
+        "norcombe",
+        "bramwell",
+        "aveldon"
+      ],
+      "ruler": "brigane",
+      "territoryType": "Earltum",
+      "territoryName": "Earltum Briganefold"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "wetherham",
+      "name": "Wetherham",
+      "county": "lennwyck",
+      "regionName": "Wetherfold",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        22.3,
+        13.8
+      ],
+      "label": [
+        22.3,
+        14.3
+      ],
+      "geography": "Der Hauptort der Lennwyck liegt im nordwestlichen offenen Land. Niedrige Hügel, Weiden und vereinzelte Baumgruppen kennzeichnen die Umgebung.",
+      "motif": "Ein heller Widder über zwei niedrigen braunen Hügelbögen auf stumpfem Ockergelb.",
+      "palette": [
+        "Ockergelb",
+        "Wollweiß",
+        "Erdbraun"
+      ],
+      "mapName": "Name für eine Earlstadt",
+      "overlayLabel": true,
+      "art": "wetherham",
+      "pin": [
+        25.3,
+        10.3
+      ],
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Wetherfold"
+    },
+    {
+      "id": "dunworth",
+      "name": "Dunworth",
+      "county": "lennwyck",
+      "regionName": "Dunworthmark",
+      "kind": "Thaintum",
+      "point": [
+        87.9,
+        8.8
+      ],
+      "label": [
+        87.9,
+        9.8
+      ],
+      "geography": "Nordöstliches Randgebiet mit offenem Hochland und steilen Bergen im Osten. Der Ortsanker liegt unmittelbar am Bergsaum.",
+      "motif": "Ein silberner Steinbockkopf über zwei dunklen Bergzacken auf warmem Rostbraun.",
+      "palette": [
+        "Rostbraun",
+        "Silber",
+        "Schiefergrau"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "dunworth",
+      "pin": [
+        90.9,
+        5.300000000000001
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Dunworthmark"
+    },
+    {
+      "id": "cawden",
+      "name": "Cawden",
+      "county": "lennwyck",
+      "regionName": "Cawdenhold",
+      "kind": "Thaintum",
+      "point": [
+        54.6,
+        28.7
+      ],
+      "label": [
+        54.6,
+        29.3
+      ],
+      "geography": "Südliches Gebiet der Lennwyck unter den östlichen Bergen. Offene Flächen und Hügel überwiegen; Wald tritt nur in kleinen Gruppen auf.",
+      "motif": "Drei goldene Gerstenähren über einem einzigen hellen Hügelbogen auf gedämpftem Rotbraun.",
+      "palette": [
+        "Rotbraun",
+        "Goldocker",
+        "Leinenweiß"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "cawden",
+      "pin": [
+        57.6,
+        25.2
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Cawdenhold"
+    },
+    {
+      "id": "eldenwick",
+      "name": "Eldenwick",
+      "county": "warren",
+      "regionName": "Eldenemnet",
+      "kind": "Thaintum",
+      "point": [
+        15.9,
+        37.7
+      ],
+      "label": [
+        15.9,
+        39.099999999999994
+      ],
+      "geography": "Der nordwestliche Teil der Warren besitzt offenes Weide- und Ackerland mit einer kleinen Hügelgruppe im Süden.",
+      "motif": "Ein brauner Rinderkopf zwischen zwei dunkelgrünen Grashalmen auf warmem Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Kastanienbraun",
+        "Grün"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "eldenwick",
+      "pin": [
+        18.9,
+        34.2
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Eldenemnet"
+    },
+    {
+      "id": "wensbury",
+      "name": "Wensbury",
+      "county": "warren",
+      "regionName": "Wensfold",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        41.9,
+        47.4
+      ],
+      "label": [
+        41.9,
+        48.3
+      ],
+      "geography": "Der Hauptort der Warren liegt mitten im großen Laubwald. Waldwirtschaft, Wild und Lichtungen bestimmen den landschaftlichen Entwurf.",
+      "motif": "Ein silberner Hirschkopf über drei goldbraunen Eichenblättern auf tiefem Waldgrün.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Goldbraun"
+      ],
+      "mapName": "Name für eine Earlstadt",
+      "overlayLabel": true,
+      "art": "wensbury",
+      "pin": [
+        44.9,
+        43.9
+      ],
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Wensfold"
+    },
+    {
+      "id": "hartham",
+      "name": "Hartham",
+      "county": "warren",
+      "regionName": "Harthamland",
+      "kind": "Thaintum",
+      "point": [
+        13.1,
+        65.8
+      ],
+      "label": [
+        13.1,
+        66.7
+      ],
+      "geography": "Großes südwestliches Gebiet mit weitem offenem Land, niedrigen Hügeln und Gehölzgruppen am Übergang zu den südlichen Höhen.",
+      "motif": "Ein heller Feldhase unter einer einzelnen bronzenen Haselrute auf gedämpftem Wiesengrün.",
+      "palette": [
+        "Wiesengrün",
+        "Wollweiß",
+        "Bronze"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "hartham",
+      "pin": [
+        16.1,
+        62.3
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Harthamland"
+    },
+    {
+      "id": "edrington",
+      "name": "Edrington",
+      "county": "aldred",
+      "regionName": "Edringfold",
+      "kind": "Eigenes Thaintum des Königs",
+      "point": [
+        78.3,
+        34.7
+      ],
+      "label": [
+        77.8,
+        36
+      ],
+      "geography": "Der Königssitz liegt unter den hohen östlichen Bergen. Waldhänge und offenes Vorland schließen unmittelbar an den Hauptort an.",
+      "motif": "Eine silberne dreizackige Berggruppe über einem dunkelgrünen Eichenblatt auf hellem Salbeigrün. Landschaftszeichen des Königssitzes, ohne die Burg des königlichen Earltums zu wiederholen.",
+      "palette": [
+        "Salbeigrün",
+        "Silber",
+        "Dunkelgrün"
+      ],
+      "mapName": "Name der Hauptstadt",
+      "overlayLabel": true,
+      "art": "edrington",
+      "pin": [
+        81.3,
+        31.200000000000003
+      ],
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Edringfold"
+    },
+    {
+      "id": "ternford",
+      "name": "Ternford",
+      "county": "aldred",
+      "regionName": "Ternemnet",
+      "kind": "Thaintum",
+      "point": [
+        77.8,
+        64.3
+      ],
+      "label": [
+        77.8,
+        65.1
+      ],
+      "geography": "Der südliche königliche Bezirk liegt an einem gewundenen Fluss unter den bewaldeten östlichen Bergen. Die Wasserlinie ist Binnengewässer, keine Meeresküste.",
+      "motif": "Ein heller stehender Reiher über einem einzelnen geschwungenen silbernen Flussband auf gedämpftem Blaugrün.",
+      "palette": [
+        "Blaugrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "ternford",
+      "pin": [
+        80.8,
+        60.8
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Ternemnet"
+    },
+    {
+      "id": "fenhurst",
+      "name": "Fenhurst",
+      "county": "brigane",
+      "regionName": "Fenhold",
+      "kind": "Thaintum",
+      "point": [
+        38.2,
+        68
+      ],
+      "label": [
+        38.2,
+        69.1
+      ],
+      "geography": "Der nördliche Bezirk der Brigane besitzt welliges offenes Land mit Gehölzgruppen und niedrigen Höhenzügen im Westen.",
+      "motif": "Ein goldener stehender Fasan über zwei hellen Grasschöpfen auf stumpfem Schieferblau.",
+      "palette": [
+        "Schieferblau",
+        "Goldocker",
+        "Leinenweiß"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "fenhurst",
+      "pin": [
+        41.2,
+        64.5
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Fenhold"
+    },
+    {
+      "id": "norcombe",
+      "name": "Norcombe",
+      "county": "brigane",
+      "regionName": "Norcombefold",
+      "kind": "Thaintum",
+      "point": [
+        4.6,
+        79.9
+      ],
+      "label": [
+        6.2,
+        80.6
+      ],
+      "geography": "Der westliche Bezirk der Brigane verbindet offene Hügel und kleine Baumgruppen mit Bergen an seinem südlichen Rand.",
+      "motif": "Ein silberner Dachs vor einem dunkelgrünen Haselzweig auf blassem Grauviolett.",
+      "palette": [
+        "Grauviolett",
+        "Silber",
+        "Dunkelgrün"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "norcombe",
+      "pin": [
+        7.6,
+        76.4
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Norcombefold"
+    },
+    {
+      "id": "bramwell",
+      "name": "Bramwell",
+      "county": "brigane",
+      "regionName": "Brammark",
+      "kind": "Thaintum",
+      "point": [
+        76.8,
+        82.5
+      ],
+      "label": [
+        76.8,
+        83.39999999999999
+      ],
+      "geography": "Östlicher Randbezirk der Brigane mit steilen Bergen im Osten und Süden; Waldflächen liegen zwischen den Ausläufern.",
+      "motif": "Eine dunkle Eibe zwischen zwei hellen Bergflanken auf gedämpftem Heideviolett.",
+      "palette": [
+        "Heideviolett",
+        "Eibengrün",
+        "Kreideweiß"
+      ],
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "art": "bramwell",
+      "pin": [
+        79.8,
+        79
+      ],
+      "principal": false,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Brammark"
+    },
+    {
+      "id": "aveldon",
+      "name": "Aveldon",
+      "county": "brigane",
+      "regionName": "Avelhold",
+      "kind": "Eigenes Thaintum des Earls",
+      "point": [
+        39.2,
+        92.3
+      ],
+      "label": [
+        39.2,
+        93
+      ],
+      "geography": "Der Hauptort der Brigane liegt in einem südlichen Tal zwischen bewaldeten Berghängen. Im Norden öffnet sich das Land zu den übrigen Bezirken.",
+      "motif": "Ein heller Apfelbaum mit wenigen kupferroten Früchten über zwei schmalen silbernen Talbögen auf Nachtblau.",
+      "palette": [
+        "Nachtblau",
+        "Elfenbein",
+        "Kupferrot"
+      ],
+      "mapName": "Name für eine Earlstadt",
+      "overlayLabel": true,
+      "art": "aveldon",
+      "pin": [
+        42.2,
+        88.8
+      ],
+      "principal": true,
+      "territoryType": "Thaintum",
+      "territoryName": "Thaintum Avelhold"
+    }
+  ],
+  "houses": [
+    {
+      "id": "aldred",
+      "sourceId": "aldred",
+      "name": "Aldred",
+      "houseId": "house-aldred",
+      "familyId": "haus-aldred",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "edrington",
+      "regionId": "aldred",
+      "rankId": "royal",
+      "rank": "König",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine helle dreitürmige Burg über hellen Wellenlinien auf dunkelrotem Feld, schwarzer Innenring und elfenbeinfarbene Blütenranken.",
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/aldred.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/aldred.png",
+      "warrior": {
+        "id": "aldred",
+        "name": "Aldred",
+        "classId": "miles",
+        "className": "Miles",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-miles",
+        "palette": [
+          "Dunkelrot",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "equipment": "Langer Kettenhauberk, talyndorischer Ritterhelm, Schwert und großer Mandelschild.",
+        "reason": "Das Burgzeichen und die königliche Stellung passen zu einem repräsentativen Miles mit großem Schild.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/aldred/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/aldred/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/aldred/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "lennwyck",
+      "sourceId": "lennwyck",
+      "name": "Lennwyck",
+      "houseId": "house-lennwyck",
+      "familyId": "haus-lennwyck",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "wetherham",
+      "regionId": "lennwyck",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "aldred",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein roter aufgerichteter Löwe auf goldgelben Brettern, dunkler Ring mit goldenen Flechtbändern und silbernen Beschlägen.",
+      "palette": [
+        "Goldocker",
+        "Dunkelrot",
+        "Eisenschwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/lennwyck.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/lennwyck.png",
+      "warrior": {
+        "id": "lennwyck",
+        "name": "Lennwyck",
+        "classId": "miles",
+        "className": "Miles",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-miles",
+        "palette": [
+          "Goldocker",
+          "Dunkelrot",
+          "Eisenschwarz"
+        ],
+        "equipment": "Langer Kettenhauberk, talyndorischer Ritterhelm, Schwert und großer Mandelschild.",
+        "reason": "Der rote Löwe und die Stellung als Earl werden durch einen reich ausgestatteten Miles aufgegriffen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/lennwyck/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/lennwyck/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/lennwyck/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "warren",
+      "sourceId": "warren",
+      "name": "Warren",
+      "houseId": "house-warren",
+      "familyId": "haus-warren",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "wensbury",
+      "regionId": "warren",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "aldred",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein dunkelroter Wolfskopf auf elfenbeinfarbenem Schild, dunkler Rundrahmen mit roten Flechtbändern und hellen Blattzweigen.",
+      "palette": [
+        "Elfenbein",
+        "Dunkelrot",
+        "Anthrazit"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/warren.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/warren.png",
+      "warrior": {
+        "id": "warren",
+        "name": "Warren",
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Elfenbein",
+          "Dunkelrot",
+          "Anthrazit"
+        ],
+        "equipment": "Kettenrüstung mit gezielten Plattenverstärkungen und einem ritterlichen Schwert.",
+        "reason": "Der Wolf und die Waldlandschaft passen zu einem standfesten Isen; die Klinge bleibt das zentrale Ausrüstungsmerkmal.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/warren/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/warren/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/warren/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "brigane",
+      "sourceId": "brigane",
+      "name": "Brigane",
+      "houseId": "house-brigane",
+      "familyId": "haus-brigane",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "aveldon",
+      "regionId": "brigane",
+      "rankId": "county",
+      "rank": "Earl (Graf)",
+      "liegeId": "aldred",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Zwei einander zugewandte wütende weiße Pitbulls über einem silbernen Ringzeichen auf Blau, breiter dunkler Ring mit silbernen Flechtbändern.",
+      "palette": [
+        "Blau",
+        "Silber",
+        "Anthrazit"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/brigane.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/brigane.png",
+      "warrior": {
+        "id": "brigane",
+        "name": "Brigane",
+        "classId": "miles",
+        "className": "Miles",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-miles",
+        "palette": [
+          "Blau",
+          "Silber",
+          "Anthrazit"
+        ],
+        "equipment": "Langer Kettenhauberk, talyndorischer Ritterhelm, Schwert und großer Mandelschild.",
+        "reason": "Die beiden wütenden weißen Pitbulls bleiben Hauszeichen. Als Earlshaus erhält Brigane einen aufwendigeren Miles.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/brigane/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/brigane/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/brigane/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "ashton",
+      "sourceId": "ashton",
+      "name": "Ashton",
+      "houseId": "house-ashton",
+      "familyId": "haus-ashton",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "edrington",
+      "regionId": "aldred",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein weißes steigendes Pferd auf Dunkelgrün, heller Blattrankenrahmen.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/ashton.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/ashton.png",
+      "warrior": {
+        "id": "ashton",
+        "name": "Ashton",
+        "classId": "hyld",
+        "className": "Hyld",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-hyld",
+        "palette": [
+          "Dunkelgrün",
+          "Elfenbein",
+          "Silber"
+        ],
+        "equipment": "Reiterrüstung, Schwert am Gurt und vollständig gesattelter Brycing-Hengst.",
+        "reason": "Das steigende Pferd legt einen der wenigen Hyld-Entwürfe nahe.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/ashton/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/ashton/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/ashton/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "egerton",
+      "sourceId": "egerton",
+      "name": "Egerton",
+      "houseId": "house-egerton",
+      "familyId": "haus-egerton",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "dunworth",
+      "regionId": "lennwyck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarzer aufgerichteter Löwe zwischen dunklen Blattzweigen auf Gold, schwarzer Rundrahmen mit goldenen Ranken.",
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Altgold"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/egerton.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/egerton.png",
+      "warrior": {
+        "id": "egerton",
+        "name": "Egerton",
+        "classId": "ceorl",
+        "className": "Ceorl",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-ceorl",
+        "palette": [
+          "Goldocker",
+          "Schwarz",
+          "Altgold"
+        ],
+        "equipment": "Schwere Panzerung über Kette, verstärkter Helm und schwere Wuchtwaffe.",
+        "reason": "Der schwarze Löwe erhält eine schwere, bodenständige Ceorl-Darstellung.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/egerton/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/egerton/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/egerton/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "holton",
+      "sourceId": "holton",
+      "name": "Holton",
+      "houseId": "house-holton",
+      "familyId": "haus-holton",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "wetherham",
+      "regionId": "lennwyck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein goldenes geschwungenes Peitschen- oder Flegelzeichen auf rotem Holz, schwarzgoldener Ring mit roten Knoten.",
+      "palette": [
+        "Dunkelrot",
+        "Goldocker",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/holton.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/holton.png",
+      "warrior": {
+        "id": "holton",
+        "name": "Holton",
+        "classId": "ceorl",
+        "className": "Ceorl",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-ceorl",
+        "palette": [
+          "Dunkelrot",
+          "Goldocker",
+          "Schwarz"
+        ],
+        "equipment": "Schwere Panzerung über Kette, verstärkter Helm und schwere Wuchtwaffe.",
+        "reason": "Das geschwungene goldene Waffenzeichen wird als gestalterischer Bezug zu einem Ceorl mit Flegel verwendet; die uneindeutige Vorlage wird nicht als gesicherte Waffenart ausgegeben.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/holton/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/holton/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/holton/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "kyme",
+      "sourceId": "kyme",
+      "name": "Kyme",
+      "houseId": "house-kyme",
+      "familyId": "haus-kyme",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "ternford",
+      "regionId": "aldred",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein dunkelpetrolfarbener gerüsteter Reiter mit gesenkter Lanze auf hellem Holz, schlichter petrolfarbener Rundrahmen.",
+      "palette": [
+        "Petrol",
+        "Leinenweiß",
+        "Eisengrau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/kyme.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/kyme.png",
+      "warrior": {
+        "id": "kyme",
+        "name": "Kyme",
+        "classId": "miles",
+        "className": "Miles",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-miles",
+        "palette": [
+          "Petrol",
+          "Leinenweiß",
+          "Eisengrau"
+        ],
+        "equipment": "Langer Kettenhauberk, talyndorischer Ritterhelm, Schwert und großer Mandelschild.",
+        "reason": "Das Wappen zeigt einen gerüsteten Reiter mit Lanze. Ein Miles greift die ritterliche Form auf, ohne die ganze Galerie beritten anzulegen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/kyme/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/kyme/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/kyme/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "vernon",
+      "sourceId": "vernon",
+      "name": "Vernon",
+      "houseId": "house-vernon",
+      "familyId": "haus-vernon",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "norcombe",
+      "regionId": "brigane",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarzer aufgerichteter Löwe mit senkrechtem Schwert auf Gold, dunkler Rahmen mit goldenen Ranken und silbernen Beschlägen.",
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/vernon.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/vernon.png",
+      "warrior": {
+        "id": "vernon",
+        "name": "Vernon",
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Goldocker",
+          "Schwarz",
+          "Silber"
+        ],
+        "equipment": "Kettenrüstung mit gezielten Plattenverstärkungen und einem ritterlichen Schwert.",
+        "reason": "Das vom Löwen geführte Schwert macht den Isen zur passenden Darstellung.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/vernon/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/vernon/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/vernon/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "wickton",
+      "sourceId": "wickton",
+      "name": "Wickton",
+      "houseId": "house-wickton",
+      "familyId": "haus-wickton",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "fenhurst",
+      "regionId": "brigane",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein sitzender goldener Löwe auf dunkelgrauem Holz, dunkler Ring mit hellen Ranken und goldenen Beschlägen.",
+      "palette": [
+        "Anthrazit",
+        "Goldocker",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wickton.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wickton.png",
+      "warrior": {
+        "id": "wickton",
+        "name": "Wickton",
+        "classId": "ceorl",
+        "className": "Ceorl",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-ceorl",
+        "palette": [
+          "Anthrazit",
+          "Goldocker",
+          "Elfenbein"
+        ],
+        "equipment": "Schwere Panzerung über Kette, verstärkter Helm und schwere Wuchtwaffe.",
+        "reason": "Der ruhige goldene Löwe wird mit der schweren, standfesten Rolle des Ceorl verbunden.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/wickton/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/wickton/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/wickton/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "yarwyck",
+      "sourceId": "yarwyck",
+      "name": "Yarwyck",
+      "houseId": "house-yarwyck",
+      "familyId": "haus-yarwyck",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "cawden",
+      "regionId": "lennwyck",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner aufgerichteter Löwe auf Schwarz, dunkler Rundrahmen mit silbernen Knoten und Eisenbeschlägen.",
+      "palette": [
+        "Schwarz",
+        "Silber",
+        "Eisengrau"
+      ],
+      "ornament": "",
+      "frame": "Gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/yarwyck.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/yarwyck.png",
+      "warrior": {
+        "id": "yarwyck",
+        "name": "Yarwyck",
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Schwarz",
+          "Silber",
+          "Eisengrau"
+        ],
+        "equipment": "Kettenhauberk, Arm- und Beinschutz sowie eine lange Stangenwaffe.",
+        "reason": "Der klare silberne Löwe und die eisenfarbene Heraldik ergeben einen schlichten Wigar.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/yarwyck/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/yarwyck/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/yarwyck/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "thornwick",
+      "sourceId": "thornwick",
+      "name": "Thornwick",
+      "houseId": "house-thornwick",
+      "familyId": "haus-thornwick",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "wensbury",
+      "regionId": "warren",
+      "rankId": "knight",
+      "rank": "Ritterherr",
+      "liegeId": "warren",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine elfenbeinfarbene Eule mit ausgebreiteten Schwingen und roten Augen auf Olivgrün, schmaler goldbrauner Blütenring.",
+      "palette": [
+        "Olivgrün",
+        "Elfenbein",
+        "Goldbraun"
+      ],
+      "ornament": "",
+      "frame": "Vorhandener goldbrauner Blütenring",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/thornwick.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/thornwick.png",
+      "warrior": {
+        "id": "thornwick",
+        "name": "Thornwick",
+        "classId": "scoet",
+        "className": "Scoet",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-scoet",
+        "palette": [
+          "Olivgrün",
+          "Elfenbein",
+          "Goldbraun"
+        ],
+        "equipment": "Bewegliche Kettenrüstung, Köcher, Schwert am Gurt und Brycing-Hengst.",
+        "reason": "Die Eule und die belegte Zuflucht in den Wäldern passen zu einem seltenen Scoet. Gezeigt wird ein namenloser Hausvertreter; Refri erhält dadurch keine neue festgelegte Klasse.",
+        "withHorse": true,
+        "horseName": "Brycing",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/brycing/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/thornwick/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/thornwick/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/brycing/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/thornwick/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Nahezu ausgelöschtes niederes Rittergeschlecht aus Thornholt in Talyndor. Nach dem Umsturz durch die Triarchie im Jahr 1720 verlor das Haus seine Waldburg, floh in die Wälder und kämpfte an der Seite der Blauschwingen weiter. Refri wurde dort seit ihrem fünften Lebensjahr erzogen und führt das Haus nach der Hinrichtung ihrer Eltern im Jahr 1739.",
+      "knownHeads": [
+        {
+          "id": "garric-thornwick",
+          "name": "Garric Thornwick",
+          "status": "dead",
+          "image": "",
+          "role": "Überliefertes Hausoberhaupt"
+        },
+        {
+          "id": "refri-thornwick",
+          "name": "Refri Thornwick",
+          "status": "alive",
+          "image": "/Stammbäume/assets/images/portraits/haus-thornwick/refri-thornwick.png",
+          "role": "Überliefertes Hausoberhaupt"
+        }
+      ],
+      "genealogySource": "Stammbäume/assets/js/data/house-thornwick-family.js",
+      "formerSeat": "Waldburg Thornholt (1720 verloren)",
+      "homeless": true,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "wulmer",
+      "sourceId": "wulmer",
+      "name": "Wulmer",
+      "houseId": "house-wulmer",
+      "familyId": "haus-wulmer",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "bramwell",
+      "regionId": "brigane",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein elfenbeinfarbener schreitender Keiler über einem einzelnen roten Eichenblatt auf dunklem Rostrot.",
+      "palette": [
+        "Rostrot",
+        "Elfenbein",
+        "Eichenbraun"
+      ],
+      "ornament": "Schlichte ineinanderlaufende Winkelbänder im geschlossenen Eisenring",
+      "frame": "Dunkles geschmiedetes Eisen",
+      "focus": "Waldweiden und Schweinezucht.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wulmer.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wulmer.png",
+      "warrior": {
+        "id": "wulmer",
+        "name": "Wulmer",
+        "classId": "ceorl",
+        "className": "Ceorl",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-ceorl",
+        "palette": [
+          "Rostrot",
+          "Elfenbein",
+          "Eichenbraun"
+        ],
+        "equipment": "Schwere Panzerung über Kette, verstärkter Helm und schwere Wuchtwaffe.",
+        "reason": "Waldweiden und Keiler stehen für ein zähes Haus mit schwerer Fußkampfausrüstung.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/wulmer/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/wulmer/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/wulmer/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "bramcote",
+      "sourceId": "bramcote",
+      "name": "Bramcote",
+      "houseId": "house-bramcote",
+      "familyId": "haus-bramcote",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "edrington",
+      "regionId": "aldred",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine große goldene gebundene Korngarbe über einem waagerechten silbernen Sichelschnitt auf dunkelblauem Holz.",
+      "palette": [
+        "Nachtblau",
+        "Goldocker",
+        "Silber"
+      ],
+      "ornament": "Schmale miteinander verflochtene Ähren im runden Messingring",
+      "frame": "Gealtertes Messing",
+      "focus": "Getreideanbau, Speicher und Versorgung; Wigar als Schutz von Wegen und Ernten.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/bramcote.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/bramcote.png",
+      "warrior": {
+        "id": "bramcote",
+        "name": "Bramcote",
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Nachtblau",
+          "Goldocker",
+          "Silber"
+        ],
+        "equipment": "Kettenhauberk, Arm- und Beinschutz sowie eine lange Stangenwaffe.",
+        "reason": "Die Wigar-Darstellung verbindet das Versorgungsprofil mit dem Schutz von Wegen und Erntezügen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/bramcote/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/bramcote/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/bramcote/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "elwick",
+      "sourceId": "elwick",
+      "name": "Elwick",
+      "houseId": "house-elwick",
+      "familyId": "haus-elwick",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "eldenwick",
+      "regionId": "warren",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner aufrecht stehender Reiher mit dunkelroten Beinen über zwei schmalen dunklen Wasserbändern auf gedämpftem Blaugrün.",
+      "palette": [
+        "Blaugrün",
+        "Silber",
+        "Dunkelrot"
+      ],
+      "ornament": "Zurückhaltendes verschlungenes Wellenband im Außenring",
+      "frame": "Silberhelles Eisen",
+      "focus": "Flussübergänge, Binnenfischerei und Uferwege; Wigar für die Sicherung der Übergänge.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/elwick.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/elwick.png",
+      "warrior": {
+        "id": "elwick",
+        "name": "Elwick",
+        "classId": "wigar",
+        "className": "Wigar",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-wigar",
+        "palette": [
+          "Blaugrün",
+          "Silber",
+          "Dunkelrot"
+        ],
+        "equipment": "Kettenhauberk, Arm- und Beinschutz sowie eine lange Stangenwaffe.",
+        "reason": "Die Stangenwaffe passt zu einem vorgeschlagenen Haus der Flussübergänge und Uferwege.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/elwick/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/elwick/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/elwick/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "sedgeley",
+      "sourceId": "sedgeley",
+      "name": "Sedgeley",
+      "houseId": "house-sedgeley",
+      "familyId": "haus-sedgeley",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "hartham",
+      "regionId": "warren",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarzer frontal gesehener Ochsenkopf mit elfenbeinfarbenen Hörnern über zwei grünen Grashalmen auf warmem Ocker.",
+      "palette": [
+        "Goldocker",
+        "Schwarz",
+        "Grün"
+      ],
+      "ornament": "Breites einfaches Rautenband, vollständig innerhalb des Kreises",
+      "frame": "Dunkles Eichenholz mit kleinen eisernen Nieten",
+      "focus": "Rinderzucht und Viehmärkte; Ceorl mit schweren Streitkolben.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/sedgeley.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/sedgeley.png",
+      "warrior": {
+        "id": "sedgeley",
+        "name": "Sedgeley",
+        "classId": "ceorl",
+        "className": "Ceorl",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-ceorl",
+        "palette": [
+          "Goldocker",
+          "Schwarz",
+          "Grün"
+        ],
+        "equipment": "Schwere Panzerung über Kette, verstärkter Helm und schwere Wuchtwaffe.",
+        "reason": "Ochse und Viehzucht werden durch einen kräftigen Ceorl mit schwerem Streitkolben erkennbar.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/sedgeley/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/sedgeley/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/sedgeley/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "rookden",
+      "sourceId": "rookden",
+      "name": "Rookden",
+      "houseId": "house-rookden",
+      "familyId": "haus-rookden",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "aveldon",
+      "regionId": "brigane",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine silberne nach links blickende Saatkrähe auf einem einzelnen waagerechten goldbraunen Ast auf stumpfem Burgunderrot.",
+      "palette": [
+        "Burgunderrot",
+        "Silber",
+        "Bronze"
+      ],
+      "ornament": "Zwei schmale ineinander verschlungene Zweigbänder im runden Bronzerahmen",
+      "frame": "Dunkle Bronze",
+      "focus": "Gehölzpflege, Holzversorgung und Wachdienst; Isen mit schlichter zweckmäßiger Ausrüstung.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/rookden.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/rookden.png",
+      "warrior": {
+        "id": "rookden",
+        "name": "Rookden",
+        "classId": "isen",
+        "className": "Isen",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-isen",
+        "palette": [
+          "Burgunderrot",
+          "Silber",
+          "Bronze"
+        ],
+        "equipment": "Kettenrüstung mit gezielten Plattenverstärkungen und einem ritterlichen Schwert.",
+        "reason": "Das vorgeschlagene Haus der Gehölze und Wachen erhält einen zweckmäßig gerüsteten Isen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/rookden/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/rookden/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/rookden/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "tostan",
+      "sourceId": "tostan",
+      "name": "Tostan",
+      "houseId": "house-tostan",
+      "familyId": "haus-tostan",
+      "originRealm": "talyndor",
+      "clan": false,
+      "seatId": "edrington",
+      "regionId": "aldred",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine große goldene kleine Handglocke mit sichtbarem Klöppel über drei waagerechten silbernen Saiten auf tiefem Waldgrün.",
+      "palette": [
+        "Waldgrün",
+        "Altgold",
+        "Silber"
+      ],
+      "ornament": "Schmale gegenläufige Flechtbänder ohne Schriftzeichen",
+      "frame": "Helles versilbertes Eisen",
+      "focus": "Höfische Musik, Dichtung und Gesandtschaften; ein seltener Gliwere als Hausdarstellung.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/tostan.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/tostan.png",
+      "warrior": {
+        "id": "tostan",
+        "name": "Tostan",
+        "classId": "gliwere",
+        "className": "Gliwere",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-gliwere",
+        "palette": [
+          "Waldgrün",
+          "Altgold",
+          "Silber"
+        ],
+        "equipment": "Leichterer Kettenhauberk unter höflichem Gewand, Duellantenschwert und kleine Leier.",
+        "reason": "Musik, Dichtung und höfische Aufgaben werden durch einen der wenigen Gliwere vertreten.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/talyndor/tostan/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/talyndor/tostan/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/talyndor/tostan/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    }
+  ],
+  "territoryArt": {
+    "earldom-lennwyck": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/earldom-lennwyck.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/earldom-lennwyck.png",
+      "shape": "banner"
+    },
+    "earldom-warren": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/earldom-warren.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/earldom-warren.png",
+      "shape": "banner"
+    },
+    "earldom-aldred": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/earldom-aldred.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/earldom-aldred.png",
+      "shape": "banner"
+    },
+    "earldom-brigane": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/earldom-brigane.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/earldom-brigane.png",
+      "shape": "banner"
+    },
+    "wetherham": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/wetherham.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/wetherham.png",
+      "shape": "banner"
+    },
+    "dunworth": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/dunworth.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/dunworth.png",
+      "shape": "banner"
+    },
+    "cawden": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/cawden.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/cawden.png",
+      "shape": "banner"
+    },
+    "eldenwick": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/eldenwick.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/eldenwick.png",
+      "shape": "banner"
+    },
+    "wensbury": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/wensbury.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/wensbury.png",
+      "shape": "banner"
+    },
+    "hartham": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/hartham.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/hartham.png",
+      "shape": "banner"
+    },
+    "edrington": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/edrington.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/edrington.png",
+      "shape": "banner"
+    },
+    "ternford": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/ternford.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/ternford.png",
+      "shape": "banner"
+    },
+    "fenhurst": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/fenhurst.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/fenhurst.png",
+      "shape": "banner"
+    },
+    "norcombe": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/norcombe.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/norcombe.png",
+      "shape": "banner"
+    },
+    "bramwell": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/bramwell.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/bramwell.png",
+      "shape": "banner"
+    },
+    "aveldon": {
+      "image": "/Stammbäume/assets/images/regions/talyndor/aveldon.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/talyndor/aveldon.png",
+      "shape": "banner"
+    }
+  },
+  "historicalEmblems": [],
+  "cultureSections": [
+    {
+      "title": "Krone, Earls und Thains",
+      "paragraphs": [
+        "Die Krone steht über den Earls der einzelnen Earltümer. Thaintümer und kleinere ritterliche Herrschaften gliedern die örtliche Ebene. Der persönliche Rang eines Hauses wird nur bei eigenem Beleg geführt."
+      ],
+      "links": [
+        {
+          "label": "Klassen Talyndors ↗",
+          "href": "/Klassenordner/Klassenseite.html#aeldrunmar"
+        }
+      ]
+    }
+  ]
+}

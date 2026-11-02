@@ -4,6 +4,14 @@ import { HOUSE_ARTH_FAMILY } from '../assets/js/data/house-arth-family.js';
 import { buildRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-model.js';
 import { renderRelationshipMatrix } from '../assets/js/modules/relationship-matrix/relationship-matrix-renderer.js';
 
+test('relationship reasons remain readable and are rendered as escaped text', () => {
+  const matrix = buildRelationshipMatrix({ document: { id: 'reason' }, persons: ['a', 'b'].map(id => ({ id, name: id })),
+    partnerships: [{ id: 'affair', participantIds: ['a', 'b'], type: 'affair', notes: 'Durchgebrannt nach Aberon <script>test</script>' }] }, 'a');
+  const html = renderRelationshipMatrix(matrix);
+  assert.match(html, /Durchgebrannt nach Aberon &lt;script&gt;test&lt;\/script&gt;/);
+  assert.doesNotMatch(html, /<script>/);
+});
+
 test('Owains Affären bleiben getrennte Familien mit ihren jeweiligen Kindern', () => {
   const matrix = buildRelationshipMatrix(HOUSE_ARTH_FAMILY, 'owain-draig');
   assert.equal(matrix.partnerships.groups.length, 2);

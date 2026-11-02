@@ -1,0 +1,36 @@
+{
+  "id": "mwyalchen-drossel",
+  "name": "Mwyalchen-Drossel",
+  "classification": "Natürlicher Singvogel · Drossel",
+  "continent": "Estryll",
+  "region": "Tal der Milane · Haus Mwyalchen",
+  "folio": "I / 03-A",
+  "summary": "Die Mwyalchen-Drossel ist ein kleiner Singvogel, dessen Name mit Haus Mwyalchen verbunden ist. Lefraye Gafyrs Begleiter Agravaine, kurz Vain, gehört zu dieser Art.",
+  "quote": "Agravaine – meistens genügt Vain.",
+  "quoteAttribution": "Benennung von Lefraye Gafyrs Begleiter",
+  "icon": { "src": "../../../assets/icons/flugwesen.webp", "width": 512, "height": 512, "alt": "Flugwesen" },
+  "hero": { "src": "../../../../AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png", "width": 1024, "height": 1536, "alt": "Agravaine, Lefraye Gafyrs Mwyalchen-Drossel, auf einem Ast", "caption": "Agravaine, genannt Vain · Einzelbild eines bekannten Begleiters" },
+  "facts": [
+    { "label": "Art", "value": "Mwyalchen-Drossel" },
+    { "label": "Tiergruppe", "value": "Vögel · Singvögel" },
+    { "label": "Größe", "value": "Kleiner Singvogel" },
+    { "label": "Bezug", "value": "Haus Mwyalchen aus dem Tal der Milane" },
+    { "label": "Bekanntes Tier", "value": "Agravaine, kurz Vain · Begleiter von Lefraye Gafyr" }
+  ],
+  "metrics": {
+    "labels": ["Flug", "Aufmerksamkeit", "Gesang", "Wehrhaftigkeit", "Tragkraft", "Menschenbindung"],
+    "values": [6, 7, 8, 1, 1, 6],
+    "intro": "Einordnung als kleiner Singvogel und persönlicher Gefährte. Die Art erhält keine Greifvogelausbildung oder besonderen magischen Kräfte.",
+    "source": "Redaktionelle Einordnung des Singvogels; Artname und Begleiterzuordnung nach Autorenfestlegung vom 2. November 2026."
+  },
+  "sections": [
+    { "id": "art", "title": "Die Drossel", "blocks": [{ "type": "paragraph", "text": "Die Mwyalchen-Drossel wird als natürliche Drossel und Singvogel geführt. Sie ist kein Rabe und kein Jagdfalke. Ihr Artname bezeichnet keine Ausbildung zum Kampf- oder Botentier." }] },
+    { "id": "erscheinung", "title": "Erscheinungsbild", "blocks": [{ "type": "paragraph", "text": "Die Bildtafel zeigt Agravaine mit dunklem, schiefergrau schimmerndem Gefieder, schlankem Schnabel und einem warmen Augenring. Die Gestaltung greift das schwarze Vogelmotiv des Hauses Mwyalchen auf; die Tafel zeigt ein einzelnes Tier und legt keine vollständige Farbvererbung für die Art fest." }] },
+    { "id": "agravaine", "title": "Agravaine und Lefraye Gafyr", "blocks": [{ "type": "paragraph", "text": "Lefrayes Drossel trägt den Namen Agravaine und wird meist Vain genannt. Namensgeber ist Agravaine, der Gründervater des Hauses Mwyalchen. Über Lefrayes Großmutter und Rittermutter Niniel Mwyalchen ist diese Erinnerung auch Teil ihres persönlichen Familienhintergrunds." }] }
+  ],
+  "readingLinks": [
+    { "label": "Haus Mwyalchen", "href": "/Stammbäume/Stammbaum.html?family=haus-mwyalchen&mode=view", "note": "Familie und Namensgeber." },
+    { "label": "Lefraye Gafyr", "href": "/Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=lefraye-gafyr", "note": "Besitzerin von Agravaine." }
+  ],
+  "plates": []
+}

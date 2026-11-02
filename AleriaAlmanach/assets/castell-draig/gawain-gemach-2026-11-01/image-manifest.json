@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-01T15:10:49.318Z",
+  "tool": "image_gen.imagegen",
+  "useCase": "illustration-story",
+  "stylePreset": "anime-scene-portrait",
+  "aspectRatio": "2:3",
+  "path": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/gawain-gemach.png",
+  "sha256": "d369ff0ec7f8ec15d3323d7e204d6de085e426f4460eaa1027c34225870fc033",
+  "width": 1024,
+  "height": 1536,
+  "bytes": 2280872,
+  "prompt": "image-prompt.txt",
+  "inspected": true,
+  "checks": {
+    "unoccupiedRoom": true,
+    "cleanAnimeLineart": true,
+    "opaqueBackground": true,
+    "noText": true,
+    "bedDeskAndDressingArea": true
+  }
+}

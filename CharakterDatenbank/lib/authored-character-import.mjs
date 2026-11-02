@@ -4,7 +4,7 @@ import { mergeCharacterRecordProjections } from './character-record-projections.
 
 // A bounded addition of newly authored people. It never re-exports unrelated
 // records or reapplies old equipment releases to the entire database.
-export function buildAuthoredCharacterImport({ registry, snapshot, report }, exports, feature) {
+export function buildAuthoredCharacterImport({ registry, snapshot, report }, exports, feature, familyCandidates = []) {
   if (!/^[a-z0-9-]+$/.test(feature)) throw Error('Ungültiger Feature-Schlüssel.');
   for (const entry of exports) if (entry.type !== 'aleria-character' || !entry.character?.id || !entry.sourcePath) throw Error('Einzelfigurenexport erwartet.');
   const ids = new Set(exports.map(e => e.character.id));
@@ -13,7 +13,7 @@ export function buildAuthoredCharacterImport({ registry, snapshot, report }, exp
     if (existing.localRecord?.authoredFeature !== feature) throw Error(`Bestehende Figur ${existing.id} wird nicht überschrieben.`);
   }
   const charTabs = mergeCharacterExportAssignments(snapshot.charTabs, exports);
-  const records = exports.flatMap(entry => buildCharacterDatabase({ characters: [entry.character], charTabs, exportedAt: entry.exportedAt }, [], { sourcePath: entry.sourcePath }).records);
+  const records = exports.flatMap(entry => buildCharacterDatabase({ characters: [entry.character], charTabs, exportedAt: entry.exportedAt }, familyCandidates, { sourcePath: entry.sourcePath }).records);
   for (const item of records) {
     item.record.local.authoredFeature = feature;
     item.snapshotCharacter.localRecord.authoredFeature = feature;

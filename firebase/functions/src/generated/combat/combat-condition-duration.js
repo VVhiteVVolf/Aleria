@@ -5,7 +5,7 @@ import { createActionLockRecovery } from './combat-action-lock-recovery.js';
 
 const DURATION_KINDS = new Set([
   'permanent', 'combat', 'actor-comments', 'scene-comments',
-  'short-rest', 'long-rest', 'day', 'concentration', 'channeling'
+  'short-rest', 'long-rest', 'day', 'concentration', 'channeling', 'scene-time'
 ]);
 
 function integer(value, fallback = 0, minimum = 0, maximum = 9999) {
@@ -35,6 +35,12 @@ export function normalizeConditionDuration(value = {}, fallbackText = '') {
       : (remainingActorComments > 0 ? 'actor-comments' : (remainingSceneComments > 0 ? 'scene-comments' : 'permanent')),
     remainingActorComments,
     remainingSceneComments,
+    ...(kind === 'scene-time' ? {
+      sceneId: text(source.sceneId, 240),
+      startedAtSeconds: integer(source.startedAtSeconds, 0, 0, Number.MAX_SAFE_INTEGER),
+      expiresAtSeconds: integer(source.expiresAtSeconds, 0, 0, Number.MAX_SAFE_INTEGER),
+      remainingSeconds: integer(source.remainingSeconds, 0, 0, Number.MAX_SAFE_INTEGER)
+    } : {}),
     ...(source.expiresAt === 'actor-start' ? { expiresAt: 'actor-start' } : {}),
     expiresOnRest: ['short-rest', 'long-rest'].includes(kind) ? kind : '',
     expiresOnDayChange: kind === 'day' || source.expiresOnDayChange === true,

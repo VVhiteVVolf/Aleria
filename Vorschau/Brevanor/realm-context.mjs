@@ -1,6 +1,6 @@
 import {mapImageSize} from './territory-data.mjs';
 export const context = {
- realm:'brevanor',short:'Brevanor',title:'Das Königreich Brevanor',continent:'Lothir',emblem:'assets/crests/brevanor.webp',emblemFull:'assets/originals/brevanor.png',imageSize:mapImageSize,
+ realm:'brevanor',short:'Brevanor',title:'Das Königreich Brevanor',continent:'Aldervan',emblem:'assets/crests/brevanor.webp',emblemFull:'assets/originals/brevanor.png',imageSize:mapImageSize,
  introduction:'Brevanor war ein verträumtes Königreich der Ritterromantik, Heldengeschichten und edlen Weine. Aus den Briath, den Auenalben südlich Deitheachs, war über das Fürstentum Brethneach eine eigenständige höfische Kultur erwachsen. Diese Seite blickt auf das Land vor seiner Unterwerfung durch die Triarchie zurück.',
  note:'17 neue Ortsnamen, drei Grafschaften und die königliche Domäne bilden einen historischen Entwurf. Die elf unbenannt gelieferten Hauswappen erhalten Namensvorschläge; Aubert wird als Königshaus vorgeschlagen. Bielle ist als Brenorhaus im Baronenrang festgelegt. 14 zusätzliche Wappen ergänzen die Häuser auf 26: jedes Ortsgebiet erhält ein Sitzhaus, Caerennes drei weitere Hauptstadtfamilien; sechs Häuser bleiben frei. Alle übrigen neuen Namen, Schwerpunkte, Ränge und Sitze sind Vorschläge und können hier gemeinsam verteilt werden. Heute steht Brevanor unter der Herrschaft der Triarchie.',
  historyHeading:'Von den Auenalben zur verlorenen Krone.',

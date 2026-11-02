@@ -54,21 +54,21 @@ test('die Jungdrachenform erweitert den Kernlehrgang um vier ergänzende Technik
   assert.equal(getCombatStyleTechniquesForGrants(teulu.combatStyleGrants, 20).length, 26, 'Entwürfe werden vor ihrer Freigabe nicht automatisch vergeben');
 });
 
-test('Teulu erlernen beim Stufenaufstieg alle neu freigeschalteten Formtechniken ohne Slotwahl', () => {
+test('der individuelle Stufenassistent erhält Teulu-Techniken und vergibt keine weiteren automatisch', () => {
   const draft = createCharacterCreationDraft({});
   draft.selections = { ancestryId: 'cenyr', backgroundId: 'ritter', classId: 'teulu' };
   draft.attributeMethod = 'free';
   draft.baseAttributes = { strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10 };
   const created = applyCharacterCreationDraft({}, draft, { now: '2026-08-08T00:00:00.000Z' });
   assert.equal(created.ok, true);
-  assert.deepEqual(created.profile.techniques.map(technique => technique.minimumLevel), [1, 1, 1]);
+  assert.equal(created.profile.techniques.length, 0);
 
   const plan = createCharacterLevelUpPlan(created.profile);
   let leveled = previewCharacterLevelUp(created.profile, plan);
   assert.equal(leveled.classTechniqueChoiceGroups.length, 0);
   assert.equal(leveled.ready, true);
-  assert.deepEqual(leveled.profile.techniques.map(technique => technique.minimumLevel).sort(), [1, 1, 1, 2, 2, 2, 2, 2, 2]);
-  assert.ok(leveled.changes.some(change => change.label === 'Automatisch erlernte Formtechnik' && change.after === 'Biss des Jungdrachens'));
+  assert.equal(leveled.profile.techniques.length, 0);
+  assert.equal(leveled.changes.some(change => change.label === 'Automatisch erlernte Formtechnik'), false);
 });
 
 test('Duncans Export enthält alle 93 Techniken seiner zugänglichen Formen, unabhängig von historischen Slots', async () => {

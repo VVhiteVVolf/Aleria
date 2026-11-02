@@ -136,6 +136,84 @@
   ],
   "maps": [
     {
+      "id": "brevanor",
+      "title": "Königreich Brevanor",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "brevanor",
+          "title": "Brevanor"
+        }
+      ],
+      "folder": "Brevanor",
+      "images": {
+        "normal": "Brevanor/Kartenbilder/normal.svg"
+      },
+      "dataPath": "Brevanor/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Brevanor/koenigreich-brevanor/index.html",
+      "link": "karte.html?map=brevanor"
+    },
+    {
+      "id": "talyndor",
+      "title": "Königreich Talyndor",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "talyndor",
+          "title": "Talyndor"
+        }
+      ],
+      "folder": "Talyndor",
+      "images": {
+        "normal": "Talyndor/Kartenbilder/normal.svg"
+      },
+      "dataPath": "Talyndor/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html",
+      "link": "karte.html?map=talyndor"
+    },
+    {
+      "id": "aeldrunmar",
+      "title": "Königreich Aeldrunmar",
+      "status": "active",
+      "type": "region",
+      "markerPresentation": "symbols",
+      "layerNames": {
+        "normal": "Vorhandene Übersichtskarte",
+        "pins": "Orte und Hauszuordnungen",
+        "regions": "Regionen"
+      },
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "aeldrunmar",
+          "title": "Aeldrunmar"
+        }
+      ],
+      "folder": "Aeldrunmar",
+      "images": {
+        "normal": "Aeldrunmar/Kartenbilder/normal.svg"
+      },
+      "dataPath": "Aeldrunmar/data.json",
+      "territoryHref": "/Kontinente/Aldervan/Aeldrunmar/koenigreich-aeldrunmar/index.html",
+      "link": "karte.html?map=aeldrunmar"
+    },
+    {
       "id": "triarchie",
       "title": "Die Triarchie · Besetztes Lothir",
       "status": "active",
@@ -2485,8 +2563,8 @@
       "title": "Zum Dritten Funken"
     },
     {
-      "id": "zum-roten-tor",
-      "title": "Zum Roten Tor"
+      "id": "gwynthor-marktplatz",
+      "title": "Gwynthor Marktplatz"
     },
     {
       "id": "lothaires-arkaneum",
@@ -2503,6 +2581,10 @@
     {
       "id": "heim-der-celynfor",
       "title": "Heim der Celynfor"
+    },
+    {
+      "id": "zum-roten-tor",
+      "title": "Zum Roten Tor"
     },
     {
       "id": "gwynthor-gwregysdu-lagerhaeuser",
@@ -3771,49 +3853,49 @@
       "moduleId": "zum-dritten-funken"
     },
     {
-      "id": "zum-roten-tor",
-      "title": "Zum Roten Tor",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz",
+      "title": "Gwynthor Marktplatz",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::page:tor-einordnung",
-      "title": "Zum Roten Tor · Zum Roten Tor",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-lindenhain",
+      "title": "Gwynthor Marktplatz · Park I · Unter den Linden",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::page:tor-personal",
-      "title": "Zum Roten Tor · Die Hände am Roten Tor",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-rosengarten",
+      "title": "Gwynthor Marktplatz · Park II · Der Rosengarten",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::page:tor-dienste",
-      "title": "Zum Roten Tor · Herberge, Stall und Reisehilfe",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-schattengarten",
+      "title": "Gwynthor Marktplatz · Park III · Am flachen Wasserbecken",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::page:tor-gaeste",
-      "title": "Zum Roten Tor · Mareds Gästeverzeichnis",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-spielwiese",
+      "title": "Gwynthor Marktplatz · Park IV · Die Spielwiese",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::session:tor-schankstube",
-      "title": "Zum Roten Tor · Schankstube · Die Bank am Fenster",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-anzeigetafel",
+      "title": "Gwynthor Marktplatz · Die Anzeigetafel · Zwischen den Wartenden",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::session:tor-kueche-vorrat",
-      "title": "Zum Roten Tor · Küche und Vorrat · Olwens Herd",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-marktstaende",
+      "title": "Gwynthor Marktplatz · Der Markt · Zwischen Gemüse und Fisch",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::session:tor-gaestekammer",
-      "title": "Zum Roten Tor · Die Gastkammern · Über dem Landweg",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-marktbrunnen",
+      "title": "Gwynthor Marktplatz · Der Marktbrunnen · Am steinernen Rand",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
-      "id": "zum-roten-tor::session:tor-wagenhof-stall",
-      "title": "Zum Roten Tor · Wagenhof und Stall · Vor der Weiterfahrt",
-      "moduleId": "zum-roten-tor"
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-spielleute",
+      "title": "Gwynthor Marktplatz · Die Spielleute · Unter dem Sonnentuch",
+      "moduleId": "gwynthor-marktplatz"
     },
     {
       "id": "lothaires-arkaneum",
@@ -3929,6 +4011,51 @@
       "id": "heim-der-celynfor::session:celynfor-wohnstube",
       "title": "Heim der Celynfor · Die Wohnstube",
       "moduleId": "heim-der-celynfor"
+    },
+    {
+      "id": "zum-roten-tor",
+      "title": "Zum Roten Tor",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::page:tor-einordnung",
+      "title": "Zum Roten Tor · Zum Roten Tor",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::page:tor-personal",
+      "title": "Zum Roten Tor · Die Hände am Roten Tor",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::page:tor-dienste",
+      "title": "Zum Roten Tor · Herberge, Stall und Reisehilfe",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::page:tor-gaeste",
+      "title": "Zum Roten Tor · Mareds Gästeverzeichnis",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::session:tor-schankstube",
+      "title": "Zum Roten Tor · Schankstube · Die Bank am Fenster",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::session:tor-kueche-vorrat",
+      "title": "Zum Roten Tor · Küche und Vorrat · Olwens Herd",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::session:tor-gaestekammer",
+      "title": "Zum Roten Tor · Die Gastkammern · Über dem Landweg",
+      "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "zum-roten-tor::session:tor-wagenhof-stall",
+      "title": "Zum Roten Tor · Wagenhof und Stall · Vor der Weiterfahrt",
+      "moduleId": "zum-roten-tor"
     },
     {
       "id": "gwynthor-gwregysdu-lagerhaeuser",
@@ -5929,6 +6056,7 @@
     "AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-data.js",
     "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js",
     "AleriaAlmanach/modules/gwynthor-heime/homes-data.js",
+    "AleriaAlmanach/modules/gwynthor-marktplatz/marketplace-data.js",
     "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
     "AleriaAlmanach/modules/house-retinues/house-retinues-data.js",
     "AleriaAlmanach/modules/house-warriors/house-warriors-data.js",

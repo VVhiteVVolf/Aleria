@@ -1,5 +1,5 @@
 ﻿// Rich-Text-Werkzeuge fuer Modultexte, Tooltips und Spoiler.
-function buildTextFormatToolbar() {
+function buildTextFormatToolbar(options = {}) {
   return `
     <div class="text-format-toolbar" data-module-rich-toolbar="true">
       <button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="bold" title="Fett">F</button>
@@ -8,6 +8,7 @@ function buildTextFormatToolbar() {
       <button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="link" title="Link einfügen">URL</button>
       <button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="tooltip" title="Tooltip">Tip</button>
       <button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="spoiler" title="Spoiler">Spoiler</button>
+      ${options.biography ? `<button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="paragraph">Absatz</button><button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="subheading">Zwischentitel</button><button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="divider">Trenner</button>` : ''}
       <button class="text-format-btn" type="button" data-richtext-action="format-nearest" data-richtext-command="linebreak" title="Zeilenumbruch">↵</button>
     </div>`;
 }
@@ -16,9 +17,10 @@ function getNearestRichEditorScope(button) {
   return button.closest('.inline-edit-field, .module-editor-field, .inline-comment-card, .inline-scene-card, .inline-profile-card, .module-scene-block-card, .module-profile-card');
 }
 
-function normalizeModuleRichEditorHtml(html) {
+function normalizeModuleRichEditorHtml(html, preserveBlocks = false) {
   const template = document.createElement('template');
   template.innerHTML = String(html || '');
+  if (preserveBlocks) return sanitizeContentHtml(template.innerHTML);
   template.content.querySelectorAll('div, p').forEach(block => {
     if (block.tagName === 'DIV' && block.classList.contains('module-rich-editor')) return;
     const frag = document.createDocumentFragment();
@@ -41,7 +43,7 @@ function syncModuleRichEditorToTextarea(editor, options = {}) {
     ? editor.nextElementSibling
     : editor?.parentElement?.querySelector?.('textarea.module-rich-textarea-source');
   if (!textarea) return;
-  textarea.value = normalizeModuleRichEditorHtml(editor.innerHTML);
+  textarea.value = normalizeModuleRichEditorHtml(editor.innerHTML, Boolean(editor.closest('[data-page-type="biography"], .cp-biography-editor, [data-biography-inline-editor]')));
   if (!options.silent) {
     textarea.dispatchEvent(new Event('input', { bubbles: true }));
     textarea.dispatchEvent(new Event('change', { bubbles: true }));
@@ -250,6 +252,9 @@ function formatNearestRichEditor(button, action) {
   if (action === 'bold') document.execCommand('bold', false);
   else if (action === 'italic') document.execCommand('italic', false);
   else if (action === 'underline') document.execCommand('underline', false);
+  else if (action === 'paragraph') document.execCommand('formatBlock', false, 'p');
+  else if (action === 'subheading') document.execCommand('formatBlock', false, 'h4');
+  else if (action === 'divider') document.execCommand('insertHTML', false, '<hr><p><br></p>');
   else if (action === 'linebreak') document.execCommand('insertHTML', false, '<br>');
   else if (action === 'link') {
     const url = prompt('Link-URL eingeben:', 'https://');

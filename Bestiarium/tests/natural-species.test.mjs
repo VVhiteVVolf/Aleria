@@ -8,7 +8,7 @@ import { renderNaturalSpecies } from '../modules/natural-species/natural-species
 const expectedEntryCounts = {
   pferde: 32,
   raubtiere: 3,
-  flugwesen: 2,
+  flugwesen: 3,
   wild: 5,
   meerestiere: 5,
   vieh: 6,
@@ -18,10 +18,10 @@ const expectedEntryCounts = {
   insekten: 9
 };
 
-const expectedLegacyImageCounts = {
+const expectedImageCounts = {
   pferde: 32,
   raubtiere: 3,
-  flugwesen: 2,
+  flugwesen: 3,
   wild: 5,
   meerestiere: 0,
   vieh: 6,
@@ -58,7 +58,7 @@ for (const id of NATURAL_SPECIES_IDS) {
     assert.equal(record.sections.length, 3);
     assert.equal(record.facts.length, 9);
     assert.equal(entries.length, expectedEntryCounts[id]);
-    assert.equal(entries.filter(entry => entry.image).length, expectedLegacyImageCounts[id]);
+    assert.equal(entries.filter(entry => entry.image).length, expectedImageCounts[id]);
     assert.equal(new Set(entries.map(entry => entry.id)).size, entries.length);
     assert(record.sections.every(section => section.paragraphs.length >= 2));
     assert(entries.every(entry => entry.description.length >= 80));
@@ -100,7 +100,7 @@ test('all named groups from the old sparse tables remain in the new atlases', as
   for (const [id, expected] of Object.entries(legacyNames)) {
     const record = JSON.parse(await readFile(new URL(`../tiere/${id}/art.json`, import.meta.url), 'utf8'));
     const names = allEntries(record).filter(entry => !entry.unknown).map(entry => entry.title);
-    assert.deepEqual(names, expected);
+    assert.deepEqual(names.filter(name => expected.includes(name)), expected);
   }
 });
 

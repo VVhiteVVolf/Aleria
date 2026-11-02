@@ -16,6 +16,24 @@ const albicTerritoryInputs = ['Stammbäume/assets/js/modules/albic-territories/'
 // and family-chart geometry checks remain in site-build-tasks.mjs.
 export const WORLD_CONTENT_TASKS = [
   {
+    id: 'rianna-lefraye-biographies', label: 'Rianna and Lefraye biographies, companions and Farnschritt breeding',
+    inputs: ['AleriaAlmanach/modules/gwynthor-seven/', 'AleriaAlmanach/assets/biographies/rianna-lefraye/',
+      'AleriaAlmanach/scripts/build-gwynthor-seven.mjs', 'AleriaAlmanach/tests/rianna-lefraye-biographies.test.mjs',
+      'AleriaAlmanach/modules/creatures/catalog/household-companion-profiles.js',
+      'AleriaAlmanach/modules/creatures/catalog/bestiary-profile-index.js',
+      'Bestiarium/modules/bird-profile/', 'Bestiarium/scripts/build-bird-profiles.mjs',
+      'Bestiarium/tiere/flugwesen/', 'Bestiarium/modules/horse-breeding/',
+      'js/biography/sources/', 'Charakter Archiv Exporte/Gwynthor Sieben/'],
+    commands: [['Bestiarium/scripts/build-bird-profiles.mjs', '--check'],
+      ['Bestiarium/scripts/build-horse-breeding.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-creature-bestiary-index.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-gwynthor-seven.mjs', '--check'],
+      ['js/biography/build-public-biographies.mjs', '--check'],
+      ['--test', '--experimental-test-isolation=none', 'AleriaAlmanach/tests/rianna-lefraye-biographies.test.mjs',
+        'AleriaAlmanach/tests/gwynthor-seven.test.mjs', 'Bestiarium/tests/horse-breeding.test.mjs',
+        'AleriaAlmanach/tests/creature-bestiary.test.mjs']]
+  },
+  {
     id: 'culture-classes', label: 'Culture class pages, icons, ranks and archive links',
     inputs: ['Klassenordner/', 'AleriaAlmanach/modules/classes/',
       'AleriaAlmanach/modules/character-archive/character-archive-page-data.js',
@@ -42,6 +60,9 @@ export const WORLD_CONTENT_TASKS = [
   {
     id: 'accepted-realms', label: 'Accepted countries, historical jurisdiction, houses, places and maps',
     inputs: ['shared/accepted-realms/', 'Kontinente/modules/accepted-realms/',
+      'Stammbäume/assets/images/houses/accepted-realms/', 'Stammbäume/assets/images/references/accepted-realms/',
+      'Stammbäume/assets/images/regions/aeldrunmar/', 'Stammbäume/assets/images/regions/talyndor/', 'Stammbäume/assets/images/regions/brevanor/',
+      'Karten/Aeldrunmar/', 'Karten/Talyndor/', 'Karten/Brevanor/',
       'Stammbäume/assets/js/data/accepted-realm-families.js', 'Kontinente/kontinente.registry.js',
       'Orte/orte.registry.js', 'Karten/karten.registry.js', 'Familien Häuser und Clans/',
       'Gallerien/krieger/scripts/accepted-realm-references.mjs'],

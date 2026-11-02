@@ -1,0 +1,87 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "person--haus-neidr--guinevere-neidr",
+    "name": "Guinevere Neidr",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-spuernase",
+          "name": "Spürnase",
+          "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+          "cost": 4,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {
+            "skillProficiencies": [
+              {
+                "name": "Nachforschungen",
+                "proficiency": "expertise"
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Wahrnehmung",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
+        },
+        {
+          "id": "development-trait-scharfe-augen",
+          "name": "Scharfe Augen",
+          "description": "+2 auf Wahrnehmung und zusätzlich +1 passive Wahrnehmung. Die passive Wahrnehmung steigt dadurch insgesamt um 3.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Körper",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Wahrnehmung",
+                "bonus": 2
+              }
+            ],
+            "passivePerception": 1
+          },
+          "triggerRules": []
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Spürnase",
+            "detail": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp"
+          },
+          {
+            "title": "Scharfe Augen",
+            "detail": "+2 auf Wahrnehmung und zusätzlich +1 passive Wahrnehmung. Die passive Wahrnehmung steigt dadurch insgesamt um 3.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp"
+          }
+        ]
+      }
+    }
+  }
+}

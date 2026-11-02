@@ -74,3 +74,15 @@ test('lange gleichlautende Set-IDs bleiben eindeutig', () => {
   assert.notEqual(first, second);
   assert.equal(second.length, 48);
 });
+
+test('umsortierte Kreaturensets behalten Standardportrait und Avatar-IDs über Export und Import', () => {
+  const creature = sanitizeCreature({ id: 'owl', imageSets: [
+    { id: 'winter', name: 'Winter', portrait: 'https://example.com/winter.png' },
+    { id: 'standard', portrait: 'https://example.com/main.png', emotes: [{ id: 'original', img: 'https://example.com/owl.png' }] }
+  ] });
+  const [restored] = normalizeCreatureImportPayload(makeCreatureExportPayload(creature));
+  assert.deepEqual(restored.imageSets.map(set => set.id), ['winter', 'standard']);
+  assert.equal(restored.portrait, 'https://example.com/main.png');
+  assert.equal(restored.avatars[0].id, 'original');
+  assert.equal(getCreatureImageSet(restored).id, 'standard');
+});

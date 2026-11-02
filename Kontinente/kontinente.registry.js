@@ -1,4 +1,2501 @@
 window.KONTINENTE_REGISTRY = [
+  // BEGIN BREVANOR_GENERATED
+  {
+    "id": "koenigreich-brevanor",
+    "slug": "koenigreich-brevanor",
+    "aliases": [
+      "brevanor"
+    ],
+    "name": "Königreich Brevanor",
+    "type": "Königreich",
+    "page": "Aldervan/Brevanor/koenigreich-brevanor/index.html",
+    "data": "Aldervan/Brevanor/koenigreich-brevanor/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-region-tervenne",
+    "slug": "brevanor-region-tervenne",
+    "aliases": [],
+    "name": "Comteyrat Tervenne",
+    "type": "Comteyrat",
+    "page": "Aldervan/Brevanor/brevanor-region-tervenne/index.html",
+    "data": "Aldervan/Brevanor/brevanor-region-tervenne/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tervenne",
+        "slug": "brevanor-region-tervenne"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-region-vaudrec",
+    "slug": "brevanor-region-vaudrec",
+    "aliases": [],
+    "name": "Comteyrat Vaudrec",
+    "type": "Comteyrat",
+    "page": "Aldervan/Brevanor/brevanor-region-vaudrec/index.html",
+    "data": "Aldervan/Brevanor/brevanor-region-vaudrec/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Vaudrec",
+        "slug": "brevanor-region-vaudrec"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-region-tregard",
+    "slug": "brevanor-region-tregard",
+    "aliases": [],
+    "name": "Comteyrat Tregard",
+    "type": "Comteyrat",
+    "page": "Aldervan/Brevanor/brevanor-region-tregard/index.html",
+    "data": "Aldervan/Brevanor/brevanor-region-tregard/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tregard",
+        "slug": "brevanor-region-tregard"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-region-caerennes",
+    "slug": "brevanor-region-caerennes",
+    "aliases": [],
+    "name": "Königliche Domäne Caerennes",
+    "type": "Königliche Domäne",
+    "page": "Aldervan/Brevanor/brevanor-region-caerennes/index.html",
+    "data": "Aldervan/Brevanor/brevanor-region-caerennes/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Caerennes",
+        "slug": "brevanor-region-caerennes"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-tervenne",
+    "slug": "brevanor-sitz-tervenne",
+    "aliases": [],
+    "name": "Herrschaft Tervenne",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-tervenne/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-tervenne/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tervenne",
+        "slug": "brevanor-region-tervenne"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Tervenne",
+        "slug": "brevanor-sitz-tervenne"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-marneval",
+    "slug": "brevanor-sitz-marneval",
+    "aliases": [],
+    "name": "Herrschaft Marneval",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-marneval/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-marneval/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tervenne",
+        "slug": "brevanor-region-tervenne"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Marneval",
+        "slug": "brevanor-sitz-marneval"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-orbec",
+    "slug": "brevanor-sitz-orbec",
+    "aliases": [],
+    "name": "Herrschaft Orbec",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-orbec/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-orbec/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tervenne",
+        "slug": "brevanor-region-tervenne"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Orbec",
+        "slug": "brevanor-sitz-orbec"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-dervel",
+    "slug": "brevanor-sitz-dervel",
+    "aliases": [],
+    "name": "Herrschaft Dervel",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-dervel/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-dervel/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tervenne",
+        "slug": "brevanor-region-tervenne"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Dervel",
+        "slug": "brevanor-sitz-dervel"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-vaudrec",
+    "slug": "brevanor-sitz-vaudrec",
+    "aliases": [],
+    "name": "Herrschaft Vaudrec",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-vaudrec/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-vaudrec/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Vaudrec",
+        "slug": "brevanor-region-vaudrec"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Vaudrec",
+        "slug": "brevanor-sitz-vaudrec"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-brellan",
+    "slug": "brevanor-sitz-brellan",
+    "aliases": [],
+    "name": "Herrschaft Brellan",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-brellan/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-brellan/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Vaudrec",
+        "slug": "brevanor-region-vaudrec"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Brellan",
+        "slug": "brevanor-sitz-brellan"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-hervant",
+    "slug": "brevanor-sitz-hervant",
+    "aliases": [],
+    "name": "Herrschaft Hervant",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-hervant/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-hervant/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Vaudrec",
+        "slug": "brevanor-region-vaudrec"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Hervant",
+        "slug": "brevanor-sitz-hervant"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-arselle",
+    "slug": "brevanor-sitz-arselle",
+    "aliases": [],
+    "name": "Herrschaft Arselle",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-arselle/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-arselle/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Vaudrec",
+        "slug": "brevanor-region-vaudrec"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Arselle",
+        "slug": "brevanor-sitz-arselle"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-tregard",
+    "slug": "brevanor-sitz-tregard",
+    "aliases": [],
+    "name": "Herrschaft Tregard",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-tregard/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-tregard/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tregard",
+        "slug": "brevanor-region-tregard"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Tregard",
+        "slug": "brevanor-sitz-tregard"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-roscan",
+    "slug": "brevanor-sitz-roscan",
+    "aliases": [],
+    "name": "Herrschaft Roscan",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-roscan/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-roscan/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tregard",
+        "slug": "brevanor-region-tregard"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Roscan",
+        "slug": "brevanor-sitz-roscan"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-torvay",
+    "slug": "brevanor-sitz-torvay",
+    "aliases": [],
+    "name": "Herrschaft Torvay",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-torvay/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-torvay/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tregard",
+        "slug": "brevanor-region-tregard"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Torvay",
+        "slug": "brevanor-sitz-torvay"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-mirel",
+    "slug": "brevanor-sitz-mirel",
+    "aliases": [],
+    "name": "Herrschaft Mirel",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-mirel/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-mirel/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tregard",
+        "slug": "brevanor-region-tregard"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Mirel",
+        "slug": "brevanor-sitz-mirel"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-garnac",
+    "slug": "brevanor-sitz-garnac",
+    "aliases": [],
+    "name": "Herrschaft Garnac",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-garnac/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-garnac/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Comteyrat",
+        "name": "Comteyrat Tregard",
+        "slug": "brevanor-region-tregard"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Garnac",
+        "slug": "brevanor-sitz-garnac"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-caerennes",
+    "slug": "brevanor-sitz-caerennes",
+    "aliases": [],
+    "name": "Herrschaft Caerennes",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-caerennes/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-caerennes/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Caerennes",
+        "slug": "brevanor-region-caerennes"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Caerennes",
+        "slug": "brevanor-sitz-caerennes"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-virec",
+    "slug": "brevanor-sitz-virec",
+    "aliases": [],
+    "name": "Herrschaft Virec",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-virec/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-virec/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Caerennes",
+        "slug": "brevanor-region-caerennes"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Virec",
+        "slug": "brevanor-sitz-virec"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-rovanne",
+    "slug": "brevanor-sitz-rovanne",
+    "aliases": [],
+    "name": "Herrschaft Rovanne",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-rovanne/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-rovanne/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Caerennes",
+        "slug": "brevanor-region-caerennes"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Rovanne",
+        "slug": "brevanor-sitz-rovanne"
+      }
+    ]
+  },
+  {
+    "id": "brevanor-sitz-sorven",
+    "slug": "brevanor-sitz-sorven",
+    "aliases": [],
+    "name": "Herrschaft Sorven",
+    "type": "Herrschaft",
+    "page": "Aldervan/Brevanor/brevanor-sitz-sorven/index.html",
+    "data": "Aldervan/Brevanor/brevanor-sitz-sorven/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Brevanor",
+        "slug": "koenigreich-brevanor"
+      },
+      {
+        "type": "Königliche Domäne",
+        "name": "Königliche Domäne Caerennes",
+        "slug": "brevanor-region-caerennes"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Sorven",
+        "slug": "brevanor-sitz-sorven"
+      }
+    ]
+  },
+  // END BREVANOR_GENERATED
+  // BEGIN TALYNDOR_GENERATED
+  {
+    "id": "koenigreich-talyndor",
+    "slug": "koenigreich-talyndor",
+    "aliases": [
+      "talyndor"
+    ],
+    "name": "Königreich Talyndor",
+    "type": "Königreich",
+    "page": "Aldervan/Talyndor/koenigreich-talyndor/index.html",
+    "data": "Aldervan/Talyndor/koenigreich-talyndor/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-region-lennwyck",
+    "slug": "talyndor-region-lennwyck",
+    "aliases": [],
+    "name": "Earltum Lennwyckland",
+    "type": "Earltum",
+    "page": "Aldervan/Talyndor/talyndor-region-lennwyck/index.html",
+    "data": "Aldervan/Talyndor/talyndor-region-lennwyck/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Lennwyckland",
+        "slug": "talyndor-region-lennwyck"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-region-warren",
+    "slug": "talyndor-region-warren",
+    "aliases": [],
+    "name": "Earltum Warrenfold",
+    "type": "Earltum",
+    "page": "Aldervan/Talyndor/talyndor-region-warren/index.html",
+    "data": "Aldervan/Talyndor/talyndor-region-warren/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Warrenfold",
+        "slug": "talyndor-region-warren"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-region-aldred",
+    "slug": "talyndor-region-aldred",
+    "aliases": [],
+    "name": "Königliches Earltum Aldredhold",
+    "type": "Königliches Earltum",
+    "page": "Aldervan/Talyndor/talyndor-region-aldred/index.html",
+    "data": "Aldervan/Talyndor/talyndor-region-aldred/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Aldredhold",
+        "slug": "talyndor-region-aldred"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-region-brigane",
+    "slug": "talyndor-region-brigane",
+    "aliases": [],
+    "name": "Earltum Briganefold",
+    "type": "Earltum",
+    "page": "Aldervan/Talyndor/talyndor-region-brigane/index.html",
+    "data": "Aldervan/Talyndor/talyndor-region-brigane/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Briganefold",
+        "slug": "talyndor-region-brigane"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-wetherham",
+    "slug": "talyndor-sitz-wetherham",
+    "aliases": [],
+    "name": "Thaintum Wetherfold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-wetherham/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-wetherham/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Lennwyckland",
+        "slug": "talyndor-region-lennwyck"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Wetherfold",
+        "slug": "talyndor-sitz-wetherham"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-dunworth",
+    "slug": "talyndor-sitz-dunworth",
+    "aliases": [],
+    "name": "Thaintum Dunworthmark",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-dunworth/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-dunworth/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Lennwyckland",
+        "slug": "talyndor-region-lennwyck"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Dunworthmark",
+        "slug": "talyndor-sitz-dunworth"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-cawden",
+    "slug": "talyndor-sitz-cawden",
+    "aliases": [],
+    "name": "Thaintum Cawdenhold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-cawden/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-cawden/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Lennwyckland",
+        "slug": "talyndor-region-lennwyck"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Cawdenhold",
+        "slug": "talyndor-sitz-cawden"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-eldenwick",
+    "slug": "talyndor-sitz-eldenwick",
+    "aliases": [],
+    "name": "Thaintum Eldenemnet",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-eldenwick/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-eldenwick/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Warrenfold",
+        "slug": "talyndor-region-warren"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Eldenemnet",
+        "slug": "talyndor-sitz-eldenwick"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-wensbury",
+    "slug": "talyndor-sitz-wensbury",
+    "aliases": [],
+    "name": "Thaintum Wensfold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-wensbury/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-wensbury/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Warrenfold",
+        "slug": "talyndor-region-warren"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Wensfold",
+        "slug": "talyndor-sitz-wensbury"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-hartham",
+    "slug": "talyndor-sitz-hartham",
+    "aliases": [],
+    "name": "Thaintum Harthamland",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-hartham/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-hartham/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Warrenfold",
+        "slug": "talyndor-region-warren"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Harthamland",
+        "slug": "talyndor-sitz-hartham"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-edrington",
+    "slug": "talyndor-sitz-edrington",
+    "aliases": [],
+    "name": "Thaintum Edringfold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-edrington/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-edrington/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Aldredhold",
+        "slug": "talyndor-region-aldred"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Edringfold",
+        "slug": "talyndor-sitz-edrington"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-ternford",
+    "slug": "talyndor-sitz-ternford",
+    "aliases": [],
+    "name": "Thaintum Ternemnet",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-ternford/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-ternford/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Aldredhold",
+        "slug": "talyndor-region-aldred"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Ternemnet",
+        "slug": "talyndor-sitz-ternford"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-fenhurst",
+    "slug": "talyndor-sitz-fenhurst",
+    "aliases": [],
+    "name": "Thaintum Fenhold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-fenhurst/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-fenhurst/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Briganefold",
+        "slug": "talyndor-region-brigane"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Fenhold",
+        "slug": "talyndor-sitz-fenhurst"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-norcombe",
+    "slug": "talyndor-sitz-norcombe",
+    "aliases": [],
+    "name": "Thaintum Norcombefold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-norcombe/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-norcombe/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Briganefold",
+        "slug": "talyndor-region-brigane"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Norcombefold",
+        "slug": "talyndor-sitz-norcombe"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-bramwell",
+    "slug": "talyndor-sitz-bramwell",
+    "aliases": [],
+    "name": "Thaintum Brammark",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-bramwell/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-bramwell/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Briganefold",
+        "slug": "talyndor-region-brigane"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Brammark",
+        "slug": "talyndor-sitz-bramwell"
+      }
+    ]
+  },
+  {
+    "id": "talyndor-sitz-aveldon",
+    "slug": "talyndor-sitz-aveldon",
+    "aliases": [],
+    "name": "Thaintum Avelhold",
+    "type": "Thaintum",
+    "page": "Aldervan/Talyndor/talyndor-sitz-aveldon/index.html",
+    "data": "Aldervan/Talyndor/talyndor-sitz-aveldon/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Talyndor",
+        "slug": "koenigreich-talyndor"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Briganefold",
+        "slug": "talyndor-region-brigane"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Avelhold",
+        "slug": "talyndor-sitz-aveldon"
+      }
+    ]
+  },
+  // END TALYNDOR_GENERATED
+  // BEGIN AELDRUNMAR_GENERATED
+  {
+    "id": "koenigreich-aeldrunmar",
+    "slug": "koenigreich-aeldrunmar",
+    "aliases": [
+      "aeldrunmar"
+    ],
+    "name": "Königreich Aeldrunmar",
+    "type": "Königreich",
+    "page": "Aldervan/Aeldrunmar/koenigreich-aeldrunmar/index.html",
+    "data": "Aldervan/Aeldrunmar/koenigreich-aeldrunmar/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-region-beran",
+    "slug": "aeldrunmar-region-beran",
+    "aliases": [],
+    "name": "Earltum Beranland",
+    "type": "Earltum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-region-beran/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-region-beran/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Beranland",
+        "slug": "aeldrunmar-region-beran"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-region-earncynne",
+    "slug": "aeldrunmar-region-earncynne",
+    "aliases": [],
+    "name": "Earltum Earnemnet",
+    "type": "Earltum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-region-earncynne/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-region-earncynne/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Earnemnet",
+        "slug": "aeldrunmar-region-earncynne"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-region-estmere",
+    "slug": "aeldrunmar-region-estmere",
+    "aliases": [],
+    "name": "Earltum Estmere",
+    "type": "Earltum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-region-estmere/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-region-estmere/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Estmere",
+        "slug": "aeldrunmar-region-estmere"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-region-tharn",
+    "slug": "aeldrunmar-region-tharn",
+    "aliases": [],
+    "name": "Earltum Tharnmere",
+    "type": "Earltum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-region-tharn/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-region-tharn/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Tharnmere",
+        "slug": "aeldrunmar-region-tharn"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-region-kendryck",
+    "slug": "aeldrunmar-region-kendryck",
+    "aliases": [],
+    "name": "Königliches Earltum Kendryckfold",
+    "type": "Königliches Earltum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-region-kendryck/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-region-kendryck/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Kendryckfold",
+        "slug": "aeldrunmar-region-kendryck"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-region-fyr",
+    "slug": "aeldrunmar-region-fyr",
+    "aliases": [],
+    "name": "Earltum Fyrland",
+    "type": "Earltum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-region-fyr/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-region-fyr/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Fyrland",
+        "slug": "aeldrunmar-region-fyr"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-aeldros",
+    "slug": "aeldrunmar-sitz-aeldros",
+    "aliases": [],
+    "name": "Thaintum Ældrosmark",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-aeldros/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-aeldros/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Beranland",
+        "slug": "aeldrunmar-region-beran"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Ældrosmark",
+        "slug": "aeldrunmar-sitz-aeldros"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-mornhall",
+    "slug": "aeldrunmar-sitz-mornhall",
+    "aliases": [],
+    "name": "Thaintum Mornmark",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-mornhall/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-mornhall/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Beranland",
+        "slug": "aeldrunmar-region-beran"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Mornmark",
+        "slug": "aeldrunmar-sitz-mornhall"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-itharol",
+    "slug": "aeldrunmar-sitz-itharol",
+    "aliases": [],
+    "name": "Thaintum Itharhold",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-itharol/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-itharol/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Beranland",
+        "slug": "aeldrunmar-region-beran"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Itharhold",
+        "slug": "aeldrunmar-sitz-itharol"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-virelith",
+    "slug": "aeldrunmar-sitz-virelith",
+    "aliases": [],
+    "name": "Thaintum Virelmark",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-virelith/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-virelith/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Earnemnet",
+        "slug": "aeldrunmar-region-earncynne"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Virelmark",
+        "slug": "aeldrunmar-sitz-virelith"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-glenfara",
+    "slug": "aeldrunmar-sitz-glenfara",
+    "aliases": [],
+    "name": "Thaintum Glenfold",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-glenfara/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-glenfara/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Earnemnet",
+        "slug": "aeldrunmar-region-earncynne"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Glenfold",
+        "slug": "aeldrunmar-sitz-glenfara"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-ghrenholt",
+    "slug": "aeldrunmar-sitz-ghrenholt",
+    "aliases": [],
+    "name": "Thaintum Greenhold",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-ghrenholt/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-ghrenholt/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Earnemnet",
+        "slug": "aeldrunmar-region-earncynne"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Greenhold",
+        "slug": "aeldrunmar-sitz-ghrenholt"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-rivisra",
+    "slug": "aeldrunmar-sitz-rivisra",
+    "aliases": [],
+    "name": "Thaintum Rivismere",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-rivisra/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-rivisra/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Estmere",
+        "slug": "aeldrunmar-region-estmere"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Rivismere",
+        "slug": "aeldrunmar-sitz-rivisra"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-faelthar",
+    "slug": "aeldrunmar-sitz-faelthar",
+    "aliases": [],
+    "name": "Thaintum Faelhold",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-faelthar/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-faelthar/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Estmere",
+        "slug": "aeldrunmar-region-estmere"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Faelhold",
+        "slug": "aeldrunmar-sitz-faelthar"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-thalrune",
+    "slug": "aeldrunmar-sitz-thalrune",
+    "aliases": [],
+    "name": "Herrschaft Thalmere",
+    "type": "Herrschaft",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-thalrune/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-thalrune/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Estmere",
+        "slug": "aeldrunmar-region-estmere"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Thalmere",
+        "slug": "aeldrunmar-sitz-thalrune"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-eldramar",
+    "slug": "aeldrunmar-sitz-eldramar",
+    "aliases": [],
+    "name": "Thaintum Eldramere",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-eldramar/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-eldramar/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Estmere",
+        "slug": "aeldrunmar-region-estmere"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Eldramere",
+        "slug": "aeldrunmar-sitz-eldramar"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-eadwick",
+    "slug": "aeldrunmar-sitz-eadwick",
+    "aliases": [],
+    "name": "Herrschaft Eadmere",
+    "type": "Herrschaft",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-eadwick/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-eadwick/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Tharnmere",
+        "slug": "aeldrunmar-region-tharn"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Eadmere",
+        "slug": "aeldrunmar-sitz-eadwick"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-linthar",
+    "slug": "aeldrunmar-sitz-linthar",
+    "aliases": [],
+    "name": "Thaintum Linthmere",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-linthar/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-linthar/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Tharnmere",
+        "slug": "aeldrunmar-region-tharn"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Linthmere",
+        "slug": "aeldrunmar-sitz-linthar"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-luthirrith",
+    "slug": "aeldrunmar-sitz-luthirrith",
+    "aliases": [],
+    "name": "Ritterliche Herrschaft Luthirmere",
+    "type": "Ritterliche Herrschaft",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-luthirrith/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-luthirrith/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Tharnmere",
+        "slug": "aeldrunmar-region-tharn"
+      },
+      {
+        "type": "Ritterliche Herrschaft",
+        "name": "Ritterliche Herrschaft Luthirmere",
+        "slug": "aeldrunmar-sitz-luthirrith"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-trentmorath",
+    "slug": "aeldrunmar-sitz-trentmorath",
+    "aliases": [],
+    "name": "Thaintum Trentmere",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-trentmorath/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-trentmorath/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Tharnmere",
+        "slug": "aeldrunmar-region-tharn"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Trentmere",
+        "slug": "aeldrunmar-sitz-trentmorath"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-kaldhorn",
+    "slug": "aeldrunmar-sitz-kaldhorn",
+    "aliases": [],
+    "name": "Thaintum Kaldmark",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-kaldhorn/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-kaldhorn/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Kendryckfold",
+        "slug": "aeldrunmar-region-kendryck"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Kaldmark",
+        "slug": "aeldrunmar-sitz-kaldhorn"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-dunrath",
+    "slug": "aeldrunmar-sitz-dunrath",
+    "aliases": [],
+    "name": "Herrschaft Dunmark",
+    "type": "Herrschaft",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-dunrath/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-dunrath/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Kendryckfold",
+        "slug": "aeldrunmar-region-kendryck"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Dunmark",
+        "slug": "aeldrunmar-sitz-dunrath"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-glendir",
+    "slug": "aeldrunmar-sitz-glendir",
+    "aliases": [],
+    "name": "Thaintum Glendfold",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-glendir/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-glendir/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Kendryckfold",
+        "slug": "aeldrunmar-region-kendryck"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Glendfold",
+        "slug": "aeldrunmar-sitz-glendir"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-aeldrunhal",
+    "slug": "aeldrunmar-sitz-aeldrunhal",
+    "aliases": [],
+    "name": "Thaintum Ældrunland",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-aeldrunhal/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-aeldrunhal/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Königliches Earltum",
+        "name": "Königliches Earltum Kendryckfold",
+        "slug": "aeldrunmar-region-kendryck"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Ældrunland",
+        "slug": "aeldrunmar-sitz-aeldrunhal"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-virelath",
+    "slug": "aeldrunmar-sitz-virelath",
+    "aliases": [],
+    "name": "Thaintum Virelemnet",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-virelath/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-virelath/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Fyrland",
+        "slug": "aeldrunmar-region-fyr"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Virelemnet",
+        "slug": "aeldrunmar-sitz-virelath"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-hydrathar",
+    "slug": "aeldrunmar-sitz-hydrathar",
+    "aliases": [],
+    "name": "Thaintum Hydrafold",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-hydrathar/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-hydrathar/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Fyrland",
+        "slug": "aeldrunmar-region-fyr"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Hydrafold",
+        "slug": "aeldrunmar-sitz-hydrathar"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-veyrthar",
+    "slug": "aeldrunmar-sitz-veyrthar",
+    "aliases": [],
+    "name": "Thaintum Veyrmere",
+    "type": "Thaintum",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-veyrthar/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-veyrthar/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Fyrland",
+        "slug": "aeldrunmar-region-fyr"
+      },
+      {
+        "type": "Thaintum",
+        "name": "Thaintum Veyrmere",
+        "slug": "aeldrunmar-sitz-veyrthar"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-kaldun",
+    "slug": "aeldrunmar-sitz-kaldun",
+    "aliases": [],
+    "name": "Herrschaft Kaldmere",
+    "type": "Herrschaft",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-kaldun/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-kaldun/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Fyrland",
+        "slug": "aeldrunmar-region-fyr"
+      },
+      {
+        "type": "Herrschaft",
+        "name": "Herrschaft Kaldmere",
+        "slug": "aeldrunmar-sitz-kaldun"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-hingstgard",
+    "slug": "aeldrunmar-sitz-hingstgard",
+    "aliases": [],
+    "name": "Ordensgebiet Hingsthold",
+    "type": "Ordensgebiet",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-hingstgard/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-hingstgard/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Ordensgebiet",
+        "name": "Ordensgebiet Hingsthold",
+        "slug": "aeldrunmar-sitz-hingstgard"
+      }
+    ]
+  },
+  {
+    "id": "aeldrunmar-sitz-scandmere",
+    "slug": "aeldrunmar-sitz-scandmere",
+    "aliases": [],
+    "name": "Rittersitz Scandmere",
+    "type": "Rittersitz",
+    "page": "Aldervan/Aeldrunmar/aeldrunmar-sitz-scandmere/index.html",
+    "data": "Aldervan/Aeldrunmar/aeldrunmar-sitz-scandmere/herrschaft.data.mjs?v=accepted-realms-20261101",
+    "dataType": "module",
+    "hierarchy": [
+      {
+        "type": "Sammlung",
+        "name": "Kontinente",
+        "slug": "kontinente"
+      },
+      {
+        "type": "Kontinent",
+        "name": "Aldervan",
+        "slug": "aldervan"
+      },
+      {
+        "type": "Königreich",
+        "name": "Königreich Aeldrunmar",
+        "slug": "koenigreich-aeldrunmar"
+      },
+      {
+        "type": "Earltum",
+        "name": "Earltum Tharnmere",
+        "slug": "aeldrunmar-region-tharn"
+      },
+      {
+        "type": "Rittersitz",
+        "name": "Rittersitz Scandmere",
+        "slug": "aeldrunmar-sitz-scandmere"
+      }
+    ]
+  },
+  // END AELDRUNMAR_GENERATED
   // BEGIN ACCEPTED_CONTINENTS_GENERATED
   {"id":"kontinent-lothir","slug":"lothir","aliases":["lothir"],"name":"Kontinent Lothir","type":"Kontinent","page":"Lothir/Lothir.html","data":"Lothir/kontinent.data.js","hierarchy":[{"type":"Sammlung","name":"Kontinente","slug":"kontinente"},{"type":"Kontinent","name":"Lothir","slug":"lothir"}]},
   {"id":"kontinent-aldervan","slug":"aldervan","aliases":["aldervan"],"name":"Kontinent Aldervan","type":"Kontinent","page":"Aldervan/Aldervan.html","data":"Aldervan/kontinent.data.js","hierarchy":[{"type":"Sammlung","name":"Kontinente","slug":"kontinente"},{"type":"Kontinent","name":"Aldervan","slug":"aldervan"}]},

@@ -1,4 +1,7 @@
 import { normalizeSpellCatalogReference } from '../spell-catalog/spell-catalog.js';
+import { getDevelopmentTraitId, getDevelopmentTechniqueId } from '../character-development/development-entry-reference.js';
+import { getCharacterClassIds } from '../character-development/character-training-state.js';
+import { getCharacterCreationTemplate } from '../combat/character-creation-templates.js';
 import { normalizeCombatSpell } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
 
@@ -248,10 +251,13 @@ export function extractCharacterArchiveEntries(record = {}, sourceKind = '') {
 
   const ancestry = profile.identity?.ancestry || record.species || '';
   const className = profile.identity?.archetype || '';
+  const classEntries=profile.templateSelections?.classIds?.length>1||profile.templateSelections?.customClass?.name
+    ?getCharacterClassIds(profile).map(id=>identityEntry('class',id==='custom'?profile.templateSelections.customClass?.name:getCharacterCreationTemplate('class',id)?.label||id,source,{id}))
+    :[identityEntry('class',className,source)];
   const background = profile.identity?.background || '';
   [
     identityEntry('ancestry', ancestry, source),
-    identityEntry('class', className, source),
+    ...classEntries,
     identityEntry('background', background, source),
     identityEntry('origin', record.origin, source)
   ].filter(Boolean).forEach(entry => entries.push(entry));
@@ -297,6 +303,9 @@ export function extractItemRegisterArchiveEntries() {
 export function createCharacterArchiveProfileItem(entry, collection = '') {
   const normalized = normalizeCharacterArchiveEntry(entry);
   const data = cloneArchiveValue(normalized.data, {});
+  const traitId=normalized.kind==='trait'?getDevelopmentTraitId(data):'';
+  if(traitId)data.developmentTraitId=traitId;
+  if(normalized.kind==='technique'&&getDevelopmentTechniqueId(data).startsWith('combat-style-'))data.catalogTechniqueId=getDevelopmentTechniqueId(data);
   const prefix = collection || getCharacterArchiveKind(normalized.kind).collection || normalized.kind;
   const id = globalThis.crypto?.randomUUID?.()
     || `${slugifyArchiveValue(prefix)}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;

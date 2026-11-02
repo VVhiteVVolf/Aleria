@@ -31,7 +31,7 @@ export function compileTerritories(realm) {
       : realm.id === 'goldmund' ? (region.id === 'kronenau' ? 'Herzogliche Grafschaft ' : 'Grafschaft ') + region.name
       : realm.id === 'iathneach' ? region.name : region.name || region.label;
     const art = realm.territoryArt[region.art || region.shield || `county-${region.id}`] || realm.territoryArt[`province-${region.id}`] || realm.territoryArt[region.id];
-    make(`${realm.id}-region-${region.id}`, name, realm.occupied ? 'Besetzte Region' : realm.id === 'weisenfluh' ? region.royal ? 'Königliche Provinz' : 'Freiherrentum' : /Mor|Iathneach/.test(region.title || '') || realm.id === 'iathneach' ? 'Mor Tiarnatum' : realm.id === 'deitheach' ? 'Mor Tiarnatum' : 'Grafschaft', realm.rootId, ruler, { level: 'region', sourceId: region.id, banner: art?.image || ruler?.crest || '', geography: region.design?.landscape || '', originRealm: region.originRealm || '', historical: !!realm.historical, occupied: !!realm.occupied });
+    make(`${realm.id}-region-${region.id}`, region.territoryName || name, region.territoryType || (realm.occupied ? 'Besetzte Region' : realm.id === 'weisenfluh' ? region.royal ? 'Königliche Provinz' : 'Freiherrentum' : /Mor|Iathneach/.test(region.title || '') || realm.id === 'iathneach' ? 'Mor Tiarnatum' : realm.id === 'deitheach' ? 'Mor Tiarnatum' : 'Grafschaft'), realm.rootId, ruler, { level: 'region', sourceId: region.id, banner: art?.image || ruler?.crest || '', geography: region.geography || region.design?.landscape || '', originRealm: region.originRealm || '', historical: !!realm.historical, occupied: !!realm.occupied });
   }
   for (const seat of realm.settlements) {
     const ruler = realm.houses.find(h => h.seatId === seat.id && h.isSeatRuler);
@@ -39,11 +39,12 @@ export function compileTerritories(realm) {
     let parentId = realm.id === 'moinneach' || !regionId ? realm.rootId : `${realm.id}-region-${regionId}`;
     if (realm.id === 'aldingen' && seat.id === 'hasselt') parentId = realm.rootId;
     const art = realm.territoryArt[seat.art || seat.shield || seat.region || seat.id];
-    const type = realm.occupied ? 'Besetzte Herrschaft' : typeForRank(ruler?.rankId);
-    const name = `${type} ${seat.regionName || seat.name}`;
+    const type = seat.territoryType || (realm.occupied ? 'Besetzte Herrschaft' : typeForRank(ruler?.rankId));
+    const name = seat.territoryName || `${type} ${seat.regionName || seat.name}`;
     make(`${realm.id}-sitz-${seat.id}`, name, type, parentId, ruler, { level: 'seat', sourceId: seat.id, seat: seat.name, banner: art?.image || ruler?.crest || '', extent: 'territorial', geography: seat.geography || '', originRealm: seat.originRealm || '', historical: !!realm.historical, occupied: !!realm.occupied, mapRegionId: regionId ? `${realm.id}-region-${regionId}` : realm.rootId });
   }
   for (const house of realm.houses) {
+    if (realm.urbanHouseTerritories === false) continue;
     if (house.isSeatRuler) continue;
     make(`${realm.id}-hausbereich-${house.id}`, `${house.rankId === 'ministerial' ? 'Hausdienst' : 'Herrschaft'} ${houseTitle(house)} in ${realm.settlements.find(s => s.id === house.seatId).name}`, house.rankId === 'ministerial' ? 'Ministerialenhaus' : 'Örtliche Herrschaft', `${realm.id}-sitz-${house.seatId}`, house, { level: 'house', sourceId: house.id, extent: 'urban', historical: !!realm.historical, occupied: !!realm.occupied });
   }

@@ -224,8 +224,8 @@ test('wechselt nach Stufe 20 in Sonderstufen und respektiert das Gesamtlimit 30'
 
   const capped = sanitizeCharacterCombatProfile({ progression: { level: 20, specialLevels: 10 } });
   const cappedPreview = previewCharacterLevelUp(capped, createCharacterLevelUpPlan(capped));
-  assert.equal(cappedPreview.ready, false);
-  assert.match(cappedPreview.errors[0], /Gesamtstufe 30/);
+  assert.equal(cappedPreview.ready, true, 'Am Maximum bleiben Ausbildung und Traits bearbeitbar.');
+  assert.equal(cappedPreview.after.level, 30);
 });
 
 test('wendet freie Level-up-Entscheidungen auf Attribute, Ressourcen und Freischaltungen an', () => {
@@ -269,8 +269,8 @@ test('vergibt Attributspunkte nur auf 4, 8, 12, 16 und 20 sowie vier Punkte je S
 
   const levelThree = sanitizeCharacterCombatProfile({ progression: { level: 3 } });
   const missingPoints = previewCharacterLevelUp(levelThree, createCharacterLevelUpPlan(levelThree));
-  assert.equal(missingPoints.ready, false);
-  assert.match(missingPoints.errors[0], /genau 2 Attributspunkte/);
+  assert.equal(missingPoints.ready, true, 'Attributspunkte sind eine frei übersteuerbare Empfehlung.');
+  assert.equal(missingPoints.remainingAttributePoints, 2);
   const balancedPlan = createCharacterLevelUpPlan(levelThree);
   balancedPlan.attributeIncreases.strength = 1;
   balancedPlan.attributeIncreases.dexterity = 1;

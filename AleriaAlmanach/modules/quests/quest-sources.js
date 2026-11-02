@@ -20,10 +20,10 @@ export function questsFromBoard(board, state, maps = []) {
     const preparation = AUTHORED_QUEST_PREPARATIONS[id];
     const location = board.hierarchy?.at(-1)?.slug;
     const linkedMaps = maps.filter(map => location && map.status === 'active' && map.hierarchy?.some(row => row.slug === location)).map(map => map.id);
-    return { ...normalizeQuest({ id: `notice:${board.id}:${id}`, title: primary.title || 'Auftrag ohne Titel', summary: preparation?.summary || summary,
+    return { ...normalizeQuest({ id: `notice:${board.id}:${id}`, title: preparation?.title || primary.title || 'Auftrag ohne Titel', summary: preparation?.summary || summary,
       ...(preparation ? { dossier: preparation.dossier, objectives: preparation.objectives } : {}),
       patron: primary.verfasserName || '', links: { boards: [board.id], notices: [{ boardId: board.id, noticeId: primary.id }],
-        modules: [...new Set([...rows.flatMap(row => moduleMentions(questPlainText(row.text)).map(item => item.id)), ...(preparation?.modules || [])])], maps: [...new Set([...linkedMaps, ...(preparation?.dossier.route ? [preparation.dossier.route.mapId] : [])])] },
+        modules: [...new Set([...rows.flatMap(row => moduleMentions(questPlainText(row.text)).map(item => item.id)), ...(preparation?.modules || [])])], maps: [...new Set([...linkedMaps, ...(preparation?.dossier.route ? [preparation.dossier.route.mapId] : []), ...(preparation?.dossier.area ? [preparation.dossier.area.mapId] : [])])] },
       rewards: rows.flatMap(row => row.rewards || []).filter((row, index, all) => all.findIndex(other => JSON.stringify(other) === JSON.stringify(row)) === index) }),
       boardAvailability: questBoardAvailability(archive, rows) };
   });

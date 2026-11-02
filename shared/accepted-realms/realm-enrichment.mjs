@@ -1,8 +1,13 @@
 import { goldmundContext } from '../../Kontinente/modules/goldmund/goldmund-context.mjs';
+import tharnAdditions from './data/aeldrunmar-tharn-houses.source.json' with { type: 'json' };
 
 // Accepted editorial corrections take precedence over older workshop captions.
 export function enrichRealm(source, legacy) {
   const realm = structuredClone(source);
+  if (realm.id === tharnAdditions.realm) {
+    realm.houses.push(...structuredClone(tharnAdditions.houses));
+    realm.houses.find(h => h.id === 'tharn').showVassalDirectory = true;
+  }
   for (const house of realm.houses) if (house.warrior?.classId && !house.warrior.classHref && ['goldmund', 'aldingen', 'weisenfluh', 'moinneach'].includes(realm.id)) {
     house.warrior.classHref = `/Klassenordner/Klassenseite.html#klasse-${realm.id === 'aldingen' ? 'goldmund' : realm.id}-${house.warrior.classId}`;
   }

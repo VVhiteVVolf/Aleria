@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-11-02T19:44:18.188Z",
+  "characterId": "vk0xAa3ZcEhVvGC1CzNq",
+  "worldPersonId": "person--haus-draig--oweta-draig",
+  "contentHash": "191caba3d74850347b88ce47f5559be3d0a73837beba0d96cfa6c6cb5f973239",
+  "inventory": [
+    {
+      "id": "oweta-heulwen",
+      "name": "Heulwen",
+      "templateId": ""
+    },
+    {
+      "id": "oweta-draig-draig-jungritter-ruestung-1",
+      "name": "Draig - Jungritter Plattenrüstung",
+      "templateId": "gwynthor-seven:draig-jungritter-ruestung"
+    },
+    {
+      "id": "oweta-draig-draig-ritterschwert-2",
+      "name": "Draig Ritterschwert",
+      "templateId": "gwynthor-seven:draig-ritterschwert"
+    },
+    {
+      "id": "oweta-draig-draig-dolch-3",
+      "name": "Draig Dolch",
+      "templateId": "gwynthor-seven:draig-dolch"
+    }
+  ],
+  "weapons": [
+    {
+      "id": "oweta-draig-draig-ritterschwert-2",
+      "name": "Draig Ritterschwert",
+      "inventoryItemId": "oweta-draig-draig-ritterschwert-2"
+    },
+    {
+      "id": "oweta-draig-draig-dolch-3",
+      "name": "Draig Dolch",
+      "inventoryItemId": "oweta-draig-draig-dolch-3"
+    }
+  ],
+  "armor": [
+    {
+      "id": "oweta-draig-draig-jungritter-ruestung-1",
+      "name": "Draig - Jungritter Plattenrüstung",
+      "inventoryItemId": "oweta-draig-draig-jungritter-ruestung-1"
+    }
+  ],
+  "localDataPreserved": true,
+  "biographyAndGenealogyPreserved": true,
+  "moneyAndCompanionsPreserved": true,
+  "heulwenItemPreserved": true,
+  "unrelatedSnapshotRowsDeepComparedDuringProjection": 264,
+  "checkAfterWrite": {
+    "changedFiles": 0
+  },
+  "focusedTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "firestoreWrites": false
+}

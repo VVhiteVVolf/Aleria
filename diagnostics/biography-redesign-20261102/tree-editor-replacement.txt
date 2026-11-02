@@ -1,0 +1,29 @@
+function renderEditor(module, documentRef) {
+  const d = module.biography;
+  const group = (title, body, options = {}) => globalThis.AleriaBiographyCards.editorGroup(title, body, { escape: escapeHtml, ...options });
+  const add = (label, action) => `<button class="button button--quiet button--small" type="button" data-biography-action="${action}">${label}</button>`;
+  const collection = (title, action, content, items, prefix = '') => group(title, prefix + add('+ Eintrag', action) + content, { count: items.length });
+  const mentors = d.knightMentors || [];
+  return `<div class="person-biography-editor" data-biography-editor>
+    ${group('Biografie & Hintergrund',
+      inputField('Biografie-Überschrift', 'biographyTitle', d.biographyTitle)
+      + richField('Über die Person', 'biography', 'biographyText', d.biographyText, documentRef)
+      + inputField('Hintergrund-Überschrift', 'historyTitle', d.historyTitle)
+      + richField('Hintergrund & Werdegang', 'biography', 'historyText', d.historyText, documentRef), { open: true, help: 'Längere Texte mit Absätzen, Zwischenüberschriften und Trennern gliedern.' })}
+    ${group('Portrait & Steckbrief', `<div class="person-biography-editor__portrait-stages">${portraitStagesEditor(d.portraitStages, d.portrait)}</div>` + add('+ Steckbriefzeile', 'add-stat') + statsEditor(module.stats), { count: module.stats.length })}
+    ${collection('Ritterväter & Rittermütter', 'add-mentor', mentors.map((item,index) => `<div class="person-biography-editor__row connection-columns">${collectionInput('knightMentors',index,'name',item.name,'Name')}${collectionInput('knightMentors',index,'role',item.role,'Rittervater / Rittermutter')}${collectionInput('knightMentors',index,'image',item.image,'Portrait-URL')}${collectionInput('knightMentors',index,'detail',item.detail,'Ausbildung / Zeitraum')}${removeButton('knightMentors',index,item.name)}</div>`).join(''), mentors)}
+    ${collection('Persönlichkeit & Spezialgebiete', 'add-ability', abilitiesEditor(d.abilities), d.abilities, inputField('Überschrift','abilitiesTitle',d.abilitiesTitle))}
+    ${collection('Weitere Kapitel', 'add-section', sectionsEditor(d.extraSections), d.extraSections)}
+    ${collection('Bekannte Werke','add-work',lineEditor(d.works,'works'), d.works, inputField('Überschrift','worksTitle',d.worksTitle))}
+    ${collection('Eigenarten & Wissenswertes','add-trivia',lineEditor(d.trivia,'trivia'), d.trivia, inputField('Überschrift','triviaTitle',d.triviaTitle))}
+    ${collection('Zitate','add-quote-line',lineEditor(d.quotes,'quotes'), d.quotes, inputField('Überschrift','quotesTitle',d.quotesTitle))}
+    ${collection('Beziehungen & Verbindungen','add-connection',connectionsEditor(d.connections), d.connections, inputField('Überschrift','connectionsTitle',d.connectionsTitle) + add('+ Gruppentrenner','add-connection-heading'))}
+    ${collection('Eigentum & Dokumente','add-document',documentsEditor(d.documents), d.documents, inputField('Überschrift','documentsTitle',d.documentsTitle))}
+    ${group('Leitgedanke & Gestaltung', richField('Zitat beim Portrait','module','quote',module.quote,documentRef)
+      + `<label class="person-biography-editor__field"><span>Zitat von</span><input type="text" data-biography-module-field="quoteBy" value="${escapeHtml(module.quoteBy)}"></label>`
+      + inputField('Fußzeile','footer',d.footer) + inputField('Inhaltsbreite links (%)','sideWidth',d.sideWidth,{type:'number',min:35,max:100})
+      + inputField('Verbindungsportraits: Höhe (px)','connectionPortraitHeight',d.connectionPortraitHeight,{type:'number',min:44,max:140})
+      + inputField('Abstand zum Verbindungstext (px)','connectionTextOffset',d.connectionTextOffset,{type:'number',min:0,max:80}))}
+  </div>`;
+}
+

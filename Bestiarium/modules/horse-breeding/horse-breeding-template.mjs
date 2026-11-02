@@ -1,7 +1,7 @@
 import { escapeHtml } from '../book-shell/book-template-utils.mjs';
 import { horseCrossingAnchor } from './horse-breeding-model.mjs';
 
-const VERSION = '20261013-draig-breeds-v2';
+const VERSION = '20261102-farnschritt-v3';
 
 const safeJson = value => JSON.stringify(value).replace(/</g, '\\u003c').replace(/-->/g, '--\\u003e');
 
@@ -85,7 +85,7 @@ export function renderHorseBreedingPage(data) {
       </section>
 
       <section class="breeding-section" id="bekannte-kreuzungen" aria-labelledby="known-title">
-        <header class="breeding-section-heading"><span aria-hidden="true">III</span><div><p class="eyebrow">Überlieferte und gefestigte Linien</p><h2 id="known-title">Benannte Kreuzungen</h2><p>Die fünf Namen der alten Rossmarkt-Matrix werden durch die zwei eindeutig belegten Zuchtlinien Brycing und Tirashan ergänzt.</p></div></header>
+        <header class="breeding-section-heading"><span aria-hidden="true">III</span><div><p class="eyebrow">Überlieferte und gefestigte Linien</p><h2 id="known-title">Benannte Kreuzungen</h2><p>Die Namen der alten Rossmarkt-Matrix und die fest benannten Zuchten sind hier gemeinsam verzeichnet. Die Zuordnung gilt in beiden Elternrichtungen.</p></div></header>
         <div class="breeding-known-grid">${data.crossings.map(crossing => renderKnownCrossing(crossing, breedsById)).join('\n')}</div>
       </section>
 

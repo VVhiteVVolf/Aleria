@@ -1,0 +1,1812 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Brevanor/data.json",
+  "revision": 1,
+  "updatedAt": "2026-11-01T00:00:00.000Z",
+  "generatedStateHash": "0e6e0ae21b5559358349b6a1f9b5ac2d25ea75e060ae7178ae194b02505c5aac",
+  "state": {
+    "pins": [
+      {
+        "id": "brevanor-tervenne",
+        "title": "Tervenne",
+        "x": 0.17420000000000002,
+        "y": 0.10470000000000002,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/caudren.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caudren",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-tervenne.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-tervenne/index.html",
+        "region": "Brevanor",
+        "house": "Haus Caudren",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tervenne"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Caudren"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Caudren, Haus Renaut, Haus Trevain"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Tervenne"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Grossstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Tervenne lag im nordwestlichen Küstenland, nahe einer weiten Meeresbucht. Offene Flächen und Gehölzgruppen umgaben den Hauptort. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-tervenne",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "tervenne",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            17.42,
+            10.47
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-marneval",
+        "title": "Marneval",
+        "x": 0.37929999999999997,
+        "y": 0.10499999999999998,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/arvenac.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-arvenac",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-marneval.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-marneval/index.html",
+        "region": "Brevanor",
+        "house": "Haus Arvenac",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Marneval"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Arvenac"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Arvenac"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Marneval"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Marneval lag am nördlichen Rand des offenen Landes unter der Wolkengrenze der gelieferten Karte. Die Umgebung zeigte Felder und lockere Baumgruppen. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-marneval",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "marneval",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            37.93,
+            10.5
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-orbec",
+        "title": "Orbec",
+        "x": 0.0368,
+        "y": 0.42579999999999996,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/iverac.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-iverac",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-orbec.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-orbec/index.html",
+        "region": "Brevanor",
+        "house": "Haus Iverac",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Orbec"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Iverac"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Iverac"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Orbec"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Orbec lag unmittelbar an der Westküste in einer offenen, nur locker bewaldeten Landschaft. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-orbec",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "orbec",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            3.68,
+            42.58
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-dervel",
+        "title": "Dervel",
+        "x": 0.3882999999999999,
+        "y": 0.31489999999999996,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/quernac.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-quernac",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-dervel.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-dervel/index.html",
+        "region": "Brevanor",
+        "house": "Haus Quernac",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Dervel"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Quernac"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Quernac"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Dervel"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Dervel lag westlich des Binnensees. Offenes Kulturland und die östlichen Ausläufer eines kleinen Höhenzuges bildeten den Übergang zum Ufer. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-dervel",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "dervel",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            38.83,
+            31.49
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-vaudrec",
+        "title": "Vaudrec",
+        "x": 0.9164,
+        "y": 0.3026000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/guivren.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-guivren",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-vaudrec.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-vaudrec/index.html",
+        "region": "Brevanor",
+        "house": "Haus Guivren",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Vaudrec"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Guivren"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Guivren, Haus Osmer, Haus Yveran"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Vaudrec"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Grossstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Vaudrec lag am östlichen Rand der nordöstlichen Grafschaft. Offenes Land und kleine Baumgruppen reichten bis an den Stadtrand. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-vaudrec",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "vaudrec",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            91.64,
+            30.26
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-brellan",
+        "title": "Brellan",
+        "x": 0.7673000000000001,
+        "y": 0.06709999999999994,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/bernant.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bernant",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-brellan.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-brellan/index.html",
+        "region": "Brevanor",
+        "house": "Haus Bernant",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Brellan"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Bernant"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Bernant"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Brellan"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Brellan lag im äußersten Nordosten unter der nördlichen Wolkengrenze. Weite offene Flächen mit kleinen Gehölzen prägten das Umland. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-brellan",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "brellan",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            76.73,
+            6.71
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-hervant",
+        "title": "Hervant",
+        "x": 0.6606000000000001,
+        "y": 0.34729999999999994,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/gerain.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gerain",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-hervant.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-hervant/index.html",
+        "region": "Brevanor",
+        "house": "Haus Gerain",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hervant"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Gerain"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Gerain"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Hervant"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Hervant lag zwischen dem großen Binnensee und den östlichen Feldern. Bewaldete Hänge stiegen im Westen an. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-hervant",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "hervant",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            66.06,
+            34.73
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-arselle",
+        "title": "Arselle",
+        "x": 0.8369,
+        "y": 0.4568,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/ervaut.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ervaut",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-arselle.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-arselle/index.html",
+        "region": "Brevanor",
+        "house": "Haus Ervaut",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Arselle"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ervaut"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Ervaut"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Arselle"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Arselle lag am nördlichen Fuß des südöstlichen Gebirgszuges der grünen Grafschaft. Die hohen Berge standen südlich und südöstlich des Ortes. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-arselle",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "arselle",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            83.69,
+            45.68
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-tregard",
+        "title": "Tregard",
+        "x": 0.17059999999999997,
+        "y": 0.9084000000000001,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/valdran.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-valdran",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-tregard.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-tregard/index.html",
+        "region": "Brevanor",
+        "house": "Haus Valdran",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Tregard"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Valdran"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Valdran, Haus Jorant, Haus Walaric"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Tregard"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Grossstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Tregard lag nahe der Südspitze der westlichen Halbinsel, umgeben von offenem Land und mehreren Küstenbuchten. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-tregard",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "tregard",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            17.06,
+            90.84
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-roscan",
+        "title": "Roscan",
+        "x": 0.1684,
+        "y": 0.5893999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/corvail.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-corvail",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-roscan.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-roscan/index.html",
+        "region": "Brevanor",
+        "house": "Haus Corvail",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Roscan"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Corvail"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Corvail"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Roscan"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Roscan lag an der westlichen Küste unmittelbar unter einem steilen Gebirgszug. Die Einzelherrschaft verband Berge und Meeresufer. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-roscan",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "roscan",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            16.84,
+            58.94
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-torvay",
+        "title": "Torvay",
+        "x": 0.3375000000000001,
+        "y": 0.5117,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/ferant.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ferant",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-torvay.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-torvay/index.html",
+        "region": "Brevanor",
+        "house": "Haus Ferant",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Torvay"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Ferant"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Ferant"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Torvay"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Torvay lag in den nördlichen Bergen der violetten Grafschaft. Die Stadt befand sich südlich des Gebirgskamms, über dem weiten südlichen Vorland. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-torvay",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "torvay",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            33.75,
+            51.17
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-mirel",
+        "title": "Mirel",
+        "x": 0.4855,
+        "y": 0.43210000000000004,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/landrec.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-landrec",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-mirel.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-mirel/index.html",
+        "region": "Brevanor",
+        "house": "Haus Landrec",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Mirel"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Landrec"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Landrec"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Mirel"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Mirel lag am südlichen Ufer des Binnensees, zwischen den östlichen und westlichen Gebirgsausläufern. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-mirel",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "mirel",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            48.55,
+            43.21
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-garnac",
+        "title": "Garnac",
+        "x": 0.32530000000000003,
+        "y": 0.6954,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/savrec.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-savrec",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-garnac.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-garnac/index.html",
+        "region": "Brevanor",
+        "house": "Haus Savrec",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Garnac"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Savrec"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Savrec"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Garnac"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Garnac lag an der östlichen Bucht der südwestlichen Grafschaft. Das offene Hinterland stieg im Norden zum Gebirge an. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-garnac",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "garnac",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            32.53,
+            69.54
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-caerennes",
+        "title": "Caerennes",
+        "x": 0.5177,
+        "y": 0.5599999999999999,
+        "cat": "mmflrbzxydg7",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/aubert.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aubert",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-caerennes.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-caerennes/index.html",
+        "region": "Brevanor",
+        "house": "Haus Aubert",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Caerennes"
+          },
+          {
+            "k": "Typ",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Aubert"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Aubert, Haus Guerin, Haus Kervaut, Haus Varenne"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Caerennes"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Hauptstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Caerennes lag am nördlichen Rand des königlichen Waldlandes, nahe der westlichen Meeresbucht. Die eigene Domäne des Riël bildete das zentrale Teilgebiet der königlichen Grafschaft. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-caerennes",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "caerennes",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            51.77,
+            56
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-virec",
+        "title": "Virec",
+        "x": 0.8136,
+        "y": 0.6114999999999999,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/perrec.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-perrec",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-virec.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-virec/index.html",
+        "region": "Brevanor",
+        "house": "Haus Perrec",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Virec"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Perrec"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Perrec"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Virec"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Virec lag im nordöstlichen Teil der königlichen Grafschaft in dichtem Laubwald unter den nördlichen Bergen. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-virec",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "virec",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            81.36,
+            61.15
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-rovanne",
+        "title": "Rovanne",
+        "x": 0.8588,
+        "y": 0.7789,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/rovenne.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rovenne",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-rovanne.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-rovanne/index.html",
+        "region": "Brevanor",
+        "house": "Haus Rovenne",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Rovanne"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Rovenne"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Rovenne"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Rovanne"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Grossstadt"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Rovanne lag im südöstlichen königlichen Land. Ihr Gebiet verband lichte Wälder im Norden mit dem südlichen Gebirgssaum; das gelieferte Ortszeichen war rund, die Beschriftung lautete Großstadt. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-rovanne",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "rovanne",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            85.88,
+            77.89
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      },
+      {
+        "id": "brevanor-sorven",
+        "title": "Sorven",
+        "x": 0.4531,
+        "y": 0.799,
+        "cat": "mmflwdjfl6ah",
+        "templateId": "siedlung",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/welt/stadt.png",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/bielle.webp",
+        "crestLink": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bielle",
+        "banner": "/Stammbäume/assets/images/regions/brevanor/district-sorven.webp",
+        "bannerLink": "/Kontinente/Aldervan/Brevanor/brevanor-sitz-sorven/index.html",
+        "region": "Brevanor",
+        "house": "Haus Bielle",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Sorven"
+          },
+          {
+            "k": "Typ",
+            "v": "Stadt"
+          },
+          {
+            "k": "Gewerbe",
+            "v": ""
+          },
+          {
+            "k": "Regierungstyp",
+            "v": ""
+          },
+          {
+            "k": "Führung",
+            "v": ""
+          },
+          {
+            "k": "Lehensherr",
+            "v": "Haus Bielle"
+          },
+          {
+            "k": "Bevölkerung",
+            "v": ""
+          },
+          {
+            "k": "Einwohnerzahl",
+            "v": ""
+          },
+          {
+            "k": "Bekannte Familien",
+            "v": "Haus Bielle"
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Ressourcen",
+            "v": ""
+          },
+          {
+            "k": "Herrschaft",
+            "v": "Herrschaft Sorven"
+          },
+          {
+            "k": "Ältere Kartenbeschriftung",
+            "v": "Stadtname"
+          },
+          {
+            "k": "Status",
+            "v": "Historisch · von der Triarchie erobert"
+          }
+        ],
+        "text": "Sorven lag am westlichen Ufer der königlichen Grafschaft. Seine Einzelherrschaft erstreckte sich von der Meeresbucht bis zum südlichen Gebirge. Historischer Sitz vor der Eroberung; heutige Bewohner nicht bestätigt.",
+        "secret": false,
+        "dominionId": "brevanor-sitz-sorven",
+        "sourceRef": {
+          "provider": "aleria-accepted-realms",
+          "acceptedOn": "2026-11-01",
+          "settlementId": "sorven",
+          "coordinateOrigin": "top-left",
+          "coordinateUnit": "percent",
+          "coordinates": [
+            45.31,
+            79.9
+          ],
+          "provisional": false
+        },
+        "residentFamilyIds": []
+      }
+    ],
+    "cats": [
+      {
+        "id": "mmflrbzxydg7",
+        "label": "Hauptstadt",
+        "color": "#a54430",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      },
+      {
+        "id": "mmflwdjfl6ah",
+        "label": "Stadt",
+        "color": "#6b7747",
+        "marker": "/Karten/assets/icons/welt/stadt.png"
+      }
+    ],
+    "categoryCatalogVersion": 3,
+    "regions": [],
+    "dominions": [
+      {
+        "id": "koenigreich-brevanor",
+        "name": "Königreich Brevanor",
+        "type": "Königreich",
+        "ruler": "Haus Aubert",
+        "seat": "Caerennes",
+        "parentId": ""
+      },
+      {
+        "id": "brevanor-region-tervenne",
+        "name": "Comteyrat Tervenne",
+        "type": "Comteyrat",
+        "ruler": "Haus Caudren",
+        "seat": "Tervenne",
+        "parentId": "koenigreich-brevanor"
+      },
+      {
+        "id": "brevanor-region-vaudrec",
+        "name": "Comteyrat Vaudrec",
+        "type": "Comteyrat",
+        "ruler": "Haus Guivren",
+        "seat": "Vaudrec",
+        "parentId": "koenigreich-brevanor"
+      },
+      {
+        "id": "brevanor-region-tregard",
+        "name": "Comteyrat Tregard",
+        "type": "Comteyrat",
+        "ruler": "Haus Valdran",
+        "seat": "Tregard",
+        "parentId": "koenigreich-brevanor"
+      },
+      {
+        "id": "brevanor-region-caerennes",
+        "name": "Königliche Domäne Caerennes",
+        "type": "Königliche Domäne",
+        "ruler": "Haus Aubert",
+        "seat": "Caerennes",
+        "parentId": "koenigreich-brevanor"
+      },
+      {
+        "id": "brevanor-sitz-tervenne",
+        "name": "Herrschaft Tervenne",
+        "type": "Herrschaft",
+        "ruler": "Haus Caudren",
+        "seat": "Tervenne",
+        "parentId": "brevanor-region-tervenne"
+      },
+      {
+        "id": "brevanor-sitz-marneval",
+        "name": "Herrschaft Marneval",
+        "type": "Herrschaft",
+        "ruler": "Haus Arvenac",
+        "seat": "Marneval",
+        "parentId": "brevanor-region-tervenne"
+      },
+      {
+        "id": "brevanor-sitz-orbec",
+        "name": "Herrschaft Orbec",
+        "type": "Herrschaft",
+        "ruler": "Haus Iverac",
+        "seat": "Orbec",
+        "parentId": "brevanor-region-tervenne"
+      },
+      {
+        "id": "brevanor-sitz-dervel",
+        "name": "Herrschaft Dervel",
+        "type": "Herrschaft",
+        "ruler": "Haus Quernac",
+        "seat": "Dervel",
+        "parentId": "brevanor-region-tervenne"
+      },
+      {
+        "id": "brevanor-sitz-vaudrec",
+        "name": "Herrschaft Vaudrec",
+        "type": "Herrschaft",
+        "ruler": "Haus Guivren",
+        "seat": "Vaudrec",
+        "parentId": "brevanor-region-vaudrec"
+      },
+      {
+        "id": "brevanor-sitz-brellan",
+        "name": "Herrschaft Brellan",
+        "type": "Herrschaft",
+        "ruler": "Haus Bernant",
+        "seat": "Brellan",
+        "parentId": "brevanor-region-vaudrec"
+      },
+      {
+        "id": "brevanor-sitz-hervant",
+        "name": "Herrschaft Hervant",
+        "type": "Herrschaft",
+        "ruler": "Haus Gerain",
+        "seat": "Hervant",
+        "parentId": "brevanor-region-vaudrec"
+      },
+      {
+        "id": "brevanor-sitz-arselle",
+        "name": "Herrschaft Arselle",
+        "type": "Herrschaft",
+        "ruler": "Haus Ervaut",
+        "seat": "Arselle",
+        "parentId": "brevanor-region-vaudrec"
+      },
+      {
+        "id": "brevanor-sitz-tregard",
+        "name": "Herrschaft Tregard",
+        "type": "Herrschaft",
+        "ruler": "Haus Valdran",
+        "seat": "Tregard",
+        "parentId": "brevanor-region-tregard"
+      },
+      {
+        "id": "brevanor-sitz-roscan",
+        "name": "Herrschaft Roscan",
+        "type": "Herrschaft",
+        "ruler": "Haus Corvail",
+        "seat": "Roscan",
+        "parentId": "brevanor-region-tregard"
+      },
+      {
+        "id": "brevanor-sitz-torvay",
+        "name": "Herrschaft Torvay",
+        "type": "Herrschaft",
+        "ruler": "Haus Ferant",
+        "seat": "Torvay",
+        "parentId": "brevanor-region-tregard"
+      },
+      {
+        "id": "brevanor-sitz-mirel",
+        "name": "Herrschaft Mirel",
+        "type": "Herrschaft",
+        "ruler": "Haus Landrec",
+        "seat": "Mirel",
+        "parentId": "brevanor-region-tregard"
+      },
+      {
+        "id": "brevanor-sitz-garnac",
+        "name": "Herrschaft Garnac",
+        "type": "Herrschaft",
+        "ruler": "Haus Savrec",
+        "seat": "Garnac",
+        "parentId": "brevanor-region-tregard"
+      },
+      {
+        "id": "brevanor-sitz-caerennes",
+        "name": "Herrschaft Caerennes",
+        "type": "Herrschaft",
+        "ruler": "Haus Aubert",
+        "seat": "Caerennes",
+        "parentId": "brevanor-region-caerennes"
+      },
+      {
+        "id": "brevanor-sitz-virec",
+        "name": "Herrschaft Virec",
+        "type": "Herrschaft",
+        "ruler": "Haus Perrec",
+        "seat": "Virec",
+        "parentId": "brevanor-region-caerennes"
+      },
+      {
+        "id": "brevanor-sitz-rovanne",
+        "name": "Herrschaft Rovanne",
+        "type": "Herrschaft",
+        "ruler": "Haus Rovenne",
+        "seat": "Rovanne",
+        "parentId": "brevanor-region-caerennes"
+      },
+      {
+        "id": "brevanor-sitz-sorven",
+        "name": "Herrschaft Sorven",
+        "type": "Herrschaft",
+        "ruler": "Haus Bielle",
+        "seat": "Sorven",
+        "parentId": "brevanor-region-caerennes"
+      }
+    ],
+    "regionTitle": "Königreich Brevanor",
+    "regionIcon": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/brevanor.webp",
+    "mapImages": {
+      "normal": "/Karten/Brevanor/Kartenbilder/normal.svg",
+      "regions": "",
+      "pins": ""
+    },
+    "layerNames": {
+      "normal": "Vorhandene Übersichtskarte",
+      "pins": "Orte und Hauszuordnungen",
+      "regions": "Regionen"
+    },
+    "dotSize": 65,
+    "lblSize": 40,
+    "displaySettingsVersion": 1,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "alwaysShowLettering": false,
+    "extraLayers": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    }
+  }
+}

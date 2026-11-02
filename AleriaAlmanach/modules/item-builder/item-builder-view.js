@@ -1,3 +1,4 @@
+import { itemDefinitionRegistry } from '../item-definitions/item-definition-registry.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const categories = { waffen: 'Waffe', ruestungen: 'Rüstung / Schild', speisen: 'Speise', getraenke: 'Getränk', alchemie: 'Alchemie', arkanes: 'Arkaner Gegenstand', werkzeuge: 'Werkzeug / Ausrüstung', sonstiges: 'Dokument / Sonstiges', pferde: 'Pferd', vieh: 'Tier' };
 const input = (name, label, value, type = 'text', extra = '') => `<label>${label}<input name="${name}" type="${type}" value="${escape(value)}" ${extra}></label>`;
@@ -34,6 +35,11 @@ function useFields(use = {}) {
     ${input('chargesPerUse', 'Ladungen je Verwendung', use.chargesPerUse || 0, 'number', 'min="0" max="9999" step="1"')}
     ${select('recovery', 'Ladungen erholen sich', use.recovery, { none: 'Nicht automatisch', day: 'Pro Tag', 'short-rest': 'Kurze Rast', 'long-rest': 'Lange Rast' })}
     ${area('useNarrative', 'Beschriebene Wirkung', use.narrative)}
+    ${select('substanceKind', 'Rauschmittel', use.substance?.kind || '', { '': 'Kein Rauschmittel', alcohol: 'Alkohol', kriss: 'Kriss', smaragdflux: 'Smaragdflux', blutstaub: 'Blutstaub' })}
+    ${input('substanceVolumeMl', 'Alkohol: Inhalt je ganzem Exemplar (ml)', use.substance?.volumeMl || '', 'number', 'min="1" max="1000000" step="1"')}
+    ${input('substanceAbv', 'Alkohol: Alkoholgehalt (%)', use.substance?.abv || '', 'number', 'min="0.1" max="100" step="0.1"')}
+    ${input('substanceDoses', 'Droge: Wirkdosen je ganzem Exemplar', use.substance?.kind !== 'alcohol' ? use.substance?.amount || 1 : 1, 'number', 'min="0.01" max="1000000" step="0.01"')}
+    <p class="ib-help ib-wide">Bei Alkohol zählen Inhalt und Stärke. Ein Fass ist ein ganzes Gebinde, kein Glas. Für Drogen wird die Zahl wirksamer Dosen angegeben. Rausch und Nachwirkung laufen nach interaktiver Szenenzeit.</p>
     <div class="ib-wide ib-effects">${(use.costs || []).map((cost, index) => `<div data-ib-cost="${index}">${select('costResource', 'Verwendung kostet', cost.resourceId, { action: 'Aktion', 'bonus-action': 'Bonusaktion', reaction: 'Reaktion', 'special-action': 'Besondere Aktion', 'aura-focus': 'Aura-Fokus', 'mana-focus': 'Mana', 'pact-points': 'Paktpunkte' })}${input('costAmount', 'Punkte', cost.amount, 'number', 'min="1" max="10000" step="1"')}<button type="button" data-ib-action="remove-cost" data-ib-index="${index}">Kosten entfernen</button></div>`).join('')}<button type="button" data-ib-action="add-cost">＋ Aktions- / Ressourcenkosten</button></div>
     <div class="ib-wide ib-effects">${(use.effects || []).map((effect, index) => `<div data-ib-effect="${index}">${select('effectType', 'Automatische Eigenwirkung', effect.type, { healing: 'Lebenspunkte heilen', 'temporary-hit-points': 'Temporäre Lebenspunkte', 'restore-resource': 'Ressource auffüllen' })}
       ${input('effectAmount', 'Fester Wert', effect.amount, 'number', 'min="0" max="10000" step="1"')}${input('effectResource', 'Ressourcen-ID (nur bei Auffüllen)', effect.resourceId || '', 'text', 'placeholder="z. B. mana-focus"')}
@@ -44,7 +50,7 @@ function useFields(use = {}) {
 export function itemBuilderMarkup(draft, templates) {
   const existing = draft.intent === 'existing';
   const source = templates.find(item => item.id === draft.sourceId);
-  const canEdit = source?.definitionRef && !source.definitionRef.id.startsWith('standard:');
+  const canEdit = source?.definitionRef && !source.definitionRef.id.startsWith('standard:') && !itemDefinitionRegistry.isBuiltin(source.definitionRef.id);
   const intents = { existing: 'Vorhandene Definition verwenden', variant: 'Gemeinsame Serienvariante anlegen', unique: 'Echtes Unikat anlegen', ...(canEdit ? { edit: 'Neue Version dieser Definition' } : {}) };
   return `<form method="dialog"><header><div><small>Gemeinsame Itemverwaltung</small><h2 id="item-builder-title">Item-Builder</h2></div><button type="button" data-ib-action="cancel" aria-label="Item-Builder schließen">×</button></header>
     <div class="ib-content"><div class="ib-grid">${select('intent', 'Was möchtest du erstellen?', draft.intent, intents)}

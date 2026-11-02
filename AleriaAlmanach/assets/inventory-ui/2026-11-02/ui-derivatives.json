@@ -1,0 +1,477 @@
+{
+  "schema": "aleria.inventory-ui-derivatives",
+  "schemaVersion": 1,
+  "generatedBy": "AleriaAlmanach/modules/character-inventory/scripts/build-ui-art.mjs",
+  "encoder": {
+    "engine": "156.0.8078.74",
+    "method": "Canvas 2D drawImage + image/webp",
+    "quality": 0.9,
+    "imageSmoothingQuality": "high",
+    "originalsPreserved": true
+  },
+  "inputBytes": 23319638,
+  "outputBytes": 318174,
+  "savedBytes": 23001464,
+  "urlMapping": {
+    "./assets/pendrwn-general-store/goods/rucksack.png": "./public/assets/inventory-ui/icons/rucksack-v1.webp",
+    "./public/assets/item-register/categories/waffen.png": "./public/assets/inventory-ui/icons/waffen-v1.webp",
+    "./public/assets/item-register/categories/ruestungen-v3.png": "./public/assets/inventory-ui/icons/ruestung-v1.webp",
+    "./public/assets/item-register/categories/werkzeuge.png": "./public/assets/inventory-ui/icons/werkzeuge-v1.webp",
+    "./public/assets/item-register/categories/alchemie.png": "./public/assets/inventory-ui/icons/alchemie-v1.webp",
+    "./assets/pendrwn-general-store/goods/notizbuch.png": "./public/assets/inventory-ui/icons/notizbuch-v1.webp",
+    "./public/assets/item-register/categories/arkanes.png": "./public/assets/inventory-ui/icons/arkanes-v1.webp",
+    "./public/assets/item-register/categories/pferde.png": "./public/assets/inventory-ui/icons/pferde-v1.webp",
+    "./public/assets/item-register/categories/sonstiges.png": "./public/assets/inventory-ui/icons/sonstiges-v1.webp",
+    "./public/assets/comment-icons/interact.png": "./public/assets/inventory-ui/icons/interaktion-v1.webp",
+    "./assets/pendrwn-general-store/goods/feder-tinte.png": "./public/assets/inventory-ui/icons/feder-tinte-v1.webp",
+    "./assets/currency/aleria-goldtaler-v1.webp": "./public/assets/inventory-ui/icons/goldtaler-v1.webp",
+    "./public/assets/inventory-ui/dark-hide-v1.png": "./public/assets/inventory-ui/dark-hide-v1.webp"
+  },
+  "records": [
+    {
+      "name": "rucksack",
+      "roles": [
+        "all"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/assets/pendrwn-general-store/goods/rucksack.png",
+        "url": "./assets/pendrwn-general-store/goods/rucksack.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2700485,
+        "sha256": "7b45f86ebcccff1140eb09e9b99ac73608ee514af85eaadb619193a9acccdd34",
+        "alpha": {
+          "transparent": 490655,
+          "partial": 1080354,
+          "opaque": 1507
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/rucksack-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/rucksack-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 31528,
+        "sha256": "d62c17526fbb8f23ae70c4ab064570101846a374435f77dd960afb254637ac8b",
+        "alpha": {
+          "transparent": 20032,
+          "partial": 45504,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "waffen",
+      "roles": [
+        "weapon"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/waffen.png",
+        "url": "./public/assets/item-register/categories/waffen.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1211536,
+        "sha256": "7d54142e48baa51ed86fde6da22060c4338253a24b465f547c2e638aca6d8169",
+        "alpha": {
+          "transparent": 1168088,
+          "partial": 403716,
+          "opaque": 712
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/waffen-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/waffen-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 19026,
+        "sha256": "4877fe76be2e9c7e2e22006f036bfea45d55d53f3079c481cb6a69dd7f10a544",
+        "alpha": {
+          "transparent": 48542,
+          "partial": 16994,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "ruestung",
+      "roles": [
+        "armor"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/ruestungen-v3.png",
+        "url": "./public/assets/item-register/categories/ruestungen-v3.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2186438,
+        "sha256": "85e0b84ffa70980c6a8dbc6d0826d7b80788eb2b9b4ab2881a667c7ab62dca6d",
+        "alpha": {
+          "transparent": 731352,
+          "partial": 840493,
+          "opaque": 671
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/ruestung-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/ruestung-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 26780,
+        "sha256": "541c827d9928a478fa8bdebd59f2c2d27f9660a7e5f7469b4d5f2c10a2218ea1",
+        "alpha": {
+          "transparent": 30091,
+          "partial": 35445,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "werkzeuge",
+      "roles": [
+        "equipment"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/werkzeuge.png",
+        "url": "./public/assets/item-register/categories/werkzeuge.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1998923,
+        "sha256": "a286a97ef66a2246ac4eabdc425eb371862071e4bf217cba41429e83089f3f11",
+        "alpha": {
+          "transparent": 849259,
+          "partial": 721979,
+          "opaque": 1278
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/werkzeuge-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/werkzeuge-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 29306,
+        "sha256": "b01c59af849931a9da5fde05455497024a1707b5e8902f03c450debdf928df7a",
+        "alpha": {
+          "transparent": 35096,
+          "partial": 30440,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "alchemie",
+      "roles": [
+        "potions",
+        "consumable"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/alchemie.png",
+        "url": "./public/assets/item-register/categories/alchemie.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1908210,
+        "sha256": "d691132ffff57a6846f7df445938380c1be923e1d97f79db09d0c9576776df81",
+        "alpha": {
+          "transparent": 848530,
+          "partial": 723553,
+          "opaque": 433
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/alchemie-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/alchemie-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 24774,
+        "sha256": "43c24ea14500bca469f77aa319146c485add0a5be0d2d944e68bd45c165c711e",
+        "alpha": {
+          "transparent": 35143,
+          "partial": 30393,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "notizbuch",
+      "roles": [
+        "documents",
+        "document",
+        "register"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/assets/pendrwn-general-store/goods/notizbuch.png",
+        "url": "./assets/pendrwn-general-store/goods/notizbuch.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2064119,
+        "sha256": "8e67ad2909ab0c7724bd96f914d83a1b87105d6a52bdd751de60ba5c8f68bf9f",
+        "alpha": {
+          "transparent": 759752,
+          "partial": 812031,
+          "opaque": 733
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/notizbuch-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/notizbuch-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 25184,
+        "sha256": "33613f2ca9aad0c32af91624019f6be19ea41538da56af2aa8cd2f7eb878a75d",
+        "alpha": {
+          "transparent": 31369,
+          "partial": 34167,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "arkanes",
+      "roles": [
+        "artifact"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/arkanes.png",
+        "url": "./public/assets/item-register/categories/arkanes.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1754789,
+        "sha256": "517b94f6bcf575569bc615bad870d6752142ae85b136f46ded68b1e57eec4687",
+        "alpha": {
+          "transparent": 911245,
+          "partial": 660822,
+          "opaque": 449
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/arkanes-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/arkanes-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 22448,
+        "sha256": "f704b0a0b5af301e4484111c3adb17730cbd1e49f5427394262370b39af50654",
+        "alpha": {
+          "transparent": 37798,
+          "partial": 27738,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "pferde",
+      "roles": [
+        "companion"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/pferde.png",
+        "url": "./public/assets/item-register/categories/pferde.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1912614,
+        "sha256": "5d6ca19701412f8de39dce97ad1c0532ef388753bc106cb6256c8b541cb8d2a8",
+        "alpha": {
+          "transparent": 829015,
+          "partial": 743076,
+          "opaque": 425
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/pferde-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/pferde-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 23588,
+        "sha256": "5cb5cf231f22087f627f0505a06706571a23e2efa308d1fd48449ce8856ed9a6",
+        "alpha": {
+          "transparent": 34360,
+          "partial": 31176,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "sonstiges",
+      "roles": [
+        "other"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/item-register/categories/sonstiges.png",
+        "url": "./public/assets/item-register/categories/sonstiges.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2294654,
+        "sha256": "0cd34a449e59c3566ac7ecc8f471d48a1a8ed462af5824aa03bccf5128d2f2d1",
+        "alpha": {
+          "transparent": 626466,
+          "partial": 945372,
+          "opaque": 678
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/sonstiges-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/sonstiges-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 28748,
+        "sha256": "4a65f7b8be4f3b099c26424d70ad4c7f2ee4356f7554993519d7eb0a25cb61f7",
+        "alpha": {
+          "transparent": 25818,
+          "partial": 39718,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "interaktion",
+      "roles": [
+        "open"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/comment-icons/interact.png",
+        "url": "./public/assets/comment-icons/interact.png",
+        "width": 898,
+        "height": 898,
+        "bytes": 1251402,
+        "sha256": "55d50513c580cf44eaebfebc2c81dbaed31458499f9774b46d7388445a593fd1",
+        "alpha": {
+          "transparent": 189832,
+          "partial": 79658,
+          "opaque": 536914
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/interaktion-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/interaktion-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 24868,
+        "sha256": "a8d9ae9a3f2a27d40407c95f9b67ff01b9fc26704adf742d47b0ef0323228568",
+        "alpha": {
+          "transparent": 15224,
+          "partial": 29461,
+          "opaque": 20851
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "feder-tinte",
+      "roles": [
+        "edit"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/assets/pendrwn-general-store/goods/feder-tinte.png",
+        "url": "./assets/pendrwn-general-store/goods/feder-tinte.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1638933,
+        "sha256": "7930005b1809adde9729336e491a9e92ac0461d6023a27b031b9005e64a490f5",
+        "alpha": {
+          "transparent": 923206,
+          "partial": 648186,
+          "opaque": 1124
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/feder-tinte-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/feder-tinte-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 21332,
+        "sha256": "69fa51c1063248e5ebfec997195104e4c9ddc3268b5bccede11f9df3c157c6ec",
+        "alpha": {
+          "transparent": 38142,
+          "partial": 27394,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "goldtaler",
+      "roles": [
+        "wallet"
+      ],
+      "maxEdge": 256,
+      "input": {
+        "path": "AleriaAlmanach/assets/currency/aleria-goldtaler-v1.webp",
+        "url": "./assets/currency/aleria-goldtaler-v1.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 90068,
+        "sha256": "3edf7ff18870ff9a0aadfd12b91eb0329bb00591bff908fa62b26480b0b2c98a",
+        "alpha": {
+          "transparent": 121624,
+          "partial": 139702,
+          "opaque": 818
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/icons/goldtaler-v1.webp",
+        "url": "./public/assets/inventory-ui/icons/goldtaler-v1.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 25374,
+        "sha256": "2e0042e38054ad85f49c956e06e44013692bef86e6d023976b16dec5c0ee9bd2",
+        "alpha": {
+          "transparent": 30154,
+          "partial": 35382,
+          "opaque": 0
+        },
+        "alphaMatchesResizedSource": true
+      }
+    },
+    {
+      "name": "dark-hide",
+      "roles": [
+        "material"
+      ],
+      "maxEdge": 512,
+      "input": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/dark-hide-v1.png",
+        "url": "./public/assets/inventory-ui/dark-hide-v1.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2307467,
+        "sha256": "ba72fd4706d896733064a3cb7ed739f71effb8fa8a47b8456b8aec0d7f9b001b",
+        "alpha": {
+          "transparent": 0,
+          "partial": 0,
+          "opaque": 1572516
+        }
+      },
+      "output": {
+        "path": "AleriaAlmanach/public/assets/inventory-ui/dark-hide-v1.webp",
+        "url": "./public/assets/inventory-ui/dark-hide-v1.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 15218,
+        "sha256": "d5e30e17c40a6e62d2bef50327cf6cd1b3b7393d6653472d456dee22fbb27990",
+        "alpha": {
+          "transparent": 0,
+          "partial": 0,
+          "opaque": 262144
+        },
+        "alphaMatchesResizedSource": true
+      }
+    }
+  ]
+}

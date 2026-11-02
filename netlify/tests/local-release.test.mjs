@@ -25,6 +25,8 @@ test('source archives leave the deploy while active originals, full-size art and
   for (const file of ['Vorschau/Triarchie/assets/generated/taghan.png',
     'Vorschau/Brevanor/assets/warriors/alternates/trevain-v1.png',
     'Vorschau/Iathneach/assets/warriors/generated-archive/old.png', 'diagnostics/review/REVIEW.md',
+    'AleriaAlmanach/modules/gwynthor-seven/source/character-plan.json',
+    'AleriaAlmanach/assets/development-traits/vollbusig.png',
     'Klassenordner/assets/images/brevanor/icons/generated/breval-comic.png',
     'Klassenordner/assets/images/brevanor/icons/generated/archive/belgrant.png']) {
     assert.equal(shouldPublish(file), false, file);
@@ -34,6 +36,8 @@ test('source archives leave the deploy while active originals, full-size art and
     'Vorschau/COUNTRY_PREPARATION_TEMPLATE.md', 'output/Patrick-Ideenwerk.zip',
     'Klassenordner/assets/images/brevanor/icons/breval.webp',
     'Klassenordner/assets/images/brevanor/icons/production/breval.png',
+    'AleriaAlmanach/assets/development-traits/web/vollbusig.webp',
+    'AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/set-1.png',
     'Klassenordner/assets/images/brevanor/realm/brevanor-original.png']) assert(shouldPublish(file), file);
 });
 

@@ -1,0 +1,54 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "oUlhJyX6C4Q69mtLS9u1",
+    "name": "Asgeir Wolfshorn",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-fit",
+          "name": "Fit",
+          "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Körper",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Athletik",
+                "bonus": 2
+              }
+            ],
+            "maximumHitPoints": 2
+          },
+          "triggerRules": []
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Fit",
+            "detail": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp"
+          }
+        ]
+      }
+    }
+  }
+}

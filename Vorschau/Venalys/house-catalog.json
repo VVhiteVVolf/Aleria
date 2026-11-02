@@ -1,0 +1,621 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-11-02",
+  "totals": {
+    "vinicius": 5,
+    "avenicci": 5,
+    "abor": 3,
+    "tullius": 2,
+    "arentino": 2
+  },
+  "houses": [
+    {
+      "id": "vinicius",
+      "name": "Vinicius",
+      "collectiveName": "Vinicier",
+      "motif": "Eine elfenbeinfarbene fünfblättrige Blüte mit goldener Mitte und kleinen goldenen Sternen auf Blau.",
+      "palette": [
+        "Blau",
+        "Elfenbein",
+        "Gold"
+      ],
+      "focus": "Gründung des Marktes der Fortuna und der Handelskolonie Venalys.",
+      "frame": "Gelieferter goldener Blüten- und Rankenrahmen",
+      "rank": "patrician",
+      "rankId": "patrician",
+      "role": "Patrizier · Hoher Adel · Gründerhaus",
+      "clan": false,
+      "isNew": false,
+      "liegeId": null,
+      "source": "Geliefertes Patrizierwappen · Nutzerkontext",
+      "crest": "assets/crests/vinicius.webp",
+      "fullsize": "assets/originals/vinicius.png",
+      "original": "assets/originals/vinicius.png"
+    },
+    {
+      "id": "avenicci",
+      "name": "Avenicci",
+      "collectiveName": "Avenicci",
+      "motif": "Ein goldener Löwe auf Rot in einem goldenen Mäanderrahmen.",
+      "palette": [
+        "Rot",
+        "Gold",
+        "Schwarz"
+      ],
+      "focus": "Kapital, Unternehmungen und die Gründung der Klingenden Münze.",
+      "frame": "Gelieferter goldener Mäanderrahmen",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Geschlossener Löwenhelm mit goldener Mähne, schwarzer Harnisch mit goldener Fassung, roter Waffenrock mit goldenem Löwen, brauner Pelzkragen und gerades Schwert.",
+        "reason": "Patrizischer Condottieri-Entwurf nach der ausdrücklich gelieferten Avenicci-Rüstungsreferenz."
+      },
+      "rank": "patrician",
+      "rankId": "patrician",
+      "role": "Patrizier · Hoher Adel · Gründerhaus",
+      "clan": false,
+      "isNew": false,
+      "liegeId": null,
+      "source": "Geliefertes Patrizierwappen · Nutzerkontext",
+      "crest": "assets/crests/avenicci.webp",
+      "fullsize": "assets/originals/avenicci.png",
+      "original": "assets/originals/avenicci.png"
+    },
+    {
+      "id": "abor",
+      "name": "Abor",
+      "collectiveName": "Abori",
+      "motif": "Ein goldener antiker Krieger mit Schild und Stangenwaffe zwischen Lorbeerzweigen und Sternen auf Blau, mit rotem Band.",
+      "palette": [
+        "Blau",
+        "Gold",
+        "Rot"
+      ],
+      "focus": "Militärische Sicherung der Kolonie und eine eigene weltweit tätige Söldnergilde.",
+      "frame": "Gelieferter goldener Lorbeer- und Sternenrahmen mit rotem Band",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Goldener geschlossener antiker Helm mit großem blauem Helmkamm, vollständiger goldgefasster Harnisch mit geschützten Gliedmaßen, blauer Mantel und edles gerades Schwert.",
+        "reason": "Patrizischer Condottieri-Entwurf nach der ausdrücklich gelieferten Abor-Helmreferenz; professioneller, ritterlicher und prunkvoller ausgearbeitet."
+      },
+      "rank": "patrician",
+      "rankId": "patrician",
+      "role": "Patrizier · Hoher Adel · Gründerhaus",
+      "clan": false,
+      "isNew": false,
+      "liegeId": null,
+      "source": "Geliefertes Patrizierwappen · Nutzerkontext",
+      "crest": "assets/crests/abor.webp",
+      "fullsize": "assets/originals/abor.png",
+      "original": "assets/originals/abor.png"
+    },
+    {
+      "id": "tullius",
+      "name": "Tullius",
+      "collectiveName": "Tullier",
+      "motif": "Betende elfenbeinfarbene Hände vor rot-elfenbeinfarbenen Strahlen in einem schwarz-roten Goldrahmen.",
+      "palette": [
+        "Rot",
+        "Elfenbein",
+        "Gold"
+      ],
+      "focus": "Mission, kirchliche Dienste und der Klerus.",
+      "frame": "Gelieferter schwarz-roter Goldrahmen",
+      "rank": "patrician",
+      "rankId": "patrician",
+      "role": "Patrizier · Hoher Adel · Gründerhaus",
+      "clan": false,
+      "isNew": false,
+      "liegeId": null,
+      "source": "Geliefertes Patrizierwappen · Nutzerkontext",
+      "crest": "assets/crests/tullius.webp",
+      "fullsize": "assets/originals/tullius.png",
+      "original": "assets/originals/tullius.png"
+    },
+    {
+      "id": "arentino",
+      "name": "Arentino",
+      "collectiveName": "Arentino",
+      "motif": "Eine helle Burg auf grünen Stufen zwischen Lorbeerzweigen und goldenen Rosetten.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Gold"
+      ],
+      "focus": "Baukunst, städtischer Aufbau und eine weltweit bedeutende Baumeistergilde.",
+      "frame": "Gelieferter grüner und elfenbeinfarbener Goldrahmen",
+      "rank": "patrician",
+      "rankId": "patrician",
+      "role": "Patrizier · Hoher Adel · Gründerhaus",
+      "clan": false,
+      "isNew": false,
+      "liegeId": null,
+      "source": "Geliefertes Patrizierwappen · Nutzerkontext",
+      "crest": "assets/crests/arentino.webp",
+      "fullsize": "assets/originals/arentino.png",
+      "original": "assets/originals/arentino.png"
+    },
+    {
+      "id": "venturian",
+      "name": "Cavelli",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "vinicius",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein silberner Delphin über einem goldenen Anker auf Meergrün.",
+      "palette": [
+        "Meergrün",
+        "Silber",
+        "Altgold"
+      ],
+      "frame": "Schmaler dunkler Bronzerahmen mit einfachem römischem Mäander",
+      "focus": "Seehandel, Lotsendienste und die Sicherung der Handelsfahrten Fortunas.",
+      "crest": "assets/crests/venturian.webp",
+      "fullsize": "assets/production/venturian.png",
+      "warrior": {
+        "classId": "gondoleri",
+        "equipment": "Leichter meergrüner Waffenrock über silberner Schuppenrüstung, bronzene Schulterspangen. Offener spätrömischer Kammhelm mit kurzem weißen Rosshaarkamm und Wangenklappen. Säbel mit Spitze nach unten, Pfeilköcher auf dem Rücken.",
+        "reason": "Seehandel, Lotsendienste und die Sicherung der Handelsfahrten Fortunas. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "fidelinus",
+      "name": "Orvella",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "vinicius",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein aufgerichteter elfenbeinfarbener Windhund über zwei gekreuzten goldenen Schlüsseln auf Weinrot.",
+      "palette": [
+        "Weinrot",
+        "Elfenbein",
+        "Gold"
+      ],
+      "frame": "Ein schlichter eiserner Ring mit wenigen flachen goldenen Lorbeerblättern",
+      "focus": "Warenverwahrung, Vertragssicherheiten und die Bewachung der Speicher Fortunas.",
+      "crest": "assets/crests/fidelinus.webp",
+      "fullsize": "assets/production/fidelinus.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Schwerer silberner Harnisch mit spätrömischen Schulterlamellen und weinrotem Mantel. Halb offener italienischer Barbuta mit T-förmigem Gesichtsausschnitt, ohne Helmzier. Gerades Schwert am Boden abgestützt.",
+        "reason": "Warenverwahrung, Vertragssicherheiten und die Bewachung der Speicher Fortunas. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "argentinus",
+      "name": "Meraldi",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "vinicius",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Eine goldene Waage über einer silbernen Muschel auf tiefem Blau.",
+      "palette": [
+        "Tiefblau",
+        "Silber",
+        "Gold"
+      ],
+      "frame": "Schmaler silberner Rundrahmen mit einfacher laufender Welle",
+      "focus": "Gewichtsprüfung, Münzbewertung und Abrechnung der Handelsladungen.",
+      "crest": "assets/crests/argentinus.webp",
+      "fullsize": "assets/production/argentinus.png",
+      "warrior": {
+        "classId": "stralieri",
+        "equipment": "Dunkelblauer Waffenrock über silberner Brigantine mit spätrömischen Beinschienen. Geschlossene Schaller mit kurzem Nackenschirm und schmalem Sehschlitz. Stehende blaue Pavese mit Waage und Muschel, lässig angelehnt, Schwert in der anderen Hand, Pfeilköcher auf dem Rücken.",
+        "reason": "Gewichtsprüfung, Münzbewertung und Abrechnung der Handelsladungen. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "victorellus",
+      "name": "Calvori",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "avenicci",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein aufgerichteter bronzener Greif mit einer silbernen Münze in der Klaue auf Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Bronze",
+        "Silber"
+      ],
+      "frame": "Schlichter bronzener Ring, sparsame Palmblätter",
+      "focus": "Geleitverträge, Werttransporte und die Absicherung großer Handelsunternehmen.",
+      "crest": "assets/crests/victorellus.webp",
+      "fullsize": "assets/production/victorellus.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Verzierter grauer Plattenharnisch mit bronzenen spätrömischen Beschlägen und elfenbeinfarbenem Mantel. Geschlossener italienischer Armet mit abgerundetem Visier und zwei kurzen cremefarbenen Federbüscheln. Gerades edles Schwert mit Spitze nach unten, zweite Hand entspannt am Gürtel.",
+        "reason": "Geleitverträge, Werttransporte und die Absicherung großer Handelsunternehmen. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "potenian",
+      "name": "Tervani",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "avenicci",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein schwarzer Stierkopf über einem goldenen Schiffsanker auf gedecktem Ocker.",
+      "palette": [
+        "Ocker",
+        "Schwarz",
+        "Gold"
+      ],
+      "frame": "Dunkler Eisenring mit flachen bronzenen Nieten und nur schmalem Mäander",
+      "focus": "Schüttgut, Schwerlastfracht und die Bereitstellung großer Transportkontingente.",
+      "crest": "assets/crests/potenian.webp",
+      "fullsize": "assets/production/potenian.png",
+      "warrior": {
+        "classId": "lancieri",
+        "equipment": "Schwere schwarze Lamellen mit ockerfarbenem Umhang, verstärkte Schulterplatten und bronzene Pteryges. Halb offener spätrömischer Intercisa-Kammhelm mit breiten Wangenklappen, ohne Hörner. Lange verzierte Lanze senkrecht, ganzer Speerkopf und Schaft sichtbar.",
+        "reason": "Schüttgut, Schwerlastfracht und die Bereitstellung großer Transportkontingente. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "rationellus",
+      "name": "Vellari",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "avenicci",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Eine silberne Eule auf einem goldenen Waagbalken auf dunklem Violett.",
+      "palette": [
+        "Dunkelviolett",
+        "Silber",
+        "Gold"
+      ],
+      "frame": "Schlichter silberner Ring mit vier kleinen goldenen Rosetten",
+      "focus": "Kreditprüfung, Beteiligungen und kaufmännische Risikoabwägung.",
+      "crest": "assets/crests/rationellus.webp",
+      "fullsize": "assets/production/rationellus.png",
+      "warrior": {
+        "classId": "stralieri",
+        "equipment": "Silberner Lamellenbrustpanzer über violetter Tunika, italienische Armschienen. Offener italienischer Schaller mit hochgeschobenem Visier, sichtbares reifes Gesicht. Aufgestellte violette Pavese mit Eule, entspannt angelehnt, gerades Schwert, Pfeilköcher auf dem Rücken.",
+        "reason": "Kreditprüfung, Beteiligungen und kaufmännische Risikoabwägung. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "honoratus",
+      "name": "Dalvori",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "tullius",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein silberner Pelikan über zwei Jungvögeln in einem goldenen Nest auf gedecktem Rot.",
+      "palette": [
+        "Ziegelrot",
+        "Silber",
+        "Gold"
+      ],
+      "frame": "Ein schmaler dunkler Bronzerahmen mit schlichten paarigen Lorbeerblättern",
+      "focus": "Versorgung kirchlicher Hospize, Pilgergeleit und die Bewachung von Stiftungsgütern.",
+      "crest": "assets/crests/honoratus.webp",
+      "fullsize": "assets/production/honoratus.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Silberner gehobener Schuppenharnisch, ziegelroter Mantel, dezente goldene spätantike Säume. Geschlossener spätrömisch geprägter Maskenhelm mit ruhiger idealisierter menschlicher Gesichtsmaske, ohne Kreuzaufsatz. Gerades Schwert in ruhiger Haltung nach unten.",
+        "reason": "Versorgung kirchlicher Hospize, Pilgergeleit und die Bewachung von Stiftungsgütern. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "sapienor",
+      "name": "Valcera",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "tullius",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Eine elfenbeinfarbene Taube über einem geöffneten goldenen Buch auf Dunkelgrün.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Gold"
+      ],
+      "frame": "Ein schlichter silberner Ring mit schmalem römischem Flechtband",
+      "focus": "Schutz kirchlicher Schulen, Schreiberwerkstätten und der Reisenden des Klerus.",
+      "crest": "assets/crests/sapienor.webp",
+      "fullsize": "assets/production/sapienor.png",
+      "warrior": {
+        "classId": "lancieri",
+        "equipment": "Dunkelgrüne Tunika über silberner Kettenrüstung mit einigen italienischen Platten und feinen goldenen Rändern. Offener spätantiker Spangenhelm mit kleinen Wangenplatten und kurzem Nackenschutz, ohne Helmzier. Elegante lange Hellebarde ruhig aufrecht, ohne Schild.",
+        "reason": "Schutz kirchlicher Schulen, Schreiberwerkstätten und der Reisenden des Klerus. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "ordinarius",
+      "name": "Rivani",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "arentino",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein silberner Kranich hält einen goldenen Bauzirkel über drei Steinen auf Schieferblau.",
+      "palette": [
+        "Schieferblau",
+        "Silber",
+        "Gold"
+      ],
+      "frame": "Ein einfacher bronzener Ring mit zurückhaltendem Kerbschnitt",
+      "focus": "Vermessung, Bauplanung und die Sicherung großer Baustellen.",
+      "crest": "assets/crests/ordinarius.webp",
+      "fullsize": "assets/production/ordinarius.png",
+      "warrior": {
+        "classId": "stralieri",
+        "equipment": "Silberne Brigantine mit klaren spätantiken Schulterplatten, schieferblauer Mantel. Italienischer Eisenhut mit breiter gerader Krempe und beweglichem Nasenschutz, offenes Gesicht. Aufgestellte schieferblaue Pavese mit Kranich und Zirkel, angelehnt, Schwert in der Hand und Pfeilköcher auf dem Rücken.",
+        "reason": "Vermessung, Bauplanung und die Sicherung großer Baustellen. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "fortenian",
+      "name": "Belcaro",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "arentino",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein goldener Widder unter einem silbernen steinernen Rundbogen auf dunklem Terrakotta.",
+      "palette": [
+        "Terrakotta",
+        "Silber",
+        "Altgold"
+      ],
+      "frame": "Dunkler Eisenring mit sparsamem bronzenem Mäander",
+      "focus": "Steinbrüche, Mauerbau und der Schutz von Materialtransporten.",
+      "crest": "assets/crests/fortenian.webp",
+      "fullsize": "assets/production/fortenian.png",
+      "warrior": {
+        "classId": "lancieri",
+        "equipment": "Schwerer silberner Harnisch mit bronzegefassten Lamellen und terrakottafarbenem Waffenrock. Geschlossener spitzer italienischer Bascinet mit gerundetem kurzem Visier, keine Tierhörner. Kräftige Hellebarde in aufrechter ruhiger Haltung.",
+        "reason": "Steinbrüche, Mauerbau und der Schutz von Materialtransporten. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "nerva",
+      "name": "Nerva",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": false,
+      "liegeId": "vinicius",
+      "source": "Bestehendes Haus · ergänzter Venalys-Entwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein bronzener Widderkopf über zwei gekreuzten silbernen Rudern auf Nachtblau.",
+      "palette": [
+        "Nachtblau",
+        "Bronze",
+        "Silber"
+      ],
+      "frame": "Ein einfacher bronzener Ring mit breitem flachem römischem Mäander",
+      "focus": "Militärische Seefahrt, Kriegsschiffe, Metallhandwerk und Schiffbau.",
+      "linguaArgenti": null,
+      "crest": "assets/crests/nerva.webp",
+      "fullsize": "assets/production/nerva.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Dunkelblauer Waffenrock über bronzener Schuppen- und grauer Plattenrüstung. Geschlossener spätrömischer Berkasovo-Helm mit segmentierter silberner Gesichtsbedeckung und kleinem dunklem Rosshaarkamm. Breites gerades Schwert mit Spitze nach unten, keine zweite Hauptwaffe.",
+        "reason": "Militärische Seefahrt, Kriegsschiffe, Metallhandwerk und Schiffbau. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "ergalla",
+      "name": "Ergalla",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": false,
+      "liegeId": "avenicci",
+      "source": "Bestehendes Haus · ergänzter Venalys-Entwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein goldener Kranich hält ein silbernes Gewicht im gehobenen Fuß auf dunklem Grün.",
+      "palette": [
+        "Dunkelgrün",
+        "Gold",
+        "Silber"
+      ],
+      "frame": "Schmaler dunkler Eisenring mit einfacher goldener Blattranke",
+      "focus": "Seefahrt, Bankgeschäfte und die Leitung der Roten Bank in Gwynthor.",
+      "linguaArgenti": null,
+      "crest": "assets/crests/ergalla.webp",
+      "fullsize": "assets/production/ergalla.png",
+      "warrior": {
+        "classId": "stralieri",
+        "equipment": "Gehobene grüne Brigantine mit silbernen Armplatten und schlichten römischen Schulterspangen. Halb offener italienischer Celata-Helm mit tiefem Stirnschirm und separatem Kinnschutz. Aufgestellte dunkelgrüne Pavese mit goldenem Kranich, lässig angelehnt, Schwert in der Hand und Pfeilköcher auf dem Rücken.",
+        "reason": "Seefahrt, Bankgeschäfte und die Leitung der Roten Bank in Gwynthor. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "falto",
+      "name": "Falto",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": false,
+      "liegeId": "vinicius",
+      "source": "Bestehendes Haus · ergänzter Venalys-Entwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Goldenes Handelsschiff mit elfenbeinfarbenem Segel über drei goldenen Münzen auf tiefem Blau.",
+      "palette": [
+        "Tiefblau",
+        "Gold",
+        "Elfenbein"
+      ],
+      "frame": "Vorhandenes Originalwappen",
+      "focus": "Bankwesen, Kaufmannschaft und Handelsflotte; die Blaue Bank in Gwynthor.",
+      "linguaArgenti": null,
+      "crest": "assets/crests/falto.webp",
+      "fullsize": "assets/originals/falto.png",
+      "original": "assets/originals/falto.png",
+      "warrior": {
+        "classId": "gondoleri",
+        "equipment": "Leichter silberner Lamellenbrustpanzer mit dunkelblauer Tunika und goldenen Beschlägen. Offener italienischer Burgonet mit Wangenklappen, tiefem Nackenschutz und kurzem elfenbeinfarbenem Federkamm. Säbel in der Hand, Pfeilköcher auf dem Rücken.",
+        "reason": "Bankwesen, Kaufmannschaft und Handelsflotte; die Blaue Bank in Gwynthor. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "falveri",
+      "name": "Falveri",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": false,
+      "liegeId": "avenicci",
+      "source": "Bestehendes Haus · ergänzter Venalys-Entwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Goldener geflügelter Löwe mit Speer auf Burgunderrot.",
+      "palette": [
+        "Burgunderrot",
+        "Gold",
+        "Schwarz"
+      ],
+      "frame": "Vorhandenes Originalwappen",
+      "focus": "Handelsflotte, See- und Bankverbindungen; die Rote Kompanie und Klingende Münze.",
+      "linguaArgenti": null,
+      "crest": "assets/crests/falveri.webp",
+      "fullsize": "assets/originals/falveri.png",
+      "original": "assets/originals/falveri.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Edler silberner Harnisch mit spätrömischen Schulterlamellen und burgunderrotem Waffenrock mit goldenem geflügeltem Löwen. Geschlossener italienischer Armet mit schmalem geradem Sehschlitz, flachem vergoldetem Kamm und zwei kleinen dunklen Federn. Gerades Schwert mit Spitze nach unten, kein Schild.",
+        "reason": "Handelsflotte, See- und Bankverbindungen; die Rote Kompanie und Klingende Münze. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "bellaratus",
+      "name": "Malvesso",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "abor",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein schwarzer Wolfskopf über zwei gekreuzten roten Speeren auf hellem Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Dunkelrot"
+      ],
+      "frame": "Ein schlichter dunkler Eisenring mit vier flachen bronzenen Rosetten",
+      "focus": "Schwere Geleitkräfte, bewaffnete Vertragsdienste und die Sicherung großer Unternehmungen der Abor.",
+      "crest": "assets/crests/bellaratus.webp",
+      "fullsize": "assets/production/bellaratus.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Schwerer schwarzer Lamellenharnisch mit grauen Platten, elfenbeinfarbener Waffenrock und dunkelroter Schulterstoff. Offener spätrömischer Niederbieber-Helm mit breitem Nackenschutz, roten querstehenden kurzem Rosshaarkamm und sichtbarem bärtigem Gesicht. Kräftiges gerades Schwert in der Hand mit Spitze nach unten.",
+        "reason": "Schwere Geleitkräfte, bewaffnete Vertragsdienste und die Sicherung großer Unternehmungen der Abor. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "legarinus",
+      "name": "Corvani",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "abor",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein roter Adler mit ausgebreiteten Flügeln über einem silbernen Rutenbündel auf Anthrazit.",
+      "palette": [
+        "Anthrazit",
+        "Rot",
+        "Silber"
+      ],
+      "frame": "Ein einfacher bronzener Ring mit schmaler silberner Perlenlinie",
+      "focus": "Geschlossene Formationen, Hafenverteidigung im Vertragsdienst und die Ausbildung von Stangenwaffenkämpfern.",
+      "crest": "assets/crests/legarinus.webp",
+      "fullsize": "assets/production/legarinus.png",
+      "warrior": {
+        "classId": "lancieri",
+        "equipment": "Silberner Brustharnisch mit anthrazitfarbenem Waffenrock, römische Beinschienen und roter Mantel. Geschlossener italienischer Visierburgonet mit geriffelter Helmglocke, rotem Nackenband und silbernem seitlichem Federpaar. Sehr lange einfache Pike ruhig aufrecht ohne Schild, gesamte Spitze sichtbar.",
+        "reason": "Geschlossene Formationen, Hafenverteidigung im Vertragsdienst und die Ausbildung von Stangenwaffenkämpfern. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    },
+    {
+      "id": "discipian",
+      "name": "Serrato",
+      "rank": "magnarian",
+      "rankId": "magnarian",
+      "role": "Magnarier · Lehensadel · Ritterfürstenrang",
+      "clan": false,
+      "isNew": true,
+      "liegeId": "abor",
+      "source": "Neuer Magnarier- und Wappenentwurf",
+      "sourceSeat": null,
+      "sourceFolder": "",
+      "motif": "Ein silberner Eber zwischen zwei bronzenen Speerspitzen auf tiefem Blau.",
+      "palette": [
+        "Tiefblau",
+        "Silber",
+        "Bronze"
+      ],
+      "frame": "Ein schmaler dunkler Bronzerahmen mit schlichten flachen Palmblättern",
+      "focus": "Schutz von Nachschub, Feldlagern und den Werkstätten angeworbener Truppen.",
+      "crest": "assets/crests/discipian.webp",
+      "fullsize": "assets/production/discipian.png",
+      "warrior": {
+        "classId": "condottieri",
+        "equipment": "Verzierter bronzener Muskelpanzer über silbernen Kettenärmeln, tiefblaue Pteryges und dunkler Umhang. Halb offener spätantiker Attischer Helm mit stark nach vorn gezogenem Nasal, hohen Wangenplatten und ohne Federbusch. Gerades Schwert locker vor der Hüfte gehalten, keine zweite Hauptwaffe.",
+        "reason": "Schutz von Nachschub, Feldlagern und den Werkstätten angeworbener Truppen. Der Hausentwurf folgt dieser Aufgabe, dem Wappen und dem Magnarierstand; er zeigt keine namentlich festgelegte Person."
+      }
+    }
+  ],
+  "namingNote": "Nutzerkorrektur vom 2. November 2026: Familiennamen nach dem Klang von Ergalla und Falto, ohne erzwungene Berufs- oder Gesinnungsbedeutung. Stabile technische IDs und Bildpfade bleiben erhalten."
+}

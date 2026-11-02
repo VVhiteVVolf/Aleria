@@ -6,6 +6,7 @@ import gawainPublic from './gawain-public-person-review-20261101.json' with { ty
 import brevanorRank from './brevanor-rank-review-20261030.json' with { type: 'json' };
 import gwynthorCourt from './gwynthor-court-family-review-20261030.json' with { type: 'json' };
 import gwynthorTroetzli from './gwynthor-troetzli-family-review-20261031.json' with { type: 'json' };
+import kingdomMetadata from './kingdom-metadata-review-20261101.json' with { type: 'json' };
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
@@ -28,6 +29,18 @@ export function protectedAlbicFamilies(records) {
     };
     copy.houseProfile = { ...copy.houseProfile };
     copy.family.document.houseProfile = { ...copy.family.document.houseProfile };
+    const kingdomReview = kingdomMetadata.families[record.id];
+    if (kingdomReview) {
+      for (const profile of [copy.houseProfile, copy.family.document.houseProfile]) {
+        for (const [field, value] of Object.entries(kingdomReview.profileAfter)) assert.equal(profile[field], value, `${record.id}/${field}`);
+        Object.assign(profile, kingdomReview.profileBefore);
+      }
+      for (const [field, value] of Object.entries(kingdomReview.extensionsAfter)) {
+        assert.deepEqual(copy.family.extensions[field], value, `${record.id}/${field}`);
+        delete copy.family.extensions[field];
+      }
+      Object.assign(copy.family.extensions, structuredClone(kingdomReview.extensionsBefore));
+    }
     // Project only the exact approved Bielle rank and its matching prose.
     // Identities, relationships and every other family field stay hashed.
     if (record.id === brevanorRank.house.id) {

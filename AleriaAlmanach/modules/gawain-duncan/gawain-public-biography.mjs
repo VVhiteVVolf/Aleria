@@ -1,3 +1,4 @@
+import { reviewedBiographyTraitCards } from '../character-trait-review/character-trait-review-model.js';
 // Public play only. Evidence and original public sources live in ./source.
 export const GAWAIN_ID = 'q1QtSIug74FzzwUAqWrs';
 export const GAWAIN_WORLD_ID = 'person--haus-draig--gawain-draig';
@@ -6,7 +7,6 @@ export const GAWAIN_PORTRAIT = 'https://i.imgur.com/BceZTJo.jpeg';
 export const DUNCAN_PORTRAIT = 'https://i.imgur.com/zdChj0a.png';
 export const GAWAIN_PUBLIC_TITLE = 'Ritter des Hauses Draig · Mundschenk, Gwynthor';
 export const GAWAIN_PUBLIC_SUMMARY = 'Sir Gawain Draig, jüngster ehelicher Sohn Galahads und Gwendolyns, ist Ritter und Mundschenk am Hof von Gwynthor. Begabt, eitel und schlagfertig, sucht er ein Leben jenseits der Burgmauern. Unter seinem früheren Rittervater Sir Duncan Gafyr soll er nun im Dienst an der Stadt zeigen, dass seinem Mut auch Verlässlichkeit und Urteilskraft folgen.';
-const trait = (title, detail, icon) => ({ title, detail, icon: `/IconOrdner/Traits%20Icon/${icon}.png` });
 export const GAWAIN_PUBLIC_BIOGRAPHY = {
   schema: 'aleria.biography-module', schemaVersion: 1,
   stats: [ ['Name','Sir Gawain Draig'], ['Geboren','1722 · 18 Jahre im Jahr 1740'], ['Haus','Draig · Celtigerns Wacht'],
@@ -23,15 +23,8 @@ export const GAWAIN_PUBLIC_BIOGRAPHY = {
       + '<p>Auch seine Zuneigung ist selten leise. Taliesin Draenmelyn ist für ihn nicht irgendein austauschbarer Diener, sondern sein bester Freund und engster Vertrauter. Dennoch denkt Gawain Freundschaft und Bedienung so selbstverständlich zusammen, dass ihm der Widerspruch kaum auffällt. Guinevere Neidr nennt er seine beste Freundin; die von ihren Eltern vereinbarte Verlobung wollte er selbst nicht. Seine wachsende Aufmerksamkeit für Ylva ist im Hof und auf dem Übungsplatz unübersehbar. Daraus ist jedoch weder eine aufgehobene Verlobung noch ein neuer Ehebund geworden.</p>'
       + '<p>Gawain kann Anerkennung annehmen und sie auch einem anderen geben. Nach seinem ersten Sieg über Gildas Gafyr reichte er dem unterlegenen Ritter die Hand und dankte ihm aufrichtig. Als Asgeir und Ylva ihr Können zeigten, wich seine Selbstsicherheit sichtlichem Respekt. Unter dem Wunsch, bewundert zu werden, liegt damit etwas, woran Duncan anknüpfen kann: Gawain möchte nicht bloß als Prinz behandelt werden. Er möchte, dass sein Können zählt.</p>'
       + '<p>Nun soll er lernen, dass ein Ritter auch dann gebraucht wird, wenn niemand eine Ballade über ihn schreibt. Zwei Wochen Dienst in Gwynthor, bis zu Tudwals Hochzeit: Patrouillen, Bürgeranliegen und die kleinen Pflichten außerhalb des Burghofs, unter Duncans wachsamen Augen und ohne Taliesins helfende Hände. Für Gawain ist das zugleich Einschränkung und endlich ein erster Schritt durch die Burgpforte. Ob daraus Verlässlichkeit wird, muss er noch zeigen.</p>',
-    abilitiesTitle: 'Wesen & Widersprüche',
-    abilities: [
-      trait('Eitel','Er pflegt sein Äußeres mit Überzeugung und möchte, dass sein Auftreten seinem Rang entspricht. Schmutz und Unordnung treffen ihn oft unmittelbarer als eine ernste Ermahnung.','Proud'),
-      trait('Schlagfertig','Gawain erkennt die komische Seite einer Lage schnell und genießt eine gute Pointe. Nicht immer merkt er rechtzeitig, dass er gerade über die Wunde eines anderen lacht.','Gregarious'),
-      trait('Begabt, aber bequem','Sein Gespür für den Schwertkampf ist echt. Die Geduld, daraus durch tägliche Übung verlässliches Handwerk zu machen, muss Duncan ihm noch immer abverlangen.','Slothful'),
-      trait('Hungrig auf die Welt','Abenteuer locken ihn, aber auch die Menschen jenseits der Burgmauern. Er möchte eigene Erfahrungen sammeln und seinen Platz nicht allein von anderen bestimmen lassen.','Curious'),
-      trait('Loyal auf seine Weise','Taliesin und Guinevere sind ihm wichtig, auch wenn er Zuneigung, Stand und eigene Ansprüche nicht sauber auseinanderhält. Über vertraute Menschen darf nach seiner Auffassung längst nicht jeder spotten.','Trusting'),
-      trait('Empfänglich für Anerkennung','Lob richtet ihn auf; Kränkungen reizen ihn. Trotzdem kann er eigene Grenzen benennen, einen Gegner respektieren und eine aufrichtige Entschuldigung aussprechen.','Willful')
-    ],
+    abilitiesTitle: 'Eigenschaften',
+    abilities: reviewedBiographyTraitCards(GAWAIN_ID),
     historyTitle: 'Ritterschlag und Bewährung',
     historyText: '<p>Geboren 1722 als Sohn Galahad Draigs und Gwendolyns, geborener Aderyn, wuchs Gawain am Hof von Gwynthor auf. Duncan Gafyr war sein Rittervater während der Knappenzeit. Galahad hat ihn inzwischen zum Ritter geschlagen. An Duncans Seite soll er nun lernen, seinen Rang auch in den unscheinbaren Pflichten des Alltags auszufüllen.</p>'
       + '<p>Im Offenen Gericht entzündete sich an seiner Abenteuerlust die Frage, ob er Verantwortung schon tragen könne. Meurig schlug einen Dienst in Stadt und Vororten vor, Egon versprach den Dienstplan, und Gwendolyn band den Versuch an den Verzicht auf seinen Kammerdiener. Duncan sollte beobachten, anleiten und urteilen. Gawain stimmte zu, weil darin trotz aller Auflagen eine Möglichkeit lag, endlich häufiger aus der Burg zu kommen.</p>'

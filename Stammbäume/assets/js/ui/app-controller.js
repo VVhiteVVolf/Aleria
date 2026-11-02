@@ -11,7 +11,7 @@ import { createTreeGeneratorController } from '../modules/tree-generator/tree-ge
 import { createHouseBiographyDialog } from '../modules/house-biography/house-biography-dialog.js?v=20260911-gwendolyn-house-bios-h';
 import { HOUSE_BIOGRAPHY_EXTENSION_ID } from '../modules/house-biography/house-biography-model.js?v=20260911-gwendolyn-house-bios-h';
 import { createPersonBiographyDialog } from '../modules/person-biography/person-biography-dialog.js';
-import { PERSON_BIOGRAPHY_EXTENSION_ID } from '../modules/person-biography/person-biography-model.js';
+import { PERSON_BIOGRAPHY_EXTENSION_ID, createRemovedPersonBiographyModule } from '../modules/person-biography/person-biography-model.js';
 import { assertUsablePortraitSource } from '../modules/person-portrait/person-portrait-source.js';
 import { createRelationshipMatrixDialog } from '../modules/relationship-matrix/relationship-matrix-dialog.js';
 import { exportChartAsPng } from '../services/chart-png-export.js';
@@ -175,7 +175,7 @@ export function createAppController({
       toast('Biographie wurde gespeichert.');
     },
     onRemove(personId) {
-      store.setPersonExtension(personId, PERSON_BIOGRAPHY_EXTENSION_ID, null);
+      store.setPersonExtension(personId, PERSON_BIOGRAPHY_EXTENSION_ID, createRemovedPersonBiographyModule());
       toast('Biographie wurde entfernt.');
     }
   });

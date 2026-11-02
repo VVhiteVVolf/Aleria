@@ -3,6 +3,7 @@ import { mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { withVassals } from '../modules/administration/administration-model.mjs';
 import vassals, { territorialContacts } from '../modules/administration/data/celtigerns-vassals.generated.mjs';
+import { ROLE_EXAMPLES, ROLE_EXAMPLE_GROUPS } from '../modules/administration/data/role-examples.mjs';
 
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({
@@ -155,6 +156,20 @@ try {
       const displayed = await dialog.locator('.administration-role-card .administration-role-name').allTextContents();
       assert.equal(displayed.length, expected.count, `${scope}/${area}: all office cards retained`);
       assert.deepEqual(expected.names.filter(name => !displayed.includes(name)), [], `${scope}/${area}: all named holders retained`);
+
+      const examples = dialog.locator(`[data-role-examples="${area}"]`);
+      assert.equal(await dialog.locator('[data-role-examples]').count(), 1, `${scope}/${area}: one examples table`);
+      assert.deepEqual(await examples.locator('thead th').allTextContents(), ['Rolle', 'Kurzbeschreibung']);
+      for (const [kind, title] of Object.entries(ROLE_EXAMPLE_GROUPS)) {
+        const group = examples.locator(`[data-example-kind="${kind}"]`);
+        assert.equal(await group.locator('[scope="rowgroup"]').innerText(), title);
+        assert.deepEqual(await group.locator('[scope="row"] .administration-example-role > span:last-child').allTextContents(), ROLE_EXAMPLES[area][kind].map(([name]) => name));
+        assert.deepEqual(await group.locator('td').allTextContents(), ROLE_EXAMPLES[area][kind].map(([, description]) => description));
+      }
+      assert.deepEqual(await examples.locator('.administration-pin').evaluateAll(pins => pins.map(pin => ({
+        bronze: pin.classList.contains('is-bronze'), symbol: pin.querySelector('use').getAttribute('href').split('#')[1],
+      }))), Array(Object.values(ROLE_EXAMPLES[area]).flat().length).fill({ bronze: true, symbol: area }));
+      assert.ok(await examples.evaluate(node => node.nextElementSibling?.classList.contains('administration-dialog-navigation')), `${scope}/${area}: examples end the content before navigation`);
 
       const maximize = dialog.locator('[data-action="maximize-administration"]');
       const normalWidth = await dialog.evaluate(node => node.getBoundingClientRect().width);

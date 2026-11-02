@@ -1,0 +1,54 @@
+function buildBiographyMentorRows(items = []) {
+  return items.map(item => `<div class="biography-mentor-edit-row">
+    ${[['name', 'Name'], ['role', 'Bezeichnung'], ['image', 'Portrait-URL'], ['detail', 'Ausbildung / Zeitraum']].map(([field, label]) => `<label>${label}<input class="inline-edit-input" data-mentor-field="${field}" value="${escapeHtml(item[field] || '')}"></label>`).join('')}
+    <button type="button" class="module-editor-mini-btn module-editor-danger" data-module-editor-action="remove-biography-mentor-row" aria-label="Rittervater oder Rittermutter entfernen">×</button>
+  </div>`).join('');
+}
+
+function editModuleBiographyMentorRow(trigger, remove = false) {
+  const card = trigger.closest('.module-page-card, [data-biography-embedded-card]');
+  const wrap = card?.querySelector('.module-biography-mentors');
+  if (!wrap) return;
+  if (remove) trigger.closest('.biography-mentor-edit-row')?.remove();
+  else if (wrap.children.length < 8) wrap.insertAdjacentHTML('beforeend', buildBiographyMentorRows([{ role: 'Rittervater' }]));
+  syncModuleJsonPreview();
+}
+
+function buildBiographyModuleEditorFields(page) {
+  const b = sanitizeBiographyData(page?.biography || {});
+  if (!b.portraitStages.some(Boolean) && Array.isArray(page?.imageTabs)) {
+    b.portraitStages = Array.from({ length: 4 }, (_, index) => String(page.imageTabs[index]?.image || '').trim());
+  }
+  const group = (title, body, options = {}) => AleriaBiographyCards.editorGroup(title, body, { escape: escapeHtml, ...options });
+  const field = (label, key, value, type = 'text', attributes = '') => `<label class="module-editor-field wide">${escapeHtml(label)}<input type="${type}" class="me-biography-${key}" value="${escapeHtml(value)}" ${attributes}></label>`;
+  const rich = (label, key, value) => `<div class="module-editor-field wide"><label>${escapeHtml(label)}</label>${buildTextFormatToolbar()}<textarea class="me-biography-${key}">${escapeHtml(value)}</textarea></div>`;
+  const button = (label, action, attributes = '') => `<button type="button" class="module-editor-mini-btn" data-module-editor-action="${action}" ${attributes}>${label}</button>`;
+  const lineList = (title, key, items, list) => group(title,
+    field('Überschrift', key + '-title', b[key + 'Title']) + button('+ Eintrag', 'add-simple-line-row', `data-simple-line-list="${list}"`) + buildModuleSimpleLineList(items, list), { count: items.length });
+  return `<div class="module-page-type-block${inferModulePageType(page) === 'biography' ? ' visible' : ''}" data-page-type="biography">
+    ${group('Biografie & Hintergrund',
+      field('Biografie-Überschrift', 'title', b.biographyTitle) + rich('Über die Person', 'text', b.biographyText || page?.description || '')
+      + field('Hintergrund-Überschrift', 'history-title', b.historyTitle) + rich('Hintergrund & Werdegang', 'history-text', b.historyText),
+      { open: true, help: 'Absätze, Zwischenüberschriften und Trenner gliedern längere Texte. Zusätzliche Kapitel stehen im Bereich „Weitere Kapitel“.' })}
+    ${group('Portrait & Steckbrief', buildBiographyPortraitStagesEditor(b)
+      + `<div class="module-editor-field wide">${button('+ Steckbriefzeile', 'add-biography-stat-row')}<div class="inline-stat-editor module-biography-stats">${buildModuleBiographyStatRows(page?.stats || [])}</div></div>`, { count: (page?.stats || []).length })}
+    ${group('Ritterväter & Rittermütter', `<div class="module-editor-field wide">${button('+ Ausbildungsperson', 'add-biography-mentor-row')}<div class="biography-edit-list module-biography-mentors">${buildBiographyMentorRows(b.knightMentors || [])}</div></div>`,
+      { count: (b.knightMentors || []).length, help: 'Nur bekannte Ausbildungspersonen eintragen. Das kleine Portrait erscheint direkt unter dem Hauptportrait.' })}
+    ${group('Persönlichkeit & Spezialgebiete', field('Überschrift', 'abilities-title', b.abilitiesTitle)
+      + `<div class="module-editor-field wide">${button('+ Eigenschaft', 'add-biography-ability-row')}<div class="biography-edit-list module-biography-abilities">${b.abilities.length ? buildBiographyAbilityRows(b.abilities, 'module') : ''}</div></div>`, { count: b.abilities.length })}
+    ${group('Weitere Kapitel', `<div class="module-editor-field wide">${button('+ Nach Einleitung', 'add-biography-section-row', 'data-biography-section-position="afterIntro"')} ${button('+ Nach Werken', 'add-biography-section-row', 'data-biography-section-position="afterWorks"')}<div class="biography-edit-list module-biography-sections">${buildBiographySectionRows(b.extraSections, 'module')}</div></div>`,
+      { count: b.extraSections.length, help: 'Jedes Kapitel erhält eine eigene Überschrift und einen dezenten Trenner. Für Listen einen Eintrag pro Zeile schreiben.' })}
+    ${lineList('Bekannte Werke', 'works', b.works, 'biographyWorks')}
+    ${lineList('Eigenarten & Wissenswertes', 'trivia', b.trivia, 'biographyTrivia')}
+    ${lineList('Zitate', 'quotes', b.quotes, 'biographyQuotes')}
+    ${group('Beziehungen & Verbindungen', field('Überschrift', 'connections-title', b.connectionsTitle)
+      + `<div class="module-editor-field wide">${button('+ Verbindung', 'add-biography-connection-row', 'data-biography-connection-kind="connection"')} ${button('+ Gruppentrenner', 'add-biography-connection-row', 'data-biography-connection-kind="heading"')}<div class="biography-edit-list module-biography-connections">${buildBiographyConnectionRows(b.connections, 'module')}</div></div>`, { count: b.connections.length })}
+    ${group('Eigentum & Dokumente', field('Überschrift', 'documents-title', b.documentsTitle)
+      + `<div class="module-editor-field wide">${button('+ Eintrag', 'add-biography-document-row')}<div class="biography-edit-list module-biography-documents">${buildBiographyDocumentRows(b.documents, 'module')}</div></div>`, { count: b.documents.length })}
+    ${group('Leitgedanke & Gestaltung', rich('Zitat beim Portrait', 'quote', page?.quote || '') + field('Zitat von', 'quote-by', page?.quoteBy || '')
+      + field('Fußzeile', 'footer', b.footer) + field('Inhaltsbreite links (%)', 'side-width', b.sideWidth, 'number', 'min="35" max="100"')
+      + field('Verbindungsportraits: Höhe (px)', 'connection-portrait-height', b.connectionPortraitHeight, 'number', 'min="44" max="140"')
+      + field('Abstand zum Verbindungstext (px)', 'connection-text-offset', b.connectionTextOffset, 'number', 'min="0" max="80"'))}
+  </div>`;
+}
+

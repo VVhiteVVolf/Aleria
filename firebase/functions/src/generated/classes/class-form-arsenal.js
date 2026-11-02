@@ -4,6 +4,7 @@ import { getVennyrClassProgression } from './vennyr/vennyr-class-progression.js'
 // Canonical form membership and unlock levels own the arsenal. Historical slot
 // selections remain migration metadata; they no longer limit learned attacks.
 export function materializeClassFormArsenal(profile, plan, { preserveExisting = true } = {}) {
+  if (profile.progression?.development?.mode === 'purchase') return profile;
   if (!plan?.styles?.length) return profile;
   const level = Math.max(1, Math.min(20, Number(plan.selectedLevel) || 1));
   const branches = new Set((profile.classTraining?.selections || []).filter(s=>s.kind==='branch').map(s=>s.selectionId));
@@ -31,6 +32,7 @@ export function materializeClassFormArsenal(profile, plan, { preserveExisting = 
 }
 
 export function reconcileCultureFormArsenal(profile = {}, targetLevel = profile.progression?.level) {
+  if (profile.progression?.development?.mode === 'purchase') return profile;
   const classId = profile.templateSelections?.classId || profile.identity?.archetype || profile.identity?.className;
   const plan = getAldrimarClassProgression(classId, targetLevel) || getVennyrClassProgression(classId, targetLevel);
   if (!plan || plan.classId === 'derwyn') return profile; // Derwyn uses its selected Cenyr/Vennyr foundation.

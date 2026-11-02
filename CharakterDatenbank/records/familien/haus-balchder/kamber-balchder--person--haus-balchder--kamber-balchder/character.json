@@ -108,13 +108,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/kamber-balchder-veroeffentlicht-2026-10-30.json",
-    "sourceExportedAt": "2026-10-30T18:10:16.584Z",
-    "sourceUpdatedAt": "2026-10-30T18:10:16.584Z",
+    "sourceArchive": "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-balchder--kamber-balchder.json",
+    "sourceExportedAt": "2026-11-02T20:28:09.214Z",
+    "sourceUpdatedAt": "2026-11-02T20:28:09.214Z",
     "sourceDocumentIds": [
       "person--haus-balchder--kamber-balchder"
     ],
-    "contentHash": "6a115aa42814de2caa20c8e35cbb3d11b3c6c9805668ce9447563b22bba99df6"
+    "contentHash": "5b177d10629c24369ac3ba657a0ae38a35c39ab992d1abfd5236d9e0050463ed"
   },
   "local": {
     "notes": "",
@@ -552,12 +552,65 @@
         ],
         "createdAt": "2026-09-02T20:14:58.895Z",
         "archived": false
+      },
+      {
+        "id": "person--haus-balchder--kamber-balchder",
+        "name": "Kamber Balchder",
+        "inventory": {
+          "companions": [
+            {
+              "id": "card-kamber-silberwind",
+              "name": "Silberwind",
+              "species": "Rhyfel",
+              "image": "/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+              "description": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+              "summary": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-kamber-silberwind",
+              "inventoryItemId": "kamber-silberwind"
+            }
+          ],
+          "items": [
+            {
+              "id": "kamber-silberwind",
+              "instanceId": "kamber-silberwind",
+              "creatureId": "companion-kamber-silberwind",
+              "name": "Silberwind",
+              "image": "/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+              "description": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+              "type": "Rhyfel",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Rhyfel",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-balchder--kamber-balchder",
+              "ownerCharacterName": "Kamber Balchder",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-02T20:28:09.214Z"
+            }
+          ]
+        },
+        "updatedAt": "2026-11-02T20:28:09.214Z"
       }
     ]
   },
   "character": {
     "id": "person--haus-balchder--kamber-balchder",
-    "updatedAt": "2026-10-30T18:10:16.584Z",
+    "updatedAt": "2026-11-02T20:28:09.214Z",
     "name": "Kamber Balchder",
     "imageSetSchemaVersion": 1,
     "relevance": "",
@@ -901,7 +954,54 @@
     "fraktion": "Haus Balchder",
     "imageSetsOverride": true,
     "status": "active",
-    "inventory": null,
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-kamber-silberwind",
+          "name": "Silberwind",
+          "species": "Rhyfel",
+          "image": "/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+          "description": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+          "summary": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-kamber-silberwind",
+          "inventoryItemId": "kamber-silberwind"
+        }
+      ],
+      "items": [
+        {
+          "id": "kamber-silberwind",
+          "instanceId": "kamber-silberwind",
+          "creatureId": "companion-kamber-silberwind",
+          "name": "Silberwind",
+          "image": "/AleriaAlmanach/assets/companions/haus-balchder/silberwind.png",
+          "description": "Silberwind ist Kamber Balchders persönliches Reitpferd: ein Rhyfel-Schimmel mit hellem Fell und silberweißer Mähne. Alter, Geschlecht, Herkunft und frühere Einsätze sind nicht überliefert.",
+          "type": "Rhyfel",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Rhyfel",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-balchder--kamber-balchder",
+          "ownerCharacterName": "Kamber Balchder",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-02T20:28:09.214Z"
+        }
+      ]
+    },
     "identity": {
       "worldPersonId": "person--haus-balchder--kamber-balchder"
     },

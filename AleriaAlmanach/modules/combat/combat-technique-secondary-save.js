@@ -13,8 +13,9 @@ export async function resolveTechniqueSecondarySave({ dice, actor, target, attac
     sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
     state: { ...ruleProfileState, saveAttribute: save.attributeKey } });
   markCombatRuleApplications(applications, usedRuleFrequencyKeys);
-  const modifier = getSavingThrowTotal(target, save.attributeKey, save) + mergeCombatRuleEffects(applications).savingThrowModifier;
-  const roll = await dice.rollSavingThrow({ modifier, rollMode: resolveSavingThrowRollMode(target, save.attributeKey),
+  const ruleEffects = mergeCombatRuleEffects(applications);
+  const modifier = getSavingThrowTotal(target, save.attributeKey, save) + ruleEffects.savingThrowModifier;
+  const roll = await dice.rollSavingThrow({ modifier, rollMode: resolveSavingThrowRollMode(target, save.attributeKey, ruleEffects.rollMode),
     actorName: actor.name, targetName: target.name, container: options.container });
   const dc = Number(save.dc) || 8;
   const succeeded = Number(roll.total) >= dc;

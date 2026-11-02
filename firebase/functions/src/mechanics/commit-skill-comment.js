@@ -1,4 +1,5 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { getSceneConditionClock } from '../generated/scene-time/scene-condition-clock.js';
 import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from './critical-comment-lifecycle.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { buildNarrativeCommentDocument } from '../comments/commit-narrative-comment.js';
@@ -67,7 +68,7 @@ export async function commitSkillCommentOperation(request, { database = getFires
       transaction,
       request,
       metadata: payload.metadata,
-      history: trustedHistory,
+      history: trustedHistory, sceneClock: getSceneConditionClock(allHistory),
       challengeHistory,
       rulePeriods,
       usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods),

@@ -1,3 +1,4 @@
+import { getSkillIdentity } from './skill-definitions.js';
 // Presentation only: skill names and aliases resolve independently of saved row IDs.
 const definitions = [
   ['athletics', 'Athletik'],
@@ -29,5 +30,6 @@ const byName = new Map(definitions.flatMap(([id, name, ...aliases], index) => [i
 const fallback = presentation('custom-skill', 'Eigene Fertigkeit');
 
 export function getSkillIconPresentation(skill = '') {
-  return byName.get(normalize(typeof skill === 'string' ? skill : skill?.name)) || fallback;
+  const name=typeof skill === 'string' ? skill : skill?.name;
+  return byName.get(normalize(name)) || byName.get(getSkillIdentity(name)) || fallback;
 }

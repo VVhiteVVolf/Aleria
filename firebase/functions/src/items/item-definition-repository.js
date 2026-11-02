@@ -80,7 +80,7 @@ export async function prepareDefinitionVersion(database, transaction, input, { a
     if (itemDefinitionContent(builtin) !== itemDefinitionContent(definition)) throw new HttpsError('failed-precondition', 'Geschützte Standardwerte dürfen nicht überschrieben werden.');
     return { definition: builtin, previousRevision: builtin.revision, write() {} };
   }
-  if (definition.id.startsWith('standard:')) throw new HttpsError('permission-denied', 'Standarddefinitionen werden durch eine geprüfte Datenversion veröffentlicht.');
+  if (definition.id.startsWith('standard:') || itemDefinitionRegistry.isBuiltin(definition.id)) throw new HttpsError('permission-denied', 'Katalogdefinitionen werden durch eine geprüfte Datenversion veröffentlicht. Für Abweichungen bitte eine eigene Variante anlegen.');
   const versionRef = definitionVersionRef(database, definition);
   const headRef = database.collection('item_definitions').doc(definition.id);
   const [version, head] = await Promise.all([transaction.get(versionRef), transaction.get(headRef)]);

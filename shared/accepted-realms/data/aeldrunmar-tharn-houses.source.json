@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-11-02",
+  "realm": "aeldrunmar",
+  "houses": [
+    {
+      "id": "ransford",
+      "sourceId": "ransford",
+      "name": "Ransford",
+      "houseId": "house-ransford",
+      "familyId": "haus-ransford",
+      "clan": false,
+      "originRealm": "aeldrunmar",
+      "acceptedOn": "2026-11-02",
+      "territorialSource": "shared/accepted-realms/data/aeldrunmar-tharn-houses.source.json",
+      "seatId": "trentmorath",
+      "regionId": "tharn",
+      "rankId": "knight-prince",
+      "rank": "Reeve (Ritterfürst)",
+      "liegeId": "tharn",
+      "isSeatRuler": false,
+      "extinct": false,
+      "isNew": true,
+      "motif": "Ein einzelner silberner Dorsch über zwei silbernen Wellen auf Petrol, umgeben von einem kupfernen Flechtrahmen.",
+      "palette": [
+        "Petrol",
+        "Silber",
+        "Kupfer"
+      ],
+      "frame": "Kupfer",
+      "ornament": "breite kupferne Tau- und Flechtbänder im geschlossenen Außenring",
+      "focus": "Hochseefischerei, Geleit der Fangschiffe und die sichere Anlandung ihrer Fänge.",
+      "rankBasis": "Nutzerfestlegung vom 2. November 2026: Reeve, entsprechend einem Ritterfürsten; unmittelbarer Vasall der Tharn mit Sitz in Trentmorath.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/ransford.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/ransford.png",
+      "warrior": {
+        "id": "ransford",
+        "name": "Ransford",
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Petrol",
+          "Silber",
+          "Kupfer"
+        ],
+        "equipment": "Kräftiges gerades Seeritter-Schwert, beweglicher Ketten- und Schuppenharnisch, kurzer petrolfarbener Mantel und kupferne Säume. Halb offener spitzer Spangenhelm mit Nasal und Wangenklappen.",
+        "reason": "Ein Særinc vertritt die seefahrende Hausgemeinschaft. Dorsch, Arbeitsseil und beweglicher Harnisch greifen Hochseefischerei und den Geleitschutz der Fangschiffe auf.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiary": "",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/ransford/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/ransford/krieger.png"
+      }
+    },
+    {
+      "id": "heswick",
+      "sourceId": "heswick",
+      "name": "Heswick",
+      "houseId": "house-heswick",
+      "familyId": "haus-heswick",
+      "clan": false,
+      "originRealm": "aeldrunmar",
+      "acceptedOn": "2026-11-02",
+      "territorialSource": "shared/accepted-realms/data/aeldrunmar-tharn-houses.source.json",
+      "seatId": "trentmorath",
+      "regionId": "tharn",
+      "rankId": "knight-prince",
+      "rank": "Reeve (Ritterfürst)",
+      "liegeId": "tharn",
+      "isSeatRuler": false,
+      "extinct": false,
+      "isNew": true,
+      "motif": "Drei goldene Heringe in drei waagerechten Reihen über einem silbernen Wellenband auf Burgunderrot, eingefasst von einem silbernen Flechtrahmen.",
+      "palette": [
+        "Burgunderrot",
+        "Mattgold",
+        "Silber"
+      ],
+      "frame": "Silber",
+      "ornament": "silberne gegenläufige Wellen und schlichte Flechtbänder im geschlossenen Außenring",
+      "focus": "Heringsfang, Salz- und Räucherfisch sowie die Versorgung der Häfen und Schiffsbesatzungen der Tharn.",
+      "rankBasis": "Nutzerfestlegung vom 2. November 2026: Reeve, entsprechend einem Ritterfürsten; unmittelbarer Vasall der Tharn mit Sitz in Trentmorath.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/heswick.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/heswick.png",
+      "warrior": {
+        "id": "heswick",
+        "name": "Heswick",
+        "classId": "s-rinc",
+        "className": "Særinc",
+        "classHref": "/Klassenordner/Klassenseite.html#klasse-aeldrunmar-s-rinc",
+        "palette": [
+          "Burgunderrot",
+          "Mattgold",
+          "Silber"
+        ],
+        "equipment": "Gerades Seeritter-Schwert, beweglicher Ketten- und Schuppenharnisch mit burgunderrotem Waffenrock, matten Goldsäumen und silbernen Schienen. Geschlossener hoher Helm mit schmalem Sehschlitz und Gesichtsschutz.",
+        "reason": "Ein Særinc steht für die maritime Gefolgschaft des Hauses. Die drei goldenen Heringe bleiben auf dem Waffenrock erkennbar; die geschlossene Helmform unterscheidet die Darstellung von Ransford.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiary": "",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/heswick/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/aeldrunmar/heswick/krieger.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "views": [
+    {
+      "layout": "desktop",
+      "width": 1194,
+      "scrollWidth": 1194
+    },
+    {
+      "layout": "phone",
+      "width": 384,
+      "scrollWidth": 384
+    }
+  ],
+  "level": 5,
+  "attacks": 1,
+  "traits": 2,
+  "negativeBalanceAllowed": true,
+  "externalWritesBlocked": true,
+  "errors": []
+}

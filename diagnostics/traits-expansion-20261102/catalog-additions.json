@@ -1,0 +1,926 @@
+[
+  {
+    "id": "development-trait-ordnungszwang",
+    "name": "Ordnungszwang",
+    "description": "Du erkennst Unstimmigkeiten, verlierst aber Zeit mit Einzelheiten: +2 auf Nachforschungen, −1 Initiative.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/ordnungszwang.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Nachforschungen",
+          "bonus": 2
+        }
+      ],
+      "initiative": -1
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-namenhueter",
+    "name": "Namenhüter",
+    "description": "Namen und Lebensgeschichten bleiben dir im Gedächtnis: +2 auf Geschichte und +1 auf Überzeugen, −1 auf Wahrnehmung.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/namenhueter.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Geschichte",
+          "bonus": 2
+        },
+        {
+          "name": "Überzeugen",
+          "bonus": 1
+        },
+        {
+          "name": "Wahrnehmung",
+          "bonus": -1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-unverbesserlicher-optimist",
+    "name": "Unverbesserlicher Optimist",
+    "description": "Du erwartest stets das Beste: +2 auf Rettungswürfe gegen Furcht und +1 auf Überzeugen, −2 auf Motiv erkennen.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/unverbesserlicher-optimist.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "saveModifiers": [
+        {
+          "kind": "fear",
+          "bonus": 2
+        }
+      ],
+      "skillModifiers": [
+        {
+          "name": "Überzeugen",
+          "bonus": 1
+        },
+        {
+          "name": "Motiv erkennen",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-schwarzseher",
+    "name": "Schwarzseher",
+    "description": "Du rechnest mit Schwierigkeiten und wirkst entsprechend düster: +1 Initiative und +1 auf Motiv erkennen, −2 auf Überzeugen.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/schwarzseher.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "initiative": 1,
+      "skillModifiers": [
+        {
+          "name": "Motiv erkennen",
+          "bonus": 1
+        },
+        {
+          "name": "Überzeugen",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-schweigegeluebde",
+    "name": "Schweigegelübde",
+    "description": "Du setzt auf Beobachtung und Zurückhaltung: +2 auf Heimlichkeit und Motiv erkennen, −3 auf Überzeugen und −2 auf Auftreten. Die Abzüge gelten allgemein, auch bei nonverbalen Versuchen.",
+    "cost": -1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/schweigegeluebde.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Heimlichkeit",
+          "bonus": 2
+        },
+        {
+          "name": "Motiv erkennen",
+          "bonus": 2
+        },
+        {
+          "name": "Überzeugen",
+          "bonus": -3
+        },
+        {
+          "name": "Auftreten",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-eigensinn",
+    "name": "Eigensinn",
+    "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "saveAttributeModifiers": [
+        {
+          "attributeKey": "charisma",
+          "bonus": 2
+        }
+      ],
+      "skillModifiers": [
+        {
+          "name": "Überzeugen",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-ritualgebunden",
+    "name": "Ritualgebunden",
+    "description": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Religion",
+          "bonus": 2
+        }
+      ],
+      "initiative": -1
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-neugier-vor-vorsicht",
+    "name": "Neugier vor Vorsicht",
+    "description": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+    "cost": -1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Nachforschungen",
+          "bonus": 3
+        }
+      ],
+      "saveAttributeModifiers": [
+        {
+          "attributeKey": "dexterity",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-uebervorsichtig",
+    "name": "Übervorsichtig",
+    "description": "Du suchst zuerst einen sicheren Ausweg: +2 auf GES-Rettungswürfe, −2 Initiative.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/uebervorsichtig.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "saveAttributeModifiers": [
+        {
+          "attributeKey": "dexterity",
+          "bonus": 2
+        }
+      ],
+      "initiative": -2
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-wanderlust",
+    "name": "Wanderlust",
+    "description": "Du bleibst lieber unterwegs, als dich lange an einer Stelle aufzuhalten: +1 m Bewegung und +1 auf Überleben, −2 auf Nachforschungen.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/wanderlust.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "movement": 1,
+      "skillModifiers": [
+        {
+          "name": "Überleben",
+          "bonus": 1
+        },
+        {
+          "name": "Nachforschungen",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-totengraeberhumor",
+    "name": "Totengräberhumor",
+    "description": "Du kennst Bestattungsbräuche und begegnest dem Unheimlichen mit unpassenden Scherzen: +2 auf Religion und +1 auf Rettungswürfe gegen Furcht, −2 auf Auftreten.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/totengraeberhumor.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Religion",
+          "bonus": 2
+        },
+        {
+          "name": "Auftreten",
+          "bonus": -2
+        }
+      ],
+      "saveModifiers": [
+        {
+          "kind": "fear",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-stille-zeugin",
+    "name": "Stille Zeugin",
+    "description": "Du beobachtest lieber vom Rand aus: +2 passive Wahrnehmung, −2 auf Auftreten. Der Bonus verändert keine aktiven Wahrnehmungsproben.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/stille-zeugin.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "passivePerception": 2,
+      "skillModifiers": [
+        {
+          "name": "Auftreten",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-fremde-erinnerungen",
+    "name": "Fremde Erinnerungen",
+    "description": "Bruchstücke fremder Geschichten und Runen drängen sich in deinen Geist: +2 auf Geschichte und Arkane Kunde, −2 auf WEI-Rettungswürfe.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/fremde-erinnerungen.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Geschichte",
+          "bonus": 2
+        },
+        {
+          "name": "Arkane Kunde",
+          "bonus": 2
+        }
+      ],
+      "saveAttributeModifiers": [
+        {
+          "attributeKey": "wisdom",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-schatten-von-morgen",
+    "name": "Schatten von Morgen",
+    "description": "Unbestimmte Vorahnungen treiben dich an, erschweren aber klare Gedanken: +2 Initiative, −2 auf INT-Rettungswürfe.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/schatten-von-morgen.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "initiative": 2,
+      "saveAttributeModifiers": [
+        {
+          "attributeKey": "intelligence",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-schuldengewissen",
+    "name": "Schuldengewissen",
+    "description": "Versprechen und offene Gefallen beschäftigen dich: +2 auf Motiv erkennen, −2 auf Täuschen.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/schuldengewissen.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Motiv erkennen",
+          "bonus": 2
+        },
+        {
+          "name": "Täuschen",
+          "bonus": -2
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-pazifistische-ader",
+    "name": "Pazifistische Ader",
+    "description": "Du suchst eher Versöhnung als Verletzung: +2 auf Heilkunde und Überzeugen, −1 Waffenschaden. Zauberschaden bleibt unverändert.",
+    "cost": 0,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/pazifistische-ader.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Heilkunde",
+          "bonus": 2
+        },
+        {
+          "name": "Überzeugen",
+          "bonus": 2
+        }
+      ],
+      "damage": -1
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-ehrenhafter-zweikampf",
+    "name": "Ehrenhafter Zweikampf",
+    "description": "Du bevorzugst die direkte Begegnung: +1 auf Nahkampf-Waffenangriffe, −1 auf Fernkampf-Waffenangriffe. Das gilt auch für entsprechende Techniken, nicht für Zauber.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/ehrenhafter-zweikampf.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {},
+    "triggerRules": [
+      {
+        "id": "zweikampf-nah",
+        "phase": "pre-roll",
+        "recipient": "actor",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "weapon",
+          "technique"
+        ],
+        "weaponAttackOnly": true,
+        "attackRange": "melee",
+        "effects": {
+          "attackModifier": 1
+        }
+      },
+      {
+        "id": "zweikampf-fern",
+        "phase": "pre-roll",
+        "recipient": "actor",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "weapon",
+          "technique"
+        ],
+        "weaponAttackOnly": true,
+        "attackRange": "ranged",
+        "effects": {
+          "attackModifier": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "development-trait-deckungssucher",
+    "name": "Deckungssucher",
+    "description": "Du bewegst dich bedächtig und schützt dich vor Beschuss: −1 m Bewegung; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/deckungssucher.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "movement": -1
+    },
+    "triggerRules": [
+      {
+        "id": "deckung-beschuss",
+        "phase": "pre-damage",
+        "recipient": "target",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "weapon",
+          "technique"
+        ],
+        "weaponAttackOnly": true,
+        "attackRange": "ranged",
+        "effects": {
+          "damageReduction": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "development-trait-magische-wetterfuehligkeit",
+    "name": "Magische Wetterfühligkeit",
+    "description": "Magische Spannungen machen dich unruhig: +1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder, −1 Initiative.",
+    "cost": 1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/magische-wetterfuehligkeit.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "initiative": -1
+    },
+    "triggerRules": [
+      {
+        "id": "wetterfuehlig-pre-roll",
+        "phase": "pre-roll",
+        "recipient": "target",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "spell",
+          "prayer",
+          "song"
+        ],
+        "saveAttributes": [
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma"
+        ],
+        "effects": {
+          "savingThrowModifier": 1
+        }
+      },
+      {
+        "id": "wetterfuehlig-pre-secondary-save",
+        "phase": "pre-secondary-save",
+        "recipient": "target",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "spell",
+          "prayer",
+          "song"
+        ],
+        "saveAttributes": [
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma"
+        ],
+        "effects": {
+          "savingThrowModifier": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "development-trait-aberglaeubisch",
+    "name": "Abergläubisch",
+    "description": "Du kennst viele Omen und deutest Magie schnell als schlechtes Zeichen: +2 auf Religion, −1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder.",
+    "cost": -1,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/aberglaeubisch.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Besondere Eigenheit",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Religion",
+          "bonus": 2
+        }
+      ]
+    },
+    "triggerRules": [
+      {
+        "id": "aberglaube-pre-roll",
+        "phase": "pre-roll",
+        "recipient": "target",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "spell",
+          "prayer",
+          "song"
+        ],
+        "saveAttributes": [
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma"
+        ],
+        "effects": {
+          "savingThrowModifier": -1
+        }
+      },
+      {
+        "id": "aberglaube-pre-secondary-save",
+        "phase": "pre-secondary-save",
+        "recipient": "target",
+        "sourceRelation": "self",
+        "activation": "passive",
+        "frequency": "always",
+        "condition": "always",
+        "actionKinds": [
+          "spell",
+          "prayer",
+          "song"
+        ],
+        "saveAttributes": [
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma"
+        ],
+        "effects": {
+          "savingThrowModifier": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "development-trait-zahlenintuition",
+    "name": "Zahlenintuition",
+    "description": "Du erkennst Mengenverhältnisse und Zahlenmuster schnell: +2 auf Nachforschungen und +1 auf Geschichte.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/zahlenintuition.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Nachforschungen",
+          "bonus": 2
+        },
+        {
+          "name": "Geschichte",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-sprachgefuehl",
+    "name": "Sprachgefühl",
+    "description": "Du findest leicht den passenden Ausdruck: +2 auf Überzeugen und +1 auf Täuschen.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/sprachgefuehl.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Überzeugen",
+          "bonus": 2
+        },
+        {
+          "name": "Täuschen",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-mechanisches-verstaendnis",
+    "name": "Mechanisches Verständnis",
+    "description": "Du begreifst das Zusammenspiel kleiner Bauteile: +2 auf Fingerfertigkeit und +1 auf Nachforschungen.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/mechanisches-verstaendnis.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Fingerfertigkeit",
+          "bonus": 2
+        },
+        {
+          "name": "Nachforschungen",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-feines-musikgehoer",
+    "name": "Feines Musikgehör",
+    "description": "Du nimmst Rhythmus und emotionale Zwischentöne sicher auf: +2 auf Auftreten und +1 auf Motiv erkennen.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/feines-musikgehoer.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Auftreten",
+          "bonus": 2
+        },
+        {
+          "name": "Motiv erkennen",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-raumgefuehl",
+    "name": "Raumgefühl",
+    "description": "Du schätzt Abstände und räumliche Zusammenhänge gut ein: +2 auf Akrobatik und +1 auf Nachforschungen.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/raumgefuehl.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Akrobatik",
+          "bonus": 2
+        },
+        {
+          "name": "Nachforschungen",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-taktisches-gespuer",
+    "name": "Taktisches Gespür",
+    "description": "Du erkennst rasch, wann eine Lage kippt: +1 Initiative und +1 auf WEI-Rettungswürfe.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "initiative": 1,
+      "saveAttributeModifiers": [
+        {
+          "attributeKey": "wisdom",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-alchemistisches-gespuer",
+    "name": "Alchemistisches Gespür",
+    "description": "Stoffe und ihre magischen Eigenheiten erschließen sich dir leicht: +2 auf Naturkunde und +1 auf Arkane Kunde.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/alchemistisches-gespuer.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Naturkunde",
+          "bonus": 2
+        },
+        {
+          "name": "Arkane Kunde",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-symboldenker",
+    "name": "Symboldenker",
+    "description": "Du erkennst Beziehungen zwischen Zeichen, Riten und Runen: +2 auf Religion und +1 auf Arkane Kunde.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/symboldenker.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Religion",
+          "bonus": 2
+        },
+        {
+          "name": "Arkane Kunde",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-stimmkuenstler",
+    "name": "Stimmkünstler",
+    "description": "Du variierst Stimme und Ausdruck mühelos: +2 auf Täuschen und +1 auf Auftreten.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/stimmkuenstler.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Täuschen",
+          "bonus": 2
+        },
+        {
+          "name": "Auftreten",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  },
+  {
+    "id": "development-trait-tierisches-taktgefuehl",
+    "name": "Tierisches Taktgefühl",
+    "description": "Du passt deine Bewegungen und Ruhe gut an Tiere an: +2 auf Mit Tieren umgehen und +1 auf Körperbeherrschung.",
+    "cost": 2,
+    "icon": "/AleriaAlmanach/assets/development-traits/web/tierisches-taktgefuehl.webp",
+    "type": "trait",
+    "active": true,
+    "target": "Selbst",
+    "duration": "Dauerhaft",
+    "appliesWhen": "Solange ausgewählt und aktiv",
+    "tags": "Charakterentwicklung · Begabung",
+    "mechanics": {
+      "skillModifiers": [
+        {
+          "name": "Mit Tieren umgehen",
+          "bonus": 2
+        },
+        {
+          "name": "Körperbeherrschung",
+          "bonus": 1
+        }
+      ]
+    },
+    "triggerRules": []
+  }
+]

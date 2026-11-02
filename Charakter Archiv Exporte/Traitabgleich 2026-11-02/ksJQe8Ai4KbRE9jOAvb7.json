@@ -1,0 +1,123 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "ksJQe8Ai4KbRE9jOAvb7",
+    "name": "Freya Skald",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-frohnatur",
+          "name": "Frohnatur",
+          "description": "Je +1 auf Überzeugen, Auftreten und Motiv erkennen.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": 1
+              },
+              {
+                "name": "Auftreten",
+                "bonus": 1
+              },
+              {
+                "name": "Motiv erkennen",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
+        },
+        {
+          "id": "development-trait-buehnenmensch",
+          "name": "Bühnenmensch",
+          "description": "+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.",
+          "cost": -1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Auftreten",
+                "bonus": 2
+              },
+              {
+                "name": "Überleben",
+                "bonus": -2
+              },
+              {
+                "name": "Einschüchtern",
+                "bonus": -1
+              }
+            ]
+          },
+          "triggerRules": []
+        },
+        {
+          "id": "development-trait-vollbusig",
+          "name": "Vollbusig",
+          "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Körper",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Auftreten",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Frohnatur",
+            "detail": "Je +1 auf Überzeugen, Auftreten und Motiv erkennen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp"
+          },
+          {
+            "title": "Bühnenmensch",
+            "detail": "+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp"
+          },
+          {
+            "title": "Vollbusig",
+            "detail": "Ausgeprägte Brustform; +1 auf Auftreten.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp"
+          }
+        ]
+      }
+    }
+  }
+}

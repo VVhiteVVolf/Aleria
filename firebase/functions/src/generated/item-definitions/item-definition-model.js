@@ -2,6 +2,7 @@
 // belong here. This contract is shared by the builder, catalogues and server.
 export const ITEM_DEFINITION_SCHEMA = 1;
 import { normalizeEquipmentPreparationCosts } from '../character-equipment/equipment-preparation-costs.js';
+import { normalizeSubstanceExposure } from '../character-health/substance-profiles.js';
 export const ITEM_CATEGORIES = Object.freeze(['waffen', 'ruestungen', 'speisen', 'getraenke', 'alchemie', 'arkanes', 'werkzeuge', 'sonstiges', 'pferde', 'vieh']);
 const clean = (value, limit = 180) => String(value ?? '').trim().slice(0, limit);
 const copy = value => value == null ? value : JSON.parse(JSON.stringify(value));
@@ -113,6 +114,7 @@ export function normalizeItemUseDefinition(value = {}, fallbackMode = 'use') {
   if (costs.length > 12 || costs.some(cost => !cost.resourceId) || new Set(costs.map(cost => cost.resourceId)).size !== costs.length) throw Error('Itemkosten benötigen eindeutige Ressourcenkennungen.');
   return { mode, quantity: integer(value.quantity, 1, 9999, 1), target: 'self', effects,
     chargesMaximum, chargesPerUse, costs,
+    ...(value.substance ? { substance: normalizeSubstanceExposure(value.substance) } : {}),
     recovery: ['none', 'day', 'short-rest', 'long-rest'].includes(value.recovery) ? value.recovery : 'none',
     narrative: clean(value.narrative, 2400) };
 }

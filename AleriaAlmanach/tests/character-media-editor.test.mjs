@@ -131,3 +131,36 @@ test('rendering the avatar summary does not consume the change before persistenc
   assert.notEqual(saved.imageSets[0].updatedAt, oldTimestamp);
   assert.equal(editor.context.collectCharacterImageSetEditorData().imageSets[0].updatedAt, saved.imageSets[0].updatedAt);
 });
+
+test('moving a set persists its order and unsaved media without reloading the active set', () => {
+  const editor = loadEditor();
+  editor.context.initCharacterImageSetEditor({ activeImageSetId: 'kampf', imageSets: [
+    { id: 'standard', portrait: 'https://example.com/standard.png' },
+    { id: 'kampf', name: 'Kampf', portrait: 'https://example.com/kampf.png' },
+    { id: 'hochzeit', name: 'Hochzeit' }
+  ] });
+  editor.context._emoteSlots[3] = { img: 'https://example.com/new.png', label: 'Neue Mimik' };
+  const displaysBeforeMove = editor.displays.length;
+  assert.equal(editor.context.moveCharacterImageSet('kampf', 0), true);
+  const saved = editor.context.collectCharacterImageSetEditorData();
+  assert.equal(JSON.stringify(saved.imageSets.map(set => set.id)), '["kampf","standard","hochzeit"]');
+  assert.equal(saved.activeImageSetId, 'kampf');
+  assert.equal(saved.imageSets[0].emotes[0].label, 'Neue Mimik');
+  assert.equal(saved.portrait, 'https://example.com/standard.png');
+  assert.equal(editor.displays.length, displaysBeforeMove);
+  assert.deepEqual(editor.saves, ['reorder-image-sets']);
+  editor.context.initCharacterImageSetEditor(saved);
+  assert.equal(editor.context.getActiveCharacterImageSet().id, 'kampf');
+  assert.equal(JSON.stringify(editor.context.collectCharacterImageSetEditorData().imageSets.map(set => set.id)), '["kampf","standard","hochzeit"]');
+  assert.equal(editor.context.moveCharacterImageSet('standard', 2), true);
+  assert.equal(editor.context.collectCharacterImageSetEditorData().imageSets[2].id, 'standard');
+});
+
+test('invalid, unchanged and out-of-bounds set moves do not queue writes', () => {
+  const editor = loadEditor();
+  editor.context.initCharacterImageSetEditor({});
+  for (const [id, position] of [['missing', 0], ['standard', -1], ['standard', 0], ['standard', 1], ['standard', NaN]]) {
+    assert.equal(editor.context.moveCharacterImageSet(id, position), false);
+  }
+  assert.deepEqual(editor.saves, []);
+});

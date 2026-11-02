@@ -1,0 +1,222 @@
+[
+  {
+    "path": "CharakterDatenbank/records/familien/haus-awenydd/rhosyn-awenydd--person--haus-awenydd--rhosyn-awenydd/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "07d3f89c29db0a157008463fbda3f8e83221a54270ab6b8180002d5a1e5f8e24",
+        "after": "1ddf0c109850b4175aa32bab181e7f5b645d77561172e99fdc07ed70908ad791"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/records/familien/haus-awenor/briallen-awenor--person--haus-awenor--briallen-awenor/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "a0621071c9bcfced90fb096e0aa84533f932f3f1263de81c524525d031bee7e9",
+        "after": "be71c6f1acdefe92a9356ffc5797c39fe23c74bf8d476071eb126f5598d39d0b"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/records/familien/haus-wyrm/rianna-wyrm--person--haus-wyrm--rianna-wyrm/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "11b30a9cbded9f271ef920910d99ddfb894a30645f461e85a9af238cdd7ac3a1",
+        "after": "9dec6eba0cc6048e86ffde990c16a3f0f9c95e2c0d55b9b86736831fa3590487"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/records/familien/haus-rhyddid/evie-rhyddid--person--haus-rhyddid--evie-rhyddid/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "8e00e773df68da80e273ef4a85efccbe5c9cfb026610ed97a0ea56d99550a7cb",
+        "after": "f5b3d6f118f6c63a09bb29e04f19fed4864c898b155a625c9968ca83530c2b3b"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/records/familien/haus-gafyr/lefraye-gafyr--person--haus-gafyr--lefraye-gafyr/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "f99e486a15c92588bd4a1f68db300243cdc126234894ed47183d83ade04d2795",
+        "after": "c2ab2e5de5668469bb20ed8ba2a7716576d21b13586a067e39482e4b4466024e"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/records/familien/haus-gwyllach/saerwyn-gwyllach--person--haus-gwyllach--saerwyn-gwyllach/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "c53ec0c0018effbf500ffcc1be7389d3dff673d397eb91795388cad513e46d43",
+        "after": "5b7e417f837cc6ec55ccf0bb6594c36253621b3ac8bcb5e2c5c181906e3f33a3"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/records/familien/haus-chwedlonol/caralyn-chwedonol--Eka4z7TWpzEgx8KjhIzy/character.json",
+    "differences": [
+      {
+        "field": "/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/sync/contentHash",
+        "before": "6c4722bd3cd03f46cf7e2f6025373ac561685b647340e1fff844ffc2fab9f530",
+        "after": "08cf75c6876239da50aa777e596e60c5c4424aea48f0513b5524bc50b605abfe"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/registry.json",
+    "differences": [
+      {
+        "field": "/records/35/contentHash",
+        "before": "6c4722bd3cd03f46cf7e2f6025373ac561685b647340e1fff844ffc2fab9f530",
+        "after": "08cf75c6876239da50aa777e596e60c5c4424aea48f0513b5524bc50b605abfe"
+      },
+      {
+        "field": "/records/255/contentHash",
+        "before": "07d3f89c29db0a157008463fbda3f8e83221a54270ab6b8180002d5a1e5f8e24",
+        "after": "1ddf0c109850b4175aa32bab181e7f5b645d77561172e99fdc07ed70908ad791"
+      },
+      {
+        "field": "/records/256/contentHash",
+        "before": "a0621071c9bcfced90fb096e0aa84533f932f3f1263de81c524525d031bee7e9",
+        "after": "be71c6f1acdefe92a9356ffc5797c39fe23c74bf8d476071eb126f5598d39d0b"
+      },
+      {
+        "field": "/records/257/contentHash",
+        "before": "11b30a9cbded9f271ef920910d99ddfb894a30645f461e85a9af238cdd7ac3a1",
+        "after": "9dec6eba0cc6048e86ffde990c16a3f0f9c95e2c0d55b9b86736831fa3590487"
+      },
+      {
+        "field": "/records/258/contentHash",
+        "before": "8e00e773df68da80e273ef4a85efccbe5c9cfb026610ed97a0ea56d99550a7cb",
+        "after": "f5b3d6f118f6c63a09bb29e04f19fed4864c898b155a625c9968ca83530c2b3b"
+      },
+      {
+        "field": "/records/259/contentHash",
+        "before": "f99e486a15c92588bd4a1f68db300243cdc126234894ed47183d83ade04d2795",
+        "after": "c2ab2e5de5668469bb20ed8ba2a7716576d21b13586a067e39482e4b4466024e"
+      },
+      {
+        "field": "/records/260/contentHash",
+        "before": "c53ec0c0018effbf500ffcc1be7389d3dff673d397eb91795388cad513e46d43",
+        "after": "5b7e417f837cc6ec55ccf0bb6594c36253621b3ac8bcb5e2c5c181906e3f33a3"
+      }
+    ]
+  },
+  {
+    "path": "CharakterDatenbank/generated/characters.snapshot.json",
+    "differences": [
+      {
+        "field": "/characters/35/localRecord/contentHash",
+        "before": "6c4722bd3cd03f46cf7e2f6025373ac561685b647340e1fff844ffc2fab9f530",
+        "after": "08cf75c6876239da50aa777e596e60c5c4424aea48f0513b5524bc50b605abfe"
+      },
+      {
+        "field": "/characters/35/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/characters/255/localRecord/contentHash",
+        "before": "07d3f89c29db0a157008463fbda3f8e83221a54270ab6b8180002d5a1e5f8e24",
+        "after": "1ddf0c109850b4175aa32bab181e7f5b645d77561172e99fdc07ed70908ad791"
+      },
+      {
+        "field": "/characters/255/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/characters/256/localRecord/contentHash",
+        "before": "a0621071c9bcfced90fb096e0aa84533f932f3f1263de81c524525d031bee7e9",
+        "after": "be71c6f1acdefe92a9356ffc5797c39fe23c74bf8d476071eb126f5598d39d0b"
+      },
+      {
+        "field": "/characters/256/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/characters/257/localRecord/contentHash",
+        "before": "11b30a9cbded9f271ef920910d99ddfb894a30645f461e85a9af238cdd7ac3a1",
+        "after": "9dec6eba0cc6048e86ffde990c16a3f0f9c95e2c0d55b9b86736831fa3590487"
+      },
+      {
+        "field": "/characters/257/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/characters/258/localRecord/contentHash",
+        "before": "8e00e773df68da80e273ef4a85efccbe5c9cfb026610ed97a0ea56d99550a7cb",
+        "after": "f5b3d6f118f6c63a09bb29e04f19fed4864c898b155a625c9968ca83530c2b3b"
+      },
+      {
+        "field": "/characters/258/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/characters/259/localRecord/contentHash",
+        "before": "f99e486a15c92588bd4a1f68db300243cdc126234894ed47183d83ade04d2795",
+        "after": "c2ab2e5de5668469bb20ed8ba2a7716576d21b13586a067e39482e4b4466024e"
+      },
+      {
+        "field": "/characters/259/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      },
+      {
+        "field": "/characters/260/localRecord/contentHash",
+        "before": "c53ec0c0018effbf500ffcc1be7389d3dff673d397eb91795388cad513e46d43",
+        "after": "5b7e417f837cc6ec55ccf0bb6594c36253621b3ac8bcb5e2c5c181906e3f33a3"
+      },
+      {
+        "field": "/characters/260/localRecord/classification/families/0/score",
+        "before": 275,
+        "after": 1000
+      }
+    ]
+  }
+]

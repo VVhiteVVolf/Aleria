@@ -4,6 +4,7 @@ import {
   getEffectiveCombatAttribute,
   getSavingThrowTotal,
   getSkillTotal,
+  getEffectiveSkillProficiency,
   getWeaponAttackModifier,
   getWeaponDamageModifier,
   resolveCharacterCombatProfile,
@@ -42,14 +43,17 @@ export function buildCombatProfileAiSnapshot(character = {}) {
         }
       }
     },
-    attributes: profile.attributes.map(attribute => ({
+    attributes: profile.attributes.map(attribute => {
+      const effective = getEffectiveCombatAttribute(calculation, attribute.key);
+      return {
       key: attribute.key,
       label: attribute.label,
       shortLabel: attribute.shortLabel,
-      score: getEffectiveCombatAttribute(calculation, attribute.key).score,
-      modifier: getAttributeModifier(getEffectiveCombatAttribute(calculation, attribute.key)),
-      modifierOverride: attribute.modifierOverride
-    })),
+      score: effective.score,
+      modifier: getAttributeModifier(effective),
+      modifierOverride: effective.modifierOverride,
+      ...(effective.effectiveMaximum == null ? {} : { maximum: effective.effectiveMaximum })
+    }; }),
     proficiencies: profile.proficiencies,
     derivedCombatValues: {
       currentHitPoints: resolved.currentHitPoints,
@@ -70,7 +74,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       ...save,
       total: getSavingThrowTotal(calculation, save.attributeKey)
     })),
-    skills: profile.skills.map(skill => ({ ...skill, total: getSkillTotal(calculation, skill) })),
+    skills: profile.skills.map(skill => ({ ...skill, effectiveProficiency:getEffectiveSkillProficiency(calculation,skill), total: getSkillTotal(calculation, skill) })),
     weapons: profile.weapons.map(weapon => ({
       ...weapon,
       totalAttackModifier: getWeaponAttackModifier(calculation, weapon),

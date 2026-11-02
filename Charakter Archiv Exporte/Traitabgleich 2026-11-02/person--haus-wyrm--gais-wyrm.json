@@ -1,0 +1,92 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "person--haus-wyrm--gais-wyrm",
+    "name": "Gais Wyrm",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-silberzunge",
+          "name": "Silberzunge",
+          "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {
+            "skillProficiencies": [
+              {
+                "name": "Überzeugen",
+                "proficiency": "expertise"
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Motiv erkennen",
+                "bonus": -1
+              }
+            ]
+          },
+          "triggerRules": []
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
+          "mechanics": {
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "charisma",
+                "bonus": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": -2
+              }
+            ]
+          },
+          "triggerRules": []
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Silberzunge",
+            "detail": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
+          },
+          {
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+          }
+        ]
+      }
+    }
+  }
+}

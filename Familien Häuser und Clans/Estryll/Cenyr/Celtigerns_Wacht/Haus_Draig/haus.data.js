@@ -346,9 +346,9 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "hof-offices-4": {
-      "src": "../Stammbäume/assets/images/placeholders/male.png",
-      "href": "",
-      "alt": "Silhouette · Zeremonienmeister nicht benannt",
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draig&mode=view&person=brona-eisenherz",
+      "alt": "Brona Eisenherz",
       "format": "portrait"
     },
     "hof-offices-5": {
@@ -412,9 +412,9 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "hof-offices-15": {
-      "src": "../Stammbäume/assets/images/placeholders/male.png",
-      "href": "",
-      "alt": "Silhouette · Hofkaplan nicht benannt",
+      "src": "../Stammbäume/assets/images/portraits/haus-gelyn/dehlia-gelyn.jpg",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gelyn&mode=view&person=dehlia-gelyn",
+      "alt": "Dehlia Gelyn",
       "format": "portrait"
     },
     "hof-offices-16": {
@@ -686,10 +686,10 @@ window.HAEUSER_DATA = {
             "imageKey": "hof-offices-3"
           },
           {
-            "name": "Nicht benannt",
-            "role": "Zeremonienmeister",
-            "detail": "",
-            "href": "",
+            "name": "Brona Eisenherz",
+            "role": "Zeremonienmeisterin",
+            "detail": "Ehefrau von Rhys Draig",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-draig&mode=view&person=brona-eisenherz",
             "imageKey": "hof-offices-4"
           },
           {
@@ -763,10 +763,10 @@ window.HAEUSER_DATA = {
             "imageKey": "hof-offices-14"
           },
           {
-            "name": "Nicht benannt",
+            "name": "Dehlia Gelyn",
             "role": "Hofkaplan",
             "detail": "",
-            "href": "",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-gelyn&mode=view&person=dehlia-gelyn",
             "imageKey": "hof-offices-15"
           },
           {

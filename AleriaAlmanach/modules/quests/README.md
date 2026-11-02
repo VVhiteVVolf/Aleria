@@ -20,6 +20,11 @@ Die erste bebilderte Quest, Reisevermessung, Szenenstandorte und das Gruppenkont
 - `quest-dossier-view.js`, `quest-book.css`, `quest-story.css`: bebildertes Abenteuerbuch.
 - `quest-scene-tracker.js`: gekapselte Standortpflege innerhalb verknüpfter Szenen.
 - `quest-route-map.js`: explizite Reisevorschau ohne automatische Veröffentlichung.
+- `quest-area-model.js`, `quest-area-view.js`, `quest-area.css`: kreisförmige
+  Gebietsübersichten und örtliche Familien als Informationsquellen.
+- `quest-preparations/`: getrennte öffentliche Vorbereitungen je Abenteuer;
+  `quest-authored-dossiers.js` führt ihre Ausgaben zusammen.
+
 
 Die allgemeine Landingpage-Anbindung liegt unter `../landing/landing-quest-*`.
 Servervorgänge liegen unter `firebase/functions/src/quests`. Kein UI-Bereich

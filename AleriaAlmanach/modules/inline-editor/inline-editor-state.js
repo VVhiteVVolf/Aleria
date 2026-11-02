@@ -148,6 +148,7 @@ function captureInlineModuleViewportState() {
   const previewFrame = document.querySelector('.inline-module-preview-frame');
   if (!editPane && !previewStage) return null;
   return {
+    biographyGroups: Array.from(editPane?.querySelectorAll('[data-biography-editor-group]') || []).map(group => [group.dataset.biographyEditorGroup,group.open]),
     editTop: editPane?.scrollTop || 0,
     editLeft: editPane?.scrollLeft || 0,
     previewTop: previewStage?.scrollTop || 0,
@@ -163,6 +164,10 @@ function restoreInlineModuleViewportState(state) {
     const editPane = document.querySelector('.inline-module-edit-pane');
     const previewStage = document.querySelector('.inline-module-preview-stage');
     if (editPane) {
+      editPane.querySelectorAll('[data-biography-editor-group]').forEach(group => {
+        const saved = state.biographyGroups?.find(([key]) => key === group.dataset.biographyEditorGroup);
+        if (saved) group.open = saved[1];
+      });
       editPane.scrollTop = state.editTop || 0;
       editPane.scrollLeft = state.editLeft || 0;
       globalThis.AleriaFamily?.workbench?.restore?.(editPane, state.familyWorkbench);

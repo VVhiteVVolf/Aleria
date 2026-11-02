@@ -1,4 +1,5 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
+import { getSceneConditionClock } from '../generated/scene-time/scene-condition-clock.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { readItemDefinitionIndex, hydrateItemRecord } from '../items/item-definition-repository.js';
@@ -66,7 +67,8 @@ export const commitCombatStatus = onCall({ region: 'europe-west1', maxInstances:
     let condition;
     let after;
     try {
-      condition = operation === 'add' ? createManualCombatCondition(data.condition, { id: `manual:${commentRef.id}`, encounterId: encounter?.encounterId || '' }) : null;
+      condition = operation === 'add' ? createManualCombatCondition(data.condition, { id: `manual:${commentRef.id}`, encounterId: encounter?.encounterId || '',
+        actorId, sceneId: entryId, sceneClockSeconds: getSceneConditionClock(history).seconds }) : null;
       after = buildCombatStatusChange({ operation, profile, state, condition, conditionId: clean(data.conditionId),
         resetState: operation === 'reset' ? buildSceneRestParticipant(profile, 'long', { actorId, dayChanged: true }).after : null });
     } catch (error) { fail('invalid-argument', error.message); }

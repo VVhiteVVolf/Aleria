@@ -125,9 +125,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/martial-control-HjDXMMexahez1G0rJrBE-2026-10-15.json",
-    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
-    "sourceUpdatedAt": "2026-10-13T16:18:16.776Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/HjDXMMexahez1G0rJrBE.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "HjDXMMexahez1G0rJrBE",
       "HjDXMMexahez1G0rJrBE",
@@ -138,7 +138,7 @@
       "HjDXMMexahez1G0rJrBE",
       "HjDXMMexahez1G0rJrBE"
     ],
-    "contentHash": "2326e60d570650e2f315a965a5daaa18988cb5e17ba1915421823d158c1a9575"
+    "contentHash": "d49e3b7144f614284eebb562636cd16132bca7b7a44c003c6f0fca7be43d31bb"
   },
   "local": {
     "notes": "",
@@ -22130,6 +22130,20 @@
             }
           ]
         }
+      },
+      {
+        "id": "HjDXMMexahez1G0rJrBE",
+        "name": "Kane Draig",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": []
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": []
+          }
+        }
       }
     ]
   },
@@ -22151,7 +22165,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-08-06T22:10:16.115Z",
-    "updatedAt": "2026-10-13T16:18:16.776Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -26368,113 +26382,7 @@
         "canActAtZeroHitPoints": false,
         "movement": 9
       },
-      "quirks": [
-        {
-          "stacking": "normal",
-          "triggerRules": [],
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "target": "self",
-          "limitations": "",
-          "trigger": "",
-          "id": "starter-ancestry-cenyr-trait-1",
-          "duration": "",
-          "aiInstructions": "",
-          "tags": "Volk · Cenyr",
-          "name": "Cenyri Kultur",
-          "mechanics": {
-            "passivePerception": 0,
-            "spellSaveDc": 0,
-            "movement": 0,
-            "savingThrowAdvantageAttributes": [],
-            "armorClass": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "skill": 0,
-            "bonusDamageFormula": "",
-            "spellAttack": 0,
-            "attack": 0,
-            "savingThrow": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "damage": 0,
-            "maximumHitPoints": 0
-          },
-          "active": true,
-          "type": "trait",
-          "priority": 0
-        },
-        {
-          "stacking": "normal",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "triggerRules": [],
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "target": "self",
-          "limitations": "",
-          "name": "Höfische und religiöse Prägung",
-          "duration": "",
-          "aiInstructions": "",
-          "mechanics": {
-            "spellSaveDc": 0,
-            "attack": 0,
-            "attackRollMode": "normal",
-            "passivePerception": 0,
-            "armorClass": 0,
-            "skill": 0,
-            "damage": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "spellAttack": 0,
-            "savingThrow": 0,
-            "initiative": 0,
-            "movement": 0,
-            "savingThrowAdvantageAttributes": [],
-            "maximumHitPoints": 0,
-            "bonusDamageFormula": ""
-          },
-          "type": "trait",
-          "active": true,
-          "trigger": "",
-          "priority": 0,
-          "tags": "Volk · Cenyr"
-        },
-        {
-          "name": "Ritterliche Herkunft und Standespflicht",
-          "type": "trait",
-          "stacking": "normal",
-          "mechanics": {
-            "savingThrowAdvantageAttributes": [],
-            "damage": 0,
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "savingThrow": 0,
-            "skill": 0,
-            "armorClass": 0,
-            "spellAttack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "movement": 0,
-            "attackRollMode": "normal",
-            "passivePerception": 0,
-            "maximumHitPoints": 0,
-            "initiative": 0,
-            "spellSaveDc": 0,
-            "savingThrowDisadvantageAttributes": []
-          },
-          "target": "self",
-          "aiInstructions": "",
-          "trigger": "",
-          "tags": "Hintergrund · Ritter",
-          "triggerRules": [],
-          "limitations": "",
-          "priority": 0,
-          "duration": "",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "active": true,
-          "id": "starter-background-ritter-trait-1"
-        }
-      ],
+      "quirks": [],
       "defenseBalanceVersion": 1
     },
     "localRecord": {

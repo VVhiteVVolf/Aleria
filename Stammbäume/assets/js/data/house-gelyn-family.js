@@ -79,7 +79,10 @@ export const HOUSE_GELYN_FAMILY = Object.freeze({
       title: 'Begründer und Ritterherr des Hauses Gelyn',
       notes: 'Diente mit Meurig Draig als Knappe unter Sir Gethin Draig; 1720 zum Ritterherrn erhoben. Lehenswart von Twr Gwynthstorm.'
     }),
-    person('dehlia-gelyn', 'Dehlia', 'female', '1670', ''),
+    person('dehlia-gelyn', 'Dehlia', 'female', '1670', '', GELYN_HOUSE_ID, {
+      title: 'Hofkaplan des Hauses Draig',
+      extensions: { registryManagedFields: ['title'], registryManagedFieldRevisions: { title: 3 } }
+    }),
     spouse('aliza', 'Aliza', 'female', '1680', ''),
 
     // Kinder von Cadoc und Aliza
@@ -174,6 +177,6 @@ export const HOUSE_GELYN_FAMILY = Object.freeze({
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Gelyn-Hierarchietabelle und der ergänzenden Stammbaumgrafik. Die Herkunft des Gründers Cadoc und seiner Schwester Dehlia ist nicht überliefert; als junges Haus kennt Gelyn keine Überlieferungslücke. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Gelyn den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.',
     blankFamily: false,
     registryManagedEntitySourceRevision: 1,
-    sourceRevision: 2
+    sourceRevision: 3
   }
 });

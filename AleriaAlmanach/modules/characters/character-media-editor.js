@@ -86,38 +86,48 @@ const characterMediaEditor = (() => {
   function renderEmotes() {
     const grid = document.getElementById('cp-emote-grid');
     if (!grid) return;
-    _emoteSlots.forEach((slot, index) => {
-      const tile = grid.children[index] || document.createElement('div');
+    // Render occupied slots plus one add tile, retaining the original indices.
+    // Empty capacity remains in state, without 80 empty cards in the DOM.
+    const visibleIndices = _emoteSlots.flatMap((slot, index) => slot?.img ? [index] : []);
+    const freeIndex = _emoteSlots.findIndex(slot => !slot?.img);
+    if (freeIndex >= 0) visibleIndices.push(freeIndex);
+    const existingTiles = new Map(Array.from(grid.children, tile => [Number(tile.dataset.emoteIndex), tile]));
+    visibleIndices.forEach((index, position) => {
+      const slot = _emoteSlots[index];
+      const tile = existingTiles.get(index) || document.createElement('div');
+      existingTiles.delete(index);
+      if (grid.children[position] !== tile) grid.insertBefore(tile, grid.children[position] || null);
       const imageUrl = slot?.img || '';
       const label = slot?.label || '';
       const input = tile.querySelector('.emote-label-input');
-      if (tile.dataset.imageUrl === imageUrl && input) {
-        if (input.value !== label) input.value = label;
+      if (tile.dataset.imageUrl === imageUrl && (input || !imageUrl)) {
+        if (input && input.value !== label) input.value = label;
         return;
       }
       const previousPreview = tile.querySelector('img');
       if (previousPreview) emoteObserver?.unobserve(previousPreview);
-      tile.className = 'emote-slot';
+      tile.className = `emote-slot${imageUrl ? '' : ' emote-slot-add'}`;
+      tile.dataset.emoteIndex = String(index);
       tile.dataset.imageUrl = imageUrl;
       tile.innerHTML = `${imageUrl ? `
         <img data-emote-src="${sanitizeImageSrc(imageUrl)}" alt="Emote ${index + 1}"
           width="512" height="512" loading="lazy" decoding="async">
         <span class="emote-image-error" role="status">Vorschau nicht ladbar · Link bleibt erhalten</span>
-        <button class="emote-remove-btn" type="button" data-char-profile-action="remove-emote" data-emote-index="${index}">✕</button>` : `
-        <div class="emote-slot-placeholder" role="button" tabindex="0" data-char-profile-action="open-emote-url" data-emote-index="${index}" title="URL eingeben">
-          <span>+</span>
-        </div>`}
+        <button class="emote-remove-btn" type="button" aria-label="Avatar ${index + 1} entfernen" data-char-profile-action="remove-emote" data-emote-index="${index}">✕</button>` : `
+        <button type="button" class="emote-slot-placeholder" data-char-profile-action="open-emote-url" data-emote-index="${index}" title="Bild-Link eingeben">
+          <span aria-hidden="true">+</span><strong>Avatar ergänzen</strong><small>Bild-Link einfügen</small>
+        </button>`}
+        ${imageUrl ? `
         <input class="emote-label-input" type="text" value="${escapeHtml(label)}" placeholder="Label" maxlength="20"
-          data-char-profile-action="update-emote-label" data-emote-index="${index}">`;
-      if (!tile.parentElement) grid.appendChild(tile);
+          aria-label="Beschriftung für Avatar ${index + 1}" data-char-profile-action="update-emote-label" data-emote-index="${index}">` : ''}`;
       const preview = tile.querySelector('img');
       if (preview) observeEmotePreview(preview, grid);
     });
-    while (grid.children.length > _emoteSlots.length) {
-      const preview = grid.lastElementChild.querySelector('img');
+    existingTiles.forEach(tile => {
+      const preview = tile.querySelector('img');
       if (preview) emoteObserver?.unobserve(preview);
-      grid.lastElementChild.remove();
-    }
+      tile.remove();
+    });
     updateCharacterAvatarImportSummary();
   }
 

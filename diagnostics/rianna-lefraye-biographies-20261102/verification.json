@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "unitTests": 82,
+  "browserReview": "browser-review.json",
+  "artworkReview": "artwork-review.json",
+  "generatedChecks": [
+    "bird-profile",
+    "horse-breeding",
+    "natural-species",
+    "bestiary-index",
+    "character-projections",
+    "public-biographies"
+  ],
+  "productionBirdEntryVerified": true,
+  "whitespaceCheck": "passed",
+  "liveWrites": false,
+  "pushed": false,
+  "deployed": false,
+  "independentEquipmentArtworkUpdatesPreserved": true
+}

@@ -1,6 +1,6 @@
 import { normalizeCombatResourceCosts } from './combat-action-economy.js?v=20260905-resource-balance-v2';
 import { canUseEquippedCombatShield } from './combat-weapon-loadout.js';
-import { normalizeCombatEffects } from './combat-effect-model.js?v=20260928-equipment-art-v4';
+import { normalizeCombatEffects, resolveCombatEffectDamageType } from './combat-effect-model.js?v=20260928-equipment-art-v4';
 import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './combat-resolution-tree.js';
 import { getCombatAttackRange } from './combat-attack-range.js';
 import { getCombatSupportEquipment } from './combat-support-equipment.js';
@@ -255,7 +255,13 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
     || (state.actorProfile?.actionResolutionMode === 'saving-throw' ? state.actorProfile.actionSaveAttribute : ''))) return false;
   if (rule.weaponAttackOnly && state.actorProfile?.actionResolutionMode !== 'weapon-attack') return false;
   if (rule.attackRange && rule.attackRange !== getCombatAttackRange(state.actorProfile)) return false;
-  if (rule.damageTypes?.length && !rule.damageTypes.includes(String(state.actorProfile?.weapon?.damageType || '').toLowerCase())) return false;
+  if (rule.damageTypes?.length) {
+    const actor=state.actorProfile || {},weapon=actor.weapon || {};
+    const damageTypes=[weapon.damageType,...(actor.selectedAction?.effects || actor.actionEffects || [])
+      .filter(effect=>effect.type==='damage').map(effect=>resolveCombatEffectDamageType(effect,weapon))]
+      .filter(Boolean).map(type=>String(type).toLowerCase());
+    if(!rule.damageTypes.some(type=>damageTypes.includes(type)))return false;
+  }
   if (rule.requiredWeaponId) {
     if (!['weapon', 'technique'].includes(actionKind)) return false;
     const weapon = state.actorProfile?.weapon;

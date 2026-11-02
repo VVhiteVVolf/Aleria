@@ -1,0 +1,1089 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-01T23:27:59.527Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Sieben/briallen-awenor.json",
+  "character": {
+    "name": "Briallen Awenor",
+    "title": "Haus Awenor",
+    "fraktion": "Haus Awenor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Briallen Awenor gehört zu Haus Awenor. Sie wurde 1717 geboren und ist im Weltjahr 1740 etwa 23 Jahre alt.\n\nBriallen Awenor ist die Tochter von Derwain Awenor. Der Name ihrer Mutter ist nicht überliefert.\n\nIhre belegten Geschwister sind Urfael Awenor, Isgar Awenor, Erydd Awenor, Carys Awenor.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-01T23:27:59.527Z",
+    "updatedAt": "2026-11-01T23:27:59.527Z",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-awenor/briallen-awenor.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": {
+      "items": [
+        {
+          "id": "briallen-awenor-briallen-awenor-ruestung-1",
+          "instanceId": "briallen-awenor-briallen-awenor-ruestung-1",
+          "templateId": "gwynthor-seven:briallen-awenor-ruestung",
+          "templateName": "Briallens Awenor-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:briallen-awenor-ruestung",
+            "revision": "c6e490de004560b2073ac767"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:briallen-awenor-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "person--haus-awenor--briallen-awenor",
+          "ownerCharacterName": "Briallen Awenor",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Briallens Awenor-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-awenor-harnisch-v1.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        }
+      ],
+      "definitionSchemaVersion": 1
+    },
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Name",
+          "Briallen Awenor"
+        ],
+        [
+          "Geboren",
+          "1717"
+        ],
+        [
+          "Alter im Weltjahr 1740",
+          "etwa 23 Jahre"
+        ],
+        [
+          "Haus",
+          "Haus Awenor"
+        ],
+        [
+          "Sitz des Hauses",
+          "Gwynthor"
+        ],
+        [
+          "Klasse",
+          "Nicht festgelegt"
+        ],
+        [
+          "Stufe",
+          "1"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-awenor/briallen-awenor.jpg",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Briallen Awenor",
+        "biographyText": "<p>Briallen Awenor gehört zu Haus Awenor. Sie wurde 1717 geboren und ist im Weltjahr 1740 etwa 23 Jahre alt.</p><p>Briallen Awenor ist die Tochter von Derwain Awenor. Der Name ihrer Mutter ist nicht überliefert.</p><p>Ihre belegten Geschwister sind Urfael Awenor, Isgar Awenor, Erydd Awenor, Carys Awenor.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Langes goldblondes Haar, blaue Augen und silberne Rüstung mit blauem Wappenrock und hellem Schwertzeichen.</p>"
+          }
+        ],
+        "historyTitle": "Belegter Familienhintergrund",
+        "historyText": "<p>Haus Awenor ist ein älteres ritterliches Geschlecht im festen Dienst des Hauses Draig, bekannt für militärische Verlässlichkeit, Disziplin und pflichtbewussten Gehorsam. Ohne großen Namen oder Legenden stellen die Awenor für die Draigs bevorzugt Lehenswarte, Statthalter, Hauptmänner und Kommandanten, sichern Bergbauregionen wie Mwynfaen und dienen regelmäßig unter dem Marschall des Grafen. Ihre Burg in Gwynthor, ihre Minen und Schmieden geben ihnen strategische Unabhängigkeit, ihr Glaube an die Alerische Kirche bleibt nüchtern und ordnend. Die Awenor streben nicht nach Ruhm – sie existieren, um Befehle auszuführen, Gebiete zu halten und Ordnung durchzusetzen, solange der Dienst es verlangt.</p><p>Der Besitz des Hauses Awenor ist zweckmäßig und eng mit Krieg und Versorgung verbunden. Nördlich von Gwynthor liegen mehrere Minen, die dem Haus unterstehen. Sie liefern vor allem Erze für Waffen, Werkzeuge und Bau – ein strategisch wertvoller Besitz, besonders in Zeiten erhöhter militärischer Aktivität.</p>",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie und Herkunft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Derwain Awenor",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-awenor/derwain-awenor.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Urfael Awenor",
+            "detail": "Geschwister",
+            "image": "../Stammbäume/assets/images/portraits/haus-awenor/urfael-awenor.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Isgar Awenor",
+            "detail": "Geschwister",
+            "image": "../Stammbäume/assets/images/portraits/haus-awenor/isgar-awenor.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Erydd Awenor",
+            "detail": "Geschwister",
+            "image": "../Stammbäume/assets/images/portraits/haus-awenor/erydd-awenor.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Carys Awenor",
+            "detail": "Geschwister",
+            "image": "../Stammbäume/assets/images/portraits/haus-awenor/carys-awenor.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Haus Awenor",
+            "detail": "Gwynthor",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-awenor.png",
+            "imageFormat": "square"
+          },
+          {
+            "type": "connection",
+            "name": "Haus Draig",
+            "detail": "Dienst- beziehungsweise Lehnsbindung des Hauses; keine zusätzliche Wohnortzuordnung.",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Quellen",
+        "documents": [
+          {
+            "icon": "",
+            "title": "Haus Awenor · Stammbaum",
+            "text": "Person, Geburtsjahr, Eltern, Geschwister, Haus und Originalporträt.",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-awenor&mode=view&person=briallen-awenor"
+          },
+          {
+            "icon": "",
+            "title": "Hausakte",
+            "text": "Überlieferter Hauskontext. Klassen und Ausrüstung folgen zusätzlich dem Autorenauftrag vom 02.11.2026.",
+            "link": "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/haus.data.js"
+          }
+        ],
+        "footer": "Belegte Personenakte · Weltjahr 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-awenor--briallen-awenor"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-awenor--briallen-awenor",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "houseId": "house-awenor",
+      "houseName": "Haus Awenor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-awenor",
+          "personId": "briallen-awenor",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-01T23:27:59.527Z",
+          "lastSyncedAt": "2026-11-01T23:27:59.527Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-awenor&mode=view&person=briallen-awenor",
+          "fingerprint": "{\"name\":\"Briallen Awenor\",\"title\":\"\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-awenor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-awenor/briallen-awenor.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"derwain-awenor\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-awenor--derwain-awenor\",\"name\":\"Derwain Awenor\"},{\"personId\":\"unknown-derwain-spouse\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--unknown-derwain-spouse\",\"name\":\"Unbekannte Ehefrau\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "derwain-awenor",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-awenor--derwain-awenor",
+            "name": "Derwain Awenor"
+          },
+          {
+            "personId": "unknown-derwain-spouse",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--unknown-derwain-spouse",
+            "name": "Unbekannte Ehefrau"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-awenor--briallen-awenor",
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "",
+        "archetype": "",
+        "background": ""
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [],
+        "weapons": [],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "development": {
+          "version": 1,
+          "mode": "purchase",
+          "startingPoints": 3,
+          "pointsPerLevel": 3,
+          "ownClassCost": 2,
+          "foreignMultiplier": 2,
+          "levelSurcharge": 1,
+          "adjustment": 0,
+          "purchases": []
+        },
+        "level": 1,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 10,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": null,
+        "temporary": 0,
+        "hitDie": 8,
+        "averagePerLevelOverride": null,
+        "maximumOverride": null
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "default-skill-1",
+          "name": "Athletik",
+          "attributeKey": "strength",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-2",
+          "name": "Akrobatik",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-4",
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-5",
+          "name": "Arkane Kunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-6",
+          "name": "Geschichte",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-8",
+          "name": "Naturkunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-9",
+          "name": "Religion",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-13",
+          "name": "Überleben",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-17",
+          "name": "Täuschen",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-19",
+          "name": "Flirten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-20",
+          "name": "Körperbeherrschung",
+          "attributeKey": "constitution",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        }
+      ],
+      "armorItems": [
+        {
+          "definitionRef": {
+            "id": "gwynthor-seven:briallen-awenor-ruestung",
+            "revision": "c6e490de004560b2073ac767"
+          },
+          "definitionTitle": "Briallens Awenor-Rüstung",
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "id": "briallen-awenor-briallen-awenor-ruestung-1",
+          "inventoryItemId": "briallen-awenor-briallen-awenor-ruestung-1",
+          "name": "Briallens Awenor-Rüstung",
+          "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-awenor-harnisch-v1.png",
+          "kind": "armor",
+          "armorCategory": "heavy",
+          "damageProtection": {
+            "amount": 1,
+            "name": "Plattengrundschutz",
+            "damageTypes": [
+              "hieb",
+              "stich",
+              "wucht"
+            ],
+            "excludedDamageTypes": []
+          },
+          "triggerRules": [],
+          "baseArmorClass": 15,
+          "armorClassBonus": 0,
+          "dexterityMode": "none",
+          "dexterityCap": 2,
+          "dexterityUnlockLevel": 0,
+          "properties": "Schwere Startrüstung",
+          "notes": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "equipped": true
+        }
+      ],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        },
+        {
+          "id": "spell-slot-1",
+          "name": "Zauberplatz I",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-2",
+          "name": "Zauberplatz II",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 2,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-3",
+          "name": "Zauberplatz III",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 3,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-4",
+          "name": "Zauberplatz IV",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 4,
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-5",
+          "name": "Zauberplatz V",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 5,
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-6",
+          "name": "Zauberplatz VI",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 6,
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-7",
+          "name": "Zauberplatz VII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 7,
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-8",
+          "name": "Zauberplatz VIII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 8,
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-9",
+          "name": "Zauberplatz IX",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-10",
+          "name": "Zauberplatz X",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 10,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": ""
+    }
+  }
+}

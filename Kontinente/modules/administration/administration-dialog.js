@@ -10,6 +10,7 @@
   const moduleRoot = new URL('./', document.currentScript.src);
   const rendererUrl = new URL('./administration-renderer.mjs?v=20261028-office-body', moduleRoot);
   const structuredUrl = new URL('./administration-structured.mjs?v=20261031-euddogwy', moduleRoot);
+  const examplesUrl = new URL('./administration-role-examples.mjs?v=20261102', moduleRoot);
   let loadRevision = 0;
   let dialog;
   let dialogKicker;
@@ -99,8 +100,12 @@
     if (!dialog.open) dialog.showModal();
 
     try {
-      const rendered = await loadArea(area, scopeId);
+      const [rendered, { renderRoleExamples }] = await Promise.all([
+        loadArea(area, scopeId), import(examplesUrl.href),
+      ]);
       if (revision !== loadRevision || !dialog.open) return;
+      const examples = renderRoleExamples(area);
+      if (examples) rendered.append(examples);
       rendered.append(createAreaNavigation(area, scopeId));
       dialogBody.replaceChildren(rendered);
       dialogBody.removeAttribute('aria-busy');

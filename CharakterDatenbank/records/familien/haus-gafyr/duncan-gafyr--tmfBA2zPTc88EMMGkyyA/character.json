@@ -148,9 +148,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/martial-control-tmfBA2zPTc88EMMGkyyA-2026-10-15.json",
-    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
-    "sourceUpdatedAt": "2026-10-12T21:41:49.827Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/tmfBA2zPTc88EMMGkyyA.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "tmfBA2zPTc88EMMGkyyA",
       "tmfBA2zPTc88EMMGkyyA",
@@ -161,7 +161,7 @@
       "tmfBA2zPTc88EMMGkyyA",
       "tmfBA2zPTc88EMMGkyyA"
     ],
-    "contentHash": "ef8d3af8dc8ed1d4da26f8599c4406c1f2891970c136d2e0e1b2be954465c6b9"
+    "contentHash": "bc8042f236f654f392e57f0eaac63b33a0085d0d6ba86336aa7d2792f80a8e56"
   },
   "local": {
     "notes": "",
@@ -82852,6 +82852,50 @@
             }
           ]
         }
+      },
+      {
+        "id": "tmfBA2zPTc88EMMGkyyA",
+        "name": "Duncan Gafyr",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-taktisches-gespuer",
+              "name": "Taktisches Gespür",
+              "description": "Du erkennst rasch, wann eine Lage kippt: +1 Initiative und +1 auf WEI-Rettungswürfe.",
+              "cost": 2,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Begabung",
+              "mechanics": {
+                "initiative": 1,
+                "saveAttributeModifiers": [
+                  {
+                    "attributeKey": "wisdom",
+                    "bonus": 1
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Taktisches Gespür",
+                "detail": "Du erkennst rasch, wann eine Lage kippt: +1 Initiative und +1 auf WEI-Rettungswürfe.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
@@ -82873,7 +82917,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-08-02T18:07:53.712Z",
-    "updatedAt": "2026-10-12T21:41:49.827Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -83991,319 +84035,27 @@
       },
       "quirks": [
         {
-          "trigger": "",
-          "mechanics": {
-            "savingThrowDisadvantageAttributes": [],
-            "attackRollMode": "normal",
-            "savingThrowAdvantageAttributes": [],
-            "spellSaveDc": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "maximumHitPoints": 0,
-            "armorClass": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "initiative": 0,
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "movement": 0,
-            "skill": 0,
-            "spellAttack": 0
-          },
-          "target": "self",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "triggerRules": [],
-          "active": true,
-          "name": "Cenyri Kultur",
-          "duration": "",
-          "stacking": "normal",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "id": "starter-ancestry-cenyr-trait-1",
+          "id": "development-trait-taktisches-gespuer",
+          "name": "Taktisches Gespür",
+          "description": "Du erkennst rasch, wann eine Lage kippt: +1 Initiative und +1 auf WEI-Rettungswürfe.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp",
           "type": "trait",
-          "limitations": "",
-          "aiInstructions": "",
-          "priority": 0,
-          "tags": "Volk · Cenyr"
-        },
-        {
-          "name": "Höfische und religiöse Prägung",
-          "trigger": "",
-          "tags": "Volk · Cenyr",
-          "type": "trait",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "limitations": "",
-          "duration": "",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "stacking": "normal",
           "active": true,
-          "triggerRules": [],
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Begabung",
           "mechanics": {
-            "attackRollMode": "normal",
-            "spellSaveDc": 0,
-            "damage": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "passivePerception": 0,
-            "skill": 0,
-            "maximumHitPoints": 0,
-            "attack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "spellAttack": 0,
-            "initiative": 0,
-            "bonusDamageFormula": "",
-            "savingThrow": 0,
-            "movement": 0,
-            "armorClass": 0
-          },
-          "aiInstructions": "",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "target": "self",
-          "priority": 0
-        },
-        {
-          "type": "trait",
-          "mechanics": {
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "attackRollMode": "normal",
-            "savingThrow": 0,
-            "initiative": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "bonusDamageFormula": "",
-            "armorClass": 0,
-            "spellAttack": 0,
-            "passivePerception": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attack": 0,
-            "spellSaveDc": 0,
-            "savingThrowAdvantageAttributes": []
-          },
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "priority": 0,
-          "tags": "Hintergrund · Ritter",
-          "aiInstructions": "",
-          "stacking": "normal",
-          "name": "Ritterliche Herkunft und Standespflicht",
-          "duration": "",
-          "limitations": "",
-          "trigger": "",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "active": true,
-          "triggerRules": [],
-          "target": "self",
-          "id": "starter-background-ritter-trait-1"
-        },
-        {
-          "trigger": "Dauerhaft",
-          "limitations": "Die Erfahrung ersetzt keine aktuelle Ortskenntnis oder Geheimdienstinformation.",
-          "name": "Ehemaliger Marschall",
-          "mechanics": {
-            "damage": 0,
-            "spellAttack": 0,
-            "maximumHitPoints": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "passivePerception": 0,
-            "attack": 0,
-            "savingThrow": 1,
-            "savingThrowAdvantageAttributes": [],
-            "spellSaveDc": 0,
-            "skill": 0,
-            "attackRollMode": "normal",
-            "armorClass": 0,
-            "savingThrowDisadvantageAttributes": [],
             "initiative": 1,
-            "bonusDamageFormula": "",
-            "movement": 0
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "wisdom",
+                "bonus": 1
+              }
+            ]
           },
-          "aiInstructions": "Der Rettungswurfbonus und die Initiative sind bereits mechanisch enthalten.",
-          "triggerRules": [],
-          "tags": "Marschall · Führung · Veteran",
-          "type": "trait",
-          "appliesWhen": "In Kampf, Führung und militärischer Lagebeurteilung",
-          "duration": "Dauerhaft",
-          "id": "duncan-quirk-former-marshal",
-          "target": "self",
-          "stacking": "normal",
-          "description": "Duncan liest Schlachtfelder, Befehlswege und Formationen mit der Erfahrung eines ehemaligen Marschalls der Grafschaft von Celtigerns Wacht.",
-          "priority": 20,
-          "active": true
-        },
-        {
-          "limitations": "Gilt nur für Angriffe, die als Waffenangriff aufgelöst werden.",
-          "trigger": "Dauerhaft",
-          "mechanics": {
-            "bonusDamageFormula": "",
-            "savingThrowDisadvantageAttributes": [],
-            "spellSaveDc": 0,
-            "attackRollMode": "normal",
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "initiative": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "damage": 1,
-            "savingThrow": 0,
-            "skill": 0,
-            "spellAttack": 0,
-            "armorClass": 0,
-            "attack": 1
-          },
-          "appliesWhen": "Bei Waffenangriffen",
-          "id": "duncan-quirk-weapons-master",
-          "tags": "Waffenmeister · Haus Draig · Schwert",
-          "type": "trait",
-          "aiInstructions": "Treffer- und Schadensbonus sind bereits mechanisch enthalten.",
-          "priority": 30,
-          "target": "self",
-          "triggerRules": [],
-          "duration": "Dauerhaft",
-          "name": "Waffenmeister",
-          "active": true,
-          "description": "Als Waffenmeister des Hauses Draig kennt Duncan Reichweite, Bindung und Schwerpunkt einer Klinge bis ins kleinste Detail.",
-          "stacking": "normal"
-        },
-        {
-          "target": "self",
-          "trigger": "Dauerhaft",
-          "priority": 40,
-          "appliesWhen": "Solange Duncan ein Schwert führen und sich frei bewegen kann",
-          "active": true,
-          "mechanics": {
-            "bonusDamageFormula": "",
-            "savingThrowDisadvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "passivePerception": 1,
-            "spellSaveDc": 0,
-            "damage": 0,
-            "skill": 0,
-            "maximumHitPoints": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "armorClass": 1,
-            "movement": 0,
-            "spellAttack": 0,
-            "attack": 0,
-            "initiative": 0
-          },
-          "limitations": "Die Formen II bis VII besitzen in diesem ersten Ausbau noch keine eingetragenen Techniken.",
-          "duration": "Dauerhaft",
-          "stacking": "normal",
-          "triggerRules": [],
-          "type": "trait",
-          "aiInstructions": "Der Rüstungsklassenbonus ist bereits mechanisch enthalten; keine Techniken für die leeren Formen erfinden.",
-          "id": "duncan-quirk-many-forms",
-          "description": "Duncan beherrscht alle sieben Formen des Drachentanzes und wechselt seine Haltung ohne erkennbare Lücke.",
-          "tags": "Drachentanz · Formenmeister · Schwertmeister",
-          "name": "Meister vieler Formen (Drachentanz)"
-        },
-        {
-          "appliesWhen": "Bei gesellschaftlichen, ritterlichen und herrschaftlichen Proben",
-          "trigger": "Dauerhaft",
-          "id": "duncan-quirk-knight-prince",
-          "aiInstructions": "Der allgemeine Fertigkeitsbonus ist bereits mechanisch enthalten.",
-          "limitations": "Sein Rang erzwingt weder Gehorsam noch Loyalität.",
-          "mechanics": {
-            "savingThrow": 0,
-            "bonusDamageFormula": "",
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "movement": 0,
-            "spellAttack": 0,
-            "maximumHitPoints": 0,
-            "attackRollMode": "normal",
-            "armorClass": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "skill": 1,
-            "passivePerception": 0,
-            "savingThrowAdvantageAttributes": [],
-            "attack": 0,
-            "spellSaveDc": 0
-          },
-          "description": "Duncan trägt die Pflichten, Würde und politische Autorität des Hauses Gafyr.",
-          "duration": "Dauerhaft",
-          "triggerRules": [],
-          "name": "Ritterfürst des Hauses Gafyr",
-          "target": "self",
-          "stacking": "normal",
-          "tags": "Haus Gafyr · Ritterfürst · Autorität",
-          "priority": 10,
-          "type": "trait",
-          "active": true
-        },
-        {
-          "tags": "Mentor · Ritter · Lehrmeister",
-          "trigger": "Dauerhaft; Kampfeffekt automatisch durch die latente Aura",
-          "limitations": "Der direkte Kampfbuff liegt ausschließlich auf der Aura, damit er nicht doppelt berechnet wird.",
-          "mechanics": {
-            "skill": 0,
-            "maximumHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "spellSaveDc": 0,
-            "movement": 0,
-            "attackRollMode": "normal",
-            "damage": 0,
-            "initiative": 0,
-            "savingThrow": 0,
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "spellAttack": 0,
-            "attack": 0,
-            "armorClass": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 1
-          },
-          "triggerRules": [],
-          "type": "trait",
-          "appliesWhen": "Beim Ausbilden, Einschätzen und Führen von Rittern",
-          "name": "Mentor vieler Ritter",
-          "aiInstructions": "Keine zusätzlichen Kampfbuffs aus dieser Marotte ableiten; dafür Präsenz des Waffenmeisters verwenden.",
-          "target": "self",
-          "priority": 20,
-          "active": true,
-          "id": "duncan-quirk-mentor",
-          "duration": "Dauerhaft",
-          "description": "Duncan erkennt Fehler früh, gibt knappe Hinweise und macht die Menschen an seiner Seite sicherer. Die Kampfverstärkung seiner Gefährten wird durch seine latente Aura abgebildet.",
-          "stacking": "normal"
-        },
-        {
-          "aiInstructions": "Initiative und Bewegung sind bereits mechanisch reduziert.",
-          "id": "duncan-quirk-aging",
-          "triggerRules": [],
-          "priority": 99,
-          "description": "Duncans Geist und Technik sind ungebrochen, doch sein Körper braucht länger, um auf plötzliche Wendungen zu reagieren.",
-          "mechanics": {
-            "attack": 0,
-            "spellAttack": 0,
-            "skill": 0,
-            "maximumHitPoints": 0,
-            "damage": 0,
-            "savingThrow": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "movement": -1,
-            "savingThrowDisadvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "spellSaveDc": 0,
-            "armorClass": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "savingThrowAdvantageAttributes": [],
-            "initiative": -2
-          },
-          "stacking": "normal",
-          "duration": "Dauerhaft",
-          "trigger": "Dauerhaft",
-          "type": "flaw",
-          "active": true,
-          "appliesWhen": "Bei Initiative und Bewegung",
-          "tags": "Alter · Veteran · Schwäche",
-          "name": "In die Jahre gekommen",
-          "limitations": "Dieser Nachteil darf nicht durch bloße Erzählung ignoriert werden.",
-          "target": "self"
+          "triggerRules": []
         }
       ],
       "resources": [

@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import { after,test } from 'node:test';
+import { database,actorRecords } from './combat-test-context.mjs';
+import { createCombatParty } from './combat-party-context.mjs';
+import { createCharacterCreationDraft,applyCharacterCreationDraft } from '../../../../AleriaAlmanach/modules/combat/character-creation-model.js';
+import { getDevelopmentAttackCatalog } from '../../../../AleriaAlmanach/modules/character-development/development-purchases.js';
+
+after(()=>database.terminate());
+test('gekaufte Ausbildung, Mehrfachklasse, eigene Klasse und Traits bleiben bei echter Kampftransaktion erhalten',async()=>{
+ const original=actorRecords.find(actor=>actor.name==='Gawain Draig');
+ const source=structuredClone(original),draft=createCharacterCreationDraft(source.combatProfile);
+ draft.additionalClassIds=['helwyr'];draft.includeCustomClass=true;draft.customClass={name:'Hafenwächter',description:'Lokaler Schnittstellentest.'};
+ draft.skillChoices.perception='expertise';draft.developmentPlan.targetLevel=8;
+ draft.developmentPlan.development.startingPoints=0;draft.developmentPlan.development.pointsPerLevel=0;
+ draft.developmentPlan.traitIds=['development-trait-arkaner-fokus','development-trait-zaeh'];
+ const purchase=getDevelopmentAttackCatalog().find(entry=>entry.classId==='teulu'&&entry.technique.id==='combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb');
+ assert.ok(purchase);draft.developmentPlan.purchaseIds=[purchase.id];
+ const created=applyCharacterCreationDraft(source.combatProfile,draft);
+ assert.equal(created.ok,true,created.errors.join(' '));source.combatProfile=created.profile;
+ assert.deepEqual(source.inventory,original.inventory);
+ const party=await createCombatParty([{key:'gawain',actor:source,team:'Draig'},{key:'ritter',creature:'catalog-schwarzer-zitteraal-raubritter',team:'Gegner'}]);
+ await party.commit(await party.prepare({actor:'gawain',targets:['ritter'],actionId:`technique:${purchase.technique.id}`}));
+ await party.assertConsistent();
+ const stored=(await database.collection('characters').doc(source.id).get()).data();
+ assert.deepEqual(stored.combatProfile.templateSelections.classIds,['teulu','helwyr','custom']);
+ assert.equal(stored.combatProfile.templateSelections.customClass.name,'Hafenwächter');
+ assert.equal(stored.combatProfile.skills.find(skill=>skill.name==='Wahrnehmung').proficiency,'expertise');
+ assert.deepEqual(stored.combatProfile.progression.development.purchases,created.profile.progression.development.purchases);
+ assert.equal(stored.combatProfile.quirks.find(q=>q.id==='development-trait-arkaner-fokus').mechanics.attackScope,'weapon');
+ assert.deepEqual(stored.inventory.items.map(item=>item.id),original.inventory.items.map(item=>item.id));
+});

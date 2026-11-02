@@ -1,0 +1,2733 @@
+{
+  "pages": [
+    {
+      "id": "koenigreich-talyndor",
+      "title": "Königreich Talyndor",
+      "shortTitle": "Königreich Talyndor",
+      "type": "Königreich",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Aldervan.html",
+      "parentLabel": "Aldervan",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        }
+      ],
+      "aliases": [
+        "talyndor"
+      ],
+      "crestSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/talyndor.webp",
+      "crestAlt": "Herrschaftszeichen · Königreich Talyndor",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "cultureSections": [
+        {
+          "title": "Krone, Earls und Thains",
+          "paragraphs": [
+            "Die Krone steht über den Earls der einzelnen Earltümer. Thaintümer und kleinere ritterliche Herrschaften gliedern die örtliche Ebene. Der persönliche Rang eines Hauses wird nur bei eigenem Beleg geführt."
+          ],
+          "links": [
+            {
+              "label": "Klassen Talyndors ↗",
+              "href": "/Klassenordner/Klassenseite.html#aeldrunmar"
+            }
+          ]
+        }
+      ],
+      "copy": {
+        "overview": [
+          "Talyndor war das Bruderkönigreich Aeldrunmars. Eine eng verwandte Reiter- und Agrarkultur verband die Zwillingskronen; Talyndor entwickelte zugleich eine eigene Tradition schwer gerüsteter Ritter und Fußkämpfer. Seit dem Umsturz von 1720 steht das Land unter der Herrschaft der Triarchie. Die hier verzeichneten Earltümer und Hausbindungen beschreiben seine frühere Ordnung.",
+          "Die Familienzuordnungen beschreiben die überlieferte Heimat. Heutige Bewohner und tatsächliche Besitzrechte unter der Besatzung werden daraus nicht abgeleitet."
+        ],
+        "history": [
+          "Die Zwillingskronen: Aeldrunmar und Talyndor galten als Bruderkönigreiche und teilten einen großen Teil ihrer Kultur. Landwirtschaft, ritterliche Ausbildung und die verwandten Traditionen ihrer Häuser verbanden beide Länder.",
+          "Earls, Thains und Königssitz: Die Krone der Aldred hatte ihren Sitz in Edrington. Lennwyck, Warren und Brigane führten die drei weiteren Earltümer. Eigene Domänen und weitere Thaintümer gliederten das Land.",
+          "Die verlorene Eigenständigkeit: Die Triarchie eignete sich Talyndor im Zusammenhang mit den Umwälzungen von 1720 an. Die frühere Sitzordnung belegt weder eine Rückeroberung noch die gegenwärtige Kontrolle durch einheimische Häuser.",
+          "Thornwick und Thornholt: Thornwick war ein niederes Rittergeschlecht der Warren. Seine Waldburg Thornholt ging 1720 verloren. Refri führt das heimatlose Haus weiter. Die örtliche Zuordnung zu Wensbury hält den überlieferten Zusammenhang fest und stellt Thornholt nicht wieder her."
+        ],
+        "culture": [
+          "Land und Hauszeichen: Offenes Kulturland, große Wälder und hohe Bergsäume prägten die Earltümer. Die Lennwyck führten den Löwen, die Warren den Wolf, die Brigane zwei wütende weiße Pitbulls und die Aldred eine Burg in ihrem Hauszeichen.",
+          "Miles und Ceorl: Miles trugen lange Kettenhauberks, starke Ritterhelme, Schwerter und große Schilde. Ceorl kämpften als schwer gepanzerte Infanteristen mit Morgenstern, Flegel oder Streitkolben.",
+          "Weitere Ausbildungswege: Isen führten Schwerter, Wigar Stangenwaffen. Hyld, Scoet und Gliwere waren seltener: Reiterritter, berittene Schützen und ritterliche Fechter mit Musik und Dichtung."
+        ],
+        "economy": [],
+        "defense": [],
+        "geography": []
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Königreich"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Aldred",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred"
+            },
+            {
+              "label": "Rang",
+              "value": "König"
+            },
+            {
+              "label": "Sitz",
+              "value": "Edrington",
+              "href": "/Orte/grossstadt.html?id=talyndor-edrington"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-aldred",
+              "name": "Haus Aldred",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/aldred.webp",
+              "imageAlt": "Wappen Haus Aldred",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred",
+              "rank": "König",
+              "seat": "Edrington",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "König"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-lennwyck",
+              "name": "Haus Lennwyck",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/lennwyck.webp",
+              "imageAlt": "Wappen Haus Lennwyck",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lennwyck",
+              "rank": "Earl (Graf)",
+              "seat": "Wetherham",
+              "liege": "Haus Aldred",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-warren",
+              "name": "Haus Warren",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/warren.webp",
+              "imageAlt": "Wappen Haus Warren",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warren",
+              "rank": "Earl (Graf)",
+              "seat": "Wensbury",
+              "liege": "Haus Aldred",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-brigane",
+              "name": "Haus Brigane",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/brigane.webp",
+              "imageAlt": "Wappen Haus Brigane",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brigane",
+              "rank": "Earl (Graf)",
+              "seat": "Aveldon",
+              "liege": "Haus Aldred",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "König",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-aldred",
+              "note": "Haus Aldred · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "talyndor-region-lennwyck",
+        "talyndor-region-warren",
+        "talyndor-region-aldred",
+        "talyndor-region-brigane"
+      ]
+    },
+    {
+      "id": "talyndor-region-lennwyck",
+      "title": "Earltum Lennwyckland",
+      "shortTitle": "Earltum Lennwyckland",
+      "type": "Earltum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html",
+      "parentLabel": "Königreich Talyndor",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Lennwyckland",
+          "slug": "talyndor-region-lennwyck"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/earldom-lennwyck.webp",
+      "crestAlt": "Herrschaftszeichen · Earltum Lennwyckland",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Earltum Lennwyckland hatte zu Talyndor gehört. Haus Lennwyck hatte hier den Rang Earl (Graf) geführt.",
+          "Unmittelbarer Lehnsherr war Haus Aldred."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Das nördliche Earltum besitzt viel offenes, leicht hügeliges Land; im Osten und Süden steigen Berge auf."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Earltum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Lennwyck",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lennwyck"
+            },
+            {
+              "label": "Rang",
+              "value": "Earl (Graf)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Wetherham"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-lennwyck",
+              "name": "Haus Lennwyck",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/lennwyck.webp",
+              "imageAlt": "Wappen Haus Lennwyck",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lennwyck",
+              "rank": "Earl (Graf)",
+              "seat": "Wetherham",
+              "liege": "Haus Aldred",
+              "featured": true,
+              "featuredLabel": "Earl (Graf)"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-egerton",
+              "name": "Haus Egerton",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/egerton.webp",
+              "imageAlt": "Wappen Haus Egerton",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-egerton",
+              "rank": "Offen",
+              "seat": "Dunworth",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-yarwyck",
+              "name": "Haus Yarwyck",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/yarwyck.webp",
+              "imageAlt": "Wappen Haus Yarwyck",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-yarwyck",
+              "rank": "Offen",
+              "seat": "Cawden",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Earl (Graf)",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-lennwyck",
+              "note": "Haus Lennwyck · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "talyndor-sitz-wetherham",
+        "talyndor-sitz-dunworth",
+        "talyndor-sitz-cawden"
+      ]
+    },
+    {
+      "id": "talyndor-region-warren",
+      "title": "Earltum Warrenfold",
+      "shortTitle": "Earltum Warrenfold",
+      "type": "Earltum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html",
+      "parentLabel": "Königreich Talyndor",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Warrenfold",
+          "slug": "talyndor-region-warren"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/earldom-warren.webp",
+      "crestAlt": "Herrschaftszeichen · Earltum Warrenfold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Earltum Warrenfold hatte zu Talyndor gehört. Haus Warren hatte hier den Rang Earl (Graf) geführt.",
+          "Unmittelbarer Lehnsherr war Haus Aldred."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Das westliche Earltum umfasst offenes Weideland, niedrige Hügel und einen großen zusammenhängenden Laubwald um den Hauptort."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Earltum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Warren",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warren"
+            },
+            {
+              "label": "Rang",
+              "value": "Earl (Graf)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Wensbury"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-warren",
+              "name": "Haus Warren",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/warren.webp",
+              "imageAlt": "Wappen Haus Warren",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warren",
+              "rank": "Earl (Graf)",
+              "seat": "Wensbury",
+              "liege": "Haus Aldred",
+              "featured": true,
+              "featuredLabel": "Earl (Graf)"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-elwick",
+              "name": "Haus Elwick",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/elwick.webp",
+              "imageAlt": "Wappen Haus Elwick",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-elwick",
+              "rank": "Offen",
+              "seat": "Eldenwick",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-sedgeley",
+              "name": "Haus Sedgeley",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/sedgeley.webp",
+              "imageAlt": "Wappen Haus Sedgeley",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sedgeley",
+              "rank": "Offen",
+              "seat": "Hartham",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Earl (Graf)",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-warren",
+              "note": "Haus Warren · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "talyndor-sitz-eldenwick",
+        "talyndor-sitz-wensbury",
+        "talyndor-sitz-hartham"
+      ]
+    },
+    {
+      "id": "talyndor-region-aldred",
+      "title": "Königliches Earltum Aldredhold",
+      "shortTitle": "Königliches Earltum Aldredhold",
+      "type": "Königliches Earltum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html",
+      "parentLabel": "Königreich Talyndor",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Königliches Earltum",
+          "name": "Königliches Earltum Aldredhold",
+          "slug": "talyndor-region-aldred"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/earldom-aldred.webp",
+      "crestAlt": "Herrschaftszeichen · Königliches Earltum Aldredhold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Königliches Earltum Aldredhold hatte zu Talyndor gehört. Haus Aldred hatte hier den Rang König geführt."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Die königliche Domäne liegt im Osten zwischen breitem Bergsaum, bewaldeten Hängen, offenem Land und einem südlichen Flusslauf."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Königliches Earltum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Aldred",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred"
+            },
+            {
+              "label": "Rang",
+              "value": "König"
+            },
+            {
+              "label": "Sitz",
+              "value": "Edrington"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-aldred",
+              "name": "Haus Aldred",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/aldred.webp",
+              "imageAlt": "Wappen Haus Aldred",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred",
+              "rank": "König",
+              "seat": "Edrington",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "König"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-kyme",
+              "name": "Haus Kyme",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/kyme.webp",
+              "imageAlt": "Wappen Haus Kyme",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kyme",
+              "rank": "Offen",
+              "seat": "Ternford",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "König",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-aldred",
+              "note": "Haus Aldred · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "talyndor-sitz-edrington",
+        "talyndor-sitz-ternford"
+      ]
+    },
+    {
+      "id": "talyndor-region-brigane",
+      "title": "Earltum Briganefold",
+      "shortTitle": "Earltum Briganefold",
+      "type": "Earltum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html",
+      "parentLabel": "Königreich Talyndor",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Briganefold",
+          "slug": "talyndor-region-brigane"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/earldom-brigane.webp",
+      "crestAlt": "Herrschaftszeichen · Earltum Briganefold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Earltum Briganefold hatte zu Talyndor gehört. Haus Brigane hatte hier den Rang Earl (Graf) geführt.",
+          "Unmittelbarer Lehnsherr war Haus Aldred."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Das südliche Earltum verbindet welliges offenes Land mit bewaldeten Bergen und den Tälern im Süden."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Earltum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Brigane",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brigane"
+            },
+            {
+              "label": "Rang",
+              "value": "Earl (Graf)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Aveldon"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-brigane",
+              "name": "Haus Brigane",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/brigane.webp",
+              "imageAlt": "Wappen Haus Brigane",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brigane",
+              "rank": "Earl (Graf)",
+              "seat": "Aveldon",
+              "liege": "Haus Aldred",
+              "featured": true,
+              "featuredLabel": "Earl (Graf)"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-wickton",
+              "name": "Haus Wickton",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wickton.webp",
+              "imageAlt": "Wappen Haus Wickton",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wickton",
+              "rank": "Offen",
+              "seat": "Fenhurst",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-vernon",
+              "name": "Haus Vernon",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/vernon.webp",
+              "imageAlt": "Wappen Haus Vernon",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-vernon",
+              "rank": "Offen",
+              "seat": "Norcombe",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-wulmer",
+              "name": "Haus Wulmer",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wulmer.webp",
+              "imageAlt": "Wappen Haus Wulmer",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wulmer",
+              "rank": "Offen",
+              "seat": "Bramwell",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Earl (Graf)",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-brigane",
+              "note": "Haus Brigane · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [],
+      "territoryLinks": [
+        "talyndor-sitz-fenhurst",
+        "talyndor-sitz-norcombe",
+        "talyndor-sitz-bramwell",
+        "talyndor-sitz-aveldon"
+      ]
+    },
+    {
+      "id": "talyndor-sitz-wetherham",
+      "title": "Thaintum Wetherfold",
+      "shortTitle": "Thaintum Wetherfold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-lennwyck/index.html",
+      "parentLabel": "Earltum Lennwyckland",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Lennwyckland",
+          "slug": "talyndor-region-lennwyck"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Wetherfold",
+          "slug": "talyndor-sitz-wetherham"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/wetherham.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Wetherfold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Wetherfold hatte zu Talyndor gehört. Haus Lennwyck hatte hier den Rang Earl (Graf) geführt.",
+          "Unmittelbarer Lehnsherr war Haus Aldred."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der Hauptort der Lennwyck liegt im nordwestlichen offenen Land. Niedrige Hügel, Weiden und vereinzelte Baumgruppen kennzeichnen die Umgebung."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Lennwyck",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lennwyck"
+            },
+            {
+              "label": "Rang",
+              "value": "Earl (Graf)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Wetherham",
+              "href": "/Orte/grossstadt.html?id=talyndor-wetherham"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Lennwyckland",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-lennwyck/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-lennwyck",
+              "name": "Haus Lennwyck",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/lennwyck.webp",
+              "imageAlt": "Wappen Haus Lennwyck",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-lennwyck",
+              "rank": "Earl (Graf)",
+              "seat": "Wetherham",
+              "liege": "Haus Aldred",
+              "featured": true,
+              "featuredLabel": "Earl (Graf)"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-holton",
+              "name": "Haus Holton",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/holton.webp",
+              "imageAlt": "Wappen Haus Holton",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-holton",
+              "rank": "Offen",
+              "seat": "Wetherham",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Earl (Graf)",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-lennwyck",
+              "note": "Haus Lennwyck · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-wetherham",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-wetherham"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-dunworth",
+      "title": "Thaintum Dunworthmark",
+      "shortTitle": "Thaintum Dunworthmark",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-lennwyck/index.html",
+      "parentLabel": "Earltum Lennwyckland",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Lennwyckland",
+          "slug": "talyndor-region-lennwyck"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Dunworthmark",
+          "slug": "talyndor-sitz-dunworth"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/dunworth.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Dunworthmark",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Dunworthmark hatte zu Talyndor gehört. Haus Egerton hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Nordöstliches Randgebiet mit offenem Hochland und steilen Bergen im Osten. Der Ortsanker liegt unmittelbar am Bergsaum."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Egerton",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-egerton"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Dunworth",
+              "href": "/Orte/grossstadt.html?id=talyndor-dunworth"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Lennwyckland",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-lennwyck/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-egerton",
+              "name": "Haus Egerton",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/egerton.webp",
+              "imageAlt": "Wappen Haus Egerton",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-egerton",
+              "rank": "Offen",
+              "seat": "Dunworth",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-egerton",
+              "note": "Haus Egerton · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-dunworth",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-dunworth"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-cawden",
+      "title": "Thaintum Cawdenhold",
+      "shortTitle": "Thaintum Cawdenhold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-lennwyck/index.html",
+      "parentLabel": "Earltum Lennwyckland",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Lennwyckland",
+          "slug": "talyndor-region-lennwyck"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Cawdenhold",
+          "slug": "talyndor-sitz-cawden"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/cawden.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Cawdenhold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Cawdenhold hatte zu Talyndor gehört. Haus Yarwyck hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Südliches Gebiet der Lennwyck unter den östlichen Bergen. Offene Flächen und Hügel überwiegen; Wald tritt nur in kleinen Gruppen auf."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Yarwyck",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-yarwyck"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Cawden",
+              "href": "/Orte/grossstadt.html?id=talyndor-cawden"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Lennwyckland",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-lennwyck/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-yarwyck",
+              "name": "Haus Yarwyck",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/yarwyck.webp",
+              "imageAlt": "Wappen Haus Yarwyck",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-yarwyck",
+              "rank": "Offen",
+              "seat": "Cawden",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-yarwyck",
+              "note": "Haus Yarwyck · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-cawden",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-cawden"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-eldenwick",
+      "title": "Thaintum Eldenemnet",
+      "shortTitle": "Thaintum Eldenemnet",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-warren/index.html",
+      "parentLabel": "Earltum Warrenfold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Warrenfold",
+          "slug": "talyndor-region-warren"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Eldenemnet",
+          "slug": "talyndor-sitz-eldenwick"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/eldenwick.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Eldenemnet",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Eldenemnet hatte zu Talyndor gehört. Haus Elwick hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der nordwestliche Teil der Warren besitzt offenes Weide- und Ackerland mit einer kleinen Hügelgruppe im Süden."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Elwick",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-elwick"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Eldenwick",
+              "href": "/Orte/grossstadt.html?id=talyndor-eldenwick"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Warrenfold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-warren/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-elwick",
+              "name": "Haus Elwick",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/elwick.webp",
+              "imageAlt": "Wappen Haus Elwick",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-elwick",
+              "rank": "Offen",
+              "seat": "Eldenwick",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-elwick",
+              "note": "Haus Elwick · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-eldenwick",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-eldenwick"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-wensbury",
+      "title": "Thaintum Wensfold",
+      "shortTitle": "Thaintum Wensfold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-warren/index.html",
+      "parentLabel": "Earltum Warrenfold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Warrenfold",
+          "slug": "talyndor-region-warren"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Wensfold",
+          "slug": "talyndor-sitz-wensbury"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/wensbury.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Wensfold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Wensfold hatte zu Talyndor gehört. Haus Warren hatte hier den Rang Earl (Graf) geführt.",
+          "Unmittelbarer Lehnsherr war Haus Aldred."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der Hauptort der Warren liegt mitten im großen Laubwald. Waldwirtschaft, Wild und Lichtungen bestimmen den landschaftlichen Entwurf."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Warren",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warren"
+            },
+            {
+              "label": "Rang",
+              "value": "Earl (Graf)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Wensbury",
+              "href": "/Orte/grossstadt.html?id=talyndor-wensbury"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Warrenfold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-warren/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-warren",
+              "name": "Haus Warren",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/warren.webp",
+              "imageAlt": "Wappen Haus Warren",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-warren",
+              "rank": "Earl (Graf)",
+              "seat": "Wensbury",
+              "liege": "Haus Aldred",
+              "featured": true,
+              "featuredLabel": "Earl (Graf)"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-thornwick",
+              "name": "Haus Thornwick",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/thornwick.webp",
+              "imageAlt": "Wappen Haus Thornwick",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-thornwick",
+              "rank": "Ritterherr",
+              "seat": "Wensbury",
+              "liege": "Haus Warren",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Earl (Graf)",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-warren",
+              "note": "Haus Warren · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-wensbury",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-wensbury"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-hartham",
+      "title": "Thaintum Harthamland",
+      "shortTitle": "Thaintum Harthamland",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-warren/index.html",
+      "parentLabel": "Earltum Warrenfold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Warrenfold",
+          "slug": "talyndor-region-warren"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Harthamland",
+          "slug": "talyndor-sitz-hartham"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/hartham.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Harthamland",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Harthamland hatte zu Talyndor gehört. Haus Sedgeley hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Großes südwestliches Gebiet mit weitem offenem Land, niedrigen Hügeln und Gehölzgruppen am Übergang zu den südlichen Höhen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Sedgeley",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sedgeley"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Hartham",
+              "href": "/Orte/grossstadt.html?id=talyndor-hartham"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Warrenfold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-warren/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-sedgeley",
+              "name": "Haus Sedgeley",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/sedgeley.webp",
+              "imageAlt": "Wappen Haus Sedgeley",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-sedgeley",
+              "rank": "Offen",
+              "seat": "Hartham",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-sedgeley",
+              "note": "Haus Sedgeley · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-hartham",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-hartham"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-edrington",
+      "title": "Thaintum Edringfold",
+      "shortTitle": "Thaintum Edringfold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-aldred/index.html",
+      "parentLabel": "Königliches Earltum Aldredhold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Königliches Earltum",
+          "name": "Königliches Earltum Aldredhold",
+          "slug": "talyndor-region-aldred"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Edringfold",
+          "slug": "talyndor-sitz-edrington"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/edrington.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Edringfold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Edringfold hatte zu Talyndor gehört. Haus Aldred hatte hier den Rang König geführt."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der Königssitz liegt unter den hohen östlichen Bergen. Waldhänge und offenes Vorland schließen unmittelbar an den Hauptort an."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Aldred",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred"
+            },
+            {
+              "label": "Rang",
+              "value": "König"
+            },
+            {
+              "label": "Sitz",
+              "value": "Edrington",
+              "href": "/Orte/grossstadt.html?id=talyndor-edrington"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Königliches Earltum Aldredhold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-aldred/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-aldred",
+              "name": "Haus Aldred",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/aldred.webp",
+              "imageAlt": "Wappen Haus Aldred",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aldred",
+              "rank": "König",
+              "seat": "Edrington",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "König"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-ashton",
+              "name": "Haus Ashton",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/ashton.webp",
+              "imageAlt": "Wappen Haus Ashton",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ashton",
+              "rank": "Offen",
+              "seat": "Edrington",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-bramcote",
+              "name": "Haus Bramcote",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/bramcote.webp",
+              "imageAlt": "Wappen Haus Bramcote",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bramcote",
+              "rank": "Offen",
+              "seat": "Edrington",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            },
+            {
+              "familyId": "haus-tostan",
+              "name": "Haus Tostan",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/tostan.webp",
+              "imageAlt": "Wappen Haus Tostan",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tostan",
+              "rank": "Offen",
+              "seat": "Edrington",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "König",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-aldred",
+              "note": "Haus Aldred · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-edrington",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-edrington"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-ternford",
+      "title": "Thaintum Ternemnet",
+      "shortTitle": "Thaintum Ternemnet",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-aldred/index.html",
+      "parentLabel": "Königliches Earltum Aldredhold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Königliches Earltum",
+          "name": "Königliches Earltum Aldredhold",
+          "slug": "talyndor-region-aldred"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Ternemnet",
+          "slug": "talyndor-sitz-ternford"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/ternford.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Ternemnet",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Ternemnet hatte zu Talyndor gehört. Haus Kyme hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der südliche königliche Bezirk liegt an einem gewundenen Fluss unter den bewaldeten östlichen Bergen. Die Wasserlinie ist Binnengewässer, keine Meeresküste."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Kyme",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kyme"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Ternford",
+              "href": "/Orte/grossstadt.html?id=talyndor-ternford"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Königliches Earltum Aldredhold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-aldred/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-kyme",
+              "name": "Haus Kyme",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/kyme.webp",
+              "imageAlt": "Wappen Haus Kyme",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-kyme",
+              "rank": "Offen",
+              "seat": "Ternford",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-kyme",
+              "note": "Haus Kyme · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-ternford",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-ternford"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-fenhurst",
+      "title": "Thaintum Fenhold",
+      "shortTitle": "Thaintum Fenhold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html",
+      "parentLabel": "Earltum Briganefold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Briganefold",
+          "slug": "talyndor-region-brigane"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Fenhold",
+          "slug": "talyndor-sitz-fenhurst"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/fenhurst.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Fenhold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Fenhold hatte zu Talyndor gehört. Haus Wickton hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der nördliche Bezirk der Brigane besitzt welliges offenes Land mit Gehölzgruppen und niedrigen Höhenzügen im Westen."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Wickton",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wickton"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Fenhurst",
+              "href": "/Orte/grossstadt.html?id=talyndor-fenhurst"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Briganefold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-wickton",
+              "name": "Haus Wickton",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wickton.webp",
+              "imageAlt": "Wappen Haus Wickton",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wickton",
+              "rank": "Offen",
+              "seat": "Fenhurst",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-wickton",
+              "note": "Haus Wickton · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-fenhurst",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-fenhurst"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-norcombe",
+      "title": "Thaintum Norcombefold",
+      "shortTitle": "Thaintum Norcombefold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html",
+      "parentLabel": "Earltum Briganefold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Briganefold",
+          "slug": "talyndor-region-brigane"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Norcombefold",
+          "slug": "talyndor-sitz-norcombe"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/norcombe.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Norcombefold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Norcombefold hatte zu Talyndor gehört. Haus Vernon hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der westliche Bezirk der Brigane verbindet offene Hügel und kleine Baumgruppen mit Bergen an seinem südlichen Rand."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Vernon",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-vernon"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Norcombe",
+              "href": "/Orte/grossstadt.html?id=talyndor-norcombe"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Briganefold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-vernon",
+              "name": "Haus Vernon",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/vernon.webp",
+              "imageAlt": "Wappen Haus Vernon",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-vernon",
+              "rank": "Offen",
+              "seat": "Norcombe",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-vernon",
+              "note": "Haus Vernon · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-norcombe",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-norcombe"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-bramwell",
+      "title": "Thaintum Brammark",
+      "shortTitle": "Thaintum Brammark",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html",
+      "parentLabel": "Earltum Briganefold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Briganefold",
+          "slug": "talyndor-region-brigane"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Brammark",
+          "slug": "talyndor-sitz-bramwell"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/bramwell.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Brammark",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Brammark hatte zu Talyndor gehört. Haus Wulmer hatte hier seinen Sitz. Der genaue Adelsrang ist noch nicht überliefert."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Östlicher Randbezirk der Brigane mit steilen Bergen im Osten und Süden; Waldflächen liegen zwischen den Ausläufern."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Wulmer",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wulmer"
+            },
+            {
+              "label": "Rang",
+              "value": "Offen"
+            },
+            {
+              "label": "Sitz",
+              "value": "Bramwell",
+              "href": "/Orte/grossstadt.html?id=talyndor-bramwell"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Briganefold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-wulmer",
+              "name": "Haus Wulmer",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/wulmer.webp",
+              "imageAlt": "Wappen Haus Wulmer",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-wulmer",
+              "rank": "Offen",
+              "seat": "Bramwell",
+              "liege": "",
+              "featured": true,
+              "featuredLabel": "Offen"
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Hausoberhaupt",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-wulmer",
+              "note": "Haus Wulmer · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-bramwell",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-bramwell"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    },
+    {
+      "id": "talyndor-sitz-aveldon",
+      "title": "Thaintum Avelhold",
+      "shortTitle": "Thaintum Avelhold",
+      "type": "Thaintum",
+      "kicker": "Historische Herrschaft · Talyndor",
+      "parentHref": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html",
+      "parentLabel": "Earltum Briganefold",
+      "hierarchy": [
+        {
+          "type": "Sammlung",
+          "name": "Kontinente",
+          "slug": "kontinente"
+        },
+        {
+          "type": "Kontinent",
+          "name": "Aldervan",
+          "slug": "aldervan"
+        },
+        {
+          "type": "Königreich",
+          "name": "Königreich Talyndor",
+          "slug": "koenigreich-talyndor"
+        },
+        {
+          "type": "Earltum",
+          "name": "Earltum Briganefold",
+          "slug": "talyndor-region-brigane"
+        },
+        {
+          "type": "Thaintum",
+          "name": "Thaintum Avelhold",
+          "slug": "talyndor-sitz-aveldon"
+        }
+      ],
+      "aliases": [],
+      "crestSrc": "/Stammbäume/assets/images/regions/talyndor/aveldon.webp",
+      "crestAlt": "Herrschaftszeichen · Thaintum Avelhold",
+      "map": {
+        "title": "Karte · Talyndor",
+        "imageSrc": "/Karten/Talyndor/Kartenbilder/normal.svg",
+        "imageAlt": "Vorhandene Übersichtskarte Talyndor; die Detailvermessung folgt",
+        "href": "/Karten/karte.html?map=talyndor"
+      },
+      "copy": {
+        "overview": [
+          "Thaintum Avelhold hatte zu Talyndor gehört. Haus Brigane hatte hier den Rang Earl (Graf) geführt.",
+          "Unmittelbarer Lehnsherr war Haus Aldred."
+        ],
+        "history": [],
+        "culture": [],
+        "economy": [],
+        "defense": [],
+        "geography": [
+          "Der Hauptort der Brigane liegt in einem südlichen Tal zwischen bewaldeten Berghängen. Im Norden öffnet sich das Land zu den übrigen Bezirken."
+        ]
+      },
+      "infobox": [
+        {
+          "title": "Frühere Herrschaft",
+          "rows": [
+            {
+              "label": "Einordnung",
+              "value": "Thaintum"
+            },
+            {
+              "label": "Land",
+              "value": "Königreich Talyndor",
+              "href": "/Kontinente/Aldervan/Talyndor/koenigreich-talyndor/index.html"
+            },
+            {
+              "label": "Früheres Haus",
+              "value": "Haus Brigane",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brigane"
+            },
+            {
+              "label": "Rang",
+              "value": "Earl (Graf)"
+            },
+            {
+              "label": "Sitz",
+              "value": "Aveldon",
+              "href": "/Orte/grossstadt.html?id=talyndor-aveldon"
+            },
+            {
+              "label": "Frühere Oberherrschaft",
+              "value": "Earltum Briganefold",
+              "href": "/Kontinente/Aldervan/Talyndor/talyndor-region-brigane/index.html"
+            },
+            {
+              "label": "Gegenwärtige Kontrolle",
+              "value": "Triarchie",
+              "href": "/Kontinente/Lothir/Triarchie/triarchie-lothir/index.html"
+            }
+          ]
+        }
+      ],
+      "families": [
+        {
+          "title": "Früheres Herrscherhaus",
+          "houses": [
+            {
+              "familyId": "haus-brigane",
+              "name": "Haus Brigane",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/brigane.webp",
+              "imageAlt": "Wappen Haus Brigane",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brigane",
+              "rank": "Earl (Graf)",
+              "seat": "Aveldon",
+              "liege": "Haus Aldred",
+              "featured": true,
+              "featuredLabel": "Earl (Graf)"
+            }
+          ]
+        },
+        {
+          "title": "Frühere örtliche Häuser",
+          "houses": [
+            {
+              "familyId": "haus-rookden",
+              "name": "Haus Rookden",
+              "imageSrc": "/Stammbäume/assets/images/houses/accepted-realms/talyndor/rookden.webp",
+              "imageAlt": "Wappen Haus Rookden",
+              "housePage": "kleinehaeuser.html",
+              "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-rookden",
+              "rank": "Offen",
+              "seat": "Aveldon",
+              "liege": "",
+              "featured": false,
+              "featuredLabel": ""
+            }
+          ]
+        }
+      ],
+      "councilGroups": [
+        {
+          "title": "Überlieferte frühere Hausführung",
+          "members": [
+            {
+              "office": "Earl (Graf)",
+              "name": "",
+              "imageSrc": "",
+              "familyId": "haus-brigane",
+              "note": "Haus Brigane · Amtsinhaber nicht überliefert.",
+              "featured": true
+            }
+          ]
+        }
+      ],
+      "vassalGroups": [],
+      "domains": [
+        {
+          "territoryId": "talyndor-sitz-aveldon",
+          "title": "Früherer Herrschaftssitz",
+          "sections": [
+            {
+              "title": "Siedlung",
+              "placeIds": [
+                "talyndor-aveldon"
+              ]
+            }
+          ]
+        }
+      ],
+      "territoryLinks": []
+    }
+  ]
+}

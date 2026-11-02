@@ -1,4 +1,6 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
+import { getSceneConditionClock, sceneClockBeforeSegment } from '../generated/scene-time/scene-condition-clock.js';
+import { advanceSubstanceStateMap } from '../generated/character-health/substance-state.js';
 import { readItemDefinitionIndex, hydrateItemRecord, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
 import { transferredEquipmentProfile } from '../items/item-transfer-equipment.js';
 import { removeTransferredSceneEquipment } from '../generated/scene-items/scene-item-equipment.js';
@@ -296,6 +298,8 @@ export async function commitCombatCommentOperation(request, {
     for (const [key, record] of records) records.set(key, hydrateItemRecord(record, itemDefinitions, { requireEquipped: entries.length > 0, preserveLoadout: true }));
 
     const workingStates = new Map(historyStates);
+    const conditionClock = getSceneConditionClock(allHistory.filter(isTrustedSceneContributionComment));
+    const advanceSubstancesToSegment = index => advanceSubstanceStateMap(workingStates, sceneClockBeforeSegment(conditionClock, metadata.commentSegments, index), entryId);
     const workingInventories = new Map();
     const persistentUpdates = new Map();
     const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates, metadata,
@@ -313,8 +317,9 @@ export async function commitCombatCommentOperation(request, {
     const uniqueItemMoves = [];
     const locallyClaimedSkills = new Set();
     const resolveSkillEntry = async entry => {
+      advanceSubstancesToSegment(entry.index);
       const validated = await validateSkillCommentSegments({ database, transaction, request,
-        metadata: { ...metadata, commentSegments: enhancedSegments }, history: trustedHistory,
+        metadata: { ...metadata, commentSegments: enhancedSegments }, history: trustedHistory, sceneClock: conditionClock,
         challengeHistory: allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment)),
         rulePeriods, usedRuleFrequencyKeys, usedConsequenceKeys, entryId, workingStates, persistentUpdates, workingInventories,
         deferClaimWrites: true, segmentIndexes: new Set([entry.index]), locallyClaimed: locallyClaimedSkills });
@@ -324,6 +329,7 @@ export async function commitCombatCommentOperation(request, {
     };
 
     const resolveInventoryEntry = async entry => {
+      advanceSubstancesToSegment(entry.index);
       const descriptor = inventoryDescriptor(entry);
       const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
       const record = records.get(recordKey);
@@ -404,7 +410,8 @@ export async function commitCombatCommentOperation(request, {
             ? { kind: 'consumed', recordId: commentRef.id, itemId: usedItem.instanceId || usedItem.id }
             : { kind: descriptor.persistence.kind === 'creature' ? 'creatures' : 'characters', recordId: descriptor.persistence.recordId, itemId: moved?.id || usedItem.id } });
       }
-      const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey, { definitions: itemDefinitions });
+      const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey, { definitions: itemDefinitions,
+        sceneClockSeconds: sceneClockBeforeSegment(conditionClock, metadata.commentSegments, entry.index), sceneId: entryId });
       enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: triggered.inventoryUse };
       if (triggered.changed || applied.resources) {
         workingStates.set(String(descriptor.actorId), {
@@ -447,6 +454,7 @@ export async function commitCombatCommentOperation(request, {
       while (nextPrecedingEntry < precedingEntries.length && precedingEntries[nextPrecedingEntry].index <= index) {
         await resolvePreceding(precedingEntries[nextPrecedingEntry++]);
       }
+      advanceSubstancesToSegment(index);
       const actorPersistence = normalizePersistence(submitted.actorPersistence, submitted.actorId);
       const targetPersistence = normalizePersistence(submitted.targetPersistence, submitted.targetId);
       const actorRecordKey = `${actorPersistence.kind}:${actorPersistence.recordId}`;

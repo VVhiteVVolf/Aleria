@@ -28,6 +28,7 @@ function partnershipGroups(matrix, houseById) {
     <div class="relationship-matrix-unions__list">${groups.map(group => `
       <article class="relationship-matrix-union" data-matrix-partnership-id="${escapeHtml(group.partnership.id)}">
         <header><strong>${escapeHtml(group.presentation.label)}</strong><span>${escapeHtml([group.presentation.period, group.presentation.status].filter(Boolean).join(' · '))}</span></header>
+        ${group.partnership.notes ? `<p class="relationship-matrix-union__note">${escapeHtml(group.partnership.notes)}</p>` : ''}
         ${group.partners.map(person => relationshipCard({ person, labels: ['Partner dieser Verbindung'] }, houseById)).join('')}
         <div class="relationship-matrix-union__children"><h4>Gemeinsame Kinder · ${group.children.length}</h4>
           ${group.children.length ? group.children.map(child => relationshipCard({ person: child.person, labels: [child.type !== 'biological' ? PARENTAGE_LABELS[child.type] : '', child.legitimacy !== 'unknown' ? LEGITIMACY_LABELS[child.legitimacy] : ''].filter(Boolean) }, houseById)).join('') : '<p class="relationship-matrix-empty">Keine gemeinsamen Kinder verzeichnet</p>'}

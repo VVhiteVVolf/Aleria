@@ -11,7 +11,7 @@ test('beide Biografie-Sanitizer erhalten sichere Absatzcontainer aus Rich-Text-I
     readFile(almanachSafetyUrl, 'utf8'),
     readFile(genealogySafetyUrl, 'utf8')
   ]);
-  const expectedAllowedTags = "['BR', 'P', 'DIV', 'STRONG', 'EM', 'B', 'I', 'U', 'A', 'SPAN']";
+  const expectedAllowedTags = "['BR', 'P', 'DIV', 'H4', 'H5', 'HR', 'BLOCKQUOTE', 'UL', 'OL', 'LI', 'STRONG', 'EM', 'B', 'I', 'U', 'A', 'SPAN']";
 
   assert.match(almanachSource, new RegExp(expectedAllowedTags.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
   assert.match(genealogySource, new RegExp(expectedAllowedTags.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));

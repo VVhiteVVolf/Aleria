@@ -1,5 +1,6 @@
 // Biografie nach den Benutzervorgaben vom 12.09.2026.
-// Aufbau wie bei Idwals Mannschaft; bestehendes Portrait und sechs CK2-Trait-Icons.
+// Bestehendes Portrait; sparsame, gemeinsam gepflegte Eigenschaftskarten.
+import { reviewedBiographyTraitCards } from '../../../../../AleriaAlmanach/modules/character-trait-review/character-trait-review-model.js';
 export const GAIS_WYRM_BIOGRAPHY = {
   schema: 'aleria.biography-module',
   schemaVersion: 1,
@@ -25,39 +26,8 @@ export const GAIS_WYRM_BIOGRAPHY = {
     connectionTextOffset: 0,
     biographyTitle: 'Gais Wyrm – Iseults Goldjunge',
     biographyText: '<p><strong>Sir Gais Wyrm</strong> ist neunzehn Jahre alt und bemüht sich, diesen Umstand möglichst selten als Entschuldigung zu benötigen. Er steht gerade, spricht deutlich und weiß gewöhnlich, wem in einem Raum zuerst die Aufmerksamkeit gebührt. Zu seinem roten Haar trägt er die schwarzen und goldenen Farben seines Hauses mit sichtlichem Stolz. Schon bevor er den Mund öffnet, soll man erkennen können, dass man einen ordentlich erzogenen jungen Ritter vor sich hat.</p><p>Gais ist tatsächlich ein anständiger junger Mann. Er nimmt Verpflichtungen ernst, bemüht sich um verlässliches Verhalten und möchte seinem Haus keine Schande bereiten. Dabei ist er weder scheu noch unnahbar. In Gesellschaft findet er leicht einen passenden Gesprächseinstieg, hört aufmerksam zu und kann ausgesprochen gewinnend sein. Er mag Menschen, gute Unterhaltung und einen gelungenen Abend. Albernheiten dagegen liegen ihm wenig. Wo andere eine Runde erst dann gelungen finden, wenn jemand auf dem Tisch steht, fragt Gais sich bereits, wer für das zerbrochene Geschirr aufkommen wird.</p><p>Sein Ernst sitzt allerdings auf einem sehr bequemen Fundament: Gais ist überzeugt, vieles schon recht gut verstanden zu haben. Wie man sich benimmt, was etwas wert ist und weshalb ein gutes Pferd einen Unterschied macht, hat ihm schließlich niemand Geringeres als seine Großmutter beigebracht. Dass es Menschen gibt, die ohne diese Kenntnisse durchaus anständig leben, weiß er. Ganz begreifen kann er ihre Zufriedenheit damit nicht immer.</p>',
-    abilitiesTitle: 'Persönlichkeit',
-    abilities: [
-      {
-        title: 'Pflichtbewusst',
-        detail: 'Gais erledigt übertragene Aufgaben sorgfältig und nimmt Zusagen ernst. Wer sich auf ihn verlässt, soll keinen Anlass haben, seinen Namen mit einer Ausrede zu verbinden. Gerade in seiner Ausbildung ist er bereit, zuzuhören, sich vorzubereiten und auch die wenig glanzvollen Arbeiten ordentlich zu verrichten.',
-        icon: '../IconOrdner/Traits%20Icon/Conscientious.png'
-      },
-      {
-        title: 'Charismatisch',
-        detail: 'Er findet in Gesellschaft rasch den richtigen Ton. Gais kann Interesse zeigen, ein stockendes Gespräch weiterführen und seinem Gegenüber das Gefühl geben, ernst genommen zu werden. Seine gewinnende Art hilft ihm auch dort, wo sein strenger Blick zunächst etwas anderes erwarten lässt.',
-        icon: '../IconOrdner/Traits%20Icon/Charismatic_negotiator.png'
-      },
-      {
-        title: 'Kultiviert',
-        detail: 'Andere Kulturen, gepflegte Umgangsformen, Weine und gute Pferde interessieren ihn aufrichtig. Er merkt sich, was andernorts als höflich gilt, und versteht, dass ein angehender Gesandter mit cenyrischer Selbstverständlichkeit allein nicht überall weit kommt.',
-        icon: '../IconOrdner/Traits%20Icon/Groomed.png'
-      },
-      {
-        title: 'Eitel',
-        detail: 'Gais gefällt sich in seiner gesitteten Erscheinung. Wird seine gute Erziehung gelobt, hört er sehr genau hin; wird sie übersehen, trifft ihn das stärker, als er zugeben möchte. Iseults unerschütterliche Bewunderung macht es ihm leicht, einen gelungenen Auftritt für einen Beweis besonderer Befähigung zu halten.',
-        icon: '../IconOrdner/Traits%20Icon/Proud.png'
-      },
-      {
-        title: 'Materialistisch',
-        detail: 'Ansehen, Besitz und Dinge von Wert wiegen in seinem Urteil schwer. Ehre ist ihm wichtig, doch ein greifbarer Vorteil oder ein Gewinn an Prestige überzeugt ihn häufig eher als der schönere ritterliche Grundsatz. Einen Menschen unterschätzt er mitunter, weil dessen Möglichkeiten weniger eindrucksvoll aussehen.',
-        icon: '../IconOrdner/Traits%20Icon/Greedy.png'
-      },
-      {
-        title: 'Pedantisch',
-        detail: 'Er hält an Formen fest, selbst wenn die Situation etwas Nachsicht vertragen könnte. Eine falsche Anrede, nachlässige Tischmanieren oder ein schlecht gewählter Scherz bleiben ihm lange im Gedächtnis. Bei Freunden kann seine vermeintlich hilfreiche Korrektur deshalb erheblich lästiger werden als der ursprüngliche Fehltritt.',
-        icon: '../IconOrdner/Traits%20Icon/Stubborn.png'
-      }
-    ],
+    abilitiesTitle: 'Eigenschaften',
+    abilities: reviewedBiographyTraitCards('person--haus-wyrm--gais-wyrm'),
     historyTitle: 'Zwei Ritterväter und eine unüberhörbare Großmutter',
     historyText: '<p>Gais ist der Sohn von <strong>Padrig Wyrm</strong> und <strong>Sorcha Céin</strong>. Seine ritterliche Unterweisung begann bei seinem Großvater <strong>Eiddon Wyrm</strong>, der sein erster Rittervater war. Später übernahm Padrig selbst die Ausbildung seines Sohnes. So lernte Gais das Ritterhandwerk innerhalb der eigenen Familie, zunächst unter dem Blick des Großvaters und anschließend unter dem seines Vaters.</p><p>Heute ist er <strong>Uchelwyr</strong>, ein berittener Ritter Cenyrs. Daneben beherrscht er die Kunst der <strong>Cantref</strong>, insbesondere den disziplinierten Umgang mit dem Speer. Seine Leistungen sind ordentlich. Er hat geübt, kann seine Waffen führen und weiß sich im Sattel zu halten; ein außergewöhnlicher Kämpfer ist er deshalb noch lange nicht. Gais kann damit besser leben als mancher junge Ritter, dessen sämtliche Zukunftspläne von einem glänzenden Sieg abhängen. Für ihn gibt es mehrere Arten, seinem Haus nützlich und selbst bedeutend zu werden.</p><p>Die feineren Regeln dieses Bedeutendwerdens stammen vor allem von seiner Großmutter <strong>Iseult Arwydd</strong>. Sie unterwies ihn mit einer Gründlichkeit, die wenig Raum für unbetrachtete Lebensbereiche ließ: Haltung, Gang, Tischsitten, Anrede und das angemessene Benehmen gegenüber Damen. Selbst der diskrete Gang zum Abort entging ihrer Vorstellung von guter Erziehung nicht. Ein junger Mann ihres Hauses sollte schließlich nicht ausgerechnet zwischen zwei förmlichen Auftritten seine gesamte Kinderstube vergessen.</p><p>Gais nahm diese Unterweisung beinahe wie eine Glaubenslehre an. Wo seine Geschwister möglicherweise die Augen verdrehten, merkte er sich die richtige Haltung. Wo Iseult eine Regel wiederholte, gab er sich Mühe, sie beim nächsten Mal bereits zu erfüllen. Die Belohnung war beträchtlich: Er wurde ihr <strong>absolutes Goldstück</strong>.</p><p>In Iseults Augen kann Gais kaum etwas falsch machen. Tatsächlich gibt er ihr selten Anlass zum Tadel. Geschieht es doch, findet sie den eigentlichen Ursprung des Missgeschicks erstaunlich zuverlässig bei einem seiner Geschwister. Eilir oder Tudor hätten ihn abgelenkt, aufgehalten oder überhaupt erst auf den unseligen Gedanken gebracht. Ihr Goldjunge werde einmal etwas ganz Besonderes; davon ist sie überzeugt.</p><p>Gais weiß sehr genau, dass sie so denkt. Er muss diese Bevorzugung nicht eigens einfordern, um von ihr zu profitieren. Meist genügt es, weiterhin der Enkel zu sein, den Iseult so gern vorzeigt. Dass dieselbe Großmutter, die ihm Verantwortung eingetrichtert hat, ihm gelegentlich die Verantwortung für einen Fehler abnimmt, empfindet er weit seltener als Widerspruch, als es seinen Geschwistern lieb wäre.</p>',
     worksTitle: 'Können & Fachgebiete',

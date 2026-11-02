@@ -374,7 +374,10 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
     person('gwendolyn-aderyn', 'Gwendolyn Aderyn', 'female', '1695', '', 'house-aderyn', { title: 'Gräfin von Celtigerns Wacht' }),
     person('nodawl-illysywen', "Nodawl Illysywen O'Castellbryn", 'male', '1682', '1720', 'house-illysywen', { familyRole: 'forced' }),
     person('egon-gafyr', "Egon Gafyr O'Gwynthor", 'male', '1694', '', 'house-gafyr'),
-    person('brona-eisenherz', 'Brona Eisenherz', 'female', '1701', '', 'house-eisenherz'),
+    person('brona-eisenherz', 'Brona Eisenherz', 'female', '1701', '', 'house-eisenherz', {
+      title: 'Zeremonienmeisterin des Hauses Draig',
+      extensions: { registryManagedFields: ['title'], registryManagedFieldRevisions: { title: 14 } }
+    }),
     person('esyllt-arth', 'Esyllt Arth', 'female', '1696', '????', 'house-arth', { familyRole: 'affair' }),
     person('nesta', 'Nesta', 'female', '????', '????', '', { familyRole: 'affair' }),
     person('matilda', 'Matilda', 'female', '????', '????', '', { familyRole: 'affair' }),
@@ -735,7 +738,7 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 12,
+    sourceRevision: 14,
     registryManagedEntitySourceRevision: 11,
     houseBiographyModule: HOUSE_BIOGRAPHY
   }

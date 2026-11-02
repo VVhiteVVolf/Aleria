@@ -1,4 +1,5 @@
 import { getCombatWeaponLoadout, hasEquippedCombatShield } from './combat-weapon-loadout.js';
+import { getHealthTaskError } from '../character-health/health-trait-policy.js';
 
 // Grip belongs to the declared attack. It neither equips/unequips a shield nor
 // changes the character's persistent loadout or the source technique catalog.
@@ -7,7 +8,7 @@ export function resolveCombatWeaponGrip(action, profile = {}, requestedGrip = ''
   const supportsVersatileGrip = ['weapon', 'technique'].includes(action?.kind)
     && !loadout.dualWield && Boolean(action?.weapon?.versatileDamageFormula?.trim());
   const weaponGripBlockedReason = supportsVersatileGrip && hasEquippedCombatShield(profile)
-    ? 'Zweihändige Führung benötigt eine freie zweite Hand. Lege zuerst den Schild ab.' : '';
+    ? 'Zweihändige Führung benötigt eine freie zweite Hand. Lege zuerst den Schild ab.' : getHealthTaskError(profile, { hands: 2 });
   const weaponGrip = supportsVersatileGrip && (action.requiresTwoHands || String(requestedGrip).trim().toLowerCase() === 'two-handed')
     ? 'two-handed' : 'one-handed';
   if (!action) return { action, weaponGrip, supportsVersatileGrip, weaponGripBlockedReason };

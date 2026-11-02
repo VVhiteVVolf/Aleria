@@ -104,7 +104,9 @@ function affinityMatches(affinity, damageType, magical) {
 }
 
 export function resolveDamageResponse(profile = {}, { damageType = 'physisch', magical = false } = {}) {
-  const matches = (Array.isArray(profile.damageAffinities) ? profile.damageAffinities : [])
+  const traitAffinities = (profile.quirks || []).filter(q => q.active !== false)
+    .flatMap(q => (q.mechanics?.damageAffinities || []).map(a => ({ ...a, source: q.name })));
+  const matches = [...(Array.isArray(profile.damageAffinities) ? profile.damageAffinities : []), ...traitAffinities]
     .map(normalizeDamageAffinity)
     .filter(affinity => affinityMatches(affinity, damageType, magical));
   const response = matches.some(item => item.response === 'immune') ? 'immune'

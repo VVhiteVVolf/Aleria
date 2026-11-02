@@ -5,10 +5,10 @@ import { buildAuthoredCharacterImport } from '../lib/authored-character-import.m
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const readJson = async path => JSON.parse(await readFile(new URL(path, new URL('../../', import.meta.url)), 'utf8'));
 
-export async function importAuthoredCharacters({ sources, feature, check = false }) {
+export async function importAuthoredCharacters({ sources, feature, check = false, familyCandidates = [] }) {
   const exports = await Promise.all(sources.map(async sourcePath => ({ ...await readJson(sourcePath), sourcePath })));
   const [registry, snapshot, report] = await Promise.all(['registry.json', 'generated/characters.snapshot.json', 'generated/sync-report.json'].map(p=>readJson(`CharakterDatenbank/${p}`)));
-  const result = buildAuthoredCharacterImport({registry,snapshot,report},exports,feature);
+  const result = buildAuthoredCharacterImport({registry,snapshot,report},exports,feature,familyCandidates);
   const outputs = result.records.map(item=>[`CharakterDatenbank/${item.path}`,item.record]);
   outputs.push(['CharakterDatenbank/registry.json',result.registry],['CharakterDatenbank/generated/characters.snapshot.json',result.snapshot],['CharakterDatenbank/generated/sync-report.json',result.report]);
   for (const [path,data] of outputs) {

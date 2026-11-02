@@ -48,6 +48,12 @@ function biographyData(value = {}) {
   const documents = Array.isArray(value.documents) ? value.documents : [];
   return {
     portrait: image(value.portrait),
+    ...(Array.isArray(value.portraitCaptions) ? { portraitCaptions: Array.from({length:5}, (_,index)=>text(value.portraitCaptions[index],500)) } : {}),
+    ...(['cover','contain'].includes(value.portraitFit) ? { portraitFit: value.portraitFit } : {}),
+    ...(Array.isArray(value.knightMentors) ? { knightMentors: value.knightMentors.map(item => ({
+      name: text(item?.name, 300), role: text(item?.role, 100) || 'Rittervater',
+      detail: text(item?.detail, 1200), image: image(item?.image)
+    })).filter(item => item.name).slice(0, 8) } : {}),
     portraitStages: Array.from(
       { length: 4 },
       (_, index) => image(Array.isArray(value.portraitStages) ? value.portraitStages[index] : '')
@@ -92,7 +98,7 @@ function biographyData(value = {}) {
           imageFormat: ['portrait', 'landscape', 'square'].includes(item?.imageFormat) ? item.imageFormat : 'portrait'
         }).filter(item => item.type === 'heading'
           ? item.title || item.detail
-          : item.name || item.detail || item.image).slice(0, 64),
+          : item.name || item.detail || item.image).slice(0, 128),
     documentsTitle: text(value.documentsTitle, 200) || 'Eigentum & Besitz',
     documents: documents.map(item => ({
       icon: image(item?.icon) || text(item?.icon, 32),
@@ -107,6 +113,7 @@ function biographyData(value = {}) {
 export function createPublicPersonExtensions(extensions = {}) {
   const source = extensions?.biographyModule;
   if (!source || typeof source !== 'object') return {};
+  if (source.disabled === true) return { biographyModule: { schema: BIOGRAPHY_SCHEMA, schemaVersion: 1, disabled: true } };
   const stats = Array.isArray(source.stats) ? source.stats : [];
   return {
     biographyModule: {

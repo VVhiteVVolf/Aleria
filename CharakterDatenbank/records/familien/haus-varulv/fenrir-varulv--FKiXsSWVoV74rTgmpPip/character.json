@@ -103,9 +103,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/FKiXsSWVoV74rTgmpPip-inventar.json",
-    "sourceExportedAt": "2026-10-13T17:55:29.861Z",
-    "sourceUpdatedAt": "2026-10-13T17:55:29.861Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/FKiXsSWVoV74rTgmpPip.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "FKiXsSWVoV74rTgmpPip",
       "FKiXsSWVoV74rTgmpPip",
@@ -114,7 +114,7 @@
       "FKiXsSWVoV74rTgmpPip",
       "FKiXsSWVoV74rTgmpPip"
     ],
-    "contentHash": "110db6ca69d0c10fdce857973318d3d3d76e3e76e9b02b2fe582b1b18ececfe5"
+    "contentHash": "7d46c118b1227f3572e46f8f53429b7728cb9f11c3367f28abe498cf93fff6f0"
   },
   "local": {
     "notes": "",
@@ -21848,13 +21848,64 @@
           "portrait": ""
         },
         "updatedAt": "2026-10-13T17:55:29.861Z"
+      },
+      {
+        "id": "FKiXsSWVoV74rTgmpPip",
+        "name": "Fenrir Varulv",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-symbiose-varulv-wolf",
+              "name": "Silvanische Symbiose der Varulv (Wolf)",
+              "description": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+              "cost": 2,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Silvanische Symbiose · Angeboren · Tierverbundenheit",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Wahrnehmung",
+                    "bonus": 1
+                  },
+                  {
+                    "name": "Überleben",
+                    "bonus": 1
+                  },
+                  {
+                    "name": "Mit Tieren umgehen",
+                    "bonus": 1
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Silvanische Symbiose der Varulv (Wolf)",
+                "detail": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
   "character": {
     "id": "FKiXsSWVoV74rTgmpPip",
     "name": "Fenrir Varulv",
-    "updatedAt": "2026-10-13T17:55:29.861Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "combatProfile": {
       "savingThrows": [
         {
@@ -24907,74 +24958,34 @@
       },
       "quirks": [
         {
-          "stacking": "normal",
-          "mechanics": {
-            "savingThrow": 0,
-            "skill": 0,
-            "spellAttack": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "armorClass": 0,
-            "savingThrowAdvantageAttributes": [],
-            "attackRollMode": "normal",
-            "combatStartTemporaryHitPoints": 0,
-            "maximumHitPoints": 0,
-            "damage": 0,
-            "passivePerception": 0,
-            "spellSaveDc": 0,
-            "initiative": 0,
-            "movement": 0,
-            "attack": 0
-          },
-          "target": "self",
-          "triggerRules": [],
-          "duration": "",
-          "aiInstructions": "",
-          "name": "Aldrimarische Widerstandskraft",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "active": true,
+          "id": "development-trait-symbiose-varulv-wolf",
+          "name": "Silvanische Symbiose der Varulv (Wolf)",
+          "description": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp",
           "type": "trait",
-          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
-          "limitations": "",
-          "id": "starter-ancestry-aldrimarer-trait-1",
-          "trigger": "",
-          "priority": 0,
-          "tags": "Volk · Aldrimarer"
-        },
-        {
-          "stacking": "normal",
-          "target": "self",
-          "mechanics": {
-            "damage": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "armorClass": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "attack": 0,
-            "skill": 0,
-            "spellSaveDc": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "initiative": 0,
-            "combatStartTemporaryHitPoints": 0
-          },
-          "trigger": "",
-          "duration": "",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "triggerRules": [],
-          "aiInstructions": "",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "tags": "Hintergrund · Ritter",
-          "id": "starter-background-ritter-trait-1",
-          "name": "Ritterliche Herkunft und Standespflicht",
           "active": true,
-          "limitations": "",
-          "type": "trait",
-          "priority": 0
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Silvanische Symbiose · Angeboren · Tierverbundenheit",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Wahrnehmung",
+                "bonus": 1
+              },
+              {
+                "name": "Überleben",
+                "bonus": 1
+              },
+              {
+                "name": "Mit Tieren umgehen",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
         }
       ],
       "revision": 1790450756608,

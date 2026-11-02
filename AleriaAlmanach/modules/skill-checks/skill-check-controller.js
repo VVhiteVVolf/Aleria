@@ -298,6 +298,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   const kindSkills = getChecksForCommentKind(segment.kind);
   const settings = normalizeSkillCheckSettings({
     skillId: segment.skillId || kindSkills[0]?.id,
+    requiredSense: segment.skillRequiredSense,
     customModifier: segment.skillCustomModifier,
     difficulty: segment.skillDifficulty,
     rollMode: segment.skillRollMode,
@@ -377,6 +378,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
           <small>${target ? 'Wird von der Herausforderung vorgegeben' : 'SG 10 ist ein einfacher Standardversuch'}</small>
         </label>
         ${renderAutomaticRollMode(rollModes)}
+        ${['perception', 'investigation'].includes(settings.skillId) ? `<label>Wahrnehmungsweg<select data-skill-input="requiredSense">${Object.entries({ '': 'Gemischt / passende Alternative', vision: 'Sehen erforderlich', hearing: 'Hören erforderlich', smell: 'Riechen erforderlich', taste: 'Schmecken erforderlich', touch: 'Tasten erforderlich' }).map(([id, name]) => `<option value="${id}"${settings.requiredSense === id ? ' selected' : ''}>${name}</option>`).join('')}</select></label>` : ''}
       </div>
       ${target ? `<div class="skill-check-target-note"><b>${target.source === 'herausforderung' ? 'Freigegebene Proben' : `${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}`}</b>${renderPreferredSkillHints(target)}</div>` : ''}
       ${renderSkillAttemptBreakdown({ actor, profileModifier, ruleModifier, checkRule, totalModifier: automaticModifier, difficulty: target?.difficulty ?? settings.difficulty, checkType: getCheckDefinition(segment.skillId)?.checkType })}
@@ -467,6 +469,7 @@ function updateSegmentField(segment, field, value) {
   }
   if (field === 'targetChallengeId') segment.skillTargetChallengeId = String(value || '');
   if (field === 'difficulty') segment.skillDifficulty = clampNumber(value, 10, 1, 40);
+  if (field === 'requiredSense') segment.skillRequiredSense = String(value || '');
   if (field === 'customModifier') return;
   if (field === 'rollMode') return;
   if (field === 'challengeEnabled') {
@@ -579,6 +582,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
   const allowed = getChecksForCommentKind(segment.commentKind || segment.kind);
   const settings = normalizeSkillCheckSettings({
     skillId: segment.skillId || allowed[0]?.id,
+    requiredSense: segment.skillRequiredSense,
     customModifier: segment.skillCustomModifier,
     difficulty: segment.skillDifficulty,
     rollMode: segment.skillRollMode,

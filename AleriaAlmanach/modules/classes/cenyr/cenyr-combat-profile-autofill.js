@@ -39,6 +39,7 @@ function trainingSignature(profile = {}) {
  * their local class-training migration has not been uploaded yet.
  */
 export function getAutofilledCenyrCombatProfile(profile = {}) {
+  if (profile?.progression?.development?.mode === 'purchase') return profile;
   if (!profile || typeof profile !== 'object') return profile;
   const definition = getCenyrClassDefinitionForProfile(profile);
   if (!definition) return reconcileCultureFormArsenal(profile);

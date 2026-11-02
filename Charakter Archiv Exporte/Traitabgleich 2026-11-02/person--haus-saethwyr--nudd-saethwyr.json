@@ -1,0 +1,87 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "person--haus-saethwyr--nudd-saethwyr",
+    "name": "Nudd Saethwyr",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
+          "mechanics": {
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "charisma",
+                "bonus": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": -2
+              }
+            ]
+          },
+          "triggerRules": []
+        },
+        {
+          "id": "development-trait-ritualgebunden",
+          "name": "Ritualgebunden",
+          "description": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+          "cost": 0,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Religion",
+                "bonus": 2
+              }
+            ],
+            "initiative": -1
+          },
+          "triggerRules": []
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+          },
+          {
+            "title": "Ritualgebunden",
+            "detail": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp"
+          }
+        ]
+      }
+    }
+  }
+}

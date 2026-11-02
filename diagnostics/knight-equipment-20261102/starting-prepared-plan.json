@@ -1,0 +1,174 @@
+{
+  "dryRun": false,
+  "profiles": [
+    {
+      "name": "Caralyn Chwedonol",
+      "changed": true,
+      "items": [
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-1",
+          "name": "Signalpfeife",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:signalpfeife",
+            "revision": "50fc073cd20c5da4b7111cbc"
+          }
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-2",
+          "name": "Wasserschlauch",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:wasserschlauch",
+            "revision": "9ac0c4ae35ada6ac7f54ffd4"
+          }
+        },
+        {
+          "id": "Eka4z7TWpzEgx8KjhIzy-start-possessions-20261102-3",
+          "name": "Nadel & Faden",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:nadel-faden",
+            "revision": "b04f80d412691a2b54c5f430"
+          }
+        }
+      ],
+      "addedCopper": 680,
+      "moneyState": {
+        "gold": 0,
+        "silver": 6,
+        "copper": 80,
+        "pfennig": 0,
+        "totalCopper": 680
+      },
+      "rationale": "Kleine persönliche Barschaft einer jungen Morwyr aus einem Küstenritterhaus; praktische Dinge für Dienst und Reisen."
+    },
+    {
+      "name": "Rianna Wyrm",
+      "changed": true,
+      "items": [
+        {
+          "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-1",
+          "name": "Spiegel (Metall)",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:spiegel",
+            "revision": "8d141c8e0d0124680c7f3c2f"
+          }
+        },
+        {
+          "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-2",
+          "name": "Holzkamm",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:holzkamm",
+            "revision": "21ee820a133052493f92a26f"
+          }
+        },
+        {
+          "id": "person--haus-wyrm--rianna-wyrm-start-possessions-20261102-3",
+          "name": "Ring · unverzaubert",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:arkanist:unverzauberter-ring",
+            "revision": "27322dbc67664138eb2b928a"
+          }
+        }
+      ],
+      "addedCopper": 1840,
+      "moneyState": {
+        "gold": 1,
+        "silver": 8,
+        "copper": 40,
+        "pfennig": 0,
+        "totalCopper": 1840
+      },
+      "rationale": "Gut versorgte Tochter des wohlhabenden Hauses Wyrm mit Freude an Schmuck und gepflegtem Auftreten; persönliche Barschaft, kein Hausvermögen."
+    },
+    {
+      "name": "Lefraye Gafyr",
+      "changed": true,
+      "items": [
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-1",
+          "name": "Notizbuch (klein)",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:notizbuch",
+            "revision": "49c9999873bc24a73529d569"
+          }
+        },
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-2",
+          "name": "Feder & Tinte",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feder-tinte",
+            "revision": "261195af426d183145b98220"
+          }
+        },
+        {
+          "id": "person--haus-gafyr--lefraye-gafyr-start-possessions-20261102-3",
+          "name": "Feuerstein & Stahl",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+            "revision": "cdb8d503f7c8e15f7af760a6"
+          }
+        }
+      ],
+      "addedCopper": 760,
+      "moneyState": {
+        "gold": 0,
+        "silver": 7,
+        "copper": 60,
+        "pfennig": 0,
+        "totalCopper": 760
+      },
+      "rationale": "Solide, genügsame Barschaft für eine junge Helwyr; leeres Notizbuch und Schreibzeug passen zu Geschichte und Beobachtung, Feuerstahl zur Wildnis."
+    },
+    {
+      "name": "Oweta Draig",
+      "changed": true,
+      "items": [
+        {
+          "id": "vk0xAa3ZcEhVvGC1CzNq-start-possessions-20261102-1",
+          "name": "Wetzstein",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:wetzstein",
+            "revision": "0aaded8f3a86e07035d95b40"
+          }
+        },
+        {
+          "id": "vk0xAa3ZcEhVvGC1CzNq-start-possessions-20261102-2",
+          "name": "Nadel & Faden",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:nadel-faden",
+            "revision": "b04f80d412691a2b54c5f430"
+          }
+        },
+        {
+          "id": "vk0xAa3ZcEhVvGC1CzNq-start-possessions-20261102-3",
+          "name": "Kleiner Zinnritter",
+          "quantity": "1",
+          "definitionRef": {
+            "id": "gwynthor-seven:oweta-zinnritter",
+            "revision": "9faab346c8b3c1f9a38e4627"
+          }
+        }
+      ],
+      "addedCopper": 1250,
+      "moneyState": {
+        "gold": 1,
+        "silver": 2,
+        "copper": 50,
+        "pfennig": 0,
+        "totalCopper": 1250
+      },
+      "rationale": "Gut versorgte, praktisch veranlagte junge Draig-Ritterin; Pflegezeug für unterwegs und eine kleine Zinnfigur nach ihrer belegten Sammlung."
+    }
+  ],
+  "definitionDocuments": 22
+}

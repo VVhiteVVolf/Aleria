@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-02",
+  "desktop": {
+    "tested": 22,
+    "wrongTitles": 0,
+    "horizontalOverflow": 0,
+    "scrollOnOpen": 0
+  },
+  "mobile": {
+    "tested": 22,
+    "cssWidth": 378,
+    "wrongTitles": 0,
+    "horizontalOverflow": 0,
+    "unloadedImages": 0,
+    "scrollOnOpen": 0
+  },
+  "passed": [
+    "district name via explicit button",
+    "district name via Enter",
+    "mobile district naming",
+    "one house across two districts and one outer point",
+    "two houses sharing a district",
+    "individual removal and undo",
+    "reload persistence",
+    "export file downloaded and inspected",
+    "UI import of exported draft",
+    "map zoom and fit",
+    "colored/plain map toggle",
+    "physical pointer drag adds another district without removing old assignments",
+    "reset and reload restore thirteen neutral names and zero assignments"
+  ],
+  "viewportReset": true
+}

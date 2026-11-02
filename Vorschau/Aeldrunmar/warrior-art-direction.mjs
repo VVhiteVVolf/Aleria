@@ -1,3 +1,4 @@
+import {additionalWarriorDirections} from './additional-houses.mjs';
 export const classDesigns=Object.freeze({
  isen:{name:'Isen',equipment:'Gerades Ritterschwert oder Zweihandschwert; Schuppen- und Kettenharnisch mit einzelnen Arm- und Beinschienen.',weapon:'ONE straight broad-bladed medieval sword, simple crossguard, coherent blade and hilt, held calmly point down; no shield.',withHorse:false},
  wigar:{name:'Wigar',equipment:'Speer, Pike oder Hellebarde; beweglicher Ketten- und Schuppenharnisch, kein Schild.',weapon:'ONE long straight practical polearm held upright beside the body with full head and butt visible; both hands on the same straight shaft when using two hands. No shield.',withHorse:false},
@@ -45,4 +46,4 @@ const directions=[
  ['edgcumbe','gliwere',null,'Older female devotional battle bard in dark-blue wool travelling mantle over brown leather scale and visible ivory mail collar, plain open iron cap pushed back enough for calm face, small praying-figure badge on mantle. ONE broad straight duelling sword with simple crossguard held point down in right hand; small wooden lyre secured on back. No mitre, crown, holy magic or clerical staff.','Die betende Gestalt wird als andächtiger Gliwere interpretiert. Ritterliche Ausrüstung und kleine Leier erhalten die geforderte adelige Kriegerrolle; ein bestimmtes Kirchenamt bleibt offen.']
 ];
 
-export const warriorDirections=Object.freeze(directions.map(([id,classId,horseColour,design,reason])=>Object.freeze({id,classId,horseColour,design,reason})));
+export const warriorDirections=Object.freeze([...directions.map(([id,classId,horseColour,design,reason])=>Object.freeze({id,classId,horseColour,design,reason})),...additionalWarriorDirections]);

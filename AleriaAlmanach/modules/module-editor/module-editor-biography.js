@@ -105,7 +105,7 @@ function buildBiographyAbilityRows(abilities = [], mode = 'module') {
     <div class="biography-edit-row ${mode === 'inline' ? '' : 'module-biography-ability-row'}" ${mode === 'inline' ? `data-biography-ability-index="${index}"` : ''}>
       ${buildBiographyAbilityIconField(item, index, mode)}
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Titel" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="title"` : 'data-module-editor-action="sync-json-preview"'}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beschreibung" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="detail"` : 'data-module-editor-action="sync-json-preview"'}>
+      <textarea class="inline-edit-input ${mode === 'module' ? 'me-biography-ability-detail' : ''}" placeholder="Beschreibung" ${mode === 'inline' ? `data-inline-action="update-biography-ability-field" data-biography-ability-index="${index}" data-biography-ability-field="detail"` : 'data-module-editor-action="sync-json-preview"'}>${escapeHtml(item.detail || '')}</textarea>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-ability" data-biography-ability-index="${index}"` : 'data-module-editor-action="remove-biography-ability-row"'}>Loeschen</button>
     </div>`).join('');
 }
@@ -127,17 +127,6 @@ function buildBiographySectionRows(sections = [], mode = 'module') {
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-section-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ueberschrift" ${mode === 'inline' ? `data-inline-action="update-biography-section-field" data-biography-section-index="${index}" data-biography-section-field="title"` : ''}>
       <textarea class="inline-edit-textarea ${mode === 'module' ? 'me-biography-section-text' : ''}" placeholder="Text oder je Zeile ein Listenpunkt" ${mode === 'inline' ? `data-inline-action="update-biography-section-field" data-biography-section-index="${index}" data-biography-section-field="text"` : ''}>${escapeHtml(item.text || '')}</textarea>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-section" data-biography-section-index="${index}"` : 'data-module-editor-action="remove-biography-section-row"'}>Loeschen</button>
-    </div>`).join('');
-}
-
-function buildBiographyConnectionRows(connections = [], mode = 'module') {
-  const rows = (Array.isArray(connections) && connections.length ? connections : [{ image: '', name: '', detail: '' }]);
-  return rows.map((item, index) => `
-    <div class="biography-edit-row connection ${mode === 'inline' ? '' : 'module-biography-connection-row'}" ${mode === 'inline' ? `data-biography-connection-index="${index}"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-image' : ''}" type="url" value="${escapeHtml(item.image || '')}" placeholder="Imgur-Bild" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="image"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-name' : ''}" type="text" value="${escapeHtml(item.name || '')}" placeholder="Name" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="name"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beziehung" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>
-      <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-connection" data-biography-connection-index="${index}"` : 'data-module-editor-action="remove-biography-connection-row"'}>Löschen</button>
     </div>`).join('');
 }
 
@@ -212,7 +201,7 @@ function buildBiographyDocumentRows(documents = [], mode = 'module') {
     <div class="biography-edit-row document ${mode === 'inline' ? 'inline-biography-document-row' : 'module-biography-document-row'}">
       ${buildBiographyDocumentIconField(item, index, mode)}
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Überschrift" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="title"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-text' : ''}" type="text" value="${escapeHtml(item.text || '')}" placeholder="Untertext" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="text"` : ''}>
+      <textarea class="inline-edit-input ${mode === 'module' ? 'me-biography-document-text' : ''}" placeholder="Untertext" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="text"` : ''}>${escapeHtml(item.text || '')}</textarea>
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-document-link' : ''}" type="url" value="${escapeHtml(item.link || '')}" placeholder="Link zur Seite / URL (optional)" ${mode === 'inline' ? `data-inline-action="update-biography-document-field" data-biography-document-index="${index}" data-biography-document-field="link"` : ''}>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-document" data-biography-document-index="${index}"` : 'data-module-editor-action="remove-biography-document-row"'}>Löschen</button>
     </div>`).join('');
@@ -244,14 +233,6 @@ function collectModuleBiographySections(card) {
   })).filter(item => item.title || item.text);
 }
 
-function collectModuleBiographyConnections(card) {
-  return Array.from(card.querySelectorAll('.module-biography-connection-row')).map(row => ({
-    image: getTrimmedFormValue(row, '.me-biography-connection-image'),
-    name: getTrimmedFormValue(row, '.me-biography-connection-name'),
-    detail: getTrimmedFormValue(row, '.me-biography-connection-detail')
-  })).filter(item => item.image || item.name || item.detail);
-}
-
 function collectModuleBiographyDocuments(card) {
   return Array.from(card.querySelectorAll('.module-biography-document-row')).map(row => ({
     icon: getTrimmedFormValue(row, '.me-biography-document-icon'),
@@ -268,7 +249,7 @@ function buildBiographyConnectionRows(connections = [], mode = 'module') {
       return `
     <div class="biography-edit-row connection-heading ${mode === 'inline' ? '' : 'module-biography-connection-row'}" ${mode === 'inline' ? `data-biography-connection-index="${index}"` : ''} data-biography-connection-type="heading">
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-title' : ''}" type="text" value="${escapeHtml(item.title || '')}" placeholder="Ueberschrift" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="title"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Unterzeile optional" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>
+      <textarea class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" placeholder="Unterzeile optional" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>${escapeHtml(item.detail || '')}</textarea>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-connection" data-biography-connection-index="${index}"` : 'data-module-editor-action="remove-biography-connection-row"'}>Loeschen</button>
     </div>`;
     }
@@ -282,7 +263,7 @@ function buildBiographyConnectionRows(connections = [], mode = 'module') {
         <option value="square"${item.imageFormat === 'square' ? ' selected' : ''}>Quadrat</option>
       </select>
       <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-name' : ''}" type="text" value="${escapeHtml(item.name || '')}" placeholder="Name" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="name"` : ''}>
-      <input class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" type="text" value="${escapeHtml(item.detail || '')}" placeholder="Beziehung" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>
+      <textarea class="inline-edit-input ${mode === 'module' ? 'me-biography-connection-detail' : ''}" placeholder="Beziehung" ${mode === 'inline' ? `data-inline-action="update-biography-connection-field" data-biography-connection-index="${index}" data-biography-connection-field="detail"` : ''}>${escapeHtml(item.detail || '')}</textarea>
       <button class="module-editor-mini-btn module-editor-danger" type="button" ${mode === 'inline' ? `data-inline-action="remove-biography-connection" data-biography-connection-index="${index}"` : 'data-module-editor-action="remove-biography-connection-row"'}>Loeschen</button>
     </div>`;
   }).join('');
@@ -415,165 +396,58 @@ function removeModuleBiographyConnectionRow(button) {
   syncModuleJsonPreview();
 }
 
+function buildBiographyMentorRows(items = []) {
+  return items.map(item => `<div class="biography-mentor-edit-row">
+    ${[['name', 'Name'], ['role', 'Bezeichnung'], ['image', 'Portrait-URL'], ['detail', 'Ausbildung / Zeitraum']].map(([field, label]) => `<label>${label}<input class="inline-edit-input" data-mentor-field="${field}" value="${escapeHtml(item[field] || '')}"></label>`).join('')}
+    <button type="button" class="module-editor-mini-btn module-editor-danger" data-module-editor-action="remove-biography-mentor-row" aria-label="Rittervater oder Rittermutter entfernen">×</button>
+  </div>`).join('');
+}
+
+function editModuleBiographyMentorRow(trigger, remove = false) {
+  const card = trigger.closest('.module-page-card, [data-biography-embedded-card]');
+  const wrap = card?.querySelector('.module-biography-mentors');
+  if (!wrap) return;
+  if (remove) trigger.closest('.biography-mentor-edit-row')?.remove();
+  else if (wrap.children.length < 8) wrap.insertAdjacentHTML('beforeend', buildBiographyMentorRows([{ role: 'Rittervater' }]));
+  syncModuleJsonPreview();
+}
+
 function buildBiographyModuleEditorFields(page) {
-  const biography = sanitizeBiographyData(page?.biography || {});
-  if (!biography.portraitStages.some(Boolean) && Array.isArray(page?.imageTabs)) {
-    biography.portraitStages = Array.from(
-      { length: 4 },
-      (_, index) => String(page.imageTabs[index]?.image || '').trim()
-    );
+  const b = sanitizeBiographyData(page?.biography || {});
+  if (!b.portraitStages.some(Boolean) && Array.isArray(page?.imageTabs)) {
+    b.portraitStages = Array.from({ length: 4 }, (_, index) => String(page.imageTabs[index]?.image || '').trim());
   }
-  return `
-      <div class="module-page-type-block${inferModulePageType(page) === 'biography' ? ' visible' : ''}" data-page-type="biography">
-        <div class="module-editor-grid">
-          <div class="module-editor-field wide">
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Infotabelle</label>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-stat-row">+ Zeile</button>
-            </div>
-            <div class="inline-stat-editor module-biography-stats">
-              ${buildModuleBiographyStatRows(page?.stats || [])}
-            </div>
-          </div>
-          ${buildBiographyPortraitStagesEditor(biography)}
-          <div class="module-editor-field">
-            <label>Biografie-Überschrift</label>
-            <input type="text" class="me-biography-title" value="${escapeHtml(biography.biographyTitle)}">
-          </div>
-          <div class="module-editor-field">
-            <label>Linke Inhaltsbreite (%)</label>
-            <input type="number" class="me-biography-side-width" min="35" max="100" step="1" value="${escapeHtml(biography.sideWidth)}">
-            <div class="module-editor-help">Steuert Bild, Infotabelle und Zitatbox gemeinsam.</div>
-          </div>
-          <div class="module-editor-field">
-            <label>Fähigkeiten-Überschrift</label>
-            <input type="text" class="me-biography-abilities-title" value="${escapeHtml(biography.abilitiesTitle)}">
-          </div>
-          <div class="module-editor-field wide">
-            <label>Biografie</label>
-            ${buildTextFormatToolbar()}
-            <textarea class="me-biography-text">${escapeHtml(biography.biographyText || page?.description || '')}</textarea>
-          </div>
-          <div class="module-editor-field wide">
-            <label>Fähigkeiten & Spezialgebiete</label>
-            <div class="module-editor-inline" style="justify-content:flex-end;">
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-ability-row">+ Punkt</button>
-            </div>
-            <div class="biography-edit-list module-biography-abilities">
-              ${biography.abilities.length ? buildBiographyAbilityRows(biography.abilities, 'module') : '<div class="inline-placeholder-note">Noch keine Punkte vorhanden.</div>'}
-            </div>
-          </div>
-          <div class="module-editor-field">
-            <label>Geschichte-Überschrift</label>
-            <input type="text" class="me-biography-history-title" value="${escapeHtml(biography.historyTitle)}">
-          </div>
-          <div class="module-editor-field">
-            <label>Werke-Überschrift</label>
-            <input type="text" class="me-biography-works-title" value="${escapeHtml(biography.worksTitle)}">
-          </div>
-          <div class="module-editor-field wide">
-            <label>Geschichte & Wirkung</label>
-            ${buildTextFormatToolbar()}
-            <textarea class="me-biography-history-text">${escapeHtml(biography.historyText)}</textarea>
-          </div>
-          <div class="module-editor-field wide">
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Bekannte Werke</label>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-simple-line-row" data-simple-line-list="biographyWorks">+ Werk</button>
-            </div>
-            ${buildModuleSimpleLineList(biography.works, 'biographyWorks')}
-          </div>
-          <div class="module-editor-field wide">
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Zusatzabschnitte im Hauptbereich</label>
-              <span>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-section-row" data-biography-section-position="afterIntro">+ Nach Haupttext</button>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-section-row" data-biography-section-position="afterWorks">+ Nach Abschnitt 3</button>
-              </span>
-            </div>
-            <div class="module-editor-help">Fuer Textbloecke oder Bulletlisten zwischen den Hauptreitern der Biographie.</div>
-            <div class="biography-edit-list module-biography-sections">
-              ${biography.extraSections.length ? buildBiographySectionRows(biography.extraSections, 'module') : '<div class="inline-placeholder-note">Noch keine Zusatzabschnitte vorhanden.</div>'}
-            </div>
-          </div>
-          <div class="module-editor-field">
-            <label>Trivia-Überschrift</label>
-            <input type="text" class="me-biography-trivia-title" value="${escapeHtml(biography.triviaTitle)}">
-          </div>
-          <div class="module-editor-field">
-            <label>Zitate-Überschrift</label>
-            <input type="text" class="me-biography-quotes-title" value="${escapeHtml(biography.quotesTitle)}">
-          </div>
-          <div class="module-editor-field wide">
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Trivia</label>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-simple-line-row" data-simple-line-list="biographyTrivia">+ Trivia</button>
-            </div>
-            ${buildModuleSimpleLineList(biography.trivia, 'biographyTrivia')}
-          </div>
-          <div class="module-editor-field wide">
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <label>Zitate</label>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-simple-line-row" data-simple-line-list="biographyQuotes">+ Zitat</button>
-            </div>
-            ${buildModuleSimpleLineList(biography.quotes, 'biographyQuotes')}
-          </div>
-          <div class="module-editor-field">
-            <label>Verbindungen-Überschrift</label>
-            <input type="text" class="me-biography-connections-title" value="${escapeHtml(biography.connectionsTitle)}">
-          </div>
-          <div class="module-editor-field">
-            <label>Verbindungsportrait-Hoehe (px)</label>
-            <input type="number" class="me-biography-connection-portrait-height" min="44" max="140" step="1" value="${escapeHtml(biography.connectionPortraitHeight)}">
-            <div class="module-editor-help">Macht die kleinen Portraitbilder in den Verbindungen hoeher oder kompakter.</div>
-          </div>
-          <div class="module-editor-field">
-            <label>Verbindungstext-Versatz <span>${escapeHtml(biography.connectionTextOffset)}px</span></label>
-            <input class="module-size-range me-biography-connection-text-offset" type="range" min="0" max="80" step="1" value="${escapeHtml(biography.connectionTextOffset)}" data-module-editor-action="update-range-percent-label">
-            <div class="module-editor-help">Rueckt den Text in den Verbindungen nach rechts.</div>
-          </div>
-          <div class="module-editor-field">
-            <label>Besitz-/Dokumente-Überschrift</label>
-            <input type="text" class="me-biography-documents-title" value="${escapeHtml(biography.documentsTitle)}">
-          </div>
-          <div class="module-editor-field wide">
-            <label>Verbindungen</label>
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <span class="module-editor-help">Bild, Name und Beziehung der verbundenen Person.</span>
-              <span>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-connection-row" data-biography-connection-kind="heading">+ Trenner</button>
-                <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-connection-row" data-biography-connection-kind="connection">+ Verbindung</button>
-              </span>
-            </div>
-            <div class="biography-edit-list module-biography-connections">
-              ${buildBiographyConnectionRows(biography.connections, 'module')}
-            </div>
-          </div>
-          <div class="module-editor-field wide">
-            <label>${escapeHtml(biography.documentsTitle || 'Eigentum & Besitz')}</label>
-            <div class="module-editor-inline" style="justify-content:space-between;">
-              <span class="module-editor-help">Icon per Bild-URL oder Zeichen; der optionale Link öffnet den Eintrag in einer neuen Seite.</span>
-              <button class="module-editor-mini-btn" type="button" data-module-editor-action="add-biography-document-row">+ Eintrag</button>
-            </div>
-            <div class="biography-edit-list module-biography-documents">
-              ${buildBiographyDocumentRows(biography.documents, 'module')}
-            </div>
-          </div>
-          <div class="module-editor-field wide">
-            <label>Zitatbox links</label>
-            ${buildTextFormatToolbar()}
-            <textarea class="me-biography-quote small">${escapeHtml(page?.quote || '')}</textarea>
-          </div>
-          <div class="module-editor-field">
-            <label>Zitat von</label>
-            <input type="text" class="me-biography-quote-by" value="${escapeHtml(page?.quoteBy || '')}">
-          </div>
-          <div class="module-editor-field wide">
-            <label>Fußzeile</label>
-            <input type="text" class="me-biography-footer" value="${escapeHtml(biography.footer)}">
-          </div>
-        </div>
-      </div>`;
+  const group = (title, body, options = {}) => AleriaBiographyCards.editorGroup(title, body, { escape: escapeHtml, ...options });
+  const field = (label, key, value, type = 'text', attributes = '') => `<label class="module-editor-field wide">${escapeHtml(label)}<input type="${type}" class="me-biography-${key}" value="${escapeHtml(value)}" ${attributes}></label>`;
+  const rich = (label, key, value) => `<div class="module-editor-field wide"><label>${escapeHtml(label)}</label>${buildTextFormatToolbar({ biography: true })}<textarea class="me-biography-${key}">${escapeHtml(value)}</textarea></div>`;
+  const button = (label, action, attributes = '') => `<button type="button" class="module-editor-mini-btn" data-module-editor-action="${action}" ${attributes}>${label}</button>`;
+  const lineList = (title, key, items, list) => group(title,
+    field('Überschrift', key + '-title', b[key + 'Title']) + button('+ Eintrag', 'add-simple-line-row', `data-simple-line-list="${list}"`) + buildModuleSimpleLineList(items, list), { count: items.length });
+  return `<div class="module-page-type-block${inferModulePageType(page) === 'biography' ? ' visible' : ''}" data-page-type="biography">
+    ${group('Biografie & Hintergrund',
+      field('Biografie-Überschrift', 'title', b.biographyTitle) + rich('Über die Person', 'text', b.biographyText || page?.description || '')
+      + field('Hintergrund-Überschrift', 'history-title', b.historyTitle) + rich('Hintergrund & Werdegang', 'history-text', b.historyText),
+      { help: 'Absätze, Zwischenüberschriften und Trenner gliedern längere Texte. Zusätzliche Kapitel stehen im Bereich „Weitere Kapitel“.' })}
+    ${group('Portrait & Steckbrief', buildBiographyPortraitStagesEditor(b)
+      + `<div class="module-editor-field wide">${button('+ Steckbriefzeile', 'add-biography-stat-row')}<div class="inline-stat-editor module-biography-stats">${buildModuleBiographyStatRows(page?.stats || [])}</div></div>`, { count: (page?.stats || []).length })}
+    ${group('Ritterväter & Rittermütter', `<div class="module-editor-field wide">${button('+ Ausbildungsperson', 'add-biography-mentor-row')}<div class="biography-edit-list module-biography-mentors">${buildBiographyMentorRows(b.knightMentors || [])}</div></div>`,
+      { count: (b.knightMentors || []).length, help: 'Nur bekannte Ausbildungspersonen eintragen. Das kleine Portrait erscheint direkt unter dem Hauptportrait.' })}
+    ${group('Persönlichkeit & Spezialgebiete', field('Überschrift', 'abilities-title', b.abilitiesTitle)
+      + `<div class="module-editor-field wide">${button('+ Eigenschaft', 'add-biography-ability-row')}<div class="biography-edit-list module-biography-abilities">${b.abilities.length ? buildBiographyAbilityRows(b.abilities, 'module') : ''}</div></div>`, { count: b.abilities.length })}
+    ${group('Weitere Kapitel', `<div class="module-editor-field wide">${button('+ Nach Einleitung', 'add-biography-section-row', 'data-biography-section-position="afterIntro"')} ${button('+ Nach Werken', 'add-biography-section-row', 'data-biography-section-position="afterWorks"')}<div class="biography-edit-list module-biography-sections">${buildBiographySectionRows(b.extraSections, 'module')}</div></div>`,
+      { count: b.extraSections.length, help: 'Jedes Kapitel erhält eine eigene Überschrift und einen dezenten Trenner. Für Listen einen Eintrag pro Zeile schreiben.' })}
+    ${lineList('Bekannte Werke', 'works', b.works, 'biographyWorks')}
+    ${lineList('Eigenarten & Wissenswertes', 'trivia', b.trivia, 'biographyTrivia')}
+    ${lineList('Zitate', 'quotes', b.quotes, 'biographyQuotes')}
+    ${group('Beziehungen & Verbindungen', field('Überschrift', 'connections-title', b.connectionsTitle)
+      + `<div class="module-editor-field wide">${button('+ Verbindung', 'add-biography-connection-row', 'data-biography-connection-kind="connection"')} ${button('+ Gruppentrenner', 'add-biography-connection-row', 'data-biography-connection-kind="heading"')}<div class="biography-edit-list module-biography-connections">${buildBiographyConnectionRows(b.connections, 'module')}</div></div>`, { count: b.connections.length })}
+    ${group('Eigentum & Dokumente', field('Überschrift', 'documents-title', b.documentsTitle)
+      + `<div class="module-editor-field wide">${button('+ Eintrag', 'add-biography-document-row')}<div class="biography-edit-list module-biography-documents">${buildBiographyDocumentRows(b.documents, 'module')}</div></div>`, { count: b.documents.length })}
+    ${group('Leitgedanke & Gestaltung', rich('Zitat beim Portrait', 'quote', page?.quote || '') + field('Zitat von', 'quote-by', page?.quoteBy || '')
+      + field('Fußzeile', 'footer', b.footer) + field('Inhaltsbreite links (%)', 'side-width', b.sideWidth, 'number', 'min="35" max="100"')
+      + field('Verbindungsportraits: Höhe (px)', 'connection-portrait-height', b.connectionPortraitHeight, 'number', 'min="44" max="140"')
+      + field('Abstand zum Verbindungstext (px)', 'connection-text-offset', b.connectionTextOffset, 'number', 'min="0" max="80"'))}
+  </div>`;
 }
 
 function collectBiographyModuleEditorPage(card, page) {
@@ -586,6 +460,7 @@ function collectBiographyModuleEditorPage(card, page) {
   delete page.imageTabLabel;
   page.biography = sanitizeBiographyData({
     portrait: getTrimmedFormValue(card, '.me-biography-portrait'),
+    knightMentors: Array.from(card.querySelectorAll('.module-biography-mentors .biography-mentor-edit-row')).map(row => Object.fromEntries(Array.from(row.querySelectorAll('[data-mentor-field]')).map(input => [input.dataset.mentorField, input.value.trim()]))),
     portraitStages: collectBiographyPortraitStages(card),
     portraitCaptions: collectBiographyPortraitCaptions(card),
     portraitFit: getTrimmedFormValue(card, '.me-biography-portrait-fit'),

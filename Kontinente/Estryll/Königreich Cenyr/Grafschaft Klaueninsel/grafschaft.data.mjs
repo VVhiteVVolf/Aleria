@@ -620,9 +620,9 @@ export default createTerritory({
         },
         {
           "office": "Herold des Grafen",
-          "name": "Cerridwyn Arth",
+          "name": "Olwen Arth",
           "seat": "",
-          "imageSrc": "/Stammbäume/assets/images/portraits/haus-arth/cerridwyn-grael.jpg",
+          "imageSrc": "/Stammbäume/assets/images/portraits/haus-arth/olwen-arth.jpg",
           "familyId": "haus-arth",
           "featured": false
         },

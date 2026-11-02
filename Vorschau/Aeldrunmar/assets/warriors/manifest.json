@@ -1979,6 +1979,110 @@
       }
     },
     {
+      "id": "heswick",
+      "source": "assets/warriors/generated/heswick.png",
+      "sourceSha256": "77157492e57fff97b2ed08b94d4ddf6baf6a27918de1e1dbf3b0c265fdad61dc",
+      "production": "assets/warriors/production/heswick.png",
+      "productionSha256": "1e92d1c4e1b5c833c3d45359b57077cbc3e2e32d22bdad937733488f67cabc38",
+      "preview": "assets/warriors/previews/heswick.webp",
+      "previewSha256": "46666bf5be725c97a4eb1f8730bc0b5efa933367c0797dd89efe6e06c1682c2e",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1010,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 14,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 890866,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 681998,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          170,
+          12,
+          954,
+          1507
+        ],
+        "margins": {
+          "left": 170,
+          "top": 12,
+          "right": 70,
+          "bottom": 29
+        },
+        "minimumMarginPixels": 12,
+        "touchesCanvas": false,
+        "transparentPixels": 916557,
+        "opaquePixels": 651929,
+        "partialAlphaPixels": 4378,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          125,
+          7,
+          718,
+          1133
+        ],
+        "margins": {
+          "left": 125,
+          "top": 7,
+          "right": 50,
+          "bottom": 19
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 508730,
+        "opaquePixels": 360285,
+        "partialAlphaPixels": 15721,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
       "id": "humber",
       "source": "assets/warriors/generated/humber.png",
       "sourceSha256": "ed071b7fc215d6714c30b72fdfebf30fea9c1687c06e8b2301b15ba79f119720",
@@ -2588,6 +2692,110 @@
         "transparentPixels": 485226,
         "opaquePixels": 383451,
         "partialAlphaPixels": 16059,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "ransford",
+      "source": "assets/warriors/generated/ransford.png",
+      "sourceSha256": "b07b64d4cf79c292d29c9f206a550f524bad9df02cb4a06d9c26bb748a6d9d1c",
+      "production": "assets/warriors/production/ransford.png",
+      "productionSha256": "7784b1597606121e7d711e915e8d92eaf50c33a9cb9cea3db0ba260456b05c8b",
+      "preview": "assets/warriors/previews/ransford.webp",
+      "previewSha256": "0c9260b64ca51a7ec1502563841cdf9d167a5fc2a2abefe1d89bae86d772b7bd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1011,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 13,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 793150,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 779714,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          37,
+          7,
+          1008,
+          1522
+        ],
+        "margins": {
+          "left": 37,
+          "top": 7,
+          "right": 16,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 815866,
+        "opaquePixels": 753026,
+        "partialAlphaPixels": 3972,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          25,
+          3,
+          758,
+          1144
+        ],
+        "margins": {
+          "left": 25,
+          "top": 3,
+          "right": 10,
+          "bottom": 8
+        },
+        "minimumMarginPixels": 3,
+        "touchesCanvas": false,
+        "transparentPixels": 452263,
+        "opaquePixels": 417312,
+        "partialAlphaPixels": 15161,
         "alphaRange": [
           0,
           255

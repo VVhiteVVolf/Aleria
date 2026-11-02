@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="./modules/archive/archive-entry-card.css?v=20260910-archive-navigation-v1">
 <link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
-  <link rel="stylesheet" href="./styles/comments.css?v=20261017-wide-interactions-v1">
+  <link rel="stylesheet" href="./styles/comments.css?v=20261102-set-order-v1">
   <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
   <link rel="stylesheet" href="./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1">
   <link rel="stylesheet" href="./styles/comments-fazit.css?v=20260821-fazit-workbench-v3">
@@ -62,13 +62,16 @@
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260922-composer-design-v1">
 <link rel="stylesheet" href="./styles/comment-composer.css?v=20260922-composer-design-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20261017-intro-collapse-v1">
-<link rel="stylesheet" href="./styles/characters.css?v=20261013-avatar-performance-v1">
+<link rel="stylesheet" href="./styles/characters.css?v=20261102-biography-layout-v3-library">
+<link rel="stylesheet" href="./styles/character-image-library.css?v=20261102-set-order-v1">
 <link rel="stylesheet" href="./styles/character-categories.css?v=20261017-character-performance-v1">
 <link rel="stylesheet" href="./styles/character-combat-profile.css?v=20261015-check-options-v1">
+<link rel="stylesheet" href="./styles/character-development.css?v=20261102-v1">
 <link rel="stylesheet" href="./styles/character-equipment-artwork.css?v=20260928-equipment-art-v4">
 <link rel="stylesheet" href="./styles/character-combat-status.css?v=20260906-character-vitality-v1">
 <link rel="stylesheet" href="./styles/character-archive.css?v=20260912-almanach-v1">
 <link rel="stylesheet" href="./styles/character-combat-setup.css?v=20260906-character-vitality-v1">
+<link rel="stylesheet" href="./styles/character-development-window.css?v=20261102-v1">
 <link rel="stylesheet" href="./styles/combat-entry-editor.css?v=20260803-spell-grades-v1">
 <link rel="stylesheet" href="./styles/creatures.css?v=20261011-creature-groups-v2">
 <link rel="stylesheet" href="./modules/creatures/creature-sheet-pages.css?v=20260919-creature-pages-v1">
@@ -82,13 +85,13 @@
 <link rel="stylesheet" href="./styles/family-workbench.css?v=20260715-family-workbench-v2">
 <link rel="stylesheet" href="./styles/module-page-bestiary.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-quest.css?v=20260909-template-layout-v1">
-<link rel="stylesheet" href="./styles/module-page-biography.css?v=20261015-portrait-captions-v1">
+<link rel="stylesheet" href="./styles/module-page-biography.css?v=20261102-biography-layout-v4">
 <link rel="stylesheet" href="./styles/module-page-house.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-house-warriors.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-boards.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-profiles.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-character-inventory.css?v=20260922-itemization-v1">
-<link rel="stylesheet" href="./styles/character-inventory-cards.css?v=20260928-collapsible-diagram-v1">
+<link rel="stylesheet" href="./styles/character-inventory-cards.css?v=20261102-oldschool-inventory-v2">
 <link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20261007-hierarchy-tabs-v2">
 <link rel="stylesheet" href="./vendor/family-chart/0.9.0/family-chart.css?v=20260715-family-chart-v1">
 <link rel="stylesheet" href="./styles/module-page-family.css?v=20260909-template-layout-v1">
@@ -182,6 +185,7 @@
   <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261019-prices-v1" defer></script>
   <script src="./modules/gwynthor-theater/theater-data.js?v=20261031-formlingssache" defer></script>
   <script src="./modules/gwynthor-arena/arena-data.js?v=20261017-local-v1" defer></script>
+  <script src="./modules/gwynthor-marktplatz/marketplace-data.js?v=20261101-v1" defer></script>
   <script src="./modules/gwynthor-cathedral/cathedral-data.js?v=20261031-euddogwy" defer></script>
   <script src="./modules/gwynthor-bathhouse/bathhouse-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/kleiner-durst/durst-data.js?v=20261017-local-v1" defer></script>
@@ -219,7 +223,7 @@
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-catalog.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/core/app-core.js?v=20261021-bandenakte-v1" defer></script>
-  <script src="./modules/core/content-safety.js?v=20260806-error-passthrough-v1" defer></script>
+  <script src="./modules/core/content-safety.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/core/aleria-calendar.js?v=20260919-play-days-v1" defer></script>
   <script src="./modules/economy-calculator/economy-runtime.global.js?v=20261020-heime-v1" defer></script>
   <script type="module" src="./modules/calendar/calendar-dashboard.mjs?v=20260911-calendar-v2"></script>
@@ -248,7 +252,7 @@
   <script src="./modules/module-editor/module-editor-auth.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/module-editor/module-editor-preview.js?v=20260909-template-layout-v1" defer></script>
   <script src="./modules/module-editor/module-editor-dnd.js?v=20260520-cleanup-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-data.js?v=20261018-availability-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-data.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/family/family-api.js?v=20260715-family-editor-v1" defer></script>
   <script src="./modules/family/editor/family-editor-model.js?v=20260715-family-editor-v1" defer></script>
   <script src="./modules/family/workbench/family-workbench-state.js?v=20260715-family-workbench-v2" defer></script>
@@ -273,7 +277,7 @@
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20261019-economy-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20261101-group-systems-v2" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
@@ -288,7 +292,7 @@
   <script src="./modules/currency/currency-art.global.js?v=20261101-aleria-currency-v1" defer></script>
   <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261101-aleria-currency-v1" defer></script>
   <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-biography.js?v=20261017-biography-portrait-fit-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260925-creature-biography-v2" defer></script>
   <script src="./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
   <script src="./modules/organization-network/organization-network-editor.js?v=20260909-newspaper-guilds-v1" defer></script>
@@ -306,12 +310,12 @@
   <script src="./modules/module-editor/module-editor-hierarchy.js?v=20261017-hierarchy-twelve-v1" defer></script>
   <script src="./modules/module-editor/module-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/module-editor/module-editor-template-transfer.js?v=20260911-page-comments-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-pages.js?v=20260911-page-comments-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-pages.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/module-editor/module-editor-controller.js?v=20261021-bandenakte-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-events.js?v=20260806-clear-comments-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-events.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/backup/almanach-backup.js?v=20261014-module-storage-v2" defer></script>
   <script src="./modules/comments/comments-session-io.js?v=20260613-thread-rescue-v2" defer></script>
-  <script src="./modules/inline-editor/inline-editor-state.js?v=20261014-module-storage-v2" defer></script>
+  <script src="./modules/inline-editor/inline-editor-state.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-panels.js?v=20260618-quest-file-layout-images-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-card-layout.js?v=20260616-card-tree-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-profiles.js?v=20260616-inline-card-hierarchy-v1" defer></script>
@@ -332,13 +336,13 @@
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/inline-editor/inline-module-editor.js?v=20261019-economy-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-biography.js?v=20260711-doc-title-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-bestiary.js?v=20260603-inline-feature-extract-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-quest.js?v=20260623-quest-editor-parity-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-tournament-league.js?v=20260603-inline-feature-extract-v1" defer></script>
-  <script src="./modules/inline-editor/inline-editor-events.js?v=20260715-family-migration-v1" defer></script>
+  <script src="./modules/inline-editor/inline-editor-events.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260617-court-dossier-v1" defer></script>
   <script src="./modules/bounty/bounty-renderer.js?v=20260712-bounty-traits-v1" defer></script>
   <script src="./modules/goods/goods-renderer.js?v=20260620-goods-details-toggle-v1" defer></script>
@@ -352,11 +356,11 @@
   <script src="./modules/script-table/script-table-renderer.js?v=20260913-morgar-v20" defer></script>
   <script src="./modules/landing/landing-renderer.js?v=20261101-group-systems-v2" defer></script>
   <script type="module" src="./modules/landing/group-landing-controller.js?v=20261101-group-systems-v2"></script>
-  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20261101-aleria-currency-v1" defer></script>
+  <script src="./modules/character-inventory/character-inventory-renderer.js?v=20261102-oldschool-inventory-v2" defer></script>
   <script src="./modules/character-inventory/character-inventory-card-editor.js?v=20260922-itemization-v1" defer></script>
-  <script src="./modules/character-inventory/character-inventory-cards.js?v=20260928-collapsible-diagram-v1" defer></script>
+  <script src="./modules/character-inventory/character-inventory-cards.js?v=20261102-oldschool-inventory-v2" defer></script>
   <script src="./modules/character-inventory/character-inventory-questionnaire.js?v=20260922-itemization-v1" defer></script>
-  <script src="./modules/character-inventory/character-inventory-events.js?v=20260922-itemization-v1" defer></script>
+  <script src="./modules/character-inventory/character-inventory-events.js?v=20261102-equipment-links-v1" defer></script>
   <script type="module" src="./modules/character-inventory/character-inventory-integration.js?v=20260928-equipment-art-v4"></script>
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20261017-hierarchy-twelve-v1" defer></script>
@@ -372,9 +376,10 @@
   <script src="./modules/house-warriors/house-warriors-renderer.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/modal/modal-navigation.js?v=20261004-biography-export-v1" defer></script>
   <script src="./modules/biography/biography-page-export.js?v=20261004-biography-export-v1" defer></script>
-  <script src="./modules/biography/biography-card-rendering.js?v=20260925-creature-biography-v2" defer></script>
+  <script src="./modules/biography/biography-card-rendering.js?v=20261102-biography-layout-v2" defer></script>
+  <script src="../js/biography/public-biographies.generated.js?v=20261102-biography-layout-v3" defer></script>
   <script src="./modules/story/story-description.js?v=20261006-story-spacing-v1" defer></script>
-  <script src="./modules/rendering/module-renderer.js?v=20261017-biography-portrait-fit-v1" defer></script>
+  <script src="./modules/rendering/module-renderer.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/archive/archive-card-meta.js?v=20261019-economy-v1" defer></script>
   <script src="./modules/archive/archive-entry-card.js?v=20261019-navigation-v2" defer></script>
   <script src="./modules/archive/archive-section-ui.js?v=20261019-economy-v1" defer></script>
@@ -385,24 +390,24 @@
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
   <script src="./modules/archive/archive-navigation.js?v=20261019-navigation-v2" defer></script>
   <script src="./modules/archive/archive-view.js?v=20261019-navigation-v2" defer></script>
-  <script src="./modules/image-library/image-library-model.js?v=20260919-creature-pages-v1" defer></script>
+  <script src="./modules/image-library/image-library-model.js?v=20261102-set-order-v1" defer></script>
 <script src="./modules/image-library/image-library-import.js?v=20260919-creature-pages-v1" defer></script>
 <script src="./modules/characters/character-image-sets.js?v=20260919-creature-pages-v1" defer></script>
   <script src="./modules/characters/character-data.js?v=20260906-character-vitality-v2" defer></script>
   <script src="./modules/characters/character-taxonomy.js?v=20260930-categories-v1" defer></script>
   <script src="./modules/characters/character-tabs.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-archive-io.js?v=20260808-character-storage-audit-v1" defer></script>
-  <script src="./modules/characters/character-inventory-profile.js?v=20261017-character-performance-v1" defer></script>
-  <script type="module" src="./modules/characters/character-combat-profile.js?v=20261017-character-performance-v1"></script>
-  <script type="module" src="./modules/creatures/creature-system.js?v=20261014-gameplay-guides-v2"></script>
+  <script src="./modules/characters/character-inventory-profile.js?v=20261102-equipment-links-v1" defer></script>
+  <script type="module" src="./modules/characters/character-combat-profile.js?v=20261102-equipment-links-v1"></script>
+  <script type="module" src="./modules/creatures/creature-system.js?v=20261102-set-order-v1"></script>
   <script type="module" src="./modules/character-archive/character-archive-ui.js?v=20260928-equipment-art-v4"></script>
   <script src="./modules/characters/character-avatar-import.js?v=20261013-avatar-performance-v1" defer></script>
   <script src="./modules/characters/character-album-import.js?v=20260919-creature-pages-v1" defer></script>
-  <script src="./modules/characters/character-image-set-editor.js?v=20261013-avatar-performance-v1" defer></script>
+  <script src="./modules/characters/character-image-set-editor.js?v=20261102-set-order-v1" defer></script>
   <script src="./modules/characters/character-profile-sections.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-profile.js?v=20261017-character-performance-v1" defer></script>
-  <script src="./modules/characters/character-media-editor.js?v=20261013-avatar-performance-v1" defer></script>
-  <script src="./modules/characters/character-biography-tab.js?v=20261017-character-performance-v1" defer></script>
+  <script src="./modules/characters/character-media-editor.js?v=20261102-set-order-v1" defer></script>
+  <script src="./modules/characters/character-biography-tab.js?v=20261102-biography-layout-v2" defer></script>
   <script type="module" src="./modules/characters/character-image-library-autosave.js?v=20260919-creature-pages-v1"></script>
   <script src="./modules/characters/character-bulk-actions.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-register-views.js?v=20261017-character-performance-v1" defer></script>
@@ -412,7 +417,8 @@
   <script src="./modules/characters/character-category-browser.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-comment-picker.js?v=20261017-character-performance-v1" defer></script>
-  <script src="./modules/characters/character-profile-events.js?v=20261013-avatar-performance-v1" defer></script>
+  <script src="./modules/characters/character-profile-events.js?v=20261102-set-order-v1" defer></script>
+  <script src="./modules/characters/character-image-set-sorting.js?v=20261102-set-order-v1" defer></script>
   <script src="./modules/session/scene-read-state.js?v=20260710-scene-read-v1" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-state.js?v=20260710-scene-inventory-v2" defer></script>
   <script src="./modules/scene-inventory/scene-inventory-ui.js?v=20260710-scene-inventory-v2" defer></script>
@@ -455,7 +461,7 @@
   <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20261015-challenge-skill-choice-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20261015-check-options-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20261102-set-order-v1" defer></script>
   <script src="./modules/comments/comments-segments.js?v=20261015-check-options-v1" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20260919-creature-pages-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
@@ -684,7 +690,7 @@
 
 <script src="./modules/archive/archive-entry-links.js?v=20261021-notice-links-v1" defer></script>
 <script src="./app.js?v=20261014-module-storage-v2" defer></script>
-<script src="./module-richtext.js?v=20260520-cleanup-v1" defer></script>
+<script src="./module-richtext.js?v=20261102-biography-layout-v2" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260804-preview-debounce-v1" defer></script>
 <script src="./modules/comments/comments-segment-events.js?v=20260816-segment-avatar-sets-v1" defer></script>
@@ -1466,7 +1472,7 @@
         <div class="cp-biography-toolbar">
           <div>
             <div class="cp-section-title">Biographie</div>
-            <div class="char-field-hint">Eigenständiger Bereich, unabhängig von Profil/Bilder/Inventar/Kampfdaten. Import/Export hier betrifft ausschließlich die Biographie-Datei (gleiches Format wie im Stammbaum-Editor) – die Speicherung selbst läuft weiterhin über den Speichern-Knopf.</div>
+            <div class="char-field-hint">Herkunft, Persönlichkeit und Beziehungen. Änderungen mit „Speichern“ sichern. Import und Export betreffen nur diese Biographie.</div>
           </div>
           <div class="cp-biography-actions">
             <button class="comment-btn-cancel" type="button" data-char-profile-action="import-biography-module" title="Nur die Biographie aus einer *-biographie.json Datei übernehmen">Biographie importieren</button>
@@ -1484,60 +1490,80 @@
         <section class="cp-image-set-manager" aria-labelledby="cp-image-set-heading">
           <div class="cp-image-set-heading-row">
             <div>
-              <div class="cp-section-title" id="cp-image-set-heading">Bilder-&-Emotes-Sets</div>
-              <div class="char-field-hint">Standard, Kampf, Hochzeit oder andere Varianten getrennt verwalten.</div>
+              <div class="cp-section-title" id="cp-image-set-heading">Deine Avatar-Sets</div>
+              <div class="cp-media-hint">Für Alltag, Kampf und besondere Momente. Jedes Set hat sein eigenes Portrait und seine eigenen Avatare.</div>
             </div>
             <div class="cp-image-set-create">
-              <input class="char-field-input" type="text" id="cp-new-image-set-name" placeholder="Neues Set, z.B. Kampf" maxlength="60">
-              <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="add-image-set">Set anlegen</button>
+              <input class="char-field-input" type="text" id="cp-new-image-set-name" aria-label="Name für ein neues Avatar-Set" placeholder="Neues Set, z. B. Kampf" maxlength="60">
+              <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="add-image-set">+ Set anlegen</button>
             </div>
           </div>
-          <div class="cp-image-set-tabs" id="cp-image-set-tabs" role="tablist" aria-label="Bilder-&-Emotes-Sets"></div>
+          <div class="cp-image-set-tabs" id="cp-image-set-tabs" role="tablist" aria-label="Avatar-Sets" aria-describedby="cp-image-set-order-help"></div>
+          <div class="cp-image-set-order-tools">
+            <p class="cp-media-hint" id="cp-image-set-order-help">Sets zum Sortieren ziehen oder mit den Pfeilen verschieben. Diese Reihenfolge gilt auch im Beitragseditor.</p>
+            <div class="cp-image-set-move-controls" role="group" aria-label="Geöffnetes Set verschieben">
+              <span id="cp-image-set-position"></span>
+              <button class="cp-image-set-move" id="cp-image-set-previous" type="button" data-char-profile-action="move-image-set" data-direction="-1" aria-label="Set nach vorne verschieben" title="Set nach vorne verschieben">←</button>
+              <button class="cp-image-set-move" id="cp-image-set-next" type="button" data-char-profile-action="move-image-set" data-direction="1" aria-label="Set nach hinten verschieben" title="Set nach hinten verschieben">→</button>
+            </div>
+          </div>
+          <div class="cp-media-announcement" id="cp-image-set-order-status" role="status" aria-live="polite"></div>
           <div class="cp-image-set-active-tools">
             <label class="char-field-group" for="cp-active-image-set-name">
-              <span class="char-field-label">Name des geöffneten Sets</span>
+              <span class="char-field-label">Set-Name</span>
               <input class="char-field-input" type="text" id="cp-active-image-set-name" maxlength="60" data-char-profile-action="rename-image-set">
             </label>
             <button class="comment-btn-cancel" id="cp-delete-image-set" type="button" data-char-profile-action="delete-image-set">Set löschen</button>
           </div>
         </section>
 
-        <!-- Portrait URL -->
-        <div class="cp-section-title">Hauptportrait dieses Sets</div>
-        <div class="cp-portrait-upload-area">
-          <div class="cp-portrait-thumb">
-            <img id="cp-portrait-thumb-img" alt="Portrait" style="display:none">
-            <div id="cp-portrait-thumb-ph" class="cp-portrait-thumb-placeholder">?</div>
-          </div>
-          <div class="cp-portrait-fields">
-            <div class="char-field-hint">Bild-Link einfügen oder direkt aus der Zwischenablage übernehmen.</div>
-            <div class="cp-image-link-row">
-              <input class="char-field-input" type="url" id="cp-portrait-url" placeholder="https://i.imgur.com/...">
-              <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="paste-portrait-link">Einfügen</button>
+        <div class="cp-media-workspace" id="cp-image-set-panel" role="tabpanel">
+          <section class="cp-media-card cp-media-portrait" aria-labelledby="cp-set-portrait-heading">
+            <!-- Portrait URL -->
+            <div class="cp-section-title" id="cp-set-portrait-heading">Hauptportrait</div>
+            <p class="cp-media-hint">Das Portrait für dieses Set, wenn kein Ausdruck gewählt ist.</p>
+            <div class="cp-portrait-upload-area">
+              <div class="cp-portrait-thumb">
+                <img id="cp-portrait-thumb-img" alt="Portrait" style="display:none">
+                <div id="cp-portrait-thumb-ph" class="cp-portrait-thumb-placeholder">?</div>
+              </div>
+              <div class="cp-portrait-fields">
+                <label class="char-field-label" for="cp-portrait-url">Bild-Link</label>
+                <div class="cp-image-link-row">
+                  <input class="char-field-input" type="url" id="cp-portrait-url" placeholder="https://i.imgur.com/...">
+                  <button class="cp-portrait-upload-btn secondary" type="button" data-char-profile-action="paste-portrait-link">Aus Zwischenablage</button>
+                </div>
+                <div id="cp-portrait-url-error" style="font-size:0.72rem;color:var(--red-wax);display:none">
+                  Bild konnte nicht geladen werden.
+                </div>
+              </div>
             </div>
-            <div id="cp-portrait-url-error" style="font-size:0.72rem;color:var(--red-wax);display:none">
-              Bild konnte nicht geladen werden.
+          </section>
+
+          <section class="cp-media-card cp-media-avatars" aria-labelledby="cp-set-avatars-heading">
+            <!-- Emotes -->
+            <div class="cp-section-title cp-avatar-section-title" id="cp-set-avatars-heading">Ausdrücke &amp; Avatare <span class="cp-section-meta">(<span id="cp-avatar-count">0</span>/<span id="cp-avatar-limit">80</span>)</span></div>
+            <div class="cp-media-hint cp-avatar-help">
+              Wähle beim Schreiben den passenden Ausdruck. Beschriftungen helfen dir, ihn schnell wiederzufinden.
             </div>
-          </div>
+            <div class="cp-avatar-import" id="cp-avatar-import-zone">
+              <details class="cp-avatar-import-tools">
+                <summary>Mehrere Avatare importieren <span>Bild-Links · Imgur · Zwischenablage</span></summary>
+                <div class="cp-avatar-import-body">
+                  <label class="char-field-label" for="cp-avatar-links">Mehrere Bild-Links oder ein Imgur-Album</label>
+                  <textarea class="char-field-textarea cp-avatar-links" id="cp-avatar-links" rows="3" placeholder="Direkte Bild-Links – einer pro Zeile – oder https://imgur.com/a/album"></textarea>
+                  <div class="cp-avatar-import-actions">
+                    <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-avatar-links">Links übernehmen</button>
+                    <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-imgur-album">Imgur-Album übernehmen</button>
+                    <button class="cp-portrait-upload-btn secondary" type="button" data-char-profile-action="paste-avatar-links">Aus Zwischenablage</button>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="cp-avatar-import-status" id="cp-avatar-import-status" role="status" aria-live="polite">Importe landen ausschließlich im gerade geöffneten Set.</div>
+            <div class="emote-grid" id="cp-emote-grid"></div>
+          </section>
         </div>
-
-        <!-- Emotes -->
-        <div class="cp-section-title cp-avatar-section-title">Emote Portraits <span class="cp-section-meta">(<span id="cp-avatar-count">0</span>/<span id="cp-avatar-limit">80</span>)</span></div>
-        <div class="char-field-hint cp-avatar-help">
-          Quadratische Ausdrucks-Portraits für das Kommentarsystem.
-        </div>
-        <div class="cp-avatar-import" id="cp-avatar-import-zone">
-          <label class="char-field-label" for="cp-avatar-links">Mehrere Bild-Links oder ein Imgur-Album</label>
-          <textarea class="char-field-textarea cp-avatar-links" id="cp-avatar-links" rows="3" placeholder="Direkte Bild-Links – einer pro Zeile – oder https://imgur.com/a/album"></textarea>
-          <div class="cp-avatar-import-actions">
-            <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-avatar-links">Links übernehmen</button>
-            <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-imgur-album">Imgur-Album übernehmen</button>
-            <button class="cp-portrait-upload-btn secondary" type="button" data-char-profile-action="paste-avatar-links">Aus Zwischenablage</button>
-          </div>
-          <div class="cp-avatar-import-status" id="cp-avatar-import-status" role="status" aria-live="polite">Importe landen ausschließlich im gerade geöffneten Set.</div>
-        </div>
-        <div class="emote-grid" id="cp-emote-grid"></div>
-
       </div>
     </div>
 

@@ -1,0 +1,1255 @@
+{
+  "scope": "Öffentliche Personenbiografien; Quellen und Historie bleiben erhalten. Keine Firebase-Schreibzugriffe.",
+  "persons": 72,
+  "linkedCharacterSheets": 63,
+  "linkedFamilyTreePeople": 63,
+  "associatedModules": 8,
+  "inspectedModuleBiographyPages": 30,
+  "knownTraining": 13,
+  "trainingPortraits": 15,
+  "idwal": "Zuerst Mervyn Gwyvern, danach Parzifal Arth; ausdrückliche Nutzerkorrektur vom 2. November 2026.",
+  "characterSheetsNotRecorded": [
+    "Gwyddno Llythfor",
+    "Gwenddydd",
+    "Edern Llythfor",
+    "Efrddyl",
+    "Lliwen Llythfor",
+    "Gwrhyr Llythfor",
+    "Lynne Arth",
+    "Parzifal Arth",
+    "Rhydian Arth"
+  ],
+  "noFamilyTreeIdentity": [
+    "Glendower O'Cenyr",
+    "Jenna O'Cenyr",
+    "Vébrand Wolfsruf",
+    "Rob",
+    "Euddogwy O'Cenyr",
+    "Lleuwen",
+    "Ulrich Schniedel",
+    "Orvar Schattentänzer",
+    "Brychan"
+  ],
+  "entries": [
+    {
+      "name": "Sindre Brandstolz",
+      "key": "person--haus-schwarzstolz--sindre-brandstolz",
+      "characterIds": [
+        "tiefenwyrm--sindre-brandstolz"
+      ],
+      "worldPersonIds": [
+        "person--haus-schwarzstolz--sindre-brandstolz"
+      ],
+      "treePersonIds": [
+        "sindre-brandstolz"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Rhodri Aelmor",
+      "key": "person--haus-aelmor--rhodri-aelmor",
+      "characterIds": [
+        "person--haus-aelmor--rhodri-aelmor"
+      ],
+      "worldPersonIds": [
+        "person--haus-aelmor--rhodri-aelmor"
+      ],
+      "treePersonIds": [
+        "rhodri-aelmor"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 3
+    },
+    {
+      "name": "Melyn Arth",
+      "key": "person--haus-arth--melyn-arth",
+      "characterIds": [
+        "person--haus-arth--melyn-arth"
+      ],
+      "worldPersonIds": [
+        "person--haus-arth--melyn-arth"
+      ],
+      "treePersonIds": [
+        "melyn-arth"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 12
+    },
+    {
+      "name": "Armel Balchder",
+      "key": "person--haus-balchder--armel-balchder",
+      "characterIds": [
+        "person--haus-balchder--armel-balchder"
+      ],
+      "worldPersonIds": [
+        "person--haus-balchder--armel-balchder"
+      ],
+      "treePersonIds": [
+        "armel-balchder"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Dalvin Balchder",
+          "role": "Rittervater"
+        }
+      ],
+      "paragraphs": 14
+    },
+    {
+      "name": "Ifor Beryn",
+      "key": "person--haus-beryn--ifor-beryn",
+      "characterIds": [
+        "person--haus-beryn--ifor-beryn"
+      ],
+      "worldPersonIds": [
+        "person--haus-beryn--ifor-beryn"
+      ],
+      "treePersonIds": [
+        "ifor-beryn"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "modul-1786259308487",
+          "pageKey": "I. — Biographie"
+        }
+      ],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 12
+    },
+    {
+      "name": "Caralyn Chwedonol",
+      "key": "person--haus-chwedlonol--caralyn-chwedlonol",
+      "characterIds": [
+        "Eka4z7TWpzEgx8KjhIzy"
+      ],
+      "worldPersonIds": [
+        "person--haus-chwedlonol--caralyn-chwedlonol"
+      ],
+      "treePersonIds": [
+        "caralyn-chwedlonol"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Llywelyn Coeddu",
+      "key": "person--craigddu--person-d189ca4a",
+      "characterIds": [
+        "ExQDi0xrpkmXAXUL1Ukh"
+      ],
+      "worldPersonIds": [
+        "person--craigddu--person-d189ca4a"
+      ],
+      "treePersonIds": [
+        "llywelyn-coeddu",
+        "person-d189ca4a"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 11
+    },
+    {
+      "name": "Hywel Craigddu",
+      "key": "person--craigddu--person-28b0e0a3",
+      "characterIds": [
+        "XVeiNvgFfsmtomLuIjcA"
+      ],
+      "worldPersonIds": [
+        "person--craigddu--person-28b0e0a3"
+      ],
+      "treePersonIds": [
+        "person-28b0e0a3"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 80
+    },
+    {
+      "name": "Myfanwy Draenmelyn",
+      "key": "person--haus-draenmelyn--myfanwy-draenmelyn",
+      "characterIds": [
+        "2ZIauO2ZQ1sbn8iFhyzH"
+      ],
+      "worldPersonIds": [
+        "person--haus-draenmelyn--myfanwy-draenmelyn"
+      ],
+      "treePersonIds": [
+        "myfanwy-draenmelyn"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Rhiannon Draenmelyn",
+      "key": "person--haus-draenmelyn--rhiannon-draenmelyn",
+      "characterIds": [
+        "person--haus-draenmelyn--rhiannon-draenmelyn"
+      ],
+      "worldPersonIds": [
+        "person--haus-draenmelyn--rhiannon-draenmelyn"
+      ],
+      "treePersonIds": [
+        "rhiannon-draenmelyn"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 5
+    },
+    {
+      "name": "Gawain Draig",
+      "key": "person--haus-draig--gawain-draig",
+      "characterIds": [
+        "q1QtSIug74FzzwUAqWrs"
+      ],
+      "worldPersonIds": [
+        "person--haus-draig--gawain-draig"
+      ],
+      "treePersonIds": [
+        "gawain-draig"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "gawain-duncan",
+          "pageKey": "1",
+          "mentorsOnly": true
+        }
+      ],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Sir Duncan Gafyr",
+          "role": "Rittervater"
+        }
+      ],
+      "paragraphs": 11
+    },
+    {
+      "name": "Idwal Draig",
+      "key": "person--haus-draig--idwal-draig",
+      "characterIds": [
+        "kJss0DGF1RLuVrrVCBQT"
+      ],
+      "worldPersonIds": [
+        "person--haus-draig--idwal-draig"
+      ],
+      "treePersonIds": [
+        "idwal-draig"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "idwals-schiffsmannschaft",
+          "pageKey": "1"
+        }
+      ],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Sir Mervyn Gwyvern",
+          "role": "Erster Ausbildungsvormund"
+        },
+        {
+          "name": "Sir Parzifal Arth",
+          "role": "Zweiter Ausbildungsvormund"
+        }
+      ],
+      "paragraphs": 3
+    },
+    {
+      "name": "Oweta Draig",
+      "key": "person--haus-draig--oweta-draig",
+      "characterIds": [
+        "vk0xAa3ZcEhVvGC1CzNq"
+      ],
+      "worldPersonIds": [
+        "person--haus-draig--oweta-draig"
+      ],
+      "treePersonIds": [
+        "oweta-draig"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Lady Heledd Gafyr",
+          "role": "Rittermutter"
+        }
+      ],
+      "paragraphs": 41
+    },
+    {
+      "name": "Trahern Draig",
+      "key": "person--haus-draig--trahern-draig",
+      "characterIds": [
+        "CJFC3INTycaqn3tOwZHB"
+      ],
+      "worldPersonIds": [
+        "person--haus-draig--trahern-draig"
+      ],
+      "treePersonIds": [
+        "trahern-draig"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Cadfael Draig",
+          "role": "Rittervater"
+        }
+      ],
+      "paragraphs": 20
+    },
+    {
+      "name": "Rhy Dyger",
+      "key": "person--haus-dyger--rhy-dyger",
+      "characterIds": [
+        "tiefenwyrm--rhy-dyger"
+      ],
+      "worldPersonIds": [
+        "person--haus-dyger--rhy-dyger"
+      ],
+      "treePersonIds": [
+        "rhy-dyger"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Gildas Gafyr",
+      "key": "person--haus-gafyr--gildas-gafyr",
+      "characterIds": [
+        "gildas-gafyr"
+      ],
+      "worldPersonIds": [
+        "person--haus-gafyr--gildas-gafyr"
+      ],
+      "treePersonIds": [
+        "gildas-gafyr"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 12
+    },
+    {
+      "name": "Heledd Gafyr",
+      "key": "person--haus-gafyr--heledd-gafyr",
+      "characterIds": [
+        "person--haus-gafyr--heledd-gafyr"
+      ],
+      "worldPersonIds": [
+        "person--haus-gafyr--heledd-gafyr"
+      ],
+      "treePersonIds": [
+        "heledd-gafyr"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Lady Melyn Saethwyr",
+          "role": "Rittermutter"
+        }
+      ],
+      "paragraphs": 32
+    },
+    {
+      "name": "Clydno Gostyn",
+      "key": "person--haus-gostyn--clydno-gostyn",
+      "characterIds": [
+        "person--haus-gostyn--clydno-gostyn"
+      ],
+      "worldPersonIds": [
+        "person--haus-gostyn--clydno-gostyn"
+      ],
+      "treePersonIds": [
+        "clydno-gostyn"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Branwen (Geb. Gwefrydd) Draig",
+      "key": "person--haus-gwefrydd--branwen-gwefrydd",
+      "characterIds": [
+        "OJEmpbD6YWhDFDmitk6R"
+      ],
+      "worldPersonIds": [
+        "person--haus-gwefrydd--branwen-gwefrydd"
+      ],
+      "treePersonIds": [
+        "branwen-gwefrydd"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Sir Odyar Draig",
+          "role": "Rittervater"
+        }
+      ],
+      "paragraphs": 9
+    },
+    {
+      "name": "Meirawen Gwyllach",
+      "key": "person--haus-gwyllach--meirawen-gwyllach",
+      "characterIds": [
+        "person--haus-gwyllach--meirawen-gwyllach"
+      ],
+      "worldPersonIds": [
+        "person--haus-gwyllach--meirawen-gwyllach"
+      ],
+      "treePersonIds": [
+        "meirawen-gwyllach"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Morwella Gwyllach",
+      "key": "person--haus-gwyllach--morwella-gwyllach",
+      "characterIds": [
+        "person--haus-gwyllach--morwella-gwyllach"
+      ],
+      "worldPersonIds": [
+        "person--haus-gwyllach--morwella-gwyllach"
+      ],
+      "treePersonIds": [
+        "morwella-gwyllach"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Anwyll Saethwyr",
+      "key": "person--haus-saethwyr--anwyll-saethwyr",
+      "characterIds": [
+        "N8D8c9EMPigmAhYWPayO"
+      ],
+      "worldPersonIds": [
+        "person--haus-saethwyr--anwyll-saethwyr"
+      ],
+      "treePersonIds": [
+        "anwyll-saethwyr"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Sir Padrig Saethwyr",
+          "role": "Rittervater"
+        }
+      ],
+      "paragraphs": 23
+    },
+    {
+      "name": "Gareth Swyll",
+      "key": "person--haus-swyll--gareth-swyll",
+      "characterIds": [
+        "person--haus-swyll--gareth-swyll"
+      ],
+      "worldPersonIds": [
+        "person--haus-swyll--gareth-swyll"
+      ],
+      "treePersonIds": [
+        "gareth-swyll"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Iestyn Swyll",
+      "key": "person--haus-swyll--iestyn-swyll",
+      "characterIds": [
+        "person--haus-swyll--iestyn-swyll"
+      ],
+      "worldPersonIds": [
+        "person--haus-swyll--iestyn-swyll"
+      ],
+      "treePersonIds": [
+        "iestyn-swyll"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 5
+    },
+    {
+      "name": "Meredith Swyll",
+      "key": "person--haus-swyll--meredith-swyll",
+      "characterIds": [
+        "7ghgdvubmimcJySSkrKH"
+      ],
+      "worldPersonIds": [
+        "person--haus-swyll--meredith-swyll"
+      ],
+      "treePersonIds": [
+        "meredith-swyll"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Caradog Tonnarth",
+      "key": "person--haus-tonnarth--caradog-bastard-tonnarth",
+      "characterIds": [
+        "person--haus-tonnarth--caradog-bastard-tonnarth"
+      ],
+      "worldPersonIds": [
+        "person--haus-tonnarth--caradog-bastard-tonnarth"
+      ],
+      "treePersonIds": [
+        "caradog-bastard-tonnarth"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 3
+    },
+    {
+      "name": "Llewarch Tonnarth",
+      "key": "person--haus-tonnarth--llewarch-tonnarth",
+      "characterIds": [
+        "Wrp54tDjahx8Re77rweq"
+      ],
+      "worldPersonIds": [
+        "person--haus-tonnarth--llewarch-tonnarth"
+      ],
+      "treePersonIds": [
+        "llewarch-tonnarth"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 3
+    },
+    {
+      "name": "Gais Wyrm",
+      "key": "person--haus-wyrm--gais-wyrm",
+      "characterIds": [
+        "person--haus-wyrm--gais-wyrm"
+      ],
+      "worldPersonIds": [
+        "person--haus-wyrm--gais-wyrm"
+      ],
+      "treePersonIds": [
+        "gais-wyrm"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [
+        {
+          "name": "Eiddon Wyrm",
+          "role": "Erster Rittervater"
+        },
+        {
+          "name": "Padrig Wyrm",
+          "role": "Zweiter Rittervater"
+        }
+      ],
+      "paragraphs": 15
+    },
+    {
+      "name": "Cadell Ysgrif",
+      "key": "person--haus-ysgrif--cadell-ysgrif",
+      "characterIds": [
+        "person--haus-ysgrif--cadell-ysgrif"
+      ],
+      "worldPersonIds": [
+        "person--haus-ysgrif--cadell-ysgrif"
+      ],
+      "treePersonIds": [
+        "cadell-ysgrif"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Glendower O'Cenyr",
+      "key": "glendower-o-cenyr",
+      "characterIds": [
+        "glendower-o-cenyr"
+      ],
+      "worldPersonIds": [],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Jenna O'Cenyr",
+      "key": "jenna-o-cenyr",
+      "characterIds": [
+        "jenna-o-cenyr"
+      ],
+      "worldPersonIds": [],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Rhydwen Swyll",
+      "key": "person--haus-swyll--rhydwen-swyll",
+      "characterIds": [
+        "person--haus-swyll--rhydwen-swyll"
+      ],
+      "worldPersonIds": [
+        "person--haus-swyll--rhydwen-swyll"
+      ],
+      "treePersonIds": [
+        "rhydwen-swyll"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Der Schwarze Zitteraal",
+      "key": "person--haus-skellor--arvel-skellor",
+      "characterIds": [
+        "zitteraale-schwarzer-zitteraal"
+      ],
+      "worldPersonIds": [
+        "person--haus-skellor--arvel-skellor"
+      ],
+      "treePersonIds": [
+        "arvel-skellor"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 29
+    },
+    {
+      "name": "Kamber Balchder",
+      "key": "person--haus-balchder--kamber-balchder",
+      "characterIds": [
+        "person--haus-balchder--kamber-balchder"
+      ],
+      "worldPersonIds": [
+        "person--haus-balchder--kamber-balchder"
+      ],
+      "treePersonIds": [
+        "kamber-balchder"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Blodwen Balchder",
+      "key": "person--haus-balchder--blodwen-balchder",
+      "characterIds": [
+        "person--haus-balchder--blodwen-balchder"
+      ],
+      "worldPersonIds": [
+        "person--haus-balchder--blodwen-balchder"
+      ],
+      "treePersonIds": [
+        "blodwen-balchder"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 2
+    },
+    {
+      "name": "Rice Balchder",
+      "key": "person--haus-balchder--rice-balchder",
+      "characterIds": [
+        "person--haus-balchder--rice-balchder"
+      ],
+      "worldPersonIds": [
+        "person--haus-balchder--rice-balchder"
+      ],
+      "treePersonIds": [
+        "rice-balchder"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 2
+    },
+    {
+      "name": "Vébrand Wolfsruf",
+      "key": "vebrand-wolfsruf",
+      "characterIds": [
+        "vebrand-wolfsruf"
+      ],
+      "worldPersonIds": [],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 3
+    },
+    {
+      "name": "Rob",
+      "key": "rob-gwynthor-tageloehner",
+      "characterIds": [
+        "rob-gwynthor-tageloehner"
+      ],
+      "worldPersonIds": [],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 2
+    },
+    {
+      "name": "Cynddelw Llythfor",
+      "key": "person--haus-llythfor--cynddelw-llythfor",
+      "characterIds": [
+        "person--haus-llythfor--cynddelw-llythfor"
+      ],
+      "worldPersonIds": [
+        "person--haus-llythfor--cynddelw-llythfor"
+      ],
+      "treePersonIds": [
+        "cynddelw-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 2
+    },
+    {
+      "name": "Esyllt Penrudd",
+      "key": "person--haus-penrudd--esyllt-penrudd",
+      "characterIds": [
+        "person--haus-penrudd--esyllt-penrudd"
+      ],
+      "worldPersonIds": [
+        "person--haus-penrudd--esyllt-penrudd"
+      ],
+      "treePersonIds": [
+        "esyllt-penrudd"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 2
+    },
+    {
+      "name": "Eirlys Llythfor",
+      "key": "person--haus-llythfor--eirlys-llythfor",
+      "characterIds": [
+        "person--haus-llythfor--eirlys-llythfor"
+      ],
+      "worldPersonIds": [
+        "person--haus-llythfor--eirlys-llythfor"
+      ],
+      "treePersonIds": [
+        "eirlys-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 2
+    },
+    {
+      "name": "Euddogwy O'Cenyr",
+      "key": "person--gwynthor-formlingssache--euddogwy",
+      "characterIds": [
+        "person--gwynthor-formlingssache--euddogwy"
+      ],
+      "worldPersonIds": [
+        "person--gwynthor-formlingssache--euddogwy"
+      ],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 3
+    },
+    {
+      "name": "Lleuwen",
+      "key": "person--gwynthor-formlingssache--lleuwen",
+      "characterIds": [
+        "person--gwynthor-formlingssache--lleuwen"
+      ],
+      "worldPersonIds": [
+        "person--gwynthor-formlingssache--lleuwen"
+      ],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Ulrich Schniedel",
+      "key": "person--gwynthor-formlingssache--ulrich",
+      "characterIds": [
+        "person--gwynthor-formlingssache--ulrich"
+      ],
+      "worldPersonIds": [
+        "person--gwynthor-formlingssache--ulrich"
+      ],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Orvar Schattentänzer",
+      "key": "person--gwynthor-formlingssache--orvar",
+      "characterIds": [
+        "person--gwynthor-formlingssache--orvar"
+      ],
+      "worldPersonIds": [
+        "person--gwynthor-formlingssache--orvar"
+      ],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 3
+    },
+    {
+      "name": "Rhosyn Awenydd",
+      "key": "person--haus-awenydd--rhosyn-awenydd",
+      "characterIds": [
+        "person--haus-awenydd--rhosyn-awenydd"
+      ],
+      "worldPersonIds": [
+        "person--haus-awenydd--rhosyn-awenydd"
+      ],
+      "treePersonIds": [
+        "rhosyn-awenydd"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Briallen Awenor",
+      "key": "person--haus-awenor--briallen-awenor",
+      "characterIds": [
+        "person--haus-awenor--briallen-awenor"
+      ],
+      "worldPersonIds": [
+        "person--haus-awenor--briallen-awenor"
+      ],
+      "treePersonIds": [
+        "briallen-awenor"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Rianna Wyrm",
+      "key": "person--haus-wyrm--rianna-wyrm",
+      "characterIds": [
+        "person--haus-wyrm--rianna-wyrm"
+      ],
+      "worldPersonIds": [
+        "person--haus-wyrm--rianna-wyrm"
+      ],
+      "treePersonIds": [
+        "rianna-wyrm"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Evie Rhyddid",
+      "key": "person--haus-rhyddid--evie-rhyddid",
+      "characterIds": [
+        "person--haus-rhyddid--evie-rhyddid"
+      ],
+      "worldPersonIds": [
+        "person--haus-rhyddid--evie-rhyddid"
+      ],
+      "treePersonIds": [
+        "evie-rhyddid"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 6
+    },
+    {
+      "name": "Lefraye Gafyr",
+      "key": "person--haus-gafyr--lefraye-gafyr",
+      "characterIds": [
+        "person--haus-gafyr--lefraye-gafyr"
+      ],
+      "worldPersonIds": [
+        "person--haus-gafyr--lefraye-gafyr"
+      ],
+      "treePersonIds": [
+        "lefraye-gafyr"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Saerwyn Gwyllach",
+      "key": "person--haus-gwyllach--saerwyn-gwyllach",
+      "characterIds": [
+        "person--haus-gwyllach--saerwyn-gwyllach"
+      ],
+      "worldPersonIds": [
+        "person--haus-gwyllach--saerwyn-gwyllach"
+      ],
+      "treePersonIds": [
+        "saerwyn-gwyllach"
+      ],
+      "moduleRefs": [],
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Freya Skald",
+      "key": "person--haus-skald--freya-skald",
+      "characterIds": [
+        "ksJQe8Ai4KbRE9jOAvb7"
+      ],
+      "worldPersonIds": [
+        "person--haus-skald--freya-skald"
+      ],
+      "treePersonIds": [
+        "freya-skald"
+      ],
+      "moduleRefs": [],
+      "source": "public Firestore characters/ksJQe8Ai4KbRE9jOAvb7 @ 2026-10-17T20:51:28.224446Z",
+      "training": [],
+      "paragraphs": 15
+    },
+    {
+      "name": "Skalli Varulv",
+      "key": "person--haus-varulv--skalli-varulv",
+      "characterIds": [
+        "person--haus-varulv--skalli-varulv"
+      ],
+      "worldPersonIds": [
+        "person--haus-varulv--skalli-varulv"
+      ],
+      "treePersonIds": [
+        "skalli-varulv"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "skallis-gefolge",
+          "pageKey": "skalli-biography"
+        }
+      ],
+      "source": "public Firestore characters/person--haus-varulv--skalli-varulv @ 2026-10-17T23:37:19.270040Z",
+      "training": [],
+      "paragraphs": 11
+    },
+    {
+      "name": "Maredudd Draig",
+      "key": "person--haus-draig--maredudd-draig",
+      "characterIds": [
+        "ZGiDqxIwkkvOHzpnKmyk"
+      ],
+      "worldPersonIds": [
+        "person--haus-draig--maredudd-draig"
+      ],
+      "treePersonIds": [
+        "maredudd-draig"
+      ],
+      "moduleRefs": [],
+      "source": "public Firestore characters/ZGiDqxIwkkvOHzpnKmyk @ 2026-10-11T19:46:50.254871Z",
+      "training": [
+        {
+          "name": "Cahir Draig",
+          "role": "Rittervater"
+        }
+      ],
+      "paragraphs": 56
+    },
+    {
+      "name": "Nudd Saethwyr",
+      "key": "person--haus-saethwyr--nudd-saethwyr",
+      "characterIds": [
+        "person--haus-saethwyr--nudd-saethwyr"
+      ],
+      "worldPersonIds": [
+        "person--haus-saethwyr--nudd-saethwyr"
+      ],
+      "treePersonIds": [
+        "nudd-saethwyr"
+      ],
+      "moduleRefs": [],
+      "source": "public Firestore characters/person--haus-saethwyr--nudd-saethwyr @ 2026-10-14T22:36:31.304867Z",
+      "training": [],
+      "paragraphs": 11
+    },
+    {
+      "name": "Neala Wylan",
+      "key": "person--haus-wylan--neala-wylan",
+      "characterIds": [
+        "person--haus-wylan--neala-wylan"
+      ],
+      "worldPersonIds": [
+        "person--haus-wylan--neala-wylan"
+      ],
+      "treePersonIds": [
+        "neala-wylan"
+      ],
+      "moduleRefs": [],
+      "source": "public Firestore characters/person--haus-wylan--neala-wylan @ 2026-10-17T15:09:29.623667Z",
+      "training": [
+        {
+          "name": "Lady Generis Wylan",
+          "role": "Rittermutter"
+        }
+      ],
+      "paragraphs": 18
+    },
+    {
+      "name": "Brychan",
+      "key": "ax26chmgvtaURnzC0n0l",
+      "characterIds": [
+        "ax26chmgvtaURnzC0n0l"
+      ],
+      "worldPersonIds": [],
+      "treePersonIds": [],
+      "moduleRefs": [],
+      "source": "Charakter Archiv Exporte/Biographien/lynne-arth-biographie-2026-10-04.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Sleipnir Varulv",
+      "key": "person--haus-varulv--sleipnir-varulv",
+      "characterIds": [
+        "person--haus-varulv--sleipnir-varulv"
+      ],
+      "worldPersonIds": [
+        "person--haus-varulv--sleipnir-varulv"
+      ],
+      "treePersonIds": [
+        "sleipnir-varulv"
+      ],
+      "moduleRefs": [],
+      "source": "Charakter Archiv Exporte/Biographien/sleipnir-varulv-2026-10-17/sleipnir-biografie.json",
+      "training": [
+        {
+          "name": "Torvard Nachtjäger",
+          "role": "Kriegerischer Lehrmeister"
+        }
+      ],
+      "paragraphs": 77
+    },
+    {
+      "name": "Gwyddno Llythfor",
+      "key": "person--haus-llythfor--gwyddno-llythfor",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-llythfor--gwyddno-llythfor"
+      ],
+      "treePersonIds": [
+        "gwyddno-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "Stammbaum haus-llythfor/gwyddno-llythfor",
+      "training": [],
+      "paragraphs": 1
+    },
+    {
+      "name": "Gwenddydd",
+      "key": "person--haus-llythfor--gwenddydd-spouse-llythfor",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-llythfor--gwenddydd-spouse-llythfor"
+      ],
+      "treePersonIds": [
+        "gwenddydd-spouse-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "Stammbaum haus-llythfor/gwenddydd-spouse-llythfor",
+      "training": [],
+      "paragraphs": 1
+    },
+    {
+      "name": "Edern Llythfor",
+      "key": "person--haus-llythfor--edern-llythfor",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-llythfor--edern-llythfor"
+      ],
+      "treePersonIds": [
+        "edern-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "Stammbaum haus-llythfor/edern-llythfor",
+      "training": [],
+      "paragraphs": 1
+    },
+    {
+      "name": "Efrddyl",
+      "key": "person--haus-llythfor--efrddyl-spouse-llythfor",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-llythfor--efrddyl-spouse-llythfor"
+      ],
+      "treePersonIds": [
+        "efrddyl-spouse-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "Stammbaum haus-llythfor/efrddyl-spouse-llythfor",
+      "training": [],
+      "paragraphs": 1
+    },
+    {
+      "name": "Lliwen Llythfor",
+      "key": "person--haus-llythfor--lliwen-llythfor",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-llythfor--lliwen-llythfor"
+      ],
+      "treePersonIds": [
+        "lliwen-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "Stammbaum haus-llythfor/lliwen-llythfor",
+      "training": [],
+      "paragraphs": 1
+    },
+    {
+      "name": "Gwrhyr Llythfor",
+      "key": "person--haus-llythfor--gwrhyr-llythfor",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-llythfor--gwrhyr-llythfor"
+      ],
+      "treePersonIds": [
+        "gwrhyr-llythfor"
+      ],
+      "moduleRefs": [],
+      "source": "Stammbaum haus-llythfor/gwrhyr-llythfor",
+      "training": [],
+      "paragraphs": 1
+    },
+    {
+      "name": "Lynne Arth",
+      "key": "person--haus-arth--lynne-arth",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-arth--lynne-arth"
+      ],
+      "treePersonIds": [
+        "lynne-arth"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "lynnes-schiffsmannschaft",
+          "pageKey": "1"
+        }
+      ],
+      "source": "Charakter Archiv Exporte/Gruppenübersichten-2026-10-05/lynnes-schiffsmannschaft-gruppenuebersicht.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Parzifal Arth",
+      "key": "person--haus-arth--parzifal-arth",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-arth--parzifal-arth"
+      ],
+      "treePersonIds": [
+        "parzifal-arth"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "parzifals-schiffsmannschaft",
+          "pageKey": "1"
+        }
+      ],
+      "source": "Charakter Archiv Exporte/Biographien/parzifals-schiffsmannschaft-modulpaket-2026-10-06.json",
+      "training": [],
+      "paragraphs": 4
+    },
+    {
+      "name": "Rhydian Arth",
+      "key": "person--haus-arth--rhydian-arth",
+      "characterIds": [],
+      "worldPersonIds": [
+        "person--haus-arth--rhydian-arth"
+      ],
+      "treePersonIds": [
+        "rhydian-arth"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "rhydians-schiffsmannschaft",
+          "pageKey": "1"
+        }
+      ],
+      "source": "Charakter Archiv Exporte/Gruppenübersichten-2026-10-05/rhydians-schiffsmannschaft-gruppenuebersicht.json",
+      "training": [],
+      "paragraphs": 7
+    },
+    {
+      "name": "Anaraut Draig",
+      "key": "person--haus-draig--anaraut-draig",
+      "characterIds": [
+        "fq586i4k2gj5Lg30dUwW"
+      ],
+      "worldPersonIds": [
+        "person--haus-draig--anaraut-draig"
+      ],
+      "treePersonIds": [
+        "anaraut-draig"
+      ],
+      "moduleRefs": [
+        {
+          "moduleId": "modul-1782120382311",
+          "pageKey": "p-mqp0lhb3-zxoof"
+        }
+      ],
+      "source": "Charakter Archiv Exporte/Gruppenübersichten-2026-10-05/modul-1782120382311-gruppenuebersicht.json",
+      "training": [],
+      "paragraphs": 2
+    }
+  ]
+}

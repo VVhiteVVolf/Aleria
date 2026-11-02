@@ -28,6 +28,7 @@ import { TOPIC_ARTICLE_IDS } from '../Bestiarium/modules/topic-article/topic-art
 import { preserveBookReaderLicense } from '../Bestiarium/modules/book-reader/book-license-build.mjs';
 import { NATURAL_SPECIES_IDS } from '../Bestiarium/modules/natural-species/natural-species-registry.mjs';
 import { HORSE_PROFILE_IDS } from '../Bestiarium/modules/horse-profile/horse-profile-registry.mjs';
+import { BIRD_PROFILE_IDS } from '../Bestiarium/modules/bird-profile/bird-profile-registry.mjs';
 import { HORSE_BREEDING_PAGE_ID } from '../Bestiarium/modules/horse-breeding/horse-breeding-registry.mjs';
 import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS } from '../Bestiarium/modules/predator-profile/predator-registry.mjs';
 import { LIVESTOCK_CATEGORY_IDS } from '../Bestiarium/modules/livestock-category/livestock-category-registry.mjs';
@@ -180,6 +181,10 @@ export default defineConfig({
         ])),
         ...Object.fromEntries(NATURAL_SPECIES_IDS.map(id => [
           `bestiary-animal-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere', id, 'index.html')
+        ])),
+        ...Object.fromEntries(BIRD_PROFILE_IDS.map(id => [
+          `bestiaryBird-${id}`,
+          resolve(workspaceRoot, 'Bestiarium', 'tiere', 'flugwesen', id, 'index.html')
         ])),
         ...Object.fromEntries(HORSE_PROFILE_IDS.map(id => [
           `bestiary-horse-${id}`, resolve(workspaceRoot, 'Bestiarium/tiere/pferde', id, 'index.html')

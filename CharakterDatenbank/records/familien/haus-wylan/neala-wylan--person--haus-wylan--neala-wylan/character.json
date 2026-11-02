@@ -98,13 +98,13 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-09-03T17:54:50.847Z",
+    "sourceArchive": "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wylan--neala-wylan.json",
+    "sourceExportedAt": "2026-11-02T20:28:09.214Z",
+    "sourceUpdatedAt": "2026-11-02T20:28:09.214Z",
     "sourceDocumentIds": [
       "person--haus-wylan--neala-wylan"
     ],
-    "contentHash": "067c9943d25d1d05ad402ae62df0175a662b6006c362795267f2c1c2696f9480"
+    "contentHash": "4b00377fa9cdd0cd8bc31c90e62f9e028f5607ef671cd805d8a6c6cab3062e25"
   },
   "local": {
     "notes": "",
@@ -323,6 +323,59 @@
         "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
         "title": "",
         "updatedAt": "2026-09-03T17:54:50.847Z"
+      },
+      {
+        "id": "person--haus-wylan--neala-wylan",
+        "name": "Neala Wylan",
+        "inventory": {
+          "companions": [
+            {
+              "id": "card-neala-floeckchen",
+              "name": "Flöckchen",
+              "species": "Ceffyl-Pferd",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+              "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+              "summary": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+              "role": "Reittier",
+              "status": "Gesund",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "creatureId": "companion-neala-floeckchen",
+              "inventoryItemId": "neala-floeckchen"
+            }
+          ],
+          "items": [
+            {
+              "id": "neala-floeckchen",
+              "instanceId": "neala-floeckchen",
+              "creatureId": "companion-neala-floeckchen",
+              "name": "Flöckchen",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+              "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+              "type": "Ceffyl-Pferd",
+              "category": "companion",
+              "registerCategory": "pferde",
+              "templateId": "",
+              "templateName": "Ceffyl-Pferd",
+              "quantity": "1",
+              "itemStorageMode": "character",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "ownerCharacterId": "person--haus-wylan--neala-wylan",
+              "ownerCharacterName": "Neala Wylan",
+              "imageFormat": "portrait",
+              "imageFit": "contain",
+              "imagePosition": "center",
+              "attributes": [],
+              "infoRows": [],
+              "individualizedAt": "2026-11-02T20:28:09.214Z"
+            }
+          ]
+        },
+        "updatedAt": "2026-11-02T20:28:09.214Z"
       }
     ]
   },
@@ -532,7 +585,54 @@
     ],
     "imageSetSchemaVersion": 1,
     "imageSetsOverride": true,
-    "inventory": null,
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-neala-floeckchen",
+          "name": "Flöckchen",
+          "species": "Ceffyl-Pferd",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+          "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+          "summary": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-neala-floeckchen",
+          "inventoryItemId": "neala-floeckchen"
+        }
+      ],
+      "items": [
+        {
+          "id": "neala-floeckchen",
+          "instanceId": "neala-floeckchen",
+          "creatureId": "companion-neala-floeckchen",
+          "name": "Flöckchen",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-wylan%2Fneala-floeckchen-e646948a3bb901fa%2Foriginal.jpeg?alt=media",
+          "description": "Flöckchen ist Nealas persönliches Ceffyl-Reitpferd. Ein kräftiger Brauner mit schwarzer Mähne und schwarzem Schweif, heller Blesse und vier weißen Fesseln. Das braune Sattelzeug hat goldfarbene Beschläge und ein Kreuzmedaillon. Alter und Geschlecht sind noch nicht festgelegt.",
+          "type": "Ceffyl-Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Ceffyl-Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-wylan--neala-wylan",
+          "ownerCharacterName": "Neala Wylan",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-02T20:28:09.214Z"
+        }
+      ]
+    },
     "name": "Neala Wylan",
     "origin": "",
     "playerOwner": "",
@@ -544,6 +644,6 @@
     "status": "active",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "title": "",
-    "updatedAt": "2026-09-03T17:54:50.847Z"
+    "updatedAt": "2026-11-02T20:28:09.214Z"
   }
 }

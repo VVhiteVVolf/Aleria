@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "widths": [
+    {
+      "width": 691,
+      "scroll": 691
+    }
+  ],
+  "charBounds": {
+    "width": 356,
+    "scroll": 356
+  },
+  "treeBounds": {
+    "width": 390,
+    "scroll": 390
+  },
+  "paragraphsAndHeadingsRetained": true,
+  "mobilePreviewToggle": true,
+  "inlineMentors": true,
+  "externalWritesBlocked": true,
+  "errors": [],
+  "checkedAt": "2026-11-02T18:30:28.562Z",
+  "reviewedScreenshots": [
+    ".tmp/biography-redesign-20261102/browser-1793644150571/character-editor-phone.png",
+    ".tmp/biography-redesign-20261102/browser-1793644150571/tree-editor-phone.png"
+  ],
+  "limits": [
+    "Local browser fixtures; no live saving or production deployment.",
+    "External writes blocked by preview helper.",
+    "Creature opening is checked through an isolated local gateway; no live creature data mutation.",
+    "No exhaustive family-tree suite repeated; source and unit audit handled separately."
+  ]
+}

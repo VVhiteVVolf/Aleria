@@ -44,12 +44,13 @@ function createCharacterInventoryDataFromCharacter(char = {}) {
 
 function getCharacterInventoryProfileSource(char = {}) {
   if (char.inventory && typeof char.inventory === 'object') {
+    const contextValue = (key, fallback) => char.inventory[key] == null ? fallback : char.inventory[key];
     return sanitizeCharacterInventoryData({
       ...char.inventory,
-      characterId: char.inventory.characterId || char.id || _editingChar || '',
-      portrait: char.inventory.portrait || char.portrait || '',
-      name: char.inventory.name || char.name || 'Name des Charakters',
-      role: char.inventory.role || char.title || char.fraktion || 'Rolle'
+      characterId: char.id || char.inventory.characterId || _editingChar || '',
+      portrait: contextValue('portrait', char.portrait || ''),
+      name: contextValue('name', char.name || 'Name des Charakters'),
+      role: contextValue('role', char.title || char.fraktion || 'Rolle')
     });
   }
   return createCharacterInventoryDataFromCharacter(char);
@@ -136,7 +137,8 @@ function collectCharacterInventoryProfileData() {
 }
 
 function setCharacterInventoryProfileData(inventory = {}, options = {}) {
-  _characterInventoryDraft = sanitizeCharacterInventoryData(inventory);
+  const character = options.character || (_editingChar && typeof getCharacterById === 'function' ? getCharacterById(_editingChar) : null) || {};
+  _characterInventoryDraft = getCharacterInventoryProfileSource({ ...character, inventory });
   if (options.render === true) renderCharacterInventoryProfileEditor();
   return _characterInventoryDraft;
 }

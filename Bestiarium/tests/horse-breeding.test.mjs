@@ -31,16 +31,16 @@ test('breeding data joins all 27 Rossmarkt breeds with local horse dossiers', as
   await Promise.all(data.breeds.map(breed => access(new URL(breed.profileHref, pageDirectory))));
 });
 
-test('the five Rossmarkt names and six registered lore crossings are complete and symmetric', async () => {
+test('the five Rossmarkt names and seven registered lore crossings are complete and symmetric', async () => {
   const source = await readFile(new URL('../../Markt/Rossmarkt/Rossmarkt.html', import.meta.url), 'utf8');
   assert.deepEqual(extractRossmarktBreedingCrossings(source).map(entry => entry.name), [
     'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale'
   ]);
-  assert.equal(data.crossings.length, 11);
+  assert.equal(data.crossings.length, 12);
   assert.deepEqual(data.crossings.map(entry => entry.name), [
-    'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale', 'Brycing', 'Tirashan', 'Ritterschimmer', 'Eidwacht', 'Edel Rhyfel', 'Sonnenläufer'
+    'Hochblut', 'Kronforst', 'Kronhest', 'Roh-Rhyfel', 'Edelsale', 'Farnschritt', 'Brycing', 'Tirashan', 'Ritterschimmer', 'Eidwacht', 'Edel Rhyfel', 'Sonnenläufer'
   ]);
-  assert.equal(new Set(data.crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, 11);
+  assert.equal(new Set(data.crossings.map(entry => horsePairKey(entry.mareId, entry.sireId))).size, 12);
   assert.equal(horsePairKey('hest', 'ceffyl'), horsePairKey('ceffyl', 'hest'));
   assert.equal(data.crossings.find(entry => entry.name === 'Roh-Rhyfel').establishedBreed, 'Rhyfel');
 });

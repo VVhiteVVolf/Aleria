@@ -49,6 +49,10 @@ function collect() {
     effects: [...dialog.querySelectorAll('[data-ib-effect]')].map(row => ({ type: row.querySelector('[name="effectType"]').value,
       amount: Number(row.querySelector('[name="effectAmount"]').value), resourceId: row.querySelector('[name="effectResource"]').value })) };
   draft.inventoryUseMode = draft.useDefinition.mode;
+  if (values.substanceKind) draft.useDefinition.substance = values.substanceKind === 'alcohol'
+    ? { kind: 'alcohol', volumeMl: Number(values.substanceVolumeMl), abv: Number(values.substanceAbv) }
+    : { kind: values.substanceKind, amount: Number(values.substanceDoses) };
+  else delete draft.useDefinition.substance;
 }
 function error(failure) { dialog.querySelector('[data-ib-error]').textContent = failure?.message || String(failure || ''); }
 function render() {

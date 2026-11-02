@@ -48,8 +48,8 @@ const preparation = { dossier,
   summary: 'Cynddelw Llythfor braucht erfahrene Hilfe: Sein schreckhafter Rhyfel-Hengst Trötzli muss von Gwynthor zum Penrudd-Hof nördlich der Stadt geführt werden. Tudur Penrudd ist unterrichtet und nimmt ihn auf. Gesucht ist eine sichere Überführung, keine Zähmung oder Probe zum Zureiten. Für die sichere Übergabe winken 50 Kupferstücke, ein schickes unbeschriebenes Notizbuch und Schreibutensilien.',
   objectives: [{ id: 'meet-cynddelw', title: 'Bei Celtigerns Echo melden und die Überführung vorbereiten' }, { id: 'lead-troetzli', title: 'Trötzli ruhig und sicher über den nördlichen Weg führen' }, { id: 'handover-tudur', title: 'Trötzli heil an Tudur auf dem Penrudd-Hof übergeben' }, { id: 'report-cynddelw', title: 'Cynddelw die Übergabe bestätigen und die Belohnung abholen' }],
   modules: ['zum-roten-tor'] };
-const output = `// Generated from public quest, family and map sources. Rebuild: node scripts/build-troetzli-quest.mjs\nexport const AUTHORED_QUEST_PREPARATIONS = ${JSON.stringify({ 'gwynthor-der-staedter-und-sein-pferd': preparation }, null, 2)};\n`;
-const target = new URL('../modules/quests/quest-authored-dossiers.js', import.meta.url);
+const output = `// Generated from public quest, family and map sources. Rebuild: node scripts/build-troetzli-quest.mjs\nexport const TROETZLI_QUEST_PREPARATIONS = ${JSON.stringify({ 'gwynthor-der-staedter-und-sein-pferd': preparation }, null, 2)};\n`;
+const target = new URL('../modules/quests/quest-preparations/troetzli.generated.js', import.meta.url);
 if (check) { if (await readFile(target, 'utf8') !== output) throw Error('Trötzli-Questvorbereitung ist veraltet.'); }
 else await writeFile(target, output);
 return paths.map(({ id, estimate }) => ({ id, ...estimate }));

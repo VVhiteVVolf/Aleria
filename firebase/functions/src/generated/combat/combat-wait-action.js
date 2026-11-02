@@ -1,3 +1,4 @@
+import { effectiveHealthTraits } from '../character-health/health-trait-policy.js';
 export const COMBAT_WAIT_ACTION = Object.freeze({
   id: 'combat:wait', sourceId: 'combat:wait', kind: 'wait', kindLabel: 'Kampfzug',
   name: 'Abwarten / Zug aussetzen', formula: '', weapon: { name: 'Abwarten', damageFormula: '' },
@@ -7,6 +8,9 @@ export const COMBAT_WAIT_ACTION = Object.freeze({
   segmentKinds: ['combataction'], compatible: true, default: false
 });
 
+export function getActionBlockingCondition(profile = {}) {
+  return [...(profile.conditions || []), ...effectiveHealthTraits(profile.quirks || [])].find(condition => condition.active !== false && condition.mechanics?.blocksActions === true) || null;
+}
 export function hasActionBlockingCondition(profile = {}) {
-  return (profile.conditions || []).some(condition => condition.active !== false && condition.mechanics?.blocksActions === true);
+  return Boolean(getActionBlockingCondition(profile));
 }

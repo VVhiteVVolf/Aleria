@@ -255,6 +255,7 @@ function pruneTrainingForLevel(profile, definition, level) {
 }
 
 export function reconcileCenyrTrainingForLevel(profile = {}, targetLevelValue = null, options = {}) {
+  if (profile.progression?.development?.mode === 'purchase') return { profile: clone(profile), added: [], pending: [] };
   const definition = getCenyrClassDefinitionForProfile(profile);
   if (!definition) return { profile: reconcileCultureFormArsenal(clone(profile), targetLevelValue ?? profile.progression?.level), added: [], pending: [] };
   const level = normalizeLevel(targetLevelValue ?? profile.progression?.level);

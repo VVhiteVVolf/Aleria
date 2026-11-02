@@ -15,6 +15,7 @@ function renderHouseGroups(data) {
   const groups = data.houses.filter(group => Array.isArray(group?.items) && group.items.some(Boolean));
   root.replaceChildren(...groups.map(group => renderFamilySection({
     title: String(group.title || 'Häuser'),
+    variant: String(group.variant || ''),
     cards: group.items.filter(Boolean).map(house => ({
       ...house,
       id: house.familyId,

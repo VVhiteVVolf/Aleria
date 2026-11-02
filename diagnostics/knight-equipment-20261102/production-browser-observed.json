@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "initialRunCapturedAt": "2026-11-02T19:50:30.775Z",
+  "source": "Successful initial process stdout and inspected screenshots; Caralyn desktop/mobile/card/combat screenshots were refreshed by a partially completed second read-only run. The latest report JSON records the separately failed retry.",
+  "noCharacterInjection": true,
+  "liveWrites": 0,
+  "readOnlyGuard": {
+    "allowedFirestoreListenPosts": 25,
+    "blockedPost": "identitytoolkit.googleapis.com/v1/accounts:signUp",
+    "otherPostWritesObserved": 0
+  },
+  "characters": [
+    {
+      "name": "Caralyn Chwedonol",
+      "id": "Eka4z7TWpzEgx8KjhIzy",
+      "items": 8,
+      "visibleRows": 8,
+      "brokenInventoryImages": [],
+      "mobileViewportWidth": 390,
+      "inventoryClientWidth": 358,
+      "inventoryScrollWidth": 358
+    },
+    {
+      "name": "Rianna Wyrm",
+      "id": "person--haus-wyrm--rianna-wyrm",
+      "items": 3,
+      "visibleRows": 3,
+      "brokenInventoryImages": [],
+      "mobileViewportWidth": 390,
+      "inventoryClientWidth": 358,
+      "inventoryScrollWidth": 358
+    },
+    {
+      "name": "Lefraye Gafyr",
+      "id": "person--haus-gafyr--lefraye-gafyr",
+      "items": 9,
+      "visibleRows": 9,
+      "brokenInventoryImages": [],
+      "mobileViewportWidth": 390,
+      "inventoryClientWidth": 358,
+      "inventoryScrollWidth": 358
+    },
+    {
+      "name": "Oweta Draig",
+      "id": "vk0xAa3ZcEhVvGC1CzNq",
+      "items": 4,
+      "visibleRows": 3,
+      "additionalCompanion": "Heulwen",
+      "brokenInventoryImages": [],
+      "mobileViewportWidth": 390,
+      "inventoryClientWidth": 358,
+      "inventoryScrollWidth": 358
+    }
+  ],
+  "definitions": {
+    "earlyStatus": "offline",
+    "earlyRegistryAuthored": 0,
+    "observedReadPostTarget": "item_definitions",
+    "all20VersionsVerifiedInBrowser": false
+  },
+  "knownPendingDifferences": [
+    "Generic inventory header/context for Rianna and Lefraye",
+    "DefinitionRef-only item-sheet link chooses wrong profile tab; local correction not deployed"
+  ],
+  "retry": {
+    "failure": "Netlify ERR_CONNECTION_TIMED_OUT before page DOM loaded; independent Node HTTPS GET also failed with UND_ERR_CONNECT_TIMEOUT",
+    "report": "production-browser.json",
+    "furtherRetries": 0
+  },
+  "screenshots": [
+    {
+      "name": "caralyn-combat-desktop.png",
+      "width": 1680,
+      "height": 1050,
+      "bytes": 618719,
+      "sha256": "1285037e32ef0208df50214b2249766cdd6c3257b8e6ac35feeb4e4bcf1f8a7f",
+      "lastModified": "2026-11-02T19:54:55.233Z"
+    },
+    {
+      "name": "caralyn-desktop.png",
+      "width": 1680,
+      "height": 1050,
+      "bytes": 370631,
+      "sha256": "2a62b6638c3b4e5b402cb5a8d216407efc254b4af850cf78d40d75a1ff7fef1c",
+      "lastModified": "2026-11-02T19:54:54.071Z"
+    },
+    {
+      "name": "caralyn-item-card-mobile.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 115703,
+      "sha256": "6302686a1aaf0a44f1eb326c84c77347fcef789e645225e62ace63d10ad1a34e",
+      "lastModified": "2026-11-02T19:54:54.465Z"
+    },
+    {
+      "name": "caralyn-mobile.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 152397,
+      "sha256": "d6303b6c00f1d3198c1dffce6c899ffdd53f67ef4292096e062e7541a7a5a379",
+      "lastModified": "2026-11-02T19:54:54.226Z"
+    },
+    {
+      "name": "lefraye-desktop.png",
+      "width": 1680,
+      "height": 1050,
+      "bytes": 368218,
+      "sha256": "30f5875159e9bcdc875a9d6c34b2c3c902df62b3a1bb93362bbbdcad2a5c7b5d",
+      "lastModified": "2026-11-02T19:51:11.069Z"
+    },
+    {
+      "name": "lefraye-mobile.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 149583,
+      "sha256": "b2b6e1492a97c32c27c074b02d4548b33f66c1822e10dcb73fff32236e8271a7",
+      "lastModified": "2026-11-02T19:51:11.179Z"
+    },
+    {
+      "name": "oweta-desktop.png",
+      "width": 1680,
+      "height": 1050,
+      "bytes": 369943,
+      "sha256": "0413ad17d249811b563d1b10d778152cbba58ca48892fe3b0144fff2216efddf",
+      "lastModified": "2026-11-02T19:51:12.954Z"
+    },
+    {
+      "name": "oweta-mobile.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 150528,
+      "sha256": "e59fcf22f272040a2a015ca6de4ea2230ddde9074bb3e656426a4e5a85f679b6",
+      "lastModified": "2026-11-02T19:51:13.057Z"
+    },
+    {
+      "name": "rianna-desktop.png",
+      "width": 1680,
+      "height": 1050,
+      "bytes": 367826,
+      "sha256": "66937a99ead1e24cb6529cf05a3e2b0a1018faa0bcd5f81ef5e3f05279f79821",
+      "lastModified": "2026-11-02T19:51:08.967Z"
+    },
+    {
+      "name": "rianna-mobile.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 150221,
+      "sha256": "297f4f488ac4fb64fa9ca2c066f3c6fac81c5253de4f9b59f3a122d3989a28d5",
+      "lastModified": "2026-11-02T19:51:09.078Z"
+    }
+  ],
+  "partialSecondRun": {
+    "observedCard": "caralyn-item-card-mobile.png",
+    "visibleFacts": [
+      "15 RK",
+      "Kein GES-Bonus",
+      "Plattengrundschutz: 1 Schaden weniger gegen Hieb und Stich und Wucht je Schadensinstanz; kein RK-Bonus"
+    ],
+    "observedCombat": "caralyn-combat-desktop.png",
+    "visibleArmorClass": 15,
+    "full20DefinitionBrowserProof": false
+  },
+  "limits": [
+    "Initial screenshots precede miscellaneous-item and cash awards.",
+    "A naturally displayed sync-conflict notice obscures part of several screenshots; no sync resolution or save was performed.",
+    "All twenty exact definition versions were not verified in the browser before connectivity failed."
+  ]
+}

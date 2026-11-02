@@ -534,61 +534,19 @@ function buildBiographyTraitList(items = []) {
   return items.length ? `<div class="biography-ability-list">${items.map(item => AleriaBiographyCards.renderTrait(item, { escape: escapeHtml, imageSource: sanitizeImageSrc })).join('')}</div>` : '';
 }
 
-function buildBiographyPage(page, entry, pageIndex, total) {
-  const nav = buildNav(page, pageIndex, total);
+function buildBiographyReadView(page, entry) {
+  page = globalThis.AleriaBiographyCatalog?.resolveModule(page, entry?.id) || page;
   const data = sanitizeBiographyData(page.biography || {});
-  const stats = Array.isArray(page.stats) ? page.stats : [];
-  const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
-  const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
-  const connectionTextOffset = Math.max(0, Math.min(80, Number(data.connectionTextOffset) || 0));
-  const quote = page.quote ? `
-    <div class="biography-quote-card">
-      <div class="biography-quote-mark">“</div>
-      <div>${sanitizeContentHtml(page.quote)}</div>
-      ${page.quoteBy ? `<span>${escapeHtml(page.quoteBy)}</span>` : ''}
-    </div>` : '';
-  const abilities = buildBiographyTraitList(data.abilities);
-  const connections = data.connections.length ? `
-    <div class="biography-connections">
-      ${data.connections.map(buildBiographyConnectionItem).join('')}
-    </div>` : '';
-  return `
-    ${nav}
-    <div class="biography-page" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;--biography-connection-text-offset:${connectionTextOffset}px;">
-      <aside class="biography-left">
-        ${buildBiographyPortrait(page, entry)}
-        ${stats.length ? `
-          <div class="biography-info-table">
-            <div class="biography-side-label">Infotabelle</div>
-            ${stats.map(([label, value]) => `
-              <div class="biography-info-row"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join('')}
-          </div>` : ''}
-        ${quote}
-      </aside>
-      <main class="biography-main">
-        ${buildBiographyHeading(data.biographyTitle)}
-        <div class="biography-copy">${sanitizeContentHtml(data.biographyText || page.description || '')}</div>
-        ${buildBiographyExtraSections(data.extraSections, 'afterIntro')}
-        ${buildBiographyHeading(data.abilitiesTitle)}
-        ${abilities}
-        ${buildBiographyHeading(data.historyTitle)}
-        <div class="biography-copy">${sanitizeContentHtml(data.historyText || '')}</div>
-        ${buildBiographyHeading(data.worksTitle)}
-        ${buildBiographyLines(data.works, 'compact')}
-        ${buildBiographyExtraSections(data.extraSections, 'afterWorks')}
-      </main>
-      <aside class="biography-right">
-        ${buildBiographyHeading(data.triviaTitle)}
-        ${buildBiographyLines(data.trivia)}
-        ${buildBiographyHeading(data.quotesTitle)}
-        ${buildBiographyLines(data.quotes, 'quotes')}
-        ${buildBiographyHeading(data.connectionsTitle)}
-        ${connections}
-        ${buildBiographyHeading(data.documentsTitle)}
-        ${buildBiographyDocuments(data.documents)}
-      </aside>
-      ${data.footer ? `<div class="biography-footer">${escapeHtml(data.footer)}</div>` : ''}
-    </div>`;
+  data.biographyText ||= page.description || '';
+  return AleriaBiographyCards.renderPage({
+    portraitHtml: buildBiographyPortrait(page, entry),
+    stats: page.stats || [], quote: page.quote, quoteBy: page.quoteBy, data
+  }, { escape: escapeHtml, imageSource: sanitizeImageSrc, href: sanitizeHref,
+    richText: sanitizeContentHtml, documentRef: document });
+}
+
+function buildBiographyPage(page, entry, pageIndex, total) {
+  return buildNav(page, pageIndex, total) + buildBiographyReadView(page, entry);
 }
 
 // House header: title + house motto (the same quote/quoteBy fields the biography sidebar

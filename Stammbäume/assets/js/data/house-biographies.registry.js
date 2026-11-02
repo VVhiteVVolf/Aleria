@@ -35,7 +35,7 @@ import { HOUSE_BIOGRAPHY as haus_taranvyr } from "../../../../Familien Häuser u
 import { HOUSE_BIOGRAPHY as haus_tawelgar } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Tawelgar/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_trydar } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Trydar/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_ymladd } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Gwendolyns_Ufer/Haus_Ymladd/haus.biography.mjs?v=20261024-housebio-v1";
-import { HOUSE_BIOGRAPHY as haus_draig } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20261024-housebio-v1";
+import { HOUSE_BIOGRAPHY as haus_draig } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20261102-court-offices-v1";
 import { HOUSE_BIOGRAPHY as haus_aelmor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aelmor/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_argall } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_awenor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Awenor/haus.biography.mjs?v=20261024-housebio-v1";
@@ -240,6 +240,70 @@ import { HOUSE_BIOGRAPHY as haus_weissberg } from "../../../../Familien Häuser 
 import { HOUSE_BIOGRAPHY as haus_weissmann } from "../../../../Familien Häuser und Clans/Lothir/Weisenfluh/haus-weissmann/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_weizmann } from "../../../../Familien Häuser und Clans/Lothir/Weisenfluh/haus-weizmann/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_wolfenstein } from "../../../../Familien Häuser und Clans/Lothir/Weisenfluh/haus-wolfenstein/haus.biography.mjs?v=accepted-realms-20261029a";
+import { HOUSE_BIOGRAPHY as haus_ashby } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-ashby/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_aubigny } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-aubigny/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_beran } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-beran/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_boxton } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-boxton/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_brymwulf } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-brymwulf/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_cerdic } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-cerdic/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_coelret } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-coelret/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_cutting } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-cutting/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_derwent } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-derwent/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_dimholt } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-dimholt/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_dunstan } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-dunstan/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_earncynne } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-earncynne/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_edgcumbe } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-edgcumbe/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_edwynne } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-edwynne/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_estmere } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-estmere/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_frye } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-frye/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_giffard } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-giffard/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_granger } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-granger/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_halfax } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-halfax/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_heswick } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-heswick/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_humber } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-humber/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_irwynne } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-irwynne/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_kendryck } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-kendryck/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_leofric } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-leofric/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_lir } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-lir/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_oiscingas } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-oiscingas/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_ransford } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-ransford/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_scandyn } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-scandyn/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_seolfor } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-seolfor/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_skelton } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-skelton/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_swygert } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-swygert/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_tharn } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-tharn/haus.biography.mjs?v=accepted-tharn-20261102";
+import { HOUSE_BIOGRAPHY as haus_thwing } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-thwing/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_thynne } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-thynne/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_trent } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-trent/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_trevelyan } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-trevelyan/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_wend } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-wend/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_whiting } from "../../../../Familien Häuser und Clans/Aldervan/Aeldrunmar/haus-whiting/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_arvenac } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-arvenac/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_aubert } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-aubert/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_bernant } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-bernant/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_bielle } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-bielle/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_caudren } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-caudren/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_corvail } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-corvail/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_ervaut } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-ervaut/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_ferant } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-ferant/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_gerain } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-gerain/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_guerin } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-guerin/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_guivren } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-guivren/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_iverac } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-iverac/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_jorant } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-jorant/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_kervaut } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-kervaut/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_landrec } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-landrec/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_osmer } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-osmer/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_perrec } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-perrec/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_quernac } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-quernac/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_renaut } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-renaut/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_rovenne } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-rovenne/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_savrec } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-savrec/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_trevain } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-trevain/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_valdran } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-valdran/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_varenne } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-varenne/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_walaric } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-walaric/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_yveran } from "../../../../Familien Häuser und Clans/Aldervan/Brevanor/haus-yveran/haus.biography.mjs?v=accepted-kingdoms-20261101";
 import { HOUSE_BIOGRAPHY as haus_ardmhair } from "../../../../Familien Häuser und Clans/Aldervan/Deitheach/haus-ardmhair/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_caolan } from "../../../../Familien Häuser und Clans/Aldervan/Deitheach/haus-caolan/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_dal_tuairne } from "../../../../Familien Häuser und Clans/Aldervan/Deitheach/haus-dal-tuairne/haus.biography.mjs?v=accepted-realms-20261029a";
@@ -252,6 +316,24 @@ import { HOUSE_BIOGRAPHY as haus_nic_drisach } from "../../../../Familien Häuse
 import { HOUSE_BIOGRAPHY as haus_ruin_seilgeir } from "../../../../Familien Häuser und Clans/Aldervan/Deitheach/haus-ruin-seilgeir/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_tir_eatharn } from "../../../../Familien Häuser und Clans/Aldervan/Deitheach/haus-tir-eatharn/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_torcmhar } from "../../../../Familien Häuser und Clans/Aldervan/Deitheach/haus-torcmhar/haus.biography.mjs?v=accepted-realms-20261029a";
+import { HOUSE_BIOGRAPHY as haus_aldred } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-aldred/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_ashton } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-ashton/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_bramcote } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-bramcote/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_brigane } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-brigane/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_egerton } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-egerton/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_elwick } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-elwick/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_holton } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-holton/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_kyme } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-kyme/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_lennwyck } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-lennwyck/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_rookden } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-rookden/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_sedgeley } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-sedgeley/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_thornwick } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-thornwick/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_tostan } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-tostan/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_vernon } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-vernon/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_warren } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-warren/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_wickton } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-wickton/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_wulmer } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-wulmer/haus.biography.mjs?v=accepted-kingdoms-20261101";
+import { HOUSE_BIOGRAPHY as haus_yarwyck } from "../../../../Familien Häuser und Clans/Aldervan/Talyndor/haus-yarwyck/haus.biography.mjs?v=accepted-kingdoms-20261101";
 
 export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-ard-conbhron": Object.freeze({ sourceRevision: 2, biography: haus_ard_conbhron, replacedDefaultFingerprints: Object.freeze(["1947:11ab1423:793d2af9"]) }),
@@ -292,7 +374,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-ymladd": Object.freeze({ sourceRevision: 4, biography: haus_ymladd, replacedDefaultFingerprints: Object.freeze(["1879:68e724e9:30af71b","2533:f0b1c434:f0e3ee66"]) }),
   "haus-draig": Object.freeze({ sourceRevision: 15, biography: haus_draig, replacedDefaultFingerprints: Object.freeze(["3373:8cca99be:2c8dbd70"]) }),
   "haus-aelmor": Object.freeze({ sourceRevision: 3, biography: haus_aelmor, replacedDefaultFingerprints: Object.freeze(["1725:902c7891:3510a7bb"]) }),
-  "haus-argall": Object.freeze({ sourceRevision: 3, biography: haus_argall, replacedDefaultFingerprints: Object.freeze(["1722:f24a8265:697155f3"]) }),
+  "haus-argall": Object.freeze({ sourceRevision: 5, biography: haus_argall, replacedDefaultFingerprints: Object.freeze(["1722:f24a8265:697155f3","2905:a2f5ac84:4d32266a"]) }),
   "haus-awenor": Object.freeze({ sourceRevision: 3, biography: haus_awenor, replacedDefaultFingerprints: Object.freeze(["2346:33871a93:116c6e2d"]) }),
   "haus-awenydd": Object.freeze({ sourceRevision: 4, biography: haus_awenydd, replacedDefaultFingerprints: Object.freeze(["2348:86852fcf:fec56929"]) }),
   "haus-balchder": Object.freeze({ sourceRevision: 4, biography: haus_balchder, replacedDefaultFingerprints: Object.freeze(["2515:d5687406:5b9a9034"]) }),
@@ -495,6 +577,70 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-weissmann": Object.freeze({ sourceRevision: 1, biography: haus_weissmann, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-weizmann": Object.freeze({ sourceRevision: 1, biography: haus_weizmann, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-wolfenstein": Object.freeze({ sourceRevision: 1, biography: haus_wolfenstein, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-ashby": Object.freeze({ sourceRevision: 3, biography: haus_ashby, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-aubigny": Object.freeze({ sourceRevision: 3, biography: haus_aubigny, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-beran": Object.freeze({ sourceRevision: 3, biography: haus_beran, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-boxton": Object.freeze({ sourceRevision: 3, biography: haus_boxton, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-brymwulf": Object.freeze({ sourceRevision: 3, biography: haus_brymwulf, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-cerdic": Object.freeze({ sourceRevision: 3, biography: haus_cerdic, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-coelret": Object.freeze({ sourceRevision: 3, biography: haus_coelret, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-cutting": Object.freeze({ sourceRevision: 3, biography: haus_cutting, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-derwent": Object.freeze({ sourceRevision: 3, biography: haus_derwent, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-dimholt": Object.freeze({ sourceRevision: 3, biography: haus_dimholt, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-dunstan": Object.freeze({ sourceRevision: 3, biography: haus_dunstan, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-earncynne": Object.freeze({ sourceRevision: 3, biography: haus_earncynne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-edgcumbe": Object.freeze({ sourceRevision: 3, biography: haus_edgcumbe, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-edwynne": Object.freeze({ sourceRevision: 3, biography: haus_edwynne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-estmere": Object.freeze({ sourceRevision: 3, biography: haus_estmere, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-frye": Object.freeze({ sourceRevision: 3, biography: haus_frye, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-giffard": Object.freeze({ sourceRevision: 3, biography: haus_giffard, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-granger": Object.freeze({ sourceRevision: 3, biography: haus_granger, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-halfax": Object.freeze({ sourceRevision: 3, biography: haus_halfax, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-heswick": Object.freeze({ sourceRevision: 3, biography: haus_heswick, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-humber": Object.freeze({ sourceRevision: 3, biography: haus_humber, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-irwynne": Object.freeze({ sourceRevision: 3, biography: haus_irwynne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-kendryck": Object.freeze({ sourceRevision: 3, biography: haus_kendryck, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-leofric": Object.freeze({ sourceRevision: 3, biography: haus_leofric, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-lir": Object.freeze({ sourceRevision: 3, biography: haus_lir, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-oiscingas": Object.freeze({ sourceRevision: 3, biography: haus_oiscingas, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-ransford": Object.freeze({ sourceRevision: 3, biography: haus_ransford, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-scandyn": Object.freeze({ sourceRevision: 3, biography: haus_scandyn, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-seolfor": Object.freeze({ sourceRevision: 3, biography: haus_seolfor, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-skelton": Object.freeze({ sourceRevision: 3, biography: haus_skelton, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-swygert": Object.freeze({ sourceRevision: 3, biography: haus_swygert, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-tharn": Object.freeze({ sourceRevision: 4, biography: haus_tharn, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-thwing": Object.freeze({ sourceRevision: 3, biography: haus_thwing, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-thynne": Object.freeze({ sourceRevision: 3, biography: haus_thynne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-trent": Object.freeze({ sourceRevision: 3, biography: haus_trent, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-trevelyan": Object.freeze({ sourceRevision: 3, biography: haus_trevelyan, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-wend": Object.freeze({ sourceRevision: 3, biography: haus_wend, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-whiting": Object.freeze({ sourceRevision: 3, biography: haus_whiting, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-arvenac": Object.freeze({ sourceRevision: 3, biography: haus_arvenac, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-aubert": Object.freeze({ sourceRevision: 3, biography: haus_aubert, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-bernant": Object.freeze({ sourceRevision: 3, biography: haus_bernant, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-bielle": Object.freeze({ sourceRevision: 3, biography: haus_bielle, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-caudren": Object.freeze({ sourceRevision: 3, biography: haus_caudren, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-corvail": Object.freeze({ sourceRevision: 3, biography: haus_corvail, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-ervaut": Object.freeze({ sourceRevision: 3, biography: haus_ervaut, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-ferant": Object.freeze({ sourceRevision: 3, biography: haus_ferant, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-gerain": Object.freeze({ sourceRevision: 3, biography: haus_gerain, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-guerin": Object.freeze({ sourceRevision: 3, biography: haus_guerin, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-guivren": Object.freeze({ sourceRevision: 3, biography: haus_guivren, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-iverac": Object.freeze({ sourceRevision: 3, biography: haus_iverac, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-jorant": Object.freeze({ sourceRevision: 3, biography: haus_jorant, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-kervaut": Object.freeze({ sourceRevision: 3, biography: haus_kervaut, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-landrec": Object.freeze({ sourceRevision: 3, biography: haus_landrec, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-osmer": Object.freeze({ sourceRevision: 3, biography: haus_osmer, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-perrec": Object.freeze({ sourceRevision: 3, biography: haus_perrec, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-quernac": Object.freeze({ sourceRevision: 3, biography: haus_quernac, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-renaut": Object.freeze({ sourceRevision: 3, biography: haus_renaut, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-rovenne": Object.freeze({ sourceRevision: 3, biography: haus_rovenne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-savrec": Object.freeze({ sourceRevision: 3, biography: haus_savrec, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-trevain": Object.freeze({ sourceRevision: 3, biography: haus_trevain, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-valdran": Object.freeze({ sourceRevision: 3, biography: haus_valdran, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-varenne": Object.freeze({ sourceRevision: 3, biography: haus_varenne, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-walaric": Object.freeze({ sourceRevision: 3, biography: haus_walaric, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-yveran": Object.freeze({ sourceRevision: 3, biography: haus_yveran, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-ardmhair": Object.freeze({ sourceRevision: 1, biography: haus_ardmhair, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-caolan": Object.freeze({ sourceRevision: 1, biography: haus_caolan, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-dal-tuairne": Object.freeze({ sourceRevision: 1, biography: haus_dal_tuairne, replacedDefaultFingerprints: Object.freeze([]) }),
@@ -507,4 +653,22 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-ruin-seilgeir": Object.freeze({ sourceRevision: 1, biography: haus_ruin_seilgeir, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-tir-eatharn": Object.freeze({ sourceRevision: 1, biography: haus_tir_eatharn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-torcmhar": Object.freeze({ sourceRevision: 1, biography: haus_torcmhar, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-aldred": Object.freeze({ sourceRevision: 3, biography: haus_aldred, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-ashton": Object.freeze({ sourceRevision: 3, biography: haus_ashton, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-bramcote": Object.freeze({ sourceRevision: 3, biography: haus_bramcote, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-brigane": Object.freeze({ sourceRevision: 3, biography: haus_brigane, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-egerton": Object.freeze({ sourceRevision: 3, biography: haus_egerton, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-elwick": Object.freeze({ sourceRevision: 3, biography: haus_elwick, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-holton": Object.freeze({ sourceRevision: 3, biography: haus_holton, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-kyme": Object.freeze({ sourceRevision: 3, biography: haus_kyme, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-lennwyck": Object.freeze({ sourceRevision: 3, biography: haus_lennwyck, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-rookden": Object.freeze({ sourceRevision: 3, biography: haus_rookden, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-sedgeley": Object.freeze({ sourceRevision: 3, biography: haus_sedgeley, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-thornwick": Object.freeze({ sourceRevision: 3, biography: haus_thornwick, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-tostan": Object.freeze({ sourceRevision: 3, biography: haus_tostan, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-vernon": Object.freeze({ sourceRevision: 3, biography: haus_vernon, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-warren": Object.freeze({ sourceRevision: 3, biography: haus_warren, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-wickton": Object.freeze({ sourceRevision: 3, biography: haus_wickton, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-wulmer": Object.freeze({ sourceRevision: 3, biography: haus_wulmer, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-yarwyck": Object.freeze({ sourceRevision: 3, biography: haus_yarwyck, replacedDefaultFingerprints: Object.freeze([]) }),
 });

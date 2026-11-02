@@ -1,0 +1,2027 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-01T23:27:59.527Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Sieben/caralyn-chwedlonol.json",
+  "character": {
+    "id": "Eka4z7TWpzEgx8KjhIzy",
+    "name": "Caralyn Chwedonol",
+    "title": "Morwyr · Haus Chwedonol",
+    "fraktion": "Haus Chwedonol, Gwynthor & Glastraeth",
+    "bio": "Caralyn Chwedonol gehört zu Haus Chwedonol. Sie wurde 1722 geboren und ist im Weltjahr 1740 etwa 18 Jahre alt.\n\nCaralyn Chwedonol ist die Tochter von Glyndwr Chwedonol und Kathleen.\n\nIhre Klasse ist Morwyr; ihr Kampfprofil bleibt vorerst auf Stufe 1.",
+    "aliases": [],
+    "archived": false,
+    "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+    "emotesOverride": true,
+    "playerOwner": "patrick",
+    "profileLink": "",
+    "emotes": [
+      {
+        "img": "https://i.imgur.com/X4wfYba.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/4zmxTnG.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/Z6C3g06.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/R3UHVKa.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/abOKg8L.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/DWHbiJH.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/k7rnyXj.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/FpSjMHW.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/MBoAWTm.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/lzPxLZk.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/a5mAD4u.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/vxQgj7N.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/7cu4QLQ.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/TfScZK6.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/K89zuHS.png",
+        "label": ""
+      },
+      {
+        "img": "https://i.imgur.com/cu9dcqH.png",
+        "label": ""
+      }
+    ],
+    "inventory": {
+      "carryLabel": "Traglast",
+      "role": "Ritterin, Gwynthor & Glastraeth",
+      "level": "Haus Chwedonol, Gwynthor & Glastraeth",
+      "equipmentQuiz": {
+        "resultText": "",
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "step": 0,
+        "open": false,
+        "status": "",
+        "updatedAt": ""
+      },
+      "portraitFit": "cover",
+      "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+      "portraitPosition": "top",
+      "title": "Charakter-Inventar",
+      "moneyNotice": "",
+      "hitpoints": "TP / Zustand",
+      "carryValue": "Noch festlegen",
+      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "companions": [
+        {
+          "id": "companion-mqu1vat2-0-zz2n",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Reittier / Gefährte",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "companion-mqu1vat2-1-5e7l",
+          "image": "",
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "imagePosition": "top",
+          "name": "Treuer Begleiter",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "status": "Noch festlegen",
+          "statusColor": "#5c7f20",
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "description": "",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "label": "Ausdauer",
+              "value": 7
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "name": "Caralyn Chwedonol",
+      "portraitFormat": "portrait",
+      "healthColor": "#5c7f20",
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "label": "Ges",
+          "value": 6
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "id": "armor",
+          "label": "Rüstung",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "label": "Ausrüstung",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "id": "potions",
+          "label": "Trinkturen",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png"
+        },
+        {
+          "id": "other",
+          "label": "Sonstiges",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "moneyState": {
+        "gold": 0,
+        "copper": 0,
+        "silver": 0,
+        "totalCopper": 0
+      },
+      "infoRows": [],
+      "items": [
+        {
+          "id": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "instanceId": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "templateId": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+          "templateName": "Caralyns Chwedonol-Rüstung",
+          "definitionRef": {
+            "id": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+            "revision": "7cfaf43ad2ef720765fb3ee9"
+          },
+          "offerId": "",
+          "registerCategory": "ruestungen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Caralyns Chwedonol-Rüstung",
+          "type": "Rüstung",
+          "category": "armor",
+          "description": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-efe3c1d38655839c%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "instanceId": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "templateId": "gwynthor-seven:chwedonol-dreizack",
+          "templateName": "Chwedonol Dreizack",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-dreizack",
+            "revision": "be71b2bb8d14a2556f1159af"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-dreizack",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Chwedonol Dreizack",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Dreizack in grünen und goldenen Hausfarben.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-1055815face35522%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "instanceId": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "templateId": "gwynthor-seven:chwedonol-enteraxt",
+          "templateName": "Chwedonol Enteraxt",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-enteraxt",
+            "revision": "23a75879de27a0282d3be37a"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-enteraxt",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Chwedonol Enteraxt",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Handliche Enteraxt für das Gedränge an Deck.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-2d5e4c953cecf2ef%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "instanceId": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "templateId": "gwynthor-seven:chwedonol-harpune",
+          "templateName": "Chwedonol Harpune",
+          "definitionRef": {
+            "id": "gwynthor-seven:chwedonol-harpune",
+            "revision": "ee0274db595c0612e1cf4be4"
+          },
+          "offerId": "",
+          "registerCategory": "waffen",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:chwedonol-harpune",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Chwedonol Harpune",
+          "type": "Waffe",
+          "category": "weapon",
+          "description": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-netz-7",
+          "instanceId": "caralyn-chwedlonol-netz-7",
+          "templateId": "gwynthor-seven:netz",
+          "templateName": "Netz",
+          "definitionRef": {
+            "id": "gwynthor-seven:netz",
+            "revision": "4a6e140389422fc425cc0d34"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:netz",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Netz",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Ein Wurf- und Fangnetz. Kein automatischer Zustand ohne ausgearbeitete Aktion.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-4345de1502d3ed85%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        },
+        {
+          "id": "caralyn-chwedlonol-seil-8",
+          "instanceId": "caralyn-chwedlonol-seil-8",
+          "templateId": "gwynthor-seven:seil",
+          "templateName": "Seil",
+          "definitionRef": {
+            "id": "gwynthor-seven:seil",
+            "revision": "ea6062dea433bf62a09626bc"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "gwynthor-seven:seil",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "Eka4z7TWpzEgx8KjhIzy",
+          "ownerCharacterName": "Caralyn Chwedonol",
+          "acquiredAt": "2026-11-01T23:27:59.527Z",
+          "name": "Seil",
+          "type": "Ausrüstung",
+          "category": "equipment",
+          "description": "Hanfseil, 15 m. Die Verbindung mit Netz oder Harpune muss tatsächlich hergestellt werden.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-94b83e34baadaaf9%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Gwynthor, Individuelle Ausrüstung",
+          "equipped": false,
+          "valuation": null,
+          "infoRows": [],
+          "attributes": []
+        }
+      ],
+      "status": "Gesund",
+      "definitionSchemaVersion": 1
+    },
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "createdAt": "2026-11-01T23:27:59.527Z",
+    "updatedAt": "2026-11-01T23:27:59.527Z",
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "gwynthor-20261102-set-1",
+        "name": "Set 1 · Alltag und Gespräch",
+        "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+        "emotes": [
+          {
+            "name": "Alltag und Gespräch 1",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild1.png"
+          },
+          {
+            "name": "Alltag und Gespräch 2",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild2.png"
+          },
+          {
+            "name": "Alltag und Gespräch 3",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild3.png"
+          },
+          {
+            "name": "Alltag und Gespräch 4",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild4.png"
+          },
+          {
+            "name": "Alltag und Gespräch 5",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild5.png"
+          },
+          {
+            "name": "Alltag und Gespräch 6",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild6.png"
+          },
+          {
+            "name": "Alltag und Gespräch 7",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild7.png"
+          },
+          {
+            "name": "Alltag und Gespräch 8",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild8.png"
+          },
+          {
+            "name": "Alltag und Gespräch 9",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-01_Bild9.png"
+          }
+        ]
+      },
+      {
+        "id": "gwynthor-20261102-set-2",
+        "name": "Set 2 · Gefühle und Begegnungen",
+        "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+        "emotes": [
+          {
+            "name": "Gefühle und Begegnungen 1",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild1.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 2",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild2.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 3",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild3.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 4",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild4.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 5",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild5.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 6",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild6.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 7",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild7.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 8",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild8.png"
+          },
+          {
+            "name": "Gefühle und Begegnungen 9",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-02_Bild9.png"
+          }
+        ]
+      },
+      {
+        "id": "gwynthor-20261102-set-3",
+        "name": "Set 3 · Eigenwillige Gesten",
+        "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+        "emotes": [
+          {
+            "name": "Eigenwillige Gesten 1",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild1.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 2",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild2.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 3",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild3.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 4",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild4.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 5",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild5.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 6",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild6.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 7",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild7.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 8",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild8.png"
+          },
+          {
+            "name": "Eigenwillige Gesten 9",
+            "img": "/AleriaAlmanach/assets/gwynthor-seven/avatars/caralyn/caralyn-2026-11-02-set-03_Bild9.png"
+          }
+        ]
+      },
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://64.media.tumblr.com/0ae0ecbf828c06a604013194def625fa/509b0fc594dd0b61-55/s250x400/5d6b76987e4d3ffdf04a60d1341fb1683a6a223d.pnj",
+        "emotes": [
+          {
+            "img": "https://i.imgur.com/X4wfYba.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/4zmxTnG.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/Z6C3g06.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/R3UHVKa.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/abOKg8L.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/DWHbiJH.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/k7rnyXj.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/FpSjMHW.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/MBoAWTm.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/lzPxLZk.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/a5mAD4u.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/vxQgj7N.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/7cu4QLQ.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/TfScZK6.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/K89zuHS.png",
+            "label": ""
+          },
+          {
+            "img": "https://i.imgur.com/cu9dcqH.png",
+            "label": ""
+          }
+        ]
+      }
+    ],
+    "activeImageSetId": "gwynthor-20261102-set-1",
+    "imageSetsOverride": true,
+    "identity": {
+      "worldPersonId": "person--haus-chwedlonol--caralyn-chwedlonol"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chwedlonol--caralyn-chwedlonol",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-chwedlonol",
+      "houseName": "Haus Chwedonol",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chwedlonol",
+          "personId": "caralyn-chwedlonol",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-01T23:27:59.527Z",
+          "lastSyncedAt": "2026-11-01T23:27:59.527Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=caralyn-chwedlonol",
+          "fingerprint": "{\"name\":\"Caralyn Chwedonol\",\"title\":\"\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chwedlonol\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chwedlonol/caralyn-chwedlonol.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"glyndwr-chwedlonol\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chwedlonol--glyndwr-chwedlonol\",\"name\":\"Glyndwr Chwedonol\"},{\"personId\":\"kathleen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--kathleen\",\"name\":\"Kathleen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "glyndwr-chwedlonol",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chwedlonol--glyndwr-chwedlonol",
+            "name": "Glyndwr Chwedonol"
+          },
+          {
+            "personId": "kathleen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--kathleen",
+            "name": "Kathleen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        [
+          "Name",
+          "Caralyn Chwedonol"
+        ],
+        [
+          "Geboren",
+          "1722"
+        ],
+        [
+          "Alter im Weltjahr 1740",
+          "etwa 18 Jahre"
+        ],
+        [
+          "Haus",
+          "Haus Chwedonol"
+        ],
+        [
+          "Sitz des Hauses",
+          "Gwynthor"
+        ],
+        [
+          "Klasse",
+          "Morwyr"
+        ],
+        [
+          "Stufe",
+          "1"
+        ]
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chwedlonol/caralyn-chwedlonol.jpg",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Caralyn Chwedonol",
+        "biographyText": "<p>Caralyn Chwedonol gehört zu Haus Chwedonol. Sie wurde 1722 geboren und ist im Weltjahr 1740 etwa 18 Jahre alt.</p><p>Caralyn Chwedonol ist die Tochter von Glyndwr Chwedonol und Kathleen.</p><p>Ihre Klasse ist Morwyr; ihr Kampfprofil bleibt vorerst auf Stufe 1.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [],
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Langes rotes Haar, grüne Augen und grün-goldener Wappenrock mit Meerjungfrau über dunkler Rüstung.</p>"
+          }
+        ],
+        "historyTitle": "Belegter Familienhintergrund",
+        "historyText": "<p>Haus Chwedonol ist ein von Frauen geführtes Ritterhaus im Dienst der Saethwyr. Seine Kapitäne und Ritter zur See schützen die Küste; Burgen in Gwynthor und Glastraeth sowie eine Werft tragen seine Stellung.</p><p>Die Chwedonol verfügen über zwei Burgen, die ihre Stellung innerhalb der Grafschaft unterstreichen. Die erste erhebt sich im Hafenbereich von Gwynthor. Dort residiert das Familienoberhaupt, ebenso wie viele weitere Mitglieder des Hauses.</p>",
+        "worksTitle": "Bekannte Werke",
+        "works": [],
+        "triviaTitle": "Trivia",
+        "trivia": [],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie und Herkunft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Glyndwr Chwedonol",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chwedlonol/glyndwr-chwedlonol.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Kathleen",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chwedlonol/kathleen.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Haus Chwedonol",
+            "detail": "Gwynthor",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-chwedlonol.png",
+            "imageFormat": "square"
+          },
+          {
+            "type": "connection",
+            "name": "Haus Saethwyr",
+            "detail": "Dienst- beziehungsweise Lehnsbindung des Hauses; keine zusätzliche Wohnortzuordnung.",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Quellen",
+        "documents": [
+          {
+            "icon": "",
+            "title": "Haus Chwedonol · Stammbaum",
+            "text": "Person, Geburtsjahr, Eltern, Geschwister, Haus und Originalporträt.",
+            "link": "/Stammbäume/Stammbaum.html?family=haus-chwedlonol&mode=view&person=caralyn-chwedlonol"
+          },
+          {
+            "icon": "",
+            "title": "Hausakte",
+            "text": "Überlieferter Hauskontext. Klassen und Ausrüstung folgen zusätzlich dem Autorenauftrag vom 02.11.2026.",
+            "link": "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/haus.data.js"
+          }
+        ],
+        "footer": "Belegte Personenakte · Weltjahr 1740"
+      }
+    },
+    "combatProfile": {
+      "schemaVersion": 11,
+      "revision": 0,
+      "identity": {
+        "ancestry": "",
+        "archetype": "Morwyr",
+        "background": ""
+      },
+      "templateSelections": {
+        "schemaVersion": 1,
+        "ancestryId": "",
+        "backgroundId": "",
+        "classId": "morwyr",
+        "attributeMethod": "",
+        "appliedAt": ""
+      },
+      "proficiencies": {
+        "armor": [
+          "light"
+        ],
+        "weapons": [
+          "simple",
+          "martial",
+          "spear",
+          "polearm",
+          "axe"
+        ],
+        "tools": [],
+        "languages": [],
+        "notes": ""
+      },
+      "progression": {
+        "development": {
+          "version": 1,
+          "mode": "purchase",
+          "startingPoints": 3,
+          "pointsPerLevel": 3,
+          "ownClassCost": 2,
+          "foreignMultiplier": 2,
+          "levelSurcharge": 1,
+          "adjustment": 0,
+          "purchases": []
+        },
+        "level": 1,
+        "specialLevels": 0,
+        "resourceRulesVersion": 2,
+        "actionPoolChoices": [],
+        "experience": 0,
+        "nextLevelExperience": null,
+        "experienceReward": null,
+        "proficiencyBonusOverride": null
+      },
+      "attributes": [
+        {
+          "key": "strength",
+          "label": "Kraft",
+          "shortLabel": "KRF",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "dexterity",
+          "label": "Geschick",
+          "shortLabel": "GES",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "constitution",
+          "label": "Konstitution",
+          "shortLabel": "KON",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "intelligence",
+          "label": "Intelligenz",
+          "shortLabel": "INT",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "wisdom",
+          "label": "Weisheit",
+          "shortLabel": "WEI",
+          "score": 10,
+          "modifierOverride": null
+        },
+        {
+          "key": "charisma",
+          "label": "Charisma",
+          "shortLabel": "CHA",
+          "score": 10,
+          "modifierOverride": null
+        }
+      ],
+      "hitPoints": {
+        "current": null,
+        "temporary": 0,
+        "hitDie": 10,
+        "averagePerLevelOverride": null,
+        "maximumOverride": null
+      },
+      "armorClass": {
+        "base": 10,
+        "dexterityMode": "full",
+        "dexterityCap": 2,
+        "shieldBonus": 0,
+        "magicModifier": 0,
+        "otherModifier": 0,
+        "override": null,
+        "overrideMode": "total"
+      },
+      "combat": {
+        "movement": 9,
+        "initiativeBonus": 0,
+        "attackBonus": 0,
+        "damageBonus": 0,
+        "passivePerceptionBonus": 0,
+        "canActAtZeroHitPoints": false,
+        "mounted": false
+      },
+      "savingThrows": [
+        {
+          "attributeKey": "strength",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "dexterity",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "constitution",
+          "proficient": true,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "intelligence",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "wisdom",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        },
+        {
+          "attributeKey": "charisma",
+          "proficient": false,
+          "expertise": false,
+          "bonus": 0
+        }
+      ],
+      "skills": [
+        {
+          "id": "default-skill-1",
+          "name": "Athletik",
+          "attributeKey": "strength",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-2",
+          "name": "Akrobatik",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-3",
+          "name": "Fingerfertigkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-4",
+          "name": "Heimlichkeit",
+          "attributeKey": "dexterity",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-5",
+          "name": "Arkane Kunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-6",
+          "name": "Geschichte",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-7",
+          "name": "Nachforschungen",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-8",
+          "name": "Naturkunde",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-9",
+          "name": "Religion",
+          "attributeKey": "intelligence",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-10",
+          "name": "Heilkunde",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-11",
+          "name": "Mit Tieren umgehen",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-12",
+          "name": "Motiv erkennen",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-13",
+          "name": "Überleben",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-14",
+          "name": "Wahrnehmung",
+          "attributeKey": "wisdom",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-15",
+          "name": "Auftreten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-16",
+          "name": "Einschüchtern",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-17",
+          "name": "Täuschen",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-18",
+          "name": "Überreden",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-19",
+          "name": "Flirten",
+          "attributeKey": "charisma",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        },
+        {
+          "id": "default-skill-20",
+          "name": "Körperbeherrschung",
+          "attributeKey": "constitution",
+          "proficiency": "none",
+          "bonus": 0,
+          "notes": ""
+        }
+      ],
+      "weapons": [
+        {
+          "id": "default-unarmed-melee",
+          "inventoryItemId": "",
+          "name": "Nahkampf",
+          "image": "",
+          "weaponProfileId": "",
+          "triggerRules": [],
+          "weaponType": "unarmed",
+          "training": "simple",
+          "damageFormula": "1d4",
+          "versatileDamageFormula": "",
+          "damageType": "Wucht",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Schlicht · simpel · immer verfügbar",
+          "notes": "Grundlegender waffenloser Nahkampfangriff.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "inventoryItemId": "caralyn-chwedlonol-chwedonol-dreizack-2",
+          "name": "Chwedonol Dreizack",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-1055815face35522%2Foriginal.png?alt=media",
+          "weaponProfileId": "trident",
+          "triggerRules": [],
+          "weaponType": "spear",
+          "training": "martial",
+          "damageFormula": "1d8",
+          "versatileDamageFormula": "1d10",
+          "damageType": "Stich",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Vielseitig",
+          "notes": "Dreizack in grünen und goldenen Hausfarben.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": true
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "inventoryItemId": "caralyn-chwedlonol-chwedonol-enteraxt-3",
+          "name": "Chwedonol Enteraxt",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-2d5e4c953cecf2ef%2Foriginal.png?alt=media",
+          "weaponProfileId": "boarding-axe",
+          "triggerRules": [],
+          "weaponType": "axe",
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Hieb",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf",
+          "properties": "Einhändig · Enterhaken",
+          "notes": "Handliche Enteraxt für das Gedränge an Deck.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "inventoryItemId": "caralyn-chwedlonol-chwedonol-harpune-4",
+          "name": "Chwedonol Harpune",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "weaponProfileId": "harpoon",
+          "triggerRules": [],
+          "weaponType": "spear",
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · Wurf 6/18 m",
+          "properties": "Einhändig · Wurfwaffe · Leine gesondert befestigen",
+          "notes": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "inventoryItemId": "caralyn-chwedlonol-chwedonol-harpune-5",
+          "name": "Chwedonol Harpune",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "weaponProfileId": "harpoon",
+          "triggerRules": [],
+          "weaponType": "spear",
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · Wurf 6/18 m",
+          "properties": "Einhändig · Wurfwaffe · Leine gesondert befestigen",
+          "notes": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        },
+        {
+          "id": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "inventoryItemId": "caralyn-chwedlonol-chwedonol-harpune-6",
+          "name": "Chwedonol Harpune",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-3993c72e7fb9da4e%2Foriginal.png?alt=media",
+          "weaponProfileId": "harpoon",
+          "triggerRules": [],
+          "weaponType": "spear",
+          "training": "martial",
+          "damageFormula": "1d6",
+          "versatileDamageFormula": "",
+          "damageType": "Stich",
+          "attackAttribute": "strength",
+          "proficient": true,
+          "attackBonus": 0,
+          "damageBonus": 0,
+          "range": "Nahkampf · Wurf 6/18 m",
+          "properties": "Einhändig · Wurfwaffe · Leine gesondert befestigen",
+          "notes": "Eine Harpune. Ziehen erfordert eine intakte befestigte Leine und ein passendes Manöver mit Rettungswurf.",
+          "requirements": "",
+          "aiInstructions": "",
+          "effects": [],
+          "ammunition": null,
+          "activationType": "action",
+          "costs": [
+            {
+              "id": "activation-action",
+              "resourceId": "action",
+              "name": "Aktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": true,
+            "resourceId": "",
+            "cost": 1
+          },
+          "equipped": false
+        }
+      ],
+      "armorItems": [
+        {
+          "definitionRef": {
+            "id": "gwynthor-seven:caralyn-chwedlonol-ruestung",
+            "revision": "7cfaf43ad2ef720765fb3ee9"
+          },
+          "definitionTitle": "Caralyns Chwedonol-Rüstung",
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "id": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "inventoryItemId": "caralyn-chwedlonol-caralyn-chwedlonol-ruestung-1",
+          "name": "Caralyns Chwedonol-Rüstung",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-chwedlonol%2Fknight-equipment-efe3c1d38655839c%2Foriginal.png?alt=media",
+          "kind": "armor",
+          "armorCategory": "heavy",
+          "damageProtection": {
+            "amount": 1,
+            "name": "Plattengrundschutz",
+            "damageTypes": [
+              "hieb",
+              "stich",
+              "wucht"
+            ],
+            "excludedDamageTypes": []
+          },
+          "triggerRules": [],
+          "baseArmorClass": 15,
+          "armorClassBonus": 0,
+          "dexterityMode": "none",
+          "dexterityCap": 2,
+          "dexterityUnlockLevel": 0,
+          "properties": "Schwere Startrüstung",
+          "notes": "Persönliche Startrüstung in den Porträt- und Hausfarben: Stufe 1, RK 15 ohne GES und −1 gegen Hieb/Stich/Wucht. Keine persönlichen Sonderboni.",
+          "equipped": true
+        }
+      ],
+      "resources": [
+        {
+          "id": "inspiration",
+          "name": "Inspiration",
+          "current": 0,
+          "maximum": 1,
+          "recovery": "manual",
+          "scope": "persistent",
+          "category": "",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "mana-focus",
+          "name": "Mana",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "magic",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "focus",
+          "name": "Fokus",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "focus",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "celestial-points",
+          "name": "Celestiale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "celestial",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "infernal-points",
+          "name": "Infernale Punkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "infernal",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "pact-points",
+          "name": "Paktpunkte",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "pact",
+          "icon": "",
+          "notes": ""
+        },
+        {
+          "id": "action",
+          "name": "Aktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "bonus-action",
+          "name": "Bonusaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/bonus-action.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "reaction",
+          "name": "Reaktion",
+          "current": 1,
+          "maximum": 1,
+          "recovery": "scene",
+          "scope": "comment",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/reaction.png",
+          "notes": "Wird für jeden neuen Gesamtkommentar aufgefüllt."
+        },
+        {
+          "id": "special-action",
+          "name": "Besondere Aktion",
+          "current": 2,
+          "maximum": 2,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "icon": "./public/assets/combat-profile-icons/special-action.png",
+          "notes": ""
+        },
+        {
+          "id": "aura-focus",
+          "name": "Aura-Fokuspunkt",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "day",
+          "scope": "persistent",
+          "category": "action",
+          "paymentRole": "universal-substitute",
+          "icon": "./public/assets/combat-profile-icons/aura-focus.png",
+          "notes": ""
+        },
+        {
+          "id": "spell-slot-1",
+          "name": "Zauberplatz I",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 1,
+          "notes": "Wird von Zaubern des I. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-2",
+          "name": "Zauberplatz II",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 2,
+          "notes": "Wird von Zaubern des II. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-3",
+          "name": "Zauberplatz III",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 3,
+          "notes": "Wird von Zaubern des III. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-4",
+          "name": "Zauberplatz IV",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 4,
+          "notes": "Wird von Zaubern des IV. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-5",
+          "name": "Zauberplatz V",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 5,
+          "notes": "Wird von Zaubern des V. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-6",
+          "name": "Zauberplatz VI",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 6,
+          "notes": "Wird von Zaubern des VI. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-7",
+          "name": "Zauberplatz VII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 7,
+          "notes": "Wird von Zaubern des VII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-8",
+          "name": "Zauberplatz VIII",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 8,
+          "notes": "Wird von Zaubern des VIII. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-9",
+          "name": "Zauberplatz IX",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 9,
+          "notes": "Wird von Zaubern des IX. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        },
+        {
+          "id": "spell-slot-10",
+          "name": "Zauberplatz X",
+          "current": 0,
+          "maximum": 0,
+          "recovery": "long-rest",
+          "scope": "persistent",
+          "category": "spell-slot",
+          "icon": "",
+          "spellLevel": 10,
+          "notes": "Wird von Zaubern des X. Grades verbraucht und durch eine lange Rast aufgefüllt."
+        }
+      ],
+      "techniques": [],
+      "classTraining": {
+        "schemaVersion": 2,
+        "curriculumId": "",
+        "selections": [],
+        "techniqueSelections": []
+      },
+      "quirks": [],
+      "conditions": [],
+      "damageAffinities": [],
+      "abilities": [
+        {
+          "id": "martial-durchschnaufen",
+          "name": "Durchschnaufen",
+          "description": "Regeneriere 1 eigenen Klassen-Trefferwürfel + 10 % der maximalen TP (aufgerundet), höchstens bis zum TP-Maximum. Kein KON-Bonus. Einmal pro langer Rast.",
+          "usesCurrent": 1,
+          "usesMaximum": 1,
+          "recovery": "long-rest",
+          "recoveryDayKey": "",
+          "rollFormula": "",
+          "damageType": "physisch",
+          "activationType": "bonus-action",
+          "delivery": "ability",
+          "resolutionType": "automatic",
+          "saveAttribute": "dexterity",
+          "halfDamageOnSave": false,
+          "combatUsable": true,
+          "target": "Selbst",
+          "range": "Selbst",
+          "duration": "",
+          "requirements": "",
+          "tags": "Erholung · Lange Rast",
+          "aiInstructions": "",
+          "effects": [
+            {
+              "id": "second-wind-heal",
+              "type": "healing",
+              "target": "self",
+              "amount": 0,
+              "scaling": "hit-die-and-tenth-maximum",
+              "formula": "1d8",
+              "damageType": "physisch",
+              "inheritWeaponDamageType": false,
+              "magical": false,
+              "on": "always",
+              "resourceId": "",
+              "condition": null,
+              "conditionId": "",
+              "conditionTags": "",
+              "movementMeters": 0,
+              "movementKind": "move",
+              "summon": null,
+              "concentration": false,
+              "channelComments": 0,
+              "nonlethal": false,
+              "notes": ""
+            }
+          ],
+          "concentration": false,
+          "channelComments": 0,
+          "costs": [
+            {
+              "id": "second-wind-bonus",
+              "resourceId": "bonus-action",
+              "name": "Bonusaktion",
+              "amount": 1,
+              "scope": "comment"
+            }
+          ],
+          "auraBypass": {
+            "allowed": false,
+            "resourceId": "",
+            "cost": 1
+          },
+          "active": true,
+          "mechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "triggerRules": [],
+          "inventoryUseTrigger": {
+            "enabled": false,
+            "itemTags": [],
+            "restoreResources": [],
+            "requireActualRecovery": true
+          }
+        }
+      ],
+      "magic": {
+        "enabled": false,
+        "casterTier": "full",
+        "bypassResourceId": "",
+        "focusEnabled": false,
+        "focusResourceId": "focus",
+        "castingAttribute": "intelligence",
+        "spellAttackOverride": null,
+        "spellSaveDcOverride": null,
+        "manaResourceId": "mana-focus",
+        "slotResourceIds": [
+          "spell-slot-1",
+          "spell-slot-2",
+          "spell-slot-3",
+          "spell-slot-4",
+          "spell-slot-5",
+          "spell-slot-6",
+          "spell-slot-7",
+          "spell-slot-8",
+          "spell-slot-9",
+          "spell-slot-10"
+        ],
+        "notes": "",
+        "spells": []
+      },
+      "aura": {
+        "enabled": false,
+        "name": "Aura",
+        "domain": "",
+        "focusResourceId": "aura-focus",
+        "focusBypassCost": 1,
+        "notes": "",
+        "activeForm": {
+          "enabled": false,
+          "active": false,
+          "name": "Aktive Form",
+          "description": "",
+          "radius": "",
+          "target": "Selbst und gewählte Ziele",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        },
+        "latentPresence": {
+          "enabled": true,
+          "active": true,
+          "name": "Latente Präsenz",
+          "description": "",
+          "radius": "",
+          "target": "Umgebung, Verbündete und Gegner",
+          "trigger": "",
+          "duration": "",
+          "requirements": "",
+          "aiInstructions": "",
+          "selfMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "allyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          },
+          "enemyMechanics": {
+            "attack": 0,
+            "damage": 0,
+            "armorClass": 0,
+            "initiative": 0,
+            "skill": 0,
+            "savingThrow": 0,
+            "spellAttack": 0,
+            "spellSaveDc": 0,
+            "movement": 0,
+            "maximumHitPoints": 0,
+            "combatStartTemporaryHitPoints": 0,
+            "passivePerception": 0,
+            "attackRollMode": "normal",
+            "bonusDamageFormula": "",
+            "savingThrowAdvantageAttributes": [],
+            "savingThrowDisadvantageAttributes": []
+          }
+        }
+      },
+      "cheats": {
+        "enabled": false,
+        "automaticCritical": false
+      },
+      "notes": ""
+    }
+  }
+}

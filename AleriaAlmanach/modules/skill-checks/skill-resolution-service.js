@@ -16,6 +16,7 @@ import {
 import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { getCheckProfileRollModes } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
+import { getHealthTaskError } from '../character-health/health-trait-policy.js';
 
 export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-6';
 
@@ -111,6 +112,8 @@ export class SkillResolutionService {
   async resolve({ actor, settings: sourceSettings, challenge = null, actorPersistence = null } = {}, options = {}) {
     const { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, rollMode, checkType, actionKind, modifierKey }
       = getSkillRollContext({ actor, settings: sourceSettings }, options);
+    const healthError = getHealthTaskError(skill.profile, { sense: settings.requiredSense });
+    if (healthError) throw Error(healthError);
     const affinityModifier = challenge ? getChallengeAffinityModifier(challenge, settings.skillId) : 0;
     const checkRule = getChallengeCheckRule(challenge, settings.skillId);
     if (!checkRule.allowed) throw new Error('Diese Probe ist für den gewählten Lösungsweg gesperrt.');

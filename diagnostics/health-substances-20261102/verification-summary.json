@@ -1,0 +1,107 @@
+{
+  "frontend-tests-verified": {
+    "tests": 2167,
+    "pass": 2167,
+    "fail": 0,
+    "skipped": 0
+  },
+  "backend-tests-verified": {
+    "tests": 330,
+    "pass": 330,
+    "fail": 0,
+    "skipped": 0
+  },
+  "integration-tests-final": {
+    "tests": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0
+  },
+  "release-tests-final": {
+    "tests": 26,
+    "pass": 26,
+    "fail": 0,
+    "skipped": 0
+  },
+  "compatibility-tests-final": {
+    "tests": 36,
+    "pass": 36,
+    "fail": 0,
+    "skipped": 0
+  },
+  "browser-reviewed": {
+    "passed": true,
+    "filters": {
+      "affliction": 30,
+      "fever": 10,
+      "addiction": 9,
+      "tolerance": 3
+    },
+    "selectedTraits": 4,
+    "mutuallyExclusiveStages": true,
+    "allIconsDecoded": true,
+    "originalStateIcons": [
+      "/AleriaAlmanach/assets/development-traits/web/zustand-betrunken.webp",
+      "/AleriaAlmanach/assets/development-traits/web/zustand-kriss-rausch.webp",
+      "/AleriaAlmanach/assets/development-traits/web/zustand-smaragdflux-rausch.webp",
+      "/AleriaAlmanach/assets/development-traits/web/zustand-blutstaub-rausch.webp",
+      "/AleriaAlmanach/assets/development-traits/web/zustand-verkatert.webp"
+    ],
+    "fixedPresetEditor": true,
+    "bounds": {
+      "width": 384,
+      "scrollWidth": 384
+    },
+    "runtime": [
+      "Betrunken",
+      "Kriss-Rausch",
+      "Smaragdflux-Rausch",
+      "Blutstaub-Rausch",
+      "Verkatert (Alkohol)"
+    ],
+    "externalWritesBlocked": true,
+    "errors": []
+  },
+  "setup-browser": {
+    "passed": true,
+    "views": [
+      {
+        "name": "desktop",
+        "width": 1314,
+        "scrollWidth": 1314
+      },
+      {
+        "name": "phone",
+        "width": 384,
+        "scrollWidth": 384
+      }
+    ],
+    "level": 5,
+    "attacks": 1,
+    "traits": 4,
+    "bloodlineFilter": 10,
+    "symbiosisFilter": 4,
+    "clanEmblems": 4,
+    "negativeBalanceAllowed": true,
+    "standardEquipmentGranted": 0,
+    "existingEquipmentPreserved": true,
+    "externalWritesBlocked": true,
+    "errors": []
+  },
+  "serverParity": {
+    "comparedModules": 252,
+    "mismatches": [],
+    "readOnly": true
+  },
+  "newArt": {
+    "count": 57,
+    "generator": "built-in imagegen",
+    "reusedGameIcons": 0
+  },
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "liveDataWritten": false
+  }
+}

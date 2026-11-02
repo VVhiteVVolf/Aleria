@@ -115,9 +115,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/martial-control-gildas-gafyr-2026-10-15.json",
-    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
-    "sourceUpdatedAt": "2026-10-03T02:00:00.000Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/gildas-gafyr.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "gildas-gafyr",
       "gildas-gafyr",
@@ -128,7 +128,7 @@
       "person--haus-gafyr--gildas-gafyr",
       "gildas-gafyr"
     ],
-    "contentHash": "f710cbfbd1a03a484b8df24a8ae32ef020743dc8b37df2c8e05786cae5a55142"
+    "contentHash": "e0c0bf0d617a242126d31e96919f60ec8f6277df8ec6f164ca13567ce6d50fae"
   },
   "local": {
     "notes": "",
@@ -29837,6 +29837,78 @@
             }
           ]
         }
+      },
+      {
+        "id": "gildas-gafyr",
+        "name": "Gildas Gafyr",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-wachsam",
+              "name": "Wachsamer Blick",
+              "description": "+2 passive Wahrnehmung und +1 Initiative.",
+              "cost": 2,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung",
+              "mechanics": {
+                "passivePerception": 2,
+                "initiative": 1
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "development-trait-eigensinn",
+              "name": "Eigensinn",
+              "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+              "cost": 1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Besondere Eigenheit",
+              "mechanics": {
+                "saveAttributeModifiers": [
+                  {
+                    "attributeKey": "charisma",
+                    "bonus": 2
+                  }
+                ],
+                "skillModifiers": [
+                  {
+                    "name": "Überzeugen",
+                    "bonus": -2
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Wachsamer Blick",
+                "detail": "+2 passive Wahrnehmung und +1 Initiative.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp"
+              },
+              {
+                "title": "Eigensinn",
+                "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
@@ -29858,7 +29930,7 @@
     "aliases": [],
     "archived": false,
     "createdAt": "2026-08-08T03:52:02.274Z",
-    "updatedAt": "2026-10-03T02:00:00.000Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "imageSetSchemaVersion": 1,
     "imageSets": [
       {
@@ -30336,284 +30408,50 @@
     "combatProfile": {
       "quirks": [
         {
-          "stacking": "normal",
-          "aiInstructions": "",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "duration": "",
-          "id": "starter-ancestry-cenyr-trait-1",
-          "priority": 0,
-          "triggerRules": [],
-          "active": true,
+          "id": "development-trait-wachsam",
+          "name": "Wachsamer Blick",
+          "description": "+2 passive Wahrnehmung und +1 Initiative.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp",
           "type": "trait",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
           "mechanics": {
-            "savingThrowAdvantageAttributes": [],
-            "spellAttack": 0,
-            "attack": 0,
-            "savingThrow": 0,
-            "skill": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "savingThrowDisadvantageAttributes": [],
-            "armorClass": 0,
-            "maximumHitPoints": 0,
-            "passivePerception": 0,
-            "spellSaveDc": 0,
-            "initiative": 0,
-            "movement": 0
+            "passivePerception": 2,
+            "initiative": 1
           },
-          "tags": "Volk · Cenyr",
-          "target": "self",
-          "name": "Cenyri Kultur",
-          "limitations": "",
-          "trigger": ""
+          "triggerRules": []
         },
         {
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "mechanics": {
-            "savingThrowDisadvantageAttributes": [],
-            "spellAttack": 0,
-            "bonusDamageFormula": "",
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrow": 0,
-            "skill": 0,
-            "maximumHitPoints": 0,
-            "armorClass": 0,
-            "movement": 0,
-            "attack": 0,
-            "spellSaveDc": 0,
-            "passivePerception": 0,
-            "savingThrowAdvantageAttributes": [],
-            "initiative": 0,
-            "damage": 0,
-            "attackRollMode": "normal"
-          },
-          "triggerRules": [],
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "target": "self",
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
           "type": "trait",
-          "stacking": "normal",
-          "duration": "",
-          "tags": "Volk · Cenyr",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "name": "Höfische und religiöse Prägung",
           "active": true,
-          "priority": 0,
-          "aiInstructions": "",
-          "trigger": "",
-          "limitations": ""
-        },
-        {
-          "active": true,
-          "type": "trait",
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
           "mechanics": {
-            "movement": 0,
-            "initiative": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "attack": 0,
-            "bonusDamageFormula": "",
-            "spellSaveDc": 0,
-            "attackRollMode": "normal",
-            "combatStartTemporaryHitPoints": 0,
-            "armorClass": 0,
-            "damage": 0,
-            "passivePerception": 0,
-            "maximumHitPoints": 0,
-            "savingThrowAdvantageAttributes": [],
-            "spellAttack": 0,
-            "savingThrow": 0,
-            "skill": 0
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "charisma",
+                "bonus": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": -2
+              }
+            ]
           },
-          "tags": "Hintergrund · Ritter",
-          "target": "self",
-          "id": "starter-background-ritter-trait-1",
-          "name": "Ritterliche Herkunft und Standespflicht",
-          "aiInstructions": "",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "duration": "",
-          "limitations": "",
-          "stacking": "normal",
-          "trigger": "",
-          "triggerRules": [],
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "priority": 0
-        },
-        {
-          "limitations": "Der Bonus entfällt erzählerisch, wenn Gildas überrascht oder ohne jede Vorbereitung in die Lage gezwungen wird.",
-          "priority": 0,
-          "active": true,
-          "id": "gildas-puenktlich-heisst-zu-frueh",
-          "stacking": "normal",
-          "target": "self",
-          "duration": "",
-          "appliesWhen": "Zu Beginn eines Kampfes oder einer vorbereiteten Aufgabe",
-          "name": "Pünktlich heißt zu früh",
-          "triggerRules": [],
-          "mechanics": {
-            "spellAttack": 0,
-            "attackRollMode": "normal",
-            "passivePerception": 0,
-            "damage": 0,
-            "maximumHitPoints": 0,
-            "bonusDamageFormula": "",
-            "skill": 0,
-            "attack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "movement": 0,
-            "savingThrow": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 1,
-            "spellSaveDc": 0,
-            "savingThrowAdvantageAttributes": [],
-            "armorClass": 0
-          },
-          "tags": "Marotte · Vorbereitung · Pünktlichkeit",
-          "type": "quirk",
-          "trigger": "",
-          "aiInstructions": "Stelle die Vorbereitung als ruhige Routine dar, nicht als übernatürliche Vorahnung.",
-          "description": "Gildas erscheint fast immer vor der vereinbarten Zeit und nutzt die Minuten, um Ort, Ausrüstung und Aufgabe zu prüfen."
-        },
-        {
-          "triggerRules": [],
-          "type": "trait",
-          "description": "Gildas besitzt kein herausragendes Naturtalent; tausendfach wiederholte Abläufe und hoher Eigenanspruch machen ihn jedoch schwer aus der Fassung zu bringen.",
-          "tags": "Passiv · Disziplin · Beharrlichkeit",
-          "mechanics": {
-            "savingThrowAdvantageAttributes": [],
-            "spellAttack": 0,
-            "maximumHitPoints": 0,
-            "initiative": 0,
-            "bonusDamageFormula": "",
-            "movement": 0,
-            "armorClass": 0,
-            "savingThrow": 1,
-            "attackRollMode": "normal",
-            "spellSaveDc": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "attack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "skill": 0,
-            "damage": 0,
-            "passivePerception": 0
-          },
-          "name": "Erarbeitete Standfestigkeit",
-          "stacking": "normal",
-          "active": true,
-          "aiInstructions": "Beschreibe Erfolg als eingeübte Standfestigkeit statt als angeborene Brillanz.",
-          "appliesWhen": "Bei Rettungswürfen gegen Druck, Schmerz, Ablenkung oder Kontrollverlust",
-          "id": "gildas-erarbeitete-standfestigkeit",
-          "duration": "",
-          "target": "self",
-          "priority": 0,
-          "limitations": "Der pauschale Bonus ist bereits in der Kampfauflösung hinterlegt und darf nicht erneut addiert werden.",
-          "trigger": ""
-        },
-        {
-          "name": "Pflicht vor Bequemlichkeit",
-          "trigger": "",
-          "id": "gildas-pflicht-vor-bequemlichkeit",
-          "description": "Eine angenommene Verantwortung gilt für Gildas erst dann als beendet, wenn die Aufgabe wirklich erfüllt und niemand zurückgelassen wurde.",
-          "aiInstructions": "",
-          "tags": "Ideal · Pflicht · Rittertum",
-          "type": "ideal",
-          "duration": "",
-          "stacking": "normal",
-          "limitations": "",
-          "active": true,
-          "appliesWhen": "Wenn eine Pflicht unbequem, gefährlich oder undankbar wird",
-          "triggerRules": [],
-          "mechanics": {
-            "bonusDamageFormula": "",
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "spellSaveDc": 0,
-            "attackRollMode": "normal",
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "passivePerception": 0,
-            "spellAttack": 0,
-            "initiative": 0,
-            "attack": 0,
-            "savingThrow": 0,
-            "skill": 0,
-            "damage": 0,
-            "armorClass": 0
-          },
-          "priority": 0,
-          "target": "self"
-        },
-        {
-          "stacking": "normal",
-          "limitations": "",
-          "duration": "",
-          "triggerRules": [],
-          "appliesWhen": "Bei Ausreden, Ausflüchten oder offensichtlicher Nachlässigkeit",
-          "priority": 0,
-          "trigger": "",
-          "aiInstructions": "",
-          "name": "Brauen des Zweifels",
-          "active": true,
-          "mechanics": {
-            "passivePerception": 0,
-            "spellAttack": 0,
-            "damage": 0,
-            "savingThrow": 0,
-            "movement": 0,
-            "bonusDamageFormula": "",
-            "attackRollMode": "normal",
-            "attack": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "armorClass": 0,
-            "spellSaveDc": 0,
-            "skill": 0,
-            "savingThrowAdvantageAttributes": [],
-            "maximumHitPoints": 0,
-            "initiative": 0
-          },
-          "id": "gildas-brauen-des-zweifels",
-          "description": "Bei schlechten Ausreden zieht Gildas unwillkürlich die Brauen zusammen. Seine Skepsis ist dadurch meist sichtbar, bevor er ein Wort sagt.",
-          "type": "quirk",
-          "tags": "Marotte · Mimik · Skepsis",
-          "target": "self"
-        },
-        {
-          "trigger": "",
-          "limitations": "",
-          "priority": 0,
-          "mechanics": {
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "spellSaveDc": 0,
-            "armorClass": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "skill": 0,
-            "spellAttack": 0,
-            "passivePerception": 0,
-            "savingThrow": 0,
-            "savingThrowAdvantageAttributes": [],
-            "movement": 0,
-            "attackRollMode": "normal"
-          },
-          "appliesWhen": "In ruhigen sozialen Szenen",
-          "duration": "",
-          "triggerRules": [],
-          "stacking": "normal",
-          "tags": "Marotte · Humor · Ernst",
-          "aiInstructions": "",
-          "target": "self",
-          "type": "quirk",
-          "description": "Offensichtliche Scherze lassen ihn oft nur blinzeln; eine leise, trockene Bemerkung kann ihm dagegen ein ehrliches Lachen entlocken.",
-          "id": "gildas-trockener-humor",
-          "active": true,
-          "name": "Trockener Humor"
+          "triggerRules": []
         }
       ],
       "abilities": [
@@ -34314,35 +34152,7 @@
         "ancestry": "Cenyr",
         "background": "Ritter"
       },
-      "conditions": [
-        {
-          "id": "gildas-vorschnelles-urteil",
-          "source": "Junger Ritterstolz",
-          "triggerRules": [],
-          "description": "Gildas beobachtet scharf, glaubt aber bisweilen zu früh, einen Menschen bereits verstanden zu haben. Besonders Verwöhntheit und missbrauchte Privilegien machen ihn unnachsichtig.",
-          "duration": "Dauerhaft",
-          "mechanics": {
-            "savingThrowDisadvantageAttributes": [],
-            "spellAttack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrow": 0,
-            "maximumHitPoints": 0,
-            "armorClass": 0,
-            "spellSaveDc": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "attack": 0,
-            "movement": 0,
-            "bonusDamageFormula": "",
-            "skill": 0,
-            "initiative": 0,
-            "damage": 0
-          },
-          "active": true,
-          "name": "Vorschnelles Urteil"
-        }
-      ],
+      "conditions": [],
       "classTraining": {
         "schemaVersion": 2,
         "curriculumId": "cenyr-teulu",
@@ -35223,47 +35033,17 @@
         "connectionTextOffset": 0,
         "biographyTitle": "Biografie",
         "biographyText": "Gildas Gafyr ist ein achtzehnjähriger Ritter aus dem alten Rittergeschlecht Gafyr und gehört zu einem Seitenzweig jenes Hauses, das seit Generationen zu den treuesten Gefolgsleuten der Draigs zählt. Er ist der Enkel eines Vetters von Sir Duncan Gafyr und damit zwar mit dem Ritterfürst verwandt, gehört jedoch nicht dessen unmittelbarer Familie an.<br><br>Sein Vater Kelyddon Gafyr dient als Kämmerer der ritterlichen Herrschaft des Hauses Gafyr. Sein Großvater Hywell Gafyr bekleidet dort das Amt des Justiziars. Seine Mutter Izolda, geborene Arwydd, entstammt ebenfalls einem Rittergeschlecht Celtigerns Wacht.<br><br>Gildas wuchs dadurch in einer Familie auf, in der Rittertum niemals nur mit Waffen, Turnieren und Ruhm verbunden wurde. Sein Vater verwaltete Vorräte, Einkünfte und Ausgaben seines Hauses. Sein Großvater schlichtete Streitigkeiten, bereitete Urteile vor und wachte über Recht und Ordnung. Schon als Junge erlebte Gildas Männer, die hohe Ämter bekleideten und dennoch einen erheblichen Teil ihres Lebens mit Arbeiten verbrachten, die wenig heldenhaft erschienen.<br><br><p><span style=\"font-size: 0.82rem;\">Für ihn entstand daraus früh ein einfaches\nVerständnis von Adel:</span></p>\n\n<p data-start=\"1205\" data-end=\"1283\"><strong data-start=\"1205\" data-end=\"1283\">Ein\nhöherer Rang bedeutet nicht weniger Pflichten. Er bedeutet mehr davon.</strong><o:p></o:p></p><p data-start=\"1205\" data-end=\"1283\"><span style=\"font-size: 0.82rem;\">Während andere Jungen von großen Schlachten\nund ruhmreichen Abenteuern träumten, faszinierte Gildas vor allem die\nVorstellung des Ritters selbst. Ein Mann, dem andere vertrauen konnten. Der\nsein Wort hielt, Schwächere beschützte, seinem Herrn diente und bereit war,\nVerantwortung zu übernehmen, wenn andere sie lieber von sich schoben.</span></p>Zwei Männer prägten dieses Bild für ihn besonders: Sir Duncan Gafyr und Sir Egon Gafyr.<br><br>Gildas bewundert Sir Duncan seit seiner Kindheit. Nicht allein wegen dessen Fähigkeiten mit der Waffe, sondern wegen seiner Disziplin. Duncan muss niemandem erklären, dass er ein Ritter ist. Er zeigt es durch sein Verhalten, seine Pflichterfüllung und die Selbstverständlichkeit, mit der er Verantwortung übernimmt. Für Gildas&nbsp;<span style=\"font-size: 0.82rem;\">verkörpert der Waffenmeister beinahe alles, was einen vollkommenen Ritter&nbsp;</span><span style=\"font-size: 0.82rem;\">ausmacht: Können ohne Prahlerei, Härte ohne Grausamkeit und Autorität, die&nbsp;</span><span style=\"font-size: 0.82rem;\">nicht erst durch einen Titel geschaffen werden muss.</span><div><br>Sir Egon verkörpert für ihn eine andere Seite&nbsp;<span style=\"font-size: 0.82rem;\">desselben Ideals. Der Marschall Celtigerns Wacht ist für Gildas der Beweis,&nbsp;</span><span style=\"font-size: 0.82rem;\">dass Rittertum nicht beim Kämpfen endet. Egon führt Männer, kümmert sich um die<span style=\"font-weight: normal;\">&nbsp;</span></span><span style=\"font-size: 0.82rem;\">Sicherheit der Grafschaft, übernimmt Verantwortung für Untergebene und besitzt&nbsp;</span><span style=\"font-size: 0.82rem;\">trotz seines Ranges eine Bodenständigkeit, die Gildas ausgesprochen schätzt.</span></div><div><br>Wenn Gildas darüber nachdenkt, was für ein Ritter er eines Tages sein möchte, denkt er häufig an diese beiden Männer.<br><br>Von Duncan möchte er die Disziplin und Meisterschaft besitzen. Von Egon die Führungsstärke und Menschlichkeit.<br><br>Entsprechend ernst nahm Gildas seine eigene Ausbildung. Er war niemals der talentierteste junge Kämpfer seines Hauses und besitzt weder außergewöhnliche Körperkraft noch eine besondere Begabung, die ihn von anderen Rittern deutlich abhebt. Was ihm an natürlichem Talent fehlt, versucht er durch Disziplin auszugleichen. Übungen wiederholt er, bis er sie beherrscht. Fehler ärgern ihn vor allem dann, wenn er weiß, dass er sie durch bessere Vorbereitung hätte verhindern können.<br><br>Seinen Ritterschlag betrachtete Gildas deshalb niemals als selbstverständliches Recht seiner Geburt.<br><br>Für ihn war er etwas, das verdient werden musste.<br><br>Als er schließlich selbst zum Ritter geschlagen wurde, gehörte dieser Augenblick zu den stolzesten seines bisherigen<span style=\"font-weight: normal;\">&nbsp;</span>Lebens. Nicht weil er sich seitdem für bedeutender hält als andere, sondern<span style=\"font-weight: normal;\">&nbsp;&nbsp;</span>weil er darin die Bestätigung sieht, dass seine bisherigen Lehrer ihn für&nbsp;würdig hielten, den Stand zu tragen, dem er seit seiner Kindheit nacheiferte.<br><br>Gerade deshalb besitzt Gildas wenig Verständnis für junge Adlige, die Ritterwürde vor allem als Titel betrachten.<br><br>Kaum jemand verkörpert dieses Problem für ihn stärker als Gawain Draig.</div>",
-        "abilitiesTitle": "Persönlichkeit",
+        "abilitiesTitle": "Eigenschaften",
         "abilities": [
           {
-            "title": "Pflichtbewusst",
-            "detail": "Gildas nimmt Aufgaben ernst und erledigt sie gewissenhaft. Hat er eine Verantwortung übernommen, betrachtet er sie nicht als beendet, bis sie tatsächlich erfüllt wurde.",
-            "icon": "✦"
+            "title": "Wachsamer Blick",
+            "detail": "+2 passive Wahrnehmung und +1 Initiative.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp"
           },
           {
-            "title": "Diszipliniert",
-            "detail": "Er besitzt keine außergewöhnlichen natürlichen Talente und weiß das selbst. Deshalb verlässt er sich auf Übung, Vorbereitung und Beharrlichkeit. Was er heute nicht beherrscht, wird morgen erneut geübt.",
-            "icon": "✦"
-          },
-          {
-            "title": "Ritterstolz",
-            "detail": "Sein Ritterschlag bedeutet Gildas ausgesprochen viel. Er betrachtet Ritterwürde nicht als gesellschaftlichen Rang, sondern als Verpflichtung und reagiert empfindlich auf Ritter, die seiner Ansicht nach deren Werte nicht ernst nehmen.",
-            "icon": "✦"
-          },
-          {
-            "title": "Streng mit sich selbst",
-            "detail": "Gildas erwartet von sich mindestens ebenso viel wie von anderen. Eigene Fehler beschäftigen ihn lange, insbesondere wenn mangelnde Vorbereitung oder Nachlässigkeit dafür verantwortlich waren.",
-            "icon": "✦"
-          },
-          {
-            "title": "Urteilend",
-            "detail": "Er beobachtet Menschen aufmerksam und bildet sich schnell eine Meinung über ihren Charakter. Dabei liegt er nicht immer falsch – aber häufig glaubt er bereits genug zu wissen, bevor er tatsächlich genug gesehen hat.",
-            "icon": "✦"
-          },
-          {
-            "title": "Unnachsichtig gegenüber Verwöhntheit",
-            "detail": "Menschen, die Arbeit selbstverständlich anderen überlassen, ihren Rang ausnutzen oder Privilegien als natürliches Recht betrachten, gehen Gildas ausgesprochen schnell auf die Nerven. Gerade deshalb fällt ihm der Umgang mit Gawain schwer.",
-            "icon": "✦"
-          },
-          {
-            "title": "Verlässlich",
-            "detail": "Wer Gildas einmal sein Vertrauen gewonnen hat, kann sich auf ihn verlassen. Er hält Absprachen ein, erscheint pünktlich und würde einen Gefährten nur äußerst ungern mit einer Aufgabe alleinlassen.",
-            "icon": "✦"
-          },
-          {
-            "title": "Ernst",
-            "detail": "Gildas besitzt durchaus Humor, wirkt im Alltag jedoch häufig ernster als andere junge Männer seines Alters. Besonders während einer Aufgabe fällt es ihm schwer, Albernheiten einfach als Albernheiten stehenzulassen.",
-            "icon": "✦"
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
           }
         ],
         "extraSections": [],

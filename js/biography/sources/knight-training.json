@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Beleg der redaktionellen Prüfung vom 2. November 2026. Die bearbeitbare Quelle der ausgelieferten Biografien ist public-biographies.json.",
+  "entries": {
+    "person--haus-wyrm--gais-wyrm": [
+      {
+        "name": "Eiddon Wyrm",
+        "role": "Erster Rittervater",
+        "detail": "Sein Großvater; bei ihm begann die Ausbildung.",
+        "worldPersonId": "person--haus-wyrm--eiddon-wyrm"
+      },
+      {
+        "name": "Padrig Wyrm",
+        "role": "Zweiter Rittervater",
+        "detail": "Sein Vater führte die Ausbildung fort.",
+        "worldPersonId": "person--haus-wyrm--padrig-wyrm"
+      }
+    ],
+    "person--haus-draig--trahern-draig": [
+      {
+        "name": "Cadfael Draig",
+        "role": "Rittervater",
+        "detail": "Großvater und Mentor; Ausbildung zum Uchelwyr und Herold.",
+        "worldPersonId": "person--haus-draig--cadfael-draig"
+      }
+    ],
+    "person--haus-balchder--armel-balchder": [
+      {
+        "name": "Dalvin Balchder",
+        "role": "Rittervater",
+        "detail": "Sein Großvater und Vorbild.",
+        "worldPersonId": "person--haus-balchder--dalvin-balchder"
+      }
+    ],
+    "person--haus-draig--gawain-draig": [
+      {
+        "name": "Sir Duncan Gafyr",
+        "role": "Rittervater",
+        "detail": "Sein früherer Ausbilder; heute begleitet er Gawains Bewährung.",
+        "worldPersonId": "person--haus-gafyr--duncan-gafyr"
+      }
+    ],
+    "person--haus-gwefrydd--branwen-gwefrydd": [
+      {
+        "name": "Sir Odyar Draig",
+        "role": "Rittervater",
+        "detail": "Nahm sie als Ausbildungsmündel auf; unterwies sie im Reiten und an der Lanze.",
+        "worldPersonId": "person--haus-draig--odyar-draig"
+      }
+    ],
+    "person--haus-draig--oweta-draig": [
+      {
+        "name": "Lady Heledd Gafyr",
+        "role": "Rittermutter",
+        "detail": "Ihre Ausbildung führte über Übungsplätze, Straßen und Geleitdienste.",
+        "worldPersonId": "person--haus-gafyr--heledd-gafyr"
+      }
+    ],
+    "person--haus-gafyr--heledd-gafyr": [
+      {
+        "name": "Lady Melyn Saethwyr",
+        "role": "Rittermutter",
+        "detail": "Geborene Arth; anspruchsvolle Lehrmeisterin und spätere Kampfgefährtin.",
+        "worldPersonId": "person--haus-arth--melyn-arth"
+      }
+    ],
+    "person--haus-saethwyr--anwyll-saethwyr": [
+      {
+        "name": "Sir Padrig Saethwyr",
+        "role": "Rittervater",
+        "detail": "Sein Großonkel vermittelte ihm ein nüchternes Verständnis ritterlicher Pflicht.",
+        "worldPersonId": "person--haus-saethwyr--padrig-saethwyr"
+      }
+    ],
+    "person--haus-wylan--neala-wylan": [
+      {
+        "name": "Lady Generis Wylan",
+        "role": "Rittermutter",
+        "detail": "Ihre Tante, geborene Draig.",
+        "worldPersonId": "person--haus-draig--generis-draig"
+      }
+    ],
+    "person--haus-draig--maredudd-draig": [
+      {
+        "name": "Cahir Draig",
+        "role": "Rittervater",
+        "detail": "Cahir der Schwarze nahm ihn als Pagen und später als Knappen auf.",
+        "worldPersonId": "person--haus-draig--cahir-draig"
+      }
+    ],
+    "person--haus-draig--idwal-draig": [
+      {
+        "name": "Sir Mervyn Gwyvern",
+        "role": "Erster Ausbildungsvormund",
+        "detail": "Idwals erste Mündelschaft; Aufwachsen im Haus Gwyvern.",
+        "worldPersonId": "person--haus-gwyvern--mervyn-gwyvern"
+      },
+      {
+        "name": "Sir Parzifal Arth",
+        "role": "Zweiter Ausbildungsvormund",
+        "detail": "Anschließende Mündelschaft und Knappenzeit.",
+        "worldPersonId": "person--haus-arth--parzifal-arth"
+      }
+    ],
+    "person--haus-varulv--sleipnir-varulv": [
+      {
+        "name": "Torvard Nachtjäger",
+        "role": "Kriegerischer Lehrmeister",
+        "detail": "Leitete maßgeblich seine kriegerische Ausbildung.",
+        "worldPersonId": "person--haus-nachtjaeger--torvard-nachtjaeger"
+      }
+    ],
+    "person--haus-wyrm--rianna-wyrm": [
+      {
+        "name": "Derwen Wyrm",
+        "role": "Erster Rittervater",
+        "detail": "Ihr Großvater begann ihre ritterliche Ausbildung."
+      },
+      {
+        "name": "Rhydian Wyrm",
+        "role": "Zweiter Rittervater",
+        "detail": "Ihr Vater führte die Ausbildung fort."
+      },
+      {
+        "name": "Eiddon Wyrm",
+        "role": "Lehrmeister · Marschall",
+        "detail": "Zusätzliche Unterweisung durch den Marschall des Hauses Wyrm."
+      }
+    ],
+    "person--haus-gafyr--lefraye-gafyr": [
+      {
+        "name": "Niniel Mwyalchen",
+        "role": "Rittermutter · Großmutter",
+        "detail": "Helwyr aus dem Tal der Milane; unterwies Lefraye auf zahlreichen gemeinsamen Unternehmungen."
+      }
+    ]
+  },
+  "evidence": "Vorhandene öffentliche Biografien, deren Verbindungen und Stammbaumportraits. Idwals Abfolge wurde am 2. November 2026 ausdrücklich vom Nutzer bestätigt: zuerst Mervyn, danach Parzifal. Unbekannte Ausbildungspersonen bleiben leer."
+}

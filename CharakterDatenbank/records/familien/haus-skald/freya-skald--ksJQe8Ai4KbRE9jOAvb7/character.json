@@ -103,9 +103,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/gefaehrten/begleiter-abgleich-2026-10-13/ksJQe8Ai4KbRE9jOAvb7-inventar.json",
-    "sourceExportedAt": "2026-10-13T17:55:29.861Z",
-    "sourceUpdatedAt": "2026-10-13T17:55:29.861Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/ksJQe8Ai4KbRE9jOAvb7.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "ksJQe8Ai4KbRE9jOAvb7",
       "ksJQe8Ai4KbRE9jOAvb7",
@@ -114,7 +114,7 @@
       "ksJQe8Ai4KbRE9jOAvb7",
       "ksJQe8Ai4KbRE9jOAvb7"
     ],
-    "contentHash": "86375260c58c8675e7cc9573d745ffcdd17b310142714732d854c772c35ed801"
+    "contentHash": "a449d533d12f73e16af4ea04d7d3e3e5ee67735c6ba33a339937a235ecf90880"
   },
   "local": {
     "notes": "",
@@ -19374,13 +19374,126 @@
           "title": "Charakter-Inventar"
         },
         "updatedAt": "2026-10-13T17:55:29.861Z"
+      },
+      {
+        "id": "ksJQe8Ai4KbRE9jOAvb7",
+        "name": "Freya Skald",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-frohnatur",
+              "name": "Frohnatur",
+              "description": "Je +1 auf Überzeugen, Auftreten und Motiv erkennen.",
+              "cost": 2,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Überzeugen",
+                    "bonus": 1
+                  },
+                  {
+                    "name": "Auftreten",
+                    "bonus": 1
+                  },
+                  {
+                    "name": "Motiv erkennen",
+                    "bonus": 1
+                  }
+                ]
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "development-trait-buehnenmensch",
+              "name": "Bühnenmensch",
+              "description": "+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.",
+              "cost": -1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Auftreten",
+                    "bonus": 2
+                  },
+                  {
+                    "name": "Überleben",
+                    "bonus": -2
+                  },
+                  {
+                    "name": "Einschüchtern",
+                    "bonus": -1
+                  }
+                ]
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "development-trait-vollbusig",
+              "name": "Vollbusig",
+              "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+              "cost": 1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Körper",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Auftreten",
+                    "bonus": 1
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Frohnatur",
+                "detail": "Je +1 auf Überzeugen, Auftreten und Motiv erkennen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp"
+              },
+              {
+                "title": "Bühnenmensch",
+                "detail": "+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp"
+              },
+              {
+                "title": "Vollbusig",
+                "detail": "Ausgeprägte Brustform; +1 auf Auftreten.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
   "character": {
     "id": "ksJQe8Ai4KbRE9jOAvb7",
     "name": "Freya Skald",
-    "updatedAt": "2026-10-13T17:55:29.861Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "combatProfile": {
       "weapons": [
         {
@@ -21831,480 +21944,86 @@
       },
       "quirks": [
         {
-          "type": "trait",
-          "mechanics": {
-            "attack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "damage": 0,
-            "attackRollMode": "normal",
-            "spellSaveDc": 0,
-            "armorClass": 0,
-            "maximumHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "skill": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrow": 0,
-            "initiative": 0,
-            "spellAttack": 0
-          },
-          "duration": "",
-          "name": "Aldrimarische Widerstandskraft",
-          "active": true,
-          "id": "starter-ancestry-aldrimarer-trait-1",
-          "triggerRules": [],
-          "tags": "Volk · Aldrimarer",
-          "aiInstructions": "",
-          "priority": 0,
-          "stacking": "normal",
-          "limitations": "",
-          "target": "self",
-          "trigger": "",
-          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
-          "appliesWhen": "Dauerhafte kulturelle Prägung"
-        },
-        {
-          "type": "trait",
-          "stacking": "normal",
-          "name": "Bühnenerfahrung und Publikumsgespür",
-          "limitations": "",
-          "aiInstructions": "",
-          "description": "Auf Marktplätzen, in Hallen und Wirtshäusern ausgebildete Musikerin, mit Vortrag, Instrument und dem Umgang mit Publikum vertraut.",
-          "active": true,
-          "tags": "Hintergrund · Musikerin",
-          "id": "starter-background-musikerin-trait-1",
-          "appliesWhen": "Wenn Auftritt, Musik oder Publikum relevant sind",
-          "duration": "",
-          "triggerRules": [],
-          "target": "self",
-          "trigger": "",
-          "mechanics": {
-            "initiative": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "skill": 0,
-            "spellSaveDc": 0,
-            "maximumHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "attack": 0,
-            "attackRollMode": "normal",
-            "bonusDamageFormula": "",
-            "armorClass": 0,
-            "movement": 0,
-            "spellAttack": 0,
-            "savingThrow": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0
-          },
-          "priority": 0
-        },
-        {
-          "target": "self",
-          "priority": 0,
-          "triggerRules": [
-            {
-              "radiusMeters": null,
-              "resultEffects": [],
-              "costs": [],
-              "phase": "pre-roll",
-              "actionScope": "global",
-              "actionKinds": [
-                "skill"
-              ],
-              "sourceRelation": "self",
-              "enabled": true,
-              "priority": 0,
-              "effects": {
-                "damageReduction": 0,
-                "attackModifier": 0,
-                "damageModifier": 0,
-                "outcome": "none",
-                "spellSaveDcModifier": 0,
-                "defenseModifier": 0,
-                "savingThrowModifier": 0,
-                "skillModifier": 1,
-                "rollMode": "normal"
-              },
-              "condition": "always",
-              "description": "+1 auf positive, freundliche Fertigkeiten mit Menschen.",
-              "frequency": "always",
-              "authority": "passive",
-              "requiredTargetTags": [],
-              "activation": "passive",
-              "skillIds": [
-                "persuasion",
-                "performance",
-                "insight"
-              ],
-              "consumeReaction": false,
-              "name": "Frohnatur-Bonus",
-              "recipient": "actor",
-              "id": "freya-frohnatur-skill-bonus"
-            }
-          ],
-          "id": "freya-frohnatur",
-          "mechanics": {
-            "combatStartTemporaryHitPoints": 0,
-            "maximumHitPoints": 0,
-            "skill": 0,
-            "spellSaveDc": 0,
-            "bonusDamageFormula": "",
-            "savingThrowAdvantageAttributes": [],
-            "armorClass": 0,
-            "damage": 0,
-            "attackRollMode": "normal",
-            "initiative": 0,
-            "movement": 0,
-            "passivePerception": 0,
-            "spellAttack": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "attack": 0,
-            "savingThrow": 0
-          },
-          "aiInstructions": "",
-          "duration": "",
-          "trigger": "",
-          "appliesWhen": "Bei positiven, freundlichen Fertigkeitsversuchen mit Menschen",
-          "tags": "Persönlichkeit · Frohnatur",
-          "active": true,
-          "description": "Freyas warme, offene Art macht es Menschen leicht, ihr zu vertrauen.",
-          "type": "trait",
+          "id": "development-trait-frohnatur",
           "name": "Frohnatur",
-          "stacking": "normal",
-          "limitations": "Nur positive, freundliche Fertigkeiten mit Menschen."
-        },
-        {
-          "type": "flaw",
-          "limitations": "Nur niederträchtige Fertigkeiten (Täuschen, Einschüchtern).",
-          "mechanics": {
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "damage": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "attack": 0,
-            "skill": 0,
-            "initiative": 0,
-            "attackRollMode": "normal",
-            "spellSaveDc": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "bonusDamageFormula": "",
-            "passivePerception": 0,
-            "armorClass": 0,
-            "combatStartTemporaryHitPoints": 0
-          },
-          "name": "Gutmensch",
-          "duration": "",
-          "target": "self",
-          "priority": 0,
-          "tags": "Persönlichkeit · Gutmensch",
-          "description": "Freya tut sich schwer damit, andere gezielt zu täuschen oder einzuschüchtern.",
-          "appliesWhen": "Bei niederträchtigen Fertigkeitsversuchen",
-          "trigger": "",
-          "aiInstructions": "",
-          "active": true,
-          "stacking": "normal",
-          "triggerRules": [
-            {
-              "actionKinds": [
-                "skill"
-              ],
-              "actionScope": "global",
-              "requiredTargetTags": [],
-              "effects": {
-                "spellSaveDcModifier": 0,
-                "outcome": "none",
-                "defenseModifier": 0,
-                "attackModifier": 0,
-                "damageModifier": 0,
-                "damageReduction": 0,
-                "skillModifier": -3,
-                "rollMode": "normal",
-                "savingThrowModifier": 0
-              },
-              "consumeReaction": false,
-              "resultEffects": [],
-              "enabled": true,
-              "radiusMeters": null,
-              "id": "freya-gutmensch-skill-malus",
-              "priority": 0,
-              "recipient": "actor",
-              "activation": "passive",
-              "description": "-3 bei niederträchtigen Fertigkeiten.",
-              "sourceRelation": "self",
-              "frequency": "always",
-              "phase": "pre-roll",
-              "costs": [],
-              "authority": "passive",
-              "name": "Gutmensch-Malus",
-              "condition": "always",
-              "skillIds": [
-                "deception",
-                "intimidation"
-              ]
-            }
-          ],
-          "id": "freya-gutmensch"
-        },
-        {
-          "description": "Jahre der Bühnenpraxis geben Freya Sicherheit vor Publikum.",
-          "active": true,
-          "appliesWhen": "Bei Auftreten-Versuchen",
-          "tags": "Persönlichkeit · Künstlerin",
-          "mechanics": {
-            "initiative": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "spellSaveDc": 0,
-            "savingThrowAdvantageAttributes": [],
-            "maximumHitPoints": 0,
-            "spellAttack": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "attackRollMode": "normal",
-            "savingThrow": 0,
-            "armorClass": 0,
-            "movement": 0,
-            "damage": 0,
-            "passivePerception": 0,
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "skill": 0
-          },
-          "aiInstructions": "",
-          "name": "Künstlerische Ausbildung",
-          "id": "freya-kuenstlerische-ausbildung",
-          "stacking": "normal",
+          "description": "Je +1 auf Überzeugen, Auftreten und Motiv erkennen.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp",
           "type": "trait",
-          "limitations": "Nur Auftreten.",
-          "triggerRules": [
-            {
-              "consumeReaction": false,
-              "sourceRelation": "self",
-              "description": "Vorteil bei Auftreten.",
-              "resultEffects": [],
-              "enabled": true,
-              "skillIds": [
-                "performance"
-              ],
-              "effects": {
-                "spellSaveDcModifier": 0,
-                "defenseModifier": 0,
-                "damageReduction": 0,
-                "outcome": "none",
-                "rollMode": "advantage",
-                "savingThrowModifier": 0,
-                "attackModifier": 0,
-                "damageModifier": 0,
-                "skillModifier": 0
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": 1
               },
-              "radiusMeters": null,
-              "name": "Bühnensicherheit",
-              "id": "freya-kuenstlerische-ausbildung-advantage",
-              "actionScope": "global",
-              "actionKinds": [
-                "skill"
-              ],
-              "costs": [],
-              "phase": "pre-roll",
-              "recipient": "actor",
-              "requiredTargetTags": [],
-              "authority": "passive",
-              "priority": 0,
-              "frequency": "always",
-              "condition": "always",
-              "activation": "passive"
-            }
-          ],
-          "trigger": "",
-          "target": "self",
-          "priority": 0,
-          "duration": ""
+              {
+                "name": "Auftreten",
+                "bonus": 1
+              },
+              {
+                "name": "Motiv erkennen",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
         },
         {
-          "triggerRules": [
-            {
-              "authority": "passive",
-              "requiredTargetTags": [],
-              "frequency": "always",
-              "sourceRelation": "self",
-              "skillIds": [
-                "performance"
-              ],
-              "condition": "always",
-              "name": "Bühnenpräsenz",
-              "costs": [],
-              "phase": "pre-roll",
-              "actionScope": "global",
-              "actionKinds": [
-                "skill"
-              ],
-              "recipient": "actor",
-              "consumeReaction": false,
-              "enabled": true,
-              "priority": 0,
-              "effects": {
-                "damageReduction": 0,
-                "attackModifier": 0,
-                "damageModifier": 0,
-                "defenseModifier": 0,
-                "savingThrowModifier": 0,
-                "outcome": "none",
-                "skillModifier": 2,
-                "spellSaveDcModifier": 0,
-                "rollMode": "normal"
-              },
-              "radiusMeters": null,
-              "activation": "passive",
-              "id": "freya-exzentrisch-performance-bonus",
-              "resultEffects": [],
-              "description": "+2 auf Auftreten."
-            },
-            {
-              "effects": {
-                "rollMode": "normal",
-                "damageModifier": 0,
-                "savingThrowModifier": 0,
-                "skillModifier": -4,
-                "attackModifier": 0,
-                "spellSaveDcModifier": 0,
-                "damageReduction": 0,
-                "outcome": "none",
-                "defenseModifier": 0
-              },
-              "requiredTargetTags": [],
-              "id": "freya-exzentrisch-wildnis-malus",
-              "enabled": true,
-              "activation": "passive",
-              "consumeReaction": false,
-              "phase": "pre-roll",
-              "costs": [],
-              "radiusMeters": null,
-              "name": "Fehl am Platz",
-              "resultEffects": [],
-              "actionScope": "global",
-              "actionKinds": [
-                "skill"
-              ],
-              "skillIds": [
-                "survival",
-                "intimidation"
-              ],
-              "frequency": "always",
-              "authority": "passive",
-              "sourceRelation": "self",
-              "condition": "always",
-              "recipient": "actor",
-              "description": "-4 auf Überleben und Einschüchtern.",
-              "priority": 0
-            }
-          ],
-          "target": "self",
-          "name": "Exzentrische Künstlerin",
-          "priority": 0,
+          "id": "development-trait-buehnenmensch",
+          "name": "Bühnenmensch",
+          "description": "+2 auf Auftreten; −2 auf Überleben und −1 auf Einschüchtern.",
+          "cost": -1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp",
           "type": "trait",
-          "trigger": "",
-          "duration": "",
-          "tags": "Persönlichkeit · Exzentrisch",
-          "limitations": "",
-          "aiInstructions": "",
           "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
           "mechanics": {
-            "initiative": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "skill": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "bonusDamageFormula": "",
-            "passivePerception": 0,
-            "armorClass": 0,
-            "damage": 0,
-            "attackRollMode": "normal",
-            "savingThrowAdvantageAttributes": [],
-            "combatStartTemporaryHitPoints": 0,
-            "movement": 0,
-            "maximumHitPoints": 0,
-            "attack": 0,
-            "spellSaveDc": 0
+            "skillModifiers": [
+              {
+                "name": "Auftreten",
+                "bonus": 2
+              },
+              {
+                "name": "Überleben",
+                "bonus": -2
+              },
+              {
+                "name": "Einschüchtern",
+                "bonus": -1
+              }
+            ]
           },
-          "stacking": "normal",
-          "id": "freya-exzentrische-kuenstlerin",
-          "appliesWhen": "Bei Auftreten, Überleben und Einschüchtern",
-          "description": "Freya lebt für die Bühne - und ist entsprechend fehl am Platz, wenn es hart und wild zugeht."
+          "triggerRules": []
         },
         {
-          "active": true,
-          "priority": 0,
-          "mechanics": {
-            "movement": 0,
-            "savingThrowAdvantageAttributes": [],
-            "attackRollMode": "normal",
-            "passivePerception": 0,
-            "maximumHitPoints": 0,
-            "savingThrow": 0,
-            "initiative": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "spellAttack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "bonusDamageFormula": "",
-            "damage": 0,
-            "attack": 0,
-            "spellSaveDc": 0,
-            "armorClass": 0,
-            "skill": 0
-          },
-          "trigger": "",
-          "duration": "",
-          "triggerRules": [
-            {
-              "priority": 0,
-              "costs": [],
-              "phase": "pre-roll",
-              "recipient": "actor",
-              "id": "freya-busenwunder-flirt-bonus",
-              "description": "+4 auf Flirten.",
-              "condition": "always",
-              "frequency": "always",
-              "authority": "passive",
-              "consumeReaction": false,
-              "sourceRelation": "self",
-              "actionScope": "global",
-              "actionKinds": [
-                "skill"
-              ],
-              "skillIds": [
-                "seduction"
-              ],
-              "requiredTargetTags": [],
-              "effects": {
-                "attackModifier": 0,
-                "outcome": "none",
-                "savingThrowModifier": 0,
-                "damageModifier": 0,
-                "damageReduction": 0,
-                "skillModifier": 4,
-                "rollMode": "normal",
-                "spellSaveDcModifier": 0,
-                "defenseModifier": 0
-              },
-              "activation": "passive",
-              "enabled": true,
-              "name": "Busenwunder-Bonus",
-              "radiusMeters": null,
-              "resultEffects": []
-            }
-          ],
-          "limitations": "Nur Flirten.",
+          "id": "development-trait-vollbusig",
+          "name": "Vollbusig",
+          "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp",
           "type": "trait",
-          "target": "self",
-          "name": "Busenwunder",
-          "stacking": "normal",
-          "tags": "Persönlichkeit · Busenwunder",
-          "appliesWhen": "Bei Flirten-Versuchen",
-          "aiInstructions": "",
-          "description": "Freyas Ausstrahlung wirkt beim Flirten wahre Wunder.",
-          "id": "freya-busenwunder"
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Körper",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Auftreten",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
         }
       ],
       "armorItems": [

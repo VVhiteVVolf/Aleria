@@ -2,6 +2,8 @@ import { isZornkappe, applyZornkappeUse } from './zornkappe-effects.js';
 import { materializeInventoryItem, resolveItemDefinition } from '../item-definitions/item-definition-resolver.js';
 import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-model.js';
 import { applyDefinedItemEffects } from './item-use-effects.js';
+import { getConsumedSubstanceExposure } from '../character-health/substance-item-effects.js';
+import { applySubstanceExposure } from '../character-health/substance-state.js';
 const INVENTORY_USE_MODES = new Set(['auto', 'consume', 'use']);
 const CONSUMABLE_CATEGORIES = new Set(['potions', 'consumable', 'consumables', 'food', 'ammunition']);
 const REUSABLE_CATEGORIES = new Set(['weapon', 'armor']);
@@ -143,10 +145,16 @@ function itemMatchesTrigger(item = {}, trigger = {}) {
   return tags.some(tag => itemText.includes(tag));
 }
 
-export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, recoveryDayKey = '', { definitions } = {}) {
+export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, recoveryDayKey = '', { definitions, sceneClockSeconds, sceneId = '' } = {}) {
   const inventoryUse = normalizeInventoryUse(value);
   delete inventoryUse.conditionSnapshot;
-  const conditionEffects = applyZornkappeUse(combatProfile.temporaryConditions || [], inventoryUse);
+  let conditionEffects = applyZornkappeUse(combatProfile.temporaryConditions || [], inventoryUse);
+  if (inventoryUse.mode === 'consume' && inventoryUse.operation !== 'pickup') {
+    const definition = resolveItemDefinition(inventoryUse.item, definitions);
+    const exposure = getConsumedSubstanceExposure(inventoryUse.item, definition, inventoryUse.quantity);
+    if (exposure) conditionEffects = applySubstanceExposure({ ...combatProfile, temporaryConditions: conditionEffects.conditions }, exposure,
+      { actorId: inventoryUse.actorId, sceneId, seconds: sceneClockSeconds });
+  }
   if (conditionEffects.changed) inventoryUse.conditionSnapshot = {
     before: clone(combatProfile.temporaryConditions || []), after: conditionEffects.conditions
   };

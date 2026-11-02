@@ -1,0 +1,57 @@
+import assert from 'node:assert/strict';
+import { readFile, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { openVenueBrowserPreview } from './support/venue-browser-preview.mjs';
+const { characters } = JSON.parse(await readFile(new URL('../modules/gwynthor-seven/source/character-plan.json', import.meta.url), 'utf8'));
+const preview = await openVenueBrowserPreview('psychological-traits-20261102');
+const { page } = preview;
+try {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.evaluate(character => { openCharProfile(null); switchCharTab('combat'); AleriaCharacterCombatProfile.init(character); }, characters.find(character => character.name === 'Rianna Wyrm'));
+  const before = await page.evaluate(() => AleriaCharacterCombatProfile.collect());
+  await page.locator('[data-combat-action="open-level-up"]').click();
+  await page.locator('[data-level-up-path="targetLevel"]').fill('1');
+  await page.locator('[data-level-up-path="traitGroup"]').selectOption('psychological');
+  assert.equal(await page.locator('[data-development-trait]').count(), 7);
+  await preview.decodeImages('.development-trait img');
+  await page.locator('.development-trait').first().scrollIntoViewIfNeeded();
+  await preview.capture('psychological-desktop');
+  for (const id of ['genie', 'eidetisches-gedaechtnis', 'geistig-beschraenkt', 'vollidiot']) await page.locator(`[data-development-trait="development-trait-${id}"]`).check();
+  assert.equal(await page.locator('[data-development-trait="development-trait-geistig-beschraenkt"]').isChecked(), false);
+  await page.setViewportSize({ width: 390, height: 844 });
+  const bounds = await page.locator('.cp-level-up-dialog').evaluate(element => ({ width: element.clientWidth, scrollWidth: element.scrollWidth }));
+  assert.ok(bounds.scrollWidth <= bounds.width + 2);
+  await preview.decodeImages('.development-trait img'); await preview.capture('psychological-phone');
+  await page.locator('[data-combat-action="apply-level-up"]').click();
+  const modifier = page.locator('[data-combat-attribute-modifier="intelligence"]');
+  assert.equal((await modifier.textContent()).trim(), '-4');
+  assert.match(await page.locator('[data-combat-attribute-effective="intelligence"]').textContent(), /Wirksam 2.*Obergrenze 2/);
+  const intScore = page.locator('[data-combat-collection="attributes"][data-combat-item-id="intelligence"][data-combat-property="score"]');
+  const intOverride = page.locator('[data-combat-collection="attributes"][data-combat-item-id="intelligence"][data-combat-property="modifierOverride"]');
+  await intScore.fill('40'); await intScore.dispatchEvent('change');
+  await intOverride.fill('20'); await intOverride.dispatchEvent('change');
+  assert.equal((await modifier.textContent()).trim(), '-4');
+  await intScore.scrollIntoViewIfNeeded(); await preview.capture('capped-attribute-phone');
+  const stored = await page.evaluate(async () => {
+    const profile = AleriaCharacterCombatProfile.collect();
+    const { getEffectiveCombatAttribute } = await import('/AleriaAlmanach/modules/combat/combat-profile-model.js');
+    return { profile, effective: getEffectiveCombatAttribute(profile, 'intelligence') };
+  });
+  assert.equal(stored.effective.score, 2);
+  assert.equal(stored.profile.attributes.find(attribute => attribute.key === 'intelligence').score, 40);
+  for (const key of ['weapons', 'armorItems', 'resources', 'techniques', 'skills']) assert.deepEqual(stored.profile[key], before[key], key);
+  assert.equal(stored.profile.progression.level, 1); assert.equal(stored.profile.hitPoints.current, before.hitPoints.current);
+  await page.locator('[data-combat-action="open-level-up"]').click();
+  await page.locator('[data-level-up-path="targetLevel"]').fill('1');
+  await page.locator('[data-level-up-path="traitGroup"]').selectOption('psychological');
+  await page.locator('[data-development-trait="development-trait-vollidiot"]').uncheck();
+  await page.locator('[data-combat-action="apply-level-up"]').click();
+  assert.match(await page.locator('[data-combat-attribute-effective="intelligence"]').textContent(), /Wirksam 42/);
+  assert.equal(await intScore.inputValue(), '40');
+  assert.deepEqual(preview.errors, []);
+  await writeFile(resolve(preview.output, 'report.json'), JSON.stringify({ passed: true, traits: 7, originalIconsDecoded: true, alternativeSelection: true, effectiveAttributeCap: 2, freeOverrideCannotBypass: true, removalReversible: true, baseScoresPreserved: true, level: 1, itemGrants: 0, bounds, externalWritesBlocked: true, errors: preview.errors }, null, 2) + '\n');
+  console.log(JSON.stringify({ passed: true, output: preview.output }));
+} catch (error) {
+  await preview.capture('failure');
+  throw error;
+} finally { await preview.close(); }

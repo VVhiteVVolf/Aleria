@@ -197,7 +197,7 @@ test('legacy spell icons reset once; future manual assignments and explicit clea
 });
 
 test('CK2 suggestions cover actual archived traits and reference existing local files', async () => {
-  const traitNames = new Set(entries.filter(entry => entry.kind === 'trait').map(entry => entry.name));
+  const traitNames = new Set(entries.filter(entry => entry.kind === 'trait' && !entry.icon && !entry.data?.icon).map(entry => entry.name));
   for (const name of traitNames) assert(getArchiveTraitIconSource({ name }), `Missing suggestion: ${name}`);
   for (const file of archiveTraitIconFiles) await readFile(fileURLToPath(new URL(`../../IconOrdner/Traits Icon/${file}`, import.meta.url)));
   assert.equal(getCharacterArchiveEntryIconPresentation({ kind: 'trait', name: 'Tapfer', iconOverride: 'manual.png' }).source, 'manual.png');

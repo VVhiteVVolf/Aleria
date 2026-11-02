@@ -8487,9 +8487,9 @@ test('gliedert Haus Argall als kleines Bürgerhaus aus Llysfaen mit Draig-Gegena
     file: 'Argall.png'
   });
   assert.deepEqual(LLYSFAEN_COMMONER_HOUSE_FAMILIES, [HOUSE_ARGALL_FAMILY]);
-  assert.equal(family.persons.length, 22);
-  assert.equal(family.partnerships.length, 8);
-  assert.equal(family.parentages.length, 13);
+  assert.equal(family.persons.length, 26);
+  assert.equal(family.partnerships.length, 10);
+  assert.equal(family.parentages.length, 15);
   assert.equal(family.cadetBranches.length, 0);
   assert.equal(family.lineage.crestFrame, 'iron');
   assert.equal(family.lineage.crestSubtitle, 'Bürgerliches Haus aus Llysfaen');

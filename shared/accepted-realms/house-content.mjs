@@ -1,5 +1,6 @@
 import { realmsById, houseTitle } from './catalog.mjs';
 import { housePlacement, houseTerritory } from './house-placement.mjs';
+import { enrichKingdomHouseContent } from './kingdom-house-content.mjs';
 
 const relative = value => value?.startsWith('/') ? `..${value}` : value || '';
 const join = paragraphs => paragraphs.filter(Boolean).join('\n\n');
@@ -49,7 +50,7 @@ export function createAcceptedHouseContent(realm, house) {
     culture: `${house.clan ? 'Die albische Clanzugehörigkeit' : 'Die regionale Hauszugehörigkeit'} bleibt in Namen und Hauszeichen erkennbar. Eigene Bräuche, Schutzgottheiten und Glaubensämter sind noch nicht gesondert belegt.`, relations: join(relations), influence: [rank, `${old ? 'Früherer Sitz' : 'Sitz'}: ${seat.name}`, ...(liege ? [`Lehnsbindung: ${houseTitle(liege)}`] : [])] };
   const heads = (house.knownHeads || []).map(h => ({ ...h, image: relative(h.image), role: h.status === 'alive' ? 'Amtierendes Hausoberhaupt' : 'Früheres Hausoberhaupt' }));
   const currentHead = heads.find(h => house.knownHeads.find(k => k.id === h.id)?.status === 'alive')?.name || 'Noch nicht benannt';
-  return { id: house.familyId, name, type: house.clan ? 'Clan' : house.rankId === 'knightly-order' ? 'Ritterorden' : 'Adelshaus', page: 'kleinehaeuser.html', registerPage: true,
+  const content = { id: house.familyId, name, type: house.clan ? 'Clan' : house.rankId === 'knightly-order' ? 'Ritterorden' : 'Adelshaus', page: 'kleinehaeuser.html', registerPage: true,
     prepared: true, contentVersion: 'accepted-realms-20261029a', biographySourceRevision: house.knownHeads ? 2 : 1,
     county: placement.county || origin.name, countyLabel: 'Region', liege: liege ? houseTitle(liege) : house.id === realm.ruler ? 'Landesherrliches Haus' : 'Zwischeninstanz offen', parentHouseId: liege?.familyId || '',
     territoryId: territory.id, territoryName: territory.name, territoryHref: territory.href, extinct: false, showMotto: false, omitMilitaryProfile: true,
@@ -78,4 +79,5 @@ export function createAcceptedHouseContent(realm, house) {
     founder: null, heads, heirs: house.knownHeirs || [], offices: [], figures: [], figuresTitle: 'Überlieferte Angehörige',
     trivia: [house.culturalTitle ? `Kulturelle Eigenbezeichnung: ${house.culturalTitle}.` : '', old ? 'Der Verlust des Landes bedeutet nicht, dass der Clan ausgestorben ist.' : '', house.id === 'sonnenfels' ? 'Die Verbindung zur Lachenden Nixe in Gwynthor bleibt im Stammbaum erhalten.' : ''].filter(Boolean),
   };
+  return realm.admissionVersion === '20261101' ? enrichKingdomHouseContent(content, realm, house, seat, territory) : content;
 }

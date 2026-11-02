@@ -36,6 +36,7 @@ export function getCharacterArchiveEntryIconPresentation(entry = {}) {
   const explicitSource = String(entry.iconOverride || entry.icon || data.icon || '').trim();
   if (kind === 'trait') {
     const matched = getArchiveTraitIconSource(entry);
+    if (explicitSource) return { source: explicitSource, fallbackSource: matched, custom: true };
     if (matched) return { source: entry.iconOverride || matched, fallbackSource: matched, custom: Boolean(entry.iconOverride) };
   }
 

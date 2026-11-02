@@ -1,4 +1,8 @@
 import { beginCombatContribution } from './combat-contribution-start.js';
+import { advanceSceneConditionClock, sceneClockBeforeSegment } from '../scene-time/scene-condition-clock.js';
+import { advanceSubstanceStateMap } from '../character-health/substance-state.js';
+import { getHealthOverlayDelta, resolveHealthWalkingMovement } from '../character-health/health-trait-policy.js';
+import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
 import { getDroppedCombatWeapon } from './combat-weapon-availability.js';
 // Pure combat-state helpers.
 import { getLightAttackDamageModifier } from './combat-technique-damage.js';
@@ -342,6 +346,8 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
   const states = new Map();
   const sceneItems = new Map();
   let sceneDay = 1;
+  let conditionClock = {};
+  const conditionSceneId = position.sceneId || comments.find(comment => comment.entryId)?.entryId || '';
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
@@ -386,11 +392,14 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       : getStoredResolutions(comment).map(resolution => ({ index: 0, resolution }));
     for (const entry of entries) {
       if (isStopComment && stopSegmentIndex != null && entry.index >= stopSegmentIndex) break;
+      advanceSubstanceStateMap(states, sceneClockBeforeSegment(conditionClock, segments, entry.index), conditionSceneId);
       applyCombatResolutionState(states, entry.resolution, sceneItems);
     }
     // A historical segment stops before the rest of its contribution. Its
     // clocks and end-of-comment rest/encounter effects have not happened yet.
     if (isStopComment) break;
+    conditionClock = advanceSceneConditionClock(conditionClock, comment);
+    advanceSubstanceStateMap(states, conditionClock.seconds, conditionSceneId);
     // All contribution kinds advance clocks. Conditions remain active for the
     // complete contribution and expire only after its final segment.
     expireCriticalTemporaryHitPoints(states, comment, conditionIdsBeforeComment);
@@ -407,6 +416,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
       }));
       sceneDay = nextDay;
     }
+    advanceSubstanceStateMap(states, conditionClock.seconds, conditionSceneId);
     reconcileConcentrationConditions(states, { pruneEmpty: true });
   }
   return states;
@@ -458,7 +468,14 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       result[key] = (Number(result[key]) || 0) + (Number(mechanics[key]) || 0);
     });
     return result;
-  }, {});
+  }, getHealthOverlayDelta(profile, temporaryConditions));
+  const movement = resolveHealthWalkingMovement(profile, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0));
+  const namedSkillBonus = name => temporaryConditions.flatMap(condition => condition.mechanics?.skillModifiers || [])
+    .filter(modifier => getSkillIdentity(modifier.name) === getSkillIdentity(name)).reduce((sum, modifier) => sum + Number(modifier.bonus || 0), 0);
+  const namedSaveBonus = attribute => temporaryConditions.flatMap(condition => condition.mechanics?.saveAttributeModifiers || [])
+    .filter(modifier => modifier.attributeKey === attribute).reduce((sum, modifier) => sum + Number(modifier.bonus || 0), 0)
+    + Number(temporaryMechanics.saveAttributeDeltas[attribute] || 0);
+  const perceptionBonus = namedSkillBonus('Wahrnehmung');
   // A generic attack modifier applies to every attack. Damage bonuses are
   // weapon-only unless their source explicitly includes all effects.
   const magicalAction = ['spell', 'song', 'prayer'].includes(profile.profileActionKind);
@@ -489,10 +506,10 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
       temporaryHitPoints: normalized.temporary,
       armorClass: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
       initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
-      movementMeters: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
+      movementMeters: movement,
       spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
       spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
-      passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0)
+      passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0) + perceptionBonus
     },
     hitPointRules: profile.aiSnapshot.hitPointRules ? {
       ...profile.aiSnapshot.hitPointRules,
@@ -509,8 +526,8 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     specialAbilities: Array.isArray(abilities) ? abilities.map(ability => ({ ...ability })) : [],
     temporaryConditions,
     conditionsAndEffects: [...(profile.aiSnapshot.conditionsAndEffects || []), ...temporaryConditions],
-    skills: (profile.aiSnapshot.skills || []).map(skill => ({ ...skill, total: Number(skill.total || 0) + Number(temporaryMechanics.skill || 0) + (skill.attributeKey === 'strength' ? strengthDelta : 0) })),
-    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0) + Number(temporaryMechanics.savingThrow || 0) + (save.attributeKey === 'strength' ? strengthDelta : 0) })),
+    skills: (profile.aiSnapshot.skills || []).map(skill => ({ ...skill, total: Number(skill.total || 0) + Number(temporaryMechanics.skill || 0) + namedSkillBonus(skill.name) + (skill.attributeKey === 'strength' ? strengthDelta : 0) })),
+    savingThrows: (profile.aiSnapshot.savingThrows || []).map(save => ({ ...save, total: Number(save.total || 0) + Number(temporaryMechanics.savingThrow || 0) + namedSaveBonus(save.attributeKey) + (save.attributeKey === 'strength' ? strengthDelta : 0) })),
     concentration: state.concentration || null,
     channeling: state.channeling || null
   } : profile.aiSnapshot;
@@ -539,7 +556,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     attackModifier: Number(profile.attackModifier || 0) + Number(temporaryMechanics.attack || 0) + weaponStrengthDelta
       + (['spell', 'song', 'prayer'].includes(profile.profileActionKind) ? Number(temporaryMechanics.spellAttack || 0) : 0),
     actionSpellSaveDc: Number(profile.actionSpellSaveDc ?? profile.spellSaveDc ?? 10) + Number(temporaryMechanics.spellSaveDc || 0),
-    movement: Math.max(0, Number(profile.movement || 0) + Number(temporaryMechanics.movement || 0)),
+    movement,
     initiative: Number(profile.initiative || 0) + Number(temporaryMechanics.initiative || 0),
     ...(profile.selectedAction?.inheritDamageModifier === false ? {
       unscaledDamageModifier: Number(profile.unscaledDamageModifier ?? profile.selectedAction.unscaledDamageModifier ?? 0) + temporaryDamageBonus + weaponStrengthDelta,
@@ -551,7 +568,7 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
     totalDefense: Number(profile.totalDefense || 0) + Number(temporaryMechanics.armorClass || 0),
     spellAttackModifier: Number(profile.spellAttackModifier || 0) + temporarySpellAttackBonus,
     spellSaveDc: Number(profile.spellSaveDc || 0) + Number(temporaryMechanics.spellSaveDc || 0),
-    passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0),
+    passivePerception: Number(profile.passivePerception || 0) + Number(temporaryMechanics.passivePerception || 0) + Number(temporaryMechanics.skill || 0) + perceptionBonus,
     aiSnapshot,
     hitPoints: profile.hitPoints ? {
       ...profile.hitPoints,

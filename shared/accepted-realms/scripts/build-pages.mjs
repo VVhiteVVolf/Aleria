@@ -8,7 +8,6 @@ import { buildTerritoryRegion } from '../../../Kontinente/scripts/territory-regi
 import { buildAtlasPages } from './atlas-pages.mjs';
 
 const root = new URL('../../../', import.meta.url), check = process.argv.includes('--check');
-const version = 'accepted-realms-20261029a';
 async function output(file, text) {
   const url = new URL(file, root);
   const previous = await readFile(url, 'utf8').catch(e => { if (e.code !== 'ENOENT') throw e; return null; });
@@ -20,6 +19,7 @@ const moduleImport = (target, from) => { const relative = path.relative(path.dir
 
 const ortEntries = [];
 for (const realm of realms) {
+  const version = realm.admissionVersion ? `accepted-realms-${realm.admissionVersion}` : 'accepted-realms-20261029a';
   const moduleRoot = `Kontinente/modules/${realm.id}`;
   const pages = realm.territories.map(t => createTerritoryArticle(realm, t));
   await output(`${moduleRoot}/pages.source.json`, json({ pages }));

@@ -1,0 +1,52 @@
+export const context = {
+  realm: 'venalys', short: 'Venalys', title: 'Die Stadtrepublik Venalys', continent: 'Tirnara',
+  emblem: 'assets/crests/venalys.webp', emblemFull: 'assets/originals/venalys.png', imageSize: [8192, 4698],
+  introduction: 'Aus einer Handelskolonie des Marktes der Fortuna erwuchs eine unabhängige Metropole. Fünf Gründerfamilien verbanden Kaufmannschaft, Kapital, Waffendienst, Mission und Baukunst. Ihre Häuser prägen die Republik bis heute.',
+  note: 'Bezirksnamen und Wappenzuordnungen sind dein lokaler Entwurf. Ein Haus kann mehrere Stadtbezirke und äußere Orte erhalten; mehrere Häuser können denselben Bereich teilen. Es entstehen vorerst ausschließlich Magnarierhäuser unter den fünf Patrizierfamilien.',
+  historyHeading: 'Fünf Gründerväter. Eine Republik.',
+  history: [
+    { title: 'Die Kolonie Fortunas', text: 'Der Markt der Fortuna war die erste Kaufmannsgilde. Seine Kolonie auf dem südlichen Kontinent Tirnara blühte unter der Gilde auf, gewann ihre Unabhängigkeit und entwickelte sich zur Metropole Venalys.' },
+    { title: 'Die Patrizier', text: 'Patrizier leitet sich vom Wortstamm Patre ab: Vater. Gemeint sind die Gründerväter der Stadt. Vinicius gründete den Markt der Fortuna; Avenicci förderte die Kolonie mit Kapital und geschäftlichem Interesse. Abor sicherte die Unternehmung militärisch, Tullius verfolgte geistliche und missionarische Aufgaben und Arentino wurde als fähige Baumeisterfamilie mit dem Aufbau beauftragt.' },
+    { title: 'Die Trennung der Kaufleute', text: 'Mit der Zeit lösten sich stärker auf Kapital und Gewinn ausgerichtete Kaufleute von Fortunas wohlwollender Politik. Unter ihnen waren vor allem die Avenicci und ihre Sympathisanten. Sie gründeten die Klingende Münze als Konkurrenz. Heute ist Venalys die Heimat beider weltweit vertretenen Kaufmannsgilden.' },
+    { title: 'Gilden von weltweitem Gewicht', text: 'Die Abor besitzen eine eigene Söldnergilde, die weltweit mit den Windreitern und dem Blutbund konkurriert. Die Arentino beschäftigen weiterhin eine bedeutende Baumeistergilde. Die Tullius konzentrieren sich auf ihre klerikale Rolle. Namen dieser beiden weiteren Gilden sind noch nicht festgelegt.' },
+  ],
+  themes: [
+    { title: 'Stand und Haus', text: 'Die fünf Patrizierhäuser bilden den hohen Adel. Ihnen dienen große Magnarierhäuser als Lehensadel im Rang von Ritterfürsten. Mercantierhäuser gehören dem Adel nicht an; ihre Stellung ist annähernd mit Ritterherren vergleichbar. Plebejer stehen unter ihnen. Advena sind Ausländer mit einer vom Anlass ihres Aufenthalts abhängigen Stellung.' },
+    { title: 'Die Alerische Kirche', text: 'Staatsreligion ist die Alerische Kirche. Andere Religionen werden akzeptiert. Venalys passte sich aus kommerziellem Nutzen der Kirche an und gab seinen früheren Staatsglauben, die Celestische Synode, auf.' },
+    { title: 'Namen und Geschlechter', text: 'Alto Tullius ist die persönliche Namensform; vom Geschlecht der Tullier bezeichnet das Haus in der Mehrzahl. Entsprechend gelten Abor und Abori sowie Vinicius und Vinicier. Arentino und Avenicci bleiben auch als Geschlechtsbezeichnungen unverändert. Weitere Formen werden nicht automatisch erfunden.' },
+    { title: 'Krieger der Häuser', text: 'Spätrömische Ausrüstung verbindet sich mit italienischem Condottieri-Design. Condottieri sind gut gepanzerte, edle Schwertkämpfer. Gondoleri dienen leichter gerüstet zur See. Lancieri führen Stangenwaffen und stellen gegebenenfalls die kleine Reiterei. Stralieri zeigen sich mit aufgestellter Pavese, Schwert und Rückenköcher. Limita bleiben für diese Hausentwürfe ausgeschlossen.' },
+  ],
+  founders: [
+    { houseId: 'vinicius', plural: 'Vinicier', role: 'Gründer des Marktes der Fortuna und Initiatoren der Handelskolonie' },
+    { houseId: 'avenicci', plural: 'Avenicci', role: 'Sponsoren der Kolonie; später treibende Kraft hinter der Klingenden Münze' },
+    { houseId: 'abor', plural: 'Abori', role: 'Militärische Unterstützung der Kolonie und eine eigene globale Söldnergilde' },
+    { houseId: 'tullius', plural: 'Tullier', role: 'Geistliche und missionarische Interessen; heute auf den Klerus ausgerichtet' },
+    { houseId: 'arentino', plural: 'Arentino', role: 'Beauftragte Baumeister der Kolonie und bis heute eine globale Baumeistergilde' },
+  ],
+  society: [
+    { name: 'Patrizier', description: 'Hoher Adel: die fünf Gründerfamilien.' },
+    { name: 'Magnarier', description: 'Lehensadel, gleichbedeutend mit Ritterfürsten; Dienst an einem Patrizierhaus.' },
+    { name: 'Mercantier', description: 'Kein Adel, in ihrer Stellung aber annähernd mit Ritterherren vergleichbar. Dienen unmittelbar den Patriziern oder mittelbar über deren Magnarier.' },
+    { name: 'Plebejer', description: 'Die einfache Bevölkerung unter den Mercantiern.' },
+    { name: 'Advena', description: 'Ausländer, häufig wegen Partnerschaft, Arbeit oder Handel in Venalys. Partner und Gäste werden gut behandelt; andere müssen sich ihre Stellung oft erst erarbeiten. Keine feste unterste Stufe der Standesleiter.' },
+  ],
+  governance: {
+    offices: [
+      { title: 'Zwei Dogen', area: 'Staatsoberhäupter', description: 'Die Republik besitzt zwei Staatsoberhäupter. Konkrete Amtsinhaber, Wahlverfahren und Amtszeiten sind noch nicht benannt.' },
+      { title: 'Legat', area: 'Militär', description: 'Führt die eigenständige Stadtwache. Haus- und Gildenstreitkräfte bilden keine Teile dieser Wache.' },
+      { title: 'Quästor', area: 'Finanzen', description: 'Verantwortet die Finanzen der Stadtregierung.' },
+      { title: 'Advokat', area: 'Justiz', description: 'Verantwortet die Justiz der Stadtregierung.' },
+      { title: 'Augur', area: 'Religion', description: 'Verantwortet die religiösen Angelegenheiten der Republik.' },
+      { title: 'Zensor', area: 'Kultur und Unterhaltung', description: 'Verantwortet Kultur und Unterhaltung.' },
+      { title: 'Herald', area: 'Diplomatie', description: 'Verantwortet die Diplomatie der Republik.' },
+    ],
+    secondaryOffices: [
+      { title: 'Ädil', area: 'Hafen', description: 'Das nachgeordnete Amt für den Hafen.' },
+      { title: 'Volkstribun', area: 'Bürgersprecher', description: 'Spricht für die Bürgerschaft. Weitere sekundäre Ämter bleiben offen.' },
+    ],
+    watch: { size: 1000, leader: 'Legat', text: 'Die 1.000 Mann starke Stadtwache nimmt ausschließlich einheimische Venalier nach strenger Prüfung auf. Sie bleibt institutionell von sämtlichen Streitkräften der Patrizier, Magnarier und Gilden getrennt. Die Republik will so Bürgerkrieg und Kontrollverlust verhindern.' },
+    senate: 'Jeder Mann aus einem Magnarier- oder Patrizierhaus erhält ab 30 Jahren Senatorenstatus und darf am Senat teilnehmen. Mercantier, Plebejer und bloße militärische Laufbahnen begründen diesen Status nicht.',
+  },
+  labels: { warriorHeading: 'Die Krieger der Häuser.', warriorIntro: 'Die 17 Magnarierhäuser erhalten eigene Vertreter. Hinzu kommen die ausdrücklich gewünschten Patrizierentwürfe der Avenicci mit Löwenhelm und der Abor mit goldenem Helm und blauem Helmkamm. Die Hausstreitkräfte sind von der eigenständigen Stadtwache getrennt.' },
+  relatedPages: [{ href: '../../Klassenordner/Klassenseite.html#venalys', label: 'Klassen Venalys’' }, { href: '../Aeldrunmar/', label: 'Aeldrunmar' }, { href: '../Brevanor/', label: 'Brevanor' }],
+};

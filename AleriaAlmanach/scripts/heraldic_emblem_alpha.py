@@ -64,3 +64,31 @@ def normalize_emblem_alpha(path, *, fill_enclosed=True):
     return {'file': str(path.relative_to(ROOT)), 'size': source.size,
                    'alphaValues': [0, 255], 'opaquePixels': int((alpha == 255).sum()),
             'silhouetteBounds': bbox, 'rgbUnchanged': True}
+
+
+def prepare_emblem_from_source(source, target, *, coverage=.88):
+    """Admit generated heraldry with solid alpha, exact round framing and padding.
+
+    This is the existing Falto production process as a reusable operation. Only
+    alpha and transparent padding change; every original RGB pixel is retained.
+    """
+    target = Path(target).resolve()
+    target.relative_to(ROOT)
+    original = Image.open(source).convert('RGBA')
+    guard = Image.new('RGBA', (original.width + 4, original.height + 4))
+    guard.paste(original, (2, 2))
+    target.parent.mkdir(parents=True, exist_ok=True)
+    guard.save(target)
+    normalize_emblem_alpha(target)
+    cleaned = Image.open(target).crop((2, 2, original.width + 2, original.height + 2))
+    final, padding, circle = frame_circular_emblem(cleaned, coverage=coverage)
+    final.save(target)
+    pixels = np.array(final)
+    x, y = padding['left'], padding['top']
+    assert np.array_equal(np.array(original)[:, :, :3], pixels[y:y+original.height, x:x+original.width, :3])
+    yy, xx = np.ogrid[:final.height, :final.width]
+    cx, cy = circle['centre']
+    assert np.array_equal(pixels[:, :, 3] == 255, (xx-cx)**2 + (yy-cy)**2 <= circle['radius']**2)
+    assert set(np.unique(pixels[:, :, 3])) == {0, 255}
+    return {'size': list(final.size), 'padding': padding, 'circle': circle,
+            'rgbUnchanged': True, 'alphaValues': [0, 255]}

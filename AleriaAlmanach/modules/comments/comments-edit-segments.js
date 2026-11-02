@@ -290,6 +290,7 @@ function buildEditCommentSegmentsForSave() {
         skillId: String(segment.skillId || ''),
         skillCustomModifier: Number(segment.skillCustomModifier || 0),
         skillDifficulty: Number(segment.skillDifficulty || 10),
+        ...(segment?.skillRequiredSense ? { skillRequiredSense: String(segment.skillRequiredSense).slice(0, 20) } : {}),
         skillRollMode: ['advantage', 'disadvantage'].includes(segment.skillRollMode) ? segment.skillRollMode : 'normal',
         skillTargetActorKey: String(segment.skillTargetActorKey || ''),
         skillTargetChallengeId: String(segment.skillTargetChallengeId || ''),

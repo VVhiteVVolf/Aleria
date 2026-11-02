@@ -1,0 +1,115 @@
+{
+  "permission": "Existing user approval: Ja, Alpha bereinigen; originals and RGB retained.",
+  "crests": [
+    {
+      "id": "ransford",
+      "size": [
+        1388,
+        1388
+      ],
+      "padding": {
+        "left": 68,
+        "top": 70
+      },
+      "circle": {
+        "centre": [
+          694,
+          694
+        ],
+        "radius": 610
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "sourceSha256": "9bd99bc107edf3bba15eede16b1aaad25b2132361942775222d5199b5e9d67ec",
+      "productionSha256": "23c867c37c2fbf3ec88c9b37ec0c7b299351ca79144322a0c9c727f81e51dd32",
+      "previewSha256": "f50be9d56754f145a0a54f4f418ca2245870174f34d947d5b4c77d5527d81641"
+    },
+    {
+      "id": "heswick",
+      "size": [
+        1376,
+        1376
+      ],
+      "padding": {
+        "left": 64,
+        "top": 66
+      },
+      "circle": {
+        "centre": [
+          688,
+          688
+        ],
+        "radius": 605
+      },
+      "rgbUnchanged": true,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "sourceSha256": "2042712b15627cd3c7fa1e3bd181a4e93418d971cbabd519e762e7ee8414252d",
+      "productionSha256": "c1ffcc397f22023079c6d364de656d7267c63dd806ad58d465327ea47828e302",
+      "previewSha256": "dba90393b4142aea0077af80bef106ca1b73fb5393a781dd742f7ad296a391e6"
+    }
+  ],
+  "originals": [
+    {
+      "id": "ransford",
+      "originals": {
+        "ransford-crest.png": "9bd99bc107edf3bba15eede16b1aaad25b2132361942775222d5199b5e9d67ec",
+        "ransford-warrior.png": "b07b64d4cf79c292d29c9f206a550f524bad9df02cb4a06d9c26bb748a6d9d1c"
+      }
+    },
+    {
+      "id": "heswick",
+      "originals": {
+        "heswick-crest.png": "2042712b15627cd3c7fa1e3bd181a4e93418d971cbabd519e762e7ee8414252d",
+        "heswick-warrior.png": "77157492e57fff97b2ed08b94d4ddf6baf6a27918de1e1dbf3b0c265fdad61dc"
+      }
+    }
+  ],
+  "warriorAudit": {
+    "checkedWarriors": 37,
+    "expectedCount": 37,
+    "failures": [],
+    "warnings": [
+      "ashby: tight but transparent margin (6 px)",
+      "aubigny: tight but transparent margin (8 px)",
+      "beran: tight but transparent margin (11 px)",
+      "boxton: tight but transparent margin (7 px)",
+      "brymwulf: tight but transparent margin (14 px)",
+      "cerdic: tight but transparent margin (9 px)",
+      "coelret: tight but transparent margin (8 px)",
+      "cutting: tight but transparent margin (5 px)",
+      "derwent: tight but transparent margin (8 px)",
+      "dimholt: tight but transparent margin (8 px)",
+      "dunstan: tight but transparent margin (2 px)",
+      "earncynne: tight but transparent margin (12 px)",
+      "edwynne: tight but transparent margin (9 px)",
+      "estmere: tight but transparent margin (6 px)",
+      "frye: tight but transparent margin (8 px)",
+      "giffard: tight but transparent margin (6 px)",
+      "granger: tight but transparent margin (9 px)",
+      "halfax: tight but transparent margin (3 px)",
+      "heswick: tight but transparent margin (12 px)",
+      "humber: tight but transparent margin (8 px)",
+      "irwynne: tight but transparent margin (7 px)",
+      "kendryck: tight but transparent margin (12 px)",
+      "leofric: tight but transparent margin (3 px)",
+      "lir: tight but transparent margin (13 px)",
+      "oiscingas: tight but transparent margin (7 px)",
+      "ransford: tight but transparent margin (7 px)",
+      "seolfor: tight but transparent margin (13 px)",
+      "skelton: tight but transparent margin (5 px)",
+      "tharn: tight but transparent margin (3 px)",
+      "thwing: tight but transparent margin (6 px)",
+      "thynne: tight but transparent margin (12 px)",
+      "trent: tight but transparent margin (6 px)",
+      "trevelyan: tight but transparent margin (7 px)",
+      "wend: tight but transparent margin (14 px)",
+      "whiting: tight but transparent margin (9 px)"
+    ]
+  }
+}

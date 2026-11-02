@@ -15,22 +15,22 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "moinneach",
       "iathneach",
       "deitheach",
+      "aeldrunmar",
+      "talyndor",
+      "brevanor",
       "cenyr",
       "faelaorn",
       "aldrimar",
       "venalys",
       "morgorn",
-      "aeldrunmar",
       "vennyr",
-      "talyndor",
       "ceitheach",
       "blaithneach",
       "leitheach",
       "dunfal",
       "aislearneach",
       "uathneach",
-      "kaiserreich-argentum",
-      "brevanor"
+      "kaiserreich-argentum"
     ],
     "houseIds": [
       "haus-brechten",
@@ -153,6 +153,90 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-duach",
       "haus-droch-trodach",
       "haus-dal-tuairne",
+      "haus-boxton",
+      "haus-halfax",
+      "haus-lir",
+      "haus-skelton",
+      "haus-trevelyan",
+      "haus-ashby",
+      "haus-kendryck",
+      "haus-cutting",
+      "haus-humber",
+      "haus-seolfor",
+      "haus-coelret",
+      "haus-thynne",
+      "haus-beran",
+      "haus-giffard",
+      "haus-oiscingas",
+      "haus-dunstan",
+      "haus-granger",
+      "haus-earncynne",
+      "haus-cerdic",
+      "haus-swygert",
+      "haus-irwynne",
+      "haus-leofric",
+      "haus-estmere",
+      "haus-aubigny",
+      "haus-derwent",
+      "haus-thwing",
+      "haus-brymwulf",
+      "haus-frye",
+      "haus-edwynne",
+      "haus-trent",
+      "haus-edgcumbe",
+      "haus-tharn",
+      "haus-ransford",
+      "haus-heswick",
+      "haus-dimholt",
+      "haus-wend",
+      "haus-whiting",
+      "haus-scandyn",
+      "haus-aldred",
+      "haus-ashton",
+      "haus-bramcote",
+      "haus-tostan",
+      "haus-kyme",
+      "haus-lennwyck",
+      "haus-holton",
+      "haus-egerton",
+      "haus-yarwyck",
+      "haus-warren",
+      "haus-thornwick",
+      "haus-elwick",
+      "haus-sedgeley",
+      "haus-brigane",
+      "haus-rookden",
+      "haus-vernon",
+      "haus-wickton",
+      "haus-wulmer",
+      "haus-desele",
+      "haus-lothaire",
+      "haus-aubert",
+      "haus-guerin",
+      "haus-varenne",
+      "haus-kervaut",
+      "haus-rovenne",
+      "haus-perrec",
+      "haus-bielle",
+      "haus-caudren",
+      "haus-trevain",
+      "haus-renaut",
+      "haus-arvenac",
+      "haus-iverac",
+      "haus-quernac",
+      "haus-guivren",
+      "haus-osmer",
+      "haus-yveran",
+      "haus-gerain",
+      "haus-bernant",
+      "haus-ervaut",
+      "haus-valdran",
+      "haus-jorant",
+      "haus-walaric",
+      "haus-corvail",
+      "haus-ferant",
+      "haus-savrec",
+      "haus-landrec",
       "haus-madryn",
       "haus-merek",
       "haus-rhenna",
@@ -199,6 +283,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -571,13 +663,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-falveri",
       "haus-falto",
       "haus-karreg",
-      "haus-frye",
-      "haus-estmere",
-      "haus-earncynne",
-      "haus-beran",
-      "haus-kendryck",
-      "haus-seolfor",
-      "haus-scandyn",
       "haus-trachwyll-talfronwyn",
       "haus-caerdyn",
       "haus-diafol",
@@ -603,7 +688,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-morgant",
       "haus-serenoc",
       "haus-morlais",
-      "haus-thornwick",
       "haus-ui-rochraide",
       "haus-craobhan",
       "haus-eldath",
@@ -715,10 +799,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-clannmhar",
       "haus-marcaigh",
       "haus-giolla",
-      "haus-veltrane",
-      "haus-bielle",
-      "haus-desele",
-      "haus-lothaire"
+      "haus-veltrane"
     ]
   },
   {
@@ -2798,6 +2879,1421 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
+    "id": "aeldrunmar",
+    "parentId": "",
+    "name": "Aeldrunmar",
+    "path": [
+      "Aeldrunmar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/aeldrunmar.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "",
+    "children": [
+      "aeldrunmar/konigliches-earltum-kendryckfold",
+      "aeldrunmar/earltum-beranland",
+      "aeldrunmar/earltum-earnemnet",
+      "aeldrunmar/earltum-estmere",
+      "aeldrunmar/earltum-fyrland",
+      "aeldrunmar/earltum-tharnmere"
+    ],
+    "houseIds": [
+      "haus-boxton",
+      "haus-halfax",
+      "haus-lir",
+      "haus-skelton",
+      "haus-trevelyan",
+      "haus-ashby",
+      "haus-kendryck",
+      "haus-cutting",
+      "haus-humber",
+      "haus-seolfor",
+      "haus-coelret",
+      "haus-thynne",
+      "haus-beran",
+      "haus-giffard",
+      "haus-oiscingas",
+      "haus-dunstan",
+      "haus-granger",
+      "haus-earncynne",
+      "haus-cerdic",
+      "haus-swygert",
+      "haus-irwynne",
+      "haus-leofric",
+      "haus-estmere",
+      "haus-aubigny",
+      "haus-derwent",
+      "haus-thwing",
+      "haus-brymwulf",
+      "haus-frye",
+      "haus-edwynne",
+      "haus-trent",
+      "haus-edgcumbe",
+      "haus-tharn",
+      "haus-ransford",
+      "haus-heswick",
+      "haus-dimholt",
+      "haus-wend",
+      "haus-whiting",
+      "haus-scandyn"
+    ]
+  },
+  {
+    "id": "aeldrunmar/konigliches-earltum-kendryckfold",
+    "parentId": "aeldrunmar",
+    "name": "Königliches Earltum Kendryckfold",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/earldom-kendryck.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "konigliches-earltum-kendryckfold",
+    "children": [
+      "aeldrunmar/konigliches-earltum-kendryckfold/ldrunhal",
+      "aeldrunmar/konigliches-earltum-kendryckfold/dunrath",
+      "aeldrunmar/konigliches-earltum-kendryckfold/glendir",
+      "aeldrunmar/konigliches-earltum-kendryckfold/kaldhorn"
+    ],
+    "houseIds": [
+      "haus-boxton",
+      "haus-halfax",
+      "haus-lir",
+      "haus-skelton",
+      "haus-trevelyan",
+      "haus-ashby",
+      "haus-kendryck",
+      "haus-cutting",
+      "haus-humber",
+      "haus-seolfor"
+    ]
+  },
+  {
+    "id": "aeldrunmar/konigliches-earltum-kendryckfold/ldrunhal",
+    "parentId": "aeldrunmar/konigliches-earltum-kendryckfold",
+    "name": "Ældrunhal",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/aeldrunhal.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "konigliches-earltum-kendryckfold",
+    "children": [],
+    "houseIds": [
+      "haus-boxton",
+      "haus-halfax",
+      "haus-lir",
+      "haus-skelton",
+      "haus-trevelyan",
+      "haus-ashby",
+      "haus-kendryck"
+    ]
+  },
+  {
+    "id": "aeldrunmar/konigliches-earltum-kendryckfold/dunrath",
+    "parentId": "aeldrunmar/konigliches-earltum-kendryckfold",
+    "name": "Dunrath",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Dunrath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/dunrath.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "konigliches-earltum-kendryckfold",
+    "children": [],
+    "houseIds": [
+      "haus-cutting"
+    ]
+  },
+  {
+    "id": "aeldrunmar/konigliches-earltum-kendryckfold/glendir",
+    "parentId": "aeldrunmar/konigliches-earltum-kendryckfold",
+    "name": "Glendir",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Glendir"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/glendir.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "konigliches-earltum-kendryckfold",
+    "children": [],
+    "houseIds": [
+      "haus-humber"
+    ]
+  },
+  {
+    "id": "aeldrunmar/konigliches-earltum-kendryckfold/kaldhorn",
+    "parentId": "aeldrunmar/konigliches-earltum-kendryckfold",
+    "name": "Kaldhorn",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Kaldhorn"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/kaldhorn.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "konigliches-earltum-kendryckfold",
+    "children": [],
+    "houseIds": [
+      "haus-seolfor"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-beranland",
+    "parentId": "aeldrunmar",
+    "name": "Earltum Beranland",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/earldom-beran.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-beranland",
+    "children": [
+      "aeldrunmar/earltum-beranland/ldros",
+      "aeldrunmar/earltum-beranland/mornhall",
+      "aeldrunmar/earltum-beranland/itharol"
+    ],
+    "houseIds": [
+      "haus-coelret",
+      "haus-thynne",
+      "haus-beran",
+      "haus-giffard",
+      "haus-oiscingas"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-beranland/ldros",
+    "parentId": "aeldrunmar/earltum-beranland",
+    "name": "Ældros",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Ældros"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/aeldros.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-beranland",
+    "children": [],
+    "houseIds": [
+      "haus-coelret",
+      "haus-thynne",
+      "haus-beran"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-beranland/mornhall",
+    "parentId": "aeldrunmar/earltum-beranland",
+    "name": "Mornhall",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Mornhall"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/mornhall.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-beranland",
+    "children": [],
+    "houseIds": [
+      "haus-giffard"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-beranland/itharol",
+    "parentId": "aeldrunmar/earltum-beranland",
+    "name": "Itharol",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Itharol"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/itharol.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-beranland",
+    "children": [],
+    "houseIds": [
+      "haus-oiscingas"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-earnemnet",
+    "parentId": "aeldrunmar",
+    "name": "Earltum Earnemnet",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/earldom-earncynne.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-earnemnet",
+    "children": [
+      "aeldrunmar/earltum-earnemnet/glenfara",
+      "aeldrunmar/earltum-earnemnet/greenholt",
+      "aeldrunmar/earltum-earnemnet/virelith"
+    ],
+    "houseIds": [
+      "haus-dunstan",
+      "haus-granger",
+      "haus-earncynne",
+      "haus-cerdic",
+      "haus-swygert"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-earnemnet/glenfara",
+    "parentId": "aeldrunmar/earltum-earnemnet",
+    "name": "Glenfara",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Glenfara"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/glenfara.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-earnemnet",
+    "children": [],
+    "houseIds": [
+      "haus-dunstan",
+      "haus-granger",
+      "haus-earncynne"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-earnemnet/greenholt",
+    "parentId": "aeldrunmar/earltum-earnemnet",
+    "name": "Greenholt",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Greenholt"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/ghrenholt.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-earnemnet",
+    "children": [],
+    "houseIds": [
+      "haus-cerdic"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-earnemnet/virelith",
+    "parentId": "aeldrunmar/earltum-earnemnet",
+    "name": "Virelith",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Virelith"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/virelith.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-earnemnet",
+    "children": [],
+    "houseIds": [
+      "haus-swygert"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-estmere",
+    "parentId": "aeldrunmar",
+    "name": "Earltum Estmere",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/earldom-estmere.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-estmere",
+    "children": [
+      "aeldrunmar/earltum-estmere/eldramar",
+      "aeldrunmar/earltum-estmere/faelthar",
+      "aeldrunmar/earltum-estmere/rivisra",
+      "aeldrunmar/earltum-estmere/thalrune"
+    ],
+    "houseIds": [
+      "haus-irwynne",
+      "haus-leofric",
+      "haus-estmere",
+      "haus-aubigny",
+      "haus-derwent",
+      "haus-thwing"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-estmere/eldramar",
+    "parentId": "aeldrunmar/earltum-estmere",
+    "name": "Eldramar",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Eldramar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/eldramar.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-estmere",
+    "children": [],
+    "houseIds": [
+      "haus-irwynne",
+      "haus-leofric",
+      "haus-estmere"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-estmere/faelthar",
+    "parentId": "aeldrunmar/earltum-estmere",
+    "name": "Faelthar",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Faelthar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/faelthar.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-estmere",
+    "children": [],
+    "houseIds": [
+      "haus-aubigny"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-estmere/rivisra",
+    "parentId": "aeldrunmar/earltum-estmere",
+    "name": "Rivisra",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Rivisra"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/rivisra.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-estmere",
+    "children": [],
+    "houseIds": [
+      "haus-derwent"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-estmere/thalrune",
+    "parentId": "aeldrunmar/earltum-estmere",
+    "name": "Thalrune",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Thalrune"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/thalrune.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-estmere",
+    "children": [],
+    "houseIds": [
+      "haus-thwing"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-fyrland",
+    "parentId": "aeldrunmar",
+    "name": "Earltum Fyrland",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/earldom-fyr.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-fyrland",
+    "children": [
+      "aeldrunmar/earltum-fyrland/veyrthar",
+      "aeldrunmar/earltum-fyrland/kaldun",
+      "aeldrunmar/earltum-fyrland/virelath",
+      "aeldrunmar/earltum-fyrland/hydrathar"
+    ],
+    "houseIds": [
+      "haus-brymwulf",
+      "haus-frye",
+      "haus-edwynne",
+      "haus-trent",
+      "haus-edgcumbe"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-fyrland/veyrthar",
+    "parentId": "aeldrunmar/earltum-fyrland",
+    "name": "Veyrthar",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Veyrthar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/veyrthar.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-fyrland",
+    "children": [],
+    "houseIds": [
+      "haus-brymwulf",
+      "haus-frye"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-fyrland/kaldun",
+    "parentId": "aeldrunmar/earltum-fyrland",
+    "name": "Kaldun",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Kaldun"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/kaldun.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-fyrland",
+    "children": [],
+    "houseIds": [
+      "haus-edwynne"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-fyrland/virelath",
+    "parentId": "aeldrunmar/earltum-fyrland",
+    "name": "Virelath",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Virelath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/virelath.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-fyrland",
+    "children": [],
+    "houseIds": [
+      "haus-trent"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-fyrland/hydrathar",
+    "parentId": "aeldrunmar/earltum-fyrland",
+    "name": "Hydrathar",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Hydrathar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/hydrathar.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-fyrland",
+    "children": [],
+    "houseIds": [
+      "haus-edgcumbe"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-tharnmere",
+    "parentId": "aeldrunmar",
+    "name": "Earltum Tharnmere",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/earldom-tharn.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-tharnmere",
+    "children": [
+      "aeldrunmar/earltum-tharnmere/trentmorath",
+      "aeldrunmar/earltum-tharnmere/luthirrith",
+      "aeldrunmar/earltum-tharnmere/linthar",
+      "aeldrunmar/earltum-tharnmere/eadwick",
+      "aeldrunmar/earltum-tharnmere/scandmere"
+    ],
+    "houseIds": [
+      "haus-tharn",
+      "haus-ransford",
+      "haus-heswick",
+      "haus-dimholt",
+      "haus-wend",
+      "haus-whiting",
+      "haus-scandyn"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-tharnmere/trentmorath",
+    "parentId": "aeldrunmar/earltum-tharnmere",
+    "name": "Trentmorath",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Trentmorath"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/trentmorath.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-tharnmere",
+    "children": [],
+    "houseIds": [
+      "haus-tharn",
+      "haus-ransford",
+      "haus-heswick"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-tharnmere/luthirrith",
+    "parentId": "aeldrunmar/earltum-tharnmere",
+    "name": "Luthirrith",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Luthirrith"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/luthirrith.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-tharnmere",
+    "children": [],
+    "houseIds": [
+      "haus-dimholt"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-tharnmere/linthar",
+    "parentId": "aeldrunmar/earltum-tharnmere",
+    "name": "Linthar",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Linthar"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/linthar.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-tharnmere",
+    "children": [],
+    "houseIds": [
+      "haus-wend"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-tharnmere/eadwick",
+    "parentId": "aeldrunmar/earltum-tharnmere",
+    "name": "Eadwick",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Eadwick"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar/eadwick.webp",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-tharnmere",
+    "children": [],
+    "houseIds": [
+      "haus-whiting"
+    ]
+  },
+  {
+    "id": "aeldrunmar/earltum-tharnmere/scandmere",
+    "parentId": "aeldrunmar/earltum-tharnmere",
+    "name": "Scandmere",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Scandmere"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-scandyn.png",
+    "countryId": "aeldrunmar",
+    "regionId": "earltum-tharnmere",
+    "children": [],
+    "houseIds": [
+      "haus-scandyn"
+    ]
+  },
+  {
+    "id": "talyndor",
+    "parentId": "",
+    "name": "Talyndor",
+    "path": [
+      "Talyndor"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/talyndor.webp",
+    "countryId": "talyndor",
+    "regionId": "",
+    "children": [
+      "talyndor/konigliches-earltum-aldredhold",
+      "talyndor/earltum-lennwyckland",
+      "talyndor/earltum-warrenfold",
+      "talyndor/earltum-briganefold"
+    ],
+    "houseIds": [
+      "haus-aldred",
+      "haus-ashton",
+      "haus-bramcote",
+      "haus-tostan",
+      "haus-kyme",
+      "haus-lennwyck",
+      "haus-holton",
+      "haus-egerton",
+      "haus-yarwyck",
+      "haus-warren",
+      "haus-thornwick",
+      "haus-elwick",
+      "haus-sedgeley",
+      "haus-brigane",
+      "haus-rookden",
+      "haus-vernon",
+      "haus-wickton",
+      "haus-wulmer"
+    ]
+  },
+  {
+    "id": "talyndor/konigliches-earltum-aldredhold",
+    "parentId": "talyndor",
+    "name": "Königliches Earltum Aldredhold",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/earldom-aldred.webp",
+    "countryId": "talyndor",
+    "regionId": "konigliches-earltum-aldredhold",
+    "children": [
+      "talyndor/konigliches-earltum-aldredhold/edrington",
+      "talyndor/konigliches-earltum-aldredhold/ternford"
+    ],
+    "houseIds": [
+      "haus-aldred",
+      "haus-ashton",
+      "haus-bramcote",
+      "haus-tostan",
+      "haus-kyme"
+    ]
+  },
+  {
+    "id": "talyndor/konigliches-earltum-aldredhold/edrington",
+    "parentId": "talyndor/konigliches-earltum-aldredhold",
+    "name": "Edrington",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Edrington"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/edrington.webp",
+    "countryId": "talyndor",
+    "regionId": "konigliches-earltum-aldredhold",
+    "children": [],
+    "houseIds": [
+      "haus-aldred",
+      "haus-ashton",
+      "haus-bramcote",
+      "haus-tostan"
+    ]
+  },
+  {
+    "id": "talyndor/konigliches-earltum-aldredhold/ternford",
+    "parentId": "talyndor/konigliches-earltum-aldredhold",
+    "name": "Ternford",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Ternford"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/ternford.webp",
+    "countryId": "talyndor",
+    "regionId": "konigliches-earltum-aldredhold",
+    "children": [],
+    "houseIds": [
+      "haus-kyme"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-lennwyckland",
+    "parentId": "talyndor",
+    "name": "Earltum Lennwyckland",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/earldom-lennwyck.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-lennwyckland",
+    "children": [
+      "talyndor/earltum-lennwyckland/wetherham",
+      "talyndor/earltum-lennwyckland/dunworth",
+      "talyndor/earltum-lennwyckland/cawden"
+    ],
+    "houseIds": [
+      "haus-lennwyck",
+      "haus-holton",
+      "haus-egerton",
+      "haus-yarwyck"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-lennwyckland/wetherham",
+    "parentId": "talyndor/earltum-lennwyckland",
+    "name": "Wetherham",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Wetherham"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/wetherham.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-lennwyckland",
+    "children": [],
+    "houseIds": [
+      "haus-lennwyck",
+      "haus-holton"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-lennwyckland/dunworth",
+    "parentId": "talyndor/earltum-lennwyckland",
+    "name": "Dunworth",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Dunworth"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/dunworth.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-lennwyckland",
+    "children": [],
+    "houseIds": [
+      "haus-egerton"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-lennwyckland/cawden",
+    "parentId": "talyndor/earltum-lennwyckland",
+    "name": "Cawden",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Cawden"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/cawden.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-lennwyckland",
+    "children": [],
+    "houseIds": [
+      "haus-yarwyck"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-warrenfold",
+    "parentId": "talyndor",
+    "name": "Earltum Warrenfold",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/earldom-warren.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-warrenfold",
+    "children": [
+      "talyndor/earltum-warrenfold/wensbury",
+      "talyndor/earltum-warrenfold/eldenwick",
+      "talyndor/earltum-warrenfold/hartham"
+    ],
+    "houseIds": [
+      "haus-warren",
+      "haus-thornwick",
+      "haus-elwick",
+      "haus-sedgeley"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-warrenfold/wensbury",
+    "parentId": "talyndor/earltum-warrenfold",
+    "name": "Wensbury",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold",
+      "Wensbury"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/wensbury.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-warrenfold",
+    "children": [],
+    "houseIds": [
+      "haus-warren",
+      "haus-thornwick"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-warrenfold/eldenwick",
+    "parentId": "talyndor/earltum-warrenfold",
+    "name": "Eldenwick",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold",
+      "Eldenwick"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/eldenwick.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-warrenfold",
+    "children": [],
+    "houseIds": [
+      "haus-elwick"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-warrenfold/hartham",
+    "parentId": "talyndor/earltum-warrenfold",
+    "name": "Hartham",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold",
+      "Hartham"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/hartham.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-warrenfold",
+    "children": [],
+    "houseIds": [
+      "haus-sedgeley"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-briganefold",
+    "parentId": "talyndor",
+    "name": "Earltum Briganefold",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/earldom-brigane.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-briganefold",
+    "children": [
+      "talyndor/earltum-briganefold/aveldon",
+      "talyndor/earltum-briganefold/norcombe",
+      "talyndor/earltum-briganefold/fenhurst",
+      "talyndor/earltum-briganefold/bramwell"
+    ],
+    "houseIds": [
+      "haus-brigane",
+      "haus-rookden",
+      "haus-vernon",
+      "haus-wickton",
+      "haus-wulmer"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-briganefold/aveldon",
+    "parentId": "talyndor/earltum-briganefold",
+    "name": "Aveldon",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Aveldon"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/aveldon.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-briganefold",
+    "children": [],
+    "houseIds": [
+      "haus-brigane",
+      "haus-rookden"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-briganefold/norcombe",
+    "parentId": "talyndor/earltum-briganefold",
+    "name": "Norcombe",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Norcombe"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/norcombe.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-briganefold",
+    "children": [],
+    "houseIds": [
+      "haus-vernon"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-briganefold/fenhurst",
+    "parentId": "talyndor/earltum-briganefold",
+    "name": "Fenhurst",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Fenhurst"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/fenhurst.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-briganefold",
+    "children": [],
+    "houseIds": [
+      "haus-wickton"
+    ]
+  },
+  {
+    "id": "talyndor/earltum-briganefold/bramwell",
+    "parentId": "talyndor/earltum-briganefold",
+    "name": "Bramwell",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Bramwell"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor/bramwell.webp",
+    "countryId": "talyndor",
+    "regionId": "earltum-briganefold",
+    "children": [],
+    "houseIds": [
+      "haus-wulmer"
+    ]
+  },
+  {
+    "id": "brevanor",
+    "parentId": "",
+    "name": "Brevanor",
+    "path": [
+      "Brevanor"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/brevanor.webp",
+    "countryId": "brevanor",
+    "regionId": "",
+    "children": [
+      "brevanor/konigliche-domane-caerennes",
+      "brevanor/comteyrat-tervenne",
+      "brevanor/comteyrat-vaudrec",
+      "brevanor/comteyrat-tregard"
+    ],
+    "houseIds": [
+      "haus-desele",
+      "haus-lothaire",
+      "haus-aubert",
+      "haus-guerin",
+      "haus-varenne",
+      "haus-kervaut",
+      "haus-rovenne",
+      "haus-perrec",
+      "haus-bielle",
+      "haus-caudren",
+      "haus-trevain",
+      "haus-renaut",
+      "haus-arvenac",
+      "haus-iverac",
+      "haus-quernac",
+      "haus-guivren",
+      "haus-osmer",
+      "haus-yveran",
+      "haus-gerain",
+      "haus-bernant",
+      "haus-ervaut",
+      "haus-valdran",
+      "haus-jorant",
+      "haus-walaric",
+      "haus-corvail",
+      "haus-ferant",
+      "haus-savrec",
+      "haus-landrec"
+    ]
+  },
+  {
+    "id": "brevanor/konigliche-domane-caerennes",
+    "parentId": "brevanor",
+    "name": "Königliche Domäne Caerennes",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/county-caerennes.webp",
+    "countryId": "brevanor",
+    "regionId": "konigliche-domane-caerennes",
+    "children": [
+      "brevanor/konigliche-domane-caerennes/caerennes",
+      "brevanor/konigliche-domane-caerennes/rovanne",
+      "brevanor/konigliche-domane-caerennes/virec",
+      "brevanor/konigliche-domane-caerennes/sorven"
+    ],
+    "houseIds": [
+      "haus-aubert",
+      "haus-guerin",
+      "haus-varenne",
+      "haus-kervaut",
+      "haus-rovenne",
+      "haus-perrec",
+      "haus-bielle"
+    ]
+  },
+  {
+    "id": "brevanor/konigliche-domane-caerennes/caerennes",
+    "parentId": "brevanor/konigliche-domane-caerennes",
+    "name": "Caerennes",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Caerennes"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-caerennes.webp",
+    "countryId": "brevanor",
+    "regionId": "konigliche-domane-caerennes",
+    "children": [],
+    "houseIds": [
+      "haus-aubert",
+      "haus-guerin",
+      "haus-varenne",
+      "haus-kervaut"
+    ]
+  },
+  {
+    "id": "brevanor/konigliche-domane-caerennes/rovanne",
+    "parentId": "brevanor/konigliche-domane-caerennes",
+    "name": "Rovanne",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Rovanne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-rovanne.webp",
+    "countryId": "brevanor",
+    "regionId": "konigliche-domane-caerennes",
+    "children": [],
+    "houseIds": [
+      "haus-rovenne"
+    ]
+  },
+  {
+    "id": "brevanor/konigliche-domane-caerennes/virec",
+    "parentId": "brevanor/konigliche-domane-caerennes",
+    "name": "Virec",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Virec"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-virec.webp",
+    "countryId": "brevanor",
+    "regionId": "konigliche-domane-caerennes",
+    "children": [],
+    "houseIds": [
+      "haus-perrec"
+    ]
+  },
+  {
+    "id": "brevanor/konigliche-domane-caerennes/sorven",
+    "parentId": "brevanor/konigliche-domane-caerennes",
+    "name": "Sorven",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Sorven"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-sorven.webp",
+    "countryId": "brevanor",
+    "regionId": "konigliche-domane-caerennes",
+    "children": [],
+    "houseIds": [
+      "haus-bielle"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tervenne",
+    "parentId": "brevanor",
+    "name": "Comteyrat Tervenne",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/county-tervenne.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tervenne",
+    "children": [
+      "brevanor/comteyrat-tervenne/tervenne",
+      "brevanor/comteyrat-tervenne/marneval",
+      "brevanor/comteyrat-tervenne/orbec",
+      "brevanor/comteyrat-tervenne/dervel"
+    ],
+    "houseIds": [
+      "haus-caudren",
+      "haus-trevain",
+      "haus-renaut",
+      "haus-arvenac",
+      "haus-iverac",
+      "haus-quernac"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tervenne/tervenne",
+    "parentId": "brevanor/comteyrat-tervenne",
+    "name": "Tervenne",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Tervenne"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-tervenne.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tervenne",
+    "children": [],
+    "houseIds": [
+      "haus-caudren",
+      "haus-trevain",
+      "haus-renaut"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tervenne/marneval",
+    "parentId": "brevanor/comteyrat-tervenne",
+    "name": "Marneval",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Marneval"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-marneval.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tervenne",
+    "children": [],
+    "houseIds": [
+      "haus-arvenac"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tervenne/orbec",
+    "parentId": "brevanor/comteyrat-tervenne",
+    "name": "Orbec",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Orbec"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-orbec.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tervenne",
+    "children": [],
+    "houseIds": [
+      "haus-iverac"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tervenne/dervel",
+    "parentId": "brevanor/comteyrat-tervenne",
+    "name": "Dervel",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Dervel"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-dervel.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tervenne",
+    "children": [],
+    "houseIds": [
+      "haus-quernac"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-vaudrec",
+    "parentId": "brevanor",
+    "name": "Comteyrat Vaudrec",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/county-vaudrec.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-vaudrec",
+    "children": [
+      "brevanor/comteyrat-vaudrec/vaudrec",
+      "brevanor/comteyrat-vaudrec/hervant",
+      "brevanor/comteyrat-vaudrec/brellan",
+      "brevanor/comteyrat-vaudrec/arselle"
+    ],
+    "houseIds": [
+      "haus-guivren",
+      "haus-osmer",
+      "haus-yveran",
+      "haus-gerain",
+      "haus-bernant",
+      "haus-ervaut"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-vaudrec/vaudrec",
+    "parentId": "brevanor/comteyrat-vaudrec",
+    "name": "Vaudrec",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Vaudrec"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-vaudrec.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-vaudrec",
+    "children": [],
+    "houseIds": [
+      "haus-guivren",
+      "haus-osmer",
+      "haus-yveran"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-vaudrec/hervant",
+    "parentId": "brevanor/comteyrat-vaudrec",
+    "name": "Hervant",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Hervant"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-hervant.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-vaudrec",
+    "children": [],
+    "houseIds": [
+      "haus-gerain"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-vaudrec/brellan",
+    "parentId": "brevanor/comteyrat-vaudrec",
+    "name": "Brellan",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Brellan"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-brellan.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-vaudrec",
+    "children": [],
+    "houseIds": [
+      "haus-bernant"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-vaudrec/arselle",
+    "parentId": "brevanor/comteyrat-vaudrec",
+    "name": "Arselle",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Arselle"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-arselle.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-vaudrec",
+    "children": [],
+    "houseIds": [
+      "haus-ervaut"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tregard",
+    "parentId": "brevanor",
+    "name": "Comteyrat Tregard",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/county-tregard.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tregard",
+    "children": [
+      "brevanor/comteyrat-tregard/tregard",
+      "brevanor/comteyrat-tregard/roscan",
+      "brevanor/comteyrat-tregard/torvay",
+      "brevanor/comteyrat-tregard/garnac",
+      "brevanor/comteyrat-tregard/mirel"
+    ],
+    "houseIds": [
+      "haus-valdran",
+      "haus-jorant",
+      "haus-walaric",
+      "haus-corvail",
+      "haus-ferant",
+      "haus-savrec",
+      "haus-landrec"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tregard/tregard",
+    "parentId": "brevanor/comteyrat-tregard",
+    "name": "Tregard",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Tregard"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-tregard.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tregard",
+    "children": [],
+    "houseIds": [
+      "haus-valdran",
+      "haus-jorant",
+      "haus-walaric"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tregard/roscan",
+    "parentId": "brevanor/comteyrat-tregard",
+    "name": "Roscan",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Roscan"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-roscan.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tregard",
+    "children": [],
+    "houseIds": [
+      "haus-corvail"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tregard/torvay",
+    "parentId": "brevanor/comteyrat-tregard",
+    "name": "Torvay",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Torvay"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-torvay.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tregard",
+    "children": [],
+    "houseIds": [
+      "haus-ferant"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tregard/garnac",
+    "parentId": "brevanor/comteyrat-tregard",
+    "name": "Garnac",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Garnac"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-garnac.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tregard",
+    "children": [],
+    "houseIds": [
+      "haus-savrec"
+    ]
+  },
+  {
+    "id": "brevanor/comteyrat-tregard/mirel",
+    "parentId": "brevanor/comteyrat-tregard",
+    "name": "Mirel",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Mirel"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/brevanor/district-mirel.webp",
+    "countryId": "brevanor",
+    "regionId": "comteyrat-tregard",
+    "children": [],
+    "houseIds": [
+      "haus-landrec"
+    ]
+  },
+  {
     "id": "cenyr",
     "parentId": "",
     "name": "Cenyr",
@@ -2865,6 +4361,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -3151,6 +4655,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -3307,6 +4819,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -3377,6 +4897,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -9637,189 +11165,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "aeldrunmar",
-    "parentId": "",
-    "name": "Aeldrunmar",
-    "path": [
-      "Aeldrunmar"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/aeldrunmar.png",
-    "countryId": "aeldrunmar",
-    "regionId": "",
-    "children": [
-      "aeldrunmar/jarltum-der-fyr",
-      "aeldrunmar/jarltum-der-estmere",
-      "aeldrunmar/jarltum-der-earncynne",
-      "aeldrunmar/jarltum-der-beran",
-      "aeldrunmar/konigliches-jarltum-der-kendryck",
-      "aeldrunmar/jarltum-der-tharn"
-    ],
-    "houseIds": [
-      "haus-frye",
-      "haus-estmere",
-      "haus-earncynne",
-      "haus-beran",
-      "haus-kendryck",
-      "haus-seolfor",
-      "haus-scandyn"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-fyr",
-    "parentId": "aeldrunmar",
-    "name": "Jarltum der Fyr",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Fyr"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-fyr",
-    "children": [],
-    "houseIds": [
-      "haus-frye"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-estmere",
-    "parentId": "aeldrunmar",
-    "name": "Jarltum der Estmere",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Estmere"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-estmere",
-    "children": [],
-    "houseIds": [
-      "haus-estmere"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-earncynne",
-    "parentId": "aeldrunmar",
-    "name": "Jarltum der Earncynne",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Earncynne"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-earncynne",
-    "children": [],
-    "houseIds": [
-      "haus-earncynne"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-beran",
-    "parentId": "aeldrunmar",
-    "name": "Jarltum der Beran",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Beran"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-beran",
-    "children": [],
-    "houseIds": [
-      "haus-beran"
-    ]
-  },
-  {
-    "id": "aeldrunmar/konigliches-jarltum-der-kendryck",
-    "parentId": "aeldrunmar",
-    "name": "Königliches Jarltum der Kendryck",
-    "path": [
-      "Aeldrunmar",
-      "Königliches Jarltum der Kendryck"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "konigliches-jarltum-der-kendryck",
-    "children": [
-      "aeldrunmar/konigliches-jarltum-der-kendryck/thainschaft-der-seolfor"
-    ],
-    "houseIds": [
-      "haus-kendryck",
-      "haus-seolfor"
-    ]
-  },
-  {
-    "id": "aeldrunmar/konigliches-jarltum-der-kendryck/thainschaft-der-seolfor",
-    "parentId": "aeldrunmar/konigliches-jarltum-der-kendryck",
-    "name": "Thainschaft der Seolfor",
-    "path": [
-      "Aeldrunmar",
-      "Königliches Jarltum der Kendryck",
-      "Thainschaft der Seolfor"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "konigliches-jarltum-der-kendryck",
-    "children": [],
-    "houseIds": [
-      "haus-seolfor"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-tharn",
-    "parentId": "aeldrunmar",
-    "name": "Jarltum der Tharn",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Tharn"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-tharn",
-    "children": [
-      "aeldrunmar/jarltum-der-tharn/thaintum-trenmorath"
-    ],
-    "houseIds": [
-      "haus-scandyn"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-tharn/thaintum-trenmorath",
-    "parentId": "aeldrunmar/jarltum-der-tharn",
-    "name": "Thaintum Trenmorath",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Tharn",
-      "Thaintum Trenmorath"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-tharn",
-    "children": [
-      "aeldrunmar/jarltum-der-tharn/thaintum-trenmorath/scandmere"
-    ],
-    "houseIds": [
-      "haus-scandyn"
-    ]
-  },
-  {
-    "id": "aeldrunmar/jarltum-der-tharn/thaintum-trenmorath/scandmere",
-    "parentId": "aeldrunmar/jarltum-der-tharn/thaintum-trenmorath",
-    "name": "Scandmere",
-    "path": [
-      "Aeldrunmar",
-      "Jarltum der Tharn",
-      "Thaintum Trenmorath",
-      "Scandmere"
-    ],
-    "image": "",
-    "countryId": "aeldrunmar",
-    "regionId": "jarltum-der-tharn",
-    "children": [],
-    "houseIds": [
-      "haus-scandyn"
-    ]
-  },
-  {
     "id": "vennyr",
     "parentId": "",
     "name": "Vennyr",
@@ -10308,78 +11653,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-morgant",
       "haus-serenoc",
       "haus-morlais"
-    ]
-  },
-  {
-    "id": "talyndor",
-    "parentId": "",
-    "name": "Talyndor",
-    "path": [
-      "Talyndor"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/talyndor.png",
-    "countryId": "talyndor",
-    "regionId": "",
-    "children": [
-      "talyndor/earltum-der-warren"
-    ],
-    "houseIds": [
-      "haus-thornwick"
-    ]
-  },
-  {
-    "id": "talyndor/earltum-der-warren",
-    "parentId": "talyndor",
-    "name": "Earltum der Warren",
-    "path": [
-      "Talyndor",
-      "Earltum der Warren"
-    ],
-    "image": "",
-    "countryId": "talyndor",
-    "regionId": "earltum-der-warren",
-    "children": [
-      "talyndor/earltum-der-warren/thaintum-der-warren"
-    ],
-    "houseIds": [
-      "haus-thornwick"
-    ]
-  },
-  {
-    "id": "talyndor/earltum-der-warren/thaintum-der-warren",
-    "parentId": "talyndor/earltum-der-warren",
-    "name": "Thaintum der Warren",
-    "path": [
-      "Talyndor",
-      "Earltum der Warren",
-      "Thaintum der Warren"
-    ],
-    "image": "",
-    "countryId": "talyndor",
-    "regionId": "earltum-der-warren",
-    "children": [
-      "talyndor/earltum-der-warren/thaintum-der-warren/thornholt"
-    ],
-    "houseIds": [
-      "haus-thornwick"
-    ]
-  },
-  {
-    "id": "talyndor/earltum-der-warren/thaintum-der-warren/thornholt",
-    "parentId": "talyndor/earltum-der-warren/thaintum-der-warren",
-    "name": "Thornholt",
-    "path": [
-      "Talyndor",
-      "Earltum der Warren",
-      "Thaintum der Warren",
-      "Thornholt"
-    ],
-    "image": "",
-    "countryId": "talyndor",
-    "regionId": "earltum-der-warren",
-    "children": [],
-    "houseIds": [
-      "haus-thornwick"
     ]
   },
   {
@@ -14763,23 +16036,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "houseIds": [
       "haus-veltrane"
     ]
-  },
-  {
-    "id": "brevanor",
-    "parentId": "",
-    "name": "Brevanor",
-    "path": [
-      "Brevanor"
-    ],
-    "image": "",
-    "countryId": "brevanor",
-    "regionId": "",
-    "children": [],
-    "houseIds": [
-      "haus-bielle",
-      "haus-desele",
-      "haus-lothaire"
-    ]
   }
 ];
 export const REGIONAL_EQUIPMENT_HOUSES = [
@@ -16059,6 +17315,809 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "tree": "/Stammbäume/Stammbaum.html?family=haus-sattler&mode=view"
   },
   {
+    "id": "haus-boxton",
+    "name": "Haus Boxton",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/boxton.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-boxton&mode=view"
+  },
+  {
+    "id": "haus-halfax",
+    "name": "Haus Halfax",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/halfax.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-halfax&mode=view"
+  },
+  {
+    "id": "haus-lir",
+    "name": "Haus Lir",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/lir.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lir&mode=view"
+  },
+  {
+    "id": "haus-skelton",
+    "name": "Haus Skelton",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/skelton.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-skelton&mode=view"
+  },
+  {
+    "id": "haus-trevelyan",
+    "name": "Haus Trevelyan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/trevelyan.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-trevelyan&mode=view"
+  },
+  {
+    "id": "haus-coelret",
+    "name": "Haus Coelret",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Ældros"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-coelret&mode=view"
+  },
+  {
+    "id": "haus-thynne",
+    "name": "Haus Thynne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/thynne.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Ældros"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-thynne&mode=view"
+  },
+  {
+    "id": "haus-dunstan",
+    "name": "Haus Dunstan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/dunstan.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Glenfara"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dunstan&mode=view"
+  },
+  {
+    "id": "haus-granger",
+    "name": "Haus Granger",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/granger.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Glenfara"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-granger&mode=view"
+  },
+  {
+    "id": "haus-irwynne",
+    "name": "Haus Irwynne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/irwynne.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Eldramar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-irwynne&mode=view"
+  },
+  {
+    "id": "haus-leofric",
+    "name": "Haus Leofric",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/leofric.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Eldramar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-leofric&mode=view"
+  },
+  {
+    "id": "haus-brymwulf",
+    "name": "Haus Brymwulf",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/brymwulf.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Veyrthar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-brymwulf&mode=view"
+  },
+  {
+    "id": "haus-edwynne",
+    "name": "Haus Edwynne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/edwynne.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Kaldun"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-edwynne&mode=view"
+  },
+  {
+    "id": "haus-tharn",
+    "name": "Haus Tharn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/tharn.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Trentmorath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tharn&mode=view"
+  },
+  {
+    "id": "haus-dimholt",
+    "name": "Haus Dimholt",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/dimholt.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Luthirrith"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dimholt&mode=view"
+  },
+  {
+    "id": "haus-wend",
+    "name": "Haus Wend",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/wend.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Linthar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wend&mode=view"
+  },
+  {
+    "id": "haus-ashby",
+    "name": "Haus Ashby",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/ashby.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ashby&mode=view"
+  },
+  {
+    "id": "haus-aubigny",
+    "name": "Haus Aubigny",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/aubigny.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Faelthar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-aubigny&mode=view"
+  },
+  {
+    "id": "haus-cerdic",
+    "name": "Haus Cerdic",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/cerdic.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Greenholt"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cerdic&mode=view"
+  },
+  {
+    "id": "haus-cutting",
+    "name": "Haus Cutting",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/cutting.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Dunrath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-cutting&mode=view"
+  },
+  {
+    "id": "haus-derwent",
+    "name": "Haus Derwent",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/derwent.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Rivisra"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-derwent&mode=view"
+  },
+  {
+    "id": "haus-giffard",
+    "name": "Haus Giffard",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/giffard.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Mornhall"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-giffard&mode=view"
+  },
+  {
+    "id": "haus-humber",
+    "name": "Haus Humber",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/humber.webp",
+    "path": [
+      "Aeldrunmar",
+      "Königliches Earltum Kendryckfold",
+      "Glendir"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-humber&mode=view"
+  },
+  {
+    "id": "haus-oiscingas",
+    "name": "Haus Oiscingas",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/oiscingas.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Beranland",
+      "Itharol"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-oiscingas&mode=view"
+  },
+  {
+    "id": "haus-swygert",
+    "name": "Haus Swygert",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/swygert.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Earnemnet",
+      "Virelith"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-swygert&mode=view"
+  },
+  {
+    "id": "haus-thwing",
+    "name": "Haus Thwing",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/thwing.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Estmere",
+      "Thalrune"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-thwing&mode=view"
+  },
+  {
+    "id": "haus-trent",
+    "name": "Haus Trent",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/trent.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Virelath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-trent&mode=view"
+  },
+  {
+    "id": "haus-whiting",
+    "name": "Haus Whiting",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/whiting.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Eadwick"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-whiting&mode=view"
+  },
+  {
+    "id": "haus-edgcumbe",
+    "name": "Haus Edgcumbe",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/edgcumbe.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Fyrland",
+      "Hydrathar"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-edgcumbe&mode=view"
+  },
+  {
+    "id": "haus-ransford",
+    "name": "Haus Ransford",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/ransford.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Trentmorath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ransford&mode=view"
+  },
+  {
+    "id": "haus-heswick",
+    "name": "Haus Heswick",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/aeldrunmar/heswick.webp",
+    "path": [
+      "Aeldrunmar",
+      "Earltum Tharnmere",
+      "Trentmorath"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-heswick&mode=view"
+  },
+  {
+    "id": "haus-aldred",
+    "name": "Haus Aldred",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/aldred.webp",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Edrington"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-aldred&mode=view"
+  },
+  {
+    "id": "haus-lennwyck",
+    "name": "Haus Lennwyck",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/lennwyck.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Wetherham"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-lennwyck&mode=view"
+  },
+  {
+    "id": "haus-warren",
+    "name": "Haus Warren",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/warren.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold",
+      "Wensbury"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-warren&mode=view"
+  },
+  {
+    "id": "haus-brigane",
+    "name": "Haus Brigane",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/brigane.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Aveldon"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-brigane&mode=view"
+  },
+  {
+    "id": "haus-ashton",
+    "name": "Haus Ashton",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/ashton.webp",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Edrington"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ashton&mode=view"
+  },
+  {
+    "id": "haus-egerton",
+    "name": "Haus Egerton",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/egerton.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Dunworth"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-egerton&mode=view"
+  },
+  {
+    "id": "haus-holton",
+    "name": "Haus Holton",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/holton.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Wetherham"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-holton&mode=view"
+  },
+  {
+    "id": "haus-kyme",
+    "name": "Haus Kyme",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/kyme.webp",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Ternford"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-kyme&mode=view"
+  },
+  {
+    "id": "haus-vernon",
+    "name": "Haus Vernon",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/vernon.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Norcombe"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-vernon&mode=view"
+  },
+  {
+    "id": "haus-wickton",
+    "name": "Haus Wickton",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/wickton.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Fenhurst"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wickton&mode=view"
+  },
+  {
+    "id": "haus-yarwyck",
+    "name": "Haus Yarwyck",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/yarwyck.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Lennwyckland",
+      "Cawden"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-yarwyck&mode=view"
+  },
+  {
+    "id": "haus-wulmer",
+    "name": "Haus Wulmer",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/wulmer.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Bramwell"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-wulmer&mode=view"
+  },
+  {
+    "id": "haus-bramcote",
+    "name": "Haus Bramcote",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/bramcote.webp",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Edrington"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bramcote&mode=view"
+  },
+  {
+    "id": "haus-elwick",
+    "name": "Haus Elwick",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/elwick.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold",
+      "Eldenwick"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-elwick&mode=view"
+  },
+  {
+    "id": "haus-sedgeley",
+    "name": "Haus Sedgeley",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/sedgeley.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Warrenfold",
+      "Hartham"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-sedgeley&mode=view"
+  },
+  {
+    "id": "haus-rookden",
+    "name": "Haus Rookden",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/rookden.webp",
+    "path": [
+      "Talyndor",
+      "Earltum Briganefold",
+      "Aveldon"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rookden&mode=view"
+  },
+  {
+    "id": "haus-tostan",
+    "name": "Haus Tostan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/talyndor/tostan.webp",
+    "path": [
+      "Talyndor",
+      "Königliches Earltum Aldredhold",
+      "Edrington"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tostan&mode=view"
+  },
+  {
+    "id": "haus-aubert",
+    "name": "Haus Aubert",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/aubert.webp",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Caerennes"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-aubert&mode=view"
+  },
+  {
+    "id": "haus-caudren",
+    "name": "Haus Caudren",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/caudren.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Tervenne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-caudren&mode=view"
+  },
+  {
+    "id": "haus-guivren",
+    "name": "Haus Guivren",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/guivren.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Vaudrec"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-guivren&mode=view"
+  },
+  {
+    "id": "haus-valdran",
+    "name": "Haus Valdran",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/valdran.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Tregard"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-valdran&mode=view"
+  },
+  {
+    "id": "haus-arvenac",
+    "name": "Haus Arvenac",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/arvenac.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Marneval"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-arvenac&mode=view"
+  },
+  {
+    "id": "haus-guerin",
+    "name": "Haus Guerin",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/guerin.webp",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Caerennes"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-guerin&mode=view"
+  },
+  {
+    "id": "haus-varenne",
+    "name": "Haus Varenne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/varenne.webp",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Caerennes"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-varenne&mode=view"
+  },
+  {
+    "id": "haus-rovenne",
+    "name": "Haus Rovenne",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/rovenne.webp",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Rovanne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-rovenne&mode=view"
+  },
+  {
+    "id": "haus-perrec",
+    "name": "Haus Perrec",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/perrec.webp",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Virec"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-perrec&mode=view"
+  },
+  {
+    "id": "haus-gerain",
+    "name": "Haus Gerain",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/gerain.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Hervant"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-gerain&mode=view"
+  },
+  {
+    "id": "haus-corvail",
+    "name": "Haus Corvail",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/corvail.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Roscan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-corvail&mode=view"
+  },
+  {
+    "id": "haus-ferant",
+    "name": "Haus Ferant",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/ferant.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Torvay"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ferant&mode=view"
+  },
+  {
+    "id": "haus-trevain",
+    "name": "Haus Trevain",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/trevain.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Tervenne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-trevain&mode=view"
+  },
+  {
+    "id": "haus-bernant",
+    "name": "Haus Bernant",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/bernant.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Brellan"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bernant&mode=view"
+  },
+  {
+    "id": "haus-osmer",
+    "name": "Haus Osmer",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/osmer.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Vaudrec"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-osmer&mode=view"
+  },
+  {
+    "id": "haus-kervaut",
+    "name": "Haus Kervaut",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/kervaut.webp",
+    "path": [
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Caerennes"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-kervaut&mode=view"
+  },
+  {
+    "id": "haus-ervaut",
+    "name": "Haus Ervaut",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/ervaut.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Arselle"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ervaut&mode=view"
+  },
+  {
+    "id": "haus-iverac",
+    "name": "Haus Iverac",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/iverac.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Orbec"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-iverac&mode=view"
+  },
+  {
+    "id": "haus-jorant",
+    "name": "Haus Jorant",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/jorant.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Tregard"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-jorant&mode=view"
+  },
+  {
+    "id": "haus-savrec",
+    "name": "Haus Savrec",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/savrec.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Garnac"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-savrec&mode=view"
+  },
+  {
+    "id": "haus-landrec",
+    "name": "Haus Landrec",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/landrec.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Mirel"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-landrec&mode=view"
+  },
+  {
+    "id": "haus-quernac",
+    "name": "Haus Quernac",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/quernac.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Dervel"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-quernac&mode=view"
+  },
+  {
+    "id": "haus-walaric",
+    "name": "Haus Walaric",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/walaric.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tregard",
+      "Tregard"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-walaric&mode=view"
+  },
+  {
+    "id": "haus-yveran",
+    "name": "Haus Yveran",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/yveran.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Vaudrec",
+      "Vaudrec"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-yveran&mode=view"
+  },
+  {
+    "id": "haus-renaut",
+    "name": "Haus Renaut",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/accepted-realms/brevanor/renaut.webp",
+    "path": [
+      "Brevanor",
+      "Comteyrat Tervenne",
+      "Tervenne"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-renaut&mode=view"
+  },
+  {
     "id": "haus-arwydd",
     "name": "Haus Arwydd",
     "image": "/Stammb%C3%A4ume/assets/images/houses/Rhonwens%20Tr%C3%A4nen/haus-arwydd.png",
@@ -16309,7 +18368,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-frye.png",
     "path": [
       "Aeldrunmar",
-      "Jarltum der Fyr"
+      "Earltum Fyrland",
+      "Veyrthar"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-frye&mode=view"
   },
@@ -16319,7 +18379,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-estmere.png",
     "path": [
       "Aeldrunmar",
-      "Jarltum der Estmere"
+      "Earltum Estmere",
+      "Eldramar"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-estmere&mode=view"
   },
@@ -16329,7 +18390,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-earncynne.png",
     "path": [
       "Aeldrunmar",
-      "Jarltum der Earncynne"
+      "Earltum Earnemnet",
+      "Glenfara"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-earncynne&mode=view"
   },
@@ -16339,7 +18401,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-beran.png",
     "path": [
       "Aeldrunmar",
-      "Jarltum der Beran"
+      "Earltum Beranland",
+      "Ældros"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-beran&mode=view"
   },
@@ -16349,7 +18412,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-kendryck.png",
     "path": [
       "Aeldrunmar",
-      "Königliches Jarltum der Kendryck"
+      "Königliches Earltum Kendryckfold",
+      "Ældrunhal"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-kendryck&mode=view"
   },
@@ -16359,8 +18423,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-seolfor.png",
     "path": [
       "Aeldrunmar",
-      "Königliches Jarltum der Kendryck",
-      "Thainschaft der Seolfor"
+      "Königliches Earltum Kendryckfold",
+      "Kaldhorn"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-seolfor&mode=view"
   },
@@ -16370,8 +18434,7 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Aeldrunmar/haus-scandyn.png",
     "path": [
       "Aeldrunmar",
-      "Jarltum der Tharn",
-      "Thaintum Trenmorath",
+      "Earltum Tharnmere",
       "Scandmere"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-scandyn&mode=view"
@@ -17718,9 +19781,8 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "image": "/Stammb%C3%A4ume/assets/images/houses/Talyndor/haus-thornwick.png",
     "path": [
       "Talyndor",
-      "Earltum der Warren",
-      "Thaintum der Warren",
-      "Thornholt"
+      "Earltum Warrenfold",
+      "Wensbury"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-thornwick&mode=view"
   },
@@ -19885,6 +21947,102 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "tree": "/Stammbäume/Stammbaum.html?family=haus-falto&mode=view"
   },
   {
+    "id": "haus-ysgellfor",
+    "name": "Familie Ysgellfor",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ysgellfor&mode=view"
+  },
+  {
+    "id": "haus-helfaen",
+    "name": "Familie Helfaen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-helfaen&mode=view"
+  },
+  {
+    "id": "haus-marchwern",
+    "name": "Familie Marchwern",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view"
+  },
+  {
+    "id": "haus-tirfelyn",
+    "name": "Familie Tirfelyn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view"
+  },
+  {
+    "id": "haus-dolweth",
+    "name": "Familie Dolweth",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dolweth&mode=view"
+  },
+  {
+    "id": "haus-brynial",
+    "name": "Familie Brynial",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-brynial&mode=view"
+  },
+  {
+    "id": "haus-bragwen",
+    "name": "Familie Bragwen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bragwen&mode=view"
+  },
+  {
+    "id": "haus-eiddfer",
+    "name": "Familie Eiddfer",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-eiddfer&mode=view"
+  },
+  {
     "id": "haus-veltrane",
     "name": "Haus Veltrane",
     "image": "/Stammb%C3%A4ume/assets/images/houses/Kaiserreich%20Argentum/Veltrane.png",
@@ -19971,7 +22129,9 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
     "name": "Haus Bielle",
     "image": "/Stammb%C3%A4ume/assets/images/houses/Brevanor/Bielle.png",
     "path": [
-      "Brevanor"
+      "Brevanor",
+      "Königliche Domäne Caerennes",
+      "Sorven"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-bielle&mode=view"
   },

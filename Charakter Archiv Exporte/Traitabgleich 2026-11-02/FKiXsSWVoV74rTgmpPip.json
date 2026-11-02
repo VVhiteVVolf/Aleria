@@ -1,0 +1,61 @@
+{
+  "type": "aleria-character",
+  "mergeStrategy": "replace-combat-traits",
+  "exportedAt": "2026-11-02T19:48:57.033Z",
+  "traitReview": {
+    "version": "2026-11-02-sparse-v1",
+    "removeAbilityIds": [],
+    "removeConditionIds": []
+  },
+  "character": {
+    "id": "FKiXsSWVoV74rTgmpPip",
+    "name": "Fenrir Varulv",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
+    "combatProfile": {
+      "quirks": [
+        {
+          "id": "development-trait-symbiose-varulv-wolf",
+          "name": "Silvanische Symbiose der Varulv (Wolf)",
+          "description": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp",
+          "type": "trait",
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Silvanische Symbiose · Angeboren · Tierverbundenheit",
+          "mechanics": {
+            "skillModifiers": [
+              {
+                "name": "Wahrnehmung",
+                "bonus": 1
+              },
+              {
+                "name": "Überleben",
+                "bonus": 1
+              },
+              {
+                "name": "Mit Tieren umgehen",
+                "bonus": 1
+              }
+            ]
+          },
+          "triggerRules": []
+        }
+      ]
+    },
+    "biography": {
+      "biography": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Silvanische Symbiose der Varulv (Wolf)",
+            "detail": "Angeborene Verbindung zu Silvanas Wolfs-Urgeist im Erbe der Varulv. Grundprägung: +1 auf Wahrnehmung, Überleben und Mit Tieren umgehen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp"
+          }
+        ]
+      }
+    }
+  }
+}

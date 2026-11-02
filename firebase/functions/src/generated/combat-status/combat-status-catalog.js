@@ -1,4 +1,5 @@
 // Local artwork and explicit Aleria effects; an icon never imports BG3 rules.
+import { HEALTH_STATUS_PRESETS } from '../character-health/health-status-presets.js';
 const iconRoot = '../IconOrdner/Zauber Icons/Baldurs Gate/Condition Icons/';
 export const COMBAT_STATUS_PRESETS = Object.freeze([
   { id: 'advantage', name: 'Vorteil', kind: 'buff', icon: 'Bless_Condition_Icon.webp', description: 'Vorteil auf Angriffe und Fertigkeitsproben für die angegebene Dauer. Ein gleichzeitig aktiver Nachteil hebt ihn auf.', mechanics: { attackRollMode: 'advantage', skillRollMode: 'advantage' } },
@@ -14,7 +15,8 @@ export const COMBAT_STATUS_PRESETS = Object.freeze([
   { id: 'restrained', name: 'Festgesetzt', kind: 'condition', icon: 'Restrained_Condition_Icon.webp', description: 'Die Figur ist festgesetzt. Befreiungsbedingungen nach Quelle berücksichtigen.' },
   { id: 'stunned', name: 'Betäubt', kind: 'condition', icon: 'Stunned_Condition_Icon.webp', description: 'Die Figur kann keine Kampfhandlungen ausführen. Mit „Abwarten / Zug aussetzen“ vergeht ihr eigener Kampfpost.', mechanics: { blocksActions: true } },
   { id: 'sleeping', name: 'Schlafend', kind: 'condition', icon: 'Sleeping_Condition_Icon.webp', description: 'Die Figur schläft. Aufweckbedingungen nach Quelle berücksichtigen.' },
-  { id: 'wet', name: 'Nass', kind: 'condition', icon: 'Wet_Condition_Icon.webp', description: 'Die Figur ist durchnässt. Wechselwirkungen nach Quelle berücksichtigen.' }
+  { id: 'wet', name: 'Nass', kind: 'condition', icon: 'Wet_Condition_Icon.webp', description: 'Die Figur ist durchnässt. Wechselwirkungen nach Quelle berücksichtigen.' },
+  ...HEALTH_STATUS_PRESETS
 ]);
 
 export const STATUS_MODIFIERS = Object.freeze([
@@ -29,5 +31,5 @@ export const STATUS_ROLL_MODES = Object.freeze([
 export function getStatusIcon(condition = {}) {
   const preset = COMBAT_STATUS_PRESETS.find(item => item.id === condition.presetId
     || item.name.toLocaleLowerCase('de') === String(condition.name || '').toLocaleLowerCase('de'));
-  return preset ? `${iconRoot}${preset.icon}` : '';
+  return preset ? (preset.icon.startsWith('/') ? preset.icon : `${iconRoot}${preset.icon}`) : '';
 }

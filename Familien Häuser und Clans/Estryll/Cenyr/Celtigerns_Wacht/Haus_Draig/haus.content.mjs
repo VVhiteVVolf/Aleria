@@ -437,8 +437,12 @@ export const HOUSE_CONTENT = {
       "image": "../Stammbäume/assets/images/portraits/haus-draig/steffan-draig.jpg"
     },
     {
-      "role": "Zeremonienmeister",
-      "silhouette": "male"
+      "role": "Zeremonienmeisterin",
+      "id": "brona-eisenherz",
+      "name": "Brona Eisenherz",
+      "detail": "Ehefrau von Rhys Draig",
+      "familyId": "haus-draig",
+      "silhouette": "female"
     },
     {
       "role": "Mundschenk",
@@ -499,7 +503,10 @@ export const HOUSE_CONTENT = {
     },
     {
       "role": "Hofkaplan",
-      "silhouette": "male"
+      "id": "dehlia-gelyn",
+      "name": "Dehlia Gelyn",
+      "familyId": "haus-gelyn",
+      "image": "../Stammbäume/assets/images/portraits/haus-gelyn/dehlia-gelyn.jpg"
     },
     {
       "role": "Hofmeister",
@@ -556,7 +563,7 @@ export const HOUSE_CONTENT = {
     "Das hochklappbare Visier der Drachenhelme bildet den Oberkiefer eines Drachen nach.",
     "Hausgefolge und Stadtwache unterscheiden sich durch die Wappen auf ihren Wappenröcken."
   ],
-  "contentVersion": "20261024-housebio-v1",
+  "contentVersion": "20261102-court-offices-v1",
   "omitMilitaryProfile": true,
   "illustrationCategory": "Hausdarstellung",
   "biographySourceRevision": 15,

@@ -1,4 +1,9 @@
-import { getCombatFormPresentation } from '../combat-styles/combat-form-presentation.js?v=20260909-dragon-parent-v2';
+import { renderDevelopmentOverview, handleDevelopmentAction } from '../character-development/development-overview.js';
+import { updateDevelopmentPlan } from '../character-development/development-plan-input.js';
+import { renderCreationSkillsStep, renderCreationClassStep, renderCreationClassOptions, getCreationProficiencyLabel } from '../character-development/creation-training-ui.js';
+import { updateCreationTrainingChoice, acceptCreationSkillSuggestions, acceptCreationClassSuggestions, getSelectedCreationClasses, createCreationTrainingChoices } from '../character-development/creation-training-model.js';
+import { renderCreationDevelopmentStep, renderCreationResourcesStep, renderCreationDevelopmentReview,
+  refreshCreationDevelopment } from '../character-development/creation-development-ui.js';
 import {
   CHARACTER_CREATION_METHODS,
   CHARACTER_CREATION_STEPS,
@@ -8,18 +13,15 @@ import {
   getCreationBaseAttributes,
   getCreationFinalAttributes,
   getCreationFoundationOptions,
-  getCreationStartingTechniques,
+  previewCharacterCreationDraft,
   getPointBuyRemaining,
-  getTemplateGrantedSkills,
   rollAttributeSet,
-  setCreationAttributeMethod,
-  validateCharacterCreationDraft
+  setCreationAttributeMethod
 } from '../combat/character-creation-model.js?v=20260928-equipment-art-v4';
 import {
   CHARACTER_ANCESTRY_TEMPLATES,
   CHARACTER_BACKGROUND_TEMPLATES,
-  getCharacterCreationTemplate,
-  getGroupedCharacterClassTemplates
+  getCharacterCreationTemplate
 } from '../combat/character-creation-templates.js?v=20260909-dragon-parent-v2';
 import { COMBAT_ATTRIBUTE_DEFINITIONS } from '../combat/combat-profile-model.js?v=20260928-equipment-art-v4';
 
@@ -35,21 +37,9 @@ function selected(value, expected) {
   return String(value || '') === String(expected || '') ? ' selected' : '';
 }
 
-function checked(value) {
-  return value ? ' checked' : '';
-}
-
 function templateOptions(templates, value, placeholder) {
   return `<option value="">${escapeHtml(placeholder)}</option>${templates.map(template => (
     `<option value="${escapeHtml(template.id)}"${selected(value, template.id)}>${escapeHtml(template.label)}</option>`
-  )).join('')}`;
-}
-
-function classTemplateOptions(value) {
-  return `<option value="">Klasse auswählen …</option>${[...getGroupedCharacterClassTemplates()].map(([group, templates]) => (
-    `<optgroup label="${escapeHtml(group)}">${templates.map(template => (
-      `<option value="${escapeHtml(template.id)}"${selected(value, template.id)}>${escapeHtml(template.label)} · ${escapeHtml(template.subtitle)}</option>`
-    )).join('')}</optgroup>`
   )).join('')}`;
 }
 
@@ -70,9 +60,9 @@ function templatePreview(title, template, emptyText) {
     <h4>${escapeHtml(template.label)}${template.subtitle ? ` · ${escapeHtml(template.subtitle)}` : ''}</h4>
     <p>${escapeHtml(template.description)}</p>
     ${template.attributeBonuses ? `<strong>${escapeHtml(attributeBonusText(template))}</strong>` : ''}
-    ${skills.length ? `<small>Geübt: ${escapeHtml(skills.join(', '))}</small>` : ''}
-    ${proficiencies.armor?.length ? `<small>Rüstung: ${escapeHtml(proficiencies.armor.join(', '))}</small>` : ''}
-    ${proficiencies.weapons?.length ? `<small>Waffen: ${escapeHtml(proficiencies.weapons.join(', '))}</small>` : ''}
+    ${skills.length ? `<small>Fertigkeitsvorschläge: ${escapeHtml(skills.join(', '))}</small>` : ''}
+    ${proficiencies.armor?.length ? `<small>Rüstungsausbildung: ${escapeHtml(proficiencies.armor.map(id=>getCreationProficiencyLabel('armor',id)).join(', '))}</small>` : ''}
+    ${proficiencies.weapons?.length ? `<small>Waffenausbildung: ${escapeHtml(proficiencies.weapons.map(id=>getCreationProficiencyLabel('weapons',id)).join(', '))}</small>` : ''}
   </article>`;
 }
 
@@ -85,7 +75,7 @@ function renderTemplateStep(draft) {
     <div class="cp-setup-template-selectors">
       <label><span>Volk / Herkunft</span><select data-creation-field="ancestryId">${templateOptions(CHARACTER_ANCESTRY_TEMPLATES, draft.selections.ancestryId, 'Volk auswählen …')}</select></label>
       <label><span>Hintergrund</span><select data-creation-field="backgroundId">${templateOptions(CHARACTER_BACKGROUND_TEMPLATES, draft.selections.backgroundId, 'Hintergrund auswählen …')}</select></label>
-      <label><span>Klasse / Archetyp</span><select data-creation-field="classId">${classTemplateOptions(draft.selections.classId)}</select></label>
+      <label><span>Klasse / Archetyp</span><select data-creation-field="classId">${renderCreationClassOptions(draft.selections.classId,draft)}</select></label>
       ${getCreationFoundationOptions(draft).length ? `<label><span>Grundausbildung des Derwyn</span><select data-creation-field="foundationFormId"><option value="">Grundausbildung wählen …</option>${getCreationFoundationOptions(draft).map(option => `<option value="${escapeHtml(option.formId)}"${selected(draft.foundationFormId, option.formId)}>${escapeHtml(option.name)}</option>`).join('')}</select></label>` : ''}
     </div>
     <div class="cp-setup-template-grid">
@@ -154,115 +144,67 @@ function renderAttributeStep(draft) {
   </section>`;
 }
 
-function renderSkillsStep(draft, profile) {
-  const granted = new Set(getTemplateGrantedSkills(draft).map(name => name.toLocaleLowerCase('de')));
-  return `<section class="cp-setup-step">
-    <header><span>Schritt 3</span><h3>Fertigkeiten vorbereiten</h3><p>Geübte Fertigkeiten erhalten auf Stufe 1 den Kompetenzbonus +2. Die Attributsbindung bleibt strukturiert erhalten.</p></header>
-    <div class="cp-setup-skill-grid">${profile.skills.map(skill => {
-      const trained = granted.has(String(skill.name || '').toLocaleLowerCase('de'))
-        || (skill.name === 'Überreden' && granted.has('überzeugen'));
-      const attribute = COMBAT_ATTRIBUTE_DEFINITIONS.find(item => item.key === skill.attributeKey);
-      return `<article class="${trained ? 'is-trained' : ''}"><span>${trained ? '◆' : '◇'}</span><div><strong>${escapeHtml(skill.name)}</strong><small>${escapeHtml(attribute?.label || skill.attributeKey)}</small></div><b>${trained ? 'Geübt' : 'Ungeübt'}</b></article>`;
-    }).join('')}</div>
-    <p class="cp-setup-rule-note">Vorlagen gewähren: ${escapeHtml(getTemplateGrantedSkills(draft).join(', ') || 'keine festen Fertigkeiten')}.</p>
-  </section>`;
-}
-
-function renderEquipmentStep(draft) {
-  const classTemplate = getCharacterCreationTemplate('class', draft.selections.classId);
-  if (!classTemplate) return `<section class="cp-setup-step"><header><span>Schritt 4</span><h3>Kampfausbildung</h3></header><div class="cp-setup-empty">Wähle im ersten Schritt eine Klasse oder überspringe diesen Abschnitt.</div></section>`;
-  const startingTechniques = getCreationStartingTechniques(draft);
-  return `<section class="cp-setup-step">
-    <header><span>Schritt 4</span><h3>${escapeHtml(classTemplate.label)} · Kampfausbildung</h3><p>${escapeHtml(classTemplate.description)}</p></header>
-    <div class="cp-setup-package-grid">
-      <article><span>Trefferwürfel</span><strong>${classTemplate.hitDie ? `W${classTemplate.hitDie}` : 'Noch offen'}</strong><small>${classTemplate.hitDie ? 'Bestimmt die Trefferpunkte auf Stufe 1.' : 'Der vorhandene Bogenwert bleibt bestehen.'}</small></article>
-      <article><span>Rettungswürfe</span><strong>${escapeHtml((classTemplate.savingThrowProficiencies || []).map(key => COMBAT_ATTRIBUTE_DEFINITIONS.find(attribute => attribute.key === key)?.label || key).join(', ') || (classTemplate.rulesStatus === 'partial' ? 'Noch offen' : 'Keine'))}</strong></article>
-      <article><span>Rüstungen</span><strong>${escapeHtml((classTemplate.proficiencies?.armor || []).join(', ') || (classTemplate.rulesStatus === 'partial' ? 'Noch offen' : 'Keine'))}</strong></article>
-      <article><span>Waffenausbildung</span><strong>${escapeHtml((classTemplate.proficiencies?.weapons || []).join(', ') || (classTemplate.rulesStatus === 'partial' ? 'Noch offen' : 'Keine'))}</strong></article>
-    </div>
-    <div class="cp-setup-loadout">
-      <h4>Startausrüstung</h4>
-      ${(classTemplate.weapons || []).map(item => `<span>⚔ <strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.damageFormula.toUpperCase().replace(/D/g, 'W'))} ${escapeHtml(item.damageType)}</small></span>`).join('')}
-      ${(classTemplate.armorItems || []).map(item => `<span>⬟ <strong>${escapeHtml(item.name)}</strong><small>Grund-RK ${item.baseArmorClass}</small></span>`).join('')}
-      ${classTemplate.magic?.enabled ? `<span>✦ <strong>Magiebegabt</strong><small>${escapeHtml(classTemplate.magic.notes)}</small></span>` : ''}
-    </div>
-    ${startingTechniques.length ? `<div class="cp-setup-loadout"><h4>Ausbildung · Stufe 1</h4>${startingTechniques.map(technique => `<span>✦ <strong>${escapeHtml(technique.name)}</strong><small>${escapeHtml(getCombatFormPresentation(technique)?.label)} · ${escapeHtml(technique.requirements)}</small></span>`).join('')}</div>` : ''}
-    <label class="cp-setup-check"><input type="checkbox" data-creation-field="replaceStartingEquipment"${checked(draft.replaceStartingEquipment)}> Frühere Vorlagen-Ausrüstung ersetzen; selbst angelegte Gegenstände bleiben erhalten.</label>
-  </section>`;
-}
-
-function resourceCard(icon, name, current, maximum, rule) {
-  return `<article><span>${icon}</span><div><strong>${escapeHtml(name)}</strong><b>${current} / ${maximum}</b><small>${escapeHtml(rule)}</small></div></article>`;
-}
-
-function renderResourcesStep(draft) {
-  return `<section class="cp-setup-step">
-    <header><span>Schritt 5</span><h3>Verbindliche Stufe-1-Grundlage</h3><p>Diese Werte sind die gemeinsame Ausgangslage für Charakterbogen, Szene, Kampfregeln und AleriaGPT.</p></header>
-    <div class="cp-setup-resource-grid">
-      ${resourceCard('●', 'Aktion', 1, 1, 'Neu bei jedem Gesamtkommentar')}
-      ${resourceCard('▲', 'Bonusaktion', 1, 1, 'Neu bei jedem Gesamtkommentar')}
-      ${resourceCard('◆', 'Reaktion', 1, 1, 'Neu bei jedem Gesamtkommentar')}
-      ${resourceCard('★', 'Besondere Aktion', 2, 2, 'Erst am nächsten Aleria-Tag')}
-      ${resourceCard('◎', 'Aura-Fokuspunkt', 0, 0, 'Tagesgebundener Universalpunkt')}
-      ${resourceCard('✦', 'Mana', 0, 0, 'Erst am nächsten Aleria-Tag')}
-      ${resourceCard('◈', 'Fokus', 0, 0, 'Erst am nächsten Aleria-Tag')}
-      ${resourceCard('☀', 'Celestiale Punkte', 0, 0, 'Erst am nächsten Aleria-Tag')}
-      ${resourceCard('♨', 'Infernale Punkte', 0, 0, 'Erst am nächsten Aleria-Tag')}
-      ${resourceCard('⚔', 'Paktpunkte', 0, 0, 'Erst am nächsten Aleria-Tag')}
-      ${resourceCard('✧', 'Inspiration', 0, 1, 'Wird gezielt vergeben')}
-    </div>
-    <div class="cp-setup-slots"><span>Zaubertricks <b>∞</b></span>${Array.from({ length: 10 }, (_entry, index) => `<span>Grad ${index + 1} <b>0 / 0</b></span>`).join('')}</div>
-    <label class="cp-setup-check"><input type="checkbox" data-creation-field="resetLevelOne"${checked(draft.resetLevelOne)}> Figur auf Stufe 1, 0 EP und die gezeigten Grundressourcen setzen.</label>
-  </section>`;
-}
-
-function renderReviewStep(draft) {
+function renderReviewStep(draft, preview) {
   const skipped = new Set(draft.skippedSteps || []);
   const ancestry = getCharacterCreationTemplate('ancestry', draft.selections.ancestryId);
   const background = getCharacterCreationTemplate('background', draft.selections.backgroundId);
   const classTemplate = getCharacterCreationTemplate('class', draft.selections.classId);
   const final = getCreationFinalAttributes(draft);
-  const errors = validateCharacterCreationDraft(draft);
+  const errors = preview.errors;
   return `<section class="cp-setup-step cp-setup-review">
-    <header><span>Schritt 6</span><h3>Stufe-1-Bogen prüfen</h3><p>Erst „In den Entwurf übernehmen“ verändert den geöffneten Charakterbogen. Dauerhaft gespeichert wird weiterhin mit „Figur speichern“.</p></header>
+    <header><span>Schritt 7</span><h3>Deinen Bogen prüfen</h3><p>Erst „In den Entwurf übernehmen“ verändert den geöffneten Charakterbogen. Dauerhaft gespeichert wird weiterhin mit „Figur speichern“.</p></header>
     ${errors.length ? `<div class="cp-setup-errors">${errors.map(error => `<p>${escapeHtml(error)}</p>`).join('')}</div>` : ''}
     <div class="cp-setup-review-grid">
-      <article><span>Ausgang</span><strong>${escapeHtml(ancestry?.label || '—')} · ${escapeHtml(background?.label || '—')} · ${escapeHtml(classTemplate?.label || '—')}</strong><small>${skipped.has('templates') ? 'Dieser Schritt wird nicht angewandt.' : 'Vorlagen werden verknüpft.'}</small></article>
+      <article><span>Ausgang</span><strong>${escapeHtml(ancestry?.label || '—')} · ${escapeHtml(background?.label || '—')} · ${escapeHtml(getSelectedCreationClasses(draft).map(c=>c.label).join(' / ') || '—')}</strong><small>${skipped.has('templates') ? 'Herkunft wird nicht angewandt.' : 'Herkunft und gewählte Ausbildungen werden verknüpft.'}</small></article>
       <article><span>Attribute</span><strong>${COMBAT_ATTRIBUTE_DEFINITIONS.map(attribute => `${attribute.shortLabel} ${final[attribute.key]}`).join(' · ')}</strong><small>${skipped.has('attributes') ? 'Vorhandene Werte bleiben bestehen.' : CHARACTER_CREATION_METHODS.find(method => method.id === draft.attributeMethod)?.label}</small></article>
-      <article><span>Fertigkeiten</span><strong>${escapeHtml(getTemplateGrantedSkills(draft).join(', ') || 'Keine Vorlagenfertigkeiten')}</strong><small>${skipped.has('skills') ? 'Vorhandene Ausbildung bleibt bestehen.' : 'Wird als geübt markiert.'}</small></article>
-      <article><span>Kampf & Ressourcen</span><strong>${escapeHtml(classTemplate?.subtitle || 'Keine Klasse')} · ${draft.resetLevelOne ? 'Stufe 1' : 'Stufe bleibt bestehen'}</strong><small>${skipped.has('equipment') ? 'Keine Klassen-Ausrüstung.' : 'Startpaket wird ergänzt.'} ${skipped.has('resources') ? 'Ressourcen bleiben bestehen.' : 'Grundressourcen werden gesetzt.'}</small></article>
+      <article><span>Fertigkeiten</span><strong>${Object.values(draft.skillChoices).filter(value=>value!=='none').length} manuell gewählte Fertigkeiten</strong><small>${skipped.has('skills') ? 'Vorhandene Ausbildung bleibt bestehen.' : 'Nur deine Auswahl wird angewandt.'}</small></article>
+      <article><span>Kampf & Ressourcen</span><strong>${escapeHtml(getSelectedCreationClasses(draft).map(c=>c.label).join(' / ')||'Freie Ausbildung')} · Gesamtstufe ${preview.after.level}</strong><small>Die Ausrüstung bleibt individuell. ${draft.resetLevelOne && !skipped.has('resources') ? 'Frische Grundlage mit gewähltem Aufstieg.' : 'Vorhandene Grundressourcen mit gewählten Anpassungen.'}</small></article>
     </div>
+    ${renderCreationDevelopmentReview(preview)}
   </section>`;
 }
 
-function renderStepBody(setup) {
+function renderStepBody(setup, preview) {
   const step = CHARACTER_CREATION_STEPS[setup.draft.stepIndex];
   if (step.id === 'templates') return renderTemplateStep(setup.draft);
   if (step.id === 'attributes') return renderAttributeStep(setup.draft);
-  if (step.id === 'skills') return renderSkillsStep(setup.draft, setup.profile);
-  if (step.id === 'equipment') return renderEquipmentStep(setup.draft);
-  if (step.id === 'resources') return renderResourcesStep(setup.draft);
-  return renderReviewStep(setup.draft);
+  if (step.id === 'skills') return renderCreationSkillsStep(setup.draft, setup.profile, preview);
+  if (step.id === 'equipment') return renderCreationClassStep(setup.draft);
+  if (step.id === 'development') return renderCreationDevelopmentStep(preview);
+  if (step.id === 'resources') return renderCreationResourcesStep(setup.draft, preview);
+  return renderReviewStep(setup.draft, preview);
 }
 
-function renderSetup() {
-  if (!activeSetup?.root) return;
+function renderSetup({preservePosition=false}={}) {
+  if (!activeSetup?.root||activeSetup.rendering) return;
+  const setup=activeSetup;
+  const previousScroll=preservePosition?activeSetup.root.querySelector('.cp-setup-body')?.scrollTop||0:0;
+  const previousDetails=preservePosition?new Map([...activeSetup.root.querySelectorAll('details')].map(details=>[details.querySelector('summary')?.textContent,details.open])):new Map();
+  const focused=preservePosition&&activeSetup.root.contains(document.activeElement)?document.activeElement:null;
+  const focusSelector=focused?[...focused.attributes].filter(attribute=>attribute.name.startsWith('data-creation-')||attribute.name.startsWith('data-level-up-')).map(attribute=>`[${attribute.name}="${CSS.escape(attribute.value)}"]`).join(''):'';
   const { draft } = activeSetup;
-  const step = CHARACTER_CREATION_STEPS[draft.stepIndex];
   const isFirst = draft.stepIndex === 0;
   const isLast = draft.stepIndex === CHARACTER_CREATION_STEPS.length - 1;
-  activeSetup.root.innerHTML = `<section class="cp-setup-dialog" role="dialog" aria-modal="true" aria-labelledby="cp-setup-title">
-    <header class="cp-setup-head"><div><span>Geführte Charaktererschaffung</span><h2 id="cp-setup-title">${escapeHtml(draft.characterName || 'Neue Figur')} · Starthilfe</h2></div><button type="button" data-creation-action="close" aria-label="Starthilfe schließen">×</button></header>
+  const preview = previewCharacterCreationDraft(activeSetup.profile, draft);
+  setup.rendering=true;
+  try {
+  activeSetup.root.innerHTML = `<section class="cp-setup-dialog development-window" role="dialog" aria-modal="true" aria-labelledby="cp-setup-title">
+    <header class="cp-setup-head"><div><span>Die Chronik deines Weges · Starthilfe</span><h2 id="cp-setup-title">${escapeHtml(draft.characterName || 'Neue Figur')} · Aufbau &amp; Ausbildung</h2></div><button type="button" data-creation-action="close" aria-label="Starthilfe schließen">×</button></header>
+    ${renderDevelopmentOverview(preview)}
     <nav class="cp-setup-progress" aria-label="Fortschritt">${CHARACTER_CREATION_STEPS.map((entry, index) => `<button type="button" data-creation-action="go-step" data-step="${index}" class="${index === draft.stepIndex ? 'is-active' : ''} ${(draft.skippedSteps || []).includes(entry.id) ? 'is-skipped' : ''}"><b>${index + 1}</b><span>${escapeHtml(entry.label)}</span></button>`).join('')}</nav>
-    <div class="cp-setup-body">${renderStepBody(activeSetup)}</div>
+    <div class="cp-setup-body">${renderStepBody(activeSetup, preview)}<div class="cp-setup-errors" data-creation-development-role="errors" role="status">${preview.errors.map(error => `<p>${escapeHtml(error)}</p>`).join('')}</div></div>
     <footer class="cp-setup-footer">
       <button type="button" data-creation-action="previous"${isFirst ? ' disabled' : ''}>← Zurück</button>
       <span>${activeSetup.notice ? escapeHtml(activeSetup.notice) : `Schritt ${draft.stepIndex + 1} von ${CHARACTER_CREATION_STEPS.length}`}</span>
       <div>
-        ${!isLast ? `<button type="button" data-creation-action="skip">Diesen Schritt überspringen</button><button type="button" data-creation-action="next">Weiter →</button>` : `<button type="button" data-creation-action="apply" class="is-primary"${validateCharacterCreationDraft(draft).length ? ' disabled' : ''}>In den Entwurf übernehmen</button>`}
+        ${!isLast ? `<button type="button" data-creation-action="skip">Diesen Schritt überspringen</button><button type="button" data-creation-action="next">Weiter →</button>` : `<button type="button" data-creation-action="apply" class="is-primary"${preview.ready ? '' : ' disabled'}>In den Entwurf übernehmen</button>`}
       </div>
     </footer>
   </section>`;
+  activeSetup.root.querySelector('.cp-setup-body').scrollTop=previousScroll;
+  for(const details of activeSetup.root.querySelectorAll('details'))if(previousDetails.has(details.querySelector('summary')?.textContent))details.open=previousDetails.get(details.querySelector('summary').textContent);
+  if(focusSelector)activeSetup.root.querySelector(focusSelector)?.focus({preventScroll:true});
+  } finally {setup.rendering=false;}
 }
 
 function changeUniqueStandard(attributeKey, value) {
@@ -288,16 +230,33 @@ function markCurrentStepIncluded() {
 }
 
 function handleChange(event) {
-  if (!activeSetup || !activeSetup.root.contains(event.target)) return;
+  if (!activeSetup || activeSetup.rendering || !activeSetup.root.contains(event.target)) return;
   const target = event.target;
+  if (updateDevelopmentPlan(activeSetup.draft.developmentPlan, target)) {
+    const stepId = CHARACTER_CREATION_STEPS[activeSetup.draft.stepIndex].id;
+    if (stepId !== 'review') markCurrentStepIncluded();
+    const preview = previewCharacterCreationDraft(activeSetup.profile, activeSetup.draft);
+    activeSetup.draft.developmentPlan = preview.plan;
+    refreshCreationDevelopment(activeSetup.root, preview, target);
+    return;
+  }
   const field = target.dataset.creationField;
-  if (field && ['ancestryId', 'backgroundId', 'classId'].includes(field)) {
+  if(updateCreationTrainingChoice(activeSetup.draft,target)){
+    markCurrentStepIncluded();
+  } else if (field && ['ancestryId', 'backgroundId', 'classId'].includes(field)) {
+    const prior=activeSetup.draft.selections[field];
+    const promotesAdditional=field==='classId'&&activeSetup.draft.additionalClassIds.includes(target.value);
     activeSetup.draft.selections[field] = target.value;
+    if(field==='classId'){
+      activeSetup.draft.additionalClassIds=activeSetup.draft.additionalClassIds.filter(id=>id!==target.value);
+      if(promotesAdditional&&prior&&prior!=='custom')activeSetup.draft.additionalClassIds.push(prior);
+      if(target.value==='custom')activeSetup.draft.includeCustomClass=true;
+    }
     markCurrentStepIncluded();
   } else if (field === 'foundationFormId') {
     activeSetup.draft.foundationFormId = target.value;
     markCurrentStepIncluded();
-  } else if (field === 'replaceStartingEquipment' || field === 'resetLevelOne') {
+  } else if (field === 'resetLevelOne' || field === 'includeCustomClass') {
     activeSetup.draft[field] = target.checked;
     markCurrentStepIncluded();
   } else if (target.dataset.creationStandard) {
@@ -313,7 +272,7 @@ function handleChange(event) {
     markCurrentStepIncluded();
   } else return;
   activeSetup.notice = '';
-  renderSetup();
+  renderSetup({preservePosition:true});
 }
 
 function closeSetup() {
@@ -321,6 +280,7 @@ function closeSetup() {
   const { root } = activeSetup;
   root.removeEventListener('click', handleClick);
   root.removeEventListener('change', handleChange);
+  root.removeEventListener('input', handleDevelopmentInput);
   document.removeEventListener('keydown', handleEscape);
   root.remove();
   activeSetup = null;
@@ -328,6 +288,16 @@ function closeSetup() {
 
 function handleEscape(event) {
   if (event.key === 'Escape') closeSetup();
+}
+
+function handleDevelopmentInput(event) {
+  const target = event.target;
+  if(activeSetup&&!activeSetup.rendering&&(target.dataset.creationCustom||target.dataset.creationTrainingList)){
+    updateCreationTrainingChoice(activeSetup.draft,target);
+    refreshCreationDevelopment(activeSetup.root,previewCharacterCreationDraft(activeSetup.profile,activeSetup.draft),target);
+    return;
+  }
+  if (target.matches('[data-level-up-path], [data-level-up-attribute], [data-level-up-resource]') && target.tagName !== 'SELECT') handleChange(event);
 }
 
 function handlePointBuy(button) {
@@ -346,6 +316,11 @@ function handlePointBuy(button) {
 }
 
 function handleClick(event) {
+  const developmentButton = event.target.closest('[data-development-action]');
+  if (developmentButton && activeSetup?.root.contains(developmentButton)) {
+    if (handleDevelopmentAction(activeSetup.draft.developmentPlan, activeSetup.profile, developmentButton.dataset.developmentAction)) renderSetup();
+    return;
+  }
   const button = event.target.closest('[data-creation-action]');
   if (!button || !activeSetup?.root.contains(button)) return;
   const action = button.dataset.creationAction;
@@ -366,6 +341,10 @@ function handleClick(event) {
     markCurrentStepIncluded();
   }
   if (action === 'point-buy') handlePointBuy(button);
+  if(action==='suggest-skills') {acceptCreationSkillSuggestions(activeSetup.draft);markCurrentStepIncluded();}
+  if(action==='clear-skills') {activeSetup.draft.skillChoices=Object.fromEntries(Object.keys(activeSetup.draft.skillChoices).map(key=>[key,'none']));markCurrentStepIncluded();}
+  if(action==='restore-skills') {activeSetup.draft.skillChoices=createCreationTrainingChoices(activeSetup.profile).skillChoices;markCurrentStepIncluded();}
+  if(action==='suggest-training') {acceptCreationClassSuggestions(activeSetup.draft);markCurrentStepIncluded();}
   if (action === 'roll-attributes') {
     activeSetup.draft.rolledPools = rollAttributeSet();
     activeSetup.draft.rolledAssignments = Object.fromEntries(COMBAT_ATTRIBUTE_DEFINITIONS.map((attribute, index) => [attribute.key, activeSetup.draft.rolledPools[index].id]));
@@ -382,7 +361,7 @@ function handleClick(event) {
     onApply?.(result.profile);
     return;
   }
-  renderSetup();
+  renderSetup({preservePosition:['point-buy','suggest-skills','clear-skills','restore-skills','suggest-training'].includes(action)});
 }
 
 export function openCharacterCombatSetup({ character = {}, profile = {}, onApply } = {}) {
@@ -400,6 +379,7 @@ export function openCharacterCombatSetup({ character = {}, profile = {}, onApply
   };
   root.addEventListener('click', handleClick);
   root.addEventListener('change', handleChange);
+  root.addEventListener('input', handleDevelopmentInput);
   document.addEventListener('keydown', handleEscape);
   renderSetup();
   root.querySelector('[data-creation-action="close"]')?.focus();

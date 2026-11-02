@@ -37,15 +37,20 @@ function renderCharacterImageSetTabs({ preserveNameInput = false } = {}) {
       button.type = 'button';
       button.className = 'cp-image-set-tab';
       button.setAttribute('role', 'tab');
+      button.id = `cp-image-set-tab-${set.id}`;
+      button.setAttribute('aria-controls', 'cp-image-set-panel');
       button.dataset.charProfileAction = 'select-image-set';
       button.dataset.imageSetId = set.id;
-      button.innerHTML = '<span></span><small></small>';
+      button.draggable = true;
+      button.title = 'Set öffnen · zum Sortieren ziehen oder Alt + Pfeiltaste drücken';
+      button.innerHTML = '<span class="cp-image-set-grip" aria-hidden="true">⠿</span><span class="cp-image-set-name"></span><small></small>';
     }
     const isActive = set.id === active.id;
     if (button.classList.contains('active') !== isActive) button.classList.toggle('active', isActive);
     const selected = String(isActive);
     if (button.getAttribute('aria-selected') !== selected) button.setAttribute('aria-selected', selected);
-    const label = button.querySelector('span');
+    button.tabIndex = isActive ? 0 : -1;
+    const label = button.querySelector('.cp-image-set-name');
     const count = button.querySelector('small');
     const countText = `${isActive ? activeEmoteCount : set.emotes.length}/${CHARACTER_AVATAR_LIMIT}`;
     if (label.textContent !== set.name) label.textContent = set.name;
@@ -64,6 +69,33 @@ function renderCharacterImageSetTabs({ preserveNameInput = false } = {}) {
   if (deleteButton && deleteButton.disabled !== (active.id === CHARACTER_IMAGE_SET_DEFAULT_ID)) {
     deleteButton.disabled = active.id === CHARACTER_IMAGE_SET_DEFAULT_ID;
   }
+  const activeIndex = _characterImageSets.indexOf(active);
+  document.getElementById('cp-image-set-panel')?.setAttribute('aria-labelledby', `cp-image-set-tab-${active.id}`);
+  const previous = document.getElementById('cp-image-set-previous');
+  const next = document.getElementById('cp-image-set-next');
+  if (previous) previous.disabled = activeIndex <= 0;
+  if (next) next.disabled = activeIndex >= _characterImageSets.length - 1;
+  const position = document.getElementById('cp-image-set-position');
+  if (position) position.textContent = `Set ${activeIndex + 1} von ${_characterImageSets.length}`;
+}
+
+function moveCharacterImageSet(setId, targetIndex, { focus = false } = {}) {
+  const from = _characterImageSets.findIndex(set => set.id === setId);
+  if (from < 0 || !Number.isInteger(targetIndex) || targetIndex < 0
+    || targetIndex >= _characterImageSets.length || from === targetIndex) return false;
+  syncActiveCharacterImageSetFromForm();
+  const [set] = _characterImageSets.splice(from, 1);
+  _characterImageSets.splice(targetIndex, 0, set);
+  // Keep the active set and its loaded previews. Reordering is not a set switch.
+  renderCharacterImageSetTabs();
+  if (focus) {
+    const tabs = document.getElementById('cp-image-set-tabs');
+    Array.from(tabs?.children || []).find(button => button.dataset.imageSetId === setId)?.focus();
+  }
+  const status = document.getElementById('cp-image-set-order-status');
+  if (status) status.textContent = `„${set.name}“ steht jetzt an Position ${targetIndex + 1}. Diese Reihenfolge gilt auch beim Erstellen von Beiträgen.`;
+  scheduleCharacterImageLibraryPersistence('reorder-image-sets');
+  return true;
 }
 
 function loadActiveCharacterImageSetIntoForm() {
@@ -77,6 +109,8 @@ function loadActiveCharacterImageSetIntoForm() {
   initEmoteSlots(active.emotes || []);
   const links = document.getElementById('cp-avatar-links');
   if (links) links.value = '';
+  const orderStatus = document.getElementById('cp-image-set-order-status');
+  if (orderStatus) orderStatus.textContent = '';
   setCharacterAvatarImportStatus(`Set „${active.name}“ geöffnet. Importe werden nur hier eingefügt.`);
   renderCharacterImageSetTabs();
 }

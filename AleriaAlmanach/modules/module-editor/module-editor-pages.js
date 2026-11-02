@@ -1,4 +1,5 @@
 function buildRegisteredModuleEditorFields(page, type, index) {
+  if (type === 'biography') page = globalThis.AleriaBiographyCatalog?.resolveModule(page, document.getElementById('me-entry-id')?.value) || page;
   const template = getModuleTemplateForPageType(type);
   return typeof template.buildEditorFields === 'function'
     ? template.buildEditorFields(page, index)

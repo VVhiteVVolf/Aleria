@@ -34,7 +34,7 @@ function buildCharacterInventoryAttributeGrid(attributes = []) {
 function buildCharacterInventoryInfoRows(rows = []) {
   return rows.map(row => `
     <div class="ci-info-row">
-      <span>${escapeHtml(row.icon || '*')}</span>
+      <span>${buildCharacterInventoryProvidedIcon(row.icon, 'document')}</span>
       <em>${escapeHtml(row.label)}</em>
       <strong>${escapeHtml(row.value)}</strong>
     </div>`).join('');
@@ -167,9 +167,17 @@ function buildCharacterInventoryRadar(attributes = [], className = '') {
     const angle = -Math.PI / 2 + (Math.PI * 2 * index) / list.length;
     return `<line x1="${center}" y1="${center}" x2="${center + Math.cos(angle) * maxRadius}" y2="${center + Math.sin(angle) * maxRadius}" stroke="rgba(139,105,20,0.24)" stroke-width="1"/>`;
   }).join('');
+  // Reserve room for complete labels around the unchanged plot coordinates.
+  // Ten SVG units per character include the 9px uppercase font and its spacing.
+  const bounds = points.reduce((box, point) => {
+    const halfLabel = Array.from(point.label).length * 5 + 8;
+    return { left: Math.min(box.left, point.lx - halfLabel), right: Math.max(box.right, point.lx + halfLabel),
+      top: Math.min(box.top, point.ly - 14), bottom: Math.max(box.bottom, point.ly + 14) };
+  }, { left: 0, right: size, top: 0, bottom: size });
+  const viewBox = [bounds.left, bounds.top, bounds.right - bounds.left, bounds.bottom - bounds.top].map(value => Math.round(value * 100) / 100).join(' ');
   return `
     <div class="ci-radar ${className}">
-      <svg viewBox="0 0 ${size} ${size}" role="img" aria-label="Attribute">
+      <svg viewBox="${viewBox}" role="img" aria-label="Attribute">
         ${rings}
         ${axes}
         <polygon points="${polygon}" fill="rgba(111,46,35,0.26)" stroke="#6f2e23" stroke-width="3"/>
@@ -187,17 +195,54 @@ function buildCharacterInventoryRadar(attributes = [], className = '') {
     </div>`;
 }
 
+// Presentation-only icon ownership for the classic inventory reader and cards.
+// Explicit custom category artwork still wins over the retired default icons.
+function getCharacterInventoryUiIconSource(name) {
+  const icons = {
+    all: './public/assets/inventory-ui/icons/rucksack-v1.webp',
+    weapon: './public/assets/inventory-ui/icons/waffen-v1.webp',
+    armor: './public/assets/inventory-ui/icons/ruestung-v1.webp',
+    equipment: './public/assets/inventory-ui/icons/werkzeuge-v1.webp',
+    potions: './public/assets/inventory-ui/icons/alchemie-v1.webp',
+    consumable: './public/assets/inventory-ui/icons/alchemie-v1.webp',
+    documents: './public/assets/inventory-ui/icons/notizbuch-v1.webp',
+    document: './public/assets/inventory-ui/icons/notizbuch-v1.webp',
+    artifact: './public/assets/inventory-ui/icons/arkanes-v1.webp',
+    companion: './public/assets/inventory-ui/icons/pferde-v1.webp',
+    other: './public/assets/inventory-ui/icons/sonstiges-v1.webp',
+    search: './public/assets/skill-icons/investigation-v1.webp',
+    open: './public/assets/inventory-ui/icons/interaktion-v1.webp',
+    edit: './public/assets/inventory-ui/icons/feder-tinte-v1.webp',
+    register: './public/assets/inventory-ui/icons/notizbuch-v1.webp',
+    wallet: './public/assets/inventory-ui/icons/goldtaler-v1.webp',
+    rules: './public/assets/combat-arsenal-icons/roll-d20.png',
+    close: './public/assets/combat-arsenal-icons/counter.webp'
+  };
+  return Object.hasOwn(icons, name) ? icons[name] : icons.other;
+}
+
+function buildCharacterInventoryUiIcon(name, className = '') {
+  return `<img class="ci-ui-icon ${escapeHtml(className)}" src="${sanitizeImageSrc(getCharacterInventoryUiIconSource(name))}" alt="" aria-hidden="true" loading="lazy" decoding="async">`;
+}
+
+function buildCharacterInventoryProvidedIcon(value, fallbackName, useDefault = false) {
+  const icon = String(value || '').trim();
+  const image = sanitizeImageSrc(icon);
+  if (!useDefault && image) return `<img class="ci-ui-icon" src="${image}" alt="" aria-hidden="true" loading="lazy" decoding="async">`;
+  if (!useDefault && icon && !['*', '◈'].includes(icon) && !/^[a-z][a-z0-9+.-]*:/i.test(icon)) {
+    return `<span class="ci-icon-symbol" aria-hidden="true">${escapeHtml(icon)}</span>`;
+  }
+  return buildCharacterInventoryUiIcon(fallbackName);
+}
+
 function buildCharacterInventoryCategoryIcon(category = {}) {
   const icon = String(category.icon || '').trim();
-  const image = sanitizeImageSrc(icon);
-  if (/^https?:\/\//i.test(image) || /^data:image\//i.test(image)) {
-    return `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async">`;
-  }
-  return `<span>${escapeHtml(icon || '*')}</span>`;
+  const isLegacyDefault = CHARACTER_INVENTORY_DEFAULT_CATEGORIES.some(value => value.id === category.id && value.icon === icon);
+  return buildCharacterInventoryProvidedIcon(icon, category.id || 'all', isLegacyDefault);
 }
 
 function buildCharacterInventoryCategories(data, activeCategory = '') {
-  const counts = {};
+  const counts = Object.create(null);
   (data.items || []).forEach(item => {
     counts[item.category] = (counts[item.category] || 0) + 1;
   });
@@ -223,7 +268,7 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
     <section class="ci-money-panel ci-money-panel-readonly" aria-label="Geldbeutel">
       <div class="ci-money-head">
         <div>
-          <h3>Geldbeutel</h3>
+          <h3>${buildCharacterInventoryUiIcon('wallet')}Geldbeutel</h3>
           <p>1 Gold = 10 Silber = 1.000 Kupfer · 1 Kupfer = 100 Eisenpfennig</p>
         </div>
         <strong>${escapeHtml(String(money.totalCopper))} Kupfer</strong>
@@ -243,7 +288,7 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
     <section class="ci-money-panel" aria-label="Geldbeutel">
       <div class="ci-money-head">
         <div>
-          <h3>Geldbeutel</h3>
+          <h3>${buildCharacterInventoryUiIcon('wallet')}Geldbeutel</h3>
           <p>1 Gold = 10 Silber = 1.000 Kupfer · 1 Kupfer = 100 Eisenpfennig</p>
         </div>
         <strong>${escapeHtml(String(money.totalCopper))} Kupfer</strong>
@@ -265,8 +310,8 @@ function buildCharacterInventoryMoneyPanel(data = {}, options = {}) {
             </label>`).join('')}
         </div>
         <div class="ci-money-actions">
-          <button type="button" data-ci-action="apply-money-transaction" data-ci-transaction-direction="add">Einzahlen</button>
-          <button type="button" data-ci-action="apply-money-transaction" data-ci-transaction-direction="subtract">Ausgeben</button>
+          <button type="button" data-ci-action="apply-money-transaction" data-ci-transaction-direction="add">${buildCharacterInventoryUiIcon('wallet')}Einzahlen</button>
+          <button type="button" data-ci-action="apply-money-transaction" data-ci-transaction-direction="subtract">${buildCharacterInventoryUiIcon('open')}Ausgeben</button>
         </div>
       </div>
       ${data.moneyNotice ? `<p class="ci-money-status">${escapeHtml(data.moneyNotice)}</p>` : ''}
@@ -282,10 +327,10 @@ function buildCharacterInventoryEquipmentQuiz(data = {}) {
     <section class="ci-equipment-quiz${quiz.open ? ' open' : ''}">
       <div class="ci-equipment-quiz-head">
         <div>
-          <h3>AleriaGPT-Ausrüstungsfragebogen</h3>
+          <h3>${buildCharacterInventoryUiIcon('equipment')}Ausrüstungsfragebogen</h3>
           <p>${answered} von ${questions.length} Antworten gespeichert</p>
         </div>
-        <button type="button" data-ci-action="toggle-equipment-quiz">${quiz.open ? 'Schließen' : 'Öffnen'}</button>
+        <button type="button" data-ci-action="toggle-equipment-quiz">${buildCharacterInventoryUiIcon(quiz.open ? 'close' : 'open')}${quiz.open ? 'Schließen' : 'Öffnen'}</button>
       </div>
       ${quiz.open ? `
         <div class="ci-equipment-quiz-body">
@@ -295,10 +340,10 @@ function buildCharacterInventoryEquipmentQuiz(data = {}) {
             <textarea data-ci-quiz-answer>${escapeHtml(quiz.answers[step] || '')}</textarea>
           </label>
           <div class="ci-equipment-quiz-actions">
-            <button type="button" data-ci-action="quiz-prev"${step <= 0 ? ' disabled' : ''}>Zurück</button>
-            <button type="button" data-ci-action="quiz-save-answer">Antwort speichern</button>
-            <button type="button" data-ci-action="quiz-next"${step >= questions.length - 1 ? ' disabled' : ''}>Weiter</button>
-            <button type="button" data-ci-action="quiz-run-ai">Mit AleriaGPT auswerten</button>
+            <button type="button" data-ci-action="quiz-prev"${step <= 0 ? ' disabled' : ''}>${buildCharacterInventoryUiIcon('open')}Zurück</button>
+            <button type="button" data-ci-action="quiz-save-answer">${buildCharacterInventoryUiIcon('document')}Antwort speichern</button>
+            <button type="button" data-ci-action="quiz-next"${step >= questions.length - 1 ? ' disabled' : ''}>${buildCharacterInventoryUiIcon('open')}Weiter</button>
+            <button type="button" data-ci-action="quiz-run-ai">${buildCharacterInventoryUiIcon('artifact')}Mit AleriaGPT auswerten</button>
           </div>
           ${quiz.status ? `<p class="ci-equipment-quiz-status">${escapeHtml(quiz.status)}</p>` : ''}
           ${quiz.resultText ? `<div class="ci-equipment-quiz-result">${characterInventoryText(quiz.resultText)}</div>` : ''}
@@ -309,20 +354,20 @@ function buildCharacterInventoryEquipmentQuiz(data = {}) {
 function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
   const items = data.items.filter(item => !window.AleriaCharacterInventory?.isCompanion(item));
   return `<section class="ci-center">
-    <div class="ci-item-tools"><div><span class="ci-section-kicker">01 / Besitz & Ausrüstung</span><h3>Dein Verzeichnis</h3></div>
-      ${options.readOnly ? '' : '<button class="ci-register-action" type="button" data-ci-action="equip-item-from-register">+ Aus dem Register</button>'}</div>
-    <label class="ci-search"><span aria-hidden="true">⌕</span><input type="search" data-ci-search placeholder="Gegenstand suchen …" aria-label="Inventar durchsuchen"></label>
+    <div class="ci-item-tools"><div class="ci-section-title">${buildCharacterInventoryUiIcon('all', 'ci-section-icon')}<div><span class="ci-section-kicker">Besitz & Ausrüstung</span><h3>Inventar</h3></div></div>
+      ${options.readOnly ? '' : `<button class="ci-register-action" type="button" data-ci-action="equip-item-from-register">${buildCharacterInventoryUiIcon('register')}Aus dem Register</button>`}</div>
+    <label class="ci-search">${buildCharacterInventoryUiIcon('search')}<input type="search" data-ci-search placeholder="Gegenstand suchen …" aria-label="Inventar durchsuchen"></label>
     ${buildCharacterInventoryCategories({ ...data, items }, activeCategory)}
     <div class="ci-item-table"><div class="ci-item-head"><span>Gegenstand</span><span>Handelspreis</span><span>Zustand</span><span>Anzahl</span></div>
       <div class="ci-item-list">${items.map(item => `<div class="ci-item-row" data-ci-item-id="${escapeHtml(item.id)}" data-ci-category="${escapeHtml(item.category)}"${!activeCategory || item.category === activeCategory ? '' : ' hidden'}>
         <button class="ci-item-select" type="button" data-ci-action="select-item" data-ci-item-id="${escapeHtml(item.id)}" aria-pressed="false">
-          ${buildCharacterInventoryImage(item.image, item.name, 'ci-item-icon', '◈', { format: 'square', fit: 'contain' })}
+          ${buildCharacterInventoryImage(item.image || getCharacterInventoryUiIconSource(item.category), item.name, 'ci-item-icon', '◈', { format: 'square', fit: 'contain' })}
           <span><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.type || 'Gegenstand')}${item.weight && item.weight !== 'Noch festlegen' ? ' · ' + escapeHtml(item.weight) : ''}</small></span>
         </button>
         <span class="ci-item-price" title="Handelspreis je Stück">${escapeHtml(window.AleriaCharacterInventory?.card(item).price || 'Preis offen')}</span>
         <span class="ci-item-state${item.equipped ? ' is-equipped' : ''}">${item.equipped ? 'Ausgerüstet' : 'Im Gepäck'}</span>
         <span class="ci-item-quantity">${escapeHtml(item.quantity)}×</span>
-        <button class="ci-item-card-button" type="button" data-ci-action="show-item" data-ci-item-id="${escapeHtml(item.id)}" aria-label="Itemkarte: ${escapeHtml(item.name)}">↗</button>
+        <button class="ci-item-card-button" type="button" data-ci-action="show-item" data-ci-item-id="${escapeHtml(item.id)}" aria-label="Itemkarte: ${escapeHtml(item.name)}">${buildCharacterInventoryUiIcon('open')}</button>
       </div>`).join('')}</div>
       <div class="ci-item-empty" data-ci-empty${items.some(item => !activeCategory || item.category === activeCategory) ? ' hidden' : ''}>Keine passenden Gegenstände.</div>
     </div>
@@ -332,10 +377,10 @@ function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
 
 function buildCharacterInventoryCompanions(data) {
   const companions = window.AleriaCharacterInventory?.companions(data) || data.companions;
-  return `<section class="ci-companions"><div class="ci-section-heading"><div><span class="ci-section-kicker">03 / An deiner Seite</span><h3>Gefährten</h3></div><span class="ci-section-count">${companions.length}</span></div>
+  return `<section class="ci-companions"><div class="ci-section-heading"><div class="ci-section-title">${buildCharacterInventoryUiIcon('companion', 'ci-section-icon')}<div><span class="ci-section-kicker">An deiner Seite</span><h3>Gefährten</h3></div></div><span class="ci-section-count">${companions.length}</span></div>
     <div class="ci-companion-list">${companions.map(companion => `<button class="ci-companion-card" type="button" data-ci-action="show-companion" data-ci-companion-id="${escapeHtml(companion.id)}">
-      ${buildCharacterInventoryImage(companion.image, companion.name, 'ci-companion-image', '♞', { format: 'square', fit: 'contain' })}
-      <div class="ci-companion-heading"><strong>${escapeHtml(companion.name)}</strong><span>${escapeHtml(companion.species || companion.role)}</span><small>${companion.creatureId ? 'Mit Kreaturbogen verbunden' : 'Gefährtenkarte öffnen'} ↗</small></div>
+      ${buildCharacterInventoryImage(companion.image || getCharacterInventoryUiIconSource('companion'), companion.name, 'ci-companion-image', '', { format: 'square', fit: 'contain' })}
+      <div class="ci-companion-heading"><strong>${escapeHtml(companion.name)}</strong><span>${escapeHtml(companion.species || companion.role)}</span><small>${buildCharacterInventoryUiIcon('open')}${companion.creatureId ? 'Kreaturbogen verbunden' : 'Gefährtenkarte öffnen'}</small></div>
     </button>`).join('') || '<p class="ci-companion-empty">Noch keine Gefährten eingetragen.</p>'}</div>
   </section>`;
 }
@@ -591,7 +636,7 @@ function buildCharacterInventoryPage(page, entry, pageIndex, total) {
   return `${nav}<div class="character-inventory-page${readOnly ? ' read-only' : ''}" data-ci-data="${escapeHtml(JSON.stringify(raw))}" data-ci-readonly="${readOnly}" data-ci-selected-id="${escapeHtml(first?.id || '')}">
     <header class="ci-header">
       <div class="ci-owner">${buildCharacterInventoryImage(data.portrait, data.name, 'ci-owner-avatar', getInitialChar(data.name), { format: 'square', fit: 'cover', position: 'top' })}<div><span class="ci-section-kicker">${escapeHtml(data.name)}</span><h2>${escapeHtml(data.title)}</h2><p>${escapeHtml(data.role)}</p></div></div>
-      <div class="ci-overview"><span><strong data-ci-item-count>${data.items.length}</strong> Besitztümer</span><button type="button" data-ci-action="open-item-register">Handelsregister ↗</button></div>
+      <div class="ci-overview"><span><strong data-ci-item-count>${data.items.length}</strong> Besitztümer</span><button type="button" data-ci-action="open-item-register">${buildCharacterInventoryUiIcon('register')}Handelsregister</button></div>
     </header>
     <div class="ci-layout">
       <div class="ci-main-column">${buildCharacterInventoryItems(data, '', { readOnly })}${buildCharacterInventoryMoneyPanel(data, { readOnly })}${buildCharacterInventoryCompanions(data)}${data.showInfoTable ? '<details class="ci-box ci-character"><summary>Charakterinformationen</summary>' + buildCharacterInventoryInfoRows(data.infoRows) + '</details>' : ''}</div>

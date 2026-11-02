@@ -1,0 +1,2171 @@
+{
+  "schemaVersion": 1,
+  "acceptedOn": "2026-11-01",
+  "admissionVersion": "20261101",
+  "id": "brevanor",
+  "name": "Brevanor",
+  "continent": "Aldervan",
+  "capital": "caerennes",
+  "ruler": "aubert",
+  "people": "Brevanorer",
+  "rootId": "koenigreich-brevanor",
+  "historical": true,
+  "occupier": "triarchie",
+  "title": "Königreich Brevanor",
+  "type": "Königreich",
+  "urbanHouseTerritories": false,
+  "mapSource": "/Karten/Brevanor/Kartenbilder/normal.webp",
+  "map": "/Karten/Brevanor/Kartenbilder/normal.svg",
+  "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/brevanor.webp",
+  "context": {
+    "introduction": "Brevanor war ein verträumtes Königreich der Ritterromantik, Heldengeschichten und edlen Weine. Aus den Briath, den Auenalben südlich Deitheachs, war über das Fürstentum Brethneach eine eigenständige höfische Kultur erwachsen. Diese Seite blickt auf das Land vor seiner Unterwerfung durch die Triarchie zurück.",
+    "history": [
+      {
+        "title": "Briath · Die Auenalben",
+        "text": "Die Briath waren eine von der Deitheach-Gruppe abstammende albische Stammesgruppe. Sie hatten sich südlich des Flusses von Deitheach niedergelassen. Aus ihren Siedlungen ging das Fürstentum Brethneach hervor."
+      },
+      {
+        "title": "Brethneach · Unter der Lilie",
+        "text": "Die Lilie war das Zeichen des antiken Fürstentums. Seine Bewohner entwickelten sich rasch von den anderen Alben fort. Während der Kaiserzeit florierte der Handel mit Baldreska, Aeldrunmar, Talyndor, Aldingen und Mathringen. Besonders Aldingen eröffnete den Zugang zum Kaiser und verstärkte die politische und kulturelle Eigenständigkeit."
+      },
+      {
+        "title": "Brevanor · Das Königreich",
+        "text": "Noch während der Kaiserzeit wurde aus Brethneach Brevanor. Nach dem Zerfall des Kaiserreichs dachten seine Bewohner nicht daran, wieder ein albisches Fürstentum zu werden. Sie begründeten das Königreich Brevanor und hielten an ihrer gewachsenen eigenen Hof- und Ritterkultur fest."
+      },
+      {
+        "title": "Dekadenz und Unterwerfung",
+        "text": "Ritterromantik und höfischer Genuss gingen mit wachsender Dekadenz und Hedonismus einher. Infernale Sekten fassten rasch Fuß. Die Selbstüberschätzung und Ignoranz des Landes erleichterten dem mächtigen Dreierbund der Triarchie die schnelle Unterwerfung. Von dort aus unterjochte er auch Deitheach, Talyndor und Teile Lothirs. Die alten Familien waren deshalb nicht automatisch freiwillige Anhänger der Besatzer."
+      }
+    ],
+    "themes": [
+      {
+        "title": "Ritter, Helden und Liebesgeschichten",
+        "text": "Das alte Brevanor träumte von ritterlichen Taten, Heldengeschichten und Romantik. Turniere, prachtvolle Harnische und der vornehme Auftritt gehörten zu seinem Selbstbild."
+      },
+      {
+        "title": "Wein und höfischer Genuss",
+        "text": "Aus Brevanor kamen edle Weine, Sekt, Rosé, Champagner und verschiedene Liköre. Reben, Obstgärten, Kellerkunst und festliche Tafeln standen neben Seefahrt und Handel."
+      },
+      {
+        "title": "Krone und Comteyrate",
+        "text": "Aubert führte die Krone von Caerennes aus. Die Comteyr Caudren, Guivren und Valdran hatten ihre Sitze in Tervenne, Vaudrec und Tregard. Die königliche Domäne und die drei Comteyrate verbanden die örtlichen Herrschaften."
+      },
+      {
+        "title": "Bestehende Familien",
+        "text": "Bielle gehörte zu den Brenor, den Baronen Brevanors, und verband Rittertradition mit Weinbau. Desele und Lothaire waren bürgerliche Familien. Helviane, eine geborene Bielle und angeheiratete Desele, rettete nach dem Umsturz Vermögen, Duftrezepte und alte Flaschen nach Gwynthor."
+      }
+    ],
+    "notes": [
+      "Die Akten beschreiben Brevanors frühere Eigenständigkeit. Die gegenwärtige Herrschaft der Triarchie bedeutet keine freiwillige Gefolgschaft seiner alten Familien."
+    ]
+  },
+  "notes": [
+    "Die Akten beschreiben Brevanors frühere Eigenständigkeit. Die gegenwärtige Herrschaft der Triarchie bedeutet keine freiwillige Gefolgschaft seiner alten Familien."
+  ],
+  "design": {},
+  "mapAnnotations": [],
+  "regions": [
+    {
+      "id": "tervenne",
+      "name": "Grafschaft Tervenne",
+      "regionName": "Comteyrat Tervenne",
+      "title": "Grafschaft · Comteyrat",
+      "colour": "#b6b848",
+      "capital": "tervenne",
+      "houseId": "caudren",
+      "level": "county",
+      "motif": "Ein hoher silberner Zinnenturm auf senkrecht schwarz und dunkelrot geteiltem Feld.",
+      "palette": [
+        "Dunkelrot",
+        "Schwarz",
+        "Silber"
+      ],
+      "geography": "Die nordwestliche Grafschaft lag an der Westküste und reichte bis an den Binnensee. Offenes Kulturland und kleine Baumgruppen bestimmten ihr Gesicht.",
+      "art": "county-tervenne",
+      "seats": [
+        "tervenne",
+        "marneval",
+        "orbec",
+        "dervel"
+      ],
+      "ruler": "caudren",
+      "territoryType": "Comteyrat",
+      "territoryName": "Comteyrat Tervenne"
+    },
+    {
+      "id": "vaudrec",
+      "name": "Grafschaft Vaudrec",
+      "regionName": "Comteyrat Vaudrec",
+      "title": "Grafschaft · Comteyrat",
+      "colour": "#70ae41",
+      "capital": "vaudrec",
+      "houseId": "guivren",
+      "level": "county",
+      "motif": "Ein silberner heraldischer Adler mit ausgebreiteten Flügeln auf Nachtblau.",
+      "palette": [
+        "Nachtblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "geography": "Die nordöstliche Grafschaft umfasste offene Felder, kleine Wälder und einen südöstlichen Gebirgszug. Die Großstadt lag an ihrem östlichen Rand.",
+      "art": "county-vaudrec",
+      "seats": [
+        "vaudrec",
+        "brellan",
+        "hervant",
+        "arselle"
+      ],
+      "ruler": "guivren",
+      "territoryType": "Comteyrat",
+      "territoryName": "Comteyrat Vaudrec"
+    },
+    {
+      "id": "tregard",
+      "name": "Grafschaft Tregard",
+      "regionName": "Comteyrat Tregard",
+      "title": "Grafschaft · Comteyrat",
+      "colour": "#7473a7",
+      "capital": "tregard",
+      "houseId": "valdran",
+      "level": "county",
+      "motif": "Ein schwarzer gerüsteter aufgerichteter Löwe mit silberner Stangenwaffe auf warmem Orangeocker.",
+      "palette": [
+        "Orangeocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "geography": "Die südwestliche Grafschaft besaß eine lange Küste. Hohe Berge prägten den Norden, offenes Land die südliche Halbinsel.",
+      "art": "county-tregard",
+      "seats": [
+        "tregard",
+        "roscan",
+        "torvay",
+        "mirel",
+        "garnac"
+      ],
+      "ruler": "valdran",
+      "territoryType": "Comteyrat",
+      "territoryName": "Comteyrat Tregard"
+    },
+    {
+      "id": "caerennes",
+      "name": "Königliche Grafschaft Caerennes",
+      "regionName": "Königliche Domäne",
+      "title": "Königliche Grafschaft · Domäne des Riël",
+      "colour": "#3bb799",
+      "capital": "caerennes",
+      "houseId": "aubert",
+      "level": "royal",
+      "motif": "Ein goldener geflügelter Pegasus unter einer kleinen goldenen Krone auf tiefem Blau; schmale rote Akzente wie im Hauswappen.",
+      "palette": [
+        "Nachtblau",
+        "Altgold",
+        "Dunkelrot"
+      ],
+      "geography": "Die königliche Grafschaft lag im Süden. Waldland um die Hauptstadt, südliche Berge und die westliche Meeresbucht bestimmten ihre Teilgebiete.",
+      "art": "county-caerennes",
+      "seats": [
+        "caerennes",
+        "virec",
+        "rovanne",
+        "sorven"
+      ],
+      "ruler": "aubert",
+      "territoryType": "Königliche Domäne",
+      "territoryName": "Königliche Domäne Caerennes"
+    }
+  ],
+  "settlements": [
+    {
+      "id": "tervenne",
+      "county": "tervenne",
+      "point": [
+        17.42,
+        10.47
+      ],
+      "label": [
+        17.42,
+        13.72
+      ],
+      "kind": "Großstadt · Sitz des Comteyr",
+      "mapName": "Grossstadt",
+      "geography": "Tervenne lag im nordwestlichen Küstenland, nahe einer weiten Meeresbucht. Offene Flächen und Gehölzgruppen umgaben den Hauptort.",
+      "motif": "Ein silbernes Küstenschiff mit einem dunkelroten Segel über drei hellen Wellen auf stumpfem Blau.",
+      "palette": [
+        "Blaugrau",
+        "Silber",
+        "Dunkelrot"
+      ],
+      "name": "Tervenne",
+      "regionName": "Herrschaft Tervenne",
+      "overlayLabel": true,
+      "pin": [
+        20.62,
+        7.370000000000001
+      ],
+      "art": "district-tervenne",
+      "principal": true,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Tervenne"
+    },
+    {
+      "id": "marneval",
+      "county": "tervenne",
+      "point": [
+        37.93,
+        10.5
+      ],
+      "label": [
+        37.93,
+        13.15
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Marneval lag am nördlichen Rand des offenen Landes unter der Wolkengrenze der gelieferten Karte. Die Umgebung zeigte Felder und lockere Baumgruppen.",
+      "motif": "Drei goldene Ähren über einem einzelnen dunkelgrünen Lindenblatt auf warmem Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Goldocker",
+        "Grün"
+      ],
+      "name": "Marneval",
+      "regionName": "Herrschaft Marneval",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        41.13,
+        7.4
+      ],
+      "art": "district-marneval",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Marneval"
+    },
+    {
+      "id": "orbec",
+      "county": "tervenne",
+      "point": [
+        3.68,
+        42.58
+      ],
+      "label": [
+        6.2,
+        45.23
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Orbec lag unmittelbar an der Westküste in einer offenen, nur locker bewaldeten Landschaft.",
+      "motif": "Ein silberner Fisch über zwei dunkelblauen Wellen unter einem kleinen goldenen Stern auf blassem Meergrün.",
+      "palette": [
+        "Meergrün",
+        "Silber",
+        "Nachtblau"
+      ],
+      "name": "Orbec",
+      "regionName": "Herrschaft Orbec",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        6.880000000000001,
+        39.48
+      ],
+      "art": "district-orbec",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Orbec"
+    },
+    {
+      "id": "dervel",
+      "county": "tervenne",
+      "point": [
+        38.83,
+        31.49
+      ],
+      "label": [
+        38.83,
+        34.14
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Dervel lag westlich des Binnensees. Offenes Kulturland und die östlichen Ausläufer eines kleinen Höhenzuges bildeten den Übergang zum Ufer.",
+      "motif": "Eine goldene Weintraube mit dunkelgrünem Blatt über einem schmalen silbernen Seeband auf gedämpftem Weinrot.",
+      "palette": [
+        "Weinrot",
+        "Goldocker",
+        "Grün"
+      ],
+      "name": "Dervel",
+      "regionName": "Herrschaft Dervel",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        42.03,
+        28.389999999999997
+      ],
+      "art": "district-dervel",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Dervel"
+    },
+    {
+      "id": "vaudrec",
+      "county": "vaudrec",
+      "point": [
+        91.64,
+        30.26
+      ],
+      "label": [
+        91.64,
+        33.51
+      ],
+      "kind": "Großstadt · Sitz des Comteyr",
+      "mapName": "Grossstadt",
+      "geography": "Vaudrec lag am östlichen Rand der nordöstlichen Grafschaft. Offenes Land und kleine Baumgruppen reichten bis an den Stadtrand.",
+      "motif": "Ein silberner Turm zwischen zwei dunkelgrünen Ulmenblättern auf gedämpftem Blau.",
+      "palette": [
+        "Blau",
+        "Silber",
+        "Dunkelgrün"
+      ],
+      "name": "Vaudrec",
+      "regionName": "Herrschaft Vaudrec",
+      "overlayLabel": true,
+      "pin": [
+        94.84,
+        27.16
+      ],
+      "art": "district-vaudrec",
+      "principal": true,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Vaudrec"
+    },
+    {
+      "id": "brellan",
+      "county": "vaudrec",
+      "point": [
+        76.73,
+        6.71
+      ],
+      "label": [
+        76.73,
+        9.36
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Brellan lag im äußersten Nordosten unter der nördlichen Wolkengrenze. Weite offene Flächen mit kleinen Gehölzen prägten das Umland.",
+      "motif": "Ein dunkelbrauner Ochsenkopf mit hellen Hörnern über zwei goldenen Halmen auf mildem Grün.",
+      "palette": [
+        "Grün",
+        "Kastanienbraun",
+        "Elfenbein"
+      ],
+      "name": "Brellan",
+      "regionName": "Herrschaft Brellan",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        79.93,
+        4
+      ],
+      "art": "district-brellan",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Brellan"
+    },
+    {
+      "id": "hervant",
+      "county": "vaudrec",
+      "point": [
+        66.06,
+        34.73
+      ],
+      "label": [
+        66.06,
+        37.38
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Hervant lag zwischen dem großen Binnensee und den östlichen Feldern. Bewaldete Hänge stiegen im Westen an.",
+      "motif": "Ein silberner Keiler vor einem einzelnen goldbraunen Eichenblatt auf Waldgrün.",
+      "palette": [
+        "Waldgrün",
+        "Silber",
+        "Goldbraun"
+      ],
+      "name": "Hervant",
+      "regionName": "Herrschaft Hervant",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        69.26,
+        31.629999999999995
+      ],
+      "art": "district-hervant",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Hervant"
+    },
+    {
+      "id": "arselle",
+      "county": "vaudrec",
+      "point": [
+        83.69,
+        45.68
+      ],
+      "label": [
+        83.69,
+        48.33
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Arselle lag am nördlichen Fuß des südöstlichen Gebirgszuges der grünen Grafschaft. Die hohen Berge standen südlich und südöstlich des Ortes.",
+      "motif": "Ein silberner Gebirgszug über einem kupfernen Hammer auf tiefem Tannengrün.",
+      "palette": [
+        "Tannengrün",
+        "Silber",
+        "Kupfer"
+      ],
+      "name": "Arselle",
+      "regionName": "Herrschaft Arselle",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        86.89,
+        42.58
+      ],
+      "art": "district-arselle",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Arselle"
+    },
+    {
+      "id": "tregard",
+      "county": "tregard",
+      "point": [
+        17.06,
+        90.84
+      ],
+      "label": [
+        17.06,
+        94.09
+      ],
+      "kind": "Großstadt · Sitz des Comteyr",
+      "mapName": "Grossstadt",
+      "geography": "Tregard lag nahe der Südspitze der westlichen Halbinsel, umgeben von offenem Land und mehreren Küstenbuchten.",
+      "motif": "Ein goldenes Leuchtfeuer auf dunklem Steinsockel über einem silbernen Wellenband auf stumpfem Violett.",
+      "palette": [
+        "Violett",
+        "Goldocker",
+        "Schiefergrau"
+      ],
+      "name": "Tregard",
+      "regionName": "Herrschaft Tregard",
+      "overlayLabel": true,
+      "pin": [
+        20.259999999999998,
+        87.74000000000001
+      ],
+      "art": "district-tregard",
+      "principal": true,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Tregard"
+    },
+    {
+      "id": "roscan",
+      "county": "tregard",
+      "point": [
+        16.84,
+        58.94
+      ],
+      "label": [
+        16.84,
+        61.59
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Roscan lag an der westlichen Küste unmittelbar unter einem steilen Gebirgszug. Die Einzelherrschaft verband Berge und Meeresufer.",
+      "motif": "Ein heller Seevogel über zwei dunklen Bergzacken und einer silbernen Welle auf Schieferblau.",
+      "palette": [
+        "Schieferblau",
+        "Elfenbein",
+        "Anthrazit"
+      ],
+      "name": "Roscan",
+      "regionName": "Herrschaft Roscan",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        20.04,
+        55.839999999999996
+      ],
+      "art": "district-roscan",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Roscan"
+    },
+    {
+      "id": "torvay",
+      "county": "tregard",
+      "point": [
+        33.75,
+        51.17
+      ],
+      "label": [
+        33.75,
+        53.82
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Torvay lag in den nördlichen Bergen der violetten Grafschaft. Die Stadt befand sich südlich des Gebirgskamms, über dem weiten südlichen Vorland.",
+      "motif": "Ein silberner Hirschkopf mit Geweih über einem dunklen Bergbogen auf gedämpftem Heideviolett.",
+      "palette": [
+        "Heideviolett",
+        "Silber",
+        "Dunkelbraun"
+      ],
+      "name": "Torvay",
+      "regionName": "Herrschaft Torvay",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        36.95,
+        48.07
+      ],
+      "art": "district-torvay",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Torvay"
+    },
+    {
+      "id": "mirel",
+      "county": "tregard",
+      "point": [
+        48.55,
+        43.21
+      ],
+      "label": [
+        48.55,
+        45.86
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Mirel lag am südlichen Ufer des Binnensees, zwischen den östlichen und westlichen Gebirgsausläufern.",
+      "motif": "Ein silberner Reiher zwischen zwei goldbraunen Schilfhalmen über einem blauen Wasserband auf hellem Sandton.",
+      "palette": [
+        "Sandfarben",
+        "Silber",
+        "Blau"
+      ],
+      "name": "Mirel",
+      "regionName": "Herrschaft Mirel",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        51.75,
+        40.11
+      ],
+      "art": "district-mirel",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Mirel"
+    },
+    {
+      "id": "garnac",
+      "county": "tregard",
+      "point": [
+        32.53,
+        69.54
+      ],
+      "label": [
+        32.53,
+        72.19
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Garnac lag an der östlichen Bucht der südwestlichen Grafschaft. Das offene Hinterland stieg im Norden zum Gebirge an.",
+      "motif": "Ein dunkler Fischotter mit silbernem Fisch über zwei Wellen auf gedämpftem Kupferrot.",
+      "palette": [
+        "Kupferrot",
+        "Dunkelbraun",
+        "Silber"
+      ],
+      "name": "Garnac",
+      "regionName": "Herrschaft Garnac",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        35.730000000000004,
+        66.44000000000001
+      ],
+      "art": "district-garnac",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Garnac"
+    },
+    {
+      "id": "caerennes",
+      "county": "caerennes",
+      "point": [
+        51.77,
+        56
+      ],
+      "label": [
+        51.77,
+        60.35
+      ],
+      "kind": "Hauptstadt · Eigene Domäne des Riël",
+      "mapName": "Hauptstadt",
+      "geography": "Caerennes lag am nördlichen Rand des königlichen Waldlandes, nahe der westlichen Meeresbucht. Die eigene Domäne des Riël bildete das zentrale Teilgebiet der königlichen Grafschaft.",
+      "motif": "Eine große silberne Lilie über zwei kleinen goldenen Eichenblättern auf tiefem Türkis. Die Lilie erinnerte an Brethneach.",
+      "palette": [
+        "Türkis",
+        "Silber",
+        "Altgold"
+      ],
+      "name": "Caerennes",
+      "regionName": "Domäne Caerennes",
+      "overlayLabel": true,
+      "pin": [
+        54.970000000000006,
+        52.9
+      ],
+      "art": "district-caerennes",
+      "principal": true,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Caerennes"
+    },
+    {
+      "id": "virec",
+      "county": "caerennes",
+      "point": [
+        81.36,
+        61.15
+      ],
+      "label": [
+        81.36,
+        63.8
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Virec lag im nordöstlichen Teil der königlichen Grafschaft in dichtem Laubwald unter den nördlichen Bergen.",
+      "motif": "Ein goldener Apfelzweig mit drei roten Früchten auf dunklem Blaugrün.",
+      "palette": [
+        "Blaugrün",
+        "Goldocker",
+        "Dunkelrot"
+      ],
+      "name": "Virec",
+      "regionName": "Herrschaft Virec",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        84.56,
+        58.05
+      ],
+      "art": "district-virec",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Virec"
+    },
+    {
+      "id": "rovanne",
+      "county": "caerennes",
+      "point": [
+        85.88,
+        77.89
+      ],
+      "label": [
+        85.88,
+        80.54
+      ],
+      "kind": "Große Stadt · Einzelherrschaft",
+      "mapName": "Grossstadt",
+      "geography": "Rovanne lag im südöstlichen königlichen Land. Ihr Gebiet verband lichte Wälder im Norden mit dem südlichen Gebirgssaum; das gelieferte Ortszeichen war rund, die Beschriftung lautete Großstadt.",
+      "motif": "Eine dunkelrote Rose über einem silbernen Kelch auf hellem Elfenbein, darunter ein schmaler grüner Hügelbogen.",
+      "palette": [
+        "Elfenbein",
+        "Dunkelrot",
+        "Grün"
+      ],
+      "name": "Rovanne",
+      "regionName": "Herrschaft Rovanne",
+      "overlayLabel": true,
+      "pin": [
+        89.08,
+        74.79
+      ],
+      "art": "district-rovanne",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Rovanne"
+    },
+    {
+      "id": "sorven",
+      "county": "caerennes",
+      "point": [
+        45.31,
+        79.9
+      ],
+      "label": [
+        45.31,
+        82.55
+      ],
+      "kind": "Stadt · Einzelherrschaft",
+      "geography": "Sorven lag am westlichen Ufer der königlichen Grafschaft. Seine Einzelherrschaft erstreckte sich von der Meeresbucht bis zum südlichen Gebirge.",
+      "motif": "Ein silberner Weinstock mit violetten und hellen Trauben über einem dunklen Bergbogen auf mattem Salbeigrün.",
+      "palette": [
+        "Salbeigrün",
+        "Silber",
+        "Violett"
+      ],
+      "name": "Sorven",
+      "regionName": "Herrschaft Sorven",
+      "mapName": "Stadtname",
+      "overlayLabel": true,
+      "pin": [
+        48.510000000000005,
+        76.80000000000001
+      ],
+      "art": "district-sorven",
+      "principal": false,
+      "territoryType": "Herrschaft",
+      "territoryName": "Herrschaft Sorven"
+    }
+  ],
+  "houses": [
+    {
+      "id": "aubert",
+      "sourceId": "aubert",
+      "name": "Aubert",
+      "houseId": "house-aubert",
+      "familyId": "haus-aubert",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "caerennes",
+      "regionId": "caerennes",
+      "rankId": "royal",
+      "rank": "Riël (König)",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein goldener geflügelter Pegasus unter einer Krone auf Nachtblau; rote und silberne Blattranken im goldenen Rundrahmen.",
+      "palette": [
+        "Nachtblau",
+        "Altgold",
+        "Dunkelrot"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/aubert.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/aubert.png",
+      "warrior": {
+        "id": "aubert",
+        "name": "Aubert",
+        "classId": "cabrant",
+        "className": "Cabrant",
+        "classHref": "/Klassenordner/Brevanor/cabrant/index.html",
+        "palette": [
+          "Nachtblau",
+          "Altgold",
+          "Dunkelrot"
+        ],
+        "equipment": "Prunkvoller schwerer Harnisch, Speer und ein reich gezäumter Cheval an der Seite. Helm: Geschlossenes Armet mit goldener Stirnkrone.",
+        "reason": "Der geflügelte Hengst und die Krone legten einen königlichen Cabrant mit Cheval nahe.",
+        "withHorse": true,
+        "horseName": "Cheval",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/cheval/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/aubert/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/aubert/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/cheval/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/aubert/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "caudren",
+      "sourceId": "caudren",
+      "name": "Caudren",
+      "houseId": "house-caudren",
+      "familyId": "haus-caudren",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "tervenne",
+      "regionId": "tervenne",
+      "rankId": "county",
+      "rank": "Comteyr (Graf)",
+      "liegeId": "aubert",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein hoher silberner Zinnenturm auf schwarz und dunkelrot geteiltem Feld, goldene und silberne Blattornamente.",
+      "palette": [
+        "Dunkelrot",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/caudren.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/caudren.png",
+      "warrior": {
+        "id": "caudren",
+        "name": "Caudren",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Dunkelrot",
+          "Schwarz",
+          "Silber"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Geschlossener Kübelhelm mit flachem Scheitel.",
+        "reason": "Das Turmwappen passte zu einem standhaften Frontkämpfer und Bewahrer eines Grafschaftssitzes.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/caudren/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/caudren/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/caudren/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "guivren",
+      "sourceId": "guivren",
+      "name": "Guivren",
+      "houseId": "house-guivren",
+      "familyId": "haus-guivren",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "vaudrec",
+      "regionId": "vaudrec",
+      "rankId": "county",
+      "rank": "Comteyr (Graf)",
+      "liegeId": "aubert",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner heraldischer Adler mit ausgebreiteten Flügeln auf Nachtblau, silberne Lilien und Blattranken im dunklen Rundrahmen.",
+      "palette": [
+        "Nachtblau",
+        "Silber",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/guivren.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/guivren.png",
+      "warrior": {
+        "id": "guivren",
+        "name": "Guivren",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Nachtblau",
+          "Silber",
+          "Schwarz"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Geschlossener Schnabelbascinet mit großem Federbusch.",
+        "reason": "Adler, Blau und Silber bestimmten einen reichen Breval mit ausdrücklich vogelbezogenem Federschmuck.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/guivren/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/guivren/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/guivren/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "valdran",
+      "sourceId": "valdran",
+      "name": "Valdran",
+      "houseId": "house-valdran",
+      "familyId": "haus-valdran",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "tregard",
+      "regionId": "tregard",
+      "rankId": "county",
+      "rank": "Comteyr (Graf)",
+      "liegeId": "aubert",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarzer gerüsteter aufgerichteter Löwe mit silberner Stangenwaffe auf Orangeocker, dunkler Ring mit hellen Lorbeerzweigen.",
+      "palette": [
+        "Orangeocker",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/valdran.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/valdran.png",
+      "warrior": {
+        "id": "valdran",
+        "name": "Valdran",
+        "classId": "hastrel",
+        "className": "Hastrel",
+        "classHref": "/Klassenordner/Brevanor/hastrel/index.html",
+        "palette": [
+          "Orangeocker",
+          "Schwarz",
+          "Silber"
+        ],
+        "equipment": "Edler Plattenharnisch und lange Stangenwaffe: Pike, Hellebarde oder Lanze. Helm: Halboffener Löwenvisierhelm ohne Hornzier.",
+        "reason": "Der gerüstete Löwe führte bereits eine Stangenwaffe; der Hastrel übernahm diesen Schwerpunkt.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/valdran/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/valdran/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/valdran/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "arvenac",
+      "sourceId": "arvenac",
+      "name": "Arvenac",
+      "houseId": "house-arvenac",
+      "familyId": "haus-arvenac",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "marneval",
+      "regionId": "tervenne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine helle ausladende florale Lilie mit Blattranken auf Dunkelgrün, heller gravierter Rundrahmen.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/arvenac.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/arvenac.png",
+      "warrior": {
+        "id": "arvenac",
+        "name": "Arvenac",
+        "classId": "hastrel",
+        "className": "Hastrel",
+        "classHref": "/Klassenordner/Brevanor/hastrel/index.html",
+        "palette": [
+          "Dunkelgrün",
+          "Elfenbein",
+          "Silber"
+        ],
+        "equipment": "Edler Plattenharnisch und lange Stangenwaffe: Pike, Hellebarde oder Lanze. Helm: Offene hohe Beckenhaube mit Liliengravur.",
+        "reason": "Das florale Lilienmotiv erhielt einen höfischen Stangenwaffenritter in Grün und Elfenbein.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/arvenac/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/arvenac/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/arvenac/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "guerin",
+      "sourceId": "guerin",
+      "name": "Guerin",
+      "houseId": "house-guerin",
+      "familyId": "haus-guerin",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "caerennes",
+      "regionId": "caerennes",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein silberner geflügelter Engel mit einem langen senkrechten Schwert vor einem blauen Strahlenfeld, heller floraler Rundrahmen.",
+      "palette": [
+        "Blau",
+        "Silber",
+        "Nachtblau"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/guerin.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/guerin.png",
+      "warrior": {
+        "id": "guerin",
+        "name": "Guerin",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Blau",
+          "Silber",
+          "Nachtblau"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Geschlossener gewölbter Visierhelm mit Kreuzsteg.",
+        "reason": "Engel und Schwert legten einen feierlichen Breval nahe, ohne daraus ein kirchliches Amt zu erfinden.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/guerin/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/guerin/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/guerin/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "varenne",
+      "sourceId": "varenne",
+      "name": "Varenne",
+      "houseId": "house-varenne",
+      "familyId": "haus-varenne",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "caerennes",
+      "regionId": "caerennes",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine große silberne florale Lilie auf tiefem Schwarz, geschlossener schwarzsilberner Rundrahmen mit feinen Strahlen.",
+      "palette": [
+        "Schwarz",
+        "Silber",
+        "Elfenbein"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/varenne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/varenne.png",
+      "warrior": {
+        "id": "varenne",
+        "name": "Varenne",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Schwarz",
+          "Silber",
+          "Elfenbein"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Geschlossener geschwärzter Schaller mit hohem Bart.",
+        "reason": "Die schwarzsilberne Lilie prägte einen zurückhaltend farbigen, dennoch reich verzierten Hausritter.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/varenne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/varenne/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/varenne/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "rovenne",
+      "sourceId": "rovenne",
+      "name": "Rovenne",
+      "houseId": "house-rovenne",
+      "familyId": "haus-rovenne",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "rovanne",
+      "regionId": "caerennes",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine dunkelrote Rose mit grünen Blättern auf hellem innerem Schild; schwarzer Kreis mit roten Rosen und hellen Lilien.",
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Dunkelgrün"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/rovenne.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/rovenne.png",
+      "warrior": {
+        "id": "rovenne",
+        "name": "Rovenne",
+        "classId": "cantrel",
+        "className": "Cantrel",
+        "classHref": "/Klassenordner/Brevanor/cantrel/index.html",
+        "palette": [
+          "Dunkelrot",
+          "Elfenbein",
+          "Dunkelgrün"
+        ],
+        "equipment": "Höfischer Fechterauftritt, Degen, hohe Stiefel und angedeutetes Saiteninstrument am Rücken. Helm: Breitrandiger Fechterhut über kleiner Stahlkappe.",
+        "reason": "Rose und höfische Romantik passten zum Cantrel; der Degen stand im Mittelpunkt.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/rovenne/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/rovenne/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/rovenne/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "perrec",
+      "sourceId": "perrec",
+      "name": "Perrec",
+      "houseId": "house-perrec",
+      "familyId": "haus-perrec",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "virec",
+      "regionId": "caerennes",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine dunkelblaue florale Lilie auf Elfenbein, schlichter dunkelblauer doppelter Rundrahmen mit kleinen Sternen.",
+      "palette": [
+        "Elfenbein",
+        "Nachtblau",
+        "Silber"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/perrec.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/perrec.png",
+      "warrior": {
+        "id": "perrec",
+        "name": "Perrec",
+        "classId": "silvain",
+        "className": "Silvain",
+        "classHref": "/Klassenordner/Brevanor/silvain/index.html",
+        "palette": [
+          "Elfenbein",
+          "Nachtblau",
+          "Silber"
+        ],
+        "equipment": "Kapuze über eigenständigem Helm, verzierte Rüstung, Armbrust oder Bogen und Köcher am Rücken. Helm: Niedrige Nasalhaube unter elfenbeinfarbener Kapuze.",
+        "reason": "Die klare Lilie in Blau und Elfenbein erhielt einen gepanzerten Silvain mit Armbrust.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/perrec/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/perrec/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/perrec/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "gerain",
+      "sourceId": "gerain",
+      "name": "Gerain",
+      "houseId": "house-gerain",
+      "familyId": "haus-gerain",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "hervant",
+      "regionId": "vaudrec",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine große silberne Schreibfeder vor einer geöffneten Schriftrolle auf Blau, reich verzierter silberner Rundrahmen.",
+      "palette": [
+        "Blau",
+        "Silber",
+        "Nachtblau"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/gerain.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/gerain.png",
+      "warrior": {
+        "id": "gerain",
+        "name": "Gerain",
+        "classId": "cantrel",
+        "className": "Cantrel",
+        "classHref": "/Klassenordner/Brevanor/cantrel/index.html",
+        "palette": [
+          "Blau",
+          "Silber",
+          "Nachtblau"
+        ],
+        "equipment": "Höfischer Fechterauftritt, Degen, hohe Stiefel und angedeutetes Saiteninstrument am Rücken. Helm: Schmaler aufgeschlagener Filzhut mit stählernem Stirnband.",
+        "reason": "Schreibfeder und Rolle verbanden Dichtung, Heldenerzählung und den Fechterweg des Cantrel.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/gerain/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/gerain/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/gerain/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "corvail",
+      "sourceId": "corvail",
+      "name": "Corvail",
+      "houseId": "house-corvail",
+      "familyId": "haus-corvail",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "roscan",
+      "regionId": "tregard",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein heller langhalsiger, langbeiniger Vogel im Flug vor blau und elfenbein geteiltem Schild; darüber eine dunkle Lilie, heller floraler Rundrahmen.",
+      "palette": [
+        "Nachtblau",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "ornament": "",
+      "frame": "Unveränderter gelieferter Rahmen",
+      "focus": "",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/corvail.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/corvail.png",
+      "warrior": {
+        "id": "corvail",
+        "name": "Corvail",
+        "classId": "havren",
+        "className": "Havren",
+        "classHref": "/Klassenordner/Brevanor/havren/index.html",
+        "palette": [
+          "Nachtblau",
+          "Elfenbein",
+          "Schwarz"
+        ],
+        "equipment": "Leichtere verzierte Rüstung, Säbel und Köcher mit Pfeilen am Rücken. Helm: Offene Marine-Burgunderhaube mit hellem Federfächer.",
+        "reason": "Der fliegende Vogel und die Küstenvorschläge legten einen leichter gerüsteten Havren nahe.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/corvail/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/corvail/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/corvail/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "bielle",
+      "sourceId": "bielle",
+      "name": "Bielle",
+      "houseId": "house-bielle",
+      "familyId": "haus-bielle",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "sorven",
+      "regionId": "caerennes",
+      "rankId": "brenor",
+      "rank": "Brenor (Baron)",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein Turm mit Weinrebe sowie weißen und violetten Trauben auf Dunkelgrün. Das bereits registrierte Hauswappen bleibt unverändert.",
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Violett"
+      ],
+      "ornament": "",
+      "frame": "Vorhandener geschlossener Wappenrahmen",
+      "focus": "Brenorhaus (Baronenrang) mit Rittertradition und Weingütern; Helviane Desele wurde als Bielle geboren.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/bielle.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/bielle.png",
+      "warrior": {
+        "id": "bielle",
+        "name": "Bielle",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Dunkelgrün",
+          "Elfenbein",
+          "Violett"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Halboffener gerippter Harnischhelm mit Weinlaubgravur.",
+        "reason": "Das belegte Ritter- und Winzerhaus erhielt einen Breval in den tatsächlichen Grün-, Elfenbein- und Traubenfarben seines Wappens.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/bielle/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/bielle/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/bielle/krieger.webp",
+      "existingFamily": true,
+      "knownDescription": "Brevanorisches Brenor- und Winzerhaus (Baronenrang). Helviane Desele wurde als Bielle geboren. Das Wappen zeigt einen Turm mit einer Weinrebe und weißen sowie violetten Trauben; es erinnert an die Rittertradition und die Weingüter der Familie.",
+      "knownHeads": [],
+      "genealogySource": "Stammbäume/assets/js/data/brevanor-desele-bielle-records.js",
+      "rankBasis": "Bestehende Familienakte oder ausdrückliche Landes- und Rangordnung."
+    },
+    {
+      "id": "ferant",
+      "sourceId": "ferant",
+      "name": "Ferant",
+      "houseId": "house-ferant",
+      "familyId": "haus-ferant",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "torvay",
+      "regionId": "tregard",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner stehender Hirsch mit großem Geweih auf weinrotem Feld, darunter ein einzelnes goldenes Eichenblatt.",
+      "palette": [
+        "Weinrot",
+        "Silber",
+        "Altgold"
+      ],
+      "ornament": "Schmale ineinanderlaufende Eichenranken",
+      "frame": "Dunkle Bronze",
+      "focus": "Waldjagd, Wildhege und höfische Jagdgesellschaften.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/ferant.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/ferant.png",
+      "warrior": {
+        "id": "ferant",
+        "name": "Ferant",
+        "classId": "hastrel",
+        "className": "Hastrel",
+        "classHref": "/Klassenordner/Brevanor/hastrel/index.html",
+        "palette": [
+          "Weinrot",
+          "Silber",
+          "Altgold"
+        ],
+        "equipment": "Edler Plattenharnisch und lange Stangenwaffe: Pike, Hellebarde oder Lanze. Helm: Geschlossener Geweihhelm mit schmalem Sehschlitz.",
+        "reason": "Der Hirsch verlangte Geweihzier; Jagd und Bergland passten zum gepanzerten Hastrel.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/ferant/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/ferant/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/ferant/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "trevain",
+      "sourceId": "trevain",
+      "name": "Trevain",
+      "houseId": "house-trevain",
+      "familyId": "haus-trevain",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "tervenne",
+      "regionId": "tervenne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein schwarzer steigender Hengst über einem schmalen silbernen Sparren auf warmem Elfenbein.",
+      "palette": [
+        "Elfenbein",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "Feine geflochtene Lederbandmotive im Ring",
+      "frame": "Versilbertes Eisen",
+      "focus": "Cheval-Zucht, Reitausbildung und Turniergestüte.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/trevain.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/trevain.png",
+      "warrior": {
+        "id": "trevain",
+        "name": "Trevain",
+        "classId": "cabrant",
+        "className": "Cabrant",
+        "classHref": "/Klassenordner/Brevanor/cabrant/index.html",
+        "palette": [
+          "Elfenbein",
+          "Schwarz",
+          "Silber"
+        ],
+        "equipment": "Prunkvoller schwerer Harnisch, Speer und ein reich gezäumter Cheval an der Seite. Helm: Offene ovale Burgunderhaube mit breitem Nackenschutz.",
+        "reason": "Das schwarze Hengstwappen verband den Hausentwurf mit Cheval-Zucht und einem Cabrant neben seinem Ross.",
+        "withHorse": true,
+        "horseName": "Cheval",
+        "bestiaryHref": "../../Bestiarium/tiere/pferde/cheval/index.html",
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/trevain/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/trevain/krieger.png",
+        "bestiary": "/Bestiarium/tiere/pferde/cheval/index.html"
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/trevain/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "bernant",
+      "sourceId": "bernant",
+      "name": "Bernant",
+      "houseId": "house-bernant",
+      "familyId": "haus-bernant",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "brellan",
+      "regionId": "vaudrec",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein schwarzer frontaler Stierkopf mit silbernen Hörnern zwischen zwei kleinen goldenen Ähren auf Rostrot.",
+      "palette": [
+        "Rostrot",
+        "Schwarz",
+        "Silber"
+      ],
+      "ornament": "Kleine silberne Rauten und breite schlichte Metallbänder",
+      "frame": "Geschwärztes Eisen",
+      "focus": "Rinderzucht, Zugvieh und Versorgung großer Höfe.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/bernant.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/bernant.png",
+      "warrior": {
+        "id": "bernant",
+        "name": "Bernant",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Rostrot",
+          "Schwarz",
+          "Silber"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Halboffener Stierhelm mit zwei silbernen Hörnern.",
+        "reason": "Der Stier führte zur Hornzier und einem kräftigen Breval mit Streitkolben.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/bernant/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/bernant/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/bernant/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "osmer",
+      "sourceId": "osmer",
+      "name": "Osmer",
+      "houseId": "house-osmer",
+      "familyId": "haus-osmer",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "vaudrec",
+      "regionId": "vaudrec",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Zwei gekreuzte silberne Schlüssel über einem einzigen goldenen Stern auf dunklem Purpur.",
+      "palette": [
+        "Purpur",
+        "Silber",
+        "Altgold"
+      ],
+      "ornament": "Schmale geometrische Winkelbänder",
+      "frame": "Altes Silber",
+      "focus": "Schatzkammern, verbriefte Rechte und die Verwaltung höfischen Vermögens.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/osmer.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/osmer.png",
+      "warrior": {
+        "id": "osmer",
+        "name": "Osmer",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Purpur",
+          "Silber",
+          "Altgold"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Geschlossener Spitzvisierhelm mit eingravierten Schlüsseln.",
+        "reason": "Schlüssel und Stern erhielten einen schwer gerüsteten Hüter höfischen Vermögens.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/osmer/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/osmer/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/osmer/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "kervaut",
+      "sourceId": "kervaut",
+      "name": "Kervaut",
+      "houseId": "house-kervaut",
+      "familyId": "haus-kervaut",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "caerennes",
+      "regionId": "caerennes",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein silberner schreitender Keiler mit dunklen Borsten vor einem goldbraunen Eichenblatt auf Tannengrün.",
+      "palette": [
+        "Tannengrün",
+        "Silber",
+        "Goldbraun"
+      ],
+      "ornament": "Breite Blattranken und wenige helle Zierbeschläge",
+      "frame": "Dunkles Eichenholz mit eisernen Nieten",
+      "focus": "Waldweiden, Holz und schwere Jagdgesellschaften.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/kervaut.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/kervaut.png",
+      "warrior": {
+        "id": "kervaut",
+        "name": "Kervaut",
+        "classId": "silvain",
+        "className": "Silvain",
+        "classHref": "/Klassenordner/Brevanor/silvain/index.html",
+        "palette": [
+          "Tannengrün",
+          "Silber",
+          "Goldbraun"
+        ],
+        "equipment": "Kapuze über eigenständigem Helm, verzierte Rüstung, Armbrust oder Bogen und Köcher am Rücken. Helm: Dunkle Stirnplattenhaube unter tannengrüner Jagdkapuze.",
+        "reason": "Das Keilerwappen passte zu einem Silvain mit Jagdbogen; Keilerhauer wurden nicht zu Helmhornen umgedeutet.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/kervaut/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/kervaut/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/kervaut/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "ervaut",
+      "sourceId": "ervaut",
+      "name": "Ervaut",
+      "houseId": "house-ervaut",
+      "familyId": "haus-ervaut",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "arselle",
+      "regionId": "vaudrec",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner Schmiedehammer über einem kupferfarbenen Amboss auf dunklem Blaugrün.",
+      "palette": [
+        "Blaugrün",
+        "Silber",
+        "Kupfer"
+      ],
+      "ornament": "Kupferne Rautenbeschläge und feine Strichgravur",
+      "frame": "Dunkles Eisen",
+      "focus": "Bergbau, Plattnerkunst und die Zierharnische des alten Königreichs.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/ervaut.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/ervaut.png",
+      "warrior": {
+        "id": "ervaut",
+        "name": "Ervaut",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Blaugrün",
+          "Silber",
+          "Kupfer"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Offener breiter Eisenschaller mit Kupferrand.",
+        "reason": "Hammer und Amboss erhielten einen verzierten, kräftigen Breval mit schwerem Streitkolben.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/ervaut/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/ervaut/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/ervaut/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "iverac",
+      "sourceId": "iverac",
+      "name": "Iverac",
+      "houseId": "house-iverac",
+      "familyId": "haus-iverac",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "orbec",
+      "regionId": "tervenne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Zwei silberne einander zugewandte Fische über einer goldenen Jakobsmuschel auf Schieferblau.",
+      "palette": [
+        "Schieferblau",
+        "Silber",
+        "Goldocker"
+      ],
+      "ornament": "Feine gegenläufige Wellen im geschlossenen Ring",
+      "frame": "Helles Zinn und dunkle Bronze",
+      "focus": "Küstenfischerei, Salz und seewärtiger Handel.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/iverac.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/iverac.png",
+      "warrior": {
+        "id": "iverac",
+        "name": "Iverac",
+        "classId": "havren",
+        "className": "Havren",
+        "classHref": "/Klassenordner/Brevanor/havren/index.html",
+        "palette": [
+          "Schieferblau",
+          "Silber",
+          "Goldocker"
+        ],
+        "equipment": "Leichtere verzierte Rüstung, Säbel und Köcher mit Pfeilen am Rücken. Helm: Halboffene Muschel-Sturmhaube mit schmalem Stirnvisier.",
+        "reason": "Fische und Muschel gaben dem Havren seine maritime Farb- und Formensprache.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/iverac/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/iverac/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/iverac/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "jorant",
+      "sourceId": "jorant",
+      "name": "Jorant",
+      "houseId": "house-jorant",
+      "familyId": "haus-jorant",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "tregard",
+      "regionId": "tregard",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine einzelne goldene Glocke zwischen zwei kleinen silbernen Sternen auf dunklem Maulbeerrot.",
+      "palette": [
+        "Maulbeerrot",
+        "Altgold",
+        "Silber"
+      ],
+      "ornament": "Schmale geschwungene Bänder ohne Schrift",
+      "frame": "Mattes Messing",
+      "focus": "Höfische Musik, Heldengesänge und festliche Auftritte.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/jorant.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/jorant.png",
+      "warrior": {
+        "id": "jorant",
+        "name": "Jorant",
+        "classId": "cantrel",
+        "className": "Cantrel",
+        "classHref": "/Klassenordner/Brevanor/cantrel/index.html",
+        "palette": [
+          "Maulbeerrot",
+          "Altgold",
+          "Silber"
+        ],
+        "equipment": "Höfischer Fechterauftritt, Degen, hohe Stiefel und angedeutetes Saiteninstrument am Rücken. Helm: Offener schmaler Stahlhut mit umgelegter Krempe.",
+        "reason": "Das Glockenzeichen passte zu Festen, Heldengesängen und dem Fechterauftritt des Cantrel.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/jorant/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/jorant/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/jorant/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "savrec",
+      "sourceId": "savrec",
+      "name": "Savrec",
+      "houseId": "house-savrec",
+      "familyId": "haus-savrec",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "garnac",
+      "regionId": "tregard",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein brauner Fischotter, der einen silbernen Fisch trägt, über einem schmalen weißen Wellenband auf gedämpftem Türkis.",
+      "palette": [
+        "Türkis",
+        "Dunkelbraun",
+        "Silber"
+      ],
+      "ornament": "Kleine Muschelformen und ein schmales Wellenband",
+      "frame": "Dunkle Bronze",
+      "focus": "Hafenzugänge, Küstenschifffahrt und die Versorgung der Bucht.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/savrec.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/savrec.png",
+      "warrior": {
+        "id": "savrec",
+        "name": "Savrec",
+        "classId": "havren",
+        "className": "Havren",
+        "classHref": "/Klassenordner/Brevanor/havren/index.html",
+        "palette": [
+          "Türkis",
+          "Dunkelbraun",
+          "Silber"
+        ],
+        "equipment": "Leichtere verzierte Rüstung, Säbel und Köcher mit Pfeilen am Rücken. Helm: Offene asymmetrische Küstenhaube mit schützendem Nasenbügel.",
+        "reason": "Otter und Fisch legten einen beweglichen Havren an der Bucht nahe.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/savrec/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/savrec/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/savrec/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "landrec",
+      "sourceId": "landrec",
+      "name": "Landrec",
+      "houseId": "house-landrec",
+      "familyId": "haus-landrec",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "mirel",
+      "regionId": "tregard",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Ein silberner stehender Schwan mit zusammengelegten Flügeln zwischen zwei dunkelgrünen Schilfblättern auf dunklem Blau.",
+      "palette": [
+        "Nachtblau",
+        "Silber",
+        "Schilfgrün"
+      ],
+      "ornament": "Feine Uferpflanzen im Innenring",
+      "frame": "Helles Silber",
+      "focus": "Binnenschifffahrt, Seeufer und Ziergärten am Wasser.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/landrec.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/landrec.png",
+      "warrior": {
+        "id": "landrec",
+        "name": "Landrec",
+        "classId": "hastrel",
+        "className": "Hastrel",
+        "classHref": "/Klassenordner/Brevanor/hastrel/index.html",
+        "palette": [
+          "Nachtblau",
+          "Silber",
+          "Schilfgrün"
+        ],
+        "equipment": "Edler Plattenharnisch und lange Stangenwaffe: Pike, Hellebarde oder Lanze. Helm: Geschlossener Schwanenschaller mit weißer Federzier.",
+        "reason": "Der Schwan erlaubte helle Federzier, während der Hastrel den Uferwegen einen eigenen Rittertyp gab.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/landrec/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/landrec/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/landrec/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "quernac",
+      "sourceId": "quernac",
+      "name": "Quernac",
+      "houseId": "house-quernac",
+      "familyId": "haus-quernac",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "dervel",
+      "regionId": "tervenne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": true,
+      "extinct": false,
+      "motif": "Eine goldene Weintraube zwischen einer silbernen Sichel und einem dunkelgrünen Weinblatt auf tiefem Burgunderrot.",
+      "palette": [
+        "Burgunderrot",
+        "Goldocker",
+        "Silber"
+      ],
+      "ornament": "Kurze Weinranken und schmale Blattsäume",
+      "frame": "Dunkles Nussbaumholz mit silbernen Ziernägeln",
+      "focus": "Reben, Rosé, Schaumweine und die Kellerwirtschaft.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/quernac.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/quernac.png",
+      "warrior": {
+        "id": "quernac",
+        "name": "Quernac",
+        "classId": "hastrel",
+        "className": "Hastrel",
+        "classHref": "/Klassenordner/Brevanor/hastrel/index.html",
+        "palette": [
+          "Burgunderrot",
+          "Goldocker",
+          "Silber"
+        ],
+        "equipment": "Edler Plattenharnisch und lange Stangenwaffe: Pike, Hellebarde oder Lanze. Helm: Geschlossener gerader Visierhelm mit breiter Halskrause.",
+        "reason": "Reben und Kellerwirtschaft erhielten einen schweren Hastrel zum Schutz von Gütern und Wegen.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/quernac/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/quernac/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/quernac/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "walaric",
+      "sourceId": "walaric",
+      "name": "Walaric",
+      "houseId": "house-walaric",
+      "familyId": "haus-walaric",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "tregard",
+      "regionId": "tregard",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein silberner laufender Wolf über einem schmalen roten Querbalken auf tiefem Schwarz.",
+      "palette": [
+        "Schwarz",
+        "Silber",
+        "Dunkelrot"
+      ],
+      "ornament": "Zurückhaltende verschlungene Ranken",
+      "frame": "Geschwärztes Eisen mit silbernen Fassungen",
+      "focus": "Geleitschutz, Fernwege und reisende Rittergesellschaften.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/walaric.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/walaric.png",
+      "warrior": {
+        "id": "walaric",
+        "name": "Walaric",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Schwarz",
+          "Silber",
+          "Dunkelrot"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Halboffener schwarzer Wolfsvisierhelm ohne Zierhörner.",
+        "reason": "Der Wolf passte zu Geleit und reisenden Rittergesellschaften; sein Helm blieb ohne Horn- oder Federzier.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/walaric/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/walaric/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/walaric/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "yveran",
+      "sourceId": "yveran",
+      "name": "Yveran",
+      "houseId": "house-yveran",
+      "familyId": "haus-yveran",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "vaudrec",
+      "regionId": "vaudrec",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Ein silberner Dachs über zwei goldenen Haselblättern auf dunklem Moosgrün.",
+      "palette": [
+        "Moosgrün",
+        "Silber",
+        "Goldocker"
+      ],
+      "ornament": "Haselzweige und kleine helle Nieten",
+      "frame": "Dunkle Bronze",
+      "focus": "Obsthaine, Nussgärten und die Versorgung höfischer Tafeln.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/yveran.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/yveran.png",
+      "warrior": {
+        "id": "yveran",
+        "name": "Yveran",
+        "classId": "silvain",
+        "className": "Silvain",
+        "classHref": "/Klassenordner/Brevanor/silvain/index.html",
+        "palette": [
+          "Moosgrün",
+          "Silber",
+          "Goldocker"
+        ],
+        "equipment": "Kapuze über eigenständigem Helm, verzierte Rüstung, Armbrust oder Bogen und Köcher am Rücken. Helm: Schmale segmentierte Visierkappe unter moosgrüner Kapuze.",
+        "reason": "Der Dachs und die Obsthaine passten zu einem gepanzerten Silvain mit Armbrust.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/yveran/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/yveran/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/yveran/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    },
+    {
+      "id": "renaut",
+      "sourceId": "renaut",
+      "name": "Renaut",
+      "houseId": "house-renaut",
+      "familyId": "haus-renaut",
+      "originRealm": "brevanor",
+      "clan": false,
+      "seatId": "tervenne",
+      "regionId": "tervenne",
+      "rankId": "unknown",
+      "rank": "Offen",
+      "liegeId": "",
+      "isSeatRuler": false,
+      "extinct": false,
+      "motif": "Eine goldene Waage über einer silbernen Lilie auf tiefem Indigo.",
+      "palette": [
+        "Indigo",
+        "Altgold",
+        "Silber"
+      ],
+      "ornament": "Feine symmetrische Lilienranken",
+      "frame": "Altes Messing",
+      "focus": "Schiedsgerichte, Verträge und die Bewahrung des alten Hofrechts.",
+      "crest": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/renaut.webp",
+      "crestFull": "/Stammbäume/assets/images/houses/accepted-realms/brevanor/renaut.png",
+      "warrior": {
+        "id": "renaut",
+        "name": "Renaut",
+        "classId": "breval",
+        "className": "Breval",
+        "classHref": "/Klassenordner/Brevanor/breval/index.html",
+        "palette": [
+          "Indigo",
+          "Altgold",
+          "Silber"
+        ],
+        "equipment": "Verzierter schwerer Plattenharnisch; Morgenstern, Schwert, Streitkolben oder Axt. Helm: Geschlossener rundlicher Spangenvisierhelm mit Waagengravur.",
+        "reason": "Waage und Lilie legten einen formellen Breval als Begleiter von Schiedsgerichten und Gesandten nahe.",
+        "withHorse": false,
+        "horseName": null,
+        "bestiaryHref": null,
+        "image": "/Stammbäume/assets/images/references/accepted-realms/brevanor/renaut/krieger.webp",
+        "fullsize": "/Stammbäume/assets/images/references/accepted-realms/brevanor/renaut/krieger.png",
+        "bestiary": ""
+      },
+      "warriorPreview": "/Stammbäume/assets/images/references/accepted-realms/brevanor/renaut/krieger.webp",
+      "existingFamily": false,
+      "rankBasis": "Haus und örtliche Zuordnung bestätigt; genauer Adelsrang nicht überliefert."
+    }
+  ],
+  "territoryArt": {
+    "county-tervenne": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/county-tervenne.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/county-tervenne.png",
+      "shape": "scalloped-shield"
+    },
+    "county-vaudrec": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/county-vaudrec.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/county-vaudrec.png",
+      "shape": "scalloped-shield"
+    },
+    "county-tregard": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/county-tregard.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/county-tregard.png",
+      "shape": "scalloped-shield"
+    },
+    "county-caerennes": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/county-caerennes.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/county-caerennes.png",
+      "shape": "scalloped-shield"
+    },
+    "district-tervenne": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-tervenne.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-tervenne.png",
+      "shape": "scalloped-shield"
+    },
+    "district-marneval": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-marneval.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-marneval.png",
+      "shape": "scalloped-shield"
+    },
+    "district-orbec": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-orbec.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-orbec.png",
+      "shape": "scalloped-shield"
+    },
+    "district-dervel": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-dervel.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-dervel.png",
+      "shape": "scalloped-shield"
+    },
+    "district-vaudrec": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-vaudrec.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-vaudrec.png",
+      "shape": "scalloped-shield"
+    },
+    "district-brellan": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-brellan.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-brellan.png",
+      "shape": "scalloped-shield"
+    },
+    "district-hervant": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-hervant.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-hervant.png",
+      "shape": "scalloped-shield"
+    },
+    "district-arselle": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-arselle.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-arselle.png",
+      "shape": "scalloped-shield"
+    },
+    "district-tregard": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-tregard.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-tregard.png",
+      "shape": "scalloped-shield"
+    },
+    "district-roscan": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-roscan.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-roscan.png",
+      "shape": "scalloped-shield"
+    },
+    "district-torvay": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-torvay.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-torvay.png",
+      "shape": "scalloped-shield"
+    },
+    "district-mirel": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-mirel.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-mirel.png",
+      "shape": "scalloped-shield"
+    },
+    "district-garnac": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-garnac.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-garnac.png",
+      "shape": "scalloped-shield"
+    },
+    "district-caerennes": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-caerennes.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-caerennes.png",
+      "shape": "scalloped-shield"
+    },
+    "district-virec": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-virec.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-virec.png",
+      "shape": "scalloped-shield"
+    },
+    "district-rovanne": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-rovanne.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-rovanne.png",
+      "shape": "scalloped-shield"
+    },
+    "district-sorven": {
+      "image": "/Stammbäume/assets/images/regions/brevanor/district-sorven.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/district-sorven.png",
+      "shape": "scalloped-shield"
+    }
+  },
+  "historicalEmblems": [
+    {
+      "id": "brethneach",
+      "name": "Brethneach",
+      "title": "Antikes Fürstentum Brethneach",
+      "motif": "Eine einzelne große silberne heraldische Lilie mit drei klaren Blütenblättern, schmalem Band und kurzem Fuß auf dunklem blaugrünem Holz.",
+      "description": "Die Lilie war das Zeichen des antiken Fürstentums Brethneach. Es war aus den Siedlungen der Briath südlich des Flusses von Deitheach hervorgegangen. Handel und Kaiserzeit führten später zur eigenständigen Kultur Brevanors.",
+      "image": "/Stammbäume/assets/images/regions/brevanor/history-brethneach.webp",
+      "fullsize": "/Stammbäume/assets/images/regions/brevanor/history-brethneach.png"
+    }
+  ],
+  "cultureSections": [
+    {
+      "title": "Die brevanorische Adelshierarchie",
+      "paragraphs": [
+        "Riël: König.",
+        "Arduen: Herzog.",
+        "Arvor: Fürst.",
+        "Comteyr: Graf.",
+        "Vicon: Vizegraf.",
+        "Brenor: Baron.",
+        "Chastor: Ritterfürst.",
+        "Bannor: Ritterlicher Herr, Bannerherr.",
+        "Cavalier: Einfacher Ritter.",
+        "Gentry: Knappe.",
+        "Pajet: Page."
+      ],
+      "links": [
+        {
+          "label": "Klassen Brevanors ↗",
+          "href": "/Klassenordner/Klassenseite.html?herkunft=brevanor#brevanor"
+        }
+      ]
+    }
+  ]
+}

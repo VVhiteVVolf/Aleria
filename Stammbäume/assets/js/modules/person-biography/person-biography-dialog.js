@@ -79,6 +79,9 @@ function toolbar() {
     <button class="text-format-btn" type="button" data-biography-command="link" title="Link einfügen">URL</button>
     <button class="text-format-btn" type="button" data-biography-command="tooltip" title="Tooltip">Tip</button>
     <button class="text-format-btn" type="button" data-biography-command="spoiler" title="Spoiler">Spoiler</button>
+    <button class="text-format-btn" type="button" data-biography-command="paragraph">Absatz</button>
+    <button class="text-format-btn" type="button" data-biography-command="subheading">Zwischentitel</button>
+    <button class="text-format-btn" type="button" data-biography-command="divider">Trenner</button>
     <button class="text-format-btn" type="button" data-biography-command="linebreak" title="Zeilenumbruch">↵</button>
   </div>`;
 }
@@ -92,6 +95,7 @@ function richField(label, owner, field, value, documentRef) {
 }
 
 function collectionInput(collection, index, field, value, placeholder = '') {
+  if (field === 'detail' || field === 'text') return `<textarea data-biography-collection="${collection}" data-biography-index="${index}" data-biography-item-field="${field}" aria-label="${escapeHtml(placeholder)}" placeholder="${escapeHtml(placeholder)}">${escapeHtml(value)}</textarea>`;
   return `<input type="text" data-biography-collection="${collection}" data-biography-index="${index}" data-biography-item-field="${field}" value="${escapeHtml(value)}" placeholder="${escapeHtml(placeholder)}">`;
 }
 
@@ -192,61 +196,36 @@ function portraitStagesEditor(items = [], portrait = '') {
 }
 
 function renderEditor(module, documentRef) {
-  const data = module.biography;
+  const d = module.biography;
+  const group = (title, body, options = {}) => globalThis.AleriaBiographyCards.editorGroup(title, body, { escape: escapeHtml, ...options });
+  const add = (label, action) => `<button class="button button--quiet button--small" type="button" data-biography-action="${action}">${label}</button>`;
+  const collection = (title, action, content, items, prefix = '') => group(title, prefix + add('+ Eintrag', action) + content, { count: items.length });
+  const mentors = d.knightMentors || [];
   return `<div class="person-biography-editor" data-biography-editor>
-    <section class="person-biography-editor__section">
-      <header><h3>Portrait-Altersstufen</h3></header>
-      <div class="person-biography-editor__portrait-stages">
-        ${portraitStagesEditor(data.portraitStages, data.portrait)}
-      </div>
-      <p class="person-biography-editor__section-help">[1] verwendet das Biografieportrait oder, bei leerem Feld, das Portrait der Person im Stammbaum. Die optionalen Stufen [2] bis [5] können beispielsweise Kindheit, Jugend, Erwachsenenalter und hohes Alter zeigen.</p>
-    </section>
-    <section class="person-biography-editor__section">
-      <header><h3>Grundaufbau</h3></header>
-      <div class="person-biography-editor__grid">
-        ${inputField('Biografie-Überschrift', 'biographyTitle', data.biographyTitle)}
-        ${inputField('Persönlichkeit-Überschrift', 'abilitiesTitle', data.abilitiesTitle)}
-        ${inputField('Linke Inhaltsbreite (%)', 'sideWidth', data.sideWidth, { type: 'number', min: 35, max: 100 })}
-        ${richField('Biografie', 'biography', 'biographyText', data.biographyText, documentRef)}
-        ${inputField('Hintergrund-Überschrift', 'historyTitle', data.historyTitle)}
-        ${inputField('Werke-Überschrift', 'worksTitle', data.worksTitle)}
-        ${richField('Hintergrund & Wirkung', 'biography', 'historyText', data.historyText, documentRef)}
-      </div>
-    </section>
-    ${editorSection('Infotabelle', 'add-stat', '+ Zeile', statsEditor(module.stats))}
-    ${editorSection('Persönlichkeit & Spezialgebiete', 'add-ability', '+ Punkt', abilitiesEditor(data.abilities))}
-    ${editorSection('Bekannte Werke', 'add-work', '+ Werk', lineEditor(data.works, 'works'))}
-    ${editorSection('Zusatzabschnitte im Hauptbereich', 'add-section', '+ Abschnitt', sectionsEditor(data.extraSections))}
-    <section class="person-biography-editor__section">
-      <header><h3>Rechte Spalte</h3></header>
-      <div class="person-biography-editor__grid">
-        ${inputField('Trivia-Überschrift', 'triviaTitle', data.triviaTitle)}
-        ${inputField('Zitate-Überschrift', 'quotesTitle', data.quotesTitle)}
-        ${inputField('Verbindungen-Überschrift', 'connectionsTitle', data.connectionsTitle)}
-        ${inputField('Verbindungsportrait-Höhe', 'connectionPortraitHeight', data.connectionPortraitHeight, { type: 'number', min: 44, max: 140 })}
-        ${inputField('Verbindungstext-Versatz', 'connectionTextOffset', data.connectionTextOffset, { type: 'number', min: 0, max: 80 })}
-        ${inputField('Besitz-Überschrift', 'documentsTitle', data.documentsTitle)}
-      </div>
-    </section>
-    ${editorSection('Trivia', 'add-trivia', '+ Trivia', lineEditor(data.trivia, 'trivia'))}
-    ${editorSection('Zitate', 'add-quote-line', '+ Zitat', lineEditor(data.quotes, 'quotes'))}
-    <section class="person-biography-editor__section">
-      <header><h3>Verbindungen</h3><span class="person-biography-editor__header-actions"><button class="button button--quiet button--small" type="button" data-biography-action="add-connection-heading">+ Trenner</button><button class="button button--quiet button--small" type="button" data-biography-action="add-connection">+ Verbindung</button></span></header>
-      <div class="person-biography-editor__rows">${connectionsEditor(data.connections) || '<p class="person-biography-editor__empty">Noch keine Verbindungen vorhanden.</p>'}</div>
-    </section>
-    ${editorSection('Eigentum & Besitz', 'add-document', '+ Eintrag', documentsEditor(data.documents))}
-    <section class="person-biography-editor__section">
-      <header><h3>Zitatbox & Fußzeile</h3></header>
-      <div class="person-biography-editor__grid">
-        ${richField('Zitatbox links', 'module', 'quote', module.quote, documentRef)}
-        <label class="person-biography-editor__field"><span>Zitat von</span><input type="text" data-biography-module-field="quoteBy" value="${escapeHtml(module.quoteBy)}"></label>
-        ${inputField('Fußzeile', 'footer', data.footer, { wide: true })}
-      </div>
-    </section>
+    ${group('Biografie & Hintergrund',
+      inputField('Biografie-Überschrift', 'biographyTitle', d.biographyTitle)
+      + richField('Über die Person', 'biography', 'biographyText', d.biographyText, documentRef)
+      + inputField('Hintergrund-Überschrift', 'historyTitle', d.historyTitle)
+      + richField('Hintergrund & Werdegang', 'biography', 'historyText', d.historyText, documentRef), { help: 'Längere Texte mit Absätzen, Zwischenüberschriften und Trennern gliedern.' })}
+    ${group('Portrait & Steckbrief', `<div class="person-biography-editor__portrait-stages">${portraitStagesEditor(d.portraitStages, d.portrait)}</div>` + add('+ Steckbriefzeile', 'add-stat') + statsEditor(module.stats), { count: module.stats.length })}
+    ${collection('Ritterväter & Rittermütter', 'add-mentor', mentors.map((item,index) => `<div class="person-biography-editor__row connection-columns">${collectionInput('knightMentors',index,'name',item.name,'Name')}${collectionInput('knightMentors',index,'role',item.role,'Rittervater / Rittermutter')}${collectionInput('knightMentors',index,'image',item.image,'Portrait-URL')}${collectionInput('knightMentors',index,'detail',item.detail,'Ausbildung / Zeitraum')}${removeButton('knightMentors',index,item.name)}</div>`).join(''), mentors)}
+    ${collection('Persönlichkeit & Spezialgebiete', 'add-ability', abilitiesEditor(d.abilities), d.abilities, inputField('Überschrift','abilitiesTitle',d.abilitiesTitle))}
+    ${collection('Weitere Kapitel', 'add-section', sectionsEditor(d.extraSections), d.extraSections)}
+    ${collection('Bekannte Werke','add-work',lineEditor(d.works,'works'), d.works, inputField('Überschrift','worksTitle',d.worksTitle))}
+    ${collection('Eigenarten & Wissenswertes','add-trivia',lineEditor(d.trivia,'trivia'), d.trivia, inputField('Überschrift','triviaTitle',d.triviaTitle))}
+    ${collection('Zitate','add-quote-line',lineEditor(d.quotes,'quotes'), d.quotes, inputField('Überschrift','quotesTitle',d.quotesTitle))}
+    ${collection('Beziehungen & Verbindungen','add-connection',connectionsEditor(d.connections), d.connections, inputField('Überschrift','connectionsTitle',d.connectionsTitle) + add('+ Gruppentrenner','add-connection-heading'))}
+    ${collection('Eigentum & Dokumente','add-document',documentsEditor(d.documents), d.documents, inputField('Überschrift','documentsTitle',d.documentsTitle))}
+    ${group('Leitgedanke & Gestaltung', richField('Zitat beim Portrait','module','quote',module.quote,documentRef)
+      + `<label class="person-biography-editor__field"><span>Zitat von</span><input type="text" data-biography-module-field="quoteBy" value="${escapeHtml(module.quoteBy)}"></label>`
+      + inputField('Fußzeile','footer',d.footer) + inputField('Inhaltsbreite links (%)','sideWidth',d.sideWidth,{type:'number',min:35,max:100})
+      + inputField('Verbindungsportraits: Höhe (px)','connectionPortraitHeight',d.connectionPortraitHeight,{type:'number',min:44,max:140})
+      + inputField('Abstand zum Verbindungstext (px)','connectionTextOffset',d.connectionTextOffset,{type:'number',min:0,max:80}))}
   </div>`;
 }
 
 function getCollection(module, collection) {
+  if (collection === 'knightMentors') module.biography.knightMentors ||= [];
   return collection === 'stats' ? module.stats : module.biography[collection];
 }
 
@@ -278,6 +257,7 @@ export function createPersonBiographyDialog({
     dialog.innerHTML = `<form class="person-biography-dialog__form" data-biography-form>
       <header class="dialog-header person-biography-dialog__header">
         <div><p class="eyebrow">Almanach · Biographie</p><h2>${escapeHtml(person.name)}</h2></div>
+        ${editable ? '<button class="button button--quiet button--small biography-mobile-preview-toggle" type="button" data-biography-action="toggle-preview" aria-expanded="false">Vorschau</button>' : ''}
         <button class="icon-button" type="button" data-biography-action="close" aria-label="Biographie schließen">×</button>
       </header>
       ${emptyView
@@ -287,10 +267,12 @@ export function createPersonBiographyDialog({
             ${editable ? `<div class="person-biography-dialog__divider" role="separator" aria-orientation="vertical" aria-label="Breite zwischen Live-Vorschau und Bearbeitung ändern" aria-valuemin="30" aria-valuemax="75" aria-valuenow="55" tabindex="0" data-biography-splitter><span>Liveversion</span><span>Bearbeitung</span></div><aside class="person-biography-dialog__editor-pane">${renderEditor(draft, documentRef)}</aside>` : ''}
           </div>`}
       <footer class="dialog-footer person-biography-dialog__footer">
-        ${editable && exists ? '<button class="button button--danger" type="button" data-biography-action="remove-module">Biographie entfernen</button>' : ''}
+        ${editable ? `<details class="biography-editor-menu"><summary>Weitere Aktionen</summary><div>
+          <button class="button button--quiet" type="button" data-biography-action="import-module">Importieren</button>
+          <button class="button button--quiet" type="button" data-biography-action="export-module">Exportieren</button>
+          ${exists ? '<button class="button button--danger" type="button" data-biography-action="remove-module">Biographie entfernen</button>' : ''}
+        </div></details>` : ''}
         <span class="person-biography-dialog__footer-spacer"></span>
-        ${editable ? '<button class="button button--quiet" type="button" data-biography-action="import-module">Importieren</button>' : ''}
-        ${editable ? '<button class="button button--quiet" type="button" data-biography-action="export-module">Exportieren</button>' : ''}
         <button class="button button--quiet" type="button" data-biography-action="close">Schließen</button>
         ${editable ? '<button class="button" type="submit">Biographie speichern</button>' : ''}
       </footer>
@@ -299,7 +281,14 @@ export function createPersonBiographyDialog({
 
   function rerenderEditor() {
     const pane = dialog.querySelector('.person-biography-dialog__editor-pane');
-    if (pane) pane.innerHTML = renderEditor(draft, documentRef);
+    if (pane) {
+      const groups = Array.from(pane.querySelectorAll('[data-biography-editor-group]')).map(group => [group.dataset.biographyEditorGroup, group.open]);
+      pane.innerHTML = renderEditor(draft, documentRef);
+      pane.querySelectorAll('[data-biography-editor-group]').forEach(group => {
+        const previous = groups.find(([key]) => key === group.dataset.biographyEditorGroup);
+        if (previous) group.open = previous[1];
+      });
+    }
     renderPreview();
   }
 
@@ -309,6 +298,7 @@ export function createPersonBiographyDialog({
     const stored = getPersonBiographyModule(person);
     exists = Boolean(stored);
     draft = clone(stored || createPersonBiographyModule(person, options.house));
+    draft.biography.knightMentors ||= [];
     renderDialog();
     splitPane.sync();
     dialog.showModal();
@@ -323,6 +313,7 @@ export function createPersonBiographyDialog({
 
   function addItem(action) {
     const additions = {
+      'add-mentor': ['knightMentors', { name: '', role: 'Rittervater', image: '', detail: '' }],
       'add-stat': ['stats', ['Bezeichnung', 'Wert']],
       'add-ability': ['abilities', { icon: '✦', title: 'Neuer Punkt', detail: '' }],
       'add-work': ['works', 'Neues Werk'],
@@ -418,6 +409,10 @@ export function createPersonBiographyDialog({
     const range = restoreRichTextRange(editor);
     if (['bold', 'italic', 'underline'].includes(command)) {
       applyInlineFormat(editor, range, command);
+    } else if (command === 'paragraph' || command === 'subheading') {
+      documentRef.execCommand?.('formatBlock', false, command === 'paragraph' ? 'p' : 'h4');
+    } else if (command === 'divider') {
+      insertRichTextHtml(editor, range, '<hr><p><br></p>');
     } else if (command === 'linebreak') {
       insertRichTextHtml(editor, range, '<br>');
     } else if (command === 'link') {
@@ -476,7 +471,12 @@ export function createPersonBiographyDialog({
     event.preventDefault();
     event.stopPropagation();
     const action = button.dataset.biographyAction;
-    if (action === 'close') close();
+    if (action === 'toggle-preview') {
+      const visible = dialog.querySelector('.person-biography-dialog__body')?.classList.toggle('is-preview-visible');
+      button.setAttribute('aria-expanded', String(Boolean(visible)));
+      button.textContent = visible ? 'Bearbeiten' : 'Vorschau';
+    }
+    else if (action === 'close') close();
     else if (action === 'pick-ability-icon') {
       const index = Number(button.dataset.biographyIndex);
       const target = dialog.querySelector(`[data-biography-collection="abilities"][data-biography-index="${index}"][data-biography-item-field="icon"]`);

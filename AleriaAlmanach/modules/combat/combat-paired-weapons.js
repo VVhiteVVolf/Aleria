@@ -1,5 +1,6 @@
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { parseDamageFormula, formatDamageFormula } from './rules/combat-mvp-rules.js';
+import { getDevelopmentTechniqueId } from '../character-development/development-entry-reference.js';
 
 export function requiresPairedCombatWeapons(technique = {}) {
   if (technique.requiresDualWield || technique.cultureTraining?.requiresDualWield
@@ -15,7 +16,9 @@ export function hasPairedCombatTraining(profile = {}, right, left = right) {
     if (technique.active === false || Number(technique.minimumLevel || 1) > Number(profile.progression?.level || 1)
       || !requiresPairedCombatWeapons(technique)) return false;
     const classes = technique.cultureTraining?.allowedClassIds || technique.cenyrTraining?.allowedClassIds || [];
-    if (classes.length && !classes.includes(classId)) return false;
+    const purchasedClass = profile.progression?.development?.mode === 'purchase'
+      ? profile.progression.development.purchases?.find(p => p.techniqueId === getDevelopmentTechniqueId(technique))?.classId : '';
+    if (classes.length && !classes.includes(purchasedClass || classId)) return false;
     const types = technique.weaponTypes || [];
     if (types.length && (!types.includes(right.weaponType) || !types.includes(left.weaponType))) return false;
     const ids = technique.compatibleWeaponIds || [];

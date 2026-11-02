@@ -1,0 +1,4607 @@
+[
+  {
+    "id": "development-trait-feuer-phobie",
+    "name": "Feuer Phobie",
+    "description": "Doppelter Feuerschaden und Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-naturkind",
+    "name": "In der Natur aufgewachsen",
+    "description": "Expertise in Naturkunde und +2 auf Mit Tieren umgehen.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Naturkunde": 4,
+        "Mit Tieren umgehen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flink",
+    "name": "Flinke Füße",
+    "description": "+2 m Bewegung, −1 RK.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "ac": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-standfest",
+    "name": "Standfest",
+    "description": "+1 RK, −1 m Bewegung.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "ac": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-wachsam",
+    "name": "Wachsamer Blick",
+    "description": "+2 passive Wahrnehmung und +1 Initiative.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "passivePerception": 2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vertraeumt",
+    "name": "Verträumt",
+    "description": "−2 Initiative; +2 auf Arkane Kunde.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Arkane Kunde": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaeh",
+    "name": "Zäh wie Leder",
+    "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "hp": 4,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zerbrechlich",
+    "name": "Zerbrechlich",
+    "description": "−3 maximale TP, +2 auf Akrobatik.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "hp": -3,
+      "skills": {
+        "Akrobatik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-mutig",
+    "name": "Mutiges Herz",
+    "description": "+2 auf Rettungswürfe gegen Furcht.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-aengstlich",
+    "name": "Leicht zu erschrecken",
+    "description": "−2 auf Rettungswürfe gegen Furcht; +2 auf Heimlichkeit.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftfest",
+    "name": "Giftfeste Konstitution",
+    "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frostempfindlich",
+    "name": "Frostempfindlich",
+    "description": "Doppelter Kälteschaden.",
+    "cost": -2,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glutgewoehnt",
+    "name": "An Glut gewöhnt",
+    "description": "Resistenz gegen Feuerschaden; −1 Initiative.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelehrt",
+    "name": "Bücherwurm",
+    "description": "Expertise in Geschichte; −1 auf Athletik.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Geschichte": 4
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-empathisch",
+    "name": "Menschenkenner",
+    "description": "+2 auf Motiv erkennen und Überzeugen.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schroff",
+    "name": "Schroffe Ehrlichkeit",
+    "description": "+2 auf Einschüchtern, −2 auf Täuschen.",
+    "cost": 0,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 2,
+        "Täuschen": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-silberzunge",
+    "name": "Silberzunge",
+    "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-ungeschickt",
+    "name": "Zwei linke Hände",
+    "description": "−2 auf Fingerfertigkeit; +1 maximale TP.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "hp": 1,
+      "skills": {
+        "Fingerfertigkeit": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfschuetze",
+    "name": "Ruhige Sehne",
+    "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klingenmut",
+    "name": "Klingenmut",
+    "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+    "cost": 0,
+    "level": 1,
+    "changes": {
+      "ac": -1,
+      "weaponDamage": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-arkaner-fokus",
+    "name": "Arkaner Fokus",
+    "description": "+1 Zauberangriff, −1 Waffenangriff.",
+    "cost": 0,
+    "level": 1,
+    "changes": {
+      "weaponAttack": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaehe-magie",
+    "name": "Zähe Magie",
+    "description": "+1 Zauber-SG; −1 m Bewegung.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "spellDc": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magiescheu",
+    "name": "Magiescheu",
+    "description": "−1 Zauberangriff und −1 Zauber-SG.",
+    "cost": -2,
+    "level": 1,
+    "changes": {
+      "spellAttack": -1,
+      "spellDc": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glueckspilz",
+    "name": "Glückspilz",
+    "description": "+1 auf alle Rettungswürfe.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-pechvogel",
+    "name": "Pechvogel",
+    "description": "−1 auf alle Rettungswürfe.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": -1,
+        "dexterity": -1,
+        "constitution": -1,
+        "intelligence": -1,
+        "wisdom": -1,
+        "charisma": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-kampfbereit",
+    "name": "Immer kampfbereit",
+    "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "passivePerception": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-konzentriert",
+    "name": "Eiserne Konzentration",
+    "description": "Vorteil auf KON-Rettungswürfe; −1 auf Initiative.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-lebhafter-geist",
+    "name": "Lebhafter Geist",
+    "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "ac": -1,
+      "passivePerception": 1,
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1,
+        "Fingerfertigkeit": 1,
+        "Heimlichkeit": 1,
+        "Arkane Kunde": 1,
+        "Geschichte": 1,
+        "Nachforschungen": 1,
+        "Naturkunde": 1,
+        "Religion": 1,
+        "Heilkunde": 1,
+        "Mit Tieren umgehen": 1,
+        "Motiv erkennen": 1,
+        "Überleben": 1,
+        "Wahrnehmung": 1,
+        "Auftreten": 1,
+        "Einschüchtern": 1,
+        "Täuschen": 1,
+        "Überreden": 1,
+        "Flirten": 1,
+        "Körperbeherrschung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-kraftpaket",
+    "name": "Kraftpaket",
+    "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-duennhaeutig",
+    "name": "Dünnhäutig",
+    "description": "Nachteil auf CHA-Rettungswürfe; +2 auf Auftreten.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Auftreten": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vollbusig",
+    "name": "Vollbusig",
+    "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-haesslich",
+    "name": "Hässlich",
+    "description": "Markant unvorteilhafte Gesichtszüge; −2 auf Überzeugen und +1 auf Einschüchtern.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gutaussehend",
+    "name": "Gutaussehend",
+    "description": "Ansprechende Gesichtszüge; +2 auf Überzeugen und +1 auf Auftreten.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fit",
+    "name": "Fit",
+    "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "hp": 2,
+      "skills": {
+        "Athletik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fragil",
+    "name": "Fragil",
+    "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "hp": -4,
+      "skills": {},
+      "saves": {
+        "constitution": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schmaechtig",
+    "name": "Schmächtig",
+    "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+    "cost": 0,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": -2,
+        "Akrobatik": 1,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klein",
+    "name": "Klein",
+    "description": "Unterdurchschnittliche Körpergröße; +2 auf Heimlichkeit und −1 auf Athletik.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gross",
+    "name": "Groß",
+    "description": "Überdurchschnittliche Körpergröße; +2 auf Athletik und −1 auf Heimlichkeit.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-huenenhaft",
+    "name": "Hünenhaft",
+    "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "hp": 4,
+      "skills": {
+        "Athletik": 2,
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-riesenblut",
+    "name": "Riesenblut",
+    "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 Waffenschaden, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "hp": 6,
+      "weaponDamage": 1,
+      "skills": {
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-breitschultrig",
+    "name": "Breitschultrig",
+    "description": "Breite Schultern und kräftiger Oberkörper; +2 auf Athletik, −1 auf Fingerfertigkeit.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Fingerfertigkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-sehnig",
+    "name": "Sehnig",
+    "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelenkig",
+    "name": "Gelenkig",
+    "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Akrobatik": 2,
+        "Fingerfertigkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-steife-gelenke",
+    "name": "Steife Gelenke",
+    "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+    "cost": -2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfe-augen",
+    "name": "Scharfe Augen",
+    "description": "Sehr gute Sehkraft; +2 auf Wahrnehmung und +1 passive Wahrnehmung.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "passivePerception": 3,
+      "skills": {
+        "Wahrnehmung": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwerhoerig",
+    "name": "Schwerhörig",
+    "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+    "cost": -1,
+    "level": 1,
+    "changes": {
+      "passivePerception": -2,
+      "skills": {
+        "Wahrnehmung": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eiserne-lunge",
+    "name": "Eiserne Lunge",
+    "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Athletik": 1
+      },
+      "saves": {
+        "constitution": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schneller-stoffwechsel",
+    "name": "Schneller Stoffwechsel",
+    "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+    "cost": 0,
+    "level": 1,
+    "changes": {
+      "hp": -2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwere-knochen",
+    "name": "Schwere Knochen",
+    "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+    "cost": 1,
+    "level": 1,
+    "changes": {
+      "hp": 3,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-robuste-haut",
+    "name": "Robuste Haut",
+    "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+    "cost": 2,
+    "level": 1,
+    "changes": {
+      "ac": 1,
+      "skills": {
+        "Auftreten": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frost-phobie",
+    "name": "Frostphobie",
+    "description": "Doppelter Kälteschaden und Nachteil bei Rettungswürfen gegen kältebasierte Angriffe.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitz-phobie",
+    "name": "Blitzphobie",
+    "description": "Doppelter Blitzschaden und Nachteil bei Rettungswürfen gegen Blitzangriffe.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gift-phobie",
+    "name": "Giftphobie",
+    "description": "Doppelter Giftschaden und Nachteil bei Rettungswürfen gegen giftbasierte Angriffe.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magie-phobie",
+    "name": "Magiephobie",
+    "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-heilerhaende",
+    "name": "Heilerhände",
+    "description": "Expertise in Heilkunde und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1,
+        "Heilkunde": 4
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-spuernase",
+    "name": "Spürnase",
+    "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "passivePerception": 1,
+      "skills": {
+        "Nachforschungen": 4,
+        "Wahrnehmung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-buehnenbegabt",
+    "name": "Bühnenbegabt",
+    "description": "Expertise in Auftreten und +1 auf Akrobatik.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Akrobatik": 1,
+        "Auftreten": 4
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flinke-finger",
+    "name": "Flinke Finger",
+    "description": "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Fingerfertigkeit": 4,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-faehrtenleser",
+    "name": "Geborener Fährtenleser",
+    "description": "Expertise in Überlebenskunst und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-luegenriecher",
+    "name": "Lügenriecher",
+    "description": "Expertise in Motiv erkennen und +1 auf WEI-Rettungswürfe.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 4
+      },
+      "saves": {
+        "wisdom": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-feueraffinitaet",
+    "name": "Feueraffinität",
+    "description": "Resistenz gegen Feuerschaden.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eisaffinitaet",
+    "name": "Eisaffinität",
+    "description": "Resistenz gegen Kälteschaden.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzaffinitaet",
+    "name": "Blitzaffinität",
+    "description": "Resistenz gegen Blitzschaden.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureaffinitaet",
+    "name": "Säureaffinität",
+    "description": "Resistenz gegen Säureschaden.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallaffinitaet",
+    "name": "Schallaffinität",
+    "description": "Resistenz gegen Donnerschaden.",
+    "cost": 3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftanfaellig",
+    "name": "Giftanfällig",
+    "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+    "cost": -3,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureempfindlich",
+    "name": "Säureempfindlich",
+    "description": "Doppelter Säureschaden.",
+    "cost": -2,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzempfindlich",
+    "name": "Blitzempfindlich",
+    "description": "Doppelter Blitzschaden.",
+    "cost": -2,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallempfindlich",
+    "name": "Schallempfindlich",
+    "description": "Doppelter Donnerschaden.",
+    "cost": -2,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magische-resonanz",
+    "name": "Magische Resonanz",
+    "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+    "cost": -4,
+    "level": 1,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-feuer-phobie",
+    "name": "Feuer Phobie",
+    "description": "Doppelter Feuerschaden und Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-naturkind",
+    "name": "In der Natur aufgewachsen",
+    "description": "Expertise in Naturkunde und +2 auf Mit Tieren umgehen.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Naturkunde": 6,
+        "Mit Tieren umgehen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flink",
+    "name": "Flinke Füße",
+    "description": "+2 m Bewegung, −1 RK.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "ac": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-standfest",
+    "name": "Standfest",
+    "description": "+1 RK, −1 m Bewegung.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "ac": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-wachsam",
+    "name": "Wachsamer Blick",
+    "description": "+2 passive Wahrnehmung und +1 Initiative.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "passivePerception": 2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vertraeumt",
+    "name": "Verträumt",
+    "description": "−2 Initiative; +2 auf Arkane Kunde.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Arkane Kunde": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaeh",
+    "name": "Zäh wie Leder",
+    "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "hp": 4,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zerbrechlich",
+    "name": "Zerbrechlich",
+    "description": "−3 maximale TP, +2 auf Akrobatik.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "hp": -3,
+      "skills": {
+        "Akrobatik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-mutig",
+    "name": "Mutiges Herz",
+    "description": "+2 auf Rettungswürfe gegen Furcht.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-aengstlich",
+    "name": "Leicht zu erschrecken",
+    "description": "−2 auf Rettungswürfe gegen Furcht; +2 auf Heimlichkeit.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftfest",
+    "name": "Giftfeste Konstitution",
+    "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frostempfindlich",
+    "name": "Frostempfindlich",
+    "description": "Doppelter Kälteschaden.",
+    "cost": -2,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glutgewoehnt",
+    "name": "An Glut gewöhnt",
+    "description": "Resistenz gegen Feuerschaden; −1 Initiative.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelehrt",
+    "name": "Bücherwurm",
+    "description": "Expertise in Geschichte; −1 auf Athletik.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Geschichte": 6
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-empathisch",
+    "name": "Menschenkenner",
+    "description": "+2 auf Motiv erkennen und Überzeugen.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schroff",
+    "name": "Schroffe Ehrlichkeit",
+    "description": "+2 auf Einschüchtern, −2 auf Täuschen.",
+    "cost": 0,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 2,
+        "Täuschen": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-silberzunge",
+    "name": "Silberzunge",
+    "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-ungeschickt",
+    "name": "Zwei linke Hände",
+    "description": "−2 auf Fingerfertigkeit; +1 maximale TP.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "hp": 1,
+      "skills": {
+        "Fingerfertigkeit": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfschuetze",
+    "name": "Ruhige Sehne",
+    "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klingenmut",
+    "name": "Klingenmut",
+    "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+    "cost": 0,
+    "level": 5,
+    "changes": {
+      "ac": -1,
+      "weaponDamage": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-arkaner-fokus",
+    "name": "Arkaner Fokus",
+    "description": "+1 Zauberangriff, −1 Waffenangriff.",
+    "cost": 0,
+    "level": 5,
+    "changes": {
+      "weaponAttack": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaehe-magie",
+    "name": "Zähe Magie",
+    "description": "+1 Zauber-SG; −1 m Bewegung.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "spellDc": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magiescheu",
+    "name": "Magiescheu",
+    "description": "−1 Zauberangriff und −1 Zauber-SG.",
+    "cost": -2,
+    "level": 5,
+    "changes": {
+      "spellAttack": -1,
+      "spellDc": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glueckspilz",
+    "name": "Glückspilz",
+    "description": "+1 auf alle Rettungswürfe.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-pechvogel",
+    "name": "Pechvogel",
+    "description": "−1 auf alle Rettungswürfe.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": -1,
+        "dexterity": -1,
+        "constitution": -1,
+        "intelligence": -1,
+        "wisdom": -1,
+        "charisma": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-kampfbereit",
+    "name": "Immer kampfbereit",
+    "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "passivePerception": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-konzentriert",
+    "name": "Eiserne Konzentration",
+    "description": "Vorteil auf KON-Rettungswürfe; −1 auf Initiative.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-lebhafter-geist",
+    "name": "Lebhafter Geist",
+    "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "ac": -1,
+      "passivePerception": 1,
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1,
+        "Fingerfertigkeit": 1,
+        "Heimlichkeit": 1,
+        "Arkane Kunde": 1,
+        "Geschichte": 1,
+        "Nachforschungen": 1,
+        "Naturkunde": 1,
+        "Religion": 1,
+        "Heilkunde": 1,
+        "Mit Tieren umgehen": 1,
+        "Motiv erkennen": 1,
+        "Überleben": 1,
+        "Wahrnehmung": 1,
+        "Auftreten": 1,
+        "Einschüchtern": 1,
+        "Täuschen": 1,
+        "Überreden": 1,
+        "Flirten": 1,
+        "Körperbeherrschung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-kraftpaket",
+    "name": "Kraftpaket",
+    "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-duennhaeutig",
+    "name": "Dünnhäutig",
+    "description": "Nachteil auf CHA-Rettungswürfe; +2 auf Auftreten.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Auftreten": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vollbusig",
+    "name": "Vollbusig",
+    "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-haesslich",
+    "name": "Hässlich",
+    "description": "Markant unvorteilhafte Gesichtszüge; −2 auf Überzeugen und +1 auf Einschüchtern.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gutaussehend",
+    "name": "Gutaussehend",
+    "description": "Ansprechende Gesichtszüge; +2 auf Überzeugen und +1 auf Auftreten.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fit",
+    "name": "Fit",
+    "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "hp": 2,
+      "skills": {
+        "Athletik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fragil",
+    "name": "Fragil",
+    "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "hp": -4,
+      "skills": {},
+      "saves": {
+        "constitution": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schmaechtig",
+    "name": "Schmächtig",
+    "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+    "cost": 0,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": -2,
+        "Akrobatik": 1,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klein",
+    "name": "Klein",
+    "description": "Unterdurchschnittliche Körpergröße; +2 auf Heimlichkeit und −1 auf Athletik.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gross",
+    "name": "Groß",
+    "description": "Überdurchschnittliche Körpergröße; +2 auf Athletik und −1 auf Heimlichkeit.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-huenenhaft",
+    "name": "Hünenhaft",
+    "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "hp": 4,
+      "skills": {
+        "Athletik": 2,
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-riesenblut",
+    "name": "Riesenblut",
+    "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 Waffenschaden, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "hp": 6,
+      "weaponDamage": 1,
+      "skills": {
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-breitschultrig",
+    "name": "Breitschultrig",
+    "description": "Breite Schultern und kräftiger Oberkörper; +2 auf Athletik, −1 auf Fingerfertigkeit.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Fingerfertigkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-sehnig",
+    "name": "Sehnig",
+    "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelenkig",
+    "name": "Gelenkig",
+    "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Akrobatik": 2,
+        "Fingerfertigkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-steife-gelenke",
+    "name": "Steife Gelenke",
+    "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+    "cost": -2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfe-augen",
+    "name": "Scharfe Augen",
+    "description": "Sehr gute Sehkraft; +2 auf Wahrnehmung und +1 passive Wahrnehmung.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "passivePerception": 3,
+      "skills": {
+        "Wahrnehmung": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwerhoerig",
+    "name": "Schwerhörig",
+    "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+    "cost": -1,
+    "level": 5,
+    "changes": {
+      "passivePerception": -2,
+      "skills": {
+        "Wahrnehmung": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eiserne-lunge",
+    "name": "Eiserne Lunge",
+    "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Athletik": 1
+      },
+      "saves": {
+        "constitution": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schneller-stoffwechsel",
+    "name": "Schneller Stoffwechsel",
+    "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+    "cost": 0,
+    "level": 5,
+    "changes": {
+      "hp": -2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwere-knochen",
+    "name": "Schwere Knochen",
+    "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+    "cost": 1,
+    "level": 5,
+    "changes": {
+      "hp": 3,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-robuste-haut",
+    "name": "Robuste Haut",
+    "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+    "cost": 2,
+    "level": 5,
+    "changes": {
+      "ac": 1,
+      "skills": {
+        "Auftreten": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frost-phobie",
+    "name": "Frostphobie",
+    "description": "Doppelter Kälteschaden und Nachteil bei Rettungswürfen gegen kältebasierte Angriffe.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitz-phobie",
+    "name": "Blitzphobie",
+    "description": "Doppelter Blitzschaden und Nachteil bei Rettungswürfen gegen Blitzangriffe.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gift-phobie",
+    "name": "Giftphobie",
+    "description": "Doppelter Giftschaden und Nachteil bei Rettungswürfen gegen giftbasierte Angriffe.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magie-phobie",
+    "name": "Magiephobie",
+    "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-heilerhaende",
+    "name": "Heilerhände",
+    "description": "Expertise in Heilkunde und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1,
+        "Heilkunde": 6
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-spuernase",
+    "name": "Spürnase",
+    "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "passivePerception": 1,
+      "skills": {
+        "Nachforschungen": 6,
+        "Wahrnehmung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-buehnenbegabt",
+    "name": "Bühnenbegabt",
+    "description": "Expertise in Auftreten und +1 auf Akrobatik.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Akrobatik": 1,
+        "Auftreten": 6
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flinke-finger",
+    "name": "Flinke Finger",
+    "description": "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Fingerfertigkeit": 6,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-faehrtenleser",
+    "name": "Geborener Fährtenleser",
+    "description": "Expertise in Überlebenskunst und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-luegenriecher",
+    "name": "Lügenriecher",
+    "description": "Expertise in Motiv erkennen und +1 auf WEI-Rettungswürfe.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 6
+      },
+      "saves": {
+        "wisdom": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-feueraffinitaet",
+    "name": "Feueraffinität",
+    "description": "Resistenz gegen Feuerschaden.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eisaffinitaet",
+    "name": "Eisaffinität",
+    "description": "Resistenz gegen Kälteschaden.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzaffinitaet",
+    "name": "Blitzaffinität",
+    "description": "Resistenz gegen Blitzschaden.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureaffinitaet",
+    "name": "Säureaffinität",
+    "description": "Resistenz gegen Säureschaden.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallaffinitaet",
+    "name": "Schallaffinität",
+    "description": "Resistenz gegen Donnerschaden.",
+    "cost": 3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftanfaellig",
+    "name": "Giftanfällig",
+    "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+    "cost": -3,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureempfindlich",
+    "name": "Säureempfindlich",
+    "description": "Doppelter Säureschaden.",
+    "cost": -2,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzempfindlich",
+    "name": "Blitzempfindlich",
+    "description": "Doppelter Blitzschaden.",
+    "cost": -2,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallempfindlich",
+    "name": "Schallempfindlich",
+    "description": "Doppelter Donnerschaden.",
+    "cost": -2,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magische-resonanz",
+    "name": "Magische Resonanz",
+    "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+    "cost": -4,
+    "level": 5,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-feuer-phobie",
+    "name": "Feuer Phobie",
+    "description": "Doppelter Feuerschaden und Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-naturkind",
+    "name": "In der Natur aufgewachsen",
+    "description": "Expertise in Naturkunde und +2 auf Mit Tieren umgehen.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Naturkunde": 8,
+        "Mit Tieren umgehen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flink",
+    "name": "Flinke Füße",
+    "description": "+2 m Bewegung, −1 RK.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "ac": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-standfest",
+    "name": "Standfest",
+    "description": "+1 RK, −1 m Bewegung.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "ac": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-wachsam",
+    "name": "Wachsamer Blick",
+    "description": "+2 passive Wahrnehmung und +1 Initiative.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "passivePerception": 2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vertraeumt",
+    "name": "Verträumt",
+    "description": "−2 Initiative; +2 auf Arkane Kunde.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Arkane Kunde": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaeh",
+    "name": "Zäh wie Leder",
+    "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "hp": 4,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zerbrechlich",
+    "name": "Zerbrechlich",
+    "description": "−3 maximale TP, +2 auf Akrobatik.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "hp": -3,
+      "skills": {
+        "Akrobatik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-mutig",
+    "name": "Mutiges Herz",
+    "description": "+2 auf Rettungswürfe gegen Furcht.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-aengstlich",
+    "name": "Leicht zu erschrecken",
+    "description": "−2 auf Rettungswürfe gegen Furcht; +2 auf Heimlichkeit.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftfest",
+    "name": "Giftfeste Konstitution",
+    "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frostempfindlich",
+    "name": "Frostempfindlich",
+    "description": "Doppelter Kälteschaden.",
+    "cost": -2,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glutgewoehnt",
+    "name": "An Glut gewöhnt",
+    "description": "Resistenz gegen Feuerschaden; −1 Initiative.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelehrt",
+    "name": "Bücherwurm",
+    "description": "Expertise in Geschichte; −1 auf Athletik.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Geschichte": 8
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-empathisch",
+    "name": "Menschenkenner",
+    "description": "+2 auf Motiv erkennen und Überzeugen.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schroff",
+    "name": "Schroffe Ehrlichkeit",
+    "description": "+2 auf Einschüchtern, −2 auf Täuschen.",
+    "cost": 0,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 2,
+        "Täuschen": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-silberzunge",
+    "name": "Silberzunge",
+    "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-ungeschickt",
+    "name": "Zwei linke Hände",
+    "description": "−2 auf Fingerfertigkeit; +1 maximale TP.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "hp": 1,
+      "skills": {
+        "Fingerfertigkeit": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfschuetze",
+    "name": "Ruhige Sehne",
+    "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klingenmut",
+    "name": "Klingenmut",
+    "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+    "cost": 0,
+    "level": 10,
+    "changes": {
+      "ac": -1,
+      "weaponDamage": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-arkaner-fokus",
+    "name": "Arkaner Fokus",
+    "description": "+1 Zauberangriff, −1 Waffenangriff.",
+    "cost": 0,
+    "level": 10,
+    "changes": {
+      "weaponAttack": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaehe-magie",
+    "name": "Zähe Magie",
+    "description": "+1 Zauber-SG; −1 m Bewegung.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "spellDc": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magiescheu",
+    "name": "Magiescheu",
+    "description": "−1 Zauberangriff und −1 Zauber-SG.",
+    "cost": -2,
+    "level": 10,
+    "changes": {
+      "spellAttack": -1,
+      "spellDc": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glueckspilz",
+    "name": "Glückspilz",
+    "description": "+1 auf alle Rettungswürfe.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-pechvogel",
+    "name": "Pechvogel",
+    "description": "−1 auf alle Rettungswürfe.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": -1,
+        "dexterity": -1,
+        "constitution": -1,
+        "intelligence": -1,
+        "wisdom": -1,
+        "charisma": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-kampfbereit",
+    "name": "Immer kampfbereit",
+    "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "passivePerception": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-konzentriert",
+    "name": "Eiserne Konzentration",
+    "description": "Vorteil auf KON-Rettungswürfe; −1 auf Initiative.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-lebhafter-geist",
+    "name": "Lebhafter Geist",
+    "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "ac": -1,
+      "passivePerception": 1,
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1,
+        "Fingerfertigkeit": 1,
+        "Heimlichkeit": 1,
+        "Arkane Kunde": 1,
+        "Geschichte": 1,
+        "Nachforschungen": 1,
+        "Naturkunde": 1,
+        "Religion": 1,
+        "Heilkunde": 1,
+        "Mit Tieren umgehen": 1,
+        "Motiv erkennen": 1,
+        "Überleben": 1,
+        "Wahrnehmung": 1,
+        "Auftreten": 1,
+        "Einschüchtern": 1,
+        "Täuschen": 1,
+        "Überreden": 1,
+        "Flirten": 1,
+        "Körperbeherrschung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-kraftpaket",
+    "name": "Kraftpaket",
+    "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-duennhaeutig",
+    "name": "Dünnhäutig",
+    "description": "Nachteil auf CHA-Rettungswürfe; +2 auf Auftreten.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Auftreten": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vollbusig",
+    "name": "Vollbusig",
+    "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-haesslich",
+    "name": "Hässlich",
+    "description": "Markant unvorteilhafte Gesichtszüge; −2 auf Überzeugen und +1 auf Einschüchtern.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gutaussehend",
+    "name": "Gutaussehend",
+    "description": "Ansprechende Gesichtszüge; +2 auf Überzeugen und +1 auf Auftreten.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fit",
+    "name": "Fit",
+    "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "hp": 2,
+      "skills": {
+        "Athletik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fragil",
+    "name": "Fragil",
+    "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "hp": -4,
+      "skills": {},
+      "saves": {
+        "constitution": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schmaechtig",
+    "name": "Schmächtig",
+    "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+    "cost": 0,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": -2,
+        "Akrobatik": 1,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klein",
+    "name": "Klein",
+    "description": "Unterdurchschnittliche Körpergröße; +2 auf Heimlichkeit und −1 auf Athletik.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gross",
+    "name": "Groß",
+    "description": "Überdurchschnittliche Körpergröße; +2 auf Athletik und −1 auf Heimlichkeit.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-huenenhaft",
+    "name": "Hünenhaft",
+    "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "hp": 4,
+      "skills": {
+        "Athletik": 2,
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-riesenblut",
+    "name": "Riesenblut",
+    "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 Waffenschaden, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "hp": 6,
+      "weaponDamage": 1,
+      "skills": {
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-breitschultrig",
+    "name": "Breitschultrig",
+    "description": "Breite Schultern und kräftiger Oberkörper; +2 auf Athletik, −1 auf Fingerfertigkeit.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Fingerfertigkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-sehnig",
+    "name": "Sehnig",
+    "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelenkig",
+    "name": "Gelenkig",
+    "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Akrobatik": 2,
+        "Fingerfertigkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-steife-gelenke",
+    "name": "Steife Gelenke",
+    "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+    "cost": -2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfe-augen",
+    "name": "Scharfe Augen",
+    "description": "Sehr gute Sehkraft; +2 auf Wahrnehmung und +1 passive Wahrnehmung.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "passivePerception": 3,
+      "skills": {
+        "Wahrnehmung": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwerhoerig",
+    "name": "Schwerhörig",
+    "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+    "cost": -1,
+    "level": 10,
+    "changes": {
+      "passivePerception": -2,
+      "skills": {
+        "Wahrnehmung": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eiserne-lunge",
+    "name": "Eiserne Lunge",
+    "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Athletik": 1
+      },
+      "saves": {
+        "constitution": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schneller-stoffwechsel",
+    "name": "Schneller Stoffwechsel",
+    "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+    "cost": 0,
+    "level": 10,
+    "changes": {
+      "hp": -2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwere-knochen",
+    "name": "Schwere Knochen",
+    "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+    "cost": 1,
+    "level": 10,
+    "changes": {
+      "hp": 3,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-robuste-haut",
+    "name": "Robuste Haut",
+    "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+    "cost": 2,
+    "level": 10,
+    "changes": {
+      "ac": 1,
+      "skills": {
+        "Auftreten": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frost-phobie",
+    "name": "Frostphobie",
+    "description": "Doppelter Kälteschaden und Nachteil bei Rettungswürfen gegen kältebasierte Angriffe.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitz-phobie",
+    "name": "Blitzphobie",
+    "description": "Doppelter Blitzschaden und Nachteil bei Rettungswürfen gegen Blitzangriffe.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gift-phobie",
+    "name": "Giftphobie",
+    "description": "Doppelter Giftschaden und Nachteil bei Rettungswürfen gegen giftbasierte Angriffe.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magie-phobie",
+    "name": "Magiephobie",
+    "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-heilerhaende",
+    "name": "Heilerhände",
+    "description": "Expertise in Heilkunde und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1,
+        "Heilkunde": 8
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-spuernase",
+    "name": "Spürnase",
+    "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "passivePerception": 1,
+      "skills": {
+        "Nachforschungen": 8,
+        "Wahrnehmung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-buehnenbegabt",
+    "name": "Bühnenbegabt",
+    "description": "Expertise in Auftreten und +1 auf Akrobatik.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Akrobatik": 1,
+        "Auftreten": 8
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flinke-finger",
+    "name": "Flinke Finger",
+    "description": "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Fingerfertigkeit": 8,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-faehrtenleser",
+    "name": "Geborener Fährtenleser",
+    "description": "Expertise in Überlebenskunst und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-luegenriecher",
+    "name": "Lügenriecher",
+    "description": "Expertise in Motiv erkennen und +1 auf WEI-Rettungswürfe.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 8
+      },
+      "saves": {
+        "wisdom": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-feueraffinitaet",
+    "name": "Feueraffinität",
+    "description": "Resistenz gegen Feuerschaden.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eisaffinitaet",
+    "name": "Eisaffinität",
+    "description": "Resistenz gegen Kälteschaden.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzaffinitaet",
+    "name": "Blitzaffinität",
+    "description": "Resistenz gegen Blitzschaden.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureaffinitaet",
+    "name": "Säureaffinität",
+    "description": "Resistenz gegen Säureschaden.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallaffinitaet",
+    "name": "Schallaffinität",
+    "description": "Resistenz gegen Donnerschaden.",
+    "cost": 3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftanfaellig",
+    "name": "Giftanfällig",
+    "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+    "cost": -3,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureempfindlich",
+    "name": "Säureempfindlich",
+    "description": "Doppelter Säureschaden.",
+    "cost": -2,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzempfindlich",
+    "name": "Blitzempfindlich",
+    "description": "Doppelter Blitzschaden.",
+    "cost": -2,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallempfindlich",
+    "name": "Schallempfindlich",
+    "description": "Doppelter Donnerschaden.",
+    "cost": -2,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magische-resonanz",
+    "name": "Magische Resonanz",
+    "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+    "cost": -4,
+    "level": 10,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-feuer-phobie",
+    "name": "Feuer Phobie",
+    "description": "Doppelter Feuerschaden und Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-naturkind",
+    "name": "In der Natur aufgewachsen",
+    "description": "Expertise in Naturkunde und +2 auf Mit Tieren umgehen.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Naturkunde": 12,
+        "Mit Tieren umgehen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flink",
+    "name": "Flinke Füße",
+    "description": "+2 m Bewegung, −1 RK.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "ac": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-standfest",
+    "name": "Standfest",
+    "description": "+1 RK, −1 m Bewegung.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "ac": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-wachsam",
+    "name": "Wachsamer Blick",
+    "description": "+2 passive Wahrnehmung und +1 Initiative.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "passivePerception": 2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vertraeumt",
+    "name": "Verträumt",
+    "description": "−2 Initiative; +2 auf Arkane Kunde.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Arkane Kunde": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaeh",
+    "name": "Zäh wie Leder",
+    "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "hp": 4,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zerbrechlich",
+    "name": "Zerbrechlich",
+    "description": "−3 maximale TP, +2 auf Akrobatik.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "hp": -3,
+      "skills": {
+        "Akrobatik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-mutig",
+    "name": "Mutiges Herz",
+    "description": "+2 auf Rettungswürfe gegen Furcht.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-aengstlich",
+    "name": "Leicht zu erschrecken",
+    "description": "−2 auf Rettungswürfe gegen Furcht; +2 auf Heimlichkeit.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftfest",
+    "name": "Giftfeste Konstitution",
+    "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frostempfindlich",
+    "name": "Frostempfindlich",
+    "description": "Doppelter Kälteschaden.",
+    "cost": -2,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glutgewoehnt",
+    "name": "An Glut gewöhnt",
+    "description": "Resistenz gegen Feuerschaden; −1 Initiative.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelehrt",
+    "name": "Bücherwurm",
+    "description": "Expertise in Geschichte; −1 auf Athletik.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Geschichte": 12
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-empathisch",
+    "name": "Menschenkenner",
+    "description": "+2 auf Motiv erkennen und Überzeugen.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schroff",
+    "name": "Schroffe Ehrlichkeit",
+    "description": "+2 auf Einschüchtern, −2 auf Täuschen.",
+    "cost": 0,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 2,
+        "Täuschen": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-silberzunge",
+    "name": "Silberzunge",
+    "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-ungeschickt",
+    "name": "Zwei linke Hände",
+    "description": "−2 auf Fingerfertigkeit; +1 maximale TP.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "hp": 1,
+      "skills": {
+        "Fingerfertigkeit": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfschuetze",
+    "name": "Ruhige Sehne",
+    "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klingenmut",
+    "name": "Klingenmut",
+    "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+    "cost": 0,
+    "level": 20,
+    "changes": {
+      "ac": -1,
+      "weaponDamage": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-arkaner-fokus",
+    "name": "Arkaner Fokus",
+    "description": "+1 Zauberangriff, −1 Waffenangriff.",
+    "cost": 0,
+    "level": 20,
+    "changes": {
+      "weaponAttack": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaehe-magie",
+    "name": "Zähe Magie",
+    "description": "+1 Zauber-SG; −1 m Bewegung.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "spellDc": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magiescheu",
+    "name": "Magiescheu",
+    "description": "−1 Zauberangriff und −1 Zauber-SG.",
+    "cost": -2,
+    "level": 20,
+    "changes": {
+      "spellAttack": -1,
+      "spellDc": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glueckspilz",
+    "name": "Glückspilz",
+    "description": "+1 auf alle Rettungswürfe.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-pechvogel",
+    "name": "Pechvogel",
+    "description": "−1 auf alle Rettungswürfe.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": -1,
+        "dexterity": -1,
+        "constitution": -1,
+        "intelligence": -1,
+        "wisdom": -1,
+        "charisma": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-kampfbereit",
+    "name": "Immer kampfbereit",
+    "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "passivePerception": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-konzentriert",
+    "name": "Eiserne Konzentration",
+    "description": "Vorteil auf KON-Rettungswürfe; −1 auf Initiative.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-lebhafter-geist",
+    "name": "Lebhafter Geist",
+    "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "ac": -1,
+      "passivePerception": 1,
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1,
+        "Fingerfertigkeit": 1,
+        "Heimlichkeit": 1,
+        "Arkane Kunde": 1,
+        "Geschichte": 1,
+        "Nachforschungen": 1,
+        "Naturkunde": 1,
+        "Religion": 1,
+        "Heilkunde": 1,
+        "Mit Tieren umgehen": 1,
+        "Motiv erkennen": 1,
+        "Überleben": 1,
+        "Wahrnehmung": 1,
+        "Auftreten": 1,
+        "Einschüchtern": 1,
+        "Täuschen": 1,
+        "Überreden": 1,
+        "Flirten": 1,
+        "Körperbeherrschung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-kraftpaket",
+    "name": "Kraftpaket",
+    "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-duennhaeutig",
+    "name": "Dünnhäutig",
+    "description": "Nachteil auf CHA-Rettungswürfe; +2 auf Auftreten.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Auftreten": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vollbusig",
+    "name": "Vollbusig",
+    "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-haesslich",
+    "name": "Hässlich",
+    "description": "Markant unvorteilhafte Gesichtszüge; −2 auf Überzeugen und +1 auf Einschüchtern.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gutaussehend",
+    "name": "Gutaussehend",
+    "description": "Ansprechende Gesichtszüge; +2 auf Überzeugen und +1 auf Auftreten.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fit",
+    "name": "Fit",
+    "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "hp": 2,
+      "skills": {
+        "Athletik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fragil",
+    "name": "Fragil",
+    "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "hp": -4,
+      "skills": {},
+      "saves": {
+        "constitution": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schmaechtig",
+    "name": "Schmächtig",
+    "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+    "cost": 0,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": -2,
+        "Akrobatik": 1,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klein",
+    "name": "Klein",
+    "description": "Unterdurchschnittliche Körpergröße; +2 auf Heimlichkeit und −1 auf Athletik.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gross",
+    "name": "Groß",
+    "description": "Überdurchschnittliche Körpergröße; +2 auf Athletik und −1 auf Heimlichkeit.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-huenenhaft",
+    "name": "Hünenhaft",
+    "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "hp": 4,
+      "skills": {
+        "Athletik": 2,
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-riesenblut",
+    "name": "Riesenblut",
+    "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 Waffenschaden, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "hp": 6,
+      "weaponDamage": 1,
+      "skills": {
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-breitschultrig",
+    "name": "Breitschultrig",
+    "description": "Breite Schultern und kräftiger Oberkörper; +2 auf Athletik, −1 auf Fingerfertigkeit.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Fingerfertigkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-sehnig",
+    "name": "Sehnig",
+    "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelenkig",
+    "name": "Gelenkig",
+    "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Akrobatik": 2,
+        "Fingerfertigkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-steife-gelenke",
+    "name": "Steife Gelenke",
+    "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+    "cost": -2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfe-augen",
+    "name": "Scharfe Augen",
+    "description": "Sehr gute Sehkraft; +2 auf Wahrnehmung und +1 passive Wahrnehmung.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "passivePerception": 3,
+      "skills": {
+        "Wahrnehmung": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwerhoerig",
+    "name": "Schwerhörig",
+    "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+    "cost": -1,
+    "level": 20,
+    "changes": {
+      "passivePerception": -2,
+      "skills": {
+        "Wahrnehmung": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eiserne-lunge",
+    "name": "Eiserne Lunge",
+    "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Athletik": 1
+      },
+      "saves": {
+        "constitution": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schneller-stoffwechsel",
+    "name": "Schneller Stoffwechsel",
+    "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+    "cost": 0,
+    "level": 20,
+    "changes": {
+      "hp": -2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwere-knochen",
+    "name": "Schwere Knochen",
+    "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+    "cost": 1,
+    "level": 20,
+    "changes": {
+      "hp": 3,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-robuste-haut",
+    "name": "Robuste Haut",
+    "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+    "cost": 2,
+    "level": 20,
+    "changes": {
+      "ac": 1,
+      "skills": {
+        "Auftreten": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frost-phobie",
+    "name": "Frostphobie",
+    "description": "Doppelter Kälteschaden und Nachteil bei Rettungswürfen gegen kältebasierte Angriffe.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitz-phobie",
+    "name": "Blitzphobie",
+    "description": "Doppelter Blitzschaden und Nachteil bei Rettungswürfen gegen Blitzangriffe.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gift-phobie",
+    "name": "Giftphobie",
+    "description": "Doppelter Giftschaden und Nachteil bei Rettungswürfen gegen giftbasierte Angriffe.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magie-phobie",
+    "name": "Magiephobie",
+    "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-heilerhaende",
+    "name": "Heilerhände",
+    "description": "Expertise in Heilkunde und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1,
+        "Heilkunde": 12
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-spuernase",
+    "name": "Spürnase",
+    "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "passivePerception": 1,
+      "skills": {
+        "Nachforschungen": 12,
+        "Wahrnehmung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-buehnenbegabt",
+    "name": "Bühnenbegabt",
+    "description": "Expertise in Auftreten und +1 auf Akrobatik.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Akrobatik": 1,
+        "Auftreten": 12
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flinke-finger",
+    "name": "Flinke Finger",
+    "description": "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Fingerfertigkeit": 12,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-faehrtenleser",
+    "name": "Geborener Fährtenleser",
+    "description": "Expertise in Überlebenskunst und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-luegenriecher",
+    "name": "Lügenriecher",
+    "description": "Expertise in Motiv erkennen und +1 auf WEI-Rettungswürfe.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 12
+      },
+      "saves": {
+        "wisdom": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-feueraffinitaet",
+    "name": "Feueraffinität",
+    "description": "Resistenz gegen Feuerschaden.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eisaffinitaet",
+    "name": "Eisaffinität",
+    "description": "Resistenz gegen Kälteschaden.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzaffinitaet",
+    "name": "Blitzaffinität",
+    "description": "Resistenz gegen Blitzschaden.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureaffinitaet",
+    "name": "Säureaffinität",
+    "description": "Resistenz gegen Säureschaden.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallaffinitaet",
+    "name": "Schallaffinität",
+    "description": "Resistenz gegen Donnerschaden.",
+    "cost": 3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftanfaellig",
+    "name": "Giftanfällig",
+    "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+    "cost": -3,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureempfindlich",
+    "name": "Säureempfindlich",
+    "description": "Doppelter Säureschaden.",
+    "cost": -2,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzempfindlich",
+    "name": "Blitzempfindlich",
+    "description": "Doppelter Blitzschaden.",
+    "cost": -2,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallempfindlich",
+    "name": "Schallempfindlich",
+    "description": "Doppelter Donnerschaden.",
+    "cost": -2,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magische-resonanz",
+    "name": "Magische Resonanz",
+    "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+    "cost": -4,
+    "level": 20,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-feuer-phobie",
+    "name": "Feuer Phobie",
+    "description": "Doppelter Feuerschaden und Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-naturkind",
+    "name": "In der Natur aufgewachsen",
+    "description": "Expertise in Naturkunde und +2 auf Mit Tieren umgehen.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Naturkunde": 18,
+        "Mit Tieren umgehen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flink",
+    "name": "Flinke Füße",
+    "description": "+2 m Bewegung, −1 RK.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "ac": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-standfest",
+    "name": "Standfest",
+    "description": "+1 RK, −1 m Bewegung.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "ac": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-wachsam",
+    "name": "Wachsamer Blick",
+    "description": "+2 passive Wahrnehmung und +1 Initiative.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "passivePerception": 2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vertraeumt",
+    "name": "Verträumt",
+    "description": "−2 Initiative; +2 auf Arkane Kunde.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Arkane Kunde": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaeh",
+    "name": "Zäh wie Leder",
+    "description": "+4 maximale TP; aktuelle TP werden nicht aufgefüllt.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "hp": 4,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zerbrechlich",
+    "name": "Zerbrechlich",
+    "description": "−3 maximale TP, +2 auf Akrobatik.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "hp": -3,
+      "skills": {
+        "Akrobatik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-mutig",
+    "name": "Mutiges Herz",
+    "description": "+2 auf Rettungswürfe gegen Furcht.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-aengstlich",
+    "name": "Leicht zu erschrecken",
+    "description": "−2 auf Rettungswürfe gegen Furcht; +2 auf Heimlichkeit.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftfest",
+    "name": "Giftfeste Konstitution",
+    "description": "Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frostempfindlich",
+    "name": "Frostempfindlich",
+    "description": "Doppelter Kälteschaden.",
+    "cost": -2,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glutgewoehnt",
+    "name": "An Glut gewöhnt",
+    "description": "Resistenz gegen Feuerschaden; −1 Initiative.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelehrt",
+    "name": "Bücherwurm",
+    "description": "Expertise in Geschichte; −1 auf Athletik.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Geschichte": 18
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-empathisch",
+    "name": "Menschenkenner",
+    "description": "+2 auf Motiv erkennen und Überzeugen.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schroff",
+    "name": "Schroffe Ehrlichkeit",
+    "description": "+2 auf Einschüchtern, −2 auf Täuschen.",
+    "cost": 0,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 2,
+        "Täuschen": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-silberzunge",
+    "name": "Silberzunge",
+    "description": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-ungeschickt",
+    "name": "Zwei linke Hände",
+    "description": "−2 auf Fingerfertigkeit; +1 maximale TP.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "hp": 1,
+      "skills": {
+        "Fingerfertigkeit": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfschuetze",
+    "name": "Ruhige Sehne",
+    "description": "+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klingenmut",
+    "name": "Klingenmut",
+    "description": "+1 Schaden mit Schwertern und Dolchen; −1 RK.",
+    "cost": 0,
+    "level": 30,
+    "changes": {
+      "ac": -1,
+      "weaponDamage": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-arkaner-fokus",
+    "name": "Arkaner Fokus",
+    "description": "+1 Zauberangriff, −1 Waffenangriff.",
+    "cost": 0,
+    "level": 30,
+    "changes": {
+      "weaponAttack": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-zaehe-magie",
+    "name": "Zähe Magie",
+    "description": "+1 Zauber-SG; −1 m Bewegung.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "spellDc": 1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magiescheu",
+    "name": "Magiescheu",
+    "description": "−1 Zauberangriff und −1 Zauber-SG.",
+    "cost": -2,
+    "level": 30,
+    "changes": {
+      "spellAttack": -1,
+      "spellDc": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-glueckspilz",
+    "name": "Glückspilz",
+    "description": "+1 auf alle Rettungswürfe.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-pechvogel",
+    "name": "Pechvogel",
+    "description": "−1 auf alle Rettungswürfe.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {
+        "strength": -1,
+        "dexterity": -1,
+        "constitution": -1,
+        "intelligence": -1,
+        "wisdom": -1,
+        "charisma": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-kampfbereit",
+    "name": "Immer kampfbereit",
+    "description": "Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "passivePerception": -1,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-konzentriert",
+    "name": "Eiserne Konzentration",
+    "description": "Vorteil auf KON-Rettungswürfe; −1 auf Initiative.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-lebhafter-geist",
+    "name": "Lebhafter Geist",
+    "description": "+1 auf alle Fertigkeitsproben; −1 RK.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "ac": -1,
+      "passivePerception": 1,
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1,
+        "Fingerfertigkeit": 1,
+        "Heimlichkeit": 1,
+        "Arkane Kunde": 1,
+        "Geschichte": 1,
+        "Nachforschungen": 1,
+        "Naturkunde": 1,
+        "Religion": 1,
+        "Heilkunde": 1,
+        "Mit Tieren umgehen": 1,
+        "Motiv erkennen": 1,
+        "Überleben": 1,
+        "Wahrnehmung": 1,
+        "Auftreten": 1,
+        "Einschüchtern": 1,
+        "Täuschen": 1,
+        "Überreden": 1,
+        "Flirten": 1,
+        "Körperbeherrschung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-kraftpaket",
+    "name": "Kraftpaket",
+    "description": "+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-duennhaeutig",
+    "name": "Dünnhäutig",
+    "description": "Nachteil auf CHA-Rettungswürfe; +2 auf Auftreten.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Auftreten": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-vollbusig",
+    "name": "Vollbusig",
+    "description": "Ausgeprägte Brustform; +1 auf Auftreten.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-haesslich",
+    "name": "Hässlich",
+    "description": "Markant unvorteilhafte Gesichtszüge; −2 auf Überzeugen und +1 auf Einschüchtern.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Einschüchtern": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gutaussehend",
+    "name": "Gutaussehend",
+    "description": "Ansprechende Gesichtszüge; +2 auf Überzeugen und +1 auf Auftreten.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Auftreten": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fit",
+    "name": "Fit",
+    "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "hp": 2,
+      "skills": {
+        "Athletik": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-fragil",
+    "name": "Fragil",
+    "description": "Empfindlicher Körperbau; −4 maximale TP und −1 auf KON-Rettungswürfe.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "hp": -4,
+      "skills": {},
+      "saves": {
+        "constitution": -1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schmaechtig",
+    "name": "Schmächtig",
+    "description": "Schmaler, leichter Körperbau; −2 auf Athletik, +1 auf Akrobatik und Heimlichkeit.",
+    "cost": 0,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": -2,
+        "Akrobatik": 1,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-klein",
+    "name": "Klein",
+    "description": "Unterdurchschnittliche Körpergröße; +2 auf Heimlichkeit und −1 auf Athletik.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": -1,
+        "Heimlichkeit": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gross",
+    "name": "Groß",
+    "description": "Überdurchschnittliche Körpergröße; +2 auf Athletik und −1 auf Heimlichkeit.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-huenenhaft",
+    "name": "Hünenhaft",
+    "description": "Sehr großer, kräftiger Körper; +4 maximale TP und +2 auf Athletik, −2 auf Akrobatik.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "hp": 4,
+      "skills": {
+        "Athletik": 2,
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-riesenblut",
+    "name": "Riesenblut",
+    "description": "Außergewöhnlich massiger Körperbau; +6 maximale TP und +1 Waffenschaden, −1 Initiative und −1 auf Heimlichkeit. Keine automatische Änderung der Rasse oder Abstammungsakte.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "hp": 6,
+      "weaponDamage": 1,
+      "skills": {
+        "Heimlichkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-breitschultrig",
+    "name": "Breitschultrig",
+    "description": "Breite Schultern und kräftiger Oberkörper; +2 auf Athletik, −1 auf Fingerfertigkeit.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": 2,
+        "Fingerfertigkeit": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-sehnig",
+    "name": "Sehnig",
+    "description": "Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": 1,
+        "Akrobatik": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gelenkig",
+    "name": "Gelenkig",
+    "description": "Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Akrobatik": 2,
+        "Fingerfertigkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-steife-gelenke",
+    "name": "Steife Gelenke",
+    "description": "Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.",
+    "cost": -2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Akrobatik": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-scharfe-augen",
+    "name": "Scharfe Augen",
+    "description": "Sehr gute Sehkraft; +2 auf Wahrnehmung und +1 passive Wahrnehmung.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "passivePerception": 3,
+      "skills": {
+        "Wahrnehmung": 2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwerhoerig",
+    "name": "Schwerhörig",
+    "description": "Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.",
+    "cost": -1,
+    "level": 30,
+    "changes": {
+      "passivePerception": -2,
+      "skills": {
+        "Wahrnehmung": -2
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eiserne-lunge",
+    "name": "Eiserne Lunge",
+    "description": "Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Athletik": 1
+      },
+      "saves": {
+        "constitution": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-schneller-stoffwechsel",
+    "name": "Schneller Stoffwechsel",
+    "description": "Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.",
+    "cost": 0,
+    "level": 30,
+    "changes": {
+      "hp": -2,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schwere-knochen",
+    "name": "Schwere Knochen",
+    "description": "Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.",
+    "cost": 1,
+    "level": 30,
+    "changes": {
+      "hp": 3,
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-robuste-haut",
+    "name": "Robuste Haut",
+    "description": "Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.",
+    "cost": 2,
+    "level": 30,
+    "changes": {
+      "ac": 1,
+      "skills": {
+        "Auftreten": -1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-frost-phobie",
+    "name": "Frostphobie",
+    "description": "Doppelter Kälteschaden und Nachteil bei Rettungswürfen gegen kältebasierte Angriffe.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitz-phobie",
+    "name": "Blitzphobie",
+    "description": "Doppelter Blitzschaden und Nachteil bei Rettungswürfen gegen Blitzangriffe.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-gift-phobie",
+    "name": "Giftphobie",
+    "description": "Doppelter Giftschaden und Nachteil bei Rettungswürfen gegen giftbasierte Angriffe.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magie-phobie",
+    "name": "Magiephobie",
+    "description": "Nachteil bei Rettungswürfen gegen Zauber, Gebete und magische Lieder. Gewöhnliche Waffenangriffe bleiben unberührt.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-heilerhaende",
+    "name": "Heilerhände",
+    "description": "Expertise in Heilkunde und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1,
+        "Heilkunde": 18
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-spuernase",
+    "name": "Spürnase",
+    "description": "Expertise in Nachforschungen und +1 auf Wahrnehmung.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "passivePerception": 1,
+      "skills": {
+        "Nachforschungen": 18,
+        "Wahrnehmung": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-buehnenbegabt",
+    "name": "Bühnenbegabt",
+    "description": "Expertise in Auftreten und +1 auf Akrobatik.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Akrobatik": 1,
+        "Auftreten": 18
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-flinke-finger",
+    "name": "Flinke Finger",
+    "description": "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Fingerfertigkeit": 18,
+        "Heimlichkeit": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-faehrtenleser",
+    "name": "Geborener Fährtenleser",
+    "description": "Expertise in Überlebenskunst und +1 auf Naturkunde.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Naturkunde": 1
+      },
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-luegenriecher",
+    "name": "Lügenriecher",
+    "description": "Expertise in Motiv erkennen und +1 auf WEI-Rettungswürfe.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {
+        "Motiv erkennen": 18
+      },
+      "saves": {
+        "wisdom": 1
+      }
+    }
+  },
+  {
+    "id": "development-trait-feueraffinitaet",
+    "name": "Feueraffinität",
+    "description": "Resistenz gegen Feuerschaden.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-eisaffinitaet",
+    "name": "Eisaffinität",
+    "description": "Resistenz gegen Kälteschaden.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzaffinitaet",
+    "name": "Blitzaffinität",
+    "description": "Resistenz gegen Blitzschaden.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureaffinitaet",
+    "name": "Säureaffinität",
+    "description": "Resistenz gegen Säureschaden.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallaffinitaet",
+    "name": "Schallaffinität",
+    "description": "Resistenz gegen Donnerschaden.",
+    "cost": 3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-giftanfaellig",
+    "name": "Giftanfällig",
+    "description": "Doppelter Giftschaden und −1 auf Rettungswürfe gegen Gift.",
+    "cost": -3,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-saeureempfindlich",
+    "name": "Säureempfindlich",
+    "description": "Doppelter Säureschaden.",
+    "cost": -2,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-blitzempfindlich",
+    "name": "Blitzempfindlich",
+    "description": "Doppelter Blitzschaden.",
+    "cost": -2,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-schallempfindlich",
+    "name": "Schallempfindlich",
+    "description": "Doppelter Donnerschaden.",
+    "cost": -2,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  },
+  {
+    "id": "development-trait-magische-resonanz",
+    "name": "Magische Resonanz",
+    "description": "Doppelter magischer Schaden aller Schadensarten. Nichtmagischer Schaden bleibt normal.",
+    "cost": -4,
+    "level": 30,
+    "changes": {
+      "skills": {},
+      "saves": {}
+    }
+  }
+]

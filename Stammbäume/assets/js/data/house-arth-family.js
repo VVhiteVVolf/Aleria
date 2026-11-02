@@ -372,7 +372,10 @@ export const HOUSE_ARTH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
       familyRole: 'affair',
       extensions: { chartRepeatForPartnershipIds: ['affair-owain-sylvia'] }
     }),
-    person('olwen-arth', 'Olwen Arth', 'female', '1697', ''),
+    person('olwen-arth', 'Olwen Arth', 'female', '1697', '', ARTH_HOUSE_ID, {
+      title: 'Herold des Hauses Arth',
+      extensions: { registryManagedFields: ['title'], registryManagedFieldRevisions: { title: 16 } }
+    }),
     person('melwas-crafanc', 'Melwas Crafanc', 'male', '1696', '', 'house-crafanc'),
     person('tarrant-1703-arth', 'Tarrant Arth', 'male', '1703', ''),
     person('talara-blodyn', 'Talara Blodyn', 'female', '1704', '1720', 'house-blodyn', {
@@ -573,7 +576,8 @@ export const HOUSE_ARTH_FAMILY = Object.freeze(withDunfalSourceCounterUpgrade({
   extensions: {
     sourceNote: 'Personen, Beziehungen, Amtsfolge und Portraitquellen folgen der bereitgestellten Arth-Tabelle sowie ihrer eingebetteten Stammbaumgrafik. Vier Auslassungen bilden die eine strikt serielle Hauptlinie Rhun–Cadfael–Tarrant–Caradoc–Traharyan; parallele Auslassungszeichen der Seitenlinien werden gemäß der absoluten Zeitsprungregel als beanspruchte Abstammungen dokumentiert, aber nicht als konkurrierende Diagrammknoten wiederholt. Die ausdrücklich bestätigten Hausgründungen Pawen, Crafanc, Cwingod, Unigol und Eirth hängen jeweils direkt unter ihrem Gründerpaar. Haus Morthwyll und Haus Sélwyn sind dagegen eigenständige Vasallenhäuser der Arth: Heddwen Arth wird an Sayres Morthwyll und Tegwen Arth an Morgan Sélwyn wegverheiratet; beide Ehen erzeugen keinen Kadettenhausknoten. Sämtliche übrigen Arth-Linien, die durch Ehe in einem anderen Haus weiterlaufen, besitzen einen direkten Wegverheiratet-Knoten. Offensichtliche Jahrhundertfehler 1952/1955/1967 wurden zu 1652/1655/1697 berichtigt und direkt an den Personen notiert; 1620 bei Traharyan ist ein Amtsbeginn. Die Pysgod-Gegenakte löst den Widerspruch Griflet/Cynwrig zugunsten Cynwrigs, die Saethwyr-Gegenakte Melyns Geschlecht und Familie. Talara Blodyn ist nur in der eingebetteten Grafik benannt. Die Marwolaeth-Gegenakte ergänzt Gwendolens Geburtsjahr 1679 und Cadfaels Todesjahr 1740. Caradocs individuelle Tumblr-Quelle ist nicht mehr abrufbar und wird nicht durch das Portrait seines späteren Namensvetters ersetzt. Generische Silhouetten und unbenannte Abschlussplatzhalter wurden nicht als individuelle Portraits oder zusätzliche Ehen importiert.',
     blankFamily: false,
-    sourceRevision: 14,
+    sourceRevision: 16,
+    registryManagedEntitySourceRevision: 14,
     registryManagedHouseProfileFields: [
       'rankId',
       'seat',

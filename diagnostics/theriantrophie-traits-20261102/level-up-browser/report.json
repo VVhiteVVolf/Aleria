@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "views": [
+    {
+      "layout": "desktop",
+      "width": 1194,
+      "scrollWidth": 1194
+    },
+    {
+      "layout": "phone",
+      "width": 384,
+      "scrollWidth": 384
+    }
+  ],
+  "level": 5,
+  "attacks": 1,
+  "traits": 8,
+  "aptitudeFilter": 10,
+  "uniqueFilter": 20,
+  "bloodlineFilter": 10,
+  "therianthropyFilter": 8,
+  "symbiosisFilter": 4,
+  "clanEmblems": 4,
+  "negativeBalanceAllowed": true,
+  "existingEquipmentPreserved": true,
+  "externalWritesBlocked": true,
+  "errors": []
+}

@@ -29,7 +29,10 @@ function normalizeCharacterBiographyStats(stats) {
 }
 
 function getCharacterBiographyProfileSource(char = {}) {
-  const source = char.biography && typeof char.biography === 'object' ? char.biography : {};
+  const stored = char.biography && typeof char.biography === 'object' ? char.biography : null;
+  const source = globalThis.AleriaBiographyCatalog?.resolve(stored, {
+    characterId: char.id, worldPersonId: char.identity?.worldPersonId || char.genealogy?.worldPersonId
+  }) || stored || {};
   return {
     schema: 'aleria.biography-module',
     schemaVersion: 1,
@@ -49,6 +52,7 @@ function isCharacterBiographyEmpty(draft) {
     && !String(bio.historyText || '').trim()
     && !(draft?.stats || []).length
     && !(bio.abilities || []).length
+    && !(bio.knightMentors || []).length
     && !(bio.connections || []).length
     && !(bio.works || []).length
     && !(bio.trivia || []).length
@@ -78,64 +82,10 @@ function getCharacterBiographyEntryMeta() {
   return { title: name, image: portrait };
 }
 
-// Rendert exakt dieselbe "fertiges Bio-Modul"-Optik wie ein Story-Modul mit biographyPage:true
-// (module-renderer.js#buildBiographyPage), nur ohne die dortige Modul-Seitennavigation, die an
-// den aktuell geöffneten Modul-Eintrag gebunden ist und hier keinen Sinn ergibt. Alle
-// verwendeten Bausteine (buildBiographyPortrait, buildBiographyHeading, ...) sind reine,
-// parameterbasierte Funktionen aus module-renderer.js - unverändert wiederverwendet.
+// Character sheets use the same stateless page renderer as modules and the
+// family tree; their edit state and persistence stay within this feature.
 function buildCharacterBiographyReadView(page, entry) {
-  const data = sanitizeBiographyData(page.biography || {});
-  const stats = Array.isArray(page.stats) ? page.stats : [];
-  const sideWidth = Math.max(35, Math.min(100, Number(data.sideWidth) || 100));
-  const connectionPortraitHeight = Math.max(44, Math.min(140, Number(data.connectionPortraitHeight) || 68));
-  const connectionTextOffset = Math.max(0, Math.min(80, Number(data.connectionTextOffset) || 0));
-  const quote = page.quote ? `
-    <div class="biography-quote-card">
-      <div class="biography-quote-mark">&ldquo;</div>
-      <div>${sanitizeContentHtml(page.quote)}</div>
-      ${page.quoteBy ? `<span>${escapeHtml(page.quoteBy)}</span>` : ''}
-    </div>` : '';
-  const abilities = buildBiographyTraitList(data.abilities);
-  const connections = data.connections.length ? `
-    <div class="biography-connections">
-      ${data.connections.map(buildBiographyConnectionItem).join('')}
-    </div>` : '';
-  return `
-    <div class="biography-page" style="--biography-side-width:${sideWidth}%;--biography-connection-height:${connectionPortraitHeight}px;--biography-connection-text-offset:${connectionTextOffset}px;">
-      <aside class="biography-left">
-        ${buildBiographyPortrait(page, entry)}
-        ${stats.length ? `
-          <div class="biography-info-table">
-            <div class="biography-side-label">Infotabelle</div>
-            ${stats.map(([label, value]) => `
-              <div class="biography-info-row"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></div>`).join('')}
-          </div>` : ''}
-        ${quote}
-      </aside>
-      <main class="biography-main">
-        ${buildBiographyHeading(data.biographyTitle)}
-        <div class="biography-copy">${sanitizeContentHtml(data.biographyText || '')}</div>
-        ${buildBiographyExtraSections(data.extraSections, 'afterIntro')}
-        ${buildBiographyHeading(data.abilitiesTitle)}
-        ${abilities}
-        ${buildBiographyHeading(data.historyTitle)}
-        <div class="biography-copy">${sanitizeContentHtml(data.historyText || '')}</div>
-        ${buildBiographyHeading(data.worksTitle)}
-        ${buildBiographyLines(data.works, 'compact')}
-        ${buildBiographyExtraSections(data.extraSections, 'afterWorks')}
-      </main>
-      <aside class="biography-right">
-        ${buildBiographyHeading(data.triviaTitle)}
-        ${buildBiographyLines(data.trivia)}
-        ${buildBiographyHeading(data.quotesTitle)}
-        ${buildBiographyLines(data.quotes, 'quotes')}
-        ${buildBiographyHeading(data.connectionsTitle)}
-        ${connections}
-        ${buildBiographyHeading(data.documentsTitle)}
-        ${buildBiographyDocuments(data.documents)}
-      </aside>
-      ${data.footer ? `<div class="biography-footer">${escapeHtml(data.footer)}</div>` : ''}
-    </div>`;
+  return buildBiographyReadView(page, entry);
 }
 
 function renderCharacterBiographyEmptyState(target) {
@@ -172,8 +122,9 @@ function renderCharacterBiographyEditorView(target, draft) {
   target.innerHTML = `
     <div class="cp-biography-edit">
       <div class="cp-biography-edit-toolbar">
+        <button class="comment-btn-cancel cp-biography-mobile-preview-toggle" type="button" data-cp-biography-action="toggle-preview" aria-expanded="false">Vorschau anzeigen</button>
         <button class="comment-btn-cancel" type="button" data-cp-biography-action="toggle-maximize">${_characterBiographyMaximized ? '⤡ Verkleinern' : '⤢ Vergrößern'}</button>
-        <button class="char-save-btn" type="button" data-cp-biography-action="finish">✓ Vorschau anzeigen</button>
+        <button class="char-save-btn" type="button" data-cp-biography-action="finish">✓ Fertig</button>
       </div>
       <div class="cp-biography-edit-body">
         <div class="cp-biography-edit-preview" id="cp-biography-preview">
@@ -298,6 +249,13 @@ function toggleCharacterBiographyMaximize() {
 function handleCharacterBiographyPanelAction(trigger) {
   const action = trigger?.dataset?.cpBiographyAction || '';
   if (!action || !trigger.closest('#cp-biography-editor')) return false;
+  if (action === 'toggle-preview') {
+    const edit = trigger.closest('.cp-biography-edit');
+    const visible = edit.classList.toggle('is-preview-visible');
+    trigger.setAttribute('aria-expanded', String(visible));
+    trigger.textContent = visible ? 'Zur Bearbeitung' : 'Vorschau anzeigen';
+    return true;
+  }
   if (action === 'create') return createCharacterBiographyFromExisting(), true;
   if (action === 'edit') return editCharacterBiography(), true;
   if (action === 'finish') return finishCharacterBiographyEditing(), true;
@@ -309,6 +267,7 @@ function handleCharacterBiographyPanelAction(trigger) {
 function handleCharacterBiographyEditorAction(trigger) {
   const action = trigger?.dataset?.moduleEditorAction || '';
   if (!action || !trigger.closest('#cp-biography-editor')) return false;
+  if (action === 'add-biography-mentor-row' || action === 'remove-biography-mentor-row') return editModuleBiographyMentorRow(trigger, action === 'remove-biography-mentor-row'), true;
   if (action === 'add-biography-stat-row') return addModuleBiographyStatRow(trigger), true;
   if (action === 'remove-biography-stat-row') return removeModuleBiographyStatRow(trigger), true;
   if (action === 'add-biography-ability-row') return addModuleBiographyAbilityRow(trigger), true;

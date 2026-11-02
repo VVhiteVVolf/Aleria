@@ -11,6 +11,7 @@ const PROFILES = {
   cat: { genus: 'Katzen', limit: 2, size: 'Winzig', scores: [3, 16, 10, 3, 14, 10], die: 4, movement: 9, attack: 'Krallen', damage: '1d4', damageBonus: -2, damageType: 'Hieb', attribute: 'dexterity', abilities: [['Kletterin', 'Bewegt sich sicher auf schmalen Vorsprüngen und klettert bis zu 6 m; schwierige Stellen benötigen passende Proben.'], ['Leiser Schritt', 'Schleicht und beobachtet aufmerksam. Heimlichkeit wird gegen die Wahrnehmung der Umgebung geprüft.']] },
   kite: RAPTOR_PROFILE,
   hawk: RAPTOR_PROFILE,
+  songbird: { genus: 'Vögel', limit: 2, size: 'Winzig', scores: [1, 16, 8, 2, 14, 12], die: 4, movement: 3, attack: null, abilities: [['Flug', 'Fliegt bis zu 12 m bei freiem Luftraum und nutzbaren Flügeln; am Boden bis zu 3 m.'], ['Singvogel', 'Verständigt sich durch Rufe und Gesang. Kein abgerichteter Greifvogel und kein automatisch kämpfender Begleiter.']] },
   peacock: { genus: 'Vögel', limit: 2, size: 'Klein', scores: [4, 12, 10, 2, 12, 14], die: 4, movement: 6, attack: 'Schnabelhieb', damage: '1d4', damageBonus: -2, damageType: 'Stich', attribute: 'dexterity', abilities: [['Kurzer Flug', 'Kann kurze Strecken bis zu 9 m fliegen, um einen erhöhten Sitzplatz oder Schutz zu erreichen.'], ['Lauter Ruf', 'Sein Ruf ist weithin hörbar. Das Rad und die Rufe dienen der Balz und Verständigung.']] }
 };
 
@@ -34,8 +35,8 @@ export function createHouseholdCompanion(spec) {
       armorClass: { base: 10, dexterityMode: 'full', override: null },
       combat: { movement: spec.movement || base.movement },
       skills: [{ id: `${itemId}-perception`, name: 'Wahrnehmung', attributeKey: 'wisdom', proficiency: 'trained' }],
-      weapons: [{ id: `${itemId}-natural`, name: base.attack, weaponType: 'natural', damageFormula: base.damage, damageType: base.damageType, attackAttribute: base.attribute,
-        damageBonus: base.damageBonus || 0, proficient: true, equipped: true, activationType: 'action', range: base.size === 'Groß' ? 'Nahkampf · 1,5 m' : 'Nahkampf · 0,5 m', properties: 'Naturwaffe' }],
+      weapons: base.attack ? [{ id: `${itemId}-natural`, name: base.attack, weaponType: 'natural', damageFormula: base.damage, damageType: base.damageType, attackAttribute: base.attribute,
+        damageBonus: base.damageBonus || 0, proficient: true, equipped: true, activationType: 'action', range: base.size === 'Groß' ? 'Nahkampf · 1,5 m' : 'Nahkampf · 0,5 m', properties: 'Naturwaffe' }] : [],
       abilities: [...base.abilities, ...(spec.abilities || [])].map(([name, description], i) => ({ id: `${itemId}-ability-${i}`, name, description, activationType: 'passive', active: true, combatUsable: false })),
       armorItems: [], resources: [], techniques: [], quirks: [], conditions: [], magic: { enabled: false, spells: [] }
     },

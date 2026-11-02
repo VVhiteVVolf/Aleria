@@ -365,3 +365,9 @@
     order: initial;
   }
 }
+.relationship-matrix-union__note {
+  margin: 0 0 12px;
+  color: var(--ink-muted, #6b6259);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}

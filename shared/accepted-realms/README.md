@@ -1,4 +1,25 @@
-# Bestätigte Länder · Übernahme vom 28./29. Oktober 2026
+# Bestätigte Länder
+
+## Ergänzung vom 1. November 2026
+
+Aeldrunmar, Talyndor und Brevanor sind nach ausdrücklichem Nutzerauftrag in die
+regulären Register übernommen. Die drei unveränderten Zuordnungsexporte sind
+archiviert und mit SHA-256 belegt. Details und Prüfung:
+[Übernahme der drei Königreiche](kingdom-admission-20261101.md).
+
+Die Ergänzung enthält 70 Herrschaftsseiten, 53 Ortsakten und 80 Hausseiten samt
+kurzer Hausbio. 71 Familienakten sind neu und personenlos; neun vorhandene
+Familienakten behalten ihre vollständigen Genealogien. Scandyn bleibt an seinem
+bereits belegten separaten Sitz Scandmere, dessen Kartenposition offen ist.
+Talyndor und Brevanor führen ihre historische Ordnung unter heutiger Besatzung.
+Virelath ist ein Thaintum, Luthirrith eine ritterliche Herrschaft; Halfax und
+Ashby bleiben ausgestorben. Die Kartenbeschriftung wird als SVG aus dem
+unveränderten Raster und den bestätigten Namen erzeugt.
+
+Aktuell insgesamt: zehn Länder, 236 Herrschaftsseiten, 127 Ortsakten und
+199 Hausquellen. Die aktuelle Ergänzung ist lokal; kein Push oder Deploy.
+
+## Erste Übernahme vom 28./29. Oktober 2026
 
 Die sechs unveränderten JSON-Exporte und Moinneachs erste Variante wurden nach
 der ausdrücklichen Freigabe der Zuordnungen in reguläre Aleria-Seiten übernommen.

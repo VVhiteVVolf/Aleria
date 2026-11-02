@@ -1,14 +1,26 @@
 # Bilder- und Emote-Sets
 
-Stand: 12. September 2026
+Stand: 2. November 2026
 
 ## Datenmodell
 
-Charaktere speichern benannte Varianten in `imageSets`. Das unveränderliche Set `standard` spiegelt sein Portrait und seine Emotes zusätzlich in die bisherigen Felder `portrait` und `emotes`. Alte Clients, bestehende Kommentare und ältere Exporte bleiben dadurch lesbar.
+Charaktere speichern benannte Varianten in `imageSets`. Das Set `standard` behält seine feste ID und seinen Namen und spiegelt sein Portrait und seine Emotes zusätzlich in die bisherigen Felder `portrait` und `emotes`. Alte Clients, bestehende Kommentare und ältere Exporte bleiben dadurch lesbar.
 
 Jedes Set besitzt eine stabile ID, einen Namen, ein Hauptportrait und bis zu 80 Emotes. Pro Charakter sind höchstens 20 Sets vorgesehen. Neue Sets beginnen vollständig leer. `imageSetSchemaVersion: 1` und `imageSetsOverride: true` markieren den neuen Speicherstand.
 
-Kommentare speichern neben dem fertigen Portrait-Link auch `imageSetId` und `emoteIndex`. Bereits veröffentlichte Beiträge verändern ihr Bild daher nicht, wenn ein Set später bearbeitet wird. Beim Erstellen und Bearbeiten eines Beitrags kann das Set gewechselt werden; die Emote-Paletten aller Abschnitte folgen dieser Auswahl.
+Kommentare speichern neben dem fertigen Portrait-Link auch `imageSetId` und `emoteIndex`. Bereits veröffentlichte Beiträge verändern ihr Bild daher nicht, wenn ein Set später bearbeitet wird. Beim Erstellen und Bearbeiten eines Beitrags kann das Set für jeden Abschnitt einzeln gewechselt werden; dessen Emote-Palette folgt der Auswahl.
+
+## Reihenfolge und Bedienung
+
+Die Reihenfolge des Arrays `imageSets` ist die Anzeigereihenfolge. Alle Sets einschließlich Standard können im Bildeditor durch Ziehen, über die beiden Pfeilbuttons oder mit `Alt` + Pfeiltaste verschoben werden. Pfeiltasten ohne `Alt` wechseln die geöffneten Tabs; `Home` und `End` springen zum ersten beziehungsweise letzten Set. Im Namensfeld legt `Enter` ein neues Set an. Änderungen verwenden das bestehende gebündelte Medien-Autosave und bleiben in Exporten, Importen, Kopien sowie neuen und bearbeiteten Beiträgen erhalten.
+
+`image-library-model.js` normalisiert die Daten unter Erhaltung der Reihenfolge. Fehlende Standard-Sets werden bei Altdaten weiterhin vorne ergänzt; unbekannte Set-IDs fallen ausdrücklich auf die ID `standard` zurück. Legacy-Portrait und -Emotes werden immer anhand dieser ID gelesen, auch bei Kreaturen. Es gibt kein zusätzliches Sortierfeld und keine erforderliche Firebase-Migration. Die generierte Serverkopie verwendet dasselbe Modell.
+
+Das Verschieben aktualisiert ausschließlich die Tabpositionen und lädt weder das aktive Set noch seine Bildvorschauen erneut. `character-image-set-sorting.js` kapselt Drag-and-drop und Tastaturbedienung; `character-image-set-editor.js` bleibt für Editorzustand und Speicherung verantwortlich. Das Layout liegt in `styles/character-image-library.css`.
+
+## Kompakte Galerie
+
+Hauptportrait und Avatar-Galerie haben eigene Bereiche. Der Mehrfachimport lässt sich aufklappen, Importmeldungen bleiben sichtbar. Das Raster rendert nur belegte Slots und eine Kachel zum Ergänzen, statt 80 leere Felder aufzubauen. Eine leere Bibliothek hat damit eine statt 80 Kacheln. Die ursprünglichen Slotindizes bleiben bis zur bestehenden Speichernormalisierung erhalten; das Entfernen eines Avatars lädt die übrigen Vorschauen nicht neu. Bildabrufe erfolgen weiterhin erst in der Nähe des sichtbaren Scrollbereichs über `IntersectionObserver`, mit asynchroner Dekodierung.
 
 ## Imgur-Alben
 

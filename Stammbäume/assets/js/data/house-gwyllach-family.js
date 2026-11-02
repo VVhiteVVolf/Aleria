@@ -73,7 +73,7 @@ export const HOUSE_GWYLLACH_FAMILY = Object.freeze({
     id: 'haus-gwyllach',
     title: 'Haus Gwyllach',
     motto: '',
-    description: 'Die belegte Linie des bürgerlichen Hauses Gwyllach in Gwynthor, öffentlich die Kutscher- und Fuhrmannszunft, insgeheim Augen und Ohren des Drachen im Dienst Haus Draigs: vom Begründer Maelgoran bis zur Generation um 1723.',
+    description: 'Die belegte Linie des bürgerlichen Hauses Gwyllach in Gwynthor, öffentlich die Kutscher- und Fuhrmannszunft, insgeheim Augen und Ohren des Drachen im Dienst Haus Draigs: vom Begründer Maelgoran bis zur Generation um 1731.',
     emblem: GWYLLACH_EMBLEM,
     houseProfile: CELTIGERNS_WACHT_HOUSE_PROFILES.gwyllach
   },
@@ -116,53 +116,55 @@ export const HOUSE_GWYLLACH_FAMILY = Object.freeze({
     unnamedSpouse('unknown-rhovan-spouse', 'Unbekannte Ehefrau', 'female'),
 
     // Kinder Rhydderchs
-    person('efael-gwyllach', 'Efael Gwyllach', 'male', '1692', '', GWYLLACH_HOUSE_ID, {
-      notes: 'Auf ausdrücklichen Autorenwunsch verjüngt: 48 Jahre im Jahr 1740, bei der Geburt seiner Zwillingstöchter 24 Jahre alt.',
+    person('efael-gwyllach', 'Efael Gwyllach', 'male', '1698', '', GWYLLACH_HOUSE_ID, {
+      notes: 'Erneute Autorenkorrektur vom 02.11.2026 nach Porträtprüfung: etwa 42 Jahre im Weltjahr 1740 und 23 bei der Geburt seiner Zwillingstöchter. Das Jahr ist eine redaktionelle Alterseinordnung.',
       extensions: { registryManagedFields: ['birth', 'notes'] }
     }),
-    unnamedSpouse('unknown-efael-spouse', 'Unbekannte Ehefrau', 'female', '1694', '????', {
-      notes: 'Geburtsjahr auf Autorenwunsch passend zur jüngeren Elterngeneration ergänzt. Bei der Geburt der Zwillinge 1716 war sie 22 Jahre alt. Name und Lebensstatus bleiben unüberliefert.',
+    unnamedSpouse('unknown-efael-spouse', 'Unbekannte Ehefrau', 'female', '1700', '????', {
+      notes: 'Redaktionelle Einordnung vom 02.11.2026 passend zur jüngeren Elterngeneration: etwa 40 Jahre im Weltjahr 1740 und 21 bei der Geburt der Zwillinge. Name und Lebensstatus bleiben unüberliefert.',
       extensions: { registryManagedFields: ['birth', 'notes'] }
     }),
-    person('talaneth-gwyllach', 'Talaneth Gwyllach', 'female', '1681', ''),
+    person('talaneth-gwyllach', 'Talaneth Gwyllach', 'female', '1691', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
     unnamedSpouse('unknown-talaneth-spouse', 'Unbekannter Ehemann', 'male'),
-    person('meredydd-gwyllach', 'Meredydd Gwyllach', 'male', '1683', ''),
+    person('meredydd-gwyllach', 'Meredydd Gwyllach', 'male', '1695', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
     unnamedSpouse('unknown-meredydd-spouse', 'Unbekannte Ehefrau', 'female'),
 
     // Kinder Rhovans
-    person('drystan-gwyllach', 'Drystan Gwyllach', 'male', '1685', '', GWYLLACH_HOUSE_ID, {
+    person('drystan-gwyllach', 'Drystan Gwyllach', 'male', '1694', '', GWYLLACH_HOUSE_ID, {
+      extensions: { registryManagedFields: ['birth'] },
       title: 'Vorgesehener Erbe des Hauses Gwyllach'
     }),
     unnamedSpouse('unknown-drystan-spouse', 'Unbekannte Ehefrau', 'female'),
-    person('anelen-gwyllach', 'Anelen Gwyllach', 'female', '1687', ''),
+    person('anelen-gwyllach', 'Anelen Gwyllach', 'female', '1696', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
     unnamedSpouse('unknown-anelen-spouse', 'Unbekannter Ehemann', 'male'),
 
     // Jüngste Generation: Kinder Efaels
-    person('meirawen-gwyllach', 'Meirawen Gwyllach', 'female', '1716', '', GWYLLACH_HOUSE_ID, {
+    person('meirawen-gwyllach', 'Meirawen Gwyllach', 'female', '1721', '', GWYLLACH_HOUSE_ID, {
       title: 'Zwillingsschwester',
       tags: ['Zwillinge'],
-      notes: 'Zwillingsschwester Morwellas; beide sind im Jahr 1740 vierundzwanzig Jahre alt. Geburtsjahr und Zwillingsverhältnis folgen der ausdrücklichen Autorenkorrektur.',
+      notes: 'Zwillingsschwester Morwellas; beide sind im Weltjahr 1740 etwa neunzehn Jahre alt. Die Porträt- und Alterskorrektur vom 02.11.2026 ersetzt die bisherige Datierung 1716; das Zwillingsverhältnis bleibt erhalten.',
       extensions: { registryManagedFields: ['birth', 'title', 'tags', 'notes'] }
     }),
-    person('morwella-gwyllach', 'Morwella Gwyllach', 'female', '1716', '', GWYLLACH_HOUSE_ID, {
+    person('morwella-gwyllach', 'Morwella Gwyllach', 'female', '1721', '', GWYLLACH_HOUSE_ID, {
       title: 'Zwillingsschwester',
       tags: ['Zwillinge'],
-      notes: 'Zwillingsschwester Meirawens; beide sind im Jahr 1740 vierundzwanzig Jahre alt. Geburtsjahr und Zwillingsverhältnis folgen der ausdrücklichen Autorenkorrektur.',
+      notes: 'Zwillingsschwester Meirawens; beide sind im Weltjahr 1740 etwa neunzehn Jahre alt. Die Porträt- und Alterskorrektur vom 02.11.2026 ersetzt die bisherige Datierung 1716; das Zwillingsverhältnis bleibt erhalten.',
       extensions: { registryManagedFields: ['birth', 'title', 'tags', 'notes'] }
     }),
 
     // Jüngste Generation: Kinder Meredydds
-    person('talyfer-gwyllach', 'Talyfer Gwyllach', 'male', '1708', ''),
-    person('saerwyn-gwyllach', 'Saerwyn Gwyllach', 'female', '1710', ''),
+    person('talyfer-gwyllach', 'Talyfer Gwyllach', 'male', '1718', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
+    person('saerwyn-gwyllach', 'Saerwyn Gwyllach', 'female', '1721', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
 
     // Jüngste Generation: Kinder Drystans
-    person('meirion-gwyllach', 'Meirion Gwyllach', 'male', '1710', '', GWYLLACH_HOUSE_ID, {
+    person('meirion-gwyllach', 'Meirion Gwyllach', 'male', '1716', '', GWYLLACH_HOUSE_ID, {
+      extensions: { registryManagedFields: ['birth'] },
       title: 'Zweiter Erbe des Hauses Gwyllach'
     }),
-    person('olyndor-gwyllach', 'Olyndor Gwyllach', 'male', '1713', ''),
-    person('rhufaed-gwyllach', 'Rhufaed Gwyllach', 'male', '1715', ''),
-    person('eryndor-gwyllach', 'Eryndor Gwyllach', 'male', '1720', ''),
-    person('liora-gwyllach', 'Liora Gwyllach', 'female', '1723', '')
+    person('olyndor-gwyllach', 'Olyndor Gwyllach', 'male', '1721', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
+    person('rhufaed-gwyllach', 'Rhufaed Gwyllach', 'male', '1725', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
+    person('eryndor-gwyllach', 'Eryndor Gwyllach', 'male', '1728', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } }),
+    person('liora-gwyllach', 'Liora Gwyllach', 'female', '1731', '', GWYLLACH_HOUSE_ID, { extensions: { registryManagedFields: ['birth'] } })
   ],
   partnerships: [
     createMarriage('marriage-maelgoran-spouse', ...MAELGORAN_IDS),
@@ -265,9 +267,10 @@ export const HOUSE_GWYLLACH_FAMILY = Object.freeze({
     showSiblings: true
   },
   extensions: {
-    sourceNote: 'Die Quelltabelle überliefert drei feste Jahreszahlen (Rhydderch 1653, Mablen 1656, Rhovan 1659); alle übrigen Geburtsjahre wurden davon ausgehend mit einem gesunden Abstand von rund 25–30 Jahren zum jeweils ältesten Kind rückwärts (Elterngenerationen) bzw. vorwärts (jüngste, nach Aussehen datierte Generation) hochgerechnet. Anders als bei den Ritterhäusern vererbt sich die Kopfschaft bei diesem bürgerlichen Haus nicht nach starrer Erstgeburt, sondern nach Eignung (User-Vorgabe); daher wechselt sie zwischen Maelgorans zwei Söhnelinien hin und her: Tewrig und Odrith sind Geschwister, Rhydderch (Tewrigs Sohn) und Rhovan (Odriths Sohn) sind Cousins, dennoch folgen laut Hof-Tabelle beide unmittelbar aufeinander in der Erbfolge. Die Kette wurde per User-Vorgabe über die Quelltabelle hinaus fortgeschrieben: Rhovans vorgesehene Erbfolge ist Drystan, danach dessen Sohn Meirion (beide erhalten den Kopf-Kartenrahmen und einen entsprechenden Titel, obwohl Rhovan noch lebt und amtiert). Maelgorans dritter, namenloser Sohn/Tochter ist in der Quelle komplett ohne Namen und Portrait überliefert (nur ein unbeschriftetes „???"-Feld mit Dolch); das Geschlecht wurde mangels jeglicher Angabe angenommen. Cyrelle (Maelgorans Frau) und Mablen (Tewrigs Tochter) sind namentlich genannt, führen aber ebenfalls nur das unbeschriftete Platzhalterbild und bleiben daher portraitlos. Die beigefügte Grafik zeigt kein Baumdiagramm, sondern ein dekoratives Einzelporträt eines Familienmitglieds ohne Beschriftung und wurde daher nicht als Strukturquelle herangezogen; maßgeblich war die benannte Hof-/Hierarchietabelle. Wie bei den übrigen niederen Häusern wurden alle weiblichen Kernmitglieder mit unbenanntem, kinderlosem Ehepartner (die namenlose Tochter, Mablen, Talaneth, Anelen) systematisch als Wegverheiratete Linie mit Platzhalter „Unbekanntes Haus" markiert. Haus Gwyllach ist ein bürgerliches Haus (kein Rittergeschlecht) und sitzt daher außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS, nutzt aber denselben generischen Gwynthor-Sitz wie die dortigen niederen Ritterhäuser. Es führt den eisernen Wappenrahmen; das Stand-Icon ist bis auf Weiteres ein Platzhalter (Page-Icon) laut ausdrücklicher User-Vorgabe. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Revision 2 folgt der ausdrücklichen Autorenkorrektur vom 05.09.2026: Meirawen und Morwella sind Zwillinge, beide Jahrgang 1716 und damit 24 im Weltjahr 1740; Efael ist nun Jahrgang 1692 (48), ihre namenlose Mutter Jahrgang 1694 (bei der Geburt 22; Lebensstatus unbekannt). Diese Korrektur ersetzt die früheren Schätzungen 1679, 1705 und 1707; Rhydderchs belegtes Jahr 1653 bleibt bestehen.',
+    sourceNote: 'Die Quelltabelle überliefert drei feste Jahreszahlen (Rhydderch 1653, Mablen 1656, Rhovan 1659); alle übrigen Geburtsjahre wurden davon ausgehend mit einem gesunden Abstand von rund 25–30 Jahren zum jeweils ältesten Kind rückwärts (Elterngenerationen) bzw. vorwärts (jüngste, nach Aussehen datierte Generation) hochgerechnet. Anders als bei den Ritterhäusern vererbt sich die Kopfschaft bei diesem bürgerlichen Haus nicht nach starrer Erstgeburt, sondern nach Eignung (User-Vorgabe); daher wechselt sie zwischen Maelgorans zwei Söhnelinien hin und her: Tewrig und Odrith sind Geschwister, Rhydderch (Tewrigs Sohn) und Rhovan (Odriths Sohn) sind Cousins, dennoch folgen laut Hof-Tabelle beide unmittelbar aufeinander in der Erbfolge. Die Kette wurde per User-Vorgabe über die Quelltabelle hinaus fortgeschrieben: Rhovans vorgesehene Erbfolge ist Drystan, danach dessen Sohn Meirion (beide erhalten den Kopf-Kartenrahmen und einen entsprechenden Titel, obwohl Rhovan noch lebt und amtiert). Maelgorans dritter, namenloser Sohn/Tochter ist in der Quelle komplett ohne Namen und Portrait überliefert (nur ein unbeschriftetes „???"-Feld mit Dolch); das Geschlecht wurde mangels jeglicher Angabe angenommen. Cyrelle (Maelgorans Frau) und Mablen (Tewrigs Tochter) sind namentlich genannt, führen aber ebenfalls nur das unbeschriftete Platzhalterbild und bleiben daher portraitlos. Die beigefügte Grafik zeigt kein Baumdiagramm, sondern ein dekoratives Einzelporträt eines Familienmitglieds ohne Beschriftung und wurde daher nicht als Strukturquelle herangezogen; maßgeblich war die benannte Hof-/Hierarchietabelle. Wie bei den übrigen niederen Häusern wurden alle weiblichen Kernmitglieder mit unbenanntem, kinderlosem Ehepartner (die namenlose Tochter, Mablen, Talaneth, Anelen) systematisch als Wegverheiratete Linie mit Platzhalter „Unbekanntes Haus" markiert. Haus Gwyllach ist ein bürgerliches Haus (kein Rittergeschlecht) und sitzt daher außerhalb der LOWER_KNIGHT_HOUSE_DEFINITIONS, nutzt aber denselben generischen Gwynthor-Sitz wie die dortigen niederen Ritterhäuser. Es führt den eisernen Wappenrahmen; das Stand-Icon ist bis auf Weiteres ein Platzhalter (Page-Icon) laut ausdrücklicher User-Vorgabe. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Revision 2 folgt der ausdrücklichen Autorenkorrektur vom 05.09.2026: Meirawen und Morwella sind Zwillinge, beide Jahrgang 1716 und damit 24 im Weltjahr 1740; Efael ist nun Jahrgang 1692 (48), ihre namenlose Mutter Jahrgang 1694 (bei der Geburt 22; Lebensstatus unbekannt). Diese Korrektur ersetzt die früheren Schätzungen 1679, 1705 und 1707; Rhydderchs belegtes Jahr 1653 bleibt bestehen. Revision 3 folgt dem erneuten Autorenauftrag vom 02.11.2026 und der Sichtprüfung aller 19 vorhandenen Porträts: Saerwyn ist nun Jahrgang 1721 (etwa 19), Talyfer 1718 (22); Meredydd 1695 (45), Talaneth 1691 (49), Efael 1698 (42) und die namenlose Zwillingsmutter 1700 (40). Meirawen und Morwella bleiben Zwillinge, nun beide 1721 (19). Drystan ist 1694 (46), Anelen 1696 (44), Meirion 1716 (24), Olyndor 1721 (19), Rhufaed 1725 (15), Eryndor 1728 (12) und Liora 1731 (9). Rhovan bleibt 1659; die belegten Anker Rhydderch 1653 und Mablen 1656 sowie sämtliche Verwandtschaften und die Erbfolge bleiben erhalten. Die früher genannten Alterszahlen der Revision 2 sind damit historische Bearbeitungsstände, keine aktuellen Altersangaben. Eltern-Kind-Abstände wurden für alle bezifferten Verbindungen geprüft (mindestens 18 Jahre).',
     blankFamily: false,
-    sourceRevision: 2,
+    ageRevision: { date: '2026-11-02', worldYear: 1740, reason: 'Autorenauftrag: Porträts prüfen und jüngere Kinder- und Elterngenerationen einordnen; Saerwyn etwa 19. Die früheren Altersnotizen im Quellenverlauf sind historisch ersetzt.', preservedBirths: ['rhovan-gwyllach', 'rhydderch-gwyllach', 'mablen-gwyllach'], estimatedBirths: ['efael-gwyllach', 'unknown-efael-spouse', 'talaneth-gwyllach', 'meredydd-gwyllach', 'drystan-gwyllach', 'anelen-gwyllach', 'meirawen-gwyllach', 'morwella-gwyllach', 'talyfer-gwyllach', 'saerwyn-gwyllach', 'meirion-gwyllach', 'olyndor-gwyllach', 'rhufaed-gwyllach', 'eryndor-gwyllach', 'liora-gwyllach'] },
+    sourceRevision: 3,
     registryManagedExtensionFields: ['sourceNote']
   }
 });

@@ -38,7 +38,10 @@ export async function readCharacterExportOverlays({ workspaceRoot, archiveRoot, 
         exportedAt: String(exported.exportedAt || exported.character.updatedAt || ''),
         character: markCharacterDatabaseOverlay(exported.character, {
           replaceExportedFields: exported.mergeStrategy === 'replace-exported-fields',
-          mergeCombatTechniques: exported.mergeStrategy === 'merge-combat-techniques'
+          mergeCombatTechniques: exported.mergeStrategy === 'merge-combat-techniques',
+          replaceCombatTraits: exported.mergeStrategy === 'replace-combat-traits',
+          removeTraitAbilityIds: exported.traitReview?.removeAbilityIds || [],
+          removeTraitConditionIds: exported.traitReview?.removeConditionIds || []
         }) });
     } catch (error) {
       if (registered) throw Error(`Registrierte öffentliche Charakterquelle kann nicht gelesen werden: ${path}: ${error.message}`, { cause: error });

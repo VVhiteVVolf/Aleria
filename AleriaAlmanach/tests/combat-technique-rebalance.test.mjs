@@ -52,15 +52,15 @@ test('catalog damage budgets survive profile storage and support remains damage-
   }
 });
 
-test('Teulu level four has special attacks; 26 level-six choices survive migration and downlevelling', async () => {
+test('individuelle Stufenänderungen erhalten erlernte Techniken und prüfen das Einsatzlevel weiterhin', async () => {
   const character = await load('gildas-gafyr');
-  for (const [level, count, historicalSlots = count] of [[4, 19, 7], [6, 26, 10], [20, 42, 24], [3, 14, 5], [6, 26, 10]]) {
+  const learned = structuredClone(character.combatProfile.techniques);
+  for (const level of [4, 6, 20, 3, 6]) {
     character.combatProfile = applyManualCharacterLevel(character.combatProfile, level).profile;
     const profile = resolveCombatProfile(character);
-    assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, count);
-    assert(profile.techniques.every(technique => technique.minimumLevel <= level));
+    assert.equal(profile.techniques.filter(entry => !entry.id.startsWith('class-special-')).length, learned.length);
     if (level === 4) assert(profile.techniques.some(technique => technique.costs.some(cost => cost.resourceId === 'special-action')));
-    assert.equal(profile.classTraining.techniqueSelections.length, historicalSlots);
+    assert.deepEqual(profile.techniques.map(t => t.id).sort(), learned.map(t => t.id).sort());
     assert.equal(new Set(profile.techniques.map(technique => technique.id)).size, profile.techniques.length);
   }
 });

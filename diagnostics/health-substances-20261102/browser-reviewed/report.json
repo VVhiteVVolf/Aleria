@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "filters": {
+    "affliction": 30,
+    "fever": 10,
+    "addiction": 9,
+    "tolerance": 3
+  },
+  "selectedTraits": 4,
+  "mutuallyExclusiveStages": true,
+  "allIconsDecoded": true,
+  "originalStateIcons": [
+    "/AleriaAlmanach/assets/development-traits/web/zustand-betrunken.webp",
+    "/AleriaAlmanach/assets/development-traits/web/zustand-kriss-rausch.webp",
+    "/AleriaAlmanach/assets/development-traits/web/zustand-smaragdflux-rausch.webp",
+    "/AleriaAlmanach/assets/development-traits/web/zustand-blutstaub-rausch.webp",
+    "/AleriaAlmanach/assets/development-traits/web/zustand-verkatert.webp"
+  ],
+  "fixedPresetEditor": true,
+  "bounds": {
+    "width": 384,
+    "scrollWidth": 384
+  },
+  "runtime": [
+    "Betrunken",
+    "Kriss-Rausch",
+    "Smaragdflux-Rausch",
+    "Blutstaub-Rausch",
+    "Verkatert (Alkohol)"
+  ],
+  "externalWritesBlocked": true,
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "capturedAt": "2026-11-02T19:57:08.105Z",
+  "production": "https://dieweltvonaleria.netlify.app",
+  "noCharacterInjection": true,
+  "blockedRequests": [],
+  "allowedReadPostCount": 0,
+  "definitionRequests": [],
+  "errors": [],
+  "characters": [],
+  "screenshots": [],
+  "pendingKnownFix": "Production item-card combat tab does not classify definitionRef-only possessions; local fix is not deployed. Inventory draft context may retain historic characterId/name/portrait.",
+  "phase": "loading-production-page",
+  "failure": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://dieweltvonaleria.netlify.app/AleriaAlmanach/AleriaAlmanach.html\nCall log:\n\u001b[2m  - navigating to \"https://dieweltvonaleria.netlify.app/AleriaAlmanach/AleriaAlmanach.html\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at E:\\Aleria\\diagnostics\\knight-equipment-20261102\\production-browser.mjs:46:14"
+}

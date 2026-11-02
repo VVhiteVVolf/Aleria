@@ -21,6 +21,8 @@ const INLINE_EDITOR_CLICK_ACTIONS = new Set([
   'add-card-layout-row',
   'remove-card-layout-block',
   'move-card-layout-block',
+  'add-biography-mentor',
+  'remove-biography-mentor',
   'add-biography-connection',
   'remove-biography-connection',
   'add-biography-document',
@@ -213,6 +215,10 @@ function handleInlineEditorActionClick(event) {
       Number(trigger.dataset.layoutIndex) || 0,
       Number(trigger.dataset.layoutDirection) || 0
     );
+    return;
+  }
+  if (action === 'add-biography-mentor' || action === 'remove-biography-mentor') {
+    editInlineBiographyMentor(trigger, action === 'add-biography-mentor' ? 'add' : 'remove');
     return;
   }
   if (action === 'add-biography-connection') {
@@ -757,6 +763,10 @@ function handleInlineEditorFieldChange(event) {
   }
   if (action === 'update-biography-section-field') {
     updateInlineBiographySectionField(field);
+    return;
+  }
+  if (action === 'update-biography-mentor') {
+    editInlineBiographyMentor(field, 'update');
     return;
   }
   if (action === 'update-biography-connection-field') {

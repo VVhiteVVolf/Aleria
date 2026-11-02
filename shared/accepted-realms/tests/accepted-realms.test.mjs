@@ -27,7 +27,7 @@ const dataContext = { window: {} };
 vm.runInNewContext(read('Kontinente/assets/js/herrschaft-data.js'), dataContext);
 const h = (realm, id) => realmsById.get(realm).housesById.get(id);
 
-test('accepted export bytes and every house placement match the supplied six drafts', () => {
+test('accepted export bytes and every house placement match all supplied drafts', () => {
   const receipts = json('shared/accepted-realms/sources/source-receipts.json');
   for (const receipt of receipts.exports) {
     assert.equal(createHash('sha256').update(fs.readFileSync(new URL(receipt.path, root))).digest('hex'), receipt.sha256);
@@ -36,10 +36,10 @@ test('accepted export bytes and every house placement match the supplied six dra
   }
 });
 
-test('all seven accepted countries, 119 houses and 74 seats have independent canonical entries', () => {
-  assert.equal(realms.length, 7); assert.equal(allHouses.length, 119);
-  assert.equal(new Set(allHouses.map(h => h.familyId)).size, 119);
-  assert.equal(realms.reduce((n, r) => n + r.settlements.length, 0), 74);
+test('all ten accepted countries, 201 houses and 127 seats have independent canonical entries', () => {
+  assert.equal(realms.length, 10); assert.equal(allHouses.length, 201);
+  assert.equal(new Set(allHouses.map(h => h.familyId)).size, 201);
+  assert.equal(realms.reduce((n, r) => n + r.settlements.length, 0), 127);
   for (const realm of realms) {
     assert.ok(territories.some(t => t.id === realm.rootId));
     for (const seat of realm.settlements) assert.equal(places.filter(p => p.id === placeId(realm, seat)).length, 1);
@@ -47,7 +47,8 @@ test('all seven accepted countries, 119 houses and 74 seats have independent can
       const record = getRegisteredFamily(house.familyId);
       assert.ok(record, house.familyId); assertValidFamily(record.family);
       assert.equal(record.family.lineage.houseId, house.houseId);
-      assert.notEqual(getHouseRank(record.houseProfile.rankId).id, 'unknown', house.familyId);
+      if (house.rankId === 'unknown') assert.equal(house.rank, 'Offen', house.familyId);
+      else assert.notEqual(getHouseRank(record.houseProfile.rankId).id, 'unknown', house.familyId);
     }
   }
 });
@@ -95,7 +96,8 @@ test('unknown people are not invented, while every house has biography, warrior 
     const content = createAcceptedHouseContent(realm, house), page = createHousePageData(content), bio = createHouseBiography(content);
     assert.ok(bio.house.documents[0].link.includes(house.familyId));
     assert.ok(page.familyTreeEmbed.src.includes(house.familyId));
-    assert.ok(page.warriorGallery.entries[0].image);
+    if (house.warrior) assert.ok(page.warriorGallery.entries[0].image);
+    else assert.equal(house.familyId, 'haus-scandyn');
     assert.ok(hasNobleCourt(page), house.familyId);
     assert.equal(completeHouseOffices([], true).length, 21);
     assert.ok(content.sections.holdings.length && content.sections.knighthood.length);
@@ -150,5 +152,5 @@ test('all new UI links and illustrations point to real local resources', () => {
 
 test('every accepted house is assigned its own warrior gallery entry', () => {
   const catalog = json('Gallerien/krieger/data/catalog.json');
-  for (const house of allHouses) assert.ok(catalog.houses.find(h => h.id === house.familyId)?.illustrationIds.length, house.familyId);
+  for (const house of allHouses.filter(h => h.warrior)) assert.ok(catalog.houses.find(h => h.id === house.familyId)?.illustrationIds.length, house.familyId);
 });

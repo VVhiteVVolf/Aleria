@@ -1,3 +1,5 @@
+import { SKILL_DEFINITIONS, getSkillIdentity } from './skill-definitions.js';
+export { SKILL_DEFINITIONS } from './skill-definitions.js';
 import {
   getSkillTotal,
   resolveCharacterCombatProfile
@@ -7,29 +9,6 @@ import { ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS, resolveAttribute
 export { ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS };
 
 export const SEGMENT_MECHANIC_MODES = Object.freeze(['normal', 'skill', 'combat', 'magic']);
-
-export const SKILL_DEFINITIONS = Object.freeze([
-  { id: 'persuasion', label: 'Überzeugen', aliases: ['überzeugen', 'ueberzeugen', 'überreden', 'ueberreden'], attributeKey: 'charisma' },
-  { id: 'intimidation', label: 'Einschüchtern', aliases: ['einschüchtern', 'einschuechtern'], attributeKey: 'charisma' },
-  { id: 'deception', label: 'Täuschen', aliases: ['täuschen', 'taeuschen'], attributeKey: 'charisma' },
-  { id: 'performance', label: 'Auftreten', aliases: ['auftreten', 'schauspiel'], attributeKey: 'charisma' },
-  { id: 'perception', label: 'Wahrnehmung', aliases: ['wahrnehmung'], attributeKey: 'wisdom' },
-  { id: 'insight', label: 'Motiv erkennen', aliases: ['motiv erkennen', 'motiverkennen'], attributeKey: 'wisdom' },
-  { id: 'animal-handling', label: 'Mit Tieren umgehen', aliases: ['mit tieren umgehen', 'tierkunde'], attributeKey: 'wisdom' },
-  { id: 'medicine', label: 'Heilkunde', aliases: ['heilkunde'], attributeKey: 'wisdom' },
-  { id: 'investigation', label: 'Nachforschungen', aliases: ['nachforschungen', 'nachforschen'], attributeKey: 'intelligence' },
-  { id: 'religion', label: 'Religion', aliases: ['religion', 'glaubenskunde'], attributeKey: 'intelligence' },
-  { id: 'arcane-kunde', label: 'Arkane Kunde', aliases: ['arkane kunde', 'arkanekunde'], attributeKey: 'intelligence' },
-  { id: 'history', label: 'Geschichte', aliases: ['geschichte'], attributeKey: 'intelligence' },
-  { id: 'nature', label: 'Naturkunde', aliases: ['naturkunde'], attributeKey: 'intelligence' },
-  { id: 'survival', label: 'Überleben', aliases: ['überleben', 'ueberleben'], attributeKey: 'wisdom' },
-  { id: 'sleight-of-hand', label: 'Fingerfertigkeit', aliases: ['fingerfertigkeit'], attributeKey: 'dexterity' },
-  { id: 'acrobatics', label: 'Akrobatik', aliases: ['akrobatik'], attributeKey: 'dexterity' },
-  { id: 'stealth', label: 'Heimlichkeit', aliases: ['heimlichkeit', 'schleichen'], attributeKey: 'dexterity' },
-  { id: 'athletics', label: 'Athletik', aliases: ['athletik'], attributeKey: 'strength' },
-  { id: 'seduction', label: 'Flirten', aliases: ['flirten', 'verführen', 'verfuehren'], attributeKey: 'charisma' },
-  { id: 'body-control', label: 'Körperbeherrschung', aliases: ['körperbeherrschung', 'koerperbeherrschung'], attributeKey: 'constitution' }
-]);
 
 export const CHECK_DEFINITIONS = Object.freeze([...SKILL_DEFINITIONS, ...ATTRIBUTE_CHECK_DEFINITIONS, ...SAVING_THROW_DEFINITIONS]);
 const CHECKS_BY_ID = new Map(CHECK_DEFINITIONS.map(check => [check.id, check]));
@@ -95,8 +74,7 @@ export function getSkillsForCommentKind(kind) {
 
 export function findProfileSkill(profile, definition) {
   if (!definition) return null;
-  const accepted = new Set([definition.label, ...definition.aliases].map(normalizeLookupText));
-  return (profile?.skills || []).find(skill => accepted.has(normalizeLookupText(skill?.name))) || null;
+  return (profile?.skills || []).find(skill => getSkillIdentity(skill?.name) === definition.id) || null;
 }
 
 export function resolveSkillModifier(character = {}, skillId = '') {
@@ -145,6 +123,7 @@ export function normalizeSkillChallenge(source = {}) {
 
 export function normalizeSkillCheckSettings(source = {}) {
   return {
+    ...(['vision', 'hearing', 'smell', 'taste', 'touch'].includes(source.requiredSense) ? { requiredSense: source.requiredSense } : {}),
     skillId: CHECKS_BY_ID.has(String(source.skillId || '')) ? String(source.skillId) : '',
     // Retain the wire field for old clients, but never accept a free bonus on
     // a new roll. Historical resolutions keep their stored audit values.

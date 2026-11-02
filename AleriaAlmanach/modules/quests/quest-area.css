@@ -1,0 +1,9 @@
+@layer quest {
+  .quest-area{display:grid;grid-template-columns:minmax(220px,1fr) minmax(230px,.9fr);gap:32px;align-items:center;padding:30px 0;border-block:3px double #b8a06d77;margin:25px 0}
+  .quest-area-map{min-width:0;text-align:center}.quest-area-map svg{display:block;width:100%;height:auto;aspect-ratio:1;filter:saturate(.78) sepia(.1)}
+  .quest-area-map>a{display:inline-block;margin-top:12px;font-size:13px}.quest-area h3{font-size:27px;font-weight:400}.quest-area p,.quest-area li{font-size:14px;line-height:1.7}.quest-area li{padding:3px 0}.quest-area ol{padding-left:23px}
+  .quest-information-sources{margin:30px 0}.quest-information-sources>h3{font-size:27px;font-weight:400;font-style:italic}.quest-source-families{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .quest-source-families article{display:flex;gap:15px;align-items:center;min-width:0;padding:15px 0;border-top:1px solid #b8a06d66}.quest-source-families img{width:78px;height:78px;object-fit:contain;flex-shrink:0}.quest-source-families h4{font-size:18px;font-weight:400;margin:0 0 6px}.quest-source-families p{font-size:13px;line-height:1.6;margin:0 0 6px}.quest-source-families a{font-size:13px}.quest-source-families h4 a{font-size:18px}
+  .quest-card .quest-card-avatar{width:95px;height:95px;border-radius:50%;border:3px double #ab8950;object-fit:cover;object-position:50% 16%;background:#e6d3a9}
+  @media(max-width:650px){.quest-area{grid-template-columns:1fr}.quest-area-map{max-width:420px;margin:auto}.quest-source-families{grid-template-columns:1fr}}
+}

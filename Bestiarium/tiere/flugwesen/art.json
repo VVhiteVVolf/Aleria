@@ -85,7 +85,7 @@
   ],
   "atlas": {
     "title": "Besondere Exemplare",
-    "intro": "Zwei benannte Vogelarten sind aus der alten Sammlung überliefert.",
+    "intro": "Die alten Vogeltafeln werden durch ausgearbeitete Artdossiers ergänzt.",
     "groups": [
       {
         "id": "voegel",
@@ -105,6 +105,20 @@
               "width": 500,
               "height": 500,
               "alt": "Überlieferte Bildtafel: Caoran"
+            }
+          },
+          {
+            "id": "mwyalchen-drossel",
+            "title": "Mwyalchen-Drossel",
+            "region": "Tal der Milane · Haus Mwyalchen",
+            "description": "Ein kleiner dunkler Singvogel. Lefraye Gafyrs Begleiter Agravaine, genannt Vain, gehört zu dieser Art.",
+            "href": "mwyalchen-drossel/index.html",
+            "status": "Artdossier vorhanden",
+            "image": {
+              "src": "../../../AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png",
+              "width": 1024,
+              "height": 1536,
+              "alt": "Agravaine, eine Mwyalchen-Drossel"
             }
           },
           {

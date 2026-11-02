@@ -25,3 +25,17 @@ test('inventory images still reject unsafe schemes and escape attribute delimite
   assert.ok(!html.includes('&amp;quot;'));
   assert.ok(!html.includes(' onerror="'));
 });
+
+test('custom info icons survive the shared presentation without losing escaping or default images', () => {
+  const html = vm.runInContext("buildCharacterInventoryInfoRows([{icon:'⚑ & <',label:'Wappen',value:'Eigenes Zeichen'},{icon:'*',label:'Notiz',value:'Text'}])", context);
+  assert.ok(html.includes('⚑ &amp; &lt;'));
+  assert.ok(html.includes('ci-icon-symbol'));
+  assert.ok(html.includes('<img class="ci-ui-icon'));
+});
+
+test('custom categories with object-property names have valid icons and numeric counts', () => {
+  const html = vm.runInContext("buildCharacterInventoryCategories({categories:[{id:'constructor',label:'Eigene Kategorie',icon:'*'},{id:'__proto__',label:'Weitere Kategorie',icon:'*'}],items:[{category:'constructor'},{category:'__proto__'}]})", context);
+  assert.ok(!html.includes('src=""'));
+  assert.ok(!html.includes('function Object'));
+  assert.equal((html.match(/class="ci-tab-count">1<\/em>/g) || []).length, 2);
+});

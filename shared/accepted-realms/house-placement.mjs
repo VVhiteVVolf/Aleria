@@ -1,7 +1,7 @@
 import { realmsById, houseTitle } from './catalog.mjs';
 
 export function houseTerritory(realm, house) {
-  return realm.territoriesById.get(house.isSeatRuler ? `${realm.id}-sitz-${house.seatId}` : `${realm.id}-hausbereich-${house.id}`);
+  return realm.territoriesById.get(house.isSeatRuler || realm.urbanHouseTerritories === false ? `${realm.id}-sitz-${house.seatId}` : `${realm.id}-hausbereich-${house.id}`);
 }
 
 export function housePlacement(realm, house) {

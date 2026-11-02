@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avatar-Sets · lokale Layoutprüfung</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/AleriaAlmanach/styles.css">
+<link rel="stylesheet" href="/AleriaAlmanach/styles/comments.css">
+<link rel="stylesheet" href="/AleriaAlmanach/styles/comment-character-picker.css">
+<link rel="stylesheet" href="/AleriaAlmanach/styles/characters.css">
+<link rel="stylesheet" href="/AleriaAlmanach/styles/character-image-library.css">
+<style>
+body{margin:0;padding:20px;background:var(--parchment);color:var(--ink);font-family:'EB Garamond',serif}
+.qa-shell{max-width:1360px;margin:auto}.qa-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:0 20px}
+.qa-heading h1{font:600 1.2rem Cinzel,serif;margin:.5rem 0}.qa-heading p{font-size:.85rem}
+#char-profile-overlay{display:block;position:static;background:transparent;backdrop-filter:none;padding:0}.qa-contribution{margin:0 20px 20px;padding:18px;border:1px solid var(--parchment-deeper);border-radius:6px}
+.qa-contribution h2{font:600 .8rem Cinzel,serif;margin:0 0 12px}.qa-contribution p{font-size:.85rem;margin:8px 0}
+@media(max-width:640px){body{padding:0}.qa-heading{padding:12px}.qa-contribution{margin:0 12px 12px}}
+</style></head><body><main class="qa-shell">
+<header class="qa-heading"><h1>Bilder &amp; Emotes · Rianna Wyrm</h1><p>Lokale Testansicht · keine Online-Speicherung</p></header>
+<div id="char-profile-overlay"><input type="hidden" id="cp-name" value="Rianna Wyrm">    <!-- TAB 2: BILDER & EMOTES -->
+    <div class="char-tab-panel active" id="cp-tab-bilder">
+      <div class="cp-images-panel">
+
+        <section class="cp-image-set-manager" aria-labelledby="cp-image-set-heading">
+          <div class="cp-image-set-heading-row">
+            <div>
+              <div class="cp-section-title" id="cp-image-set-heading">Deine Avatar-Sets</div>
+              <div class="cp-media-hint">Für Alltag, Kampf und besondere Momente. Jedes Set hat sein eigenes Portrait und seine eigenen Avatare.</div>
+            </div>
+            <div class="cp-image-set-create">
+              <input class="char-field-input" type="text" id="cp-new-image-set-name" aria-label="Name für ein neues Avatar-Set" placeholder="Neues Set, z. B. Kampf" maxlength="60">
+              <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="add-image-set">+ Set anlegen</button>
+            </div>
+          </div>
+          <div class="cp-image-set-tabs" id="cp-image-set-tabs" role="tablist" aria-label="Avatar-Sets" aria-describedby="cp-image-set-order-help"></div>
+          <div class="cp-image-set-order-tools">
+            <p class="cp-media-hint" id="cp-image-set-order-help">Sets zum Sortieren ziehen oder mit den Pfeilen verschieben. Diese Reihenfolge gilt auch im Beitragseditor.</p>
+            <div class="cp-image-set-move-controls" role="group" aria-label="Geöffnetes Set verschieben">
+              <span id="cp-image-set-position"></span>
+              <button class="cp-image-set-move" id="cp-image-set-previous" type="button" data-char-profile-action="move-image-set" data-direction="-1" aria-label="Set nach vorne verschieben" title="Set nach vorne verschieben">←</button>
+              <button class="cp-image-set-move" id="cp-image-set-next" type="button" data-char-profile-action="move-image-set" data-direction="1" aria-label="Set nach hinten verschieben" title="Set nach hinten verschieben">→</button>
+            </div>
+          </div>
+          <div class="cp-media-announcement" id="cp-image-set-order-status" role="status" aria-live="polite"></div>
+          <div class="cp-image-set-active-tools">
+            <label class="char-field-group" for="cp-active-image-set-name">
+              <span class="char-field-label">Set-Name</span>
+              <input class="char-field-input" type="text" id="cp-active-image-set-name" maxlength="60" data-char-profile-action="rename-image-set">
+            </label>
+            <button class="comment-btn-cancel" id="cp-delete-image-set" type="button" data-char-profile-action="delete-image-set">Set löschen</button>
+          </div>
+        </section>
+
+        <div class="cp-media-workspace" id="cp-image-set-panel" role="tabpanel">
+          <section class="cp-media-card cp-media-portrait" aria-labelledby="cp-set-portrait-heading">
+            <!-- Portrait URL -->
+            <div class="cp-section-title" id="cp-set-portrait-heading">Hauptportrait</div>
+            <p class="cp-media-hint">Das Portrait für dieses Set, wenn kein Ausdruck gewählt ist.</p>
+            <div class="cp-portrait-upload-area">
+              <div class="cp-portrait-thumb">
+                <img id="cp-portrait-thumb-img" alt="Portrait" style="display:none">
+                <div id="cp-portrait-thumb-ph" class="cp-portrait-thumb-placeholder">?</div>
+              </div>
+              <div class="cp-portrait-fields">
+                <label class="char-field-label" for="cp-portrait-url">Bild-Link</label>
+                <div class="cp-image-link-row">
+                  <input class="char-field-input" type="url" id="cp-portrait-url" placeholder="https://i.imgur.com/...">
+                  <button class="cp-portrait-upload-btn secondary" type="button" data-char-profile-action="paste-portrait-link">Aus Zwischenablage</button>
+                </div>
+                <div id="cp-portrait-url-error" style="font-size:0.72rem;color:var(--red-wax);display:none">
+                  Bild konnte nicht geladen werden.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="cp-media-card cp-media-avatars" aria-labelledby="cp-set-avatars-heading">
+            <!-- Emotes -->
+            <div class="cp-section-title cp-avatar-section-title" id="cp-set-avatars-heading">Ausdrücke &amp; Avatare <span class="cp-section-meta">(<span id="cp-avatar-count">0</span>/<span id="cp-avatar-limit">80</span>)</span></div>
+            <div class="cp-media-hint cp-avatar-help">
+              Wähle beim Schreiben den passenden Ausdruck. Beschriftungen helfen dir, ihn schnell wiederzufinden.
+            </div>
+            <div class="cp-avatar-import" id="cp-avatar-import-zone">
+              <details class="cp-avatar-import-tools">
+                <summary>Mehrere Avatare importieren <span>Bild-Links · Imgur · Zwischenablage</span></summary>
+                <div class="cp-avatar-import-body">
+                  <label class="char-field-label" for="cp-avatar-links">Mehrere Bild-Links oder ein Imgur-Album</label>
+                  <textarea class="char-field-textarea cp-avatar-links" id="cp-avatar-links" rows="3" placeholder="Direkte Bild-Links – einer pro Zeile – oder https://imgur.com/a/album"></textarea>
+                  <div class="cp-avatar-import-actions">
+                    <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-avatar-links">Links übernehmen</button>
+                    <button class="cp-portrait-upload-btn" type="button" data-char-profile-action="import-imgur-album">Imgur-Album übernehmen</button>
+                    <button class="cp-portrait-upload-btn secondary" type="button" data-char-profile-action="paste-avatar-links">Aus Zwischenablage</button>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <div class="cp-avatar-import-status" id="cp-avatar-import-status" role="status" aria-live="polite">Importe landen ausschließlich im gerade geöffneten Set.</div>
+            <div class="emote-grid" id="cp-emote-grid"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+</div>
+<section class="qa-contribution"><h2>Vorschau im Beitragseditor</h2><div id="qa-contribution-picker"></div><p id="qa-saved"></p><button type="button" id="qa-reload" class="cp-portrait-upload-btn secondary">Gespeicherte Testdaten neu laden</button></section>
+</main><script>
+let _emoteSlots = [], _charPortraitUrl = null, _editingChar = 'qa-rianna';
+const MAX_EMOTES = 80;
+let _commentMode = 'charakter', _editMode = 'charakter', _selectedCharId = 'qa-rianna', _editSelectedCharId = 'qa-rianna';
+let _selectedImageSetId = 'standard', _editSelectedImageSetId = 'standard';
+let qaSaved = null;
+const qaSegment = { id: 'qa-segment', kind: 'speech', imageSetId: 'standard' };
+function normalizeSearchText(value) { return String(value).toLowerCase(); }
+function escapeHtml(value) { return String(value || '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;'); }
+function sanitizeImageSrc(value) { return escapeHtml(value); }
+function normalizeImageUrlForStorage(value) { return AleriaCharacterImageSets.normalizeImageUrl(value); }
+function normalizeCommentKind(value) { return value || 'speech'; }
+function getAvailableCommentCharacterById() { return { ...qaSaved, name: 'Rianna Wyrm' }; }
+function syncPortraitDisplay(src) {
+  const image = document.getElementById('cp-portrait-thumb-img');
+  image.style.display = src ? 'block' : 'none';
+  if (src) image.src = src; else image.removeAttribute('src');
+  document.getElementById('cp-portrait-thumb-ph').style.display = src ? 'none' : 'grid';
+}
+function qaUpdate() {
+  qaSaved = collectCharacterImageSetEditorData();
+  document.getElementById('qa-contribution-picker').innerHTML = getCommentSegmentImageSetPicker(qaSegment);
+  document.getElementById('qa-saved').textContent = 'Gespeicherte Reihenfolge: ' + qaSaved.imageSets.map(set => set.name).join(' → ');
+}
+window.AleriaCharacterImageLibraryAutosave = { schedule: qaUpdate };
+</script><script src="/AleriaAlmanach/modules/image-library/image-library-model.js"></script>
+<script src="/AleriaAlmanach/modules/image-library/image-library-import.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-image-sets.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-avatar-import.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-image-set-editor.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-media-editor.js"></script>
+<script src="/AleriaAlmanach/modules/comments/comments-segment-base.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-profile-events.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-image-set-sorting.js"></script><script>
+const qaAvatars = Array.from({length:9}, (_,index) => ({
+  img: '/AleriaAlmanach/AvatarWerkstatt/Output/Rianna%20Wyrm/rianna-2026-11-02-set-01_Bild' + (index+1) + '.png',
+  label: ['Aufmerksam','Freundlich','Nachdenklich','Überrascht','Skeptisch','Entschlossen','Besorgt','Heiter','Verärgert'][index]
+}));
+initCharacterImageSetEditor({imageSets:[
+  {id:'standard',portrait:'/Stammbäume/assets/images/portraits/haus-wyrm/rianna-wyrm.jpg',emotes:qaAvatars},
+  {id:'alltag',name:'Alltag und Gespräch',emotes:qaAvatars.slice(0,3)},
+  {id:'ruestung',name:'In Rüstung mit Krähe',emotes:qaAvatars.slice(3,6)},
+  {id:'gesten',name:'Eigenwillige Gesten',emotes:qaAvatars.slice(6)}
+]});
+qaUpdate();
+document.getElementById('qa-reload').addEventListener('click', () => { initCharacterImageSetEditor(qaSaved); qaUpdate(); });
+document.getElementById('qa-contribution-picker').addEventListener('click', event => {
+  const button=event.target.closest('[data-image-set-id]');
+  if(!button)return;qaSegment.imageSetId=button.dataset.imageSetId;qaUpdate();
+});
+</script></body></html>

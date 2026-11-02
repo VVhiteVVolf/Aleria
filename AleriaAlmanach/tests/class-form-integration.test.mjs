@@ -10,7 +10,7 @@ import { DERWYN_FORM_IDS as W } from '../modules/combat-styles/sirenentanz/siren
 import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile-model.js';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { resolveCenyrTechniqueWeaponRules } from '../modules/classes/cenyr/cenyr-technique-weapon-rules.js';
-import { applyCharacterCreationDraft, createCharacterCreationDraft, getCreationStartingTechniques, validateCharacterCreationDraft } from '../modules/combat/character-creation-model.js';
+import { applyCharacterCreationDraft, createCharacterCreationDraft, validateCharacterCreationDraft } from '../modules/combat/character-creation-model.js';
 import { createCharacterLevelUpPlan, previewCharacterLevelUp } from '../modules/combat/combat-level-up-model.js';
 
 const weapon = (id, type, name = id) => ({ id, name, weaponType: type, weaponProfileId: id, damageFormula: '1d8', equipped: id === 'sword' });
@@ -89,18 +89,16 @@ test('both Derwyn foundations are exclusive, persist through serialization and s
   }
 });
 
-test('Derwyn creation requires an explicit foundation and grants only its own attacks', () => {
+test('Derwyn creation requires an explicit foundation without granting automatic attacks', () => {
   const draft = createCharacterCreationDraft(profileFor('derwyn', 1));
   assert.ok(validateCharacterCreationDraft(draft).some(error => error.includes('Grundausbildung')));
   for (const foundation of [D.jungdrache, W.foundation]) {
     const chosen = { ...draft, foundationFormId: foundation };
-    const shown = getCreationStartingTechniques(chosen);
-    assert.ok(shown.length > 0);
-    assert.ok(shown.every(technique => technique.combatStyleFormId === foundation && (!technique.cenyrTraining.allowedClassIds.length || technique.cenyrTraining.allowedClassIds.includes('derwyn'))));
     const created = applyCharacterCreationDraft(profileFor('derwyn', 1), chosen);
     assert.equal(created.ok, true, created.errors.join(' '));
     assertLegalTraining(created.profile);
-    assert.equal(created.profile.techniques.length, foundation === D.jungdrache ? 3 : 1);
+    assert.equal(created.profile.techniques.length, 0);
+    assert.ok(created.profile.classTraining.selections.some(s=>s.kind==='foundation'&&s.selectionId===foundation));
   }
 });
 

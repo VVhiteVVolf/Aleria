@@ -12,7 +12,7 @@ const root=new URL('../Aeldrunmar/',import.meta.url),workspace=new URL('../../',
 
 test('Earls und gemeinsam gelieferte Vasallen beginnen an sechs Hauptstädten; alle übrigen Häuser bleiben frei',()=>{
  const draft=createPlacementState(),initial=draft.current();
- assert.equal(houses.length,35);assert.equal(houses.filter(h=>h.sourceSeat).length,21);assert.equal(houses.filter(h=>!h.sourceSeat).length,14);
+ assert.equal(houses.length,37);assert.equal(houses.filter(h=>h.sourceSeat).length,23);assert.equal(houses.filter(h=>!h.sourceSeat).length,14);
  for(const h of houses){
   assert.equal(initial[h.id],h.sourceSeat);
   if(h.sourceSeat)assert.ok(settlements.find(s=>s.id===h.sourceSeat).principal);
@@ -28,6 +28,29 @@ test('Earls und gemeinsam gelieferte Vasallen beginnen an sechs Hauptstädten; a
  const bad=JSON.parse(draft.serialize());bad.placements.ashby='fremder-ort';assert.throws(()=>imported.restore(bad));assert.deepEqual(imported.current(),draft.current());
  assert.ok(draft.undo());assert.equal(draft.current().kendryck,initial.kendryck);
  assert.ok(draft.reset());assert.deepEqual(draft.current(),initial);
+});
+
+test('Vollständige ältere Entwürfe erhalten ihre Zuordnungen und ergänzen nur die zwei neuen Tharn-Häuser',()=>{
+ const state=createPlacementState();
+ const legacy=JSON.parse(state.serialize());
+ delete legacy.placements.ransford;delete legacy.placements.heswick;
+ legacy.placements.ashby='mornhall';legacy.placements.tharn='eldramar';
+ const unchanged=structuredClone(legacy);
+ state.restore(legacy);
+ assert.deepEqual(legacy,unchanged);
+ assert.deepEqual(state.current(),{...legacy.placements,ransford:'trentmorath',heswick:'trentmorath'});
+ const restored=createPlacementState();restored.restore(JSON.parse(state.serialize()));
+ assert.deepEqual(restored.current(),state.current());
+ for(const mutation of [
+  d=>delete d.placements.boxton,
+  d=>{delete d.placements.boxton;d.placements.unknown=null;},
+  d=>{d.placements.tharn='unknown';},
+  d=>{d.realm='talyndor';},
+  d=>{d.schemaVersion=2;},
+ ]){
+  const invalid=structuredClone(legacy);mutation(invalid);
+  assert.throws(()=>state.restore(invalid));assert.deepEqual(state.current(),restored.current());
+ }
 });
 
 test('Alle 23 Einzelgebiete besitzen ein eigenes Banner, getrennt von sechs Earltumsstandarten',()=>{

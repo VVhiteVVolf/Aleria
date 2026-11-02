@@ -1,6 +1,6 @@
 import { element as officeElement, renderRoleGroup, roleFor } from '../../../Kontinente/modules/administration/administration-cards.mjs';
 import { createOfficeDialog } from '../../../Kontinente/modules/administration/administration-office-dialog.mjs?v=20261028-office-body-v2';
-import { completeHouseOffices, hasNobleCourt, houseOfficeRole, partitionHouseCourtEntries } from './house-court-model.mjs?v=20261028-office-body-v2';
+import { completeHouseOffices, hasNobleCourt, houseOfficeRole, partitionHouseCourtEntries } from './house-court-model.mjs?v=kingdoms-20261101';
 import { legacyCourtOffices } from './house-court-legacy.mjs?v=20261028-office-body-v2';
 
 const controllers = new WeakMap();

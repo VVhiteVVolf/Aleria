@@ -1,0 +1,265 @@
+{
+  "passed": true,
+  "fixture": {
+    "id": "person--haus-wyrm--gais-wyrm",
+    "name": "Gais Wyrm",
+    "inventoryRows": 3,
+    "companions": 1
+  },
+  "checks": [
+    "character inventory keeps read-only controls",
+    "search, empty results and categories update selection and preview",
+    "item card, facts, diagram and close preserve possession data",
+    "companion card keeps its exact creature-sheet identity",
+    "category icons, item art, currency and action icons load",
+    "desktop and mobile controls remain usable without horizontal overflow",
+    "editable gold/silver/copper/pfennig transactions preserve exact totals and reject overdrafts",
+    "item editor live preview and cancel preserve original item definitions",
+    "editable money controls remain operable at 390 and 320 pixels",
+    "authored background texture loads",
+    "desktop and 320px radar labels stay inside the SVG viewBox; twelve UI thumbnails preserve original item art"
+  ],
+  "views": [
+    {
+      "name": "desktop-1680",
+      "label": "desktop-1680",
+      "width": 1628,
+      "scroll": 1628
+    },
+    {
+      "name": "desktop-1440",
+      "label": "desktop-1440",
+      "width": 1388,
+      "scroll": 1388
+    },
+    {
+      "name": "phone-390",
+      "label": "phone-390",
+      "width": 358,
+      "scroll": 358
+    },
+    {
+      "name": "phone-320",
+      "label": "phone-320",
+      "width": 288,
+      "scroll": 288
+    },
+    {
+      "label": "editable-phone-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "label": "editable-phone-320",
+      "width": 320,
+      "scroll": 320
+    }
+  ],
+  "textures": [
+    "http://127.0.0.1:61792/AleriaAlmanach/public/assets/inventory-ui/dark-hide-v1.webp"
+  ],
+  "radarBounds": [
+    {
+      "label": "editor-desktop",
+      "viewBox": {
+        "x": -59.599998474121094,
+        "y": 0,
+        "width": 299.2099914550781,
+        "height": 230
+      },
+      "renderedWidth": 340,
+      "bounds": [
+        {
+          "text": "Schaden",
+          "x": 92.0632553100586,
+          "y": 7.079398155212402,
+          "width": 46.14399719238281,
+          "height": 9.680736541748047,
+          "inside": true
+        },
+        {
+          "text": "Schutz",
+          "x": 182.29608154296875,
+          "y": 57.07939529418945,
+          "width": 38.612937927246094,
+          "height": 9.680736541748047,
+          "inside": true
+        },
+        {
+          "text": "Wert",
+          "x": 186.59329223632812,
+          "y": 157.0793914794922,
+          "width": 29.138465881347656,
+          "height": 9.680736541748047,
+          "inside": true
+        },
+        {
+          "text": "Seltenheit",
+          "x": 85.06397247314453,
+          "y": 207.0793914794922,
+          "width": 59.87205505371094,
+          "height": 9.680736541748047,
+          "inside": true
+        },
+        {
+          "text": "Zuverlaessigkeit",
+          "x": -21.133806228637695,
+          "y": 157.0793914794922,
+          "width": 98.18246459960938,
+          "height": 9.680736541748047,
+          "inside": true
+        },
+        {
+          "text": "Handhabung",
+          "x": -6.818967819213867,
+          "y": 57.07939529418945,
+          "width": 69.55278778076172,
+          "height": 9.680736541748047,
+          "inside": true
+        }
+      ]
+    },
+    {
+      "label": "editor-phone-320",
+      "viewBox": {
+        "x": -59.599998474121094,
+        "y": 0,
+        "width": 299.2099914550781,
+        "height": 230
+      },
+      "renderedWidth": 242.625,
+      "bounds": [
+        {
+          "text": "Schaden",
+          "x": 92.06936645507812,
+          "y": 6.367292881011963,
+          "width": 46.48651885986328,
+          "height": 11.09919548034668,
+          "inside": true
+        },
+        {
+          "text": "Schutz",
+          "x": 182.30418395996094,
+          "y": 56.36729431152344,
+          "width": 38.5966796875,
+          "height": 11.09919548034668,
+          "inside": true
+        },
+        {
+          "text": "Wert",
+          "x": 186.24478149414062,
+          "y": 156.36727905273438,
+          "width": 29.48223876953125,
+          "height": 11.09919548034668,
+          "inside": true
+        },
+        {
+          "text": "Seltenheit",
+          "x": 85.0745620727539,
+          "y": 206.36729431152344,
+          "width": 59.850868225097656,
+          "height": 11.09919548034668,
+          "inside": true
+        },
+        {
+          "text": "Zuverlaessigkeit",
+          "x": -21.462207794189453,
+          "y": 156.36727905273438,
+          "width": 98.48609161376953,
+          "height": 11.09919548034668,
+          "inside": true
+        },
+        {
+          "text": "Handhabung",
+          "x": -7.154648780822754,
+          "y": 56.36729431152344,
+          "width": 70.0003662109375,
+          "height": 11.09919548034668,
+          "inside": true
+        }
+      ]
+    }
+  ],
+  "uiThumbnails": [
+    {
+      "key": "all",
+      "source": "./public/assets/inventory-ui/icons/rucksack-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "weapon",
+      "source": "./public/assets/inventory-ui/icons/waffen-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "armor",
+      "source": "./public/assets/inventory-ui/icons/ruestung-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "equipment",
+      "source": "./public/assets/inventory-ui/icons/werkzeuge-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "potions",
+      "source": "./public/assets/inventory-ui/icons/alchemie-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "documents",
+      "source": "./public/assets/inventory-ui/icons/notizbuch-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "artifact",
+      "source": "./public/assets/inventory-ui/icons/arkanes-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "companion",
+      "source": "./public/assets/inventory-ui/icons/pferde-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "other",
+      "source": "./public/assets/inventory-ui/icons/sonstiges-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "open",
+      "source": "./public/assets/inventory-ui/icons/interaktion-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "edit",
+      "source": "./public/assets/inventory-ui/icons/feder-tinte-v1.webp",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "key": "wallet",
+      "source": "./public/assets/inventory-ui/icons/goldtaler-v1.webp",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "originalArt": [
+    "/AleriaAlmanach/public/assets/character-equipment/gais-lanze-v4.png",
+    "/AleriaAlmanach/public/assets/character-equipment/gais-langschwert-v2.png",
+    "/AleriaAlmanach/public/assets/character-equipment/gais-kettenhemd-v2.png"
+  ],
+  "externalWritesBlocked": true,
+  "errors": [],
+  "output": "E:\\Aleria\\.tmp\\inventory-theme-20261102\\browser-1793644818178"
+}

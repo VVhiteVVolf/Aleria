@@ -1,6 +1,59 @@
 ﻿/* Aleria Almanach - biography dossier module page styles. */
 
   /* ── BIOGRAPHY DOSSIER ── */
+  .biography-page.biography-page--two-columns { grid-template-columns: minmax(220px, 26%) minmax(0, 1fr); }
+  .biography-page .biography-section + .biography-section {
+    margin-top: 1.7rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(139,105,20,0.25);
+  }
+  .biography-copy p,
+  .biography-copy > div { margin: 0 0 0.95em; }
+  .biography-copy > :last-child { margin-bottom: 0; }
+  .biography-copy h4,
+  .biography-copy h5 { margin: 1.6em 0 0.65em; font: 600 1.05em/1.4 'Cinzel', serif; color: var(--gold); }
+  .biography-copy hr { margin: 1.5rem 0; border: 0; border-top: 1px solid rgba(139,105,20,0.25); }
+  .biography-copy blockquote { margin: 1.2em 0; padding-left: 1em; border-left: 2px solid rgba(139,105,20,0.4); font-style: italic; }
+  .biography-mentors { width: var(--biography-side-width); max-width: 100%; margin-top: 1rem; border-block: 1px solid rgba(139,105,20,0.3); }
+  .biography-mentor { display: grid; grid-template-columns: 3.4rem minmax(0,1fr); gap: 0.8rem; align-items: center; padding: 0.85rem 0.3rem; }
+  .biography-mentor + .biography-mentor { border-top: 1px solid rgba(139,105,20,0.15); }
+  .biography-mentor img,
+  .biography-mentor-placeholder { width: 3.4rem; height: 4.2rem; object-fit: cover; object-position: top; border: 1px solid rgba(139,105,20,0.4); border-radius: 2rem 2rem 0.2rem 0.2rem; }
+  .biography-mentor-placeholder { display: grid; place-items: center; color: var(--gold); background: rgba(139,105,20,0.08); }
+  .biography-mentor-role { display: block; font: 600 0.62rem/1.5 'Cinzel',serif; letter-spacing: 0.1em; color: var(--gold); }
+  .biography-mentor strong { display: block; font-size: 0.95rem; }
+  .biography-mentor p { margin: 0.2rem 0 0; font-size: 0.85rem; line-height: 1.45; color: var(--ink-faded); }
+  .biography-left, .biography-main, .biography-right { scrollbar-width: thin; scrollbar-color: rgba(139,105,20,0.4) transparent; }
+
+  /* Compact, keyboard-accessible chapters in all biography editors. */
+  .biography-editor-group { border: 1px solid rgba(139,105,20,0.25); border-radius: 0.2rem; margin: 0 0 0.7rem; background: rgba(255,252,244,0.25); min-width: 0; }
+  .biography-editor-group > summary { padding: 0.85rem 1rem; cursor: pointer; color: var(--ink); font: 600 0.82rem/1.5 'Cinzel',serif; }
+  .biography-editor-group > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .biography-editor-group[open] > summary { border-bottom: 1px solid rgba(139,105,20,0.2); background: rgba(139,105,20,0.06); }
+  .biography-editor-group__count { float: right; color: var(--ink-faded); font: 400 0.8rem/1.6 'EB Garamond',serif; }
+  .biography-editor-group__body { display: grid; gap: 0.8rem; padding: 1rem; min-width: 0; }
+  .biography-editor-group__body p { margin-block: 0 0.8em; }
+  .biography-editor-group__help { margin: 0; color: var(--ink-faded); font-size: 0.88rem; line-height: 1.5; }
+  .biography-editor-group .biography-edit-row,
+  .biography-editor-group .biography-edit-row.connection,
+  .biography-editor-group .biography-edit-row.document,
+  .biography-editor-group .biography-edit-section-row { grid-template-columns: repeat(2,minmax(0,1fr)); border: 1px solid rgba(139,105,20,0.2); padding: 0.75rem; background: rgba(255,255,255,0.15); }
+  .biography-editor-group .biography-edit-row textarea,
+  .biography-editor-group .biography-edit-section-row textarea { grid-column: 1 / -1; min-height: 5rem; }
+  .biography-editor-group .biography-edit-row > button:last-child,
+  .biography-editor-group .biography-edit-section-row > button:last-child { justify-self: end; grid-column: 1 / -1; }
+  .biography-editor-group .module-rich-editor { min-height: 9rem; max-height: 30rem; overflow: auto; line-height: 1.65; font-size: 1rem; }
+  .biography-editor-group .text-format-toolbar { position: sticky; top: 0; z-index: 1; padding-block: 0.3rem; background: var(--parchment, #f3e8d0); }
+  .biography-mentor-edit-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) auto; gap: 0.5rem; padding: 0.65rem; border: 1px solid rgba(139,105,20,0.2); }
+  .biography-mentor-edit-row label { min-width: 0; display: grid; gap: 0.25rem; font-size: 0.8rem; }
+  .biography-mentor-edit-row input { width: 100%; min-width: 0; }
+  .biography-mentor-edit-row button { grid-column: 3; grid-row: 1 / 3; align-self: start; }
+  .biography-mobile-preview-toggle, .cp-biography-mobile-preview-toggle { display: none; }
+  .biography-editor-menu { position: relative; font-size: 0.8rem; }
+  .biography-editor-menu > summary { cursor: pointer; padding: 0.55rem 0.4rem; }
+  .biography-editor-menu > div { position: absolute; z-index: 4; bottom: calc(100% + 0.5rem); left: 0; display: grid; gap: 0.4rem; min-width: 12rem; padding: 0.7rem; border: 1px solid rgba(139,105,20,0.4); background: var(--parchment, #f3e8d0); box-shadow: 0 0.4rem 1rem #0002; }
+  .inline-edit-grid > .biography-editor-group { grid-column: 1 / -1; }
+  .cp-biography-view-render, .cp-biography-edit-preview, .person-biography-dialog__preview { container: biography-frame / inline-size; }
   .biography-page {
     --biography-side-width: 100%;
     --biography-connection-height: 68px;
@@ -8,7 +61,7 @@
     flex: 1;
     min-height: 0;
     display: grid;
-    grid-template-columns: minmax(250px, 29%) minmax(0, 1fr) minmax(250px, 24%);
+    grid-template-columns: minmax(220px, 23%) minmax(0, 1fr) minmax(240px, 26%);
     grid-template-rows: minmax(0, 1fr) auto;
     background: var(--module-paper, var(--parchment-dark));
     color: var(--ink);
@@ -33,7 +86,7 @@
     align-items: center;
   }
   .biography-main {
-    padding: 1.25rem 1.45rem;
+    padding: 1.6rem clamp(1.25rem, 2vw, 2.5rem);
   }
 
   .biography-right {
@@ -102,7 +155,7 @@
   }
   .biography-info-row strong {
     font-weight: 500;
-    font-size: 0.78rem;
+    font-size: 0.83rem;
     color: var(--ink);
   }
   .biography-quote-card {
@@ -131,8 +184,8 @@
     display: flex;
     align-items: center;
     gap: 0.65rem;
-    margin: 0.25rem 0 0.8rem;
-    font: 700 0.72rem/1 'Cinzel', serif;
+    margin: 0 0 1rem;
+    font: 700 0.75rem/1.5 'Cinzel', serif;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--gold);
@@ -145,14 +198,14 @@
   .biography-copy {
     max-width: none;
     color: var(--ink);
-    font-size: 0.88rem;
-    line-height: 1.72;
-    margin-bottom: 1.45rem;
+    font-size: 1rem;
+    line-height: 1.78;
+    margin: 0;
   }
   .biography-ability-list {
     display: grid;
-    gap: 0.75rem;
-    margin-bottom: 1.45rem;
+    gap: 0.9rem;
+    margin: 0;
   }
   .biography-ability {
     display: grid;
@@ -183,19 +236,19 @@
   .biography-connection strong {
     display: block;
     font-family: 'Cinzel', serif;
-    font-size: 0.78rem;
+    font-size: 0.83rem;
     color: var(--ink);
   }
   .biography-ability span,
   .biography-connection span {
     display: block;
-    font-size: 0.76rem;
-    font-style: italic;
+    font-size: 0.9rem;
+    font-style: normal;
     color: var(--ink-faded);
-    line-height: 1.35;
+    line-height: 1.6;
   }
   .biography-list {
-    margin: 0 0 1.25rem;
+    margin: 0;
     padding-left: 1.15rem;
     color: var(--ink);
     font-size: 0.95rem;
@@ -225,12 +278,12 @@
     border-bottom-style: solid;
   }
   .biography-extra-section {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
   }
   .biography-connections {
     display: grid;
     gap: 0.55rem;
-    margin-bottom: 1.3rem;
+    margin: 0;
   }
   .biography-connection {
     display: grid;
@@ -306,8 +359,8 @@
     background: var(--ink);
     color: var(--gold);
     text-align: center;
-    font: 700 0.58rem/1 'Cinzel', serif;
-    letter-spacing: 0.24em;
+    font: 700 0.6rem/1.5 'Cinzel', serif;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
   }
   .biography-edit-list {
@@ -383,4 +436,17 @@
     .biography-left { border-bottom: 1px solid var(--module-line, var(--parchment-deeper)); }
     .biography-portrait { max-width: 300px; }
     .biography-right { border-top: 1px solid var(--module-line, var(--parchment-deeper)); }
+  }
+  @container biography-frame (max-width: 1050px) {
+    .biography-page { display: block; overflow: auto; }
+    .biography-left, .biography-main, .biography-right { min-width: 0; overflow: visible; border: 0; padding: 1.25rem; }
+    .biography-left { border-bottom: 1px solid rgba(139,105,20,0.25); }
+    .biography-portrait { max-width: 19rem; }
+    .biography-right { border-top: 1px solid rgba(139,105,20,0.25); }
+  }
+  @media (max-width: 600px) {
+    .biography-editor-group .biography-edit-row,
+    .biography-editor-group .biography-edit-section-row,
+    .biography-mentor-edit-row { grid-template-columns: minmax(0,1fr); }
+    .biography-mentor-edit-row button { grid-column: 1; grid-row: auto; justify-self: end; }
   }

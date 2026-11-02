@@ -104,17 +104,22 @@ function normalizeCharacterImageSets(character = {}) {
       ? standardSource.emotes
       : legacyEmotes
   }, 0, occupiedIds, options);
-  const sets = [standard];
+  const sets = [];
   otherSources.slice(0, CHARACTER_IMAGE_SET_LIMIT - 1).forEach((source, index) => {
     sets.push(normalizeCharacterImageSetRecord(source, index + 1, occupiedIds, options));
   });
+  // Array order is the display order. Standard retains its identity and legacy
+  // fields, but can be moved like any other set. Old records still start with it.
+  const standardIndex = standardSource ? Math.min(rawSets.indexOf(standardSource), sets.length) : 0;
+  sets.splice(standardIndex, 0, standard);
   return sets;
 }
 
 function getCharacterImageSet(character = {}, setId = CHARACTER_IMAGE_SET_DEFAULT_ID) {
   const sets = normalizeCharacterImageSets(character);
   const requestedId = String(setId || CHARACTER_IMAGE_SET_DEFAULT_ID);
-  return sets.find(set => set.id === requestedId) || sets[0];
+  return sets.find(set => set.id === requestedId)
+    || sets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID);
 }
 
 function getCharacterImageSetPresentation(character = {}, setId = CHARACTER_IMAGE_SET_DEFAULT_ID) {

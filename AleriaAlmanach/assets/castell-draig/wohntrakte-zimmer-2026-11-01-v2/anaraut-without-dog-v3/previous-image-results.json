@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "date": "2026-11-01",
+  "tool": "built-in image_gen",
+  "originalCompositionPreserved": true,
+  "references": [
+    {
+      "path": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/gawain-gemach.png",
+      "sha256": "d369ff0ec7f8ec15d3323d7e204d6de085e426f4460eaa1027c34225870fc033"
+    },
+    {
+      "path": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/references/gwrgi.png",
+      "sha256": "a7d0be13dc549b4387833dca35b4eae7051faf7d9ee4e8c2b6d4778b4530d743"
+    }
+  ],
+  "images": [
+    {
+      "id": "gawain",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/gawain-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/gawain-gemach-v2.png",
+      "sha256": "518bc85258a3c8b546cec996e96f52b5461aea81ca3103c610dc9a0d0f81a09b",
+      "bytes": 2216147,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "idwal",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/idwal-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/idwal-gemach-v2.png",
+      "sha256": "1f92395b99423289c0f9bf1b04cfee258660b1401301d10403409810d1918bed",
+      "bytes": 2290049,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "anaraut",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/anaraut-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/anaraut-gemach-v2.png",
+      "sha256": "649e206be24a61ad0853c0cefa450b168b1b2d60a5646a54296498b493d6b275",
+      "bytes": 2024871,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "isobel",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/isobel-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/isobel-gemach-v2.png",
+      "sha256": "13bf90697572804ddb7bc340a8e2b63865d8c53c92ea6a812e0c42e46f8ce50b",
+      "bytes": 2519236,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "rhiannon",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/rhiannon-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/rhiannon-gemach-v2.png",
+      "sha256": "cd81424ee3f72aa2897d831bd3efc3edd610becbb2f36ea913a27dffa0059ce5",
+      "bytes": 2201471,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "neithon",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/neithon-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/neithon-gemach-v2.png",
+      "sha256": "fa0217262c028df07a5813f4f030598619154a3ef1c306d7b04f061ec192328a",
+      "bytes": 2057216,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "tudwal",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/tudwal-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/tudwal-gemach-v2.png",
+      "sha256": "e959113e7fead928cfd1cddf1d36bc0385b01060687777739af7527639d622fb",
+      "bytes": 2162966,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    },
+    {
+      "id": "oweta",
+      "original": "AleriaAlmanach/assets/castell-draig/wohntrakte-zimmer-2026-11-01-v2/generated/oweta-gemach-v2.png",
+      "destination": "AleriaAlmanach/public/assets/castell-draig/2026-11-01/rooms-v2/oweta-gemach-v2.png",
+      "sha256": "6dff557db9da041f6cb4a0f629c21f4603351f25a85971436784a4af3d41be84",
+      "bytes": 2105125,
+      "width": 1024,
+      "height": 1536,
+      "visualReview": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "traits": [
+    {
+      "id": "development-trait-bluttraeger-vampirspross",
+      "name": "Blutträger (Vampirspross)",
+      "description": "Angeborenes menschliches Erbe eines vampirischen Vorfahren: +1 Zauberangriff, +1 auf Arkane Kunde und KON-Rettungswürfe.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-vampirspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellAttack": 1,
+        "skillModifiers": [
+          {
+            "name": "Arkane Kunde",
+            "bonus": 1
+          }
+        ],
+        "saveAttributeModifiers": [
+          {
+            "attributeKey": "constitution",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-formlingsspross",
+      "name": "Blutträger (Formlingsspross)",
+      "description": "Angeborenes menschliches Erbe eines Formlings oder Formwandlers: +1 Zauber-SG und +2 auf Täuschen. Die Anlage begünstigt Illusion und Verstellung.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-formlingsspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellSaveDc": 1,
+        "skillModifiers": [
+          {
+            "name": "Täuschen",
+            "bonus": 2
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-succubusspross",
+      "name": "Blutträger (Succubusspross)",
+      "description": "Angeborenes menschliches Erbe eines Sukkubus oder Inkubus: +1 Zauber-SG, +2 auf Flirten und +1 auf Motiv erkennen. Die Anlage begünstigt Traum- und Gefühlsmagie.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-succubusspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellSaveDc": 1,
+        "skillModifiers": [
+          {
+            "name": "Flirten",
+            "bonus": 2
+          },
+          {
+            "name": "Motiv erkennen",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-satyrspross",
+      "name": "Blutträger (Satyrspross)",
+      "description": "Angeborenes menschliches Erbe eines Satyrs: +1 Zauberangriff, +2 auf Auftreten und +1 auf Akrobatik. Magische Begabung zeigt sich besonders in Klang und Rhythmus.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-satyrspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellAttack": 1,
+        "skillModifiers": [
+          {
+            "name": "Auftreten",
+            "bonus": 2
+          },
+          {
+            "name": "Akrobatik",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-aelvarspross",
+      "name": "Blutträger (Aelvarspross)",
+      "description": "Angeborenes menschliches Erbe einer Aelvar: +1 Zauber-SG, +2 auf Heimlichkeit und +1 auf Religion. Die infernale Anlage ist von subtiler Magie und verborgenen Riten geprägt.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-aelvarspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellSaveDc": 1,
+        "skillModifiers": [
+          {
+            "name": "Heimlichkeit",
+            "bonus": 2
+          },
+          {
+            "name": "Religion",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-nymphenspross",
+      "name": "Blutträger (Nymphenspross)",
+      "description": "Angeborenes menschliches Erbe einer celestialen Nymphe: +1 Zauber-SG und jeweils +1 auf Naturkunde, Heilkunde und Mit Tieren umgehen. Die Anlage ist lebens- und naturverbunden.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-nymphenspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellSaveDc": 1,
+        "skillModifiers": [
+          {
+            "name": "Naturkunde",
+            "bonus": 1
+          },
+          {
+            "name": "Heilkunde",
+            "bonus": 1
+          },
+          {
+            "name": "Mit Tieren umgehen",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-flammenspross",
+      "name": "Blutträger (Flammenspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Flamme: +1 Zauberangriff und Resistenz gegen Feuerschaden.",
+      "cost": 5,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-flammenspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellAttack": 1,
+        "damageAffinities": [
+          {
+            "damageType": "feuer",
+            "response": "resistant"
+          },
+          {
+            "damageType": "fire",
+            "response": "resistant"
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-windspross",
+      "name": "Blutträger (Windspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Winde: +1 Zauberangriff, +1 m Bewegung und +1 auf Akrobatik.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-windspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellAttack": 1,
+        "movement": 1,
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-donnerspross",
+      "name": "Blutträger (Donnerspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen des Donners: +1 Zauberangriff und Resistenz gegen Blitzschaden.",
+      "cost": 5,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-donnerspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellAttack": 1,
+        "damageAffinities": [
+          {
+            "damageType": "blitz",
+            "response": "resistant"
+          },
+          {
+            "damageType": "elektrisch",
+            "response": "resistant"
+          },
+          {
+            "damageType": "elektrizität",
+            "response": "resistant"
+          },
+          {
+            "damageType": "lightning",
+            "response": "resistant"
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-bluttraeger-bergspross",
+      "name": "Blutträger (Bergspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Berge: +1 Zauber-SG, +2 maximale TP und +1 auf STÄ-Rettungswürfe. Aktuelle TP werden nicht aufgefüllt.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-bergspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung · Blutträger · Angeboren",
+      "mechanics": {
+        "spellSaveDc": 1,
+        "maximumHitPoints": 2,
+        "saveAttributeModifiers": [
+          {
+            "attributeKey": "strength",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    }
+  ],
+  "origins": [
+    {
+      "id": "development-trait-bluttraeger-vampirspross",
+      "kind": "infernal",
+      "ancestor": "Vampirischer Vorfahr",
+      "referenceUrl": "/Bestiarium/wesen/gruppen/vampire/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/dunkelalben/index.html",
+      "examples": [
+        {
+          "name": "Aradin Hyrmgarthr",
+          "worldPersonId": "person--haus-hyrmgardr--aradin-hyrmgardr",
+          "reason": "Vampirischer Ursprung des Clans Hyrmgarthr; Autorenfestlegung vom 2. November 2026."
+        }
+      ]
+    },
+    {
+      "id": "development-trait-bluttraeger-formlingsspross",
+      "kind": "infernal",
+      "ancestor": "Formling / Formwandler",
+      "referenceUrl": "/Bestiarium/wesen/inferniiden/formwandler/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/dunkelalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-succubusspross",
+      "kind": "infernal",
+      "ancestor": "Sukkubus / Inkubus",
+      "referenceUrl": "/Bestiarium/wesen/inferniiden/sukkubus-inkubus/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/dunkelalben/index.html",
+      "examples": [
+        {
+          "name": "Myriad Draig",
+          "worldPersonId": "person--haus-draig--myriad-draig",
+          "reason": "Mutter Afallith „Lilith“ Tanwyn ist ein Succubus; Autorenfestlegung vom 2. November 2026."
+        }
+      ]
+    },
+    {
+      "id": "development-trait-bluttraeger-satyrspross",
+      "kind": "infernal",
+      "ancestor": "Satyr",
+      "referenceUrl": "/Bestiarium/wesen/inferniiden/satyr/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/dunkelalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-aelvarspross",
+      "kind": "infernal",
+      "ancestor": "Aelvar",
+      "referenceUrl": "/Bestiarium/wesen/gruppen/aelvar/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/dunkelalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-nymphenspross",
+      "kind": "celestial",
+      "ancestor": "Celestiale Nymphe",
+      "referenceUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-flammenspross",
+      "kind": "celestial",
+      "ancestor": "Humanoider Celestialer der Flamme",
+      "referenceUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-windspross",
+      "kind": "celestial",
+      "ancestor": "Humanoider Celestialer der Winde",
+      "referenceUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-donnerspross",
+      "kind": "celestial",
+      "ancestor": "Humanoider Celestialer des Donners",
+      "referenceUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "examples": []
+    },
+    {
+      "id": "development-trait-bluttraeger-bergspross",
+      "kind": "celestial",
+      "ancestor": "Humanoider Celestialer der Berge",
+      "referenceUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "compatibilityUrl": "/Bestiarium/themen/lichtalben/index.html",
+      "examples": []
+    }
+  ]
+}

@@ -37,6 +37,7 @@ export function buildBiographyExportPayload({ biographyModule, personId = '', pe
   const bio = module.biography;
   bio.portrait = resolveAsset(bio.portrait, baseUrl);
   bio.portraitStages = (bio.portraitStages || []).map(value => resolveAsset(value, baseUrl));
+  for (const item of bio.knightMentors || []) item.image = resolveAsset(item.image, baseUrl);
   for (const item of bio.connections || []) item.image = resolveAsset(item.image, baseUrl);
   for (const item of [...(bio.abilities || []), ...(bio.documents || [])]) {
     if (isRecord(item)) item.icon = resolveAsset(item.icon, baseUrl, true);

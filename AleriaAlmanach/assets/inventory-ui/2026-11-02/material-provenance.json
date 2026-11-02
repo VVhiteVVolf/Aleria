@@ -1,0 +1,13 @@
+{
+  "createdAt": "2026-11-02",
+  "tool": "built-in image_gen",
+  "purpose": "Subtle dark tile material for the old-school inventory UI",
+  "path": "AleriaAlmanach/public/assets/inventory-ui/dark-hide-v1.png",
+  "width": 1254,
+  "height": 1254,
+  "bytes": 2307467,
+  "sha256": "ba72fd4706d896733064a3cb7ed739f71effb8fa8a47b8456b8aec0d7f9b001b",
+  "transparentBackground": false,
+  "prompt": "Use case: stylized-concept. Asset type: seamless square bitmap surface texture for a working old-school fantasy RPG inventory UI inspired by early-2000s Morrowind menus. Create ONE flat orthographic material texture, no objects: very dark charcoal-brown ancient hide over an old hammered-metal backing, an extremely subtle fine worn leather/pitted iron grain. Restrained warm near-black #1b1813 base, sparse dull umber #30291f grain, minute weathering, very low contrast and evenly lit. The texture must remain unobtrusive behind small ivory text and hand-painted item icons. Uniform density over the whole square; all four edges tile seamlessly. Flat 2D old PC game menu material; matte aged handcrafted feel. No decorative corners, frame, border, buttons, icons, lettering, emblems, stains, scratches large enough to read as a motif, strong lighting, vignette, directional shadows, glossy highlights, scenery, props or watermark. Do not create a UI mockup. Only the understated tileable dark background material.",
+  "usage": "Used only as a subdued CSS material surface. Existing original item/coin/companion images remain unchanged."
+}

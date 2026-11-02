@@ -52,7 +52,9 @@ test('Brevanor receives heraldry records without invented family members', () =>
   const bielle = FAMILY_REGISTRY.filter(f => f.id === 'haus-bielle');
   const desele = FAMILY_REGISTRY.filter(f => f.id === 'haus-desele');
   assert.equal(bielle.length, 1); assert.equal(desele.length, 1);
-  for (const record of [...bielle, ...desele]) { assert.deepEqual([...record.folderPath], ['Brevanor']); assert.equal(record.family.partnerships.length, 0); }
+  // Die territoriale Untergliederung gehört zum Königreichsregister; hier wird
+  // die Herkunft der Hausakten geprüft, nicht ein veralteter flacher Ordnerpfad.
+  for (const record of [...bielle, ...desele]) { assert.equal(record.folderPath[0], 'Brevanor'); assert.equal(record.family.partnerships.length, 0); }
   assert.equal(bielle[0].family.persons.length, 0);
   assert.equal(desele[0].family.persons.length, 1);
   assert.equal(desele[0].family.persons[0].worldPersonId, MUSCHI_PEOPLE[0].worldPersonId);

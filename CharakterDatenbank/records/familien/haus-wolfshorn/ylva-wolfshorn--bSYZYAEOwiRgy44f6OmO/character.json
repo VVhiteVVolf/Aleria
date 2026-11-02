@@ -148,9 +148,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/martial-control-bSYZYAEOwiRgy44f6OmO-2026-10-15.json",
-    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
-    "sourceUpdatedAt": "2026-10-14T19:00:46.364Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/bSYZYAEOwiRgy44f6OmO.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO",
@@ -161,7 +161,7 @@
       "bSYZYAEOwiRgy44f6OmO",
       "bSYZYAEOwiRgy44f6OmO"
     ],
-    "contentHash": "a3a14d6d81d91615b946c72e7eaf450ccac12ce380b6ec2880b2a36fd30f8be7"
+    "contentHash": "adb360146473bffe714b2d45aaf62ded518b88dee2eb70b5e53545255d7109ce"
   },
   "local": {
     "notes": "",
@@ -25443,6 +25443,55 @@
             }
           ]
         }
+      },
+      {
+        "id": "bSYZYAEOwiRgy44f6OmO",
+        "name": "Ylva Wolfshorn",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-faehrtenleser",
+              "name": "Geborener Fährtenleser",
+              "description": "Expertise in Überleben und +1 auf Naturkunde.",
+              "cost": 4,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung",
+              "mechanics": {
+                "skillProficiencies": [
+                  {
+                    "name": "Überleben",
+                    "proficiency": "expertise"
+                  }
+                ],
+                "skillModifiers": [
+                  {
+                    "name": "Naturkunde",
+                    "bonus": 1
+                  }
+                ]
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Geborener Fährtenleser",
+                "detail": "Expertise in Überleben und +1 auf Naturkunde.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
@@ -25452,7 +25501,7 @@
     "archived": false,
     "status": "",
     "emotesOverride": true,
-    "updatedAt": "2026-10-14T19:00:46.364Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "title": "Edeldame, Hornhall",
     "plotNode": "",
     "identity": {
@@ -30892,108 +30941,31 @@
       },
       "quirks": [
         {
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "stacking": "normal",
-          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
-          "triggerRules": [],
-          "target": "self",
-          "limitations": "",
-          "trigger": "",
-          "duration": "",
-          "tags": "Volk · Aldrimarer",
-          "mechanics": {
-            "bonusDamageFormula": "",
-            "armorClass": 0,
-            "skill": 0,
-            "spellSaveDc": 0,
-            "attackRollMode": "normal",
-            "attack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "damage": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "passivePerception": 0,
-            "initiative": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "movement": 0,
-            "maximumHitPoints": 0
-          },
-          "id": "starter-ancestry-aldrimarer-trait-1",
-          "name": "Aldrimarische Widerstandskraft",
-          "aiInstructions": "",
+          "id": "development-trait-faehrtenleser",
+          "name": "Geborener Fährtenleser",
+          "description": "Expertise in Überleben und +1 auf Naturkunde.",
+          "cost": 4,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp",
           "type": "trait",
-          "priority": 0,
-          "active": true
-        },
-        {
-          "stacking": "normal",
-          "tags": "Hintergrund · Huskarl",
-          "type": "trait",
-          "name": "Aldrimarische Gefolgschaftstreue",
-          "triggerRules": [],
-          "trigger": "",
           "active": true,
-          "duration": "",
-          "limitations": "",
-          "aiInstructions": "",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "target": "self",
-          "priority": 0,
-          "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
-          "id": "starter-background-huskarl-trait-1",
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung",
           "mechanics": {
-            "spellSaveDc": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "damage": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "attackRollMode": "normal",
-            "skill": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "attack": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "savingThrow": 0,
-            "spellAttack": 0,
-            "bonusDamageFormula": "",
-            "movement": 0,
-            "armorClass": 0
-          }
-        },
-        {
-          "aiInstructions": "",
-          "target": "self",
-          "tags": "",
-          "id": "skytte-auge",
-          "stacking": "normal",
-          "name": "Auge des Jägers",
-          "type": "quirk",
-          "priority": 0,
-          "mechanics": {
-            "damage": 0,
-            "armorClass": 0,
-            "skill": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "spellAttack": 0,
-            "savingThrow": 0,
-            "passivePerception": 0,
-            "attack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "movement": 0,
-            "bonusDamageFormula": "",
-            "initiative": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "maximumHitPoints": 0,
-            "attackRollMode": "normal",
-            "spellSaveDc": 0
+            "skillProficiencies": [
+              {
+                "name": "Überleben",
+                "proficiency": "expertise"
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Naturkunde",
+                "bonus": 1
+              }
+            ]
           },
-          "limitations": "",
-          "active": true,
-          "description": "+1 Angriff mit einem geführten Bogen, auch bei Bogentechniken. Klassenbonus wird automatisch berechnet; kein Gegenstandsbonus.",
-          "trigger": "",
-          "duration": "",
-          "appliesWhen": "",
           "triggerRules": []
         }
       ],

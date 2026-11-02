@@ -53,10 +53,10 @@ test('Hausseite und Stammbaum-Bio stammen vollständig aus derselben Quelle', as
   assert.ok(biographyWords.length < 1000, 'Die Hausbio bleibt gegenüber der vollständigen Hausseite gekürzt.');
 });
 
-test('Alle elf unbenannten Hofämter verwenden die Silhouetten der Quelle', () => {
+test('Alle unbenannten Hofämter verwenden die Silhouetten der Quelle', () => {
   const offices = page.court.groups.find(group => group.id === 'offices').entries;
   const unassigned = offices.filter(entry => entry.name === 'Nicht benannt');
-  assert.equal(unassigned.length, 10);
+  assert.equal(unassigned.length, 8);
   for (const entry of unassigned) {
     const expected = ['Brotmeister', 'Gartenmeister', 'Hoffalkner'].includes(entry.role) ? 'female' : 'male';
     assert.equal(page.images[entry.imageKey].src, `../Stammbäume/assets/images/placeholders/${expected}.png`);

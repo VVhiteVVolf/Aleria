@@ -1,15 +1,24 @@
 import { renderAttributeIcon } from '../skill-checks/attribute-icon-registry.js?v=20261015-check-options-v1';
+import { describeCombatAttributeValue } from '../combat/combat-attribute-effects.js';
+const SKILL_PROFICIENCY_LABELS={none:'Ungeübt',trained:'Geübt',expertise:'Expertise'};
+import { renderDevelopmentShop, refreshDevelopmentShop } from '../character-development/development-ui.js';
+import { findDevelopmentArchiveDuplicate } from '../character-development/development-entry-reference.js';
+import { updateDevelopmentPlan } from '../character-development/development-plan-input.js';
+import { renderDevelopmentOverview, handleDevelopmentAction } from '../character-development/development-overview.js';
 import { describeConditionalEquipmentDefense } from '../character-equipment/equipment-stat-description.js';
 import {
   COMBAT_ATTRIBUTE_DEFINITIONS,
   COMBAT_WEAPON_TYPE_OPTIONS,
   getAttributeModifier,
+  getEffectiveCombatAttribute,
+  createCombatProfileReadModel,
   getHitPointProgression,
   upgradeCharacterHitPoints,
   setCharacterHitPointMaximum,
   getCharacterCombatInventoryOptions,
   getSavingThrowTotal,
   getSkillTotal,
+  getEffectiveSkillProficiency,
   getWeaponAttackModifier,
   getWeaponDamageModifier,
   isTechniqueCompatibleWithWeapon,
@@ -24,7 +33,6 @@ import { updateCharacterSpellPresentations } from './character-spell-view.js?v=2
 import {
   applyManualCharacterLevel,
   createCharacterLevelUpPlan,
-  getLevelUpAttributePointAllowance,
   previewCharacterLevelUp
 } from '../combat/combat-level-up-model.js?v=20260928-equipment-art-v4';
 import { getCombatResourceIconPresentation } from '../combat/combat-resource-icons.js?v=20260803-composer-design-v1';
@@ -73,10 +81,15 @@ function getInventoryDraft() {
 }
 
 function setInventoryDraft(inventory, options = {}) {
-  activeCharacter = { ...(activeCharacter || {}), inventory };
+  // A stored inventory may predate owner metadata. The currently opened
+  // character owns this draft throughout both equipment-sync directions.
+  const character = activeCharacter || {};
+  let ownedInventory = { ...inventory, characterId: character.id || inventory?.characterId || '' };
   if (typeof globalThis.setCharacterInventoryProfileData === 'function') {
-    globalThis.setCharacterInventoryProfileData(inventory, options);
+    ownedInventory = globalThis.setCharacterInventoryProfileData(ownedInventory, { ...options, character }) || ownedInventory;
   }
+  activeCharacter = { ...character, inventory: ownedInventory };
+  return ownedInventory;
 }
 
 function synchronizeDraftFromCombat(options = {}) {
@@ -88,14 +101,14 @@ function synchronizeDraftFromCombat(options = {}) {
     now: new Date().toISOString()
   });
   draftProfile = sanitizeCharacterCombatProfile(result.combatProfile);
-  setInventoryDraft(result.inventory, { render: options.renderInventory === true });
+  result.inventory = setInventoryDraft(result.inventory, { render: options.renderInventory === true });
   return result;
 }
 
 function synchronizeDraftFromInventory(inventory = getInventoryDraft()) {
   const result = synchronizeEquipmentFromInventory({ inventory, combatProfile: draftProfile });
   draftProfile = sanitizeCharacterCombatProfile(result.combatProfile);
-  setInventoryDraft(result.inventory);
+  result.inventory = setInventoryDraft(result.inventory);
   return result;
 }
 
@@ -251,7 +264,7 @@ function renderIdentityAndProgression(profile) {
       </div>
       <div class="cp-sheet-title-actions">
         <p>Alle Werte sind frei bearbeitbar, werden online mit der Figur gespeichert und als verbindlicher Kontext an AleriaGPT übergeben.</p>
-        <button type="button" data-combat-action="open-character-setup">✦ Starthilfe · Stufe 1</button>
+        <button type="button" data-combat-action="open-character-setup">✦ Starthilfe · Aufbau &amp; Ausbildung</button>
         <button type="button" data-combat-action="open-level-up">✦ Stufenaufstieg</button>
       </div>
     </header>
@@ -297,61 +310,46 @@ function renderLevelUpChanges(preview) {
     <ul>${preview.changes.map(change => `<li><span>${escapeMarkup(change.label)}</span><strong>${escapeMarkup(change.before)} → ${escapeMarkup(change.after)}</strong></li>`).join('')}</ul>`;
 }
 
-function renderLevelUpTraining(preview) {
-  const plan = preview.plan;
-  const trainingGroups = preview.classTrainingChoiceGroups || [];
-  const techniqueGroups = preview.classTechniqueChoiceGroups || [];
-  if (!trainingGroups.length && !techniqueGroups.length) return '';
-  return `<section class="cp-level-up-section" data-level-up-role="training">
-    <div class="cp-level-up-section-head"><div><span>Cenyr-Ausbildung</span><h4>Formen, Pfade &amp; Attackenslots</h4></div><small>Der erste Expertenpfad ist frei; weitere Pfade belegen einen Attackenslot.</small></div>
-    <div class="cp-level-up-fields">
-      ${trainingGroups.map(group => `<label class="wide"><span>${escapeMarkup(group.label)}${group.required ? ' · erforderlich' : ' · optional'}</span><select data-level-up-path="classTrainingChoices.${escapeMarkup(group.kind)}"><option value="">${group.required ? 'Bitte wählen' : 'Keinen weiteren Weg wählen'}</option>${group.options.map(option => `<option value="${escapeMarkup(option.id)}"${selected(plan.classTrainingChoices[group.kind], option.id)}>${escapeMarkup(option.name)}</option>`).join('')}</select></label>`).join('')}
-      ${techniqueGroups.map(group => `<label class="wide"><span>${escapeMarkup(group.label)} · erforderlich</span><select data-level-up-technique="${escapeMarkup(group.slotId)}"><option value="">Attacke wählen</option>${group.options.map(option => {
-        const weaponNote = option.compatibleWeaponNames.length
-          ? ` · ${option.compatibleWeaponNames.join('/')}`
-          : ' · passende Waffe im Bogen ergänzen';
-        return `<option value="${escapeMarkup(option.id)}"${selected(plan.cenyrTechniqueChoices[group.slotId], option.id)}>${escapeMarkup(`${option.name} · ab Stufe ${option.minimumLevel}${weaponNote}`)}</option>`;
-      }).join('')}</select></label>`).join('')}
-    </div>
-  </section>`;
-}
 
 function renderLevelUpDialog(profile) {
   if (!levelUpState) return '';
   const preview = previewCharacterLevelUp(profile, levelUpState.plan);
   const plan = preview.plan;
-  const attributePointAllowance = getLevelUpAttributePointAllowance(profile);
+  const attributePointAllowance = preview.attributePointAllowance;
   const allocatedAttributePoints = Object.values(plan.attributeIncreases)
     .reduce((sum, value) => sum + Math.max(0, Number(value) || 0), 0);
   const remainingAttributePoints = attributePointAllowance - allocatedAttributePoints;
   return `<div class="cp-level-up-backdrop" data-level-up-role="backdrop">
-    <section class="cp-level-up-dialog" role="dialog" aria-modal="true" aria-labelledby="cp-level-up-title">
+    <section class="cp-level-up-dialog development-window" role="dialog" aria-modal="true" aria-labelledby="cp-level-up-title">
       <header>
-        <div><span>Geführte Entwicklung</span><h3 id="cp-level-up-title">Stufenaufstieg</h3></div>
+        <div><span>Individuelle Entwicklung</span><h3 id="cp-level-up-title">Stufen, Attacken &amp; Traits</h3></div>
         <button type="button" class="cp-level-up-close" data-combat-action="close-level-up" aria-label="Stufenaufstieg schließen">×</button>
       </header>
+      ${renderDevelopmentOverview(preview)}
       <div class="cp-level-up-body">
         <section class="cp-level-up-section cp-level-up-intro">
           <div><small>Aktuell</small><strong>Stufe ${preview.before?.level ?? 30}</strong></div>
           <span aria-hidden="true">→</span>
-          <div><small>Danach</small><strong>${preview.after ? (preview.after.levelKind === 'special' ? `Gesamt ${preview.after.level} · Sonder ${preview.after.specialLevels}` : `Stufe ${preview.after.level}`) : 'Maximum erreicht'}</strong></div>
+          <div><small>Danach</small><strong data-development-role="target-level">${preview.after ? (preview.after.levelKind === 'special' ? `Gesamt ${preview.after.level} · Sonder ${preview.after.specialLevels}` : `Stufe ${preview.after.level}`) : 'Maximum erreicht'}</strong></div>
           <p>Der Vorgang ändert zunächst nur den Entwurf. Dauerhaft wird er erst über <b>Figur speichern</b>.</p>
         </section>
 
         <section class="cp-level-up-section">
           <div class="cp-level-up-section-head"><div><span>Fortschritt</span><h4>Erfahrung &amp; Trefferpunkte</h4></div><small>TP werden vor dem Anwenden vollständig vorgerechnet.</small></div>
           <div class="cp-level-up-fields">
+            <label><span>Ziel-Gesamtstufe (auch mehrere auf einmal)</span><input type="number" min="${preview.before.level}" max="30" data-level-up-path="targetLevel" value="${plan.targetLevel}"><small>Gleiche Stufe: nur Ausbildung und Traits bearbeiten.</small></label>
             <label><span>Erfahrung nach Aufstieg</span><input type="number" min="0" max="999999999" data-level-up-path="experience" value="${plan.experience}"></label>
             <label><span>Nächste Stufe bei</span><input type="number" min="1" max="999999999" data-level-up-path="nextLevelExperience" value="${plan.nextLevelExperience ?? ''}" placeholder="frei"></label>
             <label><span>TP-Regel</span><select data-level-up-path="hitPointMode"><option value="recommended"${selected(plan.hitPointMode, 'recommended')}>Empfohlene Ableitung</option><option value="manual"${selected(plan.hitPointMode, 'manual')}>Manueller Zuwachs</option><option value="unchanged"${selected(plan.hitPointMode, 'unchanged')}>Maximum beibehalten</option></select></label>
-            <label><span>Gewürfelter Zuwachs + KON</span><input type="number" min="0" max="9999" data-level-up-path="manualHitPointGain" value="${plan.manualHitPointGain}"><small>Ohne Vitalität eingeben; der Zuschlag wird zusätzlich berechnet.</small></label>
+            <label><span>Manueller Zuwachs + KON je Stufe</span><input type="number" min="0" max="9999" data-level-up-path="manualHitPointGain" value="${plan.manualHitPointGain}"><small>Gilt je aufgestiegener Stufe. Ohne Vitalität eingeben; der Zuschlag wird zusätzlich berechnet.</small></label>
             <label class="cp-level-up-check"><input type="checkbox" data-level-up-path="restoreGainedHitPoints"${checked(plan.restoreGainedHitPoints)}> Aktuelle TP um den tatsächlichen Maximalzuwachs erhöhen</label>
           </div>
         </section>
 
         <section class="cp-level-up-section">
-          <div class="cp-level-up-section-head"><div><span>Freie Steigerung</span><h4>Attribute</h4></div><small>${attributePointAllowance ? `${attributePointAllowance} Punkte frei verteilen · ${remainingAttributePoints} übrig` : 'Auf dieser Stufe keine Attributspunkte'}</small></div>
-          <div class="cp-level-up-attributes">${profile.attributes.map(attribute => `<label><span>${escapeMarkup(attribute.label)} <b>${attribute.score}</b></span><input type="number" min="0" max="${attributePointAllowance}" data-level-up-attribute="${attribute.key}" value="${plan.attributeIncreases[attribute.key]}"${attributePointAllowance ? '' : ' disabled'}><small>+ Punkte</small></label>`).join('')}</div>
+          <div class="cp-level-up-section-head"><div><span>Freie Steigerung</span><h4>Attribute</h4></div><small>Empfehlung und freie Verteilung</small></div>
+          <p data-development-role="attributes">Empfehlung: ${attributePointAllowance} Punkte. Die Verteilung ist frei und kann von der Empfehlung abweichen.</p>
+          <div class="cp-level-up-attributes">${profile.attributes.map(attribute => `<label><span>${escapeMarkup(attribute.label)} <b>${attribute.score}</b></span><input type="number" min="0" max="10" data-level-up-attribute="${attribute.key}" value="${plan.attributeIncreases[attribute.key]}"><small>+ Punkte</small></label>`).join('')}</div>
         </section>
 
         ${renderLevelUpActionPools(preview)}
@@ -360,7 +358,7 @@ function renderLevelUpDialog(profile) {
           <div class="cp-level-up-resources">${profile.resources.filter(resource => !isSpellSlotResource(resource, profile.magic.slotResourceIds) && !["action", "bonus-action", "reaction", "special-action", "aura-focus"].includes(resource.id)).map(resource => `<div><strong>${escapeMarkup(resource.name)}</strong><small>${resource.current} / ${resource.maximum}</small><label>Aktuell +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="current" value="${plan.resourceIncreases[resource.id]?.current ?? 0}"></label><label>Maximum +<input type="number" min="-9999" max="9999" data-level-up-resource="${escapeMarkup(resource.id)}" data-level-up-resource-property="maximum" value="${plan.resourceIncreases[resource.id]?.maximum ?? 0}"></label></div>`).join('')}</div>
         </section>` : ''}
 
-        ${renderLevelUpTraining(preview)}
+        ${renderDevelopmentShop(profile, preview)}
 
         <section class="cp-level-up-section">
           <div class="cp-level-up-section-head"><div><span>Optional</span><h4>Neue Freischaltungen</h4></div><small>Leere Namen werden ignoriert.</small></div>
@@ -401,6 +399,7 @@ function renderLevelUpDialog(profile) {
 }
 
 function renderAttributeRadar(profile) {
+  const calculation = createCombatProfileReadModel(profile);
   return `
     <section class="cp-sheet-card cp-sheet-attributes" aria-labelledby="cp-sheet-attributes-title">
       <div class="cp-sheet-section-head"><div><span>Grundlagen</span><h4 id="cp-sheet-attributes-title">Attribute</h4></div><small>Wert 10 entspricht Modifikator +0</small></div>
@@ -426,15 +425,19 @@ function renderAttributeRadar(profile) {
           <p>Das Netz zeigt die Werte relativ zur frei nutzbaren Skala 1–30.</p>
         </div>
         <div class="cp-sheet-attribute-grid">
-          ${profile.attributes.map(attribute => `
+          ${profile.attributes.map(attribute => {
+            const effective = getEffectiveCombatAttribute(calculation, attribute.key);
+            const note = describeCombatAttributeValue(attribute, effective);
+            return `
             <article class="cp-sheet-attribute">
               ${renderAttributeIcon(attribute)}
               <input class="cp-sheet-attribute-name" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="label" value="${escapeMarkup(attribute.label)}" maxlength="40" aria-label="Attributname">
               <input class="cp-sheet-attribute-score" type="number" min="1" max="40" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="score" value="${attribute.score}" aria-label="${escapeMarkup(attribute.label)} Wert">
-              <strong data-combat-attribute-modifier="${attribute.key}">${displayModifier(getAttributeModifier(attribute))}</strong>
+              <strong data-combat-attribute-modifier="${attribute.key}">${displayModifier(getAttributeModifier(effective))}</strong>
+              <small class="cp-sheet-attribute-effect" data-combat-attribute-effective="${attribute.key}"${note ? '' : ' hidden'}>${escapeMarkup(note)}</small>
               <label>Kürzel<input data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="shortLabel" value="${escapeMarkup(attribute.shortLabel)}" maxlength="8"></label>
               <label>Mod. frei<input type="number" min="-20" max="20" data-combat-collection="attributes" data-combat-item-id="${attribute.key}" data-combat-property="modifierOverride" value="${attribute.modifierOverride ?? ''}" placeholder="auto"></label>
-            </article>`).join('')}
+            </article>`; }).join('')}
         </div>
       </div>
     </section>`;
@@ -524,7 +527,7 @@ function renderSkills(profile) {
     <div class="cp-sheet-table" role="table">
       <div class="cp-sheet-table-head" role="row"><span>Gesamt</span><span>Fertigkeit</span><span>Attribut</span><span>Kompetenz</span><span>Bonus</span><span></span></div>
       ${profile.skills.map(skill => `<div class="cp-sheet-table-row" role="row">
-        <strong data-combat-skill-total="${escapeMarkup(skill.id)}">${displayModifier(getSkillTotal(profile, skill))}</strong>
+        <strong data-combat-skill-total="${escapeMarkup(skill.id)}" title="Wirksame Kompetenz: ${SKILL_PROFICIENCY_LABELS[getEffectiveSkillProficiency(profile,skill)]}">${displayModifier(getSkillTotal(profile, skill))}</strong>
         <div class="cp-sheet-skill-identity">${renderCharacterSkillIcon(skill)}<input data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="name" value="${escapeMarkup(skill.name)}" maxlength="100" aria-label="Fertigkeit"><input data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="notes" value="${escapeMarkup(skill.notes)}" maxlength="500" placeholder="Notiz / Besonderheit" aria-label="Fertigkeitsnotiz"></div>
         <select data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="attributeKey" aria-label="Attribut">${renderAttributeOptions(skill.attributeKey)}</select>
         <select data-combat-collection="skills" data-combat-item-id="${escapeMarkup(skill.id)}" data-combat-property="proficiency" aria-label="Kompetenz"><option value="none"${selected(skill.proficiency, 'none')}>Keine</option><option value="trained"${selected(skill.proficiency, 'trained')}>Trainiert</option><option value="expertise"${selected(skill.proficiency, 'expertise')}>Expertise</option></select>
@@ -953,33 +956,31 @@ function closeLevelUp() {
 
 function updateLevelUpPlan(target) {
   if (!levelUpState) return false;
-  const path = target.dataset.levelUpPath;
-  const attributeKey = target.dataset.levelUpAttribute;
-  const resourceId = target.dataset.levelUpResource;
-  const resourceProperty = target.dataset.levelUpResourceProperty;
   const techniqueSlotId = target.dataset.levelUpTechnique;
-  if (path) setAtPath(levelUpState.plan, path, inputValue(target));
-  else if (attributeKey) levelUpState.plan.attributeIncreases[attributeKey] = inputValue(target);
+  if (updateDevelopmentPlan(levelUpState.plan, target)) { /* Shared creation/level input. */ }
   else if (techniqueSlotId) {
     if (!levelUpState.plan.cenyrTechniqueChoices) levelUpState.plan.cenyrTechniqueChoices = {};
     levelUpState.plan.cenyrTechniqueChoices[techniqueSlotId] = inputValue(target);
   }
-  else if (resourceId && resourceProperty) {
-    if (!levelUpState.plan.resourceIncreases[resourceId]) levelUpState.plan.resourceIncreases[resourceId] = {};
-    levelUpState.plan.resourceIncreases[resourceId][resourceProperty] = inputValue(target);
-  } else return false;
-  refreshLevelUpPreview();
+  else return false;
+  refreshLevelUpPreview(target);
   return true;
 }
 
-function refreshLevelUpPreview() {
+function refreshLevelUpPreview(changedTarget = null) {
   if (!levelUpState) return;
   const preview = previewCharacterLevelUp(draftProfile, levelUpState.plan);
   levelUpState.plan = preview.plan;
   const output = document.querySelector('[data-level-up-role="preview"]');
   if (output) output.innerHTML = renderLevelUpChanges(preview);
-  const training = document.querySelector('[data-level-up-role="training"]');
-  if (training) training.outerHTML = renderLevelUpTraining(preview);
+  const dialog = document.querySelector('.cp-level-up-dialog');
+  refreshDevelopmentShop(dialog, draftProfile, preview, changedTarget);
+  const overview = dialog?.querySelector('[data-development-role="overview"]');
+  if (overview) overview.outerHTML = renderDevelopmentOverview(preview);
+  const recommendation = dialog?.querySelector('[data-development-role="attributes"]');
+  if (recommendation) recommendation.textContent = `Empfehlung: ${preview.attributePointAllowance} Punkte · ${preview.allocatedAttributePoints} verteilt · ${preview.remainingAttributePoints} übrig. Die Verteilung ist frei.`;
+  const targetLevel = dialog?.querySelector('[data-development-role="target-level"]');
+  if (targetLevel) targetLevel.textContent = `Gesamtstufe ${preview.after.level}`;
   const pools = document.querySelector('[data-level-up-role="action-pools"]');
   if (pools) pools.outerHTML = renderLevelUpActionPools(preview);
   const applyButton = document.querySelector('[data-combat-action="apply-level-up"]');
@@ -1067,12 +1068,13 @@ function updateDraftField(target) {
 }
 
 function getRadarPoints(profile) {
+  const calculation = createCombatProfileReadModel(profile);
   const centerX = 130;
   const centerY = 125;
   const maximumRadius = 105;
   return profile.attributes.map((attribute, index) => {
     const angle = -Math.PI / 2 + index * Math.PI / 3;
-    const ratio = Math.max(0.08, Math.min(1, Number(attribute.score || 0) / 30));
+    const ratio = Math.max(0.08, Math.min(1, getEffectiveCombatAttribute(calculation, attribute.key).score / 30));
     return `${(centerX + Math.cos(angle) * maximumRadius * ratio).toFixed(1)},${(centerY + Math.sin(angle) * maximumRadius * ratio).toFixed(1)}`;
   }).join(' ');
 }
@@ -1085,6 +1087,7 @@ function setDerived(role, value) {
 
 function updateDerivedView() {
   const profile = sanitizeCharacterCombatProfile(draftProfile);
+  const calculation = createCombatProfileReadModel(profile);
   const resolved = resolveCharacterCombatProfile({ ...(activeCharacter || {}), combatProfile: profile });
   setDerived('effective-level', resolved.effectiveLevel);
   setDerived('proficiency', displayModifier(resolved.proficiencyBonus));
@@ -1101,8 +1104,14 @@ function updateDerivedView() {
   setDerived('spell-attack', displayModifier(resolved.spellAttackModifier));
   setDerived('spell-save-dc', resolved.spellSaveDc);
   profile.attributes.forEach(attribute => {
+    const effective = getEffectiveCombatAttribute(calculation, attribute.key);
     const output = document.querySelector(`[data-combat-attribute-modifier="${attribute.key}"]`);
-    if (output) output.textContent = displayModifier(getAttributeModifier(attribute));
+    if (output) output.textContent = displayModifier(getAttributeModifier(effective));
+    const effectLabel = document.querySelector(`[data-combat-attribute-effective="${attribute.key}"]`);
+    if (effectLabel) {
+      effectLabel.textContent = describeCombatAttributeValue(attribute, effective);
+      effectLabel.hidden = !effectLabel.textContent;
+    }
     const label = document.querySelector(`[data-combat-radar-label="${attribute.key}"]`);
     if (label) label.textContent = attribute.shortLabel || attribute.label.slice(0, 3).toUpperCase();
   });
@@ -1112,7 +1121,10 @@ function updateDerivedView() {
   });
   profile.skills.forEach(skill => {
     const output = document.querySelector(`[data-combat-skill-total="${CSS.escape(skill.id)}"]`);
-    if (output) output.textContent = displayModifier(getSkillTotal(profile, skill));
+    if (output) {
+      output.textContent = displayModifier(getSkillTotal(profile, skill));
+      output.title=`Wirksame Kompetenz: ${SKILL_PROFICIENCY_LABELS[getEffectiveSkillProficiency(profile,skill)]}`;
+    }
   });
   profile.weapons.forEach(weapon => {
     const attack = document.querySelector(`[data-combat-weapon-attack="${CSS.escape(weapon.id)}"]`);
@@ -1162,7 +1174,10 @@ function addItemFromCharacterArchive(collectionPath, editorKind = '', createFall
     kind: archiveKind,
     onSelect(entry) {
       const item = archive.createProfileItem?.(entry, collectionPath) || entry?.data;
-      if (item) addItem(collectionPath, item);
+      if (!item) return;
+      const existing = findDevelopmentArchiveDuplicate(draftProfile, collectionPath, item);
+      if (existing) openDetailItemEditor(collectionPath, existing.id, editorKind);
+      else addItem(collectionPath, item);
     },
     onCreate: createFallback
   });
@@ -1327,6 +1342,11 @@ document.addEventListener('aleria:character-archive-changed', () => {
 });
 
 document.addEventListener('click', event => {
+  const developmentButton = event.target?.closest?.('.cp-level-up-dialog [data-development-action]');
+  if (developmentButton && levelUpState && handleDevelopmentAction(levelUpState.plan, draftProfile, developmentButton.dataset.developmentAction)) {
+    renderSheet();
+    return;
+  }
   const trigger = event.target?.closest?.('[data-combat-action]');
   if (!trigger || !trigger.closest('#cp-tab-combat')) return;
   const action = trigger.dataset.combatAction;
@@ -1352,7 +1372,7 @@ document.addEventListener('click', event => {
       onApply(profile) {
         draftProfile = sanitizeCharacterCombatProfile(profile);
         synchronizeDraftFromCombat();
-        setupNotice = 'Die Stufe-1-Starthilfe wurde in den Entwurf übernommen. Bitte „Figur speichern“ verwenden, um den Bogen dauerhaft zu sichern.';
+        setupNotice = 'Aufbau und gewählte Ausbildung wurden in den Entwurf übernommen. Bitte „Figur speichern“ verwenden, um den Bogen dauerhaft zu sichern.';
         renderSheet();
       }
     });

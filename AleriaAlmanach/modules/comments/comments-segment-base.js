@@ -49,6 +49,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     skillId: String(combatSettings?.skillId || ''),
     skillCustomModifier: Number(combatSettings?.skillCustomModifier || 0),
     skillDifficulty: Number(combatSettings?.skillDifficulty || 10),
+    ...(combatSettings?.skillRequiredSense ? { skillRequiredSense: String(combatSettings.skillRequiredSense).slice(0, 20) } : {}),
     skillRollMode: ['advantage', 'disadvantage'].includes(combatSettings?.skillRollMode) ? combatSettings.skillRollMode : 'normal',
     skillTargetActorKey: String(combatSettings?.skillTargetActorKey || ''),
     skillTargetChallengeId: String(combatSettings?.skillTargetChallengeId || ''),
@@ -252,7 +253,8 @@ function getCommentSegmentImageSetContext(segment, edit = false) {
   const imageSets = normalizeCharacterImageSets(character);
   const fallbackSetId = edit ? _editSelectedImageSetId : _selectedImageSetId;
   const requestedSetId = String(segment?.imageSetId || fallbackSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
-  const selectedSet = imageSets.find(set => set.id === requestedSetId) || imageSets[0];
+  const selectedSet = imageSets.find(set => set.id === requestedSetId)
+    || imageSets.find(set => set.id === CHARACTER_IMAGE_SET_DEFAULT_ID);
   return selectedSet ? { imageSets, selectedSet } : null;
 }
 

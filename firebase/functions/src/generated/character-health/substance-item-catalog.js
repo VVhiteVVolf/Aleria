@@ -1,0 +1,5125 @@
+// Generated from actual public item and venue sources. Do not match editable item names.
+export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
+  {
+    "definitionId": "module-item:2043cc3b7c87b0cd:42fd4b4baef7ad3b",
+    "name": "Cneacail · Hügeldunkel",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2043cc3b7c87b0cd:e9d60917d3d335a3"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "Sude, Malzwhisky und kleine Bretter",
+        "itemId": "krone-huegeldunkel",
+        "itemIndex": 11,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gwynthor-zur-klingenden-krone",
+        "moduleTitle": "Zur Klingenden Krone",
+        "moduleType": "Taverne und Gildenbrauerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2043cc3b7c87b0cd:534e2c0756d27437",
+    "name": "Cneacail · Flusshell",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2043cc3b7c87b0cd:652d9a5f6968eaaf"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "Sude, Malzwhisky und kleine Bretter",
+        "itemId": "krone-flusshell",
+        "itemIndex": 10,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gwynthor-zur-klingenden-krone",
+        "moduleTitle": "Zur Klingenden Krone",
+        "moduleType": "Taverne und Gildenbrauerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2043cc3b7c87b0cd:5b89b405a428663b",
+    "name": "Cneacail · Hügeldunkel",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2043cc3b7c87b0cd:3ad4a8b9bb72fda3"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "Sude, Malzwhisky und kleine Bretter",
+        "itemId": "krone-huegeldunkel",
+        "itemIndex": 11,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gwynthor-zur-klingenden-krone",
+        "moduleTitle": "Zur Klingenden Krone",
+        "moduleType": "Taverne und Gildenbrauerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2043cc3b7c87b0cd:9587a716a2db8432",
+    "name": "Cneacail · Flusshell",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2043cc3b7c87b0cd:64296d2617b95e2a"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "Sude, Malzwhisky und kleine Bretter",
+        "itemId": "krone-flusshell",
+        "itemIndex": 10,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gwynthor-zur-klingenden-krone",
+        "moduleTitle": "Zur Klingenden Krone",
+        "moduleType": "Taverne und Gildenbrauerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2043cc3b7c87b0cd:9b5fc3a6b823d292",
+    "name": "Cneacail · Flusshell",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2043cc3b7c87b0cd:b242cb6e09728f0a"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "Sude, Malzwhisky und kleine Bretter",
+        "itemId": "krone-flusshell",
+        "itemIndex": 10,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gwynthor-zur-klingenden-krone",
+        "moduleTitle": "Zur Klingenden Krone",
+        "moduleType": "Taverne und Gildenbrauerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2043cc3b7c87b0cd:f8251cd07ac2101e",
+    "name": "Cneacail · Hügeldunkel",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2043cc3b7c87b0cd:6fd8dd8840f2fb86"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "Sude, Malzwhisky und kleine Bretter",
+        "itemId": "krone-huegeldunkel",
+        "itemIndex": 11,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gwynthor-zur-klingenden-krone",
+        "moduleTitle": "Zur Klingenden Krone",
+        "moduleType": "Taverne und Gildenbrauerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:0da4c7361d684688",
+    "name": "Weinlaub · Jahrgang 1734",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:bf8f855e8291e410"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-weinlaub-1734",
+        "itemIndex": 9,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:0f68fc3604cb8780",
+    "name": "Bielle · Réserve du Chevalier 1708",
+    "family": "wine",
+    "unit": "Ganze Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:02df4af6cc3fb8d8"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "bielle-reserve",
+        "itemIndex": 13,
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:2bbeab48de1085a8",
+    "name": "Weissmann · Weißwein",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:cd53ffd8452aad70"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-weissmann-weisswein",
+        "itemIndex": 10,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:3b775fd0dc93d774",
+    "name": "Bielle · Tour Blanche 1716",
+    "family": "wine",
+    "unit": "Ganze Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:6d88c87854d66c6c"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "bielle-tour-blanche",
+        "itemIndex": 14,
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:44d2f623a0ab4f41",
+    "name": "Weinlaub · Jahrgang 1734",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:e3dd89f9d8084679"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-weinlaub-1734",
+        "itemIndex": 9,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:8e01bfe6e6611042",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:045c9456bf5761da"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-bier-goldschuppen",
+        "itemIndex": 6,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:b4239e606828c3b6",
+    "name": "Rosenstolz · Rotwein",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:de6dceaae631af0e"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-rosenstolz",
+        "itemIndex": 11,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:b7d10583d5515f5f",
+    "name": "Rosenstolz · Rotwein",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:47f3faf7098e9ac7"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-rosenstolz",
+        "itemIndex": 11,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:ba6b0fcb761fcf81",
+    "name": "Weissmann · Weißwein",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:ca7c72fbdb900c19"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "muschi-weissmann-weisswein",
+        "itemIndex": 10,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2a43feed37decd3d:de8530f5f49cece7",
+    "name": "Bielle · Tour Rouge 1712",
+    "family": "wine",
+    "unit": "Ganze Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2a43feed37decd3d:35340781b541a77f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Gläser, Rauch und alte Düfte",
+        "itemId": "bielle-tour-rouge",
+        "itemIndex": 12,
+        "moduleId": "gwynthor-gestiefelte-muschi",
+        "moduleTitle": "Die Gestiefelte Muschi",
+        "moduleType": "Unterhaltungshaus"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:25e80e6ca4734968",
+    "name": "Weinlaub · Jahrgang 1734",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:685833988e9e2570"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weinlaub-1734",
+        "itemIndex": 27,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:334406f15d8ab613",
+    "name": "Weissmann · Weißwein",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:cb84ede7af884cab"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weissmann-weisswein",
+        "itemIndex": 29,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:492c4c4c11fa43fc",
+    "name": "Weinlaub · Jahrgang 1728",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:b8d15dc8b7774d64"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weinlaub-1728",
+        "itemIndex": 28,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:86ea8a182065cc1a",
+    "name": "Weissmann · Weißwein",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:78210e503e682902"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weissmann-weisswein",
+        "itemIndex": 29,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:8ebb55708ffb47d0",
+    "name": "Weissmann · Champagnia",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:040463f418e88148"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weissmann-champagnia",
+        "itemIndex": 30,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:cadb590729b56bd5",
+    "name": "Weinlaub · Jahrgang 1728",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:ab9904d3a7e6780d"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weinlaub-1728",
+        "itemIndex": 28,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:cff1de108fd194fc",
+    "name": "Weissmann · Champagnia",
+    "family": "wine",
+    "unit": "Glas · 0,10 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.2
+    },
+    "volumeMl": 100,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:98869efa6cd8e544"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weissmann-champagnia",
+        "itemIndex": 30,
+        "priceOption": "Glas",
+        "unit": "0,10 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:2c439c0b409cb43d:d17f99a7e1af18c1",
+    "name": "Weinlaub · Jahrgang 1734",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:2c439c0b409cb43d:f9b28d0360a28d19"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Die Hauskarte · Güterregister",
+        "itemId": "weinlaub-1734",
+        "itemIndex": 27,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "celtigerns-letzte-rast",
+        "moduleTitle": "Celtigerns Letzte Rast",
+        "moduleType": "Szene"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:33ee466eddb114ac:365189c500253f4f",
+    "name": "Einfacher roter Tischwein",
+    "family": "wine",
+    "unit": "Ein Becher · 0,20 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.4
+    },
+    "volumeMl": 200,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:33ee466eddb114ac:d17a5551f1770857"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Olwens Hauskarte · Speis und Trank",
+        "itemId": "tischwein-rot",
+        "itemIndex": 25,
+        "moduleId": "zum-roten-tor",
+        "moduleTitle": "Zum Roten Tor",
+        "moduleType": "Gasthof und Herberge"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:33ee466eddb114ac:b59964dcd81fa440",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:33ee466eddb114ac:47a5d84c55684b58"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "Olwens Hauskarte · Speis und Trank",
+        "itemId": "tor-import-bier-goldschuppen",
+        "itemIndex": 24,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "zum-roten-tor",
+        "moduleTitle": "Zum Roten Tor",
+        "moduleType": "Gasthof und Herberge"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:005ce2efe47109bd",
+    "name": "Hakenbräu",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:7407d8b3364935a5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Eigene Herkunft",
+        "itemId": "bier-hakenbraeu",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:0b558717ec08ec83",
+    "name": "Dämmerkrone",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:b7221acb9328319b"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-daemmerkrone",
+        "itemIndex": 2,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:25d773ccc6cb95de",
+    "name": "Hopfgold",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:6ce76a50d25cb3c6"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-hopfgold",
+        "itemIndex": 3,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:379980b625c6aae6",
+    "name": "Dämmerkrone",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:7b0e304ec997fafe"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-daemmerkrone",
+        "itemIndex": 2,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:477475ae116d99f8",
+    "name": "Hakenbräu",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:db3088020a1d0260"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Eigene Herkunft",
+        "itemId": "bier-hakenbraeu",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:4c74e80f0168b20d",
+    "name": "Hellwacht",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:15dd5d7bc6d8b115"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-hellwacht",
+        "itemIndex": 1,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:52c073ec1ba38ff6",
+    "name": "Goldhaube",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:608d9a90df27a3ee"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-goldhaube",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:6673cfce5734f598",
+    "name": "Hakenbräu",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:0cb4390e0131abc0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Eigene Herkunft",
+        "itemId": "bier-hakenbraeu",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:6c69fa60a66476d6",
+    "name": "Goldhaube",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:8882dca8f817bc4e"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-goldhaube",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:76a1d8164e2f0784",
+    "name": "Sonnenglanz",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:6991d1e28a65409c"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-sonnenglanz",
+        "itemIndex": 4,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:a3d8b4a1085ce3f3",
+    "name": "Goldhaube",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:c5320097849f3dcb"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-goldhaube",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:a78c15c0a67b0efe",
+    "name": "Hopfgold",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:3cf877300137bda6"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-hopfgold",
+        "itemIndex": 3,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:c2422a8a2bf9f2e8",
+    "name": "Hellwacht",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:c3c9a8fe29df7070"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-hellwacht",
+        "itemIndex": 1,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:db00f4d5b1bbb0e1",
+    "name": "Sonnenglanz",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:3f5f635964b95079"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-sonnenglanz",
+        "itemIndex": 4,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:eb3f4b01dd9a269b",
+    "name": "Hopfgold",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:b74e8f3d86117383"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-hopfgold",
+        "itemIndex": 3,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:ee050119618d1b8d",
+    "name": "Hellwacht",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:37b9a06523eee615"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-hellwacht",
+        "itemIndex": 1,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:f8f8aec6d071bec6",
+    "name": "Dämmerkrone",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:b6c5d5527c05d2de"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-daemmerkrone",
+        "itemIndex": 2,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:3be12a33e0142b03:fc6d50d3be7abc21",
+    "name": "Sonnenglanz",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:3be12a33e0142b03:a3aaa54538f79899"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Fünf Eigenbiere",
+        "itemId": "bier-sonnenglanz",
+        "itemIndex": 4,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "teyrngarch-brauerzunft",
+        "moduleTitle": "Die Teyrngarch Brauerzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:4d1077fc24d00386:88081b5b70e07c85",
+    "name": "Dünnbier",
+    "family": "beer",
+    "unit": "Ein Krug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1
+    },
+    "volumeMl": 500,
+    "abv": 2,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:4d1077fc24d00386:57774f3786c27e1d"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "Die kleine Karte",
+        "itemId": "duennbier",
+        "itemIndex": 5,
+        "moduleId": "gwynthor-zum-kleinen-durst",
+        "moduleTitle": "Zum Kleinen Durst",
+        "moduleType": "Hafenkneipe"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:224dfb172ef2472d",
+    "name": "Hellwacht",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:446c250b81590335"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-hellwacht",
+        "itemIndex": 14,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:25e80e6ca4734968",
+    "name": "Weinlaub · Jahrgang 1734",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:a5de0c06c193b790"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weinlaub-1734",
+        "itemIndex": 7,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:334406f15d8ab613",
+    "name": "Weissmann · Weißwein",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:589978d5b5be098b"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weissmann-weisswein",
+        "itemIndex": 9,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:492c4c4c11fa43fc",
+    "name": "Weinlaub · Jahrgang 1728",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:63cce2b46ff91124"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weinlaub-1728",
+        "itemIndex": 8,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:542f758e28bde524",
+    "name": "Penderyn · Rhagorol",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:beec9d9ae622813c"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "penderyn-brauer-destillierzunft-whisky-rhagorol",
+        "itemIndex": 18,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:55db893fca2f4bf1",
+    "name": "Penderyn",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:a48111fb1a4e3f69"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "penderyn-brauer-destillierzunft-whisky-penderyn",
+        "itemIndex": 19,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:6177c47c89e8c698",
+    "name": "Hopfgold",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:3255a860ba6b1e00"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-hopfgold",
+        "itemIndex": 15,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:7946dcc1b08d1289",
+    "name": "Weißer Tischwein",
+    "family": "wine",
+    "unit": "Glas · 0,20 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.4
+    },
+    "volumeMl": 200,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:e239a0cd319adf91"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "tischwein-weiss",
+        "itemIndex": 12,
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:86ea8a182065cc1a",
+    "name": "Weissmann · Weißwein",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:ed33bc0024a7a782"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weissmann-weisswein",
+        "itemIndex": 9,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:8ebb55708ffb47d0",
+    "name": "Weissmann · Champagnia",
+    "family": "wine",
+    "unit": "Flasche · 0,75 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 9
+    },
+    "volumeMl": 750,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:299af64c9965f0c8"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weissmann-champagnia",
+        "itemIndex": 10,
+        "priceOption": "Flasche",
+        "unit": "0,75 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:a9513a215b624603",
+    "name": "Rosé-Tischwein",
+    "family": "wine",
+    "unit": "Glas · 0,20 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.4
+    },
+    "volumeMl": 200,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:c4d501553bc57d9b"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "tischwein-rose",
+        "itemIndex": 13,
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:b62e26c9d2b9d133",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:790f2771f511ae2b"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "penderyn-brauer-destillierzunft-bier-goldschuppen",
+        "itemIndex": 17,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:cadb590729b56bd5",
+    "name": "Weinlaub · Jahrgang 1728",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:56b00bf35eb5828d"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weinlaub-1728",
+        "itemIndex": 8,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:cff1de108fd194fc",
+    "name": "Weissmann · Champagnia",
+    "family": "wine",
+    "unit": "Glas · 0,10 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.2
+    },
+    "volumeMl": 100,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:3ddbfc0c8c790064"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weissmann-champagnia",
+        "itemIndex": 10,
+        "priceOption": "Glas",
+        "unit": "0,10 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:d17f99a7e1af18c1",
+    "name": "Weinlaub · Jahrgang 1734",
+    "family": "wine",
+    "unit": "Glas · 0,15 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.8
+    },
+    "volumeMl": 150,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:114d3a8f31e81ed9"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "weinlaub-1734",
+        "itemIndex": 7,
+        "priceOption": "Glas",
+        "unit": "0,15 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:e1ee131d463e2cfb",
+    "name": "Roter Tischwein",
+    "family": "wine",
+    "unit": "Glas · 0,20 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.4
+    },
+    "volumeMl": 200,
+    "abv": 12,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:e246f859fd2d2363"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "tischwein-rot",
+        "itemIndex": 11,
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:6c37eddd73eea15b:ff9fbc44572e0020",
+    "name": "Sonnenglanz",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:6c37eddd73eea15b:5a7f95d052883938"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ —Angebot— ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-sonnenglanz",
+        "itemIndex": 16,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "die-lachende-nixe",
+        "moduleTitle": "Die Lachende Nixe",
+        "moduleType": "Taverne"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:00a6a758e7028338",
+    "name": "Drachenblut Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:0dd74fc840438c20"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "itemId": "bier-drachenblut",
+        "itemIndex": 1,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:27cb88dd7373ab7d",
+    "name": "Drachenblut Bier",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:8a83030d7e9b2765"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "itemId": "bier-drachenblut",
+        "itemIndex": 1,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:34fe3938637d73c8",
+    "name": "Brandhorn Bier",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:e37bf7ec630894d0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 7,
+        "pageTitle": "VIII. — Kooperationsbier · Brandhorn",
+        "itemId": "bier-brandhorn",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:46b93ac5bdd1214d",
+    "name": "Penderyn",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2000
+    },
+    "volumeMl": 50000,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:17cbb06dc6b78f15"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Zwei Whiskys",
+        "itemId": "whisky-penderyn",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:581192d717686c25",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:b297ba8f7f01433d"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "itemId": "bier-goldschuppen",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:599f0ef643257000",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:c0e5525e4b8bfc18"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "itemId": "bier-goldschuppen",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:93cbf3f78f6f10e1",
+    "name": "Penderyn",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:2de3a86399147479"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Zwei Whiskys",
+        "itemId": "whisky-penderyn",
+        "itemIndex": 0,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:971631861c547160",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:d0f56bf68c7da8f8"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "itemId": "bier-goldschuppen",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:971abd2e6c1a0a32",
+    "name": "Penderyn",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 28
+    },
+    "volumeMl": 700,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:a721b3eacaf3c72a"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Zwei Whiskys",
+        "itemId": "whisky-penderyn",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:a610510442e1b8d8",
+    "name": "Drachenblut Bier",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:c5716f5cb2cd9ec0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Die Hausbiere · Goldschuppen & Drachenblut",
+        "itemId": "bier-drachenblut",
+        "itemIndex": 1,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:b4e89af9457cea6d",
+    "name": "Brandhorn Bier",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:11b510715b3806f5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 7,
+        "pageTitle": "VIII. — Kooperationsbier · Brandhorn",
+        "itemId": "bier-brandhorn",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:824b635fba2534ab:ca1a86f42d541c28",
+    "name": "Brandhorn Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:824b635fba2534ab:9840bff8195c3530"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 7,
+        "pageTitle": "VIII. — Kooperationsbier · Brandhorn",
+        "itemId": "bier-brandhorn",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "penderyn-brauer-destillierzunft",
+        "moduleTitle": "Die Penderyn Brauer- & Destillierzunft",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:21ed6deafa7e8a32",
+    "name": "Frostkamm",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:c6aeb432c8835faa"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Frostkamm der Freiwinter",
+        "itemId": "bier-frostkamm",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:29c5b5d397d6332d",
+    "name": "Schwarzflut",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:1d05377796b9beb5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "bier-schwarzflut",
+        "itemIndex": 2,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:331d187e5e07b7cc",
+    "name": "Schwarzdorn Met",
+    "family": "mead",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 500
+    },
+    "volumeMl": 50000,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:a1c2e10287f2abd4"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "met-schwarzdorn",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:39e02ca108d62a6d",
+    "name": "Dornblut",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:72a39fcdb089aef5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "bier-dornblut",
+        "itemIndex": 3,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:45261bec4a855c28",
+    "name": "Dornblut",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:72ccd7f088612db0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "bier-dornblut",
+        "itemIndex": 3,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:4f64bb6f21e8df57",
+    "name": "Frostkamm",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:ce34550f338641cf"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Frostkamm der Freiwinter",
+        "itemId": "bier-frostkamm",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:7fef8fbec29d3fac",
+    "name": "Schwarzdorn Met",
+    "family": "mead",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 500,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:6bfb91525431fab4"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "met-schwarzdorn",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:84e4a5e69635c61e",
+    "name": "Stachelkrone",
+    "family": "mead",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 300
+    },
+    "volumeMl": 50000,
+    "abv": 6,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:15bff0ae54e45886"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "met-stachelkrone",
+        "itemIndex": 1,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:9096b260ff86b3c8",
+    "name": "Dornblut",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:b5a0f34cec294a50"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "bier-dornblut",
+        "itemIndex": 3,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:a7c9c4f910f90117",
+    "name": "Frostkamm",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:279b6309ea95f58f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Frostkamm der Freiwinter",
+        "itemId": "bier-frostkamm",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:ba701d286698e8c8",
+    "name": "Schwarzflut",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:704732ac07ca2350"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "bier-schwarzflut",
+        "itemIndex": 2,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:d8d6c9fd24d0d8ed",
+    "name": "Schwarzflut",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:38dce66dbd23fb35"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "bier-schwarzflut",
+        "itemIndex": 2,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:da9074d60517b63e",
+    "name": "Stachelkrone",
+    "family": "mead",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 3
+    },
+    "volumeMl": 500,
+    "abv": 6,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:7de39ee64994e426"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "met-stachelkrone",
+        "itemIndex": 1,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:e786bfc7aa192ebb",
+    "name": "Stachelkrone",
+    "family": "mead",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 6
+    },
+    "volumeMl": 1000,
+    "abv": 6,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:0383191fa099d523"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "met-stachelkrone",
+        "itemIndex": 1,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:bb32da4e725414e6:efb54bdf371fdb69",
+    "name": "Schwarzdorn Met",
+    "family": "mead",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 10
+    },
+    "volumeMl": 1000,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:bb32da4e725414e6:f41507bbdbadc9b1"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Met und Hausbiere",
+        "itemId": "met-schwarzdorn",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "schwarzdorn-brauerei",
+        "moduleTitle": "Die Schwarzdorn Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cd9d8d3689ad3fa0:2b5eff8d65371181",
+    "name": "Drachenblut Bier",
+    "family": "beer",
+    "unit": "Pro Bierkrug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cd9d8d3689ad3fa0:a5a6d5dd361c9999"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "goods-register",
+        "pageIndex": 4,
+        "pageTitle": "✦ — Angebot— ✦",
+        "tableId": "angebot",
+        "tableTitle": "Angebot",
+        "rowIndex": 24,
+        "moduleId": "zum-roten-drachen-taverne",
+        "moduleTitle": "Zum Roten Drachen - Taverne",
+        "moduleType": "Tavernenübersicht"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cd9d8d3689ad3fa0:3c16e60f5cf00d39",
+    "name": "Rhagorol Whiskey",
+    "family": "whisky",
+    "unit": "Pro Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cd9d8d3689ad3fa0:9076315b7227d8a1"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "goods-register",
+        "pageIndex": 4,
+        "pageTitle": "✦ — Angebot— ✦",
+        "tableId": "angebot",
+        "tableTitle": "Angebot",
+        "rowIndex": 23,
+        "moduleId": "zum-roten-drachen-taverne",
+        "moduleTitle": "Zum Roten Drachen - Taverne",
+        "moduleType": "Tavernenübersicht"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cd9d8d3689ad3fa0:5ad389b7456d7eff",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Pro Bierkrug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cd9d8d3689ad3fa0:73e1a577eaf05fe7"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "goods-register",
+        "pageIndex": 4,
+        "pageTitle": "✦ — Angebot— ✦",
+        "tableId": "angebot",
+        "tableTitle": "Angebot",
+        "rowIndex": 25,
+        "moduleId": "zum-roten-drachen-taverne",
+        "moduleTitle": "Zum Roten Drachen - Taverne",
+        "moduleType": "Tavernenübersicht"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cd9d8d3689ad3fa0:c083a4f2fdc8ce44",
+    "name": "Penderyn Whiskey",
+    "family": "whisky",
+    "unit": "Pro Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cd9d8d3689ad3fa0:58f90b529fff4d1c"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "goods-register",
+        "pageIndex": 4,
+        "pageTitle": "✦ — Angebot— ✦",
+        "tableId": "angebot",
+        "tableTitle": "Angebot",
+        "rowIndex": 22,
+        "moduleId": "zum-roten-drachen-taverne",
+        "moduleTitle": "Zum Roten Drachen - Taverne",
+        "moduleType": "Tavernenübersicht"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cd9d8d3689ad3fa0:c5371453bb83a879",
+    "name": "Brandhorn Bier",
+    "family": "beer",
+    "unit": "Pro Bierkrug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cd9d8d3689ad3fa0:2cce1c4f9ef49861"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "goods-register",
+        "pageIndex": 4,
+        "pageTitle": "✦ — Angebot— ✦",
+        "tableId": "angebot",
+        "tableTitle": "Angebot",
+        "rowIndex": 26,
+        "moduleId": "zum-roten-drachen-taverne",
+        "moduleTitle": "Zum Roten Drachen - Taverne",
+        "moduleType": "Tavernenübersicht"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:104a19e7f75d8f17",
+    "name": "Goldhaube",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:aba1bb1b67fc068f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-goldhaube",
+        "itemIndex": 39,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:1f5da33b2e5ddf01",
+    "name": "Penderyn · Rhagorol",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:9b594c5725dc0099"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "penderyn-brauer-destillierzunft-whisky-rhagorol",
+        "itemIndex": 42,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:34903570d6b4e388",
+    "name": "Drachenblut Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:ffea6450206f9710"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "penderyn-brauer-destillierzunft-bier-drachenblut",
+        "itemIndex": 41,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:6b0051ab789f7783",
+    "name": "Dämmerkrone",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:fef279a3ddfda75b"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-daemmerkrone",
+        "itemIndex": 38,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:8bb356aec94928f6",
+    "name": "Goldschuppen Bier",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:ccafbd6e03d2c3ee"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "penderyn-brauer-destillierzunft-bier-goldschuppen",
+        "itemIndex": 40,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:980ac304e7cfeb68",
+    "name": "Hellwacht",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:098429e8a39230f0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-hellwacht",
+        "itemIndex": 37,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:d36dab66308cb414",
+    "name": "Penderyn",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:a93ee586a0bdf6cc"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "penderyn-brauer-destillierzunft-whisky-penderyn",
+        "itemIndex": 43,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:cda6f697f4f9fb2f:fbf0b5db2781215d",
+    "name": "Hopfgold",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:cda6f697f4f9fb2f:8ef4f34ff1037dc5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 3,
+        "pageTitle": "✦ — Angebot — ✦",
+        "itemId": "teyrngarch-brauerzunft-bier-hopfgold",
+        "itemIndex": 36,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "modul-1781474092957",
+        "moduleTitle": "Die Krumme Kanne",
+        "moduleType": "Story"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:207e2f030aea4d47",
+    "name": "Honigbreu Met",
+    "family": "mead",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 500,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:a101b9436ea2f25f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "met-honigbreu",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:21ab877cdbde0b72",
+    "name": "Kranzgold",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:d30a2d08a5c9906a"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "bier-kranzgold",
+        "itemIndex": 2,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:3fdf18249310b986",
+    "name": "Stillgold",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:06cf9b983ea3251e"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "bier-stillgold",
+        "itemIndex": 3,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:4dd452219e503e89",
+    "name": "Honigbreu · Lichtgold",
+    "family": "mead",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 300
+    },
+    "volumeMl": 50000,
+    "abv": 6,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:3b98710509b20491"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "met-lichtgold",
+        "itemIndex": 1,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:53e222a90f377f17",
+    "name": "Kranzgold",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:0e8a49bddba6520f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "bier-kranzgold",
+        "itemIndex": 2,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:624c6188c6d12da6",
+    "name": "Stillgold",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:72767d4450107b3e"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "bier-stillgold",
+        "itemIndex": 3,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:73a2648f4ad1da89",
+    "name": "Honigbreu · Lichtgold",
+    "family": "mead",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 3
+    },
+    "volumeMl": 500,
+    "abv": 6,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:f9050b1b5081f191"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "met-lichtgold",
+        "itemIndex": 1,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:870dd98d2c9f6487",
+    "name": "Honigbreu Met",
+    "family": "mead",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 500
+    },
+    "volumeMl": 50000,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:bf3a642df573901f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "met-honigbreu",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:8c0597481fdff56c",
+    "name": "Hjerte",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 250
+    },
+    "volumeMl": 50000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:0e66b60443032334"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Hjerte der Schattenherzen",
+        "itemId": "bier-hjerte",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:905f95647c47690c",
+    "name": "Hjerte",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:506fd090cfb83294"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Hjerte der Schattenherzen",
+        "itemId": "bier-hjerte",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:a14e45b81ebc74e2",
+    "name": "Honigbreu Met",
+    "family": "mead",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 10
+    },
+    "volumeMl": 1000,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:303d739095f5283a"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "met-honigbreu",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:a5f3f1272e4739d7",
+    "name": "Kranzgold",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:2dd5c883b736f5cf"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "bier-kranzgold",
+        "itemIndex": 2,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:c99a2e09bd1ac889",
+    "name": "Hjerte",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:00647af5b52cd191"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 6,
+        "pageTitle": "VII. — Partnerbrauereien · Hjerte der Schattenherzen",
+        "itemId": "bier-hjerte",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:dab533c97f5c73c3",
+    "name": "Stillgold",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 1000,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:155c982539bcbcdb"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "bier-stillgold",
+        "itemIndex": 3,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:e702db6055e85e02:e257f9747a4cd46c",
+    "name": "Honigbreu · Lichtgold",
+    "family": "mead",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 6
+    },
+    "volumeMl": 1000,
+    "abv": 6,
+    "basis": "game-design-default",
+    "offerIds": [
+      "module:e702db6055e85e02:a55e3ffc2b9badf4"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 5,
+        "pageTitle": "VI. — Das Stammsortiment · Honigbreu und Hausbiere",
+        "itemId": "met-lichtgold",
+        "itemIndex": 1,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "goldenglanz-brauerei",
+        "moduleTitle": "Die Goldenglanz Brauerei",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:032b99df7426989f",
+    "name": "Dubhbharr",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.9
+    },
+    "volumeMl": 500,
+    "abv": 5.8,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:0965e46509e62867"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-dubhbharr",
+        "itemIndex": 1,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:03b6284dfd20c71b",
+    "name": "Caddach Gortach · 18 Jahre · Mòine",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:61856b718bec3083"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-moine-18",
+        "itemIndex": 6,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:0df23e1a2a569b4a",
+    "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:3a466b7ec9db0a12"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-orbharr-28",
+        "itemIndex": 7,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:16350885edcc0cbd",
+    "name": "Ciarbharr",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5.2
+    },
+    "volumeMl": 1000,
+    "abv": 5.2,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:18b410d929844825"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-ciarbharr",
+        "itemIndex": 3,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:230fb54b774fbe49",
+    "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:7a2d003568456eb1"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-orbharr-18",
+        "itemIndex": 1,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:243eebf318a2146f",
+    "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:90d5651f1a435877"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-dubhbharr-18",
+        "itemIndex": 3,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:2c37601cf597bba6",
+    "name": "Òrbharr",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.35
+    },
+    "volumeMl": 500,
+    "abv": 4.7,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:b9d07c70374853be"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-orbharr",
+        "itemIndex": 0,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:30e8eb6fbc6205bb",
+    "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:c2d2eee347c495a3"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-gealbharr-18",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:3a069bd0be2ad27e",
+    "name": "Caddach Gortach · 18 Jahre · Turas",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:6bf4eafa3a96dcc6"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-turas-18",
+        "itemIndex": 4,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:3e624fd2740c516c",
+    "name": "Turas",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 6.8
+    },
+    "volumeMl": 1000,
+    "abv": 6.8,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:61af9b5ee63836f4"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-turas",
+        "itemIndex": 4,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:454f63d0662ac67e",
+    "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:46d1627697d27e06"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-ciarbharr-18",
+        "itemIndex": 2,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:466262f108292bdd",
+    "name": "Gealbharr",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 170
+    },
+    "volumeMl": 50000,
+    "abv": 3.4,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:139465390076e905"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-gealbharr",
+        "itemIndex": 2,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:49dfa8b1d0fb9809",
+    "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:6e9f15e97b34d991"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-grosse-reise-22",
+        "itemIndex": 5,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:4aacad92b89257bc",
+    "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:6530d958e08a3fc4"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-dubhbharr-18",
+        "itemIndex": 3,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:58da47c524bc5f2d",
+    "name": "Caddach Gortach · 18 Jahre · Turas",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:8c6757b927bcc7f5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-turas-18",
+        "itemIndex": 4,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:5a4657fec4b974e8",
+    "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:93ad66ee0431b830"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-gealbharr-18",
+        "itemIndex": 0,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:5a50f577380c7b89",
+    "name": "Turas",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 340
+    },
+    "volumeMl": 50000,
+    "abv": 6.8,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:add8d567f1ba2c11"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-turas",
+        "itemIndex": 4,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:6b4da8ca7e88821a",
+    "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:a193c8f621765182"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-orbharr-18",
+        "itemIndex": 1,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:7521e5665f985064",
+    "name": "Caddach Gortach · 18 Jahre · Mòine",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:8d3a67b2d8a515fc"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-moine-18",
+        "itemIndex": 6,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:7c3803fe3ab7b692",
+    "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:ee12ee4acdf7718a"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-ciarbharr-18",
+        "itemIndex": 2,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:81bf135c1f069dda",
+    "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:8a02fdd8e3c14f02"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-grosse-reise-22",
+        "itemIndex": 5,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:88863b38a2796a50",
+    "name": "Caddach Gortach · 18 Jahre · Dubhbharr",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:10beb74c7bf46ac8"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-dubhbharr-18",
+        "itemIndex": 3,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:8916628c92e55704",
+    "name": "Caddach Gortach · 18 Jahre · Gealbharr",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:48653a445a31e1dc"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-gealbharr-18",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:8a12cbf22bf35ff6",
+    "name": "Caddach Gortach · 22 Jahre · Die große Reise",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:c88a2b7ee04eac6e"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-grosse-reise-22",
+        "itemIndex": 5,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:98964493b58c4e99",
+    "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:b429e6c3a95717c1"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-orbharr-28",
+        "itemIndex": 7,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:9e467a9109fdf7df",
+    "name": "Dubhbharr",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 290
+    },
+    "volumeMl": 50000,
+    "abv": 5.8,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:cbf7729da8b129c7"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-dubhbharr",
+        "itemIndex": 1,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:a69ac00fd3a3fd37",
+    "name": "Caddach Gortach · 18 Jahre · Mòine",
+    "family": "whisky",
+    "unit": "Glas · 4 cl",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.84
+    },
+    "volumeMl": 40,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:f33fb06becc0036f"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-moine-18",
+        "itemIndex": 6,
+        "priceOption": "Glas",
+        "unit": "4 cl",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:a77aca98d32b8ca0",
+    "name": "Mòine",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 285
+    },
+    "volumeMl": 50000,
+    "abv": 5.7,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:ee718118c56138b8"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-moine",
+        "itemIndex": 5,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:ad6c24bfac9f705d",
+    "name": "Gealbharr",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.7
+    },
+    "volumeMl": 500,
+    "abv": 3.4,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:c92e4163b36d8cc5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-gealbharr",
+        "itemIndex": 2,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:af097ed4d7627bc0",
+    "name": "Mòine",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.85
+    },
+    "volumeMl": 500,
+    "abv": 5.7,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:1b99805cdc4ab4d8"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-moine",
+        "itemIndex": 5,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:b00469b5cde2b22d",
+    "name": "Caddach Gortach · 18 Jahre · Ciarbharr",
+    "family": "whisky",
+    "unit": "Flasche · 0,7 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 32.2
+    },
+    "volumeMl": 700,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:9577eb8919a64db5"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-ciarbharr-18",
+        "itemIndex": 2,
+        "priceOption": "Flasche",
+        "unit": "0,7 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:b9ef8559393a5b45",
+    "name": "Mòine",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5.7
+    },
+    "volumeMl": 1000,
+    "abv": 5.7,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:1e4216fd9ed1bb5d"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-moine",
+        "itemIndex": 5,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:cd2278f06251ae86",
+    "name": "Òrbharr",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 235
+    },
+    "volumeMl": 50000,
+    "abv": 4.7,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:086c273c7911351e"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-orbharr",
+        "itemIndex": 0,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:dd7758111c15b789",
+    "name": "Turas",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 3.4
+    },
+    "volumeMl": 500,
+    "abv": 6.8,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:fee6cb8d5fa90091"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-turas",
+        "itemIndex": 4,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:e1b59a718af1c123",
+    "name": "Òrbharr",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 4.7
+    },
+    "volumeMl": 1000,
+    "abv": 4.7,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:3114b9cd1cc8a2bb"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-orbharr",
+        "itemIndex": 0,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:e480ec64b9adfcba",
+    "name": "Dubhbharr",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5.8
+    },
+    "volumeMl": 1000,
+    "abv": 5.8,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:9a883df0115f9b22"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-dubhbharr",
+        "itemIndex": 1,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:e69eee293949a3f5",
+    "name": "Caddach Gortach · 28 Jahre · Òrbharr",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:5f8076398c6af46d"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-orbharr-28",
+        "itemIndex": 7,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:e77c26a3a5a18d01",
+    "name": "Caddach Gortach · 18 Jahre · Turas",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:7ee22fd39b69b399"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-turas-18",
+        "itemIndex": 4,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:ec53a0a0ab5c71b6",
+    "name": "Caddach Gortach · 18 Jahre · Òrbharr",
+    "family": "whisky",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2300
+    },
+    "volumeMl": 50000,
+    "abv": 46,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:f3ed5d501b455aae"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 8,
+        "pageTitle": "IX. — Caddach Gortach · Acht Abfüllungen",
+        "itemId": "whisky-orbharr-18",
+        "itemIndex": 1,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:f052296c37f33898",
+    "name": "Ciarbharr",
+    "family": "beer",
+    "unit": "Fass · 50 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 260
+    },
+    "volumeMl": 50000,
+    "abv": 5.2,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:9b995eb8886be000"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-ciarbharr",
+        "itemIndex": 3,
+        "priceOption": "Fass",
+        "unit": "50 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:f8b966c452eec738",
+    "name": "Gealbharr",
+    "family": "beer",
+    "unit": "Flasche · 1 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 3.4
+    },
+    "volumeMl": 1000,
+    "abv": 3.4,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:944586a82c5606a0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-gealbharr",
+        "itemIndex": 2,
+        "priceOption": "Flasche",
+        "unit": "1 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "module-item:efa48e792020f5f3:fb01c25009f43cf8",
+    "name": "Ciarbharr",
+    "family": "beer",
+    "unit": "Krug · 0,5 l",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.6
+    },
+    "volumeMl": 500,
+    "abv": 5.2,
+    "basis": "source-abv",
+    "offerIds": [
+      "module:efa48e792020f5f3:3e9f7efe5010a6c0"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "trade-catalog",
+        "pageIndex": 4,
+        "pageTitle": "V. — Das Biersortiment · Sechs Charaktere",
+        "itemId": "bier-ciarbharr",
+        "itemIndex": 3,
+        "priceOption": "Krug",
+        "unit": "0,5 l",
+        "moduleId": "gortach-brauerei",
+        "moduleTitle": "Die Brauerei der Familie Gortach",
+        "moduleType": "Brauerei & Brennerei"
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:alchemist:kriss",
+    "name": "Kriss",
+    "family": "kriss",
+    "unit": "Phiole",
+    "exposure": {
+      "kind": "kriss",
+      "amount": 1
+    },
+    "doses": 1,
+    "basis": "one-published-phial-or-serving",
+    "offerIds": [
+      "standard:alchemist:kriss"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Alchemist",
+        "sourceId": "kriss",
+        "rowIndex": 28
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:alchemist:smaragdflux",
+    "name": "Smaragdflux",
+    "family": "smaragdflux",
+    "unit": "Phiole",
+    "exposure": {
+      "kind": "smaragdflux",
+      "amount": 1
+    },
+    "doses": 1,
+    "basis": "one-published-phial-or-serving",
+    "offerIds": [
+      "standard:alchemist:smaragdflux"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Alchemist",
+        "sourceId": "smaragdflux",
+        "rowIndex": 29
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:schwarzmarkt:blutstaub",
+    "name": "Blutstaub (Schale)",
+    "family": "blutstaub",
+    "unit": "Schale",
+    "exposure": {
+      "kind": "blutstaub",
+      "amount": 1
+    },
+    "doses": 1,
+    "basis": "one-published-phial-or-serving",
+    "offerIds": [
+      "standard:schwarzmarkt:blutstaub"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Schwarzmarkt",
+        "sourceId": "blutstaub",
+        "rowIndex": 2
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:schwarzmarkt:kriss",
+    "name": "Kriss (Phiole)",
+    "family": "kriss",
+    "unit": "Phiole",
+    "exposure": {
+      "kind": "kriss",
+      "amount": 1
+    },
+    "doses": 1,
+    "basis": "one-published-phial-or-serving",
+    "offerIds": [
+      "standard:schwarzmarkt:kriss"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Schwarzmarkt",
+        "sourceId": "kriss",
+        "rowIndex": 0
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:schwarzmarkt:smaragdflux",
+    "name": "Smaragdflux (Phiole)",
+    "family": "smaragdflux",
+    "unit": "Phiole",
+    "exposure": {
+      "kind": "smaragdflux",
+      "amount": 1
+    },
+    "doses": 1,
+    "basis": "one-published-phial-or-serving",
+    "offerIds": [
+      "standard:schwarzmarkt:smaragdflux"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Schwarzmarkt",
+        "sourceId": "smaragdflux",
+        "rowIndex": 1
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:apfelwein",
+    "name": "Apfelwein",
+    "family": "cider",
+    "unit": "Becher",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1
+    },
+    "volumeMl": 200,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:apfelwein",
+      "module:2c439c0b409cb43d:c55d99ab26e3cfa1",
+      "module:47dc8f522b82c38e:05897558b580e4ce",
+      "module:33ee466eddb114ac:05897558b580e4ce",
+      "module:2043cc3b7c87b0cd:05897558b580e4ce",
+      "module:6c37eddd73eea15b:c55d99ab26e3cfa1",
+      "module:cda6f697f4f9fb2f:c55d99ab26e3cfa1",
+      "module:3e46fe141133ca66:c55d99ab26e3cfa1",
+      "module:cd9d8d3689ad3fa0:c55d99ab26e3cfa1"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "apfelwein",
+        "rowIndex": 15
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:branntwein",
+    "name": "Einfacher Branntwein",
+    "family": "whisky",
+    "unit": "Glas",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:branntwein",
+      "module:2c439c0b409cb43d:b0567ac389a4b0bb",
+      "module:4d1077fc24d00386:309c10a27c469438",
+      "module:2a43feed37decd3d:55264175a280ac95",
+      "module:47dc8f522b82c38e:332abf1ba62adfd5",
+      "module:33ee466eddb114ac:332abf1ba62adfd5",
+      "module:2043cc3b7c87b0cd:332abf1ba62adfd5",
+      "module:6c37eddd73eea15b:b0567ac389a4b0bb",
+      "module:cda6f697f4f9fb2f:b0567ac389a4b0bb",
+      "module:3e46fe141133ca66:b0567ac389a4b0bb",
+      "module:cd9d8d3689ad3fa0:b0567ac389a4b0bb"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "branntwein",
+        "rowIndex": 19
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:duennes-bier",
+    "name": "Dünnes gewässertes Bier",
+    "family": "beer",
+    "unit": "Krug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1
+    },
+    "volumeMl": 500,
+    "abv": 2,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:duennes-bier",
+      "module:2c439c0b409cb43d:4d74c889cefc9459",
+      "module:2a43feed37decd3d:d89602825319f6f4",
+      "module:47dc8f522b82c38e:b1c2059d22379f2f",
+      "module:33ee466eddb114ac:b1c2059d22379f2f",
+      "module:2043cc3b7c87b0cd:b1c2059d22379f2f",
+      "module:6c37eddd73eea15b:4d74c889cefc9459",
+      "module:cda6f697f4f9fb2f:4d74c889cefc9459",
+      "module:3e46fe141133ca66:4d74c889cefc9459",
+      "module:cd9d8d3689ad3fa0:4d74c889cefc9459"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "duennes-bier",
+        "rowIndex": 12
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:honigmet",
+    "name": "Schlichter Honigmet",
+    "family": "mead",
+    "unit": "Humpen",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 5
+    },
+    "volumeMl": 500,
+    "abv": 10,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:honigmet",
+      "module:2c439c0b409cb43d:245ec52a62ff97f6",
+      "module:47dc8f522b82c38e:8768198b46ceecdb",
+      "module:2043cc3b7c87b0cd:8768198b46ceecdb",
+      "module:6c37eddd73eea15b:245ec52a62ff97f6",
+      "module:cda6f697f4f9fb2f:245ec52a62ff97f6",
+      "module:3e46fe141133ca66:245ec52a62ff97f6",
+      "module:cd9d8d3689ad3fa0:245ec52a62ff97f6"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "honigmet",
+        "rowIndex": 14
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:kloster-spiritus",
+    "name": "Kloster \"Spiritus\"",
+    "family": "whisky",
+    "unit": "Glas",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.4
+    },
+    "volumeMl": 40,
+    "abv": 60,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:kloster-spiritus",
+      "module:2c439c0b409cb43d:c64b3151c87aaacf",
+      "module:47dc8f522b82c38e:e0bec1882ceb2ba2",
+      "module:2043cc3b7c87b0cd:e0bec1882ceb2ba2",
+      "module:6c37eddd73eea15b:c64b3151c87aaacf",
+      "module:cda6f697f4f9fb2f:c64b3151c87aaacf",
+      "module:3e46fe141133ca66:c64b3151c87aaacf",
+      "module:cd9d8d3689ad3fa0:c64b3151c87aaacf"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "kloster-spiritus",
+        "rowIndex": 21
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:klosterbier",
+    "name": "Klosterbier",
+    "family": "beer",
+    "unit": "Krug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 2.5
+    },
+    "volumeMl": 500,
+    "abv": 5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:klosterbier",
+      "module:2c439c0b409cb43d:e18c808a5ce61cdc",
+      "module:4d1077fc24d00386:5739a4cae6859414",
+      "module:2a43feed37decd3d:f67d2f540c0f08aa",
+      "module:47dc8f522b82c38e:2f7c42d79ec32271",
+      "module:33ee466eddb114ac:2f7c42d79ec32271",
+      "module:2043cc3b7c87b0cd:2f7c42d79ec32271",
+      "module:6c37eddd73eea15b:e18c808a5ce61cdc",
+      "module:cda6f697f4f9fb2f:e18c808a5ce61cdc",
+      "module:3e46fe141133ca66:e18c808a5ce61cdc",
+      "module:cd9d8d3689ad3fa0:e18c808a5ce61cdc"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "klosterbier",
+        "rowIndex": 17
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:kraeuterschnaps",
+    "name": "Lokaler Kräuterschnaps",
+    "family": "whisky",
+    "unit": "Glas",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 1.6
+    },
+    "volumeMl": 40,
+    "abv": 40,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:kraeuterschnaps",
+      "module:2c439c0b409cb43d:f3d718fb237ed1fb",
+      "module:47dc8f522b82c38e:c6158d266efc8f96",
+      "module:2043cc3b7c87b0cd:c6158d266efc8f96",
+      "module:6c37eddd73eea15b:f3d718fb237ed1fb",
+      "module:cda6f697f4f9fb2f:f3d718fb237ed1fb",
+      "module:3e46fe141133ca66:f3d718fb237ed1fb",
+      "module:cd9d8d3689ad3fa0:f3d718fb237ed1fb"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "kraeuterschnaps",
+        "rowIndex": 20
+      }
+    ]
+  },
+  {
+    "definitionId": "standard:taverne:starkbier",
+    "name": "Einfaches Starkbier",
+    "family": "beer",
+    "unit": "Krug",
+    "exposure": {
+      "kind": "alcohol",
+      "amount": 3.75
+    },
+    "volumeMl": 500,
+    "abv": 7.5,
+    "basis": "game-design-default",
+    "offerIds": [
+      "standard:taverne:starkbier",
+      "module:2c439c0b409cb43d:ab1b5d0718181e43",
+      "module:47dc8f522b82c38e:fecbe8561ee6deae",
+      "module:33ee466eddb114ac:fecbe8561ee6deae",
+      "module:2043cc3b7c87b0cd:fecbe8561ee6deae",
+      "module:6c37eddd73eea15b:ab1b5d0718181e43",
+      "module:cda6f697f4f9fb2f:ab1b5d0718181e43",
+      "module:3e46fe141133ca66:ab1b5d0718181e43",
+      "module:cd9d8d3689ad3fa0:ab1b5d0718181e43"
+    ],
+    "sourceRefs": [
+      {
+        "kind": "market-folder",
+        "market": "Taverne",
+        "sourceId": "starkbier",
+        "rowIndex": 13
+      }
+    ]
+  }
+]);

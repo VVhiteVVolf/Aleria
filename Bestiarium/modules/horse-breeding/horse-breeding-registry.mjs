@@ -32,6 +32,14 @@ export const HORSE_BREEDING_BREEDS = Object.freeze([
 
 export const HORSE_BREEDING_LORE_CROSSINGS = Object.freeze([
   {
+    mareId: 'tirashan',
+    sireId: 'rhyfel',
+    name: 'Farnschritt',
+    bestiaryId: 'farnschritt',
+    source: 'Benannte Zucht · Autorenfestlegung vom 2. November 2026',
+    note: 'Farnschritt bezeichnet die Kreuzung aus Tirashan und Rhyfel. Sie verbindet die wendige, trittsichere Waldkavallerielinie des Tirashan mit der Tragfähigkeit, Ausdauer und ruhigen Verlässlichkeit des Rhyfel. Lefraye Gafyrs Stute Thalena gehört zu dieser Zucht; ihr Name erinnert an Thalena, die Gründermutter des Hauses Mwyalchen. Die Elternrassen bestimmen die Kreuzung, nicht die individuelle Fellfarbe oder Ausstattung einer Stute.'
+  },
+  {
     mareId: 'cyning',
     sireId: 'drake',
     name: 'Brycing',

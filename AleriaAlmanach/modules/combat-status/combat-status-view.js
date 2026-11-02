@@ -25,12 +25,17 @@ export function renderCombatCondition(condition, { removable = false, temporary 
     .map(([key, label]) => `${label} ${formatCombatModifier(condition.mechanics[key])}`).join(' · ');
   const rollModes = STATUS_ROLL_MODES.filter(([key]) => ['advantage', 'disadvantage'].includes(condition.mechanics?.[key]))
     .map(([key, label]) => `${getRollModeLabel(condition.mechanics[key])}: ${label}`).join(' · ');
+  const saveNames = { strength: 'STÄ', dexterity: 'GES', constitution: 'KON', intelligence: 'INT', wisdom: 'WEI', charisma: 'CHA' };
+  const conditional = [...(condition.mechanics?.skillModifiers || []).map(modifier => `${modifier.name} ${formatCombatModifier(modifier.bonus)}`),
+    ...(condition.mechanics?.saveAttributeModifiers || []).map(modifier => `${saveNames[modifier.attributeKey] || modifier.attributeKey}-Rettung ${formatCombatModifier(modifier.bonus)}`),
+    ...(condition.mechanics?.saveModifiers || []).map(modifier => `${({ fear: 'Rettung gegen Furcht', poison: 'Rettung gegen Gift', bleeding: 'Rettung gegen Blutungsfolgen' })[modifier.kind] || modifier.kind} ${formatCombatModifier(modifier.bonus)}`)].join(' · ');
   const duration = (temporary ? formatStatusDuration(condition) : condition.duration || 'Aus dem Charakterbogen')
     + (condition.concentrationOwnerId && condition.durationModel?.kind !== 'concentration' ? ' · Konzentration' : '');
   return `<li class="comment-combat-condition" data-condition-id="${e(condition.id)}" data-status-kind="${e(condition.statusKind || 'condition')}">
     <span class="comment-combat-condition-icon">${renderCombatIcon(getStatusIcon(condition) || condition.icon)}</span>
     <div><strong>${e(condition.name)}</strong><small>${e(duration)}${condition.ward?.enabled ? ` · ${e(condition.ward.charges)} Abwehrladungen` : ''}</small>
       ${modifiers ? `<small class="comment-combat-condition-modifiers">${e(modifiers)}</small>` : ''}
+      ${conditional ? `<small class="comment-combat-condition-modifiers">${e(conditional)}</small>` : ''}
       ${preparation ? `<small class="comment-combat-condition-modifiers">${e(preparation)}</small>` : ''}
       ${condition.mechanics?.weaponBonusDamageFormula ? `<small class="comment-combat-condition-modifiers">Waffenschaden +${e(condition.mechanics.weaponBonusDamageFormula.replace(/d/gi, 'W'))}</small>` : ''}
       ${rollModes ? `<small class="comment-combat-condition-modifiers">${e(rollModes)}</small>` : ''}

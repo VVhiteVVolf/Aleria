@@ -1,0 +1,978 @@
+{
+  "passed": true,
+  "count": 243,
+  "files": [
+    {
+      "path": "character-development/character-training-state.js",
+      "sha256": "17b6a371d38e36c027dfd3fb6958167e9d5320b693299e159dfcd1bda64ad570"
+    },
+    {
+      "path": "character-development/development-entry-reference.js",
+      "sha256": "215f2d35d722aa368797f497a20c3df0372eda0d20f735d2cae14c4d582aba1d"
+    },
+    {
+      "path": "character-development/development-state.js",
+      "sha256": "286f6950cf4f68bf582a09d0b0f08c74029b824d6667a8828d9e2fe0311afec9"
+    },
+    {
+      "path": "character-equipment/character-equipment-registration.js",
+      "sha256": "605194a87fe4bbb3c3ae7024759016a66fc293e19df28465ddcaabee4047359b"
+    },
+    {
+      "path": "character-equipment/character-equipment-sync.js",
+      "sha256": "178fd92ff4222aca047874b88be9504bf4cbc98d97338845af08bcf4af7c5cd7"
+    },
+    {
+      "path": "character-equipment/equipment-armor-rules.js",
+      "sha256": "089e0f561c1ea3c25e70c0d8688581029b572cfb79bb8076d14e473013a5bf99"
+    },
+    {
+      "path": "character-equipment/equipment-artwork-catalog.js",
+      "sha256": "76abaf7e8b57bb6129cf2c28814a93cc7871041c33ace8e902dc4b62b0091886"
+    },
+    {
+      "path": "character-equipment/equipment-artwork.js",
+      "sha256": "5479cc6ef5475940e19c134cc930ef5996754408d37ede4e1537488a1332de78"
+    },
+    {
+      "path": "character-equipment/equipment-damage-protection.js",
+      "sha256": "1912955df68e774cbe15ab6a34750da823c64898186a409dfe3bb7f89595f43b"
+    },
+    {
+      "path": "character-equipment/equipment-preparation-costs.js",
+      "sha256": "7f98596a4766311943518e189cd346f525bd6a0e5624d22bf00b974ecd55ab14"
+    },
+    {
+      "path": "character-inventory/character-inventory-identity.js",
+      "sha256": "84854345f36b01f5143dfcb812d07b6039d49b1eea10fdeebc418df7a6ceb7e9"
+    },
+    {
+      "path": "character-inventory/character-inventory-valuation.js",
+      "sha256": "2e3386c3f0d98dc5f4d826259095e71d11eadd3493c177bc5a4a8a91e2f772a0"
+    },
+    {
+      "path": "character-inventory/inventory-placeholders.js",
+      "sha256": "3b7f79bce6b7112e8ec27e8579ead57f5e0a4131596fed65d7e93769fee08f9c"
+    },
+    {
+      "path": "characters/character-import-policy.js",
+      "sha256": "a09ad9f32e58c7ce90e2175299d9641b261125993dbab4ea06a9d6faec7fb3be"
+    },
+    {
+      "path": "characters/character-save-guard.js",
+      "sha256": "1e9d60d1c16876873fed5504b9a717c3f75a01851d87bc343b30b95a862b8417"
+    },
+    {
+      "path": "characters/personal-techniques/ylva-technique-prose.js",
+      "sha256": "298122429775794df9f77ea439b2b01544aa053bf3dba5364828853f8e816afc"
+    },
+    {
+      "path": "classes/aldrimar/aldrimar-class-progression.js",
+      "sha256": "82e868a7c535b015858faa5867d90044eb79da034791ae6aff0933a91eeb5f6a"
+    },
+    {
+      "path": "classes/aldrimar/aldrimar-class-registry.js",
+      "sha256": "ff37643f60d14c8cbeca3d462a4e685fc1c7db79e7fe096aab409e4ac076ecd4"
+    },
+    {
+      "path": "classes/aldrimar/aldrimar-combat-rules.js",
+      "sha256": "b1a722ee3483bd67c273e7986c3c53163563625290d9819aae3ddb1db1874627"
+    },
+    {
+      "path": "classes/aldrimar/fenrir-weapon-techniques.js",
+      "sha256": "9ce7d7c6c91b64e318876371add5ec4f471d9f2b52974dbf2d46acc1cf7e1f00"
+    },
+    {
+      "path": "classes/aldrimar/skald-freya-reference.js",
+      "sha256": "2f8d94d7f2ecbf8215cfb4d99683ec533871e7ee6d1a81695a303456087af446"
+    },
+    {
+      "path": "classes/aldrimar/skjaldr-berserk-progression.js",
+      "sha256": "e1174341a11a0667dbebfbc1dd032682309f0419d7f422eef3d11ba29f34f5b8"
+    },
+    {
+      "path": "classes/aldrimar/skjaldr-combat-profile.js",
+      "sha256": "ba3854152ffed3ab48e9f3aed5f3f77fba5dcb1f7f972ddf6dd5b192cbaca2d3"
+    },
+    {
+      "path": "classes/armor-routine.js",
+      "sha256": "7b73454f43b115cba65698c8348a5105828bdc7b55fecec1327fe951804aec8b"
+    },
+    {
+      "path": "classes/brevanor/brevanor-class-registry.js",
+      "sha256": "cae7d811d15ced15e35cb31fd12dc54b6f0ba6da9bab41fe39bf2ff17683f5de"
+    },
+    {
+      "path": "classes/cenyr/cenyr-class-combat-rules.js",
+      "sha256": "a59bf7a1ddd8d1c7fe1fb678f2023c9386bcd14b927217d9d158c6dc639d13ad"
+    },
+    {
+      "path": "classes/cenyr/cenyr-class-ids.js",
+      "sha256": "25ccb1f585f6806941e3a7383bdccbf5a0c54280ff85d3061757a35b9f11512d"
+    },
+    {
+      "path": "classes/cenyr/cenyr-class-progression.js",
+      "sha256": "4565b73cacfa168841e119172b9c42ffa1b77f4bd9c8cfc4b3e5b276126efd54"
+    },
+    {
+      "path": "classes/cenyr/cenyr-class-registry.js",
+      "sha256": "0798bc839a7d057f245d509bc20ebb35ed35b8ca50c81857c7faeaa92328f658"
+    },
+    {
+      "path": "classes/cenyr/cenyr-class-training.js",
+      "sha256": "58c782bd91dc273d1fc40548cbf384c8a65950638c61683063a4b30ade785bc3"
+    },
+    {
+      "path": "classes/cenyr/cenyr-combat-profile-autofill.js",
+      "sha256": "65305abc8a42be7b606671627b3ad53b42b6cc08e4b730e09845e834815db08d"
+    },
+    {
+      "path": "classes/cenyr/cenyr-technique-selection.js",
+      "sha256": "61059b3c76ff61fd1167f160408c1c16e7292f6360d6398c359962765c3261b3"
+    },
+    {
+      "path": "classes/cenyr/cenyr-technique-weapon-rules.js",
+      "sha256": "e43cc1a003f6df04fe1750263770887c486592d0b3658e7488d05a85d3498caf"
+    },
+    {
+      "path": "classes/class-damage-revisions.js",
+      "sha256": "24be48288c05d113dc02af27b598dcf9f048c47ff830fcbfe0fc23f121ae499b"
+    },
+    {
+      "path": "classes/class-form-arsenal.js",
+      "sha256": "919d5e1b7a6bcee2f358b64c1c10be086cda498f1e1bd2977c7f0d5dd2565b46"
+    },
+    {
+      "path": "classes/class-special-maneuvers.js",
+      "sha256": "1baf9d6a2387245a9e6499163c013f86572d11103e04b4acb4d9d077600efda7"
+    },
+    {
+      "path": "classes/culture-draft-progression.js",
+      "sha256": "483fd2541ab6962e45926844aaf9933ec2426943a0f1b99677f169a6ff6e2d90"
+    },
+    {
+      "path": "classes/magier/rhiannon-spell-economy.js",
+      "sha256": "c1c67ebe4c04e1d39b06f52fb126fa00f9666e822d985b4a65c6d70fcf0bf4d7"
+    },
+    {
+      "path": "classes/martial-recovery.js",
+      "sha256": "ad9f37e2880fe40f98b880570d2d1716cae79b4e07285ddf816b17ed976145e8"
+    },
+    {
+      "path": "classes/vennyr/derwyn-curriculum.js",
+      "sha256": "2f4d48e76667eac1a30ac1f37d1507cb0162c4e9fe55fede725a3fc5f703693b"
+    },
+    {
+      "path": "classes/vennyr/vennyr-class-ids.js",
+      "sha256": "dd8986d592623ca1b1b6db52d8d9cf7a96ea0bb1efe4be3f343c003494a5bcbe"
+    },
+    {
+      "path": "classes/vennyr/vennyr-class-progression.js",
+      "sha256": "f5e1acc79f42e79b8a8213be0a03c3ba648e1e31ebb8fe41632ae330c2b93d32"
+    },
+    {
+      "path": "classes/vennyr/vennyr-class-registry.js",
+      "sha256": "83ea4d9a648dddcdd3963b96a8c02eb3e54a7e583baea1bd08183cfc8b4b6508"
+    },
+    {
+      "path": "combat/combat-ability-uses.js",
+      "sha256": "842c3546e089ade18d91e4dc2edf45346b4f4c4458b764052e02b17915ac19e1"
+    },
+    {
+      "path": "combat/combat-action-economy.js",
+      "sha256": "11185d716cb318b4c04951692f96915c30f21cd2040ec1109f0d61b24883d6a9"
+    },
+    {
+      "path": "combat/combat-action-lock-recovery.js",
+      "sha256": "efc2d9d658b14b10e9cb002d703433b17f85a2ae26c7d32058ea77853e5694bd"
+    },
+    {
+      "path": "combat/combat-action-progression.js",
+      "sha256": "22a69c6aaab1b0ec6f74c2acfabcf85fa4157acf59ec116c776de4ec483b26ad"
+    },
+    {
+      "path": "combat/combat-ammunition.js",
+      "sha256": "6afc78790f595578006dafba1649109d9ec497262f74158fe552448b5b6759b2"
+    },
+    {
+      "path": "combat/combat-armor-stances.js",
+      "sha256": "54f2c1cc2ad3e2ee35270adeba37585d729878ad953779967b98fa0d5f02652c"
+    },
+    {
+      "path": "combat/combat-attack-evaluation.js",
+      "sha256": "fea5baad8fcc5646e2ff88bef7ba7e6fb85567b844922ebbe219fd02f8f5448a"
+    },
+    {
+      "path": "combat/combat-attack-range.js",
+      "sha256": "4ded2d9e83b942799481ca9b1a056391c9cb794660923ab3d6fac2936887a448"
+    },
+    {
+      "path": "combat/combat-aura-attack.js",
+      "sha256": "398d27e9b6de7581734c6a8fac766c46d0bb5decf36ee71c167495f145331816"
+    },
+    {
+      "path": "combat/combat-berserk-state.js",
+      "sha256": "ed00616c0a3534420a7ce431ec736204af3d64d0625a428a5c825e32f4c545d1"
+    },
+    {
+      "path": "combat/combat-concentration-resolution.js",
+      "sha256": "72683ac70564268eeaa5f1a1531a4dbee918319b97a13140f5f688dd77b58216"
+    },
+    {
+      "path": "combat/combat-condition-duration.js",
+      "sha256": "74d6f5e72cd2f90741fad572bab491e6b1541a25d57ffbf8d0fb461beb65719a"
+    },
+    {
+      "path": "combat/combat-condition-lifecycle.js",
+      "sha256": "e5717d8fdb1a87d6b5abf1b0b22a91c287efd49e97e547f0030c224cae7173b5"
+    },
+    {
+      "path": "combat/combat-condition-usage.js",
+      "sha256": "36f1ee41537daa79c8147144eb3f733816a0e814049232473ac6eab5194ddf64"
+    },
+    {
+      "path": "combat/combat-contribution-start.js",
+      "sha256": "fd7d59071026669d9bd553852a6d5ab1865359d45e4c32650dc3d28c9b215e26"
+    },
+    {
+      "path": "combat/combat-counter-resolution.js",
+      "sha256": "461e2b33e53f397191843ee6b532ee6ab64502ab021687f159e9c358ee2b55a8"
+    },
+    {
+      "path": "combat/combat-creature-traits.js",
+      "sha256": "edf2194a19c67f013d9fa4ee0e5f5690e0e9485e14355bb8b8047c946084d2de"
+    },
+    {
+      "path": "combat/combat-damage-guard.js",
+      "sha256": "0ececc43095c2a3b3f56127acc0ee7cc0d47261b6749c6737ba1b807006a33ba"
+    },
+    {
+      "path": "combat/combat-effect-model.js",
+      "sha256": "2645222f24a1bc29af5da9c3dd773f1d0123e12c36fd28973677ada627972d49"
+    },
+    {
+      "path": "combat/combat-encounter-aura.js",
+      "sha256": "406a93f24265acf2f0d035fc5a40125b433c00a34d46987dc30e751edb40cceb"
+    },
+    {
+      "path": "combat/combat-encounter-lifecycle.js",
+      "sha256": "74b350de15228d20c402c6e026d77ddb7893d9a79b90c5d0653431600d86e13e"
+    },
+    {
+      "path": "combat/combat-encounter-model.js",
+      "sha256": "7f51c4494e2fbc66fd2076b100d0d232b56780429963a8c62a725107fe1bb725"
+    },
+    {
+      "path": "combat/combat-encounter-outcome.js",
+      "sha256": "228299d9485edeeb346083d5459c26a65544ae01f92711065b78ea1ae82291cd"
+    },
+    {
+      "path": "combat/combat-encounter-summary.js",
+      "sha256": "62b19602dd44b0dc0e74db66956116f18f240305c982949f6ae42b46b95a8ee1"
+    },
+    {
+      "path": "combat/combat-equipment-preparation.js",
+      "sha256": "c019af9ce7b6fdfd6fb8945395069c410875062ef8e56599b8f9a0cfa992c8a4"
+    },
+    {
+      "path": "combat/combat-equipment-state.js",
+      "sha256": "887fdc9c3cb8d162b073e3643a3fe481563b053cd2ea7405f309fe552cbf51bf"
+    },
+    {
+      "path": "combat/combat-follow-up-resolution.js",
+      "sha256": "1ca7b8784dd393f39554487cbe56d822796abe71f6112bad572c1d69462ef34a"
+    },
+    {
+      "path": "combat/combat-hit-point-progression.js",
+      "sha256": "30172026199a82c168a9c6e6d97aaa6a7598534a729c980f410823319dd27ff2"
+    },
+    {
+      "path": "combat/combat-paired-weapons.js",
+      "sha256": "8e0b36f7d93372c31414ce70c516566ffdc6a47a38a85fb653212026890c8f7e"
+    },
+    {
+      "path": "combat/combat-personal-modifiers.js",
+      "sha256": "99f366c1997b7ef4363c3b450c87a57ff1f1ad1456e4f231bd30eb46fef219ff"
+    },
+    {
+      "path": "combat/combat-profile-context.js",
+      "sha256": "e3ce36c9da62853a797961adefcbd2369f68a446361acb41d380f66b6f794a7c"
+    },
+    {
+      "path": "combat/combat-profile-model.js",
+      "sha256": "258e58a752a7354cdfa72ca41ab29c404f643b49cf5aa7fb7f4ece262f6ae763"
+    },
+    {
+      "path": "combat/combat-profile-read-model.js",
+      "sha256": "330e7b534ba87b078e66c673e0fc4b327c2a730ba30deb1eea0890ff169a7c22"
+    },
+    {
+      "path": "combat/combat-profile-resolver.js",
+      "sha256": "f42d52a397d749ecaaab5693f39206c3a7761479d8b7e407434f95ab1f0cfffc"
+    },
+    {
+      "path": "combat/combat-progression.js",
+      "sha256": "66ac9664c13d29f8d4e5a7234535dd0c666f327741004b3fbbbcf27a424bf85b"
+    },
+    {
+      "path": "combat/combat-resolution-service.js",
+      "sha256": "bc77f8e31771079cb010b6a1cf06418991c00693b8877aaf7b22ed85df98353c"
+    },
+    {
+      "path": "combat/combat-resolution-storage.js",
+      "sha256": "34def6b5691cf47ec835f05e85108cb5584a032d910fabd0433b9e245cc9ccad"
+    },
+    {
+      "path": "combat/combat-resolution-tree.js",
+      "sha256": "428de2cdb88821235589672f83563756945c12cff3456e393499560cf6e91c51"
+    },
+    {
+      "path": "combat/combat-resource-progression.js",
+      "sha256": "00273caa2c18d038751420ac8553737c69949f88657c28f5ed6c62b0ef7b6621"
+    },
+    {
+      "path": "combat/combat-roll-mode.js",
+      "sha256": "4dd41f0d509d6acdee4ac41c5b8c30535f03a86193f6a1cc3999bee93b2fe427"
+    },
+    {
+      "path": "combat/combat-rule-consumption.js",
+      "sha256": "0c41cc667f5604b3bcb4cfdfedd31d246aa9d33d9813207c0511a9be52ea9908"
+    },
+    {
+      "path": "combat/combat-rules-release.js",
+      "sha256": "f59c9b22e537f0e6ced11fdc64af606eb77f1f621b86df8caf5f1e21734b1ff8"
+    },
+    {
+      "path": "combat/combat-segment-model.js",
+      "sha256": "17f87504efd2869a94865a0015cf59023f1fdc5ffbd36944ebc8db9df11e3a93"
+    },
+    {
+      "path": "combat/combat-spell-slots.js",
+      "sha256": "a02895281cd8b51ff02020216074e95ed87124b8605493cb7549f263849065a2"
+    },
+    {
+      "path": "combat/combat-stance-presentation.js",
+      "sha256": "fa486b9798d347e100ed471d339a6699dea548271de76969663384c487a32940"
+    },
+    {
+      "path": "combat/combat-state-model.js",
+      "sha256": "9029c3d1a6424a9af386b0122b4b42065371316d300e248f36964b7ce6df4ab2"
+    },
+    {
+      "path": "combat/combat-support-equipment.js",
+      "sha256": "030589812fb833877dfe6190f0e06b2e127362f6e6ec73626d94042929f5a039"
+    },
+    {
+      "path": "combat/combat-technique-damage.js",
+      "sha256": "b3719739f9c9f0fa84cdc342fced9374f6d1b42d9e7d3f69f26ad5fde33a1e0a"
+    },
+    {
+      "path": "combat/combat-technique-disarm.js",
+      "sha256": "734c34298a8b68e3da8108c8bb38f17143cc4d309d0b6f14622a41641f919e7e"
+    },
+    {
+      "path": "combat/combat-technique-save-dc.js",
+      "sha256": "4309711241d4b8b55043456937bc763bf5adcb4c4d221ce16969efcf29e4ea39"
+    },
+    {
+      "path": "combat/combat-technique-secondary-save.js",
+      "sha256": "9a4a21e086fd8f78cb53bd9cecf5275a3d8f808d14dfe98944bf2e2114f13dbd"
+    },
+    {
+      "path": "combat/combat-trigger-rules.js",
+      "sha256": "b5e001a7708548ae0cdb5cf3618a85e44e0b6e29ec88f41872f0e344e63e4712"
+    },
+    {
+      "path": "combat/combat-turn-start.js",
+      "sha256": "cde4dd5039b5f566a0d2bdd9cf7e6a8d7f0e2924ed8a9662d59cf3f48f55b8c9"
+    },
+    {
+      "path": "combat/combat-wait-action.js",
+      "sha256": "fff064f2364bd237aca6837b02b8f8564f62fd747cef457b03c7da069467ae52"
+    },
+    {
+      "path": "combat/combat-ward-resolution.js",
+      "sha256": "3fa8a15aa65a4b401e6130facff5eecfec2d9c89697792addf1220170ba23dff"
+    },
+    {
+      "path": "combat/combat-weapon-attack-values.js",
+      "sha256": "c70eafa9fac62432f0da33339b8b62b86d46e8cc5d28c02d7e8b7642d9074f85"
+    },
+    {
+      "path": "combat/combat-weapon-availability.js",
+      "sha256": "bcf17c50e80d1e47147e6135612e5e57982afdeb090b1771a2d19c2abf903203"
+    },
+    {
+      "path": "combat/combat-weapon-grip.js",
+      "sha256": "01a74f0256407163f3109b6cef2356b20571789ca2776dd53d28461d00fba749"
+    },
+    {
+      "path": "combat/combat-weapon-loadout.js",
+      "sha256": "dd96cd57e2e2a399ea41be09c4680ddc7e22c1ca5c44ba371dc38b5cb7c55088"
+    },
+    {
+      "path": "combat/combat-weapon-response.js",
+      "sha256": "1472d8e3313b3401084f9cd13f030d2c1aa24fc765fd54853844cbe104fa7d17"
+    },
+    {
+      "path": "combat/rules/combat-mvp-rules.js",
+      "sha256": "f332ce08b69448686b77b2b82eca5b279bf6722b055a27d192d2005f5370508a"
+    },
+    {
+      "path": "combat-critical/combat-critical-catalog.js",
+      "sha256": "24588d71f1b30176989b6cc244cd756ad68adc0006e30edcbecc4ba7fbf2bb11"
+    },
+    {
+      "path": "combat-critical/combat-critical-conditions.js",
+      "sha256": "1b784fb96fd6753693e376d4f02a1390497cf5db23600908ca53a21f2bc4954b"
+    },
+    {
+      "path": "combat-critical/combat-critical-lifecycle.js",
+      "sha256": "c016a37dfe889d5f0f4ffc0249f03d274e8cb86713129943a8688cb0259a6ad6"
+    },
+    {
+      "path": "combat-critical/combat-critical-model.js",
+      "sha256": "212ad2c976132384f9e0962e840ae6bcdd7f621b0b2ff32c1fe9b89156c63ea8"
+    },
+    {
+      "path": "combat-critical/combat-critical-resolution.js",
+      "sha256": "fcb96041e4398a3009f4ba8a61e2782ca71a56ad4b4085e3efb8a8a7f4b95fa6"
+    },
+    {
+      "path": "combat-status/combat-status-catalog.js",
+      "sha256": "565ce7de8f8295e7ce4d4a05f6315ac107fa6431a37e59ad32397461ecf5e96d"
+    },
+    {
+      "path": "combat-status/combat-status-model.js",
+      "sha256": "a428c6993592e956e03eac7642ca82598cb6d274563cd2c2ae75a5b28948f746"
+    },
+    {
+      "path": "combat-styles/combat-style-registry.js",
+      "sha256": "59f95d787997bc2507863c7279eb1032a76b93eb90b0c591ea63b28512f3c33e"
+    },
+    {
+      "path": "combat-styles/drachentanz/drachentanz-damage-progression.js",
+      "sha256": "97dab6a1223d4c7f00edad2532d0256f2dfa9e314f50181fcd6d857b91b497ef"
+    },
+    {
+      "path": "combat-styles/drachentanz/drachentanz-ids.js",
+      "sha256": "570ad57166c3457f95e6aa336ddbc3f550e0fe84a687392be031f19f86ebbccc"
+    },
+    {
+      "path": "combat-styles/drachentanz/drachentanz-path-features.js",
+      "sha256": "349d88490c44ea37b2bb266faf84fe247d0a34ad4b25e1585b7c5701722892ca"
+    },
+    {
+      "path": "combat-styles/drachentanz/drachentanz-registry.js",
+      "sha256": "dcdac80256229e9aafea7c0337f5f6d0e4f1fc3e5ed6d041fb7c1dec079b7378"
+    },
+    {
+      "path": "combat-styles/drachentanz/drachentanz-training-migration.js",
+      "sha256": "9992a799333a6c8d205397da316c3632de4fcd3cd78e29da29f853d9de4f6c14"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/abwartender-techniques.js",
+      "sha256": "36f2be47b18b5deda9a0dfd27002c42c0cb25e6bb5af72a4f41862668da3d3b5"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/aufsteigender-techniques.js",
+      "sha256": "7b9801fd230fb486166e80399253132e4f897fd1a2e73e306b3c100f881c9e49"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/ausgeglichener-techniques.js",
+      "sha256": "e5f837de87ab9067ad2cc97400a7304abac99aa9649eed320047abad6e18d8e7"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/barddwyr-techniques.js",
+      "sha256": "db3c148002921c0a7e4edfd4957899c3af2861fd23a516cdc4adf65507d4ab93"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/bruellender-shield-techniques.js",
+      "sha256": "70f5d5b1790dd1a7524cce0195e108d3de1b9f41b12a2d15fd204a8949fc2111"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/bruellender-techniques.js",
+      "sha256": "542491e6b28d7051927586d7b16ec1081bde1a0358476f586b1c09b586b358d0"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/class-specialist-techniques.js",
+      "sha256": "01f5571c267c900572e49101ff2d801739a8cc25166b1841a0c214f7a41ec526"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/drachentanz-technique-factory.js",
+      "sha256": "6462ebfcb6da7a739524b89dde166db79bd3758e97fd4c270cbc6270173b6402"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/duelist-techniques.js",
+      "sha256": "8f8870f6457555b69f70ee7a868f43c1ace42381a2e21e923129bcb7527f07f6"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/exclusive-path-techniques.js",
+      "sha256": "be324cf3b0325806f2680dbb9d9d450c226345171c7ead33f2e743babdd23430"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/expert-path-helpers.js",
+      "sha256": "e8bf390d9eabcf2ad3449c5e9f5a1d2f5617a9df054027cc11145a2d9e1536f4"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/fliegender-techniques.js",
+      "sha256": "c6fa801f66cf9fab1d6030a0573d60d32e71d64222abbf83db6afe8188fc9feb"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/foundation-supplements.js",
+      "sha256": "49f71b380858366fbc770589de5a69ef45a10a51bd1cdc8480fa308421ebaad9"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/foundation-techniques.js",
+      "sha256": "4bda5f3365f401d2fcf435f73e8555475fc6da0177873e6792846e0bab33c438"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/helwyr-expert-techniques.js",
+      "sha256": "fcc32b601b382997dcc46a203622c4674c2a4e40b99a5d5828766a95a83678c3"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/jungdrache-shared-techniques.js",
+      "sha256": "cab61bfb4c136d49808395d7b8a0240d85aeb9e5f38c930acbed0fcb0a0ffd7c"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/milwr-techniques.js",
+      "sha256": "853607a8f03671773ca3e44b31de63f4576adbf6795bf32050f154ab352f28ba"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/schwertdrachen-path-techniques.js",
+      "sha256": "0e9e4d20a42670dcaa212f6a8cb14036e2f4c7bc47cf3df9bcdb10343bf08bf0"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/spear-path-techniques.js",
+      "sha256": "eb0ba274b792a19b0b7f613392680efdb8a4afc9beeb9a1c0e32209192774a53"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/teulu-foundation-techniques.js",
+      "sha256": "f4a9c0634f28be402eeb57ccfdb8a8a3356bc3aa49ff8e017622d3300923204b"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/uchelwyr-mounted-techniques.js",
+      "sha256": "1466071ca602f71b36b971b69f75f09c9271824313133baff2238ab1bd673e8d"
+    },
+    {
+      "path": "combat-styles/drachentanz/techniques/zwillingsdrachen-techniques.js",
+      "sha256": "0a2bdce0091ac69963ae48de3c989d0e8a9bbf47d33d6ec8aeb7d40fcae7211a"
+    },
+    {
+      "path": "combat-styles/huskarl/huskarl-additional-lessons.js",
+      "sha256": "dd010f15fb562233483d205af22c15e127836c0e608ed05a4d9b34ae41d1fa00"
+    },
+    {
+      "path": "combat-styles/huskarl/huskarl-additional-paths.js",
+      "sha256": "27cc4a732e2d2d9f35d367cbe55a3aad2796764a70133ffc6388da8f84b39eb8"
+    },
+    {
+      "path": "combat-styles/huskarl/huskarl-basic-techniques.js",
+      "sha256": "da8d66724ed8e99c246c6db871cc3910726da2c42e0d5abaee06514b00795aa0"
+    },
+    {
+      "path": "combat-styles/huskarl/huskarl-expert-techniques.js",
+      "sha256": "24de32be4522fc8e41b3c1465e0acf15b91f34827c817d0f25fc88a0e71bad70"
+    },
+    {
+      "path": "combat-styles/huskarl/huskarl-forms.js",
+      "sha256": "862be2ee61ba135df7723e1ee7700aadaa0d7ed88739493434185ff2d4bab1ea"
+    },
+    {
+      "path": "combat-styles/huskarl/huskarl-technique-factory.js",
+      "sha256": "bf29c127fb1bf429fe9c8b15a290da7512d9add18f054fc283994af002f005bc"
+    },
+    {
+      "path": "combat-styles/martial-position-effects.js",
+      "sha256": "2ff2441d98bd4692493f2feb102871664280051c073af54cf5d643c41acbd0c1"
+    },
+    {
+      "path": "combat-styles/sirenentanz/derwyn-techniques.js",
+      "sha256": "7dfd54361d66761546746b44a0ee3a5231fb0722110db8c189b3106e9d5f65ab"
+    },
+    {
+      "path": "combat-styles/sirenentanz/sirenentanz-basic-techniques.js",
+      "sha256": "6de3d900a2cb74d63972f53df24ed2a64add4911f06a03a385747dd47b946959"
+    },
+    {
+      "path": "combat-styles/sirenentanz/sirenentanz-expert-techniques.js",
+      "sha256": "e2e86617c25e1ba65807fe6d7229a1e8a2fa25009825976bd3783140bba78c77"
+    },
+    {
+      "path": "combat-styles/sirenentanz/sirenentanz-forms.js",
+      "sha256": "75671ae0512eaa862d400c201d466b64a615550361f48cc1a816cc4b7aacb21c"
+    },
+    {
+      "path": "combat-styles/sirenentanz/sirenentanz-technique-factory.js",
+      "sha256": "e6e1e169fd6d4f8fde43c453e18f0f8398b2d58fadd783a22786df055066274b"
+    },
+    {
+      "path": "combat-styles/sirenentanz/wyrmtanz-registry.js",
+      "sha256": "7e0373c9fe95650f3b588c89a17ab5d7a6aa5f61e1c9c49476710f6ca9fdc7e6"
+    },
+    {
+      "path": "combat-styles/sirenentanz/wyrmtanz-training-migration.js",
+      "sha256": "af08ac97663b541d01616e60ab62a2155b81472605e8158913f06479b45574ce"
+    },
+    {
+      "path": "combat-styles/weapon-technique-budget.js",
+      "sha256": "5b8f3816fa774115c647b2242acd0c31c47ec9415bc09a9660d1afcd71d22a3c"
+    },
+    {
+      "path": "combat-styles/weapon-technique-control.js",
+      "sha256": "560b7f2368c89163564f875bd2e0a80b85055d6133ea71c44bb29015a1233e00"
+    },
+    {
+      "path": "comments/comment-activity-preview.js",
+      "sha256": "a16e528762a658d8a7ee644b22931fee4c6228e8373e8758da1f4aef939a86b8"
+    },
+    {
+      "path": "creatures/catalog/freki-actions.js",
+      "sha256": "f0cd8dcd8ef9834d1601c68e71fadc208b8ebd445bd31810cf17015b9cdf91eb"
+    },
+    {
+      "path": "creatures/catalog/household-companion-profiles.js",
+      "sha256": "42230e8f5a6f94121425a2a32eeb9554b1e27b1c808dcdf189b3f026ab5b3680"
+    },
+    {
+      "path": "creatures/catalog/idwal-ship-cats.js",
+      "sha256": "d463e999fb10d1a864e0f58e307f8bd5ea134f4bf7a74d907ae8ffb90ce89027"
+    },
+    {
+      "path": "economy-pricing/price-reference.generated.mjs",
+      "sha256": "13da1365fbffb019e257911823758bfb989d6f570f28abef6e7f149231092f50"
+    },
+    {
+      "path": "economy-pricing/price-review-model.mjs",
+      "sha256": "be3a36a13ae4cf71ec0fb927a3120e4333e35c3fb5c81e3a84851698e792975a"
+    },
+    {
+      "path": "economy-pricing/price-review-rules.mjs",
+      "sha256": "4078dc4c6e79c36999520c2a673867a8226fbeab538479d8e53553e24500e581"
+    },
+    {
+      "path": "gawain-duncan/gawain-duncan-module.mjs",
+      "sha256": "c20b1e3aa05c5c1ef8fbc998326a4e872a607fb97b81801c7d5fb0e59d29294b"
+    },
+    {
+      "path": "gawain-duncan/gawain-public-biography.mjs",
+      "sha256": "08b122d0725435be0e74fdae3007e0b1937f9af25a99909dc8bf24cc1d52847d"
+    },
+    {
+      "path": "group-adventures/anaraut-content.mjs",
+      "sha256": "3d95bc694429bf1baa6189e7661064515b1ebbfb5fec5a42cc08d741955da6b0"
+    },
+    {
+      "path": "group-adventures/group-adventure-content.mjs",
+      "sha256": "2707db5d1a8557b4a7050f41aee98ecc586070e046c0c8b22653c00ff5be14c7"
+    },
+    {
+      "path": "group-adventures/group-adventures-classic-api.mjs",
+      "sha256": "05059da179217803453be4a47b48014209b6f920fc2416f390d56e59772e5790"
+    },
+    {
+      "path": "herausforderung/herausforderung-check-policy.js",
+      "sha256": "e8076ac0ba9ac788073c88a7b86181e0ee35496366c0d14dfae9964e7889910e"
+    },
+    {
+      "path": "herausforderung/herausforderung-combat-context.js",
+      "sha256": "0ccd12cfe7518bd44dcfef73fd0d4977a3e512e5a536b17e71b111a72c6092d1"
+    },
+    {
+      "path": "herausforderung/herausforderung-combat-effects.js",
+      "sha256": "81e3b81dcd2148aaffcf7804d2aa3e8cf416619e2320f9f402bf9dd7a288aa78"
+    },
+    {
+      "path": "herausforderung/herausforderung-combat-snapshots.js",
+      "sha256": "04fc9b78adcc93f24f4c74b7816f27d229ff5998d52f1df7bb06e1efc09bce54"
+    },
+    {
+      "path": "herausforderung/herausforderung-combat-summary.js",
+      "sha256": "9e46edc74959aada63eb2360ec38d21bbf82d4a51bc9cf500bfade855699f72b"
+    },
+    {
+      "path": "herausforderung/herausforderung-model.js",
+      "sha256": "18dbf4d45b4d997ec9e98a9f3d0b10c4abced58cab9116e5ef01a718da99fbea"
+    },
+    {
+      "path": "herausforderung/herausforderung-outcomes.js",
+      "sha256": "91e4d29fb17a314783910f5624dd8c1f80e79ede7cd16a6e6c0fa2dca2152fde"
+    },
+    {
+      "path": "herausforderung/herausforderung-rewards.js",
+      "sha256": "ddb315b53da6c85797b42703b302934c2836c9b457d4c253b61b8e1abbeaddfb"
+    },
+    {
+      "path": "herausforderung/herausforderung-scene-image-model.js",
+      "sha256": "0154da6e270665a651ff3643016cb2d65ccd101488c735b7869c92cb5f7344c4"
+    },
+    {
+      "path": "herausforderung/herausforderung-target.js",
+      "sha256": "e61bfde053edccb17cfbaac43ea7cdb3f3aaffb782f1b10572f32f50e9edc52c"
+    },
+    {
+      "path": "herausforderung/herausforderung-weapon-maneuver-model.js",
+      "sha256": "f9990844458edf08b3e7d2ed0e426b10f9e697565daa27b2493178cf46a218b3"
+    },
+    {
+      "path": "herausforderung/herausforderung-weapon-maneuver.js",
+      "sha256": "6699a6d71d23207e27a9909ad0b419d5369754be5e5ec9bb476e4daba219e726"
+    },
+    {
+      "path": "house-armor/house-armor-assignment.js",
+      "sha256": "bda23ba6fe4576f76e1caa9744eee7b9535ef2248a2f5384249eecbd838508e9"
+    },
+    {
+      "path": "house-armor/house-armor-catalog.js",
+      "sha256": "f6ef927327fe8bb726416cf7b76e80c7b5ef11bb8dab41314381b4a965a5bf83"
+    },
+    {
+      "path": "house-armor/house-armor-model.js",
+      "sha256": "282a67a432e4269fe7b7b0493cca6c579ee47f0914b68c283ac5be85dacaf01b"
+    },
+    {
+      "path": "image-library/image-library-model.js",
+      "sha256": "b6ae018ca05260e5ed0cf121152741fe1e22e159f210b31d6f7de52c3dd48708"
+    },
+    {
+      "path": "inventory-use/inventory-use-model.js",
+      "sha256": "7a0d9710df87d3ef225ce6feca417c769673a280e3327c9186ab5b655794d973"
+    },
+    {
+      "path": "inventory-use/item-charge-recovery.js",
+      "sha256": "74ae146a14347bab039c20c27cd02a232a5883aa5ab76d5b47728910c79904bc"
+    },
+    {
+      "path": "inventory-use/item-use-effects.js",
+      "sha256": "2d1528c73ab434cdce0ef0405c1ba22e339785519b3a2d8738f450a823916e83"
+    },
+    {
+      "path": "inventory-use/zornkappe-effects.js",
+      "sha256": "a2da9e3269bb8bde9c023f0edc5dd6d2255f599496636e490dbfc6530d84373a"
+    },
+    {
+      "path": "item-definitions/authored-item-catalog.js",
+      "sha256": "d38b088a1ea1f69e05d84515a14e67608a58a607d819588bcb8c2b212b2e53ba"
+    },
+    {
+      "path": "item-definitions/item-definition-model.js",
+      "sha256": "5168b58566f60703736b5de1204dd3065b1572d08ece5e7138e987b8dbc8b970"
+    },
+    {
+      "path": "item-definitions/item-definition-registry.js",
+      "sha256": "57e1a4b5ca2bd2e49b91b63aada2e45cea63830fe91e0ccd7e410586bab8f167"
+    },
+    {
+      "path": "item-definitions/item-definition-resolver.js",
+      "sha256": "995549838bf358d5e8d657e2c39c924224b9e2667806e30830bb79f1bf39e6a2"
+    },
+    {
+      "path": "item-definitions/item-definition-versions.js",
+      "sha256": "be1ad1570d5db57ce152b2f9704411bfe7aa1a5b2d34d798d5c5a3e68de6bebe"
+    },
+    {
+      "path": "item-definitions/item-migration-model.js",
+      "sha256": "48bcdfcd3914579be7dcb233f4539efa7d76f456ff340b0adbaabaddddf8ef48"
+    },
+    {
+      "path": "item-register/item-register-companion-firebase.js",
+      "sha256": "47e1317e7d36afdc508e9e03ff6bb38df6f13e7ba7cd0d47ca790598e7c3ce5b"
+    },
+    {
+      "path": "item-register/item-register-companions.js",
+      "sha256": "06188835b7b14bacc85893267257385b7205efaa9918cc880664b5256385da5c"
+    },
+    {
+      "path": "item-register/item-register-model.js",
+      "sha256": "6565bb7cf80c324a1d134df80c03cb59da638bfddec0654a04641200d6d41012"
+    },
+    {
+      "path": "item-register/item-register-module-catalog.js",
+      "sha256": "a0b11fb20022afe259b571d9bb3b0a3b00be8974c6b25853702af879d7a5b63a"
+    },
+    {
+      "path": "item-register/item-register-money.js",
+      "sha256": "74072874bfa746872b59fc14c7ccc0b15e84259742f1f76372fa6a8411db4fe5"
+    },
+    {
+      "path": "item-register/item-register-standard-artwork.js",
+      "sha256": "693e840a8b6326b530d5a9e37ccd7bf520219fe0cbdaef0e13ef9a18744be291"
+    },
+    {
+      "path": "item-register/item-register-standard.js",
+      "sha256": "66c1b786c8ba53741ef8c8de8b0def4b45eb6ff1ed2bb985a25e933f5b281e02"
+    },
+    {
+      "path": "item-register/item-register-trade.js",
+      "sha256": "8d6d409c8b94771de56292e76dbf014150de4262a0baa060b755ab42f5bf1de5"
+    },
+    {
+      "path": "landing/group-landing-inventory.js",
+      "sha256": "5b6adafe3bb6cedb8773f0e895b0a78d38b6af73a1e4cc8efe1bdba762a99b53"
+    },
+    {
+      "path": "landing/group-landing-migration.js",
+      "sha256": "c350a531bb77e3391dec9d73bdc5a0431303100b42aaf483e878344231c6e920"
+    },
+    {
+      "path": "landing/group-landing-model.js",
+      "sha256": "07dd65394d4de54423dbe2b90cb5afdae6840d8ff5f96cdc698942f7364d206c"
+    },
+    {
+      "path": "landing/group-landing-roster.js",
+      "sha256": "66e52c7d9a517bf63229fa81f0809af571095e51cbfbba20be28291488eb4640"
+    },
+    {
+      "path": "landing/group-landing-treasury.js",
+      "sha256": "6884835d200876e78a5bbc539965f25478e346d76931f919e51d90e3f0a5c193"
+    },
+    {
+      "path": "landing/landing-model.js",
+      "sha256": "79b104755f7fd17bfc24f00113698e8d7c2b0f083759fde789218f0a7085c27e"
+    },
+    {
+      "path": "landing/landing-quest-model.js",
+      "sha256": "a15c63cf41453a3ba5b8f2250ebbeefd3e7449bc2152dacc37425aa367569397"
+    },
+    {
+      "path": "loot/loot-model.js",
+      "sha256": "9cc4c4e32c9a0928bdb72f9aba41da8013a0d4063118694c0146306a5c7f42d6"
+    },
+    {
+      "path": "quests/quest-area-model.js",
+      "sha256": "ba9bc17aa08001622bc0ad0707742aea6b3814ac7c530faacc0b22e41f1caf51"
+    },
+    {
+      "path": "quests/quest-dossier-model.js",
+      "sha256": "bee4c7f25a98fabedeefff15755ed8b3db9da4ece74aaba617d4daa412ff78a4"
+    },
+    {
+      "path": "quests/quest-model.js",
+      "sha256": "0d7ca6b60a396d93457e9b635e94cd38af2776fdd63498d2dc13ed2159f893f4"
+    },
+    {
+      "path": "scene-inventory/scene-inventory-transfer-model.js",
+      "sha256": "8d69b5e9a29cc31799670797324fe93421585e31b0a77ec1c1fa1c01e0036b53"
+    },
+    {
+      "path": "scene-items/scene-item-definition.js",
+      "sha256": "24f6d9b98c9d9e7185f7e8c85b22fd3c18e0e46667e4e87d29b180e243424b43"
+    },
+    {
+      "path": "scene-items/scene-item-equipment.js",
+      "sha256": "6207e7a9b3ab3fadca072c7cbe88b7ee1b83253eb8a9e6523e9c9de4e3d0f977"
+    },
+    {
+      "path": "scene-items/scene-item-interaction.js",
+      "sha256": "57716b3e9314e73c46a282ccb204a24ddfe738a7486b2e206b7b7192d0254621"
+    },
+    {
+      "path": "scene-items/scene-items-model.js",
+      "sha256": "b5096b74853f7516a4e5a5bd197adcdea62ae06787c55a4badc6f2cee86694d1"
+    },
+    {
+      "path": "scene-rest/scene-rest-model.js",
+      "sha256": "539dbe15aacc5a9b2f3d61e213167f3e90659c0a8b4b66c634300edaa4b89c86"
+    },
+    {
+      "path": "scene-time/scene-recovery-day.js",
+      "sha256": "26631f3b94f50a1f2d1dff3e69342e111d00098015dc2697ca243c28c8789992"
+    },
+    {
+      "path": "skill-checks/attribute-check-model.js",
+      "sha256": "c8d311b0e5e840154a23f3fca5e2d6486434f7587d2dcf4c4e25ab73beb5aaaf"
+    },
+    {
+      "path": "skill-checks/skill-check-model.js",
+      "sha256": "4a14c0b3317a919c2daed94a1905e30ad39d21240cebb9ab03b605bd384111ba"
+    },
+    {
+      "path": "skill-checks/skill-definitions.js",
+      "sha256": "124c057f42802c92ca0a55c09e21eb71adf57e9aeef77b84d3b6ea46b1d17bad"
+    },
+    {
+      "path": "skill-checks/skill-resolution-service.js",
+      "sha256": "745f4e56e01b0a7e3c19a11286a8473684fddfcb207842f895919e95328e2b86"
+    },
+    {
+      "path": "spell-catalog/elementarismus-v1.js",
+      "sha256": "ad6566398695d6c910d0611e2b3656fe49cf39f07d45177dbd521cdc660dc683"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/blitz.js",
+      "sha256": "073b700677c5656434474adcae7cb40450a588787a5a223c4ea293597566d70c"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/donner.js",
+      "sha256": "e75b510b473bd35694bf7c185b4a8c5def934100739daf2a88ec738c12ed8cf0"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/erde.js",
+      "sha256": "b4a031ee7a65add1e788cd77c6ea40123710c974b3ab6501a0d957bdf5fa4f3f"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/feuer.js",
+      "sha256": "12c0bcb8f6b04fc2246cc3337e39003fc3e18cf4f827187e3fb3fee3cec64ede"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/index.js",
+      "sha256": "85730a9516f25e33842cf4a12846e171eb08386ab33c7a9129766b9f6a66a21d"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/sonstiges.js",
+      "sha256": "693dc5bf167571a052665d131a000604e506ac9a2b9b4b462befd437c6477a93"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/wasser.js",
+      "sha256": "795b5170ba9ce0bb7b2689dba15ea3171be7b0b749d35ad29e56fc3ccf1b517d"
+    },
+    {
+      "path": "spell-catalog/elemente-v2/wind.js",
+      "sha256": "9511209312a48bc0f8b17c110e37e03b949982f71e517947c52c0e3ae00c0caf"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/gemeinschaft.js",
+      "sha256": "997895551b67d395d2937f38c8957e28b0ec865e8cab029879e080fad87e7535"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/index.js",
+      "sha256": "1e5bb5927e1ea7b8e7727ef912b8992dc9c01c27ba51e82a6f1b4400d9c088af"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/koerper.js",
+      "sha256": "110b300121d2ce042bd8a27b0379eb2b002e488384730976a2d33e209c187465"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/lebenskraft.js",
+      "sha256": "72576520596fa271a699f526acdd7bec665cf994765e7f44967684ad1d0ab658"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/reinigung.js",
+      "sha256": "7a6ca6cd44a6f4a89184f8a98659d29870c8d8b51cca19bd493cfc00b35dd63c"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/restitution-spell.js",
+      "sha256": "f6879c10fcff850426b02143c5381d24ddd04dc3c48915b18f5a0ee5f27ddf1f"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/versorgung.js",
+      "sha256": "daba713fd8b2b21ebe1b1440a0cf8dc9225e166f2ef3f55fd72d46e684528125"
+    },
+    {
+      "path": "spell-catalog/restitution-v1/wahrung.js",
+      "sha256": "5d81e310b2d826c0aa2c90c872878a6abc0cc81401ad7c0aa01a33c60c7b41c7"
+    },
+    {
+      "path": "spell-catalog/spell-catalog-schools.js",
+      "sha256": "40dfc4c9c1652cd034cbf2305ced8a502bf35db26f473ff2237a201cb755d466"
+    },
+    {
+      "path": "spell-catalog/spell-catalog-targets.js",
+      "sha256": "984a543a941d53b86243c9e3f45a367af031817813abc16a1cc138c6cd475ecc"
+    },
+    {
+      "path": "spell-catalog/spell-catalog.js",
+      "sha256": "4b14bf1bd21089c02f6b3ba8f0ee7473e3e2ff103927d92b68485ba395b9a84c"
+    }
+  ]
+}

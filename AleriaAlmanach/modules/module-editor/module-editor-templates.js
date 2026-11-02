@@ -1900,7 +1900,7 @@ function createObjectProfileTemplatePages() {
       imageWidth: 30,
       imageSquare: true,
       biographyPage: true,
-      description: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
+      description: '',
       stats: [
         ['Voller Name', 'Noch festlegen'],
         ['Titel', 'Noch festlegen'],
@@ -1917,19 +1917,20 @@ function createObjectProfileTemplatePages() {
       ],
       biography: {
         portraitStages: ['', '', '', ''],
+        knightMentors: [],
         sideWidth: 100,
         connectionPortraitHeight: 68,
         connectionTextOffset: 0,
-        biographyTitle: 'Biografie',
-        biographyText: 'Beschreibe Herkunft, Ausbildung, Wendepunkte und die Rolle der Person in der Welt.',
+        biographyTitle: 'Zur Person',
+        biographyText: '',
         abilitiesTitle: 'Persönlichkeit',
         abilities: [
           { icon: '✦', title: 'Wesenszug', detail: 'Prägender Charakterzug der Person.' },
           { icon: '✦', title: 'Stärken & Schwächen', detail: 'Was die Person auszeichnet und wo sie verwundbar ist.' }
         ],
         extraSections: [],
-        historyTitle: 'Hintergrund',
-        historyText: 'Was hat diese Person geprägt, verändert oder ausgelöst? Welche Spuren bleiben?',
+        historyTitle: 'Herkunft & Werdegang',
+        historyText: '',
         worksTitle: 'Bekannte Werke',
         works: ['Erstes bekanntes Werk oder Ereignis', 'Zweites bekanntes Werk oder Ereignis'],
         triviaTitle: 'Trivia',
@@ -1946,7 +1947,7 @@ function createObjectProfileTemplatePages() {
           { icon: '', title: 'Erbstück', text: 'Ein Gegenstand mit Geschichte oder besonderer Bedeutung.', link: '' },
           { icon: '', title: 'Urkunde', text: 'Landrecht, Schuldschein oder Freibrief.', link: '' }
         ],
-        footer: 'Disziplin ist unser Schild. Wissen ist unsere Waffe.'
+        footer: ''
       },
       commentSequence: [],
       quote: '„Ein Leitsatz oder persönliches Zitat.“',

@@ -5,6 +5,8 @@ import {
   applyCharacterCreationDraft,
   createCharacterCreationDraft,
   getCreationFinalAttributes,
+  getCreationFoundationOptions,
+  previewCharacterCreationDraft,
   getPointBuyRemaining,
   rollFourDropLowest,
   setCreationAttributeMethod,
@@ -18,6 +20,8 @@ import {
 } from '../modules/combat/character-creation-templates.js';
 import { buildCombatProfileAiSnapshot } from '../modules/combat/combat-profile-context.js';
 import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile-model.js';
+import { getDevelopmentAttackCatalog } from '../modules/character-development/development-purchases.js';
+import { acceptCreationSkillSuggestions, acceptCreationClassSuggestions } from '../modules/character-development/creation-training-model.js';
 
 const actionResourceIds = ['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus'];
 
@@ -156,6 +160,8 @@ test('Gawains freie Basis erhält Cenyri-Boni erst nach der Verteilung', () => {
     charisma: 15
   });
 
+  acceptCreationSkillSuggestions(draft);
+  acceptCreationClassSuggestions(draft);
   const result = applyCharacterCreationDraft(profile, draft, { now: '2026-08-03T12:00:00.000Z' });
   assert.equal(result.ok, true);
   assert.deepEqual(result.profile.identity, { ancestry: 'Cenyr', archetype: 'Teulu', background: 'Ritter' });
@@ -170,7 +176,9 @@ test('Gawains freie Basis erhält Cenyri-Boni erst nach der Verteilung', () => {
   assert.equal(result.profile.progression.level, 1);
   assert.equal(result.profile.hitPoints.hitDie, 10);
   assert.equal(result.profile.hitPoints.current, 13);
-  assert.equal(result.profile.weapons.find(weapon => weapon.equipped).name, 'Langschwert');
+  assert.deepEqual(result.profile.weapons, profile.weapons, 'Keine klassenbasierten Standardwaffen');
+  assert.deepEqual(result.profile.armorItems, profile.armorItems, 'Keine klassenbasierten Standardrüstungen');
+  assert.equal(result.profile.techniques.length, 0, 'Keine automatischen Startattacken');
   assert.ok(result.profile.proficiencies.armor.includes('heavy'));
   assert.ok(result.profile.skills.find(skill => skill.name === 'Auftreten').proficiency === 'trained');
   assert.ok(result.profile.skills.find(skill => skill.name === 'Überreden').proficiency === 'trained');
@@ -181,10 +189,59 @@ test('Gawains freie Basis erhält Cenyri-Boni erst nach der Verteilung', () => {
 test('AleriaGPT erhält Vorlagen, Ausbildungen und alle Zaubergrade ohne Boni doppelt anzuwenden', () => {
   const draft = createCharacterCreationDraft({});
   draft.selections = { ancestryId: 'cenyr', backgroundId: 'ritter', classId: 'teulu' };
+  acceptCreationClassSuggestions(draft);
   const result = applyCharacterCreationDraft({}, draft, { now: '2026-08-03T12:00:00.000Z' });
   const snapshot = buildCombatProfileAiSnapshot({ id: 'gawain', name: 'Gawain Draig', combatProfile: result.profile });
   assert.equal(snapshot.character.templateSelections.classId, 'teulu');
   assert.ok(snapshot.proficiencies.weapons.includes('sword'));
   assert.equal(snapshot.magic.spellSlots.length, 10);
   assert.match(snapshot.instruction, /nicht doppelt addiert/);
+});
+
+test('Starthilfe verwendet denselben Stufenkauf mit negativem Saldo und reversiblen Traits', () => {
+  const original = sanitizeCharacterCombatProfile({ weapons:[{id:'personal',name:'Mein Schwert',weaponType:'sword',damageFormula:'1d8',equipped:true}] });
+  const before = structuredClone(original);
+  const draft = createCharacterCreationDraft(original);
+  draft.selections.classId = 'teulu';
+  const own = getDevelopmentAttackCatalog().find(entry => entry.templateId === 'teulu' && entry.minimumLevel <= 5);
+  draft.developmentPlan.targetLevel = 5;
+  draft.developmentPlan.purchaseIds = [own.id];
+  draft.developmentPlan.traitIds = ['development-trait-heilerhaende'];
+  draft.developmentPlan.development.startingPoints = 0;
+  draft.developmentPlan.development.pointsPerLevel = 0;
+  draft.developmentPlan.resourceIncreases['mana-focus'] = {current:3,maximum:7};
+  const preview = previewCharacterCreationDraft(original,draft);
+  assert.equal(preview.ready,true,preview.errors.join(' '));
+  assert.ok(preview.balance.remaining < 0);
+  const result = applyCharacterCreationDraft(original,draft);
+  assert.equal(result.profile.progression.level,5);
+  assert.deepEqual(result.profile.techniques.map(entry => entry.id),[own.technique.id]);
+  assert.ok(result.profile.quirks.some(entry => entry.id === 'development-trait-heilerhaende'));
+  assert.deepEqual(result.profile.weapons,original.weapons);
+  assert.equal(result.profile.resources.find(r=>r.id==='mana-focus').maximum,7);
+  assert.deepEqual(original,before);
+  draft.skippedSteps = ['development'];
+  const skipped = applyCharacterCreationDraft(original,draft);
+  assert.equal(skipped.profile.progression.level,1);
+  assert.equal(skipped.profile.techniques.length,0);
+  assert.ok(!skipped.profile.quirks.some(q=>q.id==='development-trait-heilerhaende'));
+});
+
+test('alle Klassen lassen individuellen Besitz und Ausrüstungszustand unverändert', () => {
+  const original = sanitizeCharacterCombatProfile({
+    weapons:[{id:'personal',name:'Persönliche Waffe',weaponType:'sword',damageFormula:'1d8',equipped:true}],
+    armorItems:[{id:'personal-armor',name:'Meine Rüstung',kind:'armor',baseArmorClass:15,equipped:true}],
+    techniques:[{id:'personal-technique',name:'Eigene Technik',minimumLevel:1}]
+  });
+  for (const template of CHARACTER_CLASS_TEMPLATES) {
+    const draft = createCharacterCreationDraft(original);
+    draft.selections.classId = template.id;
+    draft.foundationFormId=getCreationFoundationOptions(draft)[0]?.formId||'';
+    draft.skippedSteps = ['templates']; // Class training can be selected independently of ancestry.
+    const result = applyCharacterCreationDraft(original,draft);
+    assert.equal(result.ok,true,result.errors.join(' '));
+    assert.deepEqual(result.profile.weapons,original.weapons,template.id);
+    assert.deepEqual(result.profile.armorItems,original.armorItems,template.id);
+    assert.deepEqual(result.profile.techniques,original.techniques,template.id);
+  }
 });

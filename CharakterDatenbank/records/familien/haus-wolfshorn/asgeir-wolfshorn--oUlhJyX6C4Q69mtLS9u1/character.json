@@ -132,9 +132,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/asgeir-wolfshorn-gefaehrten-2026-10-13.json",
-    "sourceExportedAt": "2026-10-13T13:50:25.792Z",
-    "sourceUpdatedAt": "2026-10-13T13:50:25.792Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/oUlhJyX6C4Q69mtLS9u1.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "oUlhJyX6C4Q69mtLS9u1",
       "oUlhJyX6C4Q69mtLS9u1",
@@ -142,7 +142,7 @@
       "oUlhJyX6C4Q69mtLS9u1",
       "oUlhJyX6C4Q69mtLS9u1"
     ],
-    "contentHash": "e38a0eb7075445753e5f7305f28cec3eaba27489512224366db3c0b4d6b5bddb"
+    "contentHash": "64d40a1a56e090b642edc0c16bd99747e977717f921918d171d17251f880d465"
   },
   "local": {
     "notes": "",
@@ -14801,6 +14801,50 @@
           "portraitFit": "cover"
         },
         "updatedAt": "2026-10-13T13:50:25.792Z"
+      },
+      {
+        "id": "oUlhJyX6C4Q69mtLS9u1",
+        "name": "Asgeir Wolfshorn",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-fit",
+              "name": "Fit",
+              "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+              "cost": 2,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Körper",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Athletik",
+                    "bonus": 2
+                  }
+                ],
+                "maximumHitPoints": 2
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Fit",
+                "detail": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
@@ -15455,7 +15499,7 @@
     "fraktion": "Clan Wolfshorn, Dämmergrund",
     "title": "Huskarl, Hornhall",
     "name": "Asgeir Wolfshorn",
-    "updatedAt": "2026-10-13T13:50:25.792Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "role": "",
     "identity": {
       "worldPersonId": "person--haus-wolfshorn--asgeir-wolfshorn"
@@ -15515,74 +15559,27 @@
       },
       "quirks": [
         {
-          "id": "starter-ancestry-aldrimarer-trait-1",
-          "triggerRules": [],
-          "limitations": "",
-          "aiInstructions": "",
-          "stacking": "normal",
-          "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
-          "active": true,
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "trigger": "",
-          "type": "trait",
-          "name": "Aldrimarische Widerstandskraft",
-          "mechanics": {
-            "attack": 0,
-            "armorClass": 0,
-            "spellAttack": 0,
-            "savingThrow": 0,
-            "maximumHitPoints": 0,
-            "skill": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "spellSaveDc": 0,
-            "initiative": 0,
-            "passivePerception": 0,
-            "bonusDamageFormula": "",
-            "movement": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "attackRollMode": "normal"
-          },
-          "priority": 0,
-          "duration": "",
-          "tags": "Volk · Aldrimarer",
-          "target": "self"
-        },
-        {
-          "tags": "Hintergrund · Huskarl",
-          "stacking": "normal",
+          "id": "development-trait-fit",
+          "name": "Fit",
+          "description": "Trainierter Körper; +2 auf Athletik und +2 maximale TP.",
+          "cost": 2,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp",
           "type": "trait",
           "active": true,
-          "trigger": "",
-          "name": "Aldrimarische Gefolgschaftstreue",
-          "duration": "",
-          "id": "starter-background-huskarl-trait-1",
-          "aiInstructions": "",
-          "limitations": "",
-          "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
-          "target": "self",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Körper",
           "mechanics": {
-            "savingThrowAdvantageAttributes": [],
-            "initiative": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "passivePerception": 0,
-            "spellAttack": 0,
-            "savingThrow": 0,
-            "attackRollMode": "normal",
-            "savingThrowDisadvantageAttributes": [],
-            "attack": 0,
-            "bonusDamageFormula": "",
-            "armorClass": 0,
-            "maximumHitPoints": 0,
-            "movement": 0,
-            "spellSaveDc": 0,
-            "damage": 0,
-            "skill": 0
+            "skillModifiers": [
+              {
+                "name": "Athletik",
+                "bonus": 2
+              }
+            ],
+            "maximumHitPoints": 2
           },
-          "triggerRules": [],
-          "priority": 0
+          "triggerRules": []
         }
       ],
       "combat": {

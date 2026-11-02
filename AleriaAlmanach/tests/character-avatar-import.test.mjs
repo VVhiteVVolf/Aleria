@@ -193,28 +193,43 @@ test('album responses never enter a different set or a reopened character editor
   }
 });
 
-test('grid updates keep existing image and label nodes when another slot changes', () => {
+function loadEmoteGrid() {
   const { context } = loadImporter();
   const grid = {
     children: [],
-    appendChild(node) { node.parentElement = this; this.children.push(node); }
+    insertBefore(node, before) {
+      if (node.parentElement) node.remove();
+      const index = before ? this.children.indexOf(before) : this.children.length;
+      this.children.splice(index, 0, node);
+      node.parentElement = this;
+    }
   };
   context.document.createElement = () => ({
     dataset: {}, writes: 0,
     set innerHTML(html) {
       this.writes++;
-      this.input = { value: html.match(/type="text" value="([^"]*)"/)?.[1] || '' };
+      this.input = html.includes('type="text"') ? { value: html.match(/type="text" value="([^"]*)"/)?.[1] || '' } : null;
       this.image = html.includes('<img ') ? { dataset: { emoteSrc: html.match(/data-emote-src="([^"]*)"/)?.[1] } } : null;
     },
-    querySelector(selector) { return selector === 'img' ? this.image : this.input; }
+    querySelector(selector) { return selector === 'img' ? this.image : this.input; },
+    remove() {
+      if (!this.parentElement) return;
+      this.parentElement.children.splice(this.parentElement.children.indexOf(this), 1);
+      this.parentElement = null;
+    }
   });
   context.document.getElementById = id => id === 'cp-emote-grid' ? grid : null;
   vm.runInContext(fs.readFileSync(new URL('../modules/characters/character-profile.js', import.meta.url), 'utf8'), context);
   vm.runInContext(fs.readFileSync(new URL('../modules/characters/character-media-editor.js', import.meta.url), 'utf8'), context);
-  vm.runInContext(`_emoteSlots = [{ img: 'https://i.imgur.com/first.png', label: 'Name' }, null];`, context);
   context.updateCharacterAvatarImportSummary = () => {};
   context.escapeHtml = value => value;
   context.sanitizeImageSrc = value => value;
+  return { context, grid };
+}
+
+test('grid updates keep existing image and label nodes when another slot changes', () => {
+  const { context, grid } = loadEmoteGrid();
+  vm.runInContext(`_emoteSlots = [{ img: 'https://i.imgur.com/first.png', label: 'Name' }, null];`, context);
   context.renderEmoteGrid();
   const originalInput = grid.children[0].input;
   vm.runInContext(`_emoteSlots[1] = { img: 'https://i.imgur.com/next.png', label: 'Neu' };`, context);
@@ -229,6 +244,40 @@ test('grid updates keep existing image and label nodes when another slot changes
   assert.equal(grid.children[0].image, originalImage);
   assert.equal(grid.children[0].input, originalInput);
   assert.equal(originalInput.value, 'Umbenannt');
+});
+
+test('empty capacity creates one add tile, sparse avatars retain their original slot indices', () => {
+  const { context, grid } = loadEmoteGrid();
+  context.initEmoteSlots([]);
+  assert.equal(grid.children.length, 1);
+  assert.equal(grid.children[0].dataset.emoteIndex, '0');
+  const addTile = grid.children[0];
+  context.renderEmoteGrid();
+  assert.equal(grid.children[0], addTile);
+  assert.equal(addTile.writes, 1);
+  vm.runInContext(`
+    _emoteSlots[3] = { img: 'https://example.com/three.png', label: 'Drei' };
+    _emoteSlots[79] = { img: 'https://example.com/last.png', label: 'Letzter' };
+  `, context);
+  context.renderEmoteGrid();
+  assert.deepEqual(grid.children.map(tile => tile.dataset.emoteIndex), ['3', '79', '0']);
+  const lastPreview = grid.children[1].image;
+  context.removeEmote(3);
+  assert.deepEqual(grid.children.map(tile => tile.dataset.emoteIndex), ['79', '0']);
+  assert.equal(grid.children[0].image, lastPreview);
+  assert.equal(grid.children[0].input.value, 'Letzter');
+  assert.equal(vm.runInContext('_emoteSlots[79].label', context), 'Letzter');
+});
+
+test('a full gallery has 80 occupied cards and no add tile; deleting reuses the freed slot', () => {
+  const { context, grid } = loadEmoteGrid();
+  context.initEmoteSlots(Array.from({ length: 80 }, (_, i) => ({ img: `https://example.com/${i}.png` })));
+  assert.equal(grid.children.length, 80);
+  assert.ok(grid.children.every(tile => tile.image));
+  context.removeEmote(12);
+  assert.equal(grid.children.length, 80);
+  assert.equal(grid.children.at(-1).dataset.emoteIndex, '12');
+  assert.equal(grid.children.at(-1).image, null);
 });
 
 test('spaces and Enter remain native in text fields and buttons; only emote placeholders get keyboard clicks', () => {

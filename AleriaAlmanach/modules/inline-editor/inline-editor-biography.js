@@ -2,6 +2,7 @@
 // Owns only biography-page editing behavior.
 
 function getInlineBiographyDataForEdit(page) {
+  page = globalThis.AleriaBiographyCatalog?.resolveModule(page, _inlineModuleEdit?.entryId) || page;
   const biography = sanitizeBiographyData(page?.biography || {});
   if (!biography.portraitStages.some(Boolean) && Array.isArray(page?.imageTabs)) {
     biography.portraitStages = Array.from(
@@ -10,6 +11,51 @@ function getInlineBiographyDataForEdit(page) {
     );
   }
   return biography;
+}
+
+function groupInlineBiographyEditor(html, mentors) {
+  const template = document.createElement('template');
+  template.innerHTML = html;
+  const grid = template.content.querySelector('.inline-edit-grid');
+  const fields = Array.from(grid.children);
+  const groups = [
+    ['Biografie & Hintergrund', '[data-biography-field="biographyTitle"], [data-biography-field="biographyText"], [data-biography-field="historyTitle"], [data-biography-field="historyText"]'],
+    ['Portrait', '[data-biography-portrait-stage-index]'],
+    ['Persönlichkeit & Spezialgebiete', '[data-biography-field="abilitiesTitle"], [data-inline-action="add-biography-ability"]'],
+    ['Weitere Kapitel', '[data-inline-action="add-biography-section"]'],
+    ['Bekannte Werke', '[data-biography-field="worksTitle"], [data-biography-line-list="works"]'],
+    ['Eigenarten & Wissenswertes', '[data-biography-line-list="trivia"]'],
+    ['Zitate', '[data-biography-line-list="quotes"]'],
+    ['Beziehungen & Verbindungen', '[data-biography-field="connectionsTitle"], [data-inline-action="add-biography-connection"]'],
+    ['Eigentum & Dokumente', '[data-biography-field="documentsTitle"], [data-inline-action="add-biography-document"]']
+  ];
+  grid.innerHTML = '';
+  for (const [title, selector] of groups) {
+    const matching = fields.filter(field => field.querySelector(selector));
+    grid.insertAdjacentHTML('beforeend', AleriaBiographyCards.editorGroup(title, matching.map(field => field.outerHTML).join(''), { escape: escapeHtml }));
+    matching.forEach(field => fields.splice(fields.indexOf(field), 1));
+  }
+  grid.insertAdjacentHTML('beforeend', AleriaBiographyCards.editorGroup('Ritterväter & Rittermütter', `<button type="button" class="module-editor-mini-btn" data-inline-action="add-biography-mentor">+ Ausbildungsperson</button>${mentors.map((item,index)=>`<div class="biography-mentor-edit-row">${[['name','Name'],['role','Bezeichnung'],['image','Portrait-URL'],['detail','Ausbildung / Zeitraum']].map(([field,label])=>`<label>${label}<input class="inline-edit-input" data-inline-action="update-biography-mentor" data-biography-mentor-index="${index}" data-biography-mentor-field="${field}" value="${escapeHtml(item[field] || '')}"></label>`).join('')}<button type="button" class="module-editor-mini-btn" data-inline-action="remove-biography-mentor" data-biography-mentor-index="${index}" aria-label="Ausbildungsperson entfernen">×</button></div>`).join('')}`, {escape:escapeHtml,count:mentors.length}));
+  grid.insertAdjacentHTML('beforeend', AleriaBiographyCards.editorGroup('Leitgedanke & Gestaltung', fields.map(field => field.outerHTML).join(''), { escape: escapeHtml }));
+  return template.innerHTML;
+}
+
+function editInlineBiographyMentor(trigger, action) {
+  const page = getInlineDraftPage();
+  if (!page) return;
+  const biography = getInlineBiographyDataForEdit(page);
+  const mentors = biography.knightMentors = (page.biography?.knightMentors || biography.knightMentors || []).map(item => ({ ...item }));
+  const index = Number(trigger.dataset.biographyMentorIndex);
+  if (action === 'add' && mentors.length < 8) mentors.push({name:'',role:'Rittervater',image:'',detail:''});
+  else if (action === 'remove' && Number.isInteger(index)) mentors.splice(index,1);
+  else if (action === 'update' && mentors[index] && ['name','role','image','detail'].includes(trigger.dataset.biographyMentorField)) {
+    mentors[index][trigger.dataset.biographyMentorField] = trigger.value;
+  }
+  // Keep an unnamed row while it is being edited; normalizing it now would
+  // remove it before the author can enter a name.
+  page.biography = biography;
+  if (action === 'update') scheduleInlineModuleLivePreviewRefresh();
+  else renderPage(currentPage,0);
 }
 
 function getInlineBiographyLineListName(listName) {
@@ -253,9 +299,9 @@ function removeInlineBiographyConnectionRow(index) {
 }
 
 function buildInlineBiographyEditor(page) {
-  const biography = sanitizeBiographyData(page.biography || {});
-  return `
-    <div class="inline-edit-section">
+  const biography = getInlineBiographyDataForEdit(page);
+  const html = `
+    <div class="inline-edit-section" data-biography-inline-editor>
       <div class="inline-edit-kicker">Biographie</div>
       <div class="inline-edit-grid">
         <div class="inline-edit-field wide">
@@ -286,7 +332,7 @@ function buildInlineBiographyEditor(page) {
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Biografie</span>
-          ${buildTextFormatToolbar()}
+          ${buildTextFormatToolbar({ biography: true })}
           <textarea class="inline-edit-textarea" data-inline-action="update-biography-field" data-biography-field="biographyText">${escapeHtml(biography.biographyText || page.description || '')}</textarea>
         </div>
         <div class="inline-edit-field wide">
@@ -306,7 +352,7 @@ function buildInlineBiographyEditor(page) {
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Geschichte & Wirkung</span>
-          ${buildTextFormatToolbar()}
+          ${buildTextFormatToolbar({ biography: true })}
           <textarea class="inline-edit-textarea" data-inline-action="update-biography-field" data-biography-field="historyText">${escapeHtml(biography.historyText)}</textarea>
         </div>
         <div class="inline-edit-field wide">
@@ -378,7 +424,7 @@ function buildInlineBiographyEditor(page) {
         </div>
         <div class="inline-edit-field wide">
           <span class="inline-edit-label">Zitatbox links</span>
-          ${buildTextFormatToolbar()}
+          ${buildTextFormatToolbar({ biography: true })}
           <textarea class="inline-edit-textarea" data-inline-action="update-biography-field" data-biography-field="quote">${escapeHtml(page.quote || '')}</textarea>
         </div>
         <div class="inline-edit-field">
@@ -391,4 +437,5 @@ function buildInlineBiographyEditor(page) {
         </div>
       </div>
     </div>`;
+  return groupInlineBiographyEditor(html, page.biography?.knightMentors || biography.knightMentors || []);
 }

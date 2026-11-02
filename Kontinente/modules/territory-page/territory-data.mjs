@@ -53,7 +53,7 @@ export function createTerritoryData(source, context, data = globalThis.ALERIA_HE
         crestSrc: source.crestSrc || heraldry.banner, crestAlt: source.crestAlt || heraldry.bannerAlt || `Banner ${heraldry.name}`,
         kicker: source.kicker, parentHref: source.parentHref, parentLabel: source.parentLabel,
         councilNote: source.councilNote, map, infobox: source.infobox,
-        copy: source.copy, cultureSections: source.cultureSections, floraSections: source.floraSections,
+        copy: source.copy, historySections: source.historySections, cultureSections: source.cultureSections, floraSections: source.floraSections,
       },
     },
   };

@@ -50,6 +50,9 @@ import {
 import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { previewZornkappeSegment } from '../inventory-use/zornkappe-effects.js';
+import { previewSubstanceItem } from '../character-health/substance-preview.js';
+import { advanceSubstanceStateMap } from '../character-health/substance-state.js';
+import { getSceneConditionClock, sceneClockBeforeSegment } from '../scene-time/scene-condition-clock.js';
 import { deriveSceneItems, applySceneItemEvent, applyDroppedWeaponsToStates } from '../scene-items/scene-items-model.js';
 import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js?v=20260928-equipment-art-v4';
 import {
@@ -332,6 +335,7 @@ function closeResolutionDialog() {
 }
 
 function previewConsumedItem(segment, characters, fallbackActorId, workingStates, storedStates, options = {}) {
+  advanceSubstanceStateMap(workingStates, options.sceneClockSeconds, options.sceneId);
   if (!['consume', 'interact'].includes(String(segment.kind || segment.commentKind))) return;
   const actorId = String(segment.actorId || segment.sceneActorId || segment.inventoryUse?.actorId || fallbackActorId || '');
   const character = characters.find(entry => String(entry.id) === actorId);
@@ -347,7 +351,8 @@ function previewConsumedItem(segment, characters, fallbackActorId, workingStates
       sourceActor: characters.find(source => source.id === entry.sourceActorId),
       operation: (segment.kind || segment.commentKind) === 'consume' ? 'consume' : entry.operation === 'drop' ? 'pickup' : segment.inventoryOperation || 'use',
       paymentResource: segment.inventoryPaymentResource, usageId: segment.inventoryUse?.usageId || `preview:${segment.id}` });
-    workingStates.set(actorId, { ...state, inventory: applied.inventory, resources: applied.resources });
+    workingStates.set(actorId, previewSubstanceItem(segment, character, { ...state, inventory: applied.inventory, resources: applied.resources },
+      { item: entry.item, quantity: applied.inventoryUse.quantity, seconds: options.sceneClockSeconds, sceneId: options.sceneId }));
     applySceneItemEvent(sceneItems, applied.inventoryUse.sceneItemEvent);
     for (const item of sceneItems.values()) if (item.sourceActorId && !workingStates.has(item.sourceActorId)) {
       workingStates.set(item.sourceActorId, { ...(storedStates.get(item.sourceActorId) || {}) });
@@ -356,7 +361,8 @@ function previewConsumedItem(segment, characters, fallbackActorId, workingStates
     return;
   }
   if (String(segment.kind || segment.commentKind) !== 'consume') return;
-  workingStates.set(actorId, previewZornkappeSegment(segment, character, state));
+  workingStates.set(actorId, previewSubstanceItem(segment, character, previewZornkappeSegment(segment, character, state),
+    { seconds: options.sceneClockSeconds, sceneId: options.sceneId }));
 }
 
 function mountComposers(context = {}) {
@@ -372,7 +378,8 @@ function mountComposers(context = {}) {
   const characters = applyEncounterParties(mergeCombatActors(getCharacters(), context.sceneActors || []), cachedComments);
   const storedStates = getStoredCombatStates(context.threadId || '');
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
-  const composerStates = new Map();
+  const composerStates = new Map(storedStates);
+  const conditionClock = getSceneConditionClock(cachedComments);
   const actorsWithPosts = getActorsWithCombatPosts(cachedComments);
   const previewRulePeriods = { comment: `draft:${context.threadId || ''}`, scene: context.threadId || '', day: recoveryDayKey };
   const previewFrequencyKeys = deriveCombatRuleFrequencyKeys(cachedComments, previewRulePeriods);
@@ -387,9 +394,10 @@ function mountComposers(context = {}) {
       ? resolveTargetPickerProfile(character, { actorId: character.id, storedStates }) : createCombatTargetSummary(character)
   ]));
 
-  segments.forEach(segment => {
+  segments.forEach((segment, segmentIndex) => {
     try { previewConsumedItem(segment, characters, context.selectedCharacterId, composerStates, storedStates,
-      { sceneItems: composerSceneItems, resourceResetActors: composerResourceResets, recoveryDayKey }); }
+      { sceneItems: composerSceneItems, resourceResetActors: composerResourceResets, recoveryDayKey,
+        sceneClockSeconds: sceneClockBeforeSegment(conditionClock, segments, segmentIndex), sceneId: context.threadId }); }
     catch { /* Invalid consumption is rejected explicitly during submission. */ }
     if (!isCombatSegment(segment)) return;
     segment.combatRollMode = 'normal';
@@ -923,9 +931,10 @@ async function handleSubmission(submission = {}) {
         appendResolution: resolution => applySkillRuntimeSnapshots(stateContext.workingStates, resolution)
       }
     };
-    for (const segment of segments) {
+    for (const [segmentIndex, segment] of segments.entries()) {
       previewConsumedItem(segment, characters, submission.characterId, stateContext.workingStates, stateContext.storedStates,
-        { sceneItems: stateContext.sceneItems, resourceResetActors: stateContext.commentResourceResetActors, recoveryDayKey: stateContext.recoveryDayKey });
+        { sceneItems: stateContext.sceneItems, resourceResetActors: stateContext.commentResourceResetActors, recoveryDayKey: stateContext.recoveryDayKey,
+          sceneClockSeconds: sceneClockBeforeSegment(getSceneConditionClock(cachedComments), segments, segmentIndex), sceneId: submission.threadId });
       if (String(segment.mechanicMode) === 'skill') {
         if (!globalThis.AleriaSkillChecks?.resolveDraftSegment) throw Error('Die Fertigkeitsauswertung ist noch nicht geladen.');
         skillContext.usedRuleFrequencyKeys = stateContext.usedRuleFrequencyKeys;

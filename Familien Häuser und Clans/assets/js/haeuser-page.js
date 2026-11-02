@@ -1,4 +1,4 @@
-import { renderHouseCourt } from '../../modules/court/house-court.js?v=20261028-office-body-v2';
+import { renderHouseCourt } from '../../modules/court/house-court.js?v=kingdoms-20261101';
 import { renderHouseScenes } from '../../modules/house-content/house-scenes.js';
 import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-warrior-gallery.js?v=20261029a';
 

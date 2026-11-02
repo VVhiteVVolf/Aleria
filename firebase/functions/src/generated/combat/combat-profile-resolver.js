@@ -24,14 +24,15 @@ import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-techniq
 import { getTechniqueDamageScaling, resolveTechniqueDamageFormula, getLightAttackDamageModifier } from './combat-technique-damage.js?v=20260905-party-combat-v1';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v4';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
-import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
-import { COMBAT_WAIT_ACTION, hasActionBlockingCondition } from './combat-wait-action.js';
+import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout, hasEquippedCombatShield } from './combat-weapon-loadout.js';
+import { COMBAT_WAIT_ACTION, hasActionBlockingCondition, getActionBlockingCondition } from './combat-wait-action.js';
 import { empowerAuraAttack } from './combat-aura-attack.js';
 import { resolveCombatWeaponGrip } from './combat-weapon-grip.js';
 import { getHuskarlTechniqueUnavailableReason, getHuskarlTechniqueRequirements } from '../classes/aldrimar/aldrimar-combat-rules.js';
 import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
 import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
+import { getHealthTaskError } from '../character-health/health-trait-policy.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -320,7 +321,13 @@ function buildCombatProfileActions(character, profile, options = {}) {
       disabledReason: weapon.id === activeWeapon?.id ? 'Bereits aktiv ausgerüstet.' : '',
       default: false
     }));
-  return [...weaponActions, ...techniqueActions, ...abilityActions, ...spellActions, ...equipmentSwitchActions, COMBAT_WAIT_ACTION];
+  return [...weaponActions, ...techniqueActions, ...abilityActions, ...spellActions, ...equipmentSwitchActions, COMBAT_WAIT_ACTION].map(action => {
+    const martial = ['weapon', 'technique'].includes(action.kind);
+    const needsBothHands = martial && (loadout.dualWield || hasEquippedCombatShield(profile) || action.requiresTwoHands
+      || action.weapon?.weaponType === 'bow' || /zweih[aä]nd|two.hand/i.test(action.weapon?.properties || ''));
+    const error = getHealthTaskError(profile, { hands: needsBothHands ? 2 : 1, requiresVoice: action.requiresVoice === true });
+    return error ? { ...action, compatible: false, disabledReason: error } : action;
+  });
 }
 
 function resolveCombatPersistence(character = {}) {
@@ -520,7 +527,11 @@ export function getCombatActorValidationMessage(profile = {}, validation = valid
   if (validation.ready) return '';
   if (validation.missingFields.includes('disarmed')) return `${profile.weapon?.name || 'Waffe'}: Entwaffnet. Erst über „Interagieren“ aufheben oder eine andere Waffe führen.`;
   if (validation.missingFields.includes('equipmentPreparation')) return profile.equipmentPreparation.error;
-  if (validation.missingFields.includes('conditionBlocksActions')) return `${profile.name || 'Die Figur'} ist betäubt und muss diesen Zug aussetzen.`;
+  if (validation.missingFields.includes('conditionBlocksActions')) {
+    const blocker = getActionBlockingCondition(profile);
+    if (blocker?.presetId === 'stunned' || /betäubt/i.test(blocker?.name || '')) return `${profile.name || 'Die Figur'} ist betäubt und muss diesen Zug aussetzen.`;
+    return `${profile.name || 'Die Figur'} kann wegen „${blocker?.name || 'Aktiver Zustand'}“ keine selbstbestimmte Kampfhandlung ausführen und muss diesen Zug aussetzen.`;
+  }
   if (validation.missingFields.includes('incapacitated')) {
     return `${profile.name || 'Die handelnde Figur'} ist bei 0 Trefferpunkten handlungsunfähig.`;
   }

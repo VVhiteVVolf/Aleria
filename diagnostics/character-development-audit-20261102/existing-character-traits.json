@@ -1,0 +1,2161 @@
+[
+  {
+    "id": "ksJQe8Ai4KbRE9jOAvb7",
+    "name": "Freya Skald",
+    "class": "skalde",
+    "level": {
+      "level": 5,
+      "experience": 0,
+      "proficiencyBonusOverride": null,
+      "actionPoolChoices": [],
+      "experienceReward": null,
+      "nextLevelExperience": null,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2
+    },
+    "quirks": [
+      {
+        "type": "trait",
+        "mechanics": {},
+        "duration": "",
+        "name": "Aldrimarische Widerstandskraft",
+        "active": true,
+        "id": "starter-ancestry-aldrimarer-trait-1",
+        "triggerRules": [],
+        "tags": "Volk · Aldrimarer",
+        "aiInstructions": "",
+        "priority": 0,
+        "stacking": "normal",
+        "limitations": "",
+        "target": "self",
+        "trigger": "",
+        "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+        "appliesWhen": "Dauerhafte kulturelle Prägung"
+      },
+      {
+        "type": "trait",
+        "stacking": "normal",
+        "name": "Bühnenerfahrung und Publikumsgespür",
+        "limitations": "",
+        "aiInstructions": "",
+        "description": "Auf Marktplätzen, in Hallen und Wirtshäusern ausgebildete Musikerin, mit Vortrag, Instrument und dem Umgang mit Publikum vertraut.",
+        "active": true,
+        "tags": "Hintergrund · Musikerin",
+        "id": "starter-background-musikerin-trait-1",
+        "appliesWhen": "Wenn Auftritt, Musik oder Publikum relevant sind",
+        "duration": "",
+        "triggerRules": [],
+        "target": "self",
+        "trigger": "",
+        "mechanics": {},
+        "priority": 0
+      },
+      {
+        "target": "self",
+        "priority": 0,
+        "triggerRules": [
+          {
+            "radiusMeters": null,
+            "resultEffects": [],
+            "costs": [],
+            "phase": "pre-roll",
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "sourceRelation": "self",
+            "enabled": true,
+            "priority": 0,
+            "effects": {
+              "damageReduction": 0,
+              "attackModifier": 0,
+              "damageModifier": 0,
+              "outcome": "none",
+              "spellSaveDcModifier": 0,
+              "defenseModifier": 0,
+              "savingThrowModifier": 0,
+              "skillModifier": 1,
+              "rollMode": "normal"
+            },
+            "condition": "always",
+            "description": "+1 auf positive, freundliche Fertigkeiten mit Menschen.",
+            "frequency": "always",
+            "authority": "passive",
+            "requiredTargetTags": [],
+            "activation": "passive",
+            "skillIds": [
+              "persuasion",
+              "performance",
+              "insight"
+            ],
+            "consumeReaction": false,
+            "name": "Frohnatur-Bonus",
+            "recipient": "actor",
+            "id": "freya-frohnatur-skill-bonus"
+          }
+        ],
+        "id": "freya-frohnatur",
+        "mechanics": {},
+        "aiInstructions": "",
+        "duration": "",
+        "trigger": "",
+        "appliesWhen": "Bei positiven, freundlichen Fertigkeitsversuchen mit Menschen",
+        "tags": "Persönlichkeit · Frohnatur",
+        "active": true,
+        "description": "Freyas warme, offene Art macht es Menschen leicht, ihr zu vertrauen.",
+        "type": "trait",
+        "name": "Frohnatur",
+        "stacking": "normal",
+        "limitations": "Nur positive, freundliche Fertigkeiten mit Menschen."
+      },
+      {
+        "type": "flaw",
+        "limitations": "Nur niederträchtige Fertigkeiten (Täuschen, Einschüchtern).",
+        "mechanics": {},
+        "name": "Gutmensch",
+        "duration": "",
+        "target": "self",
+        "priority": 0,
+        "tags": "Persönlichkeit · Gutmensch",
+        "description": "Freya tut sich schwer damit, andere gezielt zu täuschen oder einzuschüchtern.",
+        "appliesWhen": "Bei niederträchtigen Fertigkeitsversuchen",
+        "trigger": "",
+        "aiInstructions": "",
+        "active": true,
+        "stacking": "normal",
+        "triggerRules": [
+          {
+            "actionKinds": [
+              "skill"
+            ],
+            "actionScope": "global",
+            "requiredTargetTags": [],
+            "effects": {
+              "spellSaveDcModifier": 0,
+              "outcome": "none",
+              "defenseModifier": 0,
+              "attackModifier": 0,
+              "damageModifier": 0,
+              "damageReduction": 0,
+              "skillModifier": -3,
+              "rollMode": "normal",
+              "savingThrowModifier": 0
+            },
+            "consumeReaction": false,
+            "resultEffects": [],
+            "enabled": true,
+            "radiusMeters": null,
+            "id": "freya-gutmensch-skill-malus",
+            "priority": 0,
+            "recipient": "actor",
+            "activation": "passive",
+            "description": "-3 bei niederträchtigen Fertigkeiten.",
+            "sourceRelation": "self",
+            "frequency": "always",
+            "phase": "pre-roll",
+            "costs": [],
+            "authority": "passive",
+            "name": "Gutmensch-Malus",
+            "condition": "always",
+            "skillIds": [
+              "deception",
+              "intimidation"
+            ]
+          }
+        ],
+        "id": "freya-gutmensch"
+      },
+      {
+        "description": "Jahre der Bühnenpraxis geben Freya Sicherheit vor Publikum.",
+        "active": true,
+        "appliesWhen": "Bei Auftreten-Versuchen",
+        "tags": "Persönlichkeit · Künstlerin",
+        "mechanics": {},
+        "aiInstructions": "",
+        "name": "Künstlerische Ausbildung",
+        "id": "freya-kuenstlerische-ausbildung",
+        "stacking": "normal",
+        "type": "trait",
+        "limitations": "Nur Auftreten.",
+        "triggerRules": [
+          {
+            "consumeReaction": false,
+            "sourceRelation": "self",
+            "description": "Vorteil bei Auftreten.",
+            "resultEffects": [],
+            "enabled": true,
+            "skillIds": [
+              "performance"
+            ],
+            "effects": {
+              "spellSaveDcModifier": 0,
+              "defenseModifier": 0,
+              "damageReduction": 0,
+              "outcome": "none",
+              "rollMode": "advantage",
+              "savingThrowModifier": 0,
+              "attackModifier": 0,
+              "damageModifier": 0,
+              "skillModifier": 0
+            },
+            "radiusMeters": null,
+            "name": "Bühnensicherheit",
+            "id": "freya-kuenstlerische-ausbildung-advantage",
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "costs": [],
+            "phase": "pre-roll",
+            "recipient": "actor",
+            "requiredTargetTags": [],
+            "authority": "passive",
+            "priority": 0,
+            "frequency": "always",
+            "condition": "always",
+            "activation": "passive"
+          }
+        ],
+        "trigger": "",
+        "target": "self",
+        "priority": 0,
+        "duration": ""
+      },
+      {
+        "triggerRules": [
+          {
+            "authority": "passive",
+            "requiredTargetTags": [],
+            "frequency": "always",
+            "sourceRelation": "self",
+            "skillIds": [
+              "performance"
+            ],
+            "condition": "always",
+            "name": "Bühnenpräsenz",
+            "costs": [],
+            "phase": "pre-roll",
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "recipient": "actor",
+            "consumeReaction": false,
+            "enabled": true,
+            "priority": 0,
+            "effects": {
+              "damageReduction": 0,
+              "attackModifier": 0,
+              "damageModifier": 0,
+              "defenseModifier": 0,
+              "savingThrowModifier": 0,
+              "outcome": "none",
+              "skillModifier": 2,
+              "spellSaveDcModifier": 0,
+              "rollMode": "normal"
+            },
+            "radiusMeters": null,
+            "activation": "passive",
+            "id": "freya-exzentrisch-performance-bonus",
+            "resultEffects": [],
+            "description": "+2 auf Auftreten."
+          },
+          {
+            "effects": {
+              "rollMode": "normal",
+              "damageModifier": 0,
+              "savingThrowModifier": 0,
+              "skillModifier": -4,
+              "attackModifier": 0,
+              "spellSaveDcModifier": 0,
+              "damageReduction": 0,
+              "outcome": "none",
+              "defenseModifier": 0
+            },
+            "requiredTargetTags": [],
+            "id": "freya-exzentrisch-wildnis-malus",
+            "enabled": true,
+            "activation": "passive",
+            "consumeReaction": false,
+            "phase": "pre-roll",
+            "costs": [],
+            "radiusMeters": null,
+            "name": "Fehl am Platz",
+            "resultEffects": [],
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "skillIds": [
+              "survival",
+              "intimidation"
+            ],
+            "frequency": "always",
+            "authority": "passive",
+            "sourceRelation": "self",
+            "condition": "always",
+            "recipient": "actor",
+            "description": "-4 auf Überleben und Einschüchtern.",
+            "priority": 0
+          }
+        ],
+        "target": "self",
+        "name": "Exzentrische Künstlerin",
+        "priority": 0,
+        "type": "trait",
+        "trigger": "",
+        "duration": "",
+        "tags": "Persönlichkeit · Exzentrisch",
+        "limitations": "",
+        "aiInstructions": "",
+        "active": true,
+        "mechanics": {},
+        "stacking": "normal",
+        "id": "freya-exzentrische-kuenstlerin",
+        "appliesWhen": "Bei Auftreten, Überleben und Einschüchtern",
+        "description": "Freya lebt für die Bühne - und ist entsprechend fehl am Platz, wenn es hart und wild zugeht."
+      },
+      {
+        "active": true,
+        "priority": 0,
+        "mechanics": {},
+        "trigger": "",
+        "duration": "",
+        "triggerRules": [
+          {
+            "priority": 0,
+            "costs": [],
+            "phase": "pre-roll",
+            "recipient": "actor",
+            "id": "freya-busenwunder-flirt-bonus",
+            "description": "+4 auf Flirten.",
+            "condition": "always",
+            "frequency": "always",
+            "authority": "passive",
+            "consumeReaction": false,
+            "sourceRelation": "self",
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "skillIds": [
+              "seduction"
+            ],
+            "requiredTargetTags": [],
+            "effects": {
+              "attackModifier": 0,
+              "outcome": "none",
+              "savingThrowModifier": 0,
+              "damageModifier": 0,
+              "damageReduction": 0,
+              "skillModifier": 4,
+              "rollMode": "normal",
+              "spellSaveDcModifier": 0,
+              "defenseModifier": 0
+            },
+            "activation": "passive",
+            "enabled": true,
+            "name": "Busenwunder-Bonus",
+            "radiusMeters": null,
+            "resultEffects": []
+          }
+        ],
+        "limitations": "Nur Flirten.",
+        "type": "trait",
+        "target": "self",
+        "name": "Busenwunder",
+        "stacking": "normal",
+        "tags": "Persönlichkeit · Busenwunder",
+        "appliesWhen": "Bei Flirten-Versuchen",
+        "aiInstructions": "",
+        "description": "Freyas Ausstrahlung wirkt beim Flirten wahre Wunder.",
+        "id": "freya-busenwunder"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "FKiXsSWVoV74rTgmpPip",
+    "name": "Fenrir Varulv",
+    "class": "skjaldr",
+    "level": {
+      "experienceReward": null,
+      "actionPoolChoices": [],
+      "resourceRulesVersion": 2,
+      "specialLevels": 0,
+      "experience": 0,
+      "level": 6,
+      "proficiencyBonusOverride": null,
+      "nextLevelExperience": null
+    },
+    "quirks": [
+      {
+        "stacking": "normal",
+        "mechanics": {},
+        "target": "self",
+        "triggerRules": [],
+        "duration": "",
+        "aiInstructions": "",
+        "name": "Aldrimarische Widerstandskraft",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "active": true,
+        "type": "trait",
+        "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+        "limitations": "",
+        "id": "starter-ancestry-aldrimarer-trait-1",
+        "trigger": "",
+        "priority": 0,
+        "tags": "Volk · Aldrimarer"
+      },
+      {
+        "stacking": "normal",
+        "target": "self",
+        "mechanics": {},
+        "trigger": "",
+        "duration": "",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "triggerRules": [],
+        "aiInstructions": "",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "tags": "Hintergrund · Ritter",
+        "id": "starter-background-ritter-trait-1",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "active": true,
+        "limitations": "",
+        "type": "trait",
+        "priority": 0
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "oUlhJyX6C4Q69mtLS9u1",
+    "name": "Asgeir Wolfshorn",
+    "class": "skjaldr",
+    "level": {
+      "level": 7,
+      "proficiencyBonusOverride": null,
+      "actionPoolChoices": [],
+      "nextLevelExperience": null,
+      "resourceRulesVersion": 2,
+      "specialLevels": 0,
+      "experience": 0,
+      "experienceReward": null
+    },
+    "quirks": [
+      {
+        "id": "starter-ancestry-aldrimarer-trait-1",
+        "triggerRules": [],
+        "limitations": "",
+        "aiInstructions": "",
+        "stacking": "normal",
+        "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+        "active": true,
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "trigger": "",
+        "type": "trait",
+        "name": "Aldrimarische Widerstandskraft",
+        "mechanics": {},
+        "priority": 0,
+        "duration": "",
+        "tags": "Volk · Aldrimarer",
+        "target": "self"
+      },
+      {
+        "tags": "Hintergrund · Huskarl",
+        "stacking": "normal",
+        "type": "trait",
+        "active": true,
+        "trigger": "",
+        "name": "Aldrimarische Gefolgschaftstreue",
+        "duration": "",
+        "id": "starter-background-huskarl-trait-1",
+        "aiInstructions": "",
+        "limitations": "",
+        "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
+        "target": "self",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "mechanics": {},
+        "triggerRules": [],
+        "priority": 0
+      }
+    ],
+    "passives": [
+      {
+        "id": "wolfshorn-asgeir-border-veteran",
+        "name": "Grenzer des Dunkelhains",
+        "description": "+14 maximale TP; +1 Nahkampfwaffenschaden, auch bei Techniken; +2 gegen Furcht, Niederwerfen und erzwungene Bewegung.",
+        "mechanics": {
+          "maximumHitPoints": 14,
+          "weaponModifiers": [
+            {
+              "attack": 0,
+              "damage": 1,
+              "weaponTypes": [
+                "unarmed",
+                "sword",
+                "dagger",
+                "axe",
+                "mace",
+                "spear",
+                "polearm",
+                "staff",
+                "improvised"
+              ]
+            }
+          ],
+          "saveModifiers": [
+            {
+              "kind": "fear",
+              "bonus": 2
+            },
+            {
+              "kind": "prone",
+              "bonus": 2
+            },
+            {
+              "bonus": 2,
+              "kind": "forced-movement"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "bSYZYAEOwiRgy44f6OmO",
+    "name": "Ylva Wolfshorn",
+    "class": "skytte",
+    "level": {
+      "specialLevels": 0,
+      "experience": 0,
+      "actionPoolChoices": [],
+      "experienceReward": null,
+      "proficiencyBonusOverride": null,
+      "resourceRulesVersion": 2,
+      "level": 7,
+      "nextLevelExperience": null
+    },
+    "quirks": [
+      {
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "stacking": "normal",
+        "description": "Aldrimarer zeichnen sich durch Kraft, Zähigkeit und praktische Erfahrung in Tierhaltung und Wildnis aus.",
+        "triggerRules": [],
+        "target": "self",
+        "limitations": "",
+        "trigger": "",
+        "duration": "",
+        "tags": "Volk · Aldrimarer",
+        "mechanics": {},
+        "id": "starter-ancestry-aldrimarer-trait-1",
+        "name": "Aldrimarische Widerstandskraft",
+        "aiInstructions": "",
+        "type": "trait",
+        "priority": 0,
+        "active": true
+      },
+      {
+        "stacking": "normal",
+        "tags": "Hintergrund · Huskarl",
+        "type": "trait",
+        "name": "Aldrimarische Gefolgschaftstreue",
+        "triggerRules": [],
+        "trigger": "",
+        "active": true,
+        "duration": "",
+        "limitations": "",
+        "aiInstructions": "",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "target": "self",
+        "priority": 0,
+        "description": "Gefolgsmann eines aldrimarischen Jarls oder Königs, durch Eid und Sold gebunden, mit Kriegshandwerk und Gefolgschaftstreue vertraut.",
+        "id": "starter-background-huskarl-trait-1",
+        "mechanics": {}
+      },
+      {
+        "aiInstructions": "",
+        "target": "self",
+        "tags": "",
+        "id": "skytte-auge",
+        "stacking": "normal",
+        "name": "Auge des Jägers",
+        "type": "quirk",
+        "priority": 0,
+        "mechanics": {},
+        "limitations": "",
+        "active": true,
+        "description": "+1 Angriff mit einem geführten Bogen, auch bei Bogentechniken. Klassenbonus wird automatisch berechnet; kein Gegenstandsbonus.",
+        "trigger": "",
+        "duration": "",
+        "appliesWhen": "",
+        "triggerRules": []
+      }
+    ],
+    "passives": [
+      {
+        "id": "starter-skytte-animal-companion",
+        "name": "Tierbegleiter",
+        "description": "Freki, domestizierter Gramnir des Clans Wolfshorn, Stufe 4. Eigener Kreaturbogen und eigene Aktionen; muss in der Szene anwesend sein.",
+        "mechanics": {}
+      },
+      {
+        "id": "wolfshorn-ylva-border-veteran",
+        "name": "Veteranin des Dunkelhains",
+        "description": "+20 maximale TP; +2 Angriff und +1 Schaden mit Bogen und Speer, auch bei Techniken; +3 Wahrnehmung; +3 gegen Furcht; +2 gegen Niederwerfen und erzwungene Bewegung.",
+        "mechanics": {
+          "maximumHitPoints": 20,
+          "weaponModifiers": [
+            {
+              "attack": 2,
+              "damage": 1,
+              "weaponTypes": [
+                "bow",
+                "spear"
+              ]
+            }
+          ],
+          "dexterityWeaponTypes": [
+            "spear"
+          ],
+          "skillModifiers": [
+            {
+              "name": "Wahrnehmung",
+              "bonus": 3
+            }
+          ],
+          "saveModifiers": [
+            {
+              "kind": "fear",
+              "bonus": 3
+            },
+            {
+              "bonus": 2,
+              "kind": "prone"
+            },
+            {
+              "bonus": 2,
+              "kind": "forced-movement"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "15ml9RhSvJPXof7z4qY3",
+    "name": "Gwendolyn Draig",
+    "class": "",
+    "level": {
+      "experience": 0,
+      "experienceReward": null,
+      "level": 1,
+      "nextLevelExperience": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "go0D7CiweVxWK1CqVgZz",
+    "name": "Gruffudd Gwregysdu",
+    "class": "",
+    "level": {
+      "experience": 0,
+      "experienceReward": null,
+      "level": 1,
+      "nextLevelExperience": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "WjNUoPlIiFgdUHJQkJhU",
+    "name": "Llyr Dewrdd",
+    "class": "",
+    "level": {
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "Eka4z7TWpzEgx8KjhIzy",
+    "name": "Caralyn Chwedonol",
+    "class": "morwyr",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "q1QtSIug74FzzwUAqWrs",
+    "name": "Gawain Draig",
+    "class": "teulu",
+    "level": {
+      "specialLevels": 0,
+      "proficiencyBonusOverride": null,
+      "actionPoolChoices": [],
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "level": 5,
+      "resourceRulesVersion": 2,
+      "experience": 0
+    },
+    "quirks": [
+      {
+        "stacking": "normal",
+        "active": true,
+        "tags": "Volk · Cenyr",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "triggerRules": [],
+        "duration": "",
+        "type": "trait",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "aiInstructions": "",
+        "target": "self",
+        "limitations": "",
+        "priority": 0,
+        "name": "Cenyri Kultur",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "trigger": "",
+        "mechanics": {}
+      },
+      {
+        "target": "self",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "limitations": "",
+        "triggerRules": [],
+        "active": true,
+        "aiInstructions": "",
+        "trigger": "",
+        "mechanics": {},
+        "name": "Höfische und religiöse Prägung",
+        "priority": 0,
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "type": "trait",
+        "duration": "",
+        "tags": "Volk · Cenyr",
+        "stacking": "normal",
+        "id": "starter-ancestry-cenyr-trait-2"
+      },
+      {
+        "triggerRules": [],
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "trigger": "",
+        "priority": 0,
+        "duration": "",
+        "mechanics": {},
+        "limitations": "",
+        "stacking": "normal",
+        "tags": "Hintergrund · Ritter",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "active": true,
+        "type": "trait",
+        "id": "starter-background-ritter-trait-1",
+        "aiInstructions": "",
+        "target": "self",
+        "name": "Ritterliche Herkunft und Standespflicht"
+      }
+    ],
+    "passives": [
+      {
+        "id": "gawain-liebt-duefte",
+        "name": "Liebt Düfte",
+        "description": "Beim Benutzen eines Dufts oder Parfüms regeneriert Gawain einen Punkt Besondere Aktion.",
+        "mechanics": {}
+      },
+      {
+        "id": "gawain-muttersoehnchen",
+        "name": "Muttersöhnchen",
+        "description": "Gawains starke Prägung durch seine Mutter macht ihn in bestimmten sozialen, weltlichen und religiösen Situationen unsicher.",
+        "mechanics": {}
+      },
+      {
+        "id": "gawain-draig-draig-knight-signet",
+        "name": "Draig-Rittersiegelring",
+        "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+        "mechanics": {}
+      }
+    ]
+  },
+  {
+    "id": "person--haus-draig--gethin-1722-draig",
+    "name": "Gethin Draig",
+    "class": "teulu",
+    "level": {
+      "level": 5,
+      "specialLevels": 0,
+      "nextLevelExperience": null,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "resourceRulesVersion": 2,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [
+      {
+        "active": true,
+        "aiInstructions": "",
+        "triggerRules": [],
+        "target": "self",
+        "tags": "Volk · Cenyr",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "priority": 0,
+        "name": "Cenyri Kultur",
+        "stacking": "normal",
+        "mechanics": {},
+        "id": "starter-ancestry-cenyr-trait-1",
+        "duration": "",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "trigger": "",
+        "type": "trait",
+        "limitations": ""
+      },
+      {
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "priority": 0,
+        "type": "trait",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "duration": "",
+        "stacking": "normal",
+        "triggerRules": [],
+        "target": "self",
+        "tags": "Volk · Cenyr",
+        "active": true,
+        "aiInstructions": "",
+        "limitations": "",
+        "trigger": "",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "name": "Höfische und religiöse Prägung",
+        "mechanics": {}
+      },
+      {
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "aiInstructions": "",
+        "target": "self",
+        "tags": "Hintergrund · Ritter",
+        "triggerRules": [],
+        "active": true,
+        "duration": "",
+        "type": "trait",
+        "stacking": "normal",
+        "mechanics": {},
+        "trigger": "",
+        "priority": 0,
+        "limitations": "",
+        "id": "starter-background-ritter-trait-1",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "HjDXMMexahez1G0rJrBE",
+    "name": "Kane Draig",
+    "class": "teulu",
+    "level": {
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "level": 5
+    },
+    "quirks": [
+      {
+        "stacking": "normal",
+        "triggerRules": [],
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "target": "self",
+        "limitations": "",
+        "trigger": "",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "duration": "",
+        "aiInstructions": "",
+        "tags": "Volk · Cenyr",
+        "name": "Cenyri Kultur",
+        "mechanics": {},
+        "active": true,
+        "type": "trait",
+        "priority": 0
+      },
+      {
+        "stacking": "normal",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "triggerRules": [],
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "target": "self",
+        "limitations": "",
+        "name": "Höfische und religiöse Prägung",
+        "duration": "",
+        "aiInstructions": "",
+        "mechanics": {},
+        "type": "trait",
+        "active": true,
+        "trigger": "",
+        "priority": 0,
+        "tags": "Volk · Cenyr"
+      },
+      {
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "type": "trait",
+        "stacking": "normal",
+        "mechanics": {},
+        "target": "self",
+        "aiInstructions": "",
+        "trigger": "",
+        "tags": "Hintergrund · Ritter",
+        "triggerRules": [],
+        "limitations": "",
+        "priority": 0,
+        "duration": "",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "active": true,
+        "id": "starter-background-ritter-trait-1"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "y7MBxDiAaesbWHBtmw5Q",
+    "name": "Rhiannon Draig",
+    "class": "magier",
+    "level": {
+      "actionPoolChoices": [],
+      "proficiencyBonusOverride": null,
+      "experienceReward": null,
+      "resourceRulesVersion": 2,
+      "experience": 0,
+      "nextLevelExperience": null,
+      "specialLevels": 0,
+      "level": 6
+    },
+    "quirks": [
+      {
+        "target": "self",
+        "name": "Cenyri Kultur",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "trigger": "",
+        "mechanics": {},
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "aiInstructions": "",
+        "stacking": "normal",
+        "limitations": "",
+        "active": true,
+        "id": "starter-ancestry-cenyr-trait-1",
+        "type": "trait",
+        "priority": 0,
+        "duration": "",
+        "tags": "Volk · Cenyr",
+        "triggerRules": []
+      },
+      {
+        "aiInstructions": "",
+        "tags": "Volk · Cenyr",
+        "type": "trait",
+        "active": true,
+        "stacking": "normal",
+        "mechanics": {},
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "priority": 0,
+        "limitations": "",
+        "triggerRules": [],
+        "name": "Höfische und religiöse Prägung",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "trigger": "",
+        "target": "self",
+        "duration": ""
+      },
+      {
+        "triggerRules": [],
+        "type": "trait",
+        "id": "starter-background-gelehrter-trait-1",
+        "duration": "",
+        "target": "self",
+        "priority": 0,
+        "tags": "Hintergrund · Gelehrter",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "limitations": "",
+        "mechanics": {},
+        "description": "Jahre in Bibliotheken, Skriptorien oder als Lehrling eines Gelehrten verbracht; vertraut mit Schrift, Theorie und arkanem Grundwissen.",
+        "name": "Gelehrtes Grundwissen",
+        "stacking": "normal",
+        "active": true,
+        "aiInstructions": "",
+        "trigger": ""
+      },
+      {
+        "name": "Hervorragende Arkane Ausbildung",
+        "trigger": "",
+        "limitations": "",
+        "stacking": "normal",
+        "triggerRules": [
+          {
+            "activation": "passive",
+            "consumeReaction": false,
+            "sourceRelation": "self",
+            "radiusMeters": null,
+            "skillIds": [
+              "arcane-kunde"
+            ],
+            "priority": 0,
+            "name": "Myrddins Lehren",
+            "enabled": true,
+            "authority": "passive",
+            "description": "Vorteil bei Arkaner Kunde.",
+            "actionKinds": [
+              "skill"
+            ],
+            "actionScope": "global",
+            "frequency": "always",
+            "costs": [],
+            "condition": "always",
+            "effects": {
+              "damageReduction": 0,
+              "spellSaveDcModifier": 0,
+              "savingThrowModifier": 0,
+              "defenseModifier": 0,
+              "skillModifier": 0,
+              "attackModifier": 0,
+              "outcome": "none",
+              "damageModifier": 0,
+              "rollMode": "advantage"
+            },
+            "resultEffects": [],
+            "id": "rhiannon-arkane-ausbildung-advantage",
+            "requiredTargetTags": [],
+            "recipient": "actor",
+            "phase": "pre-roll"
+          }
+        ],
+        "appliesWhen": "Immer, besonders bei arkaner Kunde und beim Zaubern",
+        "description": "Als persönliche Lehrlingin des großen Zauberers Myrddin genießt Rhiannon eine Ausbildung, von der andere Studierende nur träumen können.",
+        "id": "rhiannon-hervorragende-arkane-ausbildung",
+        "active": true,
+        "priority": 0,
+        "mechanics": {
+          "spellAttack": 1,
+          "spellSaveDc": 1
+        },
+        "type": "trait",
+        "duration": "",
+        "target": "self",
+        "tags": "Persönlichkeit · Myrddins Lehrling",
+        "aiInstructions": ""
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "tmfBA2zPTc88EMMGkyyA",
+    "name": "Duncan Gafyr",
+    "class": "teulu",
+    "level": {
+      "proficiencyBonusOverride": null,
+      "resourceRulesVersion": 2,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "experience": 0,
+      "specialLevels": 0,
+      "actionPoolChoices": [
+        {
+          "resourceId": "action",
+          "level": 10
+        },
+        {
+          "resourceId": "reaction",
+          "level": 15
+        },
+        {
+          "level": 20,
+          "resourceId": "bonus-action"
+        }
+      ],
+      "level": 20
+    },
+    "quirks": [
+      {
+        "trigger": "",
+        "mechanics": {},
+        "target": "self",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "triggerRules": [],
+        "active": true,
+        "name": "Cenyri Kultur",
+        "duration": "",
+        "stacking": "normal",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "type": "trait",
+        "limitations": "",
+        "aiInstructions": "",
+        "priority": 0,
+        "tags": "Volk · Cenyr"
+      },
+      {
+        "name": "Höfische und religiöse Prägung",
+        "trigger": "",
+        "tags": "Volk · Cenyr",
+        "type": "trait",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "limitations": "",
+        "duration": "",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "stacking": "normal",
+        "active": true,
+        "triggerRules": [],
+        "mechanics": {},
+        "aiInstructions": "",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "target": "self",
+        "priority": 0
+      },
+      {
+        "type": "trait",
+        "mechanics": {},
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "priority": 0,
+        "tags": "Hintergrund · Ritter",
+        "aiInstructions": "",
+        "stacking": "normal",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "duration": "",
+        "limitations": "",
+        "trigger": "",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "active": true,
+        "triggerRules": [],
+        "target": "self",
+        "id": "starter-background-ritter-trait-1"
+      },
+      {
+        "trigger": "Dauerhaft",
+        "limitations": "Die Erfahrung ersetzt keine aktuelle Ortskenntnis oder Geheimdienstinformation.",
+        "name": "Ehemaliger Marschall",
+        "mechanics": {
+          "savingThrow": 1,
+          "initiative": 1
+        },
+        "aiInstructions": "Der Rettungswurfbonus und die Initiative sind bereits mechanisch enthalten.",
+        "triggerRules": [],
+        "tags": "Marschall · Führung · Veteran",
+        "type": "trait",
+        "appliesWhen": "In Kampf, Führung und militärischer Lagebeurteilung",
+        "duration": "Dauerhaft",
+        "id": "duncan-quirk-former-marshal",
+        "target": "self",
+        "stacking": "normal",
+        "description": "Duncan liest Schlachtfelder, Befehlswege und Formationen mit der Erfahrung eines ehemaligen Marschalls der Grafschaft von Celtigerns Wacht.",
+        "priority": 20,
+        "active": true
+      },
+      {
+        "limitations": "Gilt nur für Angriffe, die als Waffenangriff aufgelöst werden.",
+        "trigger": "Dauerhaft",
+        "mechanics": {
+          "damage": 1,
+          "attack": 1
+        },
+        "appliesWhen": "Bei Waffenangriffen",
+        "id": "duncan-quirk-weapons-master",
+        "tags": "Waffenmeister · Haus Draig · Schwert",
+        "type": "trait",
+        "aiInstructions": "Treffer- und Schadensbonus sind bereits mechanisch enthalten.",
+        "priority": 30,
+        "target": "self",
+        "triggerRules": [],
+        "duration": "Dauerhaft",
+        "name": "Waffenmeister",
+        "active": true,
+        "description": "Als Waffenmeister des Hauses Draig kennt Duncan Reichweite, Bindung und Schwerpunkt einer Klinge bis ins kleinste Detail.",
+        "stacking": "normal"
+      },
+      {
+        "target": "self",
+        "trigger": "Dauerhaft",
+        "priority": 40,
+        "appliesWhen": "Solange Duncan ein Schwert führen und sich frei bewegen kann",
+        "active": true,
+        "mechanics": {
+          "passivePerception": 1,
+          "armorClass": 1
+        },
+        "limitations": "Die Formen II bis VII besitzen in diesem ersten Ausbau noch keine eingetragenen Techniken.",
+        "duration": "Dauerhaft",
+        "stacking": "normal",
+        "triggerRules": [],
+        "type": "trait",
+        "aiInstructions": "Der Rüstungsklassenbonus ist bereits mechanisch enthalten; keine Techniken für die leeren Formen erfinden.",
+        "id": "duncan-quirk-many-forms",
+        "description": "Duncan beherrscht alle sieben Formen des Drachentanzes und wechselt seine Haltung ohne erkennbare Lücke.",
+        "tags": "Drachentanz · Formenmeister · Schwertmeister",
+        "name": "Meister vieler Formen (Drachentanz)"
+      },
+      {
+        "appliesWhen": "Bei gesellschaftlichen, ritterlichen und herrschaftlichen Proben",
+        "trigger": "Dauerhaft",
+        "id": "duncan-quirk-knight-prince",
+        "aiInstructions": "Der allgemeine Fertigkeitsbonus ist bereits mechanisch enthalten.",
+        "limitations": "Sein Rang erzwingt weder Gehorsam noch Loyalität.",
+        "mechanics": {
+          "skill": 1
+        },
+        "description": "Duncan trägt die Pflichten, Würde und politische Autorität des Hauses Gafyr.",
+        "duration": "Dauerhaft",
+        "triggerRules": [],
+        "name": "Ritterfürst des Hauses Gafyr",
+        "target": "self",
+        "stacking": "normal",
+        "tags": "Haus Gafyr · Ritterfürst · Autorität",
+        "priority": 10,
+        "type": "trait",
+        "active": true
+      },
+      {
+        "tags": "Mentor · Ritter · Lehrmeister",
+        "trigger": "Dauerhaft; Kampfeffekt automatisch durch die latente Aura",
+        "limitations": "Der direkte Kampfbuff liegt ausschließlich auf der Aura, damit er nicht doppelt berechnet wird.",
+        "mechanics": {
+          "passivePerception": 1
+        },
+        "triggerRules": [],
+        "type": "trait",
+        "appliesWhen": "Beim Ausbilden, Einschätzen und Führen von Rittern",
+        "name": "Mentor vieler Ritter",
+        "aiInstructions": "Keine zusätzlichen Kampfbuffs aus dieser Marotte ableiten; dafür Präsenz des Waffenmeisters verwenden.",
+        "target": "self",
+        "priority": 20,
+        "active": true,
+        "id": "duncan-quirk-mentor",
+        "duration": "Dauerhaft",
+        "description": "Duncan erkennt Fehler früh, gibt knappe Hinweise und macht die Menschen an seiner Seite sicherer. Die Kampfverstärkung seiner Gefährten wird durch seine latente Aura abgebildet.",
+        "stacking": "normal"
+      },
+      {
+        "aiInstructions": "Initiative und Bewegung sind bereits mechanisch reduziert.",
+        "id": "duncan-quirk-aging",
+        "triggerRules": [],
+        "priority": 99,
+        "description": "Duncans Geist und Technik sind ungebrochen, doch sein Körper braucht länger, um auf plötzliche Wendungen zu reagieren.",
+        "mechanics": {
+          "movement": -1,
+          "initiative": -2
+        },
+        "stacking": "normal",
+        "duration": "Dauerhaft",
+        "trigger": "Dauerhaft",
+        "type": "flaw",
+        "active": true,
+        "appliesWhen": "Bei Initiative und Bewegung",
+        "tags": "Alter · Veteran · Schwäche",
+        "name": "In die Jahre gekommen",
+        "limitations": "Dieser Nachteil darf nicht durch bloße Erzählung ignoriert werden.",
+        "target": "self"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "gildas-gafyr",
+    "name": "Gildas Gafyr",
+    "class": "teulu",
+    "level": {
+      "actionPoolChoices": [],
+      "resourceRulesVersion": 2,
+      "level": 6,
+      "proficiencyBonusOverride": null,
+      "nextLevelExperience": null,
+      "experience": 0,
+      "specialLevels": 0,
+      "experienceReward": null
+    },
+    "quirks": [
+      {
+        "stacking": "normal",
+        "aiInstructions": "",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "duration": "",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "priority": 0,
+        "triggerRules": [],
+        "active": true,
+        "type": "trait",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "mechanics": {},
+        "tags": "Volk · Cenyr",
+        "target": "self",
+        "name": "Cenyri Kultur",
+        "limitations": "",
+        "trigger": ""
+      },
+      {
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "mechanics": {},
+        "triggerRules": [],
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "target": "self",
+        "type": "trait",
+        "stacking": "normal",
+        "duration": "",
+        "tags": "Volk · Cenyr",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "name": "Höfische und religiöse Prägung",
+        "active": true,
+        "priority": 0,
+        "aiInstructions": "",
+        "trigger": "",
+        "limitations": ""
+      },
+      {
+        "active": true,
+        "type": "trait",
+        "mechanics": {},
+        "tags": "Hintergrund · Ritter",
+        "target": "self",
+        "id": "starter-background-ritter-trait-1",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "aiInstructions": "",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "duration": "",
+        "limitations": "",
+        "stacking": "normal",
+        "trigger": "",
+        "triggerRules": [],
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "priority": 0
+      },
+      {
+        "limitations": "Der Bonus entfällt erzählerisch, wenn Gildas überrascht oder ohne jede Vorbereitung in die Lage gezwungen wird.",
+        "priority": 0,
+        "active": true,
+        "id": "gildas-puenktlich-heisst-zu-frueh",
+        "stacking": "normal",
+        "target": "self",
+        "duration": "",
+        "appliesWhen": "Zu Beginn eines Kampfes oder einer vorbereiteten Aufgabe",
+        "name": "Pünktlich heißt zu früh",
+        "triggerRules": [],
+        "mechanics": {
+          "initiative": 1
+        },
+        "tags": "Marotte · Vorbereitung · Pünktlichkeit",
+        "type": "quirk",
+        "trigger": "",
+        "aiInstructions": "Stelle die Vorbereitung als ruhige Routine dar, nicht als übernatürliche Vorahnung.",
+        "description": "Gildas erscheint fast immer vor der vereinbarten Zeit und nutzt die Minuten, um Ort, Ausrüstung und Aufgabe zu prüfen."
+      },
+      {
+        "triggerRules": [],
+        "type": "trait",
+        "description": "Gildas besitzt kein herausragendes Naturtalent; tausendfach wiederholte Abläufe und hoher Eigenanspruch machen ihn jedoch schwer aus der Fassung zu bringen.",
+        "tags": "Passiv · Disziplin · Beharrlichkeit",
+        "mechanics": {
+          "savingThrow": 1
+        },
+        "name": "Erarbeitete Standfestigkeit",
+        "stacking": "normal",
+        "active": true,
+        "aiInstructions": "Beschreibe Erfolg als eingeübte Standfestigkeit statt als angeborene Brillanz.",
+        "appliesWhen": "Bei Rettungswürfen gegen Druck, Schmerz, Ablenkung oder Kontrollverlust",
+        "id": "gildas-erarbeitete-standfestigkeit",
+        "duration": "",
+        "target": "self",
+        "priority": 0,
+        "limitations": "Der pauschale Bonus ist bereits in der Kampfauflösung hinterlegt und darf nicht erneut addiert werden.",
+        "trigger": ""
+      },
+      {
+        "name": "Pflicht vor Bequemlichkeit",
+        "trigger": "",
+        "id": "gildas-pflicht-vor-bequemlichkeit",
+        "description": "Eine angenommene Verantwortung gilt für Gildas erst dann als beendet, wenn die Aufgabe wirklich erfüllt und niemand zurückgelassen wurde.",
+        "aiInstructions": "",
+        "tags": "Ideal · Pflicht · Rittertum",
+        "type": "ideal",
+        "duration": "",
+        "stacking": "normal",
+        "limitations": "",
+        "active": true,
+        "appliesWhen": "Wenn eine Pflicht unbequem, gefährlich oder undankbar wird",
+        "triggerRules": [],
+        "mechanics": {},
+        "priority": 0,
+        "target": "self"
+      },
+      {
+        "stacking": "normal",
+        "limitations": "",
+        "duration": "",
+        "triggerRules": [],
+        "appliesWhen": "Bei Ausreden, Ausflüchten oder offensichtlicher Nachlässigkeit",
+        "priority": 0,
+        "trigger": "",
+        "aiInstructions": "",
+        "name": "Brauen des Zweifels",
+        "active": true,
+        "mechanics": {},
+        "id": "gildas-brauen-des-zweifels",
+        "description": "Bei schlechten Ausreden zieht Gildas unwillkürlich die Brauen zusammen. Seine Skepsis ist dadurch meist sichtbar, bevor er ein Wort sagt.",
+        "type": "quirk",
+        "tags": "Marotte · Mimik · Skepsis",
+        "target": "self"
+      },
+      {
+        "trigger": "",
+        "limitations": "",
+        "priority": 0,
+        "mechanics": {},
+        "appliesWhen": "In ruhigen sozialen Szenen",
+        "duration": "",
+        "triggerRules": [],
+        "stacking": "normal",
+        "tags": "Marotte · Humor · Ernst",
+        "aiInstructions": "",
+        "target": "self",
+        "type": "quirk",
+        "description": "Offensichtliche Scherze lassen ihn oft nur blinzeln; eine leise, trockene Bemerkung kann ihm dagegen ein ehrliches Lachen entlocken.",
+        "id": "gildas-trockener-humor",
+        "active": true,
+        "name": "Trockener Humor"
+      }
+    ],
+    "passives": [
+      {
+        "id": "gildas-gewissenhafte-vorbereitung",
+        "name": "Gewissenhafte Vorbereitung",
+        "description": "Gildas geht Abläufe, Ausrüstung und mögliche Fehlerquellen vor einer Aufgabe durch. Sein erster passender Angriffs- oder Fertigkeitswurf einer Szene erhält +1.",
+        "mechanics": {}
+      },
+      {
+        "id": "gildas-schutzpflicht",
+        "name": "Schutzpflicht",
+        "description": "Wird ein naher Verbündeter getroffen, tritt Gildas mit Schildarm, Schulter oder Klinge in die Angriffslinie und reduziert den Schaden um 3.",
+        "mechanics": {}
+      },
+      {
+        "id": "gildas-gafyr-draig-knight-signet",
+        "name": "Draig-Rittersiegelring",
+        "description": "Das offen getragene Draig-Rittersiegel verleiht seinem Träger +1 auf Überzeugen.",
+        "mechanics": {}
+      }
+    ]
+  },
+  {
+    "id": "XQMfGVoQWnbHZqf9vNfD",
+    "name": "Mairwen (Geb. Illewod) Pysgod",
+    "level": {
+      "proficiencyBonusOverride": null,
+      "level": 1,
+      "experience": 0,
+      "specialLevels": 0,
+      "nextLevelExperience": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-neidr--guinevere-neidr",
+    "name": "Guinevere Neidr",
+    "class": "helwyr",
+    "level": {
+      "experienceReward": null,
+      "nextLevelExperience": null,
+      "actionPoolChoices": [],
+      "resourceRulesVersion": 2,
+      "level": 5,
+      "proficiencyBonusOverride": null,
+      "experience": 0,
+      "specialLevels": 0
+    },
+    "quirks": [
+      {
+        "stacking": "normal",
+        "target": "self",
+        "triggerRules": [],
+        "id": "starter-ancestry-cenyr-trait-1",
+        "name": "Cenyri Kultur",
+        "duration": "",
+        "trigger": "",
+        "priority": 0,
+        "tags": "Volk · Cenyr",
+        "active": true,
+        "mechanics": {},
+        "type": "trait",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "limitations": "",
+        "aiInstructions": "",
+        "appliesWhen": "Dauerhafte kulturelle Prägung"
+      },
+      {
+        "name": "Höfische und religiöse Prägung",
+        "active": true,
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "tags": "Volk · Cenyr",
+        "limitations": "",
+        "type": "trait",
+        "trigger": "",
+        "target": "self",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "stacking": "normal",
+        "aiInstructions": "",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "duration": "",
+        "triggerRules": [],
+        "priority": 0,
+        "mechanics": {}
+      },
+      {
+        "stacking": "normal",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "duration": "",
+        "id": "starter-background-ritter-trait-1",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "mechanics": {},
+        "active": true,
+        "tags": "Hintergrund · Ritter",
+        "priority": 0,
+        "limitations": "",
+        "type": "trait",
+        "trigger": "",
+        "target": "self",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "aiInstructions": "",
+        "triggerRules": []
+      },
+      {
+        "aiInstructions": "",
+        "priority": 0,
+        "id": "guinevere-scharfsinnig",
+        "mechanics": {},
+        "target": "self",
+        "description": "Guinevere hat einen wachen Verstand für Zusammenhänge, Zeichen und verborgene Details.",
+        "trigger": "",
+        "triggerRules": [
+          {
+            "id": "guinevere-scharfsinnig-int-bonus",
+            "condition": "always",
+            "name": "Scharfsinnig-Bonus",
+            "requiredTargetTags": [],
+            "radiusMeters": null,
+            "sourceRelation": "self",
+            "frequency": "always",
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "skillIds": [
+              "investigation",
+              "religion",
+              "arcane-kunde",
+              "history",
+              "nature"
+            ],
+            "costs": [],
+            "consumeReaction": false,
+            "priority": 0,
+            "resultEffects": [],
+            "phase": "pre-roll",
+            "activation": "passive",
+            "description": "+1 auf intelligenzbasierte Fertigkeitswürfe.",
+            "effects": {
+              "savingThrowModifier": 0,
+              "defenseModifier": 0,
+              "rollMode": "normal",
+              "attackModifier": 0,
+              "spellSaveDcModifier": 0,
+              "damageModifier": 0,
+              "outcome": "none",
+              "damageReduction": 0,
+              "skillModifier": 1
+            },
+            "recipient": "actor",
+            "authority": "passive",
+            "enabled": true
+          },
+          {
+            "effects": {
+              "rollMode": "advantage",
+              "damageReduction": 0,
+              "outcome": "none",
+              "savingThrowModifier": 0,
+              "attackModifier": 0,
+              "spellSaveDcModifier": 0,
+              "damageModifier": 0,
+              "defenseModifier": 0,
+              "skillModifier": 0
+            },
+            "radiusMeters": null,
+            "resultEffects": [],
+            "frequency": "always",
+            "description": "Vorteil bei Nachforschungen.",
+            "priority": 0,
+            "enabled": true,
+            "requiredTargetTags": [],
+            "costs": [],
+            "condition": "always",
+            "activation": "passive",
+            "actionScope": "global",
+            "actionKinds": [
+              "skill"
+            ],
+            "recipient": "actor",
+            "phase": "pre-roll",
+            "id": "guinevere-scharfsinnig-investigation-advantage",
+            "authority": "passive",
+            "sourceRelation": "self",
+            "skillIds": [
+              "investigation"
+            ],
+            "name": "Spürsinn",
+            "consumeReaction": false
+          }
+        ],
+        "stacking": "normal",
+        "active": true,
+        "duration": "",
+        "tags": "Persönlichkeit · Scharfsinnig",
+        "appliesWhen": "Bei intelligenzbasierten Würfen, besonders bei Nachforschungen",
+        "type": "trait",
+        "limitations": "",
+        "name": "Scharfsinnig"
+      },
+      {
+        "appliesWhen": "Bei Dunkelheit (frei zu erzählen) und bei Angriffen gegen Tiere",
+        "priority": 0,
+        "id": "guinevere-jaegerauge",
+        "active": true,
+        "stacking": "normal",
+        "triggerRules": [
+          {
+            "consumeReaction": false,
+            "authority": "passive",
+            "name": "Jägerauge-Bonus",
+            "requiredTargetTags": [
+              "tier"
+            ],
+            "activation": "passive",
+            "radiusMeters": null,
+            "priority": 0,
+            "recipient": "actor",
+            "costs": [],
+            "actionScope": "global",
+            "actionKinds": [
+              "weapon",
+              "technique"
+            ],
+            "enabled": true,
+            "frequency": "always",
+            "effects": {
+              "rollMode": "normal",
+              "savingThrowModifier": 0,
+              "defenseModifier": 0,
+              "outcome": "none",
+              "spellSaveDcModifier": 0,
+              "damageReduction": 0,
+              "attackModifier": 2,
+              "skillModifier": 0,
+              "damageModifier": 0
+            },
+            "skillIds": [],
+            "resultEffects": [],
+            "sourceRelation": "self",
+            "phase": "pre-roll",
+            "description": "+2 auf Trefferwürfe gegen Tiere.",
+            "condition": "always",
+            "id": "guinevere-jaegerauge-tier-bonus"
+          }
+        ],
+        "limitations": "Die Nachtsicht ist rein erzählerisch (kein eigenes Lichtsystem im Kampfmodul). Der +2-Bonus gegen Tiere greift nur, wenn die Zielkreatur eine Marotte/Eigenschaft mit dem Tag 'Tier' trägt (z. B. bei Kreaturenbögen entsprechend zu markieren).",
+        "duration": "",
+        "target": "self",
+        "trigger": "",
+        "mechanics": {},
+        "tags": "Persönlichkeit · Jägerauge",
+        "description": "Guinevere sieht auch bei Nacht scharf und liest die Bewegungen von Tieren wie ein offenes Buch.",
+        "type": "trait",
+        "aiInstructions": "Nachtsicht darf frei erzählt werden. Der +2-Trefferbonus gegen Tiere ist bereits im Angriffswurf enthalten, wenn er greift - nicht zusätzlich erzählerisch aufaddieren.",
+        "name": "Jägerauge"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "person--haus-saethwyr--nudd-saethwyr",
+    "name": "Nudd Saethwyr",
+    "class": "cantref",
+    "level": {
+      "experience": 0,
+      "proficiencyBonusOverride": null,
+      "experienceReward": null,
+      "specialLevels": 0,
+      "nextLevelExperience": null,
+      "level": 6,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": []
+    },
+    "quirks": [
+      {
+        "tags": "Volk · Cenyr",
+        "triggerRules": [],
+        "priority": 0,
+        "limitations": "",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "aiInstructions": "",
+        "trigger": "",
+        "mechanics": {},
+        "target": "self",
+        "name": "Cenyri Kultur",
+        "duration": "",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "active": true,
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "type": "trait",
+        "stacking": "normal"
+      },
+      {
+        "limitations": "",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "triggerRules": [],
+        "name": "Höfische und religiöse Prägung",
+        "active": true,
+        "priority": 0,
+        "type": "trait",
+        "trigger": "",
+        "duration": "",
+        "tags": "Volk · Cenyr",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "aiInstructions": "",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "stacking": "normal",
+        "mechanics": {},
+        "target": "self"
+      },
+      {
+        "active": true,
+        "stacking": "normal",
+        "id": "starter-background-ritter-trait-1",
+        "triggerRules": [],
+        "duration": "",
+        "trigger": "",
+        "tags": "Hintergrund · Ritter",
+        "limitations": "",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "priority": 0,
+        "type": "trait",
+        "mechanics": {},
+        "aiInstructions": "",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "target": "self",
+        "name": "Ritterliche Herkunft und Standespflicht"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "JjVTIr5E7a0IHKB7q1fF",
+    "name": "Gideon Weinlaub",
+    "level": {
+      "experience": 0,
+      "level": 1,
+      "nextLevelExperience": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-wyrm--gais-wyrm",
+    "name": "Gais Wyrm",
+    "class": "uchelwyr",
+    "level": {
+      "resourceRulesVersion": 2,
+      "specialLevels": 0,
+      "nextLevelExperience": null,
+      "actionPoolChoices": [],
+      "level": 5,
+      "experience": 0,
+      "proficiencyBonusOverride": null,
+      "experienceReward": null
+    },
+    "quirks": [
+      {
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "trigger": "",
+        "triggerRules": [],
+        "target": "self",
+        "priority": 0,
+        "type": "trait",
+        "mechanics": {},
+        "tags": "Volk · Cenyr",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "active": true,
+        "stacking": "normal",
+        "limitations": "",
+        "name": "Cenyri Kultur",
+        "duration": "",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "aiInstructions": ""
+      },
+      {
+        "stacking": "normal",
+        "type": "trait",
+        "duration": "",
+        "tags": "Volk · Cenyr",
+        "limitations": "",
+        "id": "starter-ancestry-cenyr-trait-2",
+        "priority": 0,
+        "name": "Höfische und religiöse Prägung",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "aiInstructions": "",
+        "mechanics": {},
+        "active": true,
+        "triggerRules": [],
+        "target": "self",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "trigger": ""
+      },
+      {
+        "target": "self",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "mechanics": {},
+        "tags": "Hintergrund · Ritter",
+        "trigger": "",
+        "aiInstructions": "",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "active": true,
+        "type": "trait",
+        "stacking": "normal",
+        "limitations": "",
+        "duration": "",
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "priority": 0,
+        "triggerRules": [],
+        "id": "starter-background-ritter-trait-1"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "ax26chmgvtaURnzC0n0l",
+    "name": "Brychan",
+    "class": "",
+    "level": {
+      "experience": 0,
+      "experienceReward": null,
+      "level": 1,
+      "nextLevelExperience": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "2UgcQTdEEpSJDTNKxx0U",
+    "name": "Rhodri",
+    "class": "",
+    "level": {
+      "experience": 0,
+      "experienceReward": null,
+      "level": 1,
+      "nextLevelExperience": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "01OfFXeScnCoL2eNMPAM",
+    "name": "Tegid",
+    "class": "",
+    "level": {
+      "experience": 0,
+      "experienceReward": null,
+      "level": 1,
+      "nextLevelExperience": null,
+      "proficiencyBonusOverride": null,
+      "specialLevels": 0
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "6atOllMA637Z2VNAZAxf",
+    "name": "Gethin",
+    "class": "teulu",
+    "level": {
+      "actionPoolChoices": [],
+      "experienceReward": null,
+      "nextLevelExperience": null,
+      "resourceRulesVersion": 2,
+      "experience": 0,
+      "level": 5,
+      "specialLevels": 0,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [
+      {
+        "trigger": "",
+        "target": "self",
+        "duration": "",
+        "priority": 0,
+        "tags": "Volk · Cenyr",
+        "active": true,
+        "stacking": "normal",
+        "mechanics": {},
+        "limitations": "",
+        "id": "starter-ancestry-cenyr-trait-1",
+        "triggerRules": [],
+        "aiInstructions": "",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "type": "trait",
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "name": "Cenyri Kultur"
+      },
+      {
+        "tags": "Volk · Cenyr",
+        "type": "trait",
+        "active": true,
+        "stacking": "normal",
+        "name": "Höfische und religiöse Prägung",
+        "mechanics": {},
+        "id": "starter-ancestry-cenyr-trait-2",
+        "limitations": "",
+        "priority": 0,
+        "appliesWhen": "Dauerhafte kulturelle Prägung",
+        "target": "self",
+        "duration": "",
+        "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
+        "trigger": "",
+        "aiInstructions": "",
+        "triggerRules": []
+      },
+      {
+        "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
+        "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
+        "priority": 0,
+        "mechanics": {},
+        "trigger": "",
+        "id": "starter-background-ritter-trait-1",
+        "active": true,
+        "aiInstructions": "",
+        "limitations": "",
+        "duration": "",
+        "name": "Ritterliche Herkunft und Standespflicht",
+        "type": "trait",
+        "triggerRules": [],
+        "target": "self",
+        "tags": "Hintergrund · Ritter",
+        "stacking": "normal"
+      }
+    ],
+    "passives": []
+  },
+  {
+    "id": "person--haus-awenydd--rhosyn-awenydd",
+    "name": "Rhosyn Awenydd",
+    "class": "",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-awenor--briallen-awenor",
+    "name": "Briallen Awenor",
+    "class": "",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-wyrm--rianna-wyrm",
+    "name": "Rianna Wyrm",
+    "class": "teulu",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-rhyddid--evie-rhyddid",
+    "name": "Evie Rhyddid",
+    "class": "",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-gafyr--lefraye-gafyr",
+    "name": "Lefraye Gafyr",
+    "class": "helwyr",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  },
+  {
+    "id": "person--haus-gwyllach--saerwyn-gwyllach",
+    "name": "Saerwyn Gwyllach",
+    "class": "",
+    "level": {
+      "development": {
+        "version": 1,
+        "mode": "purchase",
+        "startingPoints": 3,
+        "pointsPerLevel": 3,
+        "ownClassCost": 2,
+        "foreignMultiplier": 2,
+        "levelSurcharge": 1,
+        "adjustment": 0,
+        "purchases": []
+      },
+      "level": 1,
+      "specialLevels": 0,
+      "resourceRulesVersion": 2,
+      "actionPoolChoices": [],
+      "experience": 0,
+      "nextLevelExperience": null,
+      "experienceReward": null,
+      "proficiencyBonusOverride": null
+    },
+    "quirks": [],
+    "passives": []
+  }
+]

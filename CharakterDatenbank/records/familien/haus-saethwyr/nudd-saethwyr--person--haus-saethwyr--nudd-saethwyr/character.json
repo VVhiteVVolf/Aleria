@@ -115,9 +115,9 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/martial-control-person--haus-saethwyr--nudd-saethwyr-2026-10-15.json",
-    "sourceExportedAt": "2026-10-14T22:04:14.066Z",
-    "sourceUpdatedAt": "2026-10-12T22:24:41.567Z",
+    "sourceArchive": "Charakter Archiv Exporte/Traitabgleich 2026-11-02/person--haus-saethwyr--nudd-saethwyr.json",
+    "sourceExportedAt": "2026-11-02T19:48:57.033Z",
+    "sourceUpdatedAt": "2026-11-02T19:48:57.033Z",
     "sourceDocumentIds": [
       "person--haus-saethwyr--nudd-saethwyr",
       "person--haus-saethwyr--nudd-saethwyr",
@@ -128,7 +128,7 @@
       "person--haus-saethwyr--nudd-saethwyr",
       "person--haus-saethwyr--nudd-saethwyr"
     ],
-    "contentHash": "fbc25cd7d4924de38889e26e9875221e234d32c38dd1829afa95634097896f35"
+    "contentHash": "afa8fa4133382500c093a4048f9c0772dc8fc33e8100130f830dac2099abc984"
   },
   "local": {
     "notes": "",
@@ -29763,13 +29763,90 @@
             }
           ]
         }
+      },
+      {
+        "id": "person--haus-saethwyr--nudd-saethwyr",
+        "name": "Nudd Saethwyr",
+        "updatedAt": "2026-11-02T19:48:57.033Z",
+        "combatProfile": {
+          "quirks": [
+            {
+              "id": "development-trait-eigensinn",
+              "name": "Eigensinn",
+              "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+              "cost": 1,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Besondere Eigenheit",
+              "mechanics": {
+                "saveAttributeModifiers": [
+                  {
+                    "attributeKey": "charisma",
+                    "bonus": 2
+                  }
+                ],
+                "skillModifiers": [
+                  {
+                    "name": "Überzeugen",
+                    "bonus": -2
+                  }
+                ]
+              },
+              "triggerRules": []
+            },
+            {
+              "id": "development-trait-ritualgebunden",
+              "name": "Ritualgebunden",
+              "description": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+              "cost": 0,
+              "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp",
+              "type": "trait",
+              "active": true,
+              "target": "Selbst",
+              "duration": "Dauerhaft",
+              "appliesWhen": "Solange ausgewählt und aktiv",
+              "tags": "Charakterentwicklung · Besondere Eigenheit",
+              "mechanics": {
+                "skillModifiers": [
+                  {
+                    "name": "Religion",
+                    "bonus": 2
+                  }
+                ],
+                "initiative": -1
+              },
+              "triggerRules": []
+            }
+          ]
+        },
+        "biography": {
+          "biography": {
+            "abilitiesTitle": "Eigenschaften",
+            "abilities": [
+              {
+                "title": "Eigensinn",
+                "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+              },
+              {
+                "title": "Ritualgebunden",
+                "detail": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+                "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp"
+              }
+            ]
+          }
+        }
       }
     ]
   },
   "character": {
     "id": "person--haus-saethwyr--nudd-saethwyr",
     "name": "Nudd Saethwyr",
-    "updatedAt": "2026-10-12T22:24:41.567Z",
+    "updatedAt": "2026-11-02T19:48:57.033Z",
     "combatProfile": {
       "attributes": [
         {
@@ -29858,109 +29935,55 @@
       ],
       "quirks": [
         {
-          "tags": "Volk · Cenyr",
-          "triggerRules": [],
-          "priority": 0,
-          "limitations": "",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "aiInstructions": "",
-          "trigger": "",
-          "mechanics": {
-            "savingThrow": 0,
-            "spellSaveDc": 0,
-            "spellAttack": 0,
-            "movement": 0,
-            "bonusDamageFormula": "",
-            "attack": 0,
-            "savingThrowAdvantageAttributes": [],
-            "savingThrowDisadvantageAttributes": [],
-            "passivePerception": 0,
-            "damage": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "initiative": 0,
-            "maximumHitPoints": 0,
-            "armorClass": 0,
-            "attackRollMode": "normal",
-            "skill": 0
-          },
-          "target": "self",
-          "name": "Cenyri Kultur",
-          "duration": "",
-          "id": "starter-ancestry-cenyr-trait-1",
-          "active": true,
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "description": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+          "cost": 1,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp",
           "type": "trait",
-          "stacking": "normal"
+          "active": true,
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
+          "mechanics": {
+            "saveAttributeModifiers": [
+              {
+                "attributeKey": "charisma",
+                "bonus": 2
+              }
+            ],
+            "skillModifiers": [
+              {
+                "name": "Überzeugen",
+                "bonus": -2
+              }
+            ]
+          },
+          "triggerRules": []
         },
         {
-          "limitations": "",
-          "description": "Cenyri verbinden körperliche Stärke mit höfischer Präsenz und religiös geprägter Bildung.",
-          "triggerRules": [],
-          "name": "Höfische und religiöse Prägung",
-          "active": true,
-          "priority": 0,
+          "id": "development-trait-ritualgebunden",
+          "name": "Ritualgebunden",
+          "description": "Überlieferte Abläufe geben dir Halt, spontanes Handeln weniger: +2 auf Religion, −1 Initiative.",
+          "cost": 0,
+          "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp",
           "type": "trait",
-          "trigger": "",
-          "duration": "",
-          "tags": "Volk · Cenyr",
-          "appliesWhen": "Dauerhafte kulturelle Prägung",
-          "aiInstructions": "",
-          "id": "starter-ancestry-cenyr-trait-2",
-          "stacking": "normal",
-          "mechanics": {
-            "skill": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "spellSaveDc": 0,
-            "bonusDamageFormula": "",
-            "savingThrow": 0,
-            "attackRollMode": "normal",
-            "attack": 0,
-            "maximumHitPoints": 0,
-            "spellAttack": 0,
-            "combatStartTemporaryHitPoints": 0,
-            "armorClass": 0,
-            "movement": 0,
-            "damage": 0,
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "initiative": 0
-          },
-          "target": "self"
-        },
-        {
           "active": true,
-          "stacking": "normal",
-          "id": "starter-background-ritter-trait-1",
-          "triggerRules": [],
-          "duration": "",
-          "trigger": "",
-          "tags": "Hintergrund · Ritter",
-          "limitations": "",
-          "description": "Ritterliche Erziehung, Standespflicht, Etikette, Heraldik und Verantwortung gegenüber Gefolge und Lehnsherrn.",
-          "priority": 0,
-          "type": "trait",
+          "target": "Selbst",
+          "duration": "Dauerhaft",
+          "appliesWhen": "Solange ausgewählt und aktiv",
+          "tags": "Charakterentwicklung · Besondere Eigenheit",
           "mechanics": {
-            "movement": 0,
-            "skill": 0,
-            "damage": 0,
-            "maximumHitPoints": 0,
-            "bonusDamageFormula": "",
-            "savingThrowAdvantageAttributes": [],
-            "passivePerception": 0,
-            "savingThrowDisadvantageAttributes": [],
-            "armorClass": 0,
-            "attackRollMode": "normal",
-            "savingThrow": 0,
-            "spellSaveDc": 0,
-            "spellAttack": 0,
-            "attack": 0,
-            "initiative": 0,
-            "combatStartTemporaryHitPoints": 0
+            "skillModifiers": [
+              {
+                "name": "Religion",
+                "bonus": 2
+              }
+            ],
+            "initiative": -1
           },
-          "aiInstructions": "",
-          "appliesWhen": "Wenn Herkunft, Stand oder Ausbildung relevant sind",
-          "target": "self",
-          "name": "Ritterliche Herkunft und Standespflicht"
+          "triggerRules": []
         }
       ],
       "magic": {

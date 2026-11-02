@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "characterName": "Rianna Wyrm",
+  "characterFolder": "Charaktere/Einzelcharaktere/Rianna Wyrm",
+  "setId": "set-04-geld-schmuck-tand",
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/rianna-wyrm.jpg",
+  "characterDescription": "Identit?t und Kleidung entsprechend den zwei aktuell angeh?ngten Avataren und dem gesicherten Portr?t; rote Z?pfe, bernsteinbraune Augen, schwarz-goldene R?stung, schwarzer Drache auf Gelb; blo?e H?nde.",
+  "theme": "Materielle Ader: Geld, Schmuck und Tand",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3,
+    "pixelSize": [
+      1254,
+      1254
+    ]
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Goldgierig / Bezahl mich",
+      "gesture": "Schelmisches wissendes Grinsen, eine Augenbraue hoch; eine blo?e Hand reibt Daumen und Zeigefinger in der klassischen Geldgeste, die andere Hand offen fordernd."
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Pr?fend / Ist das echtes Gold?",
+      "gesture": "Konzentriert zusammengekniffenes Auge und vorgeschobene Unterlippe; h?lt eine einzelne Goldm?nze mit Daumen und Zeigefinger nahe ans Gesicht und mustert sie skeptisch."
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Schmuckverliebt / Den will ich!",
+      "gesture": "Strahlende nat?rliche Augen, verz?cktes offenes L?cheln; hebt mit einer Hand eine feine Goldkette mit rotem Stein hoch, die andere liegt begeistert an ihrer Wange."
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Feilschend / Noch ein bisschen mehr",
+      "gesture": "Selbstsicheres verschmitztes L?cheln und leicht geneigter Kopf; eine Hand zeigt mit kleinem Fingerabstand noch ein bisschen mehr, die andere ist als verhandelnde offene Handfl?che ausgestreckt."
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Besitzergreifend / Meins!",
+      "gesture": "Wachsamer Seitenblick und trotzig vorgeschobene Unterlippe; dr?ckt einen gut gef?llten kleinen Lederbeutel mit beiden H?nden sch?tzend an ihre Brust."
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Eitel / Steht mir ausgezeichnet",
+      "gesture": "Halb geschlossene zufriedene Augen und stolzes L?cheln; pr?sentiert eine blo?e Hand mit einem einzelnen goldenen Edelsteinring und betrachtet ihn selbstgef?llig, die andere Hand locker an der H?fte."
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Absch?tzig / Billiger Tand",
+      "gesture": "Eine Braue hoch, Nase leicht ger?mpft, entt?uschter schiefer Mund; l?sst ein kleines glanzloses Kettchen mit schlichter Glasperle zwischen zwei Fingern baumeln, freie Hand abwinkend."
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Entsetzt / Alles ausgegeben",
+      "gesture": "Erschrocken geweitete nat?rliche Augen und offener Mund; h?lt ihren kleinen leeren Lederbeutel kopf?ber ?ber die freie offene Handfl?che, es f?llt keine M?nze heraus."
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Selig / Mein kleiner Schatz",
+      "gesture": "Augen gen?sslich geschlossen, sanftes gl?ckseliges L?cheln und Wange leicht an die Beute gelehnt; umarmt ein kleines offenes Schmuckk?stchen mit wenigen Goldm?nzen und einer Perlenkette."
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "rianna-2026-11-02-set-04-geld-schmuck-tand_Bild1.png bis _Bild9.png",
+  "status": "fertig; alle neun Einzelavatare technisch und visuell gepr?ft",
+  "generationMode": "built-in image_gen",
+  "promptFile": "Prompts/rianna-2026-11-02-set-04-geld-schmuck-tand.txt",
+  "propAuthorization": "Aktueller Nutzerauftrag: Thema Geld, Schmuck und Tand.",
+  "userReferenceImages": "Zwei im aktuellen Auftrag angeh?ngte quadratische Rianna-Avatare; prim?re Referenz f?r blo?e H?nde und Darstellung.",
+  "sheetPath": "Sheets/rianna-2026-11-02-set-04-geld-schmuck-tand.png",
+  "generatedSource": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19d6d-82d8-75e2-9731-934b2318d4cc\\exec-597c76b0-de69-4733-bc34-0051de1187f7.png",
+  "exportReceipt": "Verarbeitung/set-04-geld-schmuck-tand/export-receipt.json",
+  "visualReview": {
+    "allNineViewed": true,
+    "identityAndArmor": "pass",
+    "squareCropsAndPanelEdges": "pass",
+    "expressionsGesturesAndProps": "pass",
+    "backgroundAndStyle": "pass",
+    "reviewedAt": "2026-11-02"
+  }
+}

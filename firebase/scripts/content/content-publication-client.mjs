@@ -4,6 +4,23 @@ import { createRequire } from 'node:module';
 import { createHash, randomUUID } from 'node:crypto';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { encryptProjectBackup } from '../backup/project-backup-crypto.mjs';
+// Public preparation has no token and cannot issue a commit or storage request.
+export function createPublicContentReadClient() {
+  const database = 'projects/aleriaprojekt/databases/(default)';
+  return {
+    documentName: path => `${database}/documents/${path}`,
+    async request(path, body) {
+      if (body && path !== ':runQuery') throw Error('Leseprüfung darf keine Daten schreiben.');
+      const response = await fetch(`https://firestore.googleapis.com/v1/${database}/documents${path}`, {
+        method: body ? 'POST' : 'GET', headers: { 'Content-Type': 'application/json' },
+        ...(body ? { body: JSON.stringify(body) } : {}), signal: AbortSignal.timeout(30000)
+      });
+      if (response.status === 404 && !body) return null;
+      if (!response.ok) throw Error(`Öffentliche Inhaltsprüfung: HTTP ${response.status}`);
+      return response.json();
+    }
+  };
+}
 export async function createContentPublicationClient() {
   const require = createRequire(new URL('../../package.json',import.meta.url));
   const auth = require('firebase-tools/lib/auth.js');

@@ -1,0 +1,636 @@
+{
+  "version": "2026-11-02-sparse-v1",
+  "reviewedProfiles": 19,
+  "replacedProfiles": 14,
+  "oldQuirks": 58,
+  "assignedTraits": 18,
+  "rows": [
+    {
+      "id": "ksJQe8Ai4KbRE9jOAvb7",
+      "onlineId": "ksJQe8Ai4KbRE9jOAvb7",
+      "name": "Freya Skald",
+      "traits": [
+        "frohnatur",
+        "buehnenmensch",
+        "vollbusig"
+      ],
+      "reason": "Offene Frohnatur, ausdrücklich theatralische und feldunerfahrene Künstlerin; die ausgeprägte Brustform ist bereits als Busenwunder im alten Bogen belegt.",
+      "evidence": [
+        "Öffentliche Freya-Biografie: Gesellig und lebensfroh; Theatralisch und exzentrisch; Vertrauensvoll und unerfahren",
+        "Alter Bogen: freya-busenwunder"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "name": "Aldrimarische Widerstandskraft"
+        },
+        {
+          "id": "starter-background-musikerin-trait-1",
+          "name": "Bühnenerfahrung und Publikumsgespür"
+        },
+        {
+          "id": "freya-frohnatur",
+          "name": "Frohnatur"
+        },
+        {
+          "id": "freya-gutmensch",
+          "name": "Gutmensch"
+        },
+        {
+          "id": "freya-kuenstlerische-ausbildung",
+          "name": "Künstlerische Ausbildung"
+        },
+        {
+          "id": "freya-exzentrische-kuenstlerin",
+          "name": "Exzentrische Künstlerin"
+        },
+        {
+          "id": "freya-busenwunder",
+          "name": "Busenwunder"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-frohnatur",
+          "name": "Frohnatur",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/frohnatur.webp"
+        },
+        {
+          "id": "development-trait-buehnenmensch",
+          "name": "Bühnenmensch",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/buehnenmensch.webp"
+        },
+        {
+          "id": "development-trait-vollbusig",
+          "name": "Vollbusig",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/vollbusig.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-17T20:51:28.224446Z",
+      "prospectiveFields": [
+        "combatProfile.quirks",
+        "biography.biography.abilitiesTitle",
+        "biography.biography.abilities"
+      ]
+    },
+    {
+      "id": "FKiXsSWVoV74rTgmpPip",
+      "onlineId": "FKiXsSWVoV74rTgmpPip",
+      "name": "Fenrir Varulv",
+      "traits": [
+        "symbiose-varulv-wolf"
+      ],
+      "reason": "Belegter leiblicher Spross der Varulv-Linie. Nur die bereits ausgearbeitete angeborene Grundprägung; keine neue Verwandlungsfähigkeit und kein Werwolffluch.",
+      "evidence": [
+        "Stammbaum haus-varulv/fenrir-varulv: bestätigte biologische Eltern Sleipnir Varulv und Svantje Skaal",
+        "Autorenfestlegung und Symbiose-Modul: Varulv (Wolf)"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "name": "Aldrimarische Widerstandskraft"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-symbiose-varulv-wolf",
+          "name": "Silvanische Symbiose der Varulv (Wolf)",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/symbiose-varulv-wolf.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-17T23:37:19.270040Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "oUlhJyX6C4Q69mtLS9u1",
+      "onlineId": "oUlhJyX6C4Q69mtLS9u1",
+      "name": "Asgeir Wolfshorn",
+      "traits": [
+        "fit"
+      ],
+      "reason": "Der ausgearbeitete Bogen belegt ausgeprägte körperliche Kondition: KRF 18, KON 16, geübte Athletik und Körperbeherrschung sowie persönliche Grenzerausbildung.",
+      "evidence": [
+        "Bearbeiteter Kampfbogen: Attribute, Fertigkeiten und Grenzer des Dunkelhains"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "name": "Aldrimarische Widerstandskraft"
+        },
+        {
+          "id": "starter-background-huskarl-trait-1",
+          "name": "Aldrimarische Gefolgschaftstreue"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-fit",
+          "name": "Fit",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/fit.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-29T20:39:59.410143Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "bSYZYAEOwiRgy44f6OmO",
+      "onlineId": "bSYZYAEOwiRgy44f6OmO",
+      "name": "Ylva Wolfshorn",
+      "traits": [
+        "faehrtenleser"
+      ],
+      "reason": "Langjährige Grenzerin und Skytte mit ausgearbeiteter Wildnisausbildung in Überleben, Naturkunde, Wahrnehmung und Tierumgang. Die persönliche Veteranin-Ausbildung bleibt separat erhalten.",
+      "evidence": [
+        "Bearbeiteter Kampfbogen: Veteranin des Dunkelhains und ausdrücklich gewählte Wildnisfertigkeiten"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-aldrimarer-trait-1",
+          "name": "Aldrimarische Widerstandskraft"
+        },
+        {
+          "id": "starter-background-huskarl-trait-1",
+          "name": "Aldrimarische Gefolgschaftstreue"
+        },
+        {
+          "id": "skytte-auge",
+          "name": "Auge des Jägers"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-faehrtenleser",
+          "name": "Geborener Fährtenleser",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/faehrtenleser.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-11-01T03:53:51.053290Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "q1QtSIug74FzzwUAqWrs",
+      "onlineId": "q1QtSIug74FzzwUAqWrs",
+      "name": "Gawain Draig",
+      "traits": [
+        "neugier-vor-vorsicht",
+        "eigensinn"
+      ],
+      "removeAbilityIds": [
+        "gawain-muttersoehnchen"
+      ],
+      "removeConditionIds": [
+        "gawain-strenge-gerueche"
+      ],
+      "reason": "Belegte Abenteuerneugier und riskanter Übermut; Widerspruch gegen Bevormundung und eigene Ansprüche. Keine pauschale schwere psychologische Zuschreibung. Die alte globale Unsicherheit auf sieben Fertigkeiten entfällt.",
+      "evidence": [
+        "Öffentliche Gawain-Biografie: Hungrig auf die Welt; Begabt, aber bequem; seine Bewährung und riskante letzte Angriffsfolge",
+        "Alter Bogen: gawain-muttersoehnchen"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-neugier-vor-vorsicht",
+          "name": "Neugier vor Vorsicht",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks",
+        "combatProfile.abilities",
+        "combatProfile.conditions",
+        "biography.biography.abilitiesTitle",
+        "biography.biography.abilities"
+      ]
+    },
+    {
+      "id": "person--haus-draig--gethin-1722-draig",
+      "onlineId": "person--haus-draig--gethin-1722-draig",
+      "name": "Gethin Draig",
+      "traits": [],
+      "reason": "Nur allgemeine Ritter-, Kultur- und Ausbildungsangaben belegt. Keine individuelle Persönlichkeit, Krankheit oder besondere Begabung erfinden.",
+      "evidence": [
+        "Bearbeiteter Kampfbogen ohne Bio; alte drei generische Herkunftseinträge"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "6atOllMA637Z2VNAZAxf",
+      "onlineId": "6atOllMA637Z2VNAZAxf",
+      "name": "Gethin",
+      "traits": [],
+      "reason": "Separater vorhandener Bogen ohne individuelle Biografie. Keine Zusammenführung mit Gethin Draig und keine spekulative Traitvergabe.",
+      "evidence": [
+        "Eigenständige Dokument-ID und eigener bearbeiteter Kampfbogen"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "HjDXMMexahez1G0rJrBE",
+      "onlineId": "HjDXMMexahez1G0rJrBE",
+      "name": "Kane Draig",
+      "traits": [],
+      "reason": "Der Bogen belegt Ausbildung und Grundwerte, aber keine notwendige individuelle Prägung. Niedrige WEI ist keine Begründung für eine kognitive Einschränkung.",
+      "evidence": [
+        "Bearbeiteter Kampfbogen ohne persönliche Bio; alte generische Herkunftseinträge"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "y7MBxDiAaesbWHBtmw5Q",
+      "onlineId": "y7MBxDiAaesbWHBtmw5Q",
+      "name": "Rhiannon Draig",
+      "traits": [
+        "arkan-geschult"
+      ],
+      "reason": "Myrddins persönliche Lehrlingin mit ausdrücklich hervorragender arkaner Ausbildung. Hohe INT allein begründet weder Genie noch eidetisches Gedächtnis.",
+      "evidence": [
+        "Bio: Myrddins Lehrling und künftige Hofzauberin",
+        "Alter Bogen: Hervorragende Arkane Ausbildung"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-gelehrter-trait-1",
+          "name": "Gelehrtes Grundwissen"
+        },
+        {
+          "id": "rhiannon-hervorragende-arkane-ausbildung",
+          "name": "Hervorragende Arkane Ausbildung"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-arkan-geschult",
+          "name": "Arkan geschult",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/arkan-geschult.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-11T19:46:50.254871Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "tmfBA2zPTc88EMMGkyyA",
+      "onlineId": "tmfBA2zPTc88EMMGkyyA",
+      "name": "Duncan Gafyr",
+      "traits": [
+        "taktisches-gespuer"
+      ],
+      "reason": "Die belegte Marschallerfahrung und das ausdrückliche Lesen von Formationen begründen taktisches Gespür. Meisterschaft, Rang und Mentorrolle bleiben in Ausbildung, Arsenal, Aura und Prosa.",
+      "evidence": [
+        "Bio und alter Bogen: Ehemaliger Marschall; Schlachtfelder, Befehlswege und Formationen"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        },
+        {
+          "id": "duncan-quirk-former-marshal",
+          "name": "Ehemaliger Marschall"
+        },
+        {
+          "id": "duncan-quirk-weapons-master",
+          "name": "Waffenmeister"
+        },
+        {
+          "id": "duncan-quirk-many-forms",
+          "name": "Meister vieler Formen (Drachentanz)"
+        },
+        {
+          "id": "duncan-quirk-knight-prince",
+          "name": "Ritterfürst des Hauses Gafyr"
+        },
+        {
+          "id": "duncan-quirk-mentor",
+          "name": "Mentor vieler Ritter"
+        },
+        {
+          "id": "duncan-quirk-aging",
+          "name": "In die Jahre gekommen"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-taktisches-gespuer",
+          "name": "Taktisches Gespür",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/taktisches-gespuer.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "gildas-gafyr",
+      "onlineId": "person--haus-gafyr--gildas-gafyr",
+      "name": "Gildas Gafyr",
+      "traits": [
+        "wachsam",
+        "eigensinn"
+      ],
+      "removeConditionIds": [
+        "gildas-vorschnelles-urteil"
+      ],
+      "reason": "Ausdrücklich frühes Prüfen von Ort und Ausrüstung; strenger Eigenanspruch und beharrliches Urteilen. Keine angeborene Sonderbegabung entgegen seiner Biografie.",
+      "evidence": [
+        "Öffentliche Gildas-Biografie: Vorbereitung, Beharrlichkeit, Urteilend und Unnachsichtig",
+        "Alter Bogen: Pünktlich heißt zu früh"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        },
+        {
+          "id": "gildas-puenktlich-heisst-zu-frueh",
+          "name": "Pünktlich heißt zu früh"
+        },
+        {
+          "id": "gildas-erarbeitete-standfestigkeit",
+          "name": "Erarbeitete Standfestigkeit"
+        },
+        {
+          "id": "gildas-pflicht-vor-bequemlichkeit",
+          "name": "Pflicht vor Bequemlichkeit"
+        },
+        {
+          "id": "gildas-brauen-des-zweifels",
+          "name": "Brauen des Zweifels"
+        },
+        {
+          "id": "gildas-trockener-humor",
+          "name": "Trockener Humor"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-wachsam",
+          "name": "Wachsamer Blick",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/wachsam.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks",
+        "combatProfile.conditions",
+        "biography.biography.abilitiesTitle",
+        "biography.biography.abilities"
+      ]
+    },
+    {
+      "id": "person--haus-neidr--guinevere-neidr",
+      "onlineId": "person--haus-neidr--guinevere-neidr",
+      "name": "Guinevere Neidr",
+      "traits": [
+        "spuernase",
+        "scharfe-augen"
+      ],
+      "reason": "Die beiden individuellen Altmerkmale belegen verborgene Details und ausdrücklich scharfe Sicht. Die breiten alten Wissens- und Angriffsboni werden nicht zusätzlich weitergeführt.",
+      "evidence": [
+        "Alter Bogen: Scharfsinnig und Jägerauge"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        },
+        {
+          "id": "guinevere-scharfsinnig",
+          "name": "Scharfsinnig"
+        },
+        {
+          "id": "guinevere-jaegerauge",
+          "name": "Jägerauge"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-spuernase",
+          "name": "Spürnase",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/spuernase.webp"
+        },
+        {
+          "id": "development-trait-scharfe-augen",
+          "name": "Scharfe Augen",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/scharfe-augen.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks"
+      ]
+    },
+    {
+      "id": "person--haus-saethwyr--nudd-saethwyr",
+      "onlineId": "person--haus-saethwyr--nudd-saethwyr",
+      "name": "Nudd Saethwyr",
+      "traits": [
+        "eigensinn",
+        "ritualgebunden"
+      ],
+      "reason": "Ausdrücklich dogmatische, schwer revidierbare Urteile und ernsthaft gelebte tägliche religiöse Pflichten. Keine kognitive Erkrankung aus Engstirnigkeit ableiten.",
+      "evidence": [
+        "Öffentliche Nudd-Biografie: Gottesfürchtig, Dogmatisch und Engstirnig"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        },
+        {
+          "id": "development-trait-ritualgebunden",
+          "name": "Ritualgebunden",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/ritualgebunden.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-14T22:36:31.304867Z",
+      "prospectiveFields": [
+        "combatProfile.quirks",
+        "biography.biography.abilitiesTitle",
+        "biography.biography.abilities"
+      ]
+    },
+    {
+      "id": "person--haus-wyrm--gais-wyrm",
+      "onlineId": "person--haus-wyrm--gais-wyrm",
+      "name": "Gais Wyrm",
+      "traits": [
+        "silberzunge",
+        "eigensinn"
+      ],
+      "reason": "Ausdrücklich gewinnende Gesprächsführung und Gesandtenausbildung sowie pedantisches Festhalten an Umgangsformen. Eitelkeit allein begründet keine neue schwere psychologische Prägung.",
+      "evidence": [
+        "Öffentliche Gais-Biografie: Charismatisch und Pedantisch"
+      ],
+      "before": [
+        {
+          "id": "starter-ancestry-cenyr-trait-1",
+          "name": "Cenyri Kultur"
+        },
+        {
+          "id": "starter-ancestry-cenyr-trait-2",
+          "name": "Höfische und religiöse Prägung"
+        },
+        {
+          "id": "starter-background-ritter-trait-1",
+          "name": "Ritterliche Herkunft und Standespflicht"
+        }
+      ],
+      "after": [
+        {
+          "id": "development-trait-silberzunge",
+          "name": "Silberzunge",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
+        },
+        {
+          "id": "development-trait-eigensinn",
+          "name": "Eigensinn",
+          "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+        }
+      ],
+      "onlineUpdateTime": "2026-10-29T20:58:52.374287Z",
+      "prospectiveFields": [
+        "combatProfile.quirks",
+        "biography.biography.abilitiesTitle",
+        "biography.biography.abilities"
+      ]
+    }
+  ]
+}

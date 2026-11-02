@@ -85,6 +85,15 @@ unter `AleriaAlmanach/scripts/build-gawain-character-database.mjs` (auch
 `AleriaAlmanach/modules/gawain-duncan/README.md`. Er erhält den bestehenden
 Datenbankbestand einschließlich aller fremden Klassifikationen und Spielwerte.
 
+Owetas ausdrücklich beauftragte Draig-Ausrüstung wird getrennt mit
+`node CharakterDatenbank/scripts/sync-oweta-equipment.mjs` abgeglichen;
+`--check` prüft denselben Stand ohne Schreibzugriffe. Der begrenzte Abgleich
+ergänzt nur ihre Besitzstücke und deren Waffen-/Rüstungsverknüpfungen. Er
+erhält Biografie, Stammbaumzuordnung, Heulwen, Geld und sonstige Spielwerte,
+bewahrt die Quellenhistorie und aktualisiert die gemeinsamen Hashes der
+Einzelakte, des Registers und des Snapshots. Alle anderen Figuren bleiben
+unverändert; es wird weder der Sieben-Figuren-Builder noch Firestore aufgerufen.
+
 ## Konfliktregel
 
 - Online gewinnt bei bearbeitbaren Profil- und Kampfwerten.

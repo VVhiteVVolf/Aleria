@@ -49,6 +49,8 @@ const MODULE_EDITOR_CLICK_ACTIONS = new Set([
   'add-house-warrior-card',
   'remove-house-warrior-card',
   'move-house-warrior-card',
+  'add-biography-mentor-row',
+  'remove-biography-mentor-row',
   'add-biography-stat-row',
   'remove-biography-stat-row',
   'add-biography-ability-row',
@@ -375,6 +377,10 @@ function handleModuleEditorActionClick(event) {
   }
   if (action === 'move-house-warrior-card') {
     moveModuleHouseWarriorCard(trigger);
+    return;
+  }
+  if (action === 'add-biography-mentor-row' || action === 'remove-biography-mentor-row') {
+    editModuleBiographyMentorRow(trigger, action === 'remove-biography-mentor-row');
     return;
   }
   if (action === 'add-biography-stat-row') {

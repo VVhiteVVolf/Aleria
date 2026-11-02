@@ -1,4 +1,5 @@
 import { markCharacterTechniqueOverlay, isCharacterTechniqueOverlay, applyCharacterTechniqueOverlays } from './character-technique-overlays.mjs';
+import { markCharacterTraitOverlay, isCharacterTraitOverlay, applyCharacterTraitOverlays } from './character-trait-overlays.mjs';
 import { createHash } from 'node:crypto';
 
 export const CHARACTER_DATABASE_SCHEMA_VERSION = 1;
@@ -128,6 +129,11 @@ function agesConflict(first, second) {
 }
 
 function candidateMatchScore(character, candidate) {
+  // Explicit world identities also cover people with only a given name.
+  // A different known identity must never be replaced by a name match.
+  const identity = text(character.identity?.worldPersonId) || text(character.genealogy?.worldPersonId);
+  const candidateIdentity = text(candidate.worldPersonId);
+  if (identity && candidateIdentity) return identity === candidateIdentity ? 1000 : 0;
   const names = characterNameKeys(character);
   const displayName = normalizeCharacterDatabaseKey(candidate.displayName);
   const recordedName = normalizeCharacterDatabaseKey(candidate.recordedName);
@@ -348,7 +354,7 @@ function sourcePriority(character) {
   return meaningfulSize(character) * 1_000_000 + Math.floor(updatedAt / 1000);
 }
 
-export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFields = false, mergeCombatTechniques = false } = {}) {
+export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFields = false, mergeCombatTechniques = false, replaceCombatTraits = false, removeTraitAbilityIds = [], removeTraitConditionIds = [] } = {}) {
   Object.defineProperty(character, CHARACTER_OVERLAY_MARKER, {
     value: true,
     enumerable: false,
@@ -362,6 +368,7 @@ export function markCharacterDatabaseOverlay(character = {}, { replaceExportedFi
     writable: false
   });
   if (mergeCombatTechniques) markCharacterTechniqueOverlay(character);
+  if (replaceCombatTraits) markCharacterTraitOverlay(character, { removeAbilityIds: removeTraitAbilityIds, removeConditionIds: removeTraitConditionIds });
   return character;
 }
 
@@ -406,7 +413,9 @@ function groupArchiveCharacters(characters = []) {
   });
 
   return [...byName.values()].flatMap(clusters => clusters).map(sourceCharacters => {
-    const sortedByPriority = [...sourceCharacters].sort((first, second) => sourcePriority(second) - sourcePriority(first));
+    const contentSources = sourceCharacters.filter(character => !isCharacterTraitOverlay(character));
+    if (!contentSources.length) throw Error('Ein Traitabgleich benötigt eine bereits vorhandene Figurenquelle.');
+    const sortedByPriority = [...contentSources].sort((first, second) => sourcePriority(second) - sourcePriority(first));
     const canonicalDocumentId = sourceCharacters
       .map(character => text(character.id))
       .filter(Boolean)
@@ -416,7 +425,7 @@ function groupArchiveCharacters(characters = []) {
       structuredClone(sortedByPriority[0])
     );
     const combatOverlay = sourceCharacters
-      .filter(character => character?.[CHARACTER_OVERLAY_MARKER] === true && character.combatProfile && !isCharacterTechniqueOverlay(character))
+      .filter(character => character?.[CHARACTER_OVERLAY_MARKER] === true && character.combatProfile && !isCharacterTechniqueOverlay(character) && !isCharacterTraitOverlay(character))
       .sort((first, second) => sourcePriority(second) - sourcePriority(first))[0];
     if (combatOverlay) merged.combatProfile = structuredClone(combatOverlay.combatProfile);
     // Verified exports own their supplied fields, including empty lists and nulls.
@@ -427,6 +436,8 @@ function groupArchiveCharacters(characters = []) {
     snapshotOverlays.forEach(character => Object.assign(merged, structuredClone(character)));
     const latestCombatTimestamp = Math.max(0, ...[combatOverlay, ...snapshotOverlays].filter(source => source?.combatProfile).map(source => Date.parse(source.updatedAt || '') || 0));
     merged = applyCharacterTechniqueOverlays(merged, sourceCharacters, latestCombatTimestamp);
+    const latestBiographyTimestamp = Math.max(0, ...snapshotOverlays.filter(source => source.biography?.biography?.abilities !== undefined).map(source => Date.parse(source.updatedAt || '') || 0));
+    merged = applyCharacterTraitOverlays(merged, sourceCharacters, latestCombatTimestamp, latestBiographyTimestamp);
     merged.id = canonicalDocumentId;
     merged.aliases = uniqueBy([
       ...(Array.isArray(merged.aliases) ? merged.aliases : []),

@@ -1,3 +1,10 @@
+import { normalizeDevelopment } from '../character-development/development-state.js';
+import { isHealthTraitMechanicallyActive, resolveHealthWalkingMovement } from '../character-health/health-trait-policy.js';
+import { isPsychologicalTraitMechanicallyActive } from '../character-development/development-psychological-policy.js';
+import { resolveCombatAttributeEffects } from './combat-attribute-effects.js';
+import { normalizeSubstanceState } from '../character-health/substance-profiles.js';
+import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
+import { normalizeAdditionalClassSelections } from '../character-development/character-training-state.js';
 import { YLVA_DUEL_OWNER_ID, describeYlvaTechniques } from '../characters/personal-techniques/ylva-technique-prose.js';
 import { normalizeConditionDuration } from './combat-condition-duration.js';
 import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute } from './combat-personal-modifiers.js';
@@ -169,12 +176,18 @@ function sanitizeMechanicalModifiers(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   const rollMode = normalizeText(source.attackRollMode || source.rollMode, 20);
   return {
+    ...(source.attributeModifiers ? { attributeModifiers: sanitizeList(source.attributeModifiers, m => ({ attributeKey: getAttributeKey(m?.attributeKey, ''), bonus: normalizeNumber(m?.bonus, 0, -30, 30) })).filter(m => m.attributeKey) } : {}),
+    ...(source.attributeCaps ? { attributeCaps: sanitizeList(source.attributeCaps, m => ({ attributeKey: getAttributeKey(m?.attributeKey, ''), maximum: normalizeOptionalNumber(m?.maximum, 1, 40) })).filter(m => m.attributeKey && m.maximum != null) } : {}),
     ...(source.dexterityWeaponTypes ? { dexterityWeaponTypes: source.dexterityWeaponTypes.filter(t => WEAPON_TYPES.has(t)) } : {}),
     ...(source.weaponModifiers ? { weaponModifiers: sanitizeList(source.weaponModifiers, m => ({
       weaponTypes: (m.weaponTypes || []).filter(t => WEAPON_TYPES.has(t)), attack: normalizeNumber(m.attack), damage: normalizeNumber(m.damage) })) } : {}),
     ...(source.skillModifiers ? { skillModifiers: sanitizeList(source.skillModifiers, m => ({ name: normalizeText(m.name), bonus: normalizeNumber(m.bonus) })) } : {}),
+    ...(source.skillProficiencies ? { skillProficiencies: sanitizeList(source.skillProficiencies, m => ({ name: normalizeText(m.name), proficiency: PROFICIENCY_LEVELS.has(m.proficiency) ? m.proficiency : 'none' })) } : {}),
+    ...(source.damageAffinities ? { damageAffinities: sanitizeList(source.damageAffinities, normalizeDamageAffinity) } : {}),
+    ...(source.saveAttributeModifiers ? { saveAttributeModifiers: sanitizeList(source.saveAttributeModifiers, m => ({ attributeKey: getAttributeKey(m.attributeKey), bonus: normalizeNumber(m.bonus, 0, -99, 99) })) } : {}),
     ...(source.saveModifiers ? { saveModifiers: sanitizeList(source.saveModifiers, m => ({ kind: normalizeText(m.kind), bonus: normalizeNumber(m.bonus) })) } : {}),
     attack: normalizeNumber(source.attack, 0, -99, 99),
+    ...(source.attackScope === 'weapon' ? { attackScope: 'weapon' } : {}),
     ...(source.blocksActions === true ? { blocksActions: true } : {}),
     ...(Number(source.strength) ? { strength: normalizeNumber(source.strength, 0, -30, 30) } : {}),
     damage: normalizeNumber(source.damage, 0, -99, 99),
@@ -421,6 +434,7 @@ function applyLevelDerivedResourceCeiling(resources, resourceId, targetMaximum) 
 function sanitizeTemplateSelections(value = {}) {
   const source = value && typeof value === 'object' ? value : {};
   return {
+    ...normalizeAdditionalClassSelections(source),
     schemaVersion: normalizeNumber(source.schemaVersion, 1, 1, 99),
     ancestryId: normalizeText(source.ancestryId, 120),
     backgroundId: normalizeText(source.backgroundId, 120),
@@ -451,6 +465,8 @@ function sanitizeQuirk(value = {}, index = 0) {
   const type = normalizeText(source.type, 20);
   return {
     id: normalizeId(source.id, `quirk-${index + 1}`),
+    ...(source.developmentTraitId?{developmentTraitId:normalizeId(source.developmentTraitId,'')}:{}),
+    ...(source.icon ? { icon: normalizeText(source.icon, 1000) } : {}),
     name: normalizeText(source.name, 100),
     type: ['quirk', 'trait', 'ideal', 'bond', 'flaw', 'rule'].includes(type) ? type : 'quirk',
     description: normalizeText(source.description, 1200),
@@ -479,6 +495,7 @@ function sanitizeCondition(value = {}, index = 0) {
     name: normalizeText(source.name, 100),
     duration: normalizeText(source.duration, 100),
     source: normalizeText(source.source, 160),
+    ...(source.substance ? { substance: normalizeSubstanceState(source.substance) } : {}),
     description: normalizeText(source.description, 1200),
     active: normalizeBoolean(source.active, true),
     ...(source.berserk ? { berserk: { survivalCharges: normalizeNumber(source.berserk.survivalCharges, 0, 0, 1), activity: source.berserk.activity === true } } : {}),
@@ -773,6 +790,7 @@ function sanitizeTechnique(value = {}, index = 0) {
     status: ['confirmed', 'draft', 'deprecated'].includes(normalizeText(source.status, 30)) ? normalizeText(source.status, 30) : 'confirmed',
     trainingForm: normalizeText(source.trainingForm, 140),
     ...(normalizeText(source.combatStyleId, 120) ? { combatStyleId: normalizeText(source.combatStyleId, 120) } : {}),
+    ...(source.catalogTechniqueId?{catalogTechniqueId:normalizeText(source.catalogTechniqueId,180)}:{}),
     ...(normalizeText(source.combatStyleFormId, 120) ? { combatStyleFormId: normalizeText(source.combatStyleFormId, 120) } : {}),
     minimumLevel: normalizeNumber(source.minimumLevel, 1, 1, 30),
     category: ['technique', 'form', 'reaction', 'bonus', 'special'].includes(normalizeText(source.category, 30))
@@ -979,6 +997,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     templateSelections: sanitizeTemplateSelections(source.templateSelections || source.templates),
     proficiencies: sanitizeProficiencies(source.proficiencies),
     progression: {
+      ...(progression.development?.mode === 'purchase' ? { development: normalizeDevelopment(progression.development) } : {}),
       level: normalizedNormalLevel,
       specialLevels: normalizedSpecialLevels,
       resourceRulesVersion: COMBAT_RESOURCE_RULES_VERSION,
@@ -1033,7 +1052,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     // Keep a separate bounded budget for class techniques and personal moves.
     techniques: sanitizeList(source.techniques, sanitizeTechnique, 256),
     classTraining: sanitizeClassTraining(source.classTraining),
-    quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk),
+    quirks: sanitizeList(source.quirks || source.traits, sanitizeQuirk, 120),
     conditions: sanitizeList(source.conditions, sanitizeCondition),
     damageAffinities: sanitizeList(source.damageAffinities, normalizeDamageAffinity, 100),
     abilities: sanitizeList(source.abilities, sanitizeAbility),
@@ -1088,10 +1107,7 @@ export function getProficiencyBonus(profile = {}) {
 function getAttribute(profile, key) {
   const attribute = profile.attributes.find(attribute => attribute.key === key)
     || sanitizeAttribute({}, COMBAT_ATTRIBUTE_DEFINITIONS[0]);
-  const bonus = key === 'strength' ? sumMechanicalModifier(profile, 'strength') : 0;
-  return { ...attribute, score: attribute.score + bonus,
-    modifierOverride: attribute.modifierOverride == null ? null : attribute.modifierOverride
-      + Math.floor((attribute.score + bonus - 10) / 2) - Math.floor((attribute.score - 10) / 2) };
+  return resolveCombatAttributeEffects(attribute, collectActiveMechanicalSources(profile));
 }
 
 // Archive copies need the same spell rules before receiving a new instance ID.
@@ -1127,11 +1143,11 @@ function collectActiveMechanicalSources(profile) {
   const equipmentSources = (profile.armorItems || []).filter(item => item.armorRuleVersion === 2 && isActiveEquippedArmor(profile, item))
     .map(item => ({ active: true, mechanics: item.mechanics }));
   return [...profile.quirks, ...profile.conditions, ...profile.abilities, ...auraSources, ...equipmentSources]
-    .filter(entry => entry.active)
+    .filter(entry => entry.active && isHealthTraitMechanicallyActive(entry, profile) && isPsychologicalTraitMechanicallyActive(entry, profile))
     .map(entry => entry.mechanics);
 }
 
-const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'weaponBonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
+const NON_NUMERIC_MECHANICAL_KEYS = new Set(['attackScope', 'damageScope', 'attackRollMode', 'skillRollMode', 'bonusDamageFormula', 'weaponBonusDamageFormula', 'savingThrowAdvantageAttributes', 'savingThrowDisadvantageAttributes']);
 
 function mergeMechanicalModifiers(sources = []) {
   const merged = sources.reduce((result, source) => {
@@ -1141,6 +1157,7 @@ function mergeMechanicalModifiers(sources = []) {
     });
     result.bonusDamageFormula = [result.bonusDamageFormula, source?.bonusDamageFormula].filter(Boolean).join('+');
     result.weaponBonusDamageFormula = [result.weaponBonusDamageFormula, source?.weaponBonusDamageFormula].filter(Boolean).join('+');
+    for (const key of ['attributeModifiers', 'attributeCaps']) if (source?.[key]?.length) result[key] = [...(result[key] || []), ...source[key]];
     result.savingThrowAdvantageAttributes = [...new Set([...(result.savingThrowAdvantageAttributes || []), ...(source?.savingThrowAdvantageAttributes || [])])];
     result.savingThrowDisadvantageAttributes = [...new Set([...(result.savingThrowDisadvantageAttributes || []), ...(source?.savingThrowDisadvantageAttributes || [])])];
     return result;
@@ -1284,6 +1301,7 @@ export function getSavingThrowTotal(profile = {}, attributeKey, context = {}) {
   return getAttributeModifier(getAttribute(normalized, key))
     + proficiencyMultiplier * getProficiencyBonus(normalized)
     + Number(save?.bonus || 0)
+    + collectActiveMechanicalSources(normalized).flatMap(m=>m.saveAttributeModifiers||[]).filter(m=>m.attributeKey===key).reduce((sum,m)=>sum+m.bonus,0)
     + sumMechanicalModifier(normalized, 'savingThrow') + conditionalSaveModifier(normalized, context);
 }
 
@@ -1293,11 +1311,22 @@ export function getSkillTotal(profile = {}, skillOrId = {}) {
     ? normalized.skills.find(entry => entry.id === skillOrId)
     : sanitizeSkill(skillOrId);
   if (!skill) return 0;
-  const proficiencyMultiplier = skill.proficiency === 'expertise' ? 2 : (skill.proficiency === 'trained' ? 1 : 0);
+  const proficiency = getEffectiveSkillProficiency(normalized, skill);
+  const proficiencyMultiplier = proficiency === 'expertise' ? 2 : proficiency === 'trained' ? 1 : 0;
   return getAttributeModifier(getAttribute(normalized, skill.attributeKey))
     + proficiencyMultiplier * getProficiencyBonus(normalized)
     + skill.bonus + conditionalSkillModifier(normalized, skill)
     + sumMechanicalModifier(normalized, 'skill');
+}
+
+export function getEffectiveSkillProficiency(profile = {}, skillOrId = {}) {
+  const normalized = getCalculationProfile(profile);
+  const skill = typeof skillOrId === 'string' ? normalized.skills.find(s=>s.id===skillOrId) : skillOrId;
+  if (!skill) return 'none';
+  const training = collectActiveMechanicalSources(normalized).flatMap(m=>m.skillProficiencies||[])
+    .filter(m=>getSkillIdentity(m.name)===getSkillIdentity(skill.name)).map(m=>m.proficiency);
+  return [skill.proficiency,...training].includes('expertise') ? 'expertise'
+    : [skill.proficiency,...training].includes('trained') ? 'trained' : 'none';
 }
 
 export function getPassivePerception(profile = {}) {
@@ -1388,7 +1417,9 @@ export function getSpellcastingValues(profile = {}) {
   const proficiency = getProficiencyBonus(normalized);
   return {
     attack: normalized.magic.spellAttackOverride
-      ?? abilityModifier + proficiency + sumMechanicalModifier(normalized, 'attack') + sumMechanicalModifier(normalized, 'spellAttack'),
+      ?? abilityModifier + proficiency + collectActiveMechanicalSources(normalized)
+        .filter(mechanics=>mechanics.attackScope!=='weapon').reduce((sum,mechanics)=>sum+Number(mechanics.attack||0),0)
+        + sumMechanicalModifier(normalized, 'spellAttack'),
     saveDc: normalized.magic.spellSaveDcOverride
       ?? 8 + abilityModifier + proficiency + sumMechanicalModifier(normalized, 'spellSaveDc')
   };
@@ -1499,7 +1530,7 @@ export function resolveCharacterCombatProfile(character = {}) {
     armorClassTotal: totalDefense,
     armorRoutine: getArmorRoutine(profile),
     initiative: dexterityModifier + profile.combat.initiativeBonus + sumMechanicalModifier(profile, 'initiative'),
-    movement: Math.max(0, profile.combat.movement + sumMechanicalModifier(profile, 'movement')),
+    movement: resolveHealthWalkingMovement(profile, profile.combat.movement + sumMechanicalModifier(profile, 'movement')),
     passivePerception: getPassivePerception(calculation),
     weapon: activeWeapon,
     armor: primaryArmor,
