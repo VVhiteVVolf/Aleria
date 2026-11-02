@@ -283,14 +283,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
-      "haus-ysgellfor",
-      "haus-helfaen",
-      "haus-marchwern",
-      "haus-tirfelyn",
-      "haus-dolweth",
-      "haus-brynial",
-      "haus-bragwen",
-      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -4361,14 +4353,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
-      "haus-ysgellfor",
-      "haus-helfaen",
-      "haus-marchwern",
-      "haus-tirfelyn",
-      "haus-dolweth",
-      "haus-brynial",
-      "haus-bragwen",
-      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -4655,14 +4639,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
-      "haus-ysgellfor",
-      "haus-helfaen",
-      "haus-marchwern",
-      "haus-tirfelyn",
-      "haus-dolweth",
-      "haus-brynial",
-      "haus-bragwen",
-      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -4819,14 +4795,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
-      "haus-ysgellfor",
-      "haus-helfaen",
-      "haus-marchwern",
-      "haus-tirfelyn",
-      "haus-dolweth",
-      "haus-brynial",
-      "haus-bragwen",
-      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -4897,14 +4865,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
-      "haus-ysgellfor",
-      "haus-helfaen",
-      "haus-marchwern",
-      "haus-tirfelyn",
-      "haus-dolweth",
-      "haus-brynial",
-      "haus-bragwen",
-      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -21945,102 +21905,6 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Venalys"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-falto&mode=view"
-  },
-  {
-    "id": "haus-ysgellfor",
-    "name": "Familie Ysgellfor",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-ysgellfor&mode=view"
-  },
-  {
-    "id": "haus-helfaen",
-    "name": "Familie Helfaen",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-helfaen&mode=view"
-  },
-  {
-    "id": "haus-marchwern",
-    "name": "Familie Marchwern",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view"
-  },
-  {
-    "id": "haus-tirfelyn",
-    "name": "Familie Tirfelyn",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view"
-  },
-  {
-    "id": "haus-dolweth",
-    "name": "Familie Dolweth",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-dolweth&mode=view"
-  },
-  {
-    "id": "haus-brynial",
-    "name": "Familie Brynial",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-brynial.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-brynial&mode=view"
-  },
-  {
-    "id": "haus-bragwen",
-    "name": "Familie Bragwen",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-bragwen&mode=view"
-  },
-  {
-    "id": "haus-eiddfer",
-    "name": "Familie Eiddfer",
-    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "tree": "/Stammbäume/Stammbaum.html?family=haus-eiddfer&mode=view"
   },
   {
     "id": "haus-veltrane",
