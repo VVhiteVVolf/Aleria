@@ -1,11 +1,11 @@
 export const gawainGuide = {
-  reviewedAt: '2026-10-15',
+  reviewedAt: '2026-11-02',
   slug: 'gawain', id: 'q1QtSIug74FzzwUAqWrs', name: 'Sir Gawain Draig', eyebrow: 'Ritter · Teulu',
   title: 'Schwertfolgen, Silberschuppe und die richtige Antwort',
   intro: 'Gawain führt Drachenzahn in kurzen, klaren Schnittlinien. Seine Stärke liegt im Wechsel zwischen mehreren bezahlten Angriffen, schützenden Haltungen und einer vorbereiteten Gegenattacke. Silberschuppe hilft ihm, einen längeren Schlagabtausch zu überstehen; Tanor verlangt eine eigene Planung.',
   image: 'assets/gawain-chibi.png', imageAlt: 'Chibi-Gawain mit langen roten Haaren, silberroter Draig-Rüstung und Drachenzahn bietet dem goldfarbenen Tanor einen roten Apfel an.',
   weaponId: 'gawain-draig-knightly-sword', weaponIds: ['gawain-draig-knightly-sword', 'gawain-draig-dagger'],
-  permanentConditionIds: ['gawain-strenge-gerueche'],
+  permanentConditionIds: [],
   identity: 'Als Teulu auf Stufe 5 kennt Gawain 22 Jungdrachen-Techniken. Gegen ein einzelnes Ziel sind getrennte Angriffe oft ergiebiger als eine einzige teure Technik: Jeder Treffer trägt den festen Schadensbonus erneut. Braucht er Schutz, muss er dafür Angriffe aufgeben. Ein vorbereiteter Konter verursacht erst Schaden, wenn sein Auslöser eintritt.',
   narratives: {
     'Schuppenschnitt': 'Gawain setzt den Fuß fest auf und zieht Drachenzahn diagonal durch die offene Linie.',
@@ -65,9 +65,9 @@ export const gawainGuide = {
     ['Gleitende Schuppe', 'Abwehr', 'Eine Reaktion für einmal Nachteil auf einen eingehenden Waffenangriff. Gezielt gegen einen gefährlichen Treffer erwägen.'],
     ['Durchschnaufen', 'Ausdauer', 'Bei 49 maximalen TP: 1W10 + 5 TP, eine Bonusaktion, einmal pro langer Rast. Den Vorrat nutzen, bevor der nächste Treffer Gawain ausschaltet.'],
     ['Liebt Düfte', 'Vorrat', 'Ein tatsächlich benutzter Duft oder ein Parfüm stellt einmal pro Tag 1 Besondere Aktion bis zum Maximum wieder her. Der dokumentierte Inventarstand enthält kein passendes Verbrauchsitem; den Bonus daher nicht als sicher verfügbaren dritten Punkt einplanen.'],
-    ['Muttersöhnchen', 'Persönlichkeit', 'Die hinterlegten Nachteile betreffen bestimmte Fertigkeitsproben, nicht pauschal Gawains Schwertangriffe oder Rettungswürfe.'],
+    ['Neugier vor Vorsicht', 'Persönlichkeit', '+3 auf Nachforschungen und −2 auf GES-Rettungswürfe. Das verändert keine Schwertangriffe.'],
+    ['Eigensinn', 'Persönlichkeit', '+2 auf CHA-Rettungswürfe und −2 auf Überzeugen. Der Siegelring wird separat ausgewertet.'],
     ['Draig-Rittersiegelring', 'Ausrüstung', '+1 auf Überzeugen bei angelegtem Ring. Das Siegel erhöht weder Trefferwurf noch Waffenschaden.'],
-    ['Kann strenge Gerüche nicht leiden', 'Schwäche', 'Gegen ein als Stinkend markiertes Ziel gilt −2 Angriff. Die neutralen Vorschauwerte enthalten diesen zielabhängigen Abzug noch nicht.']
   ],
   equipment: [
     ['Drachenzahn · ein- oder zweihändig', 'Einhändig 1W8+3 Schaden bei 1W20 +5 Trefferwurf. Zweihändig steigt die Waffenbasis auf W10; der Griffwechsel bringt im System −1 Angriff, also 1W20 +4. In der Vorschau lassen sich beide Führungen vergleichen. Gawain führt keinen Schild.'],
@@ -85,7 +85,7 @@ export const gawainGuide = {
     ] }],
   pitfalls: [
     'Besondere Aktionen sind ein begrenzter Vorrat von 2 Punkten. Die Eigenschaft Liebt Düfte ersetzt keinen verfügbaren Duftgegenstand und keinen protokollierten Verbrauch.',
-    'Gegen ein Ziel mit dem Tag Stinkend gilt −2 auf Angriffswürfe. Ein Parfüm entfernt diesen gegnerischen Tag nicht automatisch.',
+    'Neugier vor Vorsicht senkt GES-Rettungen, Eigensinn erschwert Überzeugen. Die beiden Eigenschaften verändern weder den Schwert-Trefferwurf noch dessen Schaden.',
     'Jungdrachen-Schutzhaltungen und vorbereitete Jungdrachen-Konter können einander ersetzen. Nicht erst den Konter bezahlen und ihn dann mit einer neuen Haltung überschreiben.',
     'Die Vorschau zeigt jede Handlung einzeln. Vorteil aus einer vorher treffenden Finte oder +2 aus Gesammelter Blick müssen erst tatsächlich vorbereitet werden.',
     'Der Name einer Technik ersetzt ihre Regeln nicht: Gekreuzte Klauen hat einen Trefferwurf, Sicherer Drachenhieb keinen zusätzlichen Trefferbonus und Stürmende Drachenspur keinen kostenlosen Reittierangriff.',

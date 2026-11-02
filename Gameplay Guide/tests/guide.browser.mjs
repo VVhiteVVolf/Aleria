@@ -91,8 +91,8 @@ try {
       await library.locator('[data-attack-id="ability:gawain-liebt-duefte"]').click();
       assert.match(await page.locator('#attack-preview').innerText(),/1× pro Tag/);
       assert.match(await page.locator('#attack-preview').innerText(),/kein passendes Verbrauchsitem/);
-      await library.locator('[data-attack-id="condition:gawain-strenge-gerueche"]').click();
-      assert.match(await page.locator('#attack-preview').innerText(),/Stinkend/);
+      await library.locator('[data-attack-id="trait:development-trait-eigensinn"]').click();
+      assert.match(await page.locator('#attack-preview').innerText(),/CHA-Rettungswürfe/);
     }
     await page.locator('#arsenal').screenshot({path:`${output}/${slug}-arsenal-desktop.png`});
     for (const width of [390,740]) {

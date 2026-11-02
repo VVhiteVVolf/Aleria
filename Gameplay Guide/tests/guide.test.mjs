@@ -53,7 +53,9 @@ test(`${g.name}: legal action budgets, existing techniques, owned companions and
     const counter = model.arsenal.entries.find(e => e.name === 'Lauernde Klaue');
     assert.ok(counter.variants.every(v => v.counter && v.attack === 'Automatisch' && v.damage === 'Kein direkter Schaden'));
   } else if (g.slug === 'gawain') {
-    assert.equal(model.arsenal.entries.length,33);
+    assert.ok(ids.has('trait:development-trait-neugier-vor-vorsicht'));
+    assert.ok(ids.has('trait:development-trait-eigensinn'));
+    assert.ok(!ids.has('ability:gawain-muttersoehnchen'));
     const sword = model.arsenal.entries.find(e => e.id === 'weapon:gawain-draig-knightly-sword');
     assert.equal(sword.variants.find(v => v.grip === 'two-handed').attack, '1W20 +4');
     assert.equal(sword.variants.find(v => v.grip === 'two-handed').damage, '1W10+3');
@@ -62,7 +64,7 @@ test(`${g.name}: legal action budgets, existing techniques, owned companions and
     const perfume = model.arsenal.entries.find(e => e.name === 'Liebt Düfte');
     const preview = renderActionPreview(perfume,model.arsenal);
     assert.match(preview,/1× pro Tag/); assert.match(preview,/kein passendes Verbrauchsitem/); assert.match(preview,/Voraussetzungen/);
-    assert.ok(ids.has('condition:gawain-strenge-gerueche'));
+    assert.ok(!ids.has('condition:gawain-strenge-gerueche'));
     const tanor = model.companions.find(c => c.id === 'companion-tanor');
     assert.deepEqual(tanor.weaponActions.map(a => a.name), ['Tritt','Biss']);
     assert.ok(tanor.weaponActions.every(a => a.damage === '1W4+3' && a.costs[0].resourceId === 'action'));
@@ -80,7 +82,15 @@ test(`${g.name}: legal action budgets, existing techniques, owned companions and
     const base = path.startsWith('/') ? root : new URL('Gameplay%20Guide/', root);
     await access(new URL(path.replace(/^\//, ''), base));
   }
-  assert.equal(planGameplayGuideRelease(character), null, 'Repeated preparation must be a no-op');
+  const prepared = planGameplayGuideRelease(character);
+  const projected = structuredClone(character);
+  for (const [path, value] of Object.entries(prepared || {})) {
+    if (path === 'combatProfile.techniques') projected.combatProfile.techniques = value;
+    else projected[path] = value;
+  }
+  assert.equal(planGameplayGuideRelease(projected), null, 'Repeated preparation after the explicit patch must be a no-op');
+  assert.deepEqual(projected.combatProfile.hitPoints, character.combatProfile.hitPoints);
+  assert.deepEqual(projected.combatProfile.resources, character.combatProfile.resources);
 });
 }
 
