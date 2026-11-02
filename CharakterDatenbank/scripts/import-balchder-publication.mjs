@@ -6,6 +6,7 @@ import { BALCHDER_PROFILE_IDS } from '../../firebase/scripts/content/balchder-ch
 import { buildCharacterDatabase } from '../lib/character-database-model.mjs';
 import { mergeCharacterExportAssignments } from '../lib/character-export-assignments.mjs';
 import { mergeCharacterRecordProjections } from '../lib/character-record-projections.mjs';
+import { preserveBalchderCurrentFields } from '../lib/balchder-publication-projection.mjs';
 
 const root = new URL('../../', import.meta.url);
 const readJson = async path => JSON.parse(await readFile(new URL(path, root), 'utf8'));
@@ -35,7 +36,10 @@ for (const item of records) {
   const previous = registry.records.find(r => r.recordId === item.record.recordId);
   if (previous) {
     assert.equal(item.path, previous.path, 'Bestehenden Aktenpfad erhalten.');
-    item.record.local = (await readJson('CharakterDatenbank/' + previous.path)).local;
+    const current = await readJson('CharakterDatenbank/' + previous.path);
+    const person = snapshot.characters.find(person => person.id === current.character.id);
+    assert(person, 'Vorhandene Balchder-Lesefassung fehlt.');
+    Object.assign(item, preserveBalchderCurrentFields(item, current, person));
     if (item.record.local.authoredFeature) item.snapshotCharacter.localRecord.authoredFeature = item.record.local.authoredFeature;
   }
   assert.equal(item.record.classification.primary.id, 'haus-balchder');
