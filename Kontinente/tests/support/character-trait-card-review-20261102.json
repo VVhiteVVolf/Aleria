@@ -1,0 +1,112 @@
+{
+  "cards": [
+    {
+      "familyId": "haus-draig",
+      "personId": "gawain-draig",
+      "before": {
+        "abilitiesTitle": "Wesen & Widersprüche",
+        "abilities": [
+          {
+            "title": "Eitel",
+            "detail": "Er pflegt sein Äußeres mit Überzeugung und möchte, dass sein Auftreten seinem Rang entspricht. Schmutz und Unordnung treffen ihn oft unmittelbarer als eine ernste Ermahnung.",
+            "icon": "/IconOrdner/Traits%20Icon/Proud.png"
+          },
+          {
+            "title": "Schlagfertig",
+            "detail": "Gawain erkennt die komische Seite einer Lage schnell und genießt eine gute Pointe. Nicht immer merkt er rechtzeitig, dass er gerade über die Wunde eines anderen lacht.",
+            "icon": "/IconOrdner/Traits%20Icon/Gregarious.png"
+          },
+          {
+            "title": "Begabt, aber bequem",
+            "detail": "Sein Gespür für den Schwertkampf ist echt. Die Geduld, daraus durch tägliche Übung verlässliches Handwerk zu machen, muss Duncan ihm noch immer abverlangen.",
+            "icon": "/IconOrdner/Traits%20Icon/Slothful.png"
+          },
+          {
+            "title": "Hungrig auf die Welt",
+            "detail": "Abenteuer locken ihn, aber auch die Menschen jenseits der Burgmauern. Er möchte eigene Erfahrungen sammeln und seinen Platz nicht allein von anderen bestimmen lassen.",
+            "icon": "/IconOrdner/Traits%20Icon/Curious.png"
+          },
+          {
+            "title": "Loyal auf seine Weise",
+            "detail": "Taliesin und Guinevere sind ihm wichtig, auch wenn er Zuneigung, Stand und eigene Ansprüche nicht sauber auseinanderhält. Über vertraute Menschen darf nach seiner Auffassung längst nicht jeder spotten.",
+            "icon": "/IconOrdner/Traits%20Icon/Trusting.png"
+          },
+          {
+            "title": "Empfänglich für Anerkennung",
+            "detail": "Lob richtet ihn auf; Kränkungen reizen ihn. Trotzdem kann er eigene Grenzen benennen, einen Gegner respektieren und eine aufrichtige Entschuldigung aussprechen.",
+            "icon": "/IconOrdner/Traits%20Icon/Willful.png"
+          }
+        ]
+      },
+      "after": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Neugier vor Vorsicht",
+            "detail": "Du untersuchst selbst das verdächtigste Rätsel aus nächster Nähe: +3 auf Nachforschungen, −2 auf GES-Rettungswürfe.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/neugier-vor-vorsicht.webp"
+          },
+          {
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+          }
+        ]
+      }
+    },
+    {
+      "familyId": "haus-wyrm",
+      "personId": "gais-wyrm",
+      "before": {
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Pflichtbewusst",
+            "detail": "Gais erledigt übertragene Aufgaben sorgfältig und nimmt Zusagen ernst. Wer sich auf ihn verlässt, soll keinen Anlass haben, seinen Namen mit einer Ausrede zu verbinden. Gerade in seiner Ausbildung ist er bereit, zuzuhören, sich vorzubereiten und auch die wenig glanzvollen Arbeiten ordentlich zu verrichten.",
+            "icon": "../IconOrdner/Traits%20Icon/Conscientious.png"
+          },
+          {
+            "title": "Charismatisch",
+            "detail": "Er findet in Gesellschaft rasch den richtigen Ton. Gais kann Interesse zeigen, ein stockendes Gespräch weiterführen und seinem Gegenüber das Gefühl geben, ernst genommen zu werden. Seine gewinnende Art hilft ihm auch dort, wo sein strenger Blick zunächst etwas anderes erwarten lässt.",
+            "icon": "../IconOrdner/Traits%20Icon/Charismatic_negotiator.png"
+          },
+          {
+            "title": "Kultiviert",
+            "detail": "Andere Kulturen, gepflegte Umgangsformen, Weine und gute Pferde interessieren ihn aufrichtig. Er merkt sich, was andernorts als höflich gilt, und versteht, dass ein angehender Gesandter mit cenyrischer Selbstverständlichkeit allein nicht überall weit kommt.",
+            "icon": "../IconOrdner/Traits%20Icon/Groomed.png"
+          },
+          {
+            "title": "Eitel",
+            "detail": "Gais gefällt sich in seiner gesitteten Erscheinung. Wird seine gute Erziehung gelobt, hört er sehr genau hin; wird sie übersehen, trifft ihn das stärker, als er zugeben möchte. Iseults unerschütterliche Bewunderung macht es ihm leicht, einen gelungenen Auftritt für einen Beweis besonderer Befähigung zu halten.",
+            "icon": "../IconOrdner/Traits%20Icon/Proud.png"
+          },
+          {
+            "title": "Materialistisch",
+            "detail": "Ansehen, Besitz und Dinge von Wert wiegen in seinem Urteil schwer. Ehre ist ihm wichtig, doch ein greifbarer Vorteil oder ein Gewinn an Prestige überzeugt ihn häufig eher als der schönere ritterliche Grundsatz. Einen Menschen unterschätzt er mitunter, weil dessen Möglichkeiten weniger eindrucksvoll aussehen.",
+            "icon": "../IconOrdner/Traits%20Icon/Greedy.png"
+          },
+          {
+            "title": "Pedantisch",
+            "detail": "Er hält an Formen fest, selbst wenn die Situation etwas Nachsicht vertragen könnte. Eine falsche Anrede, nachlässige Tischmanieren oder ein schlecht gewählter Scherz bleiben ihm lange im Gedächtnis. Bei Freunden kann seine vermeintlich hilfreiche Korrektur deshalb erheblich lästiger werden als der ursprüngliche Fehltritt.",
+            "icon": "../IconOrdner/Traits%20Icon/Stubborn.png"
+          }
+        ]
+      },
+      "after": {
+        "abilitiesTitle": "Eigenschaften",
+        "abilities": [
+          {
+            "title": "Silberzunge",
+            "detail": "Expertise in Überzeugen; −1 auf Motiv erkennen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp"
+          },
+          {
+            "title": "Eigensinn",
+            "detail": "Dein Selbstbild lässt sich schwer erschüttern; Kompromisse fallen dir schwer: +2 auf CHA-Rettungswürfe, −2 auf Überzeugen.",
+            "icon": "/AleriaAlmanach/assets/development-traits/web/eigensinn.webp"
+          }
+        ]
+      }
+    }
+  ]
+}

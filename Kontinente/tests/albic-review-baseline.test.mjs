@@ -55,3 +55,15 @@ test('the Gawain public biography approval projects only exact person metadata',
     assert.throws(() => protectedAlbicFamilies([record]), /haus-draig\/gawain-draig/);
   }
 });
+
+test('new age, trait-card and office proofs reject changes outside the exact reviewed leaves', () => {
+  for (const [id, mutate] of [
+    ['haus-gwyllach', record => { record.family.persons.find(person => person.id === 'saerwyn-gwyllach').birth = '1710'; }],
+    ['haus-draig', record => { record.family.persons.find(person => person.id === 'gawain-draig').extensions.biographyModule.biography.abilities[0].title = 'Ungeprüft'; }],
+    ['haus-gafyr', record => { record.family.persons.find(person => person.id === 'lefraye-gafyr').sex = 'male'; }],
+    ['haus-draig', record => { record.family.persons.find(person => person.id === 'brona-eisenherz').title = 'Ungeprüftes Amt'; }]
+  ]) {
+    const record = structuredClone(FAMILY_REGISTRY.find(record => record.id === id));
+    mutate(record); assert.throws(() => protectedAlbicFamilies([record]), /approved-age|trait-cards|approved-metadata/);
+  }
+});

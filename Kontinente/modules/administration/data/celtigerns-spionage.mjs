@@ -1,3 +1,5 @@
+import { HOUSE_GWYLLACH_FAMILY } from '../../../../Stammbäume/assets/js/data/house-gwyllach-family.js';
+
 const portraitRoot = '/Stammbäume/assets/images/portraits/haus-gwyllach';
 
 function vacancy(id, title, description, reportsTo, options = {}) {
@@ -5,12 +7,16 @@ function vacancy(id, title, description, reportsTo, options = {}) {
 }
 
 function member(id, title, name, description, reportsTo, options = {}) {
+  const birth = HOUSE_GWYLLACH_FAMILY.persons.find(person => person.id === id)?.birth;
+  const currentDescription = /^\d{4}$/.test(birth || '')
+    ? description.replace(/\(\*\d{4},\s*\d+ Jahre\)/, `(*${birth}, ${1740 - Number(birth)} Jahre)`)
+    : description;
   return {
     id,
     title,
     name: `${name} Gwyllach`,
     portrait: `${portraitRoot}/${id}.jpg`,
-    description,
+    description: currentDescription,
     reportsTo,
     links: [{
       label: 'Person in der Familienakte',
@@ -57,7 +63,7 @@ export default {
         'Meirion',
         'Meirion (*1710, 30 Jahre), Sohn Drystans und zweiter vorgesehener Erbe des Hauses, führt Auftragslisten, bereitet Lagebesprechungen vor und hält die Verbindung zwischen Rhovan, den fünf Netzmeistern und den örtlichen Zellen. Er verfolgt Fristen und Rückmeldungen, ohne die fachliche Verantwortung der Netzmeister zu übernehmen.',
         'Schatten des Grafen · Rhovan Gwyllach',
-        { authority: 'Koordiniert im Auftrag Rhovans. Eine Vertretung der Leitung erfordert dessen ausdrücklichen Auftrag.' },
+        { authority: 'Unterstützt Rhovan bei Auftragslisten, Terminen und Rückmeldungen; keine eigene Leitungs- oder Vertretungsvollmacht.' },
       )],
     },
     {
@@ -142,11 +148,10 @@ export default {
       kind: 'service',
       description: 'Die örtlichen Verantwortlichen bündeln Meldungen ihres Einsatzraums. Fachaufträge erhalten sie vom jeweils zuständigen Netzmeister; Prioritäten und Konflikte klärt die Adjutantur.',
       roles: [
-        member(
-          'talyfer-gwyllach',
+        vacancy(
+          'zellenleitung-burg-hof',
           'Zellenführer für Burg und Hof',
-          'Talyfer',
-          'Talyfer (*1708, 32 Jahre), Sohn Meredydds, koordiniert die Meldestelle im Umfeld von Burg und Hof. Er hält Kontakte zu Bediensteten und Lieferanten, erfasst ungewöhnliche Vorgänge und leitet Hinweise an den passenden Fachbereich weiter.',
+          'Die noch unbesetzte Zellenleitung bündelt Meldungen im Umfeld von Burg und Hof. Sie hält die örtlichen Aufträge zusammen und gibt geprüfte Hinweise an den zuständigen Fachbereich weiter.',
           'Adjutantur des Schattens · fachlich dem zuständigen Netzmeister',
           { connections: [{ area: 'unterhaltung', label: 'Hofveranstaltungen', description: 'Stimmt Hinweise auf Gefahren bei Festen und öffentlichen Auftritten mit deren Verantwortlichen ab.' }] },
         ),
@@ -198,10 +203,11 @@ export default {
           'Netzmeister der Fahndung · Meredydd Gwyllach',
           { authority: 'Führt zugewiesene Fahndungen aus und meldet Ergebnisse; keine eigenständige Haft- oder Befehlsgewalt.' },
         ),
-        vacancy(
-          'kundschafter',
-          'Kundschafter',
-          'Übernimmt begrenzte Erkundungsaufträge auf bekannten Wegen, beobachtet Reisebedingungen und erkennbare Gefahren und liefert kurze, überprüfbare Meldungen. Umfang und Begleitung der Aufträge bestimmt der Netzmeister der Aufklärung.',
+        member(
+          'talyfer-gwyllach',
+          'Kundschafter für Burg und Hof',
+          'Talyfer',
+          'Talyfer (*1718, 22 Jahre), Sohn Meredydds, sammelt im zugewiesenen Umfeld von Burg und Hof einzelne Hinweise. Er hält Kontakte zu Bediensteten und Lieferanten, erfasst ungewöhnliche Vorgänge und meldet sie seinem Auftraggeber. Er führt keine eigene Zelle.',
           'Netzmeister der Aufklärung · Efael Gwyllach',
           { authority: 'Hat einen persönlichen Beobachtungsauftrag und führt keine eigene Zelle.' },
         ),

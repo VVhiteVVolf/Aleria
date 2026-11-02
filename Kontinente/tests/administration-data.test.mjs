@@ -137,7 +137,11 @@ test('Freigegebene gebürtige Gwyllach sind einmal vertreten; ausgeschlossene An
     const matching = assignments.filter(({ role }) => role.id === person.id);
     assert.equal(matching.length, 1, person.id);
     assert.equal(matching[0].role.name, person.name);
-    if (1740 - Number(person.birth) < 27) assert.equal(matching[0].kind, 'special', `${person.id}: keine Führungsstelle unter 27`);
+    if (1740 - Number(person.birth) < 27) {
+      assert.ok(['special', 'adjutant'].includes(matching[0].kind), `${person.id}: keine eigenständige Führungsstelle unter 27`);
+      if (matching[0].kind === 'adjutant') assert.match(matching[0].role.authority, /keine eigene Leitungs-/);
+    }
+    assert.ok(matching[0].role.description.includes(`(*${person.birth}, ${1740 - Number(person.birth)} Jahre)`), `${person.id}: Alter folgt der Familienakte`);
   }
   assert.match(allOffices.find(({ role }) => role.id === 'nachtgreif').role.title, /Nachtgreif/u);
   assert.ok(!assignments.some(({ role }) => role.title === 'Zugriffsdienst'));

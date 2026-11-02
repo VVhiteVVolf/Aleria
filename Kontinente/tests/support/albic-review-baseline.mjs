@@ -7,12 +7,46 @@ import brevanorRank from './brevanor-rank-review-20261030.json' with { type: 'js
 import gwynthorCourt from './gwynthor-court-family-review-20261030.json' with { type: 'json' };
 import gwynthorTroetzli from './gwynthor-troetzli-family-review-20261031.json' with { type: 'json' };
 import kingdomMetadata from './kingdom-metadata-review-20261101.json' with { type: 'json' };
+import traitCards from './character-trait-card-review-20261102.json' with { type: 'json' };
+import gwyllachAges from './gwyllach-age-review-20261102.json' with { type: 'json' };
+import currentMetadata from './current-family-metadata-review-20261102.json' with { type: 'json' };
+import { applyFamilyMetadataReview } from './apply-family-metadata-review.mjs';
 
 export const reviewHash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function protectedAlbicFamilies(records) {
   return records.map(record => {
     const copy = structuredClone(record);
+    const metadata = currentMetadata.reviews.find(review => review.familyId === record.id);
+    if (metadata) applyFamilyMetadataReview(copy, metadata);
+    // Validate the narrowly approved trait-card and age edits, then restore
+    // their predecessor values for the older territorial proof. No identity,
+    // portrait, genealogy or unrelated prose is omitted from that proof.
+    for (const review of traitCards.cards.filter(review => review.familyId === record.id)) {
+      const body = copy.family.persons.find(person => person.id === review.personId)?.extensions?.biographyModule?.biography;
+      assert(body, `${record.id}/${review.personId}/trait-cards`);
+      assert.deepEqual({ abilitiesTitle: body.abilitiesTitle, abilities: body.abilities }, review.after, `${record.id}/${review.personId}/trait-cards`);
+      Object.assign(body, structuredClone(review.before));
+    }
+    if (record.id === gwyllachAges.familyId) {
+      for (const review of gwyllachAges.people) {
+        const person = copy.family.persons.find(person => person.id === review.id);
+        const current = Object.fromEntries(['birth', 'notes', 'extensions'].filter(key => Object.hasOwn(person, key)).map(key => [key, person[key]]));
+        assert.deepEqual(current, review.after, `${record.id}/${review.id}/approved-age`);
+        for (const key of ['birth', 'notes', 'extensions']) {
+          if (Object.hasOwn(review.before, key)) person[key] = structuredClone(review.before[key]);
+          else delete person[key];
+        }
+      }
+      for (const [key, value] of Object.entries(gwyllachAges.extensionsAfter)) {
+        // The shared wrappers can advance their source counter independently;
+        // it is already excluded from this historical proof below.
+        if (key === 'sourceRevision') continue;
+        assert.deepEqual(copy.family.extensions[key], value, `${record.id}/${key}/approved-age`);
+        if (Object.hasOwn(gwyllachAges.extensionsBefore, key)) copy.family.extensions[key] = structuredClone(gwyllachAges.extensionsBefore[key]);
+        else delete copy.family.extensions[key];
+      }
+    }
     // Validate the exact approved biography/job metadata before projecting it
     // back. All identity, portrait, life-date and relationship fields stay hashed.
     for (const personReview of [balchderPeople, gawainPublic]) {
