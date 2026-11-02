@@ -271,7 +271,7 @@ test('each Cenyr template follows its curriculum through actual creation and eve
   }
 });
 
-test('manual level alignment rebuilds every Cenyr curriculum upward and prunes it downward', () => {
+test('manual purchase-mode level alignment preserves learned attacks without automatic curriculum grants', () => {
   for (const definition of definitions) {
     const draft = createCharacterCreationDraft({});
     draft.selections = { ancestryId: 'cenyr', backgroundId: '', classId: definition.templateId };
@@ -280,20 +280,16 @@ test('manual level alignment rebuilds every Cenyr curriculum upward and prunes i
     assert.equal(created.ok, true);
 
     const raised = applyManualCharacterLevel(created.profile, 20);
-    const levelTwentyPlan = getCenyrClassProgression(definition.id, 20, { classTraining: raised.profile.classTraining });
     assert.equal(raised.pendingTechniqueSlots.length, 0, `${definition.id}: offene Slots auf Stufe 20`);
-    assert.equal(raised.profile.classTraining.techniqueSelections.length, levelTwentyPlan.earnedTechniqueSlots.length);
-    assert(raised.profile.techniques.every(technique => technique.minimumLevel <= 20 && technique.status === 'confirmed'));
-    if (definition.pathSelection.firstSelectionRequired) {
-      assert(raised.profile.classTraining.selections.some(selection => selection.kind === 'path'));
-    }
+    assert.equal(raised.profile.progression.development.mode, 'purchase');
+    assert.deepEqual(raised.profile.classTraining.techniqueSelections, created.profile.classTraining.techniqueSelections);
+    assert.deepEqual(raised.profile.techniques, created.profile.techniques);
+    assert.deepEqual(raised.profile.classTraining.selections, created.profile.classTraining.selections);
 
     const lowered = applyManualCharacterLevel(raised.profile, 5);
-    const levelFivePlan = getCenyrClassProgression(definition.id, 5, { classTraining: lowered.profile.classTraining });
     assert.equal(lowered.pendingTechniqueSlots.length, 0, `${definition.id}: offene Slots auf Stufe 5`);
-    assert.equal(lowered.profile.classTraining.techniqueSelections.length, levelFivePlan.earnedTechniqueSlots.length);
-    assert(lowered.profile.classTraining.selections.every(selection => selection.selectedAtLevel <= 5));
-    assert(lowered.profile.techniques.every(technique => technique.minimumLevel <= 5));
+    assert.deepEqual(lowered.profile.classTraining.techniqueSelections, raised.profile.classTraining.techniqueSelections);
+    assert.deepEqual(lowered.profile.techniques, raised.profile.techniques);
   }
 });
 
@@ -358,13 +354,16 @@ test('Pfad- und Barddwyr-Zweigwahlen verwenden das gemeinsame Attackenbudget', (
 
   const levelEight = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'teulu' }, progression: { level: 8 } });
   const requiredPlan = createCharacterLevelUpPlan(levelEight);
-  assert.equal(previewCharacterLevelUp(levelEight, requiredPlan).ready, false);
-  requiredPlan.classTrainingChoices.path = 'drachentanz-form-iii-abwartender-drache';
-  let selectedPreview = previewCharacterLevelUp(levelEight, requiredPlan);
-  assert.equal(selectedPreview.classTechniqueChoiceGroups.length, 0);
-  assert(selectedPreview.profile.techniques.some(technique=>technique.combatStyleFormId===requiredPlan.classTrainingChoices.path));
+  const selectedPreview = previewCharacterLevelUp(levelEight, requiredPlan);
   assert.equal(selectedPreview.ready, true);
-  assert.equal(selectedPreview.profile.classTraining.selections[0].selectionId, requiredPlan.classTrainingChoices.path);
+  assert.equal(selectedPreview.profile.progression.development.mode, 'purchase');
+  assert.equal(selectedPreview.classTechniqueChoiceGroups.length, 0);
+  assert.equal(selectedPreview.classTrainingChoiceGroups.length, 0);
+  assert.deepEqual(selectedPreview.profile.techniques, []);
+  const chosenPath = selectCenyrTrainingOption(selectedPreview.profile, { kind: 'path', selectionId: 'drachentanz-form-iii-abwartender-drache', selectedAtLevel: 9 });
+  assert.equal(chosenPath.ok, true);
+  assert.equal(chosenPath.profile.classTraining.selections[0].selectionId, 'drachentanz-form-iii-abwartender-drache');
+  assert.deepEqual(chosenPath.profile.techniques, []);
 });
 
 test('Waffenwürfel und Cenyr-Waffenprofile werden erst bei der Kampfhandlung aufgelöst', () => {
