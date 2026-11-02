@@ -32,6 +32,8 @@ const sources = [
   'modules/piracy/piracy-entries.js',
   'data/sections.js',
   'modules/core/content-safety.js',
+  'modules/biography/biography-card-rendering.js',
+  '../js/biography/public-biographies.generated.js',
   'modules/house-warriors/house-warriors-data.js',
   'modules/language/language-data.js',
   'modules/organization-network/organization-network-data.js',
