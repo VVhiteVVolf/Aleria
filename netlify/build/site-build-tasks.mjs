@@ -500,6 +500,8 @@ export const SITE_BUILD_TASKS = [
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
+      'AleriaAlmanach/modules/character-trait-review/', 'AleriaAlmanach/modules/character-development/',
+      'AleriaAlmanach/modules/character-health/', 'AleriaAlmanach/modules/biography/',
       'Kontinente/modules/goldmund/goldmund-context.mjs',
       'Stammbäume/vendor/', 'Stammbäume/tests/', 'Stammbäume/tools/',
       'Stammbäume/Stammbaum.html', 'Stammbäume/index.html',
