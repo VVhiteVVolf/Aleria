@@ -5,6 +5,9 @@
 *.woff binary
 *.woff2 binary
 *.png binary
+# Font package manifests verify these OpenType feature sources byte-for-byte.
+Fonts/**/source/*.fea text eol=lf
+Fonts/**/source/*.cjs text eol=lf
 # Preserve the supplied Skjaerheim HTML snapshot byte-for-byte for its source hash.
 Stammbäume/assets/data/source-inventories/skjaerheim-2026-10-09/*.html -text whitespace=-blank-at-eol
 # World-map and territory archives are verified against their original byte hashes.
