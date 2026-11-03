@@ -18,6 +18,10 @@ const EXISTING_PORTRAITS=new Set([
 const fieldSegment=key=>/^[A-Za-z_][A-Za-z0-9_]*$/.test(key)?key:'`'+key.replaceAll('\\','\\\\').replaceAll('`','\\`')+'`';
 const fieldMask=keys=>keys.filter(key=>typeof key==='string').map(fieldSegment).join('.');
 const sortedUnique=items=>[...new Set(items)].sort();
+const compareImagePaths=(left,right)=>{
+  const a=JSON.stringify(left.rawPath),b=JSON.stringify(right.rawPath);
+  return a<b?-1:a>b?1:0;
+};
 const plain=value=>value&&typeof value==='object'&&!Array.isArray(value);
 const at=(fields,path)=>path.reduce((value,key)=>value?.[key],fields);
 
@@ -85,7 +89,9 @@ export function migratePatrickStaticImageFields(fields,manifest){
     const result=migrateValue(value,[key],[key],aliases);
     entries.push([key,result.value]);masks.push(...result.masks);changes.push(...result.changes);
   }
-  return {fields:Object.fromEntries(entries),updateMask:sortedUnique(masks),changes};
+  // Firestore REST maps have no stable entry order. A plan's ordered change
+  // list follows its immutable raw paths, independent of each GET's key order.
+  return {fields:Object.fromEntries(entries),updateMask:sortedUnique(masks),changes:changes.sort(compareImagePaths)};
 }
 
 function preservedHash(fields,changes){

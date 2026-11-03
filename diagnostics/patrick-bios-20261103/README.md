@@ -83,6 +83,11 @@ Kampfschreibzugriffe. Ein anschließender `--check` meldet null Änderungen.
 31 betroffene Tests sowie die Prüfungen der gemeinsamen Quelle und der
 öffentlichen Biografiebrücke sind erfolgreich.
 
+Die historischen Angaben zu 263 unbeteiligten Charakteren beziehen sich auf
+den damaligen vollständigen Autorenbestand. Die aktuelle geprüfte öffentliche
+Charakterdatenbank umfasst 262 Figuren einschließlich Rob: drei ausgewählte
+Akten und 259 übrige öffentliche Akten.
+
 ## Weitere Identitäten und Abschlussprüfung
 
 Vier bestätigte Altakten von Gethin, Gwendolyn und Dehlia wurden reversibel
@@ -97,5 +102,27 @@ Die unabhängige gezielte Datenprüfung umfasst 41 erfolgreiche Tests,
 und der Hausfigur. Ihr Beleg steht in
 [`final-data-audit.json`](final-data-audit.json). Weitere Publikations- und
 Releaseprüfungen sind Bestandteil des gemeinsamen Releasewegs.
-Push und Netlify-Deploy folgen nach der öffentlichen Paketprüfung; dieser
-Bericht behauptet noch keinen abgeschlossenen Frontend-Deploy.
+
+## Veröffentlichte Fassung und statische Bildadressen
+
+Die erste öffentliche Fassung wurde mit Commit `8900e2227` gepusht und als
+Netlify-Deploy `6aea33ac4a7ef410707151b4` veröffentlicht. Die abschließende
+Prüfung bestätigte am 3. November 2026 um `19:24:58Z` alle 34.607 Dateien
+und sechs Functions.
+
+Der getrennte Nachtrag für unveränderliche statische Bildadressen wurde um
+`19:31:38.284290Z` erfolgreich gespeichert: 66 URL-Felder in sieben
+Dokumenten, mit drei Kampfsperren. 36 HTTP-Abfragen bestätigten Status 200
+und die erwarteten SHA-256-Hashes. Der geprüfte Plan steht in
+[`static-assets-plan-review.json`](static-assets-plan-review.json), die
+anschließende Verifikation in
+[`static-assets-publication-verification.json`](static-assets-publication-verification.json).
+
+Die URL-Projektion betrifft dieselben drei ausgewählten öffentlichen Akten;
+die 259 übrigen öffentlichen Akten sowie sämtliche unbeteiligten Rohfelder
+blieben exakt erhalten. Dieser Nachtrag legte keine neuen Figuren an und
+verursachte null kanonische Kampfschreibzugriffe sowie null vollständige
+Inventarimporte. Die öffentliche Datenbank umfasst weiterhin 262 Figuren.
+
+Der begrenzte ?ffentliche Deploy-Nachweis steht in
+[`phase1-release-verification.json`](phase1-release-verification.json).

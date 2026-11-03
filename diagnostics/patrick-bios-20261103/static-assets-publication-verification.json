@@ -1,0 +1,87 @@
+{
+  "planId": "785361b0d00128240a5f869739fbfd06010eae20db6e02e4d9f65f0ab9e2df3c",
+  "plannedAt": "2026-11-03T19:29:49.266Z",
+  "assets": 36,
+  "records": [
+    {
+      "path": "characters/person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "imageReplacements": 13,
+      "fieldMask": [
+        "biography.biography.abilities",
+        "biography.biography.connections",
+        "inventory.companions",
+        "inventory.items"
+      ]
+    },
+    {
+      "path": "characters/person--haus-draenmelyn--rhiannon-draenmelyn",
+      "imageReplacements": 25,
+      "fieldMask": [
+        "biography.biography.abilities",
+        "biography.biography.connections",
+        "biography.biography.portrait",
+        "imageSets",
+        "inventory.companions",
+        "inventory.items",
+        "portrait"
+      ]
+    },
+    {
+      "path": "characters/person--family-tree--unknown-cadogan-spouse",
+      "imageReplacements": 17,
+      "fieldMask": [
+        "biography.biography.abilities",
+        "biography.biography.connections",
+        "biography.biography.portrait",
+        "inventory.companions",
+        "inventory.items",
+        "portrait"
+      ]
+    },
+    {
+      "path": "creatures/companion-cadogan-sgrechiwr-silberstolz",
+      "imageReplacements": 2,
+      "fieldMask": [
+        "imageSets",
+        "portrait"
+      ]
+    },
+    {
+      "path": "creatures/companion-rhiannon-draenmelyn-perle",
+      "imageReplacements": 3,
+      "fieldMask": [
+        "biography.connections",
+        "imageSets",
+        "portrait"
+      ]
+    },
+    {
+      "path": "creatures/companion-gwen-hamnett-sir-balthasar",
+      "imageReplacements": 3,
+      "fieldMask": [
+        "biography.connections",
+        "imageSets",
+        "portrait"
+      ]
+    },
+    {
+      "path": "creatures/companion-gwen-hamnett-sonnenaufgang",
+      "imageReplacements": 3,
+      "fieldMask": [
+        "biography.connections",
+        "imageSets",
+        "portrait"
+      ]
+    }
+  ],
+  "combatLockGuards": 3,
+  "verified": true,
+  "committedAt": "2026-11-03T19:31:38.284290Z",
+  "verifiedDocuments": 7,
+  "changedDocuments": 7,
+  "imageReplacements": 66,
+  "unrelatedRawFieldsUnchanged": true,
+  "externalWrites": 7,
+  "previousImageHostUnavailable": true,
+  "staticOriginalsVerified": true
+}

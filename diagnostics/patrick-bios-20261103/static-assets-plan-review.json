@@ -1,0 +1,82 @@
+{
+  "schema": "aleria.static-image-plan-review",
+  "reviewedAt": "2026-11-03T19:30:34.242Z",
+  "previousPlanId": "2edebae1b19b680b8d0632db8994070ab13fef7ff36630bc4f53c9f2249341f6",
+  "planId": "785361b0d00128240a5f869739fbfd06010eae20db6e02e4d9f65f0ab9e2df3c",
+  "previousImmutablePlanPreserved": true,
+  "externalWrites": 0,
+  "reason": "REST map entry order canonicalized",
+  "assetsUnchanged": true,
+  "locksUnchanged": true,
+  "records": [
+    {
+      "path": "characters/person--haus-sgrechiwr--cadogan-sgrechiwr",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    },
+    {
+      "path": "characters/person--haus-draenmelyn--rhiannon-draenmelyn",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    },
+    {
+      "path": "characters/person--family-tree--unknown-cadogan-spouse",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    },
+    {
+      "path": "creatures/companion-cadogan-sgrechiwr-silberstolz",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    },
+    {
+      "path": "creatures/companion-rhiannon-draenmelyn-perle",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    },
+    {
+      "path": "creatures/companion-gwen-hamnett-sir-balthasar",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    },
+    {
+      "path": "creatures/companion-gwen-hamnett-sonnenaufgang",
+      "expectedVersionUnchanged": true,
+      "beforeHashUnchanged": true,
+      "afterHashUnchanged": true,
+      "preservedRawHashUnchanged": true,
+      "exactMasksUnchanged": true,
+      "replacementSetUnchanged": true
+    }
+  ],
+  "sourceHashChanges": [
+    "firebase/scripts/content/patrick-biography-static-assets-plan.mjs"
+  ],
+  "offlineTestsPassed": 9,
+  "twoIndependentLivePreparationsMatched": true,
+  "publicAssetsHttp200ImageAndShaVerified": 36
+}

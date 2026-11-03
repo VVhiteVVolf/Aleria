@@ -106,6 +106,20 @@ test('unapproved alias hosts, ambiguous aliases, incorrect target paths and plan
   assert.throws(()=>patrickStaticPrivatePath('diagnostics/public-plan.json'),/privaten/);
 });
 
+test('two REST reads with recursively reversed map-entry order produce the same complete plan and ordered change lists',()=>{
+  const {plan,...options}=fixture();
+  const reverseMaps=value=>Array.isArray(value)?value.map(reverseMaps):value&&typeof value==='object'
+    ?Object.fromEntries(Object.entries(value).reverse().map(([key,child])=>[key,reverseMaps(child)])):value;
+  const second=buildPatrickStaticAssetPlan({...options,documents:reverseMaps(options.documents)});
+  assert.equal(second.planId,plan.planId);
+  assert.deepEqual(second,plan);
+  assert.deepEqual(second.records.map(row=>row.changes),plan.records.map(row=>row.changes));
+  for(const row of plan.records){
+    const paths=row.changes.map(change=>JSON.stringify(change.rawPath));
+    assert.deepEqual(paths,[...paths].sort());
+  }
+});
+
 test('all seven updates use version guards, exact masks and existing IDs; three inventory lock verifications precede them',()=>{
   const {plan,documents}=fixture(),writes=buildPatrickStaticAssetWrites(plan,documents,documentName);
   assert.equal(writes.length,10);assert.equal(writes.filter(write=>write.verify).length,3);
